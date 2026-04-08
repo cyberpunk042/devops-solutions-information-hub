@@ -85,6 +85,9 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
         created = str(meta.get("created", ""))
         updated = str(meta.get("updated", ""))
         sources = meta.get("sources", []) or []
+        layer = meta.get("layer", "")
+        maturity = meta.get("maturity", "")
+        derived_from = meta.get("derived_from", []) or []
         slug = _page_slug(md_file, wiki_dir)
 
         # Parse relationships from ## Relationships section
@@ -109,6 +112,9 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
             "updated": updated,
             "tags": tags,
             "sources": sources,
+            "layer": layer,
+            "maturity": maturity,
+            "derived_from": derived_from,
             "relationships": relationships,
         }
         pages_meta.append(page_record)
@@ -152,6 +158,20 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
         "relationships": total_relationships,
         "tags_unique": len(tag_index),
     }
+
+    # Layer stats
+    layer_counts: Dict[str, int] = {}
+    maturity_counts: Dict[str, int] = {}
+    for p in pages_meta:
+        l = str(p.get("layer", ""))
+        if l:
+            layer_counts[l] = layer_counts.get(l, 0) + 1
+        m = p.get("maturity", "")
+        if m:
+            maturity_counts[m] = maturity_counts.get(m, 0) + 1
+
+    stats["layers"] = layer_counts
+    stats["maturity"] = maturity_counts
 
     return {
         "generated": datetime.now(timezone.utc).isoformat(),

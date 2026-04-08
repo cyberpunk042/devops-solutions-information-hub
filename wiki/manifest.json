@@ -1,12 +1,14 @@
 {
-  "generated": "2026-04-08T15:03:55.188851+00:00",
+  "generated": "2026-04-08T15:35:23.432699+00:00",
   "stats": {
     "pages": 48,
     "domains": 7,
     "sources": 16,
     "comparisons": 3,
     "relationships": 356,
-    "tags_unique": 217
+    "tags_unique": 217,
+    "layers": {},
+    "maturity": {}
   },
   "pages": [
     {
@@ -61,6 +63,9 @@
           "title": "PleasePrompto/notebooklm-skill"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "SYNTHESIZES",
@@ -170,6 +175,9 @@
           "title": "18 Claude Code Token Hacks in 18 Minutes"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "SYNTHESIZES",
@@ -244,6 +252,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -327,6 +338,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -430,6 +444,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -545,6 +562,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -633,6 +653,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -709,6 +732,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -794,6 +820,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "USED BY",
@@ -852,6 +881,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -931,6 +963,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -981,6 +1016,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1043,6 +1081,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1115,6 +1156,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -1187,6 +1231,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -1259,6 +1306,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1341,6 +1391,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -1401,6 +1454,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "USED BY",
@@ -1478,6 +1534,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1594,6 +1653,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1666,6 +1728,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1747,6 +1812,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1830,6 +1898,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1899,6 +1970,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "USED BY",
@@ -1978,6 +2052,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -2050,6 +2127,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2111,6 +2191,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2181,6 +2264,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -2262,6 +2348,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2346,6 +2435,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2419,6 +2511,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "USED BY",
@@ -2454,6 +2549,9 @@
       "updated": "",
       "tags": [],
       "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": []
     },
     {
@@ -2485,6 +2583,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2539,6 +2640,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2593,6 +2697,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2644,6 +2751,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2695,6 +2805,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2755,6 +2868,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2813,6 +2929,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2870,6 +2989,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2930,6 +3052,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2983,6 +3108,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3040,6 +3168,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3097,6 +3228,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3148,6 +3282,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3205,6 +3342,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3259,6 +3399,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3308,6 +3451,9 @@
           "ingested": "2026-04-08"
         }
       ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
       "relationships": [
         {
           "verb": "DERIVED FROM",
