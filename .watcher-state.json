@@ -1,0 +1,322 @@
+{
+  "timestamp": "2026-04-08T10:45:36.487581",
+  "snapshot": {
+    "raw/articles/axtonliuaxton-obsidian-visual-skills.md": {
+      "mtime": 1775629765.254814,
+      "size": 10249
+    },
+    "raw/articles/claude-worldnotebooklm-skill.md": {
+      "mtime": 1775629765.5648308,
+      "size": 14949
+    },
+    "raw/articles/devops-control-plane-claude.md": {
+      "mtime": 1775657986.6712155,
+      "size": 2955
+    },
+    "raw/articles/devops-control-plane-docs-architecture.md": {
+      "mtime": 1775657986.6712155,
+      "size": 16843
+    },
+    "raw/articles/devops-control-plane-readme.md": {
+      "mtime": 1775657986.6712155,
+      "size": 6264
+    },
+    "raw/articles/karpathy-llm-wiki-idea-file.md": {
+      "mtime": 1775629797.8545277,
+      "size": 12137
+    },
+    "raw/articles/kepanoobsidian-skills.md": {
+      "mtime": 1775629766.064858,
+      "size": 2577
+    },
+    "raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md": {
+      "mtime": 1775629764.6847835,
+      "size": 13696
+    },
+    "raw/articles/notebooklm-py-official-docs.md": {
+      "mtime": 1775655908.442114,
+      "size": 4120
+    },
+    "raw/articles/obsidian-cli-official-docs.md": {
+      "mtime": 1775655893.3813405,
+      "size": 4427
+    },
+    "raw/articles/pablo-manoobsidian-cli-skill.md": {
+      "mtime": 1775629766.3848753,
+      "size": 11826
+    },
+    "raw/articles/pleasepromptonotebooklm-skill.md": {
+      "mtime": 1775629765.8348453,
+      "size": 16040
+    },
+    "raw/articles/shanraisshanclaude-code-best-practice.md": {
+      "mtime": 1775629764.974799,
+      "size": 53613
+    },
+    "raw/dumps/topic-mcp-server-development-patterns.md": {
+      "mtime": 1775657980.350894,
+      "size": 214
+    },
+    "raw/notes/2026-04-08-user-directive-ecosystem-connections.md": {
+      "mtime": 1775631670.4051583,
+      "size": 1812
+    },
+    "raw/notes/2026-04-08-user-directive-ingestion-queue.md": {
+      "mtime": 1775629343.18646,
+      "size": 2105
+    },
+    "raw/notes/2026-04-08-user-directive-integration-vision.md": {
+      "mtime": 1775632763.3929002,
+      "size": 2642
+    },
+    "raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt": {
+      "mtime": 1775629750.1932566,
+      "size": 23147
+    },
+    "raw/transcripts/andrej-karpathy-just-10xd-everyones-claude-code.txt": {
+      "mtime": 1775629748.643232,
+      "size": 22987
+    },
+    "raw/transcripts/claude-notebooklm-content-team.txt": {
+      "mtime": 1775617834.987133,
+      "size": 19621
+    },
+    "raw/transcripts/claude-notebooklm-your-247-content-team.txt": {
+      "mtime": 1775629746.4486506,
+      "size": 19649
+    },
+    "raw/transcripts/karpathy-claude-code-10x.txt": {
+      "mtime": 1775618131.6695757,
+      "size": 22873
+    },
+    "raw/transcripts/obsidian-claude-code-the-second-brain-setup-that-actually-works.txt": {
+      "mtime": 1775629744.858569,
+      "size": 23091
+    },
+    "wiki/.obsidian/app.json": {
+      "mtime": 1775659051.0919929,
+      "size": 154
+    },
+    "wiki/.obsidian/appearance.json": {
+      "mtime": 1775659051.0919929,
+      "size": 72
+    },
+    "wiki/.obsidian/core-plugins.json": {
+      "mtime": 1775659050.801977,
+      "size": 708
+    },
+    "wiki/.obsidian/graph.json": {
+      "mtime": 1775629078.2580736,
+      "size": 796
+    },
+    "wiki/.obsidian/workspace.json": {
+      "mtime": 1775659051.242001,
+      "size": 3665
+    },
+    "wiki/comparisons/_index.md": {
+      "mtime": 1775657306.5031462,
+      "size": 578
+    },
+    "wiki/comparisons/agentic-search-vs-vector-search.md": {
+      "mtime": 1775657120.7059338,
+      "size": 8586
+    },
+    "wiki/comparisons/skills-architecture-patterns.md": {
+      "mtime": 1775632441.090652,
+      "size": 12005
+    },
+    "wiki/domains/_index.md": {
+      "mtime": 1775657090.4454846,
+      "size": 626
+    },
+    "wiki/domains/ai-agents/_index.md": {
+      "mtime": 1775657910.1501942,
+      "size": 1579
+    },
+    "wiki/domains/ai-agents/claude-code-best-practices.md": {
+      "mtime": 1775657544.3905153,
+      "size": 11157
+    },
+    "wiki/domains/ai-agents/claude-code-context-management.md": {
+      "mtime": 1775657429.6468909,
+      "size": 11926
+    },
+    "wiki/domains/ai-agents/claude-code-skills.md": {
+      "mtime": 1775657544.3905153,
+      "size": 12336
+    },
+    "wiki/domains/ai-agents/claude-code.md": {
+      "mtime": 1775657120.7159348,
+      "size": 7838
+    },
+    "wiki/domains/ai-agents/llm-knowledge-linting.md": {
+      "mtime": 1775657120.7259357,
+      "size": 8590
+    },
+    "wiki/domains/ai-agents/openclaw.md": {
+      "mtime": 1775657544.400516,
+      "size": 6033
+    },
+    "wiki/domains/ai-agents/openfleet.md": {
+      "mtime": 1775657544.400516,
+      "size": 6430
+    },
+    "wiki/domains/automation/_index.md": {
+      "mtime": 1775657910.1601949,
+      "size": 1355
+    },
+    "wiki/domains/automation/ai-driven-content-pipeline.md": {
+      "mtime": 1775657544.400516,
+      "size": 7746
+    },
+    "wiki/domains/automation/claude-code-scheduling.md": {
+      "mtime": 1775657544.4105165,
+      "size": 6850
+    },
+    "wiki/domains/automation/mcp-integration-architecture.md": {
+      "mtime": 1775657120.7359364,
+      "size": 7848
+    },
+    "wiki/domains/automation/research-pipeline-orchestration.md": {
+      "mtime": 1775657120.7359364,
+      "size": 7108
+    },
+    "wiki/domains/automation/wiki-event-driven-automation.md": {
+      "mtime": 1775657544.4105165,
+      "size": 7879
+    },
+    "wiki/domains/devops/_index.md": {
+      "mtime": 1775657910.1601949,
+      "size": 393
+    },
+    "wiki/domains/devops/devops-control-plane.md": {
+      "mtime": 1775657120.7459373,
+      "size": 5286
+    },
+    "wiki/domains/knowledge-systems/_index.md": {
+      "mtime": 1775657910.1701953,
+      "size": 1428
+    },
+    "wiki/domains/knowledge-systems/lightrag.md": {
+      "mtime": 1775657120.7459373,
+      "size": 6273
+    },
+    "wiki/domains/knowledge-systems/llm-wiki-pattern.md": {
+      "mtime": 1775657549.460822,
+      "size": 13658
+    },
+    "wiki/domains/knowledge-systems/llm-wiki-vs-rag.md": {
+      "mtime": 1775657544.4205172,
+      "size": 8844
+    },
+    "wiki/domains/knowledge-systems/memory-lifecycle-management.md": {
+      "mtime": 1775632338.368511,
+      "size": 7918
+    },
+    "wiki/domains/knowledge-systems/wiki-ingestion-pipeline.md": {
+      "mtime": 1775657544.4305177,
+      "size": 8629
+    },
+    "wiki/domains/knowledge-systems/wiki-knowledge-graph.md": {
+      "mtime": 1775657544.4305177,
+      "size": 7544
+    },
+    "wiki/domains/tools-and-platforms/_index.md": {
+      "mtime": 1775657910.1901965,
+      "size": 1554
+    },
+    "wiki/domains/tools-and-platforms/aicp.md": {
+      "mtime": 1775657120.7659392,
+      "size": 6091
+    },
+    "wiki/domains/tools-and-platforms/notebooklm-py-cli.md": {
+      "mtime": 1775657120.77594,
+      "size": 9653
+    },
+    "wiki/domains/tools-and-platforms/notebooklm-skills.md": {
+      "mtime": 1775657120.77594,
+      "size": 8369
+    },
+    "wiki/domains/tools-and-platforms/notebooklm.md": {
+      "mtime": 1775656090.5026603,
+      "size": 5816
+    },
+    "wiki/domains/tools-and-platforms/obsidian-cli.md": {
+      "mtime": 1775657120.77594,
+      "size": 8817
+    },
+    "wiki/domains/tools-and-platforms/obsidian-knowledge-vault.md": {
+      "mtime": 1775656090.5126607,
+      "size": 8784
+    },
+    "wiki/domains/tools-and-platforms/obsidian-skills-ecosystem.md": {
+      "mtime": 1775657120.785941,
+      "size": 8790
+    },
+    "wiki/domains/tools-and-platforms/plane.md": {
+      "mtime": 1775657120.785941,
+      "size": 5123
+    },
+    "wiki/index.md": {
+      "mtime": 1775625995.8840153,
+      "size": 617
+    },
+    "wiki/manifest.json": {
+      "mtime": 1775658582.4376175,
+      "size": 111187
+    },
+    "wiki/sources/_index.md": {
+      "mtime": 1775631703.8959138,
+      "size": 1508
+    },
+    "wiki/sources/src-axton-obsidian-visual-skills.md": {
+      "mtime": 1775631564.1789608,
+      "size": 5204
+    },
+    "wiki/sources/src-claude-notebooklm-content-team.md": {
+      "mtime": 1775629065.3774104,
+      "size": 4681
+    },
+    "wiki/sources/src-claude-world-notebooklm-skill.md": {
+      "mtime": 1775631564.1889613,
+      "size": 4607
+    },
+    "wiki/sources/src-karpathy-claude-code-10x.md": {
+      "mtime": 1775629065.3874109,
+      "size": 3962
+    },
+    "wiki/sources/src-karpathy-llm-wiki-idea-file.md": {
+      "mtime": 1775631564.1889613,
+      "size": 8332
+    },
+    "wiki/sources/src-kepano-obsidian-skills.md": {
+      "mtime": 1775631564.1889613,
+      "size": 5184
+    },
+    "wiki/sources/src-llm-wiki-v2-agentmemory.md": {
+      "mtime": 1775631564.1889613,
+      "size": 8395
+    },
+    "wiki/sources/src-obsidian-claude-code-second-brain.md": {
+      "mtime": 1775631564.198962,
+      "size": 7651
+    },
+    "wiki/sources/src-pablo-mano-obsidian-cli-skill.md": {
+      "mtime": 1775631564.198962,
+      "size": 5477
+    },
+    "wiki/sources/src-pleaseprompto-notebooklm-skill.md": {
+      "mtime": 1775631564.198962,
+      "size": 5798
+    },
+    "wiki/sources/src-shanraisshan-claude-code-best-practice.md": {
+      "mtime": 1775631564.198962,
+      "size": 5425
+    },
+    "wiki/sources/src-token-hacks-claude-code.md": {
+      "mtime": 1775631564.198962,
+      "size": 5213
+    }
+  },
+  "last_events": []
+}

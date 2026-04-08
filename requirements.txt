@@ -1,3 +1,4 @@
 PyYAML>=6.0
 youtube-transcript-api>=1.2.0
 notebooklm-py[browser]>=0.3.4
+mcp[cli]>=1.0.0

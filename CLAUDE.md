@@ -119,6 +119,25 @@ Export transforms YAML frontmatter to markdown headers for compatibility.
 - `python3 -m tools.pipeline chain <name>` — Run a named chain (ingest, ingest-local, analyze, full, health)
 - `python3 -m tools.pipeline chain --list` — List available chains
 
+### MCP Server (native tools for any Claude Code conversation)
+
+Registered in `.mcp.json` — auto-discovered by Claude Code.
+13 tools: wiki_status, wiki_search, wiki_read_page, wiki_list_pages,
+wiki_post, wiki_fetch, wiki_fetch_topic, wiki_scan_project,
+wiki_gaps, wiki_crossref, wiki_sync, wiki_mirror_to_notebooklm,
+wiki_integrations.
+
+Manual start: `.venv/bin/python -m tools.mcp_server`
+
+### Watcher (change detection → auto-pipeline)
+
+- `python -m tools.watcher` — One-shot: report changes since last check, trigger post-chain
+- `python -m tools.watcher --watch` — Daemon: poll for changes, auto-run post-chain on wiki edits
+- `python -m tools.watcher --watch --sync` — Also auto-sync to Windows on changes
+- `python -m tools.watcher --watch --interval 5` — Custom poll interval
+- `python -m tools.watcher --reset` — Reset change tracking baseline
+- `python -m tools.watcher --no-post` — Report changes without running post-chain
+
 ### Sync (WSL ↔ Windows)
 
 - `python -m tools.sync` — One-shot sync wiki/ to Windows for Obsidian

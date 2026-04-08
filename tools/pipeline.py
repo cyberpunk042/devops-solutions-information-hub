@@ -633,6 +633,126 @@ def run_crossref(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
+# Integration steps (notebooklm, obsidian, sync)
+# ---------------------------------------------------------------------------
+
+def run_mirror(project_root: Path, notebook_name: str = None,
+               verbose: bool = True) -> Dict[str, Any]:
+    """Mirror wiki source URLs to a NotebookLM notebook."""
+    if not notebooklm.is_available():
+        return {"ok": False, "error": "notebooklm-py not available", "skipped": True}
+
+    wiki_dir = project_root / "wiki"
+    manifest_path = wiki_dir / "manifest.json"
+    if not manifest_path.exists():
+        return {"ok": False, "error": "No manifest.json — run post-chain first"}
+
+    manifest = json.loads(manifest_path.read_text())
+
+    # Collect unique source URLs from all pages
+    source_urls = set()
+    for page in manifest.get("pages", []):
+        meta_path = wiki_dir / page.get("path", "")
+        if not meta_path.exists():
+            continue
+        text = meta_path.read_text(encoding="utf-8")
+        meta, _ = parse_frontmatter(text)
+        for src in meta.get("sources", []):
+            url = src.get("url")
+            if url:
+                source_urls.add(url)
+
+    if not source_urls:
+        return {"ok": True, "sources_added": 0, "note": "No source URLs found"}
+
+    # Create or use notebook
+    nb_name = notebook_name or "Research Wiki Sources"
+    if verbose:
+        print(f"  Mirroring {len(source_urls)} source URLs to NotebookLM notebook '{nb_name}'...")
+
+    result = notebooklm.create_notebook(nb_name)
+    if not result["ok"] and "already exists" not in result.get("stderr", ""):
+        # Try to continue — notebook might already exist
+        pass
+
+    added = 0
+    errors = 0
+    for url in sorted(source_urls):
+        if verbose:
+            print(f"    + {url[:70]}")
+        add_result = notebooklm.add_source(url)
+        if add_result["ok"]:
+            added += 1
+        else:
+            errors += 1
+            if verbose:
+                print(f"      ERROR: {add_result.get('error', add_result.get('stderr', ''))[:60]}")
+
+    return {"ok": True, "sources_added": added, "errors": errors, "total": len(source_urls)}
+
+
+def run_nlm_research(topic: str, project_root: Path,
+                     verbose: bool = True) -> Dict[str, Any]:
+    """Use NotebookLM's research agent to find sources for a topic."""
+    if not notebooklm.is_available():
+        return {"ok": False, "error": "notebooklm-py not available", "skipped": True}
+
+    if verbose:
+        print(f"  Researching via NotebookLM: {topic}")
+
+    result = notebooklm.add_research(topic)
+    if verbose:
+        if result["ok"]:
+            print(f"    Research started — sources will be auto-imported")
+        else:
+            print(f"    ERROR: {result.get('error', result.get('stderr', ''))[:80]}")
+
+    return result
+
+
+def run_nlm_ask(question: str, project_root: Path,
+                verbose: bool = True) -> Dict[str, Any]:
+    """Ask NotebookLM a question against its sources (cross-validation)."""
+    if not notebooklm.is_available():
+        return {"ok": False, "error": "notebooklm-py not available", "skipped": True}
+
+    if verbose:
+        print(f"  Asking NotebookLM: {question}")
+
+    result = notebooklm.ask(question, json_output=True)
+    if verbose:
+        if result["ok"]:
+            # Print first 200 chars of answer
+            answer = result.get("stdout", "")[:200]
+            print(f"    {answer}")
+        else:
+            print(f"    ERROR: {result.get('error', result.get('stderr', ''))[:80]}")
+
+    return result
+
+
+def run_sync_step(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
+    """Run sync to Windows as a pipeline step."""
+    from tools.sync import get_sync_config, run_sync, save_sync_state
+
+    config = get_sync_config(project_root)
+    if not config["target"]:
+        return {"ok": False, "error": "No sync target configured", "skipped": True}
+
+    if verbose:
+        print(f"  Syncing to {config['target']}...")
+
+    result = run_sync(config, verbose=False)
+    save_sync_state(project_root, result)
+
+    if verbose:
+        status = "OK" if result["ok"] else "FAILED"
+        print(f"    Sync {status} ({result.get('files_changed', '?')} files)")
+
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Named chains (predefined pipeline sequences)
 # ---------------------------------------------------------------------------
 
@@ -653,13 +773,33 @@ CHAINS: Dict[str, Dict[str, Any]] = {
         "needs_input": False,
     },
     "full": {
-        "description": "Fetch → post → gaps → crossref (complete pipeline)",
-        "steps": ["fetch", "post", "gaps", "crossref"],
+        "description": "Fetch → post → gaps → crossref → sync (complete pipeline)",
+        "steps": ["fetch", "post", "gaps", "crossref", "sync"],
         "needs_input": True,
     },
     "health": {
         "description": "Post-chain → gaps → crossref (wiki health check)",
         "steps": ["post", "gaps", "crossref"],
+        "needs_input": False,
+    },
+    "publish": {
+        "description": "Post-chain → sync to Windows (make Obsidian-ready)",
+        "steps": ["post", "sync"],
+        "needs_input": False,
+    },
+    "mirror": {
+        "description": "Push wiki source URLs to NotebookLM notebook",
+        "steps": ["mirror"],
+        "needs_input": False,
+    },
+    "research": {
+        "description": "NotebookLM research → fetch results → post-chain",
+        "steps": ["nlm-research", "post"],
+        "needs_input": True,
+    },
+    "deep": {
+        "description": "Gaps → crossref → mirror → sync (full analysis + integration)",
+        "steps": ["gaps", "crossref", "mirror", "post", "sync"],
         "needs_input": False,
     },
 }
@@ -716,6 +856,31 @@ def run_chain(chain_name: str, project_root: Path, inputs: List[str] = None,
         elif step_name == "crossref":
             step_result = run_crossref(project_root, verbose=verbose)
             results["steps"]["crossref"] = step_result
+
+        elif step_name == "mirror":
+            step_result = run_mirror(project_root, verbose=verbose)
+            results["steps"]["mirror"] = step_result
+
+        elif step_name == "nlm-research":
+            # Uses first input arg as the research topic
+            topic = urls[0] if urls else None
+            if topic:
+                step_result = run_nlm_research(topic, project_root, verbose=verbose)
+            else:
+                step_result = {"ok": False, "error": "No topic provided"}
+            results["steps"]["nlm-research"] = step_result
+
+        elif step_name == "nlm-ask":
+            question = urls[0] if urls else None
+            if question:
+                step_result = run_nlm_ask(question, project_root, verbose=verbose)
+            else:
+                step_result = {"ok": False, "error": "No question provided"}
+            results["steps"]["nlm-ask"] = step_result
+
+        elif step_name == "sync":
+            step_result = run_sync_step(project_root, verbose=verbose)
+            results["steps"]["sync"] = step_result
 
     return results
 
