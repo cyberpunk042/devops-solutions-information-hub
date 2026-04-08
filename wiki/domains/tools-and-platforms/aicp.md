@@ -100,6 +100,7 @@ Shared: Plane, GitHub, ntfy
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Local LLM Quantization]]
 [[MCP Integration Architecture]]
+[[OpenArms]]
 [[Plane]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]

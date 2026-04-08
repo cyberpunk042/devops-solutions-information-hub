@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-08T19:10:17.601275+00:00",
+  "generated": "2026-04-08T19:58:10.792485+00:00",
   "stats": {
-    "pages": 72,
+    "pages": 73,
     "domains": 7,
     "sources": 20,
     "comparisons": 4,
-    "relationships": 548,
-    "tags_unique": 274,
+    "relationships": 556,
+    "tags_unique": 280,
     "layers": {
       "6": 1,
       "4": 7,
@@ -2794,6 +2794,73 @@
       ]
     },
     {
+      "path": "domains/tools-and-platforms/openarms.md",
+      "slug": "domains/tools-and-platforms/openarms",
+      "title": "OpenArms",
+      "type": "concept",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "openarms",
+        "ai-assistant",
+        "messaging",
+        "plugin-sdk",
+        "multi-channel",
+        "gateway",
+        "sandbox",
+        "media-pipeline"
+      ],
+      "sources": [
+        {
+          "id": "src-openarms-local",
+          "type": "documentation",
+          "file": "raw/articles/openarms-readme.md",
+          "title": "OpenArms \u2014 Project Documentation",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "devops-control-plane"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Multi-Channel AI Agent Access"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Research Pipeline Orchestration"
+        }
+      ]
+    },
+    {
       "path": "domains/tools-and-platforms/plane.md",
       "slug": "domains/tools-and-platforms/plane",
       "title": "Plane",
@@ -5203,8 +5270,8 @@
       "relationship_count": 37
     },
     "tools-and-platforms": {
-      "page_count": 17,
-      "relationship_count": 113
+      "page_count": 18,
+      "relationship_count": 121
     },
     "ai-agents": {
       "page_count": 23,
@@ -5669,7 +5736,8 @@
       "domains/ai-agents/openclaw"
     ],
     "gateway": [
-      "domains/ai-agents/openclaw"
+      "domains/ai-agents/openclaw",
+      "domains/tools-and-platforms/openarms"
     ],
     "brain": [
       "domains/ai-agents/openclaw"
@@ -5687,7 +5755,8 @@
       "sources/src-llm-wiki-v2-agentmemory"
     ],
     "messaging": [
-      "domains/ai-agents/openclaw"
+      "domains/ai-agents/openclaw",
+      "domains/tools-and-platforms/openarms"
     ],
     "openfleet": [
       "domains/ai-agents/openfleet",
@@ -6080,6 +6149,24 @@
     "ecosystem": [
       "domains/tools-and-platforms/obsidian-skills-ecosystem"
     ],
+    "openarms": [
+      "domains/tools-and-platforms/openarms"
+    ],
+    "ai-assistant": [
+      "domains/tools-and-platforms/openarms"
+    ],
+    "plugin-sdk": [
+      "domains/tools-and-platforms/openarms"
+    ],
+    "multi-channel": [
+      "domains/tools-and-platforms/openarms"
+    ],
+    "sandbox": [
+      "domains/tools-and-platforms/openarms"
+    ],
+    "media-pipeline": [
+      "domains/tools-and-platforms/openarms"
+    ],
     "plane": [
       "domains/tools-and-platforms/plane"
     ],
@@ -6409,6 +6496,12 @@
         "Cross-Domain \u2014 Domain Overview",
         "Devops \u2014 Domain Overview",
         "Tools And Platforms \u2014 Domain Overview"
+      ]
+    },
+    {
+      "target": "Multi-Channel AI Agent Access",
+      "referenced_by": [
+        "OpenArms"
       ]
     },
     {

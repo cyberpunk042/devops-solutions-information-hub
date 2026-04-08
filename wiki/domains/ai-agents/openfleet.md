@@ -125,6 +125,7 @@ Every 30 seconds (configurable: turbo=5s, standard=30s, economic=60s):
 [[Local LLM Quantization]]
 [[MCP Integration Architecture]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[OpenArms]]
 [[Plan Execute Review Cycle]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Synthesis: Claude Code Harness Engineering]]

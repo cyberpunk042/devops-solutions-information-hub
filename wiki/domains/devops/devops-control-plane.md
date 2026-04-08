@@ -82,3 +82,4 @@ The devops-control-plane occupies a foundational role:
 [[Plane]]
 [[Claude Code]]
 [[Wiki Ingestion Pipeline]]
+[[OpenArms]]

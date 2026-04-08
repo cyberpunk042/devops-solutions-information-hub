@@ -145,6 +145,7 @@ Tools:
 [[Context-Aware Tool Loading]]
 [[Decision: MCP vs CLI for Tool Integration]]
 [[Harness Engineering]]
+[[OpenArms]]
 [[Plan Execute Review Cycle]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Synthesis: Playwright MCP for Visual Development Testing]]

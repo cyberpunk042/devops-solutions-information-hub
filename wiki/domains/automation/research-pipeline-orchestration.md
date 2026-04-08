@@ -125,6 +125,7 @@ The gap between current state and the vision:
 [[Decision: MCP vs CLI for Tool Integration]]
 [[Harness Engineering]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[OpenArms]]
 [[Plan Execute Review Cycle]]
 [[Second Brain Architecture]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
