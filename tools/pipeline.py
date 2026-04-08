@@ -1054,6 +1054,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Pipeline orchestrator for the research wiki",
         formatter_class=argparse.RawDescriptionHelpFormatter,
+        allow_abbrev=False,
         epilog="""
 Commands:
   post                  Run post-ingestion chain (index → manifest → validate → obsidian → lint)
@@ -1291,7 +1292,7 @@ Commands:
             type_filter=sub_args.etype,
             domain_filter=sub_args.domain,
             clear_queue=sub_args.clear,
-            verbose=verbose,
+            verbose=verbose and not args.json,
         )
         if args.json:
             print(json.dumps(result, indent=2, default=str))

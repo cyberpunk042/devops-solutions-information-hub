@@ -929,6 +929,8 @@ def get_backend(name: str, project_root: Path) -> LLMBackend:
 
 def _print_candidates(candidates: List[Candidate], verbose: bool = True) -> None:
     """Print a formatted table of evolution candidates."""
+    if not verbose:
+        return
     if not candidates:
         print("  No evolution candidates found.")
         return
@@ -939,9 +941,8 @@ def _print_candidates(candidates: List[Candidate], verbose: bool = True) -> None
         domain_short = (c.domain or "cross-domain")[:24]
         title_short = c.title[:55]
         print(f"  {i:<4} {c.score:<7.3f} {c.type:<10} {domain_short:<25} {title_short}")
-        if verbose:
-            for sig in c.signals:
-                print(f"       {'':7} {'':10} {'':25}   ({sig.name}: {sig.score:.3f})")
+        for sig in c.signals:
+            print(f"       {'':7} {'':10} {'':25}   ({sig.name}: {sig.score:.3f})")
 
     print(f"\n  Total: {len(candidates)} candidate(s)")
 
