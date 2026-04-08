@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08T19:01:46.659402+00:00",
+  "generated": "2026-04-08T19:10:17.601275+00:00",
   "stats": {
     "pages": 72,
     "domains": 7,
@@ -14,8 +14,8 @@
       "spine": 7
     },
     "maturity": {
-      "seed": 11,
-      "growing": 6
+      "growing": 14,
+      "seed": 3
     }
   },
   "pages": [
@@ -334,7 +334,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Synthesis: Claude Code Harness Engineering",
         "Synthesis: Claude Code Accuracy Tips",
@@ -2919,7 +2919,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Harness Engineering",
         "OpenFleet",
@@ -3006,7 +3006,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Synthesis: Claude Code Accuracy Tips",
         "Synthesis: Claude Code Harness Engineering",
@@ -3099,7 +3099,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Claude Code Best Practices",
         "Synthesis: Claude Code Accuracy Tips",
@@ -3188,7 +3188,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Claude Code Skills",
         "Claude Code Best Practices"
@@ -3272,7 +3272,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "LLM Wiki Pattern",
         "Wiki Ingestion Pipeline"
@@ -3361,7 +3361,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Obsidian Knowledge Vault",
         "LLM Wiki Pattern"
@@ -3442,7 +3442,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Wiki Ingestion Pipeline",
         "Research Pipeline Orchestration"

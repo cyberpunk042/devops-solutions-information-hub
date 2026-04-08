@@ -894,6 +894,11 @@ CHAINS: Dict[str, Dict[str, Any]] = {
         "steps": ["evolve-spine", "post"],
         "needs_input": False,
     },
+    "review": {
+        "description": "Post-chain → evolve review → gaps → crossref (weekly review)",
+        "steps": ["post", "evolve-review", "gaps", "crossref"],
+        "needs_input": False,
+    },
 }
 
 
@@ -989,6 +994,15 @@ def run_chain(chain_name: str, project_root: Path, inputs: List[str] = None,
             step_result = run_evolve(project_root, mode="auto", type_filter="domain-overview",
                                      backend_name="openai", top=7, verbose=verbose)
             results["steps"]["evolve-spine"] = step_result
+
+        elif step_name == "evolve-review":
+            from tools.evolve import review_seeds, detect_stale
+            review_result = review_seeds(project_root, verbose=verbose)
+            stale_result = detect_stale(project_root, verbose=verbose)
+            results["steps"]["evolve-review"] = {
+                "promotable": review_result.get("promotable", []),
+                "stale": stale_result.get("stale", []),
+            }
 
     return results
 

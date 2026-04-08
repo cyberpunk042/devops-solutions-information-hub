@@ -5,7 +5,7 @@ domain: ai-agents
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Synthesis: Claude Code Accuracy Tips"
   - "Synthesis: Claude Code Harness Engineering"

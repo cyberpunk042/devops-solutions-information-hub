@@ -5,7 +5,7 @@ domain: knowledge-systems
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-08
 updated: 2026-04-08
 sources:
