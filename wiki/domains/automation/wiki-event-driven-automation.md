@@ -59,6 +59,7 @@ The connection between this concept and the AI-Driven Content Pipeline is direct
 - Can event hooks be implemented purely through Claude Code skills and scheduling, or do they require custom infrastructure?
 - How does the auto-contradiction check scale as the wiki grows -- does it need to read the entire wiki on every write?
 - What is the failure mode when an automated hook produces low-quality output -- is there a rollback mechanism?
+- Cross-source insight: The hooks architecture here maps directly to Claude Code Best Practices' hook taxonomy (PostToolUse, PreToolUse, Stop hooks). The six wiki event hooks could be implemented as Claude Code hooks, creating a direct bridge between the ai-agents and automation domains. The "on-schedule" hook maps to Claude Code Scheduling's two modes (local cron vs. remote tasks).
 
 ## Relationships
 

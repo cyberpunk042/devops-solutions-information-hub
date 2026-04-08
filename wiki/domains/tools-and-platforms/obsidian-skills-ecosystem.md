@@ -93,6 +93,7 @@ The dependence on Obsidian's desktop app for CLI operations (pablo-mano) is a me
 - Will Obsidian introduce a plugin API that makes CLI-over-IPC unnecessary for agent interaction?
 - Can visual generation skills (axton) achieve deterministic, production-quality output, or will output variability remain a fundamental limitation?
 - What is the path from experimental community skills to officially endorsed Obsidian extensions?
+- Cross-source insight: The three-layer ecosystem pattern here (official spec, visual generation, deep CLI) parallels the Command-Agent-Skill hierarchy in Claude Code Best Practices. In both cases, different abstraction levels serve different purposes and compose rather than compete. This suggests a general principle: agent extensibility systems naturally stratify into specification, generation, and control layers.
 
 ## Relationships
 
@@ -103,6 +104,7 @@ The dependence on Obsidian's desktop app for CLI operations (pablo-mano) is a me
 - BUILDS ON: Obsidian Knowledge Vault
 - RELATES TO: NotebookLM Skills
 - RELATES TO: LLM Wiki Pattern
+- RELATES TO: Skills Architecture Patterns
 
 ## Backlinks
 
@@ -113,6 +115,7 @@ The dependence on Obsidian's desktop app for CLI operations (pablo-mano) is a me
 [[Obsidian Knowledge Vault]]
 [[NotebookLM Skills]]
 [[LLM Wiki Pattern]]
+[[Skills Architecture Patterns]]
 [[Synthesis: axtonliu/axton-obsidian-visual-skills]]
 [[Synthesis: kepano/obsidian-skills]]
 [[Synthesis: pablo-mano/Obsidian-CLI-skill]]

@@ -82,6 +82,9 @@ This transforms lint from a periodic maintenance task into a continuous quality 
 - ENABLES: Memory Lifecycle Management
 - RELATES TO: Obsidian Knowledge Vault
 - RELATES TO: Wiki Event-Driven Automation
+- CONSTRAINED BY: Claude Code Context Management
+- RELATES TO: Wiki Knowledge Graph
+- ENABLED BY: Claude Code Scheduling
 
 ## Backlinks
 
@@ -93,6 +96,9 @@ This transforms lint from a periodic maintenance task into a continuous quality 
 [[Memory Lifecycle Management]]
 [[Obsidian Knowledge Vault]]
 [[Wiki Event-Driven Automation]]
+[[Claude Code Context Management]]
+[[Wiki Knowledge Graph]]
+[[Claude Code Scheduling]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]

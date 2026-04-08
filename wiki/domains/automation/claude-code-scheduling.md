@@ -57,19 +57,22 @@ The "bypass permissions mode" for low-risk tasks is a trust calibration mechanis
 - Can scheduled tasks be chained or have dependencies (e.g., task B runs only after task A completes)?
 - How does timezone handling work for remote tasks — is it tied to the user's configured timezone or the server's?
 - What is the maximum frequency for scheduled tasks, and are there rate limits?
+- Cross-source insight: Scheduling is the implementation mechanism for the "on-schedule" hook in Wiki Event-Driven Automation (periodic lint, consolidation, retention decay). How do the two scheduling modes (local cron vs. remote tasks) map to the six event hooks -- which hooks require always-on availability (remote) vs. which can tolerate machine-off gaps (local)?
 
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team
-- BUILDS ON: claude-code-skills
-- ENABLES: ai-driven-content-pipeline
-- RELATES TO: notebooklm
+- BUILDS ON: Claude Code Skills
+- ENABLES: AI-Driven Content Pipeline
+- RELATES TO: NotebookLM
+- ENABLES: Wiki Event-Driven Automation
+- RELATES TO: LLM Knowledge Linting
 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[claude-code-skills]]
-[[ai-driven-content-pipeline]]
-[[notebooklm]]
 [[Claude Code Skills]]
+[[AI-Driven Content Pipeline]]
+[[NotebookLM]]
 [[Wiki Event-Driven Automation]]
+[[LLM Knowledge Linting]]

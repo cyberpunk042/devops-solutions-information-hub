@@ -55,6 +55,8 @@ The connection to Karpathy's original lint operation is direct: lint can serve a
 - How should confidence thresholds be calibrated -- what confidence score triggers "stale" flagging vs. active deprioritization?
 - Can the forgetting curve parameters be tuned per domain (e.g., slower decay for legal facts, faster for technology trends)?
 - How does lifecycle management interact with the Git version history -- should superseded content be preserved in Git history rather than in the wiki itself?
+- Cross-source insight: The four-tier consolidation pipeline (working, episodic, semantic, procedural memory) maps to the skill complexity spectrum identified in Skills Architecture Patterns. Procedural memory ("workflows and patterns extracted from repeated semantics") is essentially what skills encode. Could the consolidation pipeline automatically generate or refine skills from repeated wiki query patterns -- promoting semantic knowledge to procedural skills?
+- Cross-source insight: Claude Code Context Management's "lost in the middle" problem directly impacts how memory lifecycle management should structure its output. High-confidence, frequently-accessed knowledge should be placed at the beginning or end of relevant pages, while low-confidence or less-accessed content can occupy the middle. Memory lifecycle metadata could drive page layout optimization for LLM attention patterns.
 
 ## Relationships
 
@@ -64,6 +66,8 @@ The connection to Karpathy's original lint operation is direct: lint can serve a
 - RELATES TO: Wiki Ingestion Pipeline
 - RELATES TO: LLM Wiki vs RAG
 - RELATES TO: Claude Code Context Management
+- RELATES TO: Wiki Knowledge Graph
+- RELATES TO: Wiki Event-Driven Automation
 
 ## Backlinks
 
@@ -73,5 +77,6 @@ The connection to Karpathy's original lint operation is direct: lint can serve a
 [[Wiki Ingestion Pipeline]]
 [[LLM Wiki vs RAG]]
 [[Claude Code Context Management]]
-[[Wiki Event-Driven Automation]]
 [[Wiki Knowledge Graph]]
+[[Wiki Event-Driven Automation]]
+[[Agentic Search vs Vector Search]]

@@ -67,6 +67,8 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 - How do the browser automation approaches compare in reliability over weeks of use?
 - Could a unified skill be built that combines PleasePrompto's query focus with claude-world's pipeline capabilities?
 - What is the practical notebook limit in NotebookLM before the library routing in PleasePrompto becomes unreliable?
+- Cross-source insight: PleasePrompto's anti-hallucination positioning creates an interesting bridge to the Agentic Search vs Vector Search debate. PleasePrompto treats NotebookLM as a grounded retrieval system (RAG-like) that is explicitly better than local RAG. Yet Karpathy critiques NotebookLM as a "retrieve-and-forget" system lacking compounding. The resolution: use NotebookLM for accuracy on specific questions, and the LLM Wiki for knowledge compounding over time. They serve complementary roles.
+- Cross-source insight: The claude-world pipeline skill's 4-phase architecture (collect, research, generate, publish) is structurally identical to the Wiki Ingestion Pipeline's 3-phase architecture (ingest, process, link). Both are agent-orchestrated pipelines that transform raw sources into structured output. The difference is the output: wiki pages vs. content assets.
 
 ## Relationships
 
@@ -76,6 +78,8 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 - BUILDS ON: NotebookLM
 - RELATES TO: Obsidian Skills Ecosystem
 - RELATES TO: LLM Wiki Pattern
+- ENABLES: AI-Driven Content Pipeline
+- RELATES TO: Skills Architecture Patterns
 
 ## Backlinks
 
@@ -85,5 +89,8 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 [[NotebookLM]]
 [[Obsidian Skills Ecosystem]]
 [[LLM Wiki Pattern]]
+[[AI-Driven Content Pipeline]]
+[[Skills Architecture Patterns]]
+[[Agentic Search vs Vector Search]]
 [[Synthesis: PleasePrompto/notebooklm-skill]]
 [[Synthesis: claude-world/notebooklm-skill]]

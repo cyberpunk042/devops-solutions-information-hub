@@ -70,6 +70,8 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 - Can the Research-Plan-Execute-Review-Ship pattern be further optimized, or is it already at its minimum viable complexity?
 - How do best practices change as models improve -- does plan mode become less necessary as models get better at self-correction?
 - What is the practical upper bound on skill complexity before a skill becomes unreliable for Claude to follow?
+- Cross-source tension: The "agentic search beats RAG" finding (Claude Code discarded vector databases for code) appears to conflict with LLM Wiki v2's recommendation for hybrid search including vectors. The likely resolution is that the domains differ -- code changes frequently and drifts from embeddings, while wiki knowledge is more stable and benefits from semantic similarity search. This suggests the best practice is domain-dependent.
+- Cross-source tension: Skills described as "just a markdown file" (content team video) vs. "folders with progressive disclosure" (shanraisshan). These reflect a complexity spectrum rather than a contradiction -- simple skills are single files, production skills are structured folders. The best practice may be to start simple and graduate to folders when a skill accumulates scripts, references, and gotchas.
 
 ## Relationships
 
@@ -80,6 +82,8 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 - RELATES TO: LLM Wiki Pattern
 - RELATES TO: Wiki Ingestion Pipeline
 - RELATES TO: Wiki Event-Driven Automation
+- RELATES TO: LLM Wiki vs RAG
+- RELATES TO: Skills Architecture Patterns
 
 ## Backlinks
 
@@ -90,5 +94,8 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 [[LLM Wiki Pattern]]
 [[Wiki Ingestion Pipeline]]
 [[Wiki Event-Driven Automation]]
+[[LLM Wiki vs RAG]]
+[[Skills Architecture Patterns]]
+[[Agentic Search vs Vector Search]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

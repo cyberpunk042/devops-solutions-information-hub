@@ -76,6 +76,8 @@ The 5-minute prompt cache TTL is a subtle but important operational detail. It m
 - How does the lost-in-the-middle phenomenon interact with compaction -- does compacting effectively move important content back to the "edges" of attention?
 - Is there a tool or technique to profile per-message token cost broken down by component (conversation history vs. CLAUDE.md vs. MCP overhead vs. system prompt)?
 - How do the economics change with different subscription plans -- is context management equally important on the $200/month plan as on the $20/month plan?
+- Cross-source insight: How does the cost of a full wiki linting pass (which reads the entire wiki) interact with context window limits? LLM Knowledge Linting and context management are fundamentally in tension -- linting requires broad reads while context management demands narrow ones. Incremental linting (only pages changed since last pass) may be the resolution.
+- Cross-source insight: The wiki ingestion pipeline's batch mode (36 transcripts in 14 minutes) implies significant context consumption per batch. What are optimal batch sizes given context compounding?
 
 ## Relationships
 
@@ -86,6 +88,9 @@ The 5-minute prompt cache TTL is a subtle but important operational detail. It m
 - RELATES TO: LLM Wiki Pattern
 - RELATES TO: Memory Lifecycle Management
 - RELATES TO: Wiki Knowledge Graph
+- CONSTRAINS: Wiki Ingestion Pipeline
+- CONSTRAINS: LLM Knowledge Linting
+- RELATES TO: Skills Architecture Patterns
 
 ## Backlinks
 
@@ -96,5 +101,8 @@ The 5-minute prompt cache TTL is a subtle but important operational detail. It m
 [[LLM Wiki Pattern]]
 [[Memory Lifecycle Management]]
 [[Wiki Knowledge Graph]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Knowledge Linting]]
+[[Skills Architecture Patterns]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

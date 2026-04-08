@@ -55,6 +55,8 @@ The connection to Obsidian is relevant: Obsidian's graph view already visualizes
 - What is the minimum set of relationship types that provides practical value without over-engineering?
 - How should entity merging work when the same real-world entity appears under different names across sources?
 - Can Obsidian plugins like Dataview or Juggl provide typed graph visualization from frontmatter metadata?
+- Cross-source insight: The typed relationships in the knowledge graph (uses, depends on, contradicts, supersedes) map directly to the relationship verbs used in this wiki's own pages (BUILDS ON, ENABLES, CONSTRAINS, CONTRASTS WITH). This wiki is itself a partial implementation of the Wiki Knowledge Graph pattern -- the gap is that its relationships are page-level rather than claim-level.
+- Cross-source insight: The Obsidian Skills Ecosystem's three-layer architecture (format spec, content generation, programmatic control) demonstrates that knowledge graphs are not just for content -- they can model capability relationships between skills. A "skills graph" with typed edges (EXTENDS, OVERLAPS, COMPLEMENTS) could help agents decide which skills to load.
 
 ## Relationships
 
@@ -64,6 +66,7 @@ The connection to Obsidian is relevant: Obsidian's graph view already visualizes
 - ENABLES: Memory Lifecycle Management
 - RELATES TO: LLM Wiki vs RAG
 - RELATES TO: Obsidian Knowledge Vault
+- RELATES TO: LLM Knowledge Linting
 
 ## Backlinks
 
@@ -73,4 +76,6 @@ The connection to Obsidian is relevant: Obsidian's graph view already visualizes
 [[Memory Lifecycle Management]]
 [[LLM Wiki vs RAG]]
 [[Obsidian Knowledge Vault]]
+[[LLM Knowledge Linting]]
+[[Agentic Search vs Vector Search]]
 [[Claude Code Context Management]]

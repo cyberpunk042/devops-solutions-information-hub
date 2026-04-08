@@ -78,6 +78,8 @@ A key architectural decision is that the raw source is preserved in the `raw/` f
 - FEEDS INTO: LLM Knowledge Linting
 - FEEDS INTO: Wiki Knowledge Graph
 - RELATES TO: Wiki Event-Driven Automation
+- PARALLELS: AI-Driven Content Pipeline
+- CONSTRAINED BY: Claude Code Context Management
 
 ## Backlinks
 
@@ -89,6 +91,8 @@ A key architectural decision is that the raw source is preserved in the `raw/` f
 [[LLM Knowledge Linting]]
 [[Wiki Knowledge Graph]]
 [[Wiki Event-Driven Automation]]
+[[AI-Driven Content Pipeline]]
+[[Claude Code Context Management]]
 [[Claude Code Best Practices]]
 [[LLM Wiki vs RAG]]
 [[Memory Lifecycle Management]]

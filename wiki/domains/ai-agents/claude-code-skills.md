@@ -110,6 +110,7 @@ This suggests that Claude Code skills exist on a complexity spectrum: simple ski
 - ENABLES: Wiki Event-Driven Automation
 - BUILDS ON: NotebookLM
 - RELATES TO: Obsidian Knowledge Vault
+- RELATES TO: Skills Architecture Patterns
 
 ## Backlinks
 
@@ -124,6 +125,7 @@ This suggests that Claude Code skills exist on a complexity spectrum: simple ski
 [[Wiki Event-Driven Automation]]
 [[NotebookLM]]
 [[Obsidian Knowledge Vault]]
+[[Skills Architecture Patterns]]
 [[NotebookLM Skills]]
 [[Obsidian Skills Ecosystem]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]

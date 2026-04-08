@@ -54,22 +54,27 @@ The breadth of output formats — from visual (slides, mind maps, infographics) 
 - What is the quality ceiling for slide design customization — can it match professional presentation tools?
 - How does the notebooklm-py package authenticate and maintain sessions, and what are its stability guarantees for long-running automated workflows?
 - Does NotebookLM support collaborative notebooks or is it single-user only?
+- Cross-source insight: Karpathy explicitly names NotebookLM as an example of the "retrieve-and-forget" pattern (RAG) where "the LLM is rediscovering knowledge from scratch on every question." Could NotebookLM notebooks be used as source material for the LLM Wiki ingestion pipeline, bridging the two paradigms?
 
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team
-- USED BY: ai-driven-content-pipeline
-- ENABLES: claude-code-skills
-- RELATES TO: claude-code-scheduling
+- USED BY: AI-Driven Content Pipeline
+- ENABLES: Claude Code Skills
+- RELATES TO: Claude Code Scheduling
 - ENABLES: NotebookLM Skills
+- CONTRASTS WITH: LLM Wiki vs RAG
+- RELATES TO: LLM Wiki Pattern
 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[ai-driven-content-pipeline]]
-[[claude-code-skills]]
-[[claude-code-scheduling]]
-[[NotebookLM Skills]]
+[[AI-Driven Content Pipeline]]
 [[Claude Code Skills]]
+[[Claude Code Scheduling]]
+[[NotebookLM Skills]]
+[[LLM Wiki vs RAG]]
+[[LLM Wiki Pattern]]
+[[Agentic Search vs Vector Search]]
 [[Synthesis: PleasePrompto/notebooklm-skill]]
 [[Synthesis: claude-world/notebooklm-skill]]

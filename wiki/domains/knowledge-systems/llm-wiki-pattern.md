@@ -84,6 +84,8 @@ These extensions represent the maturation path from a personal tool to a product
 - What is the optimal index granularity — one master index, or hierarchical sub-indexes by domain?
 - How does the schema document evolve in practice — are there examples of mature schemas after months of use?
 - Is there a recommended approach for merging multiple single-user wikis into a shared team wiki? (The v2 document proposes mesh sync with last-write-wins, but details are sparse.)
+- Cross-source insight: The LLM Wiki Pattern and the Skills Architecture Pattern are structurally parallel -- both use markdown files as LLM-readable persistent artifacts that compound over time through iterative refinement. Wiki pages store knowledge about the world; skills store knowledge about how to act. This suggests the LLM Wiki Pattern is an instance of a more general "LLM-readable persistent artifact" pattern.
+- Cross-source insight: Karpathy's "LLM as librarian, human as curator" division of labor maps directly to the Claude Code Best Practices' "don't babysit, but do watch" principle and to the Wiki Event-Driven Automation's "human in the strategic loop" design. All three sources independently arrive at the same human-AI collaboration boundary: humans direct, AI executes and maintains.
 
 ## Relationships
 
@@ -97,6 +99,10 @@ These extensions represent the maturation path from a personal tool to a product
 - ENABLES: Wiki Event-Driven Automation
 - USED BY: Obsidian Knowledge Vault
 - FEEDS INTO: LLM Knowledge Linting
+- RELATES TO: Claude Code Context Management
+- RELATES TO: NotebookLM
+- RELATES TO: Skills Architecture Patterns
+- RELATES TO: Agentic Search vs Vector Search
 
 ## Backlinks
 
@@ -110,8 +116,11 @@ These extensions represent the maturation path from a personal tool to a product
 [[Wiki Event-Driven Automation]]
 [[Obsidian Knowledge Vault]]
 [[LLM Knowledge Linting]]
-[[Claude Code Best Practices]]
 [[Claude Code Context Management]]
+[[NotebookLM]]
+[[Skills Architecture Patterns]]
+[[Agentic Search vs Vector Search]]
+[[Claude Code Best Practices]]
 [[NotebookLM Skills]]
 [[Obsidian Skills Ecosystem]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

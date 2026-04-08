@@ -78,6 +78,8 @@ This demonstrates that the Obsidian + Claude Code combination has at least two d
 - ENABLES: Wiki Ingestion Pipeline
 - RELATES TO: Claude Code Skills
 - RELATES TO: Wiki Knowledge Graph
+- USED BY: Obsidian Skills Ecosystem
+- RELATES TO: LLM Knowledge Linting
 
 ## Backlinks
 
@@ -88,8 +90,8 @@ This demonstrates that the Obsidian + Claude Code combination has at least two d
 [[Wiki Ingestion Pipeline]]
 [[Claude Code Skills]]
 [[Wiki Knowledge Graph]]
-[[LLM Knowledge Linting]]
 [[Obsidian Skills Ecosystem]]
+[[LLM Knowledge Linting]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: Obsidian + Claude Code Second Brain Setup]]

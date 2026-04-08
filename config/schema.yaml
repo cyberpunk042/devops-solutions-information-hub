@@ -89,6 +89,12 @@ relationship_verbs:
   - SUPERSEDES
   - IMPLEMENTS
   - EXTENDS
+  - CONSTRAINS
+  - CONSTRAINED BY
+  - PARALLELS
+  - SYNTHESIZES
+  - ENABLED BY
+  - CONTRASTS WITH
 
 source_required_fields:
   - id

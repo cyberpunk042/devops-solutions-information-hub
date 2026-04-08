@@ -59,22 +59,28 @@ A key architectural observation is that the pipeline's reliability depends on th
 - What are the storage and organizational implications of running this daily — does it create notebook sprawl in NotebookLM?
 - Can the pipeline be extended to distribute generated content (e.g., auto-post slides to a CMS, upload podcasts to a hosting platform)?
 - How does this pattern compare to purpose-built content automation platforms in terms of reliability and output quality?
+- Cross-source insight: The content pipeline and the wiki ingestion pipeline are structural parallels -- both take raw sources as input, process them through an LLM orchestration layer, and produce structured output. Could they be unified into a single ingest-then-publish pattern where wiki pages and content assets are produced from the same source in one pass?
 
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team
-- BUILDS ON: notebooklm
-- BUILDS ON: claude-code-skills
-- BUILDS ON: claude-code-scheduling
+- BUILDS ON: NotebookLM
+- BUILDS ON: Claude Code Skills
+- BUILDS ON: Claude Code Scheduling
 - IMPLEMENTS: Agent-as-Orchestrator Pattern
+- PARALLELS: Wiki Ingestion Pipeline
+- RELATES TO: NotebookLM Skills
+- RELATES TO: Skills Architecture Patterns
 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[notebooklm]]
-[[claude-code-skills]]
-[[claude-code-scheduling]]
-[[Agent-as-orchestrator pattern where Claude Code coordinates specialized tools rather than generating content directly]]
+[[NotebookLM]]
 [[Claude Code Skills]]
+[[Claude Code Scheduling]]
+[[Agent-as-Orchestrator Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[NotebookLM Skills]]
+[[Skills Architecture Patterns]]
 [[Synthesis: Obsidian + Claude Code Second Brain Setup]]
 [[Wiki Event-Driven Automation]]
