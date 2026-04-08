@@ -17,6 +17,11 @@ optional_fields:
   - aliases
   - complexity
   - resolution
+  - layer
+  - derived_from
+  - maturity
+  - instances
+  - reversibility
 
 enums:
   type:
@@ -26,6 +31,12 @@ enums:
     - reference
     - deep-dive
     - index
+    - lesson
+    - pattern
+    - decision
+    - domain-overview
+    - learning-path
+    - evolution
   status:
     - raw
     - processing
@@ -42,6 +53,16 @@ enums:
     - intermediate
     - advanced
     - expert
+  maturity:
+    - seed
+    - growing
+    - mature
+    - canonical
+  reversibility:
+    - easy
+    - moderate
+    - hard
+    - irreversible
   source_type:
     - article
     - youtube-transcript
@@ -76,6 +97,48 @@ required_sections:
     - Deep Analysis
     - Relationships
   index: []
+  lesson:
+    - Summary
+    - Context
+    - Insight
+    - Evidence
+    - Applicability
+    - Relationships
+  pattern:
+    - Summary
+    - Pattern Description
+    - Instances
+    - When To Apply
+    - When Not To
+    - Relationships
+  decision:
+    - Summary
+    - Decision
+    - Alternatives
+    - Rationale
+    - Reversibility
+    - Dependencies
+    - Relationships
+  domain-overview:
+    - Summary
+    - State of Knowledge
+    - Maturity Map
+    - Gaps
+    - Priorities
+    - Key Pages
+    - Relationships
+  learning-path:
+    - Summary
+    - Prerequisites
+    - Sequence
+    - Outcomes
+    - Relationships
+  evolution:
+    - Summary
+    - Timeline
+    - Key Shifts
+    - Current State
+    - Relationships
 
 relationship_verbs:
   - BUILDS ON
