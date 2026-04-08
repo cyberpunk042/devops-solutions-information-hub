@@ -118,3 +118,21 @@ Report:
 - Growth over time (pages added per week, from git history)
 - Gap score per domain (orphaned refs / total refs ratio)
 - Export readiness (% of pages passing each export profile's filters)
+- Layer/maturity distribution (by_layer, by_maturity from stats)
+
+### Evolve
+
+Trigger: user says "evolve", "score candidates", "scaffold lessons", "generate evolved pages"
+
+Delegate to the evolve skill (skills/evolve/skill.md) which handles:
+- Candidate scoring and ranking
+- Scaffolding evolved pages (lessons, patterns, decisions)
+- Content generation (this session or local model)
+- Maturity review and staleness detection
+- Domain overview maintenance
+
+Quick commands:
+- `python3 -m tools.pipeline evolve --score --top 10` — rank candidates
+- `python3 -m tools.pipeline evolve --scaffold --top 5` — scaffold top 5
+- `python3 -m tools.pipeline evolve --review` — review seed maturity
+- `python3 -m tools.pipeline chain evolve` — full evolve chain
