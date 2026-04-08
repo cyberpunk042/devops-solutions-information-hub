@@ -23,3 +23,7 @@ Thumbs.db
 
 # Project
 *.pyc
+
+# Obsidian workspace (user-specific, not portable)
+wiki/.obsidian/workspace.json
+wiki/.obsidian/workspace-mobile.json

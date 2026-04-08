@@ -89,7 +89,8 @@ After every ingestion:
 2. Regenerate manifest.json via tools/manifest.py
 3. Run tools/validate.py — errors block completion
 4. Flag stale pages affected by new information
-5. Report summary of changes
+5. Regenerate wikilinks via tools/obsidian.py
+6. Report summary of changes
 
 ## Integration
 
@@ -108,6 +109,7 @@ Export transforms YAML frontmatter to markdown headers for compatibility.
 - `python3 tools/lint.py [--report|--summary|--fix]` — Health checks
 - `python3 tools/export.py [openfleet|aicp]` — Export for sister projects
 - `python3 tools/stats.py [--json]` — Coverage & growth reporting
+- `python3 tools/obsidian.py` — Regenerate [[wikilinks]] for Obsidian graph view
 
 ## Conventions
 

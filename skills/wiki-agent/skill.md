@@ -46,8 +46,9 @@ Post-ingestion (every time):
 1. Update affected _index.md files
 2. Run: python3 tools/manifest.py
 3. Run: python3 tools/validate.py
-4. Flag stale pages needing review
-5. Report summary: sources processed, pages created/updated, domains affected,
+4. Run: python3 tools/obsidian.py
+5. Flag stale pages needing review
+6. Report summary: sources processed, pages created/updated, domains affected,
    relationships added, any warnings
 
 ### Query
