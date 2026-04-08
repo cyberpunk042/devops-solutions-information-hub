@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-08T17:51:49.045260+00:00",
+  "generated": "2026-04-08T17:56:02.672775+00:00",
   "stats": {
-    "pages": 68,
+    "pages": 69,
     "domains": 7,
     "sources": 20,
     "comparisons": 3,
-    "relationships": 513,
-    "tags_unique": 260,
+    "relationships": 519,
+    "tags_unique": 266,
     "layers": {
       "6": 1,
       "4": 7,
@@ -700,6 +700,73 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki Pattern"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-agents/design-md-pattern.md",
+      "slug": "domains/ai-agents/design-md-pattern",
+      "title": "Design.md Pattern",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "design-md",
+        "design-system",
+        "ai-agents",
+        "claude-md",
+        "google-stitch",
+        "markdown-config",
+        "ui-consistency",
+        "agent-context"
+      ],
+      "sources": [
+        {
+          "id": "src-design-md-research",
+          "type": "article",
+          "url": "https://github.com/VoltAgent/awesome-design-md",
+          "file": "raw/articles/design-md-pattern-research.md",
+          "title": "Design.md Pattern Research",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-google-stitch-design-md",
+          "type": "article",
+          "url": "https://www.mindstudio.ai/blog/what-is-google-stitch-design-md-file",
+          "title": "What Is Google Stitch's Design.md File?",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "EXTENDS",
+          "target": "Claude Code Best Practices (CLAUDE.md is the same pattern for coding)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Skills Architecture Patterns (static vs dynamic AI context)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness Engineering (project-root config as agent guardrails)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Context Management (context budget considerations)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "MCP Integration Architecture (Design.md + MCP Stitch server)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Pattern (markdown as AI-native knowledge format)"
         }
       ]
     },
@@ -4879,8 +4946,8 @@
       "relationship_count": 113
     },
     "ai-agents": {
-      "page_count": 21,
-      "relationship_count": 175
+      "page_count": 22,
+      "relationship_count": 181
     },
     "ai-models": {
       "page_count": 3,
@@ -5220,6 +5287,33 @@
       "sources/src-notebooklm-claude-code-workflow",
       "spine/domain-overviews/automation-\u2014-domain-overview"
     ],
+    "design-md": [
+      "domains/ai-agents/design-md-pattern"
+    ],
+    "design-system": [
+      "domains/ai-agents/design-md-pattern"
+    ],
+    "ai-agents": [
+      "domains/ai-agents/design-md-pattern",
+      "domains/ai-agents/openfleet",
+      "spine/domain-overviews/ai-agents-\u2014-domain-overview"
+    ],
+    "claude-md": [
+      "domains/ai-agents/design-md-pattern",
+      "sources/src-playwright-mcp-visual-testing"
+    ],
+    "google-stitch": [
+      "domains/ai-agents/design-md-pattern"
+    ],
+    "markdown-config": [
+      "domains/ai-agents/design-md-pattern"
+    ],
+    "ui-consistency": [
+      "domains/ai-agents/design-md-pattern"
+    ],
+    "agent-context": [
+      "domains/ai-agents/design-md-pattern"
+    ],
     "harness-engineering": [
       "domains/ai-agents/harness-engineering",
       "lessons/always-plan-before-executing",
@@ -5312,10 +5406,6 @@
       "domains/knowledge-systems/lightrag",
       "lessons/always-plan-before-executing",
       "patterns/plan-execute-review-cycle"
-    ],
-    "ai-agents": [
-      "domains/ai-agents/openfleet",
-      "spine/domain-overviews/ai-agents-\u2014-domain-overview"
     ],
     "fleet-management": [
       "domains/ai-agents/openfleet"
@@ -5881,9 +5971,6 @@
       "sources/src-playwright-mcp-visual-testing"
     ],
     "responsive-design": [
-      "sources/src-playwright-mcp-visual-testing"
-    ],
-    "claude-md": [
       "sources/src-playwright-mcp-visual-testing"
     ],
     "qa": [
