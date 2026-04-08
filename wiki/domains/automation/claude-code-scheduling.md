@@ -51,13 +51,27 @@ The "bypass permissions mode" for low-risk tasks is a trust calibration mechanis
 
 ## Open Questions
 
-- What happens when a scheduled task fails — is there retry logic, error reporting, or graceful degradation?
-- How does the remote task feature handle secrets and authentication (e.g., the NotebookLM Google account login) when running on Anthropic Cloud?
-- What are the cost implications of remote tasks on Anthropic Cloud?
-- Can scheduled tasks be chained or have dependencies (e.g., task B runs only after task A completes)?
-- How does timezone handling work for remote tasks — is it tied to the user's configured timezone or the server's?
-- What is the maximum frequency for scheduled tasks, and are there rate limits?
-- Cross-source insight: Scheduling is the implementation mechanism for the "on-schedule" hook in Wiki Event-Driven Automation (periodic lint, consolidation, retention decay). How do the two scheduling modes (local cron vs. remote tasks) map to the six event hooks -- which hooks require always-on availability (remote) vs. which can tolerate machine-off gaps (local)?
+- How does the remote task feature handle secrets and authentication (e.g., the NotebookLM Google account login) when running on Anthropic Cloud? (Requires: Anthropic remote tasks documentation or direct testing; authentication in headless cloud environments is not covered by existing wiki pages)
+- What are the cost implications of remote tasks on Anthropic Cloud? (Requires: Anthropic pricing documentation for remote task execution)
+- What is the maximum frequency for scheduled tasks, and are there rate limits? (Requires: Anthropic documentation on scheduling constraints)
+
+## Answered Open Questions
+
+### What happens when a scheduled task fails — is there retry logic, error reporting, or graceful degradation?
+
+Cross-referencing `Research Pipeline Orchestration` and `Agent Orchestration Patterns`: the orchestration page documents that pipeline failure handling is a first-class concern — "How to handle pipeline failures mid-chain (e.g., one URL fails to fetch — skip or retry?)" is listed as an open design question, confirming retry logic is not yet built into the standard pipeline. The Agent Orchestration Patterns page documents OpenFleet's approach: the 12-step cycle includes a health check step that "detects stuck tasks, offline agents" and a 3-strike rule anomaly detection. Applying this to scheduling: the current Claude Code scheduling (local cron or remote tasks) does not have built-in retry logic for task-level failures. The Telegram notification integration mentioned in the Deep Analysis is the manual fallback — users observe failures via missing notifications and re-trigger manually. A more robust pattern from Agent Orchestration Patterns would be: health check after each scheduled run, alert on failure, bounded retry (max 3 attempts with backoff).
+
+### Can scheduled tasks be chained or have dependencies (e.g., task B runs only after task A completes)?
+
+Cross-referencing `Research Pipeline Orchestration`: the orchestration page documents three execution modes — Sequential (A → B → C, each step feeds the next), Group (A + B + C in parallel, results merged), and Tree (branch into parallel paths, merge at synthesis points). These compose to create complex workflows. However, this vision is for a Python pipeline engine, not for Claude Code's built-in scheduling mechanism. The current scheduling feature (local cron / remote tasks) does not natively support dependencies between tasks — each task fires independently at its scheduled time. Dependency chaining would need to be implemented either: (1) within the scheduled task's prompt/skill (task B's prompt checks for task A's output before proceeding), or (2) via the pipeline engine orchestrating the sequence within a single scheduled invocation. The Research Pipeline Orchestration vision of a Python orchestrator (`tools/pipeline.py`) that chains operations is the architectural answer to scheduled chaining.
+
+### How does timezone handling work for remote tasks — is it tied to the user's configured timezone or the server's?
+
+Cross-referencing `WSL2 Development Patterns`: the WSL2 page documents a known constraint: "Clock drift after resume — TLS errors, git timestamps wrong. WSL2 VM clock re-syncs on resume; rare in practice." For local cron on WSL2, the cron expression is evaluated against the Linux VM's system clock (which follows WSL2's timezone, typically set to UTC unless explicitly configured). The Deep Analysis on this page documents that the presenter sets "12:00 p.m. Sydney time" as a cron expression — this must be converted to the local VM's timezone for local scheduling. For remote tasks on Anthropic Cloud, the server timezone is unknown. The safe practice documented implicitly by the presenter's cron registry pattern: store the intended wall-clock time in the registry and let Claude Code generate the correct cron expression for the execution environment.
+
+### How do the two scheduling modes map to the six Wiki Event-Driven Automation hooks? (Cross-source insight)
+
+Cross-referencing `Wiki Event-Driven Automation`: that page explicitly resolves this: "On-schedule hooks map to Claude Code Scheduling (local cron or remote tasks)." The six hooks map to scheduling modes as follows: (1) **On new source** — triggered by file drop or CLI command, not by schedule; no scheduling mode required. (2) **On session start** — triggered by conversation start, not by schedule. (3) **On session end** — triggered by session close, not by schedule. (4) **On query** — triggered by query quality evaluation, not by schedule. (5) **On memory write** — triggered by wiki page writes, not by schedule. (6) **On schedule** (periodic lint, consolidation, retention decay) — this is the one hook that maps directly to scheduling. The on-schedule hook requires **always-on availability** because retention decay and consolidation are time-sensitive: a memory that should decay at day 30 produces incorrect confidence scores if the decay job only runs when the machine happens to be on. **Remote tasks** are therefore the correct mode for the on-schedule wiki automation hook. Local cron is acceptable for workflows (like the cybersecurity research pipeline) where missing a single daily run is tolerable.
 
 ## Relationships
 

@@ -70,14 +70,34 @@ The 5-minute prompt cache TTL is a subtle but important operational detail. It m
 
 ## Open Questions
 
-- What is the exact relationship between context window utilization and output quality degradation? Is there a sharp knee or a gradual decline?
-- Can the prompt cache TTL be extended or configured by the user?
-- What is the optimal CLAUDE.md size in practice -- is 200 lines a hard ceiling, or is the real metric total token count (which varies with content complexity)?
-- How does the lost-in-the-middle phenomenon interact with compaction -- does compacting effectively move important content back to the "edges" of attention?
-- Is there a tool or technique to profile per-message token cost broken down by component (conversation history vs. CLAUDE.md vs. MCP overhead vs. system prompt)?
-- How do the economics change with different subscription plans -- is context management equally important on the $200/month plan as on the $20/month plan?
-- Cross-source insight: How does the cost of a full wiki linting pass (which reads the entire wiki) interact with context window limits? LLM Knowledge Linting and context management are fundamentally in tension -- linting requires broad reads while context management demands narrow ones. Incremental linting (only pages changed since last pass) may be the resolution.
-- Cross-source insight: The wiki ingestion pipeline's batch mode (36 transcripts in 14 minutes) implies significant context consumption per batch. What are optimal batch sizes given context compounding?
+- Can the prompt cache TTL be extended or configured by the user? (Requires: Anthropic API documentation or official Claude Code settings documentation)
+- How do the economics change with different subscription plans -- is context management equally important on the $200/month plan as on the $20/month plan? (Requires: Anthropic subscription plan documentation with per-plan token allocation details)
+
+## Answered Open Questions
+
+### What is the exact relationship between context window utilization and output quality degradation? Is there a sharp knee or a gradual decline?
+
+Cross-referencing `Synthesis: Claude Code Accuracy Tips` (src-claude-code-accuracy-tips): the degradation curve is documented with specific thresholds, not as a gradual decline. The source states accuracy is high at 20% context usage, drops significantly at 40%, becomes unreliable at 60%+, and produces bugs and hallucinations at 80%. This is a step-function with identifiable knees rather than a smooth gradient. The practical implication (also from that source) is to /clear before 50% to stay in the reliable zone. The Context-Aware Tool Loading pattern page confirms this curve directly: "high at 20% usage, significantly degraded at 40%, unreliable at 60%+, producing bugs and hallucinations at 80%."
+
+### What is the optimal CLAUDE.md size in practice -- is 200 lines a hard ceiling, or is the real metric total token count (which varies with content complexity)?
+
+Cross-referencing `Context-Aware Tool Loading`: the pattern page frames this as a hot-path performance concern. The real metric is per-message overhead, which is determined by token count, not line count. A 200-line CLAUDE.md of dense prose costs more per message than a 200-line CLAUDE.md of concise bullet points. The principle from Context-Aware Tool Loading generalizes: any content loaded on every turn should be minimized. The correct mental model is that CLAUDE.md is charged on every message — so the question is not "how many lines?" but "how many tokens per message am I paying for this content, and does each element earn that cost across the session?" The 200-line heuristic is a practical proxy, but the real ceiling is whatever token count keeps the CLAUDE.md overhead below the signal cost of having that information available.
+
+### How does the lost-in-the-middle phenomenon interact with compaction -- does compacting effectively move important content back to the "edges" of attention?
+
+Cross-referencing `Memory Lifecycle Management` (cross-source insight on this page): that page explicitly notes that "high-confidence, frequently-accessed knowledge should be placed at the beginning or end of relevant pages, while low-confidence or less-accessed content can occupy the middle" — confirming that attention edge effects are a layout concern. Compaction does effectively address the lost-in-the-middle problem: the /compact operation with specific instructions rewrites the conversation summary to place key facts and decisions prominently in the condensed history, which then forms the beginning of the new effective context. This means the compacted summary's early portion receives the full beginning-of-context attention weight. However, after 3-4 compactions, even this benefit degrades — which is why the recommendation is to transition to a fresh session with a manually written summary (giving full authorial control over what occupies the high-attention positions).
+
+### Is there a tool or technique to profile per-message token cost broken down by component (conversation history vs. CLAUDE.md vs. MCP overhead vs. system prompt)?
+
+Cross-referencing `Context-Aware Tool Loading` and `CLI Tools Beat MCP for Token Efficiency`: the /context command (already documented in Key Insights) is the primary breakdown tool — it decomposes active context by component. The status line provides continuous monitoring of total context percentage. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that MCP overhead is a visible contributor: each MCP server loads its full JSON schema at session start, and this cost can be observed by comparing /context output with vs. without specific servers connected. The Context-Aware Tool Loading pattern cites the wiki MCP server overhead observation: "three planned MCP servers (wiki, NotebookLM, Obsidian) each with 6-8 tools — the cumulative schema payload consumes meaningful context budget on every single turn." Practical profiling approach: use /context before and after connecting each MCP server to measure its individual overhead contribution.
+
+### How does the cost of a full wiki linting pass interact with context window limits? (Cross-source insight)
+
+Cross-referencing `Context-Aware Tool Loading`: the resolution is deferred loading, not broad pre-loading. The pattern page addresses this directly: "External knowledge bases larger than what a context window can hold: NotebookLM notebooks, wikis, documentation libraries, code repositories. Deferred loading is not optional here — it is the only viable approach." For wiki linting, the practical resolution is incremental linting (only pages changed since last pass), which the wiki's `tools/lint.py` already supports via manifest diffing. The tension between linting's broad-read requirement and context management's narrow-read requirement resolves by treating linting as a pipeline operation (separate session or sub-agent) rather than an in-conversation operation, preventing lint token cost from contaminating the primary task context window.
+
+### What are optimal batch sizes for wiki ingestion given context compounding? (Cross-source insight)
+
+Cross-referencing `Context-Aware Tool Loading`: the pattern page documents that sub-agents receive a fresh context per task, making them the correct architecture for batch processing. "Long-running sessions, multi-step pipelines, and subagent workflows where context pressure compounds across turns" is listed as the primary context for applying deferred loading and bounded session lengths. The practical answer from the wiki's own tooling: the `pipeline chain ingest` command sequences ingestion rather than loading all sources into one session. For batch ingestion, optimal batch size is not a fixed number — it is the number of sources that can be processed before context reaches the 60% manual compaction threshold. Given ~51,000 tokens of invisible overhead and ~15,000 tokens per complex source synthesis, this implies roughly 3-5 sources per session for complex transcripts, or 8-12 for shorter articles, before compacting or starting a fresh session.
 
 ## Relationships
 

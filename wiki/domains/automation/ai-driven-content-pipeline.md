@@ -53,13 +53,30 @@ A key architectural observation is that the pipeline's reliability depends on th
 
 ## Open Questions
 
-- How does the pipeline handle failures in individual generation steps (e.g., video generation fails but slides succeed)?
-- What is the latency of a full pipeline run from topic to all generated assets?
-- How does source quality control work — can the pipeline assess whether found sources are reliable before loading them?
-- What are the storage and organizational implications of running this daily — does it create notebook sprawl in NotebookLM?
-- Can the pipeline be extended to distribute generated content (e.g., auto-post slides to a CMS, upload podcasts to a hosting platform)?
-- How does this pattern compare to purpose-built content automation platforms in terms of reliability and output quality?
-- Cross-source insight: The content pipeline and the wiki ingestion pipeline are structural parallels -- both take raw sources as input, process them through an LLM orchestration layer, and produce structured output. Could they be unified into a single ingest-then-publish pattern where wiki pages and content assets are produced from the same source in one pass?
+- What is the latency of a full pipeline run from topic to all generated assets? (Requires: empirical timing data from real pipeline runs; no existing wiki page covers this)
+- How does this pattern compare to purpose-built content automation platforms in terms of reliability and output quality? (Requires: external research on platforms like HubSpot, Contentful, or Jasper AI for direct comparison)
+
+## Answered Open Questions
+
+### How does the pipeline handle failures in individual generation steps (e.g., video generation fails but slides succeed)?
+
+Cross-referencing `notebooklm-py CLI`: the CLI documentation describes `--retry` with exponential backoff as the mechanism for individual command failures. The page documents this as a known risk: "Rate limiting: Heavy automated usage triggers Google's rate limits. The --retry flag with exponential backoff helps, but sustained high-volume pipelines need throttling." For multi-artifact generation, each artifact type is a separate `notebooklm generate` command, meaning a video failure does not block a slides generation call — they are independent CLI invocations. The pipeline's failure handling is therefore at the granularity of individual artifact types, not the entire run. Partial success (slides generated, video failed) is the natural behavior. The missing piece is automated failure reporting back through the notification channel (Telegram) with per-artifact status.
+
+### How does source quality control work — can the pipeline assess whether found sources are reliable before loading them?
+
+Cross-referencing `Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py`: NotebookLM's source grounding mechanism is the primary quality filter. The synthesis page notes that "NotebookLM excels at turning messy documentation, research, and sources into clear grounded understanding — it grounds answers in uploaded sources, preventing hallucination." However, NotebookLM grounds answers in whatever sources are provided; it does not independently assess source credibility. For the content pipeline, source quality control must happen at the Claude Code orchestration layer before sources are loaded into NotebookLM. The notebooklm-py CLI's `notebooklm source add-research` command uses NotebookLM's web research agent for automated source discovery — this agent has its own quality heuristics but they are opaque. For higher-confidence quality control, the pipeline would need Claude Code to evaluate sources (check domain authority, publication date, authorship) before calling `notebooklm source add`.
+
+### What are the storage and organizational implications of running this daily — does it create notebook sprawl in NotebookLM?
+
+Cross-referencing `notebooklm-py CLI`: the CLI page documents that NotebookLM has a 300-source limit per notebook, and large-scale research requires multi-notebook architectures (the competitive analysis example uses 2 notebooks for 35 competitors). Daily pipeline runs creating one new notebook per topic per day would indeed create notebook sprawl. The `notebooklm notebook list` and `notebooklm notebook delete` CLI commands provide programmatic management, but the pipeline would need an explicit retention policy (e.g., delete notebooks older than 30 days, or limit to N active notebooks per topic). The `notebooklm-py CLI` page also documents `notebooklm profile create/switch` for multi-profile support — a dedicated profile per content domain would partition the sprawl. The Research Pipeline Orchestration page's concept of "pipeline types" suggests a CLEANUP pipeline type alongside ONLINE RESEARCH — automated notebook lifecycle management is the natural complement to automated notebook creation.
+
+### Can the pipeline be extended to distribute generated content (e.g., auto-post slides to a CMS, upload podcasts to a hosting platform)?
+
+Cross-referencing `Research Pipeline Orchestration`: the orchestration page documents the pipeline architecture vision with an "Output Layer" that includes distribution steps downstream of generation. The pipeline's three-layer architecture (intent → orchestration → generation) already has the right structure: a fourth distribution layer would sit after generation, receiving NotebookLM artifact downloads and calling CMS APIs, podcast hosting APIs, or social media APIs. The `notebooklm-py CLI` page confirms all artifacts are downloadable programmatically (`notebooklm download slides/audio/report`), making the bridge to distribution straightforward. Claude Code's skill file architecture means distribution targets can be encoded in the same skill file that governs generation, keeping the full pipeline in one configurable unit.
+
+### Could the content pipeline and wiki ingestion pipeline be unified into a single ingest-then-publish pattern? (Cross-source insight)
+
+Cross-referencing `Knowledge Evolution Pipeline` and `Research Pipeline Orchestration`: yes, the structural parallel is real and the unification is architecturally feasible. The Knowledge Evolution Pipeline documents the outer loop as "ingest → synthesize → evolve → gap-analyze → research → repeat." The AI-Driven Content Pipeline's loop is "research → load sources → generate artifacts → distribute." These share the research and source-loading phases. The Research Pipeline Orchestration vision explicitly models a "DEEPENING" pipeline type that follows the same pattern as content generation: identify gaps → research → enrich → validate. A unified "ingest-then-publish" pattern would: (1) fetch sources via standard pipeline, (2) write wiki pages from those sources, (3) simultaneously push the same sources to NotebookLM, (4) trigger artifact generation for selected topics. The `notebooklm-py CLI` page documents this integration point explicitly: "Sources ingested via tools/ingest.py can be simultaneously pushed to NotebookLM notebooks via notebooklm source add." The unification is a pipeline configuration change, not a new architecture.
 
 ## Relationships
 
