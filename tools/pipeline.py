@@ -16,6 +16,10 @@ Usage:
     python3 -m tools.pipeline chain --list            # List available chains
     python3 -m tools.pipeline gaps                    # Run gap analysis pipeline
     python3 -m tools.pipeline crossref                # Run cross-reference analysis
+    python3 -m tools.pipeline scaffold <type> <title> # Create page from template
+    python3 -m tools.pipeline evolve --score          # Rank evolution candidates
+    python3 -m tools.pipeline evolve --auto           # Auto-generate evolved pages
+    python3 -m tools.pipeline evolve --review         # Review seed page maturity
 """
 
 import argparse

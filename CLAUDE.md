@@ -125,7 +125,16 @@ Export transforms YAML frontmatter to markdown headers for compatibility.
 - `python3 -m tools.pipeline run URL [URL...]` — Parallel fetch + post-chain in one command
 - `python3 -m tools.pipeline gaps` — Gap analysis (orphans, thin pages, weak domains, open questions)
 - `python3 -m tools.pipeline crossref` — Cross-reference analysis (missing backlinks, domain bridges, comparison candidates)
-- `python3 -m tools.pipeline chain <name>` — Run a named chain (ingest, ingest-local, analyze, full, health)
+- `python3 -m tools.pipeline scaffold <type> <title>` — Create page from template
+- `python3 -m tools.pipeline evolve --score` — Rank evolution candidates (deterministic)
+- `python3 -m tools.pipeline evolve --score --top 5 --json` — Top 5 candidates as JSON
+- `python3 -m tools.pipeline evolve --scaffold --top 3` — Scaffold top 3 candidates
+- `python3 -m tools.pipeline evolve --dry-run --top 1` — Preview generation prompt
+- `python3 -m tools.pipeline evolve --auto --backend openai` — Generate via local model
+- `python3 -m tools.pipeline evolve --auto --backend claude-code` — Write prompt queue
+- `python3 -m tools.pipeline evolve --execute` — List prompt queue for session execution
+- `python3 -m tools.pipeline evolve --review` — List seed pages ready for maturity promotion
+- `python3 -m tools.pipeline chain <name>` — Run a named chain (ingest, ingest-local, analyze, full, health, evolve, evolve-auto)
 - `python3 -m tools.pipeline chain --list` — List available chains
 
 ### MCP Server (native tools for any Claude Code conversation)
