@@ -148,3 +148,6 @@ async with await NotebookLMClient.from_storage() as client:
 [[Wiki Ingestion Pipeline]]
 [[LLM Wiki Pattern]]
 [[Wiki Event-Driven Automation]]
+[[Claude Code]]
+[[MCP Integration Architecture]]
+[[Research Pipeline Orchestration]]

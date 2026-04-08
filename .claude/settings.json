@@ -10,7 +10,13 @@
       "WebFetch(domain:frankanaya.com)",
       "WebFetch(domain:obsidian.md)",
       "WebFetch(domain:deepwiki.com)",
-      "WebFetch(domain:publish-01.obsidian.md)"
+      "WebFetch(domain:publish-01.obsidian.md)",
+      "WebFetch(domain:docs.openclaw.ai)",
+      "WebFetch(domain:docs.plane.so)",
+      "WebFetch(domain:neo4j.com)",
+      "WebFetch(domain:promptengineering.org)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:plane.so)"
     ]
   }
 }

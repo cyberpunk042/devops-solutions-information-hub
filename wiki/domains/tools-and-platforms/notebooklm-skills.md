@@ -92,6 +92,7 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 [[AI-Driven Content Pipeline]]
 [[Skills Architecture Patterns]]
 [[Agentic Search vs Vector Search]]
+[[OpenClaw]]
 [[Synthesis: PleasePrompto/notebooklm-skill]]
 [[Synthesis: claude-world/notebooklm-skill]]
 [[notebooklm-py CLI]]

@@ -125,3 +125,6 @@ The current `scripts/sync-obsidian.sh` rsync approach sidesteps this by treating
 [[AI-Driven Content Pipeline]]
 [[notebooklm-py CLI]]
 [[Wiki Ingestion Pipeline]]
+[[Claude Code]]
+[[MCP Integration Architecture]]
+[[Research Pipeline Orchestration]]

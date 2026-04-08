@@ -84,6 +84,7 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 - RELATES TO: Wiki Event-Driven Automation
 - RELATES TO: LLM Wiki vs RAG
 - RELATES TO: Skills Architecture Patterns
+- EXTENDS: Claude Code
 
 ## Backlinks
 
@@ -96,6 +97,7 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 [[Wiki Event-Driven Automation]]
 [[LLM Wiki vs RAG]]
 [[Skills Architecture Patterns]]
+[[Claude Code]]
 [[Agentic Search vs Vector Search]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

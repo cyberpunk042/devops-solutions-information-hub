@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-08T13:47:44.079018+00:00",
+  "generated": "2026-04-08T14:12:38.428710+00:00",
   "stats": {
-    "pages": 33,
-    "domains": 5,
+    "pages": 42,
+    "domains": 6,
     "sources": 12,
     "comparisons": 3,
-    "relationships": 238,
-    "tags_unique": 133
+    "relationships": 323,
+    "tags_unique": 190
   },
   "pages": [
     {
@@ -280,6 +280,10 @@
         {
           "verb": "RELATES TO",
           "target": "Skills Architecture Patterns"
+        },
+        {
+          "verb": "EXTENDS",
+          "target": "Claude Code"
         }
       ]
     },
@@ -363,6 +367,10 @@
         {
           "verb": "RELATES TO",
           "target": "Skills Architecture Patterns"
+        },
+        {
+          "verb": "EXTENDS",
+          "target": "Claude Code"
         }
       ]
     },
@@ -470,6 +478,113 @@
         {
           "verb": "RELATES TO",
           "target": "Skills Architecture Patterns"
+        },
+        {
+          "verb": "USED BY",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "USED BY",
+          "target": "AICP"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "OpenClaw"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-agents/claude-code.md",
+      "slug": "domains/ai-agents/claude-code",
+      "title": "Claude Code",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "claude-code",
+        "ai-agent",
+        "coding-agent",
+        "anthropic",
+        "skills",
+        "hooks",
+        "mcp",
+        "subagents",
+        "context-management",
+        "automation"
+      ],
+      "sources": [
+        {
+          "id": "src-shanraisshan-claude-code-best-practice",
+          "type": "documentation",
+          "url": "https://github.com/shanraisshan/claude-code-best-practice",
+          "file": "raw/articles/shanraisshanclaude-code-best-practice.md",
+          "title": "Claude Code Best Practices",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-karpathy-claude-code-10x",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=7sInxhTDA7U",
+          "file": "raw/transcripts/karpathy-claude-code-10x.txt",
+          "title": "Andrej Karpathy Just 10x'd Everyone's Claude Code",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-token-hacks-claude-code",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=49V-5Ock8LU",
+          "file": "raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt",
+          "title": "18 Claude Code Token Hacks in 18 Minutes",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "ENABLES",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Best Practices"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Context Management"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenClaw"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Obsidian CLI"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "notebooklm-py CLI"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -566,6 +681,141 @@
       ]
     },
     {
+      "path": "domains/ai-agents/openclaw.md",
+      "slug": "domains/ai-agents/openclaw",
+      "title": "OpenClaw",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "openclaw",
+        "agent-framework",
+        "gateway",
+        "brain",
+        "memory",
+        "skills",
+        "heartbeat",
+        "mission-control",
+        "multi-agent",
+        "messaging"
+      ],
+      "sources": [
+        {
+          "id": "src-openclaw-docs",
+          "type": "documentation",
+          "url": "https://github.com/anthropics/claude-code",
+          "title": "OpenClaw \u2014 Agent Framework Documentation",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-openfleet-local",
+          "type": "documentation",
+          "file": "../openfleet/CLAUDE.md",
+          "title": "OpenFleet \u2014 OpenClaw Usage",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "USED BY",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Obsidian Skills Ecosystem"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "NotebookLM Skills"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "LLM Knowledge Linting"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-agents/openfleet.md",
+      "slug": "domains/ai-agents/openfleet",
+      "title": "OpenFleet",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "openfleet",
+        "ai-agents",
+        "fleet-management",
+        "orchestration",
+        "deterministic-brain",
+        "vibe-managing",
+        "mission-control",
+        "openclaw",
+        "lightrag",
+        "multi-agent"
+      ],
+      "sources": [
+        {
+          "id": "src-openfleet-local",
+          "type": "documentation",
+          "file": "../openfleet/CLAUDE.md",
+          "title": "OpenFleet \u2014 Local Project Documentation",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "OpenClaw"
+        },
+        {
+          "verb": "USED BY",
+          "target": "AI-Driven Content Pipeline"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LightRAG"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plane"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "devops-control-plane"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Pattern"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Knowledge Graph"
+        }
+      ]
+    },
+    {
       "path": "domains/automation/ai-driven-content-pipeline.md",
       "slug": "domains/automation/ai-driven-content-pipeline",
       "title": "AI-Driven Content Pipeline",
@@ -611,7 +861,7 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "Agent-as-Orchestrator Pattern"
+          "target": "OpenClaw"
         },
         {
           "verb": "PARALLELS",
@@ -678,6 +928,158 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Knowledge Linting"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plane"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet"
+        }
+      ]
+    },
+    {
+      "path": "domains/automation/mcp-integration-architecture.md",
+      "slug": "domains/automation/mcp-integration-architecture",
+      "title": "MCP Integration Architecture",
+      "type": "concept",
+      "domain": "automation",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "mcp",
+        "model-context-protocol",
+        "integration",
+        "services",
+        "daemon",
+        "watcher",
+        "rsync",
+        "bidirectional-sync",
+        "claude-replaceable"
+      ],
+      "sources": [
+        {
+          "id": "src-user-directive-integration",
+          "type": "notes",
+          "file": "raw/notes/2026-04-08-user-directive-integration-vision.md",
+          "title": "User Directive \u2014 Integration Vision & Service Architecture",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-user-directive-ecosystem",
+          "type": "notes",
+          "file": "raw/notes/2026-04-08-user-directive-ecosystem-connections.md",
+          "title": "User Directive \u2014 Ecosystem Connections & Automation Vision",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Obsidian CLI"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "notebooklm-py CLI"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Event-Driven Automation"
+        }
+      ]
+    },
+    {
+      "path": "domains/automation/research-pipeline-orchestration.md",
+      "slug": "domains/automation/research-pipeline-orchestration",
+      "title": "Research Pipeline Orchestration",
+      "type": "concept",
+      "domain": "automation",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "pipeline",
+        "orchestration",
+        "automation",
+        "chain-operations",
+        "group-operations",
+        "tree-operations",
+        "research-automation",
+        "ingestion",
+        "multi-pass"
+      ],
+      "sources": [
+        {
+          "id": "src-user-directive-ecosystem",
+          "type": "notes",
+          "file": "raw/notes/2026-04-08-user-directive-ecosystem-connections.md",
+          "title": "User Directive \u2014 Ecosystem Connections & Automation Vision",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-user-directive-integration",
+          "type": "notes",
+          "file": "raw/notes/2026-04-08-user-directive-integration-vision.md",
+          "title": "User Directive \u2014 Integration Vision & Service Architecture",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Wiki Event-Driven Automation"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "LLM Wiki Pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI-Driven Content Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Scheduling"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Obsidian CLI"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "notebooklm-py CLI"
         }
       ]
     },
@@ -756,8 +1158,138 @@
           "target": "AI-Driven Content Pipeline"
         },
         {
+          "verb": "FEEDS INTO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Claude Code Best Practices"
+        }
+      ]
+    },
+    {
+      "path": "domains/devops/devops-control-plane.md",
+      "slug": "domains/devops/devops-control-plane",
+      "title": "devops-control-plane",
+      "type": "concept",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "devops",
+        "control-plane",
+        "project-management",
+        "tech-detection",
+        "vault",
+        "encryption",
+        "audit",
+        "multi-interface",
+        "adapters",
+        "infrastructure"
+      ],
+      "sources": [
+        {
+          "id": "src-devops-control-plane-local",
+          "type": "documentation",
+          "file": "../devops-control-plane/README.md",
+          "title": "devops-control-plane \u2014 Local Project Documentation",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "ENABLES",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plane"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Ingestion Pipeline"
+        }
+      ]
+    },
+    {
+      "path": "domains/knowledge-systems/lightrag.md",
+      "slug": "domains/knowledge-systems/lightrag",
+      "title": "LightRAG",
+      "type": "concept",
+      "domain": "knowledge-systems",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "lightrag",
+        "rag",
+        "knowledge-graph",
+        "entity-extraction",
+        "graph-retrieval",
+        "vector-search",
+        "hybrid-search",
+        "mcp",
+        "openfleet"
+      ],
+      "sources": [
+        {
+          "id": "src-lightrag-docs",
+          "type": "documentation",
+          "url": "https://github.com/HKUDS/LightRAG",
+          "title": "LightRAG \u2014 Graph-Based RAG Framework",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-openfleet-local",
+          "type": "documentation",
+          "file": "../openfleet/CLAUDE.md",
+          "title": "OpenFleet \u2014 LightRAG Integration",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "USED BY",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "LLM Wiki vs RAG"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agentic Search vs Vector Search"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "USED BY",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -863,6 +1395,18 @@
         {
           "verb": "RELATES TO",
           "target": "Agentic Search vs Vector Search"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "LightRAG"
+        },
+        {
+          "verb": "USED BY",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "Claude Code"
         }
       ]
     },
@@ -943,6 +1487,14 @@
         {
           "verb": "RELATES TO",
           "target": "Claude Code Best Practices"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LightRAG"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agentic Search vs Vector Search"
         }
       ]
     },
@@ -1086,6 +1638,18 @@
           "target": "Wiki Knowledge Graph"
         },
         {
+          "verb": "EXTENDS",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "notebooklm-py CLI"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Obsidian CLI"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Wiki Event-Driven Automation"
         },
@@ -1155,6 +1719,75 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Knowledge Linting"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "LightRAG"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "OpenFleet"
+        }
+      ]
+    },
+    {
+      "path": "domains/tools-and-platforms/aicp.md",
+      "slug": "domains/tools-and-platforms/aicp",
+      "title": "AICP",
+      "type": "concept",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "aicp",
+        "localai",
+        "ai-control-platform",
+        "backend-routing",
+        "think-edit-act",
+        "guardrails",
+        "circuit-breaker",
+        "fleet-integration",
+        "local-first"
+      ],
+      "sources": [
+        {
+          "id": "src-aicp-local",
+          "type": "documentation",
+          "file": "../devops-expert-local-ai/CLAUDE.md",
+          "title": "AICP \u2014 Local Project Documentation",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "USED BY",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LightRAG"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenClaw"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "devops-control-plane"
         }
       ]
     },
@@ -1606,6 +2239,67 @@
         {
           "verb": "RELATES TO",
           "target": "Skills Architecture Patterns"
+        }
+      ]
+    },
+    {
+      "path": "domains/tools-and-platforms/plane.md",
+      "slug": "domains/tools-and-platforms/plane",
+      "title": "Plane",
+      "type": "concept",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "plane",
+        "project-management",
+        "sprints",
+        "kanban",
+        "rest-api",
+        "webhooks",
+        "self-hosted",
+        "docker",
+        "fleet-integration",
+        "pm-agent"
+      ],
+      "sources": [
+        {
+          "id": "src-plane-docs",
+          "type": "documentation",
+          "url": "https://plane.so",
+          "title": "Plane \u2014 Open-Source Project Management",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-dspd-local",
+          "type": "documentation",
+          "file": "../devops-solution-product-development/CLAUDE.md",
+          "title": "DSPD \u2014 Plane Fleet Integration",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "relationships": [
+        {
+          "verb": "USED BY",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenClaw"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "devops-control-plane"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Claude Code Scheduling"
         }
       ]
     },
@@ -2271,20 +2965,24 @@
       "relationship_count": 14
     },
     "ai-agents": {
-      "page_count": 6,
-      "relationship_count": 51
+      "page_count": 9,
+      "relationship_count": 82
     },
     "automation": {
-      "page_count": 4,
-      "relationship_count": 29
+      "page_count": 6,
+      "relationship_count": 49
+    },
+    "devops": {
+      "page_count": 1,
+      "relationship_count": 5
     },
     "knowledge-systems": {
-      "page_count": 8,
-      "relationship_count": 66
+      "page_count": 9,
+      "relationship_count": 83
     },
     "tools-and-platforms": {
-      "page_count": 12,
-      "relationship_count": 78
+      "page_count": 14,
+      "relationship_count": 90
     }
   },
   "tags": {
@@ -2292,14 +2990,17 @@
       "comparisons/agentic-search-vs-vector-search"
     ],
     "vector-search": [
-      "comparisons/agentic-search-vs-vector-search"
+      "comparisons/agentic-search-vs-vector-search",
+      "domains/knowledge-systems/lightrag"
     ],
     "rag": [
       "comparisons/agentic-search-vs-vector-search",
+      "domains/knowledge-systems/lightrag",
       "domains/knowledge-systems/llm-wiki-vs-rag"
     ],
     "hybrid-search": [
       "comparisons/agentic-search-vs-vector-search",
+      "domains/knowledge-systems/lightrag",
       "domains/knowledge-systems/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-knowledge-graph"
     ],
@@ -2321,6 +3022,8 @@
       "comparisons/skills-architecture-patterns",
       "domains/ai-agents/claude-code-best-practices",
       "domains/ai-agents/claude-code-skills",
+      "domains/ai-agents/claude-code",
+      "domains/ai-agents/openclaw",
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "sources/src-axton-obsidian-visual-skills",
@@ -2344,6 +3047,7 @@
       "domains/ai-agents/claude-code-best-practices",
       "domains/ai-agents/claude-code-context-management",
       "domains/ai-agents/claude-code-skills",
+      "domains/ai-agents/claude-code",
       "domains/automation/ai-driven-content-pipeline",
       "domains/automation/claude-code-scheduling",
       "domains/knowledge-systems/wiki-ingestion-pipeline",
@@ -2396,7 +3100,9 @@
     ],
     "orchestration": [
       "domains/ai-agents/claude-code-best-practices",
+      "domains/ai-agents/openfleet",
       "domains/automation/ai-driven-content-pipeline",
+      "domains/automation/research-pipeline-orchestration",
       "sources/src-shanraisshan-claude-code-best-practice"
     ],
     "plan-mode": [
@@ -2404,6 +3110,7 @@
     ],
     "subagents": [
       "domains/ai-agents/claude-code-best-practices",
+      "domains/ai-agents/claude-code",
       "sources/src-shanraisshan-claude-code-best-practice"
     ],
     "commands": [
@@ -2413,6 +3120,7 @@
     "hooks": [
       "domains/ai-agents/claude-code-best-practices",
       "domains/ai-agents/claude-code-skills",
+      "domains/ai-agents/claude-code",
       "domains/automation/wiki-event-driven-automation",
       "sources/src-shanraisshan-claude-code-best-practice"
     ],
@@ -2461,7 +3169,8 @@
       "sources/src-token-hacks-claude-code"
     ],
     "memory": [
-      "domains/ai-agents/claude-code-context-management"
+      "domains/ai-agents/claude-code-context-management",
+      "domains/ai-agents/openclaw"
     ],
     "context-engineering": [
       "domains/ai-agents/claude-code-context-management",
@@ -2499,6 +3208,37 @@
     "context-forking": [
       "domains/ai-agents/claude-code-skills"
     ],
+    "ai-agent": [
+      "domains/ai-agents/claude-code"
+    ],
+    "coding-agent": [
+      "domains/ai-agents/claude-code"
+    ],
+    "anthropic": [
+      "domains/ai-agents/claude-code"
+    ],
+    "mcp": [
+      "domains/ai-agents/claude-code",
+      "domains/automation/mcp-integration-architecture",
+      "domains/knowledge-systems/lightrag",
+      "domains/tools-and-platforms/notebooklm-skills",
+      "sources/src-claude-world-notebooklm-skill"
+    ],
+    "context-management": [
+      "domains/ai-agents/claude-code"
+    ],
+    "automation": [
+      "domains/ai-agents/claude-code",
+      "domains/automation/ai-driven-content-pipeline",
+      "domains/automation/claude-code-scheduling",
+      "domains/automation/research-pipeline-orchestration",
+      "domains/automation/wiki-event-driven-automation",
+      "domains/tools-and-platforms/notebooklm-py-cli",
+      "domains/tools-and-platforms/obsidian-cli",
+      "sources/src-claude-notebooklm-content-team",
+      "sources/src-claude-world-notebooklm-skill",
+      "sources/src-llm-wiki-v2-agentmemory"
+    ],
     "linting": [
       "domains/ai-agents/llm-knowledge-linting"
     ],
@@ -2524,21 +3264,59 @@
     "contradiction-resolution": [
       "domains/ai-agents/llm-knowledge-linting"
     ],
+    "openclaw": [
+      "domains/ai-agents/openclaw",
+      "domains/ai-agents/openfleet"
+    ],
+    "agent-framework": [
+      "domains/ai-agents/openclaw"
+    ],
+    "gateway": [
+      "domains/ai-agents/openclaw"
+    ],
+    "brain": [
+      "domains/ai-agents/openclaw"
+    ],
+    "heartbeat": [
+      "domains/ai-agents/openclaw"
+    ],
+    "mission-control": [
+      "domains/ai-agents/openclaw",
+      "domains/ai-agents/openfleet"
+    ],
+    "multi-agent": [
+      "domains/ai-agents/openclaw",
+      "domains/ai-agents/openfleet",
+      "sources/src-llm-wiki-v2-agentmemory"
+    ],
+    "messaging": [
+      "domains/ai-agents/openclaw"
+    ],
+    "openfleet": [
+      "domains/ai-agents/openfleet",
+      "domains/knowledge-systems/lightrag"
+    ],
+    "ai-agents": [
+      "domains/ai-agents/openfleet"
+    ],
+    "fleet-management": [
+      "domains/ai-agents/openfleet"
+    ],
+    "deterministic-brain": [
+      "domains/ai-agents/openfleet"
+    ],
+    "vibe-managing": [
+      "domains/ai-agents/openfleet"
+    ],
+    "lightrag": [
+      "domains/ai-agents/openfleet",
+      "domains/knowledge-systems/lightrag"
+    ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/notebooklm-skills",
       "sources/src-claude-world-notebooklm-skill"
-    ],
-    "automation": [
-      "domains/automation/ai-driven-content-pipeline",
-      "domains/automation/claude-code-scheduling",
-      "domains/automation/wiki-event-driven-automation",
-      "domains/tools-and-platforms/notebooklm-py-cli",
-      "domains/tools-and-platforms/obsidian-cli",
-      "sources/src-claude-notebooklm-content-team",
-      "sources/src-claude-world-notebooklm-skill",
-      "sources/src-llm-wiki-v2-agentmemory"
     ],
     "content-generation": [
       "domains/automation/ai-driven-content-pipeline",
@@ -2557,6 +3335,53 @@
     "anthropic-cloud": [
       "domains/automation/claude-code-scheduling"
     ],
+    "model-context-protocol": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "integration": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "services": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "daemon": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "watcher": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "rsync": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "bidirectional-sync": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "claude-replaceable": [
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "pipeline": [
+      "domains/automation/research-pipeline-orchestration",
+      "domains/knowledge-systems/wiki-ingestion-pipeline"
+    ],
+    "chain-operations": [
+      "domains/automation/research-pipeline-orchestration"
+    ],
+    "group-operations": [
+      "domains/automation/research-pipeline-orchestration"
+    ],
+    "tree-operations": [
+      "domains/automation/research-pipeline-orchestration"
+    ],
+    "research-automation": [
+      "domains/automation/research-pipeline-orchestration"
+    ],
+    "ingestion": [
+      "domains/automation/research-pipeline-orchestration",
+      "domains/knowledge-systems/wiki-ingestion-pipeline"
+    ],
+    "multi-pass": [
+      "domains/automation/research-pipeline-orchestration"
+    ],
     "event-driven": [
       "domains/automation/wiki-event-driven-automation",
       "domains/knowledge-systems/wiki-ingestion-pipeline"
@@ -2569,6 +3394,53 @@
     ],
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
+    ],
+    "devops": [
+      "domains/devops/devops-control-plane"
+    ],
+    "control-plane": [
+      "domains/devops/devops-control-plane"
+    ],
+    "project-management": [
+      "domains/devops/devops-control-plane",
+      "domains/tools-and-platforms/obsidian-knowledge-vault",
+      "domains/tools-and-platforms/plane",
+      "sources/src-obsidian-claude-code-second-brain"
+    ],
+    "tech-detection": [
+      "domains/devops/devops-control-plane"
+    ],
+    "vault": [
+      "domains/devops/devops-control-plane"
+    ],
+    "encryption": [
+      "domains/devops/devops-control-plane"
+    ],
+    "audit": [
+      "domains/devops/devops-control-plane"
+    ],
+    "multi-interface": [
+      "domains/devops/devops-control-plane"
+    ],
+    "adapters": [
+      "domains/devops/devops-control-plane"
+    ],
+    "infrastructure": [
+      "domains/devops/devops-control-plane"
+    ],
+    "knowledge-graph": [
+      "domains/knowledge-systems/lightrag",
+      "domains/knowledge-systems/llm-wiki-vs-rag",
+      "domains/knowledge-systems/wiki-knowledge-graph",
+      "sources/src-llm-wiki-v2-agentmemory"
+    ],
+    "entity-extraction": [
+      "domains/knowledge-systems/lightrag",
+      "domains/knowledge-systems/wiki-ingestion-pipeline",
+      "domains/knowledge-systems/wiki-knowledge-graph"
+    ],
+    "graph-retrieval": [
+      "domains/knowledge-systems/lightrag"
     ],
     "llm-wiki": [
       "domains/knowledge-systems/llm-wiki-pattern",
@@ -2613,11 +3485,6 @@
     "vector-database": [
       "domains/knowledge-systems/llm-wiki-vs-rag"
     ],
-    "knowledge-graph": [
-      "domains/knowledge-systems/llm-wiki-vs-rag",
-      "domains/knowledge-systems/wiki-knowledge-graph",
-      "sources/src-llm-wiki-v2-agentmemory"
-    ],
     "memory-lifecycle": [
       "domains/knowledge-systems/memory-lifecycle-management",
       "sources/src-llm-wiki-v2-agentmemory"
@@ -2641,12 +3508,6 @@
     "ebbinghaus": [
       "domains/knowledge-systems/memory-lifecycle-management"
     ],
-    "ingestion": [
-      "domains/knowledge-systems/wiki-ingestion-pipeline"
-    ],
-    "pipeline": [
-      "domains/knowledge-systems/wiki-ingestion-pipeline"
-    ],
     "wiki": [
       "domains/knowledge-systems/wiki-ingestion-pipeline"
     ],
@@ -2656,10 +3517,6 @@
     "workflow": [
       "domains/knowledge-systems/wiki-ingestion-pipeline"
     ],
-    "entity-extraction": [
-      "domains/knowledge-systems/wiki-ingestion-pipeline",
-      "domains/knowledge-systems/wiki-knowledge-graph"
-    ],
     "typed-relationships": [
       "domains/knowledge-systems/wiki-knowledge-graph"
     ],
@@ -2668,6 +3525,34 @@
     ],
     "structured-knowledge": [
       "domains/knowledge-systems/wiki-knowledge-graph"
+    ],
+    "aicp": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "localai": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "ai-control-platform": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "backend-routing": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "think-edit-act": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "guardrails": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "circuit-breaker": [
+      "domains/tools-and-platforms/aicp"
+    ],
+    "fleet-integration": [
+      "domains/tools-and-platforms/aicp",
+      "domains/tools-and-platforms/plane"
+    ],
+    "local-first": [
+      "domains/tools-and-platforms/aicp"
     ],
     "cli": [
       "domains/tools-and-platforms/notebooklm-py-cli",
@@ -2699,10 +3584,6 @@
     ],
     "research-tool": [
       "domains/tools-and-platforms/notebooklm-py-cli"
-    ],
-    "mcp": [
-      "domains/tools-and-platforms/notebooklm-skills",
-      "sources/src-claude-world-notebooklm-skill"
     ],
     "source-grounded": [
       "domains/tools-and-platforms/notebooklm-skills",
@@ -2740,10 +3621,6 @@
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "sources/src-obsidian-claude-code-second-brain"
     ],
-    "project-management": [
-      "domains/tools-and-platforms/obsidian-knowledge-vault",
-      "sources/src-obsidian-claude-code-second-brain"
-    ],
     "agent-skills": [
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "sources/src-kepano-obsidian-skills"
@@ -2754,6 +3631,30 @@
     ],
     "ecosystem": [
       "domains/tools-and-platforms/obsidian-skills-ecosystem"
+    ],
+    "plane": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "sprints": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "kanban": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "rest-api": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "webhooks": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "self-hosted": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "docker": [
+      "domains/tools-and-platforms/plane"
+    ],
+    "pm-agent": [
+      "domains/tools-and-platforms/plane"
     ],
     "excalidraw": [
       "sources/src-axton-obsidian-visual-skills"
@@ -2777,9 +3678,6 @@
       "sources/src-llm-wiki-v2-agentmemory"
     ],
     "agentmemory": [
-      "sources/src-llm-wiki-v2-agentmemory"
-    ],
-    "multi-agent": [
       "sources/src-llm-wiki-v2-agentmemory"
     ],
     "scaling": [
@@ -2812,12 +3710,6 @@
     ]
   },
   "orphaned_refs": [
-    {
-      "target": "Agent-as-Orchestrator Pattern",
-      "referenced_by": [
-        "AI-Driven Content Pipeline"
-      ]
-    },
     {
       "target": "ai-driven-content-pipeline",
       "referenced_by": [

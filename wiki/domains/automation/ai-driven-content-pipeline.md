@@ -67,7 +67,7 @@ A key architectural observation is that the pipeline's reliability depends on th
 - BUILDS ON: NotebookLM
 - BUILDS ON: Claude Code Skills
 - BUILDS ON: Claude Code Scheduling
-- IMPLEMENTS: Agent-as-Orchestrator Pattern
+- IMPLEMENTS: OpenClaw
 - PARALLELS: Wiki Ingestion Pipeline
 - RELATES TO: NotebookLM Skills
 - RELATES TO: Skills Architecture Patterns
@@ -78,11 +78,13 @@ A key architectural observation is that the pipeline's reliability depends on th
 [[NotebookLM]]
 [[Claude Code Skills]]
 [[Claude Code Scheduling]]
-[[Agent-as-Orchestrator Pattern]]
+[[OpenClaw]]
 [[Wiki Ingestion Pipeline]]
 [[NotebookLM Skills]]
 [[Skills Architecture Patterns]]
 [[Obsidian CLI]]
+[[OpenFleet]]
+[[Research Pipeline Orchestration]]
 [[Synthesis: Obsidian + Claude Code Second Brain Setup]]
 [[Wiki Event-Driven Automation]]
 [[notebooklm-py CLI]]

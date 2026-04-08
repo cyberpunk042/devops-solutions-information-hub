@@ -67,6 +67,8 @@ The connection to Obsidian is relevant: Obsidian's graph view already visualizes
 - RELATES TO: LLM Wiki vs RAG
 - RELATES TO: Obsidian Knowledge Vault
 - RELATES TO: LLM Knowledge Linting
+- PARALLELS: LightRAG
+- FEEDS INTO: OpenFleet
 
 ## Backlinks
 
@@ -77,5 +79,8 @@ The connection to Obsidian is relevant: Obsidian's graph view already visualizes
 [[LLM Wiki vs RAG]]
 [[Obsidian Knowledge Vault]]
 [[LLM Knowledge Linting]]
+[[LightRAG]]
+[[OpenFleet]]
+[[AICP]]
 [[Agentic Search vs Vector Search]]
 [[Claude Code Context Management]]

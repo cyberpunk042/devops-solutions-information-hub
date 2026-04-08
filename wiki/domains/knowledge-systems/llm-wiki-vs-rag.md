@@ -84,6 +84,8 @@ The LLM Wiki v2 document proposes that the binary choice between wiki and RAG is
 - RELATES TO: Wiki Knowledge Graph
 - RELATES TO: NotebookLM
 - RELATES TO: Claude Code Best Practices
+- RELATES TO: LightRAG
+- RELATES TO: Agentic Search vs Vector Search
 
 ## Backlinks
 
@@ -95,6 +97,7 @@ The LLM Wiki v2 document proposes that the binary choice between wiki and RAG is
 [[Wiki Knowledge Graph]]
 [[NotebookLM]]
 [[Claude Code Best Practices]]
+[[LightRAG]]
 [[Agentic Search vs Vector Search]]
 [[Memory Lifecycle Management]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]

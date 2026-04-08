@@ -67,6 +67,8 @@ The "bypass permissions mode" for low-risk tasks is a trust calibration mechanis
 - RELATES TO: NotebookLM
 - ENABLES: Wiki Event-Driven Automation
 - RELATES TO: LLM Knowledge Linting
+- RELATES TO: Plane
+- RELATES TO: OpenFleet
 
 ## Backlinks
 
@@ -76,3 +78,6 @@ The "bypass permissions mode" for low-risk tasks is a trust calibration mechanis
 [[NotebookLM]]
 [[Wiki Event-Driven Automation]]
 [[LLM Knowledge Linting]]
+[[Plane]]
+[[OpenFleet]]
+[[Research Pipeline Orchestration]]

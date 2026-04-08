@@ -91,6 +91,7 @@ The 5-minute prompt cache TTL is a subtle but important operational detail. It m
 - CONSTRAINS: Wiki Ingestion Pipeline
 - CONSTRAINS: LLM Knowledge Linting
 - RELATES TO: Skills Architecture Patterns
+- EXTENDS: Claude Code
 
 ## Backlinks
 
@@ -104,5 +105,6 @@ The 5-minute prompt cache TTL is a subtle but important operational detail. It m
 [[Wiki Ingestion Pipeline]]
 [[LLM Knowledge Linting]]
 [[Skills Architecture Patterns]]
+[[Claude Code]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

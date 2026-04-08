@@ -103,6 +103,9 @@ These extensions represent the maturation path from a personal tool to a product
 - RELATES TO: NotebookLM
 - RELATES TO: Skills Architecture Patterns
 - RELATES TO: Agentic Search vs Vector Search
+- CONTRASTS WITH: LightRAG
+- USED BY: OpenFleet
+- ENABLED BY: Claude Code
 
 ## Backlinks
 
@@ -120,10 +123,14 @@ These extensions represent the maturation path from a personal tool to a product
 [[NotebookLM]]
 [[Skills Architecture Patterns]]
 [[Agentic Search vs Vector Search]]
+[[LightRAG]]
+[[OpenFleet]]
+[[Claude Code]]
 [[Claude Code Best Practices]]
 [[NotebookLM Skills]]
 [[Obsidian CLI]]
 [[Obsidian Skills Ecosystem]]
+[[Research Pipeline Orchestration]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]

@@ -111,6 +111,10 @@ This suggests that Claude Code skills exist on a complexity spectrum: simple ski
 - BUILDS ON: NotebookLM
 - RELATES TO: Obsidian Knowledge Vault
 - RELATES TO: Skills Architecture Patterns
+- USED BY: OpenFleet
+- USED BY: AICP
+- BUILDS ON: OpenClaw
+- BUILDS ON: Claude Code
 
 ## Backlinks
 
@@ -126,6 +130,10 @@ This suggests that Claude Code skills exist on a complexity spectrum: simple ski
 [[NotebookLM]]
 [[Obsidian Knowledge Vault]]
 [[Skills Architecture Patterns]]
+[[OpenFleet]]
+[[AICP]]
+[[OpenClaw]]
+[[Claude Code]]
 [[NotebookLM Skills]]
 [[Obsidian CLI]]
 [[Obsidian Skills Ecosystem]]

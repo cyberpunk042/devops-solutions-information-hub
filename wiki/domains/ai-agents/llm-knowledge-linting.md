@@ -99,6 +99,7 @@ This transforms lint from a periodic maintenance task into a continuous quality 
 [[Claude Code Context Management]]
 [[Wiki Knowledge Graph]]
 [[Claude Code Scheduling]]
+[[OpenClaw]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]

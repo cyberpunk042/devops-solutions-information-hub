@@ -77,6 +77,9 @@ A key architectural decision is that the raw source is preserved in the `raw/` f
 - USED BY: Obsidian Knowledge Vault
 - FEEDS INTO: LLM Knowledge Linting
 - FEEDS INTO: Wiki Knowledge Graph
+- EXTENDS: Research Pipeline Orchestration
+- RELATES TO: notebooklm-py CLI
+- RELATES TO: Obsidian CLI
 - RELATES TO: Wiki Event-Driven Automation
 - PARALLELS: AI-Driven Content Pipeline
 - CONSTRAINED BY: Claude Code Context Management
@@ -90,15 +93,20 @@ A key architectural decision is that the raw source is preserved in the `raw/` f
 [[Obsidian Knowledge Vault]]
 [[LLM Knowledge Linting]]
 [[Wiki Knowledge Graph]]
+[[Research Pipeline Orchestration]]
+[[notebooklm-py CLI]]
+[[Obsidian CLI]]
 [[Wiki Event-Driven Automation]]
 [[AI-Driven Content Pipeline]]
 [[Claude Code Context Management]]
+[[Claude Code]]
 [[Claude Code Best Practices]]
 [[LLM Wiki vs RAG]]
+[[LightRAG]]
+[[MCP Integration Architecture]]
 [[Memory Lifecycle Management]]
-[[Obsidian CLI]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
 [[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[notebooklm-py CLI]]
+[[devops-control-plane]]

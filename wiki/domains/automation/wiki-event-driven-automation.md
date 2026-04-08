@@ -72,6 +72,8 @@ The connection between this concept and the AI-Driven Content Pipeline is direct
 - ENABLES: Memory Lifecycle Management
 - ENABLES: LLM Knowledge Linting
 - RELATES TO: AI-Driven Content Pipeline
+- FEEDS INTO: MCP Integration Architecture
+- FEEDS INTO: Research Pipeline Orchestration
 - RELATES TO: Claude Code Best Practices
 
 ## Backlinks
@@ -85,6 +87,8 @@ The connection between this concept and the AI-Driven Content Pipeline is direct
 [[Memory Lifecycle Management]]
 [[LLM Knowledge Linting]]
 [[AI-Driven Content Pipeline]]
+[[MCP Integration Architecture]]
+[[Research Pipeline Orchestration]]
 [[Claude Code Best Practices]]
 [[Obsidian CLI]]
 [[notebooklm-py CLI]]
