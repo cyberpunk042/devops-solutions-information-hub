@@ -444,13 +444,35 @@ def run_gaps(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
     all_titles = {p["title"] for p in manifest["pages"]}
 
     # 1. Orphaned relationship targets (pages referenced but don't exist)
+    # Build slug set for fuzzy matching
+    all_slugs = set()
+    for t in all_titles:
+        all_slugs.add(t.lower().replace(" ", "-"))
+        all_slugs.add(t.lower())
+    # Domain names are not pages — match multiple capitalizations
+    domain_names = set()
+    for d in manifest.get("domains", {}):
+        domain_names.add(d.replace("-", " ").title())  # "Ai Agents"
+        domain_names.add(d.replace("-", " ").upper())   # "AI AGENTS"
+        domain_names.add(d.replace("-", " "))            # "ai agents"
+        # Handle "AI" specifically
+        domain_names.add(d.replace("-", " ").title().replace("Ai ", "AI "))  # "AI Agents"
+
     for ref in manifest.get("orphaned_refs", []):
         target = ref["target"]
         # Skip src- refs (source IDs, not page titles)
         if target.startswith("src-"):
             continue
-        # Skip slug-vs-title mismatches (lowercase version of existing title)
-        if any(t.lower().replace(" ", "-") == target.lower().replace(" ", "-") for t in all_titles):
+        # Skip domain names referenced as relationship targets
+        if target in domain_names:
+            continue
+        # Skip conceptual targets (assumptions, self-references)
+        if target.startswith("default assumption") or target == "devops-solutions-research-wiki":
+            continue
+        # Skip slug-vs-title mismatches
+        if target.lower().replace(" ", "-") in all_slugs:
+            continue
+        if target.lower() in all_slugs:
             continue
         report["orphaned_targets"].append(target)
 
@@ -897,6 +919,11 @@ CHAINS: Dict[str, Dict[str, Any]] = {
     "review": {
         "description": "Post-chain → evolve review → gaps → crossref (weekly review)",
         "steps": ["post", "evolve-review", "gaps", "crossref"],
+        "needs_input": False,
+    },
+    "continue": {
+        "description": "Resume mission — status → review → score → gaps (session entry point)",
+        "steps": ["status", "post", "evolve-review", "evolve-score", "gaps", "crossref"],
         "needs_input": False,
     },
 }
