@@ -91,11 +91,22 @@ This suggests that Claude Code skills exist on a complexity spectrum: simple ski
 
 ## Open Questions
 
-- What is the maximum practical complexity of a skill before it becomes unreliable?
-- How does Claude Code handle conflicts between multiple skills that might give contradictory instructions?
-- Is there a versioning or update mechanism for skills, or must they be manually replaced?
-- How does skill performance degrade as the markdown file grows larger with more presets and options?
-- Can skills reference or compose other skills, or is each skill self-contained? (Partially answered: skills are folders that can include scripts and references, and skills can use context: fork for isolation, but formal skill-to-skill composition is not yet documented.)
+- Is there a versioning or update mechanism for skills, or must they be manually replaced? (Requires: external research on skill versioning conventions; the `Skills Architecture Patterns` page asks the same question: "How should skill versioning work — semantic versioning for breaking changes in instruction format?" and notes it requires "empirical data from large-scale skill deployment")
+- Can skills reference or compose other skills, or is each skill self-contained? (Partially answered: skills are folders that can include scripts and references, and skills can use context: fork for isolation, but formal skill-to-skill composition is not yet documented. The `Skills Architecture Patterns` page identifies this as unresolved: "Composition (skills referencing skills) remains largely unsolved across all ecosystems.")
+
+## Answered Open Questions
+
+### What is the maximum practical complexity of a skill before it becomes unreliable?
+
+Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Context-Aware Tool Loading`: the complexity ceiling is not a fixed line count but a function of session context pressure. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that Claude Code accuracy drops significantly at 40% context usage and becomes unreliable at 60%+. Any skill large enough to consume a substantial fraction of the context window will trigger this degradation before the task begins. The `Context-Aware Tool Loading` pattern provides the resolution: use `context: fork` for any skill whose instructions are extensive — this isolates skill execution in a sub-agent context so the parent session context is not polluted. The `Skills Architecture Patterns` page's answered question on this topic confirms: "for production-grade skills like claude-world's 13-tool pipeline, the recommended architecture is `context: fork` (sub-agent isolation) to prevent the skill from polluting the parent session context." The practical upper bound for an unfork'd skill is roughly ~100 lines before degradation risk becomes significant; with `context: fork`, the complexity ceiling is effectively the sub-agent's full context budget.
+
+### How does Claude Code handle conflicts between multiple skills that might give contradictory instructions?
+
+Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`: conflict resolution between skills is governed by invocation order and CLAUDE.md routing, not a registry-level priority system. The `Claude Code Best Practices` page states that "CLAUDE.md project instructions override community defaults (CLAUDE.md is read on every message), personal skills loaded explicitly override ambient skills, and `<important if='...'>` tags in CLAUDE.md provide the highest-priority override mechanism for rules that must not be ignored." Skills are loaded contextually — they enter the context window only when invoked — so a skill loaded later in a session with explicit instructions takes precedence over one loaded earlier. The `Context-Aware Tool Loading` pattern confirms there is no formal precedence specification beyond this: "the architecture resolves most conflicts via explicit routing" through CLAUDE.md acting as a routing table. For skills with direct contradictions, the pattern recommendation is to use `context: fork` for each skill, which isolates each skill's instructions in a sub-agent and prevents cross-contamination.
+
+### How does skill performance degrade as the markdown file grows larger with more presets and options?
+
+Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Skills Architecture Patterns`: degradation follows the context saturation curve directly. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that "schema tokens from unused tools occupy space that could hold recent conversation turns or retrieved file content, pushing relevant history out of the window earlier." For skill files, the same mechanism applies: each additional preset, option, or example section added to a skill file increases the token load every time the skill is active. The `Skills Architecture Patterns` comparison matrix notes: "context cost is the primary constraint on skill complexity — active skills consume tokens on every message." The resolution from existing wiki knowledge: instead of adding more presets to a single skill file, refactor them as separate named skills (each loaded on demand) or use progressive disclosure — the SKILL.md references detailed option files in references/ subdirectories that are only read into context when that specific option is selected. This mirrors the `Context-Aware Tool Loading` pattern's deferred loading principle applied at the intra-skill level.
 
 ## Relationships
 

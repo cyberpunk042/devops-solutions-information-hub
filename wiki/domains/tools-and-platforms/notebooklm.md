@@ -49,12 +49,23 @@ The breadth of output formats — from visual (slides, mind maps, infographics) 
 
 ## Open Questions
 
-- What are the rate limits or usage caps on NotebookLM's free tier, especially for automated/programmatic usage?
-- How does NotebookLM handle source conflicts or contradictory information across multiple sources in a notebook?
-- What is the quality ceiling for slide design customization — can it match professional presentation tools?
-- How does the notebooklm-py package authenticate and maintain sessions, and what are its stability guarantees for long-running automated workflows?
-- Does NotebookLM support collaborative notebooks or is it single-user only?
-- Cross-source insight: Karpathy explicitly names NotebookLM as an example of the "retrieve-and-forget" pattern (RAG) where "the LLM is rediscovering knowledge from scratch on every question." Could NotebookLM notebooks be used as source material for the LLM Wiki ingestion pipeline, bridging the two paradigms?
+- What are the rate limits or usage caps on NotebookLM's free tier, especially for automated/programmatic usage? (Requires: empirical measurement from sustained programmatic use; the notebooklm-py CLI page notes that "heavy automated usage triggers Google's rate limits" and the `--retry` flag with exponential backoff is the mitigation, but specific rate thresholds are not documented in existing wiki pages)
+- What is the quality ceiling for slide design customization — can it match professional presentation tools? (Requires: direct comparison testing against tools like Canva, PowerPoint, or Pitch; no existing wiki page covers this comparative quality assessment)
+- Does NotebookLM support collaborative notebooks or is it single-user only? (Requires: external verification; the `Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py` page asks "Can NotebookLM notebooks be shared across team members and queried by multiple Claude Code instances simultaneously?" without answering it — this remains an empirical gap)
+
+## Answered Open Questions
+
+### How does the notebooklm-py package authenticate and maintain sessions, and what are its stability guarantees for long-running automated workflows?
+
+Cross-referencing `Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py`: the package uses browser-based Google OAuth to save credentials, installed via `pip install notebooklm-py[browser-login]`. The `[browser-login]` extra indicates the authentication model is a one-time browser flow that caches credentials locally. The synthesis page notes that NotebookLM has a 300-source limit per notebook, which shapes large-scale workflow architecture (e.g., the two-notebook split for 35-competitor analysis). Stability for long-running workflows is a known concern: the `AI-Driven Content Pipeline` page documents that "the pipeline's reliability depends on the chain of integrations: Claude Code must correctly invoke notebooklm-py, which must maintain a valid session with Google's NotebookLM, which must successfully generate outputs. Any break in this chain halts the pipeline." The `--retry` flag with exponential backoff is the documented mitigation for transient failures. Long-running sessions are viable but require retry logic built into the pipeline rather than assumed reliability.
+
+### How does NotebookLM handle source conflicts or contradictory information across multiple sources in a notebook?
+
+Cross-referencing `LLM Wiki vs RAG` and `Agentic Search vs Vector Search`: NotebookLM's source-grounded retrieval model (a form of RAG) retrieves from whichever sources most closely match the query — it does not maintain a curated, contradiction-resolved knowledge graph. The `LLM Wiki vs RAG` comparison matrix documents this as the "retrieve-and-forget" limitation: "the LLM is rediscovering knowledge from scratch on every question" (Karpathy). When two sources in a notebook contradict each other, NotebookLM will surface both without resolving the conflict. This is a fundamental property of the retrieval paradigm vs. the wiki paradigm. The `LLM Wiki vs RAG` page explicitly identifies contradiction resolution as a wiki advantage: the LLM Wiki compiles and reconciles knowledge during ingestion (linting, synthesis), while RAG returns raw conflicting chunks. For contradiction-heavy source sets, the wiki pattern's upfront synthesis is more reliable than NotebookLM's per-query retrieval.
+
+### Could NotebookLM notebooks be used as source material for the LLM Wiki ingestion pipeline, bridging the two paradigms?
+
+Cross-referencing `AI-Driven Content Pipeline` and `Agentic Search vs Vector Search`: yes — this bridging is both architecturally sound and practically documented. The `AI-Driven Content Pipeline` page confirms: "Sources ingested via tools/ingest.py can be simultaneously pushed to NotebookLM notebooks via `notebooklm source add`." The reverse direction (NotebookLM → wiki) is equally feasible: NotebookLM can generate markdown reports and structured JSON artifacts via `notebooklm generate report`, and those artifacts can be fed into the wiki ingestion pipeline as synthesized source material. The `Agentic Search vs Vector Search` page proposes precisely this complementary architecture: "the LLM Wiki as the long-term memory (compounding, structured, agent-navigated) and NotebookLM as the fact-checking layer (grounded, retrieval-based, used for verification rather than accumulation)." The flow: ingest sources into NotebookLM for grounded synthesis → download the generated report → ingest report into the wiki as a `source-synthesis` page. The wiki compiles knowledge; NotebookLM verifies specific claims against raw sources.
 
 ## Relationships
 

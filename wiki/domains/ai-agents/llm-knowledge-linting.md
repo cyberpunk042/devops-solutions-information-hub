@@ -66,11 +66,25 @@ This transforms lint from a periodic maintenance task into a continuous quality 
 
 ## Open Questions
 
-- What does a linting prompt look like in practice — does it scan the full wiki or sample pages?
-- How does linting handle the cost of reading the entire wiki for each health check pass?
-- Can linting be scoped to only check pages modified since the last lint, similar to incremental builds?
-- How does the LLM decide whether to auto-fix an inconsistency or flag it for human review?
-- Could linting be combined with the ingestion pipeline (lint-on-ingest) to catch issues earlier?
+- What does a linting prompt look like in practice — does it scan the full wiki or sample pages? (Requires: implementation detail not documented in existing wiki pages; the architecture is described but no concrete prompt template for linting has been synthesized)
+
+## Answered Open Questions
+
+### How does linting handle the cost of reading the entire wiki for each health check pass?
+
+Cross-referencing `Context-Aware Tool Loading` and `Wiki Knowledge Graph`: the context cost of reading the full wiki for each lint pass is a real constraint. The `Context-Aware Tool Loading` pattern documents that "external knowledge bases larger than what a context window can hold" require deferred/selective loading rather than full pre-load. The `LLM Wiki vs RAG` page establishes the wiki's scale ceiling at ~200 pages / ~500K words for index-only navigation. A full lint pass that reads every page would exceed a single context window beyond ~50-100 pages. The architectural solution from existing wiki knowledge: lint should use the same index-navigation approach as the LLM Wiki Pattern — read the manifest/index first, identify candidate pages (via structural signals like relationship count, last-updated date, or stale flag), then read only those pages in targeted passes. The `Wiki Knowledge Graph` page's answered question on incremental processing is relevant: LightRAG supports "incremental updates without full reconstruction," confirming the field-wide recognition that full-corpus processing is impractical at scale and incremental passes are the standard approach.
+
+### Can linting be scoped to only check pages modified since the last lint, similar to incremental builds?
+
+Cross-referencing `Knowledge Evolution Pipeline` and `Agent Orchestration Patterns`: yes — incremental scoping is both architecturally feasible and the correct default approach. The `Knowledge Evolution Pipeline` documents a deterministic scoring system using signals including "page age (days since created)" and existing maturity level — this scoring infrastructure already identifies which pages warrant attention. The same signals can scope linting: pages modified since the last lint run, pages with recently changed relationship targets, or pages whose source documents have been updated. The `Agent Orchestration Patterns` page documents OpenFleet's parallel: "incremental updates without full reconstruction" is cited for LightRAG's graph updates, and the 12-step orchestrator cycle "evaluates only changed tasks, not the full task board, on each cycle." The practical implementation for this wiki: the watcher daemon already tracks file modification times (via `tools.watcher`); a lint-on-change trigger would naturally scope to modified pages. The `pipeline post` chain runs validate and lint after every ingestion — this is already a form of lint-on-ingest for newly ingested pages.
+
+### How does the LLM decide whether to auto-fix an inconsistency or flag it for human review?
+
+Cross-referencing `Knowledge Evolution Pipeline` and `Agent Orchestration Patterns`: the decision framework for auto-fix vs. human review is documented across two sources. The `Knowledge Evolution Pipeline` page establishes the human-in-the-loop gate at the `growing → mature` transition: "the `--review` flag surfaces seed pages that have accumulated enough relationships to warrant human review before promotion. This is the human-in-the-loop checkpoint in an otherwise automated pipeline, placed at the transition between growing and mature — the point where LLM-generated content may benefit from curator validation." Applied to linting: structural fixes (broken wikilinks, missing frontmatter fields, orphaned pages, formatting violations) can be auto-fixed because they have unambiguous correct states. Semantic inconsistencies (contradictions between page claims, stale facts, divergent confidence assessments) require human review because the correct resolution is not deterministic. The `Agent Orchestration Patterns` page's deterministic brain pattern supports the same split: "every control decision made by a deterministic rule rather than an LLM call saves inference cost" — structural lint fixes are rule-based and should be auto-applied; semantic fixes require LLM judgment and the human review gate.
+
+### Could linting be combined with the ingestion pipeline (lint-on-ingest) to catch issues earlier?
+
+Cross-referencing `Wiki Knowledge Graph` and `Knowledge Evolution Pipeline`: this is already partially implemented. The `pipeline post` command runs validate + lint after every ingestion as step 5 of the 6-step post-chain. This is lint-on-ingest for the pages created in that ingestion run. The remaining gap is cross-page linting: a single ingestion creates new pages that may contradict or under-link to existing pages, but the post-chain lint only checks structural validity (schema compliance, wikilinks), not semantic consistency with the rest of the wiki. Full lint-on-ingest — scanning all existing pages for interactions with newly ingested content — would require the incremental approach described above: identify pages that reference the same concepts as the new pages, then run a targeted consistency check on that subset. The `Knowledge Evolution Pipeline`'s "loop compounds" insight is relevant: every ingestion changes the relationship landscape, and a lightweight incremental lint pass after each ingestion would catch cross-page issues before they accumulate into the kind of quality debt that requires a full-wiki lint pass.
 
 ## Relationships
 

@@ -65,11 +65,22 @@ Design.md files are static context (loaded at session start). Skills are dynamic
 
 ## Open Questions
 
-- Should this wiki adopt a DESIGN.md for its own Obsidian vault appearance (graph colors, note styling)?
-- Will AGENTS.md become a standard alongside CLAUDE.md for Claude Code projects?
-- How does Design.md interact with component libraries like Tailwind or Shadcn that already encode design decisions?
-- What's the token cost of loading a full Design.md into context? Does it suffer the same context pollution as MCP schemas?
-- Can Design.md be used with local models (e.g., via AICP routing) or is it too context-heavy for smaller models?
+- Should this wiki adopt a DESIGN.md for its own Obsidian vault appearance (graph colors, note styling)? (Requires: decision by the curator; technically feasible but not yet prioritized in the wiki's IaC layer)
+- How does Design.md interact with component libraries like Tailwind or Shadcn that already encode design decisions? (Requires: external research on Design.md + Tailwind integration patterns; not covered in existing wiki pages)
+
+## Answered Open Questions
+
+### Will AGENTS.md become a standard alongside CLAUDE.md for Claude Code projects?
+
+Cross-referencing `Infrastructure as Code Patterns`: the IaC patterns page documents that AGENTS.md is already part of the established companion file ecosystem: "DESIGN.md (how it should look) complements CLAUDE.md (how the agent should behave) and AGENTS.md (how to build). Together they give an AI agent complete project context without stuffing everything into a single file." The `Infrastructure as Code Patterns` page lists AGENTS.md explicitly in its IaC spectrum table alongside SOUL.md and HEARTBEAT.md (OpenFleet agent configuration files), confirming it is already in active use within the ecosystem. The IaC patterns page also documents that markdown-as-configuration has become the dominant format precisely because it is "simultaneously human-readable and machine-parsable." AGENTS.md is unlikely to remain niche — the same forces that drove CLAUDE.md adoption (clarity, portability, tool-agnostic consumption) apply equally to it.
+
+### What's the token cost of loading a full Design.md into context? Does it suffer the same context pollution as MCP schemas?
+
+Cross-referencing `Context-Aware Tool Loading` and `CLI Tools Beat MCP for Token Efficiency`: Design.md is a static context file (always loaded at session start), which means it behaves like an MCP schema rather than a deferred-loaded skill. The `Context-Aware Tool Loading` pattern states: "eager loading: load at startup, always available, always consuming context." A full Design.md with 9 sections (visual theme, palette, typography, components, layout, depth, dos/don'ts, responsive, agent prompt guide) plus hex values, font specifications, and component examples could easily reach 1,000-3,000 tokens. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that Claude Code accuracy drops significantly at 40% context usage — a large Design.md consumes budget before the first task token. The mitigation from existing wiki knowledge: treat Design.md like CLAUDE.md — keep it concise (under ~200 lines), reference detailed component specifications in a separate file loaded on demand via a "design review" skill, and reserve the full design file for sessions where UI generation is the primary task. For non-UI sessions, Design.md should not be in the active context.
+
+### Can Design.md be used with local models (e.g., via AICP routing) or is it too context-heavy for smaller models?
+
+Cross-referencing `Infrastructure as Code Patterns` and `Agent Orchestration Patterns`: the `Infrastructure as Code Patterns` page documents that CLAUDE.md's constraint is that "every token in CLAUDE.md costs context budget... This creates an implicit pressure to keep it concise — verbosity has a real cost." The same constraint applies to Design.md with local models, but more severely: the `Agent Orchestration Patterns` page documents OpenFleet's model tiering — "indexing uses Claude (quality), querying uses LocalAI hermes-3b (cheap)" — suggesting smaller local models are used for tasks with bounded context requirements, not tasks that require loading large design system specifications. A 2,000-token Design.md may represent 5-10% of a smaller local model's effective context window (typically 4K-8K tokens for hermes-3b class models), significantly degrading performance on the actual generation task. The practical guidance from existing wiki knowledge: use Design.md with larger models (Claude, GPT-4 class) for design-intensive generation, and provide a compressed design summary (key hex values, font choices only) when routing through AICP to smaller local models.
 
 ## Relationships
 

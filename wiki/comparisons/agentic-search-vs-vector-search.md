@@ -114,11 +114,22 @@ This suggests a complementary architecture: the LLM Wiki as the long-term memory
 
 ## Open Questions
 
-- Has anyone empirically benchmarked agentic search vs. vector search vs. hybrid at the 200-500 page range where the transition is expected to occur?
-- Can the wiki index itself serve as the structural search layer in a hybrid system (vector search over index entries, then agent navigation to specific pages)?
-- How does the cost comparison work in practice -- agentic search costs tokens per navigation step, while vector search costs compute per embedding and query. At what scale does the token cost exceed the infrastructure cost?
-- Does GraphRAG (building a knowledge graph from documents and using graph traversal for retrieval) converge with the LLM Wiki v2 hybrid approach from the opposite direction?
-- Can the LLM Wiki's confidence scoring (from Memory Lifecycle Management) improve vector search relevance by weighting embeddings by confidence?
+- Has anyone empirically benchmarked agentic search vs. vector search vs. hybrid at the 200-500 page range where the transition is expected to occur? (Requires: empirical testing or external research; the `LLM Wiki vs RAG` page documents the theoretical boundary at ~200 pages but notes "precise crossover point requires empirical measurement with real query frequency data")
+- Can the LLM Wiki's confidence scoring (from Memory Lifecycle Management) improve vector search relevance by weighting embeddings by confidence? (Requires: implementation experimentation; no existing wiki page documents confidence-weighted embeddings in this context)
+
+## Answered Open Questions
+
+### Can the wiki index itself serve as the structural search layer in a hybrid system (vector search over index entries, then agent navigation to specific pages)?
+
+Cross-referencing `LLM Wiki vs RAG`: this is directly answered. The `LLM Wiki vs RAG` page states: "the ingestion pipeline already produces a structured index of all pages with titles, types, domains, and relationship summaries. This index is exactly the kind of compact, semantically dense document that embeds well. The LLM Wiki v2 architecture proposes hybrid search as 'BM25 + vector + graph traversal with reciprocal rank fusion' — which means the wiki index (BM25/vector pass) plus link-following (graph traversal pass) is precisely the described architecture. The index file is small enough to embed cheaply and would serve as a first-pass filter before the LLM follows specific page links. This is technically feasible with existing wiki structure today."
+
+### How does the cost comparison work in practice — at what scale does the token cost of agentic navigation exceed the infrastructure cost of RAG?
+
+Cross-referencing `LLM Wiki vs RAG`: the comparison page addresses this directly: "the boundary is not purely about page count — it is about query frequency and context window size. The token cost of navigation scales with O(pages read per query × turns per session), while RAG infrastructure cost is roughly fixed (embedding model hosting + vector DB). For a personal wiki queried a few times per day, wiki navigation remains cheaper well past 200 pages. For high-frequency automated querying (e.g., an agent reading the wiki on every task), RAG amortizes faster." The practical inflection point for this wiki: the `Context-Aware Tool Loading` pattern confirms wiki pages should be loaded on-demand (deferred loading), not pre-loaded, which reduces the per-session token cost of navigation significantly. At moderate query frequency (~10 wiki queries per day), the token cost of index navigation remains below the infrastructure cost of running an embedding model and vector database.
+
+### Does GraphRAG (knowledge graph from documents + graph traversal for retrieval) converge with the LLM Wiki v2 hybrid approach from the opposite direction?
+
+Cross-referencing `Wiki Knowledge Graph` and `LightRAG`: yes, they converge substantially. The `LightRAG` page documents: "Unlike traditional vector-only RAG that treats documents as isolated chunks, LightRAG extracts entities and relationships to build a knowledge graph, then retrieves via graph traversal." LightRAG's four query modes (naive, local, global, hybrid/mix) with hybrid combining entity-centric and relationship-centric retrieval maps directly onto the LLM Wiki v2 three-stream hybrid (BM25 + vector + graph). The `Wiki Knowledge Graph` page confirms the convergence: "the wiki's relationship format (- VERB: Target Name) is directly compatible with kb_sync.py's regex parser" — meaning the LLM Wiki v2 approach can be implemented via LightRAG by exporting the wiki's typed relationships into LightRAG's graph backend. GraphRAG and LLM Wiki v2 arrive at the same architecture from opposite starting points: GraphRAG builds structure from unstructured documents; LLM Wiki v2 starts from structured markdown and adds retrieval infrastructure. LightRAG is the implementation bridge between them.
 
 ## Relationships
 
