@@ -110,6 +110,9 @@ Export transforms YAML frontmatter to markdown headers for compatibility.
 - `python3 tools/export.py [openfleet|aicp]` — Export for sister projects
 - `python3 tools/stats.py [--json]` — Coverage & growth reporting
 - `python3 tools/obsidian.py` — Regenerate [[wikilinks]] for Obsidian graph view
+- `python3 tools/ingest.py URL [URL...]` — Fetch URLs (YouTube, GitHub, web) into raw/
+- `python3 tools/ingest.py --batch file.txt` — Batch ingest from URL list
+- `python3 tools/ingest.py --list-raw` — List unprocessed raw files
 
 ## Conventions
 
