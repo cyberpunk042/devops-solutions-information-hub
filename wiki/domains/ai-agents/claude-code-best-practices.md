@@ -64,14 +64,31 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 
 ## Open Questions
 
-- Why does Claude sometimes ignore CLAUDE.md instructions even when marked with MUST or ALWAYS? Is there a character/line threshold above which compliance drops?
-- What is the decision tree for choosing between a command, an agent, and a skill for a given workflow?
-- How do community skills and personal skills interact when they give conflicting instructions -- what is the precedence model?
-- Can the Research-Plan-Execute-Review-Ship pattern be further optimized, or is it already at its minimum viable complexity?
-- How do best practices change as models improve -- does plan mode become less necessary as models get better at self-correction?
-- What is the practical upper bound on skill complexity before a skill becomes unreliable for Claude to follow?
-- Cross-source tension: The "agentic search beats RAG" finding (Claude Code discarded vector databases for code) appears to conflict with LLM Wiki v2's recommendation for hybrid search including vectors. The likely resolution is that the domains differ -- code changes frequently and drifts from embeddings, while wiki knowledge is more stable and benefits from semantic similarity search. This suggests the best practice is domain-dependent.
-- Cross-source tension: Skills described as "just a markdown file" (content team video) vs. "folders with progressive disclosure" (shanraisshan). These reflect a complexity spectrum rather than a contradiction -- simple skills are single files, production skills are structured folders. The best practice may be to start simple and graduate to folders when a skill accumulates scripts, references, and gotchas.
+- Why does Claude sometimes ignore CLAUDE.md instructions even when marked with MUST or ALWAYS? Is there a character/line threshold above which compliance drops? (Requires: external research or empirical testing; the accuracy tips source documents the context degradation curve — accuracy drops at 40% usage — which is a related mechanism, but the specific CLAUDE.md compliance threshold is not documented in existing wiki pages.)
+- Can the Research-Plan-Execute-Review-Ship pattern be further optimized, or is it already at its minimum viable complexity? (Requires: external research or comparative analysis of workflow frameworks not yet ingested.)
+- How do best practices change as models improve — does plan mode become less necessary as models get better at self-correction? (Requires: external research on model capability trajectories; not answerable from current wiki knowledge.)
+
+## Answered Questions (moved from Open Questions)
+
+### What is the decision tree for choosing between a command, an agent, and a skill?
+
+Cross-referencing the Harness Engineering page and the Context-Aware Tool Loading pattern: the decision tree is documented implicitly across multiple sources and can now be stated explicitly. Use a **command** when: the workflow is a repeated prompt template that needs to be injected into the current context without isolation (no fresh context needed, no tool permission changes). Use an **agent** when: the task needs an isolated context (to prevent context pollution), parallel execution with other agents, or different tool permissions than the parent session. Use a **skill** when: specialized knowledge or operational procedures need to be loaded on demand without pre-loading overhead — skills provide progressive disclosure (SKILL.md + references/ + scripts/ + examples/) and support `context: fork` to run in isolated subagents. The Harness Engineering page documents the same pattern as a hierarchy: Level 2 (workflow orchestration via skills) sits below Level 3 (runtime guardrails via hooks) — meaning skills are the right tool for sequencing and knowledge, hooks are the right tool for enforcement.
+
+### How do community skills and personal skills interact when they give conflicting instructions?
+
+Cross-referencing the Context-Aware Tool Loading pattern: skill files are loaded contextually — they enter the context window when invoked, not at startup. This means precedence is governed by invocation order and CLAUDE.md routing, not by a registry-level priority system. The CLAUDE.md Best Practices page states CLAUDE.md should be an "index, not an encyclopedia" — it routes to the right skill. In practice, the precedence model is: CLAUDE.md project instructions override community defaults (CLAUDE.md is read on every message), personal skills loaded explicitly override ambient skills, and `<important if="...">` tags in CLAUDE.md provide the highest-priority override mechanism for rules that must not be ignored. There is no formal precedence specification beyond this in the existing wiki, but the architecture resolves most conflicts via explicit routing.
+
+### What is the practical upper bound on skill complexity before a skill becomes unreliable?
+
+Cross-referencing the CLI Tools Beat MCP for Token Efficiency lesson and the Context-Aware Tool Loading pattern: the reliability boundary for skills maps directly onto the context degradation curve. The accuracy tips source documents that Claude Code reliability drops significantly at 40% context usage and becomes unreliable at 60%+. A skill occupies context budget once loaded; a large skill (extensive SKILL.md + examples + scripts read into context) compounds the degradation curve sooner. The practical upper bound is not a fixed line count but a function of: (1) how much other context the session carries, (2) whether the skill is loaded alongside many other skills, and (3) whether the skill uses `context: fork` (isolated subagent clears this entirely). The actionable best practice from existing wiki knowledge: use `context: fork` for any skill whose instructions exceed ~100 lines to keep skill execution from polluting the main session context.
+
+### Agentic search vs RAG: the domain-dependency resolution
+
+Confirmed by cross-referencing the CLI Tools Beat MCP for Token Efficiency lesson and the LLM Wiki vs RAG comparison: the tension is resolved by domain. The "agentic search beats RAG" finding applies specifically to **code**, where content drifts out of sync with embeddings rapidly (every commit changes the ground truth). The LLM Wiki v2 hybrid search recommendation applies to **knowledge bases**, where content is curated and stable enough for semantic embeddings to remain valid. The CLI Tools lesson independently documents the same split: "CLI+Skills for project-internal tooling" (code-like domain, frequent change) vs. "MCP with vector indexing for cross-project discovery" (knowledge-like domain, stable). The best practice is explicitly domain-dependent: use agentic search (glob + grep or wiki navigation) for frequently-changing structured content; use hybrid search (BM25 + vector + graph) for stable curated knowledge bases.
+
+### Skills as single files vs. structured folders: the complexity spectrum
+
+Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Harness Engineering page: these are not conflicting descriptions but different points on a maturity spectrum. A seed skill is a single SKILL.md; a mature production skill is a folder with SKILL.md + references/ + scripts/ + examples/. The Harness Engineering page documents the same progression as its Pattern Hierarchy table — Level 0 (prompt guidance in a single file) evolves toward Level 3 (runtime guardrails with hooks and scripts). The actionable guidance from existing wiki knowledge: start with a single SKILL.md to validate the skill trigger and core instructions, then graduate to a folder structure when the skill accumulates external scripts, reference documents, or known failure cases (Gotchas section). The pattern mirrors how this wiki's own skills are structured.
 
 ## Relationships
 
@@ -104,6 +121,7 @@ The unsolved "billion-dollar questions" reveal the current frontier: why do mode
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Harness Engineering]]
 [[Infrastructure as Code Patterns]]
+[[Pattern: Skills + Claude-Code]]
 [[Plan Execute Review Cycle]]
 [[Rework Prevention]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]

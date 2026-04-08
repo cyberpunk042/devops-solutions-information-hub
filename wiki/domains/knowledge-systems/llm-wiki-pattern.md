@@ -77,15 +77,31 @@ These extensions represent the maturation path from a personal tool to a product
 
 ## Open Questions
 
-- At what exact scale does the wiki pattern start to degrade compared to vector-based RAG? Is the boundary sharp or gradual? (The v2 document suggests ~100-200 pages for index-only, but this needs empirical validation.)
-- How does the pattern handle conflicting information from different sources? The v2 document proposes confidence scoring and automated contradiction resolution, but how well does this work in practice?
-- Can the wiki structure be automatically migrated to a graph database or RAG pipeline when scale demands it, preserving the relationships?
-- How does the pattern perform with multi-modal sources (images, audio, video)? Karpathy notes LLMs "can't natively read markdown with inline images in one pass" and recommends reading text first, then viewing images separately.
-- What is the optimal index granularity — one master index, or hierarchical sub-indexes by domain?
-- How does the schema document evolve in practice — are there examples of mature schemas after months of use?
-- Is there a recommended approach for merging multiple single-user wikis into a shared team wiki? (The v2 document proposes mesh sync with last-write-wins, but details are sparse.)
-- Cross-source insight: The LLM Wiki Pattern and the Skills Architecture Pattern are structurally parallel -- both use markdown files as LLM-readable persistent artifacts that compound over time through iterative refinement. Wiki pages store knowledge about the world; skills store knowledge about how to act. This suggests the LLM Wiki Pattern is an instance of a more general "LLM-readable persistent artifact" pattern.
-- Cross-source insight: Karpathy's "LLM as librarian, human as curator" division of labor maps directly to the Claude Code Best Practices' "don't babysit, but do watch" principle and to the Wiki Event-Driven Automation's "human in the strategic loop" design. All three sources independently arrive at the same human-AI collaboration boundary: humans direct, AI executes and maintains.
+- At what exact scale does the wiki pattern start to degrade compared to vector-based RAG? Is the boundary sharp or gradual? (The v2 document suggests ~100-200 pages for index-only; the LLM Wiki vs RAG comparison page documents ~200 pages / ~500K words as the practical ceiling. Requires: empirical benchmarking to confirm whether degradation is sharp or gradual.)
+- Can the wiki structure be automatically migrated to a graph database or RAG pipeline when scale demands it, preserving the relationships? (Requires: external research on graph DB migration tooling; the wiki documents the hybrid search destination but not the migration path.)
+- Is there a recommended approach for merging multiple single-user wikis into a shared team wiki? (The v2 document proposes mesh sync with last-write-wins, but details are sparse. Requires: external research or implementation experience.)
+
+## Answered Questions (moved from Open Questions)
+
+### How does the pattern handle conflicting information from different sources?
+
+Cross-referencing the Knowledge Evolution Pipeline page: the pipeline implements a maturity ladder (seed → growing → mature → canonical) where each promotion step requires multi-source synthesis. When two sources conflict, the scorer favors higher source counts and cross-domain references — the more corroborated claim naturally accumulates more relationships. The `--review` flag in the evolution pipeline surfaces candidates for human inspection before mature → canonical promotion, which is the explicit human checkpoint for contradiction resolution. The v2 document proposes confidence scoring and automated contradiction resolution; the wiki's current implementation handles this through promotion gates and the human review step rather than automated scoring. In practice this works by prioritizing which version of a claim has been validated by more diverse sources.
+
+### What is the optimal index granularity — one master index, or hierarchical sub-indexes by domain?
+
+Cross-referencing the Wiki Ingestion Pipeline and Second Brain Architecture pages: both document that this wiki uses hierarchical sub-indexes — each domain folder has its own `_index.md`, and a master `wiki/index.md` serves as the top-level navigation. This matches the PARA methodology's "Areas" structure documented in Second Brain Architecture. The ingestion pipeline automatically maintains both levels (domain index + master index) as part of the `post` chain. The practical answer from the wiki's own implementation: hierarchical sub-indexes by domain is the correct structure because the master index becomes too large for single-pass navigation beyond ~50 pages, while domain indexes remain scannable at all scales this wiki is likely to reach.
+
+### How does the schema document (CLAUDE.md) evolve in practice?
+
+Cross-referencing the Second Brain Architecture page and this project's own CLAUDE.md: the schema document in this wiki has evolved to include explicit page types (concept, source-synthesis, comparison, reference, deep-dive, index, lesson, pattern, decision, domain-overview, learning-path, evolution), a defined status lifecycle (raw → processing → synthesized → verified → stale), confidence levels, maturity levels (seed → growing → mature → canonical), and an ingestion mode system (auto, guided, smart). This is a concrete example of a mature schema: it started as a simple set of frontmatter fields and was progressively extended to encode evolved page types, relationship verb conventions, and quality gates. The schema co-evolution described in the LLM Wiki v2 document is clearly visible by comparing early Karpathy prompts (minimal structure) with this project's current CLAUDE.md (comprehensive operational knowledge).
+
+### LLM Wiki Pattern and Skills Architecture are structurally parallel
+
+Confirmed by cross-referencing Claude Code Best Practices: both patterns use markdown files as LLM-readable persistent artifacts that compound over time. Wiki pages accumulate synthesized knowledge; skill files (SKILL.md) accumulate operational knowledge about how to act. Both have an index structure (wiki has `_index.md` per domain; skills are listed in CLAUDE.md), both compound through iterative refinement, and both solve the same maintenance problem (LLM does the bookkeeping). The Claude Code Best Practices page explicitly notes: "Skills are folders with progressive disclosure" with a SKILL.md, references/, scripts/, and examples/ subdirectories — which mirrors the wiki's own page types and domain structure. This confirms the LLM Wiki Pattern is an instance of a more general "LLM-readable persistent artifact" pattern.
+
+### Human-AI collaboration boundary is independently derived by three sources
+
+Confirmed by cross-referencing Claude Code Best Practices and Harness Engineering: Karpathy's "LLM as librarian, human as curator" maps exactly to: (1) Claude Code Best Practices' "don't babysit, but do watch" (watch the first few steps, then let it run autonomously); (2) Harness Engineering's 5-verb workflow where the human approves the Plan step before Work begins; (3) Knowledge Evolution Pipeline's `--review` flag as the explicit human gate at the growing → mature transition. All three sources independently place the human-AI boundary at the same point: humans set direction and validate at critical transitions, AI executes all maintenance and bookkeeping. This convergence across independent sources strengthens the pattern's reliability.
 
 ## Relationships
 

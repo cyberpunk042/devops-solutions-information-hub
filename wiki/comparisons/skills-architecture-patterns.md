@@ -170,3 +170,4 @@ The connection to context management is the critical constraint that shapes all 
 [[AI-Driven Content Pipeline]]
 [[LLM Wiki Pattern]]
 [[Infrastructure as Code Patterns]]
+[[Pattern: Skills + Obsidian]]

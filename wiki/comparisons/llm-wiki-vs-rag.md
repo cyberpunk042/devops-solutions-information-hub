@@ -76,12 +76,23 @@ Choose **Hybrid Search** when:
 - You have the infrastructure budget for a vector store alongside the wiki
 - Long-term scaling is a requirement
 
+### Can the wiki index be used as a first-pass vector search target?
+
+Cross-referencing the Wiki Ingestion Pipeline page: the ingestion pipeline already produces a structured index of all pages with titles, types, domains, and relationship summaries. This index is exactly the kind of compact, semantically dense document that embeds well. The LLM Wiki v2 architecture proposes hybrid search as "BM25 + vector + graph traversal with reciprocal rank fusion" — which means the wiki index (BM25/vector pass) plus link-following (graph traversal pass) is precisely the described architecture. The index file is small enough to embed cheaply and would serve as a first-pass filter before the LLM follows specific page links. This is technically feasible with existing wiki structure today.
+
+### Karpathy's NotebookLM critique vs. NotebookLM's per-query accuracy
+
+Cross-referencing the Second Brain Architecture page and the Claude Code Accuracy Tips source: these are not in conflict — they target different goals. Karpathy's critique is about **knowledge compounding**: NotebookLM, like most RAG systems, retrieves answers per-query without accumulating a persistent, structured knowledge graph. The wiki accumulates; NotebookLM re-derives. The NotebookLM accuracy advantage is about **per-query grounding quality**: for a single factual question, NotebookLM's grounding in 250-300 source documents produces fewer hallucinations than a local RAG system with a smaller or lower-quality index. The distinction maps directly onto the comparison matrix: "knowledge accumulation = Yes (wiki) vs No (RAG/NotebookLM)" and "hallucination risk = Low (wiki) vs Medium (RAG)." The Claude Code Accuracy Tips source actually recommends using NotebookLM as an *external knowledge base complement* to the wiki — storing research sources in NotebookLM for per-query accuracy while the wiki accumulates synthesized patterns. These are complementary layers, not competing approaches.
+
+### At what scale does wiki navigation token cost exceed RAG infrastructure cost?
+
+Cross-referencing the LLM Wiki Pattern and Knowledge Evolution Pipeline pages: the boundary is not purely about page count — it is about query frequency and context window size. The LLM Wiki Pattern page documents the scale ceiling as ~200 pages / ~500K words for index-only navigation. Beyond that, the index itself becomes too large to fit in a context window in a single pass, requiring either hierarchical sub-indexes or vector search as a pre-filter. The Knowledge Evolution Pipeline adds a relevant data point: as a wiki matures, each evolved canonical page is denser and more interlinked, meaning 200 mature pages may have higher effective information density than 200 seed pages. The practical answer from existing wiki knowledge: the token cost of navigation scales with O(pages read per query × turns per session), while RAG infrastructure cost is roughly fixed (embedding model hosting + vector DB). For a personal wiki queried a few times per day, wiki navigation remains cheaper well past 200 pages. For high-frequency automated querying (e.g., an agent reading the wiki on every task), RAG amortizes faster.
+
 ## Open Questions
 
-- Has hybrid search been empirically benchmarked against pure wiki navigation at the 200-500 page transition zone?
-- Can the wiki index itself be embedded and searched via vectors as a first pass, with link-following as a second pass?
-- At what scale does the token cost of wiki navigation exceed the infrastructure cost of a RAG pipeline?
-- Karpathy critiques NotebookLM for the "retrieve-and-forget" pattern; PleasePrompto's NotebookLM skill demonstrates NotebookLM outperforms local RAG on accuracy. Are these claims in conflict, or do they target different goals (knowledge compounding vs per-query accuracy)?
+- Has hybrid search been empirically benchmarked against pure wiki navigation at the 200-500 page transition zone? (Requires: empirical testing or external research; the wiki only documents the theoretical boundary at ~200 pages)
+- Can the wiki index itself be embedded and searched via vectors as a first pass, with link-following as a second pass? (Partially answered above from existing knowledge; implementation details require external research on embedding pipeline setup)
+- At what scale does the token cost of wiki navigation exceed the infrastructure cost of a RAG pipeline? (Partially answered above; precise crossover point requires empirical measurement with real query frequency data)
 
 ## Relationships
 
