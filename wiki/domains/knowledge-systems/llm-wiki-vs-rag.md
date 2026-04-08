@@ -33,6 +33,22 @@ tags: [llm-wiki, rag, semantic-search, vector-database, comparison, knowledge-re
 
 This comparison examines Karpathy's LLM Wiki approach against traditional semantic search RAG, based on a side-by-side breakdown presented in the transcript. The LLM Wiki uses well-organized markdown files with indexes and interlinks that the LLM navigates by reading and following links. Traditional RAG uses embedding models, vector databases, and similarity search to retrieve relevant chunks. The transcript concludes that the wiki approach is simpler, cheaper, and often more effective at small to medium scale, but that traditional RAG remains necessary for enterprise-scale document collections in the millions.
 
+## Comparison Matrix
+
+| Criteria | LLM Wiki Pattern | Traditional RAG | Hybrid Search (LLM Wiki v2) |
+|----------|-----------------|----------------|----------------------------|
+| Retrieval mechanism | Index navigation + link following | Cosine similarity over vector embeddings | BM25 + vector + graph traversal (reciprocal rank fusion) |
+| Infrastructure required | None (markdown files only) | Embedding model + vector database + chunking pipeline | Full stack: files + vector DB + graph store |
+| Setup time | 5 minutes (paste Karpathy's prompt) | Hours to days | Days to weeks |
+| Ongoing compute cost | Tokens per query | Embedding re-compute on content change + query inference | Both token cost and embedding maintenance |
+| Scale ceiling | ~200 pages / ~500K words | Millions of documents | Designed for scaling past 200 pages |
+| Knowledge accumulation | Yes — compounds over time, curated incrementally | No — retrieves and forgets on every query | Yes — wiki layer accumulates; vector layer retrieves |
+| Multi-hop reasoning | Excellent — explicit typed relationship links | Poor — chunks are decontextualized | Good — graph traversal stream captures relationships |
+| Maintenance model | Periodic linting + LLM-driven updates | Re-embed on change; schema migrations | Both linting and re-indexing required |
+| Hallucination risk | Low (reads synthesized, curated pages) | Medium (chunk assembly may lose context) | Low (cross-stream validation reduces errors) |
+| Content change tolerance | High — edit markdown, no pipeline | Low — re-embedding required on every change | Medium — markdown edits cheap; vector re-index periodic |
+| Best for | Personal KB, team wikis, < 200 curated pages | Large document archives, enterprise search | Mature wikis scaling beyond 200 pages |
+
 ## Key Insights
 
 - **Retrieval mechanism**: LLM Wiki finds information by reading indexes and following links between pages. RAG finds information via cosine similarity search across vector embeddings. The wiki method produces deeper relational understanding; RAG matches on surface-level semantic similarity.

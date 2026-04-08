@@ -56,6 +56,20 @@ The devops domain covers CI/CD, deployment, monitoring, infrastructure-as-code, 
 
 1. **[devops-control-plane](../../domains/devops/devops-control-plane.md)** — The only page in this domain. Covers the unified solution management platform, 20 stack auto-detection, encrypted vaults, audit ledger, and the post-mortem-derived immune system rules that became OpenFleet's doctor.py.
 
+## FAQ
+
+### Q: What is devops-control-plane and how does it relate to OpenFleet?
+devops-control-plane is the unified solution management platform underlying the ecosystem — it provides the 20 stack auto-detection, AES-256-GCM encrypted vaults, and audit ledger. Its 24 post-mortem-derived immune system rules were adopted directly into OpenFleet's doctor.py as the agent guardrail system. See [[devops-control-plane]] and [[OpenFleet]].
+
+### Q: What are the 24 immune system rules and where should I apply them?
+The 24 rules originated from 16 real post-mortems across projects. They cover failure modes like runaway loops, permission drift, stale state reads, and cost spikes. They are implemented in OpenFleet's doctor.py and are transferable to any agent harness as a checklist. A standalone pattern page distilling these rules is a documented priority. See [[Harness Engineering]].
+
+### Q: How does the ecosystem handle secrets and credentials across four projects?
+devops-control-plane implements a dual vault system with AES-256-GCM encryption and append-only audit ledgers. Whether this vault can serve as a centralized credential store for all four projects (OpenFleet, AICP, DSPD, devops-control-plane) is an open question — it is architecturally plausible but not yet evaluated. See [[devops-control-plane]].
+
+### Q: What WSL2-specific devops constraints should I know about?
+The ecosystem runs on WSL2 (Windows Subsystem for Linux), which affects service startup (no systemd by default), networking (bridged vs NAT), inotify watch limits (relevant for the wiki watcher daemon), and daemon lifecycle management. Standard Linux devops documentation often does not account for these constraints — this is a documented gap in the wiki.
+
 ## Relationships
 
 - ENABLES: AI Agents

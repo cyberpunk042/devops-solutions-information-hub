@@ -85,6 +85,7 @@ required_sections:
     - Relationships
   comparison:
     - Summary
+    - Comparison Matrix
     - Key Insights
     - Deep Analysis
     - Relationships

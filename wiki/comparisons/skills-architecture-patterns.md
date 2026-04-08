@@ -52,6 +52,20 @@ tags: [skills, architecture, patterns, cross-domain, claude-code, obsidian, note
 
 Across 8 sources spanning 3 skill ecosystems (Claude Code core, Obsidian, NotebookLM), a consistent set of architectural patterns has emerged for extending AI agent capabilities through skills. This page synthesizes these patterns by comparing how skills are structured, composed, distributed, and evolved across the different ecosystems. Despite being developed independently by different authors, the skill implementations converge on shared design principles while diverging on scope and complexity in ways that reveal the maturation trajectory of the skills pattern.
 
+## Comparison Matrix
+
+| Criteria | Claude Code Core Skills | Obsidian Skills Ecosystem | NotebookLM Skills Ecosystem |
+|----------|------------------------|--------------------------|----------------------------|
+| Definition format | SKILL.md markdown | SKILL.md markdown | SKILL.md markdown |
+| Trigger mechanism | Auto-detected from description field | Manual invocation or agent selection | Manual invocation or pipeline step |
+| Complexity ceiling | Full pipeline (multi-agent orchestration) | Full pipeline (130+ CLI commands, pablo-mano) | Full pipeline (11 CLI + 13 MCP tools, claude-world) |
+| Composition model | Hierarchical: Command → Agent → Skill | Layered: format → generate → control | Complementary: pipeline vs ad-hoc query |
+| Context cost model | Loaded every message if active; fork for isolation | Loaded when referenced | Pipeline skills load for duration; query skills per-question |
+| Distribution channel | Claude Code marketplace, npx, manual | agentskills.io, GitHub, marketplace | GitHub repositories |
+| Standard body | Anthropic / agentskills.io (kepano) | agentskills.io (kepano) | None — community-driven |
+| Production form | Folder with references/, scripts/, examples/ | Single file (kepano) to comprehensive folder (pablo-mano) | Single skill file or CLI+MCP pipeline (claude-world) |
+| Best for | Coding agents, DevOps automation, multi-step workflows | Vault management, note generation, Obsidian-specific workflows | Research synthesis, NotebookLM source management, content production |
+
 ## Key Insights
 
 - All three ecosystems (Claude Code, Obsidian, NotebookLM) independently converged on SKILL.md markdown as the universal definition format

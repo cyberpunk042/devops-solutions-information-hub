@@ -73,6 +73,23 @@ The tools-and-platforms domain covers the software tools, platforms, CLI utiliti
 4. **[NotebookLM](../../domains/tools-and-platforms/notebooklm.md)** — Google's source-grounded research tool. Multi-format output (audio overviews, slides, quizzes) from user-supplied sources.
 5. **[Obsidian Skills Ecosystem](../../domains/tools-and-platforms/obsidian-skills-ecosystem.md)** — Three-layer architecture for AI agent skills around Obsidian. Cross-project pattern synthesis.
 
+## FAQ
+
+### Q: What is AICP and why is it central to the ecosystem?
+AICP (AI Control Platform) is the backend routing layer that dispatches LLM requests to the right model — local inference for simple tasks, Claude API for complex ones. Its complexity scoring targets 80%+ token reduction from Claude API by offloading to local Ollama/LocalAI models. It's the cost-reduction engine for the entire fleet. See [[AICP]].
+
+### Q: Should I use Obsidian or NotebookLM as the wiki frontend?
+They serve different purposes: Obsidian is the long-term structured knowledge vault (graph view, wikilinks, offline-first, git-backed). NotebookLM is the research validation layer (audio overviews, source-grounded Q&A, hallucination reduction). Use both: Obsidian for compounding knowledge, NotebookLM for cross-checking specific claims. See [[Obsidian Knowledge Vault]] and [[NotebookLM]].
+
+### Q: What is the Obsidian Skills Ecosystem and how do the three layers fit together?
+Three independently developed skill sets compose into a complete Obsidian automation stack: kepano (format standards), axton (content generation in those formats), and pablo-mano (130+ CLI commands for programmatic vault control). Each layer builds on the one below. See [[Obsidian Skills Ecosystem]].
+
+### Q: How does Plane connect to the AI agent ecosystem?
+Plane is the human-facing PM surface that syncs bidirectionally with OpenFleet's Mission Control. Agents write task status to BOARD.md; the orchestrator syncs that to Plane issues; humans update Plane; changes flow back to BOARD.md. It's the human↔agent task handoff layer. See the [[Plane]] page and [[OpenFleet]].
+
+### Q: What is MCP vs CLI+Skills for tool integration, and which should I choose?
+CLI+Skills is 12x cheaper in token cost, more accurate for project-internal tooling, and simpler to debug. MCP is for external service bridges (cross-conversation tool discovery, ecosystem-wide integrations). Default to CLI+Skills; use MCP only when a tool needs to be available across unrelated conversations. See [[Decision: MCP vs CLI for Tool Integration]].
+
 ## Relationships
 
 - USED BY: AI Agents

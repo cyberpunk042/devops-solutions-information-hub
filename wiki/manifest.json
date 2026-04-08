@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-08T18:48:10.630683+00:00",
+  "generated": "2026-04-08T19:01:46.659402+00:00",
   "stats": {
-    "pages": 71,
+    "pages": 72,
     "domains": 7,
     "sources": 20,
-    "comparisons": 3,
-    "relationships": 541,
+    "comparisons": 4,
+    "relationships": 548,
     "tags_unique": 274,
     "layers": {
       "6": 1,
@@ -102,6 +102,82 @@
         {
           "verb": "RELATES TO",
           "target": "Memory Lifecycle Management"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/llm-wiki-vs-rag.md",
+      "slug": "comparisons/llm-wiki-vs-rag",
+      "title": "LLM Wiki vs RAG",
+      "type": "comparison",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "llm-wiki",
+        "rag",
+        "comparison",
+        "knowledge-retrieval",
+        "hybrid-search",
+        "vector-search",
+        "knowledge-management",
+        "cross-domain"
+      ],
+      "sources": [
+        {
+          "id": "src-karpathy-claude-code-10x",
+          "type": "youtube-transcript",
+          "file": "wiki/sources/src-karpathy-claude-code-10x.md",
+          "title": "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+        },
+        {
+          "id": "src-karpathy-llm-wiki-idea-file",
+          "type": "documentation",
+          "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
+          "file": "raw/articles/karpathy-llm-wiki-idea-file.md",
+          "title": "Karpathy LLM Wiki Idea File"
+        },
+        {
+          "id": "src-llm-wiki-v2-agentmemory",
+          "type": "documentation",
+          "url": "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2",
+          "file": "raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md",
+          "title": "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "LLM Wiki Pattern"
+        },
+        {
+          "verb": "EXTENDS",
+          "target": "Agentic Search vs Vector Search"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LightRAG"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Memory Lifecycle Management"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "NotebookLM"
         }
       ]
     },
@@ -5123,8 +5199,8 @@
   ],
   "domains": {
     "cross-domain": {
-      "page_count": 4,
-      "relationship_count": 30
+      "page_count": 5,
+      "relationship_count": 37
     },
     "tools-and-platforms": {
       "page_count": 17,
@@ -5157,25 +5233,30 @@
     ],
     "vector-search": [
       "comparisons/agentic-search-vs-vector-search",
+      "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/lightrag"
     ],
     "rag": [
       "comparisons/agentic-search-vs-vector-search",
+      "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/lightrag",
       "domains/knowledge-systems/llm-wiki-vs-rag"
     ],
     "hybrid-search": [
       "comparisons/agentic-search-vs-vector-search",
+      "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/lightrag",
       "domains/knowledge-systems/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-knowledge-graph"
     ],
     "knowledge-retrieval": [
       "comparisons/agentic-search-vs-vector-search",
+      "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/llm-wiki-vs-rag"
     ],
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
+      "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/llm-wiki-vs-rag"
     ],
     "glob-grep": [
@@ -5183,6 +5264,26 @@
     ],
     "index-navigation": [
       "comparisons/agentic-search-vs-vector-search"
+    ],
+    "llm-wiki": [
+      "comparisons/llm-wiki-vs-rag",
+      "domains/knowledge-systems/llm-wiki-pattern",
+      "domains/knowledge-systems/llm-wiki-vs-rag",
+      "lessons/lesson-convergence-on-llm-wiki-pattern",
+      "lessons/lesson-convergence-on-obsidian-knowledge-vault",
+      "sources/src-karpathy-claude-code-10x",
+      "sources/src-karpathy-llm-wiki-idea-file"
+    ],
+    "knowledge-management": [
+      "comparisons/llm-wiki-vs-rag",
+      "domains/knowledge-systems/second-brain-architecture",
+      "lessons/lesson-convergence-on-llm-wiki-pattern"
+    ],
+    "cross-domain": [
+      "comparisons/llm-wiki-vs-rag",
+      "comparisons/skills-architecture-patterns",
+      "patterns/plan-execute-review-cycle",
+      "spine/domain-overviews/cross-domain-\u2014-domain-overview"
     ],
     "skills": [
       "comparisons/skills-architecture-patterns",
@@ -5211,11 +5312,6 @@
     "patterns": [
       "comparisons/skills-architecture-patterns",
       "lessons/lesson-convergence-on-claude-code-skills"
-    ],
-    "cross-domain": [
-      "comparisons/skills-architecture-patterns",
-      "patterns/plan-execute-review-cycle",
-      "spine/domain-overviews/cross-domain-\u2014-domain-overview"
     ],
     "claude-code": [
       "comparisons/skills-architecture-patterns",
@@ -5787,14 +5883,6 @@
     "graph-retrieval": [
       "domains/knowledge-systems/lightrag"
     ],
-    "llm-wiki": [
-      "domains/knowledge-systems/llm-wiki-pattern",
-      "domains/knowledge-systems/llm-wiki-vs-rag",
-      "lessons/lesson-convergence-on-llm-wiki-pattern",
-      "lessons/lesson-convergence-on-obsidian-knowledge-vault",
-      "sources/src-karpathy-claude-code-10x",
-      "sources/src-karpathy-llm-wiki-idea-file"
-    ],
     "knowledge-base": [
       "domains/knowledge-systems/llm-wiki-pattern",
       "sources/src-karpathy-claude-code-10x",
@@ -5868,10 +5956,6 @@
     ],
     "para": [
       "domains/knowledge-systems/second-brain-architecture"
-    ],
-    "knowledge-management": [
-      "domains/knowledge-systems/second-brain-architecture",
-      "lessons/lesson-convergence-on-llm-wiki-pattern"
     ],
     "progressive-distillation": [
       "domains/knowledge-systems/second-brain-architecture"

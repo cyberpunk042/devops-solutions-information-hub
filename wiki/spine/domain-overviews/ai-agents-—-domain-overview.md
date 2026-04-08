@@ -74,6 +74,23 @@ The ai-agents domain covers the theory, patterns, and practice of building, oper
 4. **[Claude Code Skills](../../domains/ai-agents/claude-code-skills.md)** — The transferable knowledge mechanism. How skills encode expertise and enable consistent agent behavior.
 5. **[Claude Code Best Practices](../../domains/ai-agents/claude-code-best-practices.md)** — Operational patterns validated across multiple sources. Direct input into this project's CLAUDE.md conventions.
 
+## FAQ
+
+### Q: What is the difference between a skill, a hook, and an MCP server in Claude Code?
+Skills encode reusable procedural knowledge as markdown files loaded into context. Hooks inject deterministic code at lifecycle events (pre-tool, post-tool) without LLM overhead. MCP servers expose external tools as native capabilities across all conversations. See [[Claude Code Skills]] and [[Harness Engineering]].
+
+### Q: How does OpenFleet govern 10 concurrent agents without them stepping on each other?
+OpenFleet uses a deterministic orchestrator that reads HEARTBEAT.md and BOARD.md state files every 30 seconds — zero LLM calls in the coordination loop. Agents write to separate working directories and update shared state only through the orchestrator. See [[OpenFleet]].
+
+### Q: When should I use a subagent vs a direct Claude Code session?
+Use subagents for isolating risky operations, parallel workloads, or tasks that would pollute the parent context. Direct sessions are cheaper (7-10x lower token cost than spawning a subagent). The boundary is: if the task could dirty the context or benefits from parallel execution, fork it. See [[Claude Code Context Management]].
+
+### Q: What is the context degradation curve and why does it matter?
+AI accuracy drops as the context window fills: high at ~20% capacity, unreliable at ~60%, hallucinations common at 80%+. Manage it via compact sessions, subagent isolation, and loading only the skills you need for the current task. See [[Claude Code Best Practices]].
+
+### Q: What are the 24 immune system rules and where do they come from?
+The 24 rules in OpenFleet's doctor.py were distilled from 16 post-mortems of real agent failures. They cover runaway loops, stale state, cost spikes, and permission drift. They are the most operationally validated guardrail set in the ecosystem. See [[Harness Engineering]] and [[OpenFleet]].
+
 ## Relationships
 
 - FEEDS INTO: Knowledge Systems

@@ -66,6 +66,23 @@ The automation domain covers scheduling, pipeline orchestration, workflow automa
 4. **[Claude Code Scheduling](../../domains/automation/claude-code-scheduling.md)** — The most operational page: local cron and remote Anthropic Cloud task scheduling with concrete setup examples.
 5. **[AI-Driven Content Pipeline](../../domains/automation/ai-driven-content-pipeline.md)** — Claude + NotebookLM content generation loop. Relevant to the wiki's own output generation for research summaries and audio overviews.
 
+## FAQ
+
+### Q: What is the difference between local cron scheduling and Anthropic Cloud remote tasks?
+Local cron runs Claude Code on a schedule via system crontab — zero cost beyond API usage, works offline, but requires the machine to be running. Anthropic Cloud remote tasks are triggered by Anthropic's infrastructure and can wake sleeping machines, but require an active cloud account and incur scheduling overhead. Use local cron for the wiki's daily pipeline; use remote tasks for fleet-wide coordination. See [[Claude Code Scheduling]].
+
+### Q: What are the six wiki automation hooks and when do they fire?
+The six hooks are: on-ingest (new raw file dropped), on-validate (schema check), on-post (post-ingestion chain), on-sync (WSL↔Windows sync), on-gap (orphan detection), and on-evolve (maturity promotion trigger). They convert the manual pipeline steps into reactive event-driven operations. See [[Wiki Event-Driven Automation]].
+
+### Q: What is the MCP Integration Architecture's target state?
+The target is three MCP servers (wiki, OpenFleet, AICP) plus two service daemons (watcher, sync) — replacing the current manual CLI workflow with always-on reactive automation. The watcher detects wiki changes and triggers the post-chain; the sync daemon pushes to Windows/Obsidian automatically. See [[MCP Integration Architecture]].
+
+### Q: What is the Research Pipeline Orchestration vision and where are we now?
+The vision is chain/group/tree operation modes for multi-pass automated ingestion — queue a research topic, the pipeline fetches sources, synthesizes pages, cross-references, and identifies gaps without manual steps. Currently, the tools exist as individual CLI commands; the pipeline engine that composes them is the gap. See [[Research Pipeline Orchestration]].
+
+### Q: How does OpenFleet's orchestrator model apply to the wiki's pipeline?
+OpenFleet's deterministic 30-second orchestrator is the most mature automation pattern in the ecosystem: a state-machine loop with zero LLM calls for coordination, deterministic task dispatch, and LLM calls only for actual reasoning work. The wiki's pipeline should adopt the same pattern — deterministic shell for scheduling, LLM only for ingestion and synthesis. See [[Research Pipeline Orchestration]] and [[OpenFleet]].
+
 ## Relationships
 
 - IMPLEMENTS: Knowledge Systems

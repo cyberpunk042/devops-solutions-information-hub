@@ -72,6 +72,23 @@ The knowledge-systems domain covers the theory and architecture of building LLM-
 4. **[Wiki Knowledge Graph](../../domains/knowledge-systems/wiki-knowledge-graph.md)** — The typed-relationship extension to flat wikilinks. Describes entity extraction, graph traversal for impact analysis, and the scaling path beyond 200 pages.
 5. **[LLM Wiki vs RAG](../../domains/knowledge-systems/llm-wiki-vs-rag.md)** — Side-by-side comparison; decision criteria for choosing the wiki approach over traditional vector RAG.
 
+## FAQ
+
+### Q: What is the LLM Wiki Pattern and how is it different from RAG?
+The LLM Wiki Pattern (originated by Karpathy) stores synthesized knowledge in structured markdown with explicit interlinks; the LLM navigates by reading indexes and following links rather than doing similarity search. RAG embeds documents into a vector store and retrieves chunks by cosine similarity on every query. The wiki accumulates and compounds knowledge; RAG rediscovers from scratch each time. See [[LLM Wiki vs RAG]].
+
+### Q: At what scale should I switch from pure wiki navigation to hybrid search?
+Karpathy's sources suggest pure index navigation works well up to ~200 pages (roughly 500K words). Beyond that, the index becomes too large for one-pass reading and a three-stream hybrid (BM25 + vector + graph traversal with reciprocal rank fusion) is recommended. See [[Wiki Knowledge Graph]] and [[LLM Wiki vs RAG]].
+
+### Q: What is LightRAG and how does it relate to the wiki?
+LightRAG is a graph-based RAG framework that builds a knowledge graph from documents and uses graph traversal for multi-hop retrieval. OpenFleet uses it in production with 1,545 entities and 2,295 relationships. The wiki's ## Relationships sections are designed to be compatible with LightRAG's entity extraction. See [[LightRAG]].
+
+### Q: How does memory lifecycle management prevent the wiki from going stale?
+Memory lifecycle uses confidence scoring and status fields (raw → synthesized → stale) to track page freshness. Periodic linting detects pages not updated recently or contradicted by newer sources. The goal is to promote durable insights to canonical status while deprecating outdated claims. See [[Memory Lifecycle Management]].
+
+### Q: What is the ingestion pipeline's three-phase model?
+Phase 1 is extraction (source → summary + key insights), Phase 2 is cross-referencing (new page → existing pages → relationship mapping), Phase 3 is deepening (gap analysis → follow-up questions → next ingestion targets). The pipeline is multi-pass, not one-shot. See [[Wiki Ingestion Pipeline]].
+
 ## Relationships
 
 - FEEDS INTO: AI Agents

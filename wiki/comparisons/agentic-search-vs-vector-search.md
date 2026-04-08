@@ -36,6 +36,20 @@ tags: [agentic-search, vector-search, rag, hybrid-search, knowledge-retrieval, c
 
 A fundamental tension runs through the research wiki: multiple sources advocate for agent-driven navigation over structured files (agentic search) while others advocate for embedding-based similarity retrieval (vector search), and a third position argues for combining both (hybrid search). This comparison synthesizes the claims, identifies where they agree and conflict, and proposes a resolution framework based on domain characteristics.
 
+## Comparison Matrix
+
+| Criteria | Agentic Search (glob/grep/index nav) | Vector Search (embeddings + similarity) | Hybrid Search (BM25 + vector + graph) |
+|----------|-------------------------------------|----------------------------------------|---------------------------------------|
+| Scale | Small-medium (< 200 pages) | Any scale | Large (> 200 pages) |
+| Infrastructure | None (just files) | Embedding model + vector DB | Full stack (DB + embeddings + index) |
+| Token cost | Per navigation step | Per embedding + query | Combined (navigation + retrieval) |
+| Content change tolerance | High — no re-indexing needed | Low — re-embedding required on change | Medium — partial re-indexing on change |
+| Multi-hop reasoning | Excellent — follows explicit links | Poor — returns isolated chunks | Good — graph traversal stream |
+| Structural organization required | Yes — needs indexes and interlinks | No — works on unstructured content | Partial — benefits from structure |
+| Setup time | Minutes (just files + indexes) | Hours to days (pipeline + infra) | Days (full stack integration) |
+| Hallucination risk | Low (reads exact page content) | Medium (chunk retrieval may miss context) | Low (multiple streams cross-validate) |
+| Best for | Code, active wikis, known-structure KB | Enterprise document collections | Mature wikis scaling past 200 pages |
+
 ## Key Insights
 
 - Agentic search (glob/grep/index navigation) excels for fast-changing, well-structured content like codebases

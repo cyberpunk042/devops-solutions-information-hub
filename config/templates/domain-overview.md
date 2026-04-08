@@ -38,6 +38,11 @@ tags: []
 
 <!-- The essential reading list for this domain, in recommended order -->
 
+## FAQ
+
+<!-- Quick-reference answers to the most common questions in this domain.
+Format: ### Q: Question?\nAnswer in 2-3 sentences. Link to deeper pages. -->
+
 ## Relationships
 
 - RELATES TO: {{related_domain_1}}
