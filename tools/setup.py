@@ -4,10 +4,13 @@ Replaces bash scripts for environments where bash isn't available (Windows).
 Works on Linux, macOS, and Windows.
 
 Usage:
-    python3 -m tools.setup                    # Full setup
-    python3 -m tools.setup --deps             # Install dependencies only
-    python3 -m tools.setup --check            # Check environment only
-    python3 -m tools.setup --obsidian-config  # Configure Obsidian vault
+    python3 -m tools.setup                         # Full setup
+    python3 -m tools.setup --deps                  # Install dependencies only
+    python3 -m tools.setup --check                 # Check environment only
+    python3 -m tools.setup --obsidian-config       # Configure Obsidian vault
+    python3 -m tools.setup --services              # List available services
+    python3 -m tools.setup --services wiki-sync    # Deploy sync daemon
+    python3 -m tools.setup --services wiki-watcher # Deploy watcher daemon
 """
 
 import argparse
@@ -232,6 +235,99 @@ def configure_obsidian(project_root: Path):
 
 
 # ---------------------------------------------------------------------------
+# Service deployment (systemd)
+# ---------------------------------------------------------------------------
+
+def list_services(project_root: Path):
+    """List available service templates and their install status."""
+    template_dir = project_root / "config" / "services"
+    if not template_dir.exists():
+        log_error("No service templates found in config/services/")
+        return
+
+    systemd_dir = Path.home() / ".config" / "systemd" / "user"
+
+    log_info("Available services:")
+    for template in sorted(template_dir.glob("*.service.template")):
+        name = template.name.replace(".service.template", "")
+        unit_path = systemd_dir / f"{name}.service"
+        installed = unit_path.exists()
+
+        running = False
+        if installed:
+            result = subprocess.run(
+                ["systemctl", "--user", "is-active", name],
+                capture_output=True, text=True,
+            )
+            running = result.stdout.strip() == "active"
+
+        status_parts = []
+        if installed:
+            status_parts.append("installed")
+        if running:
+            status_parts.append("running")
+        status = ", ".join(status_parts) if status_parts else "not installed"
+
+        print(f"  {name:20s}  [{status}]")
+
+    print()
+    log_info("Deploy with: python -m tools.setup --services <name>")
+    log_info("Manage with: systemctl --user start|stop|status <name>")
+    log_info("View logs:   journalctl --user -u <name> -f")
+
+
+def install_service(service_name: str, project_root: Path) -> bool:
+    """Generate and enable a systemd user service from template."""
+    if not is_wsl() and platform.system() != "Linux":
+        log_error("systemd services only supported on Linux/WSL")
+        return False
+
+    template_dir = project_root / "config" / "services"
+    template_path = template_dir / f"{service_name}.service.template"
+
+    if not template_path.exists():
+        log_error(f"No template for service: {service_name}")
+        available = [
+            f.name.replace(".service.template", "")
+            for f in template_dir.glob("*.service.template")
+        ]
+        if available:
+            log_info(f"Available: {', '.join(available)}")
+        return False
+
+    content = template_path.read_text(encoding="utf-8")
+    content = content.replace("{{project_root}}", str(project_root))
+    content = content.replace("{{venv_python}}", str(venv_python(project_root)))
+
+    # Resolve sync target for wiki-sync service
+    if "{{sync_target}}" in content:
+        from tools.sync import get_sync_config
+        sync_config = get_sync_config(project_root)
+        sync_target = sync_config.get("target", "")
+        if not sync_target:
+            log_error("No sync target detected. Set WIKI_SYNC_TARGET env var first.")
+            return False
+        content = content.replace("{{sync_target}}", sync_target)
+
+    systemd_dir = Path.home() / ".config" / "systemd" / "user"
+    systemd_dir.mkdir(parents=True, exist_ok=True)
+    unit_path = systemd_dir / f"{service_name}.service"
+    unit_path.write_text(content, encoding="utf-8")
+    log_info(f"Unit file written: {unit_path}")
+
+    subprocess.run(["systemctl", "--user", "daemon-reload"], check=True)
+    subprocess.run(["systemctl", "--user", "enable", service_name], check=True)
+    subprocess.run(["systemctl", "--user", "start", service_name], check=True)
+
+    log_info(f"Service '{service_name}' installed and started")
+    log_info(f"  Status:  systemctl --user status {service_name}")
+    log_info(f"  Logs:    journalctl --user -u {service_name} -f")
+    log_info(f"  Stop:    systemctl --user stop {service_name}")
+    log_info(f"  Disable: systemctl --user disable {service_name}")
+    return True
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -240,6 +336,8 @@ def main():
     parser.add_argument("--deps", action="store_true", help="Install dependencies only")
     parser.add_argument("--check", action="store_true", help="Check environment only")
     parser.add_argument("--obsidian-config", action="store_true", help="Configure Obsidian vault")
+    parser.add_argument("--services", nargs="?", const="__list__", default=None,
+                        metavar="NAME", help="Deploy a systemd service (or list available)")
     args = parser.parse_args()
 
     root = get_project_root()
@@ -250,6 +348,12 @@ def main():
         install_deps(root)
     elif args.obsidian_config:
         configure_obsidian(root)
+    elif args.services is not None:
+        if args.services == "__list__":
+            list_services(root)
+        else:
+            success = install_service(args.services, root)
+            sys.exit(0 if success else 1)
     else:
         # Full setup
         log_info("=== Research Wiki Setup ===")

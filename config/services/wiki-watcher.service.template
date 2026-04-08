@@ -1,0 +1,13 @@
+[Unit]
+Description=Research Wiki Watcher (change detection + post-chain)
+
+[Service]
+Type=simple
+WorkingDirectory={{project_root}}
+ExecStart={{venv_python}} -m tools.watcher --watch
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONPATH={{project_root}}
+
+[Install]
+WantedBy=default.target

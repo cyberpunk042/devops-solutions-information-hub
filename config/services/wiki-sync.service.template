@@ -1,0 +1,14 @@
+[Unit]
+Description=Research Wiki Sync (WSL → Windows)
+
+[Service]
+Type=simple
+WorkingDirectory={{project_root}}
+ExecStart={{venv_python}} -m tools.sync --watch
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONPATH={{project_root}}
+Environment=WIKI_SYNC_TARGET={{sync_target}}
+
+[Install]
+WantedBy=default.target
