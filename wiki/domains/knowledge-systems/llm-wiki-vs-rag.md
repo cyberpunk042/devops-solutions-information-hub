@@ -101,6 +101,7 @@ The LLM Wiki v2 document proposes that the binary choice between wiki and RAG is
 [[Agentic Search vs Vector Search]]
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Memory Lifecycle Management]]
+[[Second Brain Architecture]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]

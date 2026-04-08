@@ -95,6 +95,7 @@ This demonstrates that the Obsidian + Claude Code combination has at least two d
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Obsidian CLI]]
 [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[Second Brain Architecture]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: Obsidian + Claude Code Second Brain Setup]]

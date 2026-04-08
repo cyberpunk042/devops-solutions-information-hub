@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-08T18:04:20.430066+00:00",
+  "generated": "2026-04-08T18:48:10.630683+00:00",
   "stats": {
-    "pages": 70,
+    "pages": 71,
     "domains": 7,
     "sources": 20,
     "comparisons": 3,
-    "relationships": 531,
-    "tags_unique": 269,
+    "relationships": 541,
+    "tags_unique": 274,
     "layers": {
       "6": 1,
       "4": 7,
@@ -1925,6 +1925,88 @@
         {
           "verb": "RELATES TO",
           "target": "Wiki Event-Driven Automation"
+        }
+      ]
+    },
+    {
+      "path": "domains/knowledge-systems/second-brain-architecture.md",
+      "slug": "domains/knowledge-systems/second-brain-architecture",
+      "title": "Second Brain Architecture",
+      "type": "concept",
+      "domain": "knowledge-systems",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "second-brain",
+        "pkm",
+        "zettelkasten",
+        "para",
+        "knowledge-management",
+        "obsidian",
+        "progressive-distillation",
+        "atomic-notes"
+      ],
+      "sources": [
+        {
+          "id": "src-second-brain-research",
+          "type": "article",
+          "file": "raw/articles/second-brain-pkm-research.md",
+          "title": "Second Brain / PKM Research",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-zettelkasten-basb",
+          "type": "article",
+          "url": "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/",
+          "title": "Combining Zettelkasten and Building a Second Brain",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Obsidian Knowledge Vault"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Memory Lifecycle Management"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Zettelkasten methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "PARA methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "LLM Wiki vs RAG"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -5065,8 +5147,8 @@
       "relationship_count": 10
     },
     "knowledge-systems": {
-      "page_count": 13,
-      "relationship_count": 117
+      "page_count": 14,
+      "relationship_count": 127
     }
   },
   "tags": {
@@ -5170,6 +5252,7 @@
     ],
     "obsidian": [
       "comparisons/skills-architecture-patterns",
+      "domains/knowledge-systems/second-brain-architecture",
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
@@ -5725,6 +5808,7 @@
     ],
     "second-brain": [
       "domains/knowledge-systems/llm-wiki-pattern",
+      "domains/knowledge-systems/second-brain-architecture",
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "lessons/lesson-convergence-on-obsidian-knowledge-vault",
@@ -5775,6 +5859,25 @@
     ],
     "ebbinghaus": [
       "domains/knowledge-systems/memory-lifecycle-management"
+    ],
+    "pkm": [
+      "domains/knowledge-systems/second-brain-architecture"
+    ],
+    "zettelkasten": [
+      "domains/knowledge-systems/second-brain-architecture"
+    ],
+    "para": [
+      "domains/knowledge-systems/second-brain-architecture"
+    ],
+    "knowledge-management": [
+      "domains/knowledge-systems/second-brain-architecture",
+      "lessons/lesson-convergence-on-llm-wiki-pattern"
+    ],
+    "progressive-distillation": [
+      "domains/knowledge-systems/second-brain-architecture"
+    ],
+    "atomic-notes": [
+      "domains/knowledge-systems/second-brain-architecture"
     ],
     "wiki": [
       "domains/knowledge-systems/wiki-ingestion-pipeline"
@@ -5946,9 +6049,6 @@
     ],
     "llm-extension": [
       "lessons/lesson-convergence-on-claude-code-skills"
-    ],
-    "knowledge-management": [
-      "lessons/lesson-convergence-on-llm-wiki-pattern"
     ],
     "static-docs": [
       "lessons/lesson-convergence-on-llm-wiki-pattern"
@@ -6211,6 +6311,12 @@
       ]
     },
     {
+      "target": "Knowledge Evolution Pipeline",
+      "referenced_by": [
+        "Second Brain Architecture"
+      ]
+    },
+    {
       "target": "Knowledge Systems",
       "referenced_by": [
         "AI Agents \u2014 Domain Overview",
@@ -6219,6 +6325,12 @@
         "Cross-Domain \u2014 Domain Overview",
         "Devops \u2014 Domain Overview",
         "Tools And Platforms \u2014 Domain Overview"
+      ]
+    },
+    {
+      "target": "PARA methodology",
+      "referenced_by": [
+        "Second Brain Architecture"
       ]
     },
     {
@@ -6236,6 +6348,12 @@
         "Cross-Domain \u2014 Domain Overview",
         "Devops \u2014 Domain Overview",
         "Knowledge Systems \u2014 Domain Overview"
+      ]
+    },
+    {
+      "target": "Zettelkasten methodology",
+      "referenced_by": [
+        "Second Brain Architecture"
       ]
     },
     {

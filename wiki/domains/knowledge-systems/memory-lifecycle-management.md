@@ -82,4 +82,5 @@ The connection to Karpathy's original lint operation is direct: lint can serve a
 [[Agentic Search vs Vector Search]]
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[Second Brain Architecture]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]

@@ -87,3 +87,4 @@ The connection to Obsidian is relevant: Obsidian's graph view already visualizes
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[Second Brain Architecture]]

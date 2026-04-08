@@ -126,6 +126,7 @@ The gap between current state and the vision:
 [[Harness Engineering]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Plan Execute Review Cycle]]
+[[Second Brain Architecture]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
 [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]

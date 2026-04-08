@@ -111,6 +111,7 @@ A key architectural decision is that the raw source is preserved in the `raw/` f
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
 [[Plan Execute Review Cycle]]
+[[Second Brain Architecture]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]

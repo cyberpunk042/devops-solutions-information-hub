@@ -135,6 +135,7 @@ These extensions represent the maturation path from a personal tool to a product
 [[Obsidian Skills Ecosystem]]
 [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
 [[Research Pipeline Orchestration]]
+[[Second Brain Architecture]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
