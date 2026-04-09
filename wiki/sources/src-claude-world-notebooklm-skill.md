@@ -92,7 +92,8 @@ Cross-referencing `notebooklm-py CLI` and `AI-Driven Content Pipeline`: the `not
 ## Backlinks
 
 [[src-claude-world-notebooklm-skill]]
-[[[[NotebookLM Skills]]]]
-[[[[Claude Code Skills]]]]
-[[[[NotebookLM]]]]
+[[NotebookLM Skills]]
+[[Claude Code Skills]]
+[[NotebookLM]]
 [[src-pleaseprompto-notebooklm-skill]]
+[[NotebookLM as Grounded Research Engine Not Just Note Storage]]

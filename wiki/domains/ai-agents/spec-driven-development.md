@@ -133,12 +133,13 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 
 ## Backlinks
 
-[[[[Design.md Pattern]] (spec artifacts as first-class project documents)]]
-[[[[Rework Prevention]] (spec gates prevent the rework that occurs without them)]]
-[[[[Plan Execute Review Cycle]] (spec is the output of the Plan phase and the input to Execute)]]
-[[[[Task Lifecycle Stage-Gating]] (spec-driven development requires stage enforcement to prevent spec-skipping)]]
-[[[[Agent Orchestration Patterns]] (BMAD uses multi-agent spec production)]]
-[[[[OpenFleet]] (primary source — SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)]]
-[[[[Harness Engineering]] (harness is the spec-driven development tooling layer)]]
-[[[[Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)]]
+[[Design.md Pattern]] (spec artifacts as first-class project documents)]]
+[[Rework Prevention]] (spec gates prevent the rework that occurs without them)]]
+[[Plan Execute Review Cycle]] (spec is the output of the Plan phase and the input to Execute)]]
+[[Task Lifecycle Stage-Gating]] (spec-driven development requires stage enforcement to prevent spec-skipping)]]
+[[Agent Orchestration Patterns]] (BMAD uses multi-agent spec production)]]
+[[OpenFleet]] (primary source — SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)]]
+[[Harness Engineering]] (harness is the spec-driven development tooling layer)]]
+[[Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)]]
 [[Vibe Coding (unstructured iterative prompting without spec gates — the failure mode SDD exists to prevent)]]
+[[Synthesis: Claude Code Best Practice (shanraisshan)]]

@@ -101,10 +101,11 @@ Cross-referencing `Wiki Event-Driven Automation`: that page explicitly resolves 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[[[Claude Code Skills]]]]
-[[[[AI-Driven Content Pipeline]]]]
-[[[[NotebookLM]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[LLM Knowledge Linting]]]]
-[[[[Plane]]]]
-[[[[OpenFleet]]]]
+[[Claude Code Skills]]
+[[AI-Driven Content Pipeline]]
+[[NotebookLM]]
+[[Wiki Event-Driven Automation]]
+[[LLM Knowledge Linting]]
+[[Plane]]
+[[OpenFleet]]
+[[Research Pipeline Orchestration]]

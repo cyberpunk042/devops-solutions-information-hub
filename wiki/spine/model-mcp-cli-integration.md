@@ -93,10 +93,10 @@ After completing this learning path you will understand:
 
 ## Backlinks
 
-[[[[Model Guide: Claude Code]]]]
-[[[[Model Guide: Skills + Commands + Hooks]]]]
-[[[[CLI Tools Beat MCP for Token Efficiency]]]]
-[[[[Context-Aware Tool Loading]]]]
-[[[[Decision: MCP vs CLI for Tool Integration]]]]
-[[[[Model Guide: Ecosystem Architecture]]]]
-[[[[Harness Engineering]]]]
+[[Model Guide: Claude Code]]
+[[Model Guide: Skills + Commands + Hooks]]
+[[CLI Tools Beat MCP for Token Efficiency]]
+[[Context-Aware Tool Loading]]
+[[Decision: MCP vs CLI for Tool Integration]]
+[[Model Guide: Ecosystem Architecture]]
+[[Harness Engineering]]

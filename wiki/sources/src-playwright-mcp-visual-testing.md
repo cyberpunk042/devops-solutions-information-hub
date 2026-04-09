@@ -93,9 +93,9 @@ Cross-referencing `Design.md Pattern` and `Harness Engineering`: the Design.md P
 ## Backlinks
 
 [[src-playwright-mcp-visual-testing]]
-[[[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[Claude Code Context Management]]]]
-[[[[Claude Code Skills]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Harness Engineering]]]]
+[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[Claude Code Best Practices]]
+[[Claude Code Context Management]]
+[[Claude Code Skills]]
+[[MCP Integration Architecture]]
+[[Harness Engineering]]

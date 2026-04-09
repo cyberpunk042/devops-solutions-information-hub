@@ -161,11 +161,13 @@ Cross-referencing `Plan Execute Review Cycle` and `Harness Engineering`: partial
 
 ## Backlinks
 
-[[[[Always Plan Before Executing]]]]
-[[[[Agent Orchestration Patterns]]]]
-[[[[Harness Engineering]]]]
-[[[[OpenFleet]]]]
-[[[[Plan Execute Review Cycle]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[Always Plan Before Executing]]
+[[Agent Orchestration Patterns]]
+[[Harness Engineering]]
+[[OpenFleet]]
+[[Plan Execute Review Cycle]]
+[[Claude Code Best Practices]]
+[[Wiki Ingestion Pipeline]]
+[[Research Pipeline Orchestration]]
+[[Immune System Rules]]
+[[Model: Quality + Failure Prevention]]

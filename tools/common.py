@@ -115,7 +115,14 @@ def _split_targets(text: str) -> List[str]:
     if current:
         targets.append("".join(current).strip())
 
-    return [t for t in targets if t]
+    # Strip [[ ]] wikilink brackets from targets
+    cleaned = []
+    for t in targets:
+        t = t.strip()
+        if t.startswith("[[") and t.endswith("]]"):
+            t = t[2:-2]
+        cleaned.append(t)
+    return [t for t in cleaned if t]
 
 
 def load_config(path: Path) -> Optional[Dict[str, Any]]:

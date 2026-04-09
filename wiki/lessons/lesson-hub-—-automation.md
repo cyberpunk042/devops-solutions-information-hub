@@ -79,9 +79,9 @@ The automation domain's connectivity pattern confirms its bridge role. Research 
 
 ## Backlinks
 
-[[[[Research Pipeline Orchestration]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Agent Orchestration Patterns]]]]
-[[[[LLM Wiki Pattern]]]]
+[[Research Pipeline Orchestration]]
+[[Wiki Event-Driven Automation]]
+[[MCP Integration Architecture]]
+[[Knowledge Evolution Pipeline]]
+[[Agent Orchestration Patterns]]
+[[LLM Wiki Pattern]]

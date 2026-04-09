@@ -127,11 +127,15 @@ Cross-referencing `Obsidian Skills Ecosystem` and `WSL2 Development Patterns`: t
 
 ## Backlinks
 
-[[[[Obsidian Knowledge Vault]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[Obsidian Skills Ecosystem]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Claude Code Skills]]]]
-[[[[AI-Driven Content Pipeline]]]]
-[[[[notebooklm-py CLI]]]]
-[[[[Wiki Ingestion Pipeline]]]]
+[[Obsidian Knowledge Vault]]
+[[Wiki Event-Driven Automation]]
+[[Obsidian Skills Ecosystem]]
+[[LLM Wiki Pattern]]
+[[Claude Code Skills]]
+[[AI-Driven Content Pipeline]]
+[[notebooklm-py CLI]]
+[[Wiki Ingestion Pipeline]]
+[[Claude Code]]
+[[MCP Integration Architecture]]
+[[Research Pipeline Orchestration]]
+[[WSL2 Development Patterns]]

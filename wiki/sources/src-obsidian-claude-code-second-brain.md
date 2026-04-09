@@ -87,8 +87,8 @@ Cross-referencing the `WSL2 Development Patterns` page: the page directly addres
 ## Backlinks
 
 [[src-obsidian-claude-code-second-brain]]
-[[[[Obsidian Knowledge Vault]]]]
-[[[[Claude Code Skills]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[AI-Driven Content Pipeline]]]]
+[[Obsidian Knowledge Vault]]
+[[Claude Code Skills]]
+[[LLM Wiki Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[AI-Driven Content Pipeline]]

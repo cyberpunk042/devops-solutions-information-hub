@@ -85,11 +85,12 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[Harness Engineering]]]]
-[[[[Immune System Rules]]]]
-[[[[Rework Prevention]]]]
-[[[[Deterministic Shell]]
-[[LLM Core]]]]
-[[[[Model: Automation + Pipelines]]]]
-[[[[Model: SFIF + Architecture]]]]
+[[Harness Engineering]]
+[[Immune System Rules]]
+[[Rework Prevention]]
+[[Deterministic Shell]]
+[[LLM Core]]
+[[Model: Automation + Pipelines]]
+[[Model: SFIF + Architecture]]
 [[Model: Local AI ($0 Target)]]
+[[Model: Design.md + IaC]]

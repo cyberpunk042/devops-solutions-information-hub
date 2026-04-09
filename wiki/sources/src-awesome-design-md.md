@@ -104,9 +104,10 @@ Developer Tools (14) and AI/ML (12) dominate — these communities are building 
 
 ## Backlinks
 
-[[[[Design.md Pattern]] (this is the empirical evidence for that concept)]]
-[[[[Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)]]
-[[[[Skills Architecture Patterns]] (static design context vs dynamic skill invocation)]]
-[[[[Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)]]
-[[[[Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context — same tradeoff)]]
-[[[[Methodology Framework]] (DESIGN.md as a required artifact in the design stage)]]
+[[Design.md Pattern]] (this is the empirical evidence for that concept)]]
+[[Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)]]
+[[Skills Architecture Patterns]] (static design context vs dynamic skill invocation)]]
+[[Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)]]
+[[Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context — same tradeoff)]]
+[[Methodology Framework]] (DESIGN.md as a required artifact in the design stage)]]
+[[Never Synthesize from Descriptions Alone]]

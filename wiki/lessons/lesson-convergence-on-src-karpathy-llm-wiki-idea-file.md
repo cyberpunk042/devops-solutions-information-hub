@@ -69,9 +69,9 @@ The practical test: this wiki's `config/schema.yaml` defines valid page types, r
 
 ## Backlinks
 
-[[[[Synthesis: Karpathy's LLM Wiki Idea File]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Second Brain Architecture]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Wiki vs RAG]]]]
+[[Synthesis: Karpathy's LLM Wiki Idea File]]
+[[LLM Wiki Pattern]]
+[[Second Brain Architecture]]
+[[Knowledge Evolution Pipeline]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Wiki vs RAG]]

@@ -123,13 +123,13 @@ Avoid or over-engineering Deterministic Shell, LLM Core when:
 
 ## Backlinks
 
-[[[[OpenFleet]]]]
-[[[[Harness Engineering]]]]
-[[[[AICP]]]]
-[[[[Plan Execute Review Cycle]]]]
-[[[[Immune System Rules]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[Infrastructure as Code Patterns]]]]
-[[[[Agent Orchestration Patterns]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[Gateway-Centric Routing]]]]
+[[OpenFleet]]
+[[Harness Engineering]]
+[[AICP]]
+[[Plan Execute Review Cycle]]
+[[Immune System Rules]]
+[[Research Pipeline Orchestration]]
+[[Infrastructure as Code Patterns]]
+[[Agent Orchestration Patterns]]
+[[Claude Code Best Practices]]
+[[Gateway-Centric Routing]]

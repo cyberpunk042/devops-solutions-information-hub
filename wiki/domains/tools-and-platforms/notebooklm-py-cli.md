@@ -156,11 +156,15 @@ Cross-referencing `Research Pipeline Orchestration`: the sync is architecturally
 
 ## Backlinks
 
-[[[[NotebookLM]]]]
-[[[[NotebookLM Skills]]]]
-[[[[AI-Driven Content Pipeline]]]]
-[[[[Obsidian CLI]]]]
-[[[[Claude Code Skills]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Event-Driven Automation]]]]
+[[NotebookLM]]
+[[NotebookLM Skills]]
+[[AI-Driven Content Pipeline]]
+[[Obsidian CLI]]
+[[Claude Code Skills]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Wiki Pattern]]
+[[Wiki Event-Driven Automation]]
+[[Claude Code]]
+[[MCP Integration Architecture]]
+[[Model: NotebookLM]]
+[[Research Pipeline Orchestration]]

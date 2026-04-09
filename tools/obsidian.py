@@ -62,6 +62,11 @@ def _resolve_target(target: str, lookup: Dict[str, Dict[str, str]]) -> str:
     3. Source ID match (for DERIVED FROM: src-xxx)
     4. Unresolved -> [[target]] as-is (shows as unresolved in Obsidian)
     """
+    # Strip existing [[ ]] if target already has them
+    target = target.strip()
+    if target.startswith("[[") and target.endswith("]]"):
+        target = target[2:-2]
+
     # Direct title match
     if target in lookup:
         return f"[[{target}]]"

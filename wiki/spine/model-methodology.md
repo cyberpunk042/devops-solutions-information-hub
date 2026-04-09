@@ -95,11 +95,13 @@ After completing this learning path you will understand:
 
 ## Backlinks
 
-[[[[Model Guide: Claude Code]]]]
-[[[[Model Guide: LLM Wiki]]]]
-[[[[Model Guide: Ecosystem Architecture]]]]
-[[[[Methodology Framework]]]]
-[[[[Stage-Gate Methodology]]]]
-[[[[Task Type Artifact Matrix]]]]
-[[[[Model Guide: Skills + Commands + Hooks]]]]
+[[Model Guide: Claude Code]]
+[[Model Guide: LLM Wiki]]
+[[Model Guide: Ecosystem Architecture]]
+[[Methodology Framework]]
+[[Stage-Gate Methodology]]
+[[Task Type Artifact Matrix]]
+[[Model Guide: Skills + Commands + Hooks]]
 [[Adoption Guide]]
+[[Model Guide: Second Brain]]
+[[Model: LLM Wiki]]

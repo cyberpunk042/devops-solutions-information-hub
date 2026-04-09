@@ -48,8 +48,9 @@ This video breaks down Andrej Karpathy's viral post about using LLMs to build pe
 ## Backlinks
 
 [[src-karpathy-claude-code-10x]]
-[[[[LLM Wiki Pattern]]]]
-[[[[LLM Wiki vs RAG]]]]
-[[[[Obsidian Knowledge Vault]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Knowledge Linting]]]]
+[[LLM Wiki Pattern]]
+[[LLM Wiki vs RAG]]
+[[Obsidian Knowledge Vault]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Knowledge Linting]]
+[[The Wiki Maintenance Problem Is Solved by LLM Automation]]

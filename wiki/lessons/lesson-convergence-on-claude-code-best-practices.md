@@ -90,13 +90,13 @@ From Claude Code Best Practices: "All workflows converge on one pattern: Ten maj
 
 ## Backlinks
 
-[[[[Claude Code Best Practices]]]]
-[[[[Synthesis: Claude Code Accuracy Tips]]]]
-[[[[Synthesis: Claude Code Harness Engineering]]]]
-[[[[Claude Code Skills]]]]
-[[[[Harness Engineering]]]]
-[[[[Plan Execute Review Cycle]]]]
-[[[[Always Plan Before Executing]]]]
-[[[[CLI Tools Beat MCP for Token Efficiency]]]]
-[[[[OpenFleet]]]]
-[[[[AICP]]]]
+[[Claude Code Best Practices]]
+[[Synthesis: Claude Code Accuracy Tips]]
+[[Synthesis: Claude Code Harness Engineering]]
+[[Claude Code Skills]]
+[[Harness Engineering]]
+[[Plan Execute Review Cycle]]
+[[Always Plan Before Executing]]
+[[CLI Tools Beat MCP for Token Efficiency]]
+[[OpenFleet]]
+[[AICP]]

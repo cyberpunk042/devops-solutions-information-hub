@@ -178,10 +178,13 @@ Cross-referencing `Wiki Event-Driven Automation`: the LLM Wiki v2 memory model d
 
 ## Backlinks
 
-[[[[Claude Code Skills]]]]
-[[[[Obsidian Skills Ecosystem]]]]
-[[[[NotebookLM Skills]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[Claude Code Context Management]]]]
-[[[[AI-Driven Content Pipeline]]]]
-[[[[LLM Wiki Pattern]]]]
+[[Claude Code Skills]]
+[[Obsidian Skills Ecosystem]]
+[[NotebookLM Skills]]
+[[Claude Code Best Practices]]
+[[Claude Code Context Management]]
+[[AI-Driven Content Pipeline]]
+[[LLM Wiki Pattern]]
+[[Infrastructure as Code Patterns]]
+[[Pattern: Skills + Obsidian]]
+[[Skill Specification Is the Key to Ecosystem Interoperability]]

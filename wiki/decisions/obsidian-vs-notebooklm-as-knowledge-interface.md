@@ -104,12 +104,12 @@ The custom RAG alternative (Subsystem 3) is the likely long-term successor to bo
 
 ## Backlinks
 
-[[[[Obsidian Knowledge Vault]]]]
-[[[[NotebookLM]]]]
-[[[[Second Brain Architecture]]]]
-[[[[WSL2 Development Patterns]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[AI-Driven Content Pipeline]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[LLM Wiki vs RAG]]]]
+[[Obsidian Knowledge Vault]]
+[[NotebookLM]]
+[[Second Brain Architecture]]
+[[WSL2 Development Patterns]]
+[[Wiki Ingestion Pipeline]]
+[[MCP Integration Architecture]]
+[[AI-Driven Content Pipeline]]
+[[Wiki Knowledge Graph]]
+[[LLM Wiki vs RAG]]

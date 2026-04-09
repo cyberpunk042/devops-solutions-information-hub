@@ -78,10 +78,10 @@ After completing this learning path you will understand:
 
 ## Backlinks
 
-[[[[Model Guide: LLM Wiki]]]]
-[[[[Second Brain Architecture]]]]
-[[[[PARA Methodology]]]]
-[[[[Zettelkasten Methodology]]]]
-[[[[Model Guide: Claude Code]]]]
-[[[[Model Guide: Methodology]]]]
-[[[[Model Guide: Ecosystem Architecture]]]]
+[[Model Guide: LLM Wiki]]
+[[Second Brain Architecture]]
+[[PARA Methodology]]
+[[Zettelkasten Methodology]]
+[[Model Guide: Claude Code]]
+[[Model Guide: Methodology]]
+[[Model Guide: Ecosystem Architecture]]

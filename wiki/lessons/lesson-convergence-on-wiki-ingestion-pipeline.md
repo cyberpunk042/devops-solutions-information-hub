@@ -85,12 +85,15 @@ From the LLM Wiki Pattern on the compounding mechanic: "Filing answers back into
 
 ## Backlinks
 
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[LLM Knowledge Linting]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[Memory Lifecycle Management]]]]
+[[Wiki Ingestion Pipeline]]
+[[Research Pipeline Orchestration]]
+[[LLM Wiki Pattern]]
+[[LLM Knowledge Linting]]
+[[Wiki Knowledge Graph]]
+[[Wiki Event-Driven Automation]]
+[[Memory Lifecycle Management]]
 [[devops-solutions-research-wiki]]
-[[[[OpenFleet]]]]
+[[OpenFleet]]
+[[Never Synthesize from Descriptions Alone]]
+[[Progressive Distillation]]
+[[Shallow Ingestion Is Systemic, Not Isolated]]

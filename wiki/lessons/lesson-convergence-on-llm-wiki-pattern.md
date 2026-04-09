@@ -87,12 +87,13 @@ From the LLM Wiki Pattern on the Memex lineage: "Karpathy explicitly connects th
 
 ## Backlinks
 
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Wiki vs RAG]]]]
-[[[[LLM Knowledge Linting]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[Obsidian Knowledge Vault]]]]
-[[[[Memory Lifecycle Management]]]]
+[[LLM Wiki Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Wiki vs RAG]]
+[[LLM Knowledge Linting]]
+[[Wiki Knowledge Graph]]
+[[Obsidian Knowledge Vault]]
+[[Memory Lifecycle Management]]
 [[devops-solutions-research-wiki]]
-[[[[OpenFleet]]]]
+[[OpenFleet]]
+[[The Wiki Maintenance Problem Is Solved by LLM Automation]]

@@ -102,7 +102,7 @@ Cross-referencing `NotebookLM Skills`: the `NotebookLM Skills` page addresses th
 ## Backlinks
 
 [[src-pleaseprompto-notebooklm-skill]]
-[[[[NotebookLM Skills]]]]
-[[[[Claude Code Skills]]]]
-[[[[NotebookLM]]]]
+[[NotebookLM Skills]]
+[[Claude Code Skills]]
+[[NotebookLM]]
 [[src-claude-world-notebooklm-skill]]

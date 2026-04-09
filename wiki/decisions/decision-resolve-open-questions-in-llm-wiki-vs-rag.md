@@ -81,9 +81,11 @@ Moderate. Activating LightRAG is additive — it does not change wiki files, so 
 
 ## Backlinks
 
-[[[[LLM Wiki vs RAG]]]]
-[[[[LightRAG]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[LLM Wiki vs RAG]]
+[[LightRAG]]
+[[Knowledge Evolution Pipeline]]
+[[Wiki Knowledge Graph]]
+[[LLM Wiki Pattern]]
+[[Research Pipeline Orchestration]]
+[[Ecosystem Integration Interfaces]]
+[[Model: Knowledge Evolution]]

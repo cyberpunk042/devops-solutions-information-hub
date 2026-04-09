@@ -144,10 +144,14 @@ Cross-referencing `devops-control-plane` and `Agent Orchestration Patterns`: the
 
 ## Backlinks
 
-[[[[devops-control-plane]]]]
-[[[[OpenFleet]]]]
-[[[[Harness Engineering]]]]
-[[[[AICP]]]]
-[[[[Plan Execute Review Cycle]]]]
-[[[[Always Plan Before Executing]]]]
-[[[[Rework Prevention]]]]
+[[devops-control-plane]]
+[[OpenFleet]]
+[[Harness Engineering]]
+[[AICP]]
+[[Plan Execute Review Cycle]]
+[[Always Plan Before Executing]]
+[[Rework Prevention]]
+[[Deterministic Shell, LLM Core]]
+[[Four-Project Ecosystem]]
+[[Infrastructure as Code Patterns]]
+[[Model: Quality + Failure Prevention]]

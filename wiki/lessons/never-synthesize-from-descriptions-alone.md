@@ -94,10 +94,10 @@ This lesson applies far beyond wiki ingestion:
 
 ## Backlinks
 
-[[[[Design.md Pattern]]]]
-[[[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]]]
-[[[[Stage-Gate Methodology]] (depth gates prevent surface-level output)]]
-[[[[Multi-Stage Ingestion Beats Single-Pass Processing]]]]
-[[[[Always Plan Before Executing]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Immune System Rules]] (this lesson became a rule)]]
+[[Design.md Pattern]]
+[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
+[[Stage-Gate Methodology]] (depth gates prevent surface-level output)]]
+[[Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[Always Plan Before Executing]]
+[[Wiki Ingestion Pipeline]]
+[[Immune System Rules]] (this lesson became a rule)]]

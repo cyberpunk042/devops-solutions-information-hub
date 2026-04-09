@@ -96,9 +96,10 @@ Cross-referencing `LLM Wiki Pattern`: the LLM Wiki Pattern page documents the st
 ## Backlinks
 
 [[src-karpathy-llm-wiki-idea-file]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Knowledge Linting]]]]
-[[[[Obsidian Knowledge Vault]]]]
-[[[[LLM Wiki vs RAG]]]]
+[[LLM Wiki Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Knowledge Linting]]
+[[Obsidian Knowledge Vault]]
+[[LLM Wiki vs RAG]]
 [[src-karpathy-claude-code-10x]]
+[[Lesson: Schema Is the Real Product — Not the Content]]

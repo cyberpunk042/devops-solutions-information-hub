@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T21:34:42.670186+00:00",
+  "generated": "2026-04-09T21:41:44.030566+00:00",
   "stats": {
-    "pages": 152,
+    "pages": 153,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
     "relationships": 1097,
-    "tags_unique": 588,
+    "tags_unique": 589,
     "layers": {
       "3": 5,
       "6": 5,
@@ -47,7 +47,7 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Decision: Local Model vs Cloud API for Routine Operations]]"
+          "target": "Decision: Local Model vs Cloud API for Routine Operations"
         },
         {
           "verb": "BUILDS ON",
@@ -59,7 +59,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Local LLM Quantization]]"
+          "target": "Local LLM Quantization"
         }
       ]
     },
@@ -88,7 +88,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "ENABLES",
@@ -112,7 +112,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Decision: Wiki-First with LightRAG Upgrade Path]]"
+          "target": "Decision: Wiki-First with LightRAG Upgrade Path"
         }
       ]
     },
@@ -214,31 +214,31 @@
       "relationships": [
         {
           "verb": "SYNTHESIZES",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "SYNTHESIZES",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         }
       ]
     },
@@ -293,43 +293,43 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Zettelkasten Methodology]]"
+          "target": "Zettelkasten Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[PARA Methodology]]"
+          "target": "PARA Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -381,31 +381,31 @@
       "relationships": [
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Agentic Search vs Vector Search]]"
+          "target": "Agentic Search vs Vector Search"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         }
       ]
     },
@@ -547,31 +547,31 @@
       "relationships": [
         {
           "verb": "SYNTHESIZES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "SYNTHESIZES",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "SYNTHESIZES",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -636,31 +636,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -709,35 +709,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Local LLM Quantization]]"
+          "target": "Local LLM Quantization"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         }
       ]
     },
@@ -792,39 +792,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Harness Engineering]]"
+          "target": "Synthesis: Claude Code Harness Engineering"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens]]"
+          "target": "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -879,39 +879,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[WSL2 Development Patterns]]"
+          "target": "WSL2 Development Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "ENABLES",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -961,35 +961,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[WSL2 Development Patterns]]"
+          "target": "WSL2 Development Patterns"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         }
       ]
     },
@@ -1037,43 +1037,43 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Rework Prevention]]"
+          "target": "Rework Prevention"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         }
       ]
     },
@@ -1134,35 +1134,35 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         }
       ]
     },
@@ -1220,39 +1220,39 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "CONSTRAINS",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "CONSTRAINS",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         }
       ]
     },
@@ -1334,51 +1334,51 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "USED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "USED BY",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         }
       ]
     },
@@ -1436,43 +1436,43 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian CLI]]"
+          "target": "Obsidian CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[notebooklm-py CLI]]"
+          "target": "notebooklm-py CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -1609,31 +1609,31 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "PARALLELS",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         }
       ]
     },
@@ -1679,43 +1679,43 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Task Lifecycle Stage-Gating]]"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving]]"
+          "target": "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plannotator \u2014 Interactive Plan & Code Review for AI Agents]]"
+          "target": "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Per-Role Command Architecture]]"
+          "target": "Per-Role Command Architecture"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Design.md Pattern]]"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         }
       ]
     },
@@ -1782,35 +1782,35 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "CONSTRAINED BY",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "ENABLED BY",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         }
       ]
     },
@@ -1858,27 +1858,27 @@
       "relationships": [
         {
           "verb": "USED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         }
       ]
     },
@@ -1919,39 +1919,39 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "USED BY",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plane]]"
+          "target": "Plane"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         }
       ]
     },
@@ -2003,7 +2003,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
@@ -2011,31 +2011,31 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Hooks Lifecycle Architecture]]"
+          "target": "Hooks Lifecycle Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plannotator \u2014 Interactive Plan & Code Review for AI Agents]]"
+          "target": "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Task Lifecycle Stage-Gating]]"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Skills Architecture Is the Dominant LLM Extension Pattern]]"
+          "target": "Skills Architecture Is the Dominant LLM Extension Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -2083,35 +2083,35 @@
       "relationships": [
         {
           "verb": "ENABLED BY",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -2345,23 +2345,23 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         }
       ]
     },
@@ -2402,31 +2402,31 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "PARALLELS",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         }
       ]
     },
@@ -2467,31 +2467,31 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plane]]"
+          "target": "Plane"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         }
       ]
     },
@@ -2538,35 +2538,35 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Obsidian CLI]]"
+          "target": "Obsidian CLI"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[notebooklm-py CLI]]"
+          "target": "notebooklm-py CLI"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         }
       ]
     },
@@ -2613,35 +2613,35 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian CLI]]"
+          "target": "Obsidian CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[notebooklm-py CLI]]"
+          "target": "notebooklm-py CLI"
         }
       ]
     },
@@ -2696,43 +2696,43 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         }
       ]
     },
@@ -2886,11 +2886,11 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]]"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Progressive Distillation]]"
+          "target": "Progressive Distillation"
         },
         {
           "verb": "RELATES TO",
@@ -2902,19 +2902,19 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         }
       ]
     },
@@ -3037,23 +3037,23 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plane]]"
+          "target": "Plane"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -3205,43 +3205,43 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "ENABLES",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "ENABLES",
-          "target": "[[OpenArms]]"
+          "target": "OpenArms"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[WSL2 Development Patterns]]"
+          "target": "WSL2 Development Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Immune System Rules]]"
+          "target": "Immune System Rules"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         }
       ]
     },
@@ -3289,31 +3289,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Rework Prevention]]"
+          "target": "Rework Prevention"
         }
       ]
     },
@@ -3369,31 +3369,31 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Design.md Pattern]]"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Immune System Rules]]"
+          "target": "Immune System Rules"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         }
       ]
     },
@@ -3623,27 +3623,27 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian CLI]]"
+          "target": "Obsidian CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -3693,39 +3693,39 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -3772,31 +3772,31 @@
       "relationships": [
         {
           "verb": "USED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agentic Search vs Vector Search]]"
+          "target": "Agentic Search vs Vector Search"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "USED BY",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -3864,59 +3864,59 @@
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "USED BY",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agentic Search vs Vector Search]]"
+          "target": "Agentic Search vs Vector Search"
         },
         {
           "verb": "CONTRASTS WITH",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "USED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "ENABLED BY",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         }
       ]
     },
@@ -3983,31 +3983,31 @@
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agentic Search vs Vector Search]]"
+          "target": "Agentic Search vs Vector Search"
         }
       ]
     },
@@ -4050,31 +4050,31 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         }
       ]
     },
@@ -4124,31 +4124,31 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[Zettelkasten Methodology]]"
+          "target": "Zettelkasten Methodology"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -4194,23 +4194,23 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "BUILDS ON",
@@ -4222,15 +4222,15 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "USED BY",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -4387,43 +4387,43 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "USED BY",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[notebooklm-py CLI]]"
+          "target": "notebooklm-py CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian CLI]]"
+          "target": "Obsidian CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "PARALLELS",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "CONSTRAINED BY",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         }
       ]
     },
@@ -4465,35 +4465,35 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "PARALLELS",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         }
       ]
     },
@@ -4542,35 +4542,35 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[PARA Methodology]]"
+          "target": "PARA Methodology"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         }
       ]
     },
@@ -4610,31 +4610,31 @@
       "relationships": [
         {
           "verb": "USED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         }
       ]
     },
@@ -4679,31 +4679,31 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "[[OpenArms]]"
+          "target": "OpenArms"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -4761,35 +4761,35 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "PARALLELS",
-          "target": "[[Obsidian CLI]]"
+          "target": "Obsidian CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         }
       ]
     },
@@ -4844,27 +4844,27 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         }
       ]
     },
@@ -4904,27 +4904,27 @@
         },
         {
           "verb": "USED BY",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         },
         {
           "verb": "ENABLES",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "CONTRASTS WITH",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -4973,35 +4973,35 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "USED BY",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "PARALLELS",
-          "target": "[[notebooklm-py CLI]]"
+          "target": "notebooklm-py CLI"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -5069,27 +5069,27 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "USED BY",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         }
       ]
     },
@@ -5156,23 +5156,23 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         }
       ]
     },
@@ -5211,35 +5211,35 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Multi-Channel AI Agent Access]]"
+          "target": "Multi-Channel AI Agent Access"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -5287,23 +5287,23 @@
       "relationships": [
         {
           "verb": "USED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[devops-control-plane]]"
+          "target": "devops-control-plane"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Scheduling]]"
+          "target": "Claude Code Scheduling"
         }
       ]
     },
@@ -5379,39 +5379,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Harness Engineering]]"
+          "target": "Synthesis: Claude Code Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Rework Prevention]]"
+          "target": "Rework Prevention"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         }
       ]
     },
@@ -5466,35 +5466,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Harness Engineering]]"
+          "target": "Synthesis: Claude Code Harness Engineering"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens]]"
+          "target": "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "CONTRADICTS",
@@ -5540,7 +5540,7 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "DERIVED FROM",
@@ -5552,7 +5552,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Methodology Framework]]"
+          "target": "Methodology Framework"
         },
         {
           "verb": "BUILDS ON",
@@ -5620,43 +5620,43 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Harness Engineering]]"
+          "target": "Synthesis: Claude Code Harness Engineering"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         }
       ]
     },
@@ -5708,39 +5708,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         }
       ]
     },
@@ -5794,31 +5794,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "ENABLES",
@@ -5874,31 +5874,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -5950,35 +5950,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "FEEDS INTO",
@@ -5986,7 +5986,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         }
       ]
     },
@@ -6039,27 +6039,27 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "FEEDS INTO",
@@ -6067,7 +6067,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         }
       ]
     },
@@ -6119,35 +6119,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: claude-world/notebooklm-skill]]"
+          "target": "Synthesis: claude-world/notebooklm-skill"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]"
+          "target": "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[Agentic Search vs Vector Search]]"
+          "target": "Agentic Search vs Vector Search"
         }
       ]
     },
@@ -6199,31 +6199,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]"
+          "target": "Synthesis: Karpathy LLM Wiki Method via Claude Code"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[LLM-Maintained Wikis Outperform Static Documentation]]"
+          "target": "LLM-Maintained Wikis Outperform Static Documentation"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -6264,31 +6264,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Karpathy's LLM Wiki Idea File]]"
+          "target": "Synthesis: Karpathy's LLM Wiki Idea File"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -6340,31 +6340,31 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: kepano/obsidian-skills]]"
+          "target": "Synthesis: kepano/obsidian-skills"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -6417,35 +6417,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "FEEDS INTO",
@@ -6453,7 +6453,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         }
       ]
     },
@@ -6501,11 +6501,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "DERIVED FROM",
@@ -6517,11 +6517,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "FEEDS INTO",
@@ -6533,11 +6533,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         }
       ]
     },
@@ -6584,39 +6584,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -6663,39 +6663,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -6737,15 +6737,15 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Stage-Gate Methodology]]"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Methodology Framework]]"
+          "target": "Methodology Framework"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "RELATES TO",
@@ -6753,7 +6753,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "CONTRADICTS",
@@ -6799,11 +6799,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Design.md Pattern]]"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents]]"
+          "target": "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
         },
         {
           "verb": "RELATES TO",
@@ -6811,15 +6811,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Multi-Stage Ingestion Beats Single-Pass Processing]]"
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
@@ -6866,19 +6866,19 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Multi-Stage Ingestion Beats Single-Pass Processing]]"
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Automated Knowledge Validation Prevents Silent Wiki Decay]]"
+          "target": "Automated Knowledge Validation Prevents Silent Wiki Decay"
         },
         {
           "verb": "RELATES TO",
@@ -6939,11 +6939,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Methodology Framework]]"
+          "target": "Methodology Framework"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Stage-Gate Methodology]]"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "RELATES TO",
@@ -6951,7 +6951,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Always Plan Before Executing]]"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "RELATES TO",
@@ -6984,6 +6984,30 @@
         "completeness",
         "bottom-up",
         "foundation"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-04-09-directive-model-quality-links-schema.md",
+      "slug": "log/2026-04-09-directive-model-quality-links-schema",
+      "title": "Model Quality + Links + Schema Naming Issues",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "quality",
+        "links",
+        "schema",
+        "models"
       ],
       "sources": [],
       "layer": "",
@@ -7185,39 +7209,39 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens]]"
+          "target": "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]"
+          "target": "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "CONTRADICTS",
@@ -7225,11 +7249,11 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -7286,43 +7310,43 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Immune System Rules]]"
+          "target": "Immune System Rules"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Gateway-Centric Routing]]"
+          "target": "Gateway-Centric Routing"
         }
       ]
     },
@@ -7379,23 +7403,23 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[OpenArms]]"
+          "target": "OpenArms"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Multi-Channel AI Agent Access]]"
+          "target": "Multi-Channel AI Agent Access"
         },
         {
           "verb": "RELATES TO",
@@ -7407,19 +7431,19 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[Multi-Channel AI Agent Access]]"
+          "target": "Multi-Channel AI Agent Access"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -7444,11 +7468,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         }
       ]
     },
@@ -7473,11 +7497,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         }
       ]
     },
@@ -7502,11 +7526,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         }
       ]
     },
@@ -7531,11 +7555,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         }
       ]
     },
@@ -7560,11 +7584,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Skills Architecture Patterns]]"
+          "target": "Skills Architecture Patterns"
         }
       ]
     },
@@ -7627,43 +7651,43 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Agent Orchestration Patterns]]"
+          "target": "Agent Orchestration Patterns"
         }
       ]
     },
@@ -7718,43 +7742,43 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[PARA Methodology]]"
+          "target": "PARA Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Zettelkasten Methodology]]"
+          "target": "Zettelkasten Methodology"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Knowledge Graph]]"
+          "target": "Wiki Knowledge Graph"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Multi-Stage Ingestion Beats Single-Pass Processing]]"
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
         }
       ]
     },
@@ -7818,7 +7842,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Progressive Distillation]]"
+          "target": "Progressive Distillation"
         },
         {
           "verb": "IMPLEMENTED BY",
@@ -7826,15 +7850,15 @@
         },
         {
           "verb": "IMPLEMENTED BY",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "IMPLEMENTED BY",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "RELATES TO",
@@ -7846,15 +7870,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         }
       ]
     },
@@ -7966,15 +7990,15 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "COMPARES TO",
@@ -8023,35 +8047,35 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "SUPPORTS",
-          "target": "[[Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens]]"
+          "target": "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
         },
         {
           "verb": "SUPPORTS",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "SUPPORTS",
-          "target": "[[Decision: MCP vs CLI for Tool Integration]]"
+          "target": "Decision: MCP vs CLI for Tool Integration"
         }
       ]
     },
@@ -8209,15 +8233,15 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "COMPARES TO",
@@ -8265,43 +8289,43 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "COMPLEMENTS",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -8347,19 +8371,19 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         }
       ]
     },
@@ -8414,23 +8438,23 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenClaw]]"
+          "target": "OpenClaw"
         }
       ]
     },
@@ -8471,23 +8495,23 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         }
       ]
     },
@@ -8531,23 +8555,23 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         },
         {
           "verb": "SUPERSEDES",
@@ -8594,19 +8618,19 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -8650,7 +8674,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
@@ -8658,15 +8682,15 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[LLM Knowledge Linting]]"
+          "target": "LLM Knowledge Linting"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -8711,31 +8735,31 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]]"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[LLM Wiki vs RAG]]"
+          "target": "LLM Wiki vs RAG"
         }
       ]
     },
@@ -8779,23 +8803,23 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AI-Driven Content Pipeline]]"
+          "target": "AI-Driven Content Pipeline"
         }
       ]
     },
@@ -8849,15 +8873,15 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Obsidian Skills Ecosystem]]"
+          "target": "Obsidian Skills Ecosystem"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Obsidian Knowledge Vault]]"
+          "target": "Obsidian Knowledge Vault"
         },
         {
           "verb": "COMPARES TO",
@@ -8962,27 +8986,27 @@
         },
         {
           "verb": "EXTENDS",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "SUPPORTS",
-          "target": "[[Decision: MCP vs CLI for Tool Integration]]"
+          "target": "Decision: MCP vs CLI for Tool Integration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -9028,27 +9052,27 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens]]"
+          "target": "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[MCP Integration Architecture]]"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         }
       ]
     },
@@ -9098,15 +9122,15 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[NotebookLM Skills]]"
+          "target": "NotebookLM Skills"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "COMPARES TO",
@@ -9165,19 +9189,19 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "RELATES TO",
@@ -9189,7 +9213,7 @@
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[Spec-Driven Development]]"
+          "target": "Spec-Driven Development"
         }
       ]
     },
@@ -9235,31 +9259,31 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Plan Execute Review Cycle]]"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Synthesis: Claude Code Accuracy Tips]]"
+          "target": "Synthesis: Claude Code Accuracy Tips"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -9304,15 +9328,15 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Context Management]]"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         }
       ]
     },
@@ -9356,11 +9380,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LightRAG]]"
+          "target": "LightRAG"
         }
       ]
     },
@@ -9389,23 +9413,23 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Methodology Framework]]"
+          "target": "Methodology Framework"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Stage-Gate Methodology]]"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Task Type Artifact Matrix]]"
+          "target": "Task Type Artifact Matrix"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Methodology Execution Modes]]"
+          "target": "Methodology Execution Modes"
         },
         {
           "verb": "ENABLES",
@@ -9749,19 +9773,19 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Research Pipeline Orchestration]]"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Event-Driven Automation]]"
+          "target": "Wiki Event-Driven Automation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Knowledge Evolution]]"
+          "target": "Model: Knowledge Evolution"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Quality + Failure Prevention]]"
+          "target": "Model: Quality + Failure Prevention"
         },
         {
           "verb": "FEEDS INTO",
@@ -9769,7 +9793,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: NotebookLM]]"
+          "target": "Model: NotebookLM"
         }
       ]
     },
@@ -9801,35 +9825,35 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Skills + Commands + Hooks]]"
+          "target": "Model Guide: Skills + Commands + Hooks"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: MCP + CLI Integration]]"
+          "target": "Model Guide: MCP + CLI Integration"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Model Guide: LLM Wiki]]"
+          "target": "Model Guide: LLM Wiki"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Model Guide: Ecosystem Architecture]]"
+          "target": "Model Guide: Ecosystem Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Methodology]]"
+          "target": "Model Guide: Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code]]"
+          "target": "Claude Code"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Hooks Lifecycle Architecture]]"
+          "target": "Hooks Lifecycle Architecture"
         }
       ]
     },
@@ -9860,27 +9884,27 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Design.md Pattern]]"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Infrastructure as Code Patterns]]"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Quality + Failure Prevention]]"
+          "target": "Model: Quality + Failure Prevention"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: SFIF + Architecture]]"
+          "target": "Model: SFIF + Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Automation + Pipelines]]"
+          "target": "Model: Automation + Pipelines"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Claude Code Best Practices]]"
+          "target": "Claude Code Best Practices"
         }
       ]
     },
@@ -9913,27 +9937,27 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Claude Code]]"
+          "target": "Model Guide: Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: LLM Wiki]]"
+          "target": "Model Guide: LLM Wiki"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Methodology]]"
+          "target": "Model Guide: Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[OpenFleet]]"
+          "target": "OpenFleet"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Gateway-Centric Routing]]"
+          "target": "Gateway-Centric Routing"
         },
         {
           "verb": "BUILDS ON",
@@ -9941,11 +9965,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: MCP + CLI Integration]]"
+          "target": "Model Guide: MCP + CLI Integration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Skills + Commands + Hooks]]"
+          "target": "Model Guide: Skills + Commands + Hooks"
         }
       ]
     },
@@ -9975,15 +9999,15 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Progressive Distillation]]"
+          "target": "Progressive Distillation"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model: Automation + Pipelines]]"
+          "target": "Model: Automation + Pipelines"
         },
         {
           "verb": "RELATES TO",
@@ -9991,15 +10015,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: SFIF + Architecture]]"
+          "target": "Model: SFIF + Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: NotebookLM]]"
+          "target": "Model: NotebookLM"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Decision: Wiki-First with LightRAG Upgrade Path]]"
+          "target": "Decision: Wiki-First with LightRAG Upgrade Path"
         }
       ]
     },
@@ -10038,35 +10062,35 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model: Second Brain]]"
+          "target": "Model: Second Brain"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Ecosystem Architecture]]"
+          "target": "Model Guide: Ecosystem Architecture"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Model Guide: Claude Code]]"
+          "target": "Model Guide: Claude Code"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]]"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]]"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Knowledge Evolution Pipeline]]"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Methodology]]"
+          "target": "Model Guide: Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Knowledge Evolution]]"
+          "target": "Model: Knowledge Evolution"
         }
       ]
     },
@@ -10096,27 +10120,27 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[AICP]]"
+          "target": "AICP"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Local LLM Quantization]]"
+          "target": "Local LLM Quantization"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model: Automation + Pipelines]]"
+          "target": "Model: Automation + Pipelines"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model: Quality + Failure Prevention]]"
+          "target": "Model: Quality + Failure Prevention"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: SFIF + Architecture]]"
+          "target": "Model: SFIF + Architecture"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[Decision: Local Model vs Cloud API for Routine Operations]]"
+          "target": "Decision: Local Model vs Cloud API for Routine Operations"
         }
       ]
     },
@@ -10149,31 +10173,31 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Claude Code]]"
+          "target": "Model Guide: Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Skills + Commands + Hooks]]"
+          "target": "Model Guide: Skills + Commands + Hooks"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[CLI Tools Beat MCP for Token Efficiency]]"
+          "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Context-Aware Tool Loading]]"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Decision: MCP vs CLI for Tool Integration]]"
+          "target": "Decision: MCP vs CLI for Tool Integration"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Ecosystem Architecture]]"
+          "target": "Model Guide: Ecosystem Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         }
       ]
     },
@@ -10205,31 +10229,31 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Claude Code]]"
+          "target": "Model Guide: Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: LLM Wiki]]"
+          "target": "Model Guide: LLM Wiki"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Ecosystem Architecture]]"
+          "target": "Model Guide: Ecosystem Architecture"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Methodology Framework]]"
+          "target": "Methodology Framework"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Stage-Gate Methodology]]"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Task Type Artifact Matrix]]"
+          "target": "Task Type Artifact Matrix"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Skills + Commands + Hooks]]"
+          "target": "Model Guide: Skills + Commands + Hooks"
         },
         {
           "verb": "RELATES TO",
@@ -10262,19 +10286,19 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[NotebookLM]]"
+          "target": "NotebookLM"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[notebooklm-py CLI]]"
+          "target": "notebooklm-py CLI"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Automation + Pipelines]]"
+          "target": "Model: Automation + Pipelines"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Knowledge Evolution]]"
+          "target": "Model: Knowledge Evolution"
         },
         {
           "verb": "RELATES TO",
@@ -10282,7 +10306,7 @@
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[Model: Design.md + IaC]]"
+          "target": "Model: Design.md + IaC"
         }
       ]
     },
@@ -10313,15 +10337,15 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Harness Engineering]]"
+          "target": "Harness Engineering"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Immune System Rules]]"
+          "target": "Immune System Rules"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Rework Prevention]]"
+          "target": "Rework Prevention"
         },
         {
           "verb": "IMPLEMENTS",
@@ -10333,11 +10357,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Automation + Pipelines]]"
+          "target": "Model: Automation + Pipelines"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: SFIF + Architecture]]"
+          "target": "Model: SFIF + Architecture"
         },
         {
           "verb": "FEEDS INTO",
@@ -10373,31 +10397,31 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: LLM Wiki]]"
+          "target": "Model Guide: LLM Wiki"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Second Brain Architecture]]"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[PARA Methodology]]"
+          "target": "PARA Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Zettelkasten Methodology]]"
+          "target": "Zettelkasten Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Claude Code]]"
+          "target": "Model Guide: Claude Code"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Methodology]]"
+          "target": "Model Guide: Methodology"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Model Guide: Ecosystem Architecture]]"
+          "target": "Model Guide: Ecosystem Architecture"
         }
       ]
     },
@@ -10427,7 +10451,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]]"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "BUILDS ON",
@@ -10443,15 +10467,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Design.md + IaC]]"
+          "target": "Model: Design.md + IaC"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Quality + Failure Prevention]]"
+          "target": "Model: Quality + Failure Prevention"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Knowledge Evolution]]"
+          "target": "Model: Knowledge Evolution"
         },
         {
           "verb": "FEEDS INTO",
@@ -10459,7 +10483,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]]"
+          "target": "Four-Project Ecosystem"
         }
       ]
     },
@@ -10492,31 +10516,31 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: Claude Code]]"
+          "target": "Model Guide: Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Model Guide: MCP + CLI Integration]]"
+          "target": "Model Guide: MCP + CLI Integration"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Claude Code Skills]]"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Hooks Lifecycle Architecture]]"
+          "target": "Hooks Lifecycle Architecture"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Per-Role Command Architecture]]"
+          "target": "Per-Role Command Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: Methodology]]"
+          "target": "Model Guide: Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model Guide: LLM Wiki]]"
+          "target": "Model Guide: LLM Wiki"
         }
       ]
     }
@@ -10555,7 +10579,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 7,
+      "page_count": 8,
       "relationship_count": 0
     }
   },
@@ -11727,6 +11751,7 @@
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
       "lessons/the-agent-must-practice-what-it-documents",
+      "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-directive-stop-claiming-readiness",
@@ -12046,6 +12071,7 @@
     "schema": [
       "domains/knowledge-systems/llm-wiki-pattern",
       "lessons/lesson-convergence-on-src-karpathy-llm-wiki-idea-file",
+      "log/2026-04-09-directive-model-quality-links-schema",
       "spine/model-llm-wiki"
     ],
     "compounding-knowledge": [
@@ -12514,6 +12540,7 @@
     ],
     "log": [
       "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-directive-stop-claiming-readiness",
@@ -12523,6 +12550,7 @@
     ],
     "directive": [
       "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-directive-stop-claiming-readiness",
@@ -12532,6 +12560,7 @@
     ],
     "models": [
       "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents"
     ],
     "completeness": [
@@ -12543,6 +12572,9 @@
     "foundation": [
       "log/2026-04-09-directive-bottom-up-model-completion",
       "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "links": [
+      "log/2026-04-09-directive-model-quality-links-schema"
     ],
     "depth": [
       "log/2026-04-09-directive-models-are-not-documents",
@@ -13109,6 +13141,22 @@
       ]
     },
     {
+      "target": "Methodology Execution Modes",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
+      "target": "Model Guide: LLM Wiki",
+      "referenced_by": [
+        "Model Guide: Claude Code",
+        "Model Guide: Ecosystem Architecture",
+        "Model Guide: Methodology",
+        "Model Guide: Second Brain",
+        "Model Guide: Skills + Commands + Hooks"
+      ]
+    },
+    {
       "target": "Model: Local AI",
       "referenced_by": [
         "Model: Automation + Pipelines",
@@ -13116,6 +13164,12 @@
         "Model: NotebookLM",
         "Model: Quality + Failure Prevention",
         "Model: SFIF + Architecture"
+      ]
+    },
+    {
+      "target": "Model: Second Brain",
+      "referenced_by": [
+        "Model: LLM Wiki"
       ]
     },
     {
@@ -13177,99 +13231,24 @@
       ]
     },
     {
-      "target": "[[AI-Driven Content Pipeline]]",
-      "referenced_by": [
-        "Skills Architecture Patterns",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Claude Code Skills",
-        "OpenFleet",
-        "Claude Code Scheduling",
-        "Research Pipeline Orchestration",
-        "Wiki Event-Driven Automation",
-        "Wiki Ingestion Pipeline",
-        "notebooklm-py CLI",
-        "NotebookLM Skills",
-        "NotebookLM",
-        "Obsidian CLI",
-        "NotebookLM as Grounded Research Engine Not Just Note Storage",
-        "Synthesis: Obsidian + Claude Code Second Brain Setup"
-      ]
-    },
-    {
       "target": "[[AICP]]",
       "referenced_by": [
-        "Local Inference Engine (Subsystem 3)",
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Claude Code Skills",
-        "Claude Code",
-        "OpenClaw",
-        "OpenFleet",
-        "Local LLM Quantization",
-        "MCP Integration Architecture",
-        "devops-control-plane",
-        "Four-Project Ecosystem",
-        "Immune System Rules",
-        "Knowledge Evolution Pipeline",
-        "LightRAG",
-        "Multi-Channel AI Agent Access",
-        "OpenArms",
-        "Plane",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Deterministic Shell, LLM Core",
-        "Gateway-Centric Routing",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw",
-        "Synthesis: TurboQuant 122B LLM on MacBook",
-        "Model: Local AI ($0 Target)"
+        "Local Inference Engine (Subsystem 3)"
       ]
     },
     {
       "target": "[[Agent Orchestration Patterns]]",
       "referenced_by": [
-        "Cross-Domain Patterns",
-        "Hooks Lifecycle Architecture",
-        "Rework Prevention",
         "Spec-Driven Development",
         "Task Lifecycle Stage-Gating",
-        "Multi-Channel AI Agent Access",
-        "Always Plan Before Executing",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Deterministic Shell, LLM Core",
-        "Plan Execute Review Cycle",
         "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Agentic Search vs Vector Search]]",
-      "referenced_by": [
-        "LLM Wiki vs RAG",
-        "LightRAG",
-        "LLM Wiki Pattern",
-        "LLM Wiki vs RAG",
-        "NotebookLM as Grounded Research Engine Not Just Note Storage"
       ]
     },
     {
       "target": "[[Always Plan Before Executing]]",
       "referenced_by": [
-        "Agent Orchestration Patterns",
-        "Rework Prevention",
-        "Immune System Rules",
         "Infrastructure Must Be Reproducible, Not Manual",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Never Skip Stages Even When Told to Continue",
-        "Never Synthesize from Descriptions Alone",
-        "The Agent Must Practice What It Documents",
         "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Automated Knowledge Validation Prevents Silent Wiki Decay]]",
-      "referenced_by": [
-        "Shallow Ingestion Is Systemic, Not Isolated"
       ]
     },
     {
@@ -13282,217 +13261,50 @@
       ]
     },
     {
-      "target": "[[CLI Tools Beat MCP for Token Efficiency]]",
-      "referenced_by": [
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Context-Aware Tool Loading",
-        "Context-Aware Tool Loading",
-        "Pattern: Skills + Cli",
-        "Pattern: Skills + Mcp",
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "Model Guide: MCP + CLI Integration"
-      ]
-    },
-    {
       "target": "[[Claude Code Best Practices]]",
       "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "Skills Architecture Patterns",
-        "Agent Orchestration Patterns",
-        "Claude Code Context Management",
-        "Claude Code Skills",
-        "Claude Code",
         "Design.md Pattern",
-        "Harness Engineering",
-        "Hooks Lifecycle Architecture",
-        "Per-Role Command Architecture",
-        "Rework Prevention",
-        "Wiki Event-Driven Automation",
-        "Infrastructure as Code Patterns",
-        "LLM Wiki vs RAG",
-        "Always Plan Before Executing",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Deterministic Shell, LLM Core",
-        "Pattern: Skills + Claude-Code",
-        "Plan Execute Review Cycle",
         "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Synthesis: Claude Code Accuracy Tips",
         "Claude Code Slash Commands (artemgetmann)",
-        "Synthesis: Claude Code Harness Engineering",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents",
-        "Synthesis: Playwright MCP for Visual Development Testing",
-        "Synthesis: Claude Code Best Practice (shanraisshan)",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)",
-        "Synthesis: 18 Claude Code Token Hacks in 18 Minutes",
-        "Model: Design.md + IaC"
+        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
       ]
     },
     {
       "target": "[[Claude Code Context Management]]",
       "referenced_by": [
-        "Skills Architecture Patterns",
-        "Decision: MCP vs CLI for Tool Integration",
-        "Agent Orchestration Patterns",
-        "Claude Code Best Practices",
-        "Claude Code Skills",
-        "Claude Code",
-        "Design.md Pattern",
-        "LLM Knowledge Linting",
-        "LLM Wiki Pattern",
-        "Memory Lifecycle Management",
-        "Wiki Ingestion Pipeline",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context-Aware Tool Loading",
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "Synthesis: Playwright MCP for Visual Development Testing",
-        "Synthesis: Claude Code Best Practice (shanraisshan)",
-        "Synthesis: 18 Claude Code Token Hacks in 18 Minutes"
+        "Design.md Pattern"
       ]
     },
     {
       "target": "[[Claude Code Scheduling]]",
       "referenced_by": [
-        "Claude Code Skills",
-        "LLM Knowledge Linting",
-        "AI-Driven Content Pipeline",
-        "Research Pipeline Orchestration",
-        "Wiki Event-Driven Automation",
-        "NotebookLM",
-        "Plane",
         "Claude Code Slash Commands (artemgetmann)"
       ]
     },
     {
       "target": "[[Claude Code Skills]]",
       "referenced_by": [
-        "Skills Architecture Patterns",
-        "Decision: MCP vs CLI for Tool Integration",
-        "Claude Code Best Practices",
-        "Claude Code Context Management",
-        "Claude Code",
-        "Harness Engineering",
-        "OpenClaw",
-        "OpenFleet",
-        "Per-Role Command Architecture",
-        "AI-Driven Content Pipeline",
-        "Claude Code Scheduling",
-        "Wiki Event-Driven Automation",
-        "AICP",
-        "Multi-Channel AI Agent Access",
-        "notebooklm-py CLI",
-        "NotebookLM Skills",
-        "NotebookLM",
-        "Obsidian CLI",
-        "Obsidian Knowledge Vault",
-        "Obsidian Skills Ecosystem",
-        "OpenArms",
-        "Always Plan Before Executing",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Skill Specification Is the Key to Ecosystem Interoperability",
-        "Context-Aware Tool Loading",
-        "Plan Execute Review Cycle",
-        "Synthesis: axtonliu/axton-obsidian-visual-skills",
-        "Synthesis: Claude Code Accuracy Tips",
         "Claude Code Slash Commands (artemgetmann)",
-        "Synthesis: claude-world/notebooklm-skill",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Claude Code Harness Engineering",
-        "Synthesis: kepano/obsidian-skills",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py",
-        "Synthesis: Obsidian + Claude Code Second Brain Setup",
-        "Synthesis: pablo-mano/Obsidian-CLI-skill",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "Synthesis: Playwright MCP for Visual Development Testing",
-        "Synthesis: PleasePrompto/notebooklm-skill",
-        "Synthesis: Claude Code Best Practice (shanraisshan)",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)",
-        "Synthesis: 18 Claude Code Token Hacks in 18 Minutes",
-        "Model Guide: Claude Code",
-        "Model Guide: Skills + Commands + Hooks"
+        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
       ]
     },
     {
       "target": "[[Claude Code]]",
       "referenced_by": [
-        "Decision: MCP vs CLI for Tool Integration",
-        "Claude Code Best Practices",
-        "Claude Code Context Management",
-        "Claude Code Skills",
-        "Harness Engineering",
-        "Hooks Lifecycle Architecture",
-        "Local LLM Quantization",
-        "MCP Integration Architecture",
-        "devops-control-plane",
-        "LLM Wiki Pattern",
-        "AICP",
-        "OpenArms",
-        "Always Plan Before Executing",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Pattern: Skills + Claude-Code",
-        "Pattern: Skills + Mcp",
-        "Plan Execute Review Cycle",
-        "Claude Code Slash Commands (artemgetmann)",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Claude Code Harness Engineering",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)",
-        "Model Guide: Claude Code"
+        "Claude Code Slash Commands (artemgetmann)"
       ]
     },
     {
       "target": "[[Context-Aware Tool Loading]]",
       "referenced_by": [
-        "Cross-Domain Patterns",
-        "Hooks Lifecycle Architecture",
-        "Pattern: Skills + Cli",
-        "Pattern: Skills + Notebooklm",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Model Guide: MCP + CLI Integration"
-      ]
-    },
-    {
-      "target": "[[Decision: Local Model vs Cloud API for Routine Operations]]",
-      "referenced_by": [
-        "Local Inference Engine (Subsystem 3)",
-        "Model: Local AI ($0 Target)"
-      ]
-    },
-    {
-      "target": "[[Decision: MCP vs CLI for Tool Integration]]",
-      "referenced_by": [
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "Model Guide: MCP + CLI Integration"
-      ]
-    },
-    {
-      "target": "[[Decision: Wiki-First with LightRAG Upgrade Path]]",
-      "referenced_by": [
-        "Ecosystem Integration Interfaces",
-        "Model: Knowledge Evolution"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ]
     },
     {
       "target": "[[Design.md Pattern]]",
       "referenced_by": [
-        "Hooks Lifecycle Architecture",
         "Spec-Driven Development",
-        "Infrastructure as Code Patterns",
-        "Never Synthesize from Descriptions Alone",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Model: Design.md + IaC"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ]
     },
     {
@@ -13518,55 +13330,18 @@
     {
       "target": "[[Four-Project Ecosystem]]",
       "referenced_by": [
-        "Ecosystem Integration Interfaces",
         "Methodology Framework",
-        "Skyscraper, Pyramid, Mountain",
         "Backlog Hierarchy Rules",
         "Execution Modes and End Conditions",
-        "Four-Project Ecosystem",
         "Stage-Gate Methodology",
-        "Task Type Artifact Matrix",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Adoption Guide \u2014 How to Use This Wiki's Standards",
-        "Model Guide: Ecosystem Architecture",
-        "Model: SFIF + Architecture"
-      ]
-    },
-    {
-      "target": "[[Gateway-Centric Routing]]",
-      "referenced_by": [
-        "Deterministic Shell, LLM Core",
-        "Model Guide: Ecosystem Architecture"
+        "Task Type Artifact Matrix"
       ]
     },
     {
       "target": "[[Harness Engineering]]",
       "referenced_by": [
-        "Agent Orchestration Patterns",
         "Design.md Pattern",
-        "Hooks Lifecycle Architecture",
-        "Per-Role Command Architecture",
-        "Rework Prevention",
-        "Spec-Driven Development",
-        "Immune System Rules",
-        "Infrastructure as Code Patterns",
-        "Always Plan Before Executing",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Deterministic Shell, LLM Core",
-        "Plan Execute Review Cycle",
-        "Synthesis: Playwright MCP for Visual Development Testing",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)",
-        "Model Guide: MCP + CLI Integration",
-        "Model: Quality + Failure Prevention"
-      ]
-    },
-    {
-      "target": "[[Hooks Lifecycle Architecture]]",
-      "referenced_by": [
-        "Per-Role Command Architecture",
-        "Model Guide: Claude Code",
-        "Model Guide: Skills + Commands + Hooks"
+        "Spec-Driven Development"
       ]
     },
     {
@@ -13575,401 +13350,55 @@
         "Task Lifecycle Stage-Gating",
         "Backlog Hierarchy Rules",
         "Execution Modes and End Conditions",
-        "Four-Project Ecosystem",
-        "Infrastructure as Code Patterns",
         "Stage-Gate Methodology",
         "Task Type Artifact Matrix",
         "Infrastructure Must Be Reproducible, Not Manual",
         "Never Skip Stages Even When Told to Continue",
         "Never Synthesize from Descriptions Alone",
         "Shallow Ingestion Is Systemic, Not Isolated",
-        "The Agent Must Practice What It Documents",
-        "Deterministic Shell, LLM Core",
-        "Model: Quality + Failure Prevention"
+        "The Agent Must Practice What It Documents"
       ]
     },
     {
       "target": "[[Infrastructure as Code Patterns]]",
       "referenced_by": [
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Skyscraper, Pyramid, Mountain",
         "Execution Modes and End Conditions",
-        "Four-Project Ecosystem",
-        "WSL2 Development Patterns",
-        "Infrastructure Must Be Reproducible, Not Manual",
-        "Deterministic Shell, LLM Core",
-        "Gateway-Centric Routing",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Model: Design.md + IaC"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ]
     },
     {
       "target": "[[Knowledge Evolution Pipeline]]",
       "referenced_by": [
         "Local Inference Engine (Subsystem 3)",
-        "Cross-Domain Patterns",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Skyscraper, Pyramid, Mountain",
         "Execution Modes and End Conditions",
-        "PARA Methodology",
-        "Second Brain Architecture",
         "Wiki Backlog Pattern",
-        "Zettelkasten Methodology",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "The Wiki Maintenance Problem Is Solved by LLM Automation",
-        "Lesson: Schema Is the Real Product \u2014 Not the Content",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Never Skip Stages Even When Told to Continue",
-        "Shallow Ingestion Is Systemic, Not Isolated",
-        "The Agent Must Practice What It Documents",
-        "Progressive Distillation",
-        "Progressive Distillation",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Knowledge Evolution",
-        "Model: LLM Wiki"
-      ]
-    },
-    {
-      "target": "[[LLM Knowledge Linting]]",
-      "referenced_by": [
-        "Claude Code Context Management",
-        "OpenClaw",
-        "Claude Code Scheduling",
-        "Wiki Event-Driven Automation",
-        "LLM Wiki Pattern",
-        "Memory Lifecycle Management",
-        "Wiki Ingestion Pipeline",
-        "Wiki Knowledge Graph",
-        "Obsidian Knowledge Vault",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "The Wiki Maintenance Problem Is Solved by LLM Automation",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Synthesis: Karpathy LLM Wiki Method via Claude Code",
-        "Synthesis: Karpathy's LLM Wiki Idea File",
-        "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+        "The Agent Must Practice What It Documents"
       ]
     },
     {
       "target": "[[LLM Wiki Pattern]]",
       "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "Cross-Domain Patterns",
-        "LLM Wiki vs RAG",
-        "Skills Architecture Patterns",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "Claude Code Best Practices",
-        "Claude Code Context Management",
-        "Claude Code",
         "Design.md Pattern",
-        "LLM Knowledge Linting",
-        "OpenFleet",
-        "Research Pipeline Orchestration",
-        "Wiki Event-Driven Automation",
         "Methodology Framework",
-        "Knowledge Evolution Pipeline",
-        "LightRAG",
-        "LLM Wiki vs RAG",
-        "Memory Lifecycle Management",
-        "PARA Methodology",
-        "Second Brain Architecture",
-        "Wiki Backlog Pattern",
-        "Wiki Ingestion Pipeline",
-        "Wiki Knowledge Graph",
-        "Zettelkasten Methodology",
-        "notebooklm-py CLI",
-        "NotebookLM Skills",
-        "NotebookLM",
-        "Obsidian CLI",
-        "Obsidian Knowledge Vault",
-        "Obsidian Skills Ecosystem",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "NotebookLM as Grounded Research Engine Not Just Note Storage",
-        "The Wiki Maintenance Problem Is Solved by LLM Automation",
-        "Lesson: Schema Is the Real Product \u2014 Not the Content",
-        "Lesson: Schema Is the Real Product \u2014 Not the Content",
-        "Skill Specification Is the Key to Ecosystem Interoperability",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Context-Aware Tool Loading",
-        "Progressive Distillation",
-        "Synthesis: Karpathy LLM Wiki Method via Claude Code",
-        "Synthesis: Karpathy's LLM Wiki Idea File",
-        "Synthesis: kepano/obsidian-skills",
-        "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py",
-        "Synthesis: Obsidian + Claude Code Second Brain Setup",
-        "Synthesis: Claude Code Best Practice (shanraisshan)",
-        "Model: LLM Wiki"
-      ]
-    },
-    {
-      "target": "[[LLM Wiki vs RAG]]",
-      "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Claude Code Best Practices",
-        "Knowledge Evolution Pipeline",
-        "LightRAG",
-        "LLM Wiki Pattern",
-        "Memory Lifecycle Management",
-        "Second Brain Architecture",
-        "Wiki Knowledge Graph",
-        "NotebookLM",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "NotebookLM as Grounded Research Engine Not Just Note Storage",
-        "The Wiki Maintenance Problem Is Solved by LLM Automation",
-        "Lesson: Schema Is the Real Product \u2014 Not the Content",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Synthesis: Karpathy LLM Wiki Method via Claude Code",
-        "Synthesis: Karpathy's LLM Wiki Idea File",
-        "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
-      ]
-    },
-    {
-      "target": "[[LLM-Maintained Wikis Outperform Static Documentation]]",
-      "referenced_by": [
-        "The Wiki Maintenance Problem Is Solved by LLM Automation"
-      ]
-    },
-    {
-      "target": "[[LightRAG]]",
-      "referenced_by": [
-        "LLM Wiki vs RAG",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "OpenFleet",
-        "Local LLM Quantization",
-        "LLM Wiki Pattern",
-        "LLM Wiki vs RAG",
-        "Wiki Knowledge Graph",
-        "AICP",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw",
-        "Synthesis: TurboQuant 122B LLM on MacBook"
-      ]
-    },
-    {
-      "target": "[[Local LLM Quantization]]",
-      "referenced_by": [
-        "Local Inference Engine (Subsystem 3)",
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Model: Local AI ($0 Target)"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[MCP Integration Architecture]]",
       "referenced_by": [
-        "Decision: MCP vs CLI for Tool Integration",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Agent Orchestration Patterns",
-        "Design.md Pattern",
-        "Harness Engineering",
-        "Research Pipeline Orchestration",
-        "Wiki Event-Driven Automation",
-        "Four-Project Ecosystem",
-        "WSL2 Development Patterns",
-        "Multi-Channel AI Agent Access",
-        "OpenArms",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Context-Aware Tool Loading",
-        "Gateway-Centric Routing",
-        "Plan Execute Review Cycle",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Playwright MCP for Visual Development Testing"
+        "Design.md Pattern"
       ]
     },
     {
       "target": "[[Memory Lifecycle Management]]",
       "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "LLM Wiki vs RAG",
-        "Claude Code Context Management",
-        "LLM Knowledge Linting",
-        "Wiki Event-Driven Automation",
-        "Knowledge Evolution Pipeline",
-        "LLM Wiki Pattern",
-        "PARA Methodology",
-        "Second Brain Architecture",
-        "Wiki Backlog Pattern",
-        "Wiki Knowledge Graph",
-        "Zettelkasten Methodology",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Progressive Distillation",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
-      ]
-    },
-    {
-      "target": "[[Methodology Execution Modes]]",
-      "referenced_by": [
-        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[Methodology Framework]]",
       "referenced_by": [
-        "Infrastructure Must Be Reproducible, Not Manual",
-        "Never Skip Stages Even When Told to Continue",
-        "The Agent Must Practice What It Documents",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Adoption Guide \u2014 How to Use This Wiki's Standards",
-        "Model Guide: Methodology"
-      ]
-    },
-    {
-      "target": "[[Model Guide: Claude Code]]",
-      "referenced_by": [
-        "Model Guide: Ecosystem Architecture",
-        "Model: LLM Wiki",
-        "Model Guide: MCP + CLI Integration",
-        "Model Guide: Methodology",
-        "Model Guide: Second Brain",
-        "Model Guide: Skills + Commands + Hooks"
-      ]
-    },
-    {
-      "target": "[[Model Guide: Ecosystem Architecture]]",
-      "referenced_by": [
-        "Model Guide: Claude Code",
-        "Model: LLM Wiki",
-        "Model Guide: MCP + CLI Integration",
-        "Model Guide: Methodology",
-        "Model Guide: Second Brain"
-      ]
-    },
-    {
-      "target": "[[Model Guide: LLM Wiki]]",
-      "referenced_by": [
-        "Model Guide: Claude Code",
-        "Model Guide: Ecosystem Architecture",
-        "Model Guide: Methodology",
-        "Model Guide: Second Brain",
-        "Model Guide: Skills + Commands + Hooks"
-      ]
-    },
-    {
-      "target": "[[Model Guide: MCP + CLI Integration]]",
-      "referenced_by": [
-        "Model Guide: Claude Code",
-        "Model Guide: Ecosystem Architecture",
-        "Model Guide: Skills + Commands + Hooks"
-      ]
-    },
-    {
-      "target": "[[Model Guide: Methodology]]",
-      "referenced_by": [
-        "Model Guide: Claude Code",
-        "Model Guide: Ecosystem Architecture",
-        "Model: LLM Wiki",
-        "Model Guide: Second Brain",
-        "Model Guide: Skills + Commands + Hooks"
-      ]
-    },
-    {
-      "target": "[[Model Guide: Skills + Commands + Hooks]]",
-      "referenced_by": [
-        "Model Guide: Claude Code",
-        "Model Guide: Ecosystem Architecture",
-        "Model Guide: MCP + CLI Integration",
-        "Model Guide: Methodology"
-      ]
-    },
-    {
-      "target": "[[Model: Automation + Pipelines]]",
-      "referenced_by": [
-        "Model: Design.md + IaC",
-        "Model: Knowledge Evolution",
-        "Model: Local AI ($0 Target)",
-        "Model: NotebookLM",
-        "Model: Quality + Failure Prevention"
-      ]
-    },
-    {
-      "target": "[[Model: Design.md + IaC]]",
-      "referenced_by": [
-        "Model: NotebookLM",
-        "Model: SFIF + Architecture"
-      ]
-    },
-    {
-      "target": "[[Model: Knowledge Evolution]]",
-      "referenced_by": [
-        "Model: Automation + Pipelines",
-        "Model: LLM Wiki",
-        "Model: NotebookLM",
-        "Model: SFIF + Architecture"
-      ]
-    },
-    {
-      "target": "[[Model: NotebookLM]]",
-      "referenced_by": [
-        "Model: Automation + Pipelines",
-        "Model: Knowledge Evolution"
-      ]
-    },
-    {
-      "target": "[[Model: Quality + Failure Prevention]]",
-      "referenced_by": [
-        "Model: Automation + Pipelines",
-        "Model: Design.md + IaC",
-        "Model: Local AI ($0 Target)",
-        "Model: SFIF + Architecture"
-      ]
-    },
-    {
-      "target": "[[Model: SFIF + Architecture]]",
-      "referenced_by": [
-        "Model: Design.md + IaC",
-        "Model: Knowledge Evolution",
-        "Model: Local AI ($0 Target)",
-        "Model: Quality + Failure Prevention"
-      ]
-    },
-    {
-      "target": "[[Model: Second Brain]]",
-      "referenced_by": [
-        "Model: LLM Wiki"
-      ]
-    },
-    {
-      "target": "[[Multi-Channel AI Agent Access]]",
-      "referenced_by": [
-        "OpenArms",
-        "Gateway-Centric Routing",
-        "Gateway-Centric Routing"
-      ]
-    },
-    {
-      "target": "[[Multi-Stage Ingestion Beats Single-Pass Processing]]",
-      "referenced_by": [
-        "Never Synthesize from Descriptions Alone",
-        "Shallow Ingestion Is Systemic, Not Isolated",
-        "Progressive Distillation"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ]
     },
     {
@@ -13985,278 +13414,48 @@
       ]
     },
     {
-      "target": "[[NotebookLM Skills]]",
-      "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "Skills Architecture Patterns",
-        "OpenClaw",
-        "AI-Driven Content Pipeline",
-        "notebooklm-py CLI",
-        "NotebookLM",
-        "Obsidian Skills Ecosystem",
-        "NotebookLM as Grounded Research Engine Not Just Note Storage",
-        "Skill Specification Is the Key to Ecosystem Interoperability",
-        "Pattern: Skills + Notebooklm",
-        "Synthesis: claude-world/notebooklm-skill",
-        "Synthesis: PleasePrompto/notebooklm-skill"
-      ]
-    },
-    {
-      "target": "[[NotebookLM]]",
-      "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "LLM Wiki vs RAG",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Claude Code Skills",
-        "AI-Driven Content Pipeline",
-        "Claude Code Scheduling",
-        "LLM Wiki Pattern",
-        "LLM Wiki vs RAG",
-        "notebooklm-py CLI",
-        "NotebookLM Skills",
-        "NotebookLM as Grounded Research Engine Not Just Note Storage",
-        "Progressive Distillation",
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: claude-world/notebooklm-skill",
-        "Synthesis: PleasePrompto/notebooklm-skill",
-        "Model: NotebookLM"
-      ]
-    },
-    {
-      "target": "[[Obsidian CLI]]",
-      "referenced_by": [
-        "Claude Code",
-        "MCP Integration Architecture",
-        "Research Pipeline Orchestration",
-        "WSL2 Development Patterns",
-        "Wiki Ingestion Pipeline",
-        "notebooklm-py CLI"
-      ]
-    },
-    {
-      "target": "[[Obsidian Knowledge Vault]]",
-      "referenced_by": [
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Claude Code Skills",
-        "LLM Knowledge Linting",
-        "Knowledge Evolution Pipeline",
-        "LLM Wiki Pattern",
-        "Second Brain Architecture",
-        "Wiki Ingestion Pipeline",
-        "Wiki Knowledge Graph",
-        "Zettelkasten Methodology",
-        "Obsidian CLI",
-        "Obsidian Skills Ecosystem",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Synthesis: axtonliu/axton-obsidian-visual-skills",
-        "Synthesis: Karpathy LLM Wiki Method via Claude Code",
-        "Synthesis: Karpathy's LLM Wiki Idea File",
-        "Synthesis: kepano/obsidian-skills",
-        "Synthesis: Obsidian + Claude Code Second Brain Setup",
-        "Synthesis: pablo-mano/Obsidian-CLI-skill"
-      ]
-    },
-    {
-      "target": "[[Obsidian Skills Ecosystem]]",
-      "referenced_by": [
-        "Skills Architecture Patterns",
-        "OpenClaw",
-        "NotebookLM Skills",
-        "Obsidian CLI",
-        "Obsidian Knowledge Vault",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Skill Specification Is the Key to Ecosystem Interoperability",
-        "Skill Specification Is the Key to Ecosystem Interoperability",
-        "Pattern: Skills + Obsidian",
-        "Synthesis: axtonliu/axton-obsidian-visual-skills",
-        "Synthesis: kepano/obsidian-skills",
-        "Synthesis: pablo-mano/Obsidian-CLI-skill"
-      ]
-    },
-    {
-      "target": "[[OpenArms]]",
-      "referenced_by": [
-        "Four-Project Ecosystem",
-        "Multi-Channel AI Agent Access",
-        "Gateway-Centric Routing"
-      ]
-    },
-    {
-      "target": "[[OpenClaw]]",
-      "referenced_by": [
-        "Claude Code Skills",
-        "Claude Code",
-        "Harness Engineering",
-        "OpenFleet",
-        "Local LLM Quantization",
-        "AI-Driven Content Pipeline",
-        "AICP",
-        "Plane",
-        "Gateway-Centric Routing",
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw",
-        "Synthesis: Claude Code Harness Engineering"
-      ]
-    },
-    {
       "target": "[[OpenFleet]]",
       "referenced_by": [
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Agent Orchestration Patterns",
-        "Claude Code Skills",
-        "Claude Code",
-        "Harness Engineering",
-        "OpenClaw",
-        "Rework Prevention",
         "Spec-Driven Development",
         "Task Lifecycle Stage-Gating",
-        "Local LLM Quantization",
-        "Claude Code Scheduling",
-        "MCP Integration Architecture",
-        "devops-control-plane",
-        "Four-Project Ecosystem",
-        "Immune System Rules",
-        "Infrastructure as Code Patterns",
-        "LightRAG",
-        "LLM Wiki Pattern",
-        "Wiki Backlog Pattern",
-        "Wiki Knowledge Graph",
-        "AICP",
-        "Multi-Channel AI Agent Access",
-        "OpenArms",
-        "Plane",
-        "Always Plan Before Executing",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Deterministic Shell, LLM Core",
-        "Gateway-Centric Routing",
-        "Plan Execute Review Cycle",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw",
-        "Synthesis: Claude Code Harness Engineering",
-        "Model Guide: Ecosystem Architecture"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[PARA Methodology]]",
       "referenced_by": [
-        "Cross-Domain Patterns",
-        "Wiki Backlog Pattern",
-        "Zettelkasten Methodology",
-        "Progressive Distillation",
-        "Model Guide: Second Brain"
-      ]
-    },
-    {
-      "target": "[[Per-Role Command Architecture]]",
-      "referenced_by": [
-        "Hooks Lifecycle Architecture",
-        "Model Guide: Skills + Commands + Hooks"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[Plan Execute Review Cycle]]",
       "referenced_by": [
-        "Cross-Domain Patterns",
-        "Agent Orchestration Patterns",
-        "Rework Prevention",
         "Spec-Driven Development",
         "Task Lifecycle Stage-Gating",
-        "Skyscraper, Pyramid, Mountain",
         "Backlog Hierarchy Rules",
         "Execution Modes and End Conditions",
-        "Immune System Rules",
         "Stage-Gate Methodology",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Deterministic Shell, LLM Core",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)"
-      ]
-    },
-    {
-      "target": "[[Plane]]",
-      "referenced_by": [
-        "OpenFleet",
-        "Claude Code Scheduling",
-        "devops-control-plane"
-      ]
-    },
-    {
-      "target": "[[Plannotator \u2014 Interactive Plan & Code Review for AI Agents]]",
-      "referenced_by": [
-        "Hooks Lifecycle Architecture",
-        "Per-Role Command Architecture"
+        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
       ]
     },
     {
       "target": "[[Progressive Distillation]]",
       "referenced_by": [
         "Methodology Framework",
-        "Skyscraper, Pyramid, Mountain",
-        "Wiki Backlog Pattern",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Knowledge Evolution"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[Research Pipeline Orchestration]]",
       "referenced_by": [
-        "Cross-Domain Patterns",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Decision: MCP vs CLI for Tool Integration",
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Agent Orchestration Patterns",
-        "Harness Engineering",
-        "Rework Prevention",
-        "MCP Integration Architecture",
-        "Wiki Event-Driven Automation",
-        "WSL2 Development Patterns",
-        "Knowledge Evolution Pipeline",
-        "PARA Methodology",
-        "Second Brain Architecture",
-        "Wiki Backlog Pattern",
-        "Wiki Ingestion Pipeline",
-        "Multi-Channel AI Agent Access",
-        "OpenArms",
-        "Always Plan Before Executing",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Context-Aware Tool Loading",
-        "Deterministic Shell, LLM Core",
-        "Gateway-Centric Routing",
-        "Plan Execute Review Cycle",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)",
-        "Model: Automation + Pipelines"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[Rework Prevention]]",
       "referenced_by": [
-        "Agent Orchestration Patterns",
         "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating",
-        "Immune System Rules",
-        "Always Plan Before Executing",
-        "Model: Quality + Failure Prevention"
+        "Task Lifecycle Stage-Gating"
       ]
     },
     {
@@ -14265,50 +13464,21 @@
         "Task Lifecycle Stage-Gating",
         "Methodology Framework",
         "Methodology Framework",
-        "Skyscraper, Pyramid, Mountain",
         "Stage-Gate Methodology",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents",
-        "Model: SFIF + Architecture"
+        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
       ]
     },
     {
       "target": "[[Second Brain Architecture]]",
       "referenced_by": [
-        "Cross-Domain Patterns",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
         "Methodology Framework",
-        "Knowledge Evolution Pipeline",
-        "PARA Methodology",
-        "Wiki Backlog Pattern",
-        "Zettelkasten Methodology",
-        "The Wiki Maintenance Problem Is Solved by LLM Automation",
-        "Lesson: Schema Is the Real Product \u2014 Not the Content",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Progressive Distillation",
-        "Model Guide: Second Brain"
-      ]
-    },
-    {
-      "target": "[[Skills Architecture Is the Dominant LLM Extension Pattern]]",
-      "referenced_by": [
-        "Per-Role Command Architecture"
+        "Wiki Backlog Pattern"
       ]
     },
     {
       "target": "[[Skills Architecture Patterns]]",
       "referenced_by": [
-        "Claude Code Best Practices",
-        "Claude Code Context Management",
-        "Claude Code Skills",
         "Design.md Pattern",
-        "AI-Driven Content Pipeline",
-        "Infrastructure as Code Patterns",
-        "LLM Wiki Pattern",
-        "NotebookLM Skills",
-        "Obsidian Skills Ecosystem",
-        "Skill Specification Is the Key to Ecosystem Interoperability",
-        "Pattern: Skills + Obsidian",
         "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
         "Claude Code Slash Commands (artemgetmann)"
       ]
@@ -14330,8 +13500,7 @@
         "Backlog Hierarchy Rules",
         "Stage-Gate Methodology",
         "Task Type Artifact Matrix",
-        "Wiki Backlog Pattern",
-        "Synthesis: Claude Code Best Practice (shanraisshan)"
+        "Wiki Backlog Pattern"
       ]
     },
     {
@@ -14342,93 +13511,13 @@
         "Execution Modes and End Conditions",
         "Task Type Artifact Matrix",
         "Infrastructure Must Be Reproducible, Not Manual",
-        "Never Skip Stages Even When Told to Continue",
         "Never Synthesize from Descriptions Alone",
-        "Shallow Ingestion Is Systemic, Not Isolated",
-        "The Agent Must Practice What It Documents",
-        "Adoption Guide \u2014 How to Use This Wiki's Standards",
-        "Model Guide: Methodology"
-      ]
-    },
-    {
-      "target": "[[Synthesis: Claude Code Accuracy Tips]]",
-      "referenced_by": [
-        "Decision: MCP vs CLI for Tool Integration",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context Management Is the Primary LLM Productivity Lever",
-        "Context-Aware Tool Loading",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)"
-      ]
-    },
-    {
-      "target": "[[Synthesis: Claude Code Harness Engineering]]",
-      "referenced_by": [
-        "Decision: MCP vs CLI for Tool Integration",
-        "Always Plan Before Executing",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context Management Is the Primary LLM Productivity Lever"
-      ]
-    },
-    {
-      "target": "[[Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving]]",
-      "referenced_by": [
-        "Hooks Lifecycle Architecture"
-      ]
-    },
-    {
-      "target": "[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]",
-      "referenced_by": [
-        "The Wiki Maintenance Problem Is Solved by LLM Automation"
-      ]
-    },
-    {
-      "target": "[[Synthesis: Karpathy's LLM Wiki Idea File]]",
-      "referenced_by": [
-        "Lesson: Schema Is the Real Product \u2014 Not the Content"
-      ]
-    },
-    {
-      "target": "[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]",
-      "referenced_by": [
-        "NotebookLM as Grounded Research Engine Not Just Note Storage",
-        "Context-Aware Tool Loading"
-      ]
-    },
-    {
-      "target": "[[Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens]]",
-      "referenced_by": [
-        "Decision: MCP vs CLI for Tool Integration",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context-Aware Tool Loading",
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: Playwright MCP for Visual Development Testing"
-      ]
-    },
-    {
-      "target": "[[Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents]]",
-      "referenced_by": [
-        "Never Synthesize from Descriptions Alone"
-      ]
-    },
-    {
-      "target": "[[Synthesis: claude-world/notebooklm-skill]]",
-      "referenced_by": [
-        "NotebookLM as Grounded Research Engine Not Just Note Storage"
-      ]
-    },
-    {
-      "target": "[[Synthesis: kepano/obsidian-skills]]",
-      "referenced_by": [
-        "Skill Specification Is the Key to Ecosystem Interoperability"
+        "Shallow Ingestion Is Systemic, Not Isolated"
       ]
     },
     {
       "target": "[[Task Lifecycle Stage-Gating]]",
       "referenced_by": [
-        "Hooks Lifecycle Architecture",
-        "Per-Role Command Architecture",
         "Spec-Driven Development",
         "Task Lifecycle Stage-Gating",
         "Methodology Framework",
@@ -14444,17 +13533,7 @@
         "Methodology Framework",
         "Backlog Hierarchy Rules",
         "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Adoption Guide \u2014 How to Use This Wiki's Standards",
-        "Model Guide: Methodology"
-      ]
-    },
-    {
-      "target": "[[WSL2 Development Patterns]]",
-      "referenced_by": [
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Four-Project Ecosystem"
+        "Stage-Gate Methodology"
       ]
     },
     {
@@ -14470,143 +13549,9 @@
       ]
     },
     {
-      "target": "[[Wiki Event-Driven Automation]]",
-      "referenced_by": [
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Decision: Polling vs Event-Driven Change Detection",
-        "Agent Orchestration Patterns",
-        "Claude Code Best Practices",
-        "Claude Code Skills",
-        "LLM Knowledge Linting",
-        "Claude Code Scheduling",
-        "MCP Integration Architecture",
-        "Research Pipeline Orchestration",
-        "LLM Wiki Pattern",
-        "Memory Lifecycle Management",
-        "Wiki Ingestion Pipeline",
-        "notebooklm-py CLI",
-        "Obsidian CLI",
-        "Skills Architecture Is the Dominant LLM Extension Pattern",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Automation Is the Bridge Between Knowledge and Action",
-        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki",
-        "Plan Execute Review Cycle",
-        "Model: Automation + Pipelines"
-      ]
-    },
-    {
       "target": "[[Wiki Ingestion Pipeline]]",
       "referenced_by": [
-        "LLM Wiki vs RAG",
-        "Decision: MCP vs CLI for Tool Integration",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Claude Code Best Practices",
-        "Claude Code Context Management",
-        "Claude Code",
-        "LLM Knowledge Linting",
-        "Per-Role Command Architecture",
-        "Rework Prevention",
-        "AI-Driven Content Pipeline",
-        "MCP Integration Architecture",
-        "Research Pipeline Orchestration",
-        "Wiki Event-Driven Automation",
-        "devops-control-plane",
-        "WSL2 Development Patterns",
-        "Knowledge Evolution Pipeline",
-        "LightRAG",
-        "LLM Wiki Pattern",
-        "LLM Wiki vs RAG",
-        "Memory Lifecycle Management",
-        "PARA Methodology",
-        "Second Brain Architecture",
-        "Wiki Knowledge Graph",
-        "Zettelkasten Methodology",
-        "notebooklm-py CLI",
-        "Obsidian CLI",
-        "Obsidian Knowledge Vault",
-        "Infrastructure Must Be Reproducible, Not Manual",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Lesson: Schema Is the Real Product \u2014 Not the Content",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Never Synthesize from Descriptions Alone",
-        "Shallow Ingestion Is Systemic, Not Isolated",
-        "Context-Aware Tool Loading",
-        "Plan Execute Review Cycle",
-        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
-        "Synthesis: Karpathy LLM Wiki Method via Claude Code",
-        "Synthesis: Karpathy's LLM Wiki Idea File",
-        "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py",
-        "Synthesis: Obsidian + Claude Code Second Brain Setup",
-        "Model: LLM Wiki"
-      ]
-    },
-    {
-      "target": "[[Wiki Knowledge Graph]]",
-      "referenced_by": [
-        "Agentic Search vs Vector Search",
-        "Cross-Domain Patterns",
-        "LLM Wiki vs RAG",
-        "Decision: Wiki-First with LightRAG Upgrade Path",
-        "Decision: Local Model vs Cloud API for Routine Operations",
-        "Decision: Obsidian vs NotebookLM as Knowledge Interface",
-        "Claude Code Context Management",
-        "LLM Knowledge Linting",
-        "OpenFleet",
-        "Four-Project Ecosystem",
-        "Knowledge Evolution Pipeline",
-        "LightRAG",
-        "LLM Wiki Pattern",
-        "LLM Wiki vs RAG",
-        "Memory Lifecycle Management",
-        "Second Brain Architecture",
-        "Wiki Ingestion Pipeline",
-        "Zettelkasten Methodology",
-        "AICP",
-        "Obsidian Knowledge Vault",
-        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
-        "Automated Knowledge Validation Prevents Silent Wiki Decay",
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Multi-Stage Ingestion Beats Single-Pass Processing",
-        "Progressive Distillation"
-      ]
-    },
-    {
-      "target": "[[Zettelkasten Methodology]]",
-      "referenced_by": [
-        "Cross-Domain Patterns",
-        "PARA Methodology",
-        "Progressive Distillation",
-        "Model Guide: Second Brain"
-      ]
-    },
-    {
-      "target": "[[devops-control-plane]]",
-      "referenced_by": [
-        "Decision: Polling vs Event-Driven Change Detection",
-        "OpenFleet",
-        "Four-Project Ecosystem",
-        "Immune System Rules",
-        "Infrastructure as Code Patterns",
-        "WSL2 Development Patterns",
-        "AICP",
-        "OpenArms",
-        "Plane"
-      ]
-    },
-    {
-      "target": "[[notebooklm-py CLI]]",
-      "referenced_by": [
-        "Claude Code",
-        "MCP Integration Architecture",
-        "Research Pipeline Orchestration",
-        "Wiki Ingestion Pipeline",
-        "Obsidian CLI",
-        "Model: NotebookLM"
+        "Infrastructure Must Be Reproducible, Not Manual"
       ]
     },
     {

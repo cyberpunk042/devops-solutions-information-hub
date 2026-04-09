@@ -303,11 +303,11 @@ After studying this model you can:
 
 ## Backlinks
 
-[[[[Model: Second Brain]]]]
-[[[[Model Guide: Ecosystem Architecture]]]]
-[[[[Model Guide: Claude Code]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Model Guide: Methodology]]]]
-[[[[Model: Knowledge Evolution]]]]
+[[Model: Second Brain]]
+[[Model Guide: Ecosystem Architecture]]
+[[Model Guide: Claude Code]]
+[[LLM Wiki Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[Knowledge Evolution Pipeline]]
+[[Model Guide: Methodology]]
+[[Model: Knowledge Evolution]]

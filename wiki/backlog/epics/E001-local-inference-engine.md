@@ -56,7 +56,7 @@ Waiting for 19GB VRAM hardware upgrade. Current 8GB limits model size to 8B para
 
 ## Backlinks
 
-[[[[Decision: Local Model vs Cloud API for Routine Operations]]]]
-[[[[AICP]] (backend routing, circuit breaker)]]
-[[[[Knowledge Evolution Pipeline]] ($0 evolution)]]
-[[[[Local LLM Quantization]]]]
+[[Decision: Local Model vs Cloud API for Routine Operations]]
+[[AICP]] (backend routing, circuit breaker)]]
+[[Knowledge Evolution Pipeline]] ($0 evolution)]]
+[[Local LLM Quantization]]

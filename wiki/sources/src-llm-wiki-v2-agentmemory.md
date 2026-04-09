@@ -95,8 +95,8 @@ Partially answerable from existing wiki knowledge: structural conflicts (two age
 ## Backlinks
 
 [[src-llm-wiki-v2-agentmemory]]
-[[[[LLM Wiki Pattern]]]]
+[[LLM Wiki Pattern]]
 [[src-karpathy-llm-wiki-idea-file]]
-[[[[LLM Knowledge Linting]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Wiki vs RAG]]]]
+[[LLM Knowledge Linting]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Wiki vs RAG]]

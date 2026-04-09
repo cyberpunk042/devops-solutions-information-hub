@@ -81,10 +81,10 @@ Karpathy's framing makes the infrastructure metaphor explicit: "Obsidian is the 
 
 ## Backlinks
 
-[[[[Obsidian Knowledge Vault]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Claude Code Skills]]]]
-[[[[Obsidian Skills Ecosystem]]]]
+[[Obsidian Knowledge Vault]]
+[[LLM Wiki Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[Claude Code Skills]]
+[[Obsidian Skills Ecosystem]]
 [[devops-solutions-research-wiki]]
-[[[[Wiki Knowledge Graph]]]]
+[[Wiki Knowledge Graph]]

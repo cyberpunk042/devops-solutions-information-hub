@@ -97,10 +97,11 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Progressive Distillation]]]]
-[[[[Model: Automation + Pipelines]]]]
+[[Knowledge Evolution Pipeline]]
+[[Progressive Distillation]]
+[[Model: Automation + Pipelines]]
 [[Model: Local AI ($0 Target)]]
-[[[[Model: SFIF + Architecture]]]]
-[[[[Model: NotebookLM]]]]
-[[[[Decision: Wiki-First with LightRAG Upgrade Path]]]]
+[[Model: SFIF + Architecture]]
+[[Model: NotebookLM]]
+[[Decision: Wiki-First with LightRAG Upgrade Path]]
+[[Model: LLM Wiki]]

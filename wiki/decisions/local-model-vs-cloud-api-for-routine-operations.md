@@ -96,10 +96,12 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 
 ## Backlinks
 
-[[[[AICP]]]]
-[[[[Local LLM Quantization]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[OpenFleet]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[Infrastructure as Code Patterns]]]]
+[[AICP]]
+[[Local LLM Quantization]]
+[[Knowledge Evolution Pipeline]]
+[[OpenFleet]]
+[[Research Pipeline Orchestration]]
+[[Wiki Knowledge Graph]]
+[[Infrastructure as Code Patterns]]
+[[Local Inference Engine (Subsystem 3)]]
+[[Model: Local AI ($0 Target)]]

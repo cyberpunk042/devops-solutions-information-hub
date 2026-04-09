@@ -106,10 +106,10 @@ Cross-referencing `Agent Orchestration Patterns` and `Plan Execute Review Cycle`
 ## Backlinks
 
 [[src-superpowers-end-of-vibe-coding]]
-[[[[Claude Code Best Practices]]]]
-[[[[Claude Code Skills]]]]
-[[[[Harness Engineering]]]]
-[[[[Plan Execute Review Cycle]]]]
-[[[[Synthesis: Claude Code Accuracy Tips]]]]
-[[[[Claude Code]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[Claude Code Best Practices]]
+[[Claude Code Skills]]
+[[Harness Engineering]]
+[[Plan Execute Review Cycle]]
+[[Synthesis: Claude Code Accuracy Tips]]
+[[Claude Code]]
+[[Research Pipeline Orchestration]]

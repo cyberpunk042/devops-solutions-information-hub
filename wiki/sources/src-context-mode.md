@@ -242,12 +242,13 @@ All processing occurs in sandboxed subprocesses on the local machine. No telemet
 
 ## Backlinks
 
-[[[[Context-Aware Tool Loading]]]]
-[[[[CLI Tools Beat MCP for Token Efficiency]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Claude Code Context Management]]]]
-[[[[Claude Code Skills]]]]
-[[[[Claude Code]]]]
-[[[[OpenClaw]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[Wiki Ingestion Pipeline]]]]
+[[Context-Aware Tool Loading]]
+[[CLI Tools Beat MCP for Token Efficiency]]
+[[MCP Integration Architecture]]
+[[Claude Code Context Management]]
+[[Claude Code Skills]]
+[[Claude Code]]
+[[OpenClaw]]
+[[Research Pipeline Orchestration]]
+[[Wiki Ingestion Pipeline]]
+[[Hooks Lifecycle Architecture]]

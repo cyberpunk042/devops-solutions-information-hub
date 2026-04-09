@@ -95,9 +95,9 @@ This lesson applies universally across infrastructure work:
 
 ## Backlinks
 
-[[[[Infrastructure as Code Patterns]]]]
-[[[[Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)]]
-[[[[Always Plan Before Executing]] (plan the infrastructure approach before writing files)]]
-[[[[Methodology Framework]]]]
-[[[[Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)]]
-[[[[Immune System Rules]] (this lesson became a rule)]]
+[[Infrastructure as Code Patterns]]
+[[Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)]]
+[[Always Plan Before Executing]] (plan the infrastructure approach before writing files)]]
+[[Methodology Framework]]
+[[Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)]]
+[[Immune System Rules]] (this lesson became a rule)]]

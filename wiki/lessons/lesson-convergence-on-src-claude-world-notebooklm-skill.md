@@ -82,11 +82,11 @@ This lesson applies to:
 
 ## Backlinks
 
-[[[[Synthesis: claude-world/notebooklm-skill]]]]
-[[[[NotebookLM Skills]]]]
-[[[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]]]
-[[[[NotebookLM]]]]
-[[[[LLM Wiki vs RAG]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[AI-Driven Content Pipeline]]]]
-[[[[Agentic Search vs Vector Search]]]]
+[[Synthesis: claude-world/notebooklm-skill]]
+[[NotebookLM Skills]]
+[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[NotebookLM]]
+[[LLM Wiki vs RAG]]
+[[LLM Wiki Pattern]]
+[[AI-Driven Content Pipeline]]
+[[Agentic Search vs Vector Search]]

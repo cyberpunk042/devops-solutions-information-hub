@@ -60,6 +60,6 @@ This video presents 18 token management techniques for Claude Code, organized in
 ## Backlinks
 
 [[src-token-hacks-claude-code]]
-[[[[Claude Code Context Management]]]]
-[[[[Claude Code Skills]]]]
-[[[[Claude Code Best Practices]]]]
+[[Claude Code Context Management]]
+[[Claude Code Skills]]
+[[Claude Code Best Practices]]

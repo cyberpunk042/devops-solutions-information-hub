@@ -76,14 +76,11 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[AICP]]]]
-[[[[Local LLM Quantization]]]]
-[[[[Model: Automation + Pipelines]]]]
-[[[[Model: Quality + Failure Prevention]]]]
-[[[[Model: SFIF + Architecture]]]]
-[[[[Decision: Local Model vs Cloud API for Routine Operations]]]]
+[[AICP]]
+[[Local LLM Quantization]]
 [[Model: Automation + Pipelines]]
-[[Model: Knowledge Evolution]]
-[[Model: NotebookLM]]
 [[Model: Quality + Failure Prevention]]
 [[Model: SFIF + Architecture]]
+[[Decision: Local Model vs Cloud API for Routine Operations]]
+[[Model: Knowledge Evolution]]
+[[Model: NotebookLM]]

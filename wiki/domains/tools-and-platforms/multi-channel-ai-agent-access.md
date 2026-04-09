@@ -137,10 +137,11 @@ Cross-referencing `OpenArms` and `OpenFleet`: both pages document the relevant i
 
 ## Backlinks
 
-[[[[OpenArms]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Claude Code Skills]]]]
-[[[[OpenFleet]]]]
-[[[[AICP]]]]
-[[[[Agent Orchestration Patterns]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[OpenArms]]
+[[MCP Integration Architecture]]
+[[Claude Code Skills]]
+[[OpenFleet]]
+[[AICP]]
+[[Agent Orchestration Patterns]]
+[[Research Pipeline Orchestration]]
+[[Gateway-Centric Routing]]

@@ -105,7 +105,7 @@ Cross-referencing `Obsidian CLI` and `WSL2 Development Patterns`: the Obsidian C
 ## Backlinks
 
 [[src-pablo-mano-obsidian-cli-skill]]
-[[[[Obsidian Skills Ecosystem]]]]
-[[[[Claude Code Skills]]]]
-[[[[Obsidian Knowledge Vault]]]]
+[[Obsidian Skills Ecosystem]]
+[[Claude Code Skills]]
+[[Obsidian Knowledge Vault]]
 [[src-kepano-obsidian-skills]]

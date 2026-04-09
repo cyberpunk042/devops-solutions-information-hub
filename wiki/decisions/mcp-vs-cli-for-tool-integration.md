@@ -109,12 +109,13 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 
 ## Backlinks
 
-[[[[Synthesis: Claude Code Harness Engineering]]]]
-[[[[Synthesis: Claude Code Accuracy Tips]]]]
-[[[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Claude Code]]]]
-[[[[Claude Code Skills]]]]
-[[[[Claude Code Context Management]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[Synthesis: Claude Code Harness Engineering]]
+[[Synthesis: Claude Code Accuracy Tips]]
+[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[MCP Integration Architecture]]
+[[Claude Code]]
+[[Claude Code Skills]]
+[[Claude Code Context Management]]
+[[Wiki Ingestion Pipeline]]
+[[Research Pipeline Orchestration]]
+[[Model Guide: MCP + CLI Integration]]

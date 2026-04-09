@@ -129,12 +129,14 @@ Cross-referencing `OpenFleet`: OpenArms's `sessions_send` is a synchronous withi
 
 ## Backlinks
 
-[[[[AICP]]]]
-[[[[OpenFleet]]]]
-[[[[devops-control-plane]]]]
-[[[[Claude Code Skills]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Multi-Channel AI Agent Access]]]]
-[[[[Claude Code]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[AICP]]
+[[OpenFleet]]
+[[devops-control-plane]]
+[[Claude Code Skills]]
+[[MCP Integration Architecture]]
+[[Multi-Channel AI Agent Access]]
+[[Claude Code]]
+[[Research Pipeline Orchestration]]
 [[Ecosystem Integration Interfaces]]
+[[Four-Project Ecosystem]]
+[[Gateway-Centric Routing]]

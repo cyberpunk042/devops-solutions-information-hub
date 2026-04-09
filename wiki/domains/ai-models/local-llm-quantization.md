@@ -81,8 +81,11 @@ Cross-referencing `AICP` and `OpenFleet`: the AICP page documents that 9 models 
 
 ## Backlinks
 
-[[[[AICP]]]]
-[[[[OpenFleet]]]]
-[[[[OpenClaw]]]]
-[[[[LightRAG]]]]
-[[[[Claude Code]]]]
+[[AICP]]
+[[OpenFleet]]
+[[OpenClaw]]
+[[LightRAG]]
+[[Claude Code]]
+[[Decision: Local Model vs Cloud API for Routine Operations]]
+[[Local Inference Engine (Subsystem 3)]]
+[[Model: Local AI ($0 Target)]]

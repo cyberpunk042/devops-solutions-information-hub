@@ -93,11 +93,13 @@ After completing this learning path you will understand:
 
 ## Backlinks
 
-[[[[Model Guide: Skills + Commands + Hooks]]]]
-[[[[Model Guide: MCP + CLI Integration]]]]
-[[[[Model Guide: LLM Wiki]]]]
-[[[[Model Guide: Ecosystem Architecture]]]]
-[[[[Model Guide: Methodology]]]]
-[[[[Claude Code]]]]
-[[[[Claude Code Skills]]]]
-[[[[Hooks Lifecycle Architecture]]]]
+[[Model Guide: Skills + Commands + Hooks]]
+[[Model Guide: MCP + CLI Integration]]
+[[Model Guide: LLM Wiki]]
+[[Model Guide: Ecosystem Architecture]]
+[[Model Guide: Methodology]]
+[[Claude Code]]
+[[Claude Code Skills]]
+[[Hooks Lifecycle Architecture]]
+[[Model Guide: Second Brain]]
+[[Model: LLM Wiki]]

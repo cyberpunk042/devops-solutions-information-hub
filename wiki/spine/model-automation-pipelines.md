@@ -82,9 +82,10 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[Research Pipeline Orchestration]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[Model: Knowledge Evolution]]]]
-[[[[Model: Quality + Failure Prevention]]]]
+[[Research Pipeline Orchestration]]
+[[Wiki Event-Driven Automation]]
+[[Model: Knowledge Evolution]]
+[[Model: Quality + Failure Prevention]]
 [[Model: Local AI ($0 Target)]]
-[[[[Model: NotebookLM]]]]
+[[Model: NotebookLM]]
+[[Model: Design.md + IaC]]

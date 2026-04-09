@@ -159,10 +159,13 @@ Cross-referencing `Second Brain Architecture` and `Zettelkasten Methodology`: bo
 
 ## Backlinks
 
-[[[[Second Brain Architecture]]]]
-[[[[Zettelkasten Methodology]]]]
-[[[[Memory Lifecycle Management]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[LLM Wiki Pattern]]]]
+[[Second Brain Architecture]]
+[[Zettelkasten Methodology]]
+[[Memory Lifecycle Management]]
+[[Wiki Ingestion Pipeline]]
+[[Knowledge Evolution Pipeline]]
+[[Research Pipeline Orchestration]]
+[[LLM Wiki Pattern]]
+[[Cross-Domain Patterns]]
+[[Model Guide: Second Brain]]
+[[Progressive Distillation]]

@@ -146,11 +146,14 @@ Cross-referencing `Wiki Knowledge Graph` and `AICP`: the scale threshold is appr
 
 ## Backlinks
 
-[[[[Second Brain Architecture]]]]
-[[[[PARA Methodology]]]]
-[[[[Memory Lifecycle Management]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Obsidian Knowledge Vault]]]]
+[[Second Brain Architecture]]
+[[PARA Methodology]]
+[[Memory Lifecycle Management]]
+[[Wiki Knowledge Graph]]
+[[Wiki Ingestion Pipeline]]
+[[LLM Wiki Pattern]]
+[[Knowledge Evolution Pipeline]]
+[[Obsidian Knowledge Vault]]
+[[Cross-Domain Patterns]]
+[[Model Guide: Second Brain]]
+[[Progressive Distillation]]

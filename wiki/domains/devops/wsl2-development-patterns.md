@@ -139,9 +139,12 @@ Cross-referencing `Infrastructure as Code Patterns`: The `Infrastructure as Code
 
 ## Backlinks
 
-[[[[Research Pipeline Orchestration]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[devops-control-plane]]]]
-[[[[Infrastructure as Code Patterns]]]]
-[[[[Obsidian CLI]]]]
-[[[[Wiki Ingestion Pipeline]]]]
+[[Research Pipeline Orchestration]]
+[[MCP Integration Architecture]]
+[[devops-control-plane]]
+[[Infrastructure as Code Patterns]]
+[[Obsidian CLI]]
+[[Wiki Ingestion Pipeline]]
+[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
+[[Decision: Polling vs Event-Driven Change Detection]]
+[[Four-Project Ecosystem]]

@@ -316,10 +316,10 @@ The wiki proves that knowledge work and code work can share the same methodology
 
 ## Backlinks
 
-[[[[Methodology Framework]]]]
-[[[[Stage-Gate Methodology]]]]
-[[[[Four-Project Ecosystem]]]]
-[[[[Task Type Artifact Matrix]]]]
-[[[[Methodology Execution Modes]]]]
+[[Methodology Framework]]
+[[Stage-Gate Methodology]]
+[[Four-Project Ecosystem]]
+[[Task Type Artifact Matrix]]
+[[Methodology Execution Modes]]
 [[methodology adoption across ecosystem projects]]
 [[project-specific methodology.yaml instances]]

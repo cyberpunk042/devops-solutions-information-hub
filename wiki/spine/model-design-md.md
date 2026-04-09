@@ -81,9 +81,10 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[Design.md Pattern]]]]
-[[[[Infrastructure as Code Patterns]]]]
-[[[[Model: Quality + Failure Prevention]]]]
-[[[[Model: SFIF + Architecture]]]]
-[[[[Model: Automation + Pipelines]]]]
-[[[[Claude Code Best Practices]]]]
+[[Design.md Pattern]]
+[[Infrastructure as Code Patterns]]
+[[Model: Quality + Failure Prevention]]
+[[Model: SFIF + Architecture]]
+[[Model: Automation + Pipelines]]
+[[Claude Code Best Practices]]
+[[Model: NotebookLM]]

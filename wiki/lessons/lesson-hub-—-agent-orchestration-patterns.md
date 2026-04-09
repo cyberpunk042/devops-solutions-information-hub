@@ -74,9 +74,9 @@ The Research Pipeline Orchestration page answers its open question about paralle
 
 ## Backlinks
 
-[[[[Agent Orchestration Patterns]]]]
-[[[[Plan Execute Review Cycle]]]]
-[[[[Deterministic Shell]]
-[[LLM Core]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[MCP Integration Architecture]]]]
+[[Agent Orchestration Patterns]]
+[[Plan Execute Review Cycle]]
+[[Deterministic Shell]]
+[[LLM Core]]
+[[Research Pipeline Orchestration]]
+[[MCP Integration Architecture]]

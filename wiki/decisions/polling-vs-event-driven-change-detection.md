@@ -104,9 +104,9 @@ The current polling implementation can run indefinitely without degradation — 
 
 ## Backlinks
 
-[[[[WSL2 Development Patterns]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[Infrastructure as Code Patterns]]]]
-[[[[devops-control-plane]]]]
-[[[[Obsidian Knowledge Vault]]]]
+[[WSL2 Development Patterns]]
+[[Wiki Event-Driven Automation]]
+[[Research Pipeline Orchestration]]
+[[Infrastructure as Code Patterns]]
+[[devops-control-plane]]
+[[Obsidian Knowledge Vault]]

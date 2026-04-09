@@ -82,9 +82,8 @@ This lesson applies to:
 
 ## Backlinks
 
-[[[[LightRAG]]]]
-[[[[LLM Wiki vs RAG]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[OpenFleet]]]]
+[[LightRAG]]
+[[LLM Wiki vs RAG]]
 [[Wiki Knowledge Graph]]
+[[LLM Wiki Pattern]]
+[[OpenFleet]]

@@ -82,12 +82,12 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[Scaffold → Foundation → Infrastructure → Features]]]]
-[[[[Skyscraper]]
+[[Scaffold → Foundation → Infrastructure → Features]]
+[[Skyscraper]]
 [[Pyramid]]
-[[Mountain]]]]
-[[[[Model: Design.md + IaC]]]]
-[[[[Model: Quality + Failure Prevention]]]]
-[[[[Model: Knowledge Evolution]]]]
+[[Mountain]]
+[[Model: Design.md + IaC]]
+[[Model: Quality + Failure Prevention]]
+[[Model: Knowledge Evolution]]
 [[Model: Local AI ($0 Target)]]
-[[[[Four-Project Ecosystem]]]]
+[[Four-Project Ecosystem]]

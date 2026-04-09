@@ -80,12 +80,13 @@ The skills-beat-MCP finding is independently confirmed in the harness engineerin
 
 ## Backlinks
 
-[[[[Claude Code Skills]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[Claude Code]]]]
-[[[[MCP Integration Architecture]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[CLI Tools Beat MCP for Token Efficiency]]]]
-[[[[Harness Engineering]]]]
-[[[[OpenFleet]]]]
-[[[[AICP]]]]
+[[Claude Code Skills]]
+[[Claude Code Best Practices]]
+[[Claude Code]]
+[[MCP Integration Architecture]]
+[[Wiki Event-Driven Automation]]
+[[CLI Tools Beat MCP for Token Efficiency]]
+[[Harness Engineering]]
+[[OpenFleet]]
+[[AICP]]
+[[Per-Role Command Architecture]]

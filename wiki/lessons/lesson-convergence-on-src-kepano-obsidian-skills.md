@@ -72,9 +72,9 @@ This lesson applies directly to:
 
 ## Backlinks
 
-[[[[Synthesis: kepano/obsidian-skills]]]]
-[[[[Obsidian Skills Ecosystem]]]]
-[[[[Skills Architecture Patterns]]]]
-[[[[Claude Code Skills]]]]
-[[[[NotebookLM Skills]]]]
-[[[[LLM Wiki Pattern]]]]
+[[Synthesis: kepano/obsidian-skills]]
+[[Obsidian Skills Ecosystem]]
+[[Skills Architecture Patterns]]
+[[Claude Code Skills]]
+[[NotebookLM Skills]]
+[[LLM Wiki Pattern]]

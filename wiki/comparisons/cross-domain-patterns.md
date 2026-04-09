@@ -177,13 +177,13 @@ Cross-referencing the `Four-Project Ecosystem`, `Plan Execute Review Cycle`, and
 
 ## Backlinks
 
-[[[[Plan Execute Review Cycle]]]]
-[[[[Context-Aware Tool Loading]]]]
-[[[[Agent Orchestration Patterns]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Zettelkasten Methodology]]]]
-[[[[PARA Methodology]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[Second Brain Architecture]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[Plan Execute Review Cycle]]
+[[Context-Aware Tool Loading]]
+[[Agent Orchestration Patterns]]
+[[Knowledge Evolution Pipeline]]
+[[Zettelkasten Methodology]]
+[[PARA Methodology]]
+[[LLM Wiki Pattern]]
+[[Wiki Knowledge Graph]]
+[[Second Brain Architecture]]
+[[Research Pipeline Orchestration]]

@@ -80,10 +80,10 @@ This lesson applies to:
 
 ## Backlinks
 
-[[[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[LLM Knowledge Linting]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Second Brain Architecture]]]]
-[[[[LLM-Maintained Wikis Outperform Static Documentation]]]]
-[[[[LLM Wiki vs RAG]]]]
+[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
+[[LLM Wiki Pattern]]
+[[LLM Knowledge Linting]]
+[[Knowledge Evolution Pipeline]]
+[[Second Brain Architecture]]
+[[LLM-Maintained Wikis Outperform Static Documentation]]
+[[LLM Wiki vs RAG]]

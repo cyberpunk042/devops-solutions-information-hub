@@ -96,10 +96,10 @@ This lesson applies to any system where automated agents produce artifacts from 
 
 ## Backlinks
 
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Wiki Ingestion Pipeline]]]]
-[[[[Multi-Stage Ingestion Beats Single-Pass Processing]]]]
-[[[[Automated Knowledge Validation Prevents Silent Wiki Decay]]]]
-[[[[Stage-Gate Methodology]] (depth gates should catch truncation)]]
-[[[[Never Synthesize from Descriptions Alone]] (same depth-verification principle)]]
-[[[[Immune System Rules]] (this lesson became a rule)]]
+[[Knowledge Evolution Pipeline]]
+[[Wiki Ingestion Pipeline]]
+[[Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[Stage-Gate Methodology]] (depth gates should catch truncation)]]
+[[Never Synthesize from Descriptions Alone]] (same depth-verification principle)]]
+[[Immune System Rules]] (this lesson became a rule)]]

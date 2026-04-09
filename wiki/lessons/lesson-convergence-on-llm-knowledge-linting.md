@@ -83,9 +83,10 @@ This lesson applies to:
 
 ## Backlinks
 
-[[[[LLM Knowledge Linting]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[LLM Wiki vs RAG]]]]
-[[[[Research Pipeline Orchestration]]]]
+[[LLM Knowledge Linting]]
+[[Knowledge Evolution Pipeline]]
+[[LLM Wiki Pattern]]
+[[Wiki Knowledge Graph]]
+[[LLM Wiki vs RAG]]
+[[Research Pipeline Orchestration]]
+[[Shallow Ingestion Is Systemic, Not Isolated]]

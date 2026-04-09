@@ -97,12 +97,14 @@ After completing this learning path you will understand:
 
 ## Backlinks
 
-[[[[Model Guide: Claude Code]]]]
-[[[[Model Guide: LLM Wiki]]]]
-[[[[Model Guide: Methodology]]]]
-[[[[Four-Project Ecosystem]]]]
-[[[[OpenFleet]]]]
-[[[[Gateway-Centric Routing]]]]
+[[Model Guide: Claude Code]]
+[[Model Guide: LLM Wiki]]
+[[Model Guide: Methodology]]
+[[Four-Project Ecosystem]]
+[[OpenFleet]]
+[[Gateway-Centric Routing]]
 [[Deterministic Shell + LLM Core]]
-[[[[Model Guide: MCP + CLI Integration]]]]
-[[[[Model Guide: Skills + Commands + Hooks]]]]
+[[Model Guide: MCP + CLI Integration]]
+[[Model Guide: Skills + Commands + Hooks]]
+[[Model Guide: Second Brain]]
+[[Model: LLM Wiki]]

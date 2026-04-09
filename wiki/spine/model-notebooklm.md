@@ -72,9 +72,9 @@ After completing this path you understand:
 
 ## Backlinks
 
-[[[[NotebookLM]]]]
-[[[[notebooklm-py CLI]]]]
-[[[[Model: Automation + Pipelines]]]]
-[[[[Model: Knowledge Evolution]]]]
+[[NotebookLM]]
+[[notebooklm-py CLI]]
+[[Model: Automation + Pipelines]]
+[[Model: Knowledge Evolution]]
 [[Model: Local AI ($0 Target)]]
-[[[[Model: Design.md + IaC]]]]
+[[Model: Design.md + IaC]]

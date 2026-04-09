@@ -77,9 +77,9 @@ The cross-domain connectivity pattern is visible in the relationship verbs. LLM 
 
 ## Backlinks
 
-[[[[LLM Wiki Pattern]]]]
-[[[[Second Brain Architecture]]]]
-[[[[Knowledge Evolution Pipeline]]]]
-[[[[Research Pipeline Orchestration]]]]
-[[[[Wiki Event-Driven Automation]]]]
-[[[[LLM Wiki vs RAG]]]]
+[[LLM Wiki Pattern]]
+[[Second Brain Architecture]]
+[[Knowledge Evolution Pipeline]]
+[[Research Pipeline Orchestration]]
+[[Wiki Event-Driven Automation]]
+[[LLM Wiki vs RAG]]

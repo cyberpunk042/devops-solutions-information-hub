@@ -181,12 +181,13 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 
 ## Backlinks
 
-[[[[Claude Code Skills]]]]
+[[Claude Code Skills]]
 [[Claude Code Slash Commands (artemgetmann)]]
-[[[[Harness Engineering]]]]
-[[[[Hooks Lifecycle Architecture]]]]
-[[[[Plannotator — Interactive Plan & Code Review for AI Agents]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[Task Lifecycle Stage-Gating]]]]
-[[[[Skills Architecture Is the Dominant LLM Extension Pattern]]]]
-[[[[Wiki Ingestion Pipeline]]]]
+[[Harness Engineering]]
+[[Hooks Lifecycle Architecture]]
+[[Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[Claude Code Best Practices]]
+[[Task Lifecycle Stage-Gating]]
+[[Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[Wiki Ingestion Pipeline]]
+[[Model Guide: Skills + Commands + Hooks]]

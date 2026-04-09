@@ -145,10 +145,12 @@ Cross-referencing `Wiki Knowledge Graph` and `LightRAG`: yes, they converge subs
 
 ## Backlinks
 
-[[[[LLM Wiki vs RAG]]]]
-[[[[Claude Code Best Practices]]]]
-[[[[LLM Wiki Pattern]]]]
-[[[[Wiki Knowledge Graph]]]]
-[[[[NotebookLM]]]]
-[[[[NotebookLM Skills]]]]
-[[[[Memory Lifecycle Management]]]]
+[[LLM Wiki vs RAG]]
+[[Claude Code Best Practices]]
+[[LLM Wiki Pattern]]
+[[Wiki Knowledge Graph]]
+[[NotebookLM]]
+[[NotebookLM Skills]]
+[[Memory Lifecycle Management]]
+[[LightRAG]]
+[[NotebookLM as Grounded Research Engine Not Just Note Storage]]

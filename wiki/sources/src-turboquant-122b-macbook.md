@@ -45,5 +45,5 @@ TurboQuant, originally Google's quantization technique, has been adapted for App
 ## Backlinks
 
 [[src-turboquant-122b-macbook]]
-[[[[AICP]]]]
-[[[[LightRAG]]]]
+[[AICP]]
+[[LightRAG]]

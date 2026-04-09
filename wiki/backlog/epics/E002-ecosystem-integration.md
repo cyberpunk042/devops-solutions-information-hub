@@ -49,10 +49,10 @@ Make the wiki's knowledge and methodology consumable by each sister project thro
 
 ## Backlinks
 
-[[[[Four-Project Ecosystem]]]]
+[[Four-Project Ecosystem]]
 [[OpenFleet]]
 [[AICP]]
 [[OpenArms]]
 [[devops-control-plane]]
 [[Adoption Guide]]
-[[[[Decision: Wiki-First with LightRAG Upgrade Path]]]]
+[[Decision: Wiki-First with LightRAG Upgrade Path]]
