@@ -136,3 +136,4 @@ Cross-referencing `OpenFleet`: OpenArms's `sessions_send` is a synchronous withi
 [[Claude Code]]
 [[Research Pipeline Orchestration]]
 [[Four-Project Ecosystem]]
+[[Gateway-Centric Routing]]

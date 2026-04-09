@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-09T00:38:23.998747+00:00",
+  "generated": "2026-04-09T00:57:28.551067+00:00",
   "stats": {
-    "pages": 89,
+    "pages": 90,
     "domains": 7,
     "sources": 20,
     "comparisons": 5,
-    "relationships": 655,
-    "tags_unique": 343,
+    "relationships": 701,
+    "tags_unique": 367,
     "layers": {
-      "6": 1,
+      "6": 4,
       "4": 7,
-      "5": 7,
+      "5": 5,
       "spine": 7
     },
     "maturity": {
-      "growing": 14,
-      "seed": 8
+      "seed": 3,
+      "growing": 20
     }
   },
   "pages": [
@@ -385,6 +385,83 @@
       ]
     },
     {
+      "path": "decisions/local-model-vs-cloud-api-for-routine-operations.md",
+      "slug": "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "title": "Decision: Local Model vs Cloud API for Routine Operations",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "aicp",
+        "localai",
+        "claude",
+        "routing",
+        "local-first",
+        "cost-optimization",
+        "backend-selection",
+        "complexity-scoring",
+        "wiki-pipeline"
+      ],
+      "sources": [
+        {
+          "id": "src-aicp-local",
+          "type": "documentation",
+          "file": "../devops-expert-local-ai/CLAUDE.md",
+          "title": "AICP \u2014 Local Project Documentation"
+        },
+        {
+          "id": "src-turboquant-122b-macbook",
+          "type": "article",
+          "url": "https://medium.com/data-science-collective/how-i-run-122b-parameter-llms-on-a-macbook-outperforming-mxfp4-and-standard-quantization-on-apple-0552ee3da1f7",
+          "title": "How I Run 122B Parameter LLMs on a MacBook"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "AICP",
+        "Local LLM Quantization",
+        "Knowledge Evolution Pipeline"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "AICP"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure as Code Patterns"
+        }
+      ]
+    },
+    {
       "path": "decisions/mcp-vs-cli-for-tool-integration.md",
       "slug": "decisions/mcp-vs-cli-for-tool-integration",
       "title": "Decision: MCP vs CLI for Tool Integration",
@@ -468,6 +545,171 @@
         {
           "verb": "FEEDS INTO",
           "target": "Research Pipeline Orchestration"
+        }
+      ]
+    },
+    {
+      "path": "decisions/obsidian-vs-notebooklm-as-knowledge-interface.md",
+      "slug": "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
+      "title": "Decision: Obsidian vs NotebookLM as Knowledge Interface",
+      "type": "decision",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "obsidian",
+        "notebooklm",
+        "knowledge-interface",
+        "second-brain",
+        "graph-view",
+        "grounded-qa",
+        "complementary-tools",
+        "wiki-frontend",
+        "research-interface"
+      ],
+      "sources": [
+        {
+          "id": "src-karpathy-claude-code-10x",
+          "type": "youtube-transcript",
+          "file": "raw/transcripts/karpathy-claude-code-10x.txt",
+          "title": "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+        },
+        {
+          "id": "src-claude-notebooklm-content-team",
+          "type": "youtube-transcript",
+          "file": "raw/transcripts/claude-notebooklm-content-team.txt",
+          "title": "Claude + NotebookLM = Your 24/7 Content Team"
+        },
+        {
+          "id": "src-obsidian-claude-code-second-brain",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=Y2rpFa43jTo",
+          "title": "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Obsidian Knowledge Vault",
+        "NotebookLM",
+        "Second Brain Architecture"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Obsidian Knowledge Vault"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "NotebookLM"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Second Brain Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "WSL2 Development Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "AI-Driven Content Pipeline"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki vs RAG"
+        }
+      ]
+    },
+    {
+      "path": "decisions/polling-vs-event-driven-change-detection.md",
+      "slug": "decisions/polling-vs-event-driven-change-detection",
+      "title": "Decision: Polling vs Event-Driven Change Detection",
+      "type": "decision",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "polling",
+        "inotify",
+        "fswatch",
+        "wsl2",
+        "change-detection",
+        "watcher",
+        "daemon",
+        "event-driven",
+        "filesystem",
+        "devops"
+      ],
+      "sources": [
+        {
+          "id": "src-devops-control-plane-local",
+          "type": "documentation",
+          "file": "../devops-control-plane/README.md",
+          "title": "devops-control-plane \u2014 Local Project Documentation"
+        },
+        {
+          "id": "src-user-directive-ecosystem",
+          "type": "notes",
+          "file": "raw/notes/2026-04-08-user-directive-ecosystem-connections.md",
+          "title": "User Directive \u2014 Ecosystem Connections & Automation Vision"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "WSL2 Development Patterns",
+        "Wiki Event-Driven Automation",
+        "Research Pipeline Orchestration"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "WSL2 Development Patterns"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Wiki Event-Driven Automation"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "devops-control-plane"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Wiki Event-Driven Automation"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Obsidian Knowledge Vault"
         }
       ]
     },
@@ -4532,147 +4774,192 @@
       ]
     },
     {
-      "path": "patterns/pattern-skills-+-claude-code.md",
-      "slug": "patterns/pattern-skills-+-claude-code",
-      "title": "Pattern: Skills + Claude-Code",
+      "path": "patterns/deterministic-shell-llm-core.md",
+      "slug": "patterns/deterministic-shell-llm-core",
+      "title": "Deterministic Shell, LLM Core",
       "type": "pattern",
-      "domain": "cross-domain",
+      "domain": "ai-agents",
       "status": "synthesized",
-      "confidence": "medium",
+      "confidence": "high",
       "created": "2026-04-08",
       "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
+      "tags": [
+        "deterministic",
+        "orchestration",
+        "llm-core",
+        "shell-pattern",
+        "guardrails",
+        "harness",
+        "openfleet",
+        "aicp",
+        "reliability",
+        "separation-of-concerns",
+        "agent-architecture"
+      ],
+      "sources": [
+        {
+          "id": "src-openfleet-local",
+          "type": "documentation",
+          "file": "../openfleet/CLAUDE.md",
+          "title": "OpenFleet \u2014 Local Project Documentation"
+        },
+        {
+          "id": "src-harness-engineering-article",
+          "type": "article",
+          "url": "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0",
+          "title": "Building Claude Code with Harness Engineering"
+        },
+        {
+          "id": "src-aicp-local",
+          "type": "documentation",
+          "file": "../devops-expert-local-ai/CLAUDE.md",
+          "title": "AICP \u2014 Local Project Documentation"
+        }
+      ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
-        "Claude Code",
-        "Claude Code Best Practices"
+        "OpenFleet",
+        "Harness Engineering",
+        "AICP"
       ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "Claude Code"
+          "target": "OpenFleet"
         },
         {
           "verb": "DERIVED FROM",
+          "target": "Harness Engineering"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plan Execute Review Cycle"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Immune System Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Orchestration Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
           "target": "Claude Code Best Practices"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Gateway-Centric Routing"
         }
       ]
     },
     {
-      "path": "patterns/pattern-skills-+-cli.md",
-      "slug": "patterns/pattern-skills-+-cli",
-      "title": "Pattern: Skills + Cli",
+      "path": "patterns/gateway-centric-routing.md",
+      "slug": "patterns/gateway-centric-routing",
+      "title": "Gateway-Centric Routing",
       "type": "pattern",
-      "domain": "cross-domain",
+      "domain": "tools-and-platforms",
       "status": "synthesized",
-      "confidence": "medium",
+      "confidence": "high",
       "created": "2026-04-08",
       "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context-Aware Tool Loading"
+      "tags": [
+        "gateway",
+        "routing",
+        "single-control-plane",
+        "multi-channel",
+        "orchestration",
+        "openarms",
+        "openclaw",
+        "openfleet",
+        "mcp",
+        "websocket",
+        "agent-dispatch"
       ],
-      "relationships": [
+      "sources": [
         {
-          "verb": "DERIVED FROM",
-          "target": "CLI Tools Beat MCP for Token Efficiency"
+          "id": "src-openarms-local",
+          "type": "documentation",
+          "file": "raw/articles/openarms-readme.md",
+          "title": "OpenArms \u2014 Project Documentation"
         },
         {
-          "verb": "DERIVED FROM",
-          "target": "Context-Aware Tool Loading"
+          "id": "src-openfleet-local",
+          "type": "documentation",
+          "file": "../openfleet/CLAUDE.md",
+          "title": "OpenFleet \u2014 Local Project Documentation"
+        },
+        {
+          "id": "src-openclaw-docs",
+          "type": "documentation",
+          "url": "https://github.com/anthropics/claude-code",
+          "title": "OpenClaw \u2014 Agent Framework Documentation"
         }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-mcp.md",
-      "slug": "patterns/pattern-skills-+-mcp",
-      "title": "Pattern: Skills + Mcp",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
+      ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Claude Code"
+        "OpenArms",
+        "OpenClaw",
+        "OpenFleet"
       ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "CLI Tools Beat MCP for Token Efficiency"
+          "target": "OpenArms"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "Claude Code"
-        }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-notebooklm.md",
-      "slug": "patterns/pattern-skills-+-notebooklm",
-      "title": "Pattern: Skills + Notebooklm",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "Context-Aware Tool Loading",
-        "NotebookLM Skills"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Context-Aware Tool Loading"
+          "target": "OpenClaw"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "NotebookLM Skills"
-        }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-obsidian.md",
-      "slug": "patterns/pattern-skills-+-obsidian",
-      "title": "Pattern: Skills + Obsidian",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "Obsidian Skills Ecosystem",
-        "Skills Architecture Patterns"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Obsidian Skills Ecosystem"
+          "target": "OpenFleet"
         },
         {
-          "verb": "DERIVED FROM",
-          "target": "Skills Architecture Patterns"
+          "verb": "RELATES TO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multi-Channel AI Agent Access"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Deterministic Shell"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Core"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Multi-Channel AI Agent Access"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -4772,6 +5059,97 @@
         {
           "verb": "BUILDS ON",
           "target": "Agent Orchestration Patterns"
+        }
+      ]
+    },
+    {
+      "path": "patterns/progressive-distillation.md",
+      "slug": "patterns/progressive-distillation",
+      "title": "Progressive Distillation",
+      "type": "pattern",
+      "domain": "knowledge-systems",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [
+        "progressive-distillation",
+        "knowledge-systems",
+        "maturity",
+        "zettelkasten",
+        "para",
+        "synthesis",
+        "second-brain",
+        "evolution",
+        "density",
+        "distillation"
+      ],
+      "sources": [
+        {
+          "id": "src-second-brain-research",
+          "type": "article",
+          "file": "raw/articles/second-brain-pkm-research.md",
+          "title": "Second Brain / PKM Research"
+        },
+        {
+          "id": "src-zettelkasten-basb",
+          "type": "article",
+          "url": "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/",
+          "title": "Combining Zettelkasten and Building a Second Brain"
+        },
+        {
+          "id": "src-pipeline-tooling",
+          "type": "documentation",
+          "file": "tools/pipeline.py",
+          "title": "Wiki Pipeline Tool \u2014 evolve command"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Second Brain Architecture",
+        "Knowledge Evolution Pipeline"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Second Brain Architecture"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Memory Lifecycle Management"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "PARA Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Zettelkasten Methodology"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Pattern"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "NotebookLM"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
         }
       ]
     },
@@ -6033,7 +6411,7 @@
       ],
       "sources": [],
       "layer": "spine",
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [],
       "relationships": [
         {
@@ -6119,7 +6497,7 @@
       ],
       "sources": [],
       "layer": "spine",
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [],
       "relationships": [
         {
@@ -6164,7 +6542,7 @@
       ],
       "sources": [],
       "layer": "spine",
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [],
       "relationships": [
         {
@@ -6282,16 +6660,20 @@
   ],
   "domains": {
     "cross-domain": {
-      "page_count": 11,
-      "relationship_count": 57
-    },
-    "tools-and-platforms": {
-      "page_count": 19,
-      "relationship_count": 128
+      "page_count": 6,
+      "relationship_count": 47
     },
     "ai-agents": {
-      "page_count": 25,
-      "relationship_count": 211
+      "page_count": 27,
+      "relationship_count": 229
+    },
+    "tools-and-platforms": {
+      "page_count": 21,
+      "relationship_count": 148
+    },
+    "devops": {
+      "page_count": 7,
+      "relationship_count": 48
     },
     "ai-models": {
       "page_count": 3,
@@ -6301,13 +6683,9 @@
       "page_count": 7,
       "relationship_count": 55
     },
-    "devops": {
-      "page_count": 6,
-      "relationship_count": 40
-    },
     "knowledge-systems": {
-      "page_count": 17,
-      "relationship_count": 151
+      "page_count": 18,
+      "relationship_count": 161
     }
   },
   "tags": {
@@ -6370,7 +6748,8 @@
     ],
     "progressive-distillation": [
       "comparisons/cross-domain-patterns",
-      "domains/knowledge-systems/second-brain-architecture"
+      "domains/knowledge-systems/second-brain-architecture",
+      "patterns/progressive-distillation"
     ],
     "deferred-loading": [
       "comparisons/cross-domain-patterns",
@@ -6388,12 +6767,15 @@
       "domains/automation/research-pipeline-orchestration",
       "lessons/always-plan-before-executing",
       "lessons/lesson-convergence-on-wiki-ingestion-pipeline",
+      "patterns/deterministic-shell-llm-core",
+      "patterns/gateway-centric-routing",
       "patterns/plan-execute-review-cycle",
       "sources/src-shanraisshan-claude-code-best-practice"
     ],
     "knowledge-systems": [
       "comparisons/cross-domain-patterns",
       "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "patterns/progressive-distillation",
       "spine/domain-overviews/knowledge-systems-\u2014-domain-overview"
     ],
     "ai-agents": [
@@ -6479,6 +6861,7 @@
     ],
     "obsidian": [
       "comparisons/skills-architecture-patterns",
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
       "domains/knowledge-systems/second-brain-architecture",
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
@@ -6492,6 +6875,7 @@
     ],
     "notebooklm": [
       "comparisons/skills-architecture-patterns",
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
       "domains/automation/ai-driven-content-pipeline",
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/notebooklm-skills",
@@ -6512,6 +6896,43 @@
     "composition": [
       "comparisons/skills-architecture-patterns"
     ],
+    "aicp": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "domains/devops/four-project-ecosystem",
+      "domains/tools-and-platforms/aicp",
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "localai": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "domains/tools-and-platforms/aicp"
+    ],
+    "claude": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations"
+    ],
+    "routing": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "patterns/gateway-centric-routing"
+    ],
+    "local-first": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "domains/ai-models/local-llm-quantization",
+      "domains/tools-and-platforms/aicp",
+      "sources/src-gemma4-searxng-openclaw"
+    ],
+    "cost-optimization": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "domains/ai-agents/claude-code-context-management",
+      "sources/src-token-hacks-claude-code"
+    ],
+    "backend-selection": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations"
+    ],
+    "complexity-scoring": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations"
+    ],
+    "wiki-pipeline": [
+      "decisions/local-model-vs-cloud-api-for-routine-operations"
+    ],
     "mcp": [
       "decisions/mcp-vs-cli-for-tool-integration",
       "domains/ai-agents/claude-code",
@@ -6520,6 +6941,7 @@
       "domains/tools-and-platforms/notebooklm-skills",
       "lessons/cli-tools-beat-mcp-for-token-efficiency",
       "patterns/context-aware-tool-loading",
+      "patterns/gateway-centric-routing",
       "sources/src-claude-world-notebooklm-skill",
       "sources/src-playwright-cli-vs-mcp",
       "sources/src-playwright-mcp-visual-testing"
@@ -6558,6 +6980,85 @@
       "sources/src-claude-code-accuracy-tips",
       "sources/src-playwright-cli-vs-mcp"
     ],
+    "knowledge-interface": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
+    ],
+    "second-brain": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
+      "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "domains/knowledge-systems/llm-wiki-pattern",
+      "domains/knowledge-systems/para-methodology",
+      "domains/knowledge-systems/second-brain-architecture",
+      "domains/knowledge-systems/zettelkasten-methodology",
+      "domains/tools-and-platforms/obsidian-cli",
+      "domains/tools-and-platforms/obsidian-knowledge-vault",
+      "lessons/lesson-convergence-on-obsidian-knowledge-vault",
+      "patterns/progressive-distillation",
+      "sources/src-karpathy-claude-code-10x",
+      "sources/src-karpathy-llm-wiki-idea-file",
+      "sources/src-obsidian-claude-code-second-brain"
+    ],
+    "graph-view": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
+      "domains/tools-and-platforms/obsidian-knowledge-vault",
+      "lessons/lesson-convergence-on-obsidian-knowledge-vault"
+    ],
+    "grounded-qa": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
+    ],
+    "complementary-tools": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
+    ],
+    "wiki-frontend": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
+    ],
+    "research-interface": [
+      "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
+    ],
+    "polling": [
+      "decisions/polling-vs-event-driven-change-detection"
+    ],
+    "inotify": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/devops/wsl2-development-patterns"
+    ],
+    "fswatch": [
+      "decisions/polling-vs-event-driven-change-detection"
+    ],
+    "wsl2": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/devops/wsl2-development-patterns"
+    ],
+    "change-detection": [
+      "decisions/polling-vs-event-driven-change-detection"
+    ],
+    "watcher": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/automation/mcp-integration-architecture"
+    ],
+    "daemon": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/automation/mcp-integration-architecture",
+      "domains/devops/wsl2-development-patterns"
+    ],
+    "event-driven": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/automation/wiki-event-driven-automation",
+      "domains/knowledge-systems/wiki-ingestion-pipeline"
+    ],
+    "filesystem": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/devops/wsl2-development-patterns"
+    ],
+    "devops": [
+      "decisions/polling-vs-event-driven-change-detection",
+      "domains/devops/devops-control-plane",
+      "domains/devops/four-project-ecosystem",
+      "domains/devops/immune-system-rules",
+      "domains/devops/infrastructure-as-code-patterns",
+      "domains/devops/wsl2-development-patterns",
+      "spine/domain-overviews/devops-\u2014-domain-overview"
+    ],
     "multi-agent": [
       "domains/ai-agents/agent-orchestration-patterns",
       "domains/ai-agents/openclaw",
@@ -6594,6 +7095,8 @@
       "domains/devops/immune-system-rules",
       "domains/knowledge-systems/lightrag",
       "lessons/always-plan-before-executing",
+      "patterns/deterministic-shell-llm-core",
+      "patterns/gateway-centric-routing",
       "patterns/plan-execute-review-cycle"
     ],
     "best-practices": [
@@ -6661,10 +7164,6 @@
       "sources/src-token-hacks-claude-code"
     ],
     "MCP-overhead": [
-      "domains/ai-agents/claude-code-context-management",
-      "sources/src-token-hacks-claude-code"
-    ],
-    "cost-optimization": [
       "domains/ai-agents/claude-code-context-management",
       "sources/src-token-hacks-claude-code"
     ],
@@ -6764,6 +7263,7 @@
     "guardrails": [
       "domains/ai-agents/harness-engineering",
       "domains/tools-and-platforms/aicp",
+      "patterns/deterministic-shell-llm-core",
       "patterns/plan-execute-review-cycle",
       "sources/src-harness-engineering"
     ],
@@ -6816,6 +7316,7 @@
     "openclaw": [
       "domains/ai-agents/openclaw",
       "domains/ai-agents/openfleet",
+      "patterns/gateway-centric-routing",
       "sources/src-gemma4-searxng-openclaw"
     ],
     "agent-framework": [
@@ -6824,7 +7325,8 @@
     "gateway": [
       "domains/ai-agents/openclaw",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
-      "domains/tools-and-platforms/openarms"
+      "domains/tools-and-platforms/openarms",
+      "patterns/gateway-centric-routing"
     ],
     "brain": [
       "domains/ai-agents/openclaw"
@@ -6910,11 +7412,6 @@
     "consumer-hardware": [
       "domains/ai-models/local-llm-quantization"
     ],
-    "local-first": [
-      "domains/ai-models/local-llm-quantization",
-      "domains/tools-and-platforms/aicp",
-      "sources/src-gemma4-searxng-openclaw"
-    ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
       "domains/tools-and-platforms/notebooklm-py-cli",
@@ -6946,13 +7443,6 @@
       "domains/devops/four-project-ecosystem"
     ],
     "services": [
-      "domains/automation/mcp-integration-architecture"
-    ],
-    "daemon": [
-      "domains/automation/mcp-integration-architecture",
-      "domains/devops/wsl2-development-patterns"
-    ],
-    "watcher": [
       "domains/automation/mcp-integration-architecture"
     ],
     "rsync": [
@@ -6992,10 +7482,6 @@
       "lessons/lesson-convergence-on-wiki-ingestion-pipeline",
       "patterns/plan-execute-review-cycle"
     ],
-    "event-driven": [
-      "domains/automation/wiki-event-driven-automation",
-      "domains/knowledge-systems/wiki-ingestion-pipeline"
-    ],
     "auto-ingest": [
       "domains/automation/wiki-event-driven-automation"
     ],
@@ -7004,14 +7490,6 @@
     ],
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
-    ],
-    "devops": [
-      "domains/devops/devops-control-plane",
-      "domains/devops/four-project-ecosystem",
-      "domains/devops/immune-system-rules",
-      "domains/devops/infrastructure-as-code-patterns",
-      "domains/devops/wsl2-development-patterns",
-      "spine/domain-overviews/devops-\u2014-domain-overview"
     ],
     "control-plane": [
       "domains/devops/devops-control-plane"
@@ -7047,17 +7525,14 @@
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/obsidian-skills-ecosystem"
     ],
-    "aicp": [
-      "domains/devops/four-project-ecosystem",
-      "domains/tools-and-platforms/aicp"
-    ],
     "devops-control-plane": [
       "domains/devops/four-project-ecosystem"
     ],
     "openarms": [
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
-      "domains/tools-and-platforms/openarms"
+      "domains/tools-and-platforms/openarms",
+      "patterns/gateway-centric-routing"
     ],
     "research-wiki": [
       "domains/devops/four-project-ecosystem"
@@ -7104,9 +7579,6 @@
     "service-templates": [
       "domains/devops/infrastructure-as-code-patterns"
     ],
-    "wsl2": [
-      "domains/devops/wsl2-development-patterns"
-    ],
     "windows-subsystem-linux": [
       "domains/devops/wsl2-development-patterns"
     ],
@@ -7119,36 +7591,19 @@
     "cross-platform": [
       "domains/devops/wsl2-development-patterns"
     ],
-    "inotify": [
-      "domains/devops/wsl2-development-patterns"
-    ],
     "sync": [
       "domains/devops/wsl2-development-patterns"
     ],
-    "filesystem": [
-      "domains/devops/wsl2-development-patterns"
-    ],
     "evolution": [
-      "domains/knowledge-systems/knowledge-evolution-pipeline"
+      "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "patterns/progressive-distillation"
     ],
     "maturity": [
-      "domains/knowledge-systems/knowledge-evolution-pipeline"
+      "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "patterns/progressive-distillation"
     ],
     "scoring": [
       "domains/knowledge-systems/knowledge-evolution-pipeline"
-    ],
-    "second-brain": [
-      "domains/knowledge-systems/knowledge-evolution-pipeline",
-      "domains/knowledge-systems/llm-wiki-pattern",
-      "domains/knowledge-systems/para-methodology",
-      "domains/knowledge-systems/second-brain-architecture",
-      "domains/knowledge-systems/zettelkasten-methodology",
-      "domains/tools-and-platforms/obsidian-cli",
-      "domains/tools-and-platforms/obsidian-knowledge-vault",
-      "lessons/lesson-convergence-on-obsidian-knowledge-vault",
-      "sources/src-karpathy-claude-code-10x",
-      "sources/src-karpathy-llm-wiki-idea-file",
-      "sources/src-obsidian-claude-code-second-brain"
     ],
     "llm-automation": [
       "domains/knowledge-systems/knowledge-evolution-pipeline"
@@ -7239,7 +7694,8 @@
     ],
     "para": [
       "domains/knowledge-systems/para-methodology",
-      "domains/knowledge-systems/second-brain-architecture"
+      "domains/knowledge-systems/second-brain-architecture",
+      "patterns/progressive-distillation"
     ],
     "pkm": [
       "domains/knowledge-systems/para-methodology",
@@ -7272,7 +7728,8 @@
     ],
     "zettelkasten": [
       "domains/knowledge-systems/second-brain-architecture",
-      "domains/knowledge-systems/zettelkasten-methodology"
+      "domains/knowledge-systems/zettelkasten-methodology",
+      "patterns/progressive-distillation"
     ],
     "atomic-notes": [
       "domains/knowledge-systems/second-brain-architecture",
@@ -7315,9 +7772,6 @@
     "emergence": [
       "domains/knowledge-systems/zettelkasten-methodology"
     ],
-    "localai": [
-      "domains/tools-and-platforms/aicp"
-    ],
     "ai-control-platform": [
       "domains/tools-and-platforms/aicp"
     ],
@@ -7336,7 +7790,8 @@
     ],
     "multi-channel": [
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
-      "domains/tools-and-platforms/openarms"
+      "domains/tools-and-platforms/openarms",
+      "patterns/gateway-centric-routing"
     ],
     "ai-assistant": [
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
@@ -7419,10 +7874,6 @@
       "domains/tools-and-platforms/obsidian-cli"
     ],
     "knowledge-vault": [
-      "domains/tools-and-platforms/obsidian-knowledge-vault",
-      "lessons/lesson-convergence-on-obsidian-knowledge-vault"
-    ],
-    "graph-view": [
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "lessons/lesson-convergence-on-obsidian-knowledge-vault"
     ],
@@ -7519,7 +7970,8 @@
       "patterns/context-aware-tool-loading"
     ],
     "agent-architecture": [
-      "patterns/context-aware-tool-loading"
+      "patterns/context-aware-tool-loading",
+      "patterns/deterministic-shell-llm-core"
     ],
     "playwright": [
       "patterns/context-aware-tool-loading",
@@ -7530,14 +7982,48 @@
       "patterns/context-aware-tool-loading",
       "sources/src-claude-code-accuracy-tips"
     ],
+    "deterministic": [
+      "patterns/deterministic-shell-llm-core",
+      "patterns/plan-execute-review-cycle"
+    ],
+    "llm-core": [
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "shell-pattern": [
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "harness": [
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "reliability": [
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "separation-of-concerns": [
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "single-control-plane": [
+      "patterns/gateway-centric-routing"
+    ],
+    "websocket": [
+      "patterns/gateway-centric-routing"
+    ],
+    "agent-dispatch": [
+      "patterns/gateway-centric-routing"
+    ],
     "agent-workflow": [
       "patterns/plan-execute-review-cycle"
     ],
     "feedback-loop": [
       "patterns/plan-execute-review-cycle"
     ],
-    "deterministic": [
-      "patterns/plan-execute-review-cycle"
+    "synthesis": [
+      "patterns/progressive-distillation"
+    ],
+    "density": [
+      "patterns/progressive-distillation"
+    ],
+    "distillation": [
+      "patterns/progressive-distillation"
     ],
     "excalidraw": [
       "sources/src-axton-obsidian-visual-skills"
@@ -7725,6 +8211,12 @@
       ]
     },
     {
+      "target": "Deterministic Shell",
+      "referenced_by": [
+        "Gateway-Centric Routing"
+      ]
+    },
+    {
       "target": "Devops",
       "referenced_by": [
         "AI Agents \u2014 Domain Overview",
@@ -7744,6 +8236,12 @@
         "Cross-Domain \u2014 Domain Overview",
         "Devops \u2014 Domain Overview",
         "Tools And Platforms \u2014 Domain Overview"
+      ]
+    },
+    {
+      "target": "LLM Core",
+      "referenced_by": [
+        "Gateway-Centric Routing"
       ]
     },
     {

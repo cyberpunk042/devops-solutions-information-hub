@@ -117,6 +117,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `WSL2 Development Patterns`
 [[Claude Code Best Practices]]
 [[Context-Aware Tool Loading]]
 [[Decision: MCP vs CLI for Tool Integration]]
+[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
 [[Knowledge Evolution Pipeline]]
 [[LLM Wiki vs RAG]]
 [[LLM-Maintained Wikis Outperform Static Documentation]]

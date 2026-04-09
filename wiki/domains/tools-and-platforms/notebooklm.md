@@ -87,6 +87,8 @@ Cross-referencing `AI-Driven Content Pipeline` and `Agentic Search vs Vector Sea
 [[LLM Wiki vs RAG]]
 [[LLM Wiki Pattern]]
 [[Agentic Search vs Vector Search]]
+[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
+[[Progressive Distillation]]
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: PleasePrompto/notebooklm-skill]]
 [[Synthesis: claude-world/notebooklm-skill]]

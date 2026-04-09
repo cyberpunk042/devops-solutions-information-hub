@@ -153,6 +153,7 @@ Confirmed by cross-referencing Claude Code Best Practices and Harness Engineerin
 [[Obsidian Skills Ecosystem]]
 [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
 [[PARA Methodology]]
+[[Progressive Distillation]]
 [[Research Pipeline Orchestration]]
 [[Second Brain Architecture]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

@@ -155,5 +155,7 @@ Cross-referencing `Zettelkasten Methodology` and the schema (`config/schema.yaml
 [[LLM Wiki vs RAG]]
 [[Research Pipeline Orchestration]]
 [[Cross-Domain Patterns]]
+[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
 [[PARA Methodology]]
+[[Progressive Distillation]]
 [[Zettelkasten Methodology]]

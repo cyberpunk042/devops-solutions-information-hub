@@ -5,13 +5,11 @@ Recurring structures observed across sources
 ## Pages
 
 - [Context-Aware Tool Loading](context-aware-tool-loading.md) — Only load tool schemas, documentation, or external data into the context window when the agent actually needs them — ...
-- [Pattern: Skills + Claude-Code](pattern-skills-+-claude-code.md) — <!-- 2-3 sentences: what recurs and why it matters -->
-- [Pattern: Skills + Cli](pattern-skills-+-cli.md) — <!-- 2-3 sentences: what recurs and why it matters -->
-- [Pattern: Skills + Mcp](pattern-skills-+-mcp.md) — <!-- 2-3 sentences: what recurs and why it matters -->
-- [Pattern: Skills + Notebooklm](pattern-skills-+-notebooklm.md) — <!-- 2-3 sentences: what recurs and why it matters -->
-- [Pattern: Skills + Obsidian](pattern-skills-+-obsidian.md) — <!-- 2-3 sentences: what recurs and why it matters -->
+- [Deterministic Shell, LLM Core](deterministic-shell-llm-core.md) — Deterministic Shell, LLM Core is the architectural pattern of wrapping LLM inference inside a deterministic orchestra...
+- [Gateway-Centric Routing](gateway-centric-routing.md) — Gateway-Centric Routing is the architectural pattern of channeling all traffic — messages, tasks, tool calls, or agen...
 - [Plan Execute Review Cycle](plan-execute-review-cycle.md) — The Plan→Execute→Review cycle is a recurring structural pattern observed independently across AI agent orchestration ...
+- [Progressive Distillation](progressive-distillation.md) — Progressive Distillation is the pattern of processing raw material through successive layers of increasing density an...
 
 ## Tags
 
-`context-management`, `token-efficiency`, `deferred-loading`, `skills`, `mcp`, `cli`, `tool-design`, `agent-architecture`, `accuracy`, `notebooklm`, `playwright`, `context7`, `plan-execute-review`, `orchestration`, `agent-workflow`, `feedback-loop`, `guardrails`, `deterministic`, `multi-pass`, `cross-domain`
+`orchestration`, `openfleet`, `mcp`, `agent-architecture`, `deterministic`, `guardrails`, `context-management`, `token-efficiency`, `deferred-loading`, `skills`, `cli`, `tool-design`, `accuracy`, `notebooklm`, `playwright`, `context7`, `llm-core`, `shell-pattern`, `harness`, `aicp`

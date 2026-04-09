@@ -142,4 +142,5 @@ Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` page
 [[Wiki Event-Driven Automation]]
 [[MCP Integration Architecture]]
 [[Cross-Domain Patterns]]
+[[Deterministic Shell, LLM Core]]
 [[Multi-Channel AI Agent Access]]

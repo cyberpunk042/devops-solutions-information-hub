@@ -162,6 +162,7 @@ Cross-referencing `LightRAG` and `Knowledge Evolution Pipeline`: the migration p
 [[Memory Lifecycle Management]]
 [[NotebookLM]]
 [[Claude Code Best Practices]]
+[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
 [[Knowledge Evolution Pipeline]]
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Second Brain Architecture]]

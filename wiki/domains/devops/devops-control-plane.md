@@ -90,6 +90,7 @@ Cross-referencing `Four-Project Ecosystem` and `Immune System Rules`: the `Four-
 [[Plane]]
 [[Claude Code]]
 [[Wiki Ingestion Pipeline]]
+[[Decision: Polling vs Event-Driven Change Detection]]
 [[Four-Project Ecosystem]]
 [[Immune System Rules]]
 [[Infrastructure as Code Patterns]]

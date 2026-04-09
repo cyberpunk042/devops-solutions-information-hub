@@ -101,6 +101,7 @@ Cross-referencing `Claude Code Context Management`: that page documents the lost
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[PARA Methodology]]
+[[Progressive Distillation]]
 [[Second Brain Architecture]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
 [[Zettelkasten Methodology]]

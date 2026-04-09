@@ -184,4 +184,3 @@ Cross-referencing `Wiki Event-Driven Automation`: the LLM Wiki v2 memory model d
 [[AI-Driven Content Pipeline]]
 [[LLM Wiki Pattern]]
 [[Infrastructure as Code Patterns]]
-[[Pattern: Skills + Obsidian]]

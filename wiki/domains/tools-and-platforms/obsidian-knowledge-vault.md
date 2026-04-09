@@ -103,6 +103,8 @@ Cross-referencing `Obsidian Skills Ecosystem`: yes, and the ecosystem is documen
 [[Wiki Knowledge Graph]]
 [[Obsidian Skills Ecosystem]]
 [[LLM Knowledge Linting]]
+[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
+[[Decision: Polling vs Event-Driven Change Detection]]
 [[Knowledge Evolution Pipeline]]
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Obsidian CLI]]

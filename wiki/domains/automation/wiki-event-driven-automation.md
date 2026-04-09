@@ -105,6 +105,7 @@ The hooks architecture for wiki event automation maps directly to Claude Code's 
 [[Research Pipeline Orchestration]]
 [[Claude Code Best Practices]]
 [[Agent Orchestration Patterns]]
+[[Decision: Polling vs Event-Driven Change Detection]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Obsidian CLI]]
 [[Plan Execute Review Cycle]]

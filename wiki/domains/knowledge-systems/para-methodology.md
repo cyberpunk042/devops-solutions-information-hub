@@ -165,3 +165,4 @@ Cross-referencing `Second Brain Architecture` and `Zettelkasten Methodology`: bo
 [[Research Pipeline Orchestration]]
 [[LLM Wiki Pattern]]
 [[Cross-Domain Patterns]]
+[[Progressive Distillation]]

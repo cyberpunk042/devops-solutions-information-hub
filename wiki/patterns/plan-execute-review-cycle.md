@@ -142,6 +142,7 @@ Avoid or simplify this pattern when:
 [[Agent Orchestration Patterns]]
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Cross-Domain Patterns]]
+[[Deterministic Shell, LLM Core]]
 [[Immune System Rules]]
 [[Rework Prevention]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]

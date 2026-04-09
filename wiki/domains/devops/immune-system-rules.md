@@ -149,5 +149,6 @@ Cross-referencing `devops-control-plane` and `Agent Orchestration Patterns`: the
 [[Plan Execute Review Cycle]]
 [[Always Plan Before Executing]]
 [[Rework Prevention]]
+[[Deterministic Shell, LLM Core]]
 [[Four-Project Ecosystem]]
 [[Infrastructure as Code Patterns]]

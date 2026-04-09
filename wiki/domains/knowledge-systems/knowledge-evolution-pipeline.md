@@ -151,5 +151,7 @@ Cross-referencing `Zettelkasten Methodology`, `Wiki Knowledge Graph`, and `LLM K
 [[AICP]]
 [[LLM Wiki vs RAG]]
 [[Cross-Domain Patterns]]
+[[Decision: Local Model vs Cloud API for Routine Operations]]
 [[PARA Methodology]]
+[[Progressive Distillation]]
 [[Zettelkasten Methodology]]

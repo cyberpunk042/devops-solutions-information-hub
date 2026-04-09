@@ -142,3 +142,4 @@ Cross-referencing `OpenArms` and `OpenFleet`: both pages document the relevant i
 [[AICP]]
 [[Agent Orchestration Patterns]]
 [[Research Pipeline Orchestration]]
+[[Gateway-Centric Routing]]

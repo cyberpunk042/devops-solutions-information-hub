@@ -112,6 +112,7 @@ Cross-referencing the `OpenFleet`, `Immune System Rules`, and `Rework Prevention
 [[Agent Orchestration Patterns]]
 [[Always Plan Before Executing]]
 [[Context Management Is the Primary LLM Productivity Lever]]
+[[Deterministic Shell, LLM Core]]
 [[Immune System Rules]]
 [[Infrastructure as Code Patterns]]
 [[Plan Execute Review Cycle]]
