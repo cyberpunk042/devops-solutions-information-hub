@@ -211,13 +211,13 @@ This eliminates the most common failure mode in project management: tasks that a
 
 ## Backlinks
 
-[[LLM Wiki Pattern]] (extends Karpathy's wiki pattern with project management types and an auto-loop)]]
-[[Task Lifecycle Stage-Gating]] (the frontmatter state machine is the wiki implementation of stage gates)]]
-[[Second Brain Architecture]] (the wiki-as-backlog is a second-brain that also executes)]]
-[[Knowledge Evolution Pipeline]] (the auto-loop operationalizes the evolution pipeline)]]
-[[Spec-Driven Development]] (when wiki pages are spec artifacts, the wiki-as-backlog makes SDD self-executing)]]
-[[OpenFleet]] (17 epics in wiki/backlog/, verbatim PO log pattern)]]
-[[Memory Lifecycle Management]] (wiki/log/ as sacrosanct directive store is a memory management strategy)]]
-[[Research Pipeline Orchestration]] (the auto-loop is an orchestration pattern applied to knowledge work)]]
-[[PARA Methodology]] (wiki-backlog is PARA + task execution in one system)]]
-[[Progressive Distillation]] (completed tasks produce knowledge pages that enter the distillation pipeline)]]
+[[[[LLM Wiki Pattern]] (extends Karpathy's wiki pattern with project management types and an auto-loop)]]
+[[[[Task Lifecycle Stage-Gating]] (the frontmatter state machine is the wiki implementation of stage gates)]]
+[[[[Second Brain Architecture]] (the wiki-as-backlog is a second-brain that also executes)]]
+[[[[Knowledge Evolution Pipeline]] (the auto-loop operationalizes the evolution pipeline)]]
+[[[[Spec-Driven Development]] (when wiki pages are spec artifacts, the wiki-as-backlog makes SDD self-executing)]]
+[[[[OpenFleet]] (17 epics in wiki/backlog/, verbatim PO log pattern)]]
+[[[[Memory Lifecycle Management]] (wiki/log/ as sacrosanct directive store is a memory management strategy)]]
+[[[[Research Pipeline Orchestration]] (the auto-loop is an orchestration pattern applied to knowledge work)]]
+[[[[PARA Methodology]] (wiki-backlog is PARA + task execution in one system)]]
+[[[[Progressive Distillation]] (completed tasks produce knowledge pages that enter the distillation pipeline)]]

@@ -169,7 +169,7 @@ What makes it the standard:
 [[Stage-Gate Methodology]]
 [[Methodology Framework]]
 [[Never Synthesize from Descriptions Alone]]
-[[Shallow Ingestion Is Systemic]]
+[[[[Shallow Ingestion Is Systemic]]
 [[Not Isolated]]]]
 [[The Agent Must Practice What It Documents]]
 [[Models Are Built in Layers, Not All at Once]]

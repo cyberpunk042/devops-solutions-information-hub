@@ -142,7 +142,7 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Progressive Distillation]]
-[[Deterministic Shell]]
+[[[[Deterministic Shell]]
 [[LLM Core]]]]
 [[Four-Project Ecosystem]]
 [[Plan Execute Review Cycle]]

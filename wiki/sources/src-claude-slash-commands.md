@@ -56,9 +56,9 @@ A small open-source collection of reusable Claude Code slash commands installabl
 
 ## Backlinks
 
-[[Claude Code Skills]] (adds concrete command examples to the skills architecture)]]
-[[Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)]]
-[[Claude Code Best Practices]] (command authoring is an extension of best practice guidance)]]
-[[Claude Code]] (core platform this builds on)]]
-[[Claude Code Scheduling]] (personal automation commands can be chained with scheduling)]]
+[[[[Claude Code Skills]] (adds concrete command examples to the skills architecture)]]
+[[[[Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)]]
+[[[[Claude Code Best Practices]] (command authoring is an extension of best practice guidance)]]
+[[[[Claude Code]] (core platform this builds on)]]
+[[[[Claude Code Scheduling]] (personal automation commands can be chained with scheduling)]]
 [[Per-Role Command Architecture]]

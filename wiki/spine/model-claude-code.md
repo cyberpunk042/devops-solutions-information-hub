@@ -182,6 +182,49 @@ Four validated lessons emerge from operating Claude Code at scale in this ecosys
 
 **4. CLI Beats MCP for Token Efficiency** ([[CLI Tools Beat MCP for Token Efficiency]]). The 12x cost differential measured on Playwright is not an outlier — it is the structural consequence of eager loading (MCP) vs deferred loading (CLI+Skills). For any tool that does not need cross-conversation discovery or external service bridging, CLI+Skills is the correct integration pattern.
 
+### Documentation Layers in a Claude Code Project
+
+A Claude Code project has distinct documentation layers that must not be conflated:
+
+| Layer | Where | Purpose | Who reads it |
+|-------|-------|---------|-------------|
+| **Agent config** | CLAUDE.md, .claude/rules/ | Agent behavior rules, project conventions | Claude Code (every message) |
+| **Wiki knowledge** | wiki/ | Synthesized, structured, evolving knowledge | Agent + human (on demand) |
+| **Public docs** | docs/, README.md | User-facing documentation, guides | Humans |
+| **Code docs** | Inline comments, JSDoc/docstrings, function headers | Code-level documentation | Developers reading source |
+| **Smart docs** | README.md files inside src/ subdirectories | Subsystem explanations alongside the code they document | Developers + agent navigating codebase |
+| **Specs and plans** | docs/superpowers/ | Execution track artifacts, temporary | Agent during implementation |
+
+An agent MUST NOT:
+- Put wiki knowledge in code comments (wrong audience, wrong lifecycle)
+- Put code docs in the wiki (too granular, changes with every refactor)
+- Conflate public docs with wiki pages (different readers, different update cadence)
+- Mix specs with permanent knowledge (specs are ephemeral, wiki is permanent)
+
+### How to Attach the Second Brain to a Claude Code Project
+
+When adding the LLM Wiki model to an existing Claude Code project:
+
+1. **Create the wiki structure** — `raw/`, `wiki/` (with subdirectories), `config/wiki-schema.yaml`, `config/templates/`. This coexists with existing project structure.
+2. **Add methodology rules to CLAUDE.md** — stage gates, quality gates, the three operations (ingest, query, lint). See the Agent Methodology section format.
+3. **Create initial skills** — at minimum: wiki-agent (ingest/query), evolve (evolution pipeline), continue (session resume).
+4. **Start ingesting** — scan the project itself first (`pipeline scan ../project/`), then ingest external sources.
+5. **Tolerate existing docs** — don't restructure old documentation. Let it coexist. The wiki adds a NEW layer; it doesn't replace what's there.
+
+For projects with an "old model" (scattered docs, no frontmatter, no schema): the wiki coexists alongside. Over time, valuable knowledge migrates into the wiki. Old docs are never force-deleted — they decay naturally as the wiki becomes the authoritative source.
+
+### OpenArms as a Live Instance
+
+OpenArms demonstrates this model in production:
+- **CLAUDE.md = AGENTS.md** (symlinked) — 351 lines covering architecture boundaries, plugin SDK, channel implementation, gateway protocol
+- **Progressive disclosure** — each major subsystem has its own AGENTS.md (`src/plugin-sdk/AGENTS.md`, `src/channels/AGENTS.md`, `src/gateway/protocol/AGENTS.md`)
+- **wiki/ with backlog** — embedded LLM wiki adapted from this research wiki. Epics, modules, tasks with frontmatter state machines.
+- **Skills ecosystem** — 50+ skills bundled, new skills directed to ClawHub marketplace
+- **Methodology enforcement** — wiki/config/methodology.yaml + wiki/config/agent-directive.md governing autonomous agent operation
+- **`read_when` metadata** — docs self-declare their relevance via frontmatter, enabling agents to know when to load a doc without reading everything
+
+The key insight from OpenArms: the documentation layers WORK when each layer has a clear owner (CLAUDE.md = agent, wiki/ = knowledge, docs/ = humans, src/ = developers) and the agent knows which layer to read for which purpose.
+
 ## Open Questions
 
 - What is the optimal number of concurrent subagents before filesystem contention degrades throughput? (Requires: empirical benchmarking with parallel file operations)

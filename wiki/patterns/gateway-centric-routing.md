@@ -129,7 +129,7 @@ Avoid Gateway-Centric Routing when:
 [[OpenFleet]]
 [[MCP Integration Architecture]]
 [[Multi-Channel AI Agent Access]]
-[[Deterministic Shell]]
+[[[[Deterministic Shell]]
 [[LLM Core]]]]
 [[Infrastructure as Code Patterns]]
 [[AICP]]

@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T23:16:48.885322+00:00",
+  "generated": "2026-04-09T23:22:03.750418+00:00",
   "stats": {
-    "pages": 157,
+    "pages": 158,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
     "relationships": 1161,
-    "tags_unique": 603,
+    "tags_unique": 608,
     "layers": {
       "3": 5,
       "6": 5,
@@ -7042,6 +7042,33 @@
       "relationships": []
     },
     {
+      "path": "log/2026-04-09-directive-docs-layers-old-models.md",
+      "slug": "log/2026-04-09-directive-docs-layers-old-models",
+      "title": "Documentation Layers + Old Model Tolerance",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "documentation",
+        "layers",
+        "code-docs",
+        "wiki",
+        "public-docs",
+        "old-models",
+        "alignment"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-04-09-directive-model-quality-links-schema.md",
       "slug": "log/2026-04-09-directive-model-quality-links-schema",
       "title": "Model Quality + Links + Schema Naming Issues",
@@ -11088,7 +11115,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 10,
+      "page_count": 11,
       "relationship_count": 0
     }
   },
@@ -12714,7 +12741,8 @@
       "domains/knowledge-systems/wiki-backlog-pattern"
     ],
     "wiki": [
-      "domains/knowledge-systems/wiki-ingestion-pipeline"
+      "domains/knowledge-systems/wiki-ingestion-pipeline",
+      "log/2026-04-09-directive-docs-layers-old-models"
     ],
     "data-processing": [
       "domains/knowledge-systems/wiki-ingestion-pipeline"
@@ -13049,7 +13077,8 @@
       "log/2026-04-09-directive-record-process-skills-supermodel"
     ],
     "layers": [
-      "lessons/models-are-built-in-layers-not-all-at-once"
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "log/2026-04-09-directive-docs-layers-old-models"
     ],
     "stage-gates": [
       "lessons/never-skip-stages-even-when-told-to-continue",
@@ -13100,6 +13129,7 @@
     ],
     "log": [
       "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-docs-layers-old-models",
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
@@ -13112,6 +13142,7 @@
     ],
     "directive": [
       "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-docs-layers-old-models",
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
@@ -13131,6 +13162,21 @@
     "foundation": [
       "log/2026-04-09-directive-bottom-up-model-completion",
       "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "documentation": [
+      "log/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "code-docs": [
+      "log/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "public-docs": [
+      "log/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "old-models": [
+      "log/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "alignment": [
+      "log/2026-04-09-directive-docs-layers-old-models"
     ],
     "links": [
       "log/2026-04-09-directive-model-quality-links-schema"
