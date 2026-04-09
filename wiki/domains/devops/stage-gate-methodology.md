@@ -293,6 +293,7 @@ The practical recommendation: start with protocol enforcement (CLAUDE.md MUST/MU
 [[[[Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)]]
 [[Vibe Coding (unstructured generation without stage boundaries — the failure mode this methodology exists to prevent)]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Model Guide: Methodology]]
 [[Never Skip Stages Even When Told to Continue]]
 [[The Agent Must Practice What It Documents]]

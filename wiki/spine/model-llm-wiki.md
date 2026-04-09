@@ -394,6 +394,10 @@ This research wiki is the reference implementation. Project-specific details (Py
 | [[Second Brain Architecture]] | PKM theory (PARA, Zettelkasten) mapped to this model |
 | [[Wiki Backlog Pattern]] | How the wiki tracks its own work |
 
+### Quality Standards
+
+See [[LLM Wiki Standards — What Good Looks Like]] for the gold-standard example of each page type, what makes each one good, and the anti-patterns to avoid. The standards page is the companion to this model — the model defines structure, the standards define quality.
+
 ### Lessons Learned
 
 From building with this model — validated experience:
@@ -435,3 +439,4 @@ From building with this model — validated experience:
 [[Knowledge Evolution Pipeline]]
 [[Model Guide: Methodology]]
 [[Model: Knowledge Evolution]]
+[[LLM Wiki Standards — What Good Looks Like]]

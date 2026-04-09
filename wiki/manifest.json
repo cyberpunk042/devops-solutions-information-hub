@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T22:17:27.561821+00:00",
+  "generated": "2026-04-09T22:27:29.407793+00:00",
   "stats": {
-    "pages": 153,
+    "pages": 154,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1097,
-    "tags_unique": 588,
+    "relationships": 1104,
+    "tags_unique": 591,
     "layers": {
       "3": 5,
       "6": 5,
@@ -14,10 +14,10 @@
       "4": 21,
       "5": 11,
       "1": 24,
-      "spine": 22
+      "spine": 23
     },
     "maturity": {
-      "growing": 130,
+      "growing": 131,
       "seed": 10
     }
   },
@@ -10028,6 +10028,59 @@
       ]
     },
     {
+      "path": "spine/model-llm-wiki-standards.md",
+      "slug": "spine/model-llm-wiki-standards",
+      "title": "LLM Wiki Standards \u2014 What Good Looks Like",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "standards",
+        "quality",
+        "examples",
+        "wiki-model",
+        "best-practices",
+        "gold-standard"
+      ],
+      "sources": [],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Synthesize from Descriptions Alone"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Shallow Ingestion Is Systemic"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Not Isolated]]"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "The Agent Must Practice What It Documents"
+        }
+      ]
+    },
+    {
       "path": "spine/model-llm-wiki.md",
       "slug": "spine/model-llm-wiki",
       "title": "Model: LLM Wiki",
@@ -10558,8 +10611,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 39,
-      "relationship_count": 276
+      "page_count": 40,
+      "relationship_count": 283
     },
     "ai-agents": {
       "page_count": 34,
@@ -11155,7 +11208,8 @@
     "best-practices": [
       "domains/ai-agents/claude-code-best-practices",
       "lessons/lesson-convergence-on-claude-code-best-practices",
-      "sources/src-shanraisshan-claude-code-best-practice"
+      "sources/src-shanraisshan-claude-code-best-practice",
+      "spine/model-llm-wiki-standards"
     ],
     "plan-mode": [
       "domains/ai-agents/claude-code-best-practices"
@@ -11764,6 +11818,7 @@
       "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-directive-stop-claiming-readiness",
       "log/2026-04-09-directive-systemic-incompleteness",
+      "spine/model-llm-wiki-standards",
       "spine/model-quality-failure-prevention"
     ],
     "refactoring": [
@@ -12469,6 +12524,7 @@
     "standards": [
       "lessons/lesson-convergence-on-src-kepano-obsidian-skills",
       "spine/adoption-guide",
+      "spine/model-llm-wiki-standards",
       "spine/model-llm-wiki"
     ],
     "cross-reference": [
@@ -13013,6 +13069,15 @@
     "wiki-lifecycle": [
       "spine/model-knowledge-evolution"
     ],
+    "examples": [
+      "spine/model-llm-wiki-standards"
+    ],
+    "wiki-model": [
+      "spine/model-llm-wiki-standards"
+    ],
+    "gold-standard": [
+      "spine/model-llm-wiki-standards"
+    ],
     "knowledge-system": [
       "spine/model-llm-wiki"
     ],
@@ -13183,6 +13248,12 @@
         "Methodology Framework",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
         "Model: SFIF + Architecture"
+      ]
+    },
+    {
+      "target": "Not Isolated]]",
+      "referenced_by": [
+        "LLM Wiki Standards \u2014 What Good Looks Like"
       ]
     },
     {
@@ -13478,6 +13549,12 @@
       "referenced_by": [
         "Methodology Framework",
         "Wiki Backlog Pattern"
+      ]
+    },
+    {
+      "target": "[[Shallow Ingestion Is Systemic",
+      "referenced_by": [
+        "LLM Wiki Standards \u2014 What Good Looks Like"
       ]
     },
     {

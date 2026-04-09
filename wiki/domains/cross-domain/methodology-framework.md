@@ -342,6 +342,7 @@ This separation between definition and instance is what makes the framework sust
 [[[[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Model Guide: Methodology]]
 [[Never Skip Stages Even When Told to Continue]]
 [[The Agent Must Practice What It Documents]]

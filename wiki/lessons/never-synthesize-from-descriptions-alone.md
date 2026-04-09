@@ -101,3 +101,4 @@ This lesson applies far beyond wiki ingestion:
 [[Always Plan Before Executing]]
 [[Wiki Ingestion Pipeline]]
 [[[[Immune System Rules]] (this lesson became a rule)]]
+[[LLM Wiki Standards — What Good Looks Like]]

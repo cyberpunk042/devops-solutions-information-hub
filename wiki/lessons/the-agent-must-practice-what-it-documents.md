@@ -109,3 +109,4 @@ Knowledge must flow upward: tribal knowledge should become documented methodolog
 [[[[Immune System Rules]] (this lesson IS the immune system principle)]]
 [[[[Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)]]
 [[Self-enforcing methodology (CLAUDE.md as operational ruleset)]]
+[[LLM Wiki Standards — What Good Looks Like]]
