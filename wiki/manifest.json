@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T20:03:03.200686+00:00",
+  "generated": "2026-04-09T20:08:11.322394+00:00",
   "stats": {
-    "pages": 123,
+    "pages": 124,
     "domains": 8,
     "sources": 24,
     "comparisons": 5,
     "relationships": 942,
-    "tags_unique": 539,
+    "tags_unique": 540,
     "layers": {
       "6": 5,
       "2": 2,
@@ -6448,6 +6448,29 @@
       ]
     },
     {
+      "path": "log/2026-04-09-directive-never-stop-at-surface.md",
+      "slug": "log/2026-04-09-directive-never-stop-at-surface",
+      "title": "Never Stop at Surface \u2014 Depth Verification Rule",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "methodology",
+        "quality",
+        "depth"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-04-09-ingest-awesome-design-md.md",
       "slug": "log/2026-04-09-ingest-awesome-design-md",
       "title": "Ingest awesome-design-md repository",
@@ -9033,7 +9056,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 1,
+      "page_count": 2,
       "relationship_count": 0
     }
   },
@@ -9836,7 +9859,8 @@
       "domains/ai-agents/task-lifecycle-stage-gating",
       "domains/cross-domain/methodology-framework",
       "domains/devops/stage-gate-methodology",
-      "domains/devops/task-type-artifact-matrix"
+      "domains/devops/task-type-artifact-matrix",
+      "log/2026-04-09-directive-never-stop-at-surface"
     ],
     "plannotator": [
       "domains/ai-agents/per-role-command-architecture",
@@ -10102,7 +10126,8 @@
       "domains/cross-domain/skyscraper-pyramid-mountain"
     ],
     "quality": [
-      "domains/cross-domain/skyscraper-pyramid-mountain"
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "log/2026-04-09-directive-never-stop-at-surface"
     ],
     "refactoring": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -10808,10 +10833,15 @@
       "lessons/lesson-hub-\u2014-knowledge-systems"
     ],
     "log": [
+      "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "directive": [
+      "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-ingest-awesome-design-md"
+    ],
+    "depth": [
+      "log/2026-04-09-directive-never-stop-at-surface"
     ],
     "tool-design": [
       "patterns/context-aware-tool-loading"

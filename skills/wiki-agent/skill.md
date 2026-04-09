@@ -24,6 +24,11 @@ CRITICAL: Always read the ENTIRE raw file before synthesizing. Large files (300+
 require multiple Read calls with offset. Check `wc -l` first. Wiki page must be ≥0.25
 ratio to raw file length — if it's shorter, you missed content.
 
+CRITICAL: Depth verification. When the source DESCRIBES a format, tool, or pattern
+(e.g., a README listing DESIGN.md files), reading the description is Layer 0 (surface).
+You MUST examine a real INSTANCE of the thing (Layer 1) before synthesizing.
+Download and read an actual example file. A description of a format ≠ understanding it.
+
 For guided mode: present the full extraction plan between ANALYZE and SYNTHESIZE.
 Include: source page name, concept pages to create (with domains), concept pages
 to update (with what changes), new domains needed, estimated relationship count.

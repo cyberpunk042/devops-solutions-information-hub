@@ -224,6 +224,7 @@ For ANY non-trivial work, progress through stages in order:
 - **NEVER rush.** If the user says "get started" or "process this," it means the CURRENT stage, not "skip to the end."
 - **ALWAYS log user directives verbatim** in raw/notes/ BEFORE acting on them. This is core methodology.
 - **ALWAYS read full files** before synthesizing. Check `wc -l` first. Use multiple offset reads for files >200 lines. Wiki page must be ≥0.25 ratio to raw file length.
+- **ALWAYS verify depth.** When ingesting a source that DESCRIBES a format/tool/pattern, reading the description is Layer 0 (surface). You MUST examine a real INSTANCE of the thing (Layer 1) before synthesizing. A README about DESIGN.md files ≠ understanding DESIGN.md — download and read an actual one. A repo description ≠ understanding the code — read the actual files.
 - **ALWAYS research before brainstorming.** Check existing wiki pages, ecosystem projects, and online sources FIRST. Then brainstorm.
 - **TWO TRACKS coexist:**
   - Execution track (superpowers): brainstorm → spec → plan → sub-agent implementation. Lives in docs/superpowers/.
