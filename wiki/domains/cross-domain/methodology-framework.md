@@ -339,3 +339,6 @@ This separation between definition and instance is what makes the framework sust
 [[Wiki Backlog Pattern (PM track methodology feeds backlog structure)]]
 [[Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)]]
 [[Scaffold → Foundation → Infrastructure → Features (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]
+[[Infrastructure Must Be Reproducible, Not Manual]]
+[[Never Skip Stages Even When Told to Continue]]
+[[The Agent Must Practice What It Documents]]

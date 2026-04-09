@@ -89,3 +89,4 @@ This lesson applies to:
 [[Wiki Knowledge Graph]]
 [[LLM Wiki vs RAG]]
 [[Research Pipeline Orchestration]]
+[[Shallow Ingestion Is Systemic, Not Isolated]]

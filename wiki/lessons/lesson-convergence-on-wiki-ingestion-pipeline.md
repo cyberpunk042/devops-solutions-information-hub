@@ -94,4 +94,6 @@ From the LLM Wiki Pattern on the compounding mechanic: "Filing answers back into
 [[Memory Lifecycle Management]]
 [[devops-solutions-research-wiki]]
 [[OpenFleet]]
+[[Never Synthesize from Descriptions Alone]]
 [[Progressive Distillation]]
+[[Shallow Ingestion Is Systemic, Not Isolated]]

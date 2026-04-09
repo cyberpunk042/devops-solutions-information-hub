@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-09T20:31:38.103031+00:00",
+  "generated": "2026-04-09T20:40:14.221434+00:00",
   "stats": {
-    "pages": 124,
+    "pages": 130,
     "domains": 8,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 944,
-    "tags_unique": 540,
+    "relationships": 977,
+    "tags_unique": 559,
     "layers": {
       "6": 5,
       "2": 2,
-      "4": 16,
+      "4": 21,
       "5": 11,
       "spine": 7
     },
     "maturity": {
-      "growing": 40,
+      "growing": 45,
       "seed": 7
     }
   },
@@ -5313,6 +5313,68 @@
       ]
     },
     {
+      "path": "lessons/infrastructure-must-be-reproducible-not-manual.md",
+      "slug": "lessons/infrastructure-must-be-reproducible-not-manual",
+      "title": "Infrastructure Must Be Reproducible, Not Manual",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "failure-lesson",
+        "methodology",
+        "quality",
+        "infrastructure-as-code",
+        "reproducibility",
+        "systemd",
+        "setup-tooling",
+        "invisible-infrastructure"
+      ],
+      "sources": [
+        {
+          "id": "directive-no-new-sources",
+          "type": "log",
+          "file": "raw/notes/2026-04-08-user-directive-no-new-sources-unless-relevant.md",
+          "title": "User Directive \u2014 No New Sources Unless Relevant",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Infrastructure as Code Patterns",
+        "Stage-Gate Methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Stage-Gate Methodology (the setup tooling IS a stage gate for infrastructure)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing (plan the infrastructure approach before writing files)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Wiki Ingestion Pipeline (the pipeline itself is reproducible tooling)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Immune System Rules (this lesson became a rule)"
+        }
+      ]
+    },
+    {
       "path": "lessons/lesson-convergence-on-claude-code-best-practices.md",
       "slug": "lessons/lesson-convergence-on-claude-code-best-practices",
       "title": "Context Management Is the Primary LLM Productivity Lever",
@@ -6448,6 +6510,274 @@
       ]
     },
     {
+      "path": "lessons/never-skip-stages-even-when-told-to-continue.md",
+      "slug": "lessons/never-skip-stages-even-when-told-to-continue",
+      "title": "Never Skip Stages Even When Told to Continue",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "failure-lesson",
+        "methodology",
+        "quality",
+        "stage-gates",
+        "rushing",
+        "misinterpretation",
+        "hard-boundaries",
+        "brainstorm"
+      ],
+      "sources": [
+        {
+          "id": "directive-stop-rushing",
+          "type": "log",
+          "file": "raw/notes/2026-04-09-user-directive-stop-rushing.md",
+          "title": "User Directive \u2014 STOP RUSHING",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Stage-Gate Methodology",
+        "Methodology Framework"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Immune System Rules (this lesson became a rule)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "CONTRADICTS",
+          "target": "assumption that \"continue\" means \"skip ahead\""
+        }
+      ]
+    },
+    {
+      "path": "lessons/never-synthesize-from-descriptions-alone.md",
+      "slug": "lessons/never-synthesize-from-descriptions-alone",
+      "title": "Never Synthesize from Descriptions Alone",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "failure-lesson",
+        "methodology",
+        "quality",
+        "depth-verification",
+        "ingestion",
+        "surface-level",
+        "layer-0",
+        "layer-1"
+      ],
+      "sources": [
+        {
+          "id": "directive-never-stop-at-surface",
+          "type": "log",
+          "file": "wiki/log/2026-04-09-directive-never-stop-at-surface.md",
+          "title": "Never Stop at Surface \u2014 Depth Verification Rule",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Design.md Pattern",
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Design.md Pattern"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology (depth gates prevent surface-level output)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Immune System Rules (this lesson became a rule)"
+        }
+      ]
+    },
+    {
+      "path": "lessons/shallow-ingestion-is-systemic-not-isolated.md",
+      "slug": "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "title": "Shallow Ingestion Is Systemic, Not Isolated",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "failure-lesson",
+        "methodology",
+        "quality",
+        "systemic-issue",
+        "shallow-ingestion",
+        "subagent",
+        "read-tool",
+        "truncation",
+        "audit"
+      ],
+      "sources": [
+        {
+          "id": "directive-systemic-shallow-ingestion",
+          "type": "log",
+          "file": "raw/notes/2026-04-09-user-directive-systemic-shallow-ingestion.md",
+          "title": "User Directive \u2014 Systemic Shallow Ingestion Issue",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Knowledge Evolution Pipeline",
+        "Wiki Ingestion Pipeline"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Automated Knowledge Validation Prevents Silent Wiki Decay"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology (depth gates should catch truncation)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Never Synthesize from Descriptions Alone (same depth-verification principle)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Immune System Rules (this lesson became a rule)"
+        }
+      ]
+    },
+    {
+      "path": "lessons/the-agent-must-practice-what-it-documents.md",
+      "slug": "lessons/the-agent-must-practice-what-it-documents",
+      "title": "The Agent Must Practice What It Documents",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "failure-lesson",
+        "methodology",
+        "quality",
+        "self-enforcement",
+        "claude-md",
+        "practice-what-you-preach",
+        "rules",
+        "agent-behavior"
+      ],
+      "sources": [
+        {
+          "id": "directive-follow-own-methodology",
+          "type": "log",
+          "file": "raw/notes/2026-04-09-user-directive-follow-own-methodology.md",
+          "title": "User Directive \u2014 Follow Your Own Methodology",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "directive-stop-rushing",
+          "type": "log",
+          "file": "raw/notes/2026-04-09-user-directive-stop-rushing.md",
+          "title": "User Directive \u2014 STOP RUSHING",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Methodology Framework",
+        "Stage-Gate Methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Skip Stages Even When Told to Continue (the same incident)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Immune System Rules (this lesson IS the immune system principle)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Knowledge Evolution Pipeline (knowledge must evolve into enforcement)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Self-enforcing methodology (CLAUDE.md as operational ruleset)"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-09-directive-never-stop-at-surface.md",
       "slug": "log/2026-04-09-directive-never-stop-at-surface",
       "title": "Never Stop at Surface \u2014 Depth Verification Rule",
@@ -6463,6 +6793,29 @@
         "methodology",
         "quality",
         "depth"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-04-09-directive-validate-second-brain-readiness.md",
+      "slug": "log/2026-04-09-directive-validate-second-brain-readiness",
+      "title": "Validate Second Brain Readiness",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "second-brain",
+        "readiness",
+        "validation"
       ],
       "sources": [],
       "layer": "",
@@ -9036,8 +9389,8 @@
   ],
   "domains": {
     "cross-domain": {
-      "page_count": 19,
-      "relationship_count": 134
+      "page_count": 24,
+      "relationship_count": 167
     },
     "ai-agents": {
       "page_count": 34,
@@ -9064,7 +9417,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 2,
+      "page_count": 3,
       "relationship_count": 0
     }
   },
@@ -9429,6 +9782,7 @@
       "lessons/lesson-convergence-on-src-karpathy-claude-code-10x",
       "lessons/lesson-convergence-on-src-karpathy-llm-wiki-idea-file",
       "lessons/lesson-hub-\u2014-knowledge-systems",
+      "log/2026-04-09-directive-validate-second-brain-readiness",
       "patterns/progressive-distillation",
       "sources/src-karpathy-claude-code-10x",
       "sources/src-karpathy-llm-wiki-idea-file",
@@ -9708,6 +10062,7 @@
     "claude-md": [
       "domains/ai-agents/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
+      "lessons/the-agent-must-practice-what-it-documents",
       "sources/src-playwright-mcp-visual-testing"
     ],
     "google-stitch": [
@@ -9780,7 +10135,8 @@
       "domains/ai-agents/hooks-lifecycle-architecture"
     ],
     "subagent": [
-      "domains/ai-agents/hooks-lifecycle-architecture"
+      "domains/ai-agents/hooks-lifecycle-architecture",
+      "lessons/shallow-ingestion-is-systemic-not-isolated"
     ],
     "compaction": [
       "domains/ai-agents/hooks-lifecycle-architecture"
@@ -9868,6 +10224,11 @@
       "domains/cross-domain/methodology-framework",
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/never-skip-stages-even-when-told-to-continue",
+      "lessons/never-synthesize-from-descriptions-alone",
+      "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-never-stop-at-surface"
     ],
     "plannotator": [
@@ -9904,7 +10265,8 @@
     ],
     "agent-behavior": [
       "domains/ai-agents/rework-prevention",
-      "lessons/always-plan-before-executing"
+      "lessons/always-plan-before-executing",
+      "lessons/the-agent-must-practice-what-it-documents"
     ],
     "test-driven": [
       "domains/ai-agents/rework-prevention"
@@ -10090,6 +10452,7 @@
       "domains/automation/research-pipeline-orchestration",
       "domains/knowledge-systems/wiki-ingestion-pipeline",
       "lessons/lesson-convergence-on-wiki-ingestion-pipeline",
+      "lessons/never-synthesize-from-descriptions-alone",
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "multi-pass": [
@@ -10135,6 +10498,11 @@
     ],
     "quality": [
       "domains/cross-domain/skyscraper-pyramid-mountain",
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/never-skip-stages-even-when-told-to-continue",
+      "lessons/never-synthesize-from-descriptions-alone",
+      "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-never-stop-at-surface"
     ],
     "refactoring": [
@@ -10181,7 +10549,8 @@
     ],
     "readiness": [
       "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/stage-gate-methodology"
+      "domains/devops/stage-gate-methodology",
+      "log/2026-04-09-directive-validate-second-brain-readiness"
     ],
     "status-propagation": [
       "domains/devops/backlog-hierarchy-rules"
@@ -10219,7 +10588,8 @@
       "domains/devops/devops-control-plane"
     ],
     "audit": [
-      "domains/devops/devops-control-plane"
+      "domains/devops/devops-control-plane",
+      "lessons/shallow-ingestion-is-systemic-not-isolated"
     ],
     "multi-interface": [
       "domains/devops/devops-control-plane"
@@ -10298,7 +10668,8 @@
       "domains/devops/infrastructure-as-code-patterns"
     ],
     "infrastructure-as-code": [
-      "domains/devops/infrastructure-as-code-patterns"
+      "domains/devops/infrastructure-as-code-patterns",
+      "lessons/infrastructure-must-be-reproducible-not-manual"
     ],
     "schema-yaml": [
       "domains/devops/infrastructure-as-code-patterns"
@@ -10326,7 +10697,8 @@
       "domains/devops/stage-gate-methodology"
     ],
     "hard-boundaries": [
-      "domains/devops/stage-gate-methodology"
+      "domains/devops/stage-gate-methodology",
+      "lessons/never-skip-stages-even-when-told-to-continue"
     ],
     "knowledge-work": [
       "domains/devops/stage-gate-methodology"
@@ -10368,7 +10740,8 @@
       "domains/devops/wsl2-development-patterns"
     ],
     "systemd": [
-      "domains/devops/wsl2-development-patterns"
+      "domains/devops/wsl2-development-patterns",
+      "lessons/infrastructure-must-be-reproducible-not-manual"
     ],
     "cross-platform": [
       "domains/devops/wsl2-development-patterns"
@@ -10746,6 +11119,22 @@
     "agent-design": [
       "lessons/cli-tools-beat-mcp-for-token-efficiency"
     ],
+    "failure-lesson": [
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/never-skip-stages-even-when-told-to-continue",
+      "lessons/never-synthesize-from-descriptions-alone",
+      "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/the-agent-must-practice-what-it-documents"
+    ],
+    "reproducibility": [
+      "lessons/infrastructure-must-be-reproducible-not-manual"
+    ],
+    "setup-tooling": [
+      "lessons/infrastructure-must-be-reproducible-not-manual"
+    ],
+    "invisible-infrastructure": [
+      "lessons/infrastructure-must-be-reproducible-not-manual"
+    ],
     "productivity": [
       "lessons/lesson-convergence-on-claude-code-best-practices"
     ],
@@ -10763,7 +11152,8 @@
       "sources/src-context-mode"
     ],
     "validation": [
-      "lessons/lesson-convergence-on-llm-knowledge-linting"
+      "lessons/lesson-convergence-on-llm-knowledge-linting",
+      "log/2026-04-09-directive-validate-second-brain-readiness"
     ],
     "wiki-decay": [
       "lessons/lesson-convergence-on-llm-knowledge-linting",
@@ -10840,12 +11230,59 @@
     "self-referential": [
       "lessons/lesson-hub-\u2014-knowledge-systems"
     ],
+    "stage-gates": [
+      "lessons/never-skip-stages-even-when-told-to-continue"
+    ],
+    "rushing": [
+      "lessons/never-skip-stages-even-when-told-to-continue"
+    ],
+    "misinterpretation": [
+      "lessons/never-skip-stages-even-when-told-to-continue"
+    ],
+    "brainstorm": [
+      "lessons/never-skip-stages-even-when-told-to-continue"
+    ],
+    "depth-verification": [
+      "lessons/never-synthesize-from-descriptions-alone"
+    ],
+    "surface-level": [
+      "lessons/never-synthesize-from-descriptions-alone"
+    ],
+    "layer-0": [
+      "lessons/never-synthesize-from-descriptions-alone"
+    ],
+    "layer-1": [
+      "lessons/never-synthesize-from-descriptions-alone"
+    ],
+    "systemic-issue": [
+      "lessons/shallow-ingestion-is-systemic-not-isolated"
+    ],
+    "shallow-ingestion": [
+      "lessons/shallow-ingestion-is-systemic-not-isolated"
+    ],
+    "read-tool": [
+      "lessons/shallow-ingestion-is-systemic-not-isolated"
+    ],
+    "truncation": [
+      "lessons/shallow-ingestion-is-systemic-not-isolated"
+    ],
+    "self-enforcement": [
+      "lessons/the-agent-must-practice-what-it-documents"
+    ],
+    "practice-what-you-preach": [
+      "lessons/the-agent-must-practice-what-it-documents"
+    ],
+    "rules": [
+      "lessons/the-agent-must-practice-what-it-documents"
+    ],
     "log": [
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "directive": [
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "depth": [
@@ -11339,6 +11776,12 @@
       ]
     },
     {
+      "target": "Self-enforcing methodology",
+      "referenced_by": [
+        "The Agent Must Practice What It Documents"
+      ]
+    },
+    {
       "target": "Skyscraper",
       "referenced_by": [
         "Methodology Framework",
@@ -11373,6 +11816,12 @@
       "target": "ai-driven-content-pipeline",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
+      ]
+    },
+    {
+      "target": "assumption that \"continue\" means \"skip ahead\"",
+      "referenced_by": [
+        "Never Skip Stages Even When Told to Continue"
       ]
     },
     {

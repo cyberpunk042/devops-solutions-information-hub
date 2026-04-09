@@ -138,6 +138,7 @@ Cross-referencing `Immune System Rules` and `devops-control-plane`: the `Immune 
 [[Deterministic Shell, LLM Core]]
 [[Four-Project Ecosystem]]
 [[Gateway-Centric Routing]]
+[[Infrastructure Must Be Reproducible, Not Manual]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skyscraper, Pyramid, Mountain]]
 [[WSL2 Development Patterns]]
