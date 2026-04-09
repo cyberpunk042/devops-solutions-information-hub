@@ -14,281 +14,250 @@ sources:
     file: raw/articles/karpathy-llm-wiki-idea-file.md
     title: "Karpathy LLM Wiki Idea File"
     ingested: 2026-04-08
-tags: [llm-wiki, model, knowledge-system, repository-structure, schema, ingestion, evolution, standards]
+  - id: src-llm-wiki-v2-agentmemory
+    type: documentation
+    file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
+    title: "LLM Wiki v2 — Extending Karpathy's Pattern with Agentmemory Lessons"
+    ingested: 2026-04-08
+tags: [llm-wiki, model, knowledge-system, schema, ingestion, evolution, standards, transferable]
 ---
 
 # Model: LLM Wiki
 
 ## Summary
 
-The LLM Wiki model defines how to build and operate a markdown-file wiki maintained by an LLM agent. It is not just a documentation tool — it is a structured knowledge system where the LLM ingests sources, synthesizes pages, cross-references relationships, evolves insights through density layers, and lints for quality — all automatically. The wiki compounds knowledge over time instead of decaying. This wiki project IS the reference implementation of this model. Any project in the ecosystem can adopt it by following the repository structure, schema, and pipeline standards defined here.
-
-## Prerequisites
-
-- Understanding of markdown and YAML frontmatter
-- A project that needs persistent, structured knowledge (not just chat history)
-- An LLM agent capable of file operations (Claude Code, OpenArms solo agent, or similar)
+The LLM Wiki model defines how to build a knowledge system where an LLM agent maintains a markdown wiki — ingesting sources, synthesizing pages, cross-referencing relationships, evolving insights through density layers, and linting for quality. The model solves the wiki maintenance problem: wikis historically die because humans abandon upkeep. With an LLM agent responsible for all mechanical operations, the wiki compounds knowledge instead of decaying. This model is technology-agnostic — it defines WHAT a wiki must contain and HOW it operates, not which tools implement it.
 
 ## Key Insights
 
-- The wiki maintenance problem (wikis die because humans abandon upkeep) is structurally solved by making the LLM handle ALL mechanical operations
-- Three core operations: Ingest (source → pages), Query (navigate via indexes), Lint (validate + cross-reference)
-- The schema (`config/schema.yaml`) is the real product — content is regenerable, the schema that constrains it is not
-- Knowledge layers (L1→L6) implement [[Progressive Distillation]] — each layer is denser and more actionable
-- The repository structure below is the STANDARD for any project adopting this model
-- Every operation is accessible from 4 interfaces: CLI, /commands, Skills, MCP
+- The maintenance economics insight: wikis fail not from lack of content but from maintenance abandonment. Making the LLM handle ALL bookkeeping (indexes, validation, cross-referencing, linting) eliminates this failure mode structurally.
+- Three core operations define the system: **Ingest** (source → structured pages), **Query** (navigate via indexes and relationships), **Lint** (validate, detect orphans, flag contradictions).
+- The schema is the real product — content is regenerable from raw sources, but the schema that constrains content structure encodes irreplaceable operational knowledge.
+- Knowledge compounds through density layers — raw sources become syntheses become concepts become lessons become patterns become decisions. Each layer is denser and more actionable.
+- The wiki IS the second brain — not a documentation tool alongside the real work, but the persistent intelligence layer that survives across sessions, agents, and projects.
 
 ## Deep Analysis
 
-### Core Principle
+### The Model (universal — any project can adopt this)
 
-The wiki maintenance problem — wikis die because humans abandon maintenance — is solved by making the LLM responsible for ALL bookkeeping: index rebuilding, manifest regeneration, validation, wikilink updates, cross-referencing, and gap analysis. Humans provide direction and judgment. The LLM handles everything mechanical.
+#### Core Architecture
 
-Three core operations (from Karpathy's original design):
-1. **Ingest** — process any source (URL, file, paste) into structured wiki pages
-2. **Query** — navigate the wiki via indexes and relationships (not vector search at this scale)
-3. **Lint** — validate structure, detect orphans, flag stale content, surface contradictions
+An LLM Wiki has three layers:
 
-### Repository Structure Standard
+1. **Raw layer** — unprocessed source material with permanent provenance. Never deleted, never modified after ingestion. This is the evidence base.
+2. **Wiki layer** — structured markdown pages with YAML frontmatter, typed relationships, and quality gates. This is the knowledge base. Pages are organized by domain and connected by explicit relationships.
+3. **Meta layer** — schema definition, validation rules, templates, and methodology config. This is the operational brain — it defines how the wiki works and enforces structure on all content.
+
+#### Repository Structure
+
+Any project adopting this model creates these directories:
 
 ```
-project-root/
-├── CLAUDE.md              # Agent instructions (the "brain config")
-├── raw/                   # Unprocessed source material (permanent provenance)
-│   ├── articles/          # Fetched web content, GitHub READMEs
-│   ├── transcripts/       # YouTube/podcast transcripts
-│   ├── notes/             # Legacy operator directives
-│   └── dumps/             # Pasted content, research queues
-├── wiki/                  # The wiki itself
-│   ├── domains/           # L2 concept pages, organized by domain
-│   │   ├── {domain-name}/ # One folder per domain
-│   │   │   ├── _index.md  # Auto-maintained domain index
-│   │   │   └── {page}.md  # One concept per page
-│   ├── sources/           # L1 source-synthesis pages (src-*.md)
-│   ├── comparisons/       # L3 structured comparison pages with matrices
-│   ├── lessons/           # L4 codified experience (from evolution)
-│   ├── patterns/          # L5 recurring cross-domain structures
-│   ├── decisions/         # L6 actionable choice frameworks
-│   ├── spine/             # Navigation: domain overviews, model guides, adoption guide
-│   ├── backlog/           # PM: epics/, modules/, tasks/ with frontmatter state
-│   ├── log/               # Operator directives, session logs, completion notes
-│   ├── config/            # Methodology definition (methodology.yaml, agent-directive.md)
-│   ├── manifest.json      # Auto-generated page index
-│   └── index.md           # Wiki navigation entry point
-├── tools/                 # Python pipeline tools
-├── skills/                # Claude Code skill definitions
-├── config/                # Schema, templates, export profiles
-│   ├── schema.yaml        # Page validation schema
-│   └── templates/         # Page scaffolding templates per type
-├── .claude/
-│   └── commands/          # Slash commands (/continue, /evolve, etc.)
-└── docs/
-    └── superpowers/       # Specs and plans (execution track)
+{project-root}/
+├── raw/                          # Raw layer — permanent source provenance
+│   ├── articles/                 # Web content, READMEs, documentation
+│   ├── transcripts/              # Video/audio transcripts
+│   └── notes/                    # Legacy notes, operator directives
+│
+├── wiki/                         # Wiki layer — structured knowledge
+│   ├── domains/                  # Concept pages by domain
+│   │   └── {domain-name}/       # One folder per knowledge domain
+│   │       ├── _index.md        # Auto-maintained domain index
+│   │       └── {concept}.md     # One concept per page
+│   ├── sources/                  # Source-synthesis pages (L1)
+│   ├── comparisons/              # Comparison pages with matrices (L3)
+│   ├── lessons/                  # Codified experience (L4)
+│   ├── patterns/                 # Recurring cross-domain structures (L5)
+│   ├── decisions/                # Choice frameworks with alternatives (L6)
+│   ├── spine/                    # Navigation: model guides, overviews
+│   ├── backlog/                  # Project management (epics/modules/tasks)
+│   ├── log/                      # Operator directives, session logs
+│   └── config/                   # Methodology definition files
+│
+├── config/                       # Meta layer — schema and templates
+│   ├── wiki-schema.yaml          # Page validation schema
+│   └── templates/                # Page scaffolding templates per type
+│
+└── {project-specific}/           # Whatever the project needs (tools, src, etc.)
 ```
 
-### Knowledge Layer Architecture
+The separation matters: `raw/` is immutable evidence. `wiki/` is living knowledge. `config/` is operational rules. A project may have its own `src/`, `tools/`, `docs/` — the wiki directories coexist alongside them.
 
-| Layer | Directory | Type | What it contains | How it's created |
-|-------|-----------|------|-----------------|-----------------|
-| L0 | `raw/` | Raw sources | Unprocessed transcripts, articles, notes | `pipeline fetch` or manual drop |
-| L1 | `wiki/sources/` | source-synthesis | Synthesized extraction from one source | Ingestion pipeline |
-| L2 | `wiki/domains/` | concept | One concept per page, organized by domain | Ingestion + manual creation |
-| L3 | `wiki/comparisons/` | comparison | Structured comparison with matrix table | Cross-reference analysis |
-| L4 | `wiki/lessons/` | lesson | Codified experience with evidence | Evolution pipeline |
-| L5 | `wiki/patterns/` | pattern | Recurring structure with 2+ instances | Evolution pipeline |
-| L6 | `wiki/decisions/` | decision | Choice framework with alternatives + rationale | Evolution pipeline |
-| Spine | `wiki/spine/` | various | Domain overviews, model guides, adoption guide | Manual curation |
+#### Knowledge Layer Architecture
 
-Each layer is DENSER and MORE ACTIONABLE than the previous. Raw → synthesis → concept → comparison → lesson → pattern → decision. This IS the [[Progressive Distillation]] pattern applied to knowledge.
+| Layer | Purpose | Content type | How it's created |
+|-------|---------|-------------|-----------------|
+| L0 | Raw evidence | Unprocessed sources | Fetched or dropped into raw/ |
+| L1 | Source synthesis | One synthesis per source | Ingestion — read source, extract insights |
+| L2 | Concepts | One concept per page, by domain | Ingestion + manual creation |
+| L3 | Comparisons | Structured comparison with matrix | Cross-reference analysis |
+| L4 | Lessons | Codified experience with evidence | Evolution — distilled from L1-L3 |
+| L5 | Patterns | Recurring structure with 2+ instances | Evolution — observed across L2-L4 |
+| L6 | Decisions | Choice framework with alternatives | Evolution — actionable from L4-L5 |
+| Spine | Navigation | Model guides, domain overviews | Manual curation |
 
-### Page Schema Standard
+This IS the [[Progressive Distillation]] pattern: each layer is denser and more actionable than the previous. Raw → synthesis → concept → lesson → pattern → decision.
 
-Every wiki page uses YAML frontmatter with required fields:
+#### Page Schema
 
+Every wiki page uses YAML frontmatter. The schema defines required and optional fields:
+
+**Required fields** (every page):
 ```yaml
----
-title: "Page Title"           # Must match # Heading
-type: concept                  # concept|source-synthesis|comparison|lesson|pattern|decision|...
-domain: ai-agents              # Must match folder path
-layer: 2                       # Knowledge layer (1-6, spine)
-maturity: growing              # seed|growing|mature|canonical
-status: synthesized            # raw|processing|synthesized|verified|stale
-confidence: high               # low|medium|high|authoritative
+title: "Page Title"           # Must match the # Heading
+type: concept                  # The page type (see types below)
+domain: ai-agents              # Knowledge domain (matches folder)
+status: synthesized            # Lifecycle: raw → processing → synthesized → verified → stale
+confidence: high               # low | medium | high | authoritative
 created: 2026-04-09
 updated: 2026-04-09
-sources: []                    # Provenance: where this knowledge came from
-tags: []                       # For cross-referencing and discovery
----
+sources: []                    # Provenance chain — where knowledge came from
+tags: []                       # For discovery and cross-referencing
 ```
 
-Additional fields for evolved pages (L4-L6):
-- `derived_from: [list of source page titles]`
-- `instances: [list for patterns]`
-- `reversibility: easy|moderate|hard|irreversible` (for decisions)
+**Evolution fields** (for L4-L6 pages):
+```yaml
+layer: 4                       # Knowledge layer number
+maturity: growing              # seed → growing → mature → canonical
+derived_from: [list]           # Source pages this was distilled from
+```
 
-Full schema: `config/schema.yaml`
+**Page types**: concept, source-synthesis, comparison, lesson, pattern, decision, domain-overview, learning-path, evolution, epic, module, task, note
 
-### Page Section Standard
+Each type has required sections defined in the schema. For example, a `lesson` requires: Summary, Context, Insight, Evidence, Applicability, Relationships. A `decision` requires: Summary, Decision, Alternatives, Rationale, Reversibility, Dependencies, Relationships.
 
-Every page follows this structure:
+The schema file (`config/wiki-schema.yaml`) is the single source of truth for validation.
+
+#### Page Structure
+
+Every page follows a section order:
 
 ```markdown
 # Title
 
-## Summary          ← 2-3 sentences minimum, used as description
-## Key Insights     ← Condensed takeaways
-## Deep Analysis    ← Full depth (concept, comparison types)
+## Summary          ← 2-3 sentences, the page's elevator pitch
+## Key Insights     ← Condensed takeaways (bullet points)
+## Deep Analysis    ← Full depth (for concepts, comparisons)
 ## Open Questions   ← Gaps to fill, tagged with (Requires: ...)
-## Relationships    ← [[wikilinks]] with ALL_CAPS verbs
-## Backlinks        ← Auto-generated by obsidian.py
+## Relationships    ← Typed links using ALL_CAPS verbs + [[wikilinks]]
+## Backlinks        ← Auto-generated incoming links
 ```
 
-Evolved page types have additional required sections defined in `config/templates/`.
+Evolved page types (lesson, pattern, decision) have different required sections — see templates.
 
-### Relationship Standard
+#### Relationship System
 
-Relationships use ALL_CAPS verbs, one per line, with [[wikilinks]]:
+Relationships are explicit, typed, and bidirectional via backlinks:
 
 ```markdown
 ## Relationships
 
 - BUILDS ON: [[LLM Wiki Pattern]]
 - ENABLES: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[Second Brain Architecture]]
-- DERIVED FROM: [[Synthesis: Karpathy's LLM Wiki Idea File]]
+- CONTRADICTS: [[some assumption]]
+- DERIVED FROM: [[Source Page Title]]
 ```
 
-Supported verbs: BUILDS ON, ENABLES, COMPARES TO, CONTRADICTS, USED BY, RELATES TO, FEEDS INTO, DERIVED FROM, SUPERSEDES, IMPLEMENTS, EXTENDS, CONSTRAINS, PARALLELS, SYNTHESIZES
+Supported verbs: BUILDS ON, ENABLES, COMPARES TO, CONTRADICTS, USED BY, RELATES TO, FEEDS INTO, DERIVED FROM, SUPERSEDES, IMPLEMENTS, EXTENDS, PARALLELS, SYNTHESIZES
 
-### Quality Gates
+This is what makes the wiki a knowledge GRAPH, not just a folder of files. In Obsidian, these render as a navigable graph. In LightRAG, they become queryable edges.
+
+#### Quality Gates
 
 Every page must pass:
-- Valid frontmatter per `config/schema.yaml`
-- Summary ≥30 words
-- At least 1 relationship (unless first in new domain)
-- Title field matches # Heading
-- Domain field matches folder path
-- Source provenance (URL or file reference)
-- No >70% concept overlap with existing pages
+1. Valid frontmatter per the schema
+2. Summary ≥ 30 words
+3. At least 1 relationship (unless first in a new domain)
+4. Title field matches # Heading
+5. Domain field matches folder path
+6. Source provenance (URL or file reference)
+7. No > 70% concept overlap with existing pages (update instead of create)
 
-Validated by: `python3 -m tools.validate`
+#### Three Core Operations
 
-### Ingestion Workflow
+**Ingest**: Source arrives → save to raw/ → read FULL source (multiple reads for large files, verify depth by examining real instances not just descriptions) → create source-synthesis page → create/update concept pages → validate.
 
-```
-Source arrives (URL, file, paste)
-    ↓
-pipeline fetch → saves to raw/
-    ↓
-Read FULL source (multiple offset reads for >200 lines)
-    ↓
-Verify depth: read actual INSTANCES not just descriptions (Layer 0 → Layer 1)
-    ↓
-Create source-synthesis page in wiki/sources/src-*.md
-    ↓
-Create/update concept pages in wiki/domains/
-    ↓
-pipeline post (6 steps):
-  1. Rebuild domain + layer indexes
-  2. Regenerate manifest.json
-  3. Validate all pages
-  4. Regenerate [[wikilinks]]
-  5. Run lint checks
-  6. Rebuild backlog/log indexes
-```
+**Query**: Navigate via domain indexes and relationship links. The LLM reads the index, follows links to relevant pages, reads content. No vector database needed below ~200 pages.
 
-### Evolution Workflow
+**Lint**: Validate all pages against schema. Detect orphaned references. Flag stale content (source updated after derived page). Surface contradictions. Report gaps (weak domains, thin pages, unanswered questions).
 
-```
-pipeline evolve --score → rank candidates from 6 signals
-    ↓
-pipeline evolve --scaffold --top N → create page stubs from templates
-    ↓
-Fill pages with real content (this session or local model)
-    ↓
-pipeline post → validate
-    ↓
-pipeline evolve --review → check maturity promotions
-```
+#### Evolution Pipeline
 
-Maturity lifecycle: `seed → growing → mature → canonical`
-- seed: exists but unvalidated
-- growing: human-reviewed, real derived_from, passes quality gates
-- mature: cross-referenced by others, stable 30+ days
-- canonical: authoritative reference, marked manually
+The wiki doesn't just store knowledge — it evolves it:
 
-### Pipeline Commands
+1. **Score** — analyze existing pages to identify evolution candidates (cross-source convergence, relationship hubs, domain gaps, open question density)
+2. **Scaffold** — create page stubs from templates
+3. **Generate** — fill pages from source material (LLM session, local model, or API)
+4. **Validate** — run quality gates
+5. **Review** — maturity promotion (seed → growing → mature → canonical)
 
-| Command | What it does |
-|---------|-------------|
-| `pipeline post` | Full post-ingestion chain (6 steps) |
-| `pipeline fetch URL` | Fetch source into raw/ |
-| `pipeline evolve --score` | Rank evolution candidates |
-| `pipeline evolve --scaffold --top N` | Scaffold top candidates |
-| `pipeline evolve --review` | Check maturity promotions |
-| `pipeline gaps` | Find orphans, thin pages, weak domains |
-| `pipeline crossref` | Find missing backlinks, comparison candidates |
-| `pipeline backlog` | Show project backlog state |
-| `pipeline chain continue` | Resume mission (status → review → score → gaps) |
-| `pipeline chain health` | Full health check |
+The maturity lifecycle prevents premature promotion: seed (exists but unvalidated) → growing (reviewed, real derived_from) → mature (cross-referenced, stable 30+ days) → canonical (authoritative, marked manually).
 
-### Interfaces (every operation at every level)
+#### Scale Boundary
 
-| Operation | CLI | /command | Skill | MCP |
-|-----------|-----|---------|-------|-----|
-| Resume | `pipeline chain continue` | `/continue` | `skills/continue/` | `wiki_continue` |
-| Evolve | `pipeline evolve` | `/evolve` | `skills/evolve/` | `wiki_evolve` |
-| Ingest | `pipeline fetch` | `/ingest` | `skills/wiki-agent/` | `wiki_fetch` |
-| Review | `pipeline chain review` | `/review` | `skills/wiki-agent/` | `wiki_gaps` |
-| Status | `pipeline status` | `/status` | — | `wiki_status` |
-| Backlog | `pipeline backlog` | `/backlog` | — | `wiki_backlog` |
+Below ~200 pages: index-driven navigation is cheaper and more accurate than vector search. The LLM reads indexes, follows links, reads pages directly.
 
-## How to Adopt This Model
+Above ~200 pages: add a graph-enhanced retrieval layer (e.g., LightRAG) as an ADDITIVE layer. The wiki stays the same — the retrieval layer indexes it. See [[Decision: Wiki-First with LightRAG Upgrade Path]].
 
-1. Create the repository structure above
-2. Copy `config/schema.yaml` → defines your page validation rules
-3. Copy `config/templates/` → scaffolding templates per page type
-4. Write your CLAUDE.md with the schema, conventions, and methodology rules
-5. Start ingesting sources → the wiki grows from there
-6. Run `pipeline post` after every change
-7. Run `pipeline evolve --score` periodically to identify evolution candidates
+### How to Adopt This Model
+
+1. Create the repository structure above in your project
+2. Define your schema in `config/wiki-schema.yaml` — start with the reference schema and adapt types/fields for your domain
+3. Create page templates in `config/templates/` — one per page type with placeholder structure
+4. Write your agent instructions (CLAUDE.md or equivalent) with the schema, conventions, and quality gates
+5. Start ingesting sources — the wiki grows from there
+6. After each change, validate all pages against the schema
+7. Periodically run evolution: score candidates, scaffold, generate, review maturity
 
 Full guide: [[Adoption Guide — How to Use This Wiki's Standards]]
 
-## Key Pages in This Model
+### Reference Implementation
 
-| Page | Role |
-|------|------|
-| [[LLM Wiki Pattern]] | The foundational pattern (Karpathy's design) |
-| [[Wiki Ingestion Pipeline]] | How sources become pages |
+This research wiki is the reference implementation of the LLM Wiki model. It demonstrates:
+- 146 pages across 10 domains with 1,086 relationships
+- 6 knowledge layers populated (L1-L6 + spine)
+- Evolution pipeline with 6 scoring signals and 3 LLM backends
+- Maturity lifecycle applied to all pages (130 growing, 5 seed)
+- Quality gates enforced via Python validation tooling
+- 14 named models with entry points in wiki/spine/
+
+Project-specific implementation details (pipeline commands, /commands, MCP tools, sync services) are documented in the project's CLAUDE.md and are NOT part of the universal model.
+
+### Key Pages in This Model
+
+| Page | What it covers |
+|------|---------------|
+| [[LLM Wiki Pattern]] | Karpathy's original design — the foundational pattern |
+| [[Wiki Ingestion Pipeline]] | How sources become pages (multi-stage) |
 | [[Wiki Knowledge Graph]] | How relationships create a queryable graph |
 | [[LLM Knowledge Linting]] | How quality is maintained automatically |
 | [[Knowledge Evolution Pipeline]] | How pages evolve through density layers |
 | [[Progressive Distillation]] | The pattern: raw → synthesis → lesson → pattern → decision |
 | [[LLM Wiki vs RAG]] | When wiki navigation beats vector search |
 | [[Decision: Wiki-First with LightRAG Upgrade Path]] | The scale decision |
-| [[Second Brain Architecture]] | PKM theory (PARA, Zettelkasten) mapped to this wiki |
+| [[Second Brain Architecture]] | PKM theory mapped to the wiki model |
 | [[Wiki Backlog Pattern]] | How the wiki tracks its own work |
 
-## Lessons Learned (from building this wiki)
+### Lessons Learned
 
-- [[LLM-Maintained Wikis Outperform Static Documentation]] — maintenance economics is the key
-- [[Lesson: Schema Is the Real Product — Not the Content]] — the schema is more durable than any page
-- [[Multi-Stage Ingestion Beats Single-Pass Processing]] — each pass discovers what the previous missed
-- [[The Wiki Maintenance Problem Is Solved by LLM Automation]] — the 80-year gap from Memex to working implementation
-- [[Never Synthesize from Descriptions Alone]] — read the THING, not the description of the thing
-- [[Shallow Ingestion Is Systemic, Not Isolated]] — one quality defect = audit ALL similar artifacts
-- [[Automated Knowledge Validation Prevents Silent Wiki Decay]] — without linting, wikis decay silently
+These lessons came from BUILDING a wiki with this model — they are validated experience, not theory:
 
-## Outcomes
+| Lesson | What we learned |
+|--------|----------------|
+| [[LLM-Maintained Wikis Outperform Static Documentation]] | Maintenance economics is the differentiator |
+| [[Lesson: Schema Is the Real Product — Not the Content]] | The schema survives; content is regenerable |
+| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | Each pass discovers what the previous missed |
+| [[The Wiki Maintenance Problem Is Solved by LLM Automation]] | The 80-year gap from Memex to working implementation |
+| [[Never Synthesize from Descriptions Alone]] | Read the THING, not the description of the thing |
+| [[Shallow Ingestion Is Systemic, Not Isolated]] | One defect = audit ALL similar artifacts |
+| [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | Without linting, wikis decay silently |
 
-After studying this model you can:
-- Set up a new LLM-maintained wiki from scratch following the repository structure
-- Define a schema that enforces page quality
-- Build an ingestion pipeline that processes any source type
-- Understand why the schema document is more valuable than any individual page
-- Run the evolution pipeline to generate higher-layer insights
-- Know when to add LightRAG (at ~200 pages) and when to stay wiki-only
+## Open Questions
+
+- What is the optimal schema complexity for a new project adopting this model? (Start minimal and grow, or start comprehensive?)
+- How should the wiki model interact with existing documentation systems (Confluence, Notion, Google Docs) in an organization?
+- What is the minimum viable wiki — the smallest set of pages and structure that demonstrates value?
+- How does multi-author wiki editing work when multiple agents or humans contribute? (Conflict resolution, merge strategy)
 
 ## Relationships
 

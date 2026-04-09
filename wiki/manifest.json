@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T21:41:44.030566+00:00",
+  "generated": "2026-04-09T21:48:14.464852+00:00",
   "stats": {
     "pages": 153,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
     "relationships": 1097,
-    "tags_unique": 589,
+    "tags_unique": 588,
     "layers": {
       "3": 5,
       "6": 5,
@@ -10041,11 +10041,11 @@
         "llm-wiki",
         "model",
         "knowledge-system",
-        "repository-structure",
         "schema",
         "ingestion",
         "evolution",
-        "standards"
+        "standards",
+        "transferable"
       ],
       "sources": [
         {
@@ -10053,6 +10053,13 @@
           "type": "documentation",
           "file": "raw/articles/karpathy-llm-wiki-idea-file.md",
           "title": "Karpathy LLM Wiki Idea File",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-llm-wiki-v2-agentmemory",
+          "type": "documentation",
+          "file": "raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md",
+          "title": "LLM Wiki v2 \u2014 Extending Karpathy's Pattern with Agentmemory Lessons",
           "ingested": "2026-04-08"
         }
       ],
@@ -11735,7 +11742,8 @@
     ],
     "transferable": [
       "domains/cross-domain/methodology-framework",
-      "spine/adoption-guide"
+      "spine/adoption-guide",
+      "spine/model-llm-wiki"
     ],
     "multi-track": [
       "domains/cross-domain/methodology-framework"
@@ -13006,9 +13014,6 @@
       "spine/model-knowledge-evolution"
     ],
     "knowledge-system": [
-      "spine/model-llm-wiki"
-    ],
-    "repository-structure": [
       "spine/model-llm-wiki"
     ],
     "local-ai": [

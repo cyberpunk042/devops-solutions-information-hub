@@ -83,9 +83,9 @@ After completing this path you understand:
 ## Backlinks
 
 [[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper]]
+[[[[Skyscraper]]
 [[Pyramid]]
-[[Mountain]]
+[[Mountain]]]]
 [[Model: Design.md + IaC]]
 [[Model: Quality + Failure Prevention]]
 [[Model: Knowledge Evolution]]

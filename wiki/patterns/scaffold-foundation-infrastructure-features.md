@@ -159,16 +159,16 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 
 ## Backlinks
 
-[[Skyscraper]]
+[[[[Skyscraper]]
 [[Pyramid]]
-[[Mountain]]
+[[Mountain]]]]
 [[Progressive Distillation]]
 [[Research Wiki]]
 [[OpenFleet]]
 [[AICP]]
 [[Four-Project Ecosystem]]
-[[Deterministic Shell]]
-[[LLM Core]]
+[[[[Deterministic Shell]]
+[[LLM Core]]]]
 [[Plan Execute Review Cycle]]
 [[Knowledge Evolution Pipeline]]
 [[Infrastructure as Code Patterns]]
