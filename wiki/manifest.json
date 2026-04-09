@@ -1,21 +1,22 @@
 {
-  "generated": "2026-04-09T20:41:27.882348+00:00",
+  "generated": "2026-04-09T20:49:10.617121+00:00",
   "stats": {
-    "pages": 125,
+    "pages": 131,
     "domains": 8,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 967,
-    "tags_unique": 559,
+    "relationships": 984,
+    "tags_unique": 561,
     "layers": {
       "6": 5,
       "2": 2,
       "4": 21,
-      "5": 6,
-      "spine": 7
+      "5": 11,
+      "spine": 8
     },
     "maturity": {
-      "growing": 47
+      "growing": 48,
+      "seed": 5
     }
   },
   "pages": [
@@ -7138,6 +7139,151 @@
       ]
     },
     {
+      "path": "patterns/pattern-skills-+-claude-code.md",
+      "slug": "patterns/pattern-skills-+-claude-code",
+      "title": "Pattern: Skills + Claude-Code",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [],
+      "sources": [],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Claude Code",
+        "Claude Code Best Practices"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Claude Code"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Claude Code Best Practices"
+        }
+      ]
+    },
+    {
+      "path": "patterns/pattern-skills-+-cli.md",
+      "slug": "patterns/pattern-skills-+-cli",
+      "title": "Pattern: Skills + Cli",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [],
+      "sources": [],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "CLI Tools Beat MCP for Token Efficiency",
+        "Context-Aware Tool Loading"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Context-Aware Tool Loading"
+        }
+      ]
+    },
+    {
+      "path": "patterns/pattern-skills-+-mcp.md",
+      "slug": "patterns/pattern-skills-+-mcp",
+      "title": "Pattern: Skills + Mcp",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [],
+      "sources": [],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "CLI Tools Beat MCP for Token Efficiency",
+        "Claude Code"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Claude Code"
+        }
+      ]
+    },
+    {
+      "path": "patterns/pattern-skills-+-notebooklm.md",
+      "slug": "patterns/pattern-skills-+-notebooklm",
+      "title": "Pattern: Skills + Notebooklm",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [],
+      "sources": [],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Context-Aware Tool Loading",
+        "NotebookLM Skills"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Context-Aware Tool Loading"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "NotebookLM Skills"
+        }
+      ]
+    },
+    {
+      "path": "patterns/pattern-skills-+-obsidian.md",
+      "slug": "patterns/pattern-skills-+-obsidian",
+      "title": "Pattern: Skills + Obsidian",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-08",
+      "updated": "2026-04-08",
+      "tags": [],
+      "sources": [],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Obsidian Skills Ecosystem",
+        "Skills Architecture Patterns"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Obsidian Skills Ecosystem"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Skills Architecture Patterns"
+        }
+      ]
+    },
+    {
       "path": "patterns/plan-execute-review-cycle.md",
       "slug": "patterns/plan-execute-review-cycle",
       "title": "Plan Execute Review Cycle",
@@ -8934,6 +9080,59 @@
       ]
     },
     {
+      "path": "spine/adoption-guide.md",
+      "slug": "spine/adoption-guide",
+      "title": "Adoption Guide \u2014 How to Use This Wiki's Standards",
+      "type": "deep-dive",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "adoption",
+        "transferable",
+        "methodology",
+        "standards",
+        "ecosystem",
+        "guide"
+      ],
+      "sources": [],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "[[Methodology Framework]]"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "[[Stage-Gate Methodology]]"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "[[Four-Project Ecosystem]]"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Task Type Artifact Matrix]]"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Methodology Execution Modes]]"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "methodology adoption across ecosystem projects"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "project-specific methodology.yaml instances"
+        }
+      ]
+    },
+    {
       "path": "spine/domain-overviews/ai-agents-\u2014-domain-overview.md",
       "slug": "spine/domain-overviews/ai-agents-\u2014-domain-overview",
       "title": "AI Agents \u2014 Domain Overview",
@@ -9243,8 +9442,8 @@
   ],
   "domains": {
     "cross-domain": {
-      "page_count": 19,
-      "relationship_count": 157
+      "page_count": 25,
+      "relationship_count": 174
     },
     "ai-agents": {
       "page_count": 34,
@@ -10083,7 +10282,8 @@
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
       "lessons/the-agent-must-practice-what-it-documents",
-      "log/2026-04-09-directive-never-stop-at-surface"
+      "log/2026-04-09-directive-never-stop-at-surface",
+      "spine/adoption-guide"
     ],
     "plannotator": [
       "domains/ai-agents/per-role-command-architecture",
@@ -10341,7 +10541,8 @@
       "domains/cross-domain/methodology-framework"
     ],
     "transferable": [
-      "domains/cross-domain/methodology-framework"
+      "domains/cross-domain/methodology-framework",
+      "spine/adoption-guide"
     ],
     "multi-track": [
       "domains/cross-domain/methodology-framework"
@@ -10483,7 +10684,8 @@
     ],
     "ecosystem": [
       "domains/devops/four-project-ecosystem",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem"
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "spine/adoption-guide"
     ],
     "devops-control-plane": [
       "domains/devops/four-project-ecosystem"
@@ -11052,7 +11254,8 @@
       "lessons/lesson-convergence-on-src-kepano-obsidian-skills"
     ],
     "standards": [
-      "lessons/lesson-convergence-on-src-kepano-obsidian-skills"
+      "lessons/lesson-convergence-on-src-kepano-obsidian-skills",
+      "spine/adoption-guide"
     ],
     "cross-reference": [
       "lessons/lesson-convergence-on-wiki-ingestion-pipeline"
@@ -11478,6 +11681,12 @@
     "122b-parameters": [
       "sources/src-turboquant-122b-macbook"
     ],
+    "adoption": [
+      "spine/adoption-guide"
+    ],
+    "guide": [
+      "spine/adoption-guide"
+    ],
     "domain-overview": [
       "spine/domain-overviews/ai-agents-\u2014-domain-overview",
       "spine/domain-overviews/ai-models-\u2014-domain-overview",
@@ -11667,6 +11876,36 @@
       ]
     },
     {
+      "target": "[[Four-Project Ecosystem]]",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
+      "target": "[[Methodology Execution Modes]]",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
+      "target": "[[Methodology Framework]]",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
+      "target": "[[Stage-Gate Methodology]]",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
+      "target": "[[Task Type Artifact Matrix]]",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
       "target": "ai-driven-content-pipeline",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
@@ -11711,9 +11950,21 @@
       ]
     },
     {
+      "target": "methodology adoption across ecosystem projects",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ]
+    },
+    {
       "target": "notebooklm",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
+      ]
+    },
+    {
+      "target": "project-specific methodology.yaml instances",
+      "referenced_by": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
       ]
     },
     {

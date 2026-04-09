@@ -4,8 +4,8 @@ Strategic architecture and domain overviews
 
 ## Pages
 
-<!-- Pages added during ingestion -->
+- [Adoption Guide — How to Use This Wiki's Standards](adoption-guide.md) — This guide explains how any project in the ecosystem (or outside it) picks up the methodology, stage-gate system, bac...
 
 ## Tags
 
-<!-- Tag cloud generated during ingestion -->
+`adoption`, `transferable`, `methodology`, `standards`, `ecosystem`, `guide`
