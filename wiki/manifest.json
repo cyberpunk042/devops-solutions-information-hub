@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T19:54:24.991633+00:00",
+  "generated": "2026-04-09T20:03:03.200686+00:00",
   "stats": {
     "pages": 123,
     "domains": 8,
     "sources": 24,
     "comparisons": 5,
     "relationships": 942,
-    "tags_unique": 538,
+    "tags_unique": 539,
     "layers": {
       "6": 5,
       "2": 2,
@@ -1295,7 +1295,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-09",
       "tags": [
         "design-md",
         "design-system",
@@ -1328,6 +1328,13 @@
           "url": "https://github.com/VoltAgent/awesome-design-md",
           "file": "raw/articles/voltagentawesome-design-md.md",
           "title": "VoltAgent/awesome-design-md \u2014 58 Design Systems",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-claude-design-md-example",
+          "type": "documentation",
+          "file": "raw/articles/claude-design-md-example.md",
+          "title": "Claude (Anthropic) Design.md \u2014 312-line machine specification",
           "ingested": "2026-04-09"
         }
       ],
@@ -7200,7 +7207,8 @@
         "markdown-config",
         "ui-consistency",
         "awesome-list",
-        "voltagent"
+        "voltagent",
+        "machine-specification"
       ],
       "sources": [
         {
@@ -7209,6 +7217,14 @@
           "url": "https://github.com/VoltAgent/awesome-design-md",
           "file": "raw/articles/voltagentawesome-design-md.md",
           "title": "VoltAgent/awesome-design-md",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-claude-design-md",
+          "type": "artifact",
+          "url": "https://getdesign.md/claude/design-md",
+          "file": "raw/articles/claude-design-md-example.md",
+          "title": "Claude (Anthropic) DESIGN.md \u2014 Full 312-line Example",
           "ingested": "2026-04-09"
         }
       ],
@@ -10881,6 +10897,9 @@
       "sources/src-awesome-design-md"
     ],
     "voltagent": [
+      "sources/src-awesome-design-md"
+    ],
+    "machine-specification": [
       "sources/src-awesome-design-md"
     ],
     "excalidraw": [
