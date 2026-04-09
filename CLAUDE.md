@@ -14,7 +14,7 @@ A monorepo containing:
 ## Project Structure
 
 - `raw/` — Unprocessed source material (transcripts, articles, papers, notes, dumps)
-- `wiki/` — Processed knowledge (domains/, sources/, comparisons/, lessons/, patterns/, decisions/, spine/, index.md, manifest.json)
+- `wiki/` — Processed knowledge (domains/, sources/, comparisons/, lessons/, patterns/, decisions/, spine/, backlog/, log/, config/, index.md, manifest.json)
 - `tools/` — Python utilities (lint, manifest, export, validate, stats)
 - `skills/` — Claude skill definitions
 - `config/` — Schema, domain registry, export profiles, quality standards
@@ -134,6 +134,8 @@ Export transforms YAML frontmatter to markdown headers for compatibility.
 - `python3 -m tools.pipeline evolve --auto --backend claude-code` — Write prompt queue
 - `python3 -m tools.pipeline evolve --execute` — List prompt queue for session execution
 - `python3 -m tools.pipeline evolve --review` — List seed pages ready for maturity promotion
+- `python3 -m tools.pipeline backlog` — Show backlog summary (epics, tasks, completion %)
+- `python3 -m tools.pipeline backlog --epic E001` — Show epic detail with children
 - `python3 -m tools.pipeline chain <name>` — Run a named chain (ingest, ingest-local, analyze, full, health, evolve, evolve-auto)
 - `python3 -m tools.pipeline chain continue` — Resume mission (status → review → score → gaps → crossref)
 - `python3 -m tools.pipeline chain review` — Weekly health check (post → review → gaps → crossref)
@@ -149,10 +151,10 @@ Skills in `skills/` — invocable via natural language or slash commands:
 ### MCP Server (native tools for any Claude Code conversation)
 
 Registered in `.mcp.json` — auto-discovered by Claude Code.
-15 tools: wiki_status, wiki_search, wiki_read_page, wiki_list_pages,
+17 tools: wiki_status, wiki_search, wiki_read_page, wiki_list_pages,
 wiki_post, wiki_fetch, wiki_fetch_topic, wiki_scan_project,
 wiki_gaps, wiki_crossref, wiki_sync, wiki_mirror_to_notebooklm,
-wiki_integrations, wiki_continue, wiki_evolve.
+wiki_integrations, wiki_continue, wiki_evolve, wiki_backlog, wiki_log.
 
 Manual start: `.venv/bin/python -m tools.mcp_server`
 

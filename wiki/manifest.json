@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-09T18:53:32.036952+00:00",
+  "generated": "2026-04-09T19:41:25.885279+00:00",
   "stats": {
-    "pages": 120,
+    "pages": 121,
     "domains": 7,
     "sources": 23,
     "comparisons": 5,
@@ -384,6 +384,23 @@
           "target": "LLM Wiki Pattern"
         }
       ]
+    },
+    {
+      "path": "config/agent-directive.md",
+      "slug": "config/agent-directive",
+      "title": "agent-directive",
+      "type": "",
+      "domain": "",
+      "status": "",
+      "confidence": "",
+      "created": "",
+      "updated": "",
+      "tags": [],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
     },
     {
       "path": "decisions/decision-resolve-open-questions-in-llm-wiki-vs-rag.md",
