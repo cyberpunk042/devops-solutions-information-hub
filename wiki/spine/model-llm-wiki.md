@@ -222,6 +222,88 @@ maturity: growing
 
 Sections: Summary → Comparison Matrix (6-row table: pattern name, domains it appears in, instances, underlying constraint) → Key Insights → Deep Analysis (per-pattern deep dives with instance tables) → Open Questions → Relationships. 189 lines. The `Comparison Matrix` section is a structured table — not prose.
 
+#### Epic example: [[Local Inference Engine (Subsystem 3)]]
+
+```yaml
+---
+title: "Local Inference Engine (Subsystem 3)"
+type: epic
+domain: backlog
+status: draft
+priority: P1
+task_type: epic
+current_stage: document
+readiness: 10
+stages_completed: [document]
+artifacts:
+  - wiki/domains/tools-and-platforms/aicp.md
+  - wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md
+---
+```
+
+Sections: Summary → Goals (bulleted list of what the epic achieves) → Done When (checkbox list — unchecked = not done) → Blocked (if applicable) → Relationships. The epic tracks readiness (10% = document stage done), lists artifacts produced so far, and has a `task_type: epic` field that determines which stages are required (all 5: document, design, scaffold, implement, test). Epics are NEVER marked "done" directly — their readiness is computed from child tasks.
+
+#### Task example: [[Test OpenAI backend with LocalAI]]
+
+```yaml
+---
+title: "Test OpenAI backend with LocalAI"
+type: task
+domain: backlog
+status: blocked
+priority: P1
+epic: E001
+task_type: task
+current_stage: scaffold
+readiness: 0
+stages_completed: []
+artifacts: []
+depends_on: []
+estimate: M
+---
+```
+
+Sections: Summary → Done When (checkbox list). Tasks are the atomic work unit — they go through stages (for `task_type: task`, the required stages are scaffold, implement, test). The `epic: E001` field links to the parent. `estimate: M` indicates medium effort. `status: blocked` with `readiness: 0` and empty `stages_completed` means work hasn't started. Each stage completion gets its own git commit.
+
+#### Note (directive) example: [[Never Stop at Surface — Depth Verification Rule]]
+
+```yaml
+---
+title: "Never Stop at Surface — Depth Verification Rule"
+type: note
+domain: log
+note_type: directive
+status: active
+---
+```
+
+Sections: Summary → Operator Directive (verbatim quote) → Interpretation. Notes in wiki/log/ are the operator's voice — directives are logged verbatim and never paraphrased. The `note_type` field distinguishes between `directive` (operator instruction), `session` (work summary), and `completion` (task done report). Log entries are chronological and append-only.
+
+#### Backlog hierarchy in practice
+
+```
+E001-local-inference-engine (epic, P1, readiness=10%)
+  └── T001-test-openai-backend (task, P1, blocked, readiness=0%)
+
+E002-ecosystem-integration (epic, P2, readiness=15%)
+  └── (tasks to be created)
+```
+
+Work happens on TASKS, not epics. To advance E001, you pick T001 and complete its next stage. Epic readiness = average of child readiness. Status flows upward: any child in-progress → parent in-progress. All children done → parent moves to "review" (not "done" — human confirms).
+
+Task types determine which stages are required:
+
+| task_type | Required stages |
+|-----------|----------------|
+| epic | document, design, scaffold, implement, test |
+| module | document, design, scaffold, implement, test |
+| task | scaffold, implement, test |
+| research | document, design |
+| evolve | document, implement |
+| docs | document |
+| bug | document, implement, test |
+| refactor | document, scaffold, implement, test |
+
 ### Required Frontmatter Fields
 
 Every page:
