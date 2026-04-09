@@ -22,6 +22,17 @@ optional_fields:
   - maturity
   - instances
   - reversibility
+  - priority
+  - task_type
+  - current_stage
+  - readiness
+  - stages_completed
+  - artifacts
+  - estimate
+  - epic
+  - module
+  - depends_on
+  - note_type
 
 enums:
   type:
@@ -37,12 +48,23 @@ enums:
     - domain-overview
     - learning-path
     - evolution
+    - epic
+    - module
+    - task
+    - note
   status:
     - raw
     - processing
     - synthesized
     - verified
     - stale
+    - draft
+    - active
+    - in-progress
+    - review
+    - done
+    - archived
+    - blocked
   confidence:
     - low
     - medium
@@ -63,6 +85,36 @@ enums:
     - moderate
     - hard
     - irreversible
+  priority:
+    - P0
+    - P1
+    - P2
+    - P3
+  task_type:
+    - epic
+    - module
+    - task
+    - research
+    - evolve
+    - docs
+    - bug
+    - refactor
+  stage:
+    - document
+    - design
+    - scaffold
+    - implement
+    - test
+  estimate:
+    - XS
+    - S
+    - M
+    - L
+    - XL
+  note_type:
+    - directive
+    - session
+    - completion
   source_type:
     - article
     - youtube-transcript
@@ -140,6 +192,16 @@ required_sections:
     - Key Shifts
     - Current State
     - Relationships
+  epic:
+    - Summary
+    - Goals
+    - Done When
+    - Relationships
+  task:
+    - Summary
+    - Done When
+  note:
+    - Summary
 
 relationship_verbs:
   - BUILDS ON
