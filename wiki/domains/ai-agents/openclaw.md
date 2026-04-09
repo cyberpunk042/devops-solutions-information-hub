@@ -111,4 +111,5 @@ Cross-referencing `Agent Orchestration Patterns` and `OpenFleet`: the OpenClaw a
 [[Plane]]
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: Claude Code Harness Engineering]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]

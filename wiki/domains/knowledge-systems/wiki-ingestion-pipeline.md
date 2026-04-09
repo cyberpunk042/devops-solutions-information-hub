@@ -131,6 +131,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `WSL2 Development Patterns`
 [[Plan Execute Review Cycle]]
 [[Rework Prevention]]
 [[Second Brain Architecture]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
 [[Synthesis: Karpathy's LLM Wiki Idea File]]
 [[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]

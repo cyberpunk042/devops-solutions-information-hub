@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T15:12:22.108764+00:00",
+  "generated": "2026-04-09T15:26:49.453282+00:00",
   "stats": {
     "pages": 106,
     "domains": 7,
     "sources": 21,
     "comparisons": 5,
-    "relationships": 797,
-    "tags_unique": 395,
+    "relationships": 800,
+    "tags_unique": 396,
     "layers": {
       "6": 5,
       "4": 16,
@@ -6314,10 +6314,13 @@
         "context-management",
         "sandbox",
         "session-continuity",
-        "context-saving",
         "fts5",
-        "sqlite",
-        "claude-code-plugin"
+        "bm25",
+        "rrf",
+        "hooks",
+        "think-in-code",
+        "claude-code-plugin",
+        "12-platform"
       ],
       "sources": [
         {
@@ -6342,6 +6345,10 @@
           "target": "CLI Tools Beat MCP for Token Efficiency"
         },
         {
+          "verb": "IMPLEMENTS",
+          "target": "Context-Aware Tool Loading"
+        },
+        {
           "verb": "RELATES TO",
           "target": "MCP Integration Architecture"
         },
@@ -6358,8 +6365,16 @@
           "target": "Claude Code"
         },
         {
+          "verb": "RELATES TO",
+          "target": "OpenClaw"
+        },
+        {
           "verb": "FEEDS INTO",
           "target": "Research Pipeline Orchestration"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Ingestion Pipeline"
         }
       ]
     },
@@ -7644,7 +7659,7 @@
     },
     "ai-agents": {
       "page_count": 29,
-      "relationship_count": 246
+      "relationship_count": 249
     },
     "tools-and-platforms": {
       "page_count": 21,
@@ -8151,6 +8166,7 @@
       "domains/ai-agents/claude-code-skills",
       "domains/ai-agents/claude-code",
       "domains/automation/wiki-event-driven-automation",
+      "sources/src-context-mode",
       "sources/src-shanraisshan-claude-code-best-practice"
     ],
     "workflows": [
@@ -8984,7 +9000,8 @@
       "lessons/lesson-convergence-on-lightrag"
     ],
     "bm25": [
-      "lessons/lesson-convergence-on-lightrag"
+      "lessons/lesson-convergence-on-lightrag",
+      "sources/src-context-mode"
     ],
     "validation": [
       "lessons/lesson-convergence-on-llm-knowledge-linting"
@@ -9149,16 +9166,19 @@
     "session-continuity": [
       "sources/src-context-mode"
     ],
-    "context-saving": [
-      "sources/src-context-mode"
-    ],
     "fts5": [
       "sources/src-context-mode"
     ],
-    "sqlite": [
+    "rrf": [
+      "sources/src-context-mode"
+    ],
+    "think-in-code": [
       "sources/src-context-mode"
     ],
     "claude-code-plugin": [
+      "sources/src-context-mode"
+    ],
+    "12-platform": [
       "sources/src-context-mode"
     ],
     "searxng": [
