@@ -73,10 +73,18 @@ Shared: Plane, GitHub, ntfy
 
 ## Open Questions
 
-- What is the actual token cost reduction at Stage 2 vs Stage 1?
-- Can AICP's router be exposed as an MCP tool so other projects (research wiki) can use backend routing?
-- What quality threshold determines when LocalAI output is "good enough" vs needs Claude escalation?
-- How does the dual-machine architecture handle split-brain scenarios?
+- What is the actual token cost reduction at Stage 2 vs Stage 1? (Requires: empirical measurement from AICP telemetry comparing API costs before and after the routing implementation; not documented in existing wiki pages)
+- How does the dual-machine architecture handle split-brain scenarios? (Requires: external research on distributed orchestration and P2P LocalAI peering failure modes; the Four-Project Ecosystem page notes the dual-machine Alpha+Bravo target but does not document split-brain handling)
+
+### Answered Open Questions
+
+**Q: Can AICP's router be exposed as an MCP tool so other projects (research wiki) can use backend routing?**
+
+Cross-referencing `OpenFleet` and `Four-Project Ecosystem`: the answer is yes — and it is already partially implemented. The `AICP` page (this page) documents that AICP exposes 11 MCP tools, and one of them is explicitly named `route`. This means the backend routing decision (LocalAI vs Claude, complexity scoring, circuit breaker evaluation) is already an MCP-callable operation. The `Four-Project Ecosystem` page documents the integration architecture: the research wiki exports knowledge to docs/kb/ (AICP consumes it), and AICP's 11 MCP tools are "exposed as MCP server for IDE clients and fleet agents." The `OpenArms` page confirms the mcporter bridge as the mechanism for connecting MCP servers across projects — the same pattern applies to the research wiki. The research wiki's own CLAUDE.md registers its MCP server in `.mcp.json` and lists `wiki_post` as a tool that can trigger pipeline operations. The practical implementation path: the research wiki's ingestion pipeline can invoke AICP's `route` MCP tool to select whether a given synthesis task (complex deep analysis vs simple index update) should use a local model or Claude. This routing is the exact mechanism that supports the "evolution pipeline AICP backend" documented in the `Knowledge Evolution Pipeline` page: "Routes through the devops AI control platform, enabling integration with the OpenFleet agent fleet. An AICP agent can run evolution as part of a sprint task."
+
+**Q: What quality threshold determines when LocalAI output is "good enough" vs needs Claude escalation?**
+
+Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the threshold is not a single fixed value but a configurable profile-based decision governed by two mechanisms. First, AICP's router uses complexity scoring (keywords, history, context size) with configurable thresholds per profile — the 9 operational presets (default, fast, offline, thorough, code-review, fleet-light, reliable, dual-gpu, benchmark) each encode different routing biases. The "thorough" profile routes more to Claude; "fleet-light" routes more to LocalAI. Second, the `Knowledge Evolution Pipeline` page documents the human-in-the-loop checkpoint: the `--review` flag surfaces pages where "LLM-generated content may benefit from curator validation" — this is the quality gate for evolved pages, placed at the growing→mature transition. The implicit threshold from cross-referencing: LocalAI output is "good enough" for tasks where the output can be deterministically validated (index updates, manifest regeneration, lint checks, simple summarization) or where a human review gate exists downstream. LocalAI output requires Claude escalation when the task involves: architectural decisions, security analysis, novel cross-domain synthesis, or deep analysis where errors would be silent (no downstream validation gate). The `Immune System Rules` page confirms this principle: "A deterministic security scan cannot be social-engineered via a crafted task description. An LLM-based security layer can be prompted around" — quality-critical operations should not rely solely on LocalAI without either deterministic validation or human review.
 
 ## Relationships
 
