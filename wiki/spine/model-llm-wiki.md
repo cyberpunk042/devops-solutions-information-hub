@@ -109,6 +109,119 @@ This IS [[Progressive Distillation]]: raw → synthesis → concept → lesson �
 | **task** | Backlog: atomic work unit | Summary, Done When |
 | **note** | Log entry (directive/session) | Summary |
 
+### Examples — What Each Type Looks Like
+
+#### Concept example: [[Methodology Framework]]
+
+```yaml
+---
+title: "Methodology Framework"
+type: concept
+domain: cross-domain
+layer: 2
+maturity: growing
+status: synthesized
+confidence: authoritative
+---
+```
+
+Sections: Summary → Key Insights (8 bullets on composable models) → Deep Analysis (8 subsections: model definition, selection, composition, adaptation, recursion, multi-track, quality dimension, transferability) → Open Questions → Relationships. 347 lines. The deepest concept page demonstrates the full depth expected.
+
+#### Lesson example: [[Context Management Is the Primary LLM Productivity Lever]]
+
+```yaml
+---
+title: "Context Management Is the Primary LLM Productivity Lever"
+type: lesson
+domain: ai-agents
+layer: 4
+maturity: growing
+derived_from:
+  - "Claude Code Best Practices"
+  - "Synthesis: Claude Code Accuracy Tips"
+  - "Synthesis: Claude Code Harness Engineering"
+---
+```
+
+Sections: Summary → Context (when this lesson applies) → Insight (the core learning — context is the variable you control, not model capability) → Evidence (4 independent sources converging: Boris Cherny's 95% confidence rule, degradation curve quantification, harness engineering guardrails, shanraisshan's CLAUDE.md architecture) → Applicability → Relationships. 102 lines. Evidence section references specific data points from multiple sources.
+
+#### Pattern example: [[Scaffold → Foundation → Infrastructure → Features]]
+
+```yaml
+---
+title: "Scaffold → Foundation → Infrastructure → Features"
+type: pattern
+domain: cross-domain
+layer: 5
+maturity: growing
+derived_from:
+  - "Four-Project Ecosystem"
+  - "Progressive Distillation"
+instances:
+  - page: "Research Wiki"
+    context: "Scaffold (CLAUDE.md, dirs) → Foundation (tools/common.py, schema) → Infrastructure (pipeline.py, MCP) → Features (evolve, sync)"
+  - page: "OpenFleet"
+    context: "Scaffold (monorepo) → Foundation (orchestrator, agent model) → Infrastructure (board sync, doctor.py) → Features (10 agents)"
+  - page: "AICP"
+    context: "Scaffold (venv, profiles) → Foundation (router, circuit breaker) → Infrastructure (MCP, guardrails) → Features (routing, voice)"
+---
+```
+
+Sections: Summary → Pattern Description (what it is, how to recognize it, exit criteria per stage) → Instances (4 detailed examples with per-stage breakdown) → When To Apply → When Not To → Relationships. 176 lines. The `instances` frontmatter field lists concrete occurrences with context.
+
+#### Decision example: [[Decision: MCP vs CLI for Tool Integration]]
+
+```yaml
+---
+title: "Decision: MCP vs CLI for Tool Integration"
+type: decision
+domain: tools-and-platforms
+layer: 6
+maturity: growing
+derived_from:
+  - "Synthesis: Claude Code Harness Engineering"
+  - "Synthesis: Claude Code Accuracy Tips"
+  - "MCP Integration Architecture"
+reversibility: easy
+---
+```
+
+Sections: Summary → Decision (clear statement: "CLI+Skills for project-internal tooling, MCP for external service bridges") → Alternatives (3 rejected alternatives with reasons) → Rationale (evidence-backed: 12x cost differential, Playwright proof video, Google Trends signal) → Reversibility → Dependencies → Relationships. 121 lines. The `reversibility` field is unique to decisions.
+
+#### Source-synthesis example: [[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
+
+```yaml
+---
+title: "Synthesis: Context Mode — MCP Sandbox for Context Saving"
+type: source-synthesis
+domain: ai-agents
+layer: 1
+maturity: growing
+sources:
+  - id: src-context-mode
+    type: documentation
+    url: "https://github.com/mksglu/context-mode"
+    file: raw/articles/mksglucontext-mode.md
+    title: "mksglu/context-mode"
+---
+```
+
+Sections: Summary → Key Insights (11 subsections covering sandbox tools, FTS5/BM25 knowledge base, session continuity, 12-platform matrix, benchmarks, Think in Code paradigm) → Open Questions → Relationships. 254 lines. This is what a DEEP source synthesis looks like — the raw file was 1,057 lines and the actual context-mode DESIGN.md was examined (Layer 1 depth verification).
+
+#### Comparison example: [[Cross-Domain Patterns]]
+
+```yaml
+---
+title: "Cross-Domain Patterns"
+type: comparison
+domain: cross-domain
+layer: 3
+maturity: growing
+---
+```
+
+Sections: Summary → Comparison Matrix (6-row table: pattern name, domains it appears in, instances, underlying constraint) → Key Insights → Deep Analysis (per-pattern deep dives with instance tables) → Open Questions → Relationships. 189 lines. The `Comparison Matrix` section is a structured table — not prose.
+
 ### Required Frontmatter Fields
 
 Every page:
