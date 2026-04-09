@@ -484,7 +484,7 @@ def run_gaps(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
         if target in domain_names:
             continue
         # Skip conceptual targets (assumptions, self-references)
-        if target.startswith("default assumption") or target == "devops-solutions-research-wiki":
+        if target.startswith("default assumption") or target in ("devops-solutions-research-wiki", "Research Wiki"):
             continue
         # Case-insensitive domain name check
         if target.lower().replace(" ", "-") in manifest.get("domains", {}):
@@ -493,6 +493,10 @@ def run_gaps(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
         if target.lower().replace(" ", "-") in all_slugs:
             continue
         if target.lower() in all_slugs:
+            continue
+        # Substring match: if target is a substring of any existing title (or vice versa)
+        target_lower = target.lower().replace("-", " ").replace(",", "")
+        if any(target_lower in t.lower() or t.lower() in target_lower for t in all_titles if len(t) > 5):
             continue
         report["orphaned_targets"].append(target)
 

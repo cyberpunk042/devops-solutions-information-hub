@@ -19,3 +19,4 @@ Operator directives, session summaries, and task completion notes.
 | Date | Title | Type | Tags |
 |------|-------|------|------|
 | 2026-04-09 | [Ingest awesome-design-md repository](2026-04-09-ingest-awesome-design-md.md) | directive | `log`, `directive`, `ingestion`, `design-md` |
+| 2026-04-09 | [Never Stop at Surface — Depth Verification Rule](2026-04-09-directive-never-stop-at-surface.md) | directive | `log`, `directive`, `methodology`, `quality`, `depth` |

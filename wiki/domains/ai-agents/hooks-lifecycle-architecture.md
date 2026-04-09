@@ -132,7 +132,7 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 - RELATES TO: Claude Code
 - RELATES TO: Plannotator — Interactive Plan & Code Review for AI Agents
 - FEEDS INTO: Per-Role Command Architecture
-- FEEDS INTO: Design MD Pattern
+- FEEDS INTO: Design.md Pattern
 - BUILDS ON: Agent Orchestration Patterns
 
 ## Backlinks
@@ -145,5 +145,5 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 [[Claude Code]]
 [[Plannotator — Interactive Plan & Code Review for AI Agents]]
 [[Per-Role Command Architecture]]
-[[Design MD Pattern]]
+[[Design.md Pattern]]
 [[Agent Orchestration Patterns]]

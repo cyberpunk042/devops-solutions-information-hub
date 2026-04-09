@@ -11,7 +11,7 @@ sources:
   - id: src-user-articulation-spm
     type: note
     file: raw/notes/skyscraper-pyramid-mountain.md
-    title: "User articulation of Skyscraper-Pyramid-Mountain architectural quality analogy"
+    title: "User articulation of Skyscraper, Pyramid, Mountain architectural quality analogy"
 tags: [architecture, quality, refactoring, legacy, technical-debt, skyscraper, pyramid, mountain, spaghetti-code, pragmatism, cross-domain, systems-course]
 ---
 

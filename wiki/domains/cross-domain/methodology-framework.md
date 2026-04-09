@@ -318,7 +318,7 @@ This separation between definition and instance is what makes the framework sust
 - RELATES TO: Four-Project Ecosystem (the ecosystem is the highest-level instance of the framework)
 - FEEDS INTO: Wiki Backlog Pattern (PM track methodology feeds backlog structure)
 - IMPLEMENTS: Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)
-- IMPLEMENTS: SFIF and Skyscraper articulation (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
+- IMPLEMENTS: Scaffold → Foundation → Infrastructure → Features (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
 
 ## Backlinks
 
@@ -338,4 +338,4 @@ This separation between definition and instance is what makes the framework sust
 [[Four-Project Ecosystem (the ecosystem is the highest-level instance of the framework)]]
 [[Wiki Backlog Pattern (PM track methodology feeds backlog structure)]]
 [[Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)]]
-[[SFIF and Skyscraper articulation (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]
+[[Scaffold → Foundation → Infrastructure → Features (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]

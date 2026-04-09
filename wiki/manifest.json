@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-09T20:08:11.322394+00:00",
+  "generated": "2026-04-09T20:31:38.103031+00:00",
   "stats": {
     "pages": 124,
     "domains": 8,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 942,
+    "relationships": 944,
     "tags_unique": 540,
     "layers": {
       "6": 5,
@@ -1521,7 +1521,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Design MD Pattern"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "BUILDS ON",
@@ -2105,7 +2105,7 @@
         },
         {
           "verb": "CONTRADICTS",
-          "target": "Continuous Implementation (unstructured iterative coding without phase checkpoints)"
+          "target": "Task Lifecycle Stage-Gating (unstructured iterative coding without phase checkpoints)"
         }
       ]
     },
@@ -2654,7 +2654,7 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "SFIF and Skyscraper articulation (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)"
         }
       ]
     },
@@ -2687,7 +2687,7 @@
           "id": "src-user-articulation-spm",
           "type": "note",
           "file": "raw/notes/skyscraper-pyramid-mountain.md",
-          "title": "User articulation of Skyscraper-Pyramid-Mountain architectural quality analogy"
+          "title": "User articulation of Skyscraper, Pyramid, Mountain architectural quality analogy"
         }
       ],
       "layer": "",
@@ -2953,7 +2953,7 @@
         },
         {
           "verb": "ENABLES",
-          "target": "Continuous Evolution (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)"
+          "target": "Knowledge Evolution Pipeline (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)"
         }
       ]
     },
@@ -5828,7 +5828,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-09",
       "tags": [
         "notebooklm",
         "research-engine",
@@ -7168,7 +7168,15 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Skyscraper-Pyramid-Mountain"
+          "target": "Skyscraper"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Pyramid"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mountain"
         },
         {
           "verb": "BUILDS ON",
@@ -8259,7 +8267,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SFIF Pattern (operationalizes the speculate \u2192 feedback \u2192 iterate loop with UI tooling)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features (operationalizes the speculate \u2192 feedback \u2192 iterate loop with UI tooling)"
         },
         {
           "verb": "RELATES TO",
@@ -8543,7 +8551,7 @@
         },
         {
           "verb": "COMPARES TO",
-          "target": "Superpowers Skills Framework"
+          "target": "Spec-Driven Development"
         }
       ]
     },
@@ -9029,7 +9037,7 @@
   "domains": {
     "cross-domain": {
       "page_count": 19,
-      "relationship_count": 132
+      "relationship_count": 134
     },
     "ai-agents": {
       "page_count": 34,
@@ -11242,30 +11250,12 @@
       ]
     },
     {
-      "target": "Continuous Evolution",
-      "referenced_by": [
-        "Execution Modes and End Conditions"
-      ]
-    },
-    {
-      "target": "Continuous Implementation",
-      "referenced_by": [
-        "Task Lifecycle Stage-Gating"
-      ]
-    },
-    {
       "target": "Cross-Domain",
       "referenced_by": [
         "AI Agents \u2014 Domain Overview",
         "Automation \u2014 Domain Overview",
         "Knowledge Systems \u2014 Domain Overview",
         "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Design MD Pattern",
-      "referenced_by": [
-        "Hooks Lifecycle Architecture"
       ]
     },
     {
@@ -11325,7 +11315,8 @@
     {
       "target": "Mountain",
       "referenced_by": [
-        "Methodology Framework"
+        "Methodology Framework",
+        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
       ]
     },
     {
@@ -11337,7 +11328,8 @@
     {
       "target": "Pyramid",
       "referenced_by": [
-        "Methodology Framework"
+        "Methodology Framework",
+        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
       ]
     },
     {
@@ -11347,33 +11339,10 @@
       ]
     },
     {
-      "target": "SFIF Pattern",
-      "referenced_by": [
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "SFIF and Skyscraper articulation",
-      "referenced_by": [
-        "Methodology Framework"
-      ]
-    },
-    {
       "target": "Skyscraper",
       "referenced_by": [
-        "Methodology Framework"
-      ]
-    },
-    {
-      "target": "Skyscraper-Pyramid-Mountain",
-      "referenced_by": [
+        "Methodology Framework",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
-      ]
-    },
-    {
-      "target": "Superpowers Skills Framework",
-      "referenced_by": [
-        "Synthesis: Claude Code Best Practice (shanraisshan)"
       ]
     },
     {

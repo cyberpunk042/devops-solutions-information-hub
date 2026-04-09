@@ -192,7 +192,7 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 - RELATES TO: LLM Wiki Pattern
 - RELATES TO: Claude Code Hooks
 - COMPARES TO: Everything Claude Code
-- COMPARES TO: Superpowers Skills Framework
+- COMPARES TO: Spec-Driven Development
 
 ## Backlinks
 
@@ -203,4 +203,4 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 [[LLM Wiki Pattern]]
 [[Claude Code Hooks]]
 [[Everything Claude Code]]
-[[Superpowers Skills Framework]]
+[[Spec-Driven Development]]

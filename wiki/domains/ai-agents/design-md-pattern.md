@@ -140,4 +140,5 @@ Cross-referencing `Infrastructure as Code Patterns` and `Agent Orchestration Pat
 [[Claude Code Context Management (context budget considerations)]]
 [[MCP Integration Architecture (Design.md + MCP Stitch server)]]
 [[LLM Wiki Pattern (markdown as AI-native knowledge format)]]
+[[Hooks Lifecycle Architecture]]
 [[Infrastructure as Code Patterns]]

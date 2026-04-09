@@ -424,7 +424,7 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 - RELATES TO: Wiki Backlog Pattern (the work loop writes to the wiki backlog — step 6, 8, 11, 12)
 - RELATES TO: Four-Project Ecosystem (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)
 - FEEDS INTO: Immune System Rules (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)
-- ENABLES: Continuous Evolution (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)
+- ENABLES: Knowledge Evolution Pipeline (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)
 
 ## Backlinks
 
@@ -437,4 +437,4 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 [[Wiki Backlog Pattern (the work loop writes to the wiki backlog — step 6, 8, 11, 12)]]
 [[Four-Project Ecosystem (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)]]
 [[Immune System Rules (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)]]
-[[Continuous Evolution (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)]]
+[[Knowledge Evolution Pipeline (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)]]

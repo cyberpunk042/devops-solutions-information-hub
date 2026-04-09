@@ -169,7 +169,7 @@ The most important architectural question in stage-gating is **enforcement mecha
 
 The practical conclusion: structural enforcement (MCP blocking) is the gold standard but requires infrastructure investment. Protocol enforcement (CLAUDE.md instructions) is the pragmatic baseline that works immediately. The combination produces defense in depth — multiple layers catch what the others miss.
 
-### Relationship to the SFIF Pattern
+### Relationship to the Scaffold → Foundation → Infrastructure → Features
 
 The SFIF (Scaffold → Foundation → Infrastructure → Features) pattern from OpenFleet's PO requirements applies stage-gating at the architectural level, not just the task level. It is not a contradiction of the task-level model — it is the same principle applied recursively. Just as a task cannot be "Implement" until "Document" and "Design" are complete, a system cannot be "Features" until "Scaffold", "Foundation", and "Infrastructure" are in place. Stage-gating composes fractally: stages within tasks, stages within projects, stages within architectures.
 
@@ -207,7 +207,7 @@ Each disease is a case study in what stage gates prevent. The teaching system's 
 - RELATES TO: Scaffold → Foundation → Infrastructure → Features (stage-gating applied at architectural scale)
 - FEEDS INTO: Wiki Backlog Pattern (task frontmatter as state machine is the wiki implementation of stage-gating)
 - FEEDS INTO: Spec-Driven Development (stages enforce spec phase before implementation phase)
-- CONTRADICTS: Continuous Implementation (unstructured iterative coding without phase checkpoints)
+- CONTRADICTS: Task Lifecycle Stage-Gating (unstructured iterative coding without phase checkpoints)
 
 ## Backlinks
 
@@ -220,6 +220,6 @@ Each disease is a case study in what stage gates prevent. The teaching system's 
 [[Scaffold → Foundation → Infrastructure → Features (stage-gating applied at architectural scale)]]
 [[Wiki Backlog Pattern (task frontmatter as state machine is the wiki implementation of stage-gating)]]
 [[Spec-Driven Development (stages enforce spec phase before implementation phase)]]
-[[Continuous Implementation (unstructured iterative coding without phase checkpoints)]]
+[[Task Lifecycle Stage-Gating (unstructured iterative coding without phase checkpoints)]]
 [[Hooks Lifecycle Architecture]]
 [[Per-Role Command Architecture]]

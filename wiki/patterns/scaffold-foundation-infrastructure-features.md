@@ -93,7 +93,7 @@ The traversal order is not always top-down. A system may scaffold all layers bef
 
 ## POC and MVP
 
-**POC (Proof of Concept):** A POC deliberately skips stages. The goal is to prove a concept quickly — not to build correctly. A POC will often scaffold minimally, skip foundation, treat everything as infrastructure, and produce a single feature as proof. POC code is mountain-tier (see Skyscraper-Pyramid-Mountain) and must be rewritten, not extended, when moving to production.
+**POC (Proof of Concept):** A POC deliberately skips stages. The goal is to prove a concept quickly — not to build correctly. A POC will often scaffold minimally, skip foundation, treat everything as infrastructure, and produce a single feature as proof. POC code is mountain-tier (see Skyscraper, Pyramid, Mountain) and must be rewritten, not extended, when moving to production.
 
 **MVP (Minimum Viable Product):** An MVP completes SFIF properly but minimally — at least 3+ proper features on a solid foundation, ready to scale without major structural problems. An MVP is pyramid-tier: pragmatic compromises, but with the right structural bones. Features added after MVP extend the existing SFIF structure rather than fighting it.
 
@@ -146,7 +146,7 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 
 ## Relationships
 
-- RELATES TO: Skyscraper-Pyramid-Mountain
+- RELATES TO: Skyscraper, Pyramid, Mountain
 - BUILDS ON: Progressive Distillation
 - IMPLEMENTED BY: Research Wiki
 - IMPLEMENTED BY: OpenFleet
@@ -159,7 +159,9 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 
 ## Backlinks
 
-[[Skyscraper-Pyramid-Mountain]]
+[[Skyscraper]]
+[[Pyramid]]
+[[Mountain]]
 [[Progressive Distillation]]
 [[Research Wiki]]
 [[OpenFleet]]
