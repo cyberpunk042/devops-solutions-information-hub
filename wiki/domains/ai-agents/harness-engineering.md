@@ -118,6 +118,8 @@ Cross-referencing the `OpenFleet`, `Immune System Rules`, and `Rework Prevention
 [[Hooks Lifecycle Architecture]]
 [[Immune System Rules]]
 [[Infrastructure as Code Patterns]]
+[[Model Guide: MCP + CLI Integration]]
+[[Model: Quality + Failure Prevention]]
 [[Per-Role Command Architecture]]
 [[Plan Execute Review Cycle]]
 [[Rework Prevention]]

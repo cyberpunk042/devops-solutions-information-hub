@@ -127,6 +127,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `WSL2 Development Patterns`
 [[LightRAG]]
 [[MCP Integration Architecture]]
 [[Memory Lifecycle Management]]
+[[Model Guide: LLM Wiki]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Never Synthesize from Descriptions Alone]]
 [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]

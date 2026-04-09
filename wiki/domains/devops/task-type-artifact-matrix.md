@@ -282,3 +282,4 @@ The readiness calculation is always derived from stage completion evidence, neve
 [[Wiki Backlog Pattern (all 7 types appear in wiki backlog; type determines which stages are tracked in frontmatter)]]
 [[Four-Project Ecosystem (all four projects use task types — spike for research, docs for wiki, task/module/epic for features)]]
 [[Immune System Rules (type violations — e.g., code produced during a spike — are detectable diseases)]]
+[[Model Guide: Methodology]]

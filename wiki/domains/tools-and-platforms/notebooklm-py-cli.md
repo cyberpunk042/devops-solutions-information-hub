@@ -166,4 +166,5 @@ Cross-referencing `Research Pipeline Orchestration`: the sync is architecturally
 [[Wiki Event-Driven Automation]]
 [[Claude Code]]
 [[MCP Integration Architecture]]
+[[Model: NotebookLM]]
 [[Research Pipeline Orchestration]]

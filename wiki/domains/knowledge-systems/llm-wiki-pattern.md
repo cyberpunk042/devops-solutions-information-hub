@@ -155,6 +155,7 @@ Confirmed by cross-referencing Claude Code Best Practices and Harness Engineerin
 [[Lesson: Automation Is the Bridge Between Knowledge and Action]]
 [[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
 [[Lesson: Schema Is the Real Product — Not the Content]]
+[[Model Guide: LLM Wiki]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[NotebookLM Skills]]
 [[NotebookLM as Grounded Research Engine Not Just Note Storage]]

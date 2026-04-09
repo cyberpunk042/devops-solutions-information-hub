@@ -115,6 +115,7 @@ The emerging practitioner consensus captured across multiple independent sources
 [[default assumption that MCP is the standard tool integration pattern]]
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Context-Aware Tool Loading]]
+[[Model Guide: MCP + CLI Integration]]
 [[Pattern: Skills + Cli]]
 [[Pattern: Skills + Mcp]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]

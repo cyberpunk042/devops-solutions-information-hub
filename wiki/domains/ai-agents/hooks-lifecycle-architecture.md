@@ -147,3 +147,5 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 [[Per-Role Command Architecture]]
 [[Design.md Pattern]]
 [[Agent Orchestration Patterns]]
+[[Model Guide: Claude Code]]
+[[Model Guide: Skills + Commands + Hooks]]

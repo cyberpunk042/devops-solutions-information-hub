@@ -292,5 +292,6 @@ The practical recommendation: start with protocol enforcement (CLAUDE.md MUST/MU
 [[Four-Project Ecosystem (all four projects in the ecosystem apply this methodology)]]
 [[Immune System Rules (violations of stage hard boundaries are the diseases the immune system detects)]]
 [[Vibe Coding (unstructured generation without stage boundaries — the failure mode this methodology exists to prevent)]]
+[[Model Guide: Methodology]]
 [[Never Skip Stages Even When Told to Continue]]
 [[The Agent Must Practice What It Documents]]

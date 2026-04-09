@@ -209,5 +209,7 @@ Cross-referencing `OpenArms` and `MCP Integration Architecture`: yes — both pa
 [[Immune System Rules]]
 [[Infrastructure as Code Patterns]]
 [[Ecosystem Integration Interfaces]]
+[[Model Guide: Ecosystem Architecture]]
+[[Model: SFIF + Architecture]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skyscraper, Pyramid, Mountain]]

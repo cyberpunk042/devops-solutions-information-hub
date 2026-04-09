@@ -159,6 +159,8 @@ Cross-referencing `Zettelkasten Methodology`, `Wiki Knowledge Graph`, and `LLM K
 [[Lesson: Automation Is the Bridge Between Knowledge and Action]]
 [[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
 [[Lesson: Schema Is the Real Product — Not the Content]]
+[[Model Guide: LLM Wiki]]
+[[Model: Knowledge Evolution]]
 [[Never Skip Stages Even When Told to Continue]]
 [[PARA Methodology]]
 [[Progressive Distillation]]

@@ -149,6 +149,7 @@ Cross-referencing `Agent Orchestration Patterns`: yes, with explicit scope bound
 [[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
 [[Lesson: Automation Is the Bridge Between Knowledge and Action]]
 [[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[Model: Automation + Pipelines]]
 [[Multi-Channel AI Agent Access]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[OpenArms]]
