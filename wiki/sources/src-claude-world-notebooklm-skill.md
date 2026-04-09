@@ -48,9 +48,14 @@ The video generation workflow (combining NotebookLM slides and podcasts into You
 
 ## Open Questions
 
-- How reliable is the notebooklm-py browser automation for long-running batch workflows?
-- What are the rate limits when generating multiple artifact types from a single notebook?
-- How does the trend-pulse integration select which trending topics are worth researching?
+- What are the rate limits when generating multiple artifact types from a single notebook? (Requires: empirical measurement under sustained load; the notebooklm-py CLI page documents `--retry` with exponential backoff as the mitigation but specifies no concrete per-artifact or per-session rate limit thresholds)
+- How does the trend-pulse integration select which trending topics are worth researching? (Requires: external documentation on trend-pulse's topic scoring and filtering logic; the AI-Driven Content Pipeline page notes it discovers from "7 sources" but the selection criteria are not covered in any existing wiki page)
+
+### Answered Open Questions
+
+**Q: How reliable is the notebooklm-py browser automation for long-running batch workflows?**
+
+Cross-referencing `notebooklm-py CLI` and `AI-Driven Content Pipeline`: the `notebooklm-py CLI` page documents the reliability risks directly: "No official API: The entire package relies on browser automation and undocumented Google APIs. A NotebookLM web UI redesign could break everything. This is the single biggest risk for production pipelines." It further identifies three specific failure modes for long-running batch workflows: (1) Rate limiting — "Heavy automated usage triggers Google's rate limits. The `--retry` flag with exponential backoff helps, but sustained high-volume pipelines need throttling"; (2) Authentication friction — "CI/CD environments need the `NOTEBOOKLM_AUTH_JSON` environment variable workaround"; (3) Session state — "Browser automation sessions can expire, requiring re-authentication. Long-running daemons need session refresh logic." The `AI-Driven Content Pipeline` page documents that failure handling operates at the granularity of individual artifact types (each is a separate CLI invocation), meaning a single artifact failure does not halt a batch — but session expiry mid-batch would. The `NotebookLM Skills` page confirms this is a shared vulnerability between both NotebookLM skill implementations: "Both projects face the same fundamental risk: dependency on browser automation for accessing NotebookLM. Neither uses an official API, making both vulnerable to changes in NotebookLM's web interface." For claude-world specifically, the async Python API's concurrent operations (`NotebookLMClient`) add session management complexity absent from single-query tools. Reliability for batch workflows is adequate for scheduled daily runs (as demonstrated by the presenter) but requires explicit session refresh logic and rate-limit throttling for production pipelines.
 
 ## Relationships
 

@@ -91,10 +91,16 @@ Cross-referencing the LLM Wiki Pattern and Knowledge Evolution Pipeline pages: t
 ## Open Questions
 
 - Has hybrid search been empirically benchmarked against pure wiki navigation at the 200-500 page transition zone? (Requires: empirical testing or external research; the wiki only documents the theoretical boundary at ~200 pages)
-- Can the wiki index itself be embedded and searched via vectors as a first pass, with link-following as a second pass? (Partially answered below from existing knowledge; implementation details require external research on embedding pipeline setup)
-- At what scale does the token cost of wiki navigation exceed the infrastructure cost of a RAG pipeline? (Partially answered below; precise crossover point requires empirical measurement with real query frequency data)
 
 ### Answered Open Questions
+
+**Q: Can the wiki index itself be embedded and searched via vectors as a first pass, with link-following as a second pass?**
+
+Cross-referencing `Knowledge Evolution Pipeline` and `Wiki Knowledge Graph`: yes, and the architecture is already described in this page's own Deep Analysis section. The `Knowledge Evolution Pipeline` page documents that the ingestion pipeline produces "a structured index of all pages with titles, types, domains, and relationship summaries" — exactly the kind of compact, semantically dense document that embeds well. The `Wiki Knowledge Graph` confirms the hybrid search vision: "BM25 for keyword matching, vector search for semantic similarity, and graph traversal for structural connections. Fused with reciprocal rank fusion, each stream catches things the others miss." The wiki index (BM25/vector pass) plus LightRAG link-following (graph traversal pass) is precisely the LLM Wiki v2 three-stream hybrid architecture. The index file is small enough to embed cheaply and would serve as a first-pass filter. For implementation: `wiki/manifest.json` is the machine-readable index; embedding it and running vector search before LightRAG graph traversal is technically feasible with existing tooling. Implementation details for embedding pipeline setup require external research beyond current wiki pages.
+
+**Q: At what scale does the token cost of wiki navigation exceed the infrastructure cost of a RAG pipeline?**
+
+Cross-referencing `LightRAG` and `Knowledge Evolution Pipeline`: as documented in this page's Deep Analysis section, the practical answer from existing wiki knowledge is: the token cost of navigation scales with O(pages read per query × turns per session), while RAG infrastructure cost is roughly fixed (embedding model hosting + vector DB). The `Knowledge Evolution Pipeline` page confirms that 200 mature pages may have higher effective information density than 200 seed pages, meaning the ceiling shifts with maturity. The `Wiki Knowledge Graph` page documents the architectural response to scale: hierarchical sub-indexes (domain `_index.md` files) extend the ceiling to ~1,000+ pages, and LightRAG graph traversal extends it indefinitely. For a personal wiki queried a few times per day, wiki navigation remains cheaper well past 200 pages. For high-frequency automated querying (e.g., an agent reading the wiki on every task), RAG amortizes faster. The precise crossover point requires empirical measurement with real query frequency data not yet available in existing wiki pages.
 
 **Q: What is the relationship between wiki maturity and the effective scale ceiling — do more evolved (canonical) pages push the ceiling higher?**
 

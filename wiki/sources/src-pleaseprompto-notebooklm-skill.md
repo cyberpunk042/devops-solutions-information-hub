@@ -52,10 +52,18 @@ The library management feature adds a layer of intelligence absent from simpler 
 
 ## Open Questions
 
-- How does the stateless model perform for complex multi-step research that benefits from conversational context?
-- What are the practical limits of the library routing mechanism when a user has dozens of notebooks?
-- How does Google's detection of automated browser usage affect long-term reliability?
-- What is the performance overhead of opening and closing a Chrome instance for every question?
+- How does Google's detection of automated browser usage affect long-term reliability? (Requires: empirical longitudinal data from production deployments; the notebooklm-py CLI page documents "No official API: entire package relies on browser automation" as the single biggest risk, and PleasePrompto uses stealth techniques, but no wiki page quantifies actual detection rates over time)
+- What is the performance overhead of opening and closing a Chrome instance for every question? (Requires: empirical timing data from real usage; no existing wiki page covers per-query browser startup latency for Patchright-based automation)
+
+### Answered Open Questions
+
+**Q: How does the stateless model perform for complex multi-step research that benefits from conversational context?**
+
+Cross-referencing `NotebookLM Skills` and `notebooklm-py CLI`: the `NotebookLM Skills` page documents the tradeoff explicitly in its Key Insights section: "Stateful vs. stateless sessions: claude-world maintains notebook context across operations within a pipeline run. PleasePrompto uses a stateless model where each question opens a fresh browser, asks, retrieves, and closes. The stateless approach trades conversational context for reliability and simplicity." The `NotebookLM Skills` page further documents the follow-up prompting pattern as the architectural workaround: "PleasePrompto compensates for its stateless model by appending 'Is that ALL you need to know?' to each answer, prompting Claude to ask follow-up questions. This shifts multi-turn research from the browser session to Claude's conversation context." For complex multi-step research, this means the stateless model is adequate as long as Claude's own conversation context accumulates the research findings across multiple independent queries — the browser session carries no state, but Claude's context window does. The `notebooklm-py CLI` page confirms that session state management is a real risk for long-running operations ("Browser automation sessions can expire, requiring re-authentication"), which reinforces the stateless design as a reliability choice at the cost of conversational continuity within NotebookLM itself.
+
+**Q: What are the practical limits of the library routing mechanism when a user has dozens of notebooks?**
+
+Cross-referencing `NotebookLM Skills`: the `NotebookLM Skills` page addresses this directly in its Answered section: "For PleasePrompto's library routing, the practical limit is not determined by source count... but by the number of distinct notebooks in the library index. Reliability degrades when the metadata tags are ambiguous — when two notebooks have overlapping topic coverage and Claude must select between them." The page further documents the mitigation: "The `notebooklm profile create/switch` commands support multi-profile isolation, which is the recommended architectural response to notebook sprawl." The `notebooklm-py CLI` page confirms that NotebookLM has a 300-source limit per notebook, and large-scale research requires multi-notebook architectures. The `NotebookLM Skills` page notes that "the `src-notebooklm-claude-code-workflow` synthesis recommends configuring NotebookLM's response format... to reduce per-query token cost, which also helps library routing by keeping notebook descriptions compact and differentiable." Practical guidance from wiki cross-references: the routing degrades at the point where notebook topic descriptions overlap significantly — the solution is to make descriptions as distinct as possible and use profile isolation to partition sprawl by domain.
 
 ## Relationships
 

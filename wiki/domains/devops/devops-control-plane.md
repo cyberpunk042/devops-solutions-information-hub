@@ -63,9 +63,17 @@ The devops-control-plane occupies a foundational role:
 
 ## Open Questions
 
-- Should the control-plane become the infrastructure management layer for all ecosystem projects, or remain standalone?
-- Can the vault system be exposed as an MCP server for centralized credential management?
-- How does the control-plane's project detection compare to OpenFleet's context assembly for understanding project state?
+- How does the control-plane's project detection compare to OpenFleet's context assembly for understanding project state? (Requires: direct inspection of OpenFleet's navigator/context assembly code and devops-control-plane's detection engine side-by-side; the Four-Project Ecosystem page documents both exist but does not compare their mechanisms)
+
+### Answered Open Questions
+
+**Q: Should the control-plane become the infrastructure management layer for all ecosystem projects, or remain standalone?**
+
+Cross-referencing `Four-Project Ecosystem` and `Infrastructure as Code Patterns`: the `Four-Project Ecosystem` page is explicit: "Each project has a single primary role: OpenFleet runs the agents. AICP routes inference cheaply. devops-control-plane manages projects and holds operational wisdom. The research wiki synthesizes knowledge. Overlap is minimal by design." The control-plane's role is "unified project management for any software project" — it is general-purpose by design, and the other projects already have their own management mechanisms (OpenFleet has the orchestrator, DSPD has Plane, the wiki has its own tools). The `Four-Project Ecosystem` page further documents the integration map shows the control-plane as a peer node, not a parent layer: its primary export to the ecosystem is the 24 immune system rules → OpenFleet doctor.py and the vault as a potential shared credential store. The `Infrastructure as Code Patterns` page confirms the ecosystem's IaC philosophy: "if a human performs a step manually, that step should be encoded in a file and automated" — but this principle applies within each project, not through a centralized management platform. The answer from cross-referenced wiki knowledge: the control-plane should remain a general-purpose standalone tool, not become a mandatory management layer for all projects. Its value to the ecosystem is as an operational DNA donor (rules → doctor.py) and an optional credential vault, not as a management dependency.
+
+**Q: Can the vault system be exposed as an MCP server for centralized credential management?**
+
+Cross-referencing `Four-Project Ecosystem` and `Immune System Rules`: the `Four-Project Ecosystem` page documents the vault as "Potential centralized credential store for all ecosystem projects — API keys for NotebookLM, Claude, LocalAI, GitHub, Plane" and notes this is "not yet implemented." The page's own Answered Open Questions section establishes: "the vault's technical characteristics make it a suitable centralized store, but the integration requires that all five projects be updated to read credentials via the control-plane's vault API rather than `.env` files — a non-trivial migration." The `Immune System Rules` page notes that AICP's guardrails include path protection against `.env` and `*.key` files, confirming credentials are currently per-project in `.env` files. Exposing the vault as an MCP server is technically feasible: the vault already exposes a Python API (used by the CLI and web interfaces), and the MCP pattern (as documented in the wiki's own 15-tool MCP server) wraps existing functionality as named tools. The specific MCP tools would map to vault operations: `vault_get_secret`, `vault_set_secret`, `vault_list`, `vault_unlock`. The blocker is not technical but operational: the vault requires a master password (PBKDF2-SHA256, 100,000 KDF iterations, auto-lock), and an MCP server exposing vault operations would need a secure unlock mechanism for automated access — a non-trivial security design decision not yet addressed in any existing wiki page.
 
 ## Relationships
 
