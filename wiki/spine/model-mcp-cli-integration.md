@@ -171,7 +171,7 @@ The research wiki's 15-tool MCP server follows these principles: tool names are 
 [[CLI Tools Beat MCP for Token Efficiency]]
 [[Context-Aware Tool Loading]]
 [[Decision: MCP vs CLI for Tool Integration]]
-[[[[Model: Skills]]
+[[Model: Skills]]
 [[Commands]]
 [[and Hooks]]]]
 [[Model: Claude Code]]

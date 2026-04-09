@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-09T22:55:26.501591+00:00",
+  "generated": "2026-04-09T23:01:40.560973+00:00",
   "stats": {
-    "pages": 154,
+    "pages": 156,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1156,
-    "tags_unique": 598,
+    "relationships": 1161,
+    "tags_unique": 602,
     "layers": {
       "3": 5,
       "6": 5,
       "2": 51,
-      "4": 21,
+      "4": 22,
       "5": 11,
       "1": 24,
       "spine": 23
     },
     "maturity": {
-      "growing": 131,
+      "growing": 132,
       "seed": 10
     }
   },
@@ -6700,6 +6700,56 @@
       ]
     },
     {
+      "path": "lessons/models-are-built-in-layers-not-all-at-once.md",
+      "slug": "lessons/models-are-built-in-layers-not-all-at-once",
+      "title": "Models Are Built in Layers, Not All at Once",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "lesson",
+        "failure-lesson",
+        "models",
+        "process",
+        "sfif",
+        "layers",
+        "methodology"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Methodology Framework",
+        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
+        "LLM Wiki Standards \u2014 What Good Looks Like"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Skip Stages Even When Told to Continue"
+        }
+      ]
+    },
+    {
       "path": "lessons/never-skip-stages-even-when-told-to-continue.md",
       "slug": "lessons/never-skip-stages-even-when-told-to-continue",
       "title": "Never Skip Stages Even When Told to Continue",
@@ -7055,6 +7105,32 @@
         "methodology",
         "quality",
         "depth"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-04-09-directive-record-process-skills-supermodel.md",
+      "slug": "log/2026-04-09-directive-record-process-skills-supermodel",
+      "title": "Record the Process \u2014 Skills, Super-Model, Preach by Example",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "process",
+        "skills",
+        "super-model",
+        "standards",
+        "examples",
+        "methodology"
       ],
       "sources": [],
       "layer": "",
@@ -10944,8 +11020,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 40,
-      "relationship_count": 335
+      "page_count": 41,
+      "relationship_count": 340
     },
     "ai-agents": {
       "page_count": 34,
@@ -10972,7 +11048,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 8,
+      "page_count": 9,
       "relationship_count": 0
     }
   },
@@ -11222,6 +11298,7 @@
       "lessons/cli-tools-beat-mcp-for-token-efficiency",
       "lessons/lesson-convergence-on-claude-code-skills",
       "lessons/lesson-convergence-on-src-kepano-obsidian-skills",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
       "patterns/context-aware-tool-loading",
       "sources/src-axton-obsidian-visual-skills",
       "sources/src-claude-notebooklm-content-team",
@@ -11882,11 +11959,13 @@
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
       "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/models-are-built-in-layers-not-all-at-once",
       "lessons/never-skip-stages-even-when-told-to-continue",
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
       "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
       "spine/adoption-guide",
       "spine/model-methodology",
       "spine/model-quality-failure-prevention"
@@ -11985,6 +12064,7 @@
     "sfif": [
       "domains/ai-agents/task-lifecycle-stage-gating",
       "domains/cross-domain/methodology-framework",
+      "lessons/models-are-built-in-layers-not-all-at-once",
       "patterns/scaffold-foundation-infrastructure-features",
       "spine/model-sfif-architecture"
     ],
@@ -12794,6 +12874,7 @@
     ],
     "failure-lesson": [
       "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/models-are-built-in-layers-not-all-at-once",
       "lessons/never-skip-stages-even-when-told-to-continue",
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
@@ -12874,6 +12955,7 @@
     ],
     "standards": [
       "lessons/lesson-convergence-on-src-kepano-obsidian-skills",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
       "spine/adoption-guide",
       "spine/model-llm-wiki-standards",
       "spine/model-llm-wiki"
@@ -12907,6 +12989,22 @@
     ],
     "self-referential": [
       "lessons/lesson-hub-\u2014-knowledge-systems"
+    ],
+    "lesson": [
+      "lessons/models-are-built-in-layers-not-all-at-once"
+    ],
+    "models": [
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-model-quality-links-schema",
+      "log/2026-04-09-directive-models-are-not-documents"
+    ],
+    "process": [
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "log/2026-04-09-directive-record-process-skills-supermodel"
+    ],
+    "layers": [
+      "lessons/models-are-built-in-layers-not-all-at-once"
     ],
     "stage-gates": [
       "lessons/never-skip-stages-even-when-told-to-continue",
@@ -12960,6 +13058,7 @@
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
       "log/2026-04-09-directive-stop-claiming-readiness",
       "log/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-09-directive-validate-second-brain-readiness",
@@ -12970,15 +13069,11 @@
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
       "log/2026-04-09-directive-stop-claiming-readiness",
       "log/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-04-09-ingest-awesome-design-md"
-    ],
-    "models": [
-      "log/2026-04-09-directive-bottom-up-model-completion",
-      "log/2026-04-09-directive-model-quality-links-schema",
-      "log/2026-04-09-directive-models-are-not-documents"
     ],
     "completeness": [
       "log/2026-04-09-directive-bottom-up-model-completion"
@@ -13000,6 +13095,13 @@
     ],
     "wikilinks": [
       "log/2026-04-09-directive-models-are-not-documents"
+    ],
+    "super-model": [
+      "log/2026-04-09-directive-record-process-skills-supermodel"
+    ],
+    "examples": [
+      "log/2026-04-09-directive-record-process-skills-supermodel",
+      "spine/model-llm-wiki-standards"
     ],
     "honesty": [
       "log/2026-04-09-directive-stop-claiming-readiness",
@@ -13426,9 +13528,6 @@
     ],
     "evolution-pipeline": [
       "spine/model-knowledge-evolution"
-    ],
-    "examples": [
-      "spine/model-llm-wiki-standards"
     ],
     "wiki-model": [
       "spine/model-llm-wiki-standards"

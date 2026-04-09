@@ -303,6 +303,31 @@ This separation between definition and instance is what makes the framework sust
 - Can the framework itself be described as a model? Is there a meta-meta level where the framework definition process follows its own stages (Document the framework → Design the vocabulary → Scaffold the configuration schema → Implement the selection engine → Test against real projects)?
 - How should model versioning work? When a project evolves its methodology.yaml, should there be a compatibility check against the framework version?
 
+### Model Registry
+
+The Methodology Framework is the super-model. These are the named sub-models it governs:
+
+| Model | Lines | What it defines |
+|-------|-------|----------------|
+| [[Model: LLM Wiki]] | 444 | The wiki structure, schema, operations, evolution |
+| [[Model: Methodology]] | 249 | The stage-gate system, task types, composability |
+| [[Model: Claude Code]] | 230 | The agent platform, extensions, context discipline |
+| [[Model: Skills, Commands, and Hooks]] | 229 | The extension hierarchy, hooks lifecycle |
+| [[Model: Quality and Failure Prevention]] | 269 | The 3-layer defense, failure lessons, harness engineering |
+| [[Model: MCP and CLI Integration]] | 180 | The two integration strategies, decision framework |
+| [[Model: Ecosystem Architecture]] | 179 | The 5-project ecosystem, integration interfaces |
+| [[Model: Knowledge Evolution]] | 185 | The evolution pipeline, maturity lifecycle |
+| [[Model: Design.md and IaC]] | 174 | Markdown-as-AI-config, companion file ecosystem |
+| [[Model: SFIF and Architecture]] | 170 | The 4-stage build lifecycle, quality tiers |
+| [[Model: Second Brain]] | 163 | PKM theory, PARA + Zettelkasten, Obsidian |
+| [[Model: Automation and Pipelines]] | 144 | Pipeline chains, event-driven automation |
+| [[Model: NotebookLM]] | 172 | Grounded research engine, content pipeline |
+| [[Model: Local AI ($0 Target)]] | 147 | AICP routing, local inference, $0 target |
+
+Quality standard: [[LLM Wiki Standards — What Good Looks Like]]
+
+When adding a new model: create the page via the model-builder skill (`/build-model`), then add it to this registry.
+
 ## Relationships
 
 - CONTAINS: [[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)
@@ -323,26 +348,27 @@ This separation between definition and instance is what makes the framework sust
 
 ## Backlinks
 
-[[[[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)]]
-[[[[Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)]]
-[[[[Execution Modes and End Conditions]] (execution modes are model parameters)]]
-[[[[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the project-level model)]]
-[[[[Spec-Driven Development]] (SDD is the execution track's methodology model)]]
-[[[[Skyscraper]]
+[[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)]]
+[[Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)]]
+[[Execution Modes and End Conditions]] (execution modes are model parameters)]]
+[[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the project-level model)]]
+[[Spec-Driven Development]] (SDD is the execution track's methodology model)]]
+[[Skyscraper]]
 [[Pyramid]]
 [[Mountain]] (the quality dimension of model execution)]]
-[[[[Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)]]
-[[[[Backlog Hierarchy Rules]] (the PM track model that structures work items)]]
-[[[[LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)]]
-[[[[Second Brain Architecture]] (the knowledge track operates within the second brain structure)]]
-[[[[Progressive Distillation]] (maturity progression is a model within the knowledge track)]]
-[[[[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)]]
-[[[[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)]]
+[[Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)]]
+[[Backlog Hierarchy Rules]] (the PM track model that structures work items)]]
+[[LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)]]
+[[Second Brain Architecture]] (the knowledge track operates within the second brain structure)]]
+[[Progressive Distillation]] (maturity progression is a model within the knowledge track)]]
+[[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)]]
+[[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)]]
 [[Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)]]
-[[[[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]
+[[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Methodology]]
+[[Models Are Built in Layers, Not All at Once]]
 [[Never Skip Stages Even When Told to Continue]]
 [[The Agent Must Practice What It Documents]]
