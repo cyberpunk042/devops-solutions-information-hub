@@ -1,22 +1,21 @@
 {
-  "generated": "2026-04-09T20:40:14.221434+00:00",
+  "generated": "2026-04-09T20:41:27.882348+00:00",
   "stats": {
-    "pages": 130,
+    "pages": 125,
     "domains": 8,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 977,
+    "relationships": 967,
     "tags_unique": 559,
     "layers": {
       "6": 5,
       "2": 2,
       "4": 21,
-      "5": 11,
+      "5": 6,
       "spine": 7
     },
     "maturity": {
-      "growing": 45,
-      "seed": 7
+      "growing": 47
     }
   },
   "pages": [
@@ -1808,7 +1807,7 @@
         }
       ],
       "layer": 2,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [],
       "relationships": [
         {
@@ -2585,7 +2584,7 @@
         }
       ],
       "layer": "",
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [],
       "relationships": [
         {
@@ -7139,151 +7138,6 @@
       ]
     },
     {
-      "path": "patterns/pattern-skills-+-claude-code.md",
-      "slug": "patterns/pattern-skills-+-claude-code",
-      "title": "Pattern: Skills + Claude-Code",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "Claude Code",
-        "Claude Code Best Practices"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Claude Code"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Claude Code Best Practices"
-        }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-cli.md",
-      "slug": "patterns/pattern-skills-+-cli",
-      "title": "Pattern: Skills + Cli",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Context-Aware Tool Loading"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "CLI Tools Beat MCP for Token Efficiency"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Context-Aware Tool Loading"
-        }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-mcp.md",
-      "slug": "patterns/pattern-skills-+-mcp",
-      "title": "Pattern: Skills + Mcp",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Claude Code"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "CLI Tools Beat MCP for Token Efficiency"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Claude Code"
-        }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-notebooklm.md",
-      "slug": "patterns/pattern-skills-+-notebooklm",
-      "title": "Pattern: Skills + Notebooklm",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "Context-Aware Tool Loading",
-        "NotebookLM Skills"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Context-Aware Tool Loading"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "NotebookLM Skills"
-        }
-      ]
-    },
-    {
-      "path": "patterns/pattern-skills-+-obsidian.md",
-      "slug": "patterns/pattern-skills-+-obsidian",
-      "title": "Pattern: Skills + Obsidian",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-08",
-      "updated": "2026-04-08",
-      "tags": [],
-      "sources": [],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "Obsidian Skills Ecosystem",
-        "Skills Architecture Patterns"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Obsidian Skills Ecosystem"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Skills Architecture Patterns"
-        }
-      ]
-    },
-    {
       "path": "patterns/plan-execute-review-cycle.md",
       "slug": "patterns/plan-execute-review-cycle",
       "title": "Plan Execute Review Cycle",
@@ -9389,8 +9243,8 @@
   ],
   "domains": {
     "cross-domain": {
-      "page_count": 24,
-      "relationship_count": 167
+      "page_count": 19,
+      "relationship_count": 157
     },
     "ai-agents": {
       "page_count": 34,

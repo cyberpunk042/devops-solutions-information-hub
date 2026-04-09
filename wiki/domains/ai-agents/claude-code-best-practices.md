@@ -123,7 +123,6 @@ Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Ha
 [[Harness Engineering]]
 [[Hooks Lifecycle Architecture]]
 [[Infrastructure as Code Patterns]]
-[[Pattern: Skills + Claude-Code]]
 [[Per-Role Command Architecture]]
 [[Plan Execute Review Cycle]]
 [[Rework Prevention]]

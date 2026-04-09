@@ -7,7 +7,7 @@ confidence: medium
 created: 2026-04-09
 updated: 2026-04-09
 layer: 2
-maturity: seed
+maturity: growing
 sources:
   - id: src-claude-slash-commands
     type: github-repo
