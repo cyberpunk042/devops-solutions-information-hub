@@ -131,41 +131,24 @@ Cross-referencing `Zettelkasten Methodology`, `Wiki Knowledge Graph`, and `LLM K
 
 ## Relationships
 
-- ENABLES: Second Brain Architecture
-- IMPLEMENTS: Memory Lifecycle Management
-- BUILDS ON: Wiki Ingestion Pipeline
-- BUILDS ON: LLM Wiki Pattern
-- FEEDS INTO: Wiki Knowledge Graph
-- RELATES TO: Research Pipeline Orchestration
-- RELATES TO: Obsidian Knowledge Vault
-- RELATES TO: AICP
-- COMPARES TO: LLM Wiki vs RAG
+- ENABLES: [[Second Brain Architecture]]
+- IMPLEMENTS: [[Memory Lifecycle Management]]
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[LLM Wiki Pattern]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[AICP]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[Memory Lifecycle Management]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[Research Pipeline Orchestration]]
-[[Obsidian Knowledge Vault]]
-[[AICP]]
-[[LLM Wiki vs RAG]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Cross-Domain Patterns]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Model Guide: LLM Wiki]]
-[[Model: Knowledge Evolution]]
-[[Never Skip Stages Even When Told to Continue]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Skyscraper, Pyramid, Mountain]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
-[[Zettelkasten Methodology]]
+[[[[Second Brain Architecture]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[AICP]]]]
+[[[[LLM Wiki vs RAG]]]]

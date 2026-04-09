@@ -110,26 +110,26 @@ Avoid or over-engineering Deterministic Shell, LLM Core when:
 
 ## Relationships
 
-- DERIVED FROM: OpenFleet
-- DERIVED FROM: Harness Engineering
-- DERIVED FROM: AICP
-- RELATES TO: Plan Execute Review Cycle
-- RELATES TO: Immune System Rules
-- RELATES TO: Research Pipeline Orchestration
-- ENABLES: Infrastructure as Code Patterns
-- RELATES TO: Agent Orchestration Patterns
-- BUILDS ON: Claude Code Best Practices
-- FEEDS INTO: Gateway-Centric Routing
+- DERIVED FROM: [[OpenFleet]]
+- DERIVED FROM: [[Harness Engineering]]
+- DERIVED FROM: [[AICP]]
+- RELATES TO: [[Plan Execute Review Cycle]]
+- RELATES TO: [[Immune System Rules]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- ENABLES: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[Agent Orchestration Patterns]]
+- BUILDS ON: [[Claude Code Best Practices]]
+- FEEDS INTO: [[Gateway-Centric Routing]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Harness Engineering]]
-[[AICP]]
-[[Plan Execute Review Cycle]]
-[[Immune System Rules]]
-[[Research Pipeline Orchestration]]
-[[Infrastructure as Code Patterns]]
-[[Agent Orchestration Patterns]]
-[[Claude Code Best Practices]]
-[[Gateway-Centric Routing]]
+[[[[OpenFleet]]]]
+[[[[Harness Engineering]]]]
+[[[[AICP]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Immune System Rules]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Infrastructure as Code Patterns]]]]
+[[[[Agent Orchestration Patterns]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Gateway-Centric Routing]]]]

@@ -67,21 +67,21 @@ The automation domain's connectivity pattern confirms its bridge role. Research 
 
 ## Relationships
 
-- DERIVED FROM: Research Pipeline Orchestration
-- DERIVED FROM: Wiki Event-Driven Automation
-- DERIVED FROM: MCP Integration Architecture
-- RELATES TO: Research Pipeline Orchestration
-- RELATES TO: Wiki Event-Driven Automation
-- RELATES TO: MCP Integration Architecture
-- FEEDS INTO: Knowledge Evolution Pipeline
-- BUILDS ON: Agent Orchestration Patterns
-- RELATES TO: LLM Wiki Pattern
+- DERIVED FROM: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[Wiki Event-Driven Automation]]
+- DERIVED FROM: [[MCP Integration Architecture]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Wiki Event-Driven Automation]]
+- RELATES TO: [[MCP Integration Architecture]]
+- FEEDS INTO: [[Knowledge Evolution Pipeline]]
+- BUILDS ON: [[Agent Orchestration Patterns]]
+- RELATES TO: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[MCP Integration Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Agent Orchestration Patterns]]
-[[LLM Wiki Pattern]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Agent Orchestration Patterns]]]]
+[[[[LLM Wiki Pattern]]]]

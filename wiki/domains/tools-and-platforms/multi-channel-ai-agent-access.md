@@ -127,21 +127,20 @@ Cross-referencing `OpenArms` and `OpenFleet`: both pages document the relevant i
 
 ## Relationships
 
-- ENABLES: OpenArms
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: Claude Code Skills
-- RELATES TO: OpenFleet
-- RELATES TO: AICP
-- BUILDS ON: Agent Orchestration Patterns
-- RELATES TO: Research Pipeline Orchestration
+- ENABLES: [[OpenArms]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[AICP]]
+- BUILDS ON: [[Agent Orchestration Patterns]]
+- RELATES TO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[OpenArms]]
-[[MCP Integration Architecture]]
-[[Claude Code Skills]]
-[[OpenFleet]]
-[[AICP]]
-[[Agent Orchestration Patterns]]
-[[Research Pipeline Orchestration]]
-[[Gateway-Centric Routing]]
+[[[[OpenArms]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Claude Code Skills]]]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]
+[[[[Agent Orchestration Patterns]]]]
+[[[[Research Pipeline Orchestration]]]]

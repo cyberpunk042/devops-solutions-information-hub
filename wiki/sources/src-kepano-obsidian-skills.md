@@ -66,16 +66,15 @@ Cross-referencing `Skills Architecture Patterns` and `Harness Engineering`: the 
 ## Relationships
 
 - DERIVED FROM: src-kepano-obsidian-skills
-- FEEDS INTO: Obsidian Skills Ecosystem
-- EXTENDS: Claude Code Skills
-- RELATES TO: Obsidian Knowledge Vault
-- IMPLEMENTS: LLM Wiki Pattern
+- FEEDS INTO: [[Obsidian Skills Ecosystem]]
+- EXTENDS: [[Claude Code Skills]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- IMPLEMENTS: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
 [[src-kepano-obsidian-skills]]
-[[Obsidian Skills Ecosystem]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
-[[LLM Wiki Pattern]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[Claude Code Skills]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[LLM Wiki Pattern]]]]

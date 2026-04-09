@@ -72,28 +72,25 @@ From the LLM Wiki Pattern on the compounding mechanic: "Filing answers back into
 
 ## Relationships
 
-- DERIVED FROM: Wiki Ingestion Pipeline
-- DERIVED FROM: Research Pipeline Orchestration
-- BUILDS ON: LLM Wiki Pattern
-- ENABLES: LLM Knowledge Linting
-- ENABLES: Wiki Knowledge Graph
-- ENABLES: Research Pipeline Orchestration
-- RELATES TO: Wiki Event-Driven Automation
-- RELATES TO: Memory Lifecycle Management
+- DERIVED FROM: [[Wiki Ingestion Pipeline]]
+- DERIVED FROM: [[Research Pipeline Orchestration]]
+- BUILDS ON: [[LLM Wiki Pattern]]
+- ENABLES: [[LLM Knowledge Linting]]
+- ENABLES: [[Wiki Knowledge Graph]]
+- ENABLES: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Wiki Event-Driven Automation]]
+- RELATES TO: [[Memory Lifecycle Management]]
 - FEEDS INTO: devops-solutions-research-wiki
-- FEEDS INTO: OpenFleet
+- FEEDS INTO: [[OpenFleet]]
 
 ## Backlinks
 
-[[Wiki Ingestion Pipeline]]
-[[Research Pipeline Orchestration]]
-[[LLM Wiki Pattern]]
-[[LLM Knowledge Linting]]
-[[Wiki Knowledge Graph]]
-[[Wiki Event-Driven Automation]]
-[[Memory Lifecycle Management]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[Memory Lifecycle Management]]]]
 [[devops-solutions-research-wiki]]
-[[OpenFleet]]
-[[Never Synthesize from Descriptions Alone]]
-[[Progressive Distillation]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
+[[[[OpenFleet]]]]

@@ -108,51 +108,25 @@ Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orches
 
 ## Relationships
 
-- IMPLEMENTS: OpenClaw
-- USED BY: AI-Driven Content Pipeline
-- BUILDS ON: LightRAG
-- BUILDS ON: AICP
-- RELATES TO: Plane
-- RELATES TO: devops-control-plane
-- ENABLES: Claude Code Skills
-- RELATES TO: LLM Wiki Pattern
-- FEEDS INTO: Wiki Knowledge Graph
+- IMPLEMENTS: [[OpenClaw]]
+- USED BY: [[AI-Driven Content Pipeline]]
+- BUILDS ON: [[LightRAG]]
+- BUILDS ON: [[AICP]]
+- RELATES TO: [[Plane]]
+- RELATES TO: [[devops-control-plane]]
+- ENABLES: [[Claude Code Skills]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
 
 ## Backlinks
 
-[[OpenClaw]]
-[[AI-Driven Content Pipeline]]
-[[LightRAG]]
-[[AICP]]
-[[Plane]]
-[[devops-control-plane]]
-[[Claude Code Skills]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[Agent Orchestration Patterns]]
-[[Always Plan Before Executing]]
-[[Claude Code]]
-[[Claude Code Scheduling]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Deterministic Shell, LLM Core]]
+[[[[OpenClaw]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[LightRAG]]]]
+[[[[AICP]]]]
+[[[[Plane]]]]
+[[[[devops-control-plane]]]]
+[[[[Claude Code Skills]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Knowledge Graph]]]]
 [[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Harness Engineering]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Local LLM Quantization]]
-[[MCP Integration Architecture]]
-[[Model Guide: Ecosystem Architecture]]
-[[Multi-Channel AI Agent Access]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[OpenArms]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]

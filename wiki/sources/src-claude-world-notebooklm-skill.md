@@ -84,16 +84,15 @@ Cross-referencing `notebooklm-py CLI` and `AI-Driven Content Pipeline`: the `not
 ## Relationships
 
 - DERIVED FROM: src-claude-world-notebooklm-skill
-- FEEDS INTO: NotebookLM Skills
-- EXTENDS: Claude Code Skills
-- RELATES TO: NotebookLM
+- FEEDS INTO: [[NotebookLM Skills]]
+- EXTENDS: [[Claude Code Skills]]
+- RELATES TO: [[NotebookLM]]
 - COMPARES TO: src-pleaseprompto-notebooklm-skill
 
 ## Backlinks
 
 [[src-claude-world-notebooklm-skill]]
-[[NotebookLM Skills]]
-[[Claude Code Skills]]
-[[NotebookLM]]
+[[[[NotebookLM Skills]]]]
+[[[[Claude Code Skills]]]]
+[[[[NotebookLM]]]]
 [[src-pleaseprompto-notebooklm-skill]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]

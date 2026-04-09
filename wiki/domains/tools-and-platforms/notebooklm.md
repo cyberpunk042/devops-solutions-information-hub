@@ -72,28 +72,19 @@ Cross-referencing `AI-Driven Content Pipeline` and `Agentic Search vs Vector Sea
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team
-- USED BY: AI-Driven Content Pipeline
-- ENABLES: Claude Code Skills
-- RELATES TO: Claude Code Scheduling
-- ENABLES: NotebookLM Skills
-- CONTRASTS WITH: LLM Wiki vs RAG
-- RELATES TO: LLM Wiki Pattern
+- USED BY: [[AI-Driven Content Pipeline]]
+- ENABLES: [[Claude Code Skills]]
+- RELATES TO: [[Claude Code Scheduling]]
+- ENABLES: [[NotebookLM Skills]]
+- CONTRASTS WITH: [[LLM Wiki vs RAG]]
+- RELATES TO: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Skills]]
-[[Claude Code Scheduling]]
-[[NotebookLM Skills]]
-[[LLM Wiki vs RAG]]
-[[LLM Wiki Pattern]]
-[[Agentic Search vs Vector Search]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Model: NotebookLM]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Progressive Distillation]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: PleasePrompto/notebooklm-skill]]
-[[Synthesis: claude-world/notebooklm-skill]]
-[[notebooklm-py CLI]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Scheduling]]]]
+[[[[NotebookLM Skills]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[LLM Wiki Pattern]]]]

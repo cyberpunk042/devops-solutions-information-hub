@@ -133,35 +133,26 @@ Cross-referencing `Zettelkasten Methodology` and the schema (`config/schema.yaml
 
 ## Relationships
 
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: Obsidian Knowledge Vault
-- IMPLEMENTS: Memory Lifecycle Management
-- ENABLES: Knowledge Evolution Pipeline
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- IMPLEMENTS: [[Memory Lifecycle Management]]
+- ENABLES: [[Knowledge Evolution Pipeline]]
 - BUILDS ON: Zettelkasten methodology
 - BUILDS ON: PARA methodology
-- FEEDS INTO: Wiki Knowledge Graph
-- COMPARES TO: LLM Wiki vs RAG
-- USED BY: Research Pipeline Orchestration
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
+- USED BY: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Obsidian Knowledge Vault]]
-[[Memory Lifecycle Management]]
-[[Knowledge Evolution Pipeline]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Knowledge Evolution Pipeline]]]]
 [[Zettelkasten methodology]]
 [[PARA methodology]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
-[[Research Pipeline Orchestration]]
-[[Cross-Domain Patterns]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Model Guide: Second Brain]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
-[[Zettelkasten Methodology]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Research Pipeline Orchestration]]]]

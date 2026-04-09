@@ -94,15 +94,15 @@ Cross-referencing `NotebookLM Skills`: the `NotebookLM Skills` page addresses th
 ## Relationships
 
 - DERIVED FROM: src-pleaseprompto-notebooklm-skill
-- FEEDS INTO: NotebookLM Skills
-- EXTENDS: Claude Code Skills
-- RELATES TO: NotebookLM
+- FEEDS INTO: [[NotebookLM Skills]]
+- EXTENDS: [[Claude Code Skills]]
+- RELATES TO: [[NotebookLM]]
 - COMPARES TO: src-claude-world-notebooklm-skill
 
 ## Backlinks
 
 [[src-pleaseprompto-notebooklm-skill]]
-[[NotebookLM Skills]]
-[[Claude Code Skills]]
-[[NotebookLM]]
+[[[[NotebookLM Skills]]]]
+[[[[Claude Code Skills]]]]
+[[[[NotebookLM]]]]
 [[src-claude-world-notebooklm-skill]]

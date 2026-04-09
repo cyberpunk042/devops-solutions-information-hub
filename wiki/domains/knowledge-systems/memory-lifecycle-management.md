@@ -80,30 +80,21 @@ Cross-referencing `Claude Code Context Management`: that page documents the lost
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
-- EXTENDS: LLM Wiki Pattern
-- ENABLES: LLM Knowledge Linting
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: LLM Wiki vs RAG
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Wiki Knowledge Graph
-- RELATES TO: Wiki Event-Driven Automation
+- EXTENDS: [[LLM Wiki Pattern]]
+- ENABLES: [[LLM Knowledge Linting]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[LLM Wiki vs RAG]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[Wiki Event-Driven Automation]]
 
 ## Backlinks
 
 [[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[LLM Knowledge Linting]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
-[[Claude Code Context Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Event-Driven Automation]]
-[[Agentic Search vs Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[Second Brain Architecture]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Zettelkasten Methodology]]
+[[[[LLM Wiki Pattern]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Wiki Event-Driven Automation]]]]

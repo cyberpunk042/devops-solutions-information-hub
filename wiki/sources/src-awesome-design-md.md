@@ -95,19 +95,18 @@ Developer Tools (14) and AI/ML (12) dominate — these communities are building 
 
 ## Relationships
 
-- EXTENDS: Design.md Pattern (this is the empirical evidence for that concept)
-- RELATES TO: Infrastructure as Code Patterns (DESIGN.md as part of the IaC spectrum)
-- RELATES TO: Skills Architecture Patterns (static design context vs dynamic skill invocation)
-- RELATES TO: Claude Code Best Practices (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)
-- RELATES TO: Context-Aware Tool Loading (DESIGN.md is eager-loaded static context — same tradeoff)
-- FEEDS INTO: Methodology Framework (DESIGN.md as a required artifact in the design stage)
+- EXTENDS: [[Design.md Pattern]] (this is the empirical evidence for that concept)
+- RELATES TO: [[Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)
+- RELATES TO: [[Skills Architecture Patterns]] (static design context vs dynamic skill invocation)
+- RELATES TO: [[Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)
+- RELATES TO: [[Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context — same tradeoff)
+- FEEDS INTO: [[Methodology Framework]] (DESIGN.md as a required artifact in the design stage)
 
 ## Backlinks
 
-[[Design.md Pattern (this is the empirical evidence for that concept)]]
-[[Infrastructure as Code Patterns (DESIGN.md as part of the IaC spectrum)]]
-[[Skills Architecture Patterns (static design context vs dynamic skill invocation)]]
-[[Claude Code Best Practices (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)]]
-[[Context-Aware Tool Loading (DESIGN.md is eager-loaded static context — same tradeoff)]]
-[[Methodology Framework (DESIGN.md as a required artifact in the design stage)]]
-[[Never Synthesize from Descriptions Alone]]
+[[[[Design.md Pattern]] (this is the empirical evidence for that concept)]]
+[[[[Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)]]
+[[[[Skills Architecture Patterns]] (static design context vs dynamic skill invocation)]]
+[[[[Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)]]
+[[[[Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context — same tradeoff)]]
+[[[[Methodology Framework]] (DESIGN.md as a required artifact in the design stage)]]

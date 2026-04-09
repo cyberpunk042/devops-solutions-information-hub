@@ -79,23 +79,17 @@ Cross-referencing `Four-Project Ecosystem` and `Immune System Rules`: the `Four-
 
 ## Relationships
 
-- ENABLES: OpenFleet
-- RELATES TO: AICP
-- RELATES TO: Plane
-- RELATES TO: Claude Code
-- RELATES TO: Wiki Ingestion Pipeline
+- ENABLES: [[OpenFleet]]
+- RELATES TO: [[AICP]]
+- RELATES TO: [[Plane]]
+- RELATES TO: [[Claude Code]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[AICP]]
-[[Plane]]
-[[Claude Code]]
-[[Wiki Ingestion Pipeline]]
-[[Decision: Polling vs Event-Driven Change Detection]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]
+[[[[Plane]]]]
+[[[[Claude Code]]]]
+[[[[Wiki Ingestion Pipeline]]]]
 [[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[OpenArms]]
-[[WSL2 Development Patterns]]

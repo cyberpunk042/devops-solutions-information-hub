@@ -65,21 +65,21 @@ The cross-domain connectivity pattern is visible in the relationship verbs. LLM 
 
 ## Relationships
 
-- DERIVED FROM: LLM Wiki Pattern
-- DERIVED FROM: Second Brain Architecture
-- DERIVED FROM: Knowledge Evolution Pipeline
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Second Brain Architecture
-- RELATES TO: Knowledge Evolution Pipeline
-- FEEDS INTO: Research Pipeline Orchestration
-- FEEDS INTO: Wiki Event-Driven Automation
-- RELATES TO: LLM Wiki vs RAG
+- DERIVED FROM: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[Second Brain Architecture]]
+- DERIVED FROM: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Second Brain Architecture]]
+- RELATES TO: [[Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
+- FEEDS INTO: [[Wiki Event-Driven Automation]]
+- RELATES TO: [[LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[LLM Wiki vs RAG]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Second Brain Architecture]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[LLM Wiki vs RAG]]]]

@@ -267,31 +267,28 @@ The practical recommendation: start with protocol enforcement (CLAUDE.md MUST/MU
 
 ## Relationships
 
-- DERIVED FROM: Task Lifecycle Stage-Gating (this page operationalizes the stage-gating concept for the devops domain)
-- DERIVED FROM: Spec-Driven Development (stages enforce the spec-before-implementation principle)
-- BUILDS ON: Plan Execute Review Cycle (stage gates implement the phase separation that PER describes)
-- IMPLEMENTS: Scaffold → Foundation → Infrastructure → Features (SFIF is the architectural expression of the same staged progression principle)
-- USED BY: Task Type Artifact Matrix (each task type selects a subset of stages based on complexity)
-- USED BY: Backlog Hierarchy Rules (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)
-- USED BY: Execution Modes and End Conditions (execution modes control which stages run and in what order)
-- RELATES TO: Wiki Backlog Pattern (the wiki IS the Document/Design stage artifact system)
-- RELATES TO: Four-Project Ecosystem (all four projects in the ecosystem apply this methodology)
-- FEEDS INTO: Immune System Rules (violations of stage hard boundaries are the diseases the immune system detects)
+- DERIVED FROM: [[Task Lifecycle Stage-Gating]] (this page operationalizes the stage-gating concept for the devops domain)
+- DERIVED FROM: [[Spec-Driven Development]] (stages enforce the spec-before-implementation principle)
+- BUILDS ON: [[Plan Execute Review Cycle]] (stage gates implement the phase separation that PER describes)
+- IMPLEMENTS: [[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the architectural expression of the same staged progression principle)
+- USED BY: [[Task Type Artifact Matrix]] (each task type selects a subset of stages based on complexity)
+- USED BY: [[Backlog Hierarchy Rules]] (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)
+- USED BY: [[Execution Modes and End Conditions]] (execution modes control which stages run and in what order)
+- RELATES TO: [[Wiki Backlog Pattern]] (the wiki IS the Document/Design stage artifact system)
+- RELATES TO: [[Four-Project Ecosystem]] (all four projects in the ecosystem apply this methodology)
+- FEEDS INTO: [[Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)
 - CONTRADICTS: Vibe Coding (unstructured generation without stage boundaries — the failure mode this methodology exists to prevent)
 
 ## Backlinks
 
-[[Task Lifecycle Stage-Gating (this page operationalizes the stage-gating concept for the devops domain)]]
-[[Spec-Driven Development (stages enforce the spec-before-implementation principle)]]
-[[Plan Execute Review Cycle (stage gates implement the phase separation that PER describes)]]
-[[Scaffold → Foundation → Infrastructure → Features (SFIF is the architectural expression of the same staged progression principle)]]
-[[Task Type Artifact Matrix (each task type selects a subset of stages based on complexity)]]
-[[Backlog Hierarchy Rules (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)]]
-[[Execution Modes and End Conditions (execution modes control which stages run and in what order)]]
-[[Wiki Backlog Pattern (the wiki IS the Document/Design stage artifact system)]]
-[[Four-Project Ecosystem (all four projects in the ecosystem apply this methodology)]]
-[[Immune System Rules (violations of stage hard boundaries are the diseases the immune system detects)]]
+[[[[Task Lifecycle Stage-Gating]] (this page operationalizes the stage-gating concept for the devops domain)]]
+[[[[Spec-Driven Development]] (stages enforce the spec-before-implementation principle)]]
+[[[[Plan Execute Review Cycle]] (stage gates implement the phase separation that PER describes)]]
+[[[[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the architectural expression of the same staged progression principle)]]
+[[[[Task Type Artifact Matrix]] (each task type selects a subset of stages based on complexity)]]
+[[[[Backlog Hierarchy Rules]] (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)]]
+[[[[Execution Modes and End Conditions]] (execution modes control which stages run and in what order)]]
+[[[[Wiki Backlog Pattern]] (the wiki IS the Document/Design stage artifact system)]]
+[[[[Four-Project Ecosystem]] (all four projects in the ecosystem apply this methodology)]]
+[[[[Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)]]
 [[Vibe Coding (unstructured generation without stage boundaries — the failure mode this methodology exists to prevent)]]
-[[Model Guide: Methodology]]
-[[Never Skip Stages Even When Told to Continue]]
-[[The Agent Must Practice What It Documents]]

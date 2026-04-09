@@ -74,26 +74,25 @@ From the LLM Wiki Pattern on the Memex lineage: "Karpathy explicitly connects th
 
 ## Relationships
 
-- DERIVED FROM: LLM Wiki Pattern
-- DERIVED FROM: Wiki Ingestion Pipeline
-- COMPARES TO: LLM Wiki vs RAG
-- ENABLES: Wiki Ingestion Pipeline
-- ENABLES: LLM Knowledge Linting
-- ENABLES: Wiki Knowledge Graph
-- RELATES TO: Obsidian Knowledge Vault
-- RELATES TO: Memory Lifecycle Management
+- DERIVED FROM: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[Wiki Ingestion Pipeline]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
+- ENABLES: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[LLM Knowledge Linting]]
+- ENABLES: [[Wiki Knowledge Graph]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[Memory Lifecycle Management]]
 - FEEDS INTO: devops-solutions-research-wiki
-- FEEDS INTO: OpenFleet
+- FEEDS INTO: [[OpenFleet]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
-[[LLM Knowledge Linting]]
-[[Wiki Knowledge Graph]]
-[[Obsidian Knowledge Vault]]
-[[Memory Lifecycle Management]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[Memory Lifecycle Management]]]]
 [[devops-solutions-research-wiki]]
-[[OpenFleet]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[[[OpenFleet]]]]

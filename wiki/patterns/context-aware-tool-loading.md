@@ -101,33 +101,29 @@ This is the documentation layer's application of deferred loading. The alternati
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: Claude Code Accuracy Tips
-- DERIVED FROM: Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens
-- DERIVED FROM: CLI Tools Beat MCP for Token Efficiency
-- DERIVED FROM: Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py
-- EXTENDS: CLI Tools Beat MCP for Token Efficiency
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Claude Code Skills
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: LLM Wiki Pattern
+- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
+- DERIVED FROM: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- DERIVED FROM: [[CLI Tools Beat MCP for Token Efficiency]]
+- DERIVED FROM: [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
+- EXTENDS: [[CLI Tools Beat MCP for Token Efficiency]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[LLM Wiki Pattern]]
 - CONTRADICTS: default assumption that registering all MCP tools at startup is cost-free
-- FEEDS INTO: Research Pipeline Orchestration
-- FEEDS INTO: Wiki Ingestion Pipeline
+- FEEDS INTO: [[Research Pipeline Orchestration]]
+- FEEDS INTO: [[Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[LLM Wiki Pattern]]
+[[[[Synthesis: Claude Code Accuracy Tips]]]]
+[[[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]]]
+[[[[CLI Tools Beat MCP for Token Efficiency]]]]
+[[[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Claude Code Skills]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[LLM Wiki Pattern]]]]
 [[default assumption that registering all MCP tools at startup is cost-free]]
-[[Research Pipeline Orchestration]]
-[[Wiki Ingestion Pipeline]]
-[[Cross-Domain Patterns]]
-[[Hooks Lifecycle Architecture]]
-[[Model Guide: MCP + CLI Integration]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Ingestion Pipeline]]]]

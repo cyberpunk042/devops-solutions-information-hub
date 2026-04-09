@@ -28,29 +28,29 @@ The Design.md + IaC model describes how markdown files placed at the project roo
 
 ### Layer 2 — Core Concepts
 
-1. **Design.md Pattern** (`wiki/domains/ai-agents/design-md-pattern.md`)
+1. **Design.md Pattern** ([[Design.md Pattern]])
    Entry point. Explains the 9-section standard structure with concrete content from Claude's 312-line DESIGN.md: Visual Theme (prose intent + characteristics), Color Palette (16 named colors with hex + role + rationale), Typography (16-role table), Component Styles (5 named button variants with full CSS), Layout Principles (8px base unit, 7-level border-radius scale), Depth & Elevation (5-level system), Do's and Don'ts (10 concrete rules each), Responsive Behavior (5 breakpoints), and the unique Agent Prompt Guide section (ready-to-paste component prompts + 7-rule iteration guide). Key insight: DESIGN.md captures design reasoning (WHY ring shadows over drop shadows), not just design decisions (what hex values to use).
 
-2. **Infrastructure as Code Patterns** (`wiki/domains/devops/infrastructure-as-code-patterns.md`)
+2. **Infrastructure as Code Patterns** ([[Infrastructure as Code Patterns]])
    The broader pattern. Places CLAUDE.md, DESIGN.md, AGENTS.md, SOUL.md, HEARTBEAT.md, config/schema.yaml, stacks/*.yml, .env.example, setup.py, and service templates all on the same IaC spectrum. The core principle: if a system needs to be configured, write a specification file. The executor might be Terraform, systemctl, Claude Code, or a Python validator — specification → execution is the pattern.
 
-3. **Claude Code Best Practices** (`wiki/domains/ai-agents/claude-code-best-practices.md`)
+3. **Claude Code Best Practices** ([[Claude Code Best Practices]])
    CLAUDE.md verbosity tradeoffs: every token in CLAUDE.md costs context budget on every turn. Accuracy degrades at 40% context usage, becomes unreliable at 60%+. Practical guidance: keep always-loaded CLAUDE.md under ~200 lines; put detailed workflows in skills loaded on demand. This wiki's CLAUDE.md (~250+ lines) is at the upper boundary.
 
-4. **Context-Aware Tool Loading** (`wiki/patterns/context-aware-tool-loading.md`)
+4. **Context-Aware Tool Loading** ([[Context-Aware Tool Loading]])
    The two-tier configuration model: static context (CLAUDE.md, DESIGN.md — loaded at session start, always present, always consuming budget) vs dynamic context (skills — loaded when relevant, zero overhead when not invoked). Design.md as static context is only appropriate when UI generation is the primary session task.
 
 ### Layer 4 — Lessons
 
-5. **Skills Architecture Is the Dominant LLM Extension Pattern** (`wiki/lessons/lesson-convergence-on-claude-code-skills.md`)
+5. **Skills Architecture Is the Dominant LLM Extension Pattern** ([[Skills Architecture Is the Dominant LLM Extension Pattern]])
    The distilled lesson: static markdown config (CLAUDE.md) and dynamic skill loading (skills/) form a two-tier IaC stack. The skill system handles the 80% of context that is only needed sometimes — keeping the always-loaded layer lean and accurate.
 
-6. **Infrastructure Must Be Reproducible, Not Manual** (`wiki/lessons/infrastructure-must-be-reproducible-not-manual.md`)
+6. **Infrastructure Must Be Reproducible, Not Manual** ([[Infrastructure Must Be Reproducible, Not Manual]])
    CLAUDE.md, DESIGN.md, and setup.py are only IaC if they are version-controlled and actually executed. Manual setup steps that exist only in developer memory are the anti-pattern this model eliminates.
 
 ### Layer 6 — Decisions
 
-7. **Decision: MCP vs CLI for Tool Integration** (`wiki/decisions/mcp-vs-cli-for-tool-integration.md`)
+7. **Decision: MCP vs CLI for Tool Integration** ([[Decision: MCP vs CLI for Tool Integration]])
    Directly relevant: MCP server schemas load into every session (like an oversized static DESIGN.md). The decision to prefer CLI+Skills for wiki operations is the IaC model applied to tooling selection — load only what is needed, when it is needed.
 
 ## Evidence: The awesome-design-md Corpus
@@ -72,19 +72,18 @@ After completing this path you understand:
 
 ## Relationships
 
-- BUILDS ON: Design.md Pattern
-- BUILDS ON: Infrastructure as Code Patterns
-- RELATES TO: Model: Quality + Failure Prevention
-- RELATES TO: Model: SFIF + Architecture
-- RELATES TO: Model: Automation + Pipelines
-- ENABLES: Claude Code Best Practices
+- BUILDS ON: [[Design.md Pattern]]
+- BUILDS ON: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[Model: Quality + Failure Prevention]]
+- RELATES TO: [[Model: SFIF + Architecture]]
+- RELATES TO: [[Model: Automation + Pipelines]]
+- ENABLES: [[Claude Code Best Practices]]
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[Infrastructure as Code Patterns]]
-[[Model: Quality + Failure Prevention]]
-[[Model: SFIF + Architecture]]
-[[Model: Automation + Pipelines]]
-[[Claude Code Best Practices]]
-[[Model: NotebookLM]]
+[[[[Design.md Pattern]]]]
+[[[[Infrastructure as Code Patterns]]]]
+[[[[Model: Quality + Failure Prevention]]]]
+[[[[Model: SFIF + Architecture]]]]
+[[[[Model: Automation + Pipelines]]]]
+[[[[Claude Code Best Practices]]]]

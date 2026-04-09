@@ -130,21 +130,21 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 
 ## Relationships
 
-- RELATES TO: Scaffold → Foundation → Infrastructure → Features
-- RELATES TO: Progressive Distillation
-- RELATES TO: Deterministic Shell, LLM Core
-- RELATES TO: Four-Project Ecosystem
-- RELATES TO: Plan Execute Review Cycle
-- FEEDS INTO: Infrastructure as Code Patterns
-- RELATES TO: Knowledge Evolution Pipeline
+- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]
+- RELATES TO: [[Progressive Distillation]]
+- RELATES TO: [[Deterministic Shell, LLM Core]]
+- RELATES TO: [[Four-Project Ecosystem]]
+- RELATES TO: [[Plan Execute Review Cycle]]
+- FEEDS INTO: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[Knowledge Evolution Pipeline]]
 
 ## Backlinks
 
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Progressive Distillation]]
-[[Deterministic Shell]]
-[[LLM Core]]
-[[Four-Project Ecosystem]]
-[[Plan Execute Review Cycle]]
-[[Infrastructure as Code Patterns]]
-[[Knowledge Evolution Pipeline]]
+[[[[Scaffold → Foundation → Infrastructure → Features]]]]
+[[[[Progressive Distillation]]]]
+[[[[Deterministic Shell]]
+[[LLM Core]]]]
+[[[[Four-Project Ecosystem]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Infrastructure as Code Patterns]]]]
+[[[[Knowledge Evolution Pipeline]]]]

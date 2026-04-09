@@ -86,17 +86,17 @@ Partially answerable from existing wiki knowledge: structural conflicts (two age
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
-- BUILDS ON: LLM Wiki Pattern
+- BUILDS ON: [[LLM Wiki Pattern]]
 - BUILDS ON: src-karpathy-llm-wiki-idea-file
-- EXTENDS: LLM Knowledge Linting
-- EXTENDS: Wiki Ingestion Pipeline
-- RELATES TO: LLM Wiki vs RAG
+- EXTENDS: [[LLM Knowledge Linting]]
+- EXTENDS: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[LLM Wiki vs RAG]]
 
 ## Backlinks
 
 [[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
+[[[[LLM Wiki Pattern]]]]
 [[src-karpathy-llm-wiki-idea-file]]
-[[LLM Knowledge Linting]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki vs RAG]]]]

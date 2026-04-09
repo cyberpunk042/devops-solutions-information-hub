@@ -45,27 +45,23 @@ A practitioner's guide to 7 techniques for improving Claude Code accuracy, prese
 ## Relationships
 
 - DERIVED FROM: src-claude-code-accuracy-tips
-- EXTENDS: Claude Code Best Practices
-- EXTENDS: Claude Code Context Management
-- RELATES TO: Claude Code Skills
-- RELATES TO: NotebookLM
-- RELATES TO: OpenClaw
-- SUPPORTS: Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens
-- SUPPORTS: CLI Tools Beat MCP for Token Efficiency
-- SUPPORTS: Decision: MCP vs CLI for Tool Integration
+- EXTENDS: [[Claude Code Best Practices]]
+- EXTENDS: [[Claude Code Context Management]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[NotebookLM]]
+- RELATES TO: [[OpenClaw]]
+- SUPPORTS: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- SUPPORTS: [[CLI Tools Beat MCP for Token Efficiency]]
+- SUPPORTS: [[Decision: MCP vs CLI for Tool Integration]]
 
 ## Backlinks
 
 [[src-claude-code-accuracy-tips]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[NotebookLM]]
-[[OpenClaw]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Context-Aware Tool Loading]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Claude Code Skills]]]]
+[[[[NotebookLM]]]]
+[[[[OpenClaw]]]]
+[[[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]]]
+[[[[CLI Tools Beat MCP for Token Efficiency]]]]
+[[[[Decision: MCP vs CLI for Tool Integration]]]]

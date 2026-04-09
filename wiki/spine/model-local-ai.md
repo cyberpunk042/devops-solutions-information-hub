@@ -28,21 +28,21 @@ The Local AI model describes the ecosystem's strategy for reducing Claude API co
 
 ### Layer 2 — Core Concepts
 
-1. **AICP** (`wiki/domains/tools-and-platforms/aicp.md`)
+1. **AICP** ([[AICP]])
    Entry point. Explains the "You → AICP → (LocalAI | Claude Code) → Your Project" architecture. Covers the three permission modes (Think/Edit/Act), backend routing with complexity scoring, the 5-stage LocalAI independence roadmap, circuit breaker per backend (CLOSED → OPEN → HALF_OPEN), 9 operational profiles, and the 11 MCP tools exposed for fleet integration. Stage 1 (LocalAI functional) and Stage 2 (routing implemented) are complete.
 
-2. **Local LLM Quantization** (`wiki/domains/ai-models/local-llm-quantization.md`)
+2. **Local LLM Quantization** ([[Local LLM Quantization]])
    The enabling technology. Explains how MoE architectures (only activating a subset of parameters per token) make large models feasible on consumer hardware. TurboQuant-MLX (44 tok/s for 122B MoE on M4 Max) vs Ollama/GGUF (one-command simplicity). Gemma 4 E4B breakthrough: a 9.6GB model reliably executes multi-step agentic tool calling. Hardware implications: current 8GB VRAM vs target 19GB.
 
-3. **OpenClaw** (`wiki/domains/ai-agents/openclaw.md`)
+3. **OpenClaw** ([[OpenClaw]])
    How LocalAI models are exposed as an OpenAI-compatible endpoint for fleet agents. The Gemma 4 + SearXNG configuration that creates a fully local, private, zero-cost agent runtime.
 
-4. **Gateway-Centric Routing** (`wiki/patterns/gateway-centric-routing.md`)
+4. **Gateway-Centric Routing** ([[Gateway-Centric Routing]])
    The routing pattern that AICP implements. Single ingress point, per-request backend selection, circuit breaker isolation. Generalizes beyond AICP to any multi-backend AI system.
 
 ### Layer 6 — Decisions
 
-5. **Decision: Local Model vs Cloud API for Routine Operations** (`wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md`)
+5. **Decision: Local Model vs Cloud API for Routine Operations** ([[Decision: Local Model vs Cloud API for Routine Operations]])
    The explicit decision: route deterministically-validatable tasks (index updates, manifest regeneration, lint checks, simple summarization) to LocalAI; route tasks requiring novel synthesis, security analysis, or architectural reasoning to Claude. Quality threshold is profile-configurable in AICP, not a single fixed value.
 
 ### Layer 4 — Lessons (partial — hardware-blocked)
@@ -67,20 +67,23 @@ After completing this path you understand:
 
 ## Relationships
 
-- BUILDS ON: AICP
-- BUILDS ON: Local LLM Quantization
-- FEEDS INTO: Model: Automation + Pipelines
-- FEEDS INTO: Model: Quality + Failure Prevention
-- RELATES TO: Model: SFIF + Architecture
-- COMPARES TO: Decision: Local Model vs Cloud API for Routine Operations
+- BUILDS ON: [[AICP]]
+- BUILDS ON: [[Local LLM Quantization]]
+- FEEDS INTO: [[Model: Automation + Pipelines]]
+- FEEDS INTO: [[Model: Quality + Failure Prevention]]
+- RELATES TO: [[Model: SFIF + Architecture]]
+- COMPARES TO: [[Decision: Local Model vs Cloud API for Routine Operations]]
 
 ## Backlinks
 
-[[AICP]]
-[[Local LLM Quantization]]
+[[[[AICP]]]]
+[[[[Local LLM Quantization]]]]
+[[[[Model: Automation + Pipelines]]]]
+[[[[Model: Quality + Failure Prevention]]]]
+[[[[Model: SFIF + Architecture]]]]
+[[[[Decision: Local Model vs Cloud API for Routine Operations]]]]
 [[Model: Automation + Pipelines]]
-[[Model: Quality + Failure Prevention]]
-[[Model: SFIF + Architecture]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
 [[Model: Knowledge Evolution]]
 [[Model: NotebookLM]]
+[[Model: Quality + Failure Prevention]]
+[[Model: SFIF + Architecture]]

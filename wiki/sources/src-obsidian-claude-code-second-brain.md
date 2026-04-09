@@ -78,17 +78,17 @@ Cross-referencing the `WSL2 Development Patterns` page: the page directly addres
 ## Relationships
 
 - DERIVED FROM: src-obsidian-claude-code-second-brain
-- EXTENDS: Obsidian Knowledge Vault
-- EXTENDS: Claude Code Skills
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: AI-Driven Content Pipeline
+- EXTENDS: [[Obsidian Knowledge Vault]]
+- EXTENDS: [[Claude Code Skills]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[AI-Driven Content Pipeline]]
 
 ## Backlinks
 
 [[src-obsidian-claude-code-second-brain]]
-[[Obsidian Knowledge Vault]]
-[[Claude Code Skills]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[AI-Driven Content Pipeline]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[Claude Code Skills]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[AI-Driven Content Pipeline]]]]

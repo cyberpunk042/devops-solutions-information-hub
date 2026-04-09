@@ -86,20 +86,20 @@ This lesson applies to any system where automated agents produce artifacts from 
 
 ## Relationships
 
-- DERIVED FROM: Knowledge Evolution Pipeline
-- DERIVED FROM: Wiki Ingestion Pipeline
-- RELATES TO: Multi-Stage Ingestion Beats Single-Pass Processing
-- RELATES TO: Automated Knowledge Validation Prevents Silent Wiki Decay
-- RELATES TO: Stage-Gate Methodology (depth gates should catch truncation)
-- BUILDS ON: Never Synthesize from Descriptions Alone (same depth-verification principle)
-- ENABLES: Immune System Rules (this lesson became a rule)
+- DERIVED FROM: [[Knowledge Evolution Pipeline]]
+- DERIVED FROM: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
+- RELATES TO: [[Automated Knowledge Validation Prevents Silent Wiki Decay]]
+- RELATES TO: [[Stage-Gate Methodology]] (depth gates should catch truncation)
+- BUILDS ON: [[Never Synthesize from Descriptions Alone]] (same depth-verification principle)
+- ENABLES: [[Immune System Rules]] (this lesson became a rule)
 
 ## Backlinks
 
-[[Knowledge Evolution Pipeline]]
-[[Wiki Ingestion Pipeline]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Stage-Gate Methodology (depth gates should catch truncation)]]
-[[Never Synthesize from Descriptions Alone (same depth-verification principle)]]
-[[Immune System Rules (this lesson became a rule)]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Multi-Stage Ingestion Beats Single-Pass Processing]]]]
+[[[[Automated Knowledge Validation Prevents Silent Wiki Decay]]]]
+[[[[Stage-Gate Methodology]] (depth gates should catch truncation)]]
+[[[[Never Synthesize from Descriptions Alone]] (same depth-verification principle)]]
+[[[[Immune System Rules]] (this lesson became a rule)]]

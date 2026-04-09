@@ -28,37 +28,37 @@ The MCP + CLI Integration model resolves one of the most consequential architect
 
 ### L1 — Primary Sources
 
-- `wiki/sources/src-playwright-cli-vs-mcp.md` — The Playwright CLI vs MCP comparison; 10-step QA test measuring token cost and accuracy for both approaches; origin of the CLI-beats-MCP finding
+- [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]] — The Playwright CLI vs MCP comparison; 10-step QA test measuring token cost and accuracy for both approaches; origin of the CLI-beats-MCP finding
 - `wiki/sources/src-harness-engineering-article.md` — The harness engineering model; origin of the context-mode sandbox pattern and the 98% context saving figure
-- `wiki/sources/src-claude-code-accuracy-tips.md` — The accuracy tips source; origin of the degradation curve data; MCP schema noise as a documented failure mode
+- [[Synthesis: Claude Code Accuracy Tips]] — The accuracy tips source; origin of the degradation curve data; MCP schema noise as a documented failure mode
 
 ### L2 — Core Concepts
 
 Read in this order:
 
-1. **CLI Tools Beat MCP for Token Efficiency** (`wiki/lessons/cli-tools-beat-mcp-for-token-efficiency.md`) — The core lesson: schema tokens from unused MCP tools displace task-relevant context; CLI+Skills loads nothing until invoked; the 12x cost differential is empirically validated. Start here.
-2. **Context-Aware Tool Loading** (`wiki/patterns/context-aware-tool-loading.md`) — The pattern that explains WHY CLI wins: defer all tool schema loading until the agent actually needs it; eager loading accelerates movement along the degradation curve. Covers MCP vs CLI vs external knowledge bases uniformly.
-3. **Decision: MCP vs CLI for Tool Integration** (`wiki/decisions/mcp-vs-cli-for-tool-integration.md`) — The resolved decision: CLI+Skills as default for project-internal operational tooling; MCP for external service bridges and cross-conversation discoverability. With full alternatives analysis.
+1. **CLI Tools Beat MCP for Token Efficiency** ([[CLI Tools Beat MCP for Token Efficiency]]) — The core lesson: schema tokens from unused MCP tools displace task-relevant context; CLI+Skills loads nothing until invoked; the 12x cost differential is empirically validated. Start here.
+2. **Context-Aware Tool Loading** ([[Context-Aware Tool Loading]]) — The pattern that explains WHY CLI wins: defer all tool schema loading until the agent actually needs it; eager loading accelerates movement along the degradation curve. Covers MCP vs CLI vs external knowledge bases uniformly.
+3. **Decision: MCP vs CLI for Tool Integration** ([[Decision: MCP vs CLI for Tool Integration]]) — The resolved decision: CLI+Skills as default for project-internal operational tooling; MCP for external service bridges and cross-conversation discoverability. With full alternatives analysis.
 4. **MCP Integration Architecture** (`wiki/domains/tools-and-platforms/mcp-integration-architecture.md`) — What MCP is, how it works, when it genuinely wins; the wiki's own MCP server (15 tools); scenarios where MCP's always-available property outweighs its cost.
-5. **Harness Engineering** (`wiki/domains/ai-agents/harness-engineering.md`) — The context-mode pattern: an isolated subagent receives the heavy task, executes against a clean context window, and returns only the result to the parent session; achieves 98% context saving for operations like full codebase analysis.
-6. **Playwright CLI vs MCP** (`wiki/sources/src-playwright-cli-vs-mcp.md`) — Concrete case study: Playwright CLI writes full page accessibility data to YAML on disk, reads it into context only when Claude needs a specific element; MCP dumps the full accessibility tree after every navigation step.
-7. **Playwright MCP Visual Testing** (`wiki/sources/src-playwright-mcp-visual-testing.md`) — The counter-case: when Playwright MCP IS the right choice; interactive visual development where always-available tool calls make the workflow faster.
+5. **Harness Engineering** ([[Harness Engineering]]) — The context-mode pattern: an isolated subagent receives the heavy task, executes against a clean context window, and returns only the result to the parent session; achieves 98% context saving for operations like full codebase analysis.
+6. **Playwright CLI vs MCP** ([[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]) — Concrete case study: Playwright CLI writes full page accessibility data to YAML on disk, reads it into context only when Claude needs a specific element; MCP dumps the full accessibility tree after every navigation step.
+7. **Playwright MCP Visual Testing** ([[Synthesis: Playwright MCP for Visual Development Testing]]) — The counter-case: when Playwright MCP IS the right choice; interactive visual development where always-available tool calls make the workflow faster.
 
 ### L3 — Comparisons
 
-- **LLM Wiki vs RAG** (`wiki/domains/knowledge-systems/llm-wiki-vs-rag.md`) — The same deferred-vs-eager loading decision applied to knowledge retrieval: index navigation vs vector embedding lookup.
+- **LLM Wiki vs RAG** ([[LLM Wiki vs RAG]]) — The same deferred-vs-eager loading decision applied to knowledge retrieval: index navigation vs vector embedding lookup.
 
 ### L4 — Lessons (Validated Insights)
 
-- **CLI Tools Beat MCP for Token Efficiency** (`wiki/lessons/cli-tools-beat-mcp-for-token-efficiency.md`) — Already the entry point above; re-read the Evidence section specifically for the 12x figure and the Google Trends adoption data.
+- **CLI Tools Beat MCP for Token Efficiency** ([[CLI Tools Beat MCP for Token Efficiency]]) — Already the entry point above; re-read the Evidence section specifically for the 12x figure and the Google Trends adoption data.
 
 ### L5 — Patterns (Structural Templates)
 
-- **Context-Aware Tool Loading** (`wiki/patterns/context-aware-tool-loading.md`) — The structural template; four instance implementations (Skills, Playwright CLI, NotebookLM, Context7) that all instantiate the same deferred-load principle.
+- **Context-Aware Tool Loading** ([[Context-Aware Tool Loading]]) — The structural template; four instance implementations (Skills, Playwright CLI, NotebookLM, Context7) that all instantiate the same deferred-load principle.
 
 ### L6 — Decisions (Resolved Choices)
 
-- **Decision: MCP vs CLI for Tool Integration** (`wiki/decisions/mcp-vs-cli-for-tool-integration.md`) — The resolved choice with full alternatives analysis; re-read the Consequences section for the concrete bindings (which tools go CLI, which go MCP in this ecosystem).
+- **Decision: MCP vs CLI for Tool Integration** ([[Decision: MCP vs CLI for Tool Integration]]) — The resolved choice with full alternatives analysis; re-read the Consequences section for the concrete bindings (which tools go CLI, which go MCP in this ecosystem).
 
 ## Key Evidence Summary
 
@@ -83,20 +83,20 @@ After completing this learning path you will understand:
 
 ## Relationships
 
-- FEEDS INTO: Model Guide: Claude Code
-- FEEDS INTO: Model Guide: Skills + Commands + Hooks
-- BUILDS ON: CLI Tools Beat MCP for Token Efficiency
-- BUILDS ON: Context-Aware Tool Loading
-- BUILDS ON: Decision: MCP vs CLI for Tool Integration
-- RELATES TO: Model Guide: Ecosystem Architecture
-- RELATES TO: Harness Engineering
+- FEEDS INTO: [[Model Guide: Claude Code]]
+- FEEDS INTO: [[Model Guide: Skills + Commands + Hooks]]
+- BUILDS ON: [[CLI Tools Beat MCP for Token Efficiency]]
+- BUILDS ON: [[Context-Aware Tool Loading]]
+- BUILDS ON: [[Decision: MCP vs CLI for Tool Integration]]
+- RELATES TO: [[Model Guide: Ecosystem Architecture]]
+- RELATES TO: [[Harness Engineering]]
 
 ## Backlinks
 
-[[Model Guide: Claude Code]]
-[[Model Guide: Skills + Commands + Hooks]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Model Guide: Ecosystem Architecture]]
-[[Harness Engineering]]
+[[[[Model Guide: Claude Code]]]]
+[[[[Model Guide: Skills + Commands + Hooks]]]]
+[[[[CLI Tools Beat MCP for Token Efficiency]]]]
+[[[[Context-Aware Tool Loading]]]]
+[[[[Decision: MCP vs CLI for Tool Integration]]]]
+[[[[Model Guide: Ecosystem Architecture]]]]
+[[[[Harness Engineering]]]]

@@ -135,25 +135,22 @@ Cross-referencing `Wiki Knowledge Graph` and `AICP`: the scale threshold is appr
 
 ## Relationships
 
-- BUILDS ON: Second Brain Architecture
-- COMPARES TO: PARA Methodology
-- IMPLEMENTS: Memory Lifecycle Management
-- RELATES TO: Wiki Knowledge Graph
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: LLM Wiki Pattern
-- FEEDS INTO: Knowledge Evolution Pipeline
-- RELATES TO: Obsidian Knowledge Vault
+- BUILDS ON: [[Second Brain Architecture]]
+- COMPARES TO: [[PARA Methodology]]
+- IMPLEMENTS: [[Memory Lifecycle Management]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- FEEDS INTO: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[PARA Methodology]]
-[[Memory Lifecycle Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki Pattern]]
-[[Knowledge Evolution Pipeline]]
-[[Obsidian Knowledge Vault]]
-[[Cross-Domain Patterns]]
-[[Model Guide: Second Brain]]
-[[Progressive Distillation]]
+[[[[Second Brain Architecture]]]]
+[[[[PARA Methodology]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Obsidian Knowledge Vault]]]]

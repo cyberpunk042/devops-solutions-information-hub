@@ -39,11 +39,11 @@ TurboQuant, originally Google's quantization technique, has been adapted for App
 ## Relationships
 
 - DERIVED FROM: src-turboquant-122b-macbook
-- RELATES TO: AICP
-- RELATES TO: LightRAG
+- RELATES TO: [[AICP]]
+- RELATES TO: [[LightRAG]]
 
 ## Backlinks
 
 [[src-turboquant-122b-macbook]]
-[[AICP]]
-[[LightRAG]]
+[[[[AICP]]]]
+[[[[LightRAG]]]]

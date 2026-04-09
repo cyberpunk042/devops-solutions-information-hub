@@ -117,35 +117,26 @@ Avoid or simplify this pattern when:
 
 ## Relationships
 
-- DERIVED FROM: Harness Engineering
-- DERIVED FROM: OpenFleet
-- DERIVED FROM: Claude Code
-- DERIVED FROM: Research Pipeline Orchestration
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Claude Code Skills
-- RELATES TO: MCP Integration Architecture
-- ENABLES: Wiki Event-Driven Automation
-- BUILDS ON: Agent Orchestration Patterns
+- DERIVED FROM: [[Harness Engineering]]
+- DERIVED FROM: [[OpenFleet]]
+- DERIVED FROM: [[Claude Code]]
+- DERIVED FROM: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[MCP Integration Architecture]]
+- ENABLES: [[Wiki Event-Driven Automation]]
+- BUILDS ON: [[Agent Orchestration Patterns]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[OpenFleet]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[Wiki Event-Driven Automation]]
-[[Agent Orchestration Patterns]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Cross-Domain Patterns]]
-[[Deterministic Shell, LLM Core]]
-[[Immune System Rules]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Rework Prevention]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[[[Harness Engineering]]]]
+[[[[OpenFleet]]]]
+[[[[Claude Code]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Skills]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[Agent Orchestration Patterns]]]]

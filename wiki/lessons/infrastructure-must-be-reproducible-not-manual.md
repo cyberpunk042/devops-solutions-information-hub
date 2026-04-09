@@ -86,18 +86,18 @@ This lesson applies universally across infrastructure work:
 
 ## Relationships
 
-- DERIVED FROM: Infrastructure as Code Patterns
-- DERIVED FROM: Stage-Gate Methodology (the setup tooling IS a stage gate for infrastructure)
-- RELATES TO: Always Plan Before Executing (plan the infrastructure approach before writing files)
-- RELATES TO: Methodology Framework
-- BUILDS ON: Wiki Ingestion Pipeline (the pipeline itself is reproducible tooling)
-- ENABLES: Immune System Rules (this lesson became a rule)
+- DERIVED FROM: [[Infrastructure as Code Patterns]]
+- DERIVED FROM: [[Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)
+- RELATES TO: [[Always Plan Before Executing]] (plan the infrastructure approach before writing files)
+- RELATES TO: [[Methodology Framework]]
+- BUILDS ON: [[Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)
+- ENABLES: [[Immune System Rules]] (this lesson became a rule)
 
 ## Backlinks
 
-[[Infrastructure as Code Patterns]]
-[[Stage-Gate Methodology (the setup tooling IS a stage gate for infrastructure)]]
-[[Always Plan Before Executing (plan the infrastructure approach before writing files)]]
-[[Methodology Framework]]
-[[Wiki Ingestion Pipeline (the pipeline itself is reproducible tooling)]]
-[[Immune System Rules (this lesson became a rule)]]
+[[[[Infrastructure as Code Patterns]]]]
+[[[[Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)]]
+[[[[Always Plan Before Executing]] (plan the infrastructure approach before writing files)]]
+[[[[Methodology Framework]]]]
+[[[[Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)]]
+[[[[Immune System Rules]] (this lesson became a rule)]]

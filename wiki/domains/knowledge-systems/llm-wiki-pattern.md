@@ -110,70 +110,37 @@ Confirmed by cross-referencing Claude Code Best Practices and Harness Engineerin
 - DERIVED FROM: src-karpathy-claude-code-10x
 - DERIVED FROM: src-karpathy-llm-wiki-idea-file
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
-- COMPARES TO: LLM Wiki vs RAG
-- ENABLES: Wiki Ingestion Pipeline
-- ENABLES: Memory Lifecycle Management
-- ENABLES: Wiki Knowledge Graph
-- ENABLES: Wiki Event-Driven Automation
-- USED BY: Obsidian Knowledge Vault
-- FEEDS INTO: LLM Knowledge Linting
-- RELATES TO: Claude Code Context Management
-- RELATES TO: NotebookLM
-- RELATES TO: Skills Architecture Patterns
-- RELATES TO: Agentic Search vs Vector Search
-- CONTRASTS WITH: LightRAG
-- USED BY: OpenFleet
-- ENABLED BY: Claude Code
+- COMPARES TO: [[LLM Wiki vs RAG]]
+- ENABLES: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[Memory Lifecycle Management]]
+- ENABLES: [[Wiki Knowledge Graph]]
+- ENABLES: [[Wiki Event-Driven Automation]]
+- USED BY: [[Obsidian Knowledge Vault]]
+- FEEDS INTO: [[LLM Knowledge Linting]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[NotebookLM]]
+- RELATES TO: [[Skills Architecture Patterns]]
+- RELATES TO: [[Agentic Search vs Vector Search]]
+- CONTRASTS WITH: [[LightRAG]]
+- USED BY: [[OpenFleet]]
+- ENABLED BY: [[Claude Code]]
 
 ## Backlinks
 
 [[src-karpathy-claude-code-10x]]
 [[src-karpathy-llm-wiki-idea-file]]
 [[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki vs RAG]]
-[[Wiki Ingestion Pipeline]]
-[[Memory Lifecycle Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Event-Driven Automation]]
-[[Obsidian Knowledge Vault]]
-[[LLM Knowledge Linting]]
-[[Claude Code Context Management]]
-[[NotebookLM]]
-[[Skills Architecture Patterns]]
-[[Agentic Search vs Vector Search]]
-[[LightRAG]]
-[[OpenFleet]]
-[[Claude Code]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Claude Code Best Practices]]
-[[Context-Aware Tool Loading]]
-[[Cross-Domain Patterns]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Model Guide: LLM Wiki]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[NotebookLM Skills]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Obsidian CLI]]
-[[Obsidian Skills Ecosystem]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[Research Pipeline Orchestration]]
-[[Second Brain Architecture]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Synthesis: kepano/obsidian-skills]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
-[[Zettelkasten Methodology]]
-[[notebooklm-py CLI]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Claude Code Context Management]]]]
+[[[[NotebookLM]]]]
+[[[[Skills Architecture Patterns]]]]
+[[[[Agentic Search vs Vector Search]]]]
+[[[[LightRAG]]]]
+[[[[OpenFleet]]]]
+[[[[Claude Code]]]]

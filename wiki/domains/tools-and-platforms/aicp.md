@@ -90,38 +90,21 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 
 ## Relationships
 
-- USED BY: OpenFleet
-- BUILDS ON: LightRAG
-- RELATES TO: Claude Code
-- RELATES TO: OpenClaw
-- ENABLES: Claude Code Skills
-- FEEDS INTO: Wiki Knowledge Graph
-- RELATES TO: devops-control-plane
+- USED BY: [[OpenFleet]]
+- BUILDS ON: [[LightRAG]]
+- RELATES TO: [[Claude Code]]
+- RELATES TO: [[OpenClaw]]
+- ENABLES: [[Claude Code Skills]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[devops-control-plane]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[LightRAG]]
-[[Claude Code]]
-[[OpenClaw]]
-[[Claude Code Skills]]
-[[Wiki Knowledge Graph]]
-[[devops-control-plane]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Deterministic Shell, LLM Core]]
+[[[[OpenFleet]]]]
+[[[[LightRAG]]]]
+[[[[Claude Code]]]]
+[[[[OpenClaw]]]]
+[[[[Claude Code Skills]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[devops-control-plane]]]]
 [[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Immune System Rules]]
-[[Knowledge Evolution Pipeline]]
-[[Local LLM Quantization]]
-[[MCP Integration Architecture]]
-[[Model: Local AI ($0 Target)]]
-[[Multi-Channel AI Agent Access]]
-[[OpenArms]]
-[[Plane]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
-[[Synthesis: TurboQuant 122B LLM on MacBook]]

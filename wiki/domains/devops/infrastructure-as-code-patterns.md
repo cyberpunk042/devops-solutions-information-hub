@@ -118,30 +118,20 @@ Cross-referencing `Immune System Rules` and `devops-control-plane`: the `Immune 
 
 ## Relationships
 
-- EXTENDS: Design.md Pattern
-- RELATES TO: devops-control-plane
-- RELATES TO: OpenFleet
-- RELATES TO: Harness Engineering
-- RELATES TO: Skills Architecture Patterns
-- BUILDS ON: Immune System Rules
-- ENABLES: Claude Code Best Practices
+- EXTENDS: [[Design.md Pattern]]
+- RELATES TO: [[devops-control-plane]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[Harness Engineering]]
+- RELATES TO: [[Skills Architecture Patterns]]
+- BUILDS ON: [[Immune System Rules]]
+- ENABLES: [[Claude Code Best Practices]]
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[devops-control-plane]]
-[[OpenFleet]]
-[[Harness Engineering]]
-[[Skills Architecture Patterns]]
-[[Immune System Rules]]
-[[Claude Code Best Practices]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Deterministic Shell, LLM Core]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Model: Design.md + IaC]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[WSL2 Development Patterns]]
+[[[[Design.md Pattern]]]]
+[[[[devops-control-plane]]]]
+[[[[OpenFleet]]]]
+[[[[Harness Engineering]]]]
+[[[[Skills Architecture Patterns]]]]
+[[[[Immune System Rules]]]]
+[[[[Claude Code Best Practices]]]]

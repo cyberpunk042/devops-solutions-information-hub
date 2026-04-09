@@ -92,25 +92,20 @@ Cross-referencing `LLM Wiki vs RAG` and `Wiki Knowledge Graph`: the LightRAG pag
 
 ## Relationships
 
-- USED BY: OpenFleet
-- ENABLES: Wiki Knowledge Graph
-- COMPARES TO: LLM Wiki vs RAG
-- RELATES TO: Agentic Search vs Vector Search
-- RELATES TO: Wiki Ingestion Pipeline
-- USED BY: AICP
-- RELATES TO: LLM Wiki Pattern
+- USED BY: [[OpenFleet]]
+- ENABLES: [[Wiki Knowledge Graph]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
+- RELATES TO: [[Agentic Search vs Vector Search]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- USED BY: [[AICP]]
+- RELATES TO: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
-[[Agentic Search vs Vector Search]]
-[[Wiki Ingestion Pipeline]]
-[[AICP]]
-[[LLM Wiki Pattern]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Local LLM Quantization]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
-[[Synthesis: TurboQuant 122B LLM on MacBook]]
+[[[[OpenFleet]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Agentic Search vs Vector Search]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[AICP]]]]
+[[[[LLM Wiki Pattern]]]]

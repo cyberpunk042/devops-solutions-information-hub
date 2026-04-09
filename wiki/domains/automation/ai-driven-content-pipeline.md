@@ -83,29 +83,21 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Research Pipeline Orchestr
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team
-- BUILDS ON: NotebookLM
-- BUILDS ON: Claude Code Skills
-- BUILDS ON: Claude Code Scheduling
-- IMPLEMENTS: OpenClaw
-- PARALLELS: Wiki Ingestion Pipeline
-- RELATES TO: NotebookLM Skills
-- RELATES TO: Skills Architecture Patterns
+- BUILDS ON: [[NotebookLM]]
+- BUILDS ON: [[Claude Code Skills]]
+- BUILDS ON: [[Claude Code Scheduling]]
+- IMPLEMENTS: [[OpenClaw]]
+- PARALLELS: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[NotebookLM Skills]]
+- RELATES TO: [[Skills Architecture Patterns]]
 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[NotebookLM]]
-[[Claude Code Skills]]
-[[Claude Code Scheduling]]
-[[OpenClaw]]
-[[Wiki Ingestion Pipeline]]
-[[NotebookLM Skills]]
-[[Skills Architecture Patterns]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Obsidian CLI]]
-[[OpenFleet]]
-[[Research Pipeline Orchestration]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Wiki Event-Driven Automation]]
-[[notebooklm-py CLI]]
+[[[[NotebookLM]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Scheduling]]]]
+[[[[OpenClaw]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[NotebookLM Skills]]]]
+[[[[Skills Architecture Patterns]]]]

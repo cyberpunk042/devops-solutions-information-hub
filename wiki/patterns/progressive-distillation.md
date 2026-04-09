@@ -116,28 +116,25 @@ Avoid or simplify Progressive Distillation when:
 
 ## Relationships
 
-- DERIVED FROM: Second Brain Architecture
-- DERIVED FROM: Knowledge Evolution Pipeline
-- IMPLEMENTS: Memory Lifecycle Management
-- RELATES TO: PARA Methodology
-- RELATES TO: Zettelkasten Methodology
-- ENABLES: Knowledge Evolution Pipeline
-- RELATES TO: LLM Wiki Pattern
-- FEEDS INTO: Wiki Knowledge Graph
-- RELATES TO: NotebookLM
-- BUILDS ON: Multi-Stage Ingestion Beats Single-Pass Processing
+- DERIVED FROM: [[Second Brain Architecture]]
+- DERIVED FROM: [[Knowledge Evolution Pipeline]]
+- IMPLEMENTS: [[Memory Lifecycle Management]]
+- RELATES TO: [[PARA Methodology]]
+- RELATES TO: [[Zettelkasten Methodology]]
+- ENABLES: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[NotebookLM]]
+- BUILDS ON: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Memory Lifecycle Management]]
-[[PARA Methodology]]
-[[Zettelkasten Methodology]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[NotebookLM]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Model: Knowledge Evolution]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
+[[[[Second Brain Architecture]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[PARA Methodology]]]]
+[[[[Zettelkasten Methodology]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[NotebookLM]]]]
+[[[[Multi-Stage Ingestion Beats Single-Pass Processing]]]]

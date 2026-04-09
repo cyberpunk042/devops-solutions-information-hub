@@ -91,27 +91,20 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 
 - DERIVED FROM: src-claude-world-notebooklm-skill
 - DERIVED FROM: src-pleaseprompto-notebooklm-skill
-- EXTENDS: Claude Code Skills
-- BUILDS ON: NotebookLM
-- RELATES TO: Obsidian Skills Ecosystem
-- RELATES TO: LLM Wiki Pattern
-- ENABLES: AI-Driven Content Pipeline
-- RELATES TO: Skills Architecture Patterns
+- EXTENDS: [[Claude Code Skills]]
+- BUILDS ON: [[NotebookLM]]
+- RELATES TO: [[Obsidian Skills Ecosystem]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- ENABLES: [[AI-Driven Content Pipeline]]
+- RELATES TO: [[Skills Architecture Patterns]]
 
 ## Backlinks
 
 [[src-claude-world-notebooklm-skill]]
 [[src-pleaseprompto-notebooklm-skill]]
-[[Claude Code Skills]]
-[[NotebookLM]]
-[[Obsidian Skills Ecosystem]]
-[[LLM Wiki Pattern]]
-[[AI-Driven Content Pipeline]]
-[[Skills Architecture Patterns]]
-[[Agentic Search vs Vector Search]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[OpenClaw]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: PleasePrompto/notebooklm-skill]]
-[[Synthesis: claude-world/notebooklm-skill]]
-[[notebooklm-py CLI]]
+[[[[Claude Code Skills]]]]
+[[[[NotebookLM]]]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[Skills Architecture Patterns]]]]

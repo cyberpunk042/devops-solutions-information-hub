@@ -77,26 +77,26 @@ From Claude Code Best Practices: "All workflows converge on one pattern: Ten maj
 
 ## Relationships
 
-- DERIVED FROM: Claude Code Best Practices
-- DERIVED FROM: Synthesis: Claude Code Accuracy Tips
-- DERIVED FROM: Synthesis: Claude Code Harness Engineering
-- ENABLES: Claude Code Skills
-- ENABLES: Harness Engineering
-- RELATES TO: Plan Execute Review Cycle
-- RELATES TO: Always Plan Before Executing
-- RELATES TO: CLI Tools Beat MCP for Token Efficiency
-- FEEDS INTO: OpenFleet
-- FEEDS INTO: AICP
+- DERIVED FROM: [[Claude Code Best Practices]]
+- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
+- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
+- ENABLES: [[Claude Code Skills]]
+- ENABLES: [[Harness Engineering]]
+- RELATES TO: [[Plan Execute Review Cycle]]
+- RELATES TO: [[Always Plan Before Executing]]
+- RELATES TO: [[CLI Tools Beat MCP for Token Efficiency]]
+- FEEDS INTO: [[OpenFleet]]
+- FEEDS INTO: [[AICP]]
 
 ## Backlinks
 
-[[Claude Code Best Practices]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Claude Code Skills]]
-[[Harness Engineering]]
-[[Plan Execute Review Cycle]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[OpenFleet]]
-[[AICP]]
+[[[[Claude Code Best Practices]]]]
+[[[[Synthesis: Claude Code Accuracy Tips]]]]
+[[[[Synthesis: Claude Code Harness Engineering]]]]
+[[[[Claude Code Skills]]]]
+[[[[Harness Engineering]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Always Plan Before Executing]]]]
+[[[[CLI Tools Beat MCP for Token Efficiency]]]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]

@@ -145,26 +145,22 @@ Cross-referencing `Research Pipeline Orchestration`: the sync is architecturally
 
 ## Relationships
 
-- BUILDS ON: NotebookLM
-- EXTENDS: NotebookLM Skills
-- ENABLES: AI-Driven Content Pipeline
-- PARALLELS: Obsidian CLI
-- RELATES TO: Claude Code Skills
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: LLM Wiki Pattern
-- ENABLES: Wiki Event-Driven Automation
+- BUILDS ON: [[NotebookLM]]
+- EXTENDS: [[NotebookLM Skills]]
+- ENABLES: [[AI-Driven Content Pipeline]]
+- PARALLELS: [[Obsidian CLI]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- ENABLES: [[Wiki Event-Driven Automation]]
 
 ## Backlinks
 
-[[NotebookLM]]
-[[NotebookLM Skills]]
-[[AI-Driven Content Pipeline]]
-[[Obsidian CLI]]
-[[Claude Code Skills]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki Pattern]]
-[[Wiki Event-Driven Automation]]
-[[Claude Code]]
-[[MCP Integration Architecture]]
-[[Model: NotebookLM]]
-[[Research Pipeline Orchestration]]
+[[[[NotebookLM]]]]
+[[[[NotebookLM Skills]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[Obsidian CLI]]]]
+[[[[Claude Code Skills]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Event-Driven Automation]]]]

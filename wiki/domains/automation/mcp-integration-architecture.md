@@ -135,39 +135,22 @@ Cross-referencing `WSL2 Development Patterns`: the lifecycle is fully documented
 
 ## Relationships
 
-- BUILDS ON: Wiki Ingestion Pipeline
-- BUILDS ON: Obsidian CLI
-- BUILDS ON: notebooklm-py CLI
-- BUILDS ON: Claude Code
-- ENABLES: Research Pipeline Orchestration
-- RELATES TO: OpenFleet
-- RELATES TO: AICP
-- RELATES TO: Wiki Event-Driven Automation
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[Obsidian CLI]]
+- BUILDS ON: [[notebooklm-py CLI]]
+- BUILDS ON: [[Claude Code]]
+- ENABLES: [[Research Pipeline Orchestration]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[AICP]]
+- RELATES TO: [[Wiki Event-Driven Automation]]
 
 ## Backlinks
 
-[[Wiki Ingestion Pipeline]]
-[[Obsidian CLI]]
-[[notebooklm-py CLI]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
-[[OpenFleet]]
-[[AICP]]
-[[Wiki Event-Driven Automation]]
-[[Agent Orchestration Patterns]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Harness Engineering]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Multi-Channel AI Agent Access]]
-[[OpenArms]]
-[[Plan Execute Review Cycle]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[WSL2 Development Patterns]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Obsidian CLI]]]]
+[[[[notebooklm-py CLI]]]]
+[[[[Claude Code]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]
+[[[[Wiki Event-Driven Automation]]]]

@@ -28,21 +28,21 @@ The Skills + Commands + Hooks model describes the three-tier system for extendin
 
 ### L1 — Primary Sources
 
-- `wiki/sources/src-shanraisshan-claude-code-best-practice.md` — Origin of the Command-Agent-Skill hierarchy; progressive disclosure folder structure; on-demand hooks in skills
+- [[Synthesis: Claude Code Best Practice (shanraisshan)]] — Origin of the Command-Agent-Skill hierarchy; progressive disclosure folder structure; on-demand hooks in skills
 - `wiki/sources/src-claude-code-hooks-reference.md` — Full reference for all 26 hook events, 4 handler types, blocking pattern, and composition rules
-- `wiki/sources/src-claude-slash-commands.md` — Per-role command architecture; two-scope install model; commands as workflow entry points
-- `wiki/sources/src-plannotator.md` — The command + hook pair pattern; interactive annotation workflow; how commands activate hook-intercepted pipelines
+- [[Claude Code Slash Commands (artemgetmann)]] — Per-role command architecture; two-scope install model; commands as workflow entry points
+- [[Plannotator — Interactive Plan & Code Review for AI Agents]] — The command + hook pair pattern; interactive annotation workflow; how commands activate hook-intercepted pipelines
 
 ### L2 — Core Concepts
 
 Read in this order:
 
-1. **Claude Code Skills** (`wiki/domains/ai-agents/claude-code-skills.md`) — Skills as plain markdown instruction sets; two-phase operation (setup then use); progressive disclosure folder structure (SKILL.md + references/ + scripts/ + examples/); context forking for isolation; on-demand hooks embedded in skills. Start here.
-2. **Hooks Lifecycle Architecture** (`wiki/domains/ai-agents/hooks-lifecycle-architecture.md`) — 26 events across 7 categories; the blocking pattern on PreToolUse; the reverse-hook pattern on Stop/TeammateIdle; context injection via additionalContext; 4 handler types (command, http, prompt, agent); composition via matchers and scope hierarchy.
-3. **Per-Role Command Architecture** (`wiki/domains/ai-agents/per-role-command-architecture.md`) — Commands as lightweight triggers vs skills as full context; role-segmented command palettes; the Plannotator pattern (command activates hook-intercepted workflow); execution mode to command set mapping.
-4. **Design.md Pattern** (`wiki/domains/ai-agents/design-md-pattern.md`) — How the design document functions as a persistent shared context artifact between human and agent; why the Design stage produces a design.md before implementation begins.
-5. **Obsidian Skills Ecosystem** (`wiki/lessons/lesson-convergence-on-src-kepano-obsidian-skills.md`) — Real-world complex skills: the kepano Obsidian skills as a reference implementation; multi-step workflow skills; skill composition patterns.
-6. **NotebookLM Skills** (`wiki/lessons/lesson-convergence-on-src-claude-world-notebooklm-skill.md`) — The NotebookLM skill as the canonical example of a tool-wrapper skill: dependency management + authentication + operation + design guidance in one file.
+1. **Claude Code Skills** ([[Claude Code Skills]]) — Skills as plain markdown instruction sets; two-phase operation (setup then use); progressive disclosure folder structure (SKILL.md + references/ + scripts/ + examples/); context forking for isolation; on-demand hooks embedded in skills. Start here.
+2. **Hooks Lifecycle Architecture** ([[Hooks Lifecycle Architecture]]) — 26 events across 7 categories; the blocking pattern on PreToolUse; the reverse-hook pattern on Stop/TeammateIdle; context injection via additionalContext; 4 handler types (command, http, prompt, agent); composition via matchers and scope hierarchy.
+3. **Per-Role Command Architecture** ([[Per-Role Command Architecture]]) — Commands as lightweight triggers vs skills as full context; role-segmented command palettes; the Plannotator pattern (command activates hook-intercepted workflow); execution mode to command set mapping.
+4. **Design.md Pattern** ([[Design.md Pattern]]) — How the design document functions as a persistent shared context artifact between human and agent; why the Design stage produces a design.md before implementation begins.
+5. **Obsidian Skills Ecosystem** ([[Skill Specification Is the Key to Ecosystem Interoperability]]) — Real-world complex skills: the kepano Obsidian skills as a reference implementation; multi-step workflow skills; skill composition patterns.
+6. **NotebookLM Skills** ([[NotebookLM as Grounded Research Engine Not Just Note Storage]]) — The NotebookLM skill as the canonical example of a tool-wrapper skill: dependency management + authentication + operation + design guidance in one file.
 
 ### L3 — Comparisons
 
@@ -55,11 +55,11 @@ Read in this order:
 ### L4 — Lessons (Validated Insights)
 
 - **Skill Specification Is Key to Interoperability** (`wiki/lessons/lesson-hub-—-agent-orchestration-patterns.md`) — Why a well-specified skill is interoperable across agent runtimes; the agentskills.io ecosystem standardization direction.
-- **Skills Architecture Is the Dominant Pattern** (`wiki/lessons/lesson-convergence-on-claude-code-skills.md`) — Skills are the primary extension mechanism; hooks and MCP serve narrower, complementary roles.
+- **Skills Architecture Is the Dominant Pattern** ([[Skills Architecture Is the Dominant LLM Extension Pattern]]) — Skills are the primary extension mechanism; hooks and MCP serve narrower, complementary roles.
 
 ### L5 — Patterns (Structural Templates)
 
-- **Context-Aware Tool Loading** (`wiki/patterns/context-aware-tool-loading.md`) — Defer skill loading until needed; never pre-load all skills at session start; how `context: fork` isolates skill execution.
+- **Context-Aware Tool Loading** ([[Context-Aware Tool Loading]]) — Defer skill loading until needed; never pre-load all skills at session start; how `context: fork` isolates skill execution.
 
 ## Outcomes
 
@@ -75,21 +75,20 @@ After completing this learning path you will understand:
 
 ## Relationships
 
-- FEEDS INTO: Model Guide: Claude Code
-- FEEDS INTO: Model Guide: MCP + CLI Integration
-- BUILDS ON: Claude Code Skills
-- BUILDS ON: Hooks Lifecycle Architecture
-- BUILDS ON: Per-Role Command Architecture
-- RELATES TO: Model Guide: Methodology
-- RELATES TO: Model Guide: LLM Wiki
+- FEEDS INTO: [[Model Guide: Claude Code]]
+- FEEDS INTO: [[Model Guide: MCP + CLI Integration]]
+- BUILDS ON: [[Claude Code Skills]]
+- BUILDS ON: [[Hooks Lifecycle Architecture]]
+- BUILDS ON: [[Per-Role Command Architecture]]
+- RELATES TO: [[Model Guide: Methodology]]
+- RELATES TO: [[Model Guide: LLM Wiki]]
 
 ## Backlinks
 
-[[Model Guide: Claude Code]]
-[[Model Guide: MCP + CLI Integration]]
-[[Claude Code Skills]]
-[[Hooks Lifecycle Architecture]]
-[[Per-Role Command Architecture]]
-[[Model Guide: Methodology]]
-[[Model Guide: LLM Wiki]]
-[[Model Guide: Ecosystem Architecture]]
+[[[[Model Guide: Claude Code]]]]
+[[[[Model Guide: MCP + CLI Integration]]]]
+[[[[Claude Code Skills]]]]
+[[[[Hooks Lifecycle Architecture]]]]
+[[[[Per-Role Command Architecture]]]]
+[[[[Model Guide: Methodology]]]]
+[[[[Model Guide: LLM Wiki]]]]

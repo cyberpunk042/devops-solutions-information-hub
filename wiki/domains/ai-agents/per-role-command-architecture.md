@@ -169,25 +169,24 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 
 ## Relationships
 
-- BUILDS ON: Claude Code Skills
+- BUILDS ON: [[Claude Code Skills]]
 - BUILDS ON: Claude Code Slash Commands (artemgetmann)
-- EXTENDS: Harness Engineering
-- IMPLEMENTS: Hooks Lifecycle Architecture
-- RELATES TO: Plannotator — Interactive Plan & Code Review for AI Agents
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Task Lifecycle Stage-Gating
-- FEEDS INTO: Skills Architecture Is the Dominant LLM Extension Pattern
-- FEEDS INTO: Wiki Ingestion Pipeline
+- EXTENDS: [[Harness Engineering]]
+- IMPLEMENTS: [[Hooks Lifecycle Architecture]]
+- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Task Lifecycle Stage-Gating]]
+- FEEDS INTO: [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+- FEEDS INTO: [[Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Claude Code Skills]]
+[[[[Claude Code Skills]]]]
 [[Claude Code Slash Commands (artemgetmann)]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Claude Code Best Practices]]
-[[Task Lifecycle Stage-Gating]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Model Guide: Skills + Commands + Hooks]]
+[[[[Harness Engineering]]]]
+[[[[Hooks Lifecycle Architecture]]]]
+[[[[Plannotator — Interactive Plan & Code Review for AI Agents]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Task Lifecycle Stage-Gating]]]]
+[[[[Skills Architecture Is the Dominant LLM Extension Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]

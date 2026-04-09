@@ -82,29 +82,24 @@ Even at the individual agent level, Claude Code's best practices recommend using
 
 ## Relationships
 
-- DERIVED FROM: Harness Engineering
-- DERIVED FROM: OpenFleet
-- DERIVED FROM: Claude Code
-- DERIVED FROM: Synthesis: Claude Code Harness Engineering
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Claude Code Skills
-- RELATES TO: Research Pipeline Orchestration
-- ENABLES: Rework Prevention
-- BUILDS ON: Agent Orchestration Patterns
+- DERIVED FROM: [[Harness Engineering]]
+- DERIVED FROM: [[OpenFleet]]
+- DERIVED FROM: [[Claude Code]]
+- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- ENABLES: [[Rework Prevention]]
+- BUILDS ON: [[Agent Orchestration Patterns]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[OpenFleet]]
-[[Claude Code]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Research Pipeline Orchestration]]
-[[Rework Prevention]]
-[[Agent Orchestration Patterns]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Immune System Rules]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Never Synthesize from Descriptions Alone]]
-[[The Agent Must Practice What It Documents]]
+[[[[Harness Engineering]]]]
+[[[[OpenFleet]]]]
+[[[[Claude Code]]]]
+[[[[Synthesis: Claude Code Harness Engineering]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Skills]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Rework Prevention]]]]
+[[[[Agent Orchestration Patterns]]]]

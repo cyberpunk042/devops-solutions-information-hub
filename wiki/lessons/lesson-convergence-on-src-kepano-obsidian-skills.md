@@ -62,19 +62,19 @@ This lesson applies directly to:
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: kepano/obsidian-skills
-- DERIVED FROM: Obsidian Skills Ecosystem
-- BUILDS ON: Skills Architecture Patterns
-- RELATES TO: Claude Code Skills
-- RELATES TO: NotebookLM Skills
-- ENABLES: Obsidian Skills Ecosystem
-- FEEDS INTO: LLM Wiki Pattern
+- DERIVED FROM: [[Synthesis: kepano/obsidian-skills]]
+- DERIVED FROM: [[Obsidian Skills Ecosystem]]
+- BUILDS ON: [[Skills Architecture Patterns]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[NotebookLM Skills]]
+- ENABLES: [[Obsidian Skills Ecosystem]]
+- FEEDS INTO: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Synthesis: kepano/obsidian-skills]]
-[[Obsidian Skills Ecosystem]]
-[[Skills Architecture Patterns]]
-[[Claude Code Skills]]
-[[NotebookLM Skills]]
-[[LLM Wiki Pattern]]
+[[[[Synthesis: kepano/obsidian-skills]]]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[Skills Architecture Patterns]]]]
+[[[[Claude Code Skills]]]]
+[[[[NotebookLM Skills]]]]
+[[[[LLM Wiki Pattern]]]]

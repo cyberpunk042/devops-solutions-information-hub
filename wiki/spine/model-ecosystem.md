@@ -37,18 +37,18 @@ The Ecosystem Architecture model describes how five projects — OpenFleet, AICP
 
 Read in this order:
 
-1. **Four-Project Ecosystem** (`wiki/domains/devops/four-project-ecosystem.md`) — The complete ecosystem map: each project's role, architecture, integration points, and the file-based coupling model. The wiki as active intelligence infrastructure (not passive docs). All projects running on WSL2 on a single machine. Start here.
-2. **OpenFleet** (`wiki/domains/ai-agents/openfleet.md`) — The agent workforce: 10 specialized agents, deterministic orchestrator (zero LLM calls, 30s cycle), seven-layer architecture, dual-board synchronization with Plane, LightRAG knowledge graph integration.
-3. **AICP** (`wiki/domains/tools-and-platforms/aicp.md`) — The AI control platform: LocalAI for routine inference, Claude for complex reasoning, 5-stage cost reduction roadmap targeting 80%+ Claude token reduction, skills export to fleet agent tooling.
+1. **Four-Project Ecosystem** ([[Four-Project Ecosystem]]) — The complete ecosystem map: each project's role, architecture, integration points, and the file-based coupling model. The wiki as active intelligence infrastructure (not passive docs). All projects running on WSL2 on a single machine. Start here.
+2. **OpenFleet** ([[OpenFleet]]) — The agent workforce: 10 specialized agents, deterministic orchestrator (zero LLM calls, 30s cycle), seven-layer architecture, dual-board synchronization with Plane, LightRAG knowledge graph integration.
+3. **AICP** ([[AICP]]) — The AI control platform: LocalAI for routine inference, Claude for complex reasoning, 5-stage cost reduction roadmap targeting 80%+ Claude token reduction, skills export to fleet agent tooling.
 4. **OpenArms** (`wiki/domains/devops/openarms.md`) — Multi-channel AI access: 20+ messaging channels (Telegram, Discord, Slack, iMessage) routing to the same agent runtime; personal AI assistant layer; how the human interacts with the fleet from any device.
-5. **OpenClaw** (`wiki/domains/ai-agents/openclaw.md`) — The WebSocket gateway that all Claude Code fleet agents connect through; the connection layer between Mission Control and individual agents.
-6. **devops-control-plane** (`wiki/domains/devops/devops-control-plane.md`) — The operational DNA donor: 24 rules from 16 post-mortems became OpenFleet's immune system (doctor.py); where lessons become law; the governance origin point.
+5. **OpenClaw** ([[OpenClaw]]) — The WebSocket gateway that all Claude Code fleet agents connect through; the connection layer between Mission Control and individual agents.
+6. **devops-control-plane** ([[devops-control-plane]]) — The operational DNA donor: 24 rules from 16 post-mortems became OpenFleet's immune system (doctor.py); where lessons become law; the governance origin point.
 7. **Multi-Channel AI Agent Access** (`wiki/domains/ai-agents/multi-channel-ai-agent-access.md`) — How OpenArms routes messages across channels to the same underlying agent runtime; the channel-agnostic agent model.
-8. **Immune System Rules** (`wiki/domains/devops/immune-system-rules.md`) — How operational post-mortems become enforceable fleet governance rules; the doctor.py implementation; the control-plane → OpenFleet knowledge flow.
+8. **Immune System Rules** ([[Immune System Rules]]) — How operational post-mortems become enforceable fleet governance rules; the doctor.py implementation; the control-plane → OpenFleet knowledge flow.
 
 ### L3 — Comparisons
 
-- **Wiki Knowledge Graph** (`wiki/domains/knowledge-systems/wiki-knowledge-graph.md`) — How the wiki's `## Relationships` sections are parsed by kb_sync.py into the LightRAG graph that feeds OpenFleet's agent intelligence.
+- **Wiki Knowledge Graph** ([[Wiki Knowledge Graph]]) — How the wiki's `## Relationships` sections are parsed by kb_sync.py into the LightRAG graph that feeds OpenFleet's agent intelligence.
 
 ### L4 — Lessons (Validated Insights)
 
@@ -56,8 +56,8 @@ Read in this order:
 
 ### L5 — Patterns (Structural Templates)
 
-- **Gateway-Centric Routing** (`wiki/patterns/gateway-centric-routing.md`) — OpenClaw as the single connection point for all fleet agents; why gateway-centricity simplifies fleet governance and observability.
-- **Deterministic Shell + LLM Core** (`wiki/patterns/deterministic-shell-llm-core.md`) — The architectural pattern that makes the fleet reliable: deterministic orchestrator handles all operational mechanics (state, dispatch, budget, security); LLM handles only reasoning where determinism is insufficient.
+- **Gateway-Centric Routing** ([[Gateway-Centric Routing]]) — OpenClaw as the single connection point for all fleet agents; why gateway-centricity simplifies fleet governance and observability.
+- **Deterministic Shell + LLM Core** ([[Deterministic Shell, LLM Core]]) — The architectural pattern that makes the fleet reliable: deterministic orchestrator handles all operational mechanics (state, dispatch, budget, security); LLM handles only reasoning where determinism is insufficient.
 
 ## Project Integration Map
 
@@ -85,25 +85,24 @@ After completing this learning path you will understand:
 
 ## Relationships
 
-- FEEDS INTO: Model Guide: Claude Code
-- FEEDS INTO: Model Guide: LLM Wiki
-- FEEDS INTO: Model Guide: Methodology
-- BUILDS ON: Four-Project Ecosystem
-- BUILDS ON: OpenFleet
-- BUILDS ON: Gateway-Centric Routing
+- FEEDS INTO: [[Model Guide: Claude Code]]
+- FEEDS INTO: [[Model Guide: LLM Wiki]]
+- FEEDS INTO: [[Model Guide: Methodology]]
+- BUILDS ON: [[Four-Project Ecosystem]]
+- BUILDS ON: [[OpenFleet]]
+- BUILDS ON: [[Gateway-Centric Routing]]
 - BUILDS ON: Deterministic Shell + LLM Core
-- RELATES TO: Model Guide: MCP + CLI Integration
-- RELATES TO: Model Guide: Skills + Commands + Hooks
+- RELATES TO: [[Model Guide: MCP + CLI Integration]]
+- RELATES TO: [[Model Guide: Skills + Commands + Hooks]]
 
 ## Backlinks
 
-[[Model Guide: Claude Code]]
-[[Model Guide: LLM Wiki]]
-[[Model Guide: Methodology]]
-[[Four-Project Ecosystem]]
-[[OpenFleet]]
-[[Gateway-Centric Routing]]
+[[[[Model Guide: Claude Code]]]]
+[[[[Model Guide: LLM Wiki]]]]
+[[[[Model Guide: Methodology]]]]
+[[[[Four-Project Ecosystem]]]]
+[[[[OpenFleet]]]]
+[[[[Gateway-Centric Routing]]]]
 [[Deterministic Shell + LLM Core]]
-[[Model Guide: MCP + CLI Integration]]
-[[Model Guide: Skills + Commands + Hooks]]
-[[Model Guide: Second Brain]]
+[[[[Model Guide: MCP + CLI Integration]]]]
+[[[[Model Guide: Skills + Commands + Hooks]]]]

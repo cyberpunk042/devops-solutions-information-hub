@@ -28,32 +28,32 @@ The Knowledge Evolution model describes how raw sources become lessons, patterns
 
 ### Layer 2 — Core Concepts
 
-1. **Knowledge Evolution Pipeline** (`wiki/domains/knowledge-systems/knowledge-evolution-pipeline.md`)
+1. **Knowledge Evolution Pipeline** ([[Knowledge Evolution Pipeline]])
    Entry point. Explains the six deterministic scoring signals, the 8-step generation loop (SCORE → SELECT → ASSEMBLE → GENERATE → WRITE → POST-CHAIN → REVIEW → LOOP), the four maturity levels and their promotion criteria, and the three LLM backends (claude-code for session execution, openai/LocalAI for direct API, AICP for fleet integration). Key insight: the scorer is deterministic (reproducible rankings, no hallucination) while the generator is LLM-based. The pipeline's compounding property: every promoted page increases neighbor scores.
 
-2. **Progressive Distillation** (`wiki/patterns/progressive-distillation.md`)
+2. **Progressive Distillation** ([[Progressive Distillation]])
    The structural pattern behind the evolution pipeline. Five density layers: Layer 0 raw → Layer 1 synthesis → Layer 2 concepts → Layer 3 patterns and lessons → Layer 6 decisions. Each layer is qualitatively different from the previous (transformation, not compression). The pattern's two failure modes: premature distillation (single-source pattern pages) and distillation arrest (seeds that never get promoted). Instances: this wiki's six-layer architecture, PARA's progressive summarization, Zettelkasten's permanent notes model, NotebookLM's source → research → artifact pipeline.
 
 ### Layer 4 — Lessons
 
-3. **Multi-Stage Ingestion Beats Single-Pass Processing** (`wiki/lessons/lesson-convergence-on-wiki-ingestion-pipeline.md`)
+3. **Multi-Stage Ingestion Beats Single-Pass Processing** ([[Multi-Stage Ingestion Beats Single-Pass Processing]])
    The lesson that motivates the pipeline: every source should go through extract → cross-reference → gap-identification → deepening. Single-pass ingestion produces thin seed pages that score too low to evolve. The pipeline's inputs depend on the quality of what was ingested.
 
-4. **Shallow Ingestion Is Systemic, Not Isolated** (`wiki/lessons/shallow-ingestion-is-systemic-not-isolated.md`)
+4. **Shallow Ingestion Is Systemic, Not Isolated** ([[Shallow Ingestion Is Systemic, Not Isolated]])
    Why one skipped quality gate degrades the entire evolution pipeline downstream: thin pages have low relationship counts, low scores, and never get promoted. The lesson is about cumulative systemic effects, not isolated page quality.
 
-5. **Schema Is the Real Product — Not the Content** (`wiki/lessons/lesson-convergence-on-src-karpathy-llm-wiki-idea-file.md`)
+5. **Schema Is the Real Product — Not the Content** ([[Lesson: Schema Is the Real Product — Not the Content]])
    The meta-lesson: the frontmatter schema (type, domain, layer, maturity, confidence, relationships) is what makes evolution possible. Without a consistent schema, the scorer has no signals to evaluate. Schema defines the scoring surface.
 
-6. **Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search** (`wiki/lessons/lesson-convergence-on-lightrag.md`)
+6. **Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search** ([[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]])
    How LightRAG's graph-aware retrieval complements the wiki's structured navigation. Evolution-promoted pages (patterns, decisions) become high-value graph nodes that improve retrieval quality for both keyword search and semantic queries.
 
 ### Layer 6 — Decisions
 
-7. **Decision: Wiki-First with LightRAG Upgrade Path** (`wiki/decisions/decision-resolve-open-questions-in-llm-wiki-vs-rag.md`)
+7. **Decision: Wiki-First with LightRAG Upgrade Path** ([[Decision: Wiki-First with LightRAG Upgrade Path]])
    The explicit architectural decision: operate in wiki-first mode (pure structured markdown + index navigation) until approaching 200 pages, then evaluate LightRAG integration. Evolution pipeline output (dense, cross-linked patterns and decisions) is exactly the content that makes LightRAG's graph-enhanced retrieval valuable.
 
-8. **Decision: Local Model vs Cloud API for Routine Operations** (`wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md`)
+8. **Decision: Local Model vs Cloud API for Routine Operations** ([[Decision: Local Model vs Cloud API for Routine Operations]])
    Directly governs the evolution pipeline's backend choice. The `--backend openai` flag with LocalAI routes lower-complexity evolution tasks (seed → growing) to free local inference; `--backend claude-code` is reserved for high-complexity canonical-tier evolution.
 
 ## The Evolution Loop in Practice
@@ -87,20 +87,20 @@ After completing this path you understand:
 
 ## Relationships
 
-- BUILDS ON: Knowledge Evolution Pipeline
-- BUILDS ON: Progressive Distillation
-- FEEDS INTO: Model: Automation + Pipelines
+- BUILDS ON: [[Knowledge Evolution Pipeline]]
+- BUILDS ON: [[Progressive Distillation]]
+- FEEDS INTO: [[Model: Automation + Pipelines]]
 - RELATES TO: Model: Local AI ($0 Target)
-- RELATES TO: Model: SFIF + Architecture
-- RELATES TO: Model: NotebookLM
-- ENABLES: Decision: Wiki-First with LightRAG Upgrade Path
+- RELATES TO: [[Model: SFIF + Architecture]]
+- RELATES TO: [[Model: NotebookLM]]
+- ENABLES: [[Decision: Wiki-First with LightRAG Upgrade Path]]
 
 ## Backlinks
 
-[[Knowledge Evolution Pipeline]]
-[[Progressive Distillation]]
-[[Model: Automation + Pipelines]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Progressive Distillation]]]]
+[[[[Model: Automation + Pipelines]]]]
 [[Model: Local AI ($0 Target)]]
-[[Model: SFIF + Architecture]]
-[[Model: NotebookLM]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
+[[[[Model: SFIF + Architecture]]]]
+[[[[Model: NotebookLM]]]]
+[[[[Decision: Wiki-First with LightRAG Upgrade Path]]]]

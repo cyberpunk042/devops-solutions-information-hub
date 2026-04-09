@@ -90,22 +90,21 @@ Cross-referencing `Wiki Event-Driven Automation`: that page explicitly resolves 
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team
-- BUILDS ON: Claude Code Skills
-- ENABLES: AI-Driven Content Pipeline
-- RELATES TO: NotebookLM
-- ENABLES: Wiki Event-Driven Automation
-- RELATES TO: LLM Knowledge Linting
-- RELATES TO: Plane
-- RELATES TO: OpenFleet
+- BUILDS ON: [[Claude Code Skills]]
+- ENABLES: [[AI-Driven Content Pipeline]]
+- RELATES TO: [[NotebookLM]]
+- ENABLES: [[Wiki Event-Driven Automation]]
+- RELATES TO: [[LLM Knowledge Linting]]
+- RELATES TO: [[Plane]]
+- RELATES TO: [[OpenFleet]]
 
 ## Backlinks
 
 [[src-claude-notebooklm-content-team]]
-[[Claude Code Skills]]
-[[AI-Driven Content Pipeline]]
-[[NotebookLM]]
-[[Wiki Event-Driven Automation]]
-[[LLM Knowledge Linting]]
-[[Plane]]
-[[OpenFleet]]
-[[Research Pipeline Orchestration]]
+[[[[Claude Code Skills]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[NotebookLM]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Plane]]]]
+[[[[OpenFleet]]]]

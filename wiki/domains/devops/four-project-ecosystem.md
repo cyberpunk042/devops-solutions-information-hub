@@ -185,31 +185,26 @@ Cross-referencing `OpenArms` and `MCP Integration Architecture`: yes — both pa
 
 ## Relationships
 
-- ENABLES: OpenFleet
-- ENABLES: AICP
-- ENABLES: OpenArms
-- RELATES TO: devops-control-plane
-- FEEDS INTO: Wiki Knowledge Graph
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: Four-Project Ecosystem
-- RELATES TO: WSL2 Development Patterns
-- RELATES TO: Immune System Rules
-- RELATES TO: Infrastructure as Code Patterns
+- ENABLES: [[OpenFleet]]
+- ENABLES: [[AICP]]
+- ENABLES: [[OpenArms]]
+- RELATES TO: [[devops-control-plane]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[Four-Project Ecosystem]]
+- RELATES TO: [[WSL2 Development Patterns]]
+- RELATES TO: [[Immune System Rules]]
+- RELATES TO: [[Infrastructure as Code Patterns]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[AICP]]
-[[OpenArms]]
-[[devops-control-plane]]
-[[Wiki Knowledge Graph]]
-[[MCP Integration Architecture]]
-[[Four-Project Ecosystem]]
-[[WSL2 Development Patterns]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[Ecosystem Integration Interfaces]]
-[[Model Guide: Ecosystem Architecture]]
-[[Model: SFIF + Architecture]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]
+[[[[OpenArms]]]]
+[[[[devops-control-plane]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Four-Project Ecosystem]]]]
+[[[[WSL2 Development Patterns]]]]
+[[[[Immune System Rules]]]]
+[[[[Infrastructure as Code Patterns]]]]

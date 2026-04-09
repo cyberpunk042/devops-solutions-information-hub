@@ -43,15 +43,15 @@ A practical tutorial on running OpenClaw 100% free and 100% private using Google
 ## Relationships
 
 - DERIVED FROM: src-gemma4-searxng-openclaw
-- EXTENDS: OpenClaw
-- RELATES TO: AICP
-- RELATES TO: OpenFleet
-- RELATES TO: LightRAG
+- EXTENDS: [[OpenClaw]]
+- RELATES TO: [[AICP]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[LightRAG]]
 
 ## Backlinks
 
 [[src-gemma4-searxng-openclaw]]
-[[OpenClaw]]
-[[AICP]]
-[[OpenFleet]]
-[[LightRAG]]
+[[[[OpenClaw]]]]
+[[[[AICP]]]]
+[[[[OpenFleet]]]]
+[[[[LightRAG]]]]

@@ -111,28 +111,26 @@ Avoid Gateway-Centric Routing when:
 
 ## Relationships
 
-- DERIVED FROM: OpenArms
-- DERIVED FROM: OpenClaw
-- DERIVED FROM: OpenFleet
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: Multi-Channel AI Agent Access
-- RELATES TO: Deterministic Shell, LLM Core
-- ENABLES: Multi-Channel AI Agent Access
-- BUILDS ON: Infrastructure as Code Patterns
-- RELATES TO: AICP
-- FEEDS INTO: Research Pipeline Orchestration
+- DERIVED FROM: [[OpenArms]]
+- DERIVED FROM: [[OpenClaw]]
+- DERIVED FROM: [[OpenFleet]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[Multi-Channel AI Agent Access]]
+- RELATES TO: [[Deterministic Shell, LLM Core]]
+- ENABLES: [[Multi-Channel AI Agent Access]]
+- BUILDS ON: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[AICP]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[OpenArms]]
-[[OpenClaw]]
-[[OpenFleet]]
-[[MCP Integration Architecture]]
-[[Multi-Channel AI Agent Access]]
-[[Deterministic Shell]]
-[[LLM Core]]
-[[Infrastructure as Code Patterns]]
-[[AICP]]
-[[Research Pipeline Orchestration]]
-[[Deterministic Shell, LLM Core]]
-[[Model Guide: Ecosystem Architecture]]
+[[[[OpenArms]]]]
+[[[[OpenClaw]]]]
+[[[[OpenFleet]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Multi-Channel AI Agent Access]]]]
+[[[[Deterministic Shell]]
+[[LLM Core]]]]
+[[[[Infrastructure as Code Patterns]]]]
+[[[[AICP]]]]
+[[[[Research Pipeline Orchestration]]]]

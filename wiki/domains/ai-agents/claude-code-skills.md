@@ -116,18 +116,18 @@ Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Skills Architec
 - DERIVED FROM: src-obsidian-claude-code-second-brain
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice
 - DERIVED FROM: src-token-hacks-claude-code
-- ENABLES: AI-Driven Content Pipeline
-- ENABLES: Claude Code Scheduling
-- ENABLES: Claude Code Best Practices
-- ENABLES: Claude Code Context Management
-- ENABLES: Wiki Event-Driven Automation
-- BUILDS ON: NotebookLM
-- RELATES TO: Obsidian Knowledge Vault
-- RELATES TO: Skills Architecture Patterns
-- USED BY: OpenFleet
-- USED BY: AICP
-- BUILDS ON: OpenClaw
-- BUILDS ON: Claude Code
+- ENABLES: [[AI-Driven Content Pipeline]]
+- ENABLES: [[Claude Code Scheduling]]
+- ENABLES: [[Claude Code Best Practices]]
+- ENABLES: [[Claude Code Context Management]]
+- ENABLES: [[Wiki Event-Driven Automation]]
+- BUILDS ON: [[NotebookLM]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[Skills Architecture Patterns]]
+- USED BY: [[OpenFleet]]
+- USED BY: [[AICP]]
+- BUILDS ON: [[OpenClaw]]
+- BUILDS ON: [[Claude Code]]
 
 ## Backlinks
 
@@ -135,49 +135,15 @@ Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Skills Architec
 [[src-obsidian-claude-code-second-brain]]
 [[src-shanraisshan-claude-code-best-practice]]
 [[src-token-hacks-claude-code]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Scheduling]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Wiki Event-Driven Automation]]
-[[NotebookLM]]
-[[Obsidian Knowledge Vault]]
-[[Skills Architecture Patterns]]
-[[OpenFleet]]
-[[AICP]]
-[[OpenClaw]]
-[[Claude Code]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Harness Engineering]]
-[[Model Guide: Claude Code]]
-[[Model Guide: Skills + Commands + Hooks]]
-[[Multi-Channel AI Agent Access]]
-[[NotebookLM Skills]]
-[[Obsidian CLI]]
-[[Obsidian Skills Ecosystem]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[OpenArms]]
-[[Per-Role Command Architecture]]
-[[Plan Execute Review Cycle]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[Synthesis: PleasePrompto/notebooklm-skill]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-[[Synthesis: claude-world/notebooklm-skill]]
-[[Synthesis: kepano/obsidian-skills]]
-[[Synthesis: pablo-mano/Obsidian-CLI-skill]]
-[[notebooklm-py CLI]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[Claude Code Scheduling]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[NotebookLM]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[Skills Architecture Patterns]]]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]
+[[[[OpenClaw]]]]
+[[[[Claude Code]]]]

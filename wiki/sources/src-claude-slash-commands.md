@@ -48,17 +48,17 @@ A small open-source collection of reusable Claude Code slash commands installabl
 
 ## Relationships
 
-- EXTENDS: Claude Code Skills (adds concrete command examples to the skills architecture)
-- IMPLEMENTS: Skills Architecture Patterns (demonstrates per-command tool scoping and argument patterns)
-- RELATES TO: Claude Code Best Practices (command authoring is an extension of best practice guidance)
-- RELATES TO: Claude Code (core platform this builds on)
-- FEEDS INTO: Claude Code Scheduling (personal automation commands can be chained with scheduling)
+- EXTENDS: [[Claude Code Skills]] (adds concrete command examples to the skills architecture)
+- IMPLEMENTS: [[Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)
+- RELATES TO: [[Claude Code Best Practices]] (command authoring is an extension of best practice guidance)
+- RELATES TO: [[Claude Code]] (core platform this builds on)
+- FEEDS INTO: [[Claude Code Scheduling]] (personal automation commands can be chained with scheduling)
 
 ## Backlinks
 
-[[Claude Code Skills (adds concrete command examples to the skills architecture)]]
-[[Skills Architecture Patterns (demonstrates per-command tool scoping and argument patterns)]]
-[[Claude Code Best Practices (command authoring is an extension of best practice guidance)]]
-[[Claude Code (core platform this builds on)]]
-[[Claude Code Scheduling (personal automation commands can be chained with scheduling)]]
+[[[[Claude Code Skills]] (adds concrete command examples to the skills architecture)]]
+[[[[Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)]]
+[[[[Claude Code Best Practices]] (command authoring is an extension of best practice guidance)]]
+[[[[Claude Code]] (core platform this builds on)]]
+[[[[Claude Code Scheduling]] (personal automation commands can be chained with scheduling)]]
 [[Per-Role Command Architecture]]

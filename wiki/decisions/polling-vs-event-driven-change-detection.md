@@ -93,20 +93,20 @@ The current polling implementation can run indefinitely without degradation — 
 
 ## Relationships
 
-- DERIVED FROM: WSL2 Development Patterns
-- DERIVED FROM: Wiki Event-Driven Automation
-- DERIVED FROM: Research Pipeline Orchestration
-- RELATES TO: Infrastructure as Code Patterns
-- RELATES TO: devops-control-plane
-- ENABLES: Wiki Event-Driven Automation
-- FEEDS INTO: Research Pipeline Orchestration
-- RELATES TO: Obsidian Knowledge Vault
+- DERIVED FROM: [[WSL2 Development Patterns]]
+- DERIVED FROM: [[Wiki Event-Driven Automation]]
+- DERIVED FROM: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[devops-control-plane]]
+- ENABLES: [[Wiki Event-Driven Automation]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
 
 ## Backlinks
 
-[[WSL2 Development Patterns]]
-[[Wiki Event-Driven Automation]]
-[[Research Pipeline Orchestration]]
-[[Infrastructure as Code Patterns]]
-[[devops-control-plane]]
-[[Obsidian Knowledge Vault]]
+[[[[WSL2 Development Patterns]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Infrastructure as Code Patterns]]]]
+[[[[devops-control-plane]]]]
+[[[[Obsidian Knowledge Vault]]]]

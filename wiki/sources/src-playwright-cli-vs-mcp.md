@@ -76,21 +76,19 @@ Cross-referencing `Decision: MCP vs CLI for Tool Integration` and `Context-Aware
 ## Relationships
 
 - DERIVED FROM: src-playwright-cli-vs-mcp
-- EXTENDS: CLI Tools Beat MCP for Token Efficiency
-- SUPPORTS: Decision: MCP vs CLI for Tool Integration
-- RELATES TO: Claude Code Skills
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Synthesis: Claude Code Accuracy Tips
-- FEEDS INTO: Research Pipeline Orchestration
+- EXTENDS: [[CLI Tools Beat MCP for Token Efficiency]]
+- SUPPORTS: [[Decision: MCP vs CLI for Tool Integration]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Synthesis: Claude Code Accuracy Tips]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
 [[src-playwright-cli-vs-mcp]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Claude Code Skills]]
-[[Claude Code Context Management]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Research Pipeline Orchestration]]
-[[Context-Aware Tool Loading]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
+[[[[CLI Tools Beat MCP for Token Efficiency]]]]
+[[[[Decision: MCP vs CLI for Tool Integration]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Synthesis: Claude Code Accuracy Tips]]]]
+[[[[Research Pipeline Orchestration]]]]

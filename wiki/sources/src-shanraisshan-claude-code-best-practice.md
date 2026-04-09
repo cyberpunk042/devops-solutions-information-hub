@@ -188,21 +188,21 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 ## Relationships
 
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice
-- ENABLES: Claude Code Best Practices
-- ENABLES: Claude Code Context Management
-- BUILDS ON: Claude Code Skills
-- RELATES TO: LLM Wiki Pattern
+- ENABLES: [[Claude Code Best Practices]]
+- ENABLES: [[Claude Code Context Management]]
+- BUILDS ON: [[Claude Code Skills]]
+- RELATES TO: [[LLM Wiki Pattern]]
 - RELATES TO: Claude Code Hooks
 - COMPARES TO: Everything Claude Code
-- COMPARES TO: Spec-Driven Development
+- COMPARES TO: [[Spec-Driven Development]]
 
 ## Backlinks
 
 [[src-shanraisshan-claude-code-best-practice]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[LLM Wiki Pattern]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Claude Code Skills]]]]
+[[[[LLM Wiki Pattern]]]]
 [[Claude Code Hooks]]
 [[Everything Claude Code]]
-[[Spec-Driven Development]]
+[[[[Spec-Driven Development]]]]

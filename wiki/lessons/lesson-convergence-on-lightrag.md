@@ -48,7 +48,7 @@ LightRAG's insight — extracted from EMNLP 2025 research — is that graph trav
 
 The performance difference is not marginal. The LightRAG page documents: "Agriculture domain: LightRAG 62.4% vs GraphRAG 43.6%. Legal domain: 54.3% vs 45.7%. Cost: <100 tokens + 1 API call per query vs GraphRAG's 610,000 tokens + hundreds of API calls." The graph traversal approach wins on both quality and cost compared to LLM-heavy alternatives.
 
-The practical lesson for wiki maintainers: the way you structure wiki relationships today directly determines the quality of graph queries tomorrow. A relationship like `- RELATES TO: Something` provides minimal graph signal. A relationship like `- CONTRADICTS: RAG-Only Architecture` or `- ENABLES: Wiki Knowledge Graph` provides typed traversal paths that enable queries like "what contradicts this?" or "what does this enable?" to return precise, structured answers.
+The practical lesson for wiki maintainers: the way you structure wiki relationships today directly determines the quality of graph queries tomorrow. A relationship like `- RELATES TO: Something` provides minimal graph signal. A relationship like `- CONTRADICTS: RAG-Only Architecture` or `- ENABLES: [[Wiki Knowledge Graph]]` provides typed traversal paths that enable queries like "what contradicts this?" or "what does this enable?" to return precise, structured answers.
 
 ## Evidence
 
@@ -71,19 +71,20 @@ This lesson applies to:
 
 ## Relationships
 
-- DERIVED FROM: LightRAG
-- DERIVED FROM: LLM Wiki vs RAG
-- DERIVED FROM: Wiki Knowledge Graph
-- EXTENDS: LLM Wiki Pattern
-- BUILDS ON: LightRAG
-- COMPARES TO: LLM Wiki vs RAG
-- FEEDS INTO: OpenFleet
+- DERIVED FROM: [[LightRAG]]
+- DERIVED FROM: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[Wiki Knowledge Graph]]
+- EXTENDS: [[LLM Wiki Pattern]]
+- BUILDS ON: [[LightRAG]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
+- FEEDS INTO: [[OpenFleet]]
 - ENABLES: Wiki Knowledge Graph
 
 ## Backlinks
 
-[[LightRAG]]
-[[LLM Wiki vs RAG]]
+[[[[LightRAG]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[OpenFleet]]]]
 [[Wiki Knowledge Graph]]
-[[LLM Wiki Pattern]]
-[[OpenFleet]]

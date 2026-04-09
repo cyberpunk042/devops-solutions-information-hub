@@ -10,7 +10,7 @@ readiness: 15
 stages_completed: [document]
 artifacts:
   - wiki/domains/devops/four-project-ecosystem.md
-  - wiki/spine/adoption-guide.md
+  - [[Adoption Guide — How to Use This Wiki's Standards]]
 confidence: high
 created: 2026-04-09
 updated: 2026-04-09
@@ -42,17 +42,17 @@ Make the wiki's knowledge and methodology consumable by each sister project thro
 
 ## Relationships
 
-- BUILDS ON: Four-Project Ecosystem
+- BUILDS ON: [[Four-Project Ecosystem]]
 - ENABLES: OpenFleet, AICP, OpenArms, devops-control-plane
 - RELATES TO: Adoption Guide
-- RELATES TO: Decision: Wiki-First with LightRAG Upgrade Path
+- RELATES TO: [[Decision: Wiki-First with LightRAG Upgrade Path]]
 
 ## Backlinks
 
-[[Four-Project Ecosystem]]
+[[[[Four-Project Ecosystem]]]]
 [[OpenFleet]]
 [[AICP]]
 [[OpenArms]]
 [[devops-control-plane]]
 [[Adoption Guide]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
+[[[[Decision: Wiki-First with LightRAG Upgrade Path]]]]

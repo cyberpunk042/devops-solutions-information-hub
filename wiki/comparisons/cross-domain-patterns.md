@@ -164,26 +164,26 @@ Cross-referencing the `Four-Project Ecosystem`, `Plan Execute Review Cycle`, and
 
 ## Relationships
 
-- RELATES TO: Plan Execute Review Cycle
-- RELATES TO: Context-Aware Tool Loading
-- RELATES TO: Agent Orchestration Patterns
-- RELATES TO: Knowledge Evolution Pipeline
-- RELATES TO: Zettelkasten Methodology
-- RELATES TO: PARA Methodology
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Knowledge Graph
-- BUILDS ON: Second Brain Architecture
-- FEEDS INTO: Research Pipeline Orchestration
+- RELATES TO: [[Plan Execute Review Cycle]]
+- RELATES TO: [[Context-Aware Tool Loading]]
+- RELATES TO: [[Agent Orchestration Patterns]]
+- RELATES TO: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[Zettelkasten Methodology]]
+- RELATES TO: [[PARA Methodology]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- BUILDS ON: [[Second Brain Architecture]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[Plan Execute Review Cycle]]
-[[Context-Aware Tool Loading]]
-[[Agent Orchestration Patterns]]
-[[Knowledge Evolution Pipeline]]
-[[Zettelkasten Methodology]]
-[[PARA Methodology]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[Second Brain Architecture]]
-[[Research Pipeline Orchestration]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Context-Aware Tool Loading]]]]
+[[[[Agent Orchestration Patterns]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Zettelkasten Methodology]]]]
+[[[[PARA Methodology]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Second Brain Architecture]]]]
+[[[[Research Pipeline Orchestration]]]]

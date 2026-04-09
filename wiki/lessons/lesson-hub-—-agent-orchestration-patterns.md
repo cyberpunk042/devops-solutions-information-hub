@@ -63,20 +63,20 @@ The Research Pipeline Orchestration page answers its open question about paralle
 
 ## Relationships
 
-- DERIVED FROM: Agent Orchestration Patterns
-- DERIVED FROM: Plan Execute Review Cycle
-- DERIVED FROM: Deterministic Shell, LLM Core
-- RELATES TO: Agent Orchestration Patterns
-- FEEDS INTO: Plan Execute Review Cycle
-- FEEDS INTO: Deterministic Shell, LLM Core
-- RELATES TO: Research Pipeline Orchestration
-- RELATES TO: MCP Integration Architecture
+- DERIVED FROM: [[Agent Orchestration Patterns]]
+- DERIVED FROM: [[Plan Execute Review Cycle]]
+- DERIVED FROM: [[Deterministic Shell, LLM Core]]
+- RELATES TO: [[Agent Orchestration Patterns]]
+- FEEDS INTO: [[Plan Execute Review Cycle]]
+- FEEDS INTO: [[Deterministic Shell, LLM Core]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[MCP Integration Architecture]]
 
 ## Backlinks
 
-[[Agent Orchestration Patterns]]
-[[Plan Execute Review Cycle]]
-[[Deterministic Shell]]
-[[LLM Core]]
-[[Research Pipeline Orchestration]]
-[[MCP Integration Architecture]]
+[[[[Agent Orchestration Patterns]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Deterministic Shell]]
+[[LLM Core]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[MCP Integration Architecture]]]]

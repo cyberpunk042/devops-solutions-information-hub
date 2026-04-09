@@ -71,21 +71,19 @@ Moderate. Activating LightRAG is additive — it does not change wiki files, so 
 
 ## Relationships
 
-- DERIVED FROM: LLM Wiki vs RAG
-- DERIVED FROM: LightRAG
-- DERIVED FROM: Knowledge Evolution Pipeline
-- COMPARES TO: LLM Wiki vs RAG
-- ENABLES: Wiki Knowledge Graph
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Research Pipeline Orchestration
+- DERIVED FROM: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[LightRAG]]
+- DERIVED FROM: [[Knowledge Evolution Pipeline]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
+- ENABLES: [[Wiki Knowledge Graph]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[LLM Wiki vs RAG]]
-[[LightRAG]]
-[[Knowledge Evolution Pipeline]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki Pattern]]
-[[Research Pipeline Orchestration]]
-[[Ecosystem Integration Interfaces]]
-[[Model: Knowledge Evolution]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[LightRAG]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Research Pipeline Orchestration]]]]

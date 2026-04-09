@@ -76,23 +76,21 @@ Cross-referencing `notebooklm-py CLI` and `Decision: MCP vs CLI for Tool Integra
 ## Relationships
 
 - DERIVED FROM: src-notebooklm-claude-code-workflow
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: Claude Code Skills
-- RELATES TO: Synthesis: Claude Code Accuracy Tips
-- RELATES TO: Memory Lifecycle Management
-- FEEDS INTO: Research Pipeline Orchestration
-- COMPARES TO: LLM Wiki vs RAG
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Synthesis: Claude Code Accuracy Tips]]
+- RELATES TO: [[Memory Lifecycle Management]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
 
 ## Backlinks
 
 [[src-notebooklm-claude-code-workflow]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Memory Lifecycle Management]]
-[[Research Pipeline Orchestration]]
-[[LLM Wiki vs RAG]]
-[[Context-Aware Tool Loading]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Claude Code Skills]]]]
+[[[[Synthesis: Claude Code Accuracy Tips]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[LLM Wiki vs RAG]]]]

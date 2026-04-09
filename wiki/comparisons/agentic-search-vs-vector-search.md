@@ -15,7 +15,7 @@ sources:
     title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    file: wiki/sources/src-karpathy-llm-wiki-idea-file.md
+    file: [[Synthesis: Karpathy's LLM Wiki Idea File]]
     title: "Karpathy LLM Wiki Idea File"
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
@@ -23,11 +23,11 @@ sources:
     title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    file: wiki/sources/src-shanraisshan-claude-code-best-practice.md
+    file: [[Synthesis: Claude Code Best Practice (shanraisshan)]]
     title: "shanraisshan/claude-code-best-practice"
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    file: wiki/sources/src-pleaseprompto-notebooklm-skill.md
+    file: [[Synthesis: PleasePrompto/notebooklm-skill]]
     title: "PleasePrompto/notebooklm-skill"
 tags: [agentic-search, vector-search, rag, hybrid-search, knowledge-retrieval, comparison, glob-grep, index-navigation]
 ---
@@ -135,22 +135,20 @@ Cross-referencing `Wiki Knowledge Graph` and `LightRAG`: yes, they converge subs
 
 ## Relationships
 
-- SYNTHESIZES: LLM Wiki vs RAG
-- SYNTHESIZES: Claude Code Best Practices
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Knowledge Graph
-- RELATES TO: NotebookLM
-- RELATES TO: NotebookLM Skills
-- RELATES TO: Memory Lifecycle Management
+- SYNTHESIZES: [[LLM Wiki vs RAG]]
+- SYNTHESIZES: [[Claude Code Best Practices]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[NotebookLM]]
+- RELATES TO: [[NotebookLM Skills]]
+- RELATES TO: [[Memory Lifecycle Management]]
 
 ## Backlinks
 
-[[LLM Wiki vs RAG]]
-[[Claude Code Best Practices]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[NotebookLM]]
-[[NotebookLM Skills]]
-[[Memory Lifecycle Management]]
-[[LightRAG]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[NotebookLM]]]]
+[[[[NotebookLM Skills]]]]
+[[[[Memory Lifecycle Management]]]]

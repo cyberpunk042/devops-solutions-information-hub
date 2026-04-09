@@ -124,28 +124,26 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 
 ## Relationships
 
-- EXTENDS: Harness Engineering
-- IMPLEMENTS: Task Lifecycle Stage-Gating
-- ENABLES: Context-Aware Tool Loading
-- RELATES TO: Synthesis: Context Mode — MCP Sandbox for Context Saving
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Claude Code
-- RELATES TO: Plannotator — Interactive Plan & Code Review for AI Agents
-- FEEDS INTO: Per-Role Command Architecture
-- FEEDS INTO: Design.md Pattern
-- BUILDS ON: Agent Orchestration Patterns
+- EXTENDS: [[Harness Engineering]]
+- IMPLEMENTS: [[Task Lifecycle Stage-Gating]]
+- ENABLES: [[Context-Aware Tool Loading]]
+- RELATES TO: [[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Claude Code]]
+- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
+- FEEDS INTO: [[Per-Role Command Architecture]]
+- FEEDS INTO: [[Design.md Pattern]]
+- BUILDS ON: [[Agent Orchestration Patterns]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[Task Lifecycle Stage-Gating]]
-[[Context-Aware Tool Loading]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Claude Code Best Practices]]
-[[Claude Code]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Per-Role Command Architecture]]
-[[Design.md Pattern]]
-[[Agent Orchestration Patterns]]
-[[Model Guide: Claude Code]]
-[[Model Guide: Skills + Commands + Hooks]]
+[[[[Harness Engineering]]]]
+[[[[Task Lifecycle Stage-Gating]]]]
+[[[[Context-Aware Tool Loading]]]]
+[[[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code]]]]
+[[[[Plannotator — Interactive Plan & Code Review for AI Agents]]]]
+[[[[Per-Role Command Architecture]]]]
+[[[[Design.md Pattern]]]]
+[[[[Agent Orchestration Patterns]]]]

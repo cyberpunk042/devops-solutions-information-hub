@@ -85,23 +85,21 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 
 ## Relationships
 
-- DERIVED FROM: AICP
-- DERIVED FROM: Local LLM Quantization
-- DERIVED FROM: Knowledge Evolution Pipeline
-- RELATES TO: OpenFleet
-- RELATES TO: Research Pipeline Orchestration
-- ENABLES: Knowledge Evolution Pipeline
-- FEEDS INTO: Wiki Knowledge Graph
-- RELATES TO: Infrastructure as Code Patterns
+- DERIVED FROM: [[AICP]]
+- DERIVED FROM: [[Local LLM Quantization]]
+- DERIVED FROM: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- ENABLES: [[Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[Infrastructure as Code Patterns]]
 
 ## Backlinks
 
-[[AICP]]
-[[Local LLM Quantization]]
-[[Knowledge Evolution Pipeline]]
-[[OpenFleet]]
-[[Research Pipeline Orchestration]]
-[[Wiki Knowledge Graph]]
-[[Infrastructure as Code Patterns]]
-[[Local Inference Engine (Subsystem 3)]]
-[[Model: Local AI ($0 Target)]]
+[[[[AICP]]]]
+[[[[Local LLM Quantization]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[OpenFleet]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Infrastructure as Code Patterns]]]]

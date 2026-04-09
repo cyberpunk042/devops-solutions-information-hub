@@ -11,39 +11,39 @@ updated: 2026-04-08
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
-    file: wiki/sources/src-claude-notebooklm-content-team.md
+    file: [[Synthesis: Claude + NotebookLM Content Automation]]
     title: "Claude + NotebookLM = Your 24/7 Content Team"
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    file: wiki/sources/src-shanraisshan-claude-code-best-practice.md
+    file: [[Synthesis: Claude Code Best Practice (shanraisshan)]]
     title: "shanraisshan/claude-code-best-practice"
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    file: wiki/sources/src-obsidian-claude-code-second-brain.md
+    file: [[Synthesis: Obsidian + Claude Code Second Brain Setup]]
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
   - id: src-kepano-obsidian-skills
     type: documentation
-    file: wiki/sources/src-kepano-obsidian-skills.md
+    file: [[Synthesis: kepano/obsidian-skills]]
     title: "kepano/obsidian-skills"
   - id: src-axton-obsidian-visual-skills
     type: documentation
-    file: wiki/sources/src-axton-obsidian-visual-skills.md
+    file: [[Synthesis: axtonliu/axton-obsidian-visual-skills]]
     title: "axtonliu/axton-obsidian-visual-skills"
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
-    file: wiki/sources/src-pablo-mano-obsidian-cli-skill.md
+    file: [[Synthesis: pablo-mano/Obsidian-CLI-skill]]
     title: "pablo-mano/Obsidian-CLI-skill"
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    file: wiki/sources/src-claude-world-notebooklm-skill.md
+    file: [[Synthesis: claude-world/notebooklm-skill]]
     title: "claude-world/notebooklm-skill"
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    file: wiki/sources/src-pleaseprompto-notebooklm-skill.md
+    file: [[Synthesis: PleasePrompto/notebooklm-skill]]
     title: "PleasePrompto/notebooklm-skill"
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    file: wiki/sources/src-token-hacks-claude-code.md
+    file: [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
     title: "18 Claude Code Token Hacks in 18 Minutes"
 tags: [skills, architecture, patterns, cross-domain, claude-code, obsidian, notebooklm, SKILL-md, agent-extensibility, composition]
 ---
@@ -168,22 +168,20 @@ Cross-referencing `Wiki Event-Driven Automation`: the LLM Wiki v2 memory model d
 
 ## Relationships
 
-- SYNTHESIZES: Claude Code Skills
-- SYNTHESIZES: Obsidian Skills Ecosystem
-- SYNTHESIZES: NotebookLM Skills
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Claude Code Context Management
-- RELATES TO: AI-Driven Content Pipeline
-- RELATES TO: LLM Wiki Pattern
+- SYNTHESIZES: [[Claude Code Skills]]
+- SYNTHESIZES: [[Obsidian Skills Ecosystem]]
+- SYNTHESIZES: [[NotebookLM Skills]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[AI-Driven Content Pipeline]]
+- RELATES TO: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Claude Code Skills]]
-[[Obsidian Skills Ecosystem]]
-[[NotebookLM Skills]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[AI-Driven Content Pipeline]]
-[[LLM Wiki Pattern]]
-[[Infrastructure as Code Patterns]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
+[[[[Claude Code Skills]]]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[NotebookLM Skills]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Context Management]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[LLM Wiki Pattern]]]]

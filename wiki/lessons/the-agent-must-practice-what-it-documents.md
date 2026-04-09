@@ -92,20 +92,20 @@ Knowledge must flow upward: tribal knowledge should become documented methodolog
 
 ## Relationships
 
-- DERIVED FROM: Methodology Framework
-- DERIVED FROM: Stage-Gate Methodology
-- RELATES TO: Never Skip Stages Even When Told to Continue (the same incident)
-- RELATES TO: Always Plan Before Executing
-- RELATES TO: Immune System Rules (this lesson IS the immune system principle)
-- BUILDS ON: Knowledge Evolution Pipeline (knowledge must evolve into enforcement)
+- DERIVED FROM: [[Methodology Framework]]
+- DERIVED FROM: [[Stage-Gate Methodology]]
+- RELATES TO: [[Never Skip Stages Even When Told to Continue]] (the same incident)
+- RELATES TO: [[Always Plan Before Executing]]
+- RELATES TO: [[Immune System Rules]] (this lesson IS the immune system principle)
+- BUILDS ON: [[Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)
 - ENABLES: Self-enforcing methodology (CLAUDE.md as operational ruleset)
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Never Skip Stages Even When Told to Continue (the same incident)]]
-[[Always Plan Before Executing]]
-[[Immune System Rules (this lesson IS the immune system principle)]]
-[[Knowledge Evolution Pipeline (knowledge must evolve into enforcement)]]
+[[[[Methodology Framework]]]]
+[[[[Stage-Gate Methodology]]]]
+[[[[Never Skip Stages Even When Told to Continue]] (the same incident)]]
+[[[[Always Plan Before Executing]]]]
+[[[[Immune System Rules]] (this lesson IS the immune system principle)]]
+[[[[Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)]]
 [[Self-enforcing methodology (CLAUDE.md as operational ruleset)]]

@@ -90,28 +90,18 @@ Cross-referencing `Agent Orchestration Patterns` and `OpenFleet`: the OpenClaw a
 
 ## Relationships
 
-- USED BY: OpenFleet
-- ENABLES: Claude Code Skills
-- RELATES TO: AICP
-- RELATES TO: Obsidian Skills Ecosystem
-- RELATES TO: NotebookLM Skills
-- ENABLES: LLM Knowledge Linting
+- USED BY: [[OpenFleet]]
+- ENABLES: [[Claude Code Skills]]
+- RELATES TO: [[AICP]]
+- RELATES TO: [[Obsidian Skills Ecosystem]]
+- RELATES TO: [[NotebookLM Skills]]
+- ENABLES: [[LLM Knowledge Linting]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Claude Code Skills]]
-[[AICP]]
-[[Obsidian Skills Ecosystem]]
-[[NotebookLM Skills]]
-[[LLM Knowledge Linting]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code]]
-[[Gateway-Centric Routing]]
-[[Harness Engineering]]
-[[Local LLM Quantization]]
-[[Plane]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[[[OpenFleet]]]]
+[[[[Claude Code Skills]]]]
+[[[[AICP]]]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[NotebookLM Skills]]]]
+[[[[LLM Knowledge Linting]]]]

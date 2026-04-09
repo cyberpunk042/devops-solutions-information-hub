@@ -9,7 +9,7 @@ current_stage: document
 readiness: 10
 stages_completed: [document]
 artifacts:
-  - wiki/domains/tools-and-platforms/aicp.md
+  - [[AICP]]
   - wiki/domains/ai-models/local-llm-quantization.md
   - wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md
   - docs/superpowers/specs/2026-04-08-knowledge-evolution-pipeline-design.md
@@ -49,14 +49,14 @@ Waiting for 19GB VRAM hardware upgrade. Current 8GB limits model size to 8B para
 
 ## Relationships
 
-- IMPLEMENTS: Decision: Local Model vs Cloud API for Routine Operations
-- BUILDS ON: AICP (backend routing, circuit breaker)
-- ENABLES: Knowledge Evolution Pipeline ($0 evolution)
-- RELATES TO: Local LLM Quantization
+- IMPLEMENTS: [[Decision: Local Model vs Cloud API for Routine Operations]]
+- BUILDS ON: [[AICP]] (backend routing, circuit breaker)
+- ENABLES: [[Knowledge Evolution Pipeline]] ($0 evolution)
+- RELATES TO: [[Local LLM Quantization]]
 
 ## Backlinks
 
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[AICP (backend routing, circuit breaker)]]
-[[Knowledge Evolution Pipeline ($0 evolution)]]
-[[Local LLM Quantization]]
+[[[[Decision: Local Model vs Cloud API for Routine Operations]]]]
+[[[[AICP]] (backend routing, circuit breaker)]]
+[[[[Knowledge Evolution Pipeline]] ($0 evolution)]]
+[[[[Local LLM Quantization]]]]

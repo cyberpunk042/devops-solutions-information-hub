@@ -73,20 +73,19 @@ This lesson applies to:
 
 ## Relationships
 
-- DERIVED FROM: LLM Knowledge Linting
-- DERIVED FROM: Knowledge Evolution Pipeline
-- BUILDS ON: LLM Wiki Pattern
-- ENABLES: Knowledge Evolution Pipeline
-- FEEDS INTO: Wiki Knowledge Graph
-- RELATES TO: LLM Wiki vs RAG
-- RELATES TO: Research Pipeline Orchestration
+- DERIVED FROM: [[LLM Knowledge Linting]]
+- DERIVED FROM: [[Knowledge Evolution Pipeline]]
+- BUILDS ON: [[LLM Wiki Pattern]]
+- ENABLES: [[Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[LLM Wiki vs RAG]]
+- RELATES TO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[LLM Knowledge Linting]]
-[[Knowledge Evolution Pipeline]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
-[[Research Pipeline Orchestration]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Research Pipeline Orchestration]]]]

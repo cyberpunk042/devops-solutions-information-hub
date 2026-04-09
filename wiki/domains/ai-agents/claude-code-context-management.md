@@ -105,36 +105,26 @@ Cross-referencing `Context-Aware Tool Loading`: the pattern page documents that 
 
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice
 - DERIVED FROM: src-token-hacks-claude-code
-- BUILDS ON: Claude Code Skills
-- BUILDS ON: Claude Code Best Practices
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Memory Lifecycle Management
-- RELATES TO: Wiki Knowledge Graph
-- CONSTRAINS: Wiki Ingestion Pipeline
-- CONSTRAINS: LLM Knowledge Linting
-- RELATES TO: Skills Architecture Patterns
-- EXTENDS: Claude Code
+- BUILDS ON: [[Claude Code Skills]]
+- BUILDS ON: [[Claude Code Best Practices]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Memory Lifecycle Management]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- CONSTRAINS: [[Wiki Ingestion Pipeline]]
+- CONSTRAINS: [[LLM Knowledge Linting]]
+- RELATES TO: [[Skills Architecture Patterns]]
+- EXTENDS: [[Claude Code]]
 
 ## Backlinks
 
 [[src-shanraisshan-claude-code-best-practice]]
 [[src-token-hacks-claude-code]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
-[[LLM Wiki Pattern]]
-[[Memory Lifecycle Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Knowledge Linting]]
-[[Skills Architecture Patterns]]
-[[Claude Code]]
-[[Agent Orchestration Patterns]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Skills Architecture Patterns]]]]
+[[[[Claude Code]]]]

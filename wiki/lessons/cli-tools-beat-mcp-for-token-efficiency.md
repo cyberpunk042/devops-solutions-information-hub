@@ -93,28 +93,23 @@ The emerging practitioner consensus captured across multiple independent sources
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: Claude Code Accuracy Tips
-- DERIVED FROM: Synthesis: Claude Code Harness Engineering
-- DERIVED FROM: Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens
-- RELATES TO: Claude Code
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Claude Code Skills
-- FEEDS INTO: MCP Integration Architecture
+- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
+- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
+- DERIVED FROM: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- RELATES TO: [[Claude Code]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Claude Code Skills]]
+- FEEDS INTO: [[MCP Integration Architecture]]
 - CONTRADICTS: default assumption that MCP is the standard tool integration pattern
 
 ## Backlinks
 
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Claude Code]]
-[[MCP Integration Architecture]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
+[[[[Synthesis: Claude Code Accuracy Tips]]]]
+[[[[Synthesis: Claude Code Harness Engineering]]]]
+[[[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]]]
+[[[[Claude Code]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Claude Code Skills]]]]
 [[default assumption that MCP is the standard tool integration pattern]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Context-Aware Tool Loading]]
-[[Model Guide: MCP + CLI Integration]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]

@@ -35,29 +35,29 @@ The Methodology model describes the stage-gate system, task type taxonomy, backl
 
 Read in this order:
 
-1. **Methodology Framework** (`wiki/domains/cross-domain/methodology-framework.md`) — The meta-system: what a methodology model IS, how models are selected per-condition, how they compose (nested, sequential, conditional, parallel), and the fractal property (same vocabulary at every scale). Start here.
-2. **Stage-Gate Methodology** (`wiki/domains/devops/stage-gate-methodology.md`) — The 5-stage sequence (Document → Design → Scaffold → Implement → Test); hard stage boundaries; readiness ranges; per-stage required artifacts; how stages enforce themselves via protocol and hooks.
-3. **Task Type Artifact Matrix** (`wiki/domains/devops/task-type-artifact-matrix.md`) — How task types (feature, research, spike, hotfix, docs, refactor) map to stage subsets and artifact bindings; why not every task runs all 5 stages.
-4. **Backlog Hierarchy Rules** (`wiki/domains/devops/backlog-hierarchy-rules.md`) — The 4-level hierarchy (Epic → Module → Task → Sub-task); promotion rules; why a flat backlog is an anti-pattern.
-5. **Execution Modes and End Conditions** (`wiki/domains/devops/execution-modes-and-end-conditions.md`) — Autonomous, semi-autonomous, and document-only modes; end condition types; how the agent knows when to stop.
-6. **Spec-Driven Development** (`wiki/domains/ai-agents/spec-driven-development.md`) — Why specs come before implementation; the spec-to-code pipeline; how spec quality determines execution quality.
-7. **Task Lifecycle Stage-Gating** (`wiki/domains/ai-agents/task-lifecycle-stage-gating.md`) — How stage gates work at the task level; the readiness percentage system; gate conditions and what triggers advancement.
+1. **Methodology Framework** ([[Methodology Framework]]) — The meta-system: what a methodology model IS, how models are selected per-condition, how they compose (nested, sequential, conditional, parallel), and the fractal property (same vocabulary at every scale). Start here.
+2. **Stage-Gate Methodology** ([[Stage-Gate Methodology]]) — The 5-stage sequence (Document → Design → Scaffold → Implement → Test); hard stage boundaries; readiness ranges; per-stage required artifacts; how stages enforce themselves via protocol and hooks.
+3. **Task Type Artifact Matrix** ([[Task Type Artifact Matrix]]) — How task types (feature, research, spike, hotfix, docs, refactor) map to stage subsets and artifact bindings; why not every task runs all 5 stages.
+4. **Backlog Hierarchy Rules** ([[Backlog Hierarchy Rules]]) — The 4-level hierarchy (Epic → Module → Task → Sub-task); promotion rules; why a flat backlog is an anti-pattern.
+5. **Execution Modes and End Conditions** ([[Execution Modes and End Conditions]]) — Autonomous, semi-autonomous, and document-only modes; end condition types; how the agent knows when to stop.
+6. **Spec-Driven Development** ([[Spec-Driven Development]]) — Why specs come before implementation; the spec-to-code pipeline; how spec quality determines execution quality.
+7. **Task Lifecycle Stage-Gating** ([[Task Lifecycle Stage-Gating]]) — How stage gates work at the task level; the readiness percentage system; gate conditions and what triggers advancement.
 
 ### L3 — Comparisons
 
-- **Adoption Guide** (`wiki/spine/adoption-guide.md`) — How any project picks up the framework; what is invariant vs what is per-project variable; the four integration levels (CLI → Skills → MCP → Export).
-- **Wiki Backlog Pattern** (`wiki/domains/knowledge-systems/wiki-backlog-pattern.md`) — The methodology applied to knowledge work specifically; how open questions, gap analysis, and evolution candidates form a prioritized queue.
+- **Adoption Guide** ([[Adoption Guide — How to Use This Wiki's Standards]]) — How any project picks up the framework; what is invariant vs what is per-project variable; the four integration levels (CLI → Skills → MCP → Export).
+- **Wiki Backlog Pattern** ([[Wiki Backlog Pattern]]) — The methodology applied to knowledge work specifically; how open questions, gap analysis, and evolution candidates form a prioritized queue.
 
 ### L4 — Lessons (Validated Insights)
 
-- **Never Skip Stages** (`wiki/lessons/never-skip-stages-even-when-told-to-continue.md`) — The lesson with the most ecosystem-wide enforcement implications: skipping stages produces the wrong artifact category, which corrupts the stage system.
-- **The Agent Must Practice What It Documents** (`wiki/lessons/the-agent-must-practice-what-it-documents.md`) — The wiki agent is subject to the same stage-gate rules it documents; this is not a contradiction, it is a consistency requirement.
-- **Never Synthesize from Descriptions Alone** (`wiki/lessons/never-synthesize-from-descriptions-alone.md`) — Why synthesis requires primary sources, not summaries of summaries; how this connects to the Document stage's source-provenance requirement.
+- **Never Skip Stages** ([[Never Skip Stages Even When Told to Continue]]) — The lesson with the most ecosystem-wide enforcement implications: skipping stages produces the wrong artifact category, which corrupts the stage system.
+- **The Agent Must Practice What It Documents** ([[The Agent Must Practice What It Documents]]) — The wiki agent is subject to the same stage-gate rules it documents; this is not a contradiction, it is a consistency requirement.
+- **Never Synthesize from Descriptions Alone** ([[Never Synthesize from Descriptions Alone]]) — Why synthesis requires primary sources, not summaries of summaries; how this connects to the Document stage's source-provenance requirement.
 
 ### L5 — Patterns (Structural Templates)
 
-- **Plan Execute Review Cycle** (`wiki/patterns/plan-execute-review-cycle.md`) — The convergent pattern across all successful agent workflows; how it maps to the stage-gate sequence.
-- **Scaffold Foundation Infrastructure Features** (`wiki/patterns/scaffold-foundation-infrastructure-features.md`) — The SFIF macro-lifecycle model; how it composes with the 5-stage micro-model.
+- **Plan Execute Review Cycle** ([[Plan Execute Review Cycle]]) — The convergent pattern across all successful agent workflows; how it maps to the stage-gate sequence.
+- **Scaffold Foundation Infrastructure Features** ([[Scaffold → Foundation → Infrastructure → Features]]) — The SFIF macro-lifecycle model; how it composes with the 5-stage micro-model.
 
 ### L6 — Decisions (Resolved Choices)
 
@@ -84,23 +84,22 @@ After completing this learning path you will understand:
 
 ## Relationships
 
-- FEEDS INTO: Model Guide: Claude Code
-- FEEDS INTO: Model Guide: LLM Wiki
-- FEEDS INTO: Model Guide: Ecosystem Architecture
-- BUILDS ON: Methodology Framework
-- BUILDS ON: Stage-Gate Methodology
-- BUILDS ON: Task Type Artifact Matrix
-- RELATES TO: Model Guide: Skills + Commands + Hooks
+- FEEDS INTO: [[Model Guide: Claude Code]]
+- FEEDS INTO: [[Model Guide: LLM Wiki]]
+- FEEDS INTO: [[Model Guide: Ecosystem Architecture]]
+- BUILDS ON: [[Methodology Framework]]
+- BUILDS ON: [[Stage-Gate Methodology]]
+- BUILDS ON: [[Task Type Artifact Matrix]]
+- RELATES TO: [[Model Guide: Skills + Commands + Hooks]]
 - RELATES TO: Adoption Guide
 
 ## Backlinks
 
-[[Model Guide: Claude Code]]
-[[Model Guide: LLM Wiki]]
-[[Model Guide: Ecosystem Architecture]]
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[Model Guide: Skills + Commands + Hooks]]
+[[[[Model Guide: Claude Code]]]]
+[[[[Model Guide: LLM Wiki]]]]
+[[[[Model Guide: Ecosystem Architecture]]]]
+[[[[Methodology Framework]]]]
+[[[[Stage-Gate Methodology]]]]
+[[[[Task Type Artifact Matrix]]]]
+[[[[Model Guide: Skills + Commands + Hooks]]]]
 [[Adoption Guide]]
-[[Model Guide: Second Brain]]

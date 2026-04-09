@@ -112,41 +112,26 @@ Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`:
 
 ## Relationships
 
-- ENABLES: OpenFleet
-- ENABLES: Wiki Ingestion Pipeline
-- ENABLES: Claude Code Skills
-- ENABLES: Claude Code Best Practices
-- ENABLES: Claude Code Context Management
-- RELATES TO: OpenClaw
-- RELATES TO: AICP
-- RELATES TO: Obsidian CLI
-- RELATES TO: notebooklm-py CLI
-- RELATES TO: LLM Wiki Pattern
+- ENABLES: [[OpenFleet]]
+- ENABLES: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[Claude Code Skills]]
+- ENABLES: [[Claude Code Best Practices]]
+- ENABLES: [[Claude Code Context Management]]
+- RELATES TO: [[OpenClaw]]
+- RELATES TO: [[AICP]]
+- RELATES TO: [[Obsidian CLI]]
+- RELATES TO: [[notebooklm-py CLI]]
+- RELATES TO: [[LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[OpenClaw]]
-[[AICP]]
-[[Obsidian CLI]]
-[[notebooklm-py CLI]]
-[[LLM Wiki Pattern]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Local LLM Quantization]]
-[[MCP Integration Architecture]]
-[[Model Guide: Claude Code]]
-[[OpenArms]]
-[[Plan Execute Review Cycle]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[devops-control-plane]]
+[[[[OpenFleet]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Context Management]]]]
+[[[[OpenClaw]]]]
+[[[[AICP]]]]
+[[[[Obsidian CLI]]]]
+[[[[notebooklm-py CLI]]]]
+[[[[LLM Wiki Pattern]]]]

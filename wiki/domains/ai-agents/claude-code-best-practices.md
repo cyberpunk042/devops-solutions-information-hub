@@ -96,43 +96,24 @@ Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Ha
 
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice
 - DERIVED FROM: src-token-hacks-claude-code
-- BUILDS ON: Claude Code Skills
-- ENABLES: Claude Code Context Management
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: Wiki Event-Driven Automation
-- RELATES TO: LLM Wiki vs RAG
-- RELATES TO: Skills Architecture Patterns
-- EXTENDS: Claude Code
+- BUILDS ON: [[Claude Code Skills]]
+- ENABLES: [[Claude Code Context Management]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Wiki Event-Driven Automation]]
+- RELATES TO: [[LLM Wiki vs RAG]]
+- RELATES TO: [[Skills Architecture Patterns]]
+- EXTENDS: [[Claude Code]]
 
 ## Backlinks
 
 [[src-shanraisshan-claude-code-best-practice]]
 [[src-token-hacks-claude-code]]
-[[Claude Code Skills]]
-[[Claude Code Context Management]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Wiki Event-Driven Automation]]
-[[LLM Wiki vs RAG]]
-[[Skills Architecture Patterns]]
-[[Claude Code]]
-[[Agent Orchestration Patterns]]
-[[Agentic Search vs Vector Search]]
-[[Always Plan Before Executing]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Deterministic Shell, LLM Core]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Infrastructure as Code Patterns]]
-[[Model: Design.md + IaC]]
-[[Per-Role Command Architecture]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Context Management]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Skills Architecture Patterns]]]]
+[[[[Claude Code]]]]

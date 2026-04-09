@@ -68,15 +68,15 @@ Cross-referencing `Design.md Pattern` and `Synthesis: Playwright MCP for Visual 
 ## Relationships
 
 - DERIVED FROM: src-axton-obsidian-visual-skills
-- FEEDS INTO: Obsidian Skills Ecosystem
-- EXTENDS: Claude Code Skills
-- RELATES TO: Obsidian Knowledge Vault
+- FEEDS INTO: [[Obsidian Skills Ecosystem]]
+- EXTENDS: [[Claude Code Skills]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
 - COMPARES TO: src-kepano-obsidian-skills
 
 ## Backlinks
 
 [[src-axton-obsidian-visual-skills]]
-[[Obsidian Skills Ecosystem]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[Claude Code Skills]]]]
+[[[[Obsidian Knowledge Vault]]]]
 [[src-kepano-obsidian-skills]]

@@ -305,42 +305,38 @@ This separation between definition and instance is what makes the framework sust
 
 ## Relationships
 
-- CONTAINS: Stage-Gate Methodology (the 5-stage model is an instance within this framework)
-- CONTAINS: Task Type Artifact Matrix (task-type-to-model selection is one selection axis)
-- CONTAINS: Execution Modes and End Conditions (execution modes are model parameters)
-- CONTAINS: Scaffold → Foundation → Infrastructure → Features (SFIF is the project-level model)
-- CONTAINS: Spec-Driven Development (SDD is the execution track's methodology model)
-- CONTAINS: Skyscraper, Pyramid, Mountain (the quality dimension of model execution)
-- CONTAINS: Task Lifecycle Stage-Gating (stage-gating is the enforcement mechanism for models)
-- ENABLES: Backlog Hierarchy Rules (the PM track model that structures work items)
-- ENABLES: LLM Wiki Pattern (the knowledge track model for wiki-based knowledge management)
-- ENABLES: Second Brain Architecture (the knowledge track operates within the second brain structure)
-- BUILDS ON: Progressive Distillation (maturity progression is a model within the knowledge track)
-- RELATES TO: Four-Project Ecosystem (the ecosystem is the highest-level instance of the framework)
-- FEEDS INTO: Wiki Backlog Pattern (PM track methodology feeds backlog structure)
+- CONTAINS: [[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)
+- CONTAINS: [[Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)
+- CONTAINS: [[Execution Modes and End Conditions]] (execution modes are model parameters)
+- CONTAINS: [[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the project-level model)
+- CONTAINS: [[Spec-Driven Development]] (SDD is the execution track's methodology model)
+- CONTAINS: [[Skyscraper, Pyramid, Mountain]] (the quality dimension of model execution)
+- CONTAINS: [[Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)
+- ENABLES: [[Backlog Hierarchy Rules]] (the PM track model that structures work items)
+- ENABLES: [[LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)
+- ENABLES: [[Second Brain Architecture]] (the knowledge track operates within the second brain structure)
+- BUILDS ON: [[Progressive Distillation]] (maturity progression is a model within the knowledge track)
+- RELATES TO: [[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)
+- FEEDS INTO: [[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)
 - IMPLEMENTS: Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)
-- IMPLEMENTS: Scaffold → Foundation → Infrastructure → Features (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
+- IMPLEMENTS: [[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
 
 ## Backlinks
 
-[[Stage-Gate Methodology (the 5-stage model is an instance within this framework)]]
-[[Task Type Artifact Matrix (task-type-to-model selection is one selection axis)]]
-[[Execution Modes and End Conditions (execution modes are model parameters)]]
-[[Scaffold → Foundation → Infrastructure → Features (SFIF is the project-level model)]]
-[[Spec-Driven Development (SDD is the execution track's methodology model)]]
-[[Skyscraper]]
+[[[[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)]]
+[[[[Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)]]
+[[[[Execution Modes and End Conditions]] (execution modes are model parameters)]]
+[[[[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the project-level model)]]
+[[[[Spec-Driven Development]] (SDD is the execution track's methodology model)]]
+[[[[Skyscraper]]
 [[Pyramid]]
-[[Mountain (the quality dimension of model execution)]]
-[[Task Lifecycle Stage-Gating (stage-gating is the enforcement mechanism for models)]]
-[[Backlog Hierarchy Rules (the PM track model that structures work items)]]
-[[LLM Wiki Pattern (the knowledge track model for wiki-based knowledge management)]]
-[[Second Brain Architecture (the knowledge track operates within the second brain structure)]]
-[[Progressive Distillation (maturity progression is a model within the knowledge track)]]
-[[Four-Project Ecosystem (the ecosystem is the highest-level instance of the framework)]]
-[[Wiki Backlog Pattern (PM track methodology feeds backlog structure)]]
+[[Mountain]] (the quality dimension of model execution)]]
+[[[[Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)]]
+[[[[Backlog Hierarchy Rules]] (the PM track model that structures work items)]]
+[[[[LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)]]
+[[[[Second Brain Architecture]] (the knowledge track operates within the second brain structure)]]
+[[[[Progressive Distillation]] (maturity progression is a model within the knowledge track)]]
+[[[[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)]]
+[[[[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)]]
 [[Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)]]
-[[Scaffold → Foundation → Infrastructure → Features (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Model Guide: Methodology]]
-[[Never Skip Stages Even When Told to Continue]]
-[[The Agent Must Practice What It Documents]]
+[[[[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)]]

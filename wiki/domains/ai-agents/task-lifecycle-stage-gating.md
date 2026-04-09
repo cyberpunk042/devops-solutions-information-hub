@@ -200,28 +200,26 @@ Each disease is a case study in what stage gates prevent. The teaching system's 
 
 ## Relationships
 
-- BUILDS ON: Rework Prevention (stage gates prevent the root causes of rework)
-- BUILDS ON: Spec-Driven Development (specs are the artifact produced at stage boundaries)
-- IMPLEMENTS: Plan Execute Review Cycle (stage-gating is the implementation of phase separation)
-- RELATES TO: Immune System Rules (disease catalogue documents stage-gating failure modes)
-- RELATES TO: OpenFleet (primary source — 5-stage model, MCP blocking, teaching system)
-- RELATES TO: Agent Orchestration Patterns (multi-agent systems require stage-gating to coordinate contribution flow)
-- RELATES TO: Scaffold → Foundation → Infrastructure → Features (stage-gating applied at architectural scale)
-- FEEDS INTO: Wiki Backlog Pattern (task frontmatter as state machine is the wiki implementation of stage-gating)
-- FEEDS INTO: Spec-Driven Development (stages enforce spec phase before implementation phase)
-- CONTRADICTS: Task Lifecycle Stage-Gating (unstructured iterative coding without phase checkpoints)
+- BUILDS ON: [[Rework Prevention]] (stage gates prevent the root causes of rework)
+- BUILDS ON: [[Spec-Driven Development]] (specs are the artifact produced at stage boundaries)
+- IMPLEMENTS: [[Plan Execute Review Cycle]] (stage-gating is the implementation of phase separation)
+- RELATES TO: [[Immune System Rules]] (disease catalogue documents stage-gating failure modes)
+- RELATES TO: [[OpenFleet]] (primary source — 5-stage model, MCP blocking, teaching system)
+- RELATES TO: [[Agent Orchestration Patterns]] (multi-agent systems require stage-gating to coordinate contribution flow)
+- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]] (stage-gating applied at architectural scale)
+- FEEDS INTO: [[Wiki Backlog Pattern]] (task frontmatter as state machine is the wiki implementation of stage-gating)
+- FEEDS INTO: [[Spec-Driven Development]] (stages enforce spec phase before implementation phase)
+- CONTRADICTS: [[Task Lifecycle Stage-Gating]] (unstructured iterative coding without phase checkpoints)
 
 ## Backlinks
 
-[[Rework Prevention (stage gates prevent the root causes of rework)]]
-[[Spec-Driven Development (specs are the artifact produced at stage boundaries)]]
-[[Plan Execute Review Cycle (stage-gating is the implementation of phase separation)]]
-[[Immune System Rules (disease catalogue documents stage-gating failure modes)]]
-[[OpenFleet (primary source — 5-stage model, MCP blocking, teaching system)]]
-[[Agent Orchestration Patterns (multi-agent systems require stage-gating to coordinate contribution flow)]]
-[[Scaffold → Foundation → Infrastructure → Features (stage-gating applied at architectural scale)]]
-[[Wiki Backlog Pattern (task frontmatter as state machine is the wiki implementation of stage-gating)]]
-[[Spec-Driven Development (stages enforce spec phase before implementation phase)]]
-[[Task Lifecycle Stage-Gating (unstructured iterative coding without phase checkpoints)]]
-[[Hooks Lifecycle Architecture]]
-[[Per-Role Command Architecture]]
+[[[[Rework Prevention]] (stage gates prevent the root causes of rework)]]
+[[[[Spec-Driven Development]] (specs are the artifact produced at stage boundaries)]]
+[[[[Plan Execute Review Cycle]] (stage-gating is the implementation of phase separation)]]
+[[[[Immune System Rules]] (disease catalogue documents stage-gating failure modes)]]
+[[[[OpenFleet]] (primary source — 5-stage model, MCP blocking, teaching system)]]
+[[[[Agent Orchestration Patterns]] (multi-agent systems require stage-gating to coordinate contribution flow)]]
+[[[[Scaffold → Foundation → Infrastructure → Features]] (stage-gating applied at architectural scale)]]
+[[[[Wiki Backlog Pattern]] (task frontmatter as state machine is the wiki implementation of stage-gating)]]
+[[[[Spec-Driven Development]] (stages enforce spec phase before implementation phase)]]
+[[[[Task Lifecycle Stage-Gating]] (unstructured iterative coding without phase checkpoints)]]

@@ -81,38 +81,28 @@ The hooks architecture for wiki event automation maps directly to Claude Code's 
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
 - DERIVED FROM: src-obsidian-claude-code-second-brain
-- EXTENDS: LLM Wiki Pattern
-- EXTENDS: Wiki Ingestion Pipeline
-- BUILDS ON: Claude Code Skills
-- BUILDS ON: Claude Code Scheduling
-- ENABLES: Memory Lifecycle Management
-- ENABLES: LLM Knowledge Linting
-- RELATES TO: AI-Driven Content Pipeline
-- FEEDS INTO: MCP Integration Architecture
-- FEEDS INTO: Research Pipeline Orchestration
-- RELATES TO: Claude Code Best Practices
+- EXTENDS: [[LLM Wiki Pattern]]
+- EXTENDS: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[Claude Code Skills]]
+- BUILDS ON: [[Claude Code Scheduling]]
+- ENABLES: [[Memory Lifecycle Management]]
+- ENABLES: [[LLM Knowledge Linting]]
+- RELATES TO: [[AI-Driven Content Pipeline]]
+- FEEDS INTO: [[MCP Integration Architecture]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[Claude Code Best Practices]]
 
 ## Backlinks
 
 [[src-llm-wiki-v2-agentmemory]]
 [[src-obsidian-claude-code-second-brain]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Claude Code Scheduling]]
-[[Memory Lifecycle Management]]
-[[LLM Knowledge Linting]]
-[[AI-Driven Content Pipeline]]
-[[MCP Integration Architecture]]
-[[Research Pipeline Orchestration]]
-[[Claude Code Best Practices]]
-[[Agent Orchestration Patterns]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Model: Automation + Pipelines]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Obsidian CLI]]
-[[Plan Execute Review Cycle]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[notebooklm-py CLI]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Scheduling]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Claude Code Best Practices]]]]

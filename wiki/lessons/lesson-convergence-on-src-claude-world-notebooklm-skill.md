@@ -71,22 +71,22 @@ This lesson applies to:
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: claude-world/notebooklm-skill
-- DERIVED FROM: NotebookLM Skills
-- DERIVED FROM: Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py
-- BUILDS ON: NotebookLM
-- RELATES TO: LLM Wiki vs RAG
-- RELATES TO: LLM Wiki Pattern
-- FEEDS INTO: AI-Driven Content Pipeline
-- COMPARES TO: Agentic Search vs Vector Search
+- DERIVED FROM: [[Synthesis: claude-world/notebooklm-skill]]
+- DERIVED FROM: [[NotebookLM Skills]]
+- DERIVED FROM: [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
+- BUILDS ON: [[NotebookLM]]
+- RELATES TO: [[LLM Wiki vs RAG]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- FEEDS INTO: [[AI-Driven Content Pipeline]]
+- COMPARES TO: [[Agentic Search vs Vector Search]]
 
 ## Backlinks
 
-[[Synthesis: claude-world/notebooklm-skill]]
-[[NotebookLM Skills]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[NotebookLM]]
-[[LLM Wiki vs RAG]]
-[[LLM Wiki Pattern]]
-[[AI-Driven Content Pipeline]]
-[[Agentic Search vs Vector Search]]
+[[[[Synthesis: claude-world/notebooklm-skill]]]]
+[[[[NotebookLM Skills]]]]
+[[[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]]]
+[[[[NotebookLM]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[Agentic Search vs Vector Search]]]]

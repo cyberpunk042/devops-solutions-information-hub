@@ -59,19 +59,19 @@ The practical test: this wiki's `config/schema.yaml` defines valid page types, r
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: Karpathy's LLM Wiki Idea File
-- DERIVED FROM: LLM Wiki Pattern
-- DERIVED FROM: Second Brain Architecture
-- RELATES TO: Knowledge Evolution Pipeline
-- BUILDS ON: LLM Wiki Pattern
-- FEEDS INTO: Wiki Ingestion Pipeline
-- RELATES TO: LLM Wiki vs RAG
+- DERIVED FROM: [[Synthesis: Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[Second Brain Architecture]]
+- RELATES TO: [[Knowledge Evolution Pipeline]]
+- BUILDS ON: [[LLM Wiki Pattern]]
+- FEEDS INTO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[LLM Wiki Pattern]]
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
+[[[[Synthesis: Karpathy's LLM Wiki Idea File]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Second Brain Architecture]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Wiki vs RAG]]]]

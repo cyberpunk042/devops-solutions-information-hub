@@ -120,32 +120,26 @@ Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` page
 
 ## Relationships
 
-- IMPLEMENTS: OpenFleet
-- IMPLEMENTS: Harness Engineering
-- BUILDS ON: Plan Execute Review Cycle
-- ENABLES: Always Plan Before Executing
-- ENABLES: Rework Prevention
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Research Pipeline Orchestration
-- FEEDS INTO: Wiki Event-Driven Automation
-- RELATES TO: MCP Integration Architecture
+- IMPLEMENTS: [[OpenFleet]]
+- IMPLEMENTS: [[Harness Engineering]]
+- BUILDS ON: [[Plan Execute Review Cycle]]
+- ENABLES: [[Always Plan Before Executing]]
+- ENABLES: [[Rework Prevention]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- FEEDS INTO: [[Wiki Event-Driven Automation]]
+- RELATES TO: [[MCP Integration Architecture]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Harness Engineering]]
-[[Plan Execute Review Cycle]]
-[[Always Plan Before Executing]]
-[[Rework Prevention]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[MCP Integration Architecture]]
-[[Cross-Domain Patterns]]
-[[Deterministic Shell, LLM Core]]
-[[Hooks Lifecycle Architecture]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Multi-Channel AI Agent Access]]
+[[[[OpenFleet]]]]
+[[[[Harness Engineering]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Always Plan Before Executing]]]]
+[[[[Rework Prevention]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[MCP Integration Architecture]]]]

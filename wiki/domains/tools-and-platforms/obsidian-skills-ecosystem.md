@@ -116,26 +116,19 @@ The three-layer ecosystem pattern (official spec → visual generation → deep 
 - DERIVED FROM: src-kepano-obsidian-skills
 - DERIVED FROM: src-axton-obsidian-visual-skills
 - DERIVED FROM: src-pablo-mano-obsidian-cli-skill
-- EXTENDS: Claude Code Skills
-- BUILDS ON: Obsidian Knowledge Vault
-- RELATES TO: NotebookLM Skills
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Skills Architecture Patterns
+- EXTENDS: [[Claude Code Skills]]
+- BUILDS ON: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[NotebookLM Skills]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Skills Architecture Patterns]]
 
 ## Backlinks
 
 [[src-kepano-obsidian-skills]]
 [[src-axton-obsidian-visual-skills]]
 [[src-pablo-mano-obsidian-cli-skill]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
-[[NotebookLM Skills]]
-[[LLM Wiki Pattern]]
-[[Skills Architecture Patterns]]
-[[Obsidian CLI]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[OpenClaw]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-[[Synthesis: kepano/obsidian-skills]]
-[[Synthesis: pablo-mano/Obsidian-CLI-skill]]
+[[[[Claude Code Skills]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[NotebookLM Skills]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Skills Architecture Patterns]]]]

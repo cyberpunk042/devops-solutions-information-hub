@@ -80,40 +80,24 @@ Cross-referencing `Context-Aware Tool Loading` and `CLI Tools Beat MCP for Token
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
-- EXTENDS: LLM Wiki Pattern
-- BUILDS ON: Wiki Ingestion Pipeline
-- ENABLES: Memory Lifecycle Management
-- RELATES TO: LLM Wiki vs RAG
-- RELATES TO: Obsidian Knowledge Vault
-- RELATES TO: LLM Knowledge Linting
-- PARALLELS: LightRAG
-- FEEDS INTO: OpenFleet
+- EXTENDS: [[LLM Wiki Pattern]]
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[Memory Lifecycle Management]]
+- RELATES TO: [[LLM Wiki vs RAG]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[LLM Knowledge Linting]]
+- PARALLELS: [[LightRAG]]
+- FEEDS INTO: [[OpenFleet]]
 
 ## Backlinks
 
 [[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Memory Lifecycle Management]]
-[[LLM Wiki vs RAG]]
-[[Obsidian Knowledge Vault]]
-[[LLM Knowledge Linting]]
-[[LightRAG]]
-[[OpenFleet]]
-[[AICP]]
-[[Agentic Search vs Vector Search]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Claude Code Context Management]]
-[[Cross-Domain Patterns]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Four-Project Ecosystem]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[LLM Wiki vs RAG]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[LightRAG]]]]
+[[[[OpenFleet]]]]
 [[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[Progressive Distillation]]
-[[Second Brain Architecture]]
-[[Zettelkasten Methodology]]

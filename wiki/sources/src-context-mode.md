@@ -229,26 +229,25 @@ All processing occurs in sandboxed subprocesses on the local machine. No telemet
 
 ## Relationships
 
-- EXTENDS: Context-Aware Tool Loading
-- COMPLEMENTS: CLI Tools Beat MCP for Token Efficiency
-- IMPLEMENTS: Context-Aware Tool Loading
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Claude Code Skills
-- RELATES TO: Claude Code
-- RELATES TO: OpenClaw
-- FEEDS INTO: Research Pipeline Orchestration
-- FEEDS INTO: Wiki Ingestion Pipeline
+- EXTENDS: [[Context-Aware Tool Loading]]
+- COMPLEMENTS: [[CLI Tools Beat MCP for Token Efficiency]]
+- IMPLEMENTS: [[Context-Aware Tool Loading]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Claude Code]]
+- RELATES TO: [[OpenClaw]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
+- FEEDS INTO: [[Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Context-Aware Tool Loading]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[MCP Integration Architecture]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[Claude Code]]
-[[OpenClaw]]
-[[Research Pipeline Orchestration]]
-[[Wiki Ingestion Pipeline]]
-[[Hooks Lifecycle Architecture]]
+[[[[Context-Aware Tool Loading]]]]
+[[[[CLI Tools Beat MCP for Token Efficiency]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code]]]]
+[[[[OpenClaw]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[Wiki Ingestion Pipeline]]]]

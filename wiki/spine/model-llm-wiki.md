@@ -28,7 +28,7 @@ The LLM Wiki model describes how a markdown-file wiki maintained by an LLM outpe
 
 ### L1 — Primary Sources
 
-- `wiki/sources/src-karpathy-llm-wiki-idea-file.md` — Karpathy's original design doc; defines the three operations (Ingest, Query, Lint) and the compounding-knowledge thesis
+- [[Synthesis: Karpathy's LLM Wiki Idea File]] — Karpathy's original design doc; defines the three operations (Ingest, Query, Lint) and the compounding-knowledge thesis
 - `wiki/sources/src-karpathy-claude-code-10x.md` — Video walkthrough; covers index-driven navigation and the "LLM as librarian" division of labor
 - `wiki/sources/src-llm-wiki-v2-agentmemory.md` — The v2 extension; adds memory lifecycle, typed knowledge graph, event-driven automation, and the "schema is the real product" framing
 
@@ -36,32 +36,32 @@ The LLM Wiki model describes how a markdown-file wiki maintained by an LLM outpe
 
 Read in this order:
 
-1. **LLM Wiki Pattern** (`wiki/domains/knowledge-systems/llm-wiki-pattern.md`) — The pattern itself: folder structure, index-driven navigation, compounding knowledge, three core operations, and the maintenance economics insight. Start here.
-2. **Wiki Ingestion Pipeline** (`wiki/domains/knowledge-systems/wiki-ingestion-pipeline.md`) — How raw source material becomes structured wiki pages; the multi-phase workflow; source type handling; the post-chain (index → manifest → validate → lint).
-3. **Wiki Knowledge Graph** (`wiki/domains/knowledge-systems/wiki-knowledge-graph.md`) — How relationships are extracted from `## Relationships` sections; the LightRAG integration; kb_sync.py compatibility; graph traversal vs text search.
-4. **LLM Knowledge Linting** (`wiki/domains/ai-agents/llm-knowledge-linting.md`) — The lint operation; orphan detection, stale claim surfacing, contradiction flagging; how automated quality checks keep the wiki healthy without human micromanagement.
-5. **Knowledge Evolution Pipeline** (`wiki/domains/knowledge-systems/knowledge-evolution-pipeline.md`) — The maturity ladder (seed → growing → mature → canonical); deterministic scoring; the evolution loop; human review gate at the mature → canonical transition.
-6. **Memory Lifecycle Management** (`wiki/domains/knowledge-systems/memory-lifecycle-management.md`) — Confidence scoring, supersession, forgetting curves, and the four-tier memory model from LLM Wiki v2.
+1. **LLM Wiki Pattern** ([[LLM Wiki Pattern]]) — The pattern itself: folder structure, index-driven navigation, compounding knowledge, three core operations, and the maintenance economics insight. Start here.
+2. **Wiki Ingestion Pipeline** ([[Wiki Ingestion Pipeline]]) — How raw source material becomes structured wiki pages; the multi-phase workflow; source type handling; the post-chain (index → manifest → validate → lint).
+3. **Wiki Knowledge Graph** ([[Wiki Knowledge Graph]]) — How relationships are extracted from `## Relationships` sections; the LightRAG integration; kb_sync.py compatibility; graph traversal vs text search.
+4. **LLM Knowledge Linting** ([[LLM Knowledge Linting]]) — The lint operation; orphan detection, stale claim surfacing, contradiction flagging; how automated quality checks keep the wiki healthy without human micromanagement.
+5. **Knowledge Evolution Pipeline** ([[Knowledge Evolution Pipeline]]) — The maturity ladder (seed → growing → mature → canonical); deterministic scoring; the evolution loop; human review gate at the mature → canonical transition.
+6. **Memory Lifecycle Management** ([[Memory Lifecycle Management]]) — Confidence scoring, supersession, forgetting curves, and the four-tier memory model from LLM Wiki v2.
 
 ### L3 — Comparisons
 
-- **LLM Wiki vs RAG** (`wiki/domains/knowledge-systems/llm-wiki-vs-rag.md`) — When index-driven navigation outperforms vector search; the ~200 page boundary; hybrid approaches for larger corpora.
+- **LLM Wiki vs RAG** ([[LLM Wiki vs RAG]]) — When index-driven navigation outperforms vector search; the ~200 page boundary; hybrid approaches for larger corpora.
 
 ### L4 — Lessons (Validated Insights)
 
-- **LLM-Maintained Wikis Outperform Static Documentation** (`wiki/lessons/lesson-convergence-on-llm-wiki-pattern.md`) — The core convergence lesson: maintenance economics, not intelligence, is the key differentiator.
+- **LLM-Maintained Wikis Outperform Static Documentation** ([[LLM-Maintained Wikis Outperform Static Documentation]]) — The core convergence lesson: maintenance economics, not intelligence, is the key differentiator.
 - **Schema Is the Real Product** (`wiki/lessons/lesson-hub-—-knowledge-systems.md`) — The schema encodes domain operational knowledge; it is more durable and transferable than any individual wiki page.
-- **Multi-Stage Ingestion Beats Single-Pass Processing** (`wiki/lessons/lesson-convergence-on-wiki-ingestion-pipeline.md`) — Why a single ingest-then-done pass misses cross-references, gaps, and relationship opportunities that multi-pass catches.
-- **Wiki Maintenance Problem Solved by Automation** (`wiki/lessons/the-agent-must-practice-what-it-documents.md`) — The historical failure mode of wikis (human abandonment) is structurally eliminated when the LLM handles all bookkeeping.
+- **Multi-Stage Ingestion Beats Single-Pass Processing** ([[Multi-Stage Ingestion Beats Single-Pass Processing]]) — Why a single ingest-then-done pass misses cross-references, gaps, and relationship opportunities that multi-pass catches.
+- **Wiki Maintenance Problem Solved by Automation** ([[The Agent Must Practice What It Documents]]) — The historical failure mode of wikis (human abandonment) is structurally eliminated when the LLM handles all bookkeeping.
 
 ### L5 — Patterns (Structural Templates)
 
-- **Progressive Distillation** (`wiki/patterns/progressive-distillation.md`) — How raw source material moves through density layers (raw → seed → growing → mature → canonical); the maturity ladder as a structural template.
-- **Wiki Backlog Pattern** (`wiki/domains/knowledge-systems/wiki-backlog-pattern.md`) — How open questions, gap analysis, and evolution candidates form a continuously prioritized work queue.
+- **Progressive Distillation** ([[Progressive Distillation]]) — How raw source material moves through density layers (raw → seed → growing → mature → canonical); the maturity ladder as a structural template.
+- **Wiki Backlog Pattern** ([[Wiki Backlog Pattern]]) — How open questions, gap analysis, and evolution candidates form a continuously prioritized work queue.
 
 ### L6 — Decisions (Resolved Choices)
 
-- **Wiki-First with LightRAG Upgrade Path** (`wiki/decisions/decision-resolve-open-questions-in-llm-wiki-vs-rag.md`) — Commit to markdown wiki as the operational base; add LightRAG graph traversal as scale demands it, not before.
+- **Wiki-First with LightRAG Upgrade Path** ([[Decision: Wiki-First with LightRAG Upgrade Path]]) — Commit to markdown wiki as the operational base; add LightRAG graph traversal as scale demands it, not before.
 
 ## Outcomes
 
@@ -77,21 +77,20 @@ After completing this learning path you will understand:
 
 ## Relationships
 
-- FEEDS INTO: Model Guide: Second Brain
-- FEEDS INTO: Model Guide: Ecosystem Architecture
-- ENABLES: Model Guide: Claude Code
-- BUILDS ON: LLM Wiki Pattern
-- BUILDS ON: Wiki Ingestion Pipeline
-- BUILDS ON: Knowledge Evolution Pipeline
-- RELATES TO: Model Guide: Methodology
+- FEEDS INTO: [[Model Guide: Second Brain]]
+- FEEDS INTO: [[Model Guide: Ecosystem Architecture]]
+- ENABLES: [[Model Guide: Claude Code]]
+- BUILDS ON: [[LLM Wiki Pattern]]
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[Model Guide: Methodology]]
 
 ## Backlinks
 
-[[Model Guide: Second Brain]]
-[[Model Guide: Ecosystem Architecture]]
-[[Model Guide: Claude Code]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Knowledge Evolution Pipeline]]
-[[Model Guide: Methodology]]
-[[Model Guide: Skills + Commands + Hooks]]
+[[[[Model Guide: Second Brain]]]]
+[[[[Model Guide: Ecosystem Architecture]]]]
+[[[[Model Guide: Claude Code]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Model Guide: Methodology]]]]

@@ -118,25 +118,23 @@ Cross-referencing `OpenFleet`: OpenArms's `sessions_send` is a synchronous withi
 
 ## Relationships
 
-- RELATES TO: AICP
-- RELATES TO: OpenFleet
-- RELATES TO: devops-control-plane
-- BUILDS ON: Claude Code Skills
-- RELATES TO: MCP Integration Architecture
-- ENABLES: Multi-Channel AI Agent Access
-- RELATES TO: Claude Code
-- FEEDS INTO: Research Pipeline Orchestration
+- RELATES TO: [[AICP]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[devops-control-plane]]
+- BUILDS ON: [[Claude Code Skills]]
+- RELATES TO: [[MCP Integration Architecture]]
+- ENABLES: [[Multi-Channel AI Agent Access]]
+- RELATES TO: [[Claude Code]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[AICP]]
-[[OpenFleet]]
-[[devops-control-plane]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[Multi-Channel AI Agent Access]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
+[[[[AICP]]]]
+[[[[OpenFleet]]]]
+[[[[devops-control-plane]]]]
+[[[[Claude Code Skills]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Multi-Channel AI Agent Access]]]]
+[[[[Claude Code]]]]
+[[[[Research Pipeline Orchestration]]]]
 [[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]

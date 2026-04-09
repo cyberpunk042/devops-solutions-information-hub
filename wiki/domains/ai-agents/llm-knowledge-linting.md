@@ -93,33 +93,25 @@ Cross-referencing `Wiki Knowledge Graph` and `Knowledge Evolution Pipeline`: thi
 - DERIVED FROM: src-karpathy-claude-code-10x
 - DERIVED FROM: src-karpathy-llm-wiki-idea-file
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
-- BUILDS ON: LLM Wiki Pattern
-- BUILDS ON: Wiki Ingestion Pipeline
-- ENABLES: Memory Lifecycle Management
-- RELATES TO: Obsidian Knowledge Vault
-- RELATES TO: Wiki Event-Driven Automation
-- CONSTRAINED BY: Claude Code Context Management
-- RELATES TO: Wiki Knowledge Graph
-- ENABLED BY: Claude Code Scheduling
+- BUILDS ON: [[LLM Wiki Pattern]]
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[Memory Lifecycle Management]]
+- RELATES TO: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[Wiki Event-Driven Automation]]
+- CONSTRAINED BY: [[Claude Code Context Management]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- ENABLED BY: [[Claude Code Scheduling]]
 
 ## Backlinks
 
 [[src-karpathy-claude-code-10x]]
 [[src-karpathy-llm-wiki-idea-file]]
 [[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Memory Lifecycle Management]]
-[[Obsidian Knowledge Vault]]
-[[Wiki Event-Driven Automation]]
-[[Claude Code Context Management]]
-[[Wiki Knowledge Graph]]
-[[Claude Code Scheduling]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[OpenClaw]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Memory Lifecycle Management]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Claude Code Scheduling]]]]

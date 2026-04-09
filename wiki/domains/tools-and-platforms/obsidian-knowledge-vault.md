@@ -87,35 +87,21 @@ Cross-referencing `Obsidian Skills Ecosystem`: yes, and the ecosystem is documen
 - DERIVED FROM: src-karpathy-claude-code-10x
 - DERIVED FROM: src-karpathy-llm-wiki-idea-file
 - DERIVED FROM: src-obsidian-claude-code-second-brain
-- IMPLEMENTS: LLM Wiki Pattern
-- ENABLES: Wiki Ingestion Pipeline
-- RELATES TO: Claude Code Skills
-- RELATES TO: Wiki Knowledge Graph
-- USED BY: Obsidian Skills Ecosystem
-- RELATES TO: LLM Knowledge Linting
+- IMPLEMENTS: [[LLM Wiki Pattern]]
+- ENABLES: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- USED BY: [[Obsidian Skills Ecosystem]]
+- RELATES TO: [[LLM Knowledge Linting]]
 
 ## Backlinks
 
 [[src-karpathy-claude-code-10x]]
 [[src-karpathy-llm-wiki-idea-file]]
 [[src-obsidian-claude-code-second-brain]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Wiki Knowledge Graph]]
-[[Obsidian Skills Ecosystem]]
-[[LLM Knowledge Linting]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Obsidian CLI]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[Second Brain Architecture]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-[[Synthesis: kepano/obsidian-skills]]
-[[Synthesis: pablo-mano/Obsidian-CLI-skill]]
-[[Zettelkasten Methodology]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Claude Code Skills]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[LLM Knowledge Linting]]]]

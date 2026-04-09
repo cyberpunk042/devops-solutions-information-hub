@@ -146,31 +146,29 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 
 ## Relationships
 
-- RELATES TO: Skyscraper, Pyramid, Mountain
-- BUILDS ON: Progressive Distillation
+- RELATES TO: [[Skyscraper, Pyramid, Mountain]]
+- BUILDS ON: [[Progressive Distillation]]
 - IMPLEMENTED BY: Research Wiki
-- IMPLEMENTED BY: OpenFleet
-- IMPLEMENTED BY: AICP
-- RELATES TO: Four-Project Ecosystem
-- RELATES TO: Deterministic Shell, LLM Core
-- RELATES TO: Plan Execute Review Cycle
-- FEEDS INTO: Knowledge Evolution Pipeline
-- RELATES TO: Infrastructure as Code Patterns
+- IMPLEMENTED BY: [[OpenFleet]]
+- IMPLEMENTED BY: [[AICP]]
+- RELATES TO: [[Four-Project Ecosystem]]
+- RELATES TO: [[Deterministic Shell, LLM Core]]
+- RELATES TO: [[Plan Execute Review Cycle]]
+- FEEDS INTO: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[Infrastructure as Code Patterns]]
 
 ## Backlinks
 
-[[Skyscraper]]
+[[[[Skyscraper]]
 [[Pyramid]]
-[[Mountain]]
-[[Progressive Distillation]]
+[[Mountain]]]]
+[[[[Progressive Distillation]]]]
 [[Research Wiki]]
-[[OpenFleet]]
-[[AICP]]
-[[Four-Project Ecosystem]]
-[[Deterministic Shell]]
-[[LLM Core]]
-[[Plan Execute Review Cycle]]
-[[Knowledge Evolution Pipeline]]
-[[Infrastructure as Code Patterns]]
-[[Model: SFIF + Architecture]]
-[[Skyscraper, Pyramid, Mountain]]
+[[[[OpenFleet]]]]
+[[[[AICP]]]]
+[[[[Four-Project Ecosystem]]]]
+[[[[Deterministic Shell]]
+[[LLM Core]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Infrastructure as Code Patterns]]]]

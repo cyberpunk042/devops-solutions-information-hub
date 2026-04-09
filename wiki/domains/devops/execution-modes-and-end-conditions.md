@@ -415,26 +415,26 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 
 ## Relationships
 
-- DERIVED FROM: Stage-Gate Methodology (execution modes control which stages run; quality gates are stage transition requirements)
-- DERIVED FROM: Task Lifecycle Stage-Gating (the work loop implements the stage-by-stage execution pattern)
-- BUILDS ON: Backlog Hierarchy Rules (the work loop reads the hierarchy to find the next task)
-- BUILDS ON: Task Type Artifact Matrix (type determines which stages the loop executes)
-- IMPLEMENTS: Plan Execute Review Cycle (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)
-- RELATES TO: Infrastructure as Code Patterns (git management rules as infrastructure — the commit convention IS the enforcement layer)
-- RELATES TO: Wiki Backlog Pattern (the work loop writes to the wiki backlog — step 6, 8, 11, 12)
-- RELATES TO: Four-Project Ecosystem (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)
-- FEEDS INTO: Immune System Rules (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)
-- ENABLES: Knowledge Evolution Pipeline (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)
+- DERIVED FROM: [[Stage-Gate Methodology]] (execution modes control which stages run; quality gates are stage transition requirements)
+- DERIVED FROM: [[Task Lifecycle Stage-Gating]] (the work loop implements the stage-by-stage execution pattern)
+- BUILDS ON: [[Backlog Hierarchy Rules]] (the work loop reads the hierarchy to find the next task)
+- BUILDS ON: [[Task Type Artifact Matrix]] (type determines which stages the loop executes)
+- IMPLEMENTS: [[Plan Execute Review Cycle]] (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)
+- RELATES TO: [[Infrastructure as Code Patterns]] (git management rules as infrastructure — the commit convention IS the enforcement layer)
+- RELATES TO: [[Wiki Backlog Pattern]] (the work loop writes to the wiki backlog — step 6, 8, 11, 12)
+- RELATES TO: [[Four-Project Ecosystem]] (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)
+- FEEDS INTO: [[Immune System Rules]] (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)
+- ENABLES: [[Knowledge Evolution Pipeline]] (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)
 
 ## Backlinks
 
-[[Stage-Gate Methodology (execution modes control which stages run; quality gates are stage transition requirements)]]
-[[Task Lifecycle Stage-Gating (the work loop implements the stage-by-stage execution pattern)]]
-[[Backlog Hierarchy Rules (the work loop reads the hierarchy to find the next task)]]
-[[Task Type Artifact Matrix (type determines which stages the loop executes)]]
-[[Plan Execute Review Cycle (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)]]
-[[Infrastructure as Code Patterns (git management rules as infrastructure — the commit convention IS the enforcement layer)]]
-[[Wiki Backlog Pattern (the work loop writes to the wiki backlog — step 6, 8, 11, 12)]]
-[[Four-Project Ecosystem (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)]]
-[[Immune System Rules (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)]]
-[[Knowledge Evolution Pipeline (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)]]
+[[[[Stage-Gate Methodology]] (execution modes control which stages run; quality gates are stage transition requirements)]]
+[[[[Task Lifecycle Stage-Gating]] (the work loop implements the stage-by-stage execution pattern)]]
+[[[[Backlog Hierarchy Rules]] (the work loop reads the hierarchy to find the next task)]]
+[[[[Task Type Artifact Matrix]] (type determines which stages the loop executes)]]
+[[[[Plan Execute Review Cycle]] (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)]]
+[[[[Infrastructure as Code Patterns]] (git management rules as infrastructure — the commit convention IS the enforcement layer)]]
+[[[[Wiki Backlog Pattern]] (the work loop writes to the wiki backlog — step 6, 8, 11, 12)]]
+[[[[Four-Project Ecosystem]] (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)]]
+[[[[Immune System Rules]] (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)]]
+[[[[Knowledge Evolution Pipeline]] (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)]]

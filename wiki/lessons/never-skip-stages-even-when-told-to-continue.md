@@ -82,18 +82,18 @@ This lesson applies to any system with sequential stages and a decision-making a
 
 ## Relationships
 
-- DERIVED FROM: Stage-Gate Methodology
-- DERIVED FROM: Methodology Framework
-- RELATES TO: Always Plan Before Executing
-- RELATES TO: Immune System Rules (this lesson became a rule)
-- BUILDS ON: Knowledge Evolution Pipeline
+- DERIVED FROM: [[Stage-Gate Methodology]]
+- DERIVED FROM: [[Methodology Framework]]
+- RELATES TO: [[Always Plan Before Executing]]
+- RELATES TO: [[Immune System Rules]] (this lesson became a rule)
+- BUILDS ON: [[Knowledge Evolution Pipeline]]
 - CONTRADICTS: assumption that "continue" means "skip ahead"
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Methodology Framework]]
-[[Always Plan Before Executing]]
-[[Immune System Rules (this lesson became a rule)]]
-[[Knowledge Evolution Pipeline]]
+[[[[Stage-Gate Methodology]]]]
+[[[[Methodology Framework]]]]
+[[[[Always Plan Before Executing]]]]
+[[[[Immune System Rules]] (this lesson became a rule)]]
+[[[[Knowledge Evolution Pipeline]]]]
 [[assumption that "continue" means "skip ahead"]]

@@ -114,51 +114,22 @@ Cross-referencing `Agent Orchestration Patterns`: yes, with explicit scope bound
 
 ## Relationships
 
-- BUILDS ON: Wiki Ingestion Pipeline
-- BUILDS ON: Wiki Event-Driven Automation
-- ENABLES: LLM Wiki Pattern
-- RELATES TO: AI-Driven Content Pipeline
-- RELATES TO: Claude Code Scheduling
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: Obsidian CLI
-- RELATES TO: notebooklm-py CLI
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[Wiki Event-Driven Automation]]
+- ENABLES: [[LLM Wiki Pattern]]
+- RELATES TO: [[AI-Driven Content Pipeline]]
+- RELATES TO: [[Claude Code Scheduling]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[Obsidian CLI]]
+- RELATES TO: [[notebooklm-py CLI]]
 
 ## Backlinks
 
-[[Wiki Ingestion Pipeline]]
-[[Wiki Event-Driven Automation]]
-[[LLM Wiki Pattern]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Scheduling]]
-[[MCP Integration Architecture]]
-[[Obsidian CLI]]
-[[notebooklm-py CLI]]
-[[Agent Orchestration Patterns]]
-[[Always Plan Before Executing]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Context-Aware Tool Loading]]
-[[Cross-Domain Patterns]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Deterministic Shell, LLM Core]]
-[[Gateway-Centric Routing]]
-[[Harness Engineering]]
-[[Knowledge Evolution Pipeline]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Model: Automation + Pipelines]]
-[[Multi-Channel AI Agent Access]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[OpenArms]]
-[[PARA Methodology]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Second Brain Architecture]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[WSL2 Development Patterns]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[Claude Code Scheduling]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Obsidian CLI]]]]
+[[[[notebooklm-py CLI]]]]

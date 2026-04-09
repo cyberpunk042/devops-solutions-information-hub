@@ -53,13 +53,13 @@ This video presents 18 token management techniques for Claude Code, organized in
 ## Relationships
 
 - DERIVED FROM: src-token-hacks-claude-code
-- ENABLES: Claude Code Context Management
-- BUILDS ON: Claude Code Skills
-- RELATES TO: Claude Code Best Practices
+- ENABLES: [[Claude Code Context Management]]
+- BUILDS ON: [[Claude Code Skills]]
+- RELATES TO: [[Claude Code Best Practices]]
 
 ## Backlinks
 
 [[src-token-hacks-claude-code]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
+[[[[Claude Code Context Management]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Best Practices]]]]

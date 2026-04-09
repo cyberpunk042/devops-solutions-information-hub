@@ -116,26 +116,22 @@ Cross-referencing `Obsidian Skills Ecosystem` and `WSL2 Development Patterns`: t
 
 ## Relationships
 
-- BUILDS ON: Obsidian Knowledge Vault
-- ENABLES: Wiki Event-Driven Automation
-- ENABLES: Obsidian Skills Ecosystem
-- RELATES TO: LLM Wiki Pattern
-- RELATES TO: Claude Code Skills
-- USED BY: AI-Driven Content Pipeline
-- PARALLELS: notebooklm-py CLI
-- ENABLES: Wiki Ingestion Pipeline
+- BUILDS ON: [[Obsidian Knowledge Vault]]
+- ENABLES: [[Wiki Event-Driven Automation]]
+- ENABLES: [[Obsidian Skills Ecosystem]]
+- RELATES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Claude Code Skills]]
+- USED BY: [[AI-Driven Content Pipeline]]
+- PARALLELS: [[notebooklm-py CLI]]
+- ENABLES: [[Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Obsidian Knowledge Vault]]
-[[Wiki Event-Driven Automation]]
-[[Obsidian Skills Ecosystem]]
-[[LLM Wiki Pattern]]
-[[Claude Code Skills]]
-[[AI-Driven Content Pipeline]]
-[[notebooklm-py CLI]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code]]
-[[MCP Integration Architecture]]
-[[Research Pipeline Orchestration]]
-[[WSL2 Development Patterns]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[Wiki Event-Driven Automation]]]]
+[[[[Obsidian Skills Ecosystem]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Claude Code Skills]]]]
+[[[[AI-Driven Content Pipeline]]]]
+[[[[notebooklm-py CLI]]]]
+[[[[Wiki Ingestion Pipeline]]]]

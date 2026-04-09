@@ -70,20 +70,20 @@ This lesson applies to:
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: Karpathy LLM Wiki Method via Claude Code
-- DERIVED FROM: LLM Wiki Pattern
-- BUILDS ON: LLM Knowledge Linting
-- ENABLES: Knowledge Evolution Pipeline
-- RELATES TO: Second Brain Architecture
-- FEEDS INTO: LLM-Maintained Wikis Outperform Static Documentation
-- COMPARES TO: LLM Wiki vs RAG
+- DERIVED FROM: [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[LLM Wiki Pattern]]
+- BUILDS ON: [[LLM Knowledge Linting]]
+- ENABLES: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[Second Brain Architecture]]
+- FEEDS INTO: [[LLM-Maintained Wikis Outperform Static Documentation]]
+- COMPARES TO: [[LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[LLM Wiki Pattern]]
-[[LLM Knowledge Linting]]
-[[Knowledge Evolution Pipeline]]
-[[Second Brain Architecture]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[LLM Wiki vs RAG]]
+[[[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]]]
+[[[[LLM Wiki Pattern]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Knowledge Evolution Pipeline]]]]
+[[[[Second Brain Architecture]]]]
+[[[[LLM-Maintained Wikis Outperform Static Documentation]]]]
+[[[[LLM Wiki vs RAG]]]]

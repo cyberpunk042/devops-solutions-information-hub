@@ -54,20 +54,18 @@ Plannotator is an open-source tool that injects a human-in-the-loop UI between a
 
 ## Relationships
 
-- IMPLEMENTS: Plan Execute Review Cycle (provides the tooling layer that makes plan-gate-review a concrete workflow)
-- EXTENDS: Agent Orchestration Patterns (adds structured human oversight as a first-class hook in multi-step agent flows)
-- RELATES TO: Scaffold → Foundation → Infrastructure → Features (operationalizes the speculate → feedback → iterate loop with UI tooling)
-- RELATES TO: Claude Code Best Practices (plan-mode review is a best practice; Plannotator makes it frictionless)
-- RELATES TO: Claude Code Skills (integrates as a Claude Code plugin, complements slash-command patterns)
-- FEEDS INTO: Always Plan Before Executing (provides tooling that enforces the planning gate lesson)
+- IMPLEMENTS: [[Plan Execute Review Cycle]] (provides the tooling layer that makes plan-gate-review a concrete workflow)
+- EXTENDS: [[Agent Orchestration Patterns]] (adds structured human oversight as a first-class hook in multi-step agent flows)
+- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]] (operationalizes the speculate → feedback → iterate loop with UI tooling)
+- RELATES TO: [[Claude Code Best Practices]] (plan-mode review is a best practice; Plannotator makes it frictionless)
+- RELATES TO: [[Claude Code Skills]] (integrates as a Claude Code plugin, complements slash-command patterns)
+- FEEDS INTO: [[Always Plan Before Executing]] (provides tooling that enforces the planning gate lesson)
 
 ## Backlinks
 
-[[Plan Execute Review Cycle (provides the tooling layer that makes plan-gate-review a concrete workflow)]]
-[[Agent Orchestration Patterns (adds structured human oversight as a first-class hook in multi-step agent flows)]]
-[[Scaffold → Foundation → Infrastructure → Features (operationalizes the speculate → feedback → iterate loop with UI tooling)]]
-[[Claude Code Best Practices (plan-mode review is a best practice; Plannotator makes it frictionless)]]
-[[Claude Code Skills (integrates as a Claude Code plugin, complements slash-command patterns)]]
-[[Always Plan Before Executing (provides tooling that enforces the planning gate lesson)]]
-[[Hooks Lifecycle Architecture]]
-[[Per-Role Command Architecture]]
+[[[[Plan Execute Review Cycle]] (provides the tooling layer that makes plan-gate-review a concrete workflow)]]
+[[[[Agent Orchestration Patterns]] (adds structured human oversight as a first-class hook in multi-step agent flows)]]
+[[[[Scaffold → Foundation → Infrastructure → Features]] (operationalizes the speculate → feedback → iterate loop with UI tooling)]]
+[[[[Claude Code Best Practices]] (plan-mode review is a best practice; Plannotator makes it frictionless)]]
+[[[[Claude Code Skills]] (integrates as a Claude Code plugin, complements slash-command patterns)]]
+[[[[Always Plan Before Executing]] (provides tooling that enforces the planning gate lesson)]]

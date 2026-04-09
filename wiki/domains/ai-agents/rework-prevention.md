@@ -150,24 +150,22 @@ Cross-referencing `Plan Execute Review Cycle` and `Harness Engineering`: partial
 
 ## Relationships
 
-- ENABLED BY: Always Plan Before Executing
-- BUILDS ON: Agent Orchestration Patterns
-- RELATES TO: Harness Engineering
-- RELATES TO: OpenFleet
-- RELATES TO: Plan Execute Review Cycle
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: Wiki Ingestion Pipeline
-- FEEDS INTO: Research Pipeline Orchestration
+- ENABLED BY: [[Always Plan Before Executing]]
+- BUILDS ON: [[Agent Orchestration Patterns]]
+- RELATES TO: [[Harness Engineering]]
+- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[Plan Execute Review Cycle]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[Always Plan Before Executing]]
-[[Agent Orchestration Patterns]]
-[[Harness Engineering]]
-[[OpenFleet]]
-[[Plan Execute Review Cycle]]
-[[Claude Code Best Practices]]
-[[Wiki Ingestion Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Immune System Rules]]
-[[Model: Quality + Failure Prevention]]
+[[[[Always Plan Before Executing]]]]
+[[[[Agent Orchestration Patterns]]]]
+[[[[Harness Engineering]]]]
+[[[[OpenFleet]]]]
+[[[[Plan Execute Review Cycle]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Research Pipeline Orchestration]]]]

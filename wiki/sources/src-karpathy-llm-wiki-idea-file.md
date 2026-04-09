@@ -86,20 +86,19 @@ Cross-referencing `LLM Wiki Pattern`: the LLM Wiki Pattern page documents the st
 ## Relationships
 
 - DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- ENABLES: LLM Wiki Pattern
-- ENABLES: Wiki Ingestion Pipeline
-- ENABLES: LLM Knowledge Linting
-- ENABLES: Obsidian Knowledge Vault
-- RELATES TO: LLM Wiki vs RAG
+- ENABLES: [[LLM Wiki Pattern]]
+- ENABLES: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[LLM Knowledge Linting]]
+- ENABLES: [[Obsidian Knowledge Vault]]
+- RELATES TO: [[LLM Wiki vs RAG]]
 - SUPERSEDES: src-karpathy-claude-code-10x
 
 ## Backlinks
 
 [[src-karpathy-llm-wiki-idea-file]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Knowledge Linting]]
-[[Obsidian Knowledge Vault]]
-[[LLM Wiki vs RAG]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[LLM Knowledge Linting]]]]
+[[[[Obsidian Knowledge Vault]]]]
+[[[[LLM Wiki vs RAG]]]]
 [[src-karpathy-claude-code-10x]]
-[[Lesson: Schema Is the Real Product — Not the Content]]

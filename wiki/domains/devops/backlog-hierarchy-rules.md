@@ -267,22 +267,22 @@ Signal: The acceptance criteria (documented in the epic's design stage) were nev
 
 ## Relationships
 
-- DERIVED FROM: Stage-Gate Methodology (the hierarchy enforces stage-gating at the container level)
-- BUILDS ON: Wiki Backlog Pattern (the file-based hierarchy IS the wiki backlog)
-- IMPLEMENTS: Plan Execute Review Cycle (the review ceiling for epics/modules IS the review phase)
-- USED BY: Task Type Artifact Matrix (epic and module types follow all 5 stages; the hierarchy rules define how they relate)
-- USED BY: Execution Modes and End Conditions (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)
-- RELATES TO: Four-Project Ecosystem (all four projects organize work in this hierarchy — Plane issues in OpenFleet, wiki backlog in OpenArms)
-- RELATES TO: Spec-Driven Development (epics/modules always have design docs; their stage requirements enforce spec-first)
-- FEEDS INTO: Immune System Rules (hierarchy violations — manual readiness, premature done status — are detectable anti-patterns)
+- DERIVED FROM: [[Stage-Gate Methodology]] (the hierarchy enforces stage-gating at the container level)
+- BUILDS ON: [[Wiki Backlog Pattern]] (the file-based hierarchy IS the wiki backlog)
+- IMPLEMENTS: [[Plan Execute Review Cycle]] (the review ceiling for epics/modules IS the review phase)
+- USED BY: [[Task Type Artifact Matrix]] (epic and module types follow all 5 stages; the hierarchy rules define how they relate)
+- USED BY: [[Execution Modes and End Conditions]] (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)
+- RELATES TO: [[Four-Project Ecosystem]] (all four projects organize work in this hierarchy — Plane issues in OpenFleet, wiki backlog in OpenArms)
+- RELATES TO: [[Spec-Driven Development]] (epics/modules always have design docs; their stage requirements enforce spec-first)
+- FEEDS INTO: [[Immune System Rules]] (hierarchy violations — manual readiness, premature done status — are detectable anti-patterns)
 
 ## Backlinks
 
-[[Stage-Gate Methodology (the hierarchy enforces stage-gating at the container level)]]
-[[Wiki Backlog Pattern (the file-based hierarchy IS the wiki backlog)]]
-[[Plan Execute Review Cycle (the review ceiling for epics/modules IS the review phase)]]
-[[Task Type Artifact Matrix (epic and module types follow all 5 stages; the hierarchy rules define how they relate)]]
-[[Execution Modes and End Conditions (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)]]
-[[Four-Project Ecosystem (all four projects organize work in this hierarchy — Plane issues in OpenFleet, wiki backlog in OpenArms)]]
-[[Spec-Driven Development (epics/modules always have design docs; their stage requirements enforce spec-first)]]
-[[Immune System Rules (hierarchy violations — manual readiness, premature done status — are detectable anti-patterns)]]
+[[[[Stage-Gate Methodology]] (the hierarchy enforces stage-gating at the container level)]]
+[[[[Wiki Backlog Pattern]] (the file-based hierarchy IS the wiki backlog)]]
+[[[[Plan Execute Review Cycle]] (the review ceiling for epics/modules IS the review phase)]]
+[[[[Task Type Artifact Matrix]] (epic and module types follow all 5 stages; the hierarchy rules define how they relate)]]
+[[[[Execution Modes and End Conditions]] (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)]]
+[[[[Four-Project Ecosystem]] (all four projects organize work in this hierarchy — Plane issues in OpenFleet, wiki backlog in OpenArms)]]
+[[[[Spec-Driven Development]] (epics/modules always have design docs; their stage requirements enforce spec-first)]]
+[[[[Immune System Rules]] (hierarchy violations — manual readiness, premature done status — are detectable anti-patterns)]]

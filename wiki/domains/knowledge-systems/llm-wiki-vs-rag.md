@@ -97,39 +97,23 @@ The LLM Wiki v2 document proposes that the binary choice between wiki and RAG is
 - DERIVED FROM: src-karpathy-claude-code-10x
 - DERIVED FROM: src-karpathy-llm-wiki-idea-file
 - DERIVED FROM: src-llm-wiki-v2-agentmemory
-- COMPARES TO: LLM Wiki Pattern
-- RELATES TO: Wiki Ingestion Pipeline
-- RELATES TO: Wiki Knowledge Graph
-- RELATES TO: NotebookLM
-- RELATES TO: Claude Code Best Practices
-- RELATES TO: LightRAG
-- RELATES TO: Agentic Search vs Vector Search
+- COMPARES TO: [[LLM Wiki Pattern]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- RELATES TO: [[Wiki Knowledge Graph]]
+- RELATES TO: [[NotebookLM]]
+- RELATES TO: [[Claude Code Best Practices]]
+- RELATES TO: [[LightRAG]]
+- RELATES TO: [[Agentic Search vs Vector Search]]
 
 ## Backlinks
 
 [[src-karpathy-claude-code-10x]]
 [[src-karpathy-llm-wiki-idea-file]]
 [[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Wiki Knowledge Graph]]
-[[NotebookLM]]
-[[Claude Code Best Practices]]
-[[LightRAG]]
-[[Agentic Search vs Vector Search]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Memory Lifecycle Management]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Second Brain Architecture]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[[[LLM Wiki Pattern]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Wiki Knowledge Graph]]]]
+[[[[NotebookLM]]]]
+[[[[Claude Code Best Practices]]]]
+[[[[LightRAG]]]]
+[[[[Agentic Search vs Vector Search]]]]

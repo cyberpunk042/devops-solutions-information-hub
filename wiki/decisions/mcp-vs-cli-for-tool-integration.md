@@ -97,25 +97,24 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 
 ## Relationships
 
-- DERIVED FROM: Synthesis: Claude Code Harness Engineering
-- DERIVED FROM: Synthesis: Claude Code Accuracy Tips
-- DERIVED FROM: Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens
-- DERIVED FROM: MCP Integration Architecture
-- DERIVED FROM: Claude Code
-- RELATES TO: Claude Code Skills
-- RELATES TO: Claude Code Context Management
-- RELATES TO: Wiki Ingestion Pipeline
-- FEEDS INTO: Research Pipeline Orchestration
+- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
+- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
+- DERIVED FROM: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- DERIVED FROM: [[MCP Integration Architecture]]
+- DERIVED FROM: [[Claude Code]]
+- RELATES TO: [[Claude Code Skills]]
+- RELATES TO: [[Claude Code Context Management]]
+- RELATES TO: [[Wiki Ingestion Pipeline]]
+- FEEDS INTO: [[Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[MCP Integration Architecture]]
-[[Claude Code]]
-[[Claude Code Skills]]
-[[Claude Code Context Management]]
-[[Wiki Ingestion Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Model Guide: MCP + CLI Integration]]
+[[[[Synthesis: Claude Code Harness Engineering]]]]
+[[[[Synthesis: Claude Code Accuracy Tips]]]]
+[[[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[Claude Code]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code Context Management]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Research Pipeline Orchestration]]]]

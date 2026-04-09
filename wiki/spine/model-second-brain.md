@@ -30,22 +30,22 @@ The Second Brain model describes how to build a personal knowledge management sy
 
 - `wiki/sources/src-second-brain-research.md` — PARA methodology and progressive summarization; the CODE workflow (Capture → Organize → Distill → Express)
 - `wiki/sources/src-zettelkasten-basb.md` — Combining Zettelkasten and BASB; the three Zettelkasten note types (fleeting → literature → permanent)
-- `wiki/sources/src-obsidian-claude-code-second-brain.md` — Obsidian + Claude Code second brain setup; Obsidian CLI skills for programmatic vault interaction
+- [[Synthesis: Obsidian + Claude Code Second Brain Setup]] — Obsidian + Claude Code second brain setup; Obsidian CLI skills for programmatic vault interaction
 
 ### L2 — Core Concepts
 
 Read in this order:
 
-1. **Second Brain Architecture** (`wiki/domains/knowledge-systems/second-brain-architecture.md`) — The architectural synthesis: why PARA and Zettelkasten address complementary problems; the hybrid model; why this wiki IS a second brain at scale. Start here.
-2. **PARA Methodology** (`wiki/domains/knowledge-systems/para-methodology.md`) — Projects, Areas, Resources, Archives; the CODE workflow; progressive summarization; when PARA excels and where it stops.
-3. **Zettelkasten Methodology** (`wiki/domains/knowledge-systems/zettelkasten-methodology.md`) — Atomic notes, heterarchical linking, permanent notes; the three note lifecycle stages; how connection density creates emergent insight.
-4. **Obsidian Knowledge Vault** (`wiki/lessons/lesson-convergence-on-src-karpathy-llm-wiki-idea-file.md`) — Obsidian as the IDE for the wiki; graph view, backlinks, and canvas as navigation mechanisms; why Obsidian is infrastructure, not just note-taking.
+1. **Second Brain Architecture** ([[Second Brain Architecture]]) — The architectural synthesis: why PARA and Zettelkasten address complementary problems; the hybrid model; why this wiki IS a second brain at scale. Start here.
+2. **PARA Methodology** ([[PARA Methodology]]) — Projects, Areas, Resources, Archives; the CODE workflow; progressive summarization; when PARA excels and where it stops.
+3. **Zettelkasten Methodology** ([[Zettelkasten Methodology]]) — Atomic notes, heterarchical linking, permanent notes; the three note lifecycle stages; how connection density creates emergent insight.
+4. **Obsidian Knowledge Vault** ([[Lesson: Schema Is the Real Product — Not the Content]]) — Obsidian as the IDE for the wiki; graph view, backlinks, and canvas as navigation mechanisms; why Obsidian is infrastructure, not just note-taking.
 5. **Obsidian CLI** (`wiki/domains/knowledge-systems/obsidian-cli.md`) — Programmatic vault access via command line; creating notes, managing folders, and querying the vault from Claude Code.
-6. **Obsidian Skills Ecosystem** (`wiki/lessons/lesson-convergence-on-src-kepano-obsidian-skills.md`) — Skills that extend Obsidian via Claude Code; the marketplace model; how skills compose with each other.
+6. **Obsidian Skills Ecosystem** ([[Skill Specification Is the Key to Ecosystem Interoperability]]) — Skills that extend Obsidian via Claude Code; the marketplace model; how skills compose with each other.
 
 ### L3 — Comparisons
 
-- **LLM Wiki vs RAG** (`wiki/domains/knowledge-systems/llm-wiki-vs-rag.md`) — How a well-structured markdown vault compares to vector embeddings for personal knowledge retrieval.
+- **LLM Wiki vs RAG** ([[LLM Wiki vs RAG]]) — How a well-structured markdown vault compares to vector embeddings for personal knowledge retrieval.
 
 ### L4 — Lessons (Validated Insights)
 
@@ -53,7 +53,7 @@ Read in this order:
 
 ### L5 — Patterns (Structural Templates)
 
-- **Progressive Distillation** (`wiki/patterns/progressive-distillation.md`) — The core value loop of any second brain: raw → summary → insight → decision; how the maturity ladder implements this automatically.
+- **Progressive Distillation** ([[Progressive Distillation]]) — The core value loop of any second brain: raw → summary → insight → decision; how the maturity ladder implements this automatically.
 
 ## Outcomes
 
@@ -68,20 +68,20 @@ After completing this learning path you will understand:
 
 ## Relationships
 
-- FEEDS INTO: Model Guide: LLM Wiki
-- BUILDS ON: Second Brain Architecture
-- BUILDS ON: PARA Methodology
-- BUILDS ON: Zettelkasten Methodology
-- RELATES TO: Model Guide: Claude Code
-- RELATES TO: Model Guide: Methodology
-- ENABLES: Model Guide: Ecosystem Architecture
+- FEEDS INTO: [[Model Guide: LLM Wiki]]
+- BUILDS ON: [[Second Brain Architecture]]
+- BUILDS ON: [[PARA Methodology]]
+- BUILDS ON: [[Zettelkasten Methodology]]
+- RELATES TO: [[Model Guide: Claude Code]]
+- RELATES TO: [[Model Guide: Methodology]]
+- ENABLES: [[Model Guide: Ecosystem Architecture]]
 
 ## Backlinks
 
-[[Model Guide: LLM Wiki]]
-[[Second Brain Architecture]]
-[[PARA Methodology]]
-[[Zettelkasten Methodology]]
-[[Model Guide: Claude Code]]
-[[Model Guide: Methodology]]
-[[Model Guide: Ecosystem Architecture]]
+[[[[Model Guide: LLM Wiki]]]]
+[[[[Second Brain Architecture]]]]
+[[[[PARA Methodology]]]]
+[[[[Zettelkasten Methodology]]]]
+[[[[Model Guide: Claude Code]]]]
+[[[[Model Guide: Methodology]]]]
+[[[[Model Guide: Ecosystem Architecture]]]]

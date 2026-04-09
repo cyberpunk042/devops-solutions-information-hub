@@ -54,7 +54,7 @@ The minimum bar for synthesis is Layer 1. Synthesizing from Layer 0 alone produc
 **The incident:** During ingestion of the awesome-design-md repository, the agent:
 1. Fetched the README from the awesome-design-md GitHub repository
 2. Read the list of 58 DESIGN.md links with their brief descriptions
-3. Synthesized `wiki/sources/src-awesome-design-md.md` and `wiki/domains/ai-agents/design-md-pattern.md`
+3. Synthesized [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]] and [[Design.md Pattern]]
 4. The synthesis described the format in general terms derived entirely from the README
 
 **The challenge:** The user said: "prove me... to me it just feels like you stayed on surface and you actually have no idea of what it truly is and its format..."
@@ -84,20 +84,20 @@ This lesson applies far beyond wiki ingestion:
 
 ## Relationships
 
-- DERIVED FROM: Design.md Pattern
-- DERIVED FROM: Synthesis: awesome-design-md — 58 Design Systems for AI Agents
-- RELATES TO: Stage-Gate Methodology (depth gates prevent surface-level output)
-- RELATES TO: Multi-Stage Ingestion Beats Single-Pass Processing
-- RELATES TO: Always Plan Before Executing
-- BUILDS ON: Wiki Ingestion Pipeline
-- ENABLES: Immune System Rules (this lesson became a rule)
+- DERIVED FROM: [[Design.md Pattern]]
+- DERIVED FROM: [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
+- RELATES TO: [[Stage-Gate Methodology]] (depth gates prevent surface-level output)
+- RELATES TO: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
+- RELATES TO: [[Always Plan Before Executing]]
+- BUILDS ON: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[Immune System Rules]] (this lesson became a rule)
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-[[Stage-Gate Methodology (depth gates prevent surface-level output)]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Always Plan Before Executing]]
-[[Wiki Ingestion Pipeline]]
-[[Immune System Rules (this lesson became a rule)]]
+[[[[Design.md Pattern]]]]
+[[[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]]]
+[[[[Stage-Gate Methodology]] (depth gates prevent surface-level output)]]
+[[[[Multi-Stage Ingestion Beats Single-Pass Processing]]]]
+[[[[Always Plan Before Executing]]]]
+[[[[Wiki Ingestion Pipeline]]]]
+[[[[Immune System Rules]] (this lesson became a rule)]]

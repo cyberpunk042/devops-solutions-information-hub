@@ -94,35 +94,20 @@ Cross-referencing the `OpenFleet`, `Immune System Rules`, and `Rework Prevention
 
 ## Relationships
 
-- EXTENDS: Claude Code Best Practices
-- EXTENDS: Claude Code Skills
-- BUILDS ON: Claude Code
-- PARALLELS: OpenFleet
-- RELATES TO: Research Pipeline Orchestration
-- RELATES TO: MCP Integration Architecture
-- RELATES TO: OpenClaw
+- EXTENDS: [[Claude Code Best Practices]]
+- EXTENDS: [[Claude Code Skills]]
+- BUILDS ON: [[Claude Code]]
+- PARALLELS: [[OpenFleet]]
+- RELATES TO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[OpenClaw]]
 
 ## Backlinks
 
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Claude Code]]
-[[OpenFleet]]
-[[Research Pipeline Orchestration]]
-[[MCP Integration Architecture]]
-[[OpenClaw]]
-[[Agent Orchestration Patterns]]
-[[Always Plan Before Executing]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Deterministic Shell, LLM Core]]
-[[Hooks Lifecycle Architecture]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[Model Guide: MCP + CLI Integration]]
-[[Model: Quality + Failure Prevention]]
-[[Per-Role Command Architecture]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[[[Claude Code Best Practices]]]]
+[[[[Claude Code Skills]]]]
+[[[[Claude Code]]]]
+[[[[OpenFleet]]]]
+[[[[Research Pipeline Orchestration]]]]
+[[[[MCP Integration Architecture]]]]
+[[[[OpenClaw]]]]
