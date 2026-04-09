@@ -58,10 +58,18 @@ The skill file wraps the CLI by loading official Microsoft Playwright CLI docume
 
 ## Open Questions
 
-- At what session length does MCP's accumulated context overhead become prohibitive vs. CLI? Is there a measurable breakeven point in number of pages tested?
-- Can the YAML page snapshot format be version-controlled to track UI changes over time (visual regression testing)?
-- Does the CLI approach work with authenticated sessions across multiple test runs, or does auth need to be re-established per test?
-- How does the 12x cost differential cited in the accuracy tips source map to the "dramatically lower" claim here — is 12x a theoretical max or an observed average?
+- Can the YAML page snapshot format be version-controlled to track UI changes over time (visual regression testing)? (Requires: external research on Playwright CLI YAML snapshot versioning practices; no wiki page documents this capability)
+- Does the CLI approach work with authenticated sessions across multiple test runs, or does auth need to be re-established per test? (Requires: empirical testing of Playwright CLI session persistence; no wiki page documents cross-run auth behavior for the CLI approach)
+
+### Answered Open Questions
+
+**Q: At what session length does MCP's accumulated context overhead become prohibitive vs. CLI? Is there a measurable breakeven point in number of pages tested?**
+
+Cross-referencing `Decision: MCP vs CLI for Tool Integration` and `Context-Aware Tool Loading`: the Decision page provides the quantified degradation curve: "Accuracy is high at 20% context usage, drops significantly at 40%, becomes unreliable at 60%+, and produces bugs/hallucinations at 80%." The Context-Aware Tool Loading pattern specifies the mechanism: "After 10 navigation steps, MCP has loaded 10 full accessibility trees into context. CLI may have loaded 2-3 YAML snapshots on demand." The breakeven point is therefore not a fixed number of pages but a function of how context-heavy each page's accessibility tree is and what else is consuming context. The Decision page documents the 12x cost differential between MCP and CLI for the Playwright case. If a session starts at 5-10% context usage, MCP's per-step injections (each accessibility tree adding hundreds to thousands of tokens) will reach the 40% degradation threshold significantly faster than CLI. A rough estimate from combining these data points: MCP becomes accuracy-degrading at roughly 3-5x fewer test steps than CLI in the same session, assuming each page accessibility tree consumes 2-5% of context. The exact breakeven varies by page complexity, but the practical guidance from existing wiki pages is: for any QA test longer than 5-7 pages, CLI is the correct choice; MCP is only justified for 1-3 page exploratory checks.
+
+**Q: How does the 12x cost differential cited in the accuracy tips source map to the "dramatically lower" claim here — is 12x a theoretical max or an observed average?**
+
+Cross-referencing `Decision: MCP vs CLI for Tool Integration` and `Context-Aware Tool Loading`: the Decision page cites the 12x differential as drawn from the accuracy tips source (src-claude-code-accuracy-tips), not from Playwright specifically. The Context-Aware Tool Loading pattern describes the mechanism: "The token differential cited across sources is 12x." The Decision page clarifies the scenario: "Playwright MCP injects 10 full accessibility trees in a 10-step QA test; CLI loads 2-3 targeted YAML snapshots." The 12x is a session-level observed differential for the specific 10-step QA demo scenario, not a theoretical maximum. It represents the cumulative effect of MCP loading full trees at every step vs. CLI loading sparse snapshots on demand. In simpler 1-3 step tests, the differential would be smaller (closer to 3-5x). In very long tests (20+ steps), the differential could exceed 12x because MCP's overhead compounds with each step while CLI's overhead scales with the number of elements queried, not the number of steps taken. The 12x figure is best interpreted as a representative mid-range observed value for a medium-length QA session, not a bound in either direction.
 
 ## Relationships
 

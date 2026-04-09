@@ -50,10 +50,18 @@ The experimental status is honest and instructive. It highlights a current limit
 
 ## Open Questions
 
-- How does output quality compare across different Claude model versions?
-- Can the Excalidraw animation feature be used to create step-by-step explanatory animations?
-- What is the practical node limit for Canvas layouts before the spacing algorithms break down?
-- Would a validation step (rendering and checking the output) improve reliability?
+- How does output quality compare across different Claude model versions? (Requires: external empirical testing across model versions; no wiki page documents a systematic quality comparison of visual skill output across Claude versions)
+- What is the practical node limit for Canvas layouts before the spacing algorithms break down? (Requires: empirical testing with large Canvas files; no wiki page documents a node count threshold for the Canvas Creator skill)
+
+### Answered Open Questions
+
+**Q: Can the Excalidraw animation feature be used to create step-by-step explanatory animations?**
+
+Cross-referencing `Design.md Pattern` and `Obsidian Skills Ecosystem`: the Design.md Pattern page documents that AI-generated visual output is most reliable when "precise visual constraints" are encoded in the skill file as binding constraints — "specific Excalidraw element types, exact color palette, layout algorithm parameters" rather than leaving decisions to the model's judgment. The Obsidian Skills Ecosystem page explicitly states the Excalidraw skill supports three output modes including "animated .excalidraw," confirming animated output is a designed capability. For step-by-step explanatory animations, the mechanism would use the animated mode with sequenced diagram elements. However, the Obsidian Skills Ecosystem page notes that "axton explicitly labels the visual skills as experimental with variable output quality," and the Design.md Pattern advises a "preview before commit" verification step for visual skill output. The answer is yes, the animated mode is structurally intended for this use case, but output reliability depends on encoding the animation sequence steps as explicit constraints in the prompt — vague "animate this" requests produce more variable results than "animate step 1: show X, step 2: add Y, step 3: connect Z."
+
+**Q: Would a validation step (rendering and checking the output) improve reliability?**
+
+Cross-referencing `Design.md Pattern` and `Synthesis: Playwright MCP for Visual Development Testing`: the Design.md Pattern page answers this directly by analogy — "preview.html artifacts allow human verification before code generation — an analogous 'preview before commit' step for visual skill output would catch variability before it reaches the vault." The Playwright MCP page documents a concrete validation mechanism: after Claude Code generates visual output, a Playwright-based design review agent captures screenshots and validates against design principles, creating a "fix-verify loop" that "removes the human from the visual verification cycle entirely for routine issues." Applying this to Excalidraw/Mermaid/Canvas output: a post-generation step that opens the file in a headless browser (for Mermaid SVG rendering) or uses the Obsidian CLI's `dev:screenshot` command would catch syntax errors and layout failures before the user sees them. The Obsidian Skills Ecosystem page confirms this would address the core variability: "the path to production quality is the same mechanism — encode precise visual constraints... rather than leaving visual decisions to the model's judgment." Validation steps are not just improvement — they are the standard mechanism for making experimental visual skills production-reliable.
 
 ## Relationships
 

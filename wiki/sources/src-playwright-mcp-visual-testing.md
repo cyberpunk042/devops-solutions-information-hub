@@ -65,10 +65,18 @@ This source demonstrates Playwright MCP (not CLI), and the context cost issue do
 
 ## Open Questions
 
-- Can the quick visual check be implemented via CLI (lower cost) while reserving MCP for comprehensive design reviews (where full visibility is needed)?
-- How does the design review agent handle dynamic content (loading states, async data) — does it wait for content to settle before capturing screenshots?
-- Is the design principles file maintained alongside CLAUDE.md or is it embedded in CLAUDE.md? Version control implications for team environments?
-- What is the performance overhead of running Playwright MCP in headless mode during active development — does it slow Claude Code's response loop noticeably?
+- How does the design review agent handle dynamic content (loading states, async data) — does it wait for content to settle before capturing screenshots? (Requires: external testing of Playwright MCP wait behavior for async content; no wiki page documents this timing behavior)
+- What is the performance overhead of running Playwright MCP in headless mode during active development — does it slow Claude Code's response loop noticeably? (Requires: empirical timing data from real development sessions; no wiki page documents Playwright MCP latency in active development contexts)
+
+### Answered Open Questions
+
+**Q: Can the quick visual check be implemented via CLI (lower cost) while reserving MCP for comprehensive design reviews (where full visibility is needed)?**
+
+Cross-referencing `Synthesis: Playwright CLI vs MCP` and `Decision: MCP vs CLI for Tool Integration`: this is exactly the two-tier architecture that the CLI vs. MCP comparison recommends. The Playwright CLI vs. MCP synthesis states directly: "Use CLI when you know what to look for, use MCP when you're exploring." The quick visual check (triggered on any front-end change) verifies known elements — the same login form, the same navigation bar, the same expected component — making it a perfect fit for CLI's "you know what to expect" scenario. The comprehensive design review (triggered on major feature implementations) needs to validate unexpected states, responsive behavior at arbitrary breakpoints, and accessibility compliance on pages that may have changed significantly — making it the "exploratory" scenario where MCP's forced full-page visibility is the advantage. The Decision: MCP vs CLI page confirms: "Use CLI for structured, known-workflow automation (regression tests, form filling, known-flow verification), and use MCP for exploratory testing or pages with high uncertainty." The two-tier architecture (CLI for quick checks, MCP for design review) is therefore the architecturally correct application of existing wiki principles, not just a possible optimization.
+
+**Q: Is the design principles file maintained alongside CLAUDE.md or is it embedded in CLAUDE.md? Version control implications for team environments?**
+
+Cross-referencing `Design.md Pattern` and `Harness Engineering`: the Design.md Pattern page provides the direct answer: "DESIGN.md (how it should look) complements CLAUDE.md (how the agent should behave) and AGENTS.md (how to build). Together they give an AI agent complete project context without stuffing everything into a single file." The pattern is explicitly a separate file (DESIGN.md) at the project root, not embedded in CLAUDE.md. The Design.md Pattern page also notes the companion files ecosystem: "Each Design.md comes with preview.html and preview-dark.html files that render the design system visually" — confirming the convention is a separate tracked file. For version control in team environments, the Harness Engineering page's IaC principle applies: all agent context files (CLAUDE.md, DESIGN.md, AGENTS.md) are checked into the repository as first-class configuration, versioned with the code they govern. The Design.md Pattern page notes the file is "version-controllable with Git" as a key property. Team conflicts on design principles are resolved the same way as CLAUDE.md conflicts: through standard Git merge/PR review processes, with the design file serving as the single source of truth for the visual specification.
 
 ## Relationships
 

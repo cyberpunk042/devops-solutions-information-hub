@@ -50,10 +50,18 @@ Compared to kepano/obsidian-skills which includes an obsidian-cli skill among it
 
 ## Open Questions
 
-- How does performance scale with vault size when running commands like full-text search or orphan detection?
-- Can the skill be extended to trigger Obsidian community plugin commands via the CLI?
-- How does the IPC-based CLI handle concurrent access from multiple AI agents?
-- What is the maintenance burden of keeping the skill updated as Obsidian CLI evolves?
+- How does performance scale with vault size when running commands like full-text search or orphan detection? (Requires: empirical benchmarking with large vaults; the Obsidian CLI page notes this as an open question and no wiki page documents CLI latency at scale)
+- What is the maintenance burden of keeping the skill updated as Obsidian CLI evolves? (Requires: external observation over time; no wiki page documents the update cadence of the Obsidian CLI skill relative to Obsidian CLI releases)
+
+### Answered Open Questions
+
+**Q: Can the skill be extended to trigger Obsidian community plugin commands via the CLI?**
+
+Cross-referencing `Obsidian CLI` and `Obsidian Skills Ecosystem`: the Obsidian CLI page documents a direct answer: "Does `obsidian eval` have access to community plugin APIs, enabling automation of Dataview queries, Templater scripts, and other plugin-specific operations? (Requires: external testing against community plugin APIs; the Obsidian Skills Ecosystem page describes what community plugins expose but does not document whether `eval` can invoke their APIs)." The `eval code=<js>` command "executes arbitrary JavaScript in the Obsidian context" — since community plugins register their APIs into the Obsidian app context, `eval` is the plausible mechanism for invoking them. However, no wiki page documents this as confirmed behavior. The pablo-mano skill's 130+ commands cover the official Obsidian CLI surface; community plugin extension is a separate capability layer that would require either `eval`-based workarounds or community plugin CLI hooks (not yet documented). The practical answer from existing wiki knowledge: the IPC-based CLI provides the `eval` command as a potential extension point, but community plugin triggering is not a documented, supported workflow in any existing wiki page.
+
+**Q: How does the IPC-based CLI handle concurrent access from multiple AI agents?**
+
+Cross-referencing `Obsidian CLI` and `WSL2 Development Patterns`: the Obsidian CLI page lists concurrent access as an open question: "How does the CLI handle concurrent access — can multiple scripts issue commands simultaneously without conflicts? (Requires: external testing or Obsidian documentation on IPC concurrency; no existing wiki page covers this)" — confirming no wiki page documents concurrent IPC behavior. The WSL2 Development Patterns page provides useful architectural context: the current project design avoids concurrent Obsidian access by using a two-daemon architecture where the wiki-watcher daemon detects changes and triggers the post-chain sequentially, and the wiki-sync daemon separately copies results to Windows. This sequential architecture sidesteps IPC concurrency concerns by design. For multi-agent scenarios where concurrent CLI access would be required, the WSL2 page notes the CLI must run on the same OS as the app, adding a coordination constraint. The wiki's current recommendation from these pages: design agent workflows to avoid concurrent Obsidian CLI calls; if concurrency is required, implement a command queue at the orchestration layer rather than relying on IPC to handle simultaneous requests safely.
 
 ## Relationships
 

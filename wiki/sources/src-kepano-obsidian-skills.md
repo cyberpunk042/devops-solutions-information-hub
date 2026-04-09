@@ -48,10 +48,18 @@ Compared to the other Obsidian skill repos (axton-obsidian-visual-skills and pab
 
 ## Open Questions
 
-- How frequently are these skills updated as Obsidian's features evolve?
-- Do the skills handle edge cases in Obsidian Flavored Markdown that differ from standard markdown?
-- Is there a testing or validation framework for skills following the agentskills.io spec?
-- Will additional skills be added as Obsidian introduces new features?
+- How frequently are these skills updated as Obsidian's features evolve? (Requires: external observation of the kepano/obsidian-skills repo update cadence over time; no wiki page covers this update frequency)
+- Will additional skills be added as Obsidian introduces new features? (Requires: external Obsidian roadmap information; no wiki page covers upcoming Obsidian feature plans)
+
+### Answered Open Questions
+
+**Q: Do the skills handle edge cases in Obsidian Flavored Markdown that differ from standard markdown?**
+
+Cross-referencing `Obsidian Skills Ecosystem` and `Skills Architecture Patterns`: the Obsidian Skills Ecosystem page documents that the kepano/obsidian-skills obsidian-markdown skill specifically covers "Obsidian Flavored Markdown with wikilinks, embeds, callouts, and properties" — features that are Obsidian-specific extensions not present in standard CommonMark. The Skills Architecture Patterns comparison notes kepano's skills are "specification-level" rather than "generation-level," meaning the obsidian-markdown skill teaches agents the format specification, including edge cases like wikilink resolution ambiguity, embed syntax, and frontmatter properties. However, the Obsidian Skills Ecosystem page also notes that kepano's skills are "thinner" than community skills — pablo-mano's comprehensive skill covers "130+ commands" including property operations that depend on Obsidian-specific frontmatter parsing. The conclusion: kepano's skill handles the documented Obsidian Markdown edge cases (those specified in the agentskills.io format), while undocumented or plugin-specific edge cases (e.g., Dataview query syntax, Templater variables embedded in markdown) are outside the skill's scope and require community extensions.
+
+**Q: Is there a testing or validation framework for skills following the agentskills.io spec?**
+
+Cross-referencing `Skills Architecture Patterns` and `Harness Engineering`: the Skills Architecture Patterns page identifies this as a tension — "official vs. community quality: kepano's official Obsidian skills follow the agentskills.io spec but are thinner than community skills... quality variance in community skills creates reliability uncertainty." The page also notes that the agentskills.io specification itself is "still emerging." No wiki page documents a testing or validation framework for agentskills.io-compliant skills. The closest analogy in existing wiki knowledge is the harness engineering approach from the Harness Engineering page: runtime guardrails (hooks, TypeScript rules R01-R13) that enforce behavior at execution time — applying this to skill testing would mean writing test cases that invoke each skill with known inputs and validate outputs. The Skills Architecture Patterns page notes that "composition (skills referencing skills) remains largely unsolved across all ecosystems" — a validation framework faces the same unsolved problem: skills are compressed instructions that LLMs expand at runtime, making deterministic testing difficult. The current state per wiki knowledge: no standardized testing framework exists; informal testing via manual invocation and output review is the norm.
 
 ## Relationships
 
