@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: PleasePrompto/notebooklm-skill"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: tools-and-platforms
 status: synthesized
 confidence: high

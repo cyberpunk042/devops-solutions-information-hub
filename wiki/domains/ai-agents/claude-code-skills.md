@@ -1,6 +1,8 @@
 ---
 title: "Claude Code Skills"
 type: concept
+layer: 2
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: high

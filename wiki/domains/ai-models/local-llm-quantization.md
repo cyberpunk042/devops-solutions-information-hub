@@ -1,6 +1,8 @@
 ---
 title: "Local LLM Quantization"
 type: concept
+layer: 2
+maturity: growing
 domain: ai-models
 status: synthesized
 confidence: medium

@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Context Mode — MCP Sandbox for Context Saving"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: high

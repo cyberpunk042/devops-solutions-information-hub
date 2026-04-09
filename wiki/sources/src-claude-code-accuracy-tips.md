@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Claude Code Accuracy Tips"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: ai-agents
 status: synthesized
 confidence: medium

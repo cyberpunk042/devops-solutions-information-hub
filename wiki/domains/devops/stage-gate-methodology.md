@@ -1,6 +1,7 @@
 ---
 title: "Stage-Gate Methodology"
 type: concept
+layer: 2
 domain: devops
 status: synthesized
 confidence: authoritative

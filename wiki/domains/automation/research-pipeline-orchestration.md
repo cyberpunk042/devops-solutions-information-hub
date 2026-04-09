@@ -1,6 +1,8 @@
 ---
 title: "Research Pipeline Orchestration"
 type: concept
+layer: 2
+maturity: growing
 domain: automation
 status: synthesized
 confidence: medium

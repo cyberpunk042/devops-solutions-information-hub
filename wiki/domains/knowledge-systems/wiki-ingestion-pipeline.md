@@ -1,6 +1,8 @@
 ---
 title: "Wiki Ingestion Pipeline"
 type: concept
+layer: 2
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

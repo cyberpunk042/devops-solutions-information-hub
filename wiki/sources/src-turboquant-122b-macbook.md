@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: TurboQuant 122B LLM on MacBook"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: ai-models
 status: synthesized
 confidence: medium

@@ -1,6 +1,8 @@
 ---
 title: "AI-Driven Content Pipeline"
 type: concept
+layer: 2
+maturity: growing
 domain: automation
 status: synthesized
 confidence: high

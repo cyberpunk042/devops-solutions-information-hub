@@ -1,6 +1,8 @@
 ---
 title: "LLM Wiki vs RAG"
 type: comparison
+layer: 3
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

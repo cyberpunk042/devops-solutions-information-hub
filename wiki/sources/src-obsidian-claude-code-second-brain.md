@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Obsidian + Claude Code Second Brain Setup"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: tools-and-platforms
 status: synthesized
 confidence: high

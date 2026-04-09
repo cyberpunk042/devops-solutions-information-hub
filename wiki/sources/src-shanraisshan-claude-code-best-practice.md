@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Claude Code Best Practice (shanraisshan)"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: high

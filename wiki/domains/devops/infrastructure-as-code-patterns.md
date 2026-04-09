@@ -1,6 +1,8 @@
 ---
 title: "Infrastructure as Code Patterns"
 type: concept
+layer: 2
+maturity: growing
 domain: devops
 status: synthesized
 confidence: medium

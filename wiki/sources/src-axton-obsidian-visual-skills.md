@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: axtonliu/axton-obsidian-visual-skills"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: tools-and-platforms
 status: synthesized
 confidence: high

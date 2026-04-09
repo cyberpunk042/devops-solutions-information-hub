@@ -1,6 +1,8 @@
 ---
 title: "MCP Integration Architecture"
 type: concept
+layer: 2
+maturity: growing
 domain: automation
 status: synthesized
 confidence: medium

@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: 18 Claude Code Token Hacks in 18 Minutes"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: ai-agents
 status: synthesized
 confidence: medium

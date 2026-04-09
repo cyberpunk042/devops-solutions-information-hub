@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Claude + NotebookLM Content Automation"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: automation
 status: synthesized
 confidence: high

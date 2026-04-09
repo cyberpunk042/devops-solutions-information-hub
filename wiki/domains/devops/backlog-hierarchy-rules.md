@@ -1,6 +1,7 @@
 ---
 title: "Backlog Hierarchy Rules"
 type: concept
+layer: 2
 domain: devops
 status: synthesized
 confidence: authoritative

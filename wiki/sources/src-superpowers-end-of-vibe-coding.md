@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: high

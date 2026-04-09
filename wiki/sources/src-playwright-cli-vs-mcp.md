@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: high

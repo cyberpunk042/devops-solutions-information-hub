@@ -1,6 +1,8 @@
 ---
 title: "Multi-Channel AI Agent Access"
 type: concept
+layer: 2
+maturity: growing
 domain: tools-and-platforms
 status: synthesized
 confidence: high

@@ -1,6 +1,8 @@
 ---
 title: "PARA Methodology"
 type: concept
+layer: 2
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

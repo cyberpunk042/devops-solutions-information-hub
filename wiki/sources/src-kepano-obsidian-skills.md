@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: kepano/obsidian-skills"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: tools-and-platforms
 status: synthesized
 confidence: high

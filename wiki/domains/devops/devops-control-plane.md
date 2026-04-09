@@ -1,6 +1,8 @@
 ---
 title: "devops-control-plane"
 type: concept
+layer: 2
+maturity: growing
 domain: devops
 status: synthesized
 confidence: authoritative

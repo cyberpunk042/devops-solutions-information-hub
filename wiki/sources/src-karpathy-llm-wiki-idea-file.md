@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Karpathy's LLM Wiki Idea File"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

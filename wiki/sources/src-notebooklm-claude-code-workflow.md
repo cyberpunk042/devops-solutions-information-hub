@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

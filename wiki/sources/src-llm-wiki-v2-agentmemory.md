@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
 type: source-synthesis
+layer: 1
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

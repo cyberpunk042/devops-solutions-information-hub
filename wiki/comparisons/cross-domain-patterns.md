@@ -1,6 +1,8 @@
 ---
 title: "Cross-Domain Patterns"
 type: comparison
+layer: 3
+maturity: growing
 domain: cross-domain
 status: synthesized
 confidence: high

@@ -1,6 +1,8 @@
 ---
 title: "Synthesis: Claude Code Harness Engineering"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: ai-agents
 status: synthesized
 confidence: high

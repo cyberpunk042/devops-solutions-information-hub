@@ -1,6 +1,8 @@
 ---
 title: "Claude Code Slash Commands (artemgetmann)"
 type: source-synthesis
+layer: 1
+maturity: seed
 domain: ai-agents
 status: synthesized
 confidence: medium
