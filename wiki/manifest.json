@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T18:32:40.894387+00:00",
+  "generated": "2026-04-09T18:44:35.712835+00:00",
   "stats": {
-    "pages": 117,
+    "pages": 118,
     "domains": 7,
     "sources": 23,
     "comparisons": 5,
-    "relationships": 900,
-    "tags_unique": 517,
+    "relationships": 917,
+    "tags_unique": 522,
     "layers": {
       "6": 5,
       "4": 16,
@@ -15,7 +15,7 @@
     },
     "maturity": {
       "growing": 39,
-      "seed": 5
+      "seed": 6
     }
   },
   "pages": [
@@ -2344,6 +2344,118 @@
         {
           "verb": "RELATES TO",
           "target": "Claude Code Best Practices"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-framework.md",
+      "slug": "domains/cross-domain/methodology-framework",
+      "title": "Methodology Framework",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "methodology",
+        "meta-methodology",
+        "stage-gate",
+        "composable",
+        "recursive",
+        "framework",
+        "transferable",
+        "multi-track",
+        "skyscraper",
+        "sfif"
+      ],
+      "sources": [
+        {
+          "id": "src-openarms-methodology",
+          "type": "documentation",
+          "file": "raw/articles/openarms-methodology-yaml-full.md",
+          "title": "OpenArms Methodology YAML + Agent Directive",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-openfleet-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "title": "OpenFleet Methodology Deep Scan",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "CONTAINS",
+          "target": "Stage-Gate Methodology (the 5-stage model is an instance within this framework)"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Task Type Artifact Matrix (task-type-to-model selection is one selection axis)"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Execution Modes and End Conditions (execution modes are model parameters)"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features (SFIF is the project-level model)"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Spec-Driven Development (SDD is the execution track's methodology model)"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Skyscraper"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Pyramid"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Mountain (the quality dimension of model execution)"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Task Lifecycle Stage-Gating (stage-gating is the enforcement mechanism for models)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Backlog Hierarchy Rules (the PM track model that structures work items)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "LLM Wiki Pattern (the knowledge track model for wiki-based knowledge management)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Second Brain Architecture (the knowledge track operates within the second brain structure)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Progressive Distillation (maturity progression is a model within the knowledge track)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Four-Project Ecosystem (the ecosystem is the highest-level instance of the framework)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Backlog Pattern (PM track methodology feeds backlog structure)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "SFIF and Skyscraper articulation (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)"
         }
       ]
     },
@@ -8603,8 +8715,8 @@
   ],
   "domains": {
     "cross-domain": {
-      "page_count": 18,
-      "relationship_count": 115
+      "page_count": 19,
+      "relationship_count": 132
     },
     "ai-agents": {
       "page_count": 32,
@@ -9436,6 +9548,7 @@
     ],
     "methodology": [
       "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/methodology-framework",
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix"
     ],
@@ -9450,6 +9563,7 @@
     ],
     "sfif": [
       "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/methodology-framework",
       "patterns/scaffold-foundation-infrastructure-features"
     ],
     "openarms": [
@@ -9594,6 +9708,33 @@
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
     ],
+    "meta-methodology": [
+      "domains/cross-domain/methodology-framework"
+    ],
+    "stage-gate": [
+      "domains/cross-domain/methodology-framework",
+      "domains/devops/stage-gate-methodology"
+    ],
+    "composable": [
+      "domains/cross-domain/methodology-framework"
+    ],
+    "recursive": [
+      "domains/cross-domain/methodology-framework",
+      "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "framework": [
+      "domains/cross-domain/methodology-framework"
+    ],
+    "transferable": [
+      "domains/cross-domain/methodology-framework"
+    ],
+    "multi-track": [
+      "domains/cross-domain/methodology-framework"
+    ],
+    "skyscraper": [
+      "domains/cross-domain/methodology-framework",
+      "domains/cross-domain/skyscraper-pyramid-mountain"
+    ],
     "quality": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
     ],
@@ -9604,9 +9745,6 @@
       "domains/cross-domain/skyscraper-pyramid-mountain"
     ],
     "technical-debt": [
-      "domains/cross-domain/skyscraper-pyramid-mountain"
-    ],
-    "skyscraper": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
     ],
     "pyramid": [
@@ -9774,9 +9912,6 @@
     ],
     "service-templates": [
       "domains/devops/infrastructure-as-code-patterns"
-    ],
-    "stage-gate": [
-      "domains/devops/stage-gate-methodology"
     ],
     "document": [
       "domains/devops/stage-gate-methodology"
@@ -10382,9 +10517,6 @@
     "build-lifecycle": [
       "patterns/scaffold-foundation-infrastructure-features"
     ],
-    "recursive": [
-      "patterns/scaffold-foundation-infrastructure-features"
-    ],
     "poc": [
       "patterns/scaffold-foundation-infrastructure-features"
     ],
@@ -10755,6 +10887,12 @@
       ]
     },
     {
+      "target": "Flexible Methodology Framework directive",
+      "referenced_by": [
+        "Methodology Framework"
+      ]
+    },
+    {
       "target": "Knowledge Systems",
       "referenced_by": [
         "AI Agents \u2014 Domain Overview",
@@ -10776,9 +10914,21 @@
       ]
     },
     {
+      "target": "Mountain",
+      "referenced_by": [
+        "Methodology Framework"
+      ]
+    },
+    {
       "target": "PARA methodology",
       "referenced_by": [
         "Second Brain Architecture"
+      ]
+    },
+    {
+      "target": "Pyramid",
+      "referenced_by": [
+        "Methodology Framework"
       ]
     },
     {
@@ -10791,6 +10941,18 @@
       "target": "SFIF Pattern",
       "referenced_by": [
         "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
+      ]
+    },
+    {
+      "target": "SFIF and Skyscraper articulation",
+      "referenced_by": [
+        "Methodology Framework"
+      ]
+    },
+    {
+      "target": "Skyscraper",
+      "referenced_by": [
+        "Methodology Framework"
       ]
     },
     {
