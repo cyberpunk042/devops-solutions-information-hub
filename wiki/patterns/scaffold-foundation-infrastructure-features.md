@@ -172,5 +172,5 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 [[Plan Execute Review Cycle]]
 [[Knowledge Evolution Pipeline]]
 [[Infrastructure as Code Patterns]]
-[[Model: SFIF + Architecture]]
+[[Model: SFIF and Architecture]]
 [[Skyscraper, Pyramid, Mountain]]

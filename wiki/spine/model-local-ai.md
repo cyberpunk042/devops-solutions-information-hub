@@ -82,6 +82,6 @@ After completing this path you understand:
 [[Model: Quality + Failure Prevention]]
 [[Model: SFIF + Architecture]]
 [[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Model: Knowledge Evolution]]
 [[Model: NotebookLM]]
 [[Model: Quality and Failure Prevention]]
+[[Model: SFIF and Architecture]]

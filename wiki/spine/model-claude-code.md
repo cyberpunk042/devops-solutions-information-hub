@@ -225,4 +225,6 @@ Four validated lessons emerge from operating Claude Code at scale in this ecosys
 [[Always Plan Before Executing]]
 [[CLI Tools Beat MCP for Token Efficiency]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[Model: Ecosystem Architecture]]
+[[Model: MCP and CLI Integration]]
 [[Model: Methodology]]

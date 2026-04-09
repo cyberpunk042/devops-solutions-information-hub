@@ -135,4 +135,4 @@ Avoid Gateway-Centric Routing when:
 [[AICP]]
 [[Research Pipeline Orchestration]]
 [[Deterministic Shell, LLM Core]]
-[[Model Guide: Ecosystem Architecture]]
+[[Model: Ecosystem Architecture]]

@@ -144,6 +144,6 @@ Cross-referencing `Infrastructure as Code Patterns` and `Agent Orchestration Pat
 [[[[LLM Wiki Pattern]] (markdown as AI-native knowledge format)]]
 [[Hooks Lifecycle Architecture]]
 [[Infrastructure as Code Patterns]]
-[[Model: Design.md + IaC]]
+[[Model: Design.md and IaC]]
 [[Model: Skills, Commands, and Hooks]]
 [[Never Synthesize from Descriptions Alone]]

@@ -141,7 +141,7 @@ Cross-referencing `Immune System Rules` and `devops-control-plane`: the `Immune 
 [[Four-Project Ecosystem]]
 [[Gateway-Centric Routing]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
-[[Model: Design.md + IaC]]
+[[Model: Design.md and IaC]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skyscraper, Pyramid, Mountain]]
 [[WSL2 Development Patterns]]

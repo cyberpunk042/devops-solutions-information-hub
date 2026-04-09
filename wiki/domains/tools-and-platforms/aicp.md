@@ -117,6 +117,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[Knowledge Evolution Pipeline]]
 [[Local LLM Quantization]]
 [[MCP Integration Architecture]]
+[[Model: Ecosystem Architecture]]
 [[Model: Local AI ($0 Target)]]
 [[Multi-Channel AI Agent Access]]
 [[OpenArms]]

@@ -264,3 +264,5 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Model: SFIF + Architecture]]
 [[Model: Local AI ($0 Target)]]
 [[Model: Design.md + IaC]]
+[[Model: Design.md and IaC]]
+[[Model: SFIF and Architecture]]

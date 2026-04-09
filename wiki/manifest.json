@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T22:38:00.706303+00:00",
+  "generated": "2026-04-09T22:49:13.107287+00:00",
   "stats": {
     "pages": 154,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1139,
-    "tags_unique": 594,
+    "relationships": 1149,
+    "tags_unique": 597,
     "layers": {
       "3": 5,
       "6": 5,
@@ -9928,8 +9928,8 @@
     {
       "path": "spine/model-design-md.md",
       "slug": "spine/model-design-md",
-      "title": "Model: Design.md + IaC",
-      "type": "learning-path",
+      "title": "Model: Design.md and IaC",
+      "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
       "confidence": "high",
@@ -9937,13 +9937,15 @@
       "updated": "2026-04-09",
       "tags": [
         "model",
-        "learning-path",
         "spine",
         "design-md",
         "iac",
         "markdown-config",
         "claude-md",
-        "agents-md"
+        "agents-md",
+        "soul-md",
+        "ai-configuration",
+        "infrastructure-as-code"
       ],
       "sources": [],
       "layer": "spine",
@@ -9959,16 +9961,24 @@
           "target": "Infrastructure as Code Patterns"
         },
         {
-          "verb": "RELATES TO",
-          "target": "Model: Quality + Failure Prevention"
+          "verb": "BUILDS ON",
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: SFIF + Architecture"
+          "target": "Model: SFIF and Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: Automation + Pipelines"
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Automation and Pipelines"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: MCP and CLI Integration"
         },
         {
           "verb": "ENABLES",
@@ -9979,8 +9989,8 @@
     {
       "path": "spine/model-ecosystem.md",
       "slug": "spine/model-ecosystem",
-      "title": "Model Guide: Ecosystem Architecture",
-      "type": "learning-path",
+      "title": "Model: Ecosystem Architecture",
+      "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
       "confidence": "high",
@@ -9988,33 +9998,21 @@
       "updated": "2026-04-09",
       "tags": [
         "ecosystem",
-        "model-guide",
-        "learning-path",
+        "model",
         "openfleet",
         "aicp",
         "openarms",
         "devops-control-plane",
         "multi-project",
         "integration",
-        "spine"
+        "spine",
+        "architecture"
       ],
       "sources": [],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
       "relationships": [
-        {
-          "verb": "FEEDS INTO",
-          "target": "Model Guide: Claude Code"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Model Guide: LLM Wiki"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Model Guide: Methodology"
-        },
         {
           "verb": "BUILDS ON",
           "target": "Four-Project Ecosystem"
@@ -10025,19 +10023,47 @@
         },
         {
           "verb": "BUILDS ON",
+          "target": "AICP"
+        },
+        {
+          "verb": "BUILDS ON",
           "target": "Gateway-Centric Routing"
         },
         {
           "verb": "BUILDS ON",
-          "target": "Deterministic Shell + LLM Core"
+          "target": "[[Deterministic Shell"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LLM Core]]"
         },
         {
           "verb": "RELATES TO",
-          "target": "Model Guide: MCP + CLI Integration"
+          "target": "Model: MCP and CLI Integration"
         },
         {
           "verb": "RELATES TO",
-          "target": "Model Guide: Skills + Commands + Hooks"
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Model: Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Commands"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "and Hooks]]"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: LLM Wiki"
         }
       ]
     },
@@ -10045,7 +10071,7 @@
       "path": "spine/model-knowledge-evolution.md",
       "slug": "spine/model-knowledge-evolution",
       "title": "Model: Knowledge Evolution",
-      "type": "learning-path",
+      "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
       "confidence": "high",
@@ -10053,12 +10079,14 @@
       "updated": "2026-04-09",
       "tags": [
         "model",
-        "learning-path",
         "spine",
         "knowledge-evolution",
         "maturity",
         "progressive-distillation",
-        "wiki-lifecycle"
+        "wiki-lifecycle",
+        "scoring",
+        "evolution-pipeline",
+        "second-brain"
       ],
       "sources": [],
       "layer": "spine",
@@ -10074,24 +10102,28 @@
           "target": "Progressive Distillation"
         },
         {
+          "verb": "RELATES TO",
+          "target": "Model: SFIF and Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki"
+        },
+        {
           "verb": "FEEDS INTO",
-          "target": "Model: Automation + Pipelines"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model: Local AI ($0 Target)"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model: SFIF + Architecture"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model: NotebookLM"
+          "target": "Model: Automation and Pipelines"
         },
         {
           "verb": "ENABLES",
           "target": "Decision: Wiki-First with LightRAG Upgrade Path"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Decision: Local Model vs Cloud API for Routine Operations"
         }
       ]
     },
@@ -10275,8 +10307,8 @@
     {
       "path": "spine/model-mcp-cli-integration.md",
       "slug": "spine/model-mcp-cli-integration",
-      "title": "Model Guide: MCP + CLI Integration",
-      "type": "learning-path",
+      "title": "Model: MCP and CLI Integration",
+      "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
       "confidence": "high",
@@ -10286,27 +10318,19 @@
         "mcp",
         "cli",
         "integration",
-        "model-guide",
-        "learning-path",
+        "model",
         "token-efficiency",
         "tool-integration",
         "playwright",
         "sandbox",
-        "spine"
+        "spine",
+        "context-management"
       ],
       "sources": [],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
       "relationships": [
-        {
-          "verb": "FEEDS INTO",
-          "target": "Model Guide: Claude Code"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Model Guide: Skills + Commands + Hooks"
-        },
         {
           "verb": "BUILDS ON",
           "target": "CLI Tools Beat MCP for Token Efficiency"
@@ -10321,11 +10345,31 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model Guide: Ecosystem Architecture"
+          "target": "[[Model: Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Commands"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "and Hooks]]"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Claude Code"
         },
         {
           "verb": "RELATES TO",
           "target": "Harness Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Ecosystem Architecture"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Decision: MCP vs CLI for Tool Integration"
         }
       ]
     },
@@ -10679,8 +10723,8 @@
     {
       "path": "spine/model-sfif-architecture.md",
       "slug": "spine/model-sfif-architecture",
-      "title": "Model: SFIF + Architecture",
-      "type": "learning-path",
+      "title": "Model: SFIF and Architecture",
+      "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
       "confidence": "high",
@@ -10688,12 +10732,16 @@
       "updated": "2026-04-09",
       "tags": [
         "model",
-        "learning-path",
         "spine",
         "sfif",
         "architecture",
         "quality-tiers",
-        "build-lifecycle"
+        "build-lifecycle",
+        "skyscraper",
+        "pyramid",
+        "mountain",
+        "recursive",
+        "cross-domain"
       ],
       "sources": [],
       "layer": "spine",
@@ -10718,23 +10766,23 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: Design.md + IaC"
+          "target": "Model: Design.md and IaC"
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: Quality + Failure Prevention"
+          "target": "Model: Quality and Failure Prevention"
         },
         {
           "verb": "RELATES TO",
           "target": "Model: Knowledge Evolution"
         },
         {
-          "verb": "FEEDS INTO",
-          "target": "Model: Local AI ($0 Target)"
-        },
-        {
           "verb": "RELATES TO",
           "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Local AI ($0 Target)"
         }
       ]
     },
@@ -10862,7 +10910,7 @@
     },
     "cross-domain": {
       "page_count": 40,
-      "relationship_count": 318
+      "relationship_count": 328
     },
     "ai-agents": {
       "page_count": 34,
@@ -11038,7 +11086,8 @@
       "lessons/lesson-hub-\u2014-knowledge-systems",
       "patterns/plan-execute-review-cycle",
       "patterns/scaffold-foundation-infrastructure-features",
-      "spine/domain-overviews/cross-domain-\u2014-domain-overview"
+      "spine/domain-overviews/cross-domain-\u2014-domain-overview",
+      "spine/model-sfif-architecture"
     ],
     "patterns": [
       "comparisons/cross-domain-patterns",
@@ -11155,6 +11204,7 @@
       "domains/devops/four-project-ecosystem",
       "patterns/scaffold-foundation-infrastructure-features",
       "sources/src-karpathy-llm-wiki-idea-file",
+      "spine/model-ecosystem",
       "spine/model-sfif-architecture"
     ],
     "claude-code": [
@@ -11334,7 +11384,8 @@
       "sources/src-claude-code-accuracy-tips",
       "sources/src-context-mode",
       "sources/src-playwright-cli-vs-mcp",
-      "spine/model-claude-code"
+      "spine/model-claude-code",
+      "spine/model-mcp-cli-integration"
     ],
     "knowledge-interface": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
@@ -11358,6 +11409,7 @@
       "sources/src-karpathy-claude-code-10x",
       "sources/src-karpathy-llm-wiki-idea-file",
       "sources/src-obsidian-claude-code-second-brain",
+      "spine/model-knowledge-evolution",
       "spine/model-second-brain"
     ],
     "graph-view": [
@@ -12042,7 +12094,8 @@
     ],
     "recursive": [
       "domains/cross-domain/methodology-framework",
-      "patterns/scaffold-foundation-infrastructure-features"
+      "patterns/scaffold-foundation-infrastructure-features",
+      "spine/model-sfif-architecture"
     ],
     "framework": [
       "domains/cross-domain/methodology-framework",
@@ -12058,7 +12111,8 @@
     ],
     "skyscraper": [
       "domains/cross-domain/methodology-framework",
-      "domains/cross-domain/skyscraper-pyramid-mountain"
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "spine/model-sfif-architecture"
     ],
     "quality": [
       "domains/cross-domain/skyscraper-pyramid-mountain",
@@ -12085,10 +12139,12 @@
       "domains/cross-domain/skyscraper-pyramid-mountain"
     ],
     "pyramid": [
-      "domains/cross-domain/skyscraper-pyramid-mountain"
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "spine/model-sfif-architecture"
     ],
     "mountain": [
-      "domains/cross-domain/skyscraper-pyramid-mountain"
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "spine/model-sfif-architecture"
     ],
     "spaghetti-code": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -12240,7 +12296,8 @@
     ],
     "infrastructure-as-code": [
       "domains/devops/infrastructure-as-code-patterns",
-      "lessons/infrastructure-must-be-reproducible-not-manual"
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "spine/model-design-md"
     ],
     "schema-yaml": [
       "domains/devops/infrastructure-as-code-patterns"
@@ -12327,7 +12384,8 @@
       "spine/model-knowledge-evolution"
     ],
     "scoring": [
-      "domains/knowledge-systems/knowledge-evolution-pipeline"
+      "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "spine/model-knowledge-evolution"
     ],
     "llm-automation": [
       "domains/knowledge-systems/knowledge-evolution-pipeline"
@@ -13269,9 +13327,11 @@
     "model": [
       "spine/model-automation-pipelines",
       "spine/model-design-md",
+      "spine/model-ecosystem",
       "spine/model-knowledge-evolution",
       "spine/model-llm-wiki",
       "spine/model-local-ai",
+      "spine/model-mcp-cli-integration",
       "spine/model-methodology",
       "spine/model-notebooklm",
       "spine/model-quality-failure-prevention",
@@ -13279,14 +13339,9 @@
     ],
     "learning-path": [
       "spine/model-automation-pipelines",
-      "spine/model-design-md",
-      "spine/model-ecosystem",
-      "spine/model-knowledge-evolution",
       "spine/model-local-ai",
-      "spine/model-mcp-cli-integration",
       "spine/model-notebooklm",
-      "spine/model-second-brain",
-      "spine/model-sfif-architecture"
+      "spine/model-second-brain"
     ],
     "spine": [
       "spine/model-automation-pipelines",
@@ -13316,15 +13371,19 @@
     "agents-md": [
       "spine/model-design-md"
     ],
-    "model-guide": [
-      "spine/model-ecosystem",
-      "spine/model-mcp-cli-integration",
-      "spine/model-second-brain"
+    "soul-md": [
+      "spine/model-design-md"
+    ],
+    "ai-configuration": [
+      "spine/model-design-md"
     ],
     "knowledge-evolution": [
       "spine/model-knowledge-evolution"
     ],
     "wiki-lifecycle": [
+      "spine/model-knowledge-evolution"
+    ],
+    "evolution-pipeline": [
       "spine/model-knowledge-evolution"
     ],
     "examples": [
@@ -13347,6 +13406,9 @@
     ],
     "rework": [
       "spine/model-quality-failure-prevention"
+    ],
+    "model-guide": [
+      "spine/model-second-brain"
     ],
     "quality-tiers": [
       "spine/model-sfif-architecture"
@@ -13411,18 +13473,19 @@
       ]
     },
     {
+      "target": "Commands",
+      "referenced_by": [
+        "Model: Ecosystem Architecture",
+        "Model: MCP and CLI Integration"
+      ]
+    },
+    {
       "target": "Cross-Domain",
       "referenced_by": [
         "AI Agents \u2014 Domain Overview",
         "Automation \u2014 Domain Overview",
         "Knowledge Systems \u2014 Domain Overview",
         "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Deterministic Shell + LLM Core",
-      "referenced_by": [
-        "Model Guide: Ecosystem Architecture"
       ]
     },
     {
@@ -13485,6 +13548,7 @@
         "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
         "Gateway-Centric Routing",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
+        "Model: Ecosystem Architecture",
         "Model: Quality and Failure Prevention"
       ]
     },
@@ -13497,26 +13561,37 @@
     {
       "target": "Model Guide: Claude Code",
       "referenced_by": [
-        "Model Guide: Ecosystem Architecture",
         "Model: LLM Wiki",
-        "Model Guide: MCP + CLI Integration",
         "Model Guide: Second Brain",
         "Model: Skills, Commands, and Hooks"
+      ]
+    },
+    {
+      "target": "Model Guide: Ecosystem Architecture",
+      "referenced_by": [
+        "Model: Claude Code",
+        "Model: LLM Wiki",
+        "Model Guide: Second Brain"
       ]
     },
     {
       "target": "Model Guide: LLM Wiki",
       "referenced_by": [
         "Model: Claude Code",
-        "Model Guide: Ecosystem Architecture",
         "Model Guide: Second Brain"
+      ]
+    },
+    {
+      "target": "Model Guide: MCP + CLI Integration",
+      "referenced_by": [
+        "Model: Claude Code",
+        "Model: Skills, Commands, and Hooks"
       ]
     },
     {
       "target": "Model Guide: Methodology",
       "referenced_by": [
         "Model: Claude Code",
-        "Model Guide: Ecosystem Architecture",
         "Model: LLM Wiki",
         "Model Guide: Second Brain",
         "Model: Skills, Commands, and Hooks"
@@ -13525,34 +13600,44 @@
     {
       "target": "Model Guide: Skills + Commands + Hooks",
       "referenced_by": [
-        "Model: Claude Code",
-        "Model Guide: Ecosystem Architecture",
-        "Model Guide: MCP + CLI Integration"
+        "Model: Claude Code"
       ]
     },
     {
-      "target": "Model: Ecosystem Architecture",
+      "target": "Model: Automation and Pipelines",
       "referenced_by": [
-        "Model: Methodology"
+        "Model: Design.md and IaC",
+        "Model: Knowledge Evolution"
+      ]
+    },
+    {
+      "target": "Model: Design.md + IaC",
+      "referenced_by": [
+        "Model: NotebookLM",
+        "Model: Quality and Failure Prevention"
       ]
     },
     {
       "target": "Model: Local AI",
       "referenced_by": [
         "Model: Automation + Pipelines",
-        "Model: Knowledge Evolution",
         "Model: NotebookLM",
         "Model: Quality and Failure Prevention",
-        "Model: SFIF + Architecture"
+        "Model: SFIF and Architecture"
       ]
     },
     {
       "target": "Model: Quality + Failure Prevention",
       "referenced_by": [
         "Model: Automation + Pipelines",
-        "Model: Design.md + IaC",
+        "Model: Local AI ($0 Target)"
+      ]
+    },
+    {
+      "target": "Model: SFIF + Architecture",
+      "referenced_by": [
         "Model: Local AI ($0 Target)",
-        "Model: SFIF + Architecture"
+        "Model: Quality and Failure Prevention"
       ]
     },
     {
@@ -13574,7 +13659,7 @@
         "Methodology Framework",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
         "Model: Methodology",
-        "Model: SFIF + Architecture"
+        "Model: SFIF and Architecture"
       ]
     },
     {
@@ -13602,7 +13687,7 @@
         "Methodology Framework",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
         "Model: Methodology",
-        "Model: SFIF + Architecture"
+        "Model: SFIF and Architecture"
       ]
     },
     {
@@ -13726,6 +13811,7 @@
         "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
         "Gateway-Centric Routing",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
+        "Model: Ecosystem Architecture",
         "Model: Quality and Failure Prevention"
       ]
     },
@@ -13816,6 +13902,13 @@
       "target": "[[Methodology Framework]]",
       "referenced_by": [
         "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+      ]
+    },
+    {
+      "target": "[[Model: Skills",
+      "referenced_by": [
+        "Model: Ecosystem Architecture",
+        "Model: MCP and CLI Integration"
       ]
     },
     {
@@ -13919,7 +14012,7 @@
         "Methodology Framework",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
         "Model: Methodology",
-        "Model: SFIF + Architecture"
+        "Model: SFIF and Architecture"
       ]
     },
     {
@@ -13989,6 +14082,13 @@
       "target": "ai-driven-content-pipeline",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
+      ]
+    },
+    {
+      "target": "and Hooks]]",
+      "referenced_by": [
+        "Model: Ecosystem Architecture",
+        "Model: MCP and CLI Integration"
       ]
     },
     {

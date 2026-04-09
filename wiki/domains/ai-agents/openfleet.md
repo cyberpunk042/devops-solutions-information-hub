@@ -146,7 +146,7 @@ Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orches
 [[LLM-Maintained Wikis Outperform Static Documentation]]
 [[Local LLM Quantization]]
 [[MCP Integration Architecture]]
-[[Model Guide: Ecosystem Architecture]]
+[[Model: Ecosystem Architecture]]
 [[Multi-Channel AI Agent Access]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[OpenArms]]
