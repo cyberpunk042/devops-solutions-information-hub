@@ -5,7 +5,7 @@ domain: devops
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "WSL2 Development Patterns"
   - "Wiki Event-Driven Automation"

@@ -133,5 +133,6 @@ Cross-referencing `Context-Aware Tool Loading`: the pattern page documents that 
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
 [[Synthesis: Playwright MCP for Visual Development Testing]]

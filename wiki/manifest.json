@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T01:12:23.172412+00:00",
+  "generated": "2026-04-09T15:12:22.108764+00:00",
   "stats": {
-    "pages": 105,
+    "pages": 106,
     "domains": 7,
-    "sources": 20,
+    "sources": 21,
     "comparisons": 5,
-    "relationships": 790,
-    "tags_unique": 389,
+    "relationships": 797,
+    "tags_unique": 395,
     "layers": {
       "6": 5,
       "4": 16,
@@ -14,8 +14,8 @@
       "spine": 7
     },
     "maturity": {
-      "seed": 18,
-      "growing": 20
+      "growing": 33,
+      "seed": 5
     }
   },
   "pages": [
@@ -419,7 +419,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "LLM Wiki vs RAG",
         "LightRAG",
@@ -492,7 +492,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "AICP",
         "Local LLM Quantization",
@@ -662,7 +662,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Obsidian Knowledge Vault",
         "NotebookLM",
@@ -744,7 +744,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "WSL2 Development Patterns",
         "Wiki Event-Driven Automation",
@@ -4525,7 +4525,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "LightRAG",
         "LLM Wiki vs RAG",
@@ -4606,7 +4606,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "LLM Knowledge Linting",
         "Knowledge Evolution Pipeline"
@@ -4850,7 +4850,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Synthesis: claude-world/notebooklm-skill",
         "NotebookLM Skills",
@@ -4931,7 +4931,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Synthesis: Karpathy LLM Wiki Method via Claude Code",
         "LLM Wiki Pattern"
@@ -4995,7 +4995,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Synthesis: Karpathy's LLM Wiki Idea File",
         "LLM Wiki Pattern",
@@ -5072,7 +5072,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Synthesis: kepano/obsidian-skills",
         "Obsidian Skills Ecosystem"
@@ -5232,7 +5232,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Agent Orchestration Patterns",
         "Plan Execute Review Cycle",
@@ -5315,7 +5315,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Research Pipeline Orchestration",
         "Wiki Event-Driven Automation",
@@ -5394,7 +5394,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "LLM Wiki Pattern",
         "Second Brain Architecture",
@@ -6295,6 +6295,71 @@
         {
           "verb": "RELATES TO",
           "target": "NotebookLM"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-context-mode.md",
+      "slug": "sources/src-context-mode",
+      "title": "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "context-mode",
+        "mcp",
+        "context-management",
+        "sandbox",
+        "session-continuity",
+        "context-saving",
+        "fts5",
+        "sqlite",
+        "claude-code-plugin"
+      ],
+      "sources": [
+        {
+          "id": "src-context-mode",
+          "type": "documentation",
+          "url": "https://github.com/mksglu/context-mode",
+          "file": "raw/articles/mksglucontext-mode.md",
+          "title": "mksglu/context-mode",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "EXTENDS",
+          "target": "Context-Aware Tool Loading"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Context Management"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -7578,8 +7643,8 @@
       "relationship_count": 96
     },
     "ai-agents": {
-      "page_count": 28,
-      "relationship_count": 239
+      "page_count": 29,
+      "relationship_count": 246
     },
     "tools-and-platforms": {
       "page_count": 21,
@@ -7895,6 +7960,7 @@
       "patterns/context-aware-tool-loading",
       "patterns/gateway-centric-routing",
       "sources/src-claude-world-notebooklm-skill",
+      "sources/src-context-mode",
       "sources/src-playwright-cli-vs-mcp",
       "sources/src-playwright-mcp-visual-testing"
     ],
@@ -7930,6 +7996,7 @@
       "lessons/lesson-convergence-on-claude-code-best-practices",
       "patterns/context-aware-tool-loading",
       "sources/src-claude-code-accuracy-tips",
+      "sources/src-context-mode",
       "sources/src-playwright-cli-vs-mcp"
     ],
     "knowledge-interface": [
@@ -8864,7 +8931,8 @@
       "domains/tools-and-platforms/openarms"
     ],
     "sandbox": [
-      "domains/tools-and-platforms/openarms"
+      "domains/tools-and-platforms/openarms",
+      "sources/src-context-mode"
     ],
     "media-pipeline": [
       "domains/tools-and-platforms/openarms"
@@ -9074,6 +9142,24 @@
     ],
     "cli-over-mcp": [
       "sources/src-claude-code-accuracy-tips"
+    ],
+    "context-mode": [
+      "sources/src-context-mode"
+    ],
+    "session-continuity": [
+      "sources/src-context-mode"
+    ],
+    "context-saving": [
+      "sources/src-context-mode"
+    ],
+    "fts5": [
+      "sources/src-context-mode"
+    ],
+    "sqlite": [
+      "sources/src-context-mode"
+    ],
+    "claude-code-plugin": [
+      "sources/src-context-mode"
     ],
     "searxng": [
       "sources/src-gemma4-searxng-openclaw"

@@ -145,5 +145,6 @@ Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`:
 [[Plan Execute Review Cycle]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Synthesis: Claude Code Harness Engineering]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
 [[devops-control-plane]]

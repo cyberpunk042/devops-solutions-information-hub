@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "LLM Wiki vs RAG"
   - "LightRAG"

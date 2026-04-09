@@ -5,7 +5,7 @@ domain: tools-and-platforms
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Obsidian Knowledge Vault"
   - "NotebookLM"

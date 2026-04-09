@@ -130,3 +130,4 @@ This is the documentation layer's application of deferred loading. The alternati
 [[Cross-Domain Patterns]]
 [[Pattern: Skills + Cli]]
 [[Pattern: Skills + Notebooklm]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]

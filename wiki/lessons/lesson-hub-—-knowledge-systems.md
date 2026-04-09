@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "LLM Wiki Pattern"
   - "Second Brain Architecture"

@@ -5,7 +5,7 @@ domain: ai-agents
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "AICP"
   - "Local LLM Quantization"

@@ -154,6 +154,7 @@ Cross-referencing `Agent Orchestration Patterns`: yes, with explicit scope bound
 [[Plan Execute Review Cycle]]
 [[Rework Prevention]]
 [[Second Brain Architecture]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
 [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]

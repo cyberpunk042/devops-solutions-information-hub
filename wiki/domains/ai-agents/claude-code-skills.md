@@ -164,6 +164,7 @@ Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Skills Architec
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]
 [[Synthesis: Claude Code Harness Engineering]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
 [[Synthesis: Obsidian + Claude Code Second Brain Setup]]
 [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]

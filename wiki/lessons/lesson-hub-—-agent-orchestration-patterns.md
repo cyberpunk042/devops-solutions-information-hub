@@ -5,7 +5,7 @@ domain: ai-agents
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Agent Orchestration Patterns"
   - "Plan Execute Review Cycle"

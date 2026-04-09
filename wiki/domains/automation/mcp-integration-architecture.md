@@ -166,5 +166,6 @@ Cross-referencing `WSL2 Development Patterns`: the lifecycle is fully documented
 [[OpenArms]]
 [[Plan Execute Review Cycle]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
 [[Synthesis: Playwright MCP for Visual Development Testing]]
 [[WSL2 Development Patterns]]
