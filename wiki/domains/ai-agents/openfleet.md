@@ -134,6 +134,7 @@ Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orches
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Decision: Local Model vs Cloud API for Routine Operations]]
 [[Deterministic Shell, LLM Core]]
+[[Ecosystem Integration Interfaces]]
 [[Four-Project Ecosystem]]
 [[Gateway-Centric Routing]]
 [[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]

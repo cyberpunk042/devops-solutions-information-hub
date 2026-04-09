@@ -18,7 +18,8 @@ All planned work, organized by epics, modules, and tasks.
 
 | ID | Epic | Priority | Status | Readiness |
 |----|------|----------|--------|-----------|
-<!-- No epics yet -->
+| E001 | Local Inference Engine (Subsystem 3) | P1 | draft | 10 |
+| E002 | Ecosystem Integration Interfaces | P2 | draft | 15 |
 
 ## Modules
 

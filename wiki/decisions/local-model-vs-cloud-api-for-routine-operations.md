@@ -103,3 +103,4 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 [[Research Pipeline Orchestration]]
 [[Wiki Knowledge Graph]]
 [[Infrastructure as Code Patterns]]
+[[Local Inference Engine (Subsystem 3)]]

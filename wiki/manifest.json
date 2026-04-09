@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T20:49:10.617121+00:00",
+  "generated": "2026-04-09T20:55:31.147216+00:00",
   "stats": {
-    "pages": 131,
-    "domains": 8,
+    "pages": 134,
+    "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 984,
-    "tags_unique": 561,
+    "relationships": 995,
+    "tags_unique": 567,
     "layers": {
       "6": 5,
       "2": 2,
@@ -20,6 +20,122 @@
     }
   },
   "pages": [
+    {
+      "path": "backlog/epics/E001-local-inference-engine.md",
+      "slug": "backlog/epics/E001-local-inference-engine",
+      "title": "Local Inference Engine (Subsystem 3)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "local-inference",
+        "aicp",
+        "localai",
+        "subsystem-3",
+        "zero-cost",
+        "evolution"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Decision: Local Model vs Cloud API for Routine Operations"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AICP (backend routing, circuit breaker)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Knowledge Evolution Pipeline ($0 evolution)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/E002-ecosystem-integration.md",
+      "slug": "backlog/epics/E002-ecosystem-integration",
+      "title": "Ecosystem Integration Interfaces",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "ecosystem",
+        "integration",
+        "openfleet",
+        "openarms",
+        "aicp",
+        "export"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "AICP"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "OpenArms"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "devops-control-plane"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: Wiki-First with LightRAG Upgrade Path"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T001-test-openai-backend.md",
+      "slug": "backlog/tasks/T001-test-openai-backend",
+      "title": "Test OpenAI backend with LocalAI",
+      "type": "task",
+      "domain": "backlog",
+      "status": "blocked",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "local-inference",
+        "openai-backend",
+        "testing",
+        "blocked"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
     {
       "path": "comparisons/agentic-search-vs-vector-search.md",
       "slug": "comparisons/agentic-search-vs-vector-search",
@@ -9441,6 +9557,10 @@
     }
   ],
   "domains": {
+    "backlog": {
+      "page_count": 3,
+      "relationship_count": 11
+    },
     "cross-domain": {
       "page_count": 25,
       "relationship_count": 174
@@ -9475,6 +9595,90 @@
     }
   },
   "tags": {
+    "local-inference": [
+      "backlog/epics/E001-local-inference-engine",
+      "backlog/tasks/T001-test-openai-backend"
+    ],
+    "aicp": [
+      "backlog/epics/E001-local-inference-engine",
+      "backlog/epics/E002-ecosystem-integration",
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "domains/devops/four-project-ecosystem",
+      "domains/tools-and-platforms/aicp",
+      "patterns/deterministic-shell-llm-core"
+    ],
+    "localai": [
+      "backlog/epics/E001-local-inference-engine",
+      "decisions/local-model-vs-cloud-api-for-routine-operations",
+      "domains/tools-and-platforms/aicp"
+    ],
+    "subsystem-3": [
+      "backlog/epics/E001-local-inference-engine"
+    ],
+    "zero-cost": [
+      "backlog/epics/E001-local-inference-engine"
+    ],
+    "evolution": [
+      "backlog/epics/E001-local-inference-engine",
+      "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "patterns/progressive-distillation"
+    ],
+    "ecosystem": [
+      "backlog/epics/E002-ecosystem-integration",
+      "domains/devops/four-project-ecosystem",
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "spine/adoption-guide"
+    ],
+    "integration": [
+      "backlog/epics/E002-ecosystem-integration",
+      "domains/automation/mcp-integration-architecture",
+      "domains/devops/four-project-ecosystem"
+    ],
+    "openfleet": [
+      "backlog/epics/E002-ecosystem-integration",
+      "domains/ai-agents/agent-orchestration-patterns",
+      "domains/ai-agents/openfleet",
+      "domains/ai-agents/rework-prevention",
+      "domains/ai-agents/spec-driven-development",
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/devops/backlog-hierarchy-rules",
+      "domains/devops/four-project-ecosystem",
+      "domains/devops/immune-system-rules",
+      "domains/devops/stage-gate-methodology",
+      "domains/knowledge-systems/lightrag",
+      "domains/knowledge-systems/wiki-backlog-pattern",
+      "lessons/always-plan-before-executing",
+      "lessons/lesson-hub-\u2014-agent-orchestration-patterns",
+      "patterns/deterministic-shell-llm-core",
+      "patterns/gateway-centric-routing",
+      "patterns/plan-execute-review-cycle"
+    ],
+    "openarms": [
+      "backlog/epics/E002-ecosystem-integration",
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/devops/backlog-hierarchy-rules",
+      "domains/devops/execution-modes-and-end-conditions",
+      "domains/devops/four-project-ecosystem",
+      "domains/devops/stage-gate-methodology",
+      "domains/devops/task-type-artifact-matrix",
+      "domains/knowledge-systems/wiki-backlog-pattern",
+      "domains/tools-and-platforms/multi-channel-ai-agent-access",
+      "domains/tools-and-platforms/openarms",
+      "patterns/gateway-centric-routing"
+    ],
+    "export": [
+      "backlog/epics/E002-ecosystem-integration"
+    ],
+    "openai-backend": [
+      "backlog/tasks/T001-test-openai-backend"
+    ],
+    "testing": [
+      "backlog/tasks/T001-test-openai-backend",
+      "sources/src-playwright-cli-vs-mcp"
+    ],
+    "blocked": [
+      "backlog/tasks/T001-test-openai-backend"
+    ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
     ],
@@ -9730,16 +9934,6 @@
       "domains/devops/devops-control-plane",
       "patterns/scaffold-foundation-infrastructure-features"
     ],
-    "aicp": [
-      "decisions/local-model-vs-cloud-api-for-routine-operations",
-      "domains/devops/four-project-ecosystem",
-      "domains/tools-and-platforms/aicp",
-      "patterns/deterministic-shell-llm-core"
-    ],
-    "localai": [
-      "decisions/local-model-vs-cloud-api-for-routine-operations",
-      "domains/tools-and-platforms/aicp"
-    ],
     "claude": [
       "decisions/local-model-vs-cloud-api-for-routine-operations"
     ],
@@ -9935,24 +10129,6 @@
       "lessons/lesson-hub-\u2014-agent-orchestration-patterns",
       "patterns/plan-execute-review-cycle",
       "sources/src-harness-engineering"
-    ],
-    "openfleet": [
-      "domains/ai-agents/agent-orchestration-patterns",
-      "domains/ai-agents/openfleet",
-      "domains/ai-agents/rework-prevention",
-      "domains/ai-agents/spec-driven-development",
-      "domains/ai-agents/task-lifecycle-stage-gating",
-      "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/four-project-ecosystem",
-      "domains/devops/immune-system-rules",
-      "domains/devops/stage-gate-methodology",
-      "domains/knowledge-systems/lightrag",
-      "domains/knowledge-systems/wiki-backlog-pattern",
-      "lessons/always-plan-before-executing",
-      "lessons/lesson-hub-\u2014-agent-orchestration-patterns",
-      "patterns/deterministic-shell-llm-core",
-      "patterns/gateway-centric-routing",
-      "patterns/plan-execute-review-cycle"
     ],
     "best-practices": [
       "domains/ai-agents/claude-code-best-practices",
@@ -10379,18 +10555,6 @@
       "domains/cross-domain/methodology-framework",
       "patterns/scaffold-foundation-infrastructure-features"
     ],
-    "openarms": [
-      "domains/ai-agents/task-lifecycle-stage-gating",
-      "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/execution-modes-and-end-conditions",
-      "domains/devops/four-project-ecosystem",
-      "domains/devops/stage-gate-methodology",
-      "domains/devops/task-type-artifact-matrix",
-      "domains/knowledge-systems/wiki-backlog-pattern",
-      "domains/tools-and-platforms/multi-channel-ai-agent-access",
-      "domains/tools-and-platforms/openarms",
-      "patterns/gateway-centric-routing"
-    ],
     "autonomous-agents": [
       "domains/ai-agents/task-lifecycle-stage-gating",
       "domains/devops/stage-gate-methodology",
@@ -10466,10 +10630,6 @@
     ],
     "model-context-protocol": [
       "domains/automation/mcp-integration-architecture"
-    ],
-    "integration": [
-      "domains/automation/mcp-integration-architecture",
-      "domains/devops/four-project-ecosystem"
     ],
     "services": [
       "domains/automation/mcp-integration-architecture"
@@ -10682,11 +10842,6 @@
     "time-limit": [
       "domains/devops/execution-modes-and-end-conditions"
     ],
-    "ecosystem": [
-      "domains/devops/four-project-ecosystem",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem",
-      "spine/adoption-guide"
-    ],
     "devops-control-plane": [
       "domains/devops/four-project-ecosystem"
     ],
@@ -10804,10 +10959,6 @@
     ],
     "sync": [
       "domains/devops/wsl2-development-patterns"
-    ],
-    "evolution": [
-      "domains/knowledge-systems/knowledge-evolution-pipeline",
-      "patterns/progressive-distillation"
     ],
     "maturity": [
       "domains/knowledge-systems/knowledge-evolution-pipeline",
@@ -11597,9 +11748,6 @@
     "qa-automation": [
       "sources/src-playwright-cli-vs-mcp"
     ],
-    "testing": [
-      "sources/src-playwright-cli-vs-mcp"
-    ],
     "visual-testing": [
       "sources/src-playwright-mcp-visual-testing"
     ],
@@ -11724,6 +11872,12 @@
         "Devops \u2014 Domain Overview",
         "Knowledge Systems \u2014 Domain Overview",
         "Tools And Platforms \u2014 Domain Overview"
+      ]
+    },
+    {
+      "target": "Adoption Guide",
+      "referenced_by": [
+        "Ecosystem Integration Interfaces"
       ]
     },
     {

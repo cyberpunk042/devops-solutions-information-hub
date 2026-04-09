@@ -87,3 +87,4 @@ Moderate. Activating LightRAG is additive — it does not change wiki files, so 
 [[Wiki Knowledge Graph]]
 [[LLM Wiki Pattern]]
 [[Research Pipeline Orchestration]]
+[[Ecosystem Integration Interfaces]]

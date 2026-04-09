@@ -108,6 +108,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Decision: Local Model vs Cloud API for Routine Operations]]
 [[Deterministic Shell, LLM Core]]
+[[Ecosystem Integration Interfaces]]
 [[Four-Project Ecosystem]]
 [[Gateway-Centric Routing]]
 [[Immune System Rules]]
