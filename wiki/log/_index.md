@@ -23,6 +23,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-09 | [Systemic Incompleteness — No Model Is Finished](2026-04-09-directive-systemic-incompleteness.md) | directive | `log`, `directive`, `failure-lesson`, `systemic`, `quality`, `honesty` |
 | 2026-04-09 | [Stop Claiming Readiness Without Proof](2026-04-09-directive-stop-claiming-readiness.md) | directive | `log`, `directive`, `honesty`, `quality`, `depth` |
 | 2026-04-09 | [Record the Process — Skills, Super-Model, Preach by Example](2026-04-09-directive-record-process-skills-supermodel.md) | directive | `log`, `directive`, `process`, `skills`, `super-model`, `standards`, `examples`, `methodology` |
+| 2026-04-09 | [Quality Models — Hub Mindset — OpenArms Methodology Learnings](2026-04-09-directive-quality-models-hub-mindset.md) | directive | `log`, `directive`, `quality`, `models`, `hub`, `openarms`, `methodology`, `openclaw` |
 | 2026-04-09 | [Never Stop at Surface — Depth Verification Rule](2026-04-09-directive-never-stop-at-surface.md) | directive | `log`, `directive`, `methodology`, `quality`, `depth` |
 | 2026-04-09 | [Models Are Not Documents — They Must Be Usable Systems](2026-04-09-directive-models-are-not-documents.md) | directive | `log`, `directive`, `models`, `quality`, `depth`, `wikilinks` |
 | 2026-04-09 | [Model Quality + Links + Schema Naming Issues](2026-04-09-directive-model-quality-links-schema.md) | directive | `log`, `directive`, `quality`, `links`, `schema`, `models` |

@@ -19,6 +19,16 @@ sources:
     file: raw/articles/openfleet-methodology-scan.md
     title: "OpenFleet Methodology Deep Scan"
     ingested: 2026-04-09
+  - id: src-openarms-methodology-evolution
+    type: documentation
+    file: raw/articles/openarms-methodology-evolution-2026-04-09.md
+    title: "OpenArms Methodology Evolution — 7 Bugs, 6 Versions"
+    ingested: 2026-04-09
+  - id: src-openarms-integration-sprint
+    type: documentation
+    file: raw/articles/openarms-integration-sprint-learnings.md
+    title: "OpenArms Integration Sprint Learnings"
+    ingested: 2026-04-09
 tags: [methodology, model, stage-gate, task-types, composable, backlog, execution-modes, framework, spine]
 ---
 
@@ -68,13 +78,54 @@ Every methodology instance in this ecosystem is built from the same 5 stages. Th
 | **Implement** | 80-95%  | Working code, filled wiki pages, tools           | Must follow design doc, no breaking changes  |
 | **Test**      | 95-100% | Clean validation, manual review, no regressions  | No new features, fix-only                    |
 
-**Stage boundaries are hard, not soft.** A commit titled `implement` that touches only wiki pages instead of source files is visibly wrong in the diff. The commit history IS the audit trail — one conventional commit per stage makes stage transitions visible in version control.
+**Stage boundaries are hard, not soft.** The commit history IS the audit trail — one conventional commit per stage makes stage transitions visible in version control. A commit titled `scaffold` that contains business logic is visibly wrong in the diff.
 
-**Readiness is derived from stage completion, not subjective assessment.** A task with `stages_completed: [document, design]` cannot report readiness above 50% regardless of how much additional work was done. Readiness flows upward: task readiness aggregates into module readiness, module into epic.
+**Each stage has ALLOWED and FORBIDDEN artifact lists.** This was learned from OpenArms' first autonomous agent run (Bug 5: "scaffold stage produced 135-line env reader with business logic"). Stage names alone are not enough — each stage needs explicit boundaries:
 
-**Max 2 retries per stage before escalation.** If a stage fails twice, it is blocked — not retried forever. This prevents infinite loops and surfaces structural problems for human review.
+**Scaffold ALLOWED**: type definitions, static constants, Zod schemas, .env entries, empty test files with placeholder assertions.
+**Scaffold FORBIDDEN**: business logic (parsers, resolvers, evaluators), env var readers with parsing logic, functions with more than a stub body, real test implementations.
+
+**Implement ALLOWED**: business logic, helper functions, modifying existing runtime files to import new code.
+**Implement REQUIRED**: at least one existing runtime file must import the new code. If nothing uses it, the code is orphaned and implement is NOT done. (Bug 6: "2,073 lines of production code — none imported by the runtime.")
+**Implement FORBIDDEN**: modifying test files, writing test assertions.
+
+**Test ALLOWED**: fill in scaffolded test files, add edge case tests.
+**Test REQUIRED**: 0 test failures before marking done. Run tests, fix failures, run again, repeat until clean.
+**Test FORBIDDEN**: proceeding with failing tests. (Bug 5: "test stage marked done with 1 failing test.")
+
+**Readiness is derived from stage completion, not subjective assessment.** A task with `stages_completed: [document, design]` cannot report readiness above 50%. Readiness flows upward: task → module → epic.
+
+**Max 2 retries per stage before escalation.** If a stage fails twice, it is blocked — not retried forever.
 
 For full stage detail — per-stage artifacts, gate conditions, and the OpenFleet parallel model — see [[Stage-Gate Methodology]].
+
+### The Bridge Module Pattern
+
+Discovered during OpenArms' integration sprint: when wiring new code into the runtime during the implement stage, prefer creating a thin bridge/adapter module instead of making large changes to existing core files.
+
+```
+New module:    src/config/network-rules-resolver.ts  (standalone logic)
+Bridge:        src/infra/net/network-rules-bridge.ts (thin adapter)
+Consumer edit: src/infra/net/fetch-guard.ts          (one import line added)
+```
+
+The bridge module imports from the new module, exports a function shaped for the consumer's needs, and contains minimal logic. This keeps diffs small and separation clean. Agents naturally produce this pattern when "Done When" items name the specific consumer file.
+
+### What Goes Wrong — 7 Bugs from Real Autonomous Operation
+
+These bugs were found during OpenArms' first day of autonomous agent operation (2026-04-09). Each led to a methodology version bump:
+
+| Bug | What happened | Fix | Version |
+|-----|--------------|-----|---------|
+| **Binary status** | Tasks were done/not-done. No stage tracking. Agent skipped stages. | Added task_type, current_stage, readiness, stages_completed to frontmatter. Reset 22 tasks. | v2 |
+| **Epic status manual** | Epics manually set to "done" with zero children complete. | Status/readiness computed from children. Max agent-settable = "review". | v3 |
+| **Rogue task creation** | Agent ignored existing tasks, created its own with colliding IDs. | "Pick from existing tasks ONLY. Do NOT create new task files." | v3 |
+| **Lost files** | Write tool succeeded but files disappeared — destructive git revert killed untracked files. | "Commit immediately after creating files. Never destructive git without git status." | v3 |
+| **Stage boundary violation** | Scaffold produced 135 lines of business logic. Test marked done with failures. | Added ALLOWED/FORBIDDEN lists per stage. Gates require passing commands. | v4 |
+| **Orphaned implementation** | 2,073 lines of code that nothing imported. Tests pass ≠ feature works. | "At least one existing runtime file must import the new code." | v5 |
+| **Unreadable logs** | Raw JSON stream events, 95% token chunks. Impossible to monitor or report. | Built agent-report.py (aggregation, compliance checking, cost per stage). | v5 |
+
+**Methodology version history**: 6 versions in one day. Each version fixed real problems found in production. The methodology is not a design exercise — it is a LIVING document hardened by real failures.
 
 ### The 8 Task Types
 

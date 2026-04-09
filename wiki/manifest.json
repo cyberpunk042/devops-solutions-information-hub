@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T23:01:40.560973+00:00",
+  "generated": "2026-04-09T23:16:48.885322+00:00",
   "stats": {
-    "pages": 156,
+    "pages": 157,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
     "relationships": 1161,
-    "tags_unique": 602,
+    "tags_unique": 603,
     "layers": {
       "3": 5,
       "6": 5,
@@ -7113,6 +7113,32 @@
       "relationships": []
     },
     {
+      "path": "log/2026-04-09-directive-quality-models-hub-mindset.md",
+      "slug": "log/2026-04-09-directive-quality-models-hub-mindset",
+      "title": "Quality Models \u2014 Hub Mindset \u2014 OpenArms Methodology Learnings",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "quality",
+        "models",
+        "hub",
+        "openarms",
+        "methodology",
+        "openclaw"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-04-09-directive-record-process-skills-supermodel.md",
       "slug": "log/2026-04-09-directive-record-process-skills-supermodel",
       "title": "Record the Process \u2014 Skills, Super-Model, Preach by Example",
@@ -10500,6 +10526,20 @@
           "file": "raw/articles/openfleet-methodology-scan.md",
           "title": "OpenFleet Methodology Deep Scan",
           "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-openarms-methodology-evolution",
+          "type": "documentation",
+          "file": "raw/articles/openarms-methodology-evolution-2026-04-09.md",
+          "title": "OpenArms Methodology Evolution \u2014 7 Bugs, 6 Versions",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-openarms-integration-sprint",
+          "type": "documentation",
+          "file": "raw/articles/openarms-integration-sprint-learnings.md",
+          "title": "OpenArms Integration Sprint Learnings",
+          "ingested": "2026-04-09"
         }
       ],
       "layer": "spine",
@@ -11048,7 +11088,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 9,
+      "page_count": 10,
       "relationship_count": 0
     }
   },
@@ -11130,6 +11170,7 @@
       "domains/knowledge-systems/wiki-backlog-pattern",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/gateway-centric-routing",
       "spine/model-ecosystem"
     ],
@@ -11904,6 +11945,7 @@
     "openclaw": [
       "domains/ai-agents/openclaw",
       "domains/ai-agents/openfleet",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/gateway-centric-routing",
       "sources/src-gemma4-searxng-openclaw",
       "sources/src-pablo-mano-obsidian-cli-skill"
@@ -11965,6 +12007,7 @@
       "lessons/shallow-ingestion-is-systemic-not-isolated",
       "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "spine/adoption-guide",
       "spine/model-methodology",
@@ -12242,6 +12285,7 @@
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09-directive-stop-claiming-readiness",
       "log/2026-04-09-directive-systemic-incompleteness",
       "spine/model-llm-wiki-standards",
@@ -12997,7 +13041,8 @@
       "lessons/models-are-built-in-layers-not-all-at-once",
       "log/2026-04-09-directive-bottom-up-model-completion",
       "log/2026-04-09-directive-model-quality-links-schema",
-      "log/2026-04-09-directive-models-are-not-documents"
+      "log/2026-04-09-directive-models-are-not-documents",
+      "log/2026-04-09-directive-quality-models-hub-mindset"
     ],
     "process": [
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -13058,6 +13103,7 @@
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "log/2026-04-09-directive-stop-claiming-readiness",
       "log/2026-04-09-directive-systemic-incompleteness",
@@ -13069,6 +13115,7 @@
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "log/2026-04-09-directive-stop-claiming-readiness",
       "log/2026-04-09-directive-systemic-incompleteness",
@@ -13095,6 +13142,9 @@
     ],
     "wikilinks": [
       "log/2026-04-09-directive-models-are-not-documents"
+    ],
+    "hub": [
+      "log/2026-04-09-directive-quality-models-hub-mindset"
     ],
     "super-model": [
       "log/2026-04-09-directive-record-process-skills-supermodel"
