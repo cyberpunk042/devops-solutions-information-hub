@@ -201,6 +201,49 @@ Cross-platform (Linux, macOS, Windows):
 
 Requires uv (https://docs.astral.sh/uv/). All tools run via `.venv/bin/python -m tools.<name>`.
 
+## Agent Methodology — MANDATORY
+
+You MUST follow this methodology in order. Skipping steps is a violation.
+
+### Stage Gates
+
+For ANY non-trivial work, progress through stages in order:
+
+1. **DOCUMENT** — Understand first. Read existing code/pages. Log user directives verbatim in raw/notes/. Create/update wiki pages documenting what you learned. Do NOT write implementation code.
+2. **DESIGN** — Decide. If the work needs a design, brainstorm with the user. Present options. Get approval. Do NOT skip to implementation.
+3. **SCAFFOLD** — Create the skeleton only. Templates, directory structure, schema changes, empty files. Do NOT implement logic.
+4. **IMPLEMENT** — Build on the scaffold. Follow the design. Run validation after.
+5. **TEST** — Verify. Run `pipeline post`, validate, check results. Do NOT claim done without evidence.
+
+### Rules
+
+- **NEVER skip stages.** Document before design. Design before scaffold. Scaffold before implement.
+- **NEVER write a spec without completing the brainstorm.** Brainstorm = ask questions → propose approaches → present design sections → get approval on EACH section. Only THEN write the spec.
+- **NEVER rush.** If the user says "get started" or "process this," it means the CURRENT stage, not "skip to the end."
+- **ALWAYS log user directives verbatim** in raw/notes/ BEFORE acting on them. This is core methodology.
+- **ALWAYS read full files** before synthesizing. Check `wc -l` first. Use multiple offset reads for files >200 lines. Wiki page must be ≥0.25 ratio to raw file length.
+- **ALWAYS research before brainstorming.** Check existing wiki pages, ecosystem projects, and online sources FIRST. Then brainstorm.
+- **TWO TRACKS coexist:**
+  - Execution track (superpowers): brainstorm → spec → plan → sub-agent implementation. Lives in docs/superpowers/.
+  - PM/observability track (backlog): epics → modules → tasks with stage gates. Lives in wiki/backlog/.
+  - These are DIFFERENT concerns. Do not conflate them.
+
+### Per-Scale Artifact Requirements
+
+| Scale | Required Before Work |
+|-------|---------------------|
+| Epic | Directive log → research → spec → design → plan → per-module breakdown |
+| Module | Design (or section of epic design) → plan → per-task breakdown |
+| Task | Task description (from plan) → implement → verify |
+| Hotfix | Nothing — fix, test, commit |
+
+### Quality Gates
+
+- Every wiki page: valid frontmatter, summary ≥30 words, ≥1 relationship, passes `pipeline post`
+- Every evolved page: ≥0.25 ratio to source material length
+- Every commit: describes WHAT changed and WHY
+- Every stage transition: previous stage's artifacts exist and are committed
+
 ## Conventions
 
 - kebab-case filenames
