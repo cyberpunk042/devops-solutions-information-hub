@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-09T17:29:05.109938+00:00",
+  "generated": "2026-04-09T17:49:05.299848+00:00",
   "stats": {
-    "pages": 110,
+    "pages": 113,
     "domains": 7,
     "sources": 23,
     "comparisons": 5,
-    "relationships": 834,
-    "tags_unique": 453,
+    "relationships": 863,
+    "tags_unique": 479,
     "layers": {
       "6": 5,
       "4": 16,
@@ -1727,6 +1727,190 @@
       ]
     },
     {
+      "path": "domains/ai-agents/spec-driven-development.md",
+      "slug": "domains/ai-agents/spec-driven-development",
+      "title": "Spec-Driven Development",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "spec-driven-development",
+        "bmad",
+        "spec-kit",
+        "superpowers",
+        "openfleet",
+        "planning",
+        "artifacts",
+        "immutable-checkpoints",
+        "multi-agent",
+        "sdlc",
+        "design-before-code",
+        "spec-to-code",
+        "phase-gating"
+      ],
+      "sources": [
+        {
+          "id": "src-openfleet-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "title": "OpenFleet Methodology Scan \u2014 Deep Research Findings",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-openarms-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openarms-methodology-scan.md",
+          "title": "OpenArms Methodology Scan \u2014 Deep Research Findings",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-superpowers-end-of-vibe-coding",
+          "type": "youtube-transcript",
+          "file": "raw/articles/superpowers-end-of-vibe-coding.md",
+          "title": "Claude Code + SUPERPOWERS = The End of Vibe Coding? (Full Tutorial)",
+          "ingested": "2026-04-08"
+        },
+        {
+          "id": "src-shanraisshan-claude-code-best-practice",
+          "type": "documentation",
+          "file": "raw/articles/shanraisshan-claude-code-best-practice.md",
+          "title": "shanraisshan/claude-code-best-practice",
+          "ingested": "2026-04-08"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Design.md Pattern (spec artifacts as first-class project documents)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Rework Prevention (spec gates prevent the rework that occurs without them)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Plan Execute Review Cycle (spec is the output of the Plan phase and the input to Execute)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Task Lifecycle Stage-Gating (spec-driven development requires stage enforcement to prevent spec-skipping)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Orchestration Patterns (BMAD uses multi-agent spec production)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet (primary source \u2014 SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness Engineering (harness is the spec-driven development tooling layer)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Backlog Pattern (when wiki pages are spec artifacts, the wiki IS the spec system)"
+        },
+        {
+          "verb": "CONTRADICTS",
+          "target": "Vibe Coding (unstructured iterative prompting without spec gates \u2014 the failure mode SDD exists to prevent)"
+        }
+      ]
+    },
+    {
+      "path": "domains/ai-agents/task-lifecycle-stage-gating.md",
+      "slug": "domains/ai-agents/task-lifecycle-stage-gating",
+      "title": "Task Lifecycle Stage-Gating",
+      "type": "concept",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "stage-gating",
+        "task-lifecycle",
+        "methodology",
+        "phase-boundaries",
+        "anti-corruption",
+        "mcp-tools",
+        "sfif",
+        "openfleet",
+        "openarms",
+        "autonomous-agents",
+        "readiness-score",
+        "one-commit-per-stage",
+        "work-modes"
+      ],
+      "sources": [
+        {
+          "id": "src-openfleet-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "title": "OpenFleet Methodology Scan \u2014 Deep Research Findings",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-openarms-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openarms-methodology-scan.md",
+          "title": "OpenArms Methodology Scan \u2014 Deep Research Findings",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Rework Prevention (stage gates prevent the root causes of rework)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Development (specs are the artifact produced at stage boundaries)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Plan Execute Review Cycle (stage-gating is the implementation of phase separation)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Immune System Rules (disease catalogue documents stage-gating failure modes)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet (primary source \u2014 5-stage model, MCP blocking, teaching system)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Orchestration Patterns (multi-agent systems require stage-gating to coordinate contribution flow)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features (stage-gating applied at architectural scale)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Wiki Backlog Pattern (task frontmatter as state machine is the wiki implementation of stage-gating)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Spec-Driven Development (stages enforce spec phase before implementation phase)"
+        },
+        {
+          "verb": "CONTRADICTS",
+          "target": "Continuous Implementation (unstructured iterative coding without phase checkpoints)"
+        }
+      ]
+    },
+    {
       "path": "domains/ai-models/local-llm-quantization.md",
       "slug": "domains/ai-models/local-llm-quantization",
       "title": "Local LLM Quantization",
@@ -3192,6 +3376,95 @@
         {
           "verb": "USED BY",
           "target": "Research Pipeline Orchestration"
+        }
+      ]
+    },
+    {
+      "path": "domains/knowledge-systems/wiki-backlog-pattern.md",
+      "slug": "domains/knowledge-systems/wiki-backlog-pattern",
+      "title": "Wiki Backlog Pattern",
+      "type": "concept",
+      "domain": "knowledge-systems",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "wiki-backlog",
+        "frontmatter-state-machine",
+        "auto-loop",
+        "pm-in-wiki",
+        "epics",
+        "tasks",
+        "llm-wiki",
+        "knowledge-base",
+        "project-management",
+        "autonomous-agents",
+        "operator-directives",
+        "verbatim-log",
+        "second-brain",
+        "openarms",
+        "openfleet"
+      ],
+      "sources": [
+        {
+          "id": "src-openarms-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openarms-methodology-scan.md",
+          "title": "OpenArms Methodology Scan \u2014 Deep Research Findings",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-openfleet-methodology-scan",
+          "type": "documentation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "title": "OpenFleet Methodology Scan \u2014 Deep Research Findings",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "LLM Wiki Pattern (extends Karpathy's wiki pattern with project management types and an auto-loop)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Task Lifecycle Stage-Gating (the frontmatter state machine is the wiki implementation of stage gates)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second Brain Architecture (the wiki-as-backlog is a second-brain that also executes)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Knowledge Evolution Pipeline (the auto-loop operationalizes the evolution pipeline)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Spec-Driven Development (when wiki pages are spec artifacts, the wiki-as-backlog makes SDD self-executing)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet (17 epics in wiki/backlog/, verbatim PO log pattern)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Memory Lifecycle Management (wiki/log/ as sacrosanct directive store is a memory management strategy)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Research Pipeline Orchestration (the auto-loop is an orchestration pattern applied to knowledge work)"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "PARA Methodology (wiki-backlog is PARA + task execution in one system)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Progressive Distillation (completed tasks produce knowledge pages that enter the distillation pipeline)"
         }
       ]
     },
@@ -7980,8 +8253,8 @@
       "relationship_count": 115
     },
     "ai-agents": {
-      "page_count": 30,
-      "relationship_count": 257
+      "page_count": 32,
+      "relationship_count": 276
     },
     "tools-and-platforms": {
       "page_count": 22,
@@ -8000,8 +8273,8 @@
       "relationship_count": 55
     },
     "knowledge-systems": {
-      "page_count": 22,
-      "relationship_count": 191
+      "page_count": 23,
+      "relationship_count": 201
     }
   },
   "tags": {
@@ -8120,6 +8393,7 @@
       "decisions/decision-resolve-open-questions-in-llm-wiki-vs-rag",
       "domains/knowledge-systems/llm-wiki-pattern",
       "domains/knowledge-systems/llm-wiki-vs-rag",
+      "domains/knowledge-systems/wiki-backlog-pattern",
       "lessons/lesson-convergence-on-llm-wiki-pattern",
       "lessons/lesson-convergence-on-obsidian-knowledge-vault",
       "lessons/lesson-convergence-on-src-karpathy-claude-code-10x",
@@ -8352,6 +8626,7 @@
       "domains/knowledge-systems/llm-wiki-pattern",
       "domains/knowledge-systems/para-methodology",
       "domains/knowledge-systems/second-brain-architecture",
+      "domains/knowledge-systems/wiki-backlog-pattern",
       "domains/knowledge-systems/zettelkasten-methodology",
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
@@ -8431,6 +8706,7 @@
       "domains/ai-agents/agent-orchestration-patterns",
       "domains/ai-agents/openclaw",
       "domains/ai-agents/openfleet",
+      "domains/ai-agents/spec-driven-development",
       "sources/src-llm-wiki-v2-agentmemory"
     ],
     "deterministic-brain": [
@@ -8460,9 +8736,12 @@
       "domains/ai-agents/agent-orchestration-patterns",
       "domains/ai-agents/openfleet",
       "domains/ai-agents/rework-prevention",
+      "domains/ai-agents/spec-driven-development",
+      "domains/ai-agents/task-lifecycle-stage-gating",
       "domains/devops/four-project-ecosystem",
       "domains/devops/immune-system-rules",
       "domains/knowledge-systems/lightrag",
+      "domains/knowledge-systems/wiki-backlog-pattern",
       "lessons/always-plan-before-executing",
       "lessons/lesson-hub-\u2014-agent-orchestration-patterns",
       "patterns/deterministic-shell-llm-core",
@@ -8733,6 +9012,7 @@
     ],
     "planning": [
       "domains/ai-agents/rework-prevention",
+      "domains/ai-agents/spec-driven-development",
       "lessons/always-plan-before-executing",
       "lessons/lesson-convergence-on-claude-code-best-practices",
       "sources/src-shanraisshan-claude-code-best-practice",
@@ -8754,6 +9034,82 @@
     ],
     "cost-of-rework": [
       "domains/ai-agents/rework-prevention"
+    ],
+    "spec-driven-development": [
+      "domains/ai-agents/spec-driven-development",
+      "sources/src-superpowers-end-of-vibe-coding"
+    ],
+    "bmad": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "spec-kit": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "superpowers": [
+      "domains/ai-agents/spec-driven-development",
+      "sources/src-claude-code-accuracy-tips",
+      "sources/src-superpowers-end-of-vibe-coding"
+    ],
+    "artifacts": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "immutable-checkpoints": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "sdlc": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "design-before-code": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "spec-to-code": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "phase-gating": [
+      "domains/ai-agents/spec-driven-development"
+    ],
+    "stage-gating": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "task-lifecycle": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "methodology": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "phase-boundaries": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "anti-corruption": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "mcp-tools": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "sfif": [
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "openarms": [
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/devops/four-project-ecosystem",
+      "domains/knowledge-systems/wiki-backlog-pattern",
+      "domains/tools-and-platforms/multi-channel-ai-agent-access",
+      "domains/tools-and-platforms/openarms",
+      "patterns/gateway-centric-routing"
+    ],
+    "autonomous-agents": [
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "readiness-score": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "one-commit-per-stage": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
+    ],
+    "work-modes": [
+      "domains/ai-agents/task-lifecycle-stage-gating"
     ],
     "quantization": [
       "domains/ai-models/local-llm-quantization",
@@ -8905,6 +9261,7 @@
     ],
     "project-management": [
       "domains/devops/devops-control-plane",
+      "domains/knowledge-systems/wiki-backlog-pattern",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "domains/tools-and-platforms/plane",
       "sources/src-obsidian-claude-code-second-brain"
@@ -8933,12 +9290,6 @@
     ],
     "devops-control-plane": [
       "domains/devops/four-project-ecosystem"
-    ],
-    "openarms": [
-      "domains/devops/four-project-ecosystem",
-      "domains/tools-and-platforms/multi-channel-ai-agent-access",
-      "domains/tools-and-platforms/openarms",
-      "patterns/gateway-centric-routing"
     ],
     "research-wiki": [
       "domains/devops/four-project-ecosystem"
@@ -9048,6 +9399,7 @@
     ],
     "knowledge-base": [
       "domains/knowledge-systems/llm-wiki-pattern",
+      "domains/knowledge-systems/wiki-backlog-pattern",
       "sources/src-karpathy-claude-code-10x",
       "sources/src-karpathy-llm-wiki-idea-file",
       "sources/src-notebooklm-claude-code-workflow"
@@ -9147,6 +9499,30 @@
     "atomic-notes": [
       "domains/knowledge-systems/second-brain-architecture",
       "domains/knowledge-systems/zettelkasten-methodology"
+    ],
+    "wiki-backlog": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "frontmatter-state-machine": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "auto-loop": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "pm-in-wiki": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "epics": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "tasks": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "operator-directives": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
+    ],
+    "verbatim-log": [
+      "domains/knowledge-systems/wiki-backlog-pattern"
     ],
     "wiki": [
       "domains/knowledge-systems/wiki-ingestion-pipeline"
@@ -9518,9 +9894,6 @@
     "build-lifecycle": [
       "patterns/scaffold-foundation-infrastructure-features"
     ],
-    "sfif": [
-      "patterns/scaffold-foundation-infrastructure-features"
-    ],
     "recursive": [
       "patterns/scaffold-foundation-infrastructure-features"
     ],
@@ -9544,10 +9917,6 @@
     ],
     "canvas": [
       "sources/src-axton-obsidian-visual-skills"
-    ],
-    "superpowers": [
-      "sources/src-claude-code-accuracy-tips",
-      "sources/src-superpowers-end-of-vibe-coding"
     ],
     "agent-teams": [
       "sources/src-claude-code-accuracy-tips",
@@ -9775,9 +10144,6 @@
     "git-worktrees": [
       "sources/src-superpowers-end-of-vibe-coding"
     ],
-    "spec-driven-development": [
-      "sources/src-superpowers-end-of-vibe-coding"
-    ],
     "implementation": [
       "sources/src-superpowers-end-of-vibe-coding"
     ],
@@ -9850,6 +10216,12 @@
       "target": "Claude Code Hooks",
       "referenced_by": [
         "Synthesis: Claude Code Best Practice (shanraisshan)"
+      ]
+    },
+    {
+      "target": "Continuous Implementation",
+      "referenced_by": [
+        "Task Lifecycle Stage-Gating"
       ]
     },
     {
@@ -9948,6 +10320,12 @@
         "Cross-Domain \u2014 Domain Overview",
         "Devops \u2014 Domain Overview",
         "Knowledge Systems \u2014 Domain Overview"
+      ]
+    },
+    {
+      "target": "Vibe Coding",
+      "referenced_by": [
+        "Spec-Driven Development"
       ]
     },
     {
