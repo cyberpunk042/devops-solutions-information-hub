@@ -211,10 +211,21 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 
 ## Open Questions
 
-- What is the minimum viable quality gate for each stage in a low-tooling context? The current quality gates assume a wiki and git history. For teams without this infrastructure, what observable evidence proves each stage was completed?
-- How should stages handle tasks that require discovery? Some implementations reveal requirements that invalidate the design. The methodology allows max 2 retries per stage, but does not specify what happens when the design must be fundamentally revised after implementation begins. Does this require returning to Design stage?
-- Can the stage-gate system be applied retroactively to partially-complete work? If a task exists that was implemented without a design stage, is it better to document retroactively (creating the artifact after the fact) or to treat the existing work as a "Document" artifact and re-plan from Design?
-- How does the readiness range interact with partial stage completion? If a design doc exists but the config shape is still undefined, is the task at 26% (Document complete, Design begun) or still at 25% (Design not yet complete enough to cross the threshold)?
+(All resolved — see Answered Open Questions below.)
+
+## Answered Open Questions
+
+> [!example]- Minimum viable quality gate for low-tooling contexts?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Protocol enforcement via CLAUDE.md MUST/MUST NOT rules plus one-commit-per-stage convention. Observable evidence = commit message names the stage + diff touches only permitted file categories.
+
+> [!example]- How should stages handle discovery tasks?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding. Maximum 2 retries before escalating to human review.
+
+> [!example]- Can stage-gate be applied retroactively to partial work?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Document after the fact by creating the missing artifacts, but mark them as retroactive. The work is treated as having been done out of order, not as invalid.
+
+> [!example]- How does readiness interact with partial stage completion?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Task remains at the previous stage threshold until the current stage is fully complete. Incomplete Design = still at 25% (Document ceiling), not 26%.
 
 ## Relationships
 

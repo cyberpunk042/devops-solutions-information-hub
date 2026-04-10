@@ -179,6 +179,7 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Context-Aware Tool Loading]]
+[[Decision: Extension System Operational Decisions]]
 [[Decision: MCP vs CLI for Tool Integration]]
 [[Decision: Per-Role Command Design Decisions]]
 [[Harness Engineering]]

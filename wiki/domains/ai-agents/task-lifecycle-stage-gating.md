@@ -207,10 +207,18 @@ The SFIF (Scaffold → Foundation → Infrastructure → Features) pattern from 
 
 ## Open Questions
 
-- What is the minimum viable stage-gating system for a solo developer with no MCP infrastructure? OpenArms' protocol-based approach is the clearest answer, but it depends on agent context quality. When context is compressed or degraded, does the protocol hold?
-- Can readiness scores be computed automatically from artifact inspection rather than agent self-report? An agent that marks readiness 82 when the design doc does not exist is the primary failure mode. Static analysis of the artifacts field against the filesystem would catch many violations.
 - At what task complexity does the overhead of stage-gating become net-negative? OpenArms acknowledges this with the `full-autonomous` mode (skip document stage on tasks, no human review). The crossover point between "stage gating adds more value than friction" and "stage gating is overkill" is empirically unknown.
-- How should stage-gating handle tasks that require discovery? Some tasks cannot be fully specified in REASONING because the implementation reveals requirements. The SFIF pattern handles this at the architectural level; it is less clear how the task-level model handles it.
+
+## Answered Open Questions
+
+> [!example]- Minimum viable stage-gating for solo developer?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. CLAUDE.md MUST/MUST NOT rules plus one-commit-per-stage convention. No MCP infrastructure required.
+
+> [!example]- Can readiness be computed automatically from artifacts?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Check the artifacts paths listed in task frontmatter against the filesystem. If an artifact is listed but does not exist, readiness is invalid.
+
+> [!example]- How should stage-gating handle discovery tasks?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding from the discovery. Maximum 2 retries before escalating.
 
 ## Relationships
 

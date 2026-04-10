@@ -220,6 +220,7 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 [[Always Plan Before Executing]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Context Management Is the Primary LLM Productivity Lever]]
+[[Decision: Extension System Operational Decisions]]
 [[Decision: Hooks Design Decisions]]
 [[Design.md Pattern]]
 [[Deterministic Shell, LLM Core]]

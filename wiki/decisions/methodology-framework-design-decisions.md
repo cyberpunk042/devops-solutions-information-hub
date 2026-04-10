@@ -98,5 +98,6 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 [[Task Type Artifact Matrix]]
 [[Skyscraper, Pyramid, Mountain]]
 [[Scaffold → Foundation → Infrastructure → Features]]
+[[Decision: Quality Tier Operational Decisions]]
 [[Decision: Task Type Edge Cases]]
 [[Methodology Is a Framework, Not a Fixed Pipeline]]

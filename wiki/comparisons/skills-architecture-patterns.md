@@ -187,6 +187,7 @@ The connection to context management is the critical constraint that shapes all 
 [[AI-Driven Content Pipeline]]
 [[LLM Wiki Pattern]]
 [[Claude Code Slash Commands (artemgetmann)]]
+[[Decision: Extension System Operational Decisions]]
 [[Design.md Pattern]]
 [[Infrastructure as Code Patterns]]
 [[Skill Specification Is the Key to Ecosystem Interoperability]]

@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-10T21:18:25.125024+00:00",
+  "generated": "2026-04-10T21:21:26.095337+00:00",
   "stats": {
-    "pages": 182,
+    "pages": 184,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1222,
-    "tags_unique": 668,
+    "relationships": 1232,
+    "tags_unique": 672,
     "layers": {
       "3": 5,
-      "6": 11,
+      "6": 13,
       "2": 51,
       "4": 28,
       "5": 6,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 133,
-      "seed": 24
+      "seed": 26
     }
   },
   "pages": [
@@ -643,6 +643,60 @@
       ]
     },
     {
+      "path": "decisions/extension-system-operational-decisions.md",
+      "slug": "decisions/extension-system-operational-decisions",
+      "title": "Decision: Extension System Operational Decisions",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "skills",
+        "hooks",
+        "versioning",
+        "composition",
+        "harness",
+        "python-hooks",
+        "design-decisions"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Claude Code Skills",
+        "Hooks Lifecycle Architecture",
+        "Harness Engineering"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Harness Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Hooks Lifecycle Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Best Practices"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Skills Architecture Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: Hooks Design Decisions"
+        }
+      ]
+    },
+    {
       "path": "decisions/hooks-design-decisions.md",
       "slug": "decisions/hooks-design-decisions",
       "title": "Decision: Hooks Design Decisions",
@@ -1128,6 +1182,52 @@
         {
           "verb": "RELATES TO",
           "target": "Obsidian Knowledge Vault"
+        }
+      ]
+    },
+    {
+      "path": "decisions/quality-tier-operational-decisions.md",
+      "slug": "decisions/quality-tier-operational-decisions",
+      "title": "Decision: Quality Tier Operational Decisions",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "quality-tiers",
+        "skyscraper",
+        "pyramid",
+        "mountain",
+        "leading-indicators",
+        "equilibrium",
+        "organizational",
+        "design-decisions"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Skyscraper, Pyramid, Mountain",
+        "Methodology Framework"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Skyscraper, Pyramid, Mountain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Immune System Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: Methodology Framework Design Decisions"
         }
       ]
     },
@@ -12232,16 +12332,16 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 51,
-      "relationship_count": 383
+      "page_count": 52,
+      "relationship_count": 387
     },
     "devops": {
       "page_count": 14,
       "relationship_count": 99
     },
     "ai-agents": {
-      "page_count": 36,
-      "relationship_count": 303
+      "page_count": 37,
+      "relationship_count": 309
     },
     "tools-and-platforms": {
       "page_count": 23,
@@ -12502,6 +12602,7 @@
     ],
     "skills": [
       "comparisons/skills-architecture-patterns",
+      "decisions/extension-system-operational-decisions",
       "decisions/mcp-vs-cli-for-tool-integration",
       "decisions/per-role-command-design-decisions",
       "domains/ai-agents/claude-code-best-practices",
@@ -12619,6 +12720,7 @@
     ],
     "composition": [
       "comparisons/skills-architecture-patterns",
+      "decisions/extension-system-operational-decisions",
       "decisions/methodology-framework-design-decisions",
       "domains/ai-agents/hooks-lifecycle-architecture"
     ],
@@ -12650,13 +12752,16 @@
     ],
     "design-decisions": [
       "decisions/execution-mode-edge-cases",
+      "decisions/extension-system-operational-decisions",
       "decisions/hooks-design-decisions",
       "decisions/methodology-framework-design-decisions",
       "decisions/per-role-command-design-decisions",
+      "decisions/quality-tier-operational-decisions",
       "decisions/stage-gate-operational-decisions",
       "decisions/task-type-edge-cases"
     ],
     "hooks": [
+      "decisions/extension-system-operational-decisions",
       "decisions/hooks-design-decisions",
       "decisions/per-role-command-design-decisions",
       "domains/ai-agents/claude-code-best-practices",
@@ -12671,6 +12776,20 @@
       "spine/model-claude-code",
       "spine/model-skills-commands-hooks-standards",
       "spine/model-skills-commands-hooks"
+    ],
+    "versioning": [
+      "decisions/extension-system-operational-decisions",
+      "decisions/methodology-framework-design-decisions",
+      "decisions/per-role-command-design-decisions"
+    ],
+    "harness": [
+      "decisions/extension-system-operational-decisions",
+      "patterns/deterministic-shell-llm-core",
+      "spine/model-claude-code-standards",
+      "spine/model-quality-failure-prevention"
+    ],
+    "python-hooks": [
+      "decisions/extension-system-operational-decisions"
     ],
     "pretooluse": [
       "decisions/hooks-design-decisions"
@@ -12813,12 +12932,9 @@
     "model-selection": [
       "decisions/methodology-framework-design-decisions"
     ],
-    "versioning": [
-      "decisions/methodology-framework-design-decisions",
-      "decisions/per-role-command-design-decisions"
-    ],
     "quality-tiers": [
       "decisions/methodology-framework-design-decisions",
+      "decisions/quality-tier-operational-decisions",
       "spine/model-sfif-architecture"
     ],
     "meta-methodology": [
@@ -12934,6 +13050,31 @@
       "domains/devops/stage-gate-methodology",
       "domains/devops/wsl2-development-patterns",
       "spine/domain-overviews/devops-domain-overview"
+    ],
+    "skyscraper": [
+      "decisions/quality-tier-operational-decisions",
+      "domains/cross-domain/methodology-framework",
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "spine/model-sfif-architecture"
+    ],
+    "pyramid": [
+      "decisions/quality-tier-operational-decisions",
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "spine/model-sfif-architecture"
+    ],
+    "mountain": [
+      "decisions/quality-tier-operational-decisions",
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "spine/model-sfif-architecture"
+    ],
+    "leading-indicators": [
+      "decisions/quality-tier-operational-decisions"
+    ],
+    "equilibrium": [
+      "decisions/quality-tier-operational-decisions"
+    ],
+    "organizational": [
+      "decisions/quality-tier-operational-decisions"
     ],
     "readiness": [
       "decisions/stage-gate-operational-decisions",
@@ -13559,11 +13700,6 @@
       "domains/cross-domain/methodology-framework",
       "spine/model-methodology"
     ],
-    "skyscraper": [
-      "domains/cross-domain/methodology-framework",
-      "domains/cross-domain/skyscraper-pyramid-mountain",
-      "spine/model-sfif-architecture"
-    ],
     "quality": [
       "domains/cross-domain/skyscraper-pyramid-mountain",
       "lessons/infrastructure-must-be-reproducible-not-manual",
@@ -13598,14 +13734,6 @@
     ],
     "technical-debt": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
-    ],
-    "pyramid": [
-      "domains/cross-domain/skyscraper-pyramid-mountain",
-      "spine/model-sfif-architecture"
-    ],
-    "mountain": [
-      "domains/cross-domain/skyscraper-pyramid-mountain",
-      "spine/model-sfif-architecture"
     ],
     "spaghetti-code": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -14641,11 +14769,6 @@
     ],
     "shell-pattern": [
       "patterns/deterministic-shell-llm-core"
-    ],
-    "harness": [
-      "patterns/deterministic-shell-llm-core",
-      "spine/model-claude-code-standards",
-      "spine/model-quality-failure-prevention"
     ],
     "reliability": [
       "patterns/deterministic-shell-llm-core"

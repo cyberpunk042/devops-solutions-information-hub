@@ -266,10 +266,21 @@ Signal: The acceptance criteria (documented in the epic's design stage) were nev
 
 ## Open Questions
 
-- How should readiness be calculated when a module has sub-modules as well as direct tasks? Should sub-module readiness be averaged at the sub-module level first, or should all leaf tasks be averaged directly to the epic?
-- What triggers the `review` state at the epic level in OpenArms' solo-agent context? In OpenFleet, fleet-ops is the reviewer. In a solo context, the agent moves the epic to `review` and then waits for the human. But without a notification mechanism, how does the human know a review is pending?
-- The readiness average treats all tasks equally. Should higher-complexity tasks (those with more required stages) receive higher weight in the readiness calculation? A `docs` task reaching 100% is worth less work than a `module` reaching 100%.
-- When a new task is created to cover a gap (Rule 8), how should the parent epic's readiness be recalculated? The act of creating a task reduces the epic's readiness (the denominator grows with readiness 0 in the new task). Is this the correct behavior, or should gap tasks be created with a flag that acknowledges they are gap-filling?
+(All resolved — see Answered Open Questions below.)
+
+## Answered Open Questions
+
+> [!example]- Sub-module readiness calculation?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Use simple average of all descendant tasks. No intermediate sub-module averaging — flatten to leaf tasks.
+
+> [!example]- Review trigger in solo-agent context?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. The agent sets the epic/module to `review` status, logs the transition, and stops. The human discovers pending reviews via `pipeline status` or backlog commands.
+
+> [!example]- Should higher-complexity tasks be weighted in readiness?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. No weighting. If a task is too large relative to siblings, decompose it into smaller tasks instead of adding weight to the formula.
+
+> [!example]- New gap task reduces parent readiness?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Yes, this is correct behavior. Adding a task with readiness 0 honestly lowers the parent's readiness. Honesty over inflation — the gap was always there, the readiness was previously overstated.
 
 ## Relationships
 

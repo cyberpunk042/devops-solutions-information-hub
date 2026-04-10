@@ -85,3 +85,4 @@ All decisions are easy to reverse. They're design guidelines, not infrastructure
 [[Agent Orchestration Patterns]]
 [[Stage-Gate Methodology]]
 [[Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[Decision: Extension System Operational Decisions]]

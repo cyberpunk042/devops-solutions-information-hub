@@ -363,6 +363,7 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Wiki Backlog Pattern]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Decision: Methodology Framework Design Decisions]]
+[[Decision: Quality Tier Operational Decisions]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Is a Framework, Not a Fixed Pipeline]]

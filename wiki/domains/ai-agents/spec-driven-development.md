@@ -116,10 +116,16 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 
 ## Open Questions
 
-- Can spec quality be evaluated automatically? OpenFleet's `plan_quality.py` is a partial answer — it checks for required fields (verbatim reference, target files, step mapping) but not for semantic completeness. What heuristics distinguish a good spec from a box-checking spec?
 - How do spec artifacts handle mid-project discovery? All frameworks assume spec precedes implementation, but real projects often discover requirements during implementation. OpenFleet has a REASONING stage that collects contributions before WORK — is that sufficient for mid-flight spec evolution?
-- Is there a minimum viable spec for small tasks? OpenArms differentiates by task type: `docs` tasks require only the Document stage; `spike` requires Document + Design; `task` requires Scaffold + Implement + Test (no design stage). This is a partial answer — a tiered spec requirement based on task type/risk.
 - The BMAD multi-agent spec model produces higher-quality specs but at higher cost. Is there a lightweight multi-perspective spec approach for solo developers that approximates the multi-agent benefit?
+
+## Answered Open Questions
+
+> [!example]- Can spec quality be evaluated automatically?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Partially — lint checks can validate required fields (verbatim reference, target files, step mapping). Semantic completeness remains a human judgment, but structural completeness is automatable.
+
+> [!example]- Minimum viable spec for small tasks?
+> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Task type determines spec scope: `docs` = Document stage only, `spike` = Document + Design, `task` = Scaffold + Implement + Test. The tiered approach matches spec overhead to task complexity.
 
 ## Relationships
 

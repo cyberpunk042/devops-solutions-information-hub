@@ -133,6 +133,7 @@ This is a model for how operational knowledge should flow in any multi-project e
 [[Always Plan Before Executing]]
 [[Rework Prevention]]
 [[Backlog Hierarchy Rules]]
+[[Decision: Quality Tier Operational Decisions]]
 [[Deterministic Shell, LLM Core]]
 [[Execution Modes and End Conditions]]
 [[Four-Project Ecosystem]]
