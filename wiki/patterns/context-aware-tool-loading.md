@@ -46,19 +46,33 @@ Only load tool schemas, documentation, or external data into the context window 
 
 ## Pattern Description
 
-Every LLM agent operates within a fixed context window. Tokens loaded at startup for "just in case" access — full tool schemas, complete accessibility trees, all documentation, entire knowledge bases — occupy context budget before the first task-relevant token has been written. As context fills, Claude Code accuracy drops measurably: observed by one practitioner to degrade at higher utilization (rough markers at 40%, 60%, 80% reported — probabilistic, not deterministic). Any mechanism that pre-loads information at session initialization accelerates movement along this degradation curve.
+Every LLM agent operates within a fixed context window. Tokens loaded at startup for "just in case" access occupy context budget before the first task-relevant token is written. Any mechanism that pre-loads information accelerates context degradation.
 
-The pattern that counters this is deferred loading: information is stored outside the context window (on disk as YAML, in an external knowledge base, behind a CLI boundary, in a documentation service) and retrieved only at the moment the agent determines it is necessary. The agent issues an explicit read, query, or fetch call, pulls a targeted subset of the available information, uses it for the immediate task, and does not carry it forward into subsequent turns unless required.
+> [!info] **Three loader types — the universal taxonomy**
+> | Type | When it loads | Cost profile | Best for |
+> |------|-------------|-------------|----------|
+> | **Eager** | Session startup — always present | Permanent per-message overhead | Information needed on every turn (CLAUDE.md, core schema) |
+> | **Deferred** | On invocation — pulled when needed | Zero until invoked | Task-specific tools, workflows, domain knowledge (Skills, CLI) |
+> | **External** | Never in context — queried on demand | Per-query only | Large knowledge bases too big for context (NotebookLM, Context7, LightRAG) |
 
-The key structural insight is that this pattern is not tool-specific — it is a recurring design decision. Every time you introduce a new information source into an agent workflow, you face the same binary: eager (load at startup, always available, always consuming context) vs. deferred (load on demand, narrowly scoped, context-clean). The eager approach optimizes for availability; the deferred approach optimizes for signal-to-noise ratio in the context window. Because accuracy is directly coupled to signal-to-noise ratio, deferred loading is the default-correct choice for any information source that is not required on every single turn.
+> [!abstract] **The structural insight**
+> This pattern is not tool-specific — it is a recurring design decision. Every new information source in an agent workflow faces the same choice: eager (always available, always consuming) vs deferred (on demand, context-clean) vs external (outside context entirely). Because accuracy is coupled to signal-to-noise ratio in the context window, deferred or external loading is the default-correct choice for anything not required on every turn.
 
-The cost of getting this wrong compounds. Schema tokens from unused tools displace conversation history. Stale page trees from earlier navigation steps crowd out current task context. Pre-loaded documentation forces the model to attend to dozens of irrelevant API methods before finding the one it needs. Each individually small inefficiency multiplies across every turn in a long session, across every agent in a fleet, and across every call in a multi-step pipeline.
+> [!warning] **The cost of getting this wrong compounds**
+> Schema tokens from unused tools displace conversation history. Stale page trees from earlier navigation crowd out current task context. Pre-loaded docs force the model to attend to dozens of irrelevant API methods. Each small inefficiency multiplies across every turn × every agent × every pipeline step.
 
 ## Instances
 
 ### Skills vs. MCP: The Schema Loading Split
 
-Claude Code supports two tool integration modes. MCP servers register their full JSON schema (tool names, parameter shapes, descriptions) into the context window at session initialization — before any tool has been called, before the agent knows what task it will perform. Skills (SKILL.md files) contain no schema at rest; they enter the context window only when explicitly invoked via slash command or agent decision, delivering targeted prose instructions and then exiting when the task completes.
+> [!info] **The loading difference**
+> | | MCP (eager) | Skills (deferred) |
+> |---|---|---|
+> | **Loads when** | Session startup — all schemas always present | Explicitly invoked or auto-detected |
+> | **Cost when unused** | Full schema overhead every message | Zero |
+> | **Measured differential** | 12x more tokens on Playwright QA test | Baseline |
+
+Claude Code supports two tool integration modes. MCP servers register their full JSON schema into the context window at session initialization — before any tool has been called. Skills contain no schema at rest; they enter only when invoked.
 
 The practical consequence is measurable. With multiple MCP servers registered, cumulative schema payload consumes meaningful context budget on every single turn regardless of relevance. The accuracy tips source documents this directly: "CLI+Skills loads tool instructions only when relevant (skill loading is contextual), while MCP loads all tool schemas into context at startup." Google Trends data from 2026 shows CLI search interest overtaking MCP as the practitioner community converges on this conclusion. The research wiki itself reflects this tradeoff: the three planned MCP servers (wiki, NotebookLM, Obsidian) deliver discoverability at the cost of per-session schema overhead that would be present even in conversations that never invoke those tools.
 
