@@ -118,9 +118,18 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 
 ## Open Questions
 
-- What are the leading indicators that a Pyramid is sliding back toward Mountain? (Quantitative signals: increasing time-to-feature, increasing ratio of hotfix commits to feature commits, decreasing test coverage in recently modified files)
-- Is there a Pyramid-stable equilibrium where a system can be maintained at Pyramid tier indefinitely without Skyscraper refactor? Or does Pyramid inevitably regress without continuous investment?
-- How does this analogy apply to organizational architecture (team structures, process design) rather than just code? A Mountain organization (ad-hoc processes, no documented conventions) and a Skyscraper organization (clean role definitions, explicit governance) seem to follow the same pattern.
+(All resolved — see Answered Open Questions below.)
+
+## Answered Open Questions
+
+> [!example]- What are the leading indicators that a Pyramid is sliding back toward Mountain?
+> Resolved in [[Decision: Quality Tier Operational Decisions]]. Four measurable signals: lint trend (increasing warnings over time), orphan growth (pages/components unreachable from indexes), stale accumulation (outdated artifacts not retired), and stage-gate skips (methodology steps bypassed under pressure).
+
+> [!example]- Is there a Pyramid-stable equilibrium where a system can be maintained at Pyramid tier indefinitely?
+> Resolved in [[Decision: Quality Tier Operational Decisions]]. Yes, with continuous maintenance investment. Pyramid-stable is achievable but requires active effort — without ongoing investment, entropy pulls toward Mountain.
+
+> [!example]- How does this analogy apply to organizational architecture?
+> Resolved in [[Decision: Quality Tier Operational Decisions]]. Yes, the same three tiers apply to teams and processes. A Mountain organization has ad-hoc processes and no documented conventions; a Pyramid organization has functional but imperfect governance; a Skyscraper organization has clean role definitions and explicit governance.
 
 ## Relationships
 

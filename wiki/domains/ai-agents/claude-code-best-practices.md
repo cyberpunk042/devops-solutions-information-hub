@@ -117,14 +117,16 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 
 ## Open Questions
 
-> [!question] **Is there a measurable CLAUDE.md compliance threshold?**
-> At what line count or token count does CLAUDE.md compliance drop measurably? Is it 200 lines? 300? 500? (Requires: controlled testing with different CLAUDE.md sizes on identical tasks)
-
 > [!question] **Can the Plan-Execute-Review cycle be further compressed?**
 > Is the 5-verb cycle already at minimum viable complexity, or can it be optimized for specific task types? (Requires: comparative analysis of framework performance across task categories)
 
 > [!question] **How do best practices change as models improve?**
 > Does plan mode become less necessary as models improve at self-correction? Does the compliance problem diminish with larger context windows? (Requires: longitudinal tracking across model generations)
+
+## Answered Open Questions
+
+> [!example]- Is there a measurable CLAUDE.md compliance threshold?
+> Resolved in [[Decision: Extension System Operational Decisions]]. Compliance is binary per rule, not a percentage threshold. Rules with consistently low compliance should graduate from CLAUDE.md instructions to hook-based enforcement.
 
 ## Relationships
 

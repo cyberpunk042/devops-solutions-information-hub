@@ -172,13 +172,17 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 
 ## Open Questions
 
-> [!question] **At what point does harness complexity become net negative?**
-> Hooks + skills + commands + methodology.yaml + agent-directive.md is significant infrastructure. At what point does maintaining the harness cost more than the rework it prevents? (Requires: tracking harness maintenance hours vs rework hours prevented)
+(All resolved — see Answered Open Questions below.)
 
-> [!question] **Should this ecosystem implement R01-R04 as Python hooks?**
-> The answered question below recommends Python over TypeScript. But implementing even the 4 denial rules would be the first Level 3 enforcement in this ecosystem. Is the effort justified by the risk surface? (Requires: auditing how often dangerous operations are attempted in practice)
+## Answered Open Questions
 
-### Answered Open Questions
+> [!example]- At what point does harness complexity become net negative?
+> Resolved in [[Decision: Extension System Operational Decisions]]. Not yet a concern at current scale; the harness infrastructure is still net positive relative to the rework it prevents.
+
+> [!example]- Should this ecosystem implement R01-R04 as Python hooks?
+> Resolved in [[Decision: Extension System Operational Decisions]]. Yes — start with R01 (block dangerous ops) and R04 (require review for force-push), which cover the highest-risk surface with minimal implementation effort.
+
+### Previously Answered
 
 > [!success] **Python hooks, not TypeScript, for this ecosystem**
 > Cross-referencing [[Decision: MCP vs CLI for Tool Integration]] and [[Immune System Rules]]: the ecosystem's toolchain is pure Python. doctor.py (24 production rules) is Python with zero LLM calls. Implementing equivalent rules in Python hooks via Claude Code's `settings.json` configuration keeps enforcement language consistent, avoids Node.js dependency, and makes rules maintainable by the same engineers who maintain the pipeline. A YAML rule file format could be a backend-agnostic abstraction executed by either Python or TypeScript engines.

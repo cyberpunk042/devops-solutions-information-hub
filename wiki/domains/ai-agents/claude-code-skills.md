@@ -119,13 +119,15 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 
 ## Open Questions
 
-> [!question] Is there a versioning or update mechanism for skills?
-> The Skills Architecture Patterns page identifies this as unresolved: "How should skill versioning work — semantic versioning for breaking changes in instruction format?" Requires empirical data from large-scale skill deployment.
-
-> [!question] Can skills formally compose other skills?
-> Partially answered: skills can include scripts and use `context: fork`, and practical composition happens through shared CLIs. But formal skill-to-skill references are not yet documented. Skills Architecture Patterns identifies this as unresolved: "Composition (skills referencing skills) remains largely unsolved across all ecosystems."
+(All resolved — see Answered Open Questions below.)
 
 ## Answered Open Questions
+
+> [!example]- Is there a versioning or update mechanism for skills?
+> Resolved in [[Decision: Extension System Operational Decisions]]. CHANGELOG section in SKILL.md tracks breaking changes; wait for agentskills.io for ecosystem-wide versioning.
+
+> [!example]- Can skills formally compose other skills?
+> Resolved in [[Decision: Extension System Operational Decisions]]. Formal skill-to-skill composition is not supported; de facto composition happens through shared CLIs and bundled scripts.
 
 > [!example]- Maximum practical complexity before unreliability?
 > The ceiling is not a fixed line count but a function of session context pressure. Any skill consuming a substantial fraction of the context window triggers degradation. Resolution: `context: fork` for extensive skills — this isolates execution in a sub-agent. The practical upper bound: ~100 lines unfork'd before degradation risk becomes significant; with `context: fork`, the ceiling is effectively the sub-agent's full context budget.
