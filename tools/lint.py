@@ -232,31 +232,39 @@ def _check_orphan_pages(
     pages: List[Path], wiki_dir: Path
 ) -> List[str]:
     """Find pages not listed in any _index.md file."""
-    # Collect all page filenames referenced in _index.md files
-    referenced: Set[str] = set()
+    # Collect all page titles referenced in _index.md files
+    # Check both markdown links [Title](file.md) and wikilinks [[Title]]
+    referenced_files: Set[str] = set()
+    referenced_titles: Set[str] = set()
+
+    import re
     for index_file in wiki_dir.rglob("_index.md"):
         try:
             content = index_file.read_text(encoding="utf-8")
-            # Look for markdown link patterns like [Title](filename.md)
-            import re
+            # Markdown link patterns: [Title](filename.md)
             for match in re.finditer(r"\[([^\]]+)\]\(([^)]+\.md)\)", content):
                 linked_file = match.group(2)
-                # Resolve relative to the index file's directory
                 resolved = (index_file.parent / linked_file).resolve()
-                referenced.add(str(resolved))
+                referenced_files.add(str(resolved))
+                referenced_titles.add(match.group(1).strip())
+            # Wikilink patterns: [[Page Title]]
+            for match in re.finditer(r"\[\[([^\]]+)\]\]", content):
+                referenced_titles.add(match.group(1).strip())
         except Exception:
             pass
 
     orphans: List[str] = []
     for page in pages:
-        if str(page.resolve()) not in referenced:
-            try:
-                text = page.read_text(encoding="utf-8")
-                meta, _ = parse_frontmatter(text)
-                title = meta.get("title", page.stem) if meta else page.stem
-                orphans.append(title)
-            except Exception:
-                orphans.append(page.stem)
+        resolved = str(page.resolve())
+        try:
+            text = page.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(text)
+            title = meta.get("title", page.stem) if meta else page.stem
+        except Exception:
+            title = page.stem
+        # Check both file path and title references
+        if resolved not in referenced_files and title not in referenced_titles:
+            orphans.append(title)
     return orphans
 
 
