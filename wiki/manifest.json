@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-10T04:21:41.262316+00:00",
+  "generated": "2026-04-10T04:24:05.381523+00:00",
   "stats": {
-    "pages": 171,
+    "pages": 172,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1177,
+    "relationships": 1182,
     "tags_unique": 636,
     "layers": {
       "3": 5,
@@ -14,11 +14,11 @@
       "4": 22,
       "5": 11,
       "1": 24,
-      "spine": 29
+      "spine": 30
     },
     "maturity": {
       "growing": 133,
-      "seed": 15
+      "seed": 16
     }
   },
   "pages": [
@@ -11307,6 +11307,66 @@
       ]
     },
     {
+      "path": "spine/model-skills-commands-hooks-standards.md",
+      "slug": "spine/model-skills-commands-hooks-standards",
+      "title": "Extension Standards \u2014 What Good Skills, Commands, and Hooks Look Like",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "skills",
+        "commands",
+        "hooks",
+        "standards",
+        "gold-standard",
+        "anti-patterns",
+        "extension-system",
+        "quality"
+      ],
+      "sources": [
+        {
+          "id": "src-shanraisshan-claude-code-best-practice",
+          "type": "documentation",
+          "url": "https://github.com/shanraisshan/claude-code-best-practice",
+          "title": "shanraisshan/claude-code-best-practice"
+        },
+        {
+          "id": "src-claude-code-hooks-reference",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/hooks",
+          "title": "Claude Code Hooks Reference"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Standards \u2014 What Good Agent Configuration Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality Standards \u2014 What Good Failure Prevention Looks Like"
+        }
+      ]
+    },
+    {
       "path": "spine/model-skills-commands-hooks.md",
       "slug": "spine/model-skills-commands-hooks",
       "title": "Model: Skills, Commands, and Hooks",
@@ -11585,8 +11645,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 47,
-      "relationship_count": 359
+      "page_count": 48,
+      "relationship_count": 364
     },
     "ai-agents": {
       "page_count": 34,
@@ -11875,6 +11935,7 @@
       "sources/src-shanraisshan-claude-code-best-practice",
       "spine/model-claude-code-standards",
       "spine/model-claude-code",
+      "spine/model-skills-commands-hooks-standards",
       "spine/model-skills-commands-hooks"
     ],
     "architecture": [
@@ -12221,6 +12282,7 @@
       "domains/ai-agents/per-role-command-architecture",
       "sources/src-claude-slash-commands",
       "sources/src-shanraisshan-claude-code-best-practice",
+      "spine/model-skills-commands-hooks-standards",
       "spine/model-skills-commands-hooks"
     ],
     "hooks": [
@@ -12234,6 +12296,7 @@
       "sources/src-shanraisshan-claude-code-best-practice",
       "spine/model-claude-code-standards",
       "spine/model-claude-code",
+      "spine/model-skills-commands-hooks-standards",
       "spine/model-skills-commands-hooks"
     ],
     "workflows": [
@@ -12835,7 +12898,8 @@
       "spine/model-llm-wiki-standards",
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
-      "spine/model-quality-failure-prevention"
+      "spine/model-quality-failure-prevention",
+      "spine/model-skills-commands-hooks-standards"
     ],
     "refactoring": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -13555,6 +13619,7 @@
       "spine/model-llm-wiki",
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
+      "spine/model-skills-commands-hooks-standards",
       "spine/model-wiki-design-standards",
       "spine/model-wiki-design"
     ],
@@ -14209,12 +14274,14 @@
       "spine/model-llm-wiki-standards",
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
+      "spine/model-skills-commands-hooks-standards",
       "spine/model-wiki-design-standards"
     ],
     "anti-patterns": [
       "spine/model-claude-code-standards",
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
+      "spine/model-skills-commands-hooks-standards",
       "spine/model-wiki-design-standards"
     ],
     "model-definition": [
@@ -14222,7 +14289,8 @@
       "spine/model-skills-commands-hooks"
     ],
     "extension-system": [
-      "spine/model-claude-code"
+      "spine/model-claude-code",
+      "spine/model-skills-commands-hooks-standards"
     ],
     "agents-md": [
       "spine/model-design-md"

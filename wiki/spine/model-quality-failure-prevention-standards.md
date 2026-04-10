@@ -219,3 +219,4 @@ What it looks like when a project migrates quality rules upward through the enfo
 [[Wiki Design Standards — What Good Styling Looks Like]]
 [[Never Synthesize from Descriptions Alone]]
 [[The Agent Must Practice What It Documents]]
+[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]

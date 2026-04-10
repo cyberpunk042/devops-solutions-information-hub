@@ -23,10 +23,11 @@ Strategic architecture and domain overviews
 - [Model Registry](model-registry.md) — This is the entry point for all named models in the wiki
 - [Model: Second Brain](model-second-brain.md) — The Second Brain model describes the personal knowledge management (PKM) theoretical foundation that underlies this w...
 - [Model: SFIF and Architecture](model-sfif-architecture.md) — The SFIF and Architecture model describes the universal 4-stage build lifecycle (Scaffold → Foundation → Infrastructu...
+- [Extension Standards — What Good Skills, Commands, and Hooks Look Like](model-skills-commands-hooks-standards.md) — This page defines the quality bar for the EXTENSION SYSTEM
 - [Model: Skills, Commands, and Hooks](model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
 - [Wiki Design Standards — What Good Styling Looks Like](model-wiki-design-standards.md) — This page defines the quality bar for VISUAL DESIGN in the wiki
 - [Model: Wiki Design](model-wiki-design.md) — The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they ...
 
 ## Tags
 
-`spine`, `model`, `standards`, `quality`, `gold-standard`, `methodology`, `concept`, `anti-patterns`, `skills`, `hooks`, `context-management`, `transferable`, `ecosystem`, `claude-code`, `harness`, `model-definition`, `harness-engineering`, `mcp`, `design-md`, `aicp`
+`spine`, `model`, `standards`, `quality`, `gold-standard`, `anti-patterns`, `methodology`, `concept`, `skills`, `hooks`, `context-management`, `transferable`, `ecosystem`, `claude-code`, `harness`, `model-definition`, `harness-engineering`, `mcp`, `extension-system`, `design-md`
