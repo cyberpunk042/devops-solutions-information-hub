@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -37,7 +37,8 @@ Obsidian is used as the visual frontend for Karpathy's LLM Wiki pattern, providi
 
 ## Key Insights
 
-- **Graph view as the primary interface**: The graph view displays wiki pages as nodes and their interlinks as edges, making it easy to spot hubs (heavily connected concepts), clusters (related topic groups), and isolated nodes (under-connected pages that may need more context).
+> [!tip] Graph view as the primary interface
+> The graph view displays wiki pages as nodes and their interlinks as edges, making it easy to spot hubs (heavily connected concepts), clusters (related topic groups), and isolated nodes (under-connected pages that may need more context).
 - **Backlink navigation**: Clicking into any wiki page shows all pages that link to it, enabling organic exploration of the knowledge base. The presenter demonstrates clicking from a source page to OpenAI to model spec to LLM psychology model — following the relationship chain.
 - **Web Clipper extension**: The Obsidian Web Clipper Chrome extension captures full web articles and deposits them directly into the vault's `raw/` folder. You configure it to target the `raw` folder instead of the default `clippings` folder so Claude Code can pick up new sources.
 - **Vault creation is trivial**: Creating a new vault in Obsidian takes seconds — name it, choose a location, and the folder structure is ready. The presenter creates a "demo vault" on the desktop during the video.

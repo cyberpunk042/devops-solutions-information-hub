@@ -7,7 +7,7 @@ domain: cross-domain
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -54,10 +54,10 @@ A fundamental tension runs through the research wiki: multiple sources advocate 
 
 ## Key Insights
 
-- Agentic search (glob/grep/index navigation) excels for fast-changing, well-structured content like codebases
-- Vector search excels for large, stable knowledge bases where structural organization is weak
+> [!tip] The choice is domain-dependent, not universal
+> Contradictions between sources dissolve when context is considered. Agentic search wins for fast-changing, well-structured content; vector search wins for large, stable collections with weak structure; hybrid combines both at scale.
+
 - LLM Wiki v2 proposes hybrid: combine both with graph traversal as a third stream
-- The choice is domain-dependent, not universal — contradictions between sources dissolve when context is considered
 - Claude Code team "tried and discarded" vector databases for code; Karpathy never needed them for his wiki
 - PleasePrompto relies on NotebookLM's vector grounding for per-query accuracy — different optimization target
 

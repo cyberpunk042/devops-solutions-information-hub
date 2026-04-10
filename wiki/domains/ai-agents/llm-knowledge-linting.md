@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -36,6 +36,9 @@ tags: [linting, knowledge-quality, health-check, llm-agent, wiki-maintenance, da
 LLM Knowledge Linting is the practice of running periodic LLM-driven health checks over a wiki knowledge base to find and fix quality issues. As described by Karpathy and elaborated in the transcript, this involves using the LLM to identify inconsistent data across pages, impute missing data by conducting web searches, discover interesting connections between existing pages, and suggest new article candidates to fill gaps in the knowledge graph. This linting process is the maintenance layer that keeps the wiki scalable, accurate, and well-structured over time, analogous to code linting but applied to a knowledge base.
 
 ## Key Insights
+
+> [!info] Self-healing lint transforms maintenance from passive to active
+> Beyond suggesting fixes, the LLM Wiki v2 argues lint should automatically implement them — orphan pages get linked, stale claims get marked, broken cross-references get repaired. The wiki tends toward health on its own, making lint both the sensor that detects knowledge decay and the actuator that triggers remediation.
 
 - **Inconsistency detection**: The LLM scans across wiki pages to find contradictory information — facts stated differently on different pages, outdated claims, or broken relationships.
 - **Missing data imputation**: When the LLM identifies gaps in a wiki page (e.g., a concept mentioned but never explained, or a relationship referenced but not fleshed out), it can conduct web searches to fill in the missing information.

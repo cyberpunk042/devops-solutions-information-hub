@@ -7,7 +7,7 @@ domain: automation
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
@@ -25,7 +25,8 @@ The AI-driven content pipeline is an automation pattern where Claude Code acts a
 
 ## Key Insights
 
-- **Human as bottleneck, agent as solution**: In the manual NotebookLM workflow, the human is the bottleneck at every step — finding content, adding it, clicking generate. The pipeline pattern replaces the human with Claude Code at each of these steps, keeping the human only in the role of strategic direction (choosing topics, approving designs).
+> [!info] Human as bottleneck, agent as solution
+> In the manual NotebookLM workflow, the human is the bottleneck at every step — finding content, adding it, clicking generate. The pipeline pattern replaces the human with Claude Code at each of these steps, keeping the human only in the role of strategic direction (choosing topics, approving designs).
 
 - **Two input modes — topic and script**: The pipeline supports two starting points. In "topic mode," the user provides a topic (e.g., "cybersecurity trends") and Claude researches it from scratch. In "script mode," the user provides an existing markdown file with talking points, and Claude pushes it into NotebookLM to generate formatted outputs like slides.
 

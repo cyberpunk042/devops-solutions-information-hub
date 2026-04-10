@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-world-notebooklm-skill
     type: documentation
@@ -32,7 +32,8 @@ Two independent open-source projects bridge Google's NotebookLM with Claude Code
 
 ## Key Insights
 
-- **Pipeline vs. query paradigm**: The claude-world skill orchestrates a four-phase content pipeline (collect sources, research via NotebookLM, generate content via Claude, publish to platforms). The PleasePrompto skill provides single-question Q&A against NotebookLM notebooks to get source-grounded answers for coding tasks. These are complementary rather than competing tools.
+> [!abstract] Pipeline vs. query paradigm
+> The claude-world skill orchestrates a four-phase content pipeline (collect sources, research via NotebookLM, generate content via Claude, publish to platforms). The PleasePrompto skill provides single-question Q&A against NotebookLM notebooks to get source-grounded answers for coding tasks. These are complementary rather than competing tools.
 
 - **Dual interface vs. skill-only**: claude-world offers both a CLI (11 commands) and an MCP server (13 tools), working with Claude Code, Cursor, Gemini CLI, and any MCP client. PleasePrompto is a Claude Code skill only, with a companion MCP server as a separate repository (notebooklm-mcp in TypeScript).
 

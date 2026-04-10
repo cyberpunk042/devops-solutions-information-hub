@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-openarms-local
     type: documentation
@@ -25,11 +25,13 @@ Multi-channel AI agent access is the architectural pattern of making a single AI
 
 ## Key Insights
 
-- **Gateway-centric routing is the enabling architecture**: All channels connect to a single gateway process rather than each channel having its own agent instance. This means one runtime, one configuration, one access control model, one set of tools. Without the gateway pattern, multi-channel access becomes N independent deployments, each with drift risk. The OpenArms gateway at `ws://127.0.0.1:18789` is the single control plane.
+> [!info] Gateway-centric routing is the enabling architecture
+> All channels connect to a single gateway process rather than each channel having its own agent instance. This means one runtime, one configuration, one access control model, one set of tools. Without the gateway pattern, multi-channel access becomes N independent deployments, each with drift risk.
 
 - **Channels have wildly different capability profiles**: Telegram supports rich media, inline keyboards, bot commands, file attachments, and group management. IRC is plain text with no file transfer. iMessage has end-to-end encryption but limited bot interaction surfaces. Signal has strong privacy guarantees but less API surface. A multi-channel agent must either reduce to the lowest common denominator or handle per-channel capability negotiation. OpenArms handles this through channel-specific adapters with per-channel allowlists and pairing models.
 
-- **Security cannot be per-channel — it must be at the gateway**: Different messaging platforms have different authentication models (phone number, account, OAuth). Treating each as a trust boundary independently creates inconsistent security posture. The gateway-level DM pairing (unknown senders get a pairing code; the owner must approve) applies a consistent access control model regardless of which channel the message arrives on.
+> [!warning] Security cannot be per-channel — it must be at the gateway
+> Different messaging platforms have different authentication models (phone number, account, OAuth). Treating each as a trust boundary independently creates inconsistent security posture. The gateway-level DM pairing applies a consistent access control model regardless of which channel the message arrives on.
 
 - **Session isolation enables safe multi-user access**: The `main` session (direct DMs from the owner) can run tools on the host. Non-main sessions (groups, channels, unknown contacts) are isolated in Docker sandboxes. This two-tier model — trusted sessions with full capability, untrusted sessions with sandboxed capability — enables the agent to be accessible on multiple channels without exposing host-level tools to arbitrary senders.
 

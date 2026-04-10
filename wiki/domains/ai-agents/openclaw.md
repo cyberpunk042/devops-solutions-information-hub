@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-openclaw-docs
     type: documentation
@@ -30,7 +30,8 @@ OpenClaw is an open-source (MIT), local-first AI agent framework (352k+ GitHub s
 
 ## Key Insights
 
-- **Five-component architecture**: Gateway (WS daemon, channel routing, auth) → Brain (ReAct loop, tool execution) → Memory (Markdown files, human-readable) → Skills (SKILL.md plugins, hierarchical loading) → Heartbeat (periodic turns, cost optimization).
+> [!info] Five-component architecture
+> Gateway (WS daemon, channel routing, auth) → Brain (ReAct loop, tool execution) → Memory (Markdown files, human-readable) → Skills (SKILL.md plugins, hierarchical loading) → Heartbeat (periodic turns, cost optimization).
 
 - **10-stage agent loop**: (1) Entry & session resolution → (2) Agent command execution → (3) Context & workspace preparation → (4) Prompt assembly with token limits → (5) Serialized execution per session → (6) Model inference → (7) Tool execution & streaming → (8) Reply assembly & suppression → (9) Compaction & retries → (10) Persistence with write locks.
 

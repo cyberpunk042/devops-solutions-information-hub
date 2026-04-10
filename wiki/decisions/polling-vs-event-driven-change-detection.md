@@ -12,7 +12,7 @@ derived_from:
   - "Research Pipeline Orchestration"
 reversibility: easy
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-devops-control-plane-local
     type: documentation
@@ -33,7 +33,8 @@ On WSL2, polling is the correct change detection strategy for the wiki watcher d
 
 ## Decision
 
-**Use polling for change detection on WSL2. Use event-driven (inotify) on native Linux. Use fswatch on macOS.**
+> [!warning] The /mnt/c boundary makes inotify unreliable on WSL2
+> **Use polling for change detection on WSL2. Use event-driven (inotify) on native Linux. Use fswatch on macOS.**
 
 Concretely:
 

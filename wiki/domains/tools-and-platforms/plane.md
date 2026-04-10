@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-plane-docs
     type: documentation
@@ -36,7 +36,8 @@ Plane is the #1 open-source project management platform (AGPL-3.0, 47.4k+ stars,
 
 - **Three-surface model in DSPD**: Plane (planning: sprints, epics, analytics, wiki) → OCMC (execution: task dispatch, heartbeat, board memory) → GitHub (code: PRs, CI, releases). PM agent bridges the first two.
 
-- **PM agent as sole writer**: Non-negotiable architecture rule — the PM agent is the only entity that writes to Plane. Other fleet agents route through PM. This prevents race conditions and maintains audit trail coherence.
+> [!warning] PM agent as sole writer
+> Non-negotiable architecture rule — the PM agent is the only entity that writes to Plane. Other fleet agents route through PM. This prevents race conditions and maintains audit trail coherence.
 
 - **Bidirectional sync**: Plane → OCMC (PM reads Plane, dispatches to MC), OCMC → Plane (PM detects completion, updates Plane + adds PR link). plane_sync.py handles the logic, plane_client.py is the sole API caller.
 

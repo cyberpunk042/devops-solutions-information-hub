@@ -7,7 +7,7 @@ domain: automation
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
@@ -32,7 +32,8 @@ Wiki Event-Driven Automation is the pattern of replacing manual wiki operations 
 
 ## Key Insights
 
-- **Six core automation hooks**: (1) On new source -- auto-ingest, extract entities, update graph and index. (2) On session start -- load relevant context from the wiki. (3) On session end -- compress session into observations, file insights. (4) On query -- assess whether the answer is worth filing back (quality score above threshold). (5) On memory write -- check for contradictions with existing knowledge, trigger supersession. (6) On schedule -- periodic lint, consolidation between memory tiers, retention decay.
+> [!example]- Six core automation hooks
+> (1) On new source -- auto-ingest, extract entities, update graph and index. (2) On session start -- load relevant context from the wiki. (3) On session end -- compress session into observations, file insights. (4) On query -- assess whether the answer is worth filing back (quality score above threshold). (5) On memory write -- check for contradictions with existing knowledge, trigger supersession. (6) On schedule -- periodic lint, consolidation between memory tiers, retention decay.
 
 - **Crystallization as automated distillation**: A completed chain of work (research thread, debugging session, analysis) should be automatically distilled into a structured digest: what was the question, what was found, what entities were involved, what lessons emerged. This digest becomes a first-class wiki page and its lessons strengthen existing knowledge. Explorations become sources, just like articles or papers.
 

@@ -7,7 +7,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -52,6 +52,9 @@ This comparison examines Karpathy's LLM Wiki approach against traditional semant
 | Best for | Personal KB, team wikis, < 200 curated pages | Large document archives, enterprise search | Mature wikis scaling beyond 200 pages |
 
 ## Key Insights
+
+> [!tip] Knowledge accumulation is the key differentiator
+> LLM Wiki compiles and reconciles knowledge during ingestion — it compounds over time. RAG retrieves and forgets on every query — no accumulation. This is the structural advantage that makes the wiki pattern superior for personal and team knowledge at moderate scale.
 
 - **Retrieval mechanism**: LLM Wiki finds information by reading indexes and following links between pages. RAG finds information via cosine similarity search across vector embeddings. The wiki method produces deeper relational understanding; RAG matches on surface-level semantic similarity.
 - **Infrastructure**: LLM Wiki requires nothing beyond markdown files — literally just a folder. RAG requires an embedding model, a vector database, and a chunking pipeline.

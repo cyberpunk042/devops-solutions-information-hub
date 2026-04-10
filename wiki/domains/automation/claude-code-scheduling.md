@@ -7,7 +7,7 @@ domain: automation
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
@@ -25,7 +25,8 @@ Claude Code supports scheduling recurring tasks through two mechanisms: local cr
 
 ## Key Insights
 
-- **Two scheduling modes — local and remote**: Local tasks create cron jobs on the user's machine and only run when the device is powered on. Remote tasks run on Anthropic Cloud and execute regardless of whether the user's machine is on, but require a GitHub account and GitHub-hosted workspace.
+> [!tip] Two scheduling modes — local and remote
+> Local tasks create cron jobs on the user's machine and only run when the device is powered on. Remote tasks run on Anthropic Cloud and execute regardless of whether the user's machine is on, but require a GitHub account and GitHub-hosted workspace.
 
 - **GUI and conversational setup**: Users can set up scheduled tasks through the schedule tab in Claude's left sidebar (GUI approach) or by asking Claude Code directly to schedule something (conversational approach). Claude Code is flexible enough to determine the best scheduling method based on the user's existing setup.
 

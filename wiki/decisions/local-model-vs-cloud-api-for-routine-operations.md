@@ -12,7 +12,7 @@ derived_from:
   - "Knowledge Evolution Pipeline"
 reversibility: easy
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-aicp-local
     type: documentation
@@ -33,7 +33,8 @@ For routine wiki and devops operations, use local models (LocalAI/AICP) for mech
 
 ## Decision
 
-**Use local models for mechanical operations. Use Claude for reasoning operations. Let AICP route automatically via complexity scoring.**
+> [!success] Route by task complexity, not by preference
+> **Use local models for mechanical operations. Use Claude for reasoning operations. Let AICP route automatically via complexity scoring.**
 
 Concretely:
 

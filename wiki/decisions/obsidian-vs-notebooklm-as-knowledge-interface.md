@@ -12,7 +12,7 @@ derived_from:
   - "Second Brain Architecture"
 reversibility: easy
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -37,7 +37,8 @@ Obsidian and NotebookLM serve complementary roles as knowledge interfaces and sh
 
 ## Decision
 
-**Use Obsidian as the graph browser and editor. Use NotebookLM as the grounded research and content generation engine. Maintain the wiki as the source of truth that feeds both.**
+> [!success] Use both — they serve complementary roles
+> **Use Obsidian as the graph browser and editor. Use NotebookLM as the grounded research and content generation engine. Maintain the wiki as the source of truth that feeds both.**
 
 Concretely:
 

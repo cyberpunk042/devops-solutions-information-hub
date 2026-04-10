@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-kepano-obsidian-skills
     type: documentation
@@ -38,7 +38,8 @@ A growing ecosystem of AI agent skills has emerged around Obsidian, enabling AI 
 
 ## Key Insights
 
-- **Three layers of capability**: The ecosystem naturally stratifies into official specification skills (kepano), visual generation skills (axton), and deep operational skills (pablo-mano). Each layer builds on the one below: kepano defines the formats, axton generates visual content in those formats, and pablo-mano provides programmatic control over the vault that holds them.
+> [!abstract] Three layers of capability
+> The ecosystem naturally stratifies into official specification skills (kepano), visual generation skills (axton), and deep operational skills (pablo-mano). Each layer builds on the one below: kepano defines the formats, axton generates visual content in those formats, and pablo-mano provides programmatic control over the vault that holds them.
 
 - **Official vs. community skills**: kepano/obsidian-skills carries the authority of Obsidian's creator and follows the agentskills.io specification. The community skills (axton, pablo-mano) extend specific capabilities far beyond what the official set covers, demonstrating that the skill system benefits from both official standards and community depth.
 

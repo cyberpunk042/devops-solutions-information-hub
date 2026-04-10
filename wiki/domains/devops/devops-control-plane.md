@@ -7,7 +7,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-devops-control-plane-local
     type: documentation
@@ -25,7 +25,8 @@ The devops-control-plane is a unified solution management platform that provides
 
 ## Key Insights
 
-- **Layered architecture**: Interfaces (thin: manage.sh, CLI, Web) → Core Domain (pure: Models/Pydantic, Services, Engine, Use-Cases) → Policy (data: project.yml, stacks/*.yml) → Adapter Layer (pluggable: Shell, VCS, Containers) → Invariant Infrastructure (Reliability, Observability, Security, Persistence).
+> [!abstract] Layered architecture
+> Interfaces (thin: manage.sh, CLI, Web) → Core Domain (pure: Models/Pydantic, Services, Engine, Use-Cases) → Policy (data: project.yml, stacks/*.yml) → Adapter Layer (pluggable: Shell, VCS, Containers) → Invariant Infrastructure (Reliability, Observability, Security, Persistence).
 
 - **20 technology stack definitions**: Each with detection rules, integration guidance, and health checks. Python, Node, Go, Rust, Docker, Kubernetes, Terraform, and more. Auto-detection scans project directories and reports capabilities.
 

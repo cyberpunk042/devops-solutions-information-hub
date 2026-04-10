@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-obsidian-cli-official
     type: documentation
@@ -32,7 +32,8 @@ The Obsidian CLI is a first-party command-line interface shipping with Obsidian 
 
 ## Key Insights
 
-- **Full app parity**: "Anything you can do in Obsidian you can do from the command line." This is not a subset — it covers file CRUD, search, link analysis, plugin management, sync, publish, themes, workspaces, properties, and developer tools.
+> [!success] Full app parity
+> "Anything you can do in Obsidian you can do from the command line." This is not a subset — it covers file CRUD, search, link analysis, plugin management, sync, publish, themes, workspaces, properties, and developer tools.
 
 - **Two execution modes**: Single-command mode (`obsidian search query="AI"`) for scripting and automation, and TUI mode (`obsidian` alone) for interactive exploration with autocomplete, command history, and Ctrl+R reverse search.
 
