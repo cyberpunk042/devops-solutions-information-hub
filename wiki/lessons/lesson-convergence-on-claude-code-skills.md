@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
@@ -40,6 +40,9 @@ This lesson applies whenever you need to extend an LLM agent's capability to int
 The convergence was observed across at least four independent contexts: Claude Code's own extensibility model (skills folders), the Obsidian + Claude Code second brain setup (Obsidian CLI skills installed via npx), the NotebookLM integration (notebooklm-py skill bundled with design guidance), and the shanraisshan best practices repository documenting skills as a first-class architectural tier alongside commands and agents.
 
 ## Insight
+
+> [!tip] Right Level of Abstraction
+> Skills are plain markdown — no compiled code, no API registrations, no infrastructure. They bundle all concerns: dependency installation, authentication flow, operational instructions, design guidance, and known failure points. Before writing MCP tooling, ask whether a skill achieves 80% of the value at 10% of the cost.
 
 Skills are winning because they solve the LLM extension problem at the right level of abstraction. They are plain markdown — no compiled code, no API registrations, no infrastructure. They bundle all concerns a Claude needs to use a tool: dependency installation, authentication flow, operational instructions, design guidance, and known failure points (Gotchas section). Skills can be iterated through natural language ("change the slide style"), shared as community packages, and composed hierarchically (higher-level workflow skills orchestrating lower-level capability skills).
 

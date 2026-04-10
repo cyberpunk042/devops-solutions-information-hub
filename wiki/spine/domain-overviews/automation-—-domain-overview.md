@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, automation]
 ---
@@ -19,6 +19,9 @@ tags: [domain-overview, automation]
 The automation domain covers scheduling, pipeline orchestration, workflow automation, event-driven patterns, and service architecture for the research wiki and broader ecosystem. Five concept pages document the current and target automation state: Claude Code Scheduling (cron + remote task mechanisms), Wiki Event-Driven Automation (hook-based reactive processing), MCP Integration Architecture (the service layer evolution target), Research Pipeline Orchestration (the multi-pass automated ingestion vision), and AI-Driven Content Pipeline (the Claude + NotebookLM content generation pattern). The domain sits at the intersection of vision and implementation — several pages document what the automation should become rather than what it currently is. Confidence is medium for most pages, reflecting that these are architectural visions grounded in real sources but not yet fully implemented. MCP Integration Architecture and Research Pipeline Orchestration are the most forward-looking; Claude Code Scheduling is the most operational.
 
 ## State of Knowledge
+
+> [!warning] Vision vs Implementation Gap
+> The automation domain sits at the intersection of vision and implementation — several pages document what the automation should become rather than what it currently is. MCP Integration Architecture and Research Pipeline Orchestration are the most forward-looking; Claude Code Scheduling is the most operational.
 
 **Strong coverage:**
 - Claude Code Scheduling — two concrete mechanisms (local cron, Anthropic Cloud remote tasks) are well-documented with operational detail. Confidence: high.

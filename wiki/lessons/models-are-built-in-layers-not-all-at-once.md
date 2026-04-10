@@ -11,7 +11,7 @@ derived_from:
   - "Scaffold → Foundation → Infrastructure → Features"
   - "LLM Wiki Standards — What Good Looks Like"
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources: []
 tags: [lesson, failure-lesson, models, process, sfif, layers, methodology]
 ---
@@ -27,6 +27,9 @@ Building the 14 named models for this wiki followed the same SFIF pattern that t
 This lesson applies whenever you're building a knowledge system that needs coherent, named models — not just a collection of pages. It's triggered when someone asks "are the models complete?" and the answer requires more than counting pages.
 
 ## Insight
+
+> [!warning] Structure Is Not Substance
+> The anti-pattern of claiming completion at the scaffold stage is endemic to LLM-assisted work. The agent produces structure quickly and mistakes structure for substance. At step 1, we claimed "models are done" because entry points existed. The user caught this: "I don't even see 2% of it."
 
 The model-building process itself followed SFIF:
 

@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 derived_from:
   - "LightRAG"
   - "LLM Wiki vs RAG"
@@ -41,6 +41,9 @@ This lesson emerges from the scale boundary of the LLM Wiki Pattern. At under 20
 The context in which this lesson became concrete is OpenFleet's implementation. OpenFleet's KB (219 entries, 1,545 entities, 2,295 relationships) hit the scale boundary where flat index navigation was impractical. The solution was not to replace the KB with a vector database — it was to feed the KB's explicit `## Relationships` sections into LightRAG via `kb_sync.py`, enabling natural language queries against the same knowledge graph without changing the authoring format.
 
 ## Insight
+
+> [!abstract] Wiki Navigation vs RAG Is a False Binary
+> LightRAG's three-stream hybrid (BM25 + vector + graph traversal) dissolves the either-or framing. The wiki becomes the knowledge graph source; LightRAG becomes the query engine. Start with the wiki, add the graph query engine at the scale boundary.
 
 The wiki's `## Relationships` sections (typed edges in ALL_CAPS verb format) are not just documentation — they are a serialized knowledge graph waiting for a query engine. Every line like `- BUILDS ON: LLM Wiki Pattern` or `- CONTRADICTS: RAG-Only Architecture` is a typed edge that carries semantic meaning beyond a plain hyperlink. This is precisely the data model that graph-enhanced retrieval systems need.
 

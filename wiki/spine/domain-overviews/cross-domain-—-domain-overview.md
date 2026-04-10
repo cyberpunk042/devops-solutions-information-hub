@@ -7,7 +7,7 @@ status: synthesized
 confidence: medium
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, cross-domain]
 ---
@@ -19,6 +19,9 @@ tags: [domain-overview, cross-domain]
 The cross-domain area is not a subject-matter domain but a structural layer — it holds comparisons, patterns, decisions, and lessons that emerge from synthesizing across two or more subject domains. Currently it contains two comparison pages (Agentic Search vs Vector Search, Skills Architecture Patterns), two lesson pages (Always Plan Before Executing, CLI Tools Beat MCP for Token Efficiency), one pattern page (Plan Execute Review Cycle), and one decision page (Decision: MCP vs CLI for Tool Integration). While small in page count, the cross-domain content represents the highest synthesis quality in the wiki — these pages document the convergences, tradeoffs, and durable principles that no single-domain page can capture. The domain is deliberately sparse: cross-domain synthesis should be selective, representing only insights with multi-source validation. Coverage will grow as the evolved layers (lessons → patterns → decisions → principles) are populated through continued ingestion.
 
 ## State of Knowledge
+
+> [!abstract] Cross-Domain Synthesis Is the Highest-Value Layer
+> While small in page count, the cross-domain content represents the highest synthesis quality in the wiki — these pages document the convergences, tradeoffs, and durable principles that no single-domain page can capture.
 
 **Strong coverage:**
 - Skills Architecture Patterns — synthesized from 8 sources across 3 ecosystems (Claude Code, Obsidian, NotebookLM). Identifies convergent design principles (SKILL.md as universal format, three-layer stratification, complexity spectrum). Confidence: high.

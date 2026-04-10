@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources: []
 tags: [standards, quality, examples, wiki-model, best-practices, gold-standard]
 ---
@@ -23,7 +23,8 @@ This page defines the quality bar for every page type in the LLM Wiki model. For
 - A template defines STRUCTURE (which sections to include). A standard defines QUALITY (what good content looks like in each section).
 - The difference between a seed page and a growing page is not length — it's evidence density, specificity, and actionability.
 - Every claim must point to a source. Every example must be concrete. Every insight must be stated plainly, not hinted at.
-- The best pages in the wiki share three properties: they are SPECIFIC (data points, not vague claims), they are CONNECTED (rich relationships to other pages), and they are ACTIONABLE (the reader knows what to do after reading).
+> [!tip] The Three Properties of a Gold-Standard Page
+> The best pages in the wiki share three properties: they are SPECIFIC (data points, not vague claims), they are CONNECTED (rich relationships to other pages), and they are ACTIONABLE (the reader knows what to do after reading).
 
 ## Deep Analysis
 

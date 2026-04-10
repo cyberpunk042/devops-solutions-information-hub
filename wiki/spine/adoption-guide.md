@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources: []
 tags: [adoption, transferable, methodology, standards, ecosystem, guide]
 ---
@@ -20,7 +20,8 @@ This guide explains how any project in the ecosystem (or outside it) picks up th
 
 ## Key Insights
 
-- **The wiki is the definition; your project is an instance.** The methodology framework, stage-gate system, and knowledge architecture are defined here once and adapted per-project by changing only the artifact bindings and quality gate commands. The structural invariants (stage sequence, hierarchy rules, readiness ranges, work loop) never change.
+> [!abstract] Core Adoption Principle
+> **The wiki is the definition; your project is an instance.** The methodology framework, stage-gate system, and knowledge architecture are defined here once and adapted per-project by changing only the artifact bindings and quality gate commands. The structural invariants (stage sequence, hierarchy rules, readiness ranges, work loop) never change.
 
 - **Copy two files and you have the core system.** `methodology.yaml` gives you stages, task types, modes, and end conditions. `agent-directive.md` gives you the 14-step work loop, enforcement rules, and the "never" list. Everything else builds on top of these two.
 

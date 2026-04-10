@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -40,6 +40,9 @@ This lesson applies when building any ingestion pipeline for structured knowledg
 Single-pass ingestion feels efficient on first encounter: drop in a source, get pages out, done. The failure mode only becomes visible when you ask a cross-cutting question and the wiki cannot answer it, or when you notice that two pages cover overlapping concepts without acknowledging each other, or when a domain has many pages but no synthesis page that connects them. These are multi-pass failures — artifacts that only a second pass through the knowledge base can discover and repair.
 
 ## Insight
+
+> [!tip] Ingestion Is a Cycle, Not a Step
+> A single pass over a source can extract content and create pages. It cannot discover cross-source relationships, identify contradictions, or recognize that the combination of three unconnected pages implies a fourth that should exist. The minimum viable cycle: extract, cross-reference, gap-analyze, deepen.
 
 A single pass over a source can extract content and create pages. It cannot discover relationships with content that was processed in a different session, identify that a newly created page partially contradicts an existing one, or recognize that the combination of three previously unconnected pages implies a fourth page that should exist. These cross-source operations require at least a second pass over the accumulated knowledge base.
 

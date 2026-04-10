@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 derived_from:
   - "Synthesis: Karpathy LLM Wiki Method via Claude Code"
   - "LLM Wiki Pattern"
@@ -40,6 +40,9 @@ This lesson applies whenever someone is evaluating whether to invest in a struct
 The inflection point arrived in 2024-2025 with the availability of capable coding agents (Claude Code, Codex CLI) that could read, write, and navigate markdown files while maintaining structural consistency across dozens of pages simultaneously. Karpathy's viral post crystallized the insight and demonstrated a working implementation.
 
 ## Insight
+
+> [!tip] The 80-Year Gap Was Economics, Not Technology
+> Vannevar Bush described the Memex in 1945. The idea was reinvented dozens of times. All implementations shared the same failure mode: human maintenance burden eventually exceeded motivation. LLMs eliminate the specific failure mode that killed every previous wiki — maintenance cost drops to near zero.
 
 The critical reframe in Karpathy's argument is identifying the root cause of wiki failure: it is not lack of interest, lack of discipline, or lack of tooling. It is the maintenance economics. Human attention is scarce and valuable. Updating a cross-reference, adding a tag, linking a new page to three related pages, checking that a renamed concept is consistent across 40 files — these tasks are not intellectually stimulating, and they multiply with every addition to the wiki. The marginal cost of each new page is positive and growing. At some point, the cost exceeds the benefit for the human maintainer, and the wiki stagnates.
 

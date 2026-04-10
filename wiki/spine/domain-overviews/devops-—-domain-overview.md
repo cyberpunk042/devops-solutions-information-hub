@@ -7,7 +7,7 @@ status: synthesized
 confidence: medium
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, devops]
 ---
@@ -19,6 +19,9 @@ tags: [domain-overview, devops]
 The devops domain covers CI/CD, deployment, monitoring, infrastructure-as-code, and SRE practices — the operational backbone of the four-project ecosystem. This is the sparsest domain in the wiki, with a single concept page (devops-control-plane) despite devops being the stated domain of the entire ecosystem. The sparse coverage is explained by scope: this wiki is a knowledge synthesis system, not an operational runbook. The devops-control-plane page is authoritative — sourced directly from the live project's README — and documents a sophisticated layered architecture with auto-detection of 20 technology stacks, AES-256-GCM encrypted vaults, append-only audit ledgers, and the 24 post-mortem-derived immune system rules that became OpenFleet's doctor.py. The domain's thin wiki coverage reflects that operational devops knowledge lives in code (scripts/, IaC files, CI configs) rather than documentation, but the synthesis gap is real: the ecosystem's devops patterns, failure modes, and operational lessons are insufficiently captured.
 
 ## State of Knowledge
+
+> [!question] Why Is DevOps the Sparsest Domain?
+> The sparse wiki coverage reflects that operational devops knowledge lives in code (scripts/, IaC files, CI configs) rather than documentation, but the synthesis gap is real: the ecosystem's devops patterns, failure modes, and operational lessons are insufficiently captured.
 
 **Strong coverage:**
 - devops-control-plane — sourced from the live README. Architecture (layered: interfaces → core → policy → adapters → infrastructure), 20 stack definitions, dual vault system, audit ledger, 29 service packages. Confidence: authoritative for the platform design; medium for operational practice.

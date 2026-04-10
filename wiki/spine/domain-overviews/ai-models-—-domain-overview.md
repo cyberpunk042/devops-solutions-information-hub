@@ -7,7 +7,7 @@ status: synthesized
 confidence: medium
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, ai-models]
 ---
@@ -19,6 +19,9 @@ tags: [domain-overview, ai-models]
 The ai-models domain covers LLMs, embeddings, quantization, fine-tuning, and model evaluation — the foundational layer that all agent and knowledge system operations depend on. This is the least developed domain in the wiki, with a single concept page (Local LLM Quantization) and one associated source synthesis. The sparse coverage reflects the project's current focus: the ecosystem consumes models rather than building or evaluating them, so model knowledge is accumulated incidentally through other domains (AICP documents model routing, OpenFleet uses hermes-3b and bge-m3, LightRAG requires 32B+ context). The Local LLM Quantization page is well-sourced (TurboQuant-MLX article + Gemma 4 + SearXNG YouTube transcript) and establishes an important capability threshold: consumer hardware can now run 122B MoE models at usable speeds, and small models (Gemma 4 E4B, 9.6GB) now reliably handle multi-step agentic tool calling. This domain should grow significantly as AICP's LocalAI independence roadmap advances and the fleet transitions away from Claude API dependency.
 
 ## State of Knowledge
+
+> [!success] Capability Breakthrough
+> Consumer hardware can now run 122B MoE models at usable speeds (44 tok/s on M4 Max), and small models like Gemma 4 E4B (9.6GB) reliably handle multi-step agentic tool calling — a capability that previously required much larger models.
 
 **Strong coverage:**
 - Local LLM Quantization — two-source synthesis covering TurboQuant-MLX (122B on MacBook M4 Max), Ollama/GGUF convenience path, Gemma 4 E2B/E4B/26B capabilities, MoE architecture enabling large local models, and AICP/OpenFleet integration implications. Confidence: medium (technical details solid, ecosystem integration implications are forward-looking).

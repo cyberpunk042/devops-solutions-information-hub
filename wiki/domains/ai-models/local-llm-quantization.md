@@ -7,7 +7,7 @@ domain: ai-models
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-turboquant-122b-macbook
     type: article
@@ -39,6 +39,9 @@ Local LLM quantization enables running large language models (up to 122B paramet
 - **TurboQuant > MXFP4 > standard quantization**: Model-aware quantization (adapted per architecture) outperforms hardware-native formats (Apple's MXFP4) and generic affine quantization. This suggests quantization should be tailored to model structure, not just hardware.
 
 - **Ollama as model distribution**: `ollama pull gemma4:e2b` downloads, quantizes, and serves models with a single command. `ollama list` manages local model inventory. Native integrations with OpenClaw, Open WebUI, and other frameworks eliminate configuration.
+
+> [!success] Small Model Capability Breakthrough
+> Gemma 4 E4B (9.6GB, designed for phones) reliably executes multi-step agentic tasks: web search, summarize, create report, send email. This was previously unreliable with small models, representing a fundamental shift in what consumer hardware can do.
 
 - **Small models now do tool calling**: Gemma 4 E4B (9.6GB, designed for phones) reliably executes multi-step agentic tasks: web search → summarize → create report → send email. This was previously unreliable with small models, representing a capability breakthrough.
 

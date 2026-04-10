@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-10
 derived_from:
   - "Synthesis: claude-world/notebooklm-skill"
   - "NotebookLM Skills"
@@ -41,6 +41,9 @@ This lesson applies when selecting tools for a research-intensive knowledge work
 The three independent projects emerged from different starting points: PleasePrompto was built by a developer who wanted to reduce Claude Code hallucinations during technical research; claude-world was built by a content creator who wanted to automate research-to-publishing pipelines; and the Eric Tech / notebooklm-py workflow (documented in the NotebookLM + Claude Code synthesis) was built by someone doing competitive analysis at scale. None were aware of the others when they started, yet all three landed at the same architecture.
 
 ## Insight
+
+> [!abstract] Constraint as Value Proposition
+> NotebookLM's source-grounding constraint is its core value proposition, not a limitation. Three independent implementations all converge on the same architecture: NotebookLM as the "brain" for source-accurate answers, not a database for note accumulation.
 
 The convergence pattern reveals something fundamental about NotebookLM's design: its source-grounding constraint is its core value proposition, not a limitation. Most tools are adopted despite their constraints; NotebookLM is adopted because of one. Traditional RAG systems ground answers in whatever documents happen to be in the vector database — NotebookLM grounds answers in a deliberately curated set of sources per notebook.
 

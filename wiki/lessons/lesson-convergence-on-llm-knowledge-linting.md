@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 derived_from:
   - "LLM Knowledge Linting"
   - "Knowledge Evolution Pipeline"
@@ -38,6 +38,9 @@ Wikis without automated validation decay silently: pages go stale, relationships
 This lesson applies to any knowledge base that receives regular automated ingestion. The triggering condition is scale: once a wiki grows past a few dozen pages edited by an automated pipeline, manual inspection of each change becomes impractical. The failure mode is insidious — individual pages look fine but the graph as a whole drifts into inconsistency. The Karpathy LLM Wiki pattern explicitly identifies lint as one of three core operations (Ingest, Query, Lint) precisely because he had seen this decay pattern in practice.
 
 ## Insight
+
+> [!warning] Decay Is Cheaper to Prevent Than to Fix
+> Running a 6-step validation chain immediately after each ingestion costs roughly the same as running it once, but prevents the compounding accumulation that makes periodic cleanup expensive. Structural violations can be auto-blocked; semantic violations require human review.
 
 Knowledge decay is not a dramatic event — it is a slow accumulation of small inconsistencies that compound. A page that references a concept which was renamed creates a broken wikilink. An ingested source that contradicts an earlier synthesis creates a silent factual conflict. A new domain page that never gets added to its `_index.md` becomes an orphan. None of these failures are individually critical, but collectively they erode the trust and navigability of the entire knowledge base. The key insight is that decay is cheaper to prevent than to fix: running a 6-step validation chain immediately after each ingestion costs roughly the same as running it once, but prevents the compounding accumulation that makes periodic cleanup expensive.
 

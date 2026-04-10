@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
@@ -24,6 +24,9 @@ tags: [notebooklm, google, research, content-generation, free-tools]
 NotebookLM is Google's free AI research tool that ingests user-provided sources — documents, website links, YouTube videos, and uploaded files — and generates a wide range of content assets from them. It is described as Google's number one AI research tool and one of the most popular AI tools Google has launched. The tool operates through a notebook paradigm where users create notebooks, load sources into them, and then generate outputs including slide decks, cinematic video summaries, podcast-style audio overviews, mind maps, flashcards, quizzes, reports, and infographics. It also provides a chat interface for interactive Q&A against loaded sources.
 
 ## Key Insights
+
+> [!info] Source-Grounded, Not General-Purpose
+> NotebookLM generates all outputs from user-provided sources rather than from general training data. This grounding constraint is its core value proposition — outputs are traceable to specific inputs.
 
 - **Source-grounded generation**: NotebookLM generates all outputs from user-provided sources rather than from general training data, making it a grounded research and content tool rather than a general-purpose chatbot.
 

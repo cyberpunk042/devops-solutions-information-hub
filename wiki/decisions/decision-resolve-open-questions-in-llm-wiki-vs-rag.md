@@ -12,7 +12,7 @@ derived_from:
   - "Knowledge Evolution Pipeline"
 reversibility: moderate
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -30,6 +30,9 @@ tags: [decision, rag, lightrag, llm-wiki, knowledge-systems, scale, infrastructu
 ## Summary
 
 This wiki operates in wiki-first mode — pure structured markdown with index navigation — until it approaches 200 pages, at which point LightRAG integration activates as an additive query layer. No RAG infrastructure is built prematurely. The wiki's existing `## Relationships` sections are already formatted for direct insertion into LightRAG via `kb_sync.py`, making the upgrade path low-friction when the scale trigger is reached.
+
+> [!tip] Premature Infrastructure Is Overhead Without Value
+> A wiki that works well at 90 pages with zero infrastructure overhead is better than a wiki that works identically at 90 pages but carries the operational burden of an embedding pipeline, graph database, and LightRAG service. Build the upgrade path when the scale problem actually exists.
 
 ## Decision
 

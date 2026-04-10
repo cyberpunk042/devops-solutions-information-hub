@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, tools-and-platforms]
 ---
@@ -19,6 +19,9 @@ tags: [domain-overview, tools-and-platforms]
 The tools-and-platforms domain covers the software tools, platforms, CLI utilities, and SaaS products used across the four-project ecosystem. It is the most heterogeneous domain with 8 pages spanning project management (Plane), knowledge visualization (Obsidian), research synthesis (NotebookLM), AI control infrastructure (AICP), and CLI automation tools (notebooklm-py, Obsidian CLI, NotebookLM Skills, Obsidian Skills Ecosystem). The domain acts as the connector layer — each tool here bridges agent operations (ai-agents domain) with knowledge management (knowledge-systems domain) or project execution (devops domain). Coverage is strong for the tools that are actively integrated into the ecosystem: AICP and Plane are documented from primary sources (live project CLAUDE.md files), while the Obsidian and NotebookLM tooling is sourced from multiple YouTube transcripts and GitHub repositories. Tools peripheral to the current workflow (NotebookLM Skills ecosystem, Obsidian CLI specifics) are covered but not yet integrated end-to-end.
 
 ## State of Knowledge
+
+> [!tip] The Connector Layer
+> Each tool here bridges agent operations (ai-agents domain) with knowledge management (knowledge-systems domain) or project execution (devops domain). The domain acts as the connector layer across the entire ecosystem.
 
 **Strong coverage:**
 - AICP — authoritative. Sourced directly from the live project documentation. 60 Python modules, 1,631 tests, 78 skills, 9 loaded models, 5-stage LocalAI independence roadmap. The most architecturally rich page in this domain.

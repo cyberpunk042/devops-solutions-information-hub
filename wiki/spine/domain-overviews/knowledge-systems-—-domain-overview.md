@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, knowledge-systems]
 ---
@@ -19,6 +19,9 @@ tags: [domain-overview, knowledge-systems]
 The knowledge-systems domain covers the theory and architecture of building LLM-powered knowledge bases, from Karpathy's original wiki pattern through graph-enhanced RAG and structured ingestion pipelines. It is the intellectual foundation for this wiki's own design — the domain documents the patterns the wiki itself implements. Six concept pages cover the LLM Wiki Pattern (the Karpathy origin), LightRAG (graph-based RAG framework used in OpenFleet), the Wiki Ingestion Pipeline (the operational workflow), Memory Lifecycle Management (knowledge validity over time), the Wiki Knowledge Graph (typed relationship extensions), and the LLM Wiki vs RAG comparison. Confidence is high across the board, anchored by primary source documentation from Karpathy directly and the LightRAG EMNLP 2025 paper. This domain feeds every other domain: ai-agents use the wiki as their knowledge backbone, automation tools implement the ingestion pipeline, and tools-and-platforms provide the frontend layers (Obsidian, NotebookLM).
 
 ## State of Knowledge
+
+> [!info] The Intellectual Foundation
+> This domain documents the patterns the wiki itself implements. It feeds every other domain: ai-agents use the wiki as their knowledge backbone, automation tools implement the ingestion pipeline, and tools-and-platforms provide the frontend layers (Obsidian, NotebookLM).
 
 **Strong coverage:**
 - LLM Wiki Pattern — primary source (Karpathy's idea file gist), two YouTube transcripts, LLM Wiki v2 extension document. The theoretical foundation is well-established. Confidence: high.

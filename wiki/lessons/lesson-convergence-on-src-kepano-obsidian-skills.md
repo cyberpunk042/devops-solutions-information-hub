@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 derived_from:
   - "Synthesis: kepano/obsidian-skills"
   - "Obsidian Skills Ecosystem"
@@ -38,6 +38,9 @@ When a skill definition format is rooted in an open specification rather than a 
 This lesson applies whenever a tool ecosystem is deciding how to structure its AI agent skill layer. The triggering situation is the emergence of competing skill implementations for the same tool (in this case, Obsidian) — each with different scope and depth. Without a shared format, skills would be platform-locked and the community's depth would be wasted on incompatible implementations. The Obsidian case occurred in 2025-2026 as Claude Code, Codex CLI, OpenCode, and other agents became capable of vault interactions.
 
 ## Insight
+
+> [!success] Open Spec Creates a Gravity Well
+> Kepano's adoption of the agentskills.io SKILL.md format for official Obsidian skills set a de facto standard. Community contributors who want maximum distribution follow the spec; tools that implement the spec gain access to the entire growing library of skills. One format works across 8+ agent platforms.
 
 The SKILL.md format became a universal packaging contract for compressed agent knowledge. Because Kepano — the creator of Obsidian and therefore the authoritative source — chose the agentskills.io open specification rather than building Obsidian-specific plugin infrastructure, every subsequent community contributor inherited cross-agent portability for free. This is the lesson: an official specification adoption creates a gravity well. Community contributors who want maximum distribution follow the spec; tools that implement the spec gain access to the entire growing library of skills.
 

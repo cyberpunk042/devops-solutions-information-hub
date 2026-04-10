@@ -11,7 +11,7 @@ derived_from:
   - "LLM Wiki Pattern"
   - "Second Brain Architecture"
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -33,6 +33,9 @@ This lesson applies whenever you are deciding where to invest effort in a knowle
 It also applies during recovery after data loss, migration to a new tool, or handoff to a new team: if you have the schema and the raw sources, you can regenerate the content. If you have only the content without the schema, you have an inconsistent pile of documents with no operational knowledge about how to maintain them.
 
 ## Insight
+
+> [!warning] Content Is Regenerable; Schema Is Not
+> Content can be regenerated from raw sources in hours. A mature schema represents weeks or months of operational learning that cannot be regenerated. If you have the schema and raw sources, you can rebuild. If you have only content without schema, you have an inconsistent pile of documents.
 
 The schema of a knowledge base — the page types, frontmatter fields, relationship verbs, status lifecycle, confidence levels, ingestion modes, quality gates, and section conventions — is accumulated operational knowledge about your domain. It encodes decisions that took time and experimentation to reach: which concepts deserve their own page type versus a section, which relationship directions matter, where the human review gate should sit, what constitutes "high" confidence. None of these decisions are obvious in advance. They emerge from operating the system.
 

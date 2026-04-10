@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources: []
 tags: [domain-overview, ai-agents]
 ---
@@ -78,6 +78,9 @@ The ai-agents domain covers the theory, patterns, and practice of building, oper
 
 ### Q: What is the difference between a skill, a hook, and an MCP server in Claude Code?
 Skills encode reusable procedural knowledge as markdown files loaded into context. Hooks inject deterministic code at lifecycle events (pre-tool, post-tool) without LLM overhead. MCP servers expose external tools as native capabilities across all conversations. See [[Claude Code Skills]] and [[Harness Engineering]].
+
+> [!info] Zero-LLM Coordination
+> OpenFleet governs 10 concurrent agents through a deterministic orchestrator that reads HEARTBEAT.md and BOARD.md state files every 30 seconds — zero LLM calls in the coordination loop. Agents write to separate working directories and update shared state only through the orchestrator.
 
 ### Q: How does OpenFleet govern 10 concurrent agents without them stepping on each other?
 OpenFleet uses a deterministic orchestrator that reads HEARTBEAT.md and BOARD.md state files every 30 seconds — zero LLM calls in the coordination loop. Agents write to separate working directories and update shared state only through the orchestrator. See [[OpenFleet]].

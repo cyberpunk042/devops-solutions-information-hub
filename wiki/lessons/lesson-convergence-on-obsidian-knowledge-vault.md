@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -40,6 +40,9 @@ This lesson applies when architecting a knowledge management system that must be
 The convergence point: Andrej Karpathy built his LLM Wiki pattern on top of Obsidian for graph visualization and Web Clipper ingestion. The "second brain" demo (Eric Tech) used Obsidian as an operational project management hub. The Karpathy idea file recommended Git sync via the Obsidian Git plugin. All three independently treated Obsidian as infrastructure, not just a UI.
 
 ## Insight
+
+> [!info] Three Capabilities in One Free Tool
+> Obsidian's value is not its editor — it is graph view for emergent relationship discovery, Obsidian CLI for LLM agent integration without a GUI, and Git plugin for free version control and sync. Karpathy's framing: "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase."
 
 The core insight is that Obsidian's value is not its editor — it is the combination of three capabilities that happen to co-exist in one free tool: (1) graph view for emergent relationship discovery, (2) Obsidian CLI for LLM agent integration without a GUI, and (3) Git plugin for free version control and sync. Together, these make Obsidian the right infrastructure layer for any LLM-maintained knowledge base at the current moment.
 

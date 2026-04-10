@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -40,6 +40,9 @@ This lesson applies when deciding how to maintain knowledge across a domain over
 The failure mode it prevents: the classic "dead wiki" — a knowledge base that was well-maintained for 3 months and then abandoned because the maintenance cost exceeded the perceived value of keeping it current. Every engineering team has experienced this. The LLM Wiki pattern eliminates the maintenance cost by making the LLM responsible for all structural bookkeeping.
 
 ## Insight
+
+> [!info] The Maintenance Economics Inversion
+> Humans abandon wikis because maintenance burden grows faster than value. LLMs invert this economics: the marginal cost of maintaining a cross-reference is the same as writing it the first time. There is no fatigue, no preference for interesting work over bookkeeping, no tendency to skip the index update.
 
 Static documentation fails because it is written once, read many times, and updated rarely. The update cost is high (requires human time and attention), the benefit is diffuse (distributed across future readers), and there is no forcing function. As a result, documentation drifts from reality over time — a well-known failure mode with no good solution in the pre-LLM era.
 
