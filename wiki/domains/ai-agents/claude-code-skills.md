@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
@@ -39,76 +39,102 @@ tags: [claude-code, skills, markdown, agent-configuration, extensibility, obsidi
 
 ## Summary
 
-Skills in Claude Code are markdown files that serve as instruction sets for the AI agent, teaching it how to perform specific tasks, interact with external tools, and follow design guidelines. A skill file contains prerequisites (such as packages to install), setup procedures (such as authentication flows), operational instructions for using a tool, and domain-specific guidance (such as slide design specifications). When a skill is sent to Claude Code, it reads the instructions and can autonomously perform the setup steps and then use the capability on demand. Skills are the primary mechanism for extending Claude Code's capabilities beyond its built-in functionality.
+Skills are Claude Code's primary extension mechanism — markdown-based instruction sets that teach the agent new capabilities, design systems, and multi-step workflows. Unlike MCP servers (which load tool schemas into context on every message regardless of use), skills load on demand: they enter the context window only when invoked, making them the most context-efficient way to extend agent capability. A skill can bundle dependency management, authentication flows, operational instructions, and design guidance into a single artifact. Skills exist on a complexity spectrum from simple tool wrappers through design-guided generators to multi-source workflow automations — and the upper bound of that spectrum is further out than initially assumed.
+
+> [!info] Skill Architecture Reference Card
+>
+> | Property | Value |
+> |----------|-------|
+> | Format | Markdown folder: SKILL.md + references/ + scripts/ + examples/ |
+> | Loading | On-demand (invoked by user or auto-detected by model) |
+> | Context cost | Zero at rest; full instructions loaded only during execution |
+> | Isolation | `context: fork` runs skill in sub-agent; parent sees only result |
+> | Description field | Written for the model ("when should I fire?"), not for humans |
+> | Gotchas section | Known failure points — prevents repeat debugging |
+> | Scripts | Bundled code artifacts for composition (not reconstruction) |
+> | Hooks | On-demand safety: /careful (block destructive), /freeze (scope lock) |
+> | Complexity ceiling | ~100 lines unfork'd; effectively unlimited with `context: fork` |
 
 ## Key Insights
 
-- **Skills are plain markdown**: A skill is simply a text file in markdown format — no special format, no compiled code. This makes skills easy to create, share, read, and modify. The presenter explicitly states: "a skill is just a markdown file... a text file that gives your agent instructions."
+### Architecture — Why Markdown Wins
 
-- **Two-phase operation — setup then use**: When Claude Code receives the NotebookLM skill, it performs two automatic steps: (1) install the required package (notebooklm-py), and (2) prompt the user to authenticate with Google. After this one-time setup, the skill is available for repeated use.
+> [!tip] Skills are compressed knowledge, not detailed instructions
+> Claude expands skill instructions into detailed operational prompts at execution time. A skill encoding "use blackboard style with orange accents" produces a fully-specified 7-slide deck with color codes, font choices, and layout parameters — without the user ever writing or seeing those detailed prompts. Skills act as high-level intent that the model decompresses on demand.
 
-- **Design guidance embedded in skills**: The NotebookLM skill includes a "slide generation component" section with specific design instructions — color schemes, font choices, title formatting, and layout parameters. This means skills can encode not just functional behavior but also aesthetic and brand standards.
+**Progressive disclosure through folder structure.** Per Anthropic's Thariq: skills should be folders with subdirectories, not monolithic files. SKILL.md is the entry point; references/ holds detailed option files loaded only when that specific option is selected; scripts/ contains code artifacts for the model to compose rather than reconstruct. This mirrors the deferred loading principle from Context-Aware Tool Loading — applied at the intra-skill level.
 
-- **Skills are iteratively refinable**: Users can ask Claude to modify a skill through natural language. The presenter demonstrates asking Claude to change the slide style from "orange blackboard" to "blue corporate navy" and then to save both as named style options within the skill. Claude reads the skill, edits the relevant sections, and writes the updated file.
+**Self-editing as meta-capability.** Users can modify skills through natural language conversation. Claude reads the skill, edits relevant sections, writes the updated file. This creates a feedback loop: the agent improves its own instruction set based on user input. Combined with the clarifying question pattern ("ask me clarifying questions so the intention is clear"), skills evolve iteratively through use rather than requiring manual markdown editing.
 
-- **Skills enable repeatable, consistent outputs**: Because the design system and operational instructions are codified in the skill file, outputs are consistent across runs. The presenter emphasizes that the slides maintain a consistent style "every time" because of the skill.
+### Behavior — How Skills Operate
 
-- **Skills can have multiple presets**: The presenter demonstrates adding a second slide style ("corporate navy blue") alongside the default ("blackboard"), creating a multi-option skill where the user can direct Claude to use a specific style at runtime.
+> [!abstract] Two-phase lifecycle: setup then use
+> When Claude receives a skill, it performs one-time setup (install dependencies, authenticate) then makes the capability available for repeated invocation. The NotebookLM skill: (1) installs `notebooklm-py`, (2) prompts Google authentication. After setup, the skill is callable on demand across sessions — enabling scheduled automation of tasks that were set up once interactively.
 
-- **Skills are folders with progressive disclosure (from best practices repo)**: According to Anthropic's Thariq, skills should be folders with subdirectories (references/, scripts/, examples/) rather than single files. The SKILL.md description field is a trigger written for the model ("when should I fire?"), not a human summary. Skills should include a Gotchas section for known failure points and should contain scripts/libraries so Claude composes rather than reconstructs boilerplate.
+**Design guidance encoded as rules, not suggestions.** Skills can embed aesthetic and brand standards alongside functional behavior. The NotebookLM skill includes color schemes, font choices, title formatting, and layout parameters. Outputs are consistent across runs because the design system is codified, not improvised.
 
-- **Context forking for isolation (from best practices repo)**: Skills can use `context: fork` to run in an isolated subagent where the main context only sees the final result, not intermediate tool calls. This prevents skill execution from polluting the main conversation's context window -- an important consideration for token management.
+**Multiple presets within one skill.** A skill can offer named options (e.g., "blackboard" vs. "corporate navy") selectable at runtime. This keeps related capabilities grouped while allowing variation — though as presets multiply, progressive disclosure (separate reference files per preset) prevents context bloat.
 
-- **On-demand hooks in skills (from best practices repo)**: Skills can include on-demand hooks like /careful (blocks destructive commands) and /freeze (blocks edits outside a directory), providing contextual safety guardrails that activate only when the skill is in use.
+### Composition and Complexity
 
-- **Skills as shareable packages**: The presenter mentions making the skill pack available through their community, indicating that skills are designed to be distributable and usable by others with minimal configuration.
+> [!info] The skill complexity spectrum
+>
+> | Tier | Example | What It Does |
+> |------|---------|-------------|
+> | **Simple** — tool wrapper | NotebookLM skill | Install package, authenticate, expose API |
+> | **Medium** — tool + design | NotebookLM + slide styling | Tool operations + aesthetic/brand standards |
+> | **Complex** — workflow automation | Onboard Projects skill | Multi-source data collection (Gmail API, filesystem, pasted content), conditional processing, structured output, dashboard maintenance |
 
-- **Clarifying question pattern**: When modifying skills, the presenter recommends asking Claude to ask clarifying questions first ("Ask me clarifying questions so that the intention is clear"), establishing a Q&A alignment step before the skill is edited. This is described as "one of the most powerful things you can do."
+**Skills compose with each other.** Higher-level workflow skills can orchestrate lower-level capability skills. The Obsidian ecosystem demonstrates this: markdown skill, database skill, and Canvas skill are independent capabilities; workflow skills like "onboard projects" coordinate across them. This is an emergent composition pattern — not formally specified, but observed in practice.
 
-- **Obsidian CLI skills (from second brain video)**: The Eric Tech video demonstrates installing Obsidian CLI skills that teach Claude Code to interact with Obsidian programmatically -- creating notes, managing folders, and using markdown and JSON Canvas through the command line. These skills are installable via marketplace or npx.
+**Complex skills include custom scripts.** The onboard projects skill bundles Gmail integration scripts (fetching labels, messages, threads, downloading attachments) alongside its markdown instructions. Skills coordinate between multiple code artifacts, not just a single instruction file.
 
-- **Complex multi-step workflow skills**: The "onboard projects" skill demonstrated in the second brain video goes well beyond simple tool wrappers. It includes: multi-source data collection (Gmail API via OAuth2, local filesystem, user-pasted text/screenshots), conditional processing logic (summarize conversations vs. preserve static documents like NDAs as-is), structured output generation (per-project folders with overview, conversation log, links, documents), and dashboard maintenance (updating a central projects database).
+### Context Economics
 
-- **Skills can include custom scripts**: The onboard projects skill bundles custom scripts for Gmail integration (fetching labels, messages, threads, downloading attachments) alongside the skill's markdown instructions. This shows skills can coordinate between multiple code artifacts, not just a single instruction file.
+> [!warning] Skills load on invocation — MCP loads on every message
+> This is the fundamental economic advantage. A skill's instructions occupy zero context at rest and full context only during execution. MCP servers load their entire JSON schema on every message regardless of whether those tools are used. For project-internal tooling where you control the invocation pattern, skills are the default winner on context cost. Reserve MCP for tools needing cross-conversation discoverability.
 
-- **Skills compose with each other**: The second brain video demonstrates skills that reference and build on other Obsidian CLI skills (markdown, database, Canvas), suggesting a composition pattern where higher-level workflow skills orchestrate lower-level capability skills.
+**Context forking prevents pollution.** `context: fork` runs a skill in an isolated sub-agent where the parent context only sees the final result, not intermediate tool calls. For complex skills, this is essential — a 5-phase workflow automation would consume massive context in the parent session without forking. The practical threshold: fork any skill that exceeds ~100 lines of instructions.
 
 ## Deep Analysis
 
-The skill system represents a practical approach to agent extensibility that prioritizes simplicity and accessibility over formal plugin architectures. By using plain markdown rather than structured APIs or plugin manifests, skills lower the barrier to extending Claude Code's capabilities. Any user who can write a text file can create a skill.
+The skill system prioritizes simplicity and accessibility over formal plugin architectures. Any user who can write a markdown file can extend Claude Code's capabilities. This low barrier is a deliberate design choice — it means the ecosystem can grow from user contributions rather than requiring developer toolchains.
 
-The NotebookLM skill demonstrated in the transcript bundles several concerns into a single file: dependency management (installing notebooklm-py), authentication (Google account login flow), operational instructions (how to create notebooks, load sources, generate assets), and design guidance (slide styling). This multi-concern bundling means a single skill can take Claude from zero capability to full operational readiness with an external tool.
+The deeper architectural insight is that **skills are the context-aware counterpart to MCP's always-on model.** MCP provides universal discoverability at the cost of per-message overhead. Skills provide targeted capability at the cost of requiring explicit invocation. Neither is strictly better — the optimal choice depends on invocation frequency and context budget. But for the typical project where 80% of tools are used in <20% of conversations, the skills model is dramatically more efficient.
 
-The iterative refinement workflow is notable: rather than requiring users to manually edit markdown files, they can ask Claude to modify the skill through conversation. This creates a meta-capability where the agent can improve its own instruction set based on user feedback. The progression shown — default style, then user requests a new style, then user asks to save both as options — demonstrates how skills evolve through use.
+The self-editing meta-capability has implications beyond convenience. When an agent can modify its own instruction set through conversation, the skill evolves through use — accumulating the user's preferences, edge cases, and style choices as codified knowledge. Over time, a well-maintained skill becomes a compressed record of how a team actually works, not just how they planned to work. This is the same principle behind the wiki's own model-builder skill: it encodes not just "how to build models" but "what we learned about building models."
 
-The fact that Claude "reconstructed" a detailed prompt under the hood (specifying a seven-slide deck with design parameters and font guidance) based on the skill instructions shows that skills act as compressed knowledge that Claude expands into detailed operational prompts at execution time. The user never sees or writes these detailed prompts directly.
+The composition pattern (higher-level skills orchestrating lower-level skills) suggests an emerging architecture where skills form a capability graph — similar to how this wiki's models reference building block concepts. Formal skill-to-skill composition remains unsolved in the ecosystem, but the practical pattern of "skill A invokes CLI operations that skill B also uses" achieves de facto composition through shared tooling rather than direct references.
 
-The connection to long-running agent sessions is important: skills persist across interactions, meaning a configured agent retains its capabilities over time. This is what enables the scheduling use case — a skill installed once continues to function in future automated runs.
-
-### Skills as Workflow Automations (from second brain video)
-
-The "onboard projects" skill from the Obsidian + Claude Code video represents a significant complexity jump from the NotebookLM skill. Where the NotebookLM skill is essentially a tool wrapper (install package, authenticate, use API), the onboard projects skill is a multi-step workflow automation that coordinates across data sources, applies conditional logic, and maintains structured output. It includes five distinct phases: project creation, source collection (Gmail + local + pasted), processing with duplicate/format detection, auto-extraction of metadata, and summary generation.
-
-This suggests that Claude Code skills exist on a complexity spectrum: simple skills wrap a single tool, medium skills combine a tool with formatting/design guidance, and complex skills orchestrate multi-source data pipelines with conditional logic. The upper bound of skill complexity -- the point where a skill becomes too large or nuanced for the LLM to follow reliably -- remains an open question but appears to be further out than initially assumed.
+> [!example]- This wiki's skill instances
+>
+> | Skill | Tier | What It Does |
+> |-------|------|-------------|
+> | wiki-agent | Complex | Ingest, query, validate, export — full wiki operations |
+> | model-builder | Complex | Document → Design → Implement → Test for model pages |
+> | evolve | Medium | Score candidates, scaffold, generate, review maturity |
+> | continue | Simple | Resume mission: diagnostics → state → options |
+>
+> All four use the progressive disclosure pattern: SKILL.md routes to tool documentation that Claude reads on demand rather than loading everything upfront.
 
 ## Open Questions
 
-- Is there a versioning or update mechanism for skills, or must they be manually replaced? (Requires: external research on skill versioning conventions; the `Skills Architecture Patterns` page asks the same question: "How should skill versioning work — semantic versioning for breaking changes in instruction format?" and notes it requires "empirical data from large-scale skill deployment")
-- Can skills reference or compose other skills, or is each skill self-contained? (Partially answered: skills are folders that can include scripts and references, and skills can use context: fork for isolation, but formal skill-to-skill composition is not yet documented. The `Skills Architecture Patterns` page identifies this as unresolved: "Composition (skills referencing skills) remains largely unsolved across all ecosystems.")
+> [!question] Is there a versioning or update mechanism for skills?
+> The Skills Architecture Patterns page identifies this as unresolved: "How should skill versioning work — semantic versioning for breaking changes in instruction format?" Requires empirical data from large-scale skill deployment.
+
+> [!question] Can skills formally compose other skills?
+> Partially answered: skills can include scripts and use `context: fork`, and practical composition happens through shared CLIs. But formal skill-to-skill references are not yet documented. Skills Architecture Patterns identifies this as unresolved: "Composition (skills referencing skills) remains largely unsolved across all ecosystems."
 
 ## Answered Open Questions
 
-### What is the maximum practical complexity of a skill before it becomes unreliable?
+> [!example]- Maximum practical complexity before unreliability?
+> The ceiling is not a fixed line count but a function of session context pressure. Any skill consuming a substantial fraction of the context window triggers degradation. Resolution: `context: fork` for extensive skills — this isolates execution in a sub-agent. The practical upper bound: ~100 lines unfork'd before degradation risk becomes significant; with `context: fork`, the ceiling is effectively the sub-agent's full context budget.
 
-Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Context-Aware Tool Loading`: the complexity ceiling is not a fixed line count but a function of session context pressure. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that Claude Code context management matters at higher utilization (one practitioner reported increased error rates around 40-60% — but this is probabilistic and session-dependent). Any skill large enough to consume a substantial fraction of the context window will trigger this degradation before the task begins. The `Context-Aware Tool Loading` pattern provides the resolution: use `context: fork` for any skill whose instructions are extensive — this isolates skill execution in a sub-agent context so the parent session context is not polluted. The `Skills Architecture Patterns` page's answered question on this topic confirms: "for production-grade skills like claude-world's 13-tool pipeline, the recommended architecture is `context: fork` (sub-agent isolation) to prevent the skill from polluting the parent session context." The practical upper bound for an unfork'd skill is roughly ~100 lines before degradation risk becomes significant; with `context: fork`, the complexity ceiling is effectively the sub-agent's full context budget.
+> [!example]- How are conflicts between contradictory skills resolved?
+> Conflict resolution is governed by invocation order and CLAUDE.md routing, not a registry-level priority system. CLAUDE.md project instructions override community defaults. Skills loaded later with explicit instructions take precedence. `<important if="...">` tags provide the highest-priority override. For direct contradictions: `context: fork` for each skill isolates their instructions in separate sub-agents.
 
-### How does Claude Code handle conflicts between multiple skills that might give contradictory instructions?
-
-Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`: conflict resolution between skills is governed by invocation order and CLAUDE.md routing, not a registry-level priority system. The `Claude Code Best Practices` page states that "CLAUDE.md project instructions override community defaults (CLAUDE.md is read on every message), personal skills loaded explicitly override ambient skills, and `<important if='...'>` tags in CLAUDE.md provide the highest-priority override mechanism for rules that must not be ignored." Skills are loaded contextually — they enter the context window only when invoked — so a skill loaded later in a session with explicit instructions takes precedence over one loaded earlier. The `Context-Aware Tool Loading` pattern confirms there is no formal precedence specification beyond this: "the architecture resolves most conflicts via explicit routing" through CLAUDE.md acting as a routing table. For skills with direct contradictions, the pattern recommendation is to use `context: fork` for each skill, which isolates each skill's instructions in a sub-agent and prevents cross-contamination.
-
-### How does skill performance degrade as the markdown file grows larger with more presets and options?
-
-Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Skills Architecture Patterns`: degradation follows the context saturation curve directly. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that "schema tokens from unused tools occupy space that could hold recent conversation turns or retrieved file content, pushing relevant history out of the window earlier." For skill files, the same mechanism applies: each additional preset, option, or example section added to a skill file increases the token load every time the skill is active. The `Skills Architecture Patterns` comparison matrix notes: "context cost is the primary constraint on skill complexity — active skills consume tokens on every message." The resolution from existing wiki knowledge: instead of adding more presets to a single skill file, refactor them as separate named skills (each loaded on demand) or use progressive disclosure — the SKILL.md references detailed option files in references/ subdirectories that are only read into context when that specific option is selected. This mirrors the `Context-Aware Tool Loading` pattern's deferred loading principle applied at the intra-skill level.
+> [!example]- How does performance degrade as skill files grow?
+> Degradation follows the context saturation curve directly. Each additional preset/option/example increases token load every time the skill is active. Resolution: instead of growing a single skill file, refactor into separate named skills (each loaded on demand) or use progressive disclosure — SKILL.md references detailed option files in references/ subdirectories loaded only when selected.
 
 ## Relationships
 

@@ -6,7 +6,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 maturity: growing
 derived_from:
   - "Task Lifecycle Stage-Gating"
@@ -29,234 +29,185 @@ tags: [stage-gate, methodology, openarms, openfleet, document, design, scaffold,
 
 ## Summary
 
-Stage-Gate Methodology is the 5-stage sequential system — Document → Design → Scaffold → Implement → Test — that governs all task execution in the OpenArms project and maps directly onto OpenFleet's CONVERSATION → ANALYSIS → INVESTIGATION → REASONING → WORK model. The core invariant is that stages have HARD BOUNDARIES: an agent executing the Document stage may not produce implementation artifacts, and an agent in the Scaffold stage may not implement business logic. This is not a guideline — it is a structural constraint enforced by protocol, commit convention, and MCP tooling depending on the system. Critically, this methodology applies universally: it governs code, knowledge work, research, infrastructure planning, wiki pages, and documentation with equal force.
+Stage-Gate Methodology is the 5-stage sequential system — Document → Design → Scaffold → Implement → Test — that governs all task execution in the OpenArms project and maps directly onto OpenFleet's CONVERSATION → ANALYSIS → INVESTIGATION → REASONING → WORK model. The core invariant is that stages have HARD BOUNDARIES: an agent executing the Document stage may not produce implementation artifacts, and an agent in the Scaffold stage may not implement business logic. This is not a guideline — it is a structural constraint enforced by protocol, commit convention, and MCP tooling depending on the system. The methodology applies universally: code, knowledge work, research, infrastructure planning, wiki pages, and documentation.
+
+> [!info] Stage System Reference Card
+>
+> | Stage | Readiness | Required Artifacts | Forbidden | Quality Gate |
+> |-------|-----------|-------------------|-----------|-------------|
+> | **Document** | 0–25% | Wiki page, infrastructure map, gap analysis | Implementation code, new src/ files, design decisions | Wiki page with Summary (≥30 words) + gap analysis |
+> | **Design** | 25–50% | Decision doc, config shape, type sketches in docs | Implementation code, source files | Decision doc exists, path forward unambiguous |
+> | **Scaffold** | 50–80% | Type definitions, .env.example, empty test files | Business logic, test implementations | Types compile, project structure reflects design |
+> | **Implement** | 80–95% | Implementation filling scaffolded stubs, passing lint | Restructuring scaffold, scope additions | Code compiles, type checks pass, lint clean |
+> | **Test** | 95–100% | Test implementations, passing suite, no regressions | Skipping to "done" | All tests pass, no regressions, readiness = 100 |
 
 ## Key Insights
 
-- **Stages have hard boundaries, not soft guidance**: The Document stage explicitly prohibits writing implementation code or creating new source files. The Design stage explicitly prohibits writing implementation code (type sketches are permitted only inside documentation files). The Scaffold stage prohibits implementing business logic. These prohibitions are not stylistic preferences — violation produces a fundamentally different artifact category that corrupts the stage system.
+> [!warning] Stages have HARD boundaries, not soft guidance
+> The Document stage explicitly prohibits writing implementation code. The Design stage prohibits code (type sketches in docs only). The Scaffold stage prohibits business logic. These are not stylistic preferences — violation produces a fundamentally different artifact category that corrupts the stage system. **The primary failure mode of autonomous agents is phase conflation, not incompetence.** An agent allowed to produce implementation during Document will write coherent-looking code that solves the wrong problem — it was solving while still understanding.
 
-- **Readiness is a gate, not a metric**: Each stage has an explicit readiness range (Document: 0-25%, Design: 25-50%, Scaffold: 50-80%, Implement: 80-95%, Test: 95-100%). The readiness value must correspond to the highest completed stage — a task with `stages_completed: [document, design]` cannot report readiness above 50 regardless of how much additional work was done. Readiness is derived from stage completion evidence, not from subjective assessment.
+> [!abstract] Readiness is a gate, not a metric
+> Each stage has an explicit readiness range. A task with `stages_completed: [document, design]` cannot report readiness above 50% regardless of how much additional work was done. Readiness is derived from stage completion evidence, not subjective assessment.
 
-- **Each stage has required artifacts that prove completion**: Saying a stage is done is not sufficient. Document requires: wiki page documenting the concept, mapping of existing infrastructure, gap analysis. Design requires: decision document, target config shape, interface/type sketches. Scaffold requires: type definitions, .env.example entries, example config snippets, empty test files with describe blocks. Implement requires: implementation code, passing type checks, passing lint. Test requires: test implementations, passing test suite, verification existing tests still pass.
+**One commit per stage transforms git into a ledger.** The conventional commit format `feat(wiki): T0XX stage-name — description` makes stage boundaries visible in version control. A commit titled `implement` that touches wiki pages instead of src/ files is visibly wrong in the diff. Stages are not just tracked in frontmatter — they are embedded in the repository's DNA.
 
-- **The methodology applies to knowledge work, not just code**: A wiki ingestion task follows the same stages — Document (understand the source, map existing knowledge), Design (decide synthesis approach, plan page structure), Scaffold (create page skeleton with frontmatter and headers), Implement (fill in content), Test (validate schema, cross-references, relationships). Research, infrastructure planning, and architectural decisions follow the same pattern.
+**Quality gates are transition requirements, not post-hoc checks.** Each stage gate must pass before advancing. Gates are verified by rereading the task file after stage completion, not by automated tooling alone. Max 2 retries per stage before escalating to human review — preventing infinite loops on failing stages.
 
-- **OpenFleet's 5-stage model is a parallel architecture for the same principle**: CONVERSATION (understand requirement, no code) = Document. ANALYSIS (examine codebase, produce analysis doc) = a deeper Document. INVESTIGATION (research options, no code) = Design exploration. REASONING (decide approach, produce plan) = Design finalization + Scaffold. WORK (execute confirmed plan, full tool sequence) = Implement + Test combined. The key addition in OpenArms is the explicit separation of Test as its own stage — preventing "I'll clean up the tests later."
-
-- **One commit per stage transforms git into a stage-gating ledger**: The conventional commit format `feat(wiki): T0XX stage-name — description` makes the stage boundary visible in version control. A commit titled `implement` that touches wiki pages instead of src/ files is visibly wrong in the diff. The commit history is the audit trail — stages are not just tracked in frontmatter but embedded in the repository's DNA.
-
-- **Quality gates are stage transition requirements, not post-hoc checks**: Each stage has a specific quality gate that must pass before advancing. Document gate: wiki page exists with Summary and gap analysis. Design gate: decision doc exists, config shape defined, types sketched in docs. Scaffold gate: types compile, .env entries added, empty test files exist. Implement gate: code compiles, lint passes. Test gate: scoped tests pass, no regressions. These gates are verified by rereading the task file after stage completion, not by automated tooling alone.
-
-- **Max 2 retries per stage before escalating**: The default configuration allows a maximum of 2 stage retries before a stage is considered blocked. This prevents infinite loops on failing stages and surfaces systemic problems for human review.
+> [!tip] This methodology applies to knowledge work, not just code
+> Wiki ingestion follows the same stages. Research follows the same stages. Infrastructure planning follows the same stages. The hard boundary principle holds universally: decisions cannot be made before understanding is complete, skeletons cannot be built before decisions are made, implementation cannot begin before the skeleton defines the contract.
 
 ## Deep Analysis
 
-### The Five Stages — Complete Reference
+### The Five Stages — Detailed Reference
 
-#### Stage 1: Document (Readiness 0–25%)
+> [!example]- Stage 1: Document (Readiness 0–25%)
+>
+> **Purpose:** Understand the problem before making any decisions about solutions.
+>
+> | Aspect | Details |
+> |--------|---------|
+> | **Required** | Wiki page, infrastructure map, gap analysis |
+> | **Forbidden** | Implementation code, new src/ files, design decisions |
+> | **Permitted** | Wiki/doc files, reading code, identifying gaps, asking questions |
+> | **Gate** | Wiki page with Summary ≥30 words + gap analysis, reachable from _index.md |
+>
+> **OpenFleet mapping:** CONVERSATION + ANALYSIS. OpenFleet separates PO conversation from codebase analysis; OpenArms merges them because PO directives are pre-written in wiki/log/.
+>
+> **Key distinction:** This stage builds a model of reality — what exists and what is missing. Not a proposal for what should exist.
 
-**Purpose:** Understand the problem before making any decisions about solutions. Read existing code. Write wiki documentation. Map existing infrastructure. Identify gaps.
+> [!example]- Stage 2: Design (Readiness 25–50%)
+>
+> **Purpose:** Make decisions. Explore options and commit to one.
+>
+> | Aspect | Details |
+> |--------|---------|
+> | **Required** | Decision doc, config shape, type sketches in documentation |
+> | **Forbidden** | Implementation code, source files, proceeding without committed decision |
+> | **Permitted** | Type sketches in docs, comparing approaches, referencing architecture |
+> | **Gate** | Decision doc exists, config shape defined, path forward unambiguous |
+>
+> **OpenFleet mapping:** INVESTIGATION + REASONING. OpenFleet requires all specialist contributions (QA, architect, security) before plan finalization.
+>
+> **Key distinction:** Making decisions under uncertainty, not eliminating uncertainty. "We will use X because Y" is complete. "We could use X or Y" is incomplete.
 
-**Required artifacts:**
-- Wiki page documenting the concept or feature
-- Mapping of existing infrastructure that will be affected
-- Gap analysis: what exists, what is missing, what is unclear
+> [!example]- Stage 3: Scaffold (Readiness 50–80%)
+>
+> **Purpose:** Create the skeleton. Zero behavior.
+>
+> | Aspect | Details |
+> |--------|---------|
+> | **Required** | Compiling type definitions, .env.example, empty test files with describe blocks |
+> | **Forbidden** | Business logic, test implementations, anything beyond defining shapes |
+> | **Permitted** | Types, interfaces, empty stubs, test structure, config entries |
+> | **Gate** | Types compile, .env entries added, empty tests exist, zero behavior |
+>
+> **OpenFleet mapping:** Implicit in REASONING plan. OpenArms makes skeleton creation an explicit stage because it is a distinct activity from design.
+>
+> **Key distinction:** Shape without substance. After scaffold, you know exactly what to implement (signatures and test cases exist) but nothing works yet. This transforms a design decision into an implementation contract.
 
-**What the protocol forbids:**
-- Writing implementation code (any code in src/)
-- Creating new source files
-- Making design decisions
+> [!example]- Stage 4: Implement (Readiness 80–95%)
+>
+> **Purpose:** Write the code. Fill in the logic.
+>
+> | Aspect | Details |
+> |--------|---------|
+> | **Required** | Implementation filling scaffolded stubs, passing type checks, passing lint |
+> | **Forbidden** | Restructuring scaffold, scope additions, marking done before Test |
+> | **Constraint** | Build on scaffold, follow design doc, keep changes additive |
+> | **Gate** | Code compiles, type checks pass, lint clean |
+>
+> **OpenFleet mapping:** WORK (fleet_read_context → fleet_task_accept → fleet_commit(s) → fleet_task_complete). The key addition: fleet_task_accept — plan submission before commits allowed.
+>
+> **Key distinction:** First stage producing executable code. Everything before was groundwork. "Build on scaffold, follow design doc" is why earlier stages exist — they are the contract Implement fulfills.
 
-**What is permitted:**
-- Creating wiki pages and documentation files
-- Reading any existing code (required)
-- Identifying gaps and open questions
-- Asking clarifying questions
+> [!example]- Stage 5: Test (Readiness 95–100%)
+>
+> **Purpose:** Write tests. Verify behavior. Ensure no regressions.
+>
+> | Aspect | Details |
+> |--------|---------|
+> | **Required** | Test implementations in scaffolded files, passing suite, no regressions |
+> | **Constraint** | Fill scaffolded test files (not create new ones), fix all failures |
+> | **Gate** | All tests pass, no regressions, all stages in stages_completed, readiness = 100 |
+>
+> **OpenFleet mapping:** Part of WORK, but QA criteria are provided by the QA agent BEFORE the engineer implements (plan_quality.py).
+>
+> **Key distinction:** Test is mandatory, not optional cleanup. Scaffold creates empty test files deliberately so Test has a defined scope — the test cases defined in Scaffold constrain what implementation is required.
 
-**Quality gate:** Wiki page exists with Summary (minimum 30 words) and gap analysis. The page must be reachable from the domain _index.md.
+### Cross-System Stage Mapping
 
-**OpenFleet mapping:** CONVERSATION (understand the requirement, ask questions, extract knowledge) + ANALYSIS (examine codebase, produce analysis document with file references). OpenFleet separates these into two stages because the multi-agent context requires a dedicated conversation phase with the PO. In OpenArms' solo-agent context, the PO directives are pre-written in wiki/log/ — there is no live conversation, so the understanding and analysis phases collapse into one.
+> [!info] OpenArms ↔ OpenFleet Comparison
+>
+> | OpenArms | Readiness | OpenFleet | Key Difference |
+> |----------|-----------|-----------|---------------|
+> | Document | 0–25% | CONVERSATION + ANALYSIS | OpenFleet separates PO conversation from codebase analysis |
+> | Design | 25–50% | INVESTIGATION + REASONING | OpenFleet adds multi-agent contribution convergence |
+> | Scaffold | 50–80% | (implicit in REASONING) | OpenArms makes skeleton creation explicit |
+> | Implement | 80–95% | WORK | Both require code + lint passing |
+> | Test | 95–100% | (part of WORK) | OpenArms makes test a mandatory separate stage |
+>
+> **Key structural difference:** OpenFleet uses MCP tool blocking as infrastructure-level enforcement (fleet_commit blocked in CONVERSATION). OpenArms uses protocol-level enforcement (MUST NOT) + commit convention as audit trail. OpenFleet's approach is stronger (impossible to violate) but requires custom tooling infrastructure.
 
-**Key distinction:** This stage is about building a model of reality. The output is a structured representation of what exists and what is missing — not a proposal for what should exist.
+### Hard Boundaries as File-System Observable Categories
 
----
-
-#### Stage 2: Design (Readiness 25–50%)
-
-**Purpose:** Make decisions. Write design docs. Define config shape. Explore multiple options and commit to one.
-
-**Required artifacts:**
-- Design decision document (in wiki/docs, not src/)
-- Target config shape (what configuration values are needed, their types and defaults)
-- Interface/type sketches in documentation (NOT in code files)
-
-**What the protocol forbids:**
-- Writing implementation code
-- Creating source files
-- Proceeding to scaffold without a committed design decision
-
-**What is permitted:**
-- Writing type sketches in documentation files
-- Comparing multiple approaches with tradeoffs
-- Referencing existing architecture docs
-
-**Quality gate:** Decision doc exists. Config shape is defined. Types are sketched inside documentation files (not code). The path forward is unambiguous.
-
-**OpenFleet mapping:** INVESTIGATION (research what's possible, explore multiple options, cite sources) + REASONING (plan the approach, create implementation plan, receive specialist contributions). OpenFleet's REASONING stage requires all specialist contributions to arrive (QA test criteria, architect design input, security requirements) before the plan is finalized. OpenArms implements this implicitly by requiring the design doc to reference all known constraints before advancing.
-
-**Key distinction:** This stage is about making decisions under uncertainty, not eliminating uncertainty. A design doc that says "we will use X because Y and Z" is complete. A design doc that says "we could use X or Y" is incomplete.
-
----
-
-#### Stage 3: Scaffold (Readiness 50–80%)
-
-**Purpose:** Create the skeleton. Types, examples, .env entries, empty test files with describe blocks. No business logic.
-
-**Required artifacts:**
-- Type definitions (compiling)
-- .env.example entries for all new configuration values
-- Example config snippets
-- Empty test files with describe blocks (but no implementation)
-
-**What the protocol forbids:**
-- Implementing business logic
-- Filling in test implementations
-- Writing code that does anything beyond defining shapes
-
-**What is permitted:**
-- Type definitions and interfaces
-- Empty function stubs with correct signatures
-- Test file structure (describe blocks, empty it() calls)
-- .env.example entries
-
-**Quality gate:** Types compile. .env entries are added. Empty test files exist. The project structure reflects the design decision. Running the code at this stage produces zero behavior (types only).
-
-**OpenFleet mapping:** Partially REASONING (plan exists), but OpenArms adds the Scaffold stage explicitly because skeleton creation is a distinct activity from design decision. The skeleton is what makes the design real — it creates the file-system structure that subsequent stages build on. OpenFleet's WORK stage handles both scaffold and implementation as one unit; OpenArms' separation is the more disciplined approach.
-
-**Key distinction:** Scaffold creates shape without substance. After scaffold, you know exactly what you will implement (the function signatures and test cases exist) but nothing works yet. This is the stage that transforms a design decision into a concrete implementation contract.
-
----
-
-#### Stage 4: Implement (Readiness 80–95%)
-
-**Purpose:** Write the code. Fill in the logic. Make it work.
-
-**Required artifacts:**
-- Implementation code (filling in the scaffolded stubs)
-- Passing type checks
-- Passing lint
-
-**What the protocol requires:**
-- Build on the scaffold (do not restructure)
-- Follow the design document (do not deviate)
-- Keep changes additive (do not remove scaffold artifacts)
-
-**What the protocol forbids:**
-- Restructuring the scaffold
-- Adding scope not defined in the design doc
-- Marking done before Test stage
-
-**Quality gate:** Code compiles. Type checks pass. Lint passes. The scaffolded stubs are filled in.
-
-**OpenFleet mapping:** WORK stage (execute the confirmed plan). In OpenFleet: `fleet_read_context → fleet_task_accept → fleet_commit(s) → fleet_task_complete`. The key OpenFleet addition is `fleet_task_accept` — submitting the plan before commits are allowed. OpenArms enforces this via the design doc requirement: you cannot reach Implement without a design doc, which serves the same purpose.
-
-**Key distinction:** Implement is the first stage that produces executable code. Everything before this stage was groundwork. The constraint "build on the scaffold, follow the design doc" is why the earlier stages exist — they are the contract that Implement is bound to fulfill.
-
----
-
-#### Stage 5: Test (Readiness 95–100%)
-
-**Purpose:** Write tests. Verify behavior. Ensure nothing broken.
-
-**Required artifacts:**
-- Test implementations (filling in the scaffolded empty test files)
-- Passing test suite
-- Verification that existing tests still pass (no regressions)
-
-**What the protocol requires:**
-- Fill in the scaffolded test files (not create new ones from scratch)
-- Fix all failures before marking complete
-- Verify regressions explicitly
-
-**Quality gate:** Scoped tests pass. No regressions in existing suite. All required stages in `stages_completed`. Readiness = 100.
-
-**OpenFleet mapping:** Part of WORK stage, but OpenFleet separates this via the `plan_quality.py` QA test criteria provided by the QA agent BEFORE the engineer implements. OpenArms combines this into the final stage, which works in a solo context.
-
-**Key distinction:** Test is a mandatory stage, not an optional cleanup. The Scaffold stage creates empty test files deliberately — they exist before implementation specifically so that Test has a defined scope. The test cases defined in Scaffold constrain what implementation is required.
-
----
-
-### OpenFleet 5-Stage Mapping Table
-
-| OpenArms Stage | Readiness | OpenFleet Stage(s) | Primary Difference |
-|---------------|-----------|-------------------|-------------------|
-| Document | 0-25% | CONVERSATION + ANALYSIS | OpenFleet separates PO conversation from codebase analysis; OpenArms merges them |
-| Design | 25-50% | INVESTIGATION + REASONING | OpenFleet adds multi-agent contribution convergence at REASONING |
-| Scaffold | 50-80% | (implicit in REASONING plan) | OpenArms makes skeleton creation an explicit stage |
-| Implement | 80-95% | WORK | Both require code compiles, tests referenced |
-| Test | 95-100% | (part of WORK) | OpenArms makes test a mandatory separate stage |
-
-The key structural difference: OpenFleet uses MCP tool blocking as infrastructure-level enforcement (fleet_commit blocked in CONVERSATION). OpenArms uses protocol-level enforcement (MUST NOT write code) + commit convention as audit trail. Both achieve the same goal; OpenFleet's approach is stronger (impossible to violate) but requires custom tooling infrastructure.
-
----
-
-### Hard Boundaries as a Design Principle
-
-The hard boundary principle means that the OUTPUT of each stage is categorically different from the output of other stages:
-
-- Document outputs: `.md` files only (wiki pages, docs)
-- Design outputs: `.md` files only (with type sketches as documentation, not code)
-- Scaffold outputs: type definition files, empty test files, `.env.example`, config stubs — all producing zero behavior
-- Implement outputs: implementation code files, updates to scaffolded stubs
-- Test outputs: test implementations in the scaffolded test files
-
-These are file-system-observable differences. A commit in the Document stage that touches `src/` files is visibly a stage violation. A commit in the Scaffold stage that contains business logic functions (not just type signatures) is visibly a stage violation. The hard boundary is not just a rule — it is a category distinction.
-
-This matters because **the primary failure mode of autonomous agents is phase conflation, not incompetence**. An agent that is allowed to produce implementation artifacts during the Document stage will produce coherent-looking code that solves the wrong problem — it was solving while still understanding. The hard boundary makes this failure mode structurally impossible.
-
----
+> [!abstract] Each stage's output is categorically different
+>
+> | Stage | Output Category | Violation Detection |
+> |-------|----------------|-------------------|
+> | Document | `.md` files only (wiki, docs) | Commit touching src/ = visible violation |
+> | Design | `.md` files only (type sketches as documentation) | Source files = visible violation |
+> | Scaffold | Type files, empty tests, .env, stubs — zero behavior | Business logic functions = visible violation |
+> | Implement | Implementation code, scaffolded stubs filled | Restructuring scaffold = visible violation |
+> | Test | Test implementations in scaffolded test files | Skipping = incomplete stages_completed |
 
 ### Universality: Beyond Code
 
-The stage-gate system is not a code development methodology. It is a knowledge work methodology that happens to apply to code. Consider:
+> [!example]- Stage gates applied to three non-code domains
+>
+> **Wiki ingestion task:**
+>
+> | Stage | Action |
+> |-------|--------|
+> | Document | Read source, understand domain, map to existing wiki knowledge |
+> | Design | Decide pages to create, relationships to draw, synthesis approach |
+> | Scaffold | Page skeletons with frontmatter and headers, no content |
+> | Implement | Fill in content — Deep Analysis, Key Insights, Relationships |
+> | Test | Validate frontmatter, cross-references, run pipeline post |
+>
+> **Infrastructure planning:**
+>
+> | Stage | Action |
+> |-------|--------|
+> | Document | Understand current infra, map what exists, identify gaps |
+> | Design | Decide target architecture, document the decision |
+> | Scaffold | IaC file structure, empty modules, placeholder configs |
+> | Implement | Write IaC, fill in module logic |
+> | Test | Apply in test environment, verify behavior |
+>
+> **Team process improvement:**
+>
+> | Stage | Action |
+> |-------|--------|
+> | Document | Understand current process, map pain points |
+> | Design | Decide process change, document new procedure |
+> | Scaffold | Template documents, checklists, empty workflows |
+> | Implement | Run new process on real task, fill templates |
+> | Test | Retrospect — did the process improve outcomes? |
 
-**Research/ingestion task:**
-- Document: Read the source, understand its domain, map to existing wiki knowledge
-- Design: Decide which pages to create, what relationships to draw, what synthesis to perform
-- Scaffold: Create page skeletons with frontmatter and headers, no content
-- Implement: Fill in the content — Deep Analysis, Key Insights, Relationships
-- Test: Validate frontmatter, check cross-references, run pipeline post
+### Enforcement Mechanisms — Comparative
 
-**Infrastructure planning:**
-- Document: Understand current infrastructure, map what exists, identify gaps
-- Design: Decide on the target architecture, document the decision
-- Scaffold: Create IaC file structure, empty module definitions, placeholder configs
-- Implement: Write the actual IaC, fill in the module logic
-- Test: Apply infrastructure in a test environment, verify behavior
-
-**Team process improvement:**
-- Document: Understand how the team currently works, map pain points
-- Design: Decide on the process change, document the new procedure
-- Scaffold: Create template documents, checklists, empty workflows
-- Implement: Run the new process on a real task, fill in the templates
-- Test: Retrospect — did the process improve the outcome?
-
-In every domain, the hard boundary principle holds: decisions cannot be made before understanding is complete, skeletons cannot be built before decisions are made, implementation cannot begin before the skeleton defines the contract.
-
----
-
-### Stage Enforcement Mechanisms — Comparative
-
-| Mechanism | OpenArms | OpenFleet | Strength |
-|-----------|----------|-----------|---------|
-| Protocol instructions (CLAUDE.md) | Primary enforcement | Supplementary | Works immediately, can degrade with context |
-| MCP tool blocking | Not applicable | Primary for CONVERSATION/WORK | Structural — impossible to violate |
-| One-commit-per-stage | Core convention | Not used | Creates auditable git ledger |
-| Immune system detection | Not applicable | 4/11 diseases implemented | Self-correcting after violation |
-| Readiness range enforcement | Core protocol | Readiness score drives gates | Observable in task frontmatter |
-| Quality gates per stage | Verified post-stage | plan_quality.py at task accept | Prevents advancement without evidence |
-
-The practical recommendation: start with protocol enforcement (CLAUDE.md MUST/MUST NOT) and one-commit-per-stage. Add MCP tool blocking when infrastructure investment is justified. The combination provides defense in depth.
+> [!info] Defense in depth across implementations
+>
+> | Mechanism | OpenArms | OpenFleet | Strength |
+> |-----------|----------|-----------|---------|
+> | Protocol instructions (CLAUDE.md) | Primary | Supplementary | Works immediately; can degrade with context |
+> | MCP tool blocking | N/A | Primary for CONVERSATION/WORK | Structural — impossible to violate |
+> | One-commit-per-stage | Core convention | Not used | Creates auditable git ledger |
+> | Immune system detection | N/A | 4/11 diseases implemented | Self-correcting after violation |
+> | Readiness range enforcement | Core protocol | Readiness score drives gates | Observable in task frontmatter |
+> | Quality gates per stage | Verified post-stage | plan_quality.py at accept | Prevents advancement without evidence |
+>
+> **Practical recommendation:** Start with protocol enforcement (CLAUDE.md MUST/MUST NOT) and one-commit-per-stage. Add MCP tool blocking when infrastructure investment is justified. The combination provides defense in depth.
 
 ## Open Questions
 

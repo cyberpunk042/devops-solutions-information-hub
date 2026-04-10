@@ -7,7 +7,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
@@ -38,21 +38,31 @@ tags: [devops, ecosystem, openfleet, aicp, devops-control-plane, openarms, resea
 
 The four-project ecosystem is a personal devops infrastructure built by a single engineer running a fleet of AI agents at minimal cost. The core four: OpenFleet (agent workforce and orchestration), AICP (AI control platform and local inference routing), devops-control-plane (project management platform and operational rule origin), and the research wiki (knowledge synthesis spine). OpenArms functions as a fifth project — the personal AI assistant layer providing multi-channel access. Each project has a distinct role with defined integration points; together they form a self-sustaining system where agents do operational work, local inference reduces cloud cost, the control plane enforces governance, and the wiki accumulates knowledge from all activity.
 
+> [!info] Ecosystem Quick Reference
+>
+> | Project | Primary Role | Integration Point |
+> |---------|-------------|-------------------|
+> | **OpenFleet** | Agent workforce + orchestration | kb_sync.py ← wiki; doctor.py ← control-plane |
+> | **AICP** | Local inference routing + cost reduction | Circuit breaker → fleet agents; docs/kb/ ← wiki |
+> | **devops-control-plane** | Project management + operational rules | 24 rules → doctor.py (immune system) |
+> | **Research Wiki** | Knowledge synthesis spine | LightRAG export; MCP server (17 tools) |
+> | **OpenArms** | Personal AI, 20+ channels | mcporter → wiki MCP; OpenClaw gateway → fleet |
+
 ## Key Insights
 
-- **Each project has a single primary role**: OpenFleet runs the agents. AICP routes inference cheaply. devops-control-plane manages projects and holds operational wisdom. The research wiki synthesizes knowledge. OpenArms provides personal multi-channel AI access. Overlap is minimal by design.
+> [!tip] The wiki is active infrastructure, not passive documentation
+> The wiki's knowledge graph (via LightRAG and kb_sync.py) feeds back into OpenFleet's navigator intelligence. The `## Relationships` sections are parsed into explicit relationships that inform agent decision-making. The wiki closes the feedback loop — it is the synthesis layer, not the end of the pipeline.
 
-- **The wiki is the central intelligence spine**: Not just a documentation repository — the wiki's knowledge graph (via LightRAG and kb_sync.py) feeds back into OpenFleet's navigator intelligence. The wiki's `## Relationships` sections are parsed by kb_sync.py into 2,295 explicit relationships that inform agent decision-making. The wiki is active infrastructure, not passive docs.
+> [!abstract] File-based integration, not API coupling
+> Projects integrate via files and shared protocols, not tightly coupled APIs. The wiki exports to LightRAG (kb_sync.py reads `## Relationships`). AICP exports skills to fleet tooling. devops-control-plane's rules are imported as doctor.py. Loose coupling means projects evolve independently.
 
-- **devops-control-plane is the operational DNA donor**: Its 24 rules from 16 post-mortems became OpenFleet's immune system (doctor.py). Knowledge flows from operational failure → post-mortem analysis → rule codification → fleet governance. The control-plane is where lessons become law.
+**Each project has a single primary role.** OpenFleet runs agents. AICP routes inference. devops-control-plane holds operational wisdom. The wiki synthesizes knowledge. OpenArms provides human access. Overlap is minimal by design.
 
-- **AICP's cost reduction enables scale**: Without AICP's routing (LocalAI for simple tasks, Claude for complex ones), running 10 agents continuously would be financially unsustainable. The 5-stage LocalAI independence roadmap targets 80%+ Claude token reduction. AICP is the economic enabler of the fleet's scale.
+**devops-control-plane is the operational DNA donor.** Its 24 rules from 16 post-mortems became OpenFleet's immune system (doctor.py). Knowledge flows: operational failure → post-mortem → rule codification → fleet governance. The control-plane is where lessons become law.
 
-- **OpenArms provides the human interface layer**: While OpenFleet's Mission Control provides an operational dashboard, OpenArms routes messages from 20+ channels (Telegram, Discord, Slack, iMessage) to the same AI agent runtime. The user can interact with the fleet from any device via their preferred messaging app.
+**AICP's cost reduction enables scale.** Without routing (LocalAI for simple tasks, Claude for complex ones), running 10 agents continuously would be financially unsustainable. The 5-stage roadmap targets 80%+ Claude token reduction. AICP is the economic enabler.
 
-- **All projects run in WSL2 on a single machine**: The entire ecosystem runs on one developer workstation running WSL2 (Ubuntu). This is not a distributed system — it is a single-machine ecosystem designed to scale to a dual-machine configuration (Alpha + Bravo) when hardware allows.
-
-- **File-based integration, not API coupling**: Projects integrate via files and shared protocols, not tightly coupled APIs. The wiki exports to LightRAG (kb_sync.py reads `## Relationships`). AICP exports skills to fleet agent tooling. devops-control-plane's rules are imported as doctor.py. This loose coupling means projects can evolve independently.
+**All projects run in WSL2 on a single machine.** Not distributed — single-machine ecosystem designed to scale to dual-machine (Alpha + Bravo) when hardware allows.
 
 ## Deep Analysis
 
@@ -149,20 +159,21 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 
 ### Knowledge Flow Direction
 
-Knowledge flows through the ecosystem in a loop:
-
-1. **Operational work** (OpenFleet agents execute tasks) generates incidents and lessons
-2. **Post-mortem analysis** (devops-control-plane) extracts rules from incidents
-3. **Rules codification** (doctor.py, immune system) enforces lessons as governance
-4. **Wiki ingestion** (research wiki) synthesizes both the lessons and the rules
-5. **LightRAG graph** (kb_sync.py) feeds synthesized knowledge back to agent navigators
-6. **Agents execute better** (informed by graph) → back to step 1
-
-The wiki is not the end of the loop — it is the synthesis layer that closes the feedback cycle.
+> [!tip] The ecosystem is a closed feedback loop
+>
+> 1. **Operational work** — OpenFleet agents execute tasks, generating incidents and lessons
+> 2. **Post-mortem analysis** — devops-control-plane extracts rules from incidents
+> 3. **Rules codification** — doctor.py enforces lessons as immune system governance
+> 4. **Wiki ingestion** — research wiki synthesizes both lessons and rules
+> 5. **LightRAG graph** — kb_sync.py feeds synthesized knowledge back to agent navigators
+> 6. **Agents execute better** (informed by graph) → back to step 1
+>
+> The wiki is not the end of the loop — it is the synthesis layer that closes the feedback cycle.
 
 ### The $0 Target
 
-AICP's 5-stage roadmap targets near-zero Claude API cost by routing 80%+ of operations to local models. OpenFleet's silent heartbeats and deterministic orchestrator already eliminate LLM calls from operational mechanics. The research wiki uses Claude Code for synthesis but stores all output locally. The long-term design assumes Claude is replaceable: every interface has a local fallback, every skill can execute against a local model, every orchestration step is deterministic. The ecosystem is designed to survive the loss of any single AI provider.
+> [!warning] The ecosystem is designed to survive losing any single AI provider
+> AICP's 5-stage roadmap targets near-zero Claude API cost by routing 80%+ to local models. OpenFleet's deterministic orchestrator eliminates LLM calls from operational mechanics. The wiki stores all output locally. The long-term design assumes Claude is replaceable: every interface has a local fallback, every skill can execute against a local model, every orchestration step is deterministic.
 
 ## Open Questions
 
@@ -171,17 +182,14 @@ AICP's 5-stage roadmap targets near-zero Claude API cost by routing 80%+ of oper
 
 ### Answered Open Questions
 
-**Q: Should devops-control-plane's vault be the centralized credential store for all five projects?**
+> [!example]- Should devops-control-plane's vault be the centralized credential store?
+> The vault uses AES-256-GCM with PBKDF2-SHA256 (100K KDF iterations) — robust characteristics. AICP currently uses per-project `.env` files with path protection. The vault's technical characteristics make it suitable as centralized store, but migration requires all five projects to read credentials via the vault API instead of `.env`. The decision is not yet made — both devops-control-plane and AICP flag it as open.
 
-Cross-referencing `devops-control-plane` and `AICP`: the `devops-control-plane` page explicitly documents this as a potential architectural decision: "The encrypted vault could serve as the credential store for all ecosystem projects — API keys for NotebookLM, Claude, LocalAI, GitHub, Plane." The vault system uses AES-256-GCM with PBKDF2-SHA256 (100,000 KDF iterations) with auto-lock — robust security characteristics. The `AICP` page separately documents that AICP's guardrails include path protection against `.env` and `*.key` files, suggesting credentials are currently per-project in `.env` files. The `devops-control-plane` page notes the vault "could serve as shared service potential" but this is not yet implemented. The practical answer from cross-referencing: the vault's technical characteristics make it a suitable centralized store, but the integration requires that all five projects be updated to read credentials via the control-plane's vault API rather than `.env` files — a non-trivial migration. The decision is not yet made and both the devops-control-plane and AICP pages flag it as open.
+> [!example]- What is the OpenArms → OpenFleet integration story?
+> The technical bridge exists: OpenArms agents can reach OpenFleet via its Open Gateway WebSocket (ws://127.0.0.1:18789), and `mcporter` enables MCP tool calls to the fleet's exposed tools. OpenFleet uses IRC channels for agent-to-agent coordination. The integration path is clear; the skill definition for bridging OpenArms ↔ OpenFleet coordination is pending.
 
-**Q: What is the integration story for OpenArms → OpenFleet agent coordination (not just human-to-fleet)?**
-
-Cross-referencing `OpenArms` and `OpenFleet`: the `OpenArms` page documents the `sessions_send` cross-session mechanism that allows agents to coordinate work across OpenArms sessions "without leaving the gateway." OpenFleet uses IRC channels (`#fleet`, `#alerts`, `#reviews`) for agent-to-agent coordination and has an "Open Gateway" (WebSocket at ws://127.0.0.1:18789) for agent sessions and heartbeats. The `OpenArms` page notes its architecture was inspired by "the OpenClaw architecture (long-running named agent sessions with Telegram-based status)." The integration path: OpenArms agents can reach OpenFleet via its Open Gateway WebSocket, and the `mcporter` bridge in OpenArms enables MCP tool calls to the OpenFleet ecosystem's exposed MCP tools. The `OpenArms` page directly asks this as an open question ("What is the recommended skill structure for bridging OpenArms ↔ openfleet agent coordination?") but does not yet have a canonical answer — the technical bridge exists (WebSocket + mcporter), the skill definition is pending.
-
-**Q: Can the research wiki's MCP server become the knowledge layer for OpenArms agents via mcporter?**
-
-Cross-referencing `OpenArms` and `MCP Integration Architecture`: yes — both pages explicitly confirm this as an intended integration path. The `OpenArms` page states: "mcporter enables MCP tool exposure, including the research-wiki MCP server, to OpenArms agents" and asks "Can wiki MCP tools be exposed to OpenArms agents via mcporter for in-chat knowledge queries?" The `MCP Integration Architecture` page lists "mcporter bridge exposes wiki MCP tools to OpenArms agents" in the OpenArms row of the integration map. The `OpenArms` page documents that "Skills installed in `~/.openarms/workspace/skills/` can include Claude Code skills from the research wiki." The wiki MCP server (15 tools: `wiki_status`, `wiki_search`, `wiki_read_page`, etc.) is the natural knowledge query layer for OpenArms agents. The integration is technically straightforward via mcporter — the implementation work is connecting the `.mcp.json` configuration to the mcporter bridge registration in OpenArms.
+> [!example]- Can the wiki's MCP server serve as knowledge layer for OpenArms via mcporter?
+> Yes — both OpenArms and MCP Integration Architecture confirm this as an intended path. The wiki MCP server (17 tools) is the natural knowledge query layer. "mcporter enables MCP tool exposure, including the research-wiki MCP server, to OpenArms agents." Integration is technically straightforward via mcporter — the implementation work is connecting `.mcp.json` to the mcporter bridge registration.
 
 ## Relationships
 
