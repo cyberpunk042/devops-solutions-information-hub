@@ -193,6 +193,26 @@ def _check_thin_pages(
     return thin
 
 
+def _check_filename_hygiene(
+    pages: List[Path],
+) -> List[Dict[str, Any]]:
+    """Find pages with non-ASCII or non-standard characters in filenames."""
+    import re
+    issues: List[Dict[str, Any]] = []
+    for page in pages:
+        name = page.name
+        # Check for non-ASCII (em-dash, special chars)
+        if not name.isascii():
+            issues.append({"file": name, "issue": "non-ASCII characters"})
+        # Check for plus signs
+        elif "+" in name:
+            issues.append({"file": name, "issue": "plus sign in filename"})
+        # Check for parentheses (except in titles like "($0 Target)" which are ok in frontmatter but bad in filenames)
+        elif "(" in name or ")" in name:
+            issues.append({"file": name, "issue": "parentheses in filename"})
+    return issues
+
+
 def _check_unstyled_pages(
     pages: List[Path],
     min_lines: int = 80,
@@ -383,6 +403,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         config.min_cross_domain_rels,
     )
     unstyled_pages = _check_unstyled_pages(pages)
+    filename_issues = _check_filename_hygiene(pages)
 
     total_issues = (
         len(dead_relationships)
@@ -399,6 +420,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         "stale_pages": stale_pages,
         "thin_pages": thin_pages,
         "unstyled_pages": unstyled_pages,
+        "filename_issues": filename_issues,
         "domain_health": domain_health,
         "summary": {
             "pages_scanned": len(pages),
@@ -474,6 +496,12 @@ def _print_human_report(report: Dict[str, Any]) -> None:
             print(f"  {d['domain']} ({d['page_count']} pages):")
             for issue in d["issues"]:
                 print(f"    - {issue}")
+        print()
+
+    if report.get("filename_issues"):
+        print(f"Filename Issues ({len(report['filename_issues'])}):")
+        for p in report["filename_issues"]:
+            print(f"  {p['file']}: {p['issue']}")
         print()
 
     if report.get("unstyled_pages"):

@@ -838,7 +838,13 @@ def scaffold_page(page_type: str, title: str, project_root: Path,
 
     template = template_path.read_text(encoding="utf-8")
     today = datetime.now().strftime("%Y-%m-%d")
-    slug = title.lower().replace(" ", "-").replace(":", "")[:80].strip("-")
+    # Slugify: ASCII-only, hyphens for separators, no special characters
+    import re as _re
+    import unicodedata
+    slug = unicodedata.normalize("NFKD", title.lower())
+    slug = slug.encode("ascii", "ignore").decode("ascii")  # Strip non-ASCII
+    slug = _re.sub(r"[^a-z0-9]+", "-", slug)  # Replace non-alphanum with hyphen
+    slug = slug.strip("-")[:80].strip("-")
 
     # Determine output directory
     type_dirs = {

@@ -173,7 +173,7 @@ def _signal_cross_source_convergence(pages: List[Dict[str, Any]]) -> List["Candi
         )
         candidates.append(Candidate(
             type="lesson",
-            title=f"Lesson: Convergence on {concept}",
+            title=f"Convergence on {concept}",
             score=raw_score,
             signals=[signal],
             source_pages=sources + ([concept] if concept_page_objs else []),
@@ -229,7 +229,7 @@ def _signal_relationship_hub(pages: List[Dict[str, Any]]) -> List["Candidate"]:
         )
         candidates.append(Candidate(
             type="lesson",
-            title=f"Lesson: Hub — {target_title}",
+            title=f"{target_title} Is a Relationship Hub",
             score=raw_score,
             signals=[signal],
             source_pages=[target_title] + sorted(referrers),
@@ -284,7 +284,7 @@ def _signal_domain_layer_gap(pages: List[Dict[str, Any]]) -> List["Candidate"]:
         )
         candidates.append(Candidate(
             type="lesson",
-            title=f"Lesson: Synthesize {domain.replace('-', ' ').title()} Knowledge",
+            title=f"Synthesize {domain.replace('-', ' ').title()} Knowledge into Lessons",
             score=raw_score,
             signals=[signal],
             source_pages=source_titles[:10],
@@ -329,7 +329,7 @@ def _signal_open_question_density(pages: List[Dict[str, Any]],
         )
         candidates.append(Candidate(
             type="decision",
-            title=f"Decision: Resolve Open Questions in {source_page_title}",
+            title=f"Resolve Open Questions in {source_page_title}",
             score=raw_score,
             signals=[signal],
             source_pages=[source_page_title],
@@ -386,7 +386,7 @@ def _signal_orphaned_references(pages: List[Dict[str, Any]],
         )
         candidates.append(Candidate(
             type="lesson",
-            title=f"Lesson: {target}",
+            title=target,
             score=raw_score,
             signals=[signal],
             source_pages=sorted(referrers),
