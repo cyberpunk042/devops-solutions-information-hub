@@ -130,9 +130,9 @@ Context management is not a technique — it is the primary lever on Claude Code
 **What is NOT verified (presented as fact elsewhere in this wiki but actually one person's observation):**
 - The specific degradation thresholds (20%, 40%, 60%, 80%)
 - Whether degradation is a step function or gradual
-- The "51,000 token" baseline claim
-- The "5-minute prompt cache TTL" claim
-- The claim that quality "degrades regardless" after 3-4 compactions
+- The "51,000 token" baseline — real measurement from one developer's specific setup, not universal
+- The "5-minute prompt cache TTL" — reported by one source, not confirmed by Anthropic
+- The "3-4 compactions" degradation claim — one developer's observation from their workflow
 
 These need proper research or marking as unverified. See the source: a single YouTube video from one practitioner, not Anthropic documentation or measured benchmarks.
 
