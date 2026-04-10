@@ -1,6 +1,40 @@
 # Knowledge Systems
 
-RAG, knowledge graphs, wikis, embeddings, search, synthesis
+The foundational domain of this wiki — where the wiki documents how it works. Covers the LLM Wiki pattern, PKM theory (PARA, Zettelkasten), evolution pipeline, knowledge graphs, memory lifecycle, ingestion, and retrieval-augmented generation.
+
+**Model:** [[Model: LLM Wiki]] | **Standards:** [[LLM Wiki Standards — What Good Looks Like]]
+
+### Start Here
+
+1. [[LLM Wiki Pattern]] — The core pattern: LLMs maintain structured markdown wikis
+2. [[Second Brain Architecture]] — The PKM architecture this wiki implements
+3. [[Knowledge Evolution Pipeline]] — How pages promote from seed to canonical
+
+### Wiki Architecture
+
+| Page | What it covers |
+|------|---------------|
+| [[LLM Wiki Pattern]] | Karpathy's approach to LLM-maintained knowledge bases |
+| [[Wiki Ingestion Pipeline]] | How raw sources become structured wiki pages |
+| [[Wiki Knowledge Graph]] | Entity-relationship layer over the wiki |
+| [[Wiki Backlog Pattern]] | Wiki as both knowledge base and project tracker |
+| [[Memory Lifecycle Management]] | Knowledge validity, staleness, and decay |
+| [[Knowledge Evolution Pipeline]] | Maturity promotion: seed to canonical |
+
+### PKM Theory
+
+| Page | What it covers |
+|------|---------------|
+| [[Second Brain Architecture]] | Externalized thinking systems (Forte, Karpathy) |
+| [[PARA Methodology]] | Tiago Forte's action-oriented PKM framework |
+| [[Zettelkasten Methodology]] | Luhmann's atomic-note slip-box system |
+
+### Scale and Retrieval
+
+| Page | What it covers |
+|------|---------------|
+| [[LLM Wiki vs RAG]] | Side-by-side comparison of wiki navigation vs vector search |
+| [[LightRAG]] | Graph-based RAG framework (HKU, EMNLP 2025) |
 
 ## Pages
 

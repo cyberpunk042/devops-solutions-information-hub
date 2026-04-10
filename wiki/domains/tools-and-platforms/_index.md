@@ -1,6 +1,32 @@
-# Tools And Platforms
+# Tools and Platforms
 
-Software tools, platforms, IDEs, CLI tools, SaaS products
+The tools layer: knowledge tools (Obsidian, NotebookLM), ecosystem projects (AICP, OpenArms, Plane), and the multi-channel access pattern that connects them. Covers both the tools themselves and their integrations via CLI, skills, and MCP.
+
+### Start Here
+
+1. [[AICP]] — The AI Control Platform orchestrating local and cloud backends
+2. [[OpenArms]] — Local-first personal AI assistant with Gateway daemon
+3. [[Obsidian Knowledge Vault]] — Visual frontend for the LLM Wiki pattern
+
+### Knowledge Tools
+
+| Page | What it covers |
+|------|---------------|
+| [[Obsidian Knowledge Vault]] | Graph view, wikilinks, visual wiki frontend |
+| [[Obsidian CLI]] | First-party command-line interface for Obsidian |
+| [[Obsidian Skills Ecosystem]] | AI agent skills for Obsidian vault operations |
+| [[NotebookLM]] | Google's AI research tool for source-grounded analysis |
+| [[notebooklm-py CLI]] | Unofficial Python CLI for NotebookLM automation |
+| [[NotebookLM Skills]] | Claude Code skills bridging NotebookLM |
+| [[Multi-Channel AI Agent Access]] | Single agent runtime reachable through multiple interfaces |
+
+### Ecosystem Projects
+
+| Page | What it covers |
+|------|---------------|
+| [[AICP]] | AI Control Platform — orchestrates AI backends |
+| [[OpenArms]] | Local-first AI assistant platform with Gateway daemon |
+| [[Plane]] | Open-source project management platform (AGPL-3) |
 
 ## Pages
 

@@ -1,6 +1,18 @@
-# Cross Domain
+# Cross-Domain
 
+Meta-level concepts that span multiple domains. The methodology framework governs how models compose, and the architectural quality analogy provides a shared vocabulary for assessing structural health across any codebase or system.
 
+### Start Here
+
+1. [[Methodology Framework]] — The meta-system for defining, selecting, and composing methodologies
+2. [[Skyscraper, Pyramid, Mountain]] — Architectural quality analogy for structural states
+
+### Pages by Theme
+
+| Page | What it covers |
+|------|---------------|
+| [[Methodology Framework]] | Meta-methodology: composable, recursive, transferable |
+| [[Skyscraper, Pyramid, Mountain]] | Three structural states of a codebase: fragile, solid, organic |
 
 ## Pages
 

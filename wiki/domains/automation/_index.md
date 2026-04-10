@@ -1,6 +1,23 @@
 # Automation
 
-Scheduling, pipelines, workflow automation, cron, task orchestration
+The bridge between knowledge and action. Covers MCP integration, research pipeline orchestration, event-driven automation, scheduling, and content pipelines. These pages define how the wiki's knowledge transforms into automated workflows.
+
+**Model:** [[Model: Automation and Pipelines]]
+
+### Start Here
+
+1. [[MCP Integration Architecture]] — The evolutionary target: CLI tools to native MCP tools
+2. [[Research Pipeline Orchestration]] — Automating knowledge acquisition across the wiki
+
+### Pipeline Architecture
+
+| Page | What it covers |
+|------|---------------|
+| [[MCP Integration Architecture]] | Moving from CLI invocation to native MCP tools |
+| [[Research Pipeline Orchestration]] | Automated knowledge acquisition and processing |
+| [[AI-Driven Content Pipeline]] | Claude Code as orchestration agent for content |
+| [[Wiki Event-Driven Automation]] | Replacing manual wiki ops with event triggers |
+| [[Claude Code Scheduling]] | Cron jobs and remote task scheduling |
 
 ## Pages
 
