@@ -274,13 +274,13 @@ The readiness calculation is always derived from stage completion evidence, neve
 
 ## Backlinks
 
-[[[[Stage-Gate Methodology]] (the type matrix selects stage subsets from the full 5-stage system)]]
-[[[[Task Lifecycle Stage-Gating]] (per-type stage selection is the flexibility layer of stage gating)]]
-[[[[Backlog Hierarchy Rules]] (epics and modules follow the full 5-stage path; tasks use the 3-stage path)]]
-[[[[Execution Modes and End Conditions]] (execution modes interact with type requirements — e.g., full-autonomous behavior differs by type)]]
-[[[[Spec-Driven Development]] (spike type formalizes research-without-implementation; docs type formalizes documentation-as-work)]]
-[[[[Wiki Backlog Pattern]] (all 7 types appear in wiki backlog; type determines which stages are tracked in frontmatter)]]
-[[[[Four-Project Ecosystem]] (all four projects use task types — spike for research, docs for wiki, task/module/epic for features)]]
-[[[[Immune System Rules]] (type violations — e.g., code produced during a spike — are detectable diseases)]]
+[[Stage-Gate Methodology]] (the type matrix selects stage subsets from the full 5-stage system)]]
+[[Task Lifecycle Stage-Gating]] (per-type stage selection is the flexibility layer of stage gating)]]
+[[Backlog Hierarchy Rules]] (epics and modules follow the full 5-stage path; tasks use the 3-stage path)]]
+[[Execution Modes and End Conditions]] (execution modes interact with type requirements — e.g., full-autonomous behavior differs by type)]]
+[[Spec-Driven Development]] (spike type formalizes research-without-implementation; docs type formalizes documentation-as-work)]]
+[[Wiki Backlog Pattern]] (all 7 types appear in wiki backlog; type determines which stages are tracked in frontmatter)]]
+[[Four-Project Ecosystem]] (all four projects use task types — spike for research, docs for wiki, task/module/epic for features)]]
+[[Immune System Rules]] (type violations — e.g., code produced during a spike — are detectable diseases)]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Model: Methodology]]
