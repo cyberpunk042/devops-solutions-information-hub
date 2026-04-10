@@ -226,5 +226,6 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skyscraper, Pyramid, Mountain]]
 [[Stage-Gate Methodology]]
+[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 [[Task Type Artifact Matrix]]
 [[The Wiki Is a Hub, Not a Silo]]

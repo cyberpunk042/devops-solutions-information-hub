@@ -272,4 +272,5 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 [[Model: Methodology]]
 [[Model: Claude Code]]
 [[Model: LLM Wiki]]
+[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 [[The Wiki Is a Hub, Not a Silo]]

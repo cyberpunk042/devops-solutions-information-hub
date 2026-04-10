@@ -17,9 +17,9 @@ This wiki is organized like a library. Start at the level that matches what you 
 | **Comparisons** | Side-by-side evaluations with structured matrices | [comparisons/](comparisons/) |
 | **Sources** | Individual source syntheses — the raw evidence layer | [sources/](sources/) |
 
-**If you're new:** Read [[Model Registry]] first, then [[Model: Methodology]], then the domain that interests you.
+**If you're new:** Read the [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]] for the big picture, then [[Model Registry]] for all 15 models.
 
-**If you're an agent from another project:** [[Model Registry]] → find the relevant model → read it + its standards page → follow the How to Adopt section.
+**If you're an agent from another project:** [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]] → choose your adoption tier → follow the model dependency graph.
 
 ## Models — The Big Picture
 

@@ -370,5 +370,6 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Model: Methodology]]
 [[Models Are Built in Layers, Not All at Once]]
 [[Never Skip Stages Even When Told to Continue]]
+[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
 [[The Agent Must Practice What It Documents]]

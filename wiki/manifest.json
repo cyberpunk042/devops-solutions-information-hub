@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-10T21:36:47.989227+00:00",
+  "generated": "2026-04-10T21:43:50.918383+00:00",
   "stats": {
-    "pages": 184,
+    "pages": 185,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1232,
+    "relationships": 1238,
     "tags_unique": 672,
     "layers": {
       "3": 5,
@@ -14,11 +14,11 @@
       "4": 28,
       "5": 6,
       "1": 24,
-      "spine": 31
+      "spine": 32
     },
     "maturity": {
       "growing": 133,
-      "seed": 26
+      "seed": 27
     }
   },
   "pages": [
@@ -12324,6 +12324,58 @@
           "target": "Model: Methodology"
         }
       ]
+    },
+    {
+      "path": "spine/super-model.md",
+      "slug": "spine/super-model",
+      "title": "Super-Model: Research Wiki as Ecosystem Intelligence Hub",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "super-model",
+        "second-brain",
+        "hub",
+        "ecosystem",
+        "adoption",
+        "models",
+        "standards",
+        "integration",
+        "quality"
+      ],
+      "sources": [],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "CONTAINS",
+          "target": "Model Registry"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Adoption Guide \u2014 How to Use This Wiki's Standards"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Ecosystem Architecture"
+        }
+      ]
     }
   ],
   "domains": {
@@ -12332,8 +12384,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 52,
-      "relationship_count": 387
+      "page_count": 53,
+      "relationship_count": 393
     },
     "devops": {
       "page_count": 14,
@@ -12404,14 +12456,16 @@
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/the-wiki-is-a-hub-not-a-silo",
       "spine/adoption-guide",
-      "spine/model-ecosystem"
+      "spine/model-ecosystem",
+      "spine/super-model"
     ],
     "integration": [
       "backlog/epics/E002-ecosystem-integration",
       "domains/automation/mcp-integration-architecture",
       "domains/devops/four-project-ecosystem",
       "spine/model-ecosystem",
-      "spine/model-mcp-cli-integration"
+      "spine/model-mcp-cli-integration",
+      "spine/super-model"
     ],
     "openfleet": [
       "backlog/epics/E002-ecosystem-integration",
@@ -12964,7 +13018,8 @@
       "sources/src-karpathy-llm-wiki-idea-file",
       "sources/src-obsidian-claude-code-second-brain",
       "spine/model-knowledge-evolution",
-      "spine/model-second-brain"
+      "spine/model-second-brain",
+      "spine/super-model"
     ],
     "graph-view": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
@@ -13724,7 +13779,8 @@
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
       "spine/model-quality-failure-prevention",
-      "spine/model-skills-commands-hooks-standards"
+      "spine/model-skills-commands-hooks-standards",
+      "spine/super-model"
     ],
     "refactoring": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -14437,7 +14493,8 @@
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-quality-models-hub-mindset",
-      "spine/model-registry"
+      "spine/model-registry",
+      "spine/super-model"
     ],
     "process": [
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -14475,7 +14532,8 @@
       "spine/model-quality-failure-prevention-standards",
       "spine/model-skills-commands-hooks-standards",
       "spine/model-wiki-design-standards",
-      "spine/model-wiki-design"
+      "spine/model-wiki-design",
+      "spine/super-model"
     ],
     "cross-reference": [
       "lessons/multi-stage-ingestion-beats-single-pass"
@@ -14593,7 +14651,8 @@
     ],
     "hub": [
       "lessons/the-wiki-is-a-hub-not-a-silo",
-      "log/2026-04-09-directive-quality-models-hub-mindset"
+      "log/2026-04-09-directive-quality-models-hub-mindset",
+      "spine/super-model"
     ],
     "aggregation": [
       "lessons/the-wiki-is-a-hub-not-a-silo"
@@ -14687,7 +14746,8 @@
       "log/2026-04-09-directive-models-are-not-documents"
     ],
     "super-model": [
-      "log/2026-04-09-directive-record-process-skills-supermodel"
+      "log/2026-04-09-directive-record-process-skills-supermodel",
+      "spine/super-model"
     ],
     "examples": [
       "log/2026-04-09-directive-record-process-skills-supermodel",
@@ -15074,7 +15134,8 @@
       "sources/src-turboquant-122b-macbook"
     ],
     "adoption": [
-      "spine/adoption-guide"
+      "spine/adoption-guide",
+      "spine/super-model"
     ],
     "guide": [
       "spine/adoption-guide"

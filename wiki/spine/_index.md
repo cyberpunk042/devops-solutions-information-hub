@@ -42,7 +42,8 @@ Strategic architecture: models, standards, domain overviews, and the adoption gu
 - [Model: Skills, Commands, and Hooks](model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
 - [Wiki Design Standards — What Good Styling Looks Like](model-wiki-design-standards.md) — This page defines the quality bar for VISUAL DESIGN in the wiki
 - [Model: Wiki Design](model-wiki-design.md) — The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they ...
+- [Super-Model: Research Wiki as Ecosystem Intelligence Hub](super-model.md) — This is the super-model — the packaging of all 15 models, 7 standards pages, and the full knowledge architecture into...
 
 ## Tags
 
-`spine`, `model`, `standards`, `gold-standard`, `quality`, `anti-patterns`, `methodology`, `concept`, `skills`, `hooks`, `context-management`, `transferable`, `ecosystem`, `claude-code`, `harness`, `model-definition`, `harness-engineering`, `mcp`, `extension-system`, `design-md`
+`spine`, `model`, `standards`, `quality`, `gold-standard`, `anti-patterns`, `methodology`, `concept`, `skills`, `hooks`, `ecosystem`, `context-management`, `integration`, `second-brain`, `adoption`, `transferable`, `claude-code`, `harness`, `model-definition`, `harness-engineering`
