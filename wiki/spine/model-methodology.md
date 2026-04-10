@@ -320,6 +320,14 @@ Selection is not a lookup table — it's a multi-dimensional evaluation. Here's 
 
 Real work never runs one model in isolation. Four composition modes:
 
+> [!info] **Composition modes at a glance**
+> | Mode | How it works | Example |
+> |------|-------------|---------|
+> | **Sequential** | One model's output feeds the next model's input | Research → Feature Development |
+> | **Nested** | Models run inside other models' stages | SFIF → Feature Dev → task subsets |
+> | **Conditional** | Conditions branch to completely different models | `bug` → Bug Fix, `spike` → Research |
+> | **Parallel** | Multiple tracks run simultaneously | Execution + PM + Knowledge |
+
 **Sequential:** Research model runs first, produces a spec. Feature Development model runs next, consuming the spec. The "Build the backlog system" example above ACTUALLY ran this way — first a research phase (reading OpenArms methodology), then a brainstorm/spec phase, then implementation.
 
 **Nested:** SFIF runs at project level. Inside SFIF's Infrastructure stage, the backlog system epic ran the Feature Development model. Inside that epic, individual tasks ran subset models (task = scaffold+implement+test). Three levels of nesting, each with its own model.
@@ -340,19 +348,35 @@ These interact but never merge: PM triggers execution, execution feeds knowledge
 
 Stage names alone do not prevent violations. Each stage needs explicit ALLOWED and FORBIDDEN artifact lists. This was proven by OpenArms Bug 5: the agent produced 135 lines of business logic during the scaffold stage because nothing explicitly said "business logic is FORBIDDEN in scaffold."
 
-**Scaffold:**
-- ALLOWED: type definitions, static constants, schema objects, .env entries, empty test files with placeholder assertions
-- FORBIDDEN: business logic (parsers, resolvers, evaluators), env var readers with parsing logic, functions beyond stub bodies, real test implementations
+#### Scaffold
 
-**Implement:**
-- ALLOWED: business logic, helper functions, modifying existing files to import new code
-- REQUIRED: at least one existing runtime file must import the new code (OpenArms Bug 6: 2,073 lines orphaned)
-- FORBIDDEN: modifying test files, writing test assertions
+> [!success] **ALLOWED**
+> Type definitions, static constants, schema objects, `.env` entries, empty test files with placeholder assertions.
 
-**Test:**
-- ALLOWED: fill scaffolded tests, add edge cases
-- REQUIRED: 0 test failures before marking done
-- FORBIDDEN: proceeding with failing tests
+> [!warning] **FORBIDDEN**
+> Business logic (parsers, resolvers, evaluators), env var readers with parsing logic, functions beyond stub bodies, real test implementations.
+
+#### Implement
+
+> [!success] **ALLOWED**
+> Business logic, helper functions, modifying existing files to import new code.
+
+> [!tip] **REQUIRED**
+> ==At least one existing runtime file must import the new code.== (OpenArms Bug 6: 2,073 lines orphaned because nothing imported them.)
+
+> [!warning] **FORBIDDEN**
+> Modifying test files, writing test assertions.
+
+#### Test
+
+> [!success] **ALLOWED**
+> Fill scaffolded tests, add edge cases.
+
+> [!tip] **REQUIRED**
+> 0 test failures before marking done.
+
+> [!warning] **FORBIDDEN**
+> Proceeding with failing tests.
 
 These lists are defined in `methodology.yaml` per stage. They adapt per domain — a wiki project's "implement" ALLOWED list includes "wiki pages, skills, commands" instead of "business logic functions."
 
@@ -407,85 +431,102 @@ Every model definition is a template. Every execution is an instance with potent
 
 ### The Quality Dimension
 
-Every model instance has a quality target:
+Every model instance has a quality target. The choice is EXPLICIT — made per-situation, never accidental.
 
-- **Skyscraper** — every stage runs, every artifact produced, every gate checked. For complex or high-stakes work.
-- **Pyramid** — stages may be compressed, artifacts lighter, gates softer. Deviations are DELIBERATE and documented. For pragmatic delivery under constraints.
-- **Mountain** — stages skipped accidentally, artifacts missing, gates ignored. The anti-pattern.
+> [!success] **Skyscraper** — the full process
+> Every stage runs, every artifact produced, every gate checked. For complex or high-stakes work. This is the default expectation for epics and new subsystems.
 
-The framework mandates that quality level is an EXPLICIT choice per situation. A hotfix at Pyramid tier is a valid choice. Accidentally producing Mountain-tier work because you didn't choose is the failure mode.
+> [!warning] **Pyramid** — deliberate compression
+> Stages may be compressed, artifacts lighter, gates softer. Deviations are DELIBERATE and documented. For pragmatic delivery under constraints. A hotfix at Pyramid tier is a valid, honest choice.
+
+> [!bug]- **Mountain** — accidental chaos (the anti-pattern)
+> Stages skipped accidentally, artifacts missing, gates ignored. Not a choice — a failure mode. The difference between Pyramid and Mountain is INTENT: Pyramid documents why stages were skipped; Mountain doesn't notice they were skipped.
+
+==The failure mode is not choosing Pyramid — it is accidentally producing Mountain-tier work because quality level was never an explicit decision.==
 
 See [[Skyscraper, Pyramid, Mountain]].
 
 ### How to Adopt
 
-**What you need:**
-1. `methodology.yaml` — defines your models (stages, task types, modes, end conditions). Start by copying from `wiki/config/methodology.yaml` and adapting.
-2. `agent-directive.md` — defines the work loop, stage enforcement rules, git management, quality gates. Start by copying from `wiki/config/agent-directive.md` and adapting commands for your project.
+> [!info] **What you need**
+> 1. `methodology.yaml` — defines your models (stages, task types, modes, end conditions). Start by copying from `wiki/config/methodology.yaml` and adapting.
+> 2. `agent-directive.md` — defines the work loop, stage enforcement rules, git management, quality gates. Start by copying from `wiki/config/agent-directive.md` and adapting commands for your project.
 
-**What is INVARIANT (never change):**
-- Stage boundaries are hard (ALLOWED/FORBIDDEN enforced)
-- Readiness derived from stage completion, not subjective assessment
-- Backlog hierarchy: epic → module → task, readiness flows upward
-- One commit per stage
-- Models are DATA defined in config, not CODE
+> [!warning] **INVARIANT — never change these**
+> - Stage boundaries are hard (ALLOWED/FORBIDDEN enforced)
+> - Readiness derived from stage completion, not subjective assessment
+> - Backlog hierarchy: epic → module → task, readiness flows upward
+> - One commit per stage
+> - Models are DATA defined in config, not CODE
 
-**What is PER-PROJECT (always adapt):**
-- Which models exist and their stage sequences
-- Per-stage artifact requirements (code vs wiki pages vs Terraform)
-- Gate mechanisms (hooks vs CI vs manual review vs post-chain)
-- Which task types exist
-- Execution mode defaults and end conditions
+> [!tip] **PER-PROJECT — always adapt these**
+> - Which models exist and their stage sequences
+> - Per-stage artifact requirements (code vs wiki pages vs Terraform)
+> - Gate mechanisms (hooks vs CI vs manual review vs post-chain)
+> - Which task types exist
+> - Execution mode defaults and end conditions
 
-**What goes wrong if you skip this:**
-See the 7 bugs above. Every one was found within hours of starting autonomous agent operation. Without explicit methodology: binary status (Bug 1), unchecked epics (Bug 2), rogue tasks (Bug 3), lost files (Bug 4), stage violations (Bug 5), orphaned code (Bug 6), invisible work (Bug 7). The methodology exists because these failures HAPPENED.
+> [!bug]- **What goes wrong if you skip this**
+> See the 7 bugs above. Every one was found within hours of starting autonomous agent operation. Without explicit methodology: binary status (Bug 1), unchecked epics (Bug 2), rogue tasks (Bug 3), lost files (Bug 4), stage violations (Bug 5), orphaned code (Bug 6), invisible work (Bug 7). The methodology exists because these failures HAPPENED.
 
 ### Real Example: End-to-End Task Execution
 
-Here's how a single task flows through the methodology, from selection to completion:
+Here's how a single task flows through the methodology, from selection to completion.
 
-**Task: "Tune the evolution scorer"** (from this wiki's actual history)
+> [!info] **Task: "Tune the evolution scorer"** (from this wiki's actual history)
+> task_type=`task`, domain=tools, scale=focused change in one file. Conditions select the **Feature Development model**, subset for task scale: scaffold → implement → test.
 
-**Selection:** task_type=`task`, domain=tools, scale=focused change in one file. Conditions select the **Feature Development model**, subset for task type: scaffold → implement → test.
+> [!example]- **Scaffold stage**
+> | | |
+> |---|---|
+> | **ALLOWED** | Modify the signal weights dict, add the `_GENERIC_TAGS` set, change the tag co-occurrence threshold |
+> | **FORBIDDEN** | Rewrite the scoring algorithm, add new signal functions |
+> | **Artifact** | Modified `SIGNAL_WEIGHTS` in evolve.py, added `_GENERIC_TAGS` filter |
+> | **Gate** | `pipeline evolve --score` still runs without errors |
+> | **Commit** | `feat(evolve): tune scorer weights and add generic tag filter` |
 
-**Scaffold stage:**
-- ALLOWED: modify the signal weights dict, add the `_GENERIC_TAGS` set, change the tag co-occurrence threshold
-- FORBIDDEN: rewrite the scoring algorithm, add new signal functions
-- Artifact: modified `SIGNAL_WEIGHTS` in evolve.py, added `_GENERIC_TAGS` filter
-- Gate: `pipeline evolve --score` still runs without errors
-- Commit: `feat(evolve): tune scorer weights and add generic tag filter`
+> [!example]- **Implement stage**
+> | | |
+> |---|---|
+> | **ALLOWED** | Update the deduplication logic, change overlap thresholds |
+> | **REQUIRED** | The scorer produces different output (verified by running `--score`) |
+> | **Artifact** | Rewritten `_deduplicate()` function with source overlap check |
+> | **Gate** | `pipeline evolve --score --top 10` shows diverse candidates (not all tag-pair patterns) |
+> | **Commit** | `feat(evolve): improve dedup — check source overlap with evolved pages` |
 
-**Implement stage:**
-- ALLOWED: update the deduplication logic, change overlap thresholds
-- REQUIRED: the scorer produces different output (verified by running `--score`)
-- Artifact: rewritten `_deduplicate()` function with source overlap check
-- Gate: `pipeline evolve --score --top 10` shows diverse candidates (not all tag-pair patterns)
-- Commit: `feat(evolve): improve dedup — check source overlap with evolved pages`
+> [!example]- **Test stage**
+> | | |
+> |---|---|
+> | **Run** | `pipeline evolve --score --top 10` — verify diverse candidates |
+> | **Run** | `pipeline post` — verify 0 validation errors |
+> | **Verify** | Candidates include convergence lessons, hub pages, open-question decisions (not just tag pairs) |
+> | **Commit** | `feat: tune evolution scorer — better weights, dedup, and generic tag filter` |
 
-**Test stage:**
-- Run: `pipeline evolve --score --top 10` — verify diverse candidates
-- Run: `pipeline post` — verify 0 validation errors
-- Verify: candidates include convergence lessons, hub pages, open-question decisions (not just tag pairs)
-- Commit: `feat: tune evolution scorer — better weights, dedup, and generic tag filter`
-
-**Completion:** stages_completed=[scaffold, implement, test], readiness=100, status=done. Parent epic readiness recalculated from children.
+> [!success] **Completion**
+> `stages_completed=[scaffold, implement, test]`, `readiness=100`, `status=done`. Parent epic readiness recalculated from children.
 
 ### Relationship to Other Models
 
-The Methodology model GOVERNS all other models in the wiki. Every other model operates WITHIN this framework:
+> [!abstract] **Governance, not peer relationship**
+> The Methodology model GOVERNS all other models in the wiki. Every other model operates WITHIN this framework. This is the super-model.
 
-- [[Model: LLM Wiki]] defines WHAT the wiki IS. This model defines HOW wiki work proceeds through stages.
-- [[Model: Claude Code]] defines the agent's capabilities. This model defines how those capabilities are sequenced and gated.
-- [[Model: Skills, Commands, and Hooks]] defines the tooling. This model defines WHEN each tool is permitted (per-stage protocols).
-- [[Model: Ecosystem Architecture]] defines the project topology. This model defines how work flows through that topology.
-
-This is not a peer relationship — it is governance. The Methodology model is the super-model.
+| Model | What it defines | How Methodology governs it |
+|-------|----------------|---------------------------|
+| [[Model: LLM Wiki]] | WHAT the wiki IS | HOW wiki work proceeds through stages |
+| [[Model: Claude Code]] | The agent's capabilities | How those capabilities are sequenced and gated |
+| [[Model: Skills, Commands, and Hooks]] | The tooling | WHEN each tool is permitted (per-stage protocols) |
+| [[Model: Ecosystem Architecture]] | The project topology | How work flows through that topology |
 
 ## Open Questions
 
-- Should model selection be encoded as a declarative config (condition → model lookup table) or evaluated dynamically? Currently it's implicit in task_type mapping. (Requires: testing a formal selection engine)
-- Can stage gates be FULLY automated (no human in the loop) for certain model instances? OpenArms' autonomous agent run suggests yes for routine tasks but no for architectural decisions. (Requires: more autonomous operation data)
-- What is the minimum viable methodology for a project that just wants stage tracking without the full framework? (Requires: a minimal adoption test)
+> [!question] **Should model selection be declarative or dynamic?**
+> Currently selection is implicit in task_type mapping. Could it be encoded as a declarative config (condition → model lookup table)? Or does the multi-dimensional evaluation require dynamic logic? (Requires: testing a formal selection engine)
+
+> [!question] **Can stage gates be fully automated?**
+> OpenArms' autonomous agent run suggests yes for routine tasks but no for architectural decisions. Where is the boundary between human-gated and auto-gated stages? (Requires: more autonomous operation data)
+
+> [!question] **What is the minimum viable methodology?**
+> A project that just wants stage tracking without the full framework — what subset works? `methodology.yaml` with 2 models (Feature Dev + Hotfix), `agent-directive.md` with the work loop, and done? (Requires: a minimal adoption test)
 
 ## Relationships
 
@@ -506,22 +547,18 @@ This is not a peer relationship — it is governance. The Methodology model is t
 [[Model: LLM Wiki]]
 [[Model: Claude Code]]
 [[Model: Ecosystem Architecture]]
-[[Model: Skills]]
-[[Commands]]
-[[and Hooks]]]]
+[[Model: Skills, Commands, and Hooks]]
 [[Model: Second Brain]]
 [[Methodology Framework]]
 [[Stage-Gate Methodology]]
 [[Task Type Artifact Matrix]]
 [[Backlog Hierarchy Rules]]
 [[Execution Modes and End Conditions]]
-[[Skyscraper]]
-[[Pyramid]]
-[[Mountain]]]]
+[[Skyscraper, Pyramid, Mountain]]
 [[Spec-Driven Development]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[wiki/config/methodology.yaml]]
 [[wiki/config/agent-directive.md]]
-[[Model: Skills, Commands, and Hooks]]
 [[Model: Wiki Design]]
+[[Wiki Design Standards — What Good Styling Looks Like]]

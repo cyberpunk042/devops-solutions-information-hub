@@ -83,6 +83,70 @@ Every model page must:
 - Explain how to ADOPT
 - Reference the super-model ([[Methodology Framework]])
 - Pass `pipeline post` validation
+- Be STYLED per the visual design standards below
+
+## Styling Standards
+
+Read [[Wiki Design Standards — What Good Styling Looks Like]] for the full standard.
+Read [[Model: Wiki Design]] for the callout vocabulary.
+
+Every model page must be styled. A model page that passes content quality gates but lacks
+visual structure is INCOMPLETE. Apply the callout vocabulary following these patterns:
+
+### Section-Specific Styling
+
+**Catalog sections** (if the model has a catalog of named items — e.g., Methodology's 9 models):
+- `> [!info]` header with name + key characteristics (blue = what this is)
+- Markdown table for structured data (stages, artifacts, gates)
+- `> [!abstract]` for selection conditions / when-to-use (teal = when this applies)
+- `> [!example]-` foldable for real ecosystem instances (purple = proof, always collapsed)
+- `> [!tip]` or `> [!warning]` for optional design insights or cautions
+
+**Reference data** (tables readers return to — emphasis hierarchy, component matrix, etc.):
+- Wrap in `> [!info]` to create a reference card. The callout says "internalize this."
+
+**Rules with ALLOWED/FORBIDDEN** (stage boundaries, invariants):
+- `> [!success]` for ALLOWED lists (green = permitted)
+- `> [!warning]` for FORBIDDEN lists (orange = prohibited)
+- `> [!tip]` for REQUIRED items
+
+**Quality tiers / maturity levels**:
+- Match callout to semantic meaning: `[!success]` = good, `[!warning]` = deliberate compromise, `[!bug]` = anti-pattern
+
+**Adoption guidance**:
+- `> [!info]` for what you need
+- `> [!warning]` for invariants (never change)
+- `> [!tip]` for per-project adaptations
+
+**Failures / bugs / incidents**:
+- `> [!bug]-` foldable, always. Title = bug name + design input.
+
+**Open questions**:
+- `> [!question]` callouts, each with (Requires: ...) tag
+
+**Governance / position statements**:
+- `> [!abstract]` for the model's role and relationships
+
+### What NOT to Style
+
+- Narrative prose sections that flow well without callouts — don't box every paragraph
+- Short content (1-3 lines) — a callout adds overhead for minimal gain
+- Content already structured with tables and bold headers — if it's scannable, leave it
+- Never use `[!info]` for everything — choose the specific semantic type
+
+### The Styling Checklist
+
+Run this before marking any model as styled:
+- [ ] Every callout type matches its semantic purpose
+- [ ] All examples >5 lines are foldable (`[!example]-` or `[!bug]-`)
+- [ ] No more than 2 nesting levels
+- [ ] Bold for key terms only (~5-10%)
+- [ ] Heading levels sequential (no skips)
+- [ ] Page scannable in 10 seconds by reading callout titles + headings
+- [ ] Page degrades gracefully (strip callouts, content still makes sense)
+- [ ] `==Highlight==` used at most 1-2 times (rare, critical rules only)
+
+Reference implementation: [[Model: Methodology]] — the first page to demonstrate all patterns.
 
 ## The Super-Model
 
