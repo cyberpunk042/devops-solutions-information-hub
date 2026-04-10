@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T16:43:54.200601+00:00",
+  "generated": "2026-04-10T17:04:26.491601+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
@@ -5428,7 +5428,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "cli",
         "mcp",
@@ -5515,7 +5515,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -6754,7 +6754,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -6816,7 +6816,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -6882,7 +6882,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "failure-lesson",
         "methodology",

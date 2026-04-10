@@ -10,7 +10,7 @@ derived_from:
   - "Infrastructure as Code Patterns"
   - "Stage-Gate Methodology"
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: directive-no-new-sources
     type: log
@@ -34,19 +34,23 @@ This is especially relevant in projects that have existing infrastructure toolin
 
 ## Insight
 
-The agent was tasked with setting up a sync daemon (WSL to Windows file synchronization for Obsidian). The technically correct action was to create a systemd user service that runs the sync watcher. The agent began doing this by writing the service file directly to `~/.config/systemd/user/` using a shell command.
+> [!bug]- The failure: writing a service file directly to the filesystem
+> The agent created a systemd service by `cat > ~/.config/systemd/user/wiki-sync.service`. This is the infrastructure equivalent of hardcoding a value instead of using a config file. The service file works — systemd finds it, loads it, runs it. But it is undocumented debt.
 
-This is the infrastructure equivalent of hardcoding a value instead of putting it in a config file. The service file works — systemd will find it, load it, run it. But:
+> [!warning] Five ways manual infrastructure fails
+>
+> | Problem | Why It Matters |
+> |---------|---------------|
+> | Invisible to repo | `git status` shows nothing — no one knows it exists |
+> | Not reproducible | Machine rebuilt → service gone, no command to recreate |
+> | Not self-documenting | Can't read `setup.py` to discover available services |
+> | Not versioned | No diff, no history, no review for config changes |
+> | Fragile | Path changes require remembering the service file exists |
 
-1. **It is invisible to the repository.** `git status` shows nothing. A new contributor cloning the repo has no idea this service exists.
-2. **It is not reproducible.** If the machine is rebuilt, the service is gone. There is no command to recreate it.
-3. **It is not documented by its existence.** Code in a repository is self-documenting: you can read `setup.py` and see what services are available. A file written directly to a system directory documents nothing.
-4. **It cannot be versioned.** If the service configuration needs to change, there is no diff, no history, no review.
-5. **It is fragile.** If the paths change, the Python virtual environment moves, or the sync target changes, someone must remember that this service file exists and update it manually.
+The repository already had `tools/setup.py --services` — generates service files from templates, auto-detects paths, installs + enables. Extending this mechanism is the correct path. Writing directly bypasses all of that.
 
-The repository already had the correct mechanism: `tools/setup.py` with a `--services` flag that generates service files from templates, installs them, enables them, and can redeploy them on any machine. Extending this mechanism adds the sync daemon to the reproducible infrastructure. Writing the file directly bypasses all of that.
-
-The general principle is the same as Infrastructure as Code in production systems: the source of truth for infrastructure is the code, not the running system. If the code does not describe the infrastructure, the infrastructure is undocumented debt.
+> [!tip] The principle: source of truth is the code, not the running system
+> If the code does not describe the infrastructure, the infrastructure is undocumented debt. This is IaC applied at every scale — from production Terraform to local systemd services.
 
 ## Evidence
 

@@ -10,7 +10,7 @@ derived_from:
   - "Design.md Pattern"
   - "Synthesis: awesome-design-md — 58 Design Systems for AI Agents"
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: directive-never-stop-at-surface
     type: log
@@ -34,18 +34,20 @@ The triggering signal is any source where the content is primarily links, names,
 
 ## Insight
 
-The failure was not laziness or a tool limitation. It was a category error: the agent treated a description as if it were an instance. The awesome-design-md README lists 58 DESIGN.md files across open-source projects. It provides section names, brief descriptions, and links. From this, the agent produced a synthesis page that described the DESIGN.md format in general terms — headings like "Design Philosophy," "Visual Language," "Accessibility" — that matched what the README said but revealed zero depth about what those sections actually contain.
+> [!warning] The category error: treating a description as an instance
+> The awesome-design-md README lists 58 DESIGN.md files with section names, descriptions, and links. The agent synthesized from this — producing headings like "Design Philosophy," "Visual Language," "Accessibility" that matched the README but revealed zero depth about what those sections actually contain.
 
-When the user challenged the synthesis, the agent fetched an actual DESIGN.md file from one of the linked repositories. The real file was 312 lines. It contained a 16-role typography table mapping font weights to UI hierarchy roles. It contained a ring shadow design philosophy explaining why the project uses ring utilities instead of box shadows. It contained semantic color naming conventions that encode state (destructive, warning, success) into the design token taxonomy. It contained an Agent Prompt Guide section — instructions for AI agents consuming the design system. None of this appeared in the README. The README could not have contained it because the README describes the collection, not the instances.
+When challenged, the agent fetched an actual DESIGN.md (312 lines). It contained: a 16-role typography table, a ring shadow design philosophy, semantic color naming conventions encoding state into tokens, and an Agent Prompt Guide for AI consumers. None of this was in the README. The README describes the collection; the instance contains the knowledge.
 
-The general principle: when a source DESCRIBES a category of artifacts, you must examine at least one real artifact from that category before claiming to understand it. The description is metadata. The instance is data. Metadata about data is not the same as data.
-
-This maps to a layer model:
-- **Layer 0**: Description of the thing (README, catalog entry, index page)
-- **Layer 1**: A real instance of the thing (an actual DESIGN.md, an actual API response, an actual config file)
-- **Layer 2**: Multiple instances compared (pattern extraction from N real examples)
-
-The minimum bar for synthesis is Layer 1. Synthesizing from Layer 0 alone produces confident-sounding pages that are factually hollow.
+> [!abstract] The depth verification layer model
+>
+> | Layer | What It Is | Example |
+> |-------|-----------|---------|
+> | **Layer 0** | Description of the thing | README, catalog entry, index page |
+> | **Layer 1** | A real instance of the thing | An actual DESIGN.md, API response, config file |
+> | **Layer 2** | Multiple instances compared | Pattern extraction from N real examples |
+>
+> **The minimum bar for synthesis is Layer 1.** Synthesizing from Layer 0 alone produces confident-sounding pages that are factually hollow. Description is metadata. Instance is data. Metadata about data ≠ data.
 
 ## Evidence
 

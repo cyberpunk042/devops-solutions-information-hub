@@ -12,7 +12,7 @@ derived_from:
   - "Claude Code"
   - "MCP Integration Architecture"
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-code-accuracy-tips
     type: youtube-transcript
@@ -49,13 +49,21 @@ The tradeoff is most consequential in long-running sessions, multi-tool setups, 
 
 ## Insight
 
-MCP server integration is a convenient discovery mechanism — register a server once, and all its tools appear as native tool calls in any conversation. The cost of that convenience is that every registered MCP server loads its full JSON schema (tool names, parameter shapes, descriptions) into the context window at session initialization, before any tool has been called. In a single-tool setup this overhead is negligible. In a multi-server setup — even the research wiki's three planned MCP servers (wiki, NotebookLM, Obsidian) each with 6-8 tools — the cumulative schema payload consumes meaningful context budget on every single turn, regardless of relevance.
+> [!warning] MCP loads on every message; Skills load on invocation
+> MCP registers a server once → all tool schemas appear on every turn. In a multi-server setup, the cumulative schema payload consumes meaningful context budget before any tool is called. Skills contain no schema overhead at rest — they enter context only when invoked, delivering prose-form instructions optimized for the model.
 
-Skill-based CLI tools have the opposite loading profile. A SKILL.md file contains no schema overhead at rest. It only enters the context window when explicitly invoked — either by the user running a slash command or by the agent deciding the skill is relevant to the current task. Once loaded, the skill delivers targeted, prose-form instructions optimized for the model to read (not for a JSON-RPC parser to validate), then exits when the task is complete.
+> [!abstract] The loading profile comparison
+>
+> | Property | MCP Server | CLI + Skill |
+> |----------|-----------|-------------|
+> | Context cost at rest | Full JSON schema on every message | Zero |
+> | Loading trigger | Session start (always) | Invocation (on demand) |
+> | Instruction format | JSON-RPC schema (for parser) | Prose markdown (for model) |
+> | Best for | Cross-context discoverability | Project-internal tooling |
 
-The accuracy implication is compounding: schema tokens from unused tools occupy space that could hold recent conversation turns or retrieved file content, pushing relevant history out of the window earlier. This is a form of context pollution — high-entropy tokens (JSON schema boilerplate) displacing lower-entropy, higher-signal tokens (actual task context). The Playwright CLI vs. MCP comparison referenced in the accuracy tips source produced a measurable result: the CLI approach was both cheaper and more accurate, not just one or the other.
+The accuracy implication compounds: schema tokens from unused tools occupy space that could hold relevant conversation turns or file content. This is context pollution — high-entropy JSON boilerplate displacing higher-signal task context. The Playwright CLI vs. MCP comparison produced a measurable result: CLI was both cheaper AND more accurate.
 
-The emerging practitioner consensus captured across multiple independent sources in 2026 is: use MCP when the tool needs to be callable from many different conversation contexts without setup, and use CLI+Skills when you control the agent's operating environment and want to minimize per-session overhead. For project-internal tooling — exactly the wiki's situation — CLI+Skills is the default winner.
+**2026 practitioner consensus:** Use MCP when tools need cross-context discoverability without setup. Use CLI+Skills when you control the environment and want minimal overhead. For project-internal tooling — CLI+Skills is the default winner.
 
 ## Evidence
 

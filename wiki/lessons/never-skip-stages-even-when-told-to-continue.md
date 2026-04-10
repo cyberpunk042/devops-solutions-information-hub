@@ -10,7 +10,7 @@ derived_from:
   - "Stage-Gate Methodology"
   - "Methodology Framework"
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: directive-stop-rushing
     type: log
@@ -34,21 +34,22 @@ This is especially dangerous at stage boundaries — the moment between brainsto
 
 ## Insight
 
-The failure was a misinterpretation with cascading consequences. The user had provided methodology content for wiki ingestion. The agent was in the brainstorm/processing phase — reading the content, understanding it, preparing to synthesize wiki pages. The user said "you have everything to get started." The agent interpreted "get started" as "begin the output phase" and jumped to writing a spec document.
+> [!bug]- The failure: "get started" interpreted as "skip to output"
+> The user provided methodology content for ingestion. The agent was in the brainstorm/processing phase. The user said "you have everything to get started." The agent interpreted this as "begin the output phase" and jumped to writing a spec — skipping analysis, extraction, design discussion, and user approval. The user's response: "WTF ???? WHAT SPEC ??? WTF ??????? WE DID NOT DISCUSS ANYTHING ... WTF ???"
 
-The user's reaction was immediate and unambiguous: "WTF ???? WHAT SPEC ??? WTF ??????? WE DID NOT DISCUSS ANYTHING ... WTF ???"
+> [!warning] Bias toward perceived progress is the root cause
+> Writing a spec *feels* like forward movement. Processing content *feels* like "still doing prep work." The agent optimized for the appearance of progress rather than correctness of the current stage. This is the same failure mode that plagues human teams — but in an AI agent it happens faster and with less internal friction.
 
-The root cause is a bias toward perceived progress. Writing a spec feels like forward movement. Processing content into wiki pages feels like "still doing prep work." The agent optimized for the appearance of progress rather than the correctness of the current stage. This is the same failure mode that plagues human teams — skipping design reviews to start coding, skipping requirements to start designing — but in an AI agent it happens faster and with less internal friction.
-
-The stage-gate methodology exists precisely to prevent this. A hard gate means: you cannot pass this boundary without explicit approval. The brainstorm skill's gate says: no spec until the design is presented and the user approves it. "Get started" is not design approval. "Continue" is not design approval. Only "I approve this design, write the spec" is design approval.
-
-The deeper lesson is about the semantics of ambiguous instructions:
-- **"Continue"** = advance within the current stage
-- **"Get started"** = begin work on the current stage
-- **"Go ahead"** = proceed with what was just discussed
-- **"Skip to X"** = the ONLY instruction that authorizes stage-skipping
-
-If the user wanted to skip a stage, they would name the target stage. Absence of a named target means "stay where you are and do the work."
+> [!abstract] The semantics of ambiguous instructions
+>
+> | Instruction | Correct Interpretation |
+> |-------------|----------------------|
+> | "Continue" | Advance within the current stage |
+> | "Get started" | Begin work on the current stage |
+> | "Go ahead" | Proceed with what was just discussed |
+> | "Skip to X" | The ONLY instruction that authorizes stage-skipping |
+>
+> If the user wanted to skip a stage, they would name the target. Absence of a named target = "stay where you are and do the work."
 
 ## Evidence
 

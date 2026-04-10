@@ -10,7 +10,7 @@ derived_from:
   - "Knowledge Evolution Pipeline"
   - "Wiki Ingestion Pipeline"
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: directive-systemic-shallow-ingestion
     type: log
@@ -34,20 +34,23 @@ This is especially relevant in systems that use subagents, parallel workers, or 
 
 ## Insight
 
-The specific failure was mechanical: the Read tool has a default line limit. When a subagent reads a raw file without specifying an offset or increased limit, it gets the first N lines (approximately 60 lines of content after the tool's overhead). For a 200-line file, this captures most of the content. For a 1,057-line file, it captures roughly 6% of the content — the introduction and maybe the first section heading.
+> [!bug]- The mechanical failure: silent truncation
+> The Read tool has a default line limit. A subagent reading a 1,057-line file gets ~60 lines — 6% of content. No error, no warning, no truncation indicator. The subagent receives what looks like a complete read, synthesizes from 6%, and produces a page that sounds authoritative but covers only the introduction. The page passes validation because quality gates check structure, not depth relative to source.
 
-The subagent does not know it is missing content. There is no error, no warning, no truncation indicator in the tool output. The subagent receives what looks like a complete read, synthesizes from that partial content, and produces a page that sounds authoritative but covers only the surface. The page passes validation (it has frontmatter, a summary, relationships, minimum word counts) because quality gates check structure, not depth relative to source.
-
-The user discovered this when reviewing a source-synthesis page about context mode that seemed suspiciously thin compared to the raw transcript they had provided. The raw file was 1,057 lines. The wiki page covered content from approximately the first 60 lines.
-
-The deeper lesson is about defect propagation in automated systems. The user's immediate reaction was not "fix this page" but "we have a systemic issue." This is the correct response. If the tool limitation affected one subagent, it affected every subagent dispatched with the same instructions. The investigation confirmed this: multiple source-synthesis pages created from long transcripts (YouTube transcripts of 500-1000+ lines) were shallow in the same way. Four pages required complete rewrites.
+> [!warning] When one subagent hits a limit, ALL subagents hit the same limit
+> The user's reaction was not "fix this page" but "we have a systemic issue." If the tool limitation affected one subagent, it affected every subagent dispatched with the same instructions. Investigation confirmed: multiple source-synthesis pages from long transcripts (500-1000+ lines) were shallow. Four required complete rewrites.
 
 The fix had to operate at three levels:
-1. **Immediate**: Rewrite the affected pages with full-file reads
-2. **Methodology**: Add an explicit rule — subagent prompts must instruct to read the FULL file with multiple offset reads for files longer than the default limit
-3. **Tooling**: Consider adding a quality check to the pipeline comparing raw file length vs. wiki page length as a depth heuristic
 
-A per-instance fix (rewrite this one page) would have left the other affected pages undetected and the root cause unaddressed. Only a systemic fix (audit all similar artifacts + change the methodology + change the tool instructions) prevents recurrence.
+> [!tip] Three-level systemic fix
+>
+> | Level | Action |
+> |-------|--------|
+> | **Immediate** | Rewrite affected pages with full-file reads |
+> | **Methodology** | Subagent prompts must instruct: read FULL file with multiple offset reads for files >200 lines |
+> | **Tooling** | Pipeline quality check comparing raw file length vs wiki page length (≥0.25 ratio) |
+>
+> A per-instance fix would have left other affected pages undetected and the root cause unaddressed.
 
 ## Evidence
 
