@@ -232,7 +232,13 @@ def sync_shutil(source: str, target: str, reverse: bool = False,
 
 def run_sync(config: Dict[str, Any], reverse: bool = False,
              verbose: bool = True) -> Dict[str, Any]:
-    """Run sync using the configured method."""
+    """Run sync using the configured method.
+
+    Forward sync (source → target) uses --delete so that file removals
+    from the source propagate to the target. WSL2 is the source of truth.
+    Reverse sync (target → source) does NOT delete — we don't want
+    Obsidian edits accidentally removing WSL files.
+    """
     source = config["source"]
     target = config["target"]
     method = config["method"]
@@ -240,8 +246,11 @@ def run_sync(config: Dict[str, Any], reverse: bool = False,
     if not target:
         return {"ok": False, "error": "No sync target configured. Set WIKI_SYNC_TARGET or use --target."}
 
+    # Forward sync propagates deletions; reverse sync does not
+    delete = not reverse
+
     if method == "rsync":
-        return sync_rsync(source, target, reverse=reverse, verbose=verbose)
+        return sync_rsync(source, target, reverse=reverse, delete=delete, verbose=verbose)
     elif method == "robocopy":
         return sync_robocopy(source, target, reverse=reverse, verbose=verbose)
     else:
@@ -283,19 +292,22 @@ def watch_sync(config: Dict[str, Any], interval: int = 15,
     last_source_fp = None
     last_target_fp = None
 
-    # Initial sync: reverse first (pick up Windows changes), then forward
-    if Path(target).exists():
-        ts = datetime.now().strftime("%H:%M:%S")
-        print(f"  [{ts}] Initial reverse sync (target → source)...")
-        result = run_sync(config, reverse=True, verbose=False)
-        if result["ok"]:
-            print(f"  [{ts}] Reverse synced ({result.get('files_changed', '?')} files)")
+    # Initial sync: forward first (with --delete to propagate deletions),
+    # then reverse (without --delete to pick up Obsidian edits)
     ts = datetime.now().strftime("%H:%M:%S")
-    print(f"  [{ts}] Initial forward sync (source → target)...")
+    print(f"  [{ts}] Initial forward sync (source → target, with --delete)...")
     result = run_sync(config, reverse=False, verbose=False)
     if result["ok"]:
         print(f"  [{ts}] Forward synced ({result.get('files_changed', '?')} files)")
     save_sync_state(Path(source).parent, result)
+
+    # Now reverse sync to pick up any Obsidian edits (no --delete)
+    if Path(target).exists():
+        ts = datetime.now().strftime("%H:%M:%S")
+        print(f"  [{ts}] Initial reverse sync (target → source, no --delete)...")
+        result = run_sync(config, reverse=True, verbose=False)
+        if result["ok"]:
+            print(f"  [{ts}] Reverse synced ({result.get('files_changed', '?')} files)")
 
     last_source_fp = dir_fingerprint(source)
     last_target_fp = dir_fingerprint(target) if Path(target).exists() else None

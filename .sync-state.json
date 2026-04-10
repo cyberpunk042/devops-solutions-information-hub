@@ -1,9 +1,9 @@
 {
-  "last_sync": "2026-04-10T15:28:31.542122",
+  "last_sync": "2026-04-10T15:41:04.524486",
   "result": {
     "ok": true,
     "method": "rsync",
-    "files_changed": 45,
+    "files_changed": 104,
     "direction": "source \u2192 target",
     "source": "/home/jfortin/devops-solutions-research-wiki",
     "target": "/mnt/c/Users/Jean/Documents/research-wiki-vault",
