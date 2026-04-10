@@ -43,7 +43,7 @@ Every model follows the same three-layer structure:
 | [[Model: Ecosystem Architecture]] | 293 | — | growing | Project topology |
 | [[Model: Design.md and IaC]] | 261 | — | growing | Agent config patterns |
 | [[Model: NotebookLM]] | 229 | — | growing | Research tooling |
-| [[Model: SFIF and Architecture]] | 170 | — | growing | Build lifecycle |
+| [[Model: SFIF and Architecture]] | 217 | — | growing | Build lifecycle |
 | [[Model: Second Brain]] | 226 | — | growing | PKM theory |
 | [[Model: Local AI ($0 Target)]] | 204 | — | growing | Cost reduction |
 | [[Model: Automation and Pipelines]] | 202 | — | growing | Pipeline orchestration |
