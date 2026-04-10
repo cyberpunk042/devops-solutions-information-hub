@@ -240,6 +240,7 @@ The OpenArms implementation (`/home/jfortin/openarms/wiki/`) is the direct refer
 [[PARA Methodology]]
 [[Progressive Distillation]]
 [[Backlog Hierarchy Rules]]
+[[Decision: Task Type Edge Cases]]
 [[Execution Modes and End Conditions]]
 [[Methodology Framework]]
 [[Stage-Gate Methodology]]

@@ -224,5 +224,6 @@ The Task Type Artifact Matrix defines the 7 distinct task types in the OpenArms 
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Decision: Execution Mode Edge Cases]]
 [[Decision: Methodology Framework Design Decisions]]
+[[Decision: Task Type Edge Cases]]
 [[Methodology Framework]]
 [[Model: Methodology]]

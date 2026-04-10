@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-10T20:25:53.576910+00:00",
+  "generated": "2026-04-10T20:41:35.785891+00:00",
   "stats": {
-    "pages": 174,
+    "pages": 175,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1187,
-    "tags_unique": 651,
+    "relationships": 1192,
+    "tags_unique": 653,
     "layers": {
       "3": 5,
-      "6": 9,
+      "6": 10,
       "2": 51,
       "4": 22,
       "5": 6,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 133,
-      "seed": 16
+      "seed": 17
     }
   },
   "pages": [
@@ -1128,6 +1128,54 @@
         {
           "verb": "RELATES TO",
           "target": "Obsidian Knowledge Vault"
+        }
+      ]
+    },
+    {
+      "path": "decisions/task-type-edge-cases.md",
+      "slug": "decisions/task-type-edge-cases",
+      "title": "Decision: Task Type Edge Cases",
+      "type": "decision",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "task-types",
+        "spike",
+        "type-evolution",
+        "mid-execution",
+        "design-decisions"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Task Type Artifact Matrix",
+        "Stage-Gate Methodology",
+        "Methodology Framework"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Wiki Backlog Pattern"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: Methodology Framework Design Decisions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Rework Prevention"
         }
       ]
     },
@@ -11821,8 +11869,8 @@
       "relationship_count": 358
     },
     "devops": {
-      "page_count": 12,
-      "relationship_count": 89
+      "page_count": 13,
+      "relationship_count": 94
     },
     "ai-agents": {
       "page_count": 36,
@@ -12236,7 +12284,8 @@
       "decisions/execution-mode-edge-cases",
       "decisions/hooks-design-decisions",
       "decisions/methodology-framework-design-decisions",
-      "decisions/per-role-command-design-decisions"
+      "decisions/per-role-command-design-decisions",
+      "decisions/task-type-edge-cases"
     ],
     "hooks": [
       "decisions/hooks-design-decisions",
@@ -12513,6 +12562,21 @@
       "domains/devops/stage-gate-methodology",
       "domains/devops/wsl2-development-patterns",
       "spine/domain-overviews/devops-domain-overview"
+    ],
+    "task-types": [
+      "decisions/task-type-edge-cases",
+      "domains/devops/task-type-artifact-matrix",
+      "spine/model-methodology"
+    ],
+    "spike": [
+      "decisions/task-type-edge-cases",
+      "domains/devops/task-type-artifact-matrix"
+    ],
+    "type-evolution": [
+      "decisions/task-type-edge-cases"
+    ],
+    "mid-execution": [
+      "decisions/task-type-edge-cases"
     ],
     "decision": [
       "decisions/wiki-first-with-lightrag-upgrade-path"
@@ -13336,17 +13400,10 @@
     "knowledge-work": [
       "domains/devops/stage-gate-methodology"
     ],
-    "task-types": [
-      "domains/devops/task-type-artifact-matrix",
-      "spine/model-methodology"
-    ],
     "artifact-matrix": [
       "domains/devops/task-type-artifact-matrix"
     ],
     "bug": [
-      "domains/devops/task-type-artifact-matrix"
-    ],
-    "spike": [
       "domains/devops/task-type-artifact-matrix"
     ],
     "docs": [

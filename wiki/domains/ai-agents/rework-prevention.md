@@ -168,6 +168,7 @@ The Harness Engineering insight quantifies this: 5.5x planning overhead at the s
 [[Wiki Ingestion Pipeline]]
 [[Research Pipeline Orchestration]]
 [[Decision: Execution Mode Edge Cases]]
+[[Decision: Task Type Edge Cases]]
 [[Immune System Rules]]
 [[Model: Quality and Failure Prevention]]
 [[Spec-Driven Development]]

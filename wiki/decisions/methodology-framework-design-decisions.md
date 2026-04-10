@@ -98,3 +98,4 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 [[Task Type Artifact Matrix]]
 [[Skyscraper, Pyramid, Mountain]]
 [[Scaffold → Foundation → Infrastructure → Features]]
+[[Decision: Task Type Edge Cases]]
