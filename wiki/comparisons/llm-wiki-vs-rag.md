@@ -164,7 +164,6 @@ Cross-referencing `LightRAG` and `Knowledge Evolution Pipeline`: the migration p
 [[Memory Lifecycle Management]]
 [[NotebookLM]]
 [[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Claude Code Best Practices]]
 [[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
 [[Decision: Wiki-First with LightRAG Upgrade Path]]
 [[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
