@@ -259,7 +259,7 @@ The key insight from OpenArms: the documentation layers WORK when each layer has
 [[Claude Code Context Management]]
 [[Harness Engineering]]
 [[Decision: MCP vs CLI for Tool Integration]]
-[[Model: Skills]]
+[[[[Model: Skills]]
 [[Commands]]
 [[and Hooks]]]]
 [[Model: MCP and CLI Integration]]

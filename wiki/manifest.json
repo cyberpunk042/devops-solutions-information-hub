@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-10T02:02:18.233509+00:00",
+  "generated": "2026-04-10T02:13:41.625140+00:00",
   "stats": {
     "pages": 165,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
     "relationships": 1168,
-    "tags_unique": 624,
+    "tags_unique": 625,
     "layers": {
       "3": 5,
       "6": 5,
@@ -11253,7 +11253,8 @@
         "styling",
         "remark",
         "visual-design",
-        "standards"
+        "standards",
+        "emerging"
       ],
       "sources": [
         {
@@ -11309,27 +11310,27 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Model: LLM Wiki]] (content structure is the foundation; design is the visual layer)"
+          "target": "Model: LLM Wiki"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Standards \u2014 What Good Looks Like]] (quality standards inform design patterns)"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Design.md Pattern]] (DESIGN.md is for UI systems; this model is for wiki pages \u2014 same principle, different domain)"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]] (CSS snippets and cssclasses are IaC for visual design)"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Methodology]] (the methodology model page is the first to use the callout vocabulary extensively)"
+          "target": "Model: Methodology"
         },
         {
           "verb": "ENABLES",
-          "target": "All model pages (the callout vocabulary applies to every page in the wiki)"
+          "target": "All model and wiki pages"
         }
       ]
     }
@@ -13993,6 +13994,9 @@
     ],
     "visual-design": [
       "spine/model-wiki-design"
+    ],
+    "emerging": [
+      "spine/model-wiki-design"
     ]
   },
   "orphaned_refs": [
@@ -14025,7 +14029,7 @@
       ]
     },
     {
-      "target": "All model pages",
+      "target": "All model and wiki pages",
       "referenced_by": [
         "Model: Wiki Design"
       ]
@@ -14297,8 +14301,7 @@
       "target": "[[Design.md Pattern]]",
       "referenced_by": [
         "Spec-Driven Development",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Model: Wiki Design"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ]
     },
     {
@@ -14364,8 +14367,7 @@
       "target": "[[Infrastructure as Code Patterns]]",
       "referenced_by": [
         "Execution Modes and End Conditions",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Model: Wiki Design"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ]
     },
     {
@@ -14386,12 +14388,6 @@
       ]
     },
     {
-      "target": "[[LLM Wiki Standards \u2014 What Good Looks Like]]",
-      "referenced_by": [
-        "Model: Wiki Design"
-      ]
-    },
-    {
       "target": "[[MCP Integration Architecture]]",
       "referenced_by": [
         "Design.md Pattern"
@@ -14407,18 +14403,6 @@
       "target": "[[Methodology Framework]]",
       "referenced_by": [
         "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Model: LLM Wiki]]",
-      "referenced_by": [
-        "Model: Wiki Design"
-      ]
-    },
-    {
-      "target": "[[Model: Methodology]]",
-      "referenced_by": [
-        "Model: Wiki Design"
       ]
     },
     {

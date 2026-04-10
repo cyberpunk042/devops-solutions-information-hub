@@ -43,299 +43,236 @@ sources:
     file: raw/articles/remarkjsremark.md
     title: "remarkjs/remark — Markdown processor with plugins"
     ingested: 2026-04-09
-tags: [wiki-design, model, formatting, obsidian, markdown, callouts, styling, remark, visual-design, standards]
+tags: [wiki-design, model, formatting, obsidian, markdown, callouts, styling, remark, visual-design, standards, emerging]
 ---
 
 # Model: Wiki Design
 
 ## Summary
 
-The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they contain. It covers three distinct formatting contexts (universal markdown, Obsidian extensions, and remark/Docusaurus for public docs), a semantic callout vocabulary for styled information blocks, text and structural formatting rules, internal navigation patterns, visual elements (diagrams, math, embeds), per-page CSS customization via properties, and page layout patterns per page type. This model complements the [[Model: LLM Wiki]] (content structure) and [[LLM Wiki Standards — What Good Looks Like]] (content quality) as the third standard layer. It is not finished — it is an evolving standard that grows as the wiki applies and discovers what works.
+The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they contain. It is the third standard layer alongside [[Model: LLM Wiki]] (content structure via schema) and [[LLM Wiki Standards — What Good Looks Like]] (content quality via gold standards). This model covers: a semantic emphasis hierarchy (what bold vs italic vs highlight vs callout MEANS), a callout vocabulary mapping 8 types to semantic purposes, per-page-type layout patterns, and a clear separation between three formatting contexts (universal markdown for baseline, Obsidian extensions for the wiki, remark/Docusaurus for public docs). ==This model is an emerging standard — marked `maturity: seed`.== It evolves as the wiki applies the patterns and discovers what works.
 
 ## Key Insights
 
-- **Three formatting contexts, not tiers.** Universal markdown (works everywhere), Obsidian Flavored Markdown (for the wiki), and remark/Docusaurus (for public docs) are DIFFERENT CONTEXTS with different syntax. The wiki uses Obsidian. Public docs use Docusaurus. Both build on universal markdown. They are not evolution stages — they coexist for different purposes.
+- **Three formatting contexts coexist, not compete.** Universal markdown (baseline), Obsidian Flavored Markdown (wiki), remark/Docusaurus (public docs). Different outputs, different syntax, same underlying content. They are not evolution stages — they coexist for different purposes.
 
-- **Callouts are the primary styling tool.** Obsidian's 14 built-in callout types — with colors, icons, foldability, and nesting — transform raw markdown into visually structured, scannable pages. No plugins needed. They degrade gracefully to blockquotes in non-Obsidian renderers.
+- **Formatting is SEMANTIC, not decorative.** Every formatting choice carries meaning. Bold = importance. Italic = emphasis. Highlight = critical attention. Callout type = information category. Choosing a format is a MEANING decision, not a visual preference.
 
-- **`cssclasses` in frontmatter enables per-page-type styling.** A model page with `cssclasses: [model-page]` can be targeted by a CSS snippet for consistent visual treatment across all model pages. This is the mechanism for systematic styling.
+- **Callouts are the primary visual structuring tool.** 14 built-in Obsidian callout types with colors, icons, foldability, and nesting. We use 8 with defined semantic purposes. They transform walls of text into scannable, layered information.
 
-- **Formatting is semantic, not decorative.** Bold means importance. Italic means emphasis. Highlight means attention. Callout types map to semantic purposes (info=context, tip=guidance, warning=caution, bug=failure, example=instance). Choosing a format is a MEANING decision.
+- **`cssclasses` enables systematic per-page-type styling.** A frontmatter field that applies CSS classes to the page, enabling consistent visual treatment across all pages of the same type.
 
-- **Graceful degradation is a design constraint.** Core content (Tier 1 markdown) must be readable outside Obsidian. Callouts degrade to blockquotes. Wikilinks degrade to plain text. Pages must be USEFUL in GitHub, VS Code, and plain text — not just beautiful in Obsidian.
+- **Graceful degradation is a hard constraint.** Core content must be readable outside Obsidian. Callouts degrade to blockquotes. Wikilinks degrade to plain text. Never put critical content ONLY in a styling feature.
 
 ## Deep Analysis
 
+### The Three Standard Layers (where this model fits)
+
+| Layer | What it defines | Where it lives | Example |
+|-------|----------------|----------------|---------|
+| **Content Structure** | Types, fields, sections, schema | `config/wiki-schema.yaml` + [[Model: LLM Wiki]] | "A lesson requires: Summary, Context, Insight, Evidence, Applicability, Relationships" |
+| **Content Quality** | What "good" looks like per type | [[LLM Wiki Standards — What Good Looks Like]] | "A lesson's Evidence section must have ≥3 independent data points" |
+| **Visual Design** | How pages look in Obsidian | **This model** | "Use `> [!example]-` for real instances, always foldable" |
+
+Structure says WHAT sections exist. Quality says HOW GOOD the content is. Design says HOW IT LOOKS. They don't overlap — a page can have correct structure (passes validation), good quality (meets the gold standard), but ugly design (walls of raw text). This model fixes the third dimension.
+
 ### The Three Formatting Contexts
 
-#### Context 1: Universal Markdown
+#### Context 1: Universal Markdown (baseline)
 
-The baseline that works in every renderer — Obsidian, GitHub, VS Code, Docusaurus, any text editor.
+The shared floor. Works in Obsidian, GitHub, VS Code, Docusaurus, any text editor. This wiki assumes the reader knows markdown — the rules below are about HOW we use it, not what it is.
 
-> [!info] **Text Formatting**
-> | Syntax | Renders as | Semantic meaning |
-> |--------|-----------|-----------------|
-> | `**bold**` | **bold** | Importance — key terms, critical rules |
-> | `*italic*` | *italic* | Emphasis — stress, nuance, foreign terms |
-> | `***bold italic***` | ***bold italic*** | Maximum emphasis — rare, use sparingly |
-> | `~~strikethrough~~` | ~~strikethrough~~ | Deletion, outdated content, corrections |
-> | `` `inline code` `` | `inline code` | Technical terms, file names, commands, values |
-> | `> blockquote` | Blockquote | Actual quotations from sources |
+> [!info] **Emphasis hierarchy for this wiki**
+> | Level | Syntax | Semantic meaning | Use for |
+> |-------|--------|-----------------|---------|
+> | 1 (highest) | `==highlight==` | ==Critical attention== | Must-not-miss rules, critical warnings. RARE. |
+> | 2 | `> [!type]` title text | Callout title | Section-level categorization (info, tip, warning, etc.) |
+> | 3 | `**bold**` | **Importance** | Key terms, field names, critical rules within prose |
+> | 4 | `*italic*` | *Emphasis* | Stress, nuance, first use of a term, titles of works |
+> | 5 | `` `code` `` | `Technical reference` | File names, commands, field values, syntax |
+> | 6 (lowest) | plain text | Normal prose | Everything else |
+>
+> **Anti-pattern:** using bold for everything. If everything is bold, nothing is important. Reserve bold for terms that would confuse the reader if missed.
 
-> [!info] **Structural Elements**
-> | Element | Syntax | Rule |
-> |---------|--------|------|
-> | **Headings** | `#` through `######` | Strict hierarchy — never skip levels (H1 → H2 → H3, never H1 → H3). H1 = page title only. |
-> | **Paragraphs** | Blank line between | One idea per paragraph. Short paragraphs > wall of text. |
-> | **Ordered lists** | `1. ` | Sequential steps, ranked items, numbered procedures |
-> | **Unordered lists** | `- ` | Non-sequential items. Use `-` consistently (not `*` or `+`) |
-> | **Task lists** | `- [ ]` / `- [x]` | Done When checklists, verification items |
-> | **Horizontal rules** | `---` | Section separators in catalogs. Blank lines before and after. |
-> | **Tables** | `\| col \| col \|` | Structured data. Align with `:--`, `:--:`, `--:`. Headers required. |
-> | **Code blocks** | Triple backticks + language | Always specify language (`python`, `yaml`, `bash`, `markdown`). |
-> | **Links** | `[text](URL)` | External URLs only. For internal links, use wikilinks (Context 2). |
-> | **Images** | `![alt](URL)` | Always include descriptive alt text. |
-> | **Footnotes** | `[^1]` + `[^1]: text` | Citations, tangential notes that would break flow |
+> [!tip] **When to use which structural element**
+> | Need | Use | Not |
+> |------|-----|-----|
+> | Compare 2+ things across dimensions | **Table** | Prose paragraphs describing each |
+> | List discrete items (order matters) | **Ordered list** | Table with one column |
+> | List discrete items (no order) | **Unordered list** | Numbered list |
+> | Explain WHY something works | **Prose** | Table or list |
+> | Track completion | **Task list** `- [x]` | Ordered list |
+> | Separate catalog entries | **Horizontal rule** `---` | Extra blank lines |
+> | Show code | **Fenced code block** with language | Inline code for multi-line |
+> | Quote an actual person/source | **Blockquote** `>` | Callout (callouts are for categories, not quotes) |
 
-> [!tip] **When to use tables vs prose vs lists**
-> - **Table**: when data has 2+ dimensions and benefits from scanning across rows/columns. Comparison matrices, stage/artifact mappings, feature matrices.
-> - **List**: when items are discrete and order matters (steps) or doesn't (features). One dimension.
-> - **Prose**: when relationships between ideas need to be explained, not just listed. When "why" matters more than "what."
+> [!warning] **Structural anti-patterns**
+> - Skipping heading levels (H1 → H3) — breaks hierarchy and Obsidian outline
+> - Tables with only one column — use a list
+> - Ordered lists where order doesn't matter — use unordered
+> - Inline code for emphasis — use bold or italic
+> - Footnotes for critical information — put it in the body
+> - Walls of prose without any structural elements — break it up
 
 #### Context 2: Obsidian Flavored Markdown (for the wiki)
 
-Everything Obsidian adds on top of universal markdown. These features render in Obsidian and Obsidian Publish but degrade gracefully elsewhere.
+Everything Obsidian adds. These render in Obsidian and Obsidian Publish; they degrade gracefully elsewhere.
 
-> [!info] **Wikilinks — Internal Navigation**
-> | Syntax | Purpose | Example |
-> |--------|---------|---------|
-> | `[[Page Title]]` | Link to another wiki page | `[[Methodology Framework]]` |
-> | `[[Page Title\|Display Text]]` | Link with custom display text | `[[Methodology Framework\|the meta-system]]` |
-> | `[[Page Title#Heading]]` | Link to specific section | `[[Model: LLM Wiki#Quality Gates]]` |
-> | `[[Page Title#^block-id]]` | Link to specific paragraph | Deep references to exact content |
-> | `![[Page Title]]` | Embed entire page | Use sparingly — heavy |
-> | `![[Page Title#Heading]]` | Embed specific section | More targeted embedding |
-> | `![[image.png\|640]]` | Embed image with width | Always specify width for consistency |
-
-> [!warning] **Wikilink rules for this wiki**
-> - ALL relationship targets use wikilinks: `- BUILDS ON: [[Page Title]]`
-> - NEVER use file paths in body text — use `[[Page Title]]` not `wiki/path/file.md`
-> - Wikilinks that resolve show in the Obsidian graph. Broken wikilinks show as unresolved nodes.
-
-> [!info] **Highlights and Comments**
-> - `==highlighted text==` — renders with yellow background. Use for CRITICAL information that must not be missed. Rarer than bold.
-> - `%% hidden comment %%` — visible in edit mode only, invisible in reading view. Use for editorial notes, reminders to self, WIP markers.
-
-> [!info] **Properties (YAML Frontmatter)**
-> Special frontmatter fields that Obsidian interprets:
-> | Property | Purpose | Example |
-> |----------|---------|---------|
-> | `tags` | Searchable tags (MUST be list) | `tags: [methodology, model]` |
-> | `aliases` | Alternative page names for search | `aliases: [SFIF, "Build Lifecycle"]` |
-> | `cssclasses` | CSS classes applied to the page | `cssclasses: [model-page, wide-tables]` |
+> [!info] **Wikilinks — our linking standard**
+> | Syntax | Purpose | When |
+> |--------|---------|------|
+> | `[[Page Title]]` | Link to wiki page | ALL relationship targets, all page references in body text |
+> | `[[Page\|Display Text]]` | Aliased link | When the page title is too long for inline use |
+> | `[[Page#Heading]]` | Section link | Deep references to specific parts |
+> | `[[Page#^block-id]]` | Block link | Referencing one specific paragraph |
+> | `![[Page#Heading]]` | Embed section | When the reader NEEDS to see it inline |
 >
-> `cssclasses` is the key to SYSTEMATIC styling — a CSS snippet targeting `.model-page` styles all model pages consistently.
+> **Rule:** NEVER use file paths (`wiki/path/file.md`) in body text. Always `[[Page Title]]`.
+
+> [!info] **Other Obsidian features we use**
+> | Feature | Syntax | When |
+> |---------|--------|------|
+> | ==Highlight== | `==text==` | Critical information that must not be missed. Rarer than bold. |
+> | Comments | `%% text %%` | Editorial notes, WIP markers. Invisible in reading view. |
+> | Properties | `cssclasses: [type]` | Per-page-type CSS styling via snippets |
+> | Tags | `#tag/subtag` | Hierarchical tags for search and organization |
+> | Aliases | `aliases: [alt-name]` | Alternative names for search discovery |
+> | Block refs | `^block-id` | Making specific paragraphs linkable |
+
+#### Context 3: Remark / Docusaurus (for public docs)
+
+NOT for the wiki. For `docs/` content rendered via Docusaurus or similar static site generators. Different syntax, similar visual results.
+
+| Obsidian (wiki) | Remark/Docusaurus (docs) | Purpose |
+|-----------------|------------------------|---------|
+| `> [!tip] Title` | `:::tip[Title]` | Admonition/callout |
+| `> [!warning]` | `:::danger` | Warning block |
+| `[[Page Title]]` | `[text](./path)` | Internal link |
+| Fenced code block | Same | Code |
+| N/A | `:::tabs` + `::tab[X]` | Tabbed content |
+| N/A | `::youtube{#id}` | Component injection |
+| N/A | MDX / JSX | React components in markdown |
+
+> [!abstract] **The remark ecosystem**
+> remark is a markdown processor with 150+ plugins operating on ASTs. Key plugins: remark-gfm (tables, strikethrough), remark-directive (:::containers, tabs), remark-frontmatter (YAML), remark-toc (auto table of contents), remark-rehype (markdown → HTML), MDX (React components). For projects using Docusaurus, remark extends markdown into a full component system.
 
 ### The Callout Vocabulary
 
-Callouts are the primary visual styling tool. Obsidian provides 14 built-in types. We use 8 with specific semantic meanings:
+8 callout types with defined semantic purposes. This is the STANDARD for this wiki:
 
-> [!info] Definition: Context, background, stage overviews
-> Use `[!info]` when introducing a concept, providing context, or defining what something IS. The blue color signals "here is information to absorb."
+> [!info] **`[!info]` — Context, definitions, reference**
+> Blue ℹ️. Use when introducing a concept, providing context, or presenting reference data. "Here is information to absorb."
 
-> [!abstract] Summary: Selection conditions, TL;DR, key takeaways
-> Use `[!abstract]` for condensed information — when to use something, preconditions, the executive summary. The teal color signals "here is the distilled essence."
+> [!abstract] **`[!abstract]` — Summary, conditions, TL;DR**
+> Teal 📋. Use for condensed information — selection conditions, preconditions, executive summaries. "Here is the distilled essence."
 
-> [!tip] Guidance: Best practices, adoption advice, design insights
-> Use `[!tip]` for actionable guidance — what to DO with the information. The cyan/flame color signals "here is something useful to apply."
+> [!tip] **`[!tip]` — Guidance, best practices, insights**
+> Cyan 💡. Use for actionable advice — what to DO with the information. "Here is something useful to apply."
 
-> [!warning] Caution: Anti-patterns, things that go wrong, limitations
-> Use `[!warning]` for things that can go WRONG. Pyramid-tier compromises, depth verification violations, stage boundary risks. The orange color signals "be careful here."
+> [!warning] **`[!warning]` — Cautions, anti-patterns, risks**
+> Orange ⚠️. Use for things that can go WRONG. "Be careful here."
 
-> [!example]- Instance: Real examples, worked cases, demonstrations
-> Use `[!example]` for concrete instances from the ecosystem. ALWAYS foldable (`-` suffix) — collapsed by default so the page is scannable, expandable for detail. The purple color signals "here is proof."
->
-> The `-` suffix is CRITICAL for examples — they're often the longest callouts and would overwhelm the page if always expanded.
+> [!example]- **`[!example]-` — Real instances, demonstrations** (always foldable)
+> Purple 📖. Use for concrete instances from the ecosystem. ALWAYS foldable (`-` suffix) — collapsed for scanning, expandable for detail. "Here is proof."
 
-> [!success] Confirmed: Verified outcomes, selection results, validated facts
-> Use `[!success]` for things that are PROVEN. Model selection results, test outcomes, confirmed decisions. The green color signals "this is verified."
+> [!success] **`[!success]` — Verified outcomes, confirmed facts**
+> Green ✅. Use for things that are PROVEN — test results, selection outcomes, validated decisions. "This is verified."
 
-> [!bug]- Failure: Bugs from real operation, incidents, things that broke
-> Use `[!bug]` for real failures. Always foldable — collapsed shows the summary, expanded shows the detail and fix. The red color signals "this went wrong."
+> [!bug]- **`[!bug]-` — Failures, incidents, bugs** (always foldable)
+> Red 🐛. Use for real failures from operation. Always foldable. "This went wrong."
 
-> [!question] Open: Needs research, unresolved, requires investigation
-> Use `[!question]` for genuinely open items. The purple/yellow color signals "this is not yet answered."
+> [!question] **`[!question]` — Open items, needs research**
+> Purple ❓. Use for genuinely unresolved questions. "This is not yet answered."
 
-> [!tip] **Callout syntax reference**
+> [!warning] **Callout anti-patterns**
+> - Using `[!info]` for everything — choose the specific type
+> - Non-foldable examples that are 20+ lines — always fold examples
+> - Callout title without body when the content is important — title-only works for labels, not for content
+> - Putting critical content ONLY in a callout title — won't survive degradation to plain text
+> - Nesting more than 2 levels — becomes unreadable
+> - Using `[!note]` (gray, generic) when a specific type exists
+> - Using blockquotes (`>`) for non-quotes — use callouts for semantic boxes, blockquotes for actual quotations
+
+> [!tip] **Callout syntax quick reference**
 > ```markdown
-> > [!type] Custom Title
-> > Content with **all markdown** supported inside.
-> > Including [[wikilinks]], `code`, tables, and nested callouts.
+> > [!type] Custom Title         ← always visible
+> > Body content                 ← visible (or hidden if folded)
 >
-> > [!type]- Foldable (collapsed by default)
-> > Content hidden until expanded.
->
-> > [!type]+ Foldable (expanded by default)
-> > Content visible but can be collapsed.
+> > [!type]- Collapsed by default  ← fold with -
+> > [!type]+ Expanded by default   ← fold with +
 > ```
->
-> **Nesting**: add another `>` level for nested callouts.
-> **Title-only**: omit the body for a compact label.
-> **Custom types**: define via CSS snippets in `.obsidian/snippets/`.
-
-### The 6 Remaining Built-In Callout Types
-
-Not in our primary vocabulary but available for specific needs:
-
-| Type | Aliases | Color | Use for |
-|------|---------|-------|---------|
-| `note` | — | Gray | Generic notes (prefer specific types) |
-| `todo` | — | Blue | Task-related callouts (prefer task lists) |
-| `failure` | fail, missing | Red | Missing functionality (prefer bug for real failures) |
-| `danger` | error | Red | Critical errors (prefer warning for most cases) |
-| `quote` | cite | Gray | Extended quotations from external sources |
-| `success` variant: `check`, `done` | — | Green | Completion indicators |
-
-### Visual Elements
-
-> [!info] **Mermaid Diagrams**
-> Rendered natively in Obsidian. Use for:
-> - **Flow charts**: model selection logic, pipeline flows, decision trees
-> - **Sequence diagrams**: interaction between tracks, stage progression
-> - **Mind maps**: concept relationships, domain overviews
->
-> ````markdown
-> ```mermaid
-> graph TD
->     A[Task arrives] --> B{Evaluate conditions}
->     B -->|spike| C[Research model]
->     B -->|module| D[Feature Dev model]
->     B -->|bug| E[Bug Fix model]
->     B -->|hotfix| F[Hotfix model]
-> ```
-> ````
->
-> **Internal links in Mermaid**: add `class NodeName internal-link;` to make nodes clickable wikilinks. Note: these don't appear in the graph view.
-
-> [!info] **Math / LaTeX**
-> Rendered via MathJax. Use when mathematical notation is genuinely needed:
-> - Inline: `$E = mc^2$` renders as $E = mc^2$
-> - Block: `$$` on own lines wrapping the expression
->
-> Don't use for emphasis or decoration — only for actual mathematical content.
-
-> [!info] **Embeds**
-> Embed content from other pages directly:
-> - `![[Page]]` — embed entire page (use sparingly — heavy)
-> - `![[Page#Section]]` — embed one section (more targeted)
-> - `![[Page#^block-id]]` — embed one paragraph (most precise)
-> - `![[image.png|640]]` — embed image with width
->
-> **When to embed vs link**: embed when the reader NEEDS to see the content inline without navigating away. Link when the content is supplementary.
+> Nesting: add `>` levels. Custom types: CSS snippets in `.obsidian/snippets/`.
 
 ### Page Layout Patterns
 
-These are the visual patterns we've established for different page types:
+How each page type should be visually structured. These patterns use the callout vocabulary above:
 
-> [!example]- **Model entry pattern** (from Model: Methodology catalog)
-> Each model in a catalog gets:
-> 1. `> [!info]` — stage overview + purpose (the blue header)
-> 2. Markdown table — stages with artifacts and gates
+> [!example]- **Model catalog entry** (as used in [[Model: Methodology]])
+> 1. `> [!info]` — stage overview + purpose (blue header)
+> 2. Markdown table — stages with artifacts and gates (structured data)
 > 3. `> [!abstract]` — selection conditions (when this model runs)
-> 4. `> [!example]-` — real instance (foldable, with numbered steps)
-> 5. `> [!tip]` or `> [!warning]` — design insight or caution (if applicable)
+> 4. `> [!example]-` — real instance, foldable, with numbered steps
+> 5. `> [!tip]` or `> [!warning]` — design insight or caution
 >
-> This pattern provides: scannable headers (info), structured data (table), context (abstract), proof (foldable example), and guidance (tip/warning).
+> Provides: scannable headers → structured data → context → proof → guidance.
 
-> [!example]- **Bug report pattern** (from Methodology bugs section)
-> Each bug gets:
-> 1. `> [!bug]-` — foldable with title showing bug name + design input + version
-> 2. Inside: what happened, how it was found, what the fix was
+> [!example]- **Lesson page**
+> 1. H2 Summary — plain prose, the lesson stated clearly
+> 2. H2 Context — plain prose, when this applies
+> 3. H2 Insight — plain prose, the core learning (depth here)
+> 4. H2 Evidence — each evidence item as **bold source label** + specific claim + `(source-id)`
+> 5. H2 Applicability — bullet list of domains where this applies + `> [!tip]` for "when NOT to apply"
+> 6. H2 Relationships — `[[wikilinks]]` with ALL_CAPS verbs
+
+> [!example]- **Decision page**
+> 1. H2 Summary — the recommendation in 2-3 sentences
+> 2. H2 Decision — `> [!success]` callout with the clear decision statement
+> 3. H2 Alternatives — each alternative as `> [!abstract]-` foldable with why it was rejected
+> 4. H2 Rationale — evidence-backed prose with `**bold source labels**`
+> 5. H2 Reversibility — `> [!info]` stating how hard to undo
+> 6. H2 Dependencies — bullet list of downstream impacts
+
+> [!example]- **Comparison page**
+> 1. H2 Summary — what's being compared and why
+> 2. H2 Comparison Matrix — markdown TABLE (never prose). Rows = criteria, columns = alternatives.
+> 3. H2 Key Insights — bullet points from the comparison
+> 4. H2 Deep Analysis — per-alternative or per-criteria deep dives
+> 5. `> [!tip]` — decision guidance ("use X when..., use Y when...")
+
+> [!example]- **Bug/failure report** (as used in Methodology bugs section)
+> Each bug: `> [!bug]-` foldable. Title = bug name + design input + version.
+> Body: what happened → how found → what the fix was.
+> Collapsed view = scannable bug list. Expanded = full detail.
+
+> [!example]- **Worked example / selection walkthrough**
+> `> [!example]-` foldable with scenario title.
+> Inside: condition evaluation table (dimension | value | why).
+> `> [!success]` nested = the result.
+
+> [!example]- **Source-synthesis page**
+> 1. H2 Summary — what the source IS and the headline finding
+> 2. H2 Key Insights — each insight as a **bold label** + prose. Group into subsections for deep sources.
+> 3. H2 Open Questions — each with `(Requires: ...)` tag
+> 4. H2 Relationships — `[[wikilinks]]`
 >
-> Collapsed view shows all 7 bugs as a scannable list. Expanded view shows full detail per bug.
+> For deep sources (250+ lines): subsection headings within Key Insights, not just bullets.
 
-> [!example]- **Worked example pattern** (from Model Selection section)
-> Each worked example gets:
-> 1. `> [!example]-` — foldable with title describing the scenario
-> 2. Inside: condition evaluation table (dimension | value | why)
-> 3. `> [!success]` — the result (which model was selected and what it produces)
->
-> Foldable so the reader sees "2 worked examples available" without being overwhelmed.
+> [!example]- **Domain overview page**
+> 1. H2 Summary — domain scope
+> 2. H2 State of Knowledge — what's known, what's thin
+> 3. H2 Gaps — `> [!question]` callouts for major gaps
+> 4. H2 Key Pages — table of essential reading
+> 5. H2 FAQ — each Q as `### Q: Question?` with 2-3 sentence answer linking to deeper pages
 
-### Context 3: Remark / Docusaurus (for public docs)
-
-A different formatting context for web-facing documentation. NOT for the wiki — for `docs/` content rendered via Docusaurus or similar static site generators.
-
-> [!info] **Remark Directives**
-> remark-directive adds three syntax types for custom markdown extensions:
->
-> **Container directive** (multi-line block):
-> ```markdown
-> :::note[Custom Title]
-> Content inside the container.
-> Can span multiple lines.
-> :::
-> ```
->
-> **Leaf directive** (single-line):
-> ```markdown
-> ::youtube[Video Title]{#dQw4w9WgXcQ}
-> ```
->
-> **Text directive** (inline):
-> ```markdown
-> :abbr[HTML]{title="HyperText Markup Language"}
-> ```
-
-> [!info] **Tabs** (via remark-directive)
-> ```markdown
-> :::tabs
-> ::tab[JavaScript]
-> ```js
-> console.log('hello');
-> ```
-> ::tab[Python]
-> ```python
-> print('hello')
-> ```
-> :::
-> ```
-
-> [!info] **Admonitions** (Docusaurus equivalent of Obsidian callouts)
-> ```markdown
-> :::tip
-> Helpful guidance here.
-> :::
->
-> :::danger
-> Critical warning here.
-> :::
-> ```
->
-> The mapping: `:::tip` = `> [!tip]`, `:::danger` = `> [!danger]`, `:::note` = `> [!note]`
-
-> [!abstract] **Key distinction**
-> - **Obsidian callouts** (`> [!type]`) = blockquote-based. For the wiki.
-> - **Remark directives** (`:::type`) = container-based. For public docs.
-> - Both achieve similar visual results with different syntax.
-> - Content CAN be converted between them with tooling (remark plugins).
-
-> [!info] **The Remark Ecosystem**
-> remark is a markdown processor with 150+ plugins operating on ASTs (abstract syntax trees):
-> - **remark-gfm**: GitHub Flavored Markdown (tables, strikethrough, task lists)
-> - **remark-frontmatter**: YAML/TOML frontmatter parsing
-> - **remark-directive**: custom containers, tabs, component injection
-> - **remark-toc**: auto-generated table of contents
-> - **remark-lint**: markdown style checking
-> - **remark-rehype**: markdown → HTML bridge
-> - **MDX**: markdown + JSX for React component embedding
->
-> For projects using Docusaurus, remark plugins extend markdown into a full component system. This is not used in Obsidian but is the path for rendering wiki content on the web.
+> [!example]- **Backlog task**
+> Short and focused. H2 Summary + H2 Done When (task list `- [ ]`).
+> Frontmatter carries the state: `status`, `task_type`, `current_stage`, `readiness`, `stages_completed`, `artifacts`.
+> No callouts needed — tasks are minimal by design.
 
 ### CSS Customization
 
-> [!info] **CSS Snippets**
-> `.obsidian/snippets/` — any `.css` file here is loaded by Obsidian.
+> [!info] **What's available (not yet implemented)**
+> `.obsidian/snippets/` — any `.css` file loaded by Obsidian.
 >
 > **Custom callout types:**
 > ```css
@@ -344,84 +281,87 @@ A different formatting context for web-facing documentation. NOT for the wiki �
 >     --callout-icon: lucide-box;
 > }
 > ```
-> Icons from [lucide.dev](https://lucide.dev). Colors as RGB 0-255.
 >
-> **Per-page styling via cssclasses:**
+> **Per-page-type styling via cssclasses:**
 > ```css
 > .model-page h2 { border-bottom: 2px solid var(--interactive-accent); }
-> .model-page table { font-size: 0.9em; }
 > ```
 > Apply with `cssclasses: [model-page]` in frontmatter.
->
-> **Other customizations:**
-> - Table styling (borders, alternating rows, compact mode)
-> - Tag colors
-> - Graph view node colors (already configured in this wiki)
-> - Heading hierarchy visual weight
+
+> [!warning] **Status: aspirational**
+> No CSS snippets have been created yet. The callout vocabulary works with built-in types. Custom CSS is a future enhancement when the vocabulary stabilizes.
 
 ### Graceful Degradation
 
-What happens when wiki content is viewed OUTSIDE Obsidian:
+| Feature | Obsidian | GitHub | VS Code | Plain text |
+|---------|----------|--------|---------|------------|
+| `**bold**` | ✓ | ✓ | ✓ | `**visible**` |
+| `==highlight==` | Yellow bg | `==visible==` | `==visible==` | `==visible==` |
+| `> [!tip] Title` | Styled box | Blockquote | Blockquote | `>` prefix |
+| `[[Page]]` | Link | `[[visible]]` | `[[visible]]` | `[[visible]]` |
+| Mermaid | Diagram | Diagram | Code block | Code block |
+| `%% comment %%` | Hidden | Visible | Visible | Visible |
 
-| Feature | In Obsidian | In GitHub | In VS Code | In plain text |
-|---------|------------|-----------|-----------|---------------|
-| `**bold**` | **bold** | **bold** | **bold** | **bold** |
-| `==highlight==` | Yellow background | Plain text with `==` | Plain text with `==` | Plain text with `==` |
-| `> [!tip] Title` | Styled colored box | Blockquote with `[!tip]` prefix | Blockquote | `>` prefixed text |
-| `[[Page Title]]` | Clickable link | Plain text `[[Page Title]]` | Plain text | Plain text |
-| `![[embed]]` | Embedded content | Plain text | Plain text | Plain text |
-| Mermaid blocks | Rendered diagram | Rendered diagram | Code block | Code block |
-| `$math$` | Rendered formula | Plain text | Plain text | Plain text |
-| `%% comment %%` | Hidden | Visible as text | Visible | Visible |
+> [!warning] **Hard constraint**
+> Never put critical content ONLY in a callout title, an embed, or a highlight. The INFORMATION must survive in plain text. Styling enhances; it must not be required for comprehension.
 
-> [!warning] **Design constraint**
-> Core content MUST be readable without Obsidian. Callouts degrade to blockquotes (still readable). Wikilinks degrade to plain text (still shows the page name). The INFORMATION survives; the STYLING doesn't. This means: never put critical content ONLY in a callout title — always include it in the body too.
+### Before/After: The Impact of Styling
 
-### Compatibility Matrix
+The [[Model: Methodology]] page demonstrates the difference. Its Model Catalog section went through three versions:
 
-| Feature | Standard MD | GFM | Obsidian | Remark | Docusaurus |
-|---------|-----------|-----|----------|--------|------------|
-| Bold/italic/strike | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Tables | ✗ | ✓ | ✓ | plugin | ✓ |
-| Task lists | ✗ | ✓ | ✓ | plugin | ✓ |
-| Highlight (`==`) | ✗ | ✗ | ✓ | plugin | plugin |
-| Callouts (`> [!type]`) | ✗ | ✗ | ✓ | plugin | ✗ |
-| Admonitions (`:::type`) | ✗ | ✗ | ✗ | plugin | ✓ |
-| Wikilinks (`[[]]`) | ✗ | ✗ | ✓ | plugin | plugin |
-| Embeds (`![[]]`) | ✗ | ✗ | ✓ | ✗ | ✗ |
-| Math/LaTeX | ✗ | ✗ | ✓ | plugin | ✓ |
-| Mermaid | ✗ | ✓ | ✓ | plugin | ✓ |
-| Footnotes | ✗ | ✗ | ✓ | plugin | ✓ |
-| Comments (`%%`) | ✗ | ✗ | ✓ | ✗ | ✗ |
-| Properties/frontmatter | ✗ | ✗ | ✓ | plugin | ✓ |
-| cssclasses | ✗ | ✗ | ✓ | ✗ | ✗ |
-| Block references | ✗ | ✗ | ✓ | ✗ | ✗ |
-| Canvas | ✗ | ✗ | ✓ | ✗ | ✗ |
-| Tabs | ✗ | ✗ | ✗ | plugin | ✓ |
-| Custom directives (`:::`) | ✗ | ✗ | ✗ | plugin | ✓ |
-| MDX/JSX components | ✗ | ✗ | ✗ | plugin | ✓ |
+**Version 1 (raw):** Plain bold labels + prose paragraphs. A wall of text. 9 models listed as paragraphs with no visual structure. You had to read every word to find what you needed.
+
+**Version 2 (tables):** Each model got a stage/artifact/gate table + bold "Selected when" + bold "Real instance." Structured but still visually flat — every section looked the same.
+
+**Version 3 (callouts):** Each model gets `> [!info]` (blue header), table (data), `> [!abstract]` (conditions), `> [!example]-` (foldable instance). NOW each section has visual hierarchy: the blue header catches your eye, the table gives structure, the abstract gives context, and examples hide behind folds until you need them.
+
+The information is the same in all three versions. The USABILITY is dramatically different.
+
+### Compatibility Reference
+
+Features we USE in this wiki (core set):
+
+| Feature | Works in Obsidian | Degrades to |
+|---------|------------------|-------------|
+| Bold, italic, code, tables, lists | ✓ | Same everywhere |
+| Callouts `> [!type]` | Styled boxes | Blockquotes |
+| Wikilinks `[[Page]]` | Clickable links | Plain text |
+| Highlights `==text==` | Yellow background | `==visible==` |
+| Mermaid diagrams | Rendered | Code block (GitHub renders) |
+| Comments `%% %%` | Hidden | Visible |
+| Properties/cssclasses | Interpreted | YAML block |
+| Foldable callouts `+`/`-` | Fold/expand | Always visible |
+
+Features we're AWARE OF but don't use in the wiki (docs context):
+
+| Feature | Where it works | What it does |
+|---------|---------------|-------------|
+| Remark directives `:::` | Docusaurus | Custom containers, admonitions |
+| Tabs `:::tabs` | Docusaurus | Tabbed content panels |
+| MDX/JSX | Docusaurus/React | Component injection in markdown |
+| Custom directives | Remark plugins | Arbitrary syntax extensions |
 
 ## Open Questions
 
-- Should we create custom callout types via CSS snippets (e.g., `[!model]`, `[!stage]`, `[!instance]`) or keep to the 8 built-in types? (Requires: testing whether custom types add value or add confusion)
-- Should `cssclasses` be standardized per page type (all model pages get `model-page`, all lessons get `lesson-page`)? (Requires: designing the CSS snippet and testing in Obsidian)
-- How should wiki content be converted for Docusaurus rendering if needed? Callouts → admonitions, wikilinks → markdown links. (Requires: remark plugin development or selection)
-- Should Mermaid diagrams be used for model selection flows? (Requires: testing readability of complex Mermaid charts in Obsidian)
+- Should we create custom callout types via CSS (e.g., `[!model]`, `[!stage]`) or keep to the 8 built-in types? (Requires: testing whether custom types add value or confusion)
+- Should `cssclasses` be standardized per page type? (Requires: designing and testing a CSS snippet)
+- Should model pages include Mermaid diagrams for selection flows? (Requires: testing readability in Obsidian)
+- How should the callout vocabulary evolve as we apply it to more pages? (Requires: more pages styled → patterns emerge)
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki]] (content structure is the foundation; design is the visual layer)
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]] (quality standards inform design patterns)
-- RELATES TO: [[Design.md Pattern]] (DESIGN.md is for UI systems; this model is for wiki pages — same principle, different domain)
-- RELATES TO: [[Infrastructure as Code Patterns]] (CSS snippets and cssclasses are IaC for visual design)
-- RELATES TO: [[Model: Methodology]] (the methodology model page is the first to use the callout vocabulary extensively)
-- ENABLES: All model pages (the callout vocabulary applies to every page in the wiki)
+- BUILDS ON: [[Model: LLM Wiki]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[Design.md Pattern]]
+- RELATES TO: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[Model: Methodology]]
+- ENABLES: All model and wiki pages
 
 ## Backlinks
 
-[[Model: LLM Wiki]] (content structure is the foundation; design is the visual layer)]]
-[[LLM Wiki Standards — What Good Looks Like]] (quality standards inform design patterns)]]
-[[Design.md Pattern]] (DESIGN.md is for UI systems; this model is for wiki pages — same principle, different domain)]]
-[[Infrastructure as Code Patterns]] (CSS snippets and cssclasses are IaC for visual design)]]
-[[Model: Methodology]] (the methodology model page is the first to use the callout vocabulary extensively)]]
-[[All model pages (the callout vocabulary applies to every page in the wiki)]]
+[[Model: LLM Wiki]]
+[[LLM Wiki Standards — What Good Looks Like]]
+[[Design.md Pattern]]
+[[Infrastructure as Code Patterns]]
+[[Model: Methodology]]
+[[All model and wiki pages]]
