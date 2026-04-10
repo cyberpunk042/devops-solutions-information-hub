@@ -7,7 +7,7 @@ domain: automation
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-user-directive-integration
     type: notes
@@ -28,19 +28,26 @@ tags: [mcp, model-context-protocol, integration, services, daemon, watcher, rsyn
 
 The MCP Integration Architecture is the evolutionary target for the research wiki system — moving from CLI tools invoked by Claude Code to MCP servers that expose wiki operations as native tools in any Claude Code conversation. The user directive states: "By the end of all this you will do only what you absolutely need to be doing and you will even eventually be replaceable easily if needed." This means the system's intelligence lives in the tools, services, and MCP servers — not in Claude. Three MCP servers (wiki operations, NotebookLM, Obsidian), two service daemons (wiki watcher, WSL↔Windows rsync), and bidirectional sync with external systems. Claude focuses on reasoning, connections, questions, and standards — the mechanical work is offloaded to infrastructure.
 
+> [!info] Integration Architecture Status
+>
+> | Component | Status | Tools/Details |
+> |-----------|--------|--------------|
+> | **Wiki MCP Server** | IMPLEMENTED | 17 tools: wiki_status, wiki_search, wiki_read_page, wiki_post, wiki_fetch, wiki_gaps, wiki_crossref, wiki_evolve, etc. |
+> | **Wiki Watcher** | IMPLEMENTED | `python -m tools.watcher` — change detection + auto post-chain |
+> | **WSL↔Windows Sync** | IMPLEMENTED | `python -m tools.sync` — bidirectional with Obsidian vault |
+> | **NotebookLM MCP** | PLANNED | Wraps notebooklm-py: create notebooks, add sources, query, generate |
+> | **Obsidian MCP** | PLANNED | Wraps Obsidian CLI: search, read, create, backlinks, sync |
+
 ## Key Insights
 
-- **Three planned MCP servers**: (1) Wiki MCP — ingest, query, lint, export, stats, gap analysis as tools callable from any conversation. (2) NotebookLM MCP — push sources, query, generate artifacts via notebooklm-py. (3) Obsidian MCP — sync, detect changes, manage vault via Obsidian CLI.
+> [!warning] "Claude becomes replaceable" — the architectural north star
+> The persistent intelligence is the wiki, tools, services, and MCP servers — not Claude. Any LLM that can call MCP tools can operate the system. Claude's unique value is reasoning quality, but the operational mechanics are LLM-agnostic. The user directive: "By the end of all this you will do only what you absolutely need to be doing and you will even eventually be replaceable easily if needed."
 
-- **Two service daemons**: (1) Wiki watcher — detects changes in wiki/, raw/, Obsidian vault, NotebookLM. Triggers appropriate pipeline stages automatically. (2) WSL↔Windows rsync daemon — keeps wiki/ synced to Windows Obsidian vault. Already prototyped in scripts/sync-obsidian.sh.
+**Bidirectional sync vision.** Detect user adds note in NotebookLM → ingest. Detect user edits in Obsidian → process. Detect wiki changes → sync to Obsidian + notify. The system reacts to changes from any entry point.
 
-- **Bidirectional sync vision**: Detect when user adds a note in NotebookLM → ingest it. Detect when user edits in Obsidian → process changes. Detect when wiki changes → sync to Obsidian + notify. The system reacts to changes from any entry point.
+**MCP tool composition in conversations.** "Ingest these 5 URLs, then cross-reference, then export to openfleet" becomes a sequence of MCP tool calls. Group calls run in parallel (subagents each calling MCP tools). Tree operations branch and merge.
 
-- **Claude becomes replaceable**: The persistent intelligence is the wiki, tools, services, and MCP servers — not Claude. Any LLM that can call MCP tools can operate the system. Claude's unique value is reasoning quality, but the operational mechanics are LLM-agnostic.
-
-- **Chain/group/tree orchestration via MCP**: MCP tools can be composed in conversations: "ingest these 5 URLs, then cross-reference, then export to openfleet" becomes a sequence of MCP tool calls. Group calls run in parallel (subagents each calling MCP tools). Tree operations branch and merge.
-
-- **Entry point evolution**: Current: CLI tools + Claude Code conversation. Target: MCP servers (usable from any IDE, agent, or client), service daemons (autonomous operation), webhooks (external triggers), scheduled tasks (cron-based research runs).
+**Entry point evolution.** Current: MCP servers + CLI tools + Claude Code conversation + service daemons. Target: add webhooks (external triggers) and scheduled tasks (cron-based research runs) for full autonomous operation.
 
 ## Deep Analysis
 
@@ -108,11 +115,14 @@ Tools:
 
 ### Implementation Priority
 
-1. **Wiki MCP** (unlocks: any conversation can query/modify wiki)
-2. **rsync daemon** (unlocks: automatic Obsidian sync)
-3. **Wiki watcher** (unlocks: reactive processing of new raw files)
-4. **NotebookLM MCP** (unlocks: source mirroring, cross-validation)
-5. **Obsidian MCP** (unlocks: bidirectional vault management)
+> [!success] Completed
+> 1. **Wiki MCP** — 17 tools, registered in `.mcp.json`, auto-discovered by Claude Code
+> 2. **rsync daemon** — `tools/sync.py` with `--watch` mode, systemd service via `tools/setup`
+> 3. **Wiki watcher** — `tools/watcher.py` with change detection + auto post-chain
+
+> [!question] Remaining
+> 4. **NotebookLM MCP** (unlocks: source mirroring, cross-validation via notebooklm-py)
+> 5. **Obsidian MCP** (unlocks: bidirectional vault management via Obsidian CLI)
 
 ## Open Questions
 
@@ -121,17 +131,14 @@ Tools:
 
 ### Answered Open Questions
 
-**Q: What MCP framework to use? FastMCP (Python), TypeScript MCP SDK, or custom?**
+> [!example]- What MCP framework to use?
+> Python (the existing `tools/mcp_server.py` implementation) is the correct choice — all existing tooling is Python, the wiki MCP server is already implemented and proven with 17 tools. TypeScript MCP SDK only if NotebookLM or Obsidian integrations are TypeScript-native. The Decision: MCP vs CLI page establishes CLI+Skills as default for operational tooling; MCP is for external service bridges and tool discovery.
 
-Cross-referencing `Decision: MCP vs CLI for Tool Integration`: the decision page documents that the wiki already has a prototyped MCP server (`tools/mcp_server.py`) written in Python, with 15 tools exposed. The decision page also establishes that "CLI+Skills is the default preferred approach for operational tool integration" and that MCP is used "for external service bridges and tool discovery." Combining these: Python (FastMCP or the existing mcp_server.py implementation) is the correct framework choice for the wiki MCP server, since all existing tooling is Python and the `tools/mcp_server.py` file is already implemented. TypeScript MCP SDK would be appropriate only for the NotebookLM or Obsidian MCP servers if their integrations are TypeScript-native. For the planned three-server architecture, a Python framework for the Wiki MCP server (already proven) and TypeScript only where the integration requires it is the pragmatic choice.
+> [!example]- Watcher: inotify, polling, or git hooks?
+> Resolved: polling for WSL2. inotify does not work reliably on /mnt/c paths. `tools/watcher.py` polls wiki/ on the Linux filesystem; `tools/sync.py` separately bridges to Windows. Git hooks only fire on git operations, not on file writes from Claude Code. The two-daemon architecture keeps change detection reliable across the WSL2 boundary.
 
-**Q: Should the wiki watcher use inotify, polling, or git hooks for change detection?**
-
-Cross-referencing `WSL2 Development Patterns`: the watcher architecture is definitively resolved. The `WSL2 Development Patterns` page documents: "inotify does not work reliably on /mnt/c — this matters for any daemon that watches files in Windows-accessible paths." The watcher must use polling for /mnt/c paths, and can use inotify for the Linux-side wiki/ path. The page further documents the two-daemon architecture: `tools/watcher.py` polls wiki/ on the Linux filesystem (where inotify is reliable) and `tools/sync.py` separately bridges to Windows. Git hooks are not appropriate here — they only fire on git operations, not on arbitrary file saves from Claude Code's Bash tool writes. The answer: polling for WSL2 wiki watching, with the Linux-side path kept on ext4 for reliable inotify if event-driven performance is ever needed.
-
-**Q: What is the startup/shutdown lifecycle for service daemons on WSL2?**
-
-Cross-referencing `WSL2 Development Patterns`: the lifecycle is fully documented. Service daemons deploy as systemd user services via `python -m tools.setup --services wiki-sync` (or `wiki-watcher`). This writes service files to `~/.config/systemd/user/` and runs `systemctl enable`. Systemd must be enabled in `/etc/wsl.conf` with `[boot] systemd=true` and a `wsl --shutdown` restart to take effect. The `WSL2 Development Patterns` page notes this is the ecosystem's IaC pattern applied to daemon lifecycle: no manual systemctl commands in CLAUDE.md, only reproducible setup scripts. The open question about what happens to user services after WSL2 restart is noted there — they should auto-restart if enabled, but this is flagged as needing verification.
+> [!example]- Service daemon lifecycle on WSL2?
+> Deploy as systemd user services via `python -m tools.setup --services wiki-sync` (or `wiki-watcher`). Writes to `~/.config/systemd/user/`, runs `systemctl enable`. Requires `[boot] systemd=true` in `/etc/wsl.conf` + `wsl --shutdown` restart. No manual systemctl commands — only reproducible setup scripts (IaC pattern).
 
 ## Relationships
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T15:52:24.004586+00:00",
+  "generated": "2026-04-10T15:56:38.909805+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
@@ -2520,7 +2520,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "mcp",
         "model-context-protocol",
