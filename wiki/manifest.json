@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T16:19:15.582995+00:00",
+  "generated": "2026-04-10T16:26:39.889400+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
@@ -251,7 +251,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "cross-domain",
         "patterns",
@@ -418,7 +418,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "skills",
         "architecture",
@@ -4165,7 +4165,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "second-brain",
         "pkm",

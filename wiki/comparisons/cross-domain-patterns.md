@@ -7,7 +7,7 @@ domain: cross-domain
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
@@ -48,10 +48,18 @@ Certain structural patterns recur independently across multiple domains in this 
 
 ## Key Insights
 
-- Every cross-domain pattern addresses the same root challenge: unbounded LLM behavior needs structural constraints to produce reliable results
-- The most battle-tested patterns (Plan-Execute-Review, Context-Aware Loading) have 4+ independent instances across the ecosystem
-- Patterns that enforce constraints at the framework level (not the model level) survive model upgrades and backend changes
-- Progressive Distillation is both a knowledge management pattern AND the wiki's own operating principle — the system practices what it documents
+> [!warning] Every pattern responds to the same root challenge
+> Unbounded LLM behavior needs structural constraints to produce reliable results. The six patterns reduce to three first-principle constraints:
+>
+> | Constraint | Patterns It Drives |
+> |-----------|-------------------|
+> | Bounded context window | Context-Aware Tool Loading, Progressive Distillation |
+> | LLM reasoning is probabilistic | Deterministic Shell + LLM Core, Plan-Execute-Review |
+> | N independent deployments drift | Gateway-Centric Routing, Atomic Units + Typed Links |
+
+**Battle-tested = 4+ independent instances.** Plan-Execute-Review and Context-Aware Loading have the most cross-domain instances. Framework-level enforcement survives model upgrades; model-level enforcement breaks.
+
+**The system practices what it documents.** Progressive Distillation is both a knowledge management pattern AND this wiki's operating principle. This is not accidental — it is evidence that the pattern responds to a real constraint.
 
 ## Deep Analysis
 
@@ -154,13 +162,11 @@ Certain structural patterns recur independently across multiple domains in this 
 
 ### Answered Open Questions
 
-**Q: Does the recurrence of these six patterns imply a small set of universal LLM agent design principles — a "first principles" layer for agent systems?**
+> [!example]- Do six patterns imply universal "first principles" for LLM agent design?
+> Yes. The six patterns reduce to three first-principle constraints: (1) bounded context window → Context-Aware Loading + Progressive Distillation; (2) LLM reasoning is probabilistic → Deterministic Shell + Plan-Execute-Review; (3) N deployments drift → Gateway Routing + Atomic Units. This is a compact, principled design space — six responses to three constraints, not an arbitrary collection.
 
-Cross-referencing the `Plan Execute Review Cycle` pattern page and the `Context-Aware Tool Loading` pattern page: yes, and those pages articulate the first principles explicitly. The `Plan Execute Review Cycle` page states: "The pattern emerges not from shared design but from shared necessity — unconstrained execution without planning produces drift, and execution without review produces silent failure." The `Context-Aware Tool Loading` page states: "Because accuracy is directly coupled to signal-to-noise ratio, deferred loading is the default-correct choice for any information source that is not required on every single turn." These are first-principle derivations, not stylistic choices. The six patterns in this page reduce to three constraints: (1) **Bounded context window** → Context-Aware Tool Loading, Progressive Distillation; (2) **LLM reasoning is probabilistic** → Deterministic Shell + LLM Core, Plan-Execute-Review Cycle; (3) **N independent deployments drift** → Gateway-Centric Routing, Atomic Units + Typed Links. The `Agent Orchestration Patterns` page confirms the meta-principle: "Unbounded LLM behavior needs structural constraints to produce reliable results." The six patterns are six responses to three first-principle constraints — evidence of a compact, principled design space rather than an arbitrary collection of practices.
-
-**Q: Which patterns are more domain-specific (applying well in ai-agents but weakly in knowledge-systems) vs. genuinely universal?**
-
-Cross-referencing the `Four-Project Ecosystem`, `Plan Execute Review Cycle`, and `Context-Aware Tool Loading` pages: the domain-specificity of each pattern can be assessed by counting its cross-domain instances documented in the pattern pages and comparison matrix above. **Genuinely universal (3+ independent domains)**: Plan-Execute-Review Cycle (ai-agents, knowledge-systems, automation, tools-and-platforms — 4 domains), Progressive Distillation (knowledge-systems, ai-agents — with Zettelkasten, PARA, and this wiki as independent instances), Atomic Units + Typed Links (knowledge-systems, ai-agents, devops-tooling). **More domain-specific**: Gateway-Centric Routing applies strongly to distributed systems (ai-agents, tools-and-platforms) but weakly in knowledge-systems where there is no routing problem; Deterministic Shell + LLM Core is most native to ai-agents/automation and requires adaptation in knowledge-systems (the wiki's post-chain is the closest analog). **Context-Aware Tool Loading** applies universally to any system where a fixed resource (context window, memory, bandwidth) is shared between multiple information sources — making it one of the most broadly applicable patterns despite originating in ai-agents. The `Four-Project Ecosystem` page confirms this by showing the pattern appears in both the CLI tools layer and the research wiki's MCP architecture.
+> [!example]- Which patterns are domain-specific vs genuinely universal?
+> **Universal (3+ domains):** Plan-Execute-Review (4 domains), Progressive Distillation (3+), Atomic Units + Typed Links (3+), Context-Aware Tool Loading (any shared-resource system). **More domain-specific:** Gateway-Centric Routing (strong in distributed systems, weak in knowledge-systems), Deterministic Shell + LLM Core (most native to ai-agents/automation; wiki post-chain is the closest knowledge-systems analog).
 
 ## Relationships
 
