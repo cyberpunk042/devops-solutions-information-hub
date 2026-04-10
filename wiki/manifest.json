@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T05:06:34.630496+00:00",
+  "generated": "2026-04-10T05:14:14.309116+00:00",
   "stats": {
     "pages": 174,
     "domains": 9,
@@ -8015,7 +8015,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "progressive-distillation",
         "knowledge-systems",

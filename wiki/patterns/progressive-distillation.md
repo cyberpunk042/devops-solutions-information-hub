@@ -11,15 +11,15 @@ derived_from:
   - "Knowledge Evolution Pipeline"
 instances:
   - page: "Knowledge Evolution Pipeline"
-    context: "Six-layer wiki architecture (raw → seed → growing → mature → canonical) with deterministic scoring engine that promotes pages through maturity layers, preventing premature canonicalization while ensuring accumulated knowledge gets distilled."
+    context: "Six-layer wiki architecture (raw → seed → growing → mature → canonical) with deterministic scoring engine that promotes pages through maturity layers."
   - page: "Second Brain Architecture"
-    context: "PARA's progressive summarization (raw → bold highlights → executive summary) and Zettelkasten's note lifecycle (fleeting → literature → permanent) both instantiate the pattern; the wiki formalizes both as a code-executed maturity pipeline."
+    context: "PARA progressive summarization (raw → highlights → bold → summary) and Zettelkasten note lifecycle (fleeting → literature → permanent) both instantiate the pattern."
   - page: "NotebookLM"
-    context: "Source → research → artifact pipeline: raw source files are loaded into a notebook, NotebookLM synthesizes them into a grounded research layer, then generates output artifacts (slide decks, podcasts, reports) — three density layers from the same source set."
-  - page: "Knowledge Evolution Pipeline"
-    context: "Zettelkasten's permanent notes model: fleeting notes captured quickly, processed into literature notes summarizing a source, then distilled into permanent notes expressing a single idea in the author's own words — each layer denser and more generalizable than the previous."
+    context: "Source → research → artifact pipeline: raw source files loaded into notebook, synthesized into grounded research, then generated as 10 artifact types."
+  - page: "Research Wiki"
+    context: "The wiki itself: raw/ → sources/ → domains/ → lessons/ → patterns/ → decisions/. Six layers, each qualitatively different from the previous."
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-second-brain-research
     type: article
@@ -40,79 +40,126 @@ tags: [progressive-distillation, knowledge-systems, maturity, zettelkasten, para
 
 ## Summary
 
-Progressive Distillation is the pattern of processing raw material through successive layers of increasing density and actionability — each pass producing a smaller, more synthesized artifact that captures more value per unit than the layer below it. The pattern recurs across knowledge management methodologies, content pipelines, and AI agent systems wherever the challenge is converting high-volume raw input into durable, actionable knowledge. Its defining characteristic is that each layer is qualitatively different from the previous, not merely shorter: distillation is not compression, it is transformation.
+Progressive Distillation is the pattern of processing raw material through successive layers of increasing density and actionability — each pass producing a smaller, more synthesized artifact that captures more value per unit than the layer below it. The pattern recurs across knowledge management, content pipelines, and AI agent systems wherever the challenge is converting high-volume input into durable, actionable knowledge. ==Its defining characteristic: each layer is qualitatively different from the previous, not merely shorter. Distillation is not compression — it is transformation.==
 
 ## Pattern Description
 
-Progressive distillation is recognizable by three structural properties: (1) multiple distinct processing layers with defined transitions between them, (2) increasing density and actionability at each layer — the top layer is smaller in volume but higher in value per unit, and (3) explicit promotion criteria that govern when material moves from one layer to the next. Systems that simply accumulate information are not distillation systems; the promotion criteria (even implicit ones) are what make the pattern.
+Progressive distillation is recognizable by three structural properties:
 
-The layers in a progressive distillation system typically follow a taxonomy from raw to refined:
+> [!abstract] **The three properties**
+> 1. **Multiple distinct layers** with defined transitions between them
+> 2. **Increasing density and actionability** at each layer — the top is smaller in volume but higher in value per unit
+> 3. **Explicit promotion criteria** governing when material moves between layers — systems that simply accumulate are not distillation systems
 
-- **Layer 0 — Raw**: unprocessed source material. High volume, low density. Articles, transcripts, dumps, notes. No synthesizing has occurred.
-- **Layer 1 — Synthesis**: structured summaries of individual sources. Medium volume, medium density. Key insights extracted, relationships identified, but still source-scoped.
-- **Layer 2 — Concepts**: cross-source synthesis. Lower volume, higher density. Ideas abstracted from their sources, linked to related concepts, domain-indexed.
-- **Layer 3 — Patterns and Lessons**: cross-domain distillation. Small volume, high density. Recurring structures identified across multiple concept instances, independently generalizable.
-- **Layer 4 — Decisions**: actionable distillates. Minimal volume, maximal actionability. Specific choices with documented rationale, alternatives, and reversibility. The output of synthesis applied to a concrete choice context.
+### The Layer Model
 
-The value of the pattern compounds at each layer: a well-distilled decision or pattern page is denser in actionable knowledge than any number of raw source pages covering the same territory. But the upper layers depend on the lower layers for their validity — a pattern page without documented instances is speculation, not distillation.
+> [!info] **Five distillation layers from raw to actionable**
+> | Layer | Name | Volume | Density | What it contains | Wiki directory |
+> |-------|------|--------|---------|-----------------|----------------|
+> | 0 | **Raw** | High | Low | Unprocessed source material. Articles, transcripts, dumps. | `raw/` |
+> | 1 | **Synthesis** | Medium | Medium | Structured summaries of individual sources. Key insights extracted, relationships identified. | `wiki/sources/` |
+> | 2 | **Concepts** | Lower | Higher | Cross-source synthesis. Ideas abstracted from sources, domain-indexed, linked. | `wiki/domains/` |
+> | 3-4 | **Lessons & Patterns** | Small | High | Cross-domain distillation. Recurring structures from multiple instances. | `wiki/lessons/`, `wiki/patterns/` |
+> | 5 | **Decisions** | Minimal | Maximal | Actionable distillates. Choices with rationale, alternatives, reversibility. | `wiki/decisions/` |
 
-The promotion transition is where distillation systems fail in practice. PARA's progressive summarization requires the human to re-read and highlight material at each pass. Zettelkasten's permanent note requires deliberate effort to write in one's own voice. Traditional wikis degrade because the distillation cost grows with the volume of accumulated material faster than the human's available attention. The Knowledge Evolution Pipeline's insight is that deterministic scoring can automate the identification of promotion candidates — removing the bottleneck of human attention from the promotion signal while preserving human judgment at the review gate.
+The value compounds at each layer: a well-distilled decision page is denser in actionable knowledge than any number of raw sources covering the same territory. But upper layers depend on lower layers for validity — a pattern without documented instances is speculation, not distillation.
 
-The pattern has two failure modes. **Premature distillation** occurs when material is promoted to a higher layer before it has enough instances, cross-references, or source diversity to support the generalization. A single-source pattern page is premature distillation — it encodes one example as a universal principle without the multi-instance evidence that makes the pattern trustworthy. The scoring engine's age, source count, and cross-domain reference signals are specifically designed to prevent this. **Distillation arrest** occurs when material accumulates at the lower layers and is never promoted — the wiki grows in raw and synthesis pages but never develops patterns, lessons, or decisions. Gap analysis and evolution scoring address distillation arrest by surfacing pages that are ready for promotion but have not been acted upon.
+### The Promotion Mechanism
+
+> [!tip] **What moves material between layers**
+> Each transition requires specific evidence that the material has been TRANSFORMED, not just reformatted:
+> - **Raw → Synthesis**: source has been read in full, key claims extracted with citations, relationships to existing pages identified
+> - **Synthesis → Concept**: multiple sources converge on the same idea, cross-source integration produces understanding no single source contained
+> - **Concept → Lesson/Pattern**: concrete instances identified across 2+ independent contexts, the principle is generalizable beyond its origin
+> - **Lesson/Pattern → Decision**: the insight has been applied to a concrete choice context with alternatives evaluated and reversibility assessed
+
+> [!warning] **Where distillation systems fail**
+> The promotion transition is the bottleneck. PARA requires human re-reading at each pass. Zettelkasten requires deliberate writing in one's own voice. Traditional wikis degrade because distillation cost grows faster than available attention.
+>
+> The evolution pipeline's insight: **deterministic scoring automates candidate identification** — removing the human attention bottleneck from the promotion SIGNAL while preserving human judgment at the review GATE. The scorer finds what's ready; the human confirms it's worthy.
+
+### Two Failure Modes
+
+> [!bug]- **Premature distillation**
+> Material promoted to a higher layer before it has enough instances, cross-references, or source diversity to support the generalization. A single-source pattern page encodes one example as a universal principle without the multi-instance evidence that makes it trustworthy.
+>
+> **How the scorer prevents this:** age, source count, and cross-domain reference signals require minimum thresholds before promotion eligibility. A page that's new, single-sourced, and domain-local won't score high enough to be considered.
+
+> [!bug]- **Distillation arrest**
+> Material accumulates at lower layers and is never promoted. The wiki grows in raw and synthesis pages but never develops patterns, lessons, or decisions. The value is there — the page is cited, cross-linked, multi-sourced — but locked in seed format.
+>
+> **How the tooling prevents this:** `pipeline evolve --review` surfaces pages in growing maturity with scores above the promotion threshold that haven't been acted on. Gap analysis identifies domains with concepts but no lessons. The weekly review cadence catches arrested pages.
+
+### What Distillation Looks Like — Before and After
+
+> [!example]- **Before: concept page (Layer 2) — thin, single-perspective**
+> A page titled "CLI Tools and Token Efficiency" with a summary saying "CLI tools are more efficient than MCP for token usage" and a Key Insights section listing 3 bullet points from one source. No mechanism explanation. No measured data. No applicability boundaries.
+>
+> This is a concept page that DESCRIBES a claim. It is not distilled — it is restated.
+
+> [!example]- **After: lesson page (Layer 4) — distilled, multi-source, actionable**
+> [[CLI Tools Beat MCP for Token Efficiency]] (122 lines): Summary states the lesson in one actionable sentence. Context lists 5 specific trigger conditions. Insight explains the MECHANISM (schema tokens displacing task context — "context pollution"). Evidence has 8 discrete items from 4 independent sources with data ("12x cost differential", "98% reduction", "3x more features"). Applicability names 4 domains + 4 counterexamples. CONTRADICTS relationship challenges the default assumption.
+>
+> This is a lesson that TEACHES a principle. The transformation from concept to lesson added: mechanism explanation (WHY not just WHAT), convergent evidence (4 sources not 1), measured data (12x, not "more efficient"), honest boundaries (when MCP still wins), and actionability (the reader can DECIDE after reading).
+
+> [!tip] **The distillation test**
+> Remove the upper-layer page. Does the wiki lose insight that wasn't on the lower-layer pages? If yes — real distillation occurred. If the lesson page just restates the concept page in different words, the promotion was premature.
+
+---
 
 ## Instances
 
 ### This Wiki's Six-Layer Architecture
 
-The most complete instantiation in the ecosystem. Layers 0–6 map the full distillation hierarchy from raw source files to decisions:
+The most complete instantiation. The evolution pipeline (`pipeline evolve`) is the mechanical promotion mechanism. The `--score` flag ranks pages by 6 deterministic signals. The `--review` flag surfaces ready-for-promotion pages. The compounding property: promoted pages link back to source concepts, increasing those concepts' scores in subsequent runs.
 
-- Layer 0: `raw/` — unprocessed source material (transcripts, articles, dumps)
-- Layer 1: `wiki/sources/` — source-synthesis pages, one per ingested source
-- Layer 2: `wiki/domains/` — concept pages synthesized across sources
-- Layer 3: `wiki/spine/` — cross-cutting synthesis that spans domains
-- Layer 4: `wiki/lessons/` — extracted learnings from concrete events
-- Layer 5: `wiki/patterns/` — recurring structures with documented instances (this layer)
-- Layer 6: `wiki/decisions/` — actionable choices with rationale and reversibility
-
-The `pipeline evolve` command is the mechanical promotion mechanism. The `--score` flag ranks all pages by evolution potential using 6 deterministic signals (relationship count, cross-domain references, source count, page age, type weight, current maturity). The `--review` flag surfaces pages ready for human-validated maturity promotion. The system's compounding property is explicit: promoted pattern pages link back to their source concepts, increasing those concepts' relationship density, which improves their own evolution scores in subsequent runs.
+> [!info] **Six scoring signals that measure distillation readiness**
+> | Signal | What it measures | Why it indicates readiness |
+> |--------|-----------------|--------------------------|
+> | Cross-source convergence | How many distinct sources back the page | Multi-source = ready for cross-source synthesis |
+> | Relationship hub | How many pages reference or are referenced by it | High connectivity = junction point worth distilling |
+> | Domain layer gap | Missing layers in the page's domain | Domains with concepts but no lessons = distillation arrested |
+> | Open question density | How many unresolved questions | Questions = evolution directions |
+> | Tag co-occurrence | Shared tags with existing evolved pages | Related evolution opportunity |
+> | Orphaned references | Relationship targets that don't exist | Missing pages = distillation candidates |
 
 ### PARA's Progressive Summarization
 
-Tiago Forte's Building a Second Brain methodology implements the same pattern as a manual human process. The CODE workflow (Capture → Organize → Distill → Express) defines the layers. Progressive summarization is the distillation mechanism: in the first pass, highlight important passages. In the second pass, bold the most critical highlights. In the third pass, write an executive summary of the bolded text. Each pass produces a denser, more portable artifact. The Second Brain Architecture page maps this to the wiki's `## Summary` → `## Key Insights` → `## Deep Analysis` section layering — the same three-pass structure implemented as a page schema rather than a manual highlighting practice.
+Tiago Forte's method implements the same pattern manually. CODE workflow: Capture → Organize → Distill → Express. Progressive summarization is the distillation mechanism: first pass highlights, second pass bolds the critical highlights, third pass writes an executive summary. Each pass produces a denser artifact.
 
-PARA's weakness is distillation arrest: the method requires human attention for each pass, so material that is never revisited never gets distilled. The wiki's automated evolution pipeline solves this by replacing human-initiated re-reads with scoring-triggered promotion.
+> [!warning] **PARA's weakness is distillation arrest**
+> The method requires human attention for each pass. Material that's never revisited never gets distilled. The wiki's automated pipeline solves this by replacing human-initiated re-reads with scoring-triggered promotion.
 
-### Zettelkasten's Permanent Notes Model
+The wiki maps PARA directly: `## Summary` (executive summary) → `## Key Insights` (bold highlights) → `## Deep Analysis` (full passage) — three density layers in one page schema.
 
-Luhmann's Zettelkasten implements distillation across three note types. Fleeting notes (captured quickly, low-effort) are the raw layer. Literature notes (one note per source, summarizing the source in the author's own words) are the synthesis layer. Permanent notes (one idea per note, written as if read by a stranger in ten years, linked to existing permanent notes) are the concept layer. The permanent note promotion criterion is explicit: does this idea warrant its own card, stated in my own voice, linked to the existing network? If not, it stays as a literature note.
+### Zettelkasten's Permanent Notes
 
-The Zettelkasten's strength is its connection-building promotion criterion — permanent notes are promoted not just for individual insight but for their ability to link with existing knowledge. The Second Brain Architecture page notes: "the value of a note is not its content in isolation but its position in the network." This is the same principle as the evolution scorer's relationship count signal: pages with more relationships are better promotion candidates because they sit at network junctions where distillation produces high-value cross-domain synthesis.
+Luhmann's system implements distillation across three note types: fleeting (raw capture), literature (source summary in own words), permanent (one idea per note, linked to existing notes). The promotion criterion is explicit: does this idea warrant its own card, stated in my own voice, linked to the existing network?
+
+> [!tip] **The Zettelkasten insight the wiki adopts**
+> A note's value is its position in the network, not its content in isolation. The evolution scorer's relationship count signal implements this directly: pages with more relationships are better promotion candidates because they sit at network junctions where distillation produces high-value cross-domain synthesis.
 
 ### NotebookLM's Source → Research → Artifact Pipeline
 
-NotebookLM implements a three-layer distillation pipeline in a different context (content generation rather than knowledge accumulation). Raw sources (uploaded documents, YouTube links, website URLs) form the base layer. The notebook's grounded Q&A and synthesis capability forms the research layer — users ask questions, NotebookLM synthesizes answers grounded in the specific sources. Generated artifacts (slide decks, podcasts, reports, infographics) form the output layer — content generated from the synthesized understanding rather than from the raw sources directly.
+Three-layer distillation in a content generation context: raw sources (uploaded docs) → grounded research (Q&A bounded to sources) → generated artifacts (slides, podcasts, reports). The source grounding property ensures the artifact layer doesn't drift from raw material — same principle as the wiki's `derived_from` frontmatter field.
 
-The key distillation property is the source grounding: NotebookLM's outputs are bounded by the loaded sources, preventing the artifact layer from drifting away from the raw material. This is the same principle as the wiki's `derived_from` frontmatter field — traceability from the output layer back through the distillation chain to the raw sources.
+---
 
 ## When To Apply
 
-Apply Progressive Distillation when:
-
-- **Volume of raw input exceeds direct processability**: the ratio of raw material to human attention time makes direct consumption unsustainable. Distillation layers create intermediate stopping points where high-value material gets extracted and preserved even if the raw volume grows indefinitely.
-- **Knowledge must compound over time**: distillation is the mechanism by which individual sources contribute to growing general knowledge. Without distillation layers, each source is processed in isolation and its insights are lost when the session closes.
-- **Actionability is the terminal goal**: the decision layer at the top of the hierarchy is what makes the distillation chain produce operational value. Systems that distill only to the concept or synthesis layer without a decision or action layer produce intellectually interesting but operationally inert knowledge.
-- **Quality must be validated at each transition**: the promotion criteria between layers are the quality gates. Each layer's promotion criterion filters out premature or poorly-supported generalizations before they reach actionable status.
-- **The distillation process must be maintainable at scale**: automated promotion (scoring, evolve pipeline) removes the human attention bottleneck that causes traditional wikis to stall. Apply the pattern with automation when volume exceeds what a human curator can process manually in the available review cadence.
+- **Volume exceeds direct processability** — distillation creates intermediate stopping points where high-value material gets extracted even if raw volume grows indefinitely
+- **Knowledge must compound over time** — without distillation, each source is processed in isolation and insights are lost when the session closes
+- **Actionability is the terminal goal** — the decision layer is what makes the chain produce operational value. Systems that stop at concepts produce intellectually interesting but operationally inert knowledge.
+- **Quality must be validated at each transition** — promotion criteria are quality gates. Each filters out poorly-supported generalizations before they reach actionable status.
+- **The process must be maintainable at scale** — automated promotion (scoring, pipeline) removes the human attention bottleneck that causes traditional wikis to stall
 
 ## When Not To
 
-Avoid or simplify Progressive Distillation when:
-
-- **Speed of output is the priority over depth**: if the requirement is rapid content generation (same-day blog posts, quick reference docs), distillation overhead is counterproductive. Use direct LLM generation from sources without the multi-layer promotion pipeline.
-- **The source set is small and stable**: for a small knowledge domain (< 20 pages, single domain), the overhead of the distillation infrastructure exceeds the value. A flat wiki with one layer of synthesis is sufficient; patterns and decisions emerge from direct observation rather than formal distillation mechanics.
-- **Sources are inherently ephemeral**: news feeds, real-time alerts, transient operational data do not benefit from distillation into permanent layers. The pattern requires sources that are worth processing for durable value.
-- **Promotion criteria cannot be defined**: if there is no clear definition of "what makes a concept worth promoting to a pattern," the distillation layers will either stall (distillation arrest) or produce premature promotions. The promotion criteria must be made explicit before the infrastructure is built.
-- **The bottom layer is never cleaned up**: distillation systems that grow the raw layer without ever archiving or processing raw material develop a "raw debt" — accumulated unprocessed material that creates false scale while delivering no distillation value. The raw layer must be processable (bounded or continuously drained) for the pattern to work sustainably.
+- **Speed over depth** — rapid content generation (same-day blog posts, quick docs) doesn't benefit from multi-layer promotion overhead
+- **Small, stable source set** — <20 pages, single domain: a flat wiki with one synthesis layer is sufficient. Patterns emerge from observation, not formal mechanics.
+- **Ephemeral sources** — news feeds, real-time alerts, transient data don't warrant promotion to permanent layers
+- **Promotion criteria can't be defined** — if "what makes a concept worth promoting to a pattern" has no clear answer, layers will either stall (arrest) or produce premature promotions. Define criteria BEFORE building infrastructure.
+- **Raw layer never cleaned** — systems that grow raw/ without processing develop "raw debt" — accumulated unprocessed material creating false scale with no distillation value
 
 ## Relationships
 
@@ -140,6 +187,7 @@ Avoid or simplify Progressive Distillation when:
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Methodology Framework]]
 [[Model: Knowledge Evolution]]
+[[Model: SFIF and Architecture]]
 [[Model: Second Brain]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skyscraper, Pyramid, Mountain]]
