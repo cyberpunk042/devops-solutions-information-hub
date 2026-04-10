@@ -160,3 +160,4 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Model: Claude Code]]
 [[Model: Skills, Commands, and Hooks]]
+[[Synthesis: Claude Code Best Practice (shanraisshan)]]

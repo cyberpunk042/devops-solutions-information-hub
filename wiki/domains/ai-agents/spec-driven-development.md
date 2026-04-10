@@ -131,7 +131,6 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 - RELATES TO: [[OpenFleet]] (primary source — SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)
 - RELATES TO: [[Harness Engineering]] (harness is the spec-driven development tooling layer)
 - FEEDS INTO: [[Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)
-- CONTRADICTS: Vibe Coding (unstructured iterative prompting without spec gates — the failure mode SDD exists to prevent)
 
 ## Backlinks
 
@@ -143,7 +142,6 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 [[OpenFleet]]
 [[Harness Engineering]]
 [[Wiki Backlog Pattern]]
-[[Vibe Coding (unstructured iterative prompting without spec gates — the failure mode SDD exists to prevent)]]
 [[Backlog Hierarchy Rules]]
 [[Methodology Framework]]
 [[Model: Methodology]]

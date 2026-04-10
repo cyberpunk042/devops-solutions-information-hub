@@ -75,16 +75,17 @@ The ecosystem runs on WSL2 (Windows Subsystem for Linux), which affects service 
 
 ## Relationships
 
-- ENABLES: AI Agents
-- ENABLES: Tools And Platforms
-- ENABLES: Automation
-- RELATES TO: Knowledge Systems
-- UNDERPINS: AI Models
+- ENABLES: AI Agents — Domain Overview
+- ENABLES: Tools And Platforms — Domain Overview
+- ENABLES: Automation — Domain Overview
+- RELATES TO: Knowledge Systems — Domain Overview
+- UNDERPINS: AI Models — Domain Overview
 
 ## Backlinks
 
-[[AI Agents]]
-[[Tools And Platforms]]
-[[Automation]]
-[[Knowledge Systems]]
-[[AI Models]]
+[[AI Agents — Domain Overview]]
+[[Tools And Platforms — Domain Overview]]
+[[Automation — Domain Overview]]
+[[Knowledge Systems — Domain Overview]]
+[[AI Models — Domain Overview]]
+[[Cross-Domain — Domain Overview]]

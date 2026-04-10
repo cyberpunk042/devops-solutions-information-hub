@@ -73,11 +73,9 @@ The [[Model: Methodology]] is the super-model — it GOVERNS how all work procee
 - RELATES TO: [[Model: Methodology]] (the super-model)
 - RELATES TO: [[Model: LLM Wiki]] (the content structure model)
 - RELATES TO: [[Model: Wiki Design]] (the visual design model)
-- ENABLES: All models in this wiki
 
 ## Backlinks
 
 [[Model: Methodology]]
 [[Model: LLM Wiki]]
 [[Model: Wiki Design]]
-[[All models in this wiki]]

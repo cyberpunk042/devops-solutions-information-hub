@@ -312,7 +312,6 @@ Methodology failures from real operation, each traced to a specific lesson.
 - RELATES TO: [[The Agent Must Practice What It Documents]]
 - RELATES TO: [[Models Are Built in Layers, Not All at Once]]
 - RELATES TO: [[Wiki Design Standards — What Good Styling Looks Like]]
-- IMPLEMENTS: wiki/config/methodology.yaml, wiki/config/agent-directive.md
 
 ## Backlinks
 
@@ -322,8 +321,6 @@ Methodology failures from real operation, each traced to a specific lesson.
 [[The Agent Must Practice What It Documents]]
 [[Models Are Built in Layers, Not All at Once]]
 [[Wiki Design Standards — What Good Styling Looks Like]]
-[[wiki/config/methodology.yaml]]
-[[wiki/config/agent-directive.md]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-10T17:57:07.829415+00:00",
+  "generated": "2026-04-10T18:08:56.944756+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1197,
+    "relationships": 1177,
     "tags_unique": 639,
     "layers": {
       "3": 5,
@@ -108,7 +108,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Adoption Guide"
+          "target": "Adoption Guide \u2014 How to Use This Wiki's Standards"
         },
         {
           "verb": "RELATES TO",
@@ -2221,10 +2221,6 @@
         {
           "verb": "FEEDS INTO",
           "target": "Wiki Backlog Pattern"
-        },
-        {
-          "verb": "CONTRADICTS",
-          "target": "Vibe Coding (unstructured iterative prompting without spec gates \u2014 the failure mode SDD exists to prevent)"
         }
       ]
     },
@@ -2845,10 +2841,6 @@
         {
           "verb": "FEEDS INTO",
           "target": "Wiki Backlog Pattern"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)"
         },
         {
           "verb": "IMPLEMENTS",
@@ -3492,10 +3484,6 @@
         {
           "verb": "FEEDS INTO",
           "target": "Immune System Rules"
-        },
-        {
-          "verb": "CONTRADICTS",
-          "target": "Vibe Coding (unstructured generation without stage boundaries \u2014 the failure mode this methodology exists to prevent)"
         }
       ]
     },
@@ -4218,11 +4206,11 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "Zettelkasten methodology"
+          "target": "Zettelkasten Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "PARA methodology"
+          "target": "PARA Methodology"
         },
         {
           "verb": "FEEDS INTO",
@@ -5499,10 +5487,6 @@
         {
           "verb": "FEEDS INTO",
           "target": "MCP Integration Architecture"
-        },
-        {
-          "verb": "CONTRADICTS",
-          "target": "default assumption that MCP is the standard tool integration pattern"
         }
       ]
     },
@@ -5986,10 +5970,6 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "devops-solutions-research-wiki"
-        },
-        {
-          "verb": "FEEDS INTO",
           "target": "OpenFleet"
         }
       ]
@@ -6064,10 +6044,6 @@
         {
           "verb": "RELATES TO",
           "target": "Obsidian Skills Ecosystem"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "devops-solutions-research-wiki"
         },
         {
           "verb": "RELATES TO",
@@ -6453,10 +6429,6 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "devops-solutions-research-wiki"
-        },
-        {
-          "verb": "FEEDS INTO",
           "target": "OpenFleet"
         }
       ]
@@ -6470,7 +6442,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "orchestration",
         "ai-agents",
@@ -6546,7 +6518,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "automation",
         "bridge",
@@ -6625,7 +6597,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "knowledge-systems",
         "hub-domain",
@@ -6800,10 +6772,6 @@
         {
           "verb": "BUILDS ON",
           "target": "Knowledge Evolution Pipeline"
-        },
-        {
-          "verb": "CONTRADICTS",
-          "target": "assumption that \"continue\" means \"skip ahead\""
         }
       ]
     },
@@ -7006,10 +6974,6 @@
         {
           "verb": "BUILDS ON",
           "target": "Knowledge Evolution Pipeline"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Self-enforcing methodology (CLAUDE.md as operational ruleset)"
         }
       ]
     },
@@ -7583,10 +7547,6 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki Pattern"
-        },
-        {
-          "verb": "CONTRADICTS",
-          "target": "default assumption that registering all MCP tools at startup is cost-free"
         },
         {
           "verb": "FEEDS INTO",
@@ -8172,10 +8132,6 @@
         {
           "verb": "BUILDS ON",
           "target": "Progressive Distillation"
-        },
-        {
-          "verb": "IMPLEMENTED BY",
-          "target": "Research Wiki"
         },
         {
           "verb": "IMPLEMENTED BY",
@@ -9530,11 +9486,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Claude Code Hooks"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "Everything Claude Code"
+          "target": "Hooks Lifecycle Architecture"
         },
         {
           "verb": "COMPARES TO",
@@ -9754,15 +9706,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Methodology Execution Modes"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "methodology adoption across ecosystem projects"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "project-specific methodology.yaml instances"
+          "target": "Execution Modes and End Conditions"
         }
       ]
     },
@@ -9787,27 +9731,27 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "Knowledge Systems"
+          "target": "Knowledge Systems \u2014 Domain Overview"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Automation"
+          "target": "Automation \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Tools And Platforms"
+          "target": "Tools And Platforms \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Devops"
+          "target": "Devops \u2014 Domain Overview"
         },
         {
           "verb": "BUILDS ON",
-          "target": "AI Models"
+          "target": "AI Models \u2014 Domain Overview"
         },
         {
           "verb": "PARALLELS",
-          "target": "Cross-Domain"
+          "target": "Cross-Domain \u2014 Domain Overview"
         }
       ]
     },
@@ -9832,23 +9776,23 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "AI Agents"
+          "target": "AI Agents \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Knowledge Systems"
+          "target": "Knowledge Systems \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Tools And Platforms"
+          "target": "Tools And Platforms \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Automation"
+          "target": "Automation \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Devops"
+          "target": "Devops \u2014 Domain Overview"
         }
       ]
     },
@@ -9873,27 +9817,27 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "Knowledge Systems"
+          "target": "Knowledge Systems \u2014 Domain Overview"
         },
         {
           "verb": "USED BY",
-          "target": "AI Agents"
+          "target": "AI Agents \u2014 Domain Overview"
         },
         {
           "verb": "BUILDS ON",
-          "target": "Tools And Platforms"
+          "target": "Tools And Platforms \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Devops"
+          "target": "Devops \u2014 Domain Overview"
         },
         {
           "verb": "EXTENDS",
-          "target": "AI Models"
+          "target": "AI Models \u2014 Domain Overview"
         },
         {
           "verb": "BRIDGES",
-          "target": "Cross-Domain"
+          "target": "Cross-Domain \u2014 Domain Overview"
         }
       ]
     },
@@ -9918,27 +9862,27 @@
       "relationships": [
         {
           "verb": "SYNTHESIZES FROM",
-          "target": "AI Agents"
+          "target": "AI Agents \u2014 Domain Overview"
         },
         {
           "verb": "SYNTHESIZES FROM",
-          "target": "Knowledge Systems"
+          "target": "Knowledge Systems \u2014 Domain Overview"
         },
         {
           "verb": "SYNTHESIZES FROM",
-          "target": "Tools And Platforms"
+          "target": "Tools And Platforms \u2014 Domain Overview"
         },
         {
           "verb": "SYNTHESIZES FROM",
-          "target": "Automation"
+          "target": "Automation \u2014 Domain Overview"
         },
         {
           "verb": "SYNTHESIZES FROM",
-          "target": "Devops"
+          "target": "Devops \u2014 Domain Overview"
         },
         {
           "verb": "SYNTHESIZES FROM",
-          "target": "AI Models"
+          "target": "AI Models \u2014 Domain Overview"
         }
       ]
     },
@@ -9963,23 +9907,23 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "AI Agents"
+          "target": "AI Agents \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Tools And Platforms"
+          "target": "Tools And Platforms \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Automation"
+          "target": "Automation \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Knowledge Systems"
+          "target": "Knowledge Systems \u2014 Domain Overview"
         },
         {
           "verb": "UNDERPINS",
-          "target": "AI Models"
+          "target": "AI Models \u2014 Domain Overview"
         }
       ]
     },
@@ -10004,27 +9948,27 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "AI Agents"
+          "target": "AI Agents \u2014 Domain Overview"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Automation"
+          "target": "Automation \u2014 Domain Overview"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Tools And Platforms"
+          "target": "Tools And Platforms \u2014 Domain Overview"
         },
         {
           "verb": "ENABLES",
-          "target": "Cross-Domain"
+          "target": "Cross-Domain \u2014 Domain Overview"
         },
         {
           "verb": "BUILDS ON",
-          "target": "AI Models"
+          "target": "AI Models \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Devops"
+          "target": "Devops \u2014 Domain Overview"
         }
       ]
     },
@@ -10049,27 +9993,27 @@
       "relationships": [
         {
           "verb": "USED BY",
-          "target": "AI Agents"
+          "target": "AI Agents \u2014 Domain Overview"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "Knowledge Systems"
+          "target": "Knowledge Systems \u2014 Domain Overview"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Automation"
+          "target": "Automation \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Devops"
+          "target": "Devops \u2014 Domain Overview"
         },
         {
           "verb": "BUILDS ON",
-          "target": "AI Models"
+          "target": "AI Models \u2014 Domain Overview"
         },
         {
           "verb": "RELATES TO",
-          "target": "Cross-Domain"
+          "target": "Cross-Domain \u2014 Domain Overview"
         }
       ]
     },
@@ -10956,14 +10900,6 @@
         {
           "verb": "RELATES TO",
           "target": "Wiki Design Standards \u2014 What Good Styling Looks Like"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "wiki/config/methodology.yaml"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "wiki/config/agent-directive.md"
         }
       ]
     },
@@ -11080,14 +11016,6 @@
         {
           "verb": "RELATES TO",
           "target": "Adoption Guide \u2014 How to Use This Wiki's Standards"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "wiki/config/methodology.yaml"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "wiki/config/agent-directive.md"
         }
       ]
     },
@@ -11359,10 +11287,6 @@
         {
           "verb": "RELATES TO",
           "target": "Model: Wiki Design"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "All models in this wiki"
         }
       ]
     },
@@ -11818,10 +11742,6 @@
         {
           "verb": "RELATES TO",
           "target": "Model: Methodology"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "All model and wiki pages"
         }
       ]
     }
@@ -11833,19 +11753,19 @@
     },
     "cross-domain": {
       "page_count": 49,
-      "relationship_count": 375
+      "relationship_count": 363
     },
     "ai-agents": {
       "page_count": 34,
-      "relationship_count": 297
+      "relationship_count": 293
     },
     "tools-and-platforms": {
       "page_count": 23,
-      "relationship_count": 160
+      "relationship_count": 159
     },
     "devops": {
       "page_count": 11,
-      "relationship_count": 85
+      "relationship_count": 84
     },
     "ai-models": {
       "page_count": 3,
@@ -11857,7 +11777,7 @@
     },
     "knowledge-systems": {
       "page_count": 23,
-      "relationship_count": 201
+      "relationship_count": 199
     },
     "log": {
       "page_count": 20,
@@ -14590,115 +14510,9 @@
   },
   "orphaned_refs": [
     {
-      "target": "AI Agents",
-      "referenced_by": [
-        "AI Models \u2014 Domain Overview",
-        "Automation \u2014 Domain Overview",
-        "Cross-Domain \u2014 Domain Overview",
-        "Devops \u2014 Domain Overview",
-        "Knowledge Systems \u2014 Domain Overview",
-        "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "AI Models",
-      "referenced_by": [
-        "AI Agents \u2014 Domain Overview",
-        "Automation \u2014 Domain Overview",
-        "Cross-Domain \u2014 Domain Overview",
-        "Devops \u2014 Domain Overview",
-        "Knowledge Systems \u2014 Domain Overview",
-        "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Adoption Guide",
-      "referenced_by": [
-        "Ecosystem Integration Interfaces"
-      ]
-    },
-    {
-      "target": "All model and wiki pages",
-      "referenced_by": [
-        "Model: Wiki Design"
-      ]
-    },
-    {
-      "target": "All models in this wiki",
-      "referenced_by": [
-        "Model Registry"
-      ]
-    },
-    {
-      "target": "Automation",
-      "referenced_by": [
-        "AI Agents \u2014 Domain Overview",
-        "AI Models \u2014 Domain Overview",
-        "Cross-Domain \u2014 Domain Overview",
-        "Devops \u2014 Domain Overview",
-        "Knowledge Systems \u2014 Domain Overview",
-        "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Claude Code Hooks",
-      "referenced_by": [
-        "Synthesis: Claude Code Best Practice (shanraisshan)"
-      ]
-    },
-    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
-      ]
-    },
-    {
-      "target": "Cross-Domain",
-      "referenced_by": [
-        "AI Agents \u2014 Domain Overview",
-        "Automation \u2014 Domain Overview",
-        "Knowledge Systems \u2014 Domain Overview",
-        "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Devops",
-      "referenced_by": [
-        "AI Agents \u2014 Domain Overview",
-        "AI Models \u2014 Domain Overview",
-        "Automation \u2014 Domain Overview",
-        "Cross-Domain \u2014 Domain Overview",
-        "Knowledge Systems \u2014 Domain Overview",
-        "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Everything Claude Code",
-      "referenced_by": [
-        "Synthesis: Claude Code Best Practice (shanraisshan)"
-      ]
-    },
-    {
-      "target": "Flexible Methodology Framework directive",
-      "referenced_by": [
-        "Methodology Framework"
-      ]
-    },
-    {
-      "target": "Knowledge Systems",
-      "referenced_by": [
-        "AI Agents \u2014 Domain Overview",
-        "AI Models \u2014 Domain Overview",
-        "Automation \u2014 Domain Overview",
-        "Cross-Domain \u2014 Domain Overview",
-        "Devops \u2014 Domain Overview",
-        "Tools And Platforms \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Methodology Execution Modes",
-      "referenced_by": [
-        "Adoption Guide \u2014 How to Use This Wiki's Standards"
       ]
     },
     {
@@ -14709,57 +14523,9 @@
       ]
     },
     {
-      "target": "PARA methodology",
-      "referenced_by": [
-        "Second Brain Architecture"
-      ]
-    },
-    {
-      "target": "Research Wiki",
-      "referenced_by": [
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
-      ]
-    },
-    {
-      "target": "Self-enforcing methodology",
-      "referenced_by": [
-        "The Agent Must Practice What It Documents"
-      ]
-    },
-    {
-      "target": "Tools And Platforms",
-      "referenced_by": [
-        "AI Agents \u2014 Domain Overview",
-        "AI Models \u2014 Domain Overview",
-        "Automation \u2014 Domain Overview",
-        "Cross-Domain \u2014 Domain Overview",
-        "Devops \u2014 Domain Overview",
-        "Knowledge Systems \u2014 Domain Overview"
-      ]
-    },
-    {
-      "target": "Vibe Coding",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Stage-Gate Methodology"
-      ]
-    },
-    {
-      "target": "Zettelkasten methodology",
-      "referenced_by": [
-        "Second Brain Architecture"
-      ]
-    },
-    {
       "target": "ai-driven-content-pipeline",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
-      ]
-    },
-    {
-      "target": "assumption that \"continue\" means \"skip ahead\"",
-      "referenced_by": [
-        "Never Skip Stages Even When Told to Continue"
       ]
     },
     {
@@ -14775,41 +14541,9 @@
       ]
     },
     {
-      "target": "default assumption that MCP is the standard tool integration pattern",
-      "referenced_by": [
-        "CLI Tools Beat MCP for Token Efficiency"
-      ]
-    },
-    {
-      "target": "default assumption that registering all MCP tools at startup is cost-free",
-      "referenced_by": [
-        "Context-Aware Tool Loading"
-      ]
-    },
-    {
-      "target": "devops-solutions-research-wiki",
-      "referenced_by": [
-        "LLM-Maintained Wikis Outperform Static Documentation",
-        "Obsidian as Knowledge Infrastructure Not Just Note-Taking",
-        "Multi-Stage Ingestion Beats Single-Pass Processing"
-      ]
-    },
-    {
-      "target": "methodology adoption across ecosystem projects",
-      "referenced_by": [
-        "Adoption Guide \u2014 How to Use This Wiki's Standards"
-      ]
-    },
-    {
       "target": "notebooklm",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
-      ]
-    },
-    {
-      "target": "project-specific methodology.yaml instances",
-      "referenced_by": [
-        "Adoption Guide \u2014 How to Use This Wiki's Standards"
       ]
     },
     {
@@ -14977,20 +14711,6 @@
       "target": "src-turboquant-122b-macbook",
       "referenced_by": [
         "Synthesis: TurboQuant 122B LLM on MacBook"
-      ]
-    },
-    {
-      "target": "wiki/config/agent-directive.md",
-      "referenced_by": [
-        "Methodology Standards \u2014 What Good Execution Looks Like",
-        "Model: Methodology"
-      ]
-    },
-    {
-      "target": "wiki/config/methodology.yaml",
-      "referenced_by": [
-        "Methodology Standards \u2014 What Good Execution Looks Like",
-        "Model: Methodology"
       ]
     }
   ]

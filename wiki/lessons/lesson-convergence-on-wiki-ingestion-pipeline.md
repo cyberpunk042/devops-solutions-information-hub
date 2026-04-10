@@ -83,7 +83,6 @@ From the LLM Wiki Pattern on the compounding mechanic: "Filing answers back into
 - ENABLES: [[Research Pipeline Orchestration]]
 - RELATES TO: [[Wiki Event-Driven Automation]]
 - RELATES TO: [[Memory Lifecycle Management]]
-- FEEDS INTO: devops-solutions-research-wiki
 - FEEDS INTO: [[OpenFleet]]
 
 ## Backlinks
@@ -95,7 +94,6 @@ From the LLM Wiki Pattern on the compounding mechanic: "Filing answers back into
 [[Wiki Knowledge Graph]]
 [[Wiki Event-Driven Automation]]
 [[Memory Lifecycle Management]]
-[[devops-solutions-research-wiki]]
 [[OpenFleet]]
 [[Model: Knowledge Evolution]]
 [[Never Synthesize from Descriptions Alone]]

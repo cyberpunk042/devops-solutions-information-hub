@@ -124,7 +124,6 @@ This is the documentation layer's application of deferred loading. The alternati
 - RELATES TO: [[Claude Code Skills]]
 - RELATES TO: [[MCP Integration Architecture]]
 - RELATES TO: [[LLM Wiki Pattern]]
-- CONTRADICTS: default assumption that registering all MCP tools at startup is cost-free
 - FEEDS INTO: [[Research Pipeline Orchestration]]
 - FEEDS INTO: [[Wiki Ingestion Pipeline]]
 
@@ -138,7 +137,6 @@ This is the documentation layer's application of deferred loading. The alternati
 [[Claude Code Skills]]
 [[MCP Integration Architecture]]
 [[LLM Wiki Pattern]]
-[[default assumption that registering all MCP tools at startup is cost-free]]
 [[Research Pipeline Orchestration]]
 [[Wiki Ingestion Pipeline]]
 [[Claude Code Best Practices]]

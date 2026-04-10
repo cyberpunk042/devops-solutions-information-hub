@@ -192,8 +192,7 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 - ENABLES: [[Claude Code Context Management]]
 - BUILDS ON: [[Claude Code Skills]]
 - RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: Claude Code Hooks
-- COMPARES TO: Everything Claude Code
+- RELATES TO: [[Hooks Lifecycle Architecture]]
 - COMPARES TO: [[Spec-Driven Development]]
 
 ## Backlinks
@@ -203,6 +202,5 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 [[Claude Code Context Management]]
 [[Claude Code Skills]]
 [[LLM Wiki Pattern]]
-[[Claude Code Hooks]]
-[[Everything Claude Code]]
+[[Hooks Lifecycle Architecture]]
 [[Spec-Driven Development]]

@@ -103,7 +103,6 @@ This lesson applies to any system that both produces and consumes its own method
 - RELATES TO: [[Always Plan Before Executing]]
 - RELATES TO: [[Immune System Rules]] (this lesson IS the immune system principle)
 - BUILDS ON: [[Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)
-- ENABLES: Self-enforcing methodology (CLAUDE.md as operational ruleset)
 
 ## Backlinks
 
@@ -113,7 +112,6 @@ This lesson applies to any system that both produces and consumes its own method
 [[Always Plan Before Executing]]
 [[Immune System Rules]]
 [[Knowledge Evolution Pipeline]]
-[[Self-enforcing methodology (CLAUDE.md as operational ruleset)]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Model: Quality and Failure Prevention]]

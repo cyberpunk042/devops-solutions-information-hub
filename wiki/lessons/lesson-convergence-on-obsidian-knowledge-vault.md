@@ -79,7 +79,6 @@ Karpathy's framing makes the infrastructure metaphor explicit: "Obsidian is the 
 - ENABLES: [[Wiki Ingestion Pipeline]]
 - RELATES TO: [[Claude Code Skills]]
 - RELATES TO: [[Obsidian Skills Ecosystem]]
-- FEEDS INTO: devops-solutions-research-wiki
 - RELATES TO: [[Wiki Knowledge Graph]]
 
 ## Backlinks
@@ -89,5 +88,4 @@ Karpathy's framing makes the infrastructure metaphor explicit: "Obsidian is the 
 [[Wiki Ingestion Pipeline]]
 [[Claude Code Skills]]
 [[Obsidian Skills Ecosystem]]
-[[devops-solutions-research-wiki]]
 [[Wiki Knowledge Graph]]

@@ -160,7 +160,6 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 
 - RELATES TO: [[Skyscraper, Pyramid, Mountain]]
 - BUILDS ON: [[Progressive Distillation]]
-- IMPLEMENTED BY: Research Wiki
 - IMPLEMENTED BY: [[OpenFleet]]
 - IMPLEMENTED BY: [[AICP]]
 - RELATES TO: [[Four-Project Ecosystem]]
@@ -173,7 +172,6 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 
 [[Skyscraper, Pyramid, Mountain]]
 [[Progressive Distillation]]
-[[Research Wiki]]
 [[OpenFleet]]
 [[AICP]]
 [[Four-Project Ecosystem]]

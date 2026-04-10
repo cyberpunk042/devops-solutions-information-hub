@@ -355,7 +355,6 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 - RELATES TO: [[Design.md Pattern]]
 - RELATES TO: [[Infrastructure as Code Patterns]]
 - RELATES TO: [[Model: Methodology]]
-- ENABLES: All model and wiki pages
 
 ## Backlinks
 
@@ -364,6 +363,5 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 [[Design.md Pattern]]
 [[Infrastructure as Code Patterns]]
 [[Model: Methodology]]
-[[All model and wiki pages]]
 [[Model Registry]]
 [[Wiki Design Standards — What Good Styling Looks Like]]

@@ -311,9 +311,7 @@ The wiki proves that knowledge work and code work can share the same methodology
 - BUILDS ON: [[Stage-Gate Methodology]]
 - BUILDS ON: [[Four-Project Ecosystem]]
 - RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[Methodology Execution Modes]]
-- ENABLES: methodology adoption across ecosystem projects
-- FEEDS INTO: project-specific methodology.yaml instances
+- RELATES TO: [[Execution Modes and End Conditions]]
 
 ## Backlinks
 
@@ -321,7 +319,6 @@ The wiki proves that knowledge work and code work can share the same methodology
 [[Stage-Gate Methodology]]
 [[Four-Project Ecosystem]]
 [[Task Type Artifact Matrix]]
-[[Methodology Execution Modes]]
-[[methodology adoption across ecosystem projects]]
-[[project-specific methodology.yaml instances]]
+[[Execution Modes and End Conditions]]
+[[Ecosystem Integration Interfaces]]
 [[Model: Methodology]]

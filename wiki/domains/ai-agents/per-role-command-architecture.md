@@ -175,7 +175,7 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 ## Relationships
 
 - BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: Claude Code Slash Commands (artemgetmann)
+- BUILDS ON: [[Claude Code Slash Commands (artemgetmann)]]
 - EXTENDS: [[Harness Engineering]]
 - IMPLEMENTS: [[Hooks Lifecycle Architecture]]
 - RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]

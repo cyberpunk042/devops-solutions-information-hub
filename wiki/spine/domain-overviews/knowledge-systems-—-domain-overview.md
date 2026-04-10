@@ -94,18 +94,18 @@ Phase 1 is extraction (source → summary + key insights), Phase 2 is cross-refe
 
 ## Relationships
 
-- FEEDS INTO: AI Agents
-- FEEDS INTO: Automation
-- FEEDS INTO: Tools And Platforms
-- ENABLES: Cross-Domain
-- BUILDS ON: AI Models
-- RELATES TO: Devops
+- FEEDS INTO: AI Agents — Domain Overview
+- FEEDS INTO: Automation — Domain Overview
+- FEEDS INTO: Tools And Platforms — Domain Overview
+- ENABLES: Cross-Domain — Domain Overview
+- BUILDS ON: AI Models — Domain Overview
+- RELATES TO: Devops — Domain Overview
 
 ## Backlinks
 
-[[AI Agents]]
-[[Automation]]
-[[Tools And Platforms]]
-[[Cross-Domain]]
-[[AI Models]]
-[[Devops]]
+[[AI Agents — Domain Overview]]
+[[Automation — Domain Overview]]
+[[Tools And Platforms — Domain Overview]]
+[[Cross-Domain — Domain Overview]]
+[[AI Models — Domain Overview]]
+[[Devops — Domain Overview]]

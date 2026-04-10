@@ -80,16 +80,17 @@ bge-m3 is the current production choice in both AICP and OpenFleet. text-embeddi
 
 ## Relationships
 
-- ENABLES: AI Agents
-- ENABLES: Knowledge Systems
-- ENABLES: Tools And Platforms
-- ENABLES: Automation
-- RELATES TO: Devops
+- ENABLES: AI Agents — Domain Overview
+- ENABLES: Knowledge Systems — Domain Overview
+- ENABLES: Tools And Platforms — Domain Overview
+- ENABLES: Automation — Domain Overview
+- RELATES TO: Devops — Domain Overview
 
 ## Backlinks
 
-[[AI Agents]]
-[[Knowledge Systems]]
-[[Tools And Platforms]]
-[[Automation]]
-[[Devops]]
+[[AI Agents — Domain Overview]]
+[[Knowledge Systems — Domain Overview]]
+[[Tools And Platforms — Domain Overview]]
+[[Automation — Domain Overview]]
+[[Devops — Domain Overview]]
+[[Cross-Domain — Domain Overview]]

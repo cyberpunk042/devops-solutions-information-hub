@@ -96,18 +96,18 @@ The 24 rules in OpenFleet's doctor.py were distilled from 16 post-mortems of rea
 
 ## Relationships
 
-- FEEDS INTO: Knowledge Systems
-- FEEDS INTO: Automation
-- ENABLES: Tools And Platforms
-- RELATES TO: Devops
-- BUILDS ON: AI Models
-- PARALLELS: Cross-Domain
+- FEEDS INTO: Knowledge Systems — Domain Overview
+- FEEDS INTO: Automation — Domain Overview
+- ENABLES: Tools And Platforms — Domain Overview
+- RELATES TO: Devops — Domain Overview
+- BUILDS ON: AI Models — Domain Overview
+- PARALLELS: Cross-Domain — Domain Overview
 
 ## Backlinks
 
-[[Knowledge Systems]]
-[[Automation]]
-[[Tools And Platforms]]
-[[Devops]]
-[[AI Models]]
-[[Cross-Domain]]
+[[Knowledge Systems — Domain Overview]]
+[[Automation — Domain Overview]]
+[[Tools And Platforms — Domain Overview]]
+[[Devops — Domain Overview]]
+[[AI Models — Domain Overview]]
+[[Cross-Domain — Domain Overview]]

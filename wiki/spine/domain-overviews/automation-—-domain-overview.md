@@ -88,18 +88,18 @@ OpenFleet's deterministic 30-second orchestrator is the most mature automation p
 
 ## Relationships
 
-- IMPLEMENTS: Knowledge Systems
-- USED BY: AI Agents
-- BUILDS ON: Tools And Platforms
-- RELATES TO: Devops
-- EXTENDS: AI Models
-- BRIDGES: Cross-Domain
+- IMPLEMENTS: Knowledge Systems — Domain Overview
+- USED BY: AI Agents — Domain Overview
+- BUILDS ON: Tools And Platforms — Domain Overview
+- RELATES TO: Devops — Domain Overview
+- EXTENDS: AI Models — Domain Overview
+- BRIDGES: Cross-Domain — Domain Overview
 
 ## Backlinks
 
-[[Knowledge Systems]]
-[[AI Agents]]
-[[Tools And Platforms]]
-[[Devops]]
-[[AI Models]]
-[[Cross-Domain]]
+[[Knowledge Systems — Domain Overview]]
+[[AI Agents — Domain Overview]]
+[[Tools And Platforms — Domain Overview]]
+[[Devops — Domain Overview]]
+[[AI Models — Domain Overview]]
+[[Cross-Domain — Domain Overview]]

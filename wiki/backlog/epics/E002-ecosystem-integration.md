@@ -44,7 +44,7 @@ Make the wiki's knowledge and methodology consumable by each sister project thro
 
 - BUILDS ON: [[Four-Project Ecosystem]]
 - ENABLES: OpenFleet, AICP, OpenArms, devops-control-plane
-- RELATES TO: Adoption Guide
+- RELATES TO: [[Adoption Guide — How to Use This Wiki's Standards]]
 - RELATES TO: [[Decision: Wiki-First with LightRAG Upgrade Path]]
 
 ## Backlinks
@@ -54,5 +54,5 @@ Make the wiki's knowledge and methodology consumable by each sister project thro
 [[AICP]]
 [[OpenArms]]
 [[devops-control-plane]]
-[[Adoption Guide]]
+[[Adoption Guide — How to Use This Wiki's Standards]]
 [[Decision: Wiki-First with LightRAG Upgrade Path]]

@@ -109,7 +109,6 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 - RELATES TO: [[Claude Code Context Management]]
 - RELATES TO: [[Claude Code Skills]]
 - FEEDS INTO: [[MCP Integration Architecture]]
-- CONTRADICTS: default assumption that MCP is the standard tool integration pattern
 
 ## Backlinks
 
@@ -120,7 +119,6 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 [[MCP Integration Architecture]]
 [[Claude Code Context Management]]
 [[Claude Code Skills]]
-[[default assumption that MCP is the standard tool integration pattern]]
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Context-Aware Tool Loading]]
 [[Evolution Standards — What Good Knowledge Promotion Looks Like]]

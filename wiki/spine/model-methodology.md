@@ -540,7 +540,6 @@ Here's how a single task flows through the methodology, from selection to comple
 - RELATES TO: [[Spec-Driven Development]]
 - RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]
 - RELATES TO: [[Adoption Guide — How to Use This Wiki's Standards]]
-- IMPLEMENTS: wiki/config/methodology.yaml, wiki/config/agent-directive.md
 
 ## Backlinks
 
@@ -558,8 +557,6 @@ Here's how a single task flows through the methodology, from selection to comple
 [[Spec-Driven Development]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
-[[wiki/config/methodology.yaml]]
-[[wiki/config/agent-directive.md]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Model Registry]]
 [[Model: Knowledge Evolution]]

@@ -327,7 +327,6 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 - BUILDS ON: [[Progressive Distillation]] (maturity progression is a model within the knowledge track)
 - RELATES TO: [[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)
 - FEEDS INTO: [[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)
-- IMPLEMENTS: Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)
 - IMPLEMENTS: [[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
 
 ## Backlinks
@@ -345,7 +344,6 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Progressive Distillation]]
 [[Four-Project Ecosystem]]
 [[Wiki Backlog Pattern]]
-[[Flexible Methodology Framework directive (raw/notes/2026-04-09-user-directive-flexible-methodology-framework.md)]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]

@@ -88,7 +88,6 @@ This lesson applies to any system with sequential stages and a decision-making a
 - RELATES TO: [[Always Plan Before Executing]]
 - RELATES TO: [[Immune System Rules]] (this lesson became a rule)
 - BUILDS ON: [[Knowledge Evolution Pipeline]]
-- CONTRADICTS: assumption that "continue" means "skip ahead"
 
 ## Backlinks
 
@@ -97,7 +96,6 @@ This lesson applies to any system with sequential stages and a decision-making a
 [[Always Plan Before Executing]]
 [[Immune System Rules]]
 [[Knowledge Evolution Pipeline]]
-[[assumption that "continue" means "skip ahead"]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Model: Quality and Failure Prevention]]
 [[Models Are Built in Layers, Not All at Once]]

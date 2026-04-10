@@ -90,11 +90,13 @@ def _check_dead_relationships(
             rels = parse_relationships(rel_text)
             for rel in rels:
                 for target in rel["targets"]:
+                    # Try full target first (handles titles with parens like "Model: Local AI ($0 Target)")
+                    full_target = target.strip()
                     clean_target = _strip_context(target)
                     # Skip source IDs (start with src-)
-                    if clean_target.startswith("src-"):
+                    if clean_target.startswith("src-") or full_target.startswith("src-"):
                         continue
-                    if clean_target not in known_titles:
+                    if full_target not in known_titles and clean_target not in known_titles:
                         dead.append({
                             "source": source_title,
                             "verb": rel["verb"],

@@ -228,7 +228,6 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 - RELATES TO: [[Wiki Backlog Pattern]] (the wiki IS the Document/Design stage artifact system)
 - RELATES TO: [[Four-Project Ecosystem]] (all four projects in the ecosystem apply this methodology)
 - FEEDS INTO: [[Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)
-- CONTRADICTS: Vibe Coding (unstructured generation without stage boundaries — the failure mode this methodology exists to prevent)
 
 ## Backlinks
 
@@ -242,7 +241,6 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 [[Wiki Backlog Pattern]]
 [[Four-Project Ecosystem]]
 [[Immune System Rules]]
-[[Vibe Coding (unstructured generation without stage boundaries — the failure mode this methodology exists to prevent)]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
