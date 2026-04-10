@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-awesome-design-md
     type: documentation
@@ -33,6 +33,8 @@ A curated collection of 58 DESIGN.md files extracted from real production websit
 ## Key Insights
 
 ### The 9-section format is a machine-specification, not a style guide
+
+> [!info] The 9 sections: Visual Theme & Atmosphere, Color Palette & Roles (semantic names + hex + rationale), Typography Rules (16-role hierarchy), Component Stylings (per-variant CSS values), Layout Principles (8px base unit), Depth & Elevation (5-level shadow system), Do's and Don'ts (machine-enforceable), Responsive Behavior (5 breakpoints), and Agent Prompt Guide (ready-to-paste prompts).
 
 Each section has a specific format, depth, and purpose that goes far beyond what a typical design document captures. Examining the Claude DESIGN.md (312 lines) reveals the precision level the format demands:
 
@@ -63,6 +65,8 @@ Every color in a DESIGN.md has a NAME that conveys intent, not just a hex code. 
 Claude's DESIGN.md uses ring shadows as "borders that are technically shadows." The signature `0px 0px 0px 1px` pattern creates a border-like halo that's softer than an actual border. This is a design decision that exists nowhere in CSS source alone — you'd have to reverse-engineer the intent from inspecting elements. DESIGN.md makes it explicit, preserving the designer's reasoning alongside the implementation values. This is what separates DESIGN.md from automated CSS extraction tools: it captures the WHY alongside the WHAT.
 
 ### The Agent Prompt Guide is a new category of design artifact
+
+> [!tip] Include an Agent Prompt Guide in DESIGN.md: ready-to-paste component prompts with exact values and a 7-rule iteration guide. No other design format (Figma, JSON tokens, Storybook) includes instructions for AI agents.
 
 No design system format — not Figma, not JSON tokens, not Storybook — includes ready-to-paste prompts for AI agents. The Agent Prompt Guide section provides example prompts that combine multiple design tokens into coherent component descriptions: "Create a hero section on Parchment (#f5f4ed) with a headline at 64px Anthropic Serif weight 500, line-height 1.10. Use Anthropic Near Black (#141413) text." Plus an iteration guide that teaches agents how to work with the system: reference specific color names, specify serif vs sans explicitly, use "ring shadow" or "whisper shadow" vocabulary instead of generic "drop shadow." This section turns DESIGN.md from a reference document into an instruction manual for AI.
 

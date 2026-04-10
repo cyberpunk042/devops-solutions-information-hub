@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-token-hacks-claude-code
     type: youtube-transcript
@@ -26,7 +26,8 @@ This video presents 18 token management techniques for Claude Code, organized in
 
 ## Key Insights
 
-- **Exponential cost curve**: Message costs compound, not add. Message 1 might cost 500 tokens, message 30 costs 15,000 because it re-reads everything before it. After 30 messages, cumulative tokens approach a quarter million. This is the fundamental insight that motivates all other hacks.
+> [!warning] Exponential cost curve
+> Message costs compound, not add. Message 1 might cost 500 tokens, message 30 costs 15,000 because it re-reads everything before it. After 30 messages, cumulative tokens approach a quarter million. This is the fundamental insight that motivates all other hacks.
 
 - **98.5% waste in long sessions**: A developer tracked a 100+ message chat and found that 98.5% of all tokens were spent re-reading old chat history. The actual new content being processed was 1.5% of total token spend.
 
@@ -38,7 +39,8 @@ This video presents 18 token management techniques for Claude Code, organized in
 
 - **Prompt cache has a 5-minute timeout**: Claude Code uses prompt caching to avoid reprocessing unchanged context, but the cache expires after 5 minutes. Stepping away and returning means the next message reprocesses everything at full cost. Either compact or clear before breaks.
 
-- **Compact at 60%, not 95%**: Auto-compact triggers at 95% when context is already degraded. Manually run /compact with specific preservation instructions at 60%. After 3-4 compacts, quality degrades -- get a session summary, /clear, feed the summary back, and continue.
+> [!tip] Compact at 60%, not 95%
+> Auto-compact triggers at 95% when context is already degraded. Manually run /compact with specific preservation instructions at 60%. After 3-4 compacts, quality degrades -- get a session summary, /clear, feed the summary back, and continue.
 
 - **Command output bloat**: When Claude runs shell commands, the full output enters the context window. 200 git commits worth of output becomes tokens charged to the model. Be intentional about what Claude is allowed to run.
 

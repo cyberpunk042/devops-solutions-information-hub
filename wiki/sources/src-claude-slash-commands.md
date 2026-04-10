@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: medium
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-claude-slash-commands
     type: github-repo
@@ -26,7 +26,8 @@ A small open-source collection of reusable Claude Code slash commands installabl
 
 - **Two installation scopes**: personal (`~/.claude/commands/`) for cross-project availability vs. project-level (`.claude/commands/`) for team-shared workflows. The distinction enables a clean separation between individual power-user utilities and shared automation.
 
-- **Frontmatter drives configuration**: Commands use YAML frontmatter (`allowed-tools`, `description`, `argument-hint`) to declare permissions and surface discoverability metadata. This is the authoritative interface contract for command authoring.
+> [!info] Frontmatter drives configuration
+> Commands use YAML frontmatter (`allowed-tools`, `description`, `argument-hint`) to declare permissions and surface discoverability metadata. This is the authoritative interface contract for command authoring.
 
 - **Three bundled commands**:
   - `/add-command` — interactive wizard for scaffolding new slash commands, teaches structure, security rules, and patterns in-context
@@ -35,7 +36,8 @@ A small open-source collection of reusable Claude Code slash commands installabl
 
 - **Security model**: Bash execution (`!command`) is sandboxed to the project directory; file references (`@file`) can access any path. `allowed-tools` acts as a capability declaration scoped per command.
 
-- **`/add-command` as meta-command**: Including a command that teaches users how to write more commands is a self-bootstrapping pattern — the collection is designed to grow via its own tooling.
+> [!tip] `/add-command` as meta-command
+> Including a command that teaches users how to write more commands is a self-bootstrapping pattern — the collection is designed to grow via its own tooling.
 
 - **Cross-agent compatibility gap**: The `/askgpt5-web-search` command introduces an explicit dependency on a second AI provider (OpenAI). This is a signal that multi-model orchestration at the slash-command layer is an emerging pattern, not yet standardized.
 

@@ -7,7 +7,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
@@ -26,6 +26,8 @@ This document by Rohit Ghumare extends Karpathy's original LLM Wiki pattern with
 
 ## Key Insights
 
+> [!abstract] The original LLM Wiki pattern treats all content as equally valid forever. The v2 extension adds memory lifecycle management: confidence decays with time, strengthens with reinforcement, new claims explicitly supersede old ones, and a four-tier consolidation pipeline (working, episodic, semantic, procedural) prevents the "junk drawer" failure mode.
+
 - **Memory lifecycle is the missing layer**: The original treats all wiki content as equally valid forever. In practice, knowledge has a lifecycle -- confidence should decay with time and strengthen with reinforcement, new claims should explicitly supersede old ones, and rarely-accessed facts should gradually deprioritize (Ebbinghaus forgetting curve applied to knowledge management).
 
 - **Four-tier consolidation pipeline**: Working memory (recent observations) feeds into episodic memory (session summaries), which consolidates into semantic memory (cross-session facts), which distills into procedural memory (workflows and patterns). Each tier is more compressed, more confident, and longer-lived.
@@ -39,6 +41,8 @@ This document by Rohit Ghumare extends Karpathy's original LLM Wiki pattern with
 - **Self-healing lint**: The original's lint should go beyond suggestion to automatic correction -- orphan pages get linked, stale claims get marked, broken cross-references get repaired. Contradiction resolution should propose which claim is more likely correct based on source recency, authority, and supporting observation count.
 
 - **Crystallization as a compounding mechanism**: Completed chains of work (research threads, debugging sessions, analyses) should be automatically distilled into structured digests that become first-class wiki pages, with extracted lessons strengthening existing knowledge.
+
+> [!tip] The schema document (CLAUDE.md, AGENTS.md) is the real product -- more important than any individual wiki page. Wiki pages can be regenerated from raw sources; the schema encoding domain-specific operational knowledge is the irreplaceable artifact.
 
 - **The schema is the real product**: The schema document (CLAUDE.md, AGENTS.md) is more important than any individual wiki page -- it encodes entity types, relationship types, ingestion workflows, quality standards, contradiction handling, consolidation schedules, and privacy scoping. It is transferable across users in the same domain.
 

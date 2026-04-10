@@ -7,7 +7,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-notebooklm-claude-code-workflow
     type: youtube-transcript
@@ -30,7 +30,8 @@ Demonstrates a practical integration of NotebookLM and Claude Code using the ope
 
 - **NotebookLM as grounded external knowledge base**: NotebookLM excels at turning "messy documentation, research, and sources into clear grounded understanding." It grounds answers in uploaded sources (web pages, PDFs, CSV data), preventing hallucination. Claude Code can query it via the skill to get source-grounded answers rather than model-knowledge guesses.
 
-- **Division of labor: brain + hands**: NotebookLM provides grounded, structured knowledge; Claude Code executes against it. For competitive analysis: NotebookLM ingests 250-300 competitor sources across two notebooks and synthesizes them. Claude Code queries the notebooks to make product decisions, prioritize Jira tickets, and generate marketing content — all grounded in actual research rather than Claude's training data.
+> [!abstract] Division of labor: brain + hands
+> NotebookLM provides grounded, structured knowledge; Claude Code executes against it. For competitive analysis: NotebookLM ingests 250-300 competitor sources across two notebooks and synthesizes them. Claude Code queries the notebooks to make product decisions, prioritize Jira tickets, and generate marketing content — all grounded in actual research rather than Claude's training data.
 
 - **3-tier competitor segmentation**: The 35-competitor analysis is organized into: Tier 1 (direct competitors, deep research, 8 competitors), Tier 2 (adjacent competitors, fast research, 10 competitors), Tier 3 (market data, fast research, 17 competitors). Two notebooks handle the volume: direct/adjacent competitors (~250 sources) and market landscape (~136 sources). NotebookLM's 300-source limit per notebook drives the two-notebook architecture.
 
@@ -38,7 +39,8 @@ Demonstrates a practical integration of NotebookLM and Claude Code using the ope
 
 - **Content creation as downstream use case**: The knowledge base built for competitive analysis feeds directly into content generation: blog posts, SEO content, comparison pages. Claude Code uses the NotebookLM skill to pull competitor-grounded insights and writes content that is accurate rather than generic.
 
-- **Skill + CLI pattern (not MCP)**: The integration uses `notebooklm-py` as a CLI tool with a corresponding Claude Code skill — not a NotebookLM MCP server. This is consistent with the CLI-over-MCP pattern for known-workflow integrations. The skill is loaded when needed, not registered as a persistent context overhead.
+> [!tip] Skill + CLI pattern (not MCP)
+> The integration uses `notebooklm-py` as a CLI tool with a corresponding Claude Code skill — not a NotebookLM MCP server. This is consistent with the CLI-over-MCP pattern for known-workflow integrations. The skill is loaded when needed, not registered as a persistent context overhead.
 
 ## Deep Analysis
 

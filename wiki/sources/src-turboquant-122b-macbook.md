@@ -7,7 +7,7 @@ domain: ai-models
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-turboquant-122b-macbook
     type: article
@@ -26,9 +26,11 @@ TurboQuant, originally Google's quantization technique, has been adapted for App
 
 ## Key Insights
 
-- **122B parameters on consumer hardware**: MacBook M4 Max with 64GB RAM runs a 122B MoE model at 44 tok/s. This is fast enough for interactive use and agent workflows.
+> [!info] 122B parameters on consumer hardware
+> MacBook M4 Max with 64GB RAM runs a 122B MoE model at 44 tok/s. This is fast enough for interactive use and agent workflows.
 
-- **TurboQuant > MXFP4 > standard quantization**: The technique outperforms Apple's own native format (MXFP4) which was designed for Apple Silicon. This suggests that model-aware quantization (adapted per architecture) beats hardware-native formats.
+> [!tip] TurboQuant > MXFP4 > standard quantization
+> The technique outperforms Apple's own native format (MXFP4) which was designed for Apple Silicon. This suggests that model-aware quantization (adapted per architecture) beats hardware-native formats.
 
 - **MoE architecture is key**: MoE models (Mixtral, Qwen-MoE, GPT-OSS family) only activate a subset of parameters per token, making them memory-efficient despite large total parameter counts. TurboQuant's extension to MoE specifically unlocks this class of models for consumer hardware.
 

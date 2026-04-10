@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
@@ -26,11 +26,15 @@ This repository provides a comprehensive Claude Code skill (and multi-agent comp
 
 ## Key Insights
 
+> [!info] 130+ CLI commands covering: Files, Daily Notes, Search, Properties, Tags, Tasks, Links, Bookmarks, Templates, Plugins, Sync, Themes, Snippets, Commands, Bases, History, Workspace, Diff, Developer tools, and Vault management. Compatible with 8+ AI agent platforms.
+
 - **130+ commands for full vault control**: Every major Obsidian operation area is covered. The command surface includes: Files (`read`, `create`, `append`, `prepend`, `move`, `rename`, `delete`, `files`, `folders`, `file`, `random`), Daily Notes (`daily`, `daily:read`, `daily:append`, `daily:prepend`, `daily:path`), Search (`search`, `search:context` with scoping, limits, JSON output), Properties (`properties`, `property:read`, `property:set`, `property:remove`, `aliases`), Tags (`tags`, `tag` with counts and filtering), Tasks (`tasks`, `task` — query, filter, toggle), Links (`backlinks`, `links`, `unresolved`, `orphans`, `deadends`), Bookmarks, Templates (`templates`, `template:read`, `template:insert`), Plugins (`plugins`, `plugin`, `plugin:enable/disable/install/uninstall`, `plugins:restrict`), Sync (`sync`, `sync:status`, `sync:history`, `sync:read`, `sync:restore`, `sync:deleted`), Themes (`themes`, `theme`, `theme:set`, `theme:install/uninstall`), Snippets (`snippets`, `snippets:enabled`, `snippet:enable/disable`), Commands (`commands`, `command`, `hotkeys`, `hotkey`), Bases (`bases`, `base:query`, `base:views`, `base:create`), History (`history`, `history:list`, `history:read`, `history:restore`), Workspace (`workspace`, `tabs`, `tab:open`), Diff (`diff`), Developer (`eval`, `dev:screenshot`, `dev:debug`, `dev:console`, `dev:errors`, `dev:css`, `dev:dom`, `devtools`), Vault (`vault`, `vaults`, `version`, `reload`, `restart`, `recents`, `outline`, `wordcount`).
 
 - **Broadest agent compatibility**: Installation instructions cover 8+ different AI agents/editors — more than any other Obsidian skill. Claude Code (plugin marketplace, direct load, settings.json), Cursor (native skills system), Cortex Code (remote install, project-local, user-level), GitHub Copilot (repository-wide or path-scoped custom instructions), Windsurf (rules system with 12k char limit per file), Nanoclaw (`.claude/skills/` format), Openclaw (`skills/` directory format), and any agent with a system prompt field (paste SKILL.md content directly).
 
 - **Three activation modes**: Natural language (usually works for clear Obsidian requests), explicit prefix `$obsidian-cli` (always works), and Strict Mode (always loaded via Claude Code settings). If Claude answers without executing commands, say "use obsidian-cli" to retry with the skill active.
+
+> [!warning] The CLI communicates over IPC, requiring the Obsidian desktop app to be running. This prevents use in CI/CD pipelines, cloud environments, or fully headless servers without xvfb workarounds. Windows requires a normal-privilege terminal -- admin terminals produce silent failures.
 
 - **Requires running desktop app**: The CLI communicates with Obsidian over IPC (inter-process communication), meaning the desktop application must be running. This is an architectural constraint that limits headless/server automation scenarios — though xvfb workarounds exist for headless Linux.
 

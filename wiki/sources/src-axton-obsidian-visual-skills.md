@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-axton-obsidian-visual-skills
     type: documentation
@@ -30,13 +30,15 @@ This repository provides a Visual Skills Pack for Obsidian that enables Claude C
 
 - **Excalidraw versatility**: The Excalidraw skill alone supports 8 diagram types (flowchart, mind map, hierarchy, relationship, comparison, timeline, matrix, freeform) across 3 output modes (Obsidian .md, standard .excalidraw, animated .excalidraw). This is the most feature-rich individual skill in the pack.
 
-- **Built-in syntax error prevention for Mermaid**: The Mermaid skill includes rules to prevent common syntax errors (list conflicts, subgraph naming, special characters). This is a practical addition since Mermaid syntax has many subtle pitfalls that cause rendering failures.
+> [!tip] Built-in syntax error prevention for Mermaid
+> The Mermaid skill includes rules to prevent common syntax errors (list conflicts, subgraph naming, special characters). This is a practical addition since Mermaid syntax has many subtle pitfalls that cause rendering failures.
 
 - **Trigger word activation**: Skills are activated by natural language trigger words (e.g., "Excalidraw", "diagram", "flowchart", "mind map") rather than explicit command syntax. Chinese trigger words are also supported.
 
 - **Canvas layout algorithms**: The Canvas Creator includes smart node sizing based on content length, automatic edge creation with labeled relationships, color-coded nodes (6 presets plus custom hex), and spacing algorithms to prevent overlap.
 
-- **Experimental status acknowledged**: The README explicitly states the project is a public prototype focused on demonstrating how tools and systems work together, not on production reliability. Output quality varies by model version and input structure.
+> [!warning] Experimental status acknowledged
+> The README explicitly states the project is a public prototype focused on demonstrating how tools and systems work together, not on production reliability. Output quality varies by model version and input structure.
 
 - **Bilingual support**: Full Chinese text support throughout, including CJK font handling for Excalidraw and Chinese trigger words for all skills.
 

@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-playwright-cli-vs-mcp
     type: youtube-transcript
@@ -26,11 +26,13 @@ A direct side-by-side comparison of Playwright's MCP server integration vs. its 
 
 ## Key Insights
 
-- **CLI "sticky notes" vs. MCP "full desk dump"**: MCP injects the complete accessibility tree of the current page into Claude's context window after every single action. CLI writes a YAML summary to disk; Claude reads it only when it needs to find an element, and skips the read entirely when it already knows what to do. This is the core mechanism behind the token savings.
+> [!abstract] CLI "sticky notes" vs. MCP "full desk dump"
+> MCP injects the complete accessibility tree of the current page into Claude's context window after every single action. CLI writes a YAML summary to disk; Claude reads it only when it needs to find an element, and skips the read entirely when it already knows what to do. This is the core mechanism behind the token savings.
 
 - **Microsoft officially recommends CLI over MCP**: Playwright's creator (Microsoft) now recommends the CLI for AI agent use. The CLI has "3x more features compared to the MCP server" in addition to being more token-efficient. This makes the tradeoff asymmetric — CLI wins on both cost and capability for the known-page use case.
 
-- **Accuracy trade-off is scenario-dependent**: CLI is more accurate when Claude knows what to expect on a page (e.g., a login form with known field IDs). MCP has an advantage when testing unknown pages or validating unexpected error states, because it forces Claude to see the full page regardless. The rule: use CLI when you know what to look for, use MCP when you're exploring.
+> [!warning] Accuracy trade-off is scenario-dependent
+> CLI is more accurate when Claude knows what to expect on a page (e.g., a login form with known field IDs). MCP has an advantage when testing unknown pages or validating unexpected error states, because it forces Claude to see the full page regardless. The rule: use CLI when you know what to look for, use MCP when you're exploring.
 
 - **YAML page snapshots replace HTML accessibility trees**: The CLI stores page state as structured YAML rather than raw HTML. A full page compresses to a few hundred lines of labeled reference elements. Claude can click precisely by referencing element IDs in the YAML rather than parsing raw HTML — this is both more token-efficient and more reliable.
 

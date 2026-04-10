@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-context-mode
     type: documentation
@@ -147,6 +147,8 @@ Context-mode supports 12 platforms with three integration architectures: plugin/
 
 ### 6. Benchmark data
 
+> [!info] Context savings benchmark: 315 KB raw input reduced to 5.4 KB in context (98% reduction) across a full session. Session length extends from ~30 minutes to ~3 hours. The 98% savings figure requires hooks to be active.
+
 | Scenario | Raw | In Context | Saved |
 |---|---|---|---|
 | Playwright snapshot | 56.2 KB | 299 B | 99% |
@@ -169,6 +171,8 @@ Session length extends from ~30 minutes to ~3 hours. The full benchmark covers 2
 The principle is enforced across all 12 platforms via hooks (programmatic block of direct data-processing tool chains) or instruction files (routing guidance when hooks are unavailable). The paradigm shift requires treating the LLM as a code generator at all times — even for one-off data queries — rather than as a data processor that reads inputs and produces outputs within the conversation context.
 
 ### 8. Routing enforcement: hooks vs. instruction files
+
+> [!warning] Without hooks, approximately 40% of tool calls that should be sandboxed are not -- each one potentially dumping tens of kilobytes into context. Hook-capable platforms should always enable hooks.
 
 The compliance gap between enforcement mechanisms is measured and significant:
 

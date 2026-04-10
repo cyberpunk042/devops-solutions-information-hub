@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
@@ -30,6 +30,8 @@ A community-maintained GitHub repository (142k+ stars, trending #1 on GitHub) ca
 
 - **Full feature surface documented**: The CONCEPTS table covers every major Claude Code extension point: Subagents (`.claude/agents/`), Commands (`.claude/commands/`), Skills (`.claude/skills/<name>/SKILL.md`), Hooks (`.claude/hooks/`), MCP Servers (`.mcp.json`), Plugins (distributable bundles of skills + agents + hooks + MCP + LSP), Settings (`.claude/settings.json`), Memory (CLAUDE.md + `.claude/rules/`), Checkpointing (git-based rewind), and CLI Startup Flags.
 
+> [!abstract] The central orchestration pattern is Command (user-invoked prompt template) triggers Agent (autonomous actor in fresh isolated context) which uses Skills (auto-discoverable knowledge with progressive disclosure). This Command-Agent-Skill hierarchy is the organizing principle for extending Claude Code.
+
 - **Orchestration architecture**: The central pattern is Command (user-invoked prompt template injected into existing context) triggers Agent (autonomous actor in fresh isolated context with its own tools, permissions, model, memory, and persistent identity) which uses Skills (configurable, preloadable, auto-discoverable knowledge with progressive disclosure). This Command-Agent-Skill hierarchy is the organizing principle for extending Claude Code.
 
 - **Hot new features (2026)**: Ultraplan (cloud-based plan drafting with browser review and inline comments), Claude Code Web (cloud infrastructure for long-running tasks, PR auto-fix, parallel sessions), Auto Mode (background safety classifier replacing manual permission prompts, toggled with `--enable-auto-mode` or `Shift+Tab`), Agent Teams (parallel agents on the same codebase with shared task coordination), No Flicker Mode (`CLAUDE_CODE_NO_FLICKER=1` for alt-screen rendering), Computer Use (macOS screen control via MCP server), Voice Dictation (`/voice` with 20-language support), Channels (push events from Telegram/Discord/webhooks into running sessions), and Scheduled Tasks (`/loop` local, `/schedule` cloud).
@@ -50,6 +52,8 @@ A community-maintained GitHub repository (142k+ stars, trending #1 on GitHub) ca
 - Prototype beats PRD: build 20-30 versions rather than writing specs; the cost of building is now low
 
 **CLAUDE.md (7 tips + 1):**
+> [!tip] Keep CLAUDE.md under 200 lines per file; treat it as an index, not an exhaustive reference. Use `settings.json` for deterministic harness-enforced behavior instead of text instructions. HumanLayer's production CLAUDE.md is only 60 lines.
+
 - Keep CLAUDE.md under 200 lines per file; treat it as an index, not an exhaustive reference — HumanLayer's production CLAUDE.md is only 60 lines
 - Wrap domain-specific rules in `<important if="...">` tags to prevent Claude from ignoring them as files grow longer
 - Use multiple CLAUDE.md for monorepos — ancestor + descendant loading

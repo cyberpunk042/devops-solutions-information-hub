@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-playwright-mcp-visual-testing
     type: youtube-transcript
@@ -26,9 +26,13 @@ Demonstrates how to embed Playwright MCP into a front-end development workflow s
 
 ## Key Insights
 
+> [!warning] Claude coding front-end without browser vision is blind -- it cannot verify that implemented features actually look correct. Without Playwright MCP, there is no feedback loop between implementation and visual correctness.
+
 - **Claude is blind to its own UI output without Playwright**: Claude Code reads console logs and code structure, but cannot verify that a React component renders correctly at mobile resolution or that a login form shows the right error state. Playwright MCP provides the missing browser vision layer — 21 tools for navigation, screenshots, form interaction, element inspection, and console/network log access.
 
 - **CLAUDE.md as the integration surface**: The workflow does not require per-task configuration. A single `Visual Development and Testing` section in CLAUDE.md defines the visual check protocol that activates automatically whenever front-end changes are made. Claude reads the instructions once per session and applies them without prompting.
+
+> [!tip] Use a two-tier verification strategy: quick visual check on any front-end change (CLI, low cost) and comprehensive design review on major features or before merges (MCP, full visibility across 3 breakpoints: 375px, 768px, 1280px+).
 
 - **Two-tier verification strategy**: Quick visual check (triggered on any front-end change) vs. comprehensive design review (triggered on major feature implementations or before merges). Quick checks catch obvious rendering problems. Design review agents perform full responsive testing, accessibility validation, interactive state checking, and design principles compliance.
 

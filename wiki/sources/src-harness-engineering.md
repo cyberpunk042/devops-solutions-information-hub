@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
@@ -31,13 +31,15 @@ Harness engineering is the practice of building structured control systems aroun
 
 ## Key Insights
 
-- **Harness = runtime guardrails, not prompts**: The distinction between prompt-based guidance and runtime enforcement is critical. Harness engineering operates at execution time through hooks, blocking dangerous operations before they happen (sudo, force-push, .env writes) rather than hoping the model follows instructions.
+> [!abstract] Harness = runtime guardrails, not prompts
+> The distinction between prompt-based guidance and runtime enforcement is critical. Harness engineering operates at execution time through hooks, blocking dangerous operations before they happen (sudo, force-push, .env writes) rather than hoping the model follows instructions.
 
 - **Anthropic's core harness**: Single-threaded master loop (perception → reasoning → tool execution → feed results back → repeat until terminal state), typed tool dispatch registry with strict input schemas, context management for long sessions.
 
 - **5-verb community framework**: /harness-setup (init), /harness-plan (spec with acceptance criteria), /harness-work (parallel workers with self-checks), /harness-review (4-perspective analysis), /harness-release (changelog + version + GitHub release). This is a more structured version of the superpowers workflow.
 
-- **13 TypeScript guardrail rules**: Denial (block sudo, .git writes, force-push), Query (flag out-of-scope writes), Security (prevent --no-verify, direct main pushes), Post-execution (warn assertion tampering). Rules execute at hook level, independent of Claude's own safety.
+> [!info] 13 TypeScript guardrail rules
+> Denial (block sudo, .git writes, force-push), Query (flag out-of-scope writes), Security (prevent --no-verify, direct main pushes), Post-execution (warn assertion tampering). Rules execute at hook level, independent of Claude's own safety.
 
 - **CLI over MCP is emerging consensus**: Multiple sources now converge on CLI+Skills being more token-efficient and accurate than MCP for tool integration. Skills load contextually (only when relevant), MCP loads all schemas upfront. This affects the research wiki's own MCP server design — consider a CLI+Skills alternative.
 

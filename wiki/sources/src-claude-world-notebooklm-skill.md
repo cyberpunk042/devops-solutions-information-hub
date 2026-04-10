@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-claude-world-notebooklm-skill
     type: documentation
@@ -26,6 +26,8 @@ This repository provides a full-pipeline tool that connects trending topic disco
 
 ## Key Insights
 
+> [!abstract] Four-phase automated pipeline: Collect (URLs, PDFs, RSS, trending topics) -> Research (NotebookLM notebook creation, source ingestion, Q&A) -> Generate (Claude content engine: articles, social posts, newsletters) -> Publish (blog/CMS, Threads/X, newsletter). "NotebookLM does the research, Claude writes the content."
+
 - **End-to-end pipeline**: Unlike simpler NotebookLM integrations, this tool covers the full content lifecycle from source discovery through research, generation, and publishing, orchestrating four distinct phases into a single automated workflow. The README phrase is concise: "NotebookLM does the research, Claude writes the content."
 
 - **Four-phase architecture with a branch**: Phase 1 (Collect: URLs, PDFs, RSS, trending topics) → Phase 2 (Research: notebook creation, source ingestion, question-asking, insight extraction) with a Phase 2b branch (Artifact generation: audio, video, slides, report, quiz, flashcards, mind map, infographic, data table, study guide) → Phase 3 (Generate: Claude content engine producing articles, social posts, newsletters) → Phase 4 (Publish: blog/CMS, Threads/X, newsletter, any platform).
@@ -43,6 +45,8 @@ This repository provides a full-pipeline tool that connects trending topic disco
 - **Slides + Podcast → YouTube video workflow**: A built-in multi-step workflow combines NotebookLM-generated slides (PDF) and podcast (M4A) into a YouTube-ready MP4 via a `make_video.sh` helper script. This demonstrates the tool pushing into multimedia content production without custom media processing infrastructure.
 
 - **Trending topic integration**: Integrates with `trend-pulse` for real-time trending topic discovery from 7 sources, enabling automated research on currently trending subjects without manual topic selection. The `trend-to-content` pipeline and `nlm_trend_research` MCP tool operationalize this.
+
+> [!warning] The entire tool relies on browser automation and undocumented Google APIs -- no official NotebookLM API exists. A web UI redesign could break everything. Session state can expire during long-running batch workflows, requiring re-authentication.
 
 - **Browser-based auth, no OAuth**: Authentication uses browser-based Google login via notebooklm-py, requiring no API keys, no OAuth Client ID, and no Google Cloud project setup. One-time `uvx notebooklm login` opens Chromium; session is saved to `~/.notebooklm/storage_state.json` and typically lasts weeks. Subsequent calls use pure HTTP from the saved session.
 

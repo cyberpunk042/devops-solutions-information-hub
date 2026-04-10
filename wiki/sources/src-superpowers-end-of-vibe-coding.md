@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-superpowers-end-of-vibe-coding
     type: youtube-transcript
@@ -26,6 +26,8 @@ A full end-to-end tutorial of the Agentyk Superpowers plugin for Claude Code, de
 
 ## Key Insights
 
+> [!tip] TDD is the key differentiator: write failing tests first, implement until tests pass, then refactor. This enforces correctness at each task before proceeding -- not just at the end. The enterprise software development standard applied to agentic coding.
+
 - **TDD is the key differentiator from other spec-driven frameworks**: Most spec-driven development workflows (GSD, SpecKit, BDD) focus on planning and delegation. Superpowers adds test-driven development: write failing tests first, implement until tests pass, then refactor. This enforces correctness at each task before proceeding, not just at the end. It is the enterprise software development standard applied to agentic coding.
 
 - **The full lifecycle in one session**: The workflow covers: brainstorm (understand ticket, explore codebase, propose UI mockups) → spec generation (edge cases, acceptance criteria, API routes, component architecture) → implementation plan (11 tasks, each with test files, implementation steps, checkpoints) → sub-agent execution (one fresh context window per task) → code review agent (finds critical/important issues, dispatches fix agent) → manual smoke test → merge to main. No manual coding is required.
@@ -35,6 +37,8 @@ A full end-to-end tutorial of the Agentyk Superpowers plugin for Claude Code, de
 - **Git worktrees for implementation isolation**: The implementation plan executes in a Git worktree — a separate environment from the main branch. This enables: concurrent feature development without interfering with main, safe rollback if the implementation goes wrong, and clean PR creation at the end. The worktree is created at project level or global level based on user choice.
 
 - **Sub-agent-per-task pattern with 11 tasks**: Each of the 11 implementation tasks dispatches a fresh sub-agent with its own context window, the task instructions, and the relevant spec sections. The orchestrator reviews between tasks with "fast iterations." This is the sub-agent isolation pattern for avoiding context rot — the same pattern endorsed in the accuracy tips source.
+
+> [!warning] The code review phase is not optional -- it is built into the workflow. It found critical issues (stale credentials, confirmed-selection bugs, misleading metadata) that per-task testing missed. A fix agent is dispatched for each.
 
 - **Code review agent is a separate phase**: After all tasks complete, a dedicated code review skill runs across the entire implementation (not just individual tasks). It found critical and important issues: stale credentials, confirmed-selection bugs, misleading metadata on multi-folder jobs. A fix agent is dispatched for each. The review phase is not optional — it is built into the workflow.
 

@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-gemma4-searxng-openclaw
     type: youtube-transcript
@@ -28,11 +28,13 @@ A practical tutorial on running OpenClaw 100% free and 100% private using Google
 
 - **Gemma 4 model lineup**: E2B and E4B (mobile-grade, multimodal: text+image+video+audio), 26B and 31B (desktop, text+image only). E4B is 9.6GB, E2B is 7.2GB. All available via `ollama pull`.
 
-- **Small models now do tool calling**: The E4B model (designed for phones) reliably executes multi-step agentic tasks: web search → summarize → create report → add to ClickUp → send email. Previously small models would "buckle halfway through." This is a significant shift for local-first AI.
+> [!tip] Small models now do tool calling
+> The E4B model (designed for phones) reliably executes multi-step agentic tasks: web search → summarize → create report → add to ClickUp → send email. Previously small models would "buckle halfway through." This is a significant shift for local-first AI.
 
 - **Ollama as model manager**: `ollama pull gemma4:e2b`, `ollama list` to see all models, native OpenClaw integration via `openclaw configure`. No custom coding needed. Cloud option: $20/month for larger models (Kimmy K2.5, GLM 5, MiniMax M2.7).
 
-- **SearXNG for private web search**: Self-hosted metasearch engine running in Docker. Native OpenClaw integration. Configuration gotcha: must enable JSON format in SearXNG settings.yaml (default is HTML only, OpenClaw needs JSON). All search queries stay on device.
+> [!warning] SearXNG for private web search
+> Self-hosted metasearch engine running in Docker. Native OpenClaw integration. Configuration gotcha: must enable JSON format in SearXNG settings.yaml (default is HTML only, OpenClaw needs JSON). All search queries stay on device.
 
 - **OpenClaw native integrations**: `openclaw configure` → select Ollama → select models → restart gateway. Same for SearXNG: `openclaw configure` or direct CLI command. The simplicity of setup is notable.
 

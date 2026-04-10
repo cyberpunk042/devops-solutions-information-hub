@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
@@ -26,7 +26,8 @@ This video demonstrates a practical implementation of using Claude Code as an AI
 
 ## Key Insights
 
-- **Git + Obsidian for free sync and version control**: Instead of paying for Obsidian Sync, the presenter creates a private GitHub repository, clones it locally, opens it as an Obsidian vault, and uses the Obsidian Git community plugin to auto-commit changes at configurable intervals (e.g., every 1 minute after edits stop). This provides free cloud backup, version history, and multi-device sync via Git pull-on-startup.
+> [!info] Git + Obsidian for free sync and version control
+> Instead of paying for Obsidian Sync, the presenter creates a private GitHub repository, clones it locally, opens it as an Obsidian vault, and uses the Obsidian Git community plugin to auto-commit changes at configurable intervals (e.g., every 1 minute after edits stop). This provides free cloud backup, version history, and multi-device sync via Git pull-on-startup.
 
 - **Obsidian CLI as the integration bridge**: Enabling the Obsidian CLI (Settings > General > Command Line Interface) allows Claude Code to interact with Obsidian programmatically -- creating notes, managing folders, and using markdown and JSON Canvas capabilities through the command line rather than the GUI.
 
@@ -34,7 +35,8 @@ This video demonstrates a practical implementation of using Claude Code as an AI
 
 - **Standardized project structure**: Each project gets: an overview.md (project profile, scope, tech stack), a conversation-log.md (chronological summary of all communications), a links.md (external references), a documents folder (static files like NDAs and contracts that should not be summarized), and an entry in a projects.base dashboard for status tracking.
 
-- **Intelligent content routing**: The skill distinguishes between content that should be summarized and condensed (email conversations, meeting notes) versus static files that must be preserved as-is (contracts, agreements, NDAs). This prevents information loss from over-summarization.
+> [!tip] Intelligent content routing
+> The skill distinguishes between content that should be summarized and condensed (email conversations, meeting notes) versus static files that must be preserved as-is (contracts, agreements, NDAs). This prevents information loss from over-summarization.
 
 - **Gmail integration via Google API scripts**: The skill includes scripts for fetching email labels, messages, threads, and attachments from Gmail using OAuth2 credentials, enabling automatic ingestion of email-based project communications.
 

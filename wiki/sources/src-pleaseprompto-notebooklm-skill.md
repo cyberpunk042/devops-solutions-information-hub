@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
@@ -26,6 +26,8 @@ This repository provides a Claude Code Skill that lets Claude directly query Goo
 
 ## Key Insights
 
+> [!tip] For document-grounded Q&A where the corpus fits within NotebookLM's limits, NotebookLM eliminates hallucinations via source-grounded answers with minimal token cost and 5-minute setup -- making local RAG infrastructure unnecessary for many use cases.
+
 - **Anti-hallucination as primary value proposition**: The README explicitly compares this to feeding docs directly to Claude (high token cost, hallucinations), web search (unreliable sources), and local RAG (hours of setup, medium hallucinations), positioning NotebookLM as the superior option: minimal token cost, 5-minute setup, minimal hallucinations via source-grounded answers. The comparison table frames NotebookLM's "expert synthesis" by Gemini 2.5 as qualitatively different from embedding-based retrieval.
 
 - **What makes NotebookLM superior to local RAG**: Pre-processed by Gemini (upload once, get instant knowledge), natural language Q&A (understanding and synthesis, not just retrieval), multi-source correlation (connects information across 50+ documents), citation-backed answers, and no infrastructure (no vector DBs, embeddings, or chunking strategies required).
@@ -39,6 +41,8 @@ This repository provides a Claude Code Skill that lets Claude directly query Goo
 - **Installation in 3 steps**: (1) `mkdir -p ~/.claude/skills`, (2) `git clone https://github.com/PleasePrompto/notebooklm-skill notebooklm` into that directory, (3) open Claude Code and say "What are my skills?". On first use, the skill auto-creates an isolated Python `.venv`, installs all dependencies including Google Chrome (not Chromium), and sets up browser automation. Everything stays contained in the skill folder.
 
 - **Why Chrome, not Chromium**: The skill uses real Chrome (not Chromium) for cross-platform reliability, consistent browser fingerprinting, and better anti-detection with Google services. This is the explicit design choice versus Chromium-based alternatives.
+
+> [!warning] Works only with local Claude Code installations -- the web UI runs skills in a sandbox without network access required for browser automation. Notebooks must be shared publicly to be accessible by the automation.
 
 - **Local-only architectural constraint**: The skill works only with local Claude Code installations, not the web UI, because the web UI runs skills in a sandbox without network access required for browser automation. This is a fundamental constraint — not a bug.
 

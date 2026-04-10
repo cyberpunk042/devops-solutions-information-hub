@@ -7,7 +7,7 @@ domain: automation
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
@@ -27,9 +27,11 @@ This video demonstrates how to connect Claude Code to Google's NotebookLM to cre
 
 - **NotebookLM as a free content engine**: Google's NotebookLM accepts documents, URLs, and YouTube videos as sources, then generates slide decks, cinematic video summaries, podcast-style audio overviews, mind maps, flashcards, quizzes, reports, and infographics from them — all for free.
 
-- **Claude Code as orchestrator**: By connecting Claude Code to NotebookLM, the human is removed as the bottleneck. Claude handles the entire pipeline: finding content, loading sources, and triggering asset generation without the user opening NotebookLM at all.
+> [!abstract] Claude Code as orchestrator
+> By connecting Claude Code to NotebookLM, the human is removed as the bottleneck. Claude handles the entire pipeline: finding content, loading sources, and triggering asset generation without the user opening NotebookLM at all.
 
-- **Skills are markdown instruction files**: A "skill" in Claude Code is simply a markdown file that gives the agent instructions, prerequisites, and design guidance. The NotebookLM skill both installs the necessary Python package (notebooklm-py by developer Tang Li) and teaches Claude how to interact with NotebookLM, including slide design specifications.
+> [!info] Skills are markdown instruction files
+> A "skill" in Claude Code is simply a markdown file that gives the agent instructions, prerequisites, and design guidance. The NotebookLM skill both installs the necessary Python package (notebooklm-py by developer Tang Li) and teaches Claude how to interact with NotebookLM, including slide design specifications.
 
 - **Customizable slide generation via skill editing**: The skill contains a slide generation section with design guidance (colors, fonts, layout). Users can ask Claude to modify this section to match brand guidelines, add multiple style presets (e.g., "blackboard" vs. "corporate navy"), and even analyze brand book images to extract palettes.
 

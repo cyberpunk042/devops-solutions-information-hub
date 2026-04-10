@@ -7,7 +7,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -28,11 +28,13 @@ This video breaks down Andrej Karpathy's viral post about using LLMs to build pe
 - **LLM as knowledge organizer**: Claude Code reads raw source documents and autonomously creates structured wiki pages with relationships, tags, and summaries — no manual relationship building required.
 - **Architecture is dead simple**: The entire system is a folder with two subdirectories — `raw/` for source documents and `wiki/` for LLM-generated pages, an index, and a log. No vector database, no embeddings, no chunking pipeline.
 - **Indexes replace similarity search**: Instead of semantic vector search, the LLM maintains index files and follows interlinks between pages, achieving deeper contextual understanding of relationships.
-- **Token efficiency gains**: One user reported a 95% reduction in token usage after converting 383 scattered files and 100+ meeting transcripts into a compact wiki structure.
+> [!info] Token efficiency gains
+> One user reported a 95% reduction in token usage after converting 383 scattered files and 100+ meeting transcripts into a compact wiki structure.
 - **Multiple vault pattern**: The presenter runs separate vaults for different purposes (YouTube transcripts, personal second brain) and plugs them into other AI agents (e.g., an executive assistant) by pointing the agent at the vault's wiki directory.
 - **Hot cache for recency**: A `hot.md` file acts as a short-term cache of the most recent context, reducing the need to crawl full wiki pages for recent interactions.
 - **LLM linting for quality**: Karpathy runs periodic health checks over the wiki using LLMs to find inconsistent data, impute missing data via web searches, and discover interesting connections for new article candidates.
-- **Scaling boundary**: The wiki approach works well up to hundreds of pages with good indexes, but at millions of documents, traditional RAG pipelines with vector databases become necessary.
+> [!warning] Scaling boundary
+> The wiki approach works well up to hundreds of pages with good indexes, but at millions of documents, traditional RAG pipelines with vector databases become necessary.
 - **Prompt-driven setup**: Karpathy intentionally left the setup prompt vague so users can customize the structure to their specific project needs. You literally paste the idea into Claude Code and it builds the system.
 - **Obsidian as optional frontend**: Obsidian provides a graph view for visualizing relationships and a web clipper for ingesting articles, but it is not required — the system is just markdown files.
 

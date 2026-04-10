@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-plannotator
     type: github-repo
@@ -34,11 +34,13 @@ Plannotator is an open-source tool that injects a human-in-the-loop UI between a
 
 - **Cross-agent coverage**: Installation is consistent (single `install.sh` / `install.ps1`) but agent integration differs per platform — Claude Code uses a plugin marketplace, Gemini CLI auto-configures from `~/.gemini` detection, OpenCode uses `opencode.json`, Codex uses `!plannotator` prefixed commands. This reflects the fractured plugin ecosystem across current AI CLI agents.
 
-- **Zero-knowledge sharing**: Small plans encode entirely in URL hash (no server). Large plans use AES-256-GCM client-side encryption before upload; the server stores only ciphertext; the decryption key lives only in the shared URL. Auto-delete after 7 days. Self-hostable. This is a strong privacy model for sharing sensitive implementation plans with colleagues.
+> [!info] Zero-knowledge sharing
+> Small plans encode entirely in URL hash (no server). Large plans use AES-256-GCM client-side encryption before upload; the server stores only ciphertext; the decryption key lives only in the shared URL. Auto-delete after 7 days. Self-hostable. This is a strong privacy model for sharing sensitive implementation plans with colleagues.
 
 - **SLSA provenance from v0.17.2**: Released binaries ship with SHA256 sidecars and support SLSA supply chain verification — a meaningful signal that the project treats security as a first-class concern for enterprise adoption.
 
-- **Plan review as a forcing function**: By making plan approval a required gate before execution, Plannotator operationalizes the "always plan before executing" lesson. It externalizes the review step that many teams skip because it has no tooling friction without it.
+> [!tip] Plan review as a forcing function
+> By making plan approval a required gate before execution, Plannotator operationalizes the "always plan before executing" lesson. It externalizes the review step that many teams skip because it has no tooling friction without it.
 
 - **Structured feedback vs. natural language**: Annotations (delete, insert, replace, comment) are structured operations, not free text. This means feedback is machine-parseable and more precisely actionable by the agent than a prose correction would be.
 

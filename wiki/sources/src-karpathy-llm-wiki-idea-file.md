@@ -7,7 +7,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -26,6 +26,8 @@ This is Andrej Karpathy's original idea file for the LLM Wiki pattern, published
 
 ## Key Insights
 
+> [!abstract] "Instead of just retrieving from raw documents at query time, the LLM incrementally builds and maintains a persistent wiki." Cross-references, contradictions, and synthesis are pre-computed rather than re-derived on every query. The LLM is the librarian; the human is the curator.
+
 - **Core thesis stated directly**: "Instead of just retrieving from raw documents at query time, the LLM incrementally builds and maintains a persistent wiki." The wiki is a "persistent, compounding artifact" where cross-references, contradictions, and synthesis are pre-computed rather than re-derived on every query.
 
 - **LLM as librarian, human as curator**: The human's job is to curate sources, direct analysis, ask good questions, and think about meaning. The LLM does "everything else" -- summarizing, cross-referencing, filing, bookkeeping. Karpathy uses Claude Code on one side and Obsidian on the other, describing it as: "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase."
@@ -33,6 +35,8 @@ This is Andrej Karpathy's original idea file for the LLM Wiki pattern, published
 - **Three-layer architecture defined**: (1) Raw sources -- immutable, curated documents the LLM reads but never modifies. (2) The wiki -- LLM-generated markdown files that the LLM owns entirely. (3) The schema -- a configuration document (CLAUDE.md or AGENTS.md) that encodes wiki structure, conventions, and workflows, co-evolved by the human and LLM over time.
 
 - **Three core operations**: Ingest (process a new source, update 10-15 pages per source, interactive or batch), Query (search wiki, synthesize answers, file good answers back as new pages), and Lint (periodic health checks for contradictions, stale claims, orphan pages, missing concepts, data gaps).
+
+> [!tip] File answers back into the wiki: when a query produces a valuable comparison, analysis, or connection, save it as a new page. Explorations compound just like ingested sources do.
 
 - **Filing answers back into the wiki**: A key compounding mechanism -- when a query produces a valuable comparison, analysis, or connection, it should be saved as a new wiki page so explorations compound just like ingested sources do.
 
