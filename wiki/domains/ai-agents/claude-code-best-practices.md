@@ -157,6 +157,7 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 [[Claude Code Slash Commands (artemgetmann)]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Context Management Is the Primary LLM Productivity Lever]]
+[[Decision: Per-Role Command Design Decisions]]
 [[Design.md Pattern]]
 [[Deterministic Shell, LLM Core]]
 [[Hooks Lifecycle Architecture]]

@@ -69,6 +69,8 @@ Plannotator is an open-source tool that injects a human-in-the-loop UI between a
 [[Claude Code Best Practices]]
 [[Claude Code Skills]]
 [[Always Plan Before Executing]]
+[[Decision: Hooks Design Decisions]]
+[[Decision: Per-Role Command Design Decisions]]
 [[Hooks Lifecycle Architecture]]
 [[Model: Skills, Commands, and Hooks]]
 [[Per-Role Command Architecture]]

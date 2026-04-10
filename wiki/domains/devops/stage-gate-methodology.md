@@ -242,6 +242,7 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 [[Four-Project Ecosystem]]
 [[Immune System Rules]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
+[[Decision: Hooks Design Decisions]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Framework]]

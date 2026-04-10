@@ -195,4 +195,5 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 [[Task Lifecycle Stage-Gating]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Wiki Ingestion Pipeline]]
+[[Decision: Per-Role Command Design Decisions]]
 [[Model: Skills, Commands, and Hooks]]

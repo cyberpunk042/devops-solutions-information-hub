@@ -150,6 +150,7 @@ Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` page
 [[Wiki Event-Driven Automation]]
 [[MCP Integration Architecture]]
 [[Cross-Domain Patterns]]
+[[Decision: Hooks Design Decisions]]
 [[Deterministic Shell, LLM Core]]
 [[Hooks Lifecycle Architecture]]
 [[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]

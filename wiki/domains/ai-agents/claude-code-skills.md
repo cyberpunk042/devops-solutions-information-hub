@@ -180,6 +180,7 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Context-Aware Tool Loading]]
 [[Decision: MCP vs CLI for Tool Integration]]
+[[Decision: Per-Role Command Design Decisions]]
 [[Harness Engineering]]
 [[Model: Claude Code]]
 [[Model: Skills, Commands, and Hooks]]

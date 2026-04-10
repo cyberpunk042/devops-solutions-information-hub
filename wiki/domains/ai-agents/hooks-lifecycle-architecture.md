@@ -158,6 +158,8 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 [[Design.md Pattern]]
 [[Agent Orchestration Patterns]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[Decision: Hooks Design Decisions]]
+[[Decision: Per-Role Command Design Decisions]]
 [[Model: Claude Code]]
 [[Model: Skills, Commands, and Hooks]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

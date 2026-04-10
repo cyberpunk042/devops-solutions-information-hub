@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-10T19:52:53.558809+00:00",
+  "generated": "2026-04-10T20:21:41.171047+00:00",
   "stats": {
-    "pages": 170,
+    "pages": 172,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1167,
-    "tags_unique": 639,
+    "relationships": 1177,
+    "tags_unique": 647,
     "layers": {
       "3": 5,
-      "6": 5,
+      "6": 7,
       "2": 51,
       "4": 22,
       "5": 6,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 133,
-      "seed": 12
+      "seed": 14
     }
   },
   "pages": [
@@ -593,6 +593,56 @@
       "relationships": []
     },
     {
+      "path": "decisions/hooks-design-decisions.md",
+      "slug": "decisions/hooks-design-decisions",
+      "title": "Decision: Hooks Design Decisions",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "hooks",
+        "pretooluse",
+        "stage-gate",
+        "latency",
+        "recursive-hooks",
+        "plan-generation",
+        "design-decisions"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Hooks Lifecycle Architecture",
+        "Per-Role Command Architecture",
+        "Harness Engineering"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Hooks Lifecycle Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Agent Orchestration Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
+        }
+      ]
+    },
+    {
       "path": "decisions/local-model-vs-cloud-api-for-routine-operations.md",
       "slug": "decisions/local-model-vs-cloud-api-for-routine-operations",
       "title": "Decision: Local Model vs Cloud API for Routine Operations",
@@ -840,6 +890,64 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki vs RAG"
+        }
+      ]
+    },
+    {
+      "path": "decisions/per-role-command-design-decisions.md",
+      "slug": "decisions/per-role-command-design-decisions",
+      "title": "Decision: Per-Role Command Design Decisions",
+      "type": "decision",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "commands",
+        "roles",
+        "slash-commands",
+        "skills",
+        "hooks",
+        "versioning",
+        "scope",
+        "design-decisions"
+      ],
+      "sources": [
+        {
+          "id": "src-shanraisshan-claude-code-best-practice",
+          "type": "documentation",
+          "url": "https://github.com/shanraisshan/claude-code-best-practice",
+          "title": "shanraisshan/claude-code-best-practice"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Per-Role Command Architecture",
+        "Claude Code Skills",
+        "Hooks Lifecycle Architecture"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Per-Role Command Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Hooks Lifecycle Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code Skills"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Best Practices"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
         }
       ]
     },
@@ -11611,8 +11719,8 @@
       "relationship_count": 353
     },
     "ai-agents": {
-      "page_count": 34,
-      "relationship_count": 293
+      "page_count": 36,
+      "relationship_count": 303
     },
     "tools-and-platforms": {
       "page_count": 23,
@@ -11877,6 +11985,7 @@
     "skills": [
       "comparisons/skills-architecture-patterns",
       "decisions/mcp-vs-cli-for-tool-integration",
+      "decisions/per-role-command-design-decisions",
       "domains/ai-agents/claude-code-best-practices",
       "domains/ai-agents/claude-code-skills",
       "domains/ai-agents/claude-code",
@@ -11993,6 +12102,45 @@
     "composition": [
       "comparisons/skills-architecture-patterns",
       "domains/ai-agents/hooks-lifecycle-architecture"
+    ],
+    "hooks": [
+      "decisions/hooks-design-decisions",
+      "decisions/per-role-command-design-decisions",
+      "domains/ai-agents/claude-code-best-practices",
+      "domains/ai-agents/claude-code-skills",
+      "domains/ai-agents/claude-code",
+      "domains/ai-agents/hooks-lifecycle-architecture",
+      "domains/ai-agents/per-role-command-architecture",
+      "domains/automation/wiki-event-driven-automation",
+      "sources/src-context-mode",
+      "sources/src-shanraisshan-claude-code-best-practice",
+      "spine/model-claude-code-standards",
+      "spine/model-claude-code",
+      "spine/model-skills-commands-hooks-standards",
+      "spine/model-skills-commands-hooks"
+    ],
+    "pretooluse": [
+      "decisions/hooks-design-decisions"
+    ],
+    "stage-gate": [
+      "decisions/hooks-design-decisions",
+      "domains/cross-domain/methodology-framework",
+      "domains/devops/stage-gate-methodology",
+      "spine/model-methodology-standards",
+      "spine/model-methodology"
+    ],
+    "latency": [
+      "decisions/hooks-design-decisions"
+    ],
+    "recursive-hooks": [
+      "decisions/hooks-design-decisions"
+    ],
+    "plan-generation": [
+      "decisions/hooks-design-decisions"
+    ],
+    "design-decisions": [
+      "decisions/hooks-design-decisions",
+      "decisions/per-role-command-design-decisions"
     ],
     "claude": [
       "decisions/local-model-vs-cloud-api-for-routine-operations"
@@ -12125,6 +12273,29 @@
     "research-interface": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
     ],
+    "commands": [
+      "decisions/per-role-command-design-decisions",
+      "domains/ai-agents/claude-code-best-practices",
+      "domains/ai-agents/per-role-command-architecture",
+      "sources/src-claude-slash-commands",
+      "sources/src-shanraisshan-claude-code-best-practice",
+      "spine/model-skills-commands-hooks-standards",
+      "spine/model-skills-commands-hooks"
+    ],
+    "roles": [
+      "decisions/per-role-command-design-decisions"
+    ],
+    "slash-commands": [
+      "decisions/per-role-command-design-decisions",
+      "domains/ai-agents/per-role-command-architecture",
+      "sources/src-claude-slash-commands"
+    ],
+    "versioning": [
+      "decisions/per-role-command-design-decisions"
+    ],
+    "scope": [
+      "decisions/per-role-command-design-decisions"
+    ],
     "polling": [
       "decisions/polling-vs-event-driven-change-detection"
     ],
@@ -12239,28 +12410,6 @@
       "sources/src-playwright-mcp-visual-testing",
       "sources/src-shanraisshan-claude-code-best-practice",
       "sources/src-superpowers-end-of-vibe-coding"
-    ],
-    "commands": [
-      "domains/ai-agents/claude-code-best-practices",
-      "domains/ai-agents/per-role-command-architecture",
-      "sources/src-claude-slash-commands",
-      "sources/src-shanraisshan-claude-code-best-practice",
-      "spine/model-skills-commands-hooks-standards",
-      "spine/model-skills-commands-hooks"
-    ],
-    "hooks": [
-      "domains/ai-agents/claude-code-best-practices",
-      "domains/ai-agents/claude-code-skills",
-      "domains/ai-agents/claude-code",
-      "domains/ai-agents/hooks-lifecycle-architecture",
-      "domains/ai-agents/per-role-command-architecture",
-      "domains/automation/wiki-event-driven-automation",
-      "sources/src-context-mode",
-      "sources/src-shanraisshan-claude-code-best-practice",
-      "spine/model-claude-code-standards",
-      "spine/model-claude-code",
-      "spine/model-skills-commands-hooks-standards",
-      "spine/model-skills-commands-hooks"
     ],
     "workflows": [
       "domains/ai-agents/claude-code-best-practices",
@@ -12539,10 +12688,6 @@
     "vibe-managing": [
       "domains/ai-agents/openfleet"
     ],
-    "slash-commands": [
-      "domains/ai-agents/per-role-command-architecture",
-      "sources/src-claude-slash-commands"
-    ],
     "per-role": [
       "domains/ai-agents/per-role-command-architecture",
       "spine/model-skills-commands-hooks"
@@ -12809,12 +12954,6 @@
     ],
     "meta-methodology": [
       "domains/cross-domain/methodology-framework"
-    ],
-    "stage-gate": [
-      "domains/cross-domain/methodology-framework",
-      "domains/devops/stage-gate-methodology",
-      "spine/model-methodology-standards",
-      "spine/model-methodology"
     ],
     "composable": [
       "domains/cross-domain/methodology-framework",
