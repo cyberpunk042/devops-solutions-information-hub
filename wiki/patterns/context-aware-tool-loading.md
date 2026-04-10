@@ -141,6 +141,7 @@ This is the documentation layer's application of deferred loading. The alternati
 [[default assumption that registering all MCP tools at startup is cost-free]]
 [[Research Pipeline Orchestration]]
 [[Wiki Ingestion Pipeline]]
+[[Claude Code Best Practices]]
 [[Cross-Domain Patterns]]
 [[Hooks Lifecycle Architecture]]
 [[Model: Claude Code]]

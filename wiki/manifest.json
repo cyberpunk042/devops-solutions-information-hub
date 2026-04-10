@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T05:19:29.160361+00:00",
+  "generated": "2026-04-10T05:22:46.972450+00:00",
   "stats": {
     "pages": 174,
     "domains": 9,
@@ -1086,7 +1086,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "claude-code",
         "best-practices",
@@ -1150,15 +1150,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Wiki Event-Driven Automation"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "LLM Wiki vs RAG"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "RELATES TO",
-          "target": "Skills Architecture Patterns"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "EXTENDS",

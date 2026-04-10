@@ -7,7 +7,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
@@ -28,69 +28,103 @@ tags: [claude-code, best-practices, orchestration, plan-mode, subagents, skills,
 
 ## Summary
 
-Claude Code best practices encompass the patterns, habits, and architectural decisions that maximize output quality while minimizing token waste and wasted effort. Drawing from Boris Cherny (Claude Code's creator), Anthropic team members, and a large community of power users, these practices span the full development lifecycle: prompting strategy (challenge Claude, avoid micromanaging), planning discipline (always plan before executing, have Claude interview you), memory architecture (lean CLAUDE.md under 200 lines, rules in separate files), extensibility patterns (the Command-Agent-Skill hierarchy with progressive disclosure), workflow automation (hooks for formatting, safety, and monitoring), context hygiene (compact early, clear often, batch prompts), git discipline (small PRs, squash merges, frequent commits), and debugging techniques (screenshots, browser MCPs, background terminals). The overarching pattern is that all successful development workflows converge on a Research-Plan-Execute-Review-Ship cycle, regardless of which specific framework implements it.
+Claude Code best practices span the full development lifecycle: planning discipline (95% confidence before changes), memory architecture (lean CLAUDE.md as routing table), extensibility patterns (Command-Agent-Skill hierarchy), workflow automation (hooks for enforcement, skills for knowledge), context hygiene (deferred loading, subagent isolation, manual compaction), and git discipline (small PRs, frequent commits). The overarching pattern: 10 independent open-source frameworks converge on Research-Plan-Execute-Review-Ship. The convergence confirms this cycle is inherent to effective AI-assisted development, not one team's preference. Sources: Boris Cherny (Claude Code's creator), Anthropic team members, shanraisshan best practices repo, 18 Claude Code Token Hacks.
 
 ## Key Insights
 
-- **Plan before you build**: The single most consistently recommended practice across all sources. Use plan mode (or Opus for planning, Sonnet for execution) before any significant task. The biggest source of token waste is not expensive models -- it is Claude going down the wrong path and having to scrap work. Boris Cherny recommends: "Do not make any changes until you have 95% confidence in what you need to build. Ask me follow-up questions until you reach that confidence level."
+### Planning and Execution
 
-- **Command-Agent-Skill architecture**: Claude Code's extensibility hierarchy has three layers. Commands are user-invoked prompt templates injected into the existing context (lightweight, for repeated workflows). Agents are autonomous actors in fresh isolated contexts with their own tools, permissions, model, and memory. Skills are configurable, preloadable knowledge bundles with progressive disclosure and context forking. The pattern is: Command orchestrates, Agent executes in isolation, Skill provides specialized knowledge.
+- **Plan before you build — the #1 practice.** Boris Cherny: "Do not make any changes until you have 95% confidence in what you need to build. Ask me follow-up questions until you reach that confidence level." The biggest source of token waste is not expensive models — it is Claude going down the wrong path and scrapping work.
 
-- **Don't babysit, but do watch**: Several tips carry the "do not babysit" marker -- let Claude work autonomously on bug fixes, code generation, and exploration. However, watching the initial direction of a task prevents the catastrophic token waste of Claude going down a wrong path in a loop. The balance is: watch the first few steps, then let it run.
+- **Don't babysit, but do watch.** Let Claude work autonomously on bug fixes and exploration. But watch the initial direction — the first 2-3 tool calls reveal whether it's on the right path. The balance is temporal: control at planning, autonomy at execution.
 
-- **CLAUDE.md is an index, not an encyclopedia**: Keep it under 200 lines. Treat it as a routing table that tells Claude where to find detailed information, not as the detailed information itself. Every message re-reads the entire CLAUDE.md, so bloat compounds across every interaction. Use `.claude/rules/` for splitting large instruction sets. For persistent rules that must not be ignored, wrap them in `<important if="...">` tags.
+- **Prototype over PRD (for exploratory features).** Boris's counterintuitive advice: build 20-30 prototype versions instead of detailed specs, because building is now cheap enough to take many shots. This does NOT contradict "plan before building" — it applies specifically to exploratory features where the requirements are unclear and iteration is the discovery method. For well-understood work, plan and spec first. For unknown territory, prototype.
 
-- **Skills are folders with progressive disclosure**: A skill is not a single markdown file -- it is a folder containing a SKILL.md, references/, scripts/, and examples/ subdirectories. The SKILL.md description is a trigger written for the model ("when should I fire?"), not a human-readable summary. Include a Gotchas section that accumulates known failure points over time. Use `context: fork` to run skills in isolated subagents so intermediate tool calls do not pollute the main context.
+### Extension Architecture
 
-- **Hooks as automation glue**: PostToolUse hooks for auto-formatting code (Claude generates well-formatted code, the hook handles the last 10%), PreToolUse hooks for measuring skill usage (finding undertriggering skills), Stop hooks to nudge Claude to verify or continue, and permission-routing hooks that send requests to Opus for automated safety classification. On-demand hooks in skills (like /careful to block destructive commands) add contextual safety.
+> [!info] **Command-Agent-Skill hierarchy**
+> | Mechanism | Analog | When to use |
+> |-----------|--------|-------------|
+> | **Command** | Shell alias | Repeated prompt template in current context. No isolation needed. |
+> | **Agent** | Microservice | Isolated context needed. Parallel execution. Different tool permissions. |
+> | **Skill** | Library | Specialized knowledge loaded on demand. Progressive disclosure. Context forking. |
+>
+> The orchestration pattern: Command triggers → Agent executes in isolation → Skill provides knowledge. Mirrors the controller-service-library pattern in traditional architectures.
 
-- **All workflows converge on one pattern**: Ten major open-source Claude Code workflow frameworks (Everything Claude Code, Superpowers, Spec Kit, gstack, Get Shit Done, BMAD-METHOD, OpenSpec, oh-my-claudecode, Compound Engineering, HumanLayer) independently arrived at Research-Plan-Execute-Review-Ship. They differ in implementation (agents vs. commands vs. skills for the planning layer, different spec formats, different verification approaches) but the fundamental cycle is the same. This convergence suggests the pattern is inherent to effective AI-assisted development.
+- **Skills are folders with progressive disclosure.** SKILL.md at root, references/, scripts/, examples/ subdirectories. The `description` field is a trigger written for the model ("when should I fire?"), not a human summary. Include a Gotchas section. Use `context: fork` when instructions exceed ~100 lines.
 
-- **Agentic search beats RAG for code**: Claude Code tried and discarded vector databases internally because code drifts out of sync and permissions are complex. Glob + grep (agentic search) is both more accurate and simpler for navigating codebases. This mirrors the LLM Wiki Pattern's insight about structured files outperforming embeddings at moderate scale.
+- **Hooks as enforcement glue.** PostToolUse for auto-formatting. PreToolUse for blocking dangerous operations. Stop hooks to force verification before completion. Permission-routing hooks that escalate to Opus for safety classification. On-demand hooks in skills (like /careful) add contextual safety.
 
-- **Git discipline amplifies everything**: Small, focused PRs (p50 of 118 lines), squash merges for clean history, committing at least once per hour, and using /code-review for multi-agent PR analysis. Tag @claude on a colleague's PR to auto-generate lint rules from recurring review feedback -- automating yourself out of code review.
+### Memory Architecture
 
-- **Prototype over PRD**: Boris Cherny's counterintuitive advice: build 20-30 prototype versions instead of writing detailed specs, because the cost of building is now low enough to take many shots. This inverts the traditional spec-first workflow for exploratory features.
+- **CLAUDE.md is an index, not an encyclopedia.** Under 200 lines. Routes to detailed files. Every message re-reads the entire CLAUDE.md — bloat compounds across every interaction. Use `.claude/rules/` for splitting large instruction sets. `<important if="...">` tags for rules that must not be forgotten.
+
+### Context Hygiene
+
+- **Deferred loading over eager loading.** Skills load on demand (zero baseline cost). MCP loads at startup (permanent overhead). CLI over MCP for operational tasks (12x measured differential). See [[Context-Aware Tool Loading]].
+
+- **Subagent isolation for heavy operations.** The Agent tool spawns workers with fresh context windows. Delegate research, bulk file operations, and exploratory analysis to subagents. The main conversation stays clean.
+
+- **Compact at breakpoints, not under pressure.** Manual `/compact` at natural milestones (finished a task, completed an ingestion batch). Fresh sessions over infinite continuation when context feels heavy.
+
+### Git and Development
+
+- **Git discipline amplifies everything.** Small, focused PRs (p50 = 118 lines). Squash merges for clean history. Commit at least once per hour. Use /code-review for multi-agent PR analysis. Tag @claude on a colleague's PR to auto-generate lint rules from recurring feedback.
+
+- **Agentic search beats RAG for code.** Claude Code tried and discarded vector databases internally — code drifts out of sync with embeddings. Glob + grep is more accurate for codebases. For stable curated knowledge bases, hybrid search (BM25 + vector + graph) wins. The split is domain-dependent: agentic search for code, hybrid for knowledge.
+
+### The Universal Workflow
+
+> [!abstract] **10 independent frameworks converge on one cycle**
+> Everything Claude Code, Superpowers, Spec Kit, gstack, Get Shit Done, BMAD-METHOD, OpenSpec, oh-my-claudecode, Compound Engineering, HumanLayer — all arrived independently at Research → Plan → Execute → Review → Ship. Implementation varies (agents vs commands vs skills for planning, different spec formats, different verification). The fundamental cycle does not. This convergence is the strongest evidence that the pattern is inherent to the domain.
 
 ## Deep Analysis
 
-The Claude Code best practices landscape reveals a fundamental tension between autonomy and control. The "don't babysit" philosophy (let Claude fix bugs without micromanaging, trust it to explore) coexists with the planning discipline (never let Claude start building without a vetted plan). The resolution is temporal: control at the planning phase, autonomy at the execution phase. Plan mode creates a contract; execution mode fulfills it.
+### The Autonomy-Control Tension
 
-The Command-Agent-Skill hierarchy represents Claude Code's answer to the age-old software engineering question of modularity. Commands are analogous to shell aliases -- lightweight, context-injected shortcuts. Agents are analogous to microservices -- isolated executors with their own state. Skills are analogous to libraries -- reusable knowledge packages that multiple agents can consume. The orchestration workflow (Command triggers Agent which loads Skills) mirrors the controller-service-library pattern in traditional architectures.
+The best practices landscape reveals a fundamental tension: "don't babysit" (let Claude work autonomously) coexists with "always plan first" (never let Claude start without a vetted plan). The resolution is temporal:
 
-The convergence of 10 independent workflow frameworks on Research-Plan-Execute-Review-Ship is the strongest evidence that this is not just one approach among many but the effective workflow for AI-assisted development at current capability levels. The variation between frameworks is in implementation details, not fundamental structure. This suggests that investing in any framework that follows this pattern is likely to remain valuable even as specific tools evolve.
+> [!tip] **Control at planning, autonomy at execution**
+> Plan mode creates a contract — what to build, why, what approach. Execution mode fulfills it — the agent works autonomously within the contract's boundaries. The planning phase is HIGH control (95% confidence, clarifying questions, explicit approval). The execution phase is LOW control (watch the first few steps, then let it run). This matches the harness engineering pattern: enforce constraints at boundaries (plan → execute transition), allow freedom within stages.
 
-The "agentic search beats RAG" finding has implications beyond Claude Code. It suggests that for codebases and structured knowledge (as opposed to unstructured document collections), explicit file navigation by an agent outperforms similarity-based retrieval. This reinforces the LLM Wiki Pattern's approach and explains why the wiki pattern works surprisingly well despite having no embedding infrastructure.
+This temporal split explains why Boris's "prototype over PRD" advice doesn't contradict planning discipline. Prototyping IS planning — each iteration narrows the solution space. The 95% confidence rule applies to the IMPLEMENTATION plan, not to the feature definition. You might build 20 prototypes to discover what to build, then plan carefully how to build the final version.
 
-The unsolved "billion-dollar questions" reveal the current frontier: why do models sometimes ignore explicit instructions in CLAUDE.md? When exactly should you use a command vs. an agent vs. a skill? Can a codebase be fully regenerated from specs? These are not just Claude Code questions -- they are fundamental questions about the reliability and completeness of LLM-driven development workflows that will define the next generation of tooling.
+### The Compliance Problem
+
+> [!warning] **Why does Claude sometimes ignore CLAUDE.md instructions?**
+> An unsolved "billion-dollar question." CLAUDE.md instructions marked with MUST or ALWAYS are still sometimes ignored. The mechanism is likely context pressure — at higher utilization, the model's attention to earlier context degrades probabilistically. This is NOT a binary threshold ("above 60% = ignores rules") — it's a gradient where compliance becomes less reliable as context fills.
+>
+> **Practical mitigations (from current evidence):**
+> - Keep CLAUDE.md under 200 lines (less to attend to = higher compliance per instruction)
+> - Use `<important if="...">` tags for critical rules (attention anchoring)
+> - Move enforcement to hooks where possible (~98% compliance vs ~60% for instructions)
+> - Compact at natural breakpoints (reduce context pressure)
+> - Fresh sessions for high-stakes work (start with clean context)
+
+### Answered Deep Questions
+
+> [!success] **Command vs Agent vs Skill — the decision tree**
+> Use a **command** when: repeated prompt template in current context, no isolation needed. Use an **agent** when: isolated context needed, parallel execution, different tool permissions. Use a **skill** when: specialized knowledge needed on demand, progressive disclosure, `context: fork` for heavy instructions. Skills are for KNOWLEDGE, agents for ISOLATION, commands for SHORTCUTS. The hierarchy (Level 2 skills < Level 3 hooks) means skills sequence and teach; hooks enforce.
+
+> [!success] **Skill complexity upper bound**
+> The reliability boundary maps to the context degradation curve. A large skill (extensive SKILL.md + examples + scripts) compounds context pressure. The actionable rule: use `context: fork` for any skill exceeding ~100 lines. Forking gives the skill a fresh context window — the main conversation stays clean regardless of skill size.
+
+> [!success] **Agentic search vs RAG — domain-dependent**
+> Agentic search (glob + grep) wins for **code** — content drifts with every commit, embeddings go stale immediately. Hybrid search (BM25 + vector + graph) wins for **knowledge bases** — curated content is stable enough for semantic embeddings. The split mirrors CLI vs MCP: "CLI for project-internal" (code-like, frequent change) vs "MCP with indexing for cross-project" (knowledge-like, stable).
+
+> [!success] **Skills: single file vs folder — maturity spectrum**
+> Not conflicting approaches — different points on a spectrum. A seed skill is a single SKILL.md. A mature skill is a folder with SKILL.md + references/ + scripts/ + examples/. Start with a single file to validate the trigger, graduate to a folder when the skill accumulates scripts, reference docs, or known failure cases (Gotchas section).
 
 ## Open Questions
 
-- Why does Claude sometimes ignore CLAUDE.md instructions even when marked with MUST or ALWAYS? Is there a character/line threshold above which compliance drops? (Requires: external research or empirical testing; the accuracy tips source documents the context degradation curve — context pressure increases at higher utilization usage — which is a related mechanism, but the specific CLAUDE.md compliance threshold is not documented in existing wiki pages.)
-- Can the Research-Plan-Execute-Review-Ship pattern be further optimized, or is it already at its minimum viable complexity? (Requires: external research or comparative analysis of workflow frameworks not yet ingested.)
-- How do best practices change as models improve — does plan mode become less necessary as models get better at self-correction? (Requires: external research on model capability trajectories; not answerable from current wiki knowledge.)
+> [!question] **Is there a measurable CLAUDE.md compliance threshold?**
+> At what line count or token count does CLAUDE.md compliance drop measurably? Is it 200 lines? 300? 500? (Requires: controlled testing with different CLAUDE.md sizes on identical tasks)
 
-## Answered Questions (moved from Open Questions)
+> [!question] **Can the Plan-Execute-Review cycle be further compressed?**
+> Is the 5-verb cycle already at minimum viable complexity, or can it be optimized for specific task types? (Requires: comparative analysis of framework performance across task categories)
 
-### What is the decision tree for choosing between a command, an agent, and a skill?
-
-Cross-referencing the Harness Engineering page and the Context-Aware Tool Loading pattern: the decision tree is documented implicitly across multiple sources and can now be stated explicitly. Use a **command** when: the workflow is a repeated prompt template that needs to be injected into the current context without isolation (no fresh context needed, no tool permission changes). Use an **agent** when: the task needs an isolated context (to prevent context pollution), parallel execution with other agents, or different tool permissions than the parent session. Use a **skill** when: specialized knowledge or operational procedures need to be loaded on demand without pre-loading overhead — skills provide progressive disclosure (SKILL.md + references/ + scripts/ + examples/) and support `context: fork` to run in isolated subagents. The Harness Engineering page documents the same pattern as a hierarchy: Level 2 (workflow orchestration via skills) sits below Level 3 (runtime guardrails via hooks) — meaning skills are the right tool for sequencing and knowledge, hooks are the right tool for enforcement.
-
-### How do community skills and personal skills interact when they give conflicting instructions?
-
-Cross-referencing the Context-Aware Tool Loading pattern: skill files are loaded contextually — they enter the context window when invoked, not at startup. This means precedence is governed by invocation order and CLAUDE.md routing, not by a registry-level priority system. The CLAUDE.md Best Practices page states CLAUDE.md should be an "index, not an encyclopedia" — it routes to the right skill. In practice, the precedence model is: CLAUDE.md project instructions override community defaults (CLAUDE.md is read on every message), personal skills loaded explicitly override ambient skills, and `<important if="...">` tags in CLAUDE.md provide the highest-priority override mechanism for rules that must not be ignored. There is no formal precedence specification beyond this in the existing wiki, but the architecture resolves most conflicts via explicit routing.
-
-### What is the practical upper bound on skill complexity before a skill becomes unreliable?
-
-Cross-referencing the CLI Tools Beat MCP for Token Efficiency lesson and the Context-Aware Tool Loading pattern: the reliability boundary for skills maps directly onto the context degradation curve. The accuracy tips source documents that Claude Code context management matters at higher utilization (probabilistic, not deterministic). A skill occupies context budget once loaded; a large skill (extensive SKILL.md + examples + scripts read into context) compounds the degradation curve sooner. The practical upper bound is not a fixed line count but a function of: (1) how much other context the session carries, (2) whether the skill is loaded alongside many other skills, and (3) whether the skill uses `context: fork` (isolated subagent clears this entirely). The actionable best practice from existing wiki knowledge: use `context: fork` for any skill whose instructions exceed ~100 lines to keep skill execution from polluting the main session context.
-
-### Agentic search vs RAG: the domain-dependency resolution
-
-Confirmed by cross-referencing the CLI Tools Beat MCP for Token Efficiency lesson and the LLM Wiki vs RAG comparison: the tension is resolved by domain. The "agentic search beats RAG" finding applies specifically to **code**, where content drifts out of sync with embeddings rapidly (every commit changes the ground truth). The LLM Wiki v2 hybrid search recommendation applies to **knowledge bases**, where content is curated and stable enough for semantic embeddings to remain valid. The CLI Tools lesson independently documents the same split: "CLI+Skills for project-internal tooling" (code-like domain, frequent change) vs. "MCP with vector indexing for cross-project discovery" (knowledge-like domain, stable). The best practice is explicitly domain-dependent: use agentic search (glob + grep or wiki navigation) for frequently-changing structured content; use hybrid search (BM25 + vector + graph) for stable curated knowledge bases.
-
-### Skills as single files vs. structured folders: the complexity spectrum
-
-Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Harness Engineering page: these are not conflicting descriptions but different points on a maturity spectrum. A seed skill is a single SKILL.md; a mature production skill is a folder with SKILL.md + references/ + scripts/ + examples/. The Harness Engineering page documents the same progression as its Pattern Hierarchy table — Level 0 (prompt guidance in a single file) evolves toward Level 3 (runtime guardrails with hooks and scripts). The actionable guidance from existing wiki knowledge: start with a single SKILL.md to validate the skill trigger and core instructions, then graduate to a folder structure when the skill accumulates external scripts, reference documents, or known failure cases (Gotchas section). The pattern mirrors how this wiki's own skills are structured.
+> [!question] **How do best practices change as models improve?**
+> Does plan mode become less necessary as models improve at self-correction? Does the compliance problem diminish with larger context windows? (Requires: longitudinal tracking across model generations)
 
 ## Relationships
 
@@ -100,9 +134,9 @@ Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Ha
 - ENABLES: [[Claude Code Context Management]]
 - RELATES TO: [[LLM Wiki Pattern]]
 - RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[LLM Wiki vs RAG]]
-- RELATES TO: [[Skills Architecture Patterns]]
+- RELATES TO: [[Harness Engineering]]
+- RELATES TO: [[Context-Aware Tool Loading]]
+- RELATES TO: [[Plan Execute Review Cycle]]
 - EXTENDS: [[Claude Code]]
 
 ## Backlinks
@@ -113,9 +147,9 @@ Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Ha
 [[Claude Code Context Management]]
 [[LLM Wiki Pattern]]
 [[Wiki Ingestion Pipeline]]
-[[Wiki Event-Driven Automation]]
-[[LLM Wiki vs RAG]]
-[[Skills Architecture Patterns]]
+[[Harness Engineering]]
+[[Context-Aware Tool Loading]]
+[[Plan Execute Review Cycle]]
 [[Claude Code]]
 [[Agent Orchestration Patterns]]
 [[Agentic Search vs Vector Search]]
@@ -125,18 +159,18 @@ Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Ha
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Design.md Pattern]]
 [[Deterministic Shell, LLM Core]]
-[[Harness Engineering]]
 [[Hooks Lifecycle Architecture]]
 [[Infrastructure as Code Patterns]]
+[[LLM Wiki vs RAG]]
 [[Model: Claude Code]]
 [[Model: Design.md and IaC]]
 [[Model: Skills, Commands, and Hooks]]
 [[Pattern: Skills + Claude-Code]]
 [[Per-Role Command Architecture]]
-[[Plan Execute Review Cycle]]
 [[Plannotator — Interactive Plan & Code Review for AI Agents]]
 [[Rework Prevention]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[Skills Architecture Patterns]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]
@@ -144,3 +178,4 @@ Confirmed by cross-referencing the Context-Aware Tool Loading pattern and the Ha
 [[Synthesis: Playwright MCP for Visual Development Testing]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
 [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
+[[Wiki Event-Driven Automation]]
