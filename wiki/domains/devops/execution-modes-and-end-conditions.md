@@ -5,7 +5,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 maturity: growing
 derived_from:
   - "Stage-Gate Methodology"
@@ -30,21 +30,42 @@ tags: [execution-modes, end-conditions, autonomous, full-autonomous, semi-autono
 
 Execution Modes and End Conditions define the operational envelope for autonomous agent execution in the OpenArms methodology. 8 execution modes — from `autonomous` (default, works through all stages) to `custom` (ephemeral per-run config) — determine which stages run and whether human review is required between tasks. 5 end conditions — from `backlog-empty` to `cost-limit` — determine when the agent stops. The 14-step work loop is the atomic execution unit that operates within this envelope, and git management rules (one commit per stage, conventional commit format) transform version control into the enforcement and audit layer.
 
+> [!info] Execution Modes Reference Card
+>
+> | Mode | Stages | Human Review | Default End Condition |
+> |------|--------|-------------|---------------------|
+> | **autonomous** (default) | All per task type | No | backlog-empty |
+> | **full-autonomous** | Skip Document on task/bug/refactor | No | backlog-empty |
+> | **semi-autonomous** | All | Yes (after each task) | backlog-empty |
+> | **document-only** | Document only | No | backlog-empty |
+> | **plan-only** | Document + Design | No | task-count: 1 |
+> | **review-only** | No stages — review/audit mode | Human reviews | null |
+> | **single-task** | All per task type | Optional | task-count: 1 |
+> | **custom** | Per-run config (ephemeral) | Per-run | Per-run |
+
+> [!abstract] 5 End Conditions (orthogonal to modes)
+>
+> | Condition | When the Agent Stops |
+> |-----------|---------------------|
+> | **backlog-empty** | No more unblocked tasks |
+> | **task-count: N** | After N tasks completed |
+> | **time-limit: Nh** | After N hours elapsed |
+> | **cost-limit: $N** | After estimated cost exceeds N |
+> | **null** | Never (requires manual stop) |
+
 ## Key Insights
 
-- **The default mode is fully autonomous — human review is opt-in, not default**: The `autonomous` mode works through all stages, picks the next task automatically, and stops only when the backlog is empty. Human review is NOT the default. This is a deliberate design choice: the stage gates, quality gates, and git audit trail provide sufficient safety that human review is not required for every task. Semi-autonomous mode (human review after each task) is available but not the default.
+> [!warning] Human review is opt-in, not default
+> The `autonomous` mode works all stages, picks next task automatically, stops when backlog is empty. Stage gates, quality gates, and git audit trail provide sufficient safety. Semi-autonomous (human review per task) is available but not the default.
 
-- **End conditions are separate from modes**: A mode defines HOW the agent executes (which stages, whether to pause for review). An end condition defines WHEN to stop. These are orthogonal dimensions. `autonomous` mode with `task-count: 5` stops after 5 tasks regardless of backlog state. `document-only` mode with `backlog-empty` runs document stage on every task until the backlog is empty.
+**Modes and end conditions are orthogonal.** Mode = HOW (which stages, review gates). End condition = WHEN (stop trigger). `autonomous` + `task-count: 5` stops after 5 tasks. `document-only` + `backlog-empty` runs document stage on everything.
 
-- **The 14-step work loop is the invariant**: Every execution mode runs the same 14-step loop. Modes differ in which steps are present (semi-autonomous adds a review pause after step 11) and which stages are included (full-autonomous skips Document on tasks), but the loop structure is fixed. The loop is not optional — it is the execution contract.
+**The 14-step loop is the invariant.** Every mode runs the same loop. Modes change which steps are present and which stages are included, but the structure is fixed.
 
-- **One commit per stage is a quality gate, not a style preference**: The rule "ONE COMMIT PER STAGE, COMMIT IMMEDIATELY after creating files" makes the git history the stage audit trail. A task with 5 completed stages has exactly 5 commits. A task with a single "completed everything" commit violated the rule. The commit is the stage checkpoint — it is when the stage becomes real.
+> [!tip] One commit per stage = the audit trail
+> A task with 5 stages has exactly 5 commits. A single "completed everything" commit violates the rule. The commit is the stage checkpoint — it is when the stage becomes real. Gate check THEN commit, never the reverse.
 
-- **Quality gates are stage transition requirements, not post-hoc checks**: Each stage has a specific gate that must pass before advancing. The agent does not commit and then check the gate — the agent checks the gate and then commits. If the gate fails, the stage is not complete, and the commit does not happen. This ordering is critical: committing before the gate check corrupts the audit trail.
-
-- **The `custom` mode is ephemeral**: Custom mode accepts per-run configuration that is not persisted. This is the escape hatch for unusual situations — when the standard modes do not fit the context. But unlike the named modes, custom mode configurations are not reusable and are not a pattern to build on.
-
-- **VERIFY step in the loop prevents silent failures**: Step 8 of the 14-step loop explicitly requires re-reading the task file after updating frontmatter to confirm the update was written correctly. This is not paranoia — agents can fail to update files, write malformed YAML, or update the wrong field. The verification step catches these failures before proceeding to the next stage.
+**VERIFY step prevents silent failures.** Step 8 re-reads the task file after updating frontmatter. Agents can write malformed YAML or update wrong fields — verification catches this before proceeding.
 
 ## Deep Analysis
 

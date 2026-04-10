@@ -6,7 +6,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 maturity: growing
 derived_from:
   - "Stage-Gate Methodology"
@@ -31,21 +31,27 @@ tags: [backlog, epic, module, task, hierarchy, readiness, status-propagation, wi
 
 The Backlog Hierarchy Rules define the three-level EPIC → MODULE → TASK structure used by the OpenArms project and mirrored in OpenFleet's Plane board. Eight rules govern how work is organized, how readiness propagates upward, how status flows upward, and when containers are considered done. The key operational principle: you work on TASKS, not epics or modules. To advance an epic, pick a task and complete its next stage. Epics are never manually marked done — they can reach a maximum of `review` status, requiring human confirmation before closure.
 
+> [!info] Three-level hierarchy
+>
+> | Level | Role | Readiness | Status Ceiling |
+> |-------|------|-----------|---------------|
+> | **Epic** | Strategic container — acceptance criteria, scope boundary | AVERAGE of all descendant tasks (derived, never manual) | `review` (human confirmation for `done`) |
+> | **Module** | Scoped subsystem within an epic | AVERAGE of child tasks | `review` (human confirmation for `done`) |
+> | **Task** | Atomic execution unit — stages, frontmatter, commits | Derived from stages_completed | `done` (automatic when all stages pass) |
+
 ## Key Insights
 
-- **Work happens at the task level, visibility lives at the epic level**: You never "work on an epic." You work on a task that is a child of a module that is a child of an epic. The epic is a coordination artifact — it holds acceptance criteria, tracks scope, and aggregates readiness. The task is the execution artifact — it has stages, frontmatter, and commits.
+> [!warning] Work happens at tasks, not epics
+> You never "work on an epic." You work on a task → child of module → child of epic. Epic = coordination artifact (acceptance criteria, scope). Task = execution artifact (stages, commits). To advance an epic, pick a task and complete its next stage.
 
-- **Readiness propagation eliminates false completion signals**: Epic readiness = AVERAGE of children's readiness. This cannot be overridden manually. An epic with 9 tasks at 100% and 1 task at 0% has 90% readiness — not 100%. This prevents the common failure mode of "marking an epic done because most of it is done."
+> [!tip] Readiness propagation eliminates false completion signals
+> Epic readiness = AVERAGE of children's readiness. Cannot be overridden manually. 9 tasks at 100% + 1 task at 0% = 90%, not 100%. An agent setting `readiness: 75` because "it feels done" is corrupting the signal.
 
-- **Status propagation creates automatic visibility**: Any child in-progress → parent in-progress. ALL children done → parent moves to `review` (not `done`). The `review` ceiling for epics and modules means completion always requires a human confirmation step. The hierarchy does not need to be manually monitored — status flows upward automatically.
+**Status flows upward automatically.** Any child in-progress → parent in-progress. ALL children done → parent moves to `review` (never `done` — human confirmation required). No manual monitoring needed.
 
-- **"No tasks remaining but not at 100%" is an incompleteness signal, not a stuck state**: When an epic has no undone tasks but readiness is below 100%, the correct response is to CREATE NEW TASKS to cover the gap. This is not a bug in the backlog — it is signal that the original decomposition was incomplete. The methodology requires acting on this signal rather than treating the epic as done.
+**"No tasks but not 100%" = create new tasks.** The correct response to incomplete readiness with no remaining tasks is decomposition was incomplete — create tasks to cover the gap. This is signal, not a bug.
 
-- **Epics may stay in-progress for weeks — this is normal**: Long-running epics are a feature, not a problem. The hierarchy is designed for complex, multi-sprint work. An epic that has been in-progress for 3 weeks with consistent task completion is healthy. An epic that has been in-progress for 3 weeks with no task activity is stuck — and the watcher/health check should surface it.
-
-- **The hierarchy maps to documentation layers**: In OpenFleet's implementation, epics correspond to major system areas, modules to subsystems, and tasks to implementation units. This is not coincidental — the hierarchy mirrors the architecture. When the architecture has a new layer, the backlog should have a new epic. When a subsystem is identified, a module should be created.
-
-- **NEVER set epic readiness manually — it is derived, not declared**: This is one of the absolute prohibitions in the methodology. An agent that sets `readiness: 75` on an epic because "it feels about 75% done" is corrupting the readiness signal. Readiness on containers is always an aggregate of their children.
+**Epics staying in-progress for weeks is normal.** Consistent task completion = healthy. No task activity = stuck (watcher should surface it).
 
 ## Deep Analysis
 

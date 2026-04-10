@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T17:24:57.475990+00:00",
+  "generated": "2026-04-10T17:27:43.845578+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
@@ -147,7 +147,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "agentic-search",
         "vector-search",
@@ -2931,7 +2931,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "backlog",
         "epic",
@@ -3070,7 +3070,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "execution-modes",
         "end-conditions",
@@ -4651,7 +4651,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "multi-channel",
         "ai-assistant",
@@ -4941,7 +4941,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "obsidian",
         "cli",
@@ -5106,7 +5106,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "obsidian",
         "skills",
