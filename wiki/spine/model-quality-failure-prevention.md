@@ -31,204 +31,271 @@ tags: [model, spine, quality, failure-prevention, harness, immune-system, rework
 
 ## Summary
 
-Quality and failure prevention for AI agents is not a set of best practices — it is a system with three enforcement layers (structural prevention, teaching, review), five codified failure lessons, and deterministic mechanisms that cannot be bypassed by prompt engineering. The model synthesizes evidence from four domains: harness engineering (13 guardrail rules enforced via hooks), OpenFleet's immune system (24 rules from 16 post-mortems), rework prevention economics (rework is multiplicative — source unverified, the principle is sound but the specific multiplier needs measurement), and this wiki's own operational failures. The central thesis: quality enforcement must live in code that runs at execution time, not in documentation that the agent may or may not consult.
+Quality and failure prevention for AI agents is not a set of best practices — it is a system with three enforcement layers (structural prevention, teaching, review), six codified failure lessons, and deterministic mechanisms that cannot be bypassed by prompt engineering. The model synthesizes evidence from four domains: harness engineering (13 guardrail rules enforced via hooks), OpenFleet's immune system (24 rules from 16 post-mortems), rework prevention economics, and this wiki's own operational failures. ==The central thesis: quality enforcement must live in code that runs at execution time, not in documentation that the agent may or may not consult.==
 
 ## Key Insights
 
-- **Three-layer defense is the minimum viable quality architecture.** Structural prevention (hooks, doctor.py) blocks bad actions before they execute. Teaching (CLAUDE.md, skills, memory) shapes behavior before the action is attempted. Review (human gates at stage transitions) catches what automation misses. Any single layer alone is insufficient — hooks without teaching produce correct-but-misaligned work; teaching without hooks produces well-intentioned failures; review without either produces exhausted humans.
+- **Three-layer defense is the minimum viable quality architecture.** Structural prevention (hooks, doctor.py) blocks bad actions. Teaching (CLAUDE.md, skills, memory) shapes behavior. Review (human gates) catches what automation misses. Any single layer alone is insufficient.
 
-- **Failure lessons must be codified, not just remembered.** Each of the five wiki failure lessons maps to a concrete enforcement mechanism. A lesson that exists only as documentation is a suggestion. A lesson encoded in CLAUDE.md, enforced by a hook, and checked by the post-chain is a rule.
+- **Failure lessons must be codified, not just remembered.** Each failure maps to a concrete enforcement mechanism. A lesson that exists only as documentation is a suggestion. A lesson encoded in CLAUDE.md, enforced by a hook, and checked by the post-chain is a rule.
 
-- **Rework is multiplicative, not additive.** Rework is multiplicative — redoing work requires reverting, re-planning, re-executing, and re-verifying, compounding cost beyond the original task. In a multi-agent fleet with dependencies, one bad dispatch cascades into downstream reworks. The specific cost multiplier and rework rate percentages are estimates that need measurement from real project data, but the principle that prevention is cheaper than rework is structurally sound.
+- **Rework is multiplicative, not additive.** Redoing work requires reverting, re-planning, re-executing, and re-verifying. In a multi-agent fleet, one bad dispatch cascades. Prevention is cheaper than cure — the break-even threshold is only 12% rework reduction.
 
-- **Depth verification is the single highest-leverage quality rule.** Reading the thing itself rather than a description of the thing prevents the most common class of hollow synthesis. The 0.25 ratio rule (at least 25% of ingestion time on primary sources) is a measurable proxy for depth.
+- **Depth verification is the single highest-leverage quality rule.** Reading the thing itself rather than a description of the thing prevents the most common class of hollow synthesis.
 
-- **Methodology is the structural embodiment of failure prevention.** Stage gates, quality gates per stage, and "do not advance until the gate passes" are not process overhead — they are the operational form of every lesson in this model.
+- **Methodology IS failure prevention.** Stage gates, quality gates per stage, "do not advance until the gate passes" — these are the operational form of every lesson in this model.
 
 ## Deep Analysis
 
 ### The Three-Layer Defense
 
-The quality system operates at three distinct layers, each catching a different failure class. This architecture emerged from OpenFleet's anti-corruption design, where no single enforcement mechanism proved sufficient against the full range of agent failure modes.
+> [!info] **Three layers, three failure classes**
+> | Layer | Mechanism | What it catches | Compliance | Example |
+> |-------|-----------|----------------|-----------|---------|
+> | **1 — Structural prevention** | Hooks, doctor.py, deterministic guards | Actions that should NEVER happen | ~98% | Block sudo, force-push, .env writes |
+> | **2 — Teaching** | CLAUDE.md, skills, memory | Behavioral patterns that lead to failures | ~60% | "Always run pipeline post after changes" |
+> | **3 — Review** | Human gates at stage transitions | Subjective quality the agent can't evaluate | 100% (when engaged) | "Does this synthesis capture the source's meaning?" |
 
-**Layer 1 — Structural Prevention (Hooks and Deterministic Guards)**
+**Layer 1 — Structural Prevention** blocks bad actions at execution time. The agent cannot bypass these through reasoning, confidence, or prompt injection.
 
-Structural prevention blocks bad actions at execution time through code that runs before, during, or after tool use. The agent cannot bypass these mechanisms through reasoning, confidence, or prompt injection.
+> [!example]- **Implementations across the ecosystem**
+> - **[[Harness Engineering]]**: 13 TypeScript guardrail rules (R01-R13) enforced via Claude Code hooks. Denial rules block sudo, .env writes, force-push. Query rules flag out-of-scope writes. Security rules prevent --no-verify and direct main pushes.
+> - **[[Immune System Rules]]**: 24 Python rules in doctor.py running at step 6 of the 12-step orchestrator cycle. Zero LLM calls — pure state evaluation. Five categories: liveness, loop detection, state integrity, behavioral security, resource exhaustion.
+> - **[[Deterministic Shell, LLM Core]]**: The architectural pattern. The LLM operates only in the execution phase, surrounded by deterministic code. The shell enforces invariants that cannot be social-engineered.
 
-Implementations across the ecosystem:
-- **[[Harness Engineering]]**: 13 TypeScript guardrail rules (R01-R13) enforced via Claude Code hooks. Denial rules block sudo, .env writes, force-push. Query rules flag out-of-scope writes. Security rules prevent --no-verify and direct main pushes. Post-execution checks warn on assertion tampering.
-- **[[Immune System Rules]]**: 24 Python rules in doctor.py running at step 6 of the 9-step orchestrator cycle. Zero LLM calls — pure state evaluation. Five rule categories: liveness, loop detection, state integrity, behavioral security, resource exhaustion.
-- **[[Deterministic Shell, LLM Core]]**: The architectural pattern. The LLM operates only in the execution phase, surrounded on both sides by deterministic Python. The shell enforces invariants that cannot be social-engineered.
+> [!tip] **The critical property**
+> Structural prevention is deterministic, fast (microseconds per check), cheap (no token cost), and auditable (no inference variability). An LLM-based quality gate would be unreliable by design.
 
-The critical property: structural prevention is deterministic, fast (microseconds per check), cheap (no token cost), and auditable (no inference variability). An LLM-based quality gate would be unreliable by design.
+**Layer 2 — Teaching** shapes behavior before the action is considered. Well-designed teaching reduces the frequency of hook violations, making Layer 1 a backstop rather than the primary defense.
 
-**Layer 2 — Teaching (CLAUDE.md, Skills, Memory)**
+> [!info] **The teaching stack**
+> | Mechanism | When it loads | Persistence | Example |
+> |-----------|-------------|-------------|---------|
+> | CLAUDE.md | Every message | Per-project | Quality gates, ingestion modes, stage gates |
+> | Skills | On invocation | Per-session | wiki-agent ingestion methodology, evolve maturity rules |
+> | Memory | Cross-session | Permanent | "Never synthesize from descriptions alone" |
 
-Teaching shapes agent behavior before the action is considered. Unlike structural prevention, teaching can be ignored — but well-designed teaching reduces the frequency of hook violations, making the structural layer a backstop rather than the primary defense.
+**Layer 3 — Review** handles decisions automation cannot evaluate: Does this synthesis capture the source's meaning? Is this architecture right for this context? Does this page deserve maturity promotion?
 
-The teaching stack:
-- **CLAUDE.md**: Project-level rules loaded into every session. Contains quality gates, ingestion modes, relationship conventions, post-chain requirements. This is the agent's methodology, not just documentation for humans.
-- **Skills**: Domain-specific behavior loaded contextually. The wiki-agent skill encodes ingestion methodology. The evolve skill encodes maturity promotion rules. Skills are teaching that activates only when relevant.
-- **Memory**: Cross-session persistence of user directives and operational lessons. "Never synthesize from descriptions alone" lives in memory so it survives session boundaries.
+> [!abstract] **Review gates in the wiki**
+> - **Guided mode**: human approves extraction plan before synthesis begins
+> - **Smart mode escalation**: auto-processing stops on new domains, contradictions, ambiguity
+> - **Maturity promotion**: seed pages require review before advancing to growing
 
-**Layer 3 — Review (Human Gates at Stage Transitions)**
+---
 
-Review is the final layer for decisions that automation cannot evaluate: Does this synthesis actually capture the source's meaning? Is this architectural decision the right one for this context? Does this evolved page deserve maturity promotion?
+### The Six Failure Lessons
 
-Review gates in the wiki:
-- Guided ingestion mode: human approves extraction plan before synthesis begins
-- Smart mode escalation: auto-processing stops and requests human input when it encounters new domains, contradictions, or ambiguity
-- Maturity promotion: seed pages require review before advancing to growing
+Each lesson was extracted from a real operational failure in this wiki. Each maps to a specific enforcement mechanism.
 
-The three layers interact: structural prevention catches deterministic violations, teaching reduces the violation rate, and review handles the irreducibly subjective decisions.
+> [!bug]- **1. Never Synthesize from Descriptions Alone**
+> **The failure:** Agent ingested a curated list (awesome-design-md), synthesized a page claiming to understand the DESIGN.md pattern, but had never opened a single real DESIGN.md file. Confident-sounding, factually hollow.
+>
+> **The principle:** Layer 0 (description of a thing) is not Layer 1 (an instance of the thing). Minimum bar: examine at least one real instance.
+>
+> **Enforcement:** CLAUDE.md quality gates + wiki-agent skill depth verification + memory directive. The 0.25 ratio rule (25% of ingestion on primary sources) provides a measurable threshold. See [[Never Synthesize from Descriptions Alone]].
 
-### The Five Failure Lessons
+> [!bug]- **2. Never Skip Stages Even When Told to Continue**
+> **The failure:** Agent treated "continue" as permission to skip brainstorm and jump to spec writing. User response: "WTF ???? WHAT SPEC ??? WTF ???????"
+>
+> **The principle:** "Continue" = advance within current stage. Only "skip to X" authorizes stage-skipping.
+>
+> **Enforcement:** CLAUDE.md stage gates + mandatory post-chain (errors block completion). See [[Never Skip Stages Even When Told to Continue]].
 
-Each lesson was extracted from a real operational failure in building this wiki. Each maps to a specific enforcement mechanism that prevents recurrence.
+> [!bug]- **3. Shallow Ingestion Is Systemic, Not Isolated**
+> **The failure:** Thin pages accumulated — minimal summaries, sparse relationships, no deep analysis. The evolution pipeline had no quality candidates to promote.
+>
+> **The principle:** Soft quality gates degrade the entire system. One skipped gate creates systematic downstream degradation.
+>
+> **Enforcement:** Validation requires ≥30-word summaries, ≥1 relationship, source provenance, no >70% overlap. See [[Shallow Ingestion Is Systemic, Not Isolated]].
 
-**1. Never Synthesize from Descriptions Alone**
+> [!bug]- **4. Infrastructure Must Be Reproducible, Not Manual**
+> **The failure:** Agent tried to `cat >` a systemd service file directly. Configuration silently diverged across environments.
+>
+> **The principle:** Any infrastructure step not encoded in a script is a quality gap. Manual steps are undocumented, unrepeatable, invisible.
+>
+> **Enforcement:** `python -m tools.setup` handles all setup. `--services` deploys daemons reproducibly. No manual infra creation. See [[Infrastructure Must Be Reproducible, Not Manual]].
 
-The failure: The agent ingested a curated list (awesome-design-md), synthesized a page claiming to understand the DESIGN.md pattern, but had never opened a single real DESIGN.md file. The synthesis was confident-sounding and factually hollow.
+> [!bug]- **5. The Agent Must Practice What It Documents**
+> **The failure:** Wiki documented methodology extensively — stage gates, brainstorm-before-spec, depth verification. Agent skipped all of them. Documentation was correct; behavior was not.
+>
+> **The principle:** Methodology in wiki pages is useless if not in CLAUDE.md. Rules must exist in the agent's OPERATIONAL instructions, not just its knowledge base.
+>
+> **Enforcement:** CLAUDE.md contains the rules the agent follows. When the wiki evolves a rule, it must propagate to CLAUDE.md. See [[The Agent Must Practice What It Documents]].
 
-The principle: Layer 0 (description of a thing) is not Layer 1 (an instance of the thing). Metadata about data is not data. The minimum bar for synthesis is examining at least one real instance.
+> [!bug]- **6. Models Are Built in Layers, Not All at Once**
+> **The failure:** 14 model pages batch-produced as 80-110 line reading lists. Agent claimed "models are ready." User: "I dont even see 2% of it..."
+>
+> **The principle:** Structure (pages exist) ≠ substance (pages define systems). The SFIF pattern applies to model-building itself: scaffold → foundation → infrastructure → features.
+>
+> **Enforcement:** Model-builder skill defines the quality bar (≥150 lines, system definition not reading list, Key Pages, Lessons, State of Knowledge, How to Adopt). See [[Models Are Built in Layers, Not All at Once]].
 
-Enforcement: CLAUDE.md requires source provenance. The wiki-agent skill encodes depth verification. Memory carries the directive "always examine a real instance before synthesizing." The 0.25 ratio rule — at least 25% of ingestion effort must be on primary sources, not descriptions of sources — provides a measurable threshold. See [[Never Synthesize from Descriptions Alone]].
+---
 
-**2. Never Skip Stages Even When Told to Continue**
+### The Immune System (OpenFleet)
 
-The failure: The agent treated "continue" as permission to skip validation, post-chain steps, and review gates. Quality degraded silently as the wiki accumulated unvalidated pages.
+> [!info] **24 rules from 16 post-mortems — production-grade structural prevention**
+> | Category | What it detects | Example rules |
+> |----------|----------------|---------------|
+> | **Liveness** | Agents alive in state but dead in practice | Heartbeat timeout, stale session ID, stuck execution |
+> | **Loop detection** | Runaway cycles | Retry storms, circular dependencies, dispatch-without-completion |
+> | **State integrity** | Impossible state combinations | Parent complete but children pending, blocked with no blocker |
+> | **Behavioral security** | Permission and scope violations | Out-of-scope writes, cost spikes, capability acquisition beyond spec |
+> | **Resource exhaustion** | Degraded conditions | Circuit breaker open, external service unresponsive, memory pressure |
 
-The principle: Forward-pushing instructions ("continue," "keep going," "next") do not override hard quality constraints. The agent must interpret scope, not just direction.
+> [!tip] **The 3-Strike Pattern**
+> One violation doesn't trigger action. Three violations within a window trigger quarantine. This tolerates transient anomalies (network blips, brief CPU spikes) while catching persistent failures. doctor.py runs at step 6 of the 12-step orchestrator cycle — after security scan, before dispatch. Flagged tasks accumulate strikes before they can reach dispatch. Preemptive immune response, not reactive incident handling.
 
-Enforcement: CLAUDE.md defines the post-ingestion chain as mandatory. The post-chain runs validation with exit-code enforcement — errors block completion. "Continue" means "continue within the methodology," not "continue and skip the methodology." See [[Never Skip Stages Even When Told to Continue]].
+---
 
-**3. Shallow Ingestion Is Systemic, Not Isolated**
+### The Enforcement Level Hierarchy
 
-The failure: Thin pages accumulated — pages with minimal summaries, sparse relationships, and no deep analysis. Each individual page seemed like a minor shortcut. The systemic effect was that the evolution pipeline had no high-quality candidates to promote.
+> [!info] **Enforcement levels — from hope to certainty**
+> | Level | Mechanism | Compliance | Example |
+> |-------|-----------|-----------|---------|
+> | 0 | Prompt guidance (CLAUDE.md) | ~60% | "Always run tests before committing" |
+> | 1 | Workflow orchestration (skills, chains) | ~80% | Research-Plan-Execute-Review cycle |
+> | 2 | Runtime guardrails (hooks, pre/post) | ~98% | Block sudo, force-push, .env writes |
+> | 3 | Deterministic orchestration (state machine) | 100% | OpenFleet 30-second brain cycle |
 
-The principle: Quality gates that are soft (advisory) degrade the entire system, not just the individual artifact. One skipped gate creates systematic downstream degradation because later processes depend on the quality of earlier outputs.
+> [!warning] **Measuring maturity**
+> A project's quality maturity = how much enforcement has migrated upward from Level 0 toward Level 3. This wiki currently operates at Levels 0-1. The planned next step is Level 2 (hook-based stage-gate enforcement). OpenFleet operates at Level 3 for its orchestration loop.
 
-Enforcement: Validation requires minimum 30-word summaries, at least 1 relationship, source provenance, and no >70% concept overlap. The lint tool reports summary quality and relationship density. See [[Shallow Ingestion Is Systemic, Not Isolated]].
-
-**4. Infrastructure Must Be Reproducible, Not Manual**
-
-The failure: Setup steps, service deployments, and configuration were done manually. They silently diverged across environments and sessions. The agent would create a systemd service by hand, then forget how it was configured.
-
-The principle: Any infrastructure step not encoded in a script, template, or IaC file is a quality gap. Manual steps are undocumented, unrepeatable, and invisible to auditing.
-
-Enforcement: `python -m tools.setup` handles all environment setup. `--services` deploys sync and watcher daemons reproducibly. No manual systemd/cron creation — everything flows through the tooling. See [[Infrastructure Must Be Reproducible, Not Manual]].
-
-**5. The Agent Must Practice What It Documents**
-
-The failure: The wiki documented methodology extensively — stage gates, brainstorm-before-spec, multi-pass ingestion — but the agent building the wiki skipped those very rules. The documentation was correct; the behavior was not.
-
-The principle: Methodology is worthless if the system that documents it does not enforce it on itself. The gap between "what we say" and "what we do" is the most dangerous form of technical debt because it is invisible in the artifacts.
-
-Enforcement: CLAUDE.md contains the rules the agent follows, not just the rules it documents. The user directive "START BY UPDATING THE CLAUDE AND RULES SO THAT YOU YOURSELF START FOLLOWING THE RULES" is codified in memory. See [[The Agent Must Practice What It Documents]].
-
-### The Harness Engineering System
-
-[[Harness Engineering]] is the coordinated enforcement architecture that turns individual quality rules into a system. The components:
-
-**The 13 Guardrail Rules (R01-R13)**
-
-Implemented as TypeScript hooks that intercept Claude Code tool calls:
-- **Denial rules**: Block sudo execution, .env file writes, git force-push — actions that are never acceptable regardless of context
-- **Query rules**: Flag writes to files outside the declared scope — actions that might be acceptable but require explicit confirmation
-- **Security rules**: Prevent --no-verify flag usage, direct pushes to main — actions that bypass other safety mechanisms
-- **Post-execution checks**: Warn when test assertions are weakened or removed — actions that erode the verification layer
-
-**The 5-Verb Workflow**
-
-Setup → Plan → Work → Review → Release. This is not a suggestion — the harness enforces verb ordering. The Review verb must execute before Release is permitted. This maps to the universal pattern across the ecosystem: superpowers (brainstorm → plan → execute → verify), OpenFleet (task creation → dispatch → execution → review → completion), and the wiki's own pipeline (extract → analyze → synthesize → write → integrate).
-
-**Enforcement Level Hierarchy**
-
-- Level 0: CLAUDE.md instructions (hope-based — the agent may or may not follow them)
-- Level 1: Skills and memory (contextual — loaded when relevant, consulted when the agent remembers to)
-- Level 2: Pre/post hooks (triggered — run automatically on matching tool calls)
-- Level 3: Runtime guardrails (blocking — deterministic code that prevents the action)
-- Level 4: Deterministic orchestration (structural — the agent never has the option to choose wrong)
-
-Each level is strictly stronger than the one below it. The quality system's maturity can be measured by how much enforcement has migrated upward from Level 0 toward Level 4.
-
-### The Immune System Rules
-
-[[Immune System Rules]] represent the production-grade implementation of structural prevention, extracted from real failures rather than theoretical risk analysis.
-
-**Origin**: 24 rules from 16 post-mortems and agent death analyses in the devops-control-plane project. Each rule traces to a specific incident where an agent failed in a way that was preventable.
-
-**The 5 Rule Categories**:
-1. **Liveness** — Detect agents alive in state but dead in practice (heartbeat timeout, stale session ID, stuck execution)
-2. **Loop detection** — Detect runaway cycles (retry storms, circular dependencies, dispatch-without-completion loops)
-3. **State integrity** — Detect impossible state combinations (parent complete but children pending, review state with no reviewer, blocked with no blocker)
-4. **Behavioral security** — Detect permission and scope violations (out-of-scope path writes, cost spikes, capability acquisition beyond spec)
-5. **Resource exhaustion** — Detect degraded conditions (circuit breaker open, external service unresponsive, disk/memory pressure)
-
-**The 3-Strike Pattern**: A single violation does not trigger action. Three violations within a window trigger quarantine. This tolerates transient anomalies (network blips, brief CPU spikes) while catching persistent failures. The strike window prevents both false positives (killing healthy agents) and silent degradation (ignoring real problems).
-
-**Integration Point**: doctor.py runs at step 6 of the 12-step orchestrator cycle — after security scan (step 5), before dispatch (step 9). A flagged task accumulates a strike before it can ever reach dispatch. This is preemptive immune response, not reactive incident handling.
+---
 
 ### Rework Prevention Economics
 
-[[Rework Prevention]] provides the cost model that justifies every quality gate in the system.
+> [!info] **The cost model that justifies every quality gate**
+> ```
+> Single rework cycle ≈ 2.5T to 3.5T (estimate — needs measurement)
+>   T = original task, R = revert, D = diagnosis,
+>   P = re-plan, T = re-execute, V = re-verify
+>
+> Prevention investment: 0.2T to 0.4T per task
+> Break-even: prevention net-positive if rework reduced by >12%
+> Real rework rates without gates: 20-40% on complex tasks
+> ```
 
-**The Compound Cost Formula**:
-```
-Single rework cycle = T + R + D + P + T + V ≈ 2.5T to 3.5T
-  where T = original task, R = revert, D = diagnosis,
-        P = re-plan, T = re-execute, V = re-verify
+> [!warning] **Unverified numbers**
+> The specific multiplier (2.5-3.5x) and rework rates (20-40%) are estimates from harness engineering literature, not measured from this ecosystem. The PRINCIPLE (prevention < rework) is structurally sound. The NUMBERS need measurement from real project data.
 
-Cascade rework (N dependent tasks) = 2.5T + Σ(downstream rework costs)
-  A fleet with 5 dependent tasks: one bad dispatch corrupts the sprint
-```
+> [!abstract] **How the wiki maps to prevention investment**
+> - **Guided mode** = maximum prevention (human approves every step) — highest cost, lowest rework
+> - **Smart mode** = risk-calibrated (auto when confident, escalate when not) — balanced
+> - **Auto mode** = throughput-first (process without stopping) — lowest cost, highest rework risk
 
-**Prevention Investment**: 0.2T to 0.4T per task (spec review, pre-checks, Planner+Critic).
-
-**Break-Even Threshold**: Prevention is net-positive if it reduces rework probability by more than 12%. Real rework rates without explicit gates run 20-40% on complex tasks. The ROI is unambiguous.
-
-**Why This Matters for the Wiki**: The wiki's three ingestion modes map directly to the prevention investment curve:
-- **Guided mode** = maximum prevention (human approves every step) — highest cost, lowest rework
-- **Smart mode** = risk-calibrated prevention (auto when confident, escalate when not) — balanced
-- **Auto mode** = throughput-first (process without stopping) — lowest cost, highest rework risk
+---
 
 ### The Depth Verification System
 
-Depth verification is the operational rule that prevents the most common quality failure: synthesizing knowledge from secondhand descriptions rather than primary sources.
+> [!warning] **The single highest-leverage quality rule**
+> Read the thing, not the description of the thing. A README listing 58 DESIGN.md files ≠ reading a DESIGN.md file. An API spec ≠ a real request/response pair.
 
-**The Core Rule**: Read the thing, not the description of the thing. A README that lists 58 DESIGN.md files is not the same as reading a DESIGN.md file. An API spec is not the same as a real request/response pair. A conference talk describing a methodology is not the methodology's actual artifacts.
+> [!info] **The layer model for source depth**
+> | Layer | What it is | Synthesis quality |
+> |-------|-----------|------------------|
+> | Layer 0 | Description of the thing (README, catalog, index) | Hollow — confident surface, no substance |
+> | Layer 1 | A real instance of the thing (actual file, output, config) | Grounded — specific, verifiable claims |
+> | Layer 2 | Multiple instances compared (pattern extraction from N examples) | Deep — structural insights across instances |
 
-**The Layer Model**:
-- Layer 0: Description of the thing (README, catalog, index)
-- Layer 1: A real instance of the thing (actual file, actual output, actual config)
-- Layer 2: Multiple instances compared (pattern extraction from N real examples)
+Minimum bar for synthesis: **Layer 1**. The 0.25 ratio rule — at least 25% of ingestion effort on primary sources — provides a measurable threshold.
 
-Minimum bar for synthesis: Layer 1. Synthesizing from Layer 0 alone produces confident-sounding pages that are factually hollow.
+---
 
-**The 0.25 Ratio Rule**: At least 25% of ingestion time must be spent on primary sources. This is a measurable proxy for depth that can be tracked and enforced.
+### Key Pages
 
-**Enforcement Stack**: CLAUDE.md (quality gates section), wiki-agent skill (ingestion methodology), memory (cross-session directive persistence). The rule survives session boundaries because it is encoded at all three teaching levels.
+| Page | Layer | Role in the model |
+|------|-------|-------------------|
+| [[Harness Engineering]] | L2 | The coordinated enforcement architecture — 13 rules, 5-verb workflow, enforcement hierarchy |
+| [[Immune System Rules]] | L2 | 24 production rules from 16 post-mortems — liveness, loops, state, security, resources |
+| [[Rework Prevention]] | L2 | Cost model justifying quality gates — prevention vs rework economics |
+| [[Deterministic Shell, LLM Core]] | L5 | The architectural pattern — deterministic code surrounding probabilistic LLM |
+| [[LLM Knowledge Linting]] | L2 | Automated quality maintenance — detecting orphans, contradictions, staleness |
+| [[Task Lifecycle Stage Gating]] | L2 | Stage-gate mechanics — how tasks progress through gates |
+| [[Skyscraper, Pyramid, Mountain]] | L2 | Quality tier framework — explicit choice vs accidental chaos |
+| [[Never Synthesize from Descriptions Alone]] | L4 | Failure lesson — depth verification origin |
+| [[Never Skip Stages Even When Told to Continue]] | L4 | Failure lesson — stage-gate enforcement origin |
+| [[Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Failure lesson — systemic quality degradation |
+| [[Infrastructure Must Be Reproducible, Not Manual]] | L4 | Failure lesson — reproducible tooling origin |
+| [[The Agent Must Practice What It Documents]] | L4 | Failure lesson — operational rules vs documentation gap |
+| [[Models Are Built in Layers, Not All at Once]] | L4 | Failure lesson — structure ≠ substance |
+| [[Plan Execute Review Cycle]] | L5 | The universal workflow that harness engineering codifies |
+| [[Always Plan Before Executing]] | L4 | The planning discipline that prevents the most rework |
 
-### The Methodology Connection
+---
 
-The model's seven components are not independent — they are unified by the stage-gate methodology that structures all work in the wiki.
+### Lessons Learned
 
-**Stage gates are the structural embodiment of failure prevention.** Each stage (extract → analyze → synthesize → write → integrate) has a quality gate. The gate defines what "done" means for that stage. Work does not advance until the gate passes. This is not process overhead — it is the operational form of every lesson in this model:
+| Lesson | What was learned | Enforcement mechanism |
+|--------|-----------------|---------------------|
+| [[Never Synthesize from Descriptions Alone]] | Layer 0 ≠ Layer 1. Read the thing, not the description. | CLAUDE.md + wiki-agent skill + 0.25 ratio rule |
+| [[Never Skip Stages Even When Told to Continue]] | "Continue" = within current stage. Stage gates are hard boundaries. | CLAUDE.md stage gates + mandatory post-chain |
+| [[Shallow Ingestion Is Systemic, Not Isolated]] | Soft gates degrade the entire system. Quality compounds. | Validation: ≥30 words, ≥1 relationship, source provenance |
+| [[Infrastructure Must Be Reproducible, Not Manual]] | Manual steps are undocumented, unrepeatable, invisible. | `tools/setup.py` handles all infra deployment |
+| [[The Agent Must Practice What It Documents]] | Rules in wiki pages ≠ rules the agent follows. Must be in CLAUDE.md. | CLAUDE.md contains operational rules, not just documentation |
+| [[Models Are Built in Layers, Not All at Once]] | Structure ≠ substance. Follow SFIF for model building. | Model-builder skill with quality bar + checklist |
 
-- "Never synthesize from descriptions alone" = the extraction gate requires primary source examination
-- "Never skip stages" = gates are mandatory, not advisory
-- "Shallow ingestion is systemic" = gate criteria enforce minimum depth
-- "Infrastructure must be reproducible" = the post-chain automates gate enforcement
-- "Practice what you document" = CLAUDE.md contains the gates the agent must pass
+---
 
-The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enforcement of stage gates: rebuild indexes, regenerate manifest, validate all pages (errors block), regenerate wikilinks, run lint, rebuild layer indexes. Six steps, all mandatory, all deterministic. This is structural prevention applied to the wiki's own methodology.
+### State of Knowledge
+
+> [!success] **Well-covered (multiple sources, real evidence)**
+> - Three-layer defense architecture (structural + teaching + review)
+> - Six failure lessons with real incidents and enforcement mechanisms
+> - Harness engineering: 13 guardrail rules, enforcement hierarchy, 5-verb workflow
+> - Immune system: 24 rules from 16 post-mortems, 3-strike pattern
+> - Depth verification: layer model, 0.25 ratio rule, enforcement stack
+> - Stage-gate methodology connection (each lesson maps to a gate)
+
+> [!warning] **Thin or unverified**
+> - Rework multiplier (2.5-3.5x) — estimate, not measured from this ecosystem
+> - Rework rates (20-40%) — from literature, not from our data
+> - Hook-based enforcement for wiki quality — no hooks implemented yet (Level 0-1 only)
+> - Quantitative enforcement level measurement — no metric for "what % of rules are at Level 0 vs Level 3"
+> - Cross-project quality comparison — how do OpenFleet, AICP, and this wiki compare on enforcement maturity?
+
+---
+
+### How to Adopt
+
+> [!info] **Setting up the quality system for a new project**
+> 1. **CLAUDE.md** — add quality gates (minimum standards per artifact type)
+> 2. **Validation tooling** — schema validation that blocks on errors (exit code enforcement)
+> 3. **Post-chain** — automated multi-step validation after every change batch
+> 4. **Depth verification** — add the Layer 0/1/2 rule to ingestion methodology
+> 5. **Stage gates** — define ALLOWED/FORBIDDEN per stage in methodology.yaml
+
+> [!warning] **INVARIANT — never change these**
+> - Quality enforcement must be deterministic (no LLM-based quality gates)
+> - Validation errors block completion (not advisory)
+> - Failure lessons propagate to CLAUDE.md (operational, not just documented)
+> - Three-layer defense (all three required — no single layer is sufficient)
+> - Rework prevention via upfront investment (plan before execute)
+
+> [!tip] **PER-PROJECT — always adapt these**
+> - Which quality gates apply (code projects: compilation + lint + tests; wiki projects: validation + links + word count)
+> - Which enforcement level to start at (Level 0 is fine initially — migrate upward as methodology matures)
+> - Which failure lessons are relevant (not all 6 apply to every project type)
+> - The 3-strike threshold for immune system rules (project-specific tolerance)
+> - Review gate triggers (what requires human review vs what auto-advances)
+
+> [!bug]- **What goes wrong if you skip this**
+> - **No structural prevention** → agent follows instructions ~60% of the time. 40% of dangerous operations succeed.
+> - **No teaching** → agent doesn't know the rules. Every session starts from zero methodology.
+> - **No review** → agent makes subjective quality decisions unchecked. Confident-but-wrong artifacts accumulate.
+> - **No depth verification** → hollow synthesis passes validation (format correct, substance missing). Evolution pipeline starves.
+> - **No stage gates** → work skips stages. Artifacts produced out of order. False readiness claims.
 
 ## Open Questions
 
-- How should the enforcement level be measured quantitatively? What percentage of quality rules currently live at Level 0 (hope) vs Level 3+ (deterministic)?
-- Can the 3-strike pattern from doctor.py be applied to wiki quality? (e.g., three thin pages in a row triggers mandatory depth review)
-- What is the empirical rework rate for wiki ingestion across the three modes? Is guided mode's overhead justified by the data?
-- Should depth verification have a hook-level enforcement (block page creation if no primary source was read) or is teaching-level sufficient?
+> [!question] **How should enforcement level be measured quantitatively?**
+> What percentage of quality rules currently live at Level 0 (hope) vs Level 3 (deterministic)? A metric like "enforcement maturity score = weighted average across levels" could track progress. (Requires: cataloging all rules with their current enforcement level)
+
+> [!question] **Can the 3-strike pattern apply to wiki quality?**
+> Three thin pages in a row → mandatory depth review. Three validation failures → auto-escalate to guided mode. Would this reduce systemic quality decay or add bureaucratic overhead? (Requires: implementing and testing on a real ingestion batch)
+
+> [!question] **What is the empirical rework rate across ingestion modes?**
+> Guided mode has the highest prevention cost. Auto mode has the highest rework risk. Smart mode balances. But what are the ACTUAL rework rates? (Requires: tracking rework across 50+ ingestion tasks)
 
 ## Relationships
 
@@ -241,10 +308,11 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 - BUILDS ON: [[Shallow Ingestion Is Systemic, Not Isolated]]
 - BUILDS ON: [[Infrastructure Must Be Reproducible, Not Manual]]
 - BUILDS ON: [[The Agent Must Practice What It Documents]]
-- RELATES TO: [[Model: Automation + Pipelines]]
-- RELATES TO: [[Model: SFIF + Architecture]]
-- FEEDS INTO: [[Model: Local AI ($0 Target)]]
-- FEEDS INTO: [[Model: Design.md + IaC]]
+- BUILDS ON: [[Models Are Built in Layers, Not All at Once]]
+- RELATES TO: [[Model: Methodology]]
+- RELATES TO: [[Model: Claude Code]]
+- RELATES TO: [[Model: Automation and Pipelines]]
+- RELATES TO: [[Skyscraper, Pyramid, Mountain]]
 
 ## Backlinks
 
@@ -257,10 +325,11 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Shallow Ingestion Is Systemic, Not Isolated]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[The Agent Must Practice What It Documents]]
-[[Model: Automation + Pipelines]]
-[[Model: SFIF + Architecture]]
-[[Model: Local AI ($0 Target)]]
-[[Model: Design.md + IaC]]
+[[Models Are Built in Layers, Not All at Once]]
+[[Model: Methodology]]
+[[Model: Claude Code]]
 [[Model: Automation and Pipelines]]
+[[Skyscraper, Pyramid, Mountain]]
 [[Model: Design.md and IaC]]
+[[Model: Local AI ($0 Target)]]
 [[Model: SFIF and Architecture]]

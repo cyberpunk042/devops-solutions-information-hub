@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-10T03:44:12.972927+00:00",
+  "generated": "2026-04-10T03:56:18.495454+00:00",
   "stats": {
     "pages": 170,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1169,
+    "relationships": 1170,
     "tags_unique": 635,
     "layers": {
       "3": 5,
@@ -11053,20 +11053,24 @@
           "target": "The Agent Must Practice What It Documents"
         },
         {
-          "verb": "RELATES TO",
-          "target": "Model: Automation + Pipelines"
+          "verb": "BUILDS ON",
+          "target": "Models Are Built in Layers, Not All at Once"
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: SFIF + Architecture"
+          "target": "Model: Methodology"
         },
         {
-          "verb": "FEEDS INTO",
-          "target": "Model: Local AI ($0 Target)"
+          "verb": "RELATES TO",
+          "target": "Model: Claude Code"
         },
         {
-          "verb": "FEEDS INTO",
-          "target": "Model: Design.md + IaC"
+          "verb": "RELATES TO",
+          "target": "Model: Automation and Pipelines"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Skyscraper, Pyramid, Mountain"
         }
       ]
     },
@@ -11514,7 +11518,7 @@
     },
     "cross-domain": {
       "page_count": 46,
-      "relationship_count": 351
+      "relationship_count": 352
     },
     "ai-agents": {
       "page_count": 34,
@@ -14340,30 +14344,11 @@
       ]
     },
     {
-      "target": "Model: Automation + Pipelines",
-      "referenced_by": [
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
-      "target": "Model: Design.md + IaC",
-      "referenced_by": [
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
       "target": "Model: Local AI",
       "referenced_by": [
         "Model: Automation and Pipelines",
         "Model: NotebookLM",
-        "Model: Quality and Failure Prevention",
         "Model: SFIF and Architecture"
-      ]
-    },
-    {
-      "target": "Model: SFIF + Architecture",
-      "referenced_by": [
-        "Model: Quality and Failure Prevention"
       ]
     },
     {
