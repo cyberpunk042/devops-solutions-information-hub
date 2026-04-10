@@ -28,8 +28,8 @@ There are distinct documentation layers that must not be conflated: wiki knowled
 
 1. **Wiki knowledge** (wiki/) — synthesized, structured, evolving knowledge with frontmatter and relationships. The second brain's core.
 2. **Public docs** (docs/) — user-facing documentation, READMEs, guides. For humans consuming the project.
-3. **Code docs** — inline comments, JSDoc/docstrings, parameter annotations, function headers. Lives IN the source code.
-4. **Smart docs** — documentation files distributed throughout src/ that explain subsystems alongside the code they document. Like devops-control-plane's docs/ scattered in code directories.
+3. **Code docs** — documentation throughout the code and inline comments, JSDoc/docstrings, parameter annotations, function headers. Lives IN the source code.
+4. **Smart docs** — documentation overlay of files distributed throughout src/ that explain subsystems alongside the code they document. Basically the aggregation of the Code docs.
 5. **Specs and plans** (docs/superpowers/) — execution track artifacts. Temporary by nature — they serve the build process, not the knowledge base.
 
 These are DIFFERENT layers. An agent must not:
