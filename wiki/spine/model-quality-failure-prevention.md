@@ -202,6 +202,39 @@ Minimum bar for synthesis: **Layer 1**. The 0.25 ratio rule — at least 25% of 
 
 ---
 
+### How the Three Layers Interact
+
+The layers are not independent — they form a defense-in-depth system where each layer reduces the load on the others.
+
+> [!abstract] **The interaction model**
+> **Teaching reduces the violation rate** — a well-taught agent (CLAUDE.md + skills + memory) attempts fewer dangerous operations, making structural prevention a backstop instead of the primary defense.
+>
+> **Structural prevention catches what teaching misses** — ~40% of the time, the agent ignores or forgets instructions. Hooks block the operation before it completes. The agent learns nothing from the block (it just fails), but damage is prevented.
+>
+> **Review handles the irreducibly subjective** — "Does this synthesis capture the source's meaning?" is not a question code can answer. Review gates exist for decisions that require human judgment, not for decisions that could be automated.
+>
+> **The failure mode is relying on ONE layer.** Hooks without teaching → correct-but-misaligned work (the agent does safe things but not the RIGHT things). Teaching without hooks → well-intentioned failures (the agent knows the rules but doesn't always follow them). Review without either → exhausted humans catching everything manually.
+
+---
+
+### The Methodology Connection
+
+==Stage gates are the structural embodiment of failure prevention.== Each stage has a quality gate. Work does not advance until the gate passes. This is not process overhead — it is the operational form of every lesson in this model:
+
+> [!info] **Each lesson maps to a stage gate**
+> | Lesson | Stage gate it maps to |
+> |--------|----------------------|
+> | "Never synthesize from descriptions alone" | Extraction gate requires primary source examination (Layer 1+) |
+> | "Never skip stages" | Gates are mandatory, not advisory — errors block advancement |
+> | "Shallow ingestion is systemic" | Gate criteria enforce minimum depth (≥30 words, ≥1 relationship) |
+> | "Infrastructure must be reproducible" | Post-chain automates gate enforcement (`pipeline post` = 6 deterministic steps) |
+> | "Practice what you document" | CLAUDE.md contains the gates the agent must pass (operational, not aspirational) |
+> | "Models built in layers" | Model-builder skill quality bar IS the gate for model creation |
+
+The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enforcement: rebuild indexes → regenerate manifest → validate all pages (errors block) → regenerate wikilinks → run lint → rebuild layer indexes. Six steps, all mandatory, all deterministic. This is structural prevention applied to the wiki's own methodology.
+
+---
+
 ### Key Pages
 
 | Page | Layer | Role in the model |
@@ -221,6 +254,8 @@ Minimum bar for synthesis: **Layer 1**. The 0.25 ratio rule — at least 25% of 
 | [[Models Are Built in Layers, Not All at Once]] | L4 | Failure lesson — structure ≠ substance |
 | [[Plan Execute Review Cycle]] | L5 | The universal workflow that harness engineering codifies |
 | [[Always Plan Before Executing]] | L4 | The planning discipline that prevents the most rework |
+| [[Claude Code Best Practices]] | L2 | Teaching layer content — planning discipline, context hygiene, skill architecture |
+| [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | L4 | Why automated linting prevents the most common quality failure mode |
 
 ---
 
