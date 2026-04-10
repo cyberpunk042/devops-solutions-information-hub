@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-10T21:10:42.646849+00:00",
+  "generated": "2026-04-10T21:13:50.374664+00:00",
   "stats": {
-    "pages": 179,
+    "pages": 181,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1209,
-    "tags_unique": 660,
+    "relationships": 1217,
+    "tags_unique": 665,
     "layers": {
       "3": 5,
       "6": 10,
       "2": 51,
-      "4": 26,
+      "4": 28,
       "5": 6,
       "1": 24,
       "spine": 31
     },
     "maturity": {
       "growing": 133,
-      "seed": 21
+      "seed": 23
     }
   },
   "pages": [
@@ -7248,6 +7248,58 @@
       ]
     },
     {
+      "path": "lessons/standards-must-preach-by-example.md",
+      "slug": "lessons/standards-must-preach-by-example",
+      "title": "Standards Must Preach by Example",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "lesson",
+        "standards",
+        "self-referential",
+        "quality",
+        "integrity",
+        "example"
+      ],
+      "sources": [
+        {
+          "id": "directive-preach-by-example",
+          "type": "log",
+          "file": "wiki/log/2026-04-09-directive-record-process-skills-supermodel.md",
+          "title": "Record the Process \u2014 Skills, Super-Model, Preach by Example",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "The Agent Must Practice What It Documents",
+        "Wiki Design Standards \u2014 What Good Styling Looks Like"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Design Standards \u2014 What Good Styling Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Quality and Failure Prevention"
+        }
+      ]
+    },
+    {
       "path": "lessons/systemic-incompleteness-is-invisible-to-validation.md",
       "slug": "lessons/systemic-incompleteness-is-invisible-to-validation",
       "title": "Systemic Incompleteness Is Invisible to Validation",
@@ -7370,6 +7422,58 @@
         {
           "verb": "BUILDS ON",
           "target": "Knowledge Evolution Pipeline"
+        }
+      ]
+    },
+    {
+      "path": "lessons/the-wiki-is-a-hub-not-a-silo.md",
+      "slug": "lessons/the-wiki-is-a-hub-not-a-silo",
+      "title": "The Wiki Is a Hub, Not a Silo",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "lesson",
+        "hub",
+        "ecosystem",
+        "aggregation",
+        "cross-project",
+        "knowledge-flow"
+      ],
+      "sources": [
+        {
+          "id": "directive-hub-mindset",
+          "type": "log",
+          "file": "wiki/log/2026-04-09-directive-quality-models-hub-mindset.md",
+          "title": "Quality Models \u2014 Hub Mindset \u2014 OpenArms Methodology Learnings",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Four-Project Ecosystem",
+        "Model: Ecosystem Architecture"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Knowledge Evolution Pipeline"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Research Pipeline Orchestration"
         }
       ]
     },
@@ -12079,8 +12183,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 49,
-      "relationship_count": 375
+      "page_count": 51,
+      "relationship_count": 383
     },
     "devops": {
       "page_count": 13,
@@ -12149,6 +12253,7 @@
       "backlog/epics/E002-ecosystem-integration",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/the-wiki-is-a-hub-not-a-silo",
       "spine/adoption-guide",
       "spine/model-ecosystem"
     ],
@@ -13401,6 +13506,7 @@
       "lessons/never-skip-stages-even-when-told-to-continue",
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/standards-must-preach-by-example",
       "lessons/systemic-incompleteness-is-invisible-to-validation",
       "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-model-quality-links-schema",
@@ -14111,7 +14217,8 @@
       "lessons/knowledge-systems-is-foundational-domain"
     ],
     "self-referential": [
-      "lessons/knowledge-systems-is-foundational-domain"
+      "lessons/knowledge-systems-is-foundational-domain",
+      "lessons/standards-must-preach-by-example"
     ],
     "static-docs": [
       "lessons/llm-maintained-wikis-outperform-static-documentation"
@@ -14130,7 +14237,9 @@
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline"
     ],
     "lesson": [
-      "lessons/models-are-built-in-layers-not-all-at-once"
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "lessons/standards-must-preach-by-example",
+      "lessons/the-wiki-is-a-hub-not-a-silo"
     ],
     "models": [
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -14165,6 +14274,7 @@
     "standards": [
       "lessons/models-are-systems-not-documents",
       "lessons/skill-specification-is-key-to-interoperability",
+      "lessons/standards-must-preach-by-example",
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "log/2026-04-10-directive-quality-evolution-epic",
       "spine/adoption-guide",
@@ -14270,6 +14380,12 @@
     "llm-extension": [
       "lessons/skills-architecture-is-dominant-extension-pattern"
     ],
+    "integrity": [
+      "lessons/standards-must-preach-by-example"
+    ],
+    "example": [
+      "lessons/standards-must-preach-by-example"
+    ],
     "completeness": [
       "lessons/systemic-incompleteness-is-invisible-to-validation",
       "log/2026-04-09-directive-bottom-up-model-completion"
@@ -14285,6 +14401,19 @@
     ],
     "rules": [
       "lessons/the-agent-must-practice-what-it-documents"
+    ],
+    "hub": [
+      "lessons/the-wiki-is-a-hub-not-a-silo",
+      "log/2026-04-09-directive-quality-models-hub-mindset"
+    ],
+    "aggregation": [
+      "lessons/the-wiki-is-a-hub-not-a-silo"
+    ],
+    "cross-project": [
+      "lessons/the-wiki-is-a-hub-not-a-silo"
+    ],
+    "knowledge-flow": [
+      "lessons/the-wiki-is-a-hub-not-a-silo"
     ],
     "log": [
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
@@ -14367,9 +14496,6 @@
     ],
     "wikilinks": [
       "log/2026-04-09-directive-models-are-not-documents"
-    ],
-    "hub": [
-      "log/2026-04-09-directive-quality-models-hub-mindset"
     ],
     "super-model": [
       "log/2026-04-09-directive-record-process-skills-supermodel"

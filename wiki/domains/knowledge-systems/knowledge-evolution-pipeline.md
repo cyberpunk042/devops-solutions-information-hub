@@ -165,6 +165,7 @@ The pipeline does not replace human judgment — it handles the bookkeeping that
 [[Shallow Ingestion Is Systemic, Not Isolated]]
 [[Skyscraper, Pyramid, Mountain]]
 [[The Agent Must Practice What It Documents]]
+[[The Wiki Is a Hub, Not a Silo]]
 [[The Wiki Maintenance Problem Is Solved by LLM Automation]]
 [[Wiki Backlog Pattern]]
 [[Zettelkasten Methodology]]

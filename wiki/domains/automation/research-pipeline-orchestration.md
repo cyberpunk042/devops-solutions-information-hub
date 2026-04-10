@@ -168,5 +168,6 @@ The gap between current state and the vision:
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
 [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[The Wiki Is a Hub, Not a Silo]]
 [[WSL2 Development Patterns]]
 [[Wiki Backlog Pattern]]
