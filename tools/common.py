@@ -94,33 +94,52 @@ def parse_relationships(text: str) -> List[Dict[str, Any]]:
 
 
 def _split_targets(text: str) -> List[str]:
-    """Split comma-separated targets, respecting parentheses."""
+    """Split comma-separated targets, respecting parentheses and [[wikilinks]]."""
     targets: List[str] = []
     current: List[str] = []
-    depth = 0
+    paren_depth = 0
+    in_wikilink = False
 
-    for char in text:
-        if char == "(":
-            depth += 1
-            current.append(char)
-        elif char == ")":
-            depth -= 1
-            current.append(char)
-        elif char == "," and depth == 0:
+    i = 0
+    while i < len(text):
+        # Track [[ ]] wikilink boundaries
+        if text[i:i+2] == "[[":
+            in_wikilink = True
+            current.append("[")
+            current.append("[")
+            i += 2
+            continue
+        elif text[i:i+2] == "]]":
+            in_wikilink = False
+            current.append("]")
+            current.append("]")
+            i += 2
+            continue
+        elif text[i] == "(":
+            paren_depth += 1
+            current.append(text[i])
+        elif text[i] == ")":
+            paren_depth -= 1
+            current.append(text[i])
+        elif text[i] == "," and paren_depth == 0 and not in_wikilink:
             targets.append("".join(current).strip())
             current = []
         else:
-            current.append(char)
+            current.append(text[i])
+        i += 1
 
     if current:
         targets.append("".join(current).strip())
 
     # Strip [[ ]] wikilink brackets from targets
+    # Handles: [[Target]], [[Target]] (context note), [[Target, With Commas]]
     cleaned = []
     for t in targets:
         t = t.strip()
-        if t.startswith("[[") and t.endswith("]]"):
-            t = t[2:-2]
+        # Extract target from [[...]] even if followed by (context)
+        wl_match = re.match(r'\[\[(.+?)\]\]', t)
+        if wl_match:
+            t = wl_match.group(1).strip()
         cleaned.append(t)
     return [t for t in cleaned if t]
 
