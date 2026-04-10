@@ -253,8 +253,13 @@ def _check_orphan_pages(
         except Exception:
             pass
 
+    # Structural files that are not expected to be in any _index.md
+    structural_names = {"index.md", "agent-directive.md"}
+
     orphans: List[str] = []
     for page in pages:
+        if page.name in structural_names:
+            continue
         resolved = str(page.resolve())
         try:
             text = page.read_text(encoding="utf-8")
