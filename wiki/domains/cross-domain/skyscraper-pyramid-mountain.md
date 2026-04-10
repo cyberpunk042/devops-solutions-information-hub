@@ -141,6 +141,7 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 [[Plan Execute Review Cycle]]
 [[Infrastructure as Code Patterns]]
 [[Knowledge Evolution Pipeline]]
+[[Decision: Methodology Framework Design Decisions]]
 [[Methodology Framework]]
 [[Model: Methodology]]
 [[Model: Quality and Failure Prevention]]

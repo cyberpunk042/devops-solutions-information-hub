@@ -345,6 +345,7 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Four-Project Ecosystem]]
 [[Wiki Backlog Pattern]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
+[[Decision: Methodology Framework Design Decisions]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Methodology]]

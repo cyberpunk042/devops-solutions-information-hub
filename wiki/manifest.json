@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-10T20:21:41.171047+00:00",
+  "generated": "2026-04-10T20:25:53.576910+00:00",
   "stats": {
-    "pages": 172,
+    "pages": 174,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1177,
-    "tags_unique": 647,
+    "relationships": 1187,
+    "tags_unique": 651,
     "layers": {
       "3": 5,
-      "6": 7,
+      "6": 9,
       "2": 51,
       "4": 22,
       "5": 6,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 133,
-      "seed": 14
+      "seed": 16
     }
   },
   "pages": [
@@ -593,6 +593,56 @@
       "relationships": []
     },
     {
+      "path": "decisions/execution-mode-edge-cases.md",
+      "slug": "decisions/execution-mode-edge-cases",
+      "title": "Decision: Execution Mode Edge Cases",
+      "type": "decision",
+      "domain": "devops",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "execution-modes",
+        "quality-gates",
+        "cost-limit",
+        "stage-failure",
+        "completion-log",
+        "edge-cases",
+        "design-decisions"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Execution Modes and End Conditions",
+        "Stage-Gate Methodology",
+        "Task Type Artifact Matrix"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Execution Modes and End Conditions"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Rework Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Task Type Artifact Matrix"
+        }
+      ]
+    },
+    {
       "path": "decisions/hooks-design-decisions.md",
       "slug": "decisions/hooks-design-decisions",
       "title": "Decision: Hooks Design Decisions",
@@ -803,6 +853,58 @@
         {
           "verb": "FEEDS INTO",
           "target": "Research Pipeline Orchestration"
+        }
+      ]
+    },
+    {
+      "path": "decisions/methodology-framework-design-decisions.md",
+      "slug": "decisions/methodology-framework-design-decisions",
+      "title": "Decision: Methodology Framework Design Decisions",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "methodology",
+        "framework",
+        "model-selection",
+        "composition",
+        "versioning",
+        "quality-tiers",
+        "meta-methodology",
+        "design-decisions"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Methodology Framework",
+        "Stage-Gate Methodology",
+        "Task Type Artifact Matrix",
+        "Skyscraper, Pyramid, Mountain"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Skyscraper, Pyramid, Mountain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         }
       ]
     },
@@ -11715,8 +11817,12 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 44,
-      "relationship_count": 353
+      "page_count": 45,
+      "relationship_count": 358
+    },
+    "devops": {
+      "page_count": 12,
+      "relationship_count": 89
     },
     "ai-agents": {
       "page_count": 36,
@@ -11725,10 +11831,6 @@
     "tools-and-platforms": {
       "page_count": 23,
       "relationship_count": 159
-    },
-    "devops": {
-      "page_count": 11,
-      "relationship_count": 84
     },
     "ai-models": {
       "page_count": 3,
@@ -12101,7 +12203,40 @@
     ],
     "composition": [
       "comparisons/skills-architecture-patterns",
+      "decisions/methodology-framework-design-decisions",
       "domains/ai-agents/hooks-lifecycle-architecture"
+    ],
+    "execution-modes": [
+      "decisions/execution-mode-edge-cases",
+      "domains/ai-agents/per-role-command-architecture",
+      "domains/devops/execution-modes-and-end-conditions",
+      "spine/model-methodology"
+    ],
+    "quality-gates": [
+      "decisions/execution-mode-edge-cases",
+      "domains/ai-agents/rework-prevention",
+      "domains/devops/execution-modes-and-end-conditions",
+      "domains/devops/stage-gate-methodology",
+      "lessons/llm-maintained-wikis-outperform-static-documentation"
+    ],
+    "cost-limit": [
+      "decisions/execution-mode-edge-cases",
+      "domains/devops/execution-modes-and-end-conditions"
+    ],
+    "stage-failure": [
+      "decisions/execution-mode-edge-cases"
+    ],
+    "completion-log": [
+      "decisions/execution-mode-edge-cases"
+    ],
+    "edge-cases": [
+      "decisions/execution-mode-edge-cases"
+    ],
+    "design-decisions": [
+      "decisions/execution-mode-edge-cases",
+      "decisions/hooks-design-decisions",
+      "decisions/methodology-framework-design-decisions",
+      "decisions/per-role-command-design-decisions"
     ],
     "hooks": [
       "decisions/hooks-design-decisions",
@@ -12137,10 +12272,6 @@
     ],
     "plan-generation": [
       "decisions/hooks-design-decisions"
-    ],
-    "design-decisions": [
-      "decisions/hooks-design-decisions",
-      "decisions/per-role-command-design-decisions"
     ],
     "claude": [
       "decisions/local-model-vs-cloud-api-for-routine-operations"
@@ -12230,6 +12361,49 @@
       "spine/model-claude-code",
       "spine/model-mcp-cli-integration"
     ],
+    "methodology": [
+      "decisions/methodology-framework-design-decisions",
+      "domains/ai-agents/per-role-command-architecture",
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/methodology-framework",
+      "domains/devops/stage-gate-methodology",
+      "domains/devops/task-type-artifact-matrix",
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "lessons/never-skip-stages-even-when-told-to-continue",
+      "lessons/never-synthesize-from-descriptions-alone",
+      "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/the-agent-must-practice-what-it-documents",
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
+      "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
+      "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
+      "spine/adoption-guide",
+      "spine/model-methodology-standards",
+      "spine/model-methodology",
+      "spine/model-quality-failure-prevention"
+    ],
+    "framework": [
+      "decisions/methodology-framework-design-decisions",
+      "domains/cross-domain/methodology-framework",
+      "spine/model-methodology"
+    ],
+    "model-selection": [
+      "decisions/methodology-framework-design-decisions"
+    ],
+    "versioning": [
+      "decisions/methodology-framework-design-decisions",
+      "decisions/per-role-command-design-decisions"
+    ],
+    "quality-tiers": [
+      "decisions/methodology-framework-design-decisions",
+      "spine/model-sfif-architecture"
+    ],
+    "meta-methodology": [
+      "decisions/methodology-framework-design-decisions",
+      "domains/cross-domain/methodology-framework"
+    ],
     "knowledge-interface": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
     ],
@@ -12289,9 +12463,6 @@
       "decisions/per-role-command-design-decisions",
       "domains/ai-agents/per-role-command-architecture",
       "sources/src-claude-slash-commands"
-    ],
-    "versioning": [
-      "decisions/per-role-command-design-decisions"
     ],
     "scope": [
       "decisions/per-role-command-design-decisions"
@@ -12702,37 +12873,10 @@
     "developer-experience": [
       "domains/ai-agents/per-role-command-architecture"
     ],
-    "methodology": [
-      "domains/ai-agents/per-role-command-architecture",
-      "domains/ai-agents/task-lifecycle-stage-gating",
-      "domains/cross-domain/methodology-framework",
-      "domains/devops/stage-gate-methodology",
-      "domains/devops/task-type-artifact-matrix",
-      "lessons/infrastructure-must-be-reproducible-not-manual",
-      "lessons/models-are-built-in-layers-not-all-at-once",
-      "lessons/never-skip-stages-even-when-told-to-continue",
-      "lessons/never-synthesize-from-descriptions-alone",
-      "lessons/shallow-ingestion-is-systemic-not-isolated",
-      "lessons/the-agent-must-practice-what-it-documents",
-      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
-      "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
-      "log/2026-04-09-directive-never-stop-at-surface",
-      "log/2026-04-09-directive-quality-models-hub-mindset",
-      "log/2026-04-09-directive-record-process-skills-supermodel",
-      "spine/adoption-guide",
-      "spine/model-methodology-standards",
-      "spine/model-methodology",
-      "spine/model-quality-failure-prevention"
-    ],
     "plannotator": [
       "domains/ai-agents/per-role-command-architecture",
       "sources/src-plannotator",
       "spine/model-skills-commands-hooks"
-    ],
-    "execution-modes": [
-      "domains/ai-agents/per-role-command-architecture",
-      "domains/devops/execution-modes-and-end-conditions",
-      "spine/model-methodology"
     ],
     "ecosystem-sharing": [
       "domains/ai-agents/per-role-command-architecture"
@@ -12748,12 +12892,6 @@
       "lessons/context-management-is-primary-productivity-lever",
       "sources/src-shanraisshan-claude-code-best-practice",
       "sources/src-superpowers-end-of-vibe-coding"
-    ],
-    "quality-gates": [
-      "domains/ai-agents/rework-prevention",
-      "domains/devops/execution-modes-and-end-conditions",
-      "domains/devops/stage-gate-methodology",
-      "lessons/llm-maintained-wikis-outperform-static-documentation"
     ],
     "spec-compliance": [
       "domains/ai-agents/rework-prevention"
@@ -12952,9 +13090,6 @@
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
     ],
-    "meta-methodology": [
-      "domains/cross-domain/methodology-framework"
-    ],
     "composable": [
       "domains/cross-domain/methodology-framework",
       "spine/model-methodology"
@@ -12963,10 +13098,6 @@
       "domains/cross-domain/methodology-framework",
       "patterns/scaffold-foundation-infrastructure-features",
       "spine/model-sfif-architecture"
-    ],
-    "framework": [
-      "domains/cross-domain/methodology-framework",
-      "spine/model-methodology"
     ],
     "transferable": [
       "domains/cross-domain/methodology-framework",
@@ -13122,9 +13253,6 @@
       "domains/devops/execution-modes-and-end-conditions"
     ],
     "stage-reached": [
-      "domains/devops/execution-modes-and-end-conditions"
-    ],
-    "cost-limit": [
       "domains/devops/execution-modes-and-end-conditions"
     ],
     "time-limit": [
@@ -14481,9 +14609,6 @@
     ],
     "entry-point": [
       "spine/model-registry"
-    ],
-    "quality-tiers": [
-      "spine/model-sfif-architecture"
     ],
     "ai-agent-extension": [
       "spine/model-skills-commands-hooks"

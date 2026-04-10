@@ -460,5 +460,6 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 [[Immune System Rules]]
 [[Knowledge Evolution Pipeline]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
+[[Decision: Execution Mode Edge Cases]]
 [[Methodology Framework]]
 [[Model: Methodology]]
