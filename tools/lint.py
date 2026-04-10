@@ -191,6 +191,41 @@ def _check_thin_pages(
     return thin
 
 
+def _check_unstyled_pages(
+    pages: List[Path],
+    min_lines: int = 80,
+) -> List[Dict[str, Any]]:
+    """Find content pages above min_lines with zero Obsidian callouts."""
+    # Types that should have callout styling when long enough
+    styled_types = {
+        "concept", "pattern", "lesson", "decision", "comparison",
+        "deep-dive", "domain-overview",
+    }
+    unstyled: List[Dict[str, Any]] = []
+    for page in pages:
+        try:
+            text = page.read_text(encoding="utf-8")
+            meta, body = parse_frontmatter(text)
+            if not meta:
+                continue
+            page_type = meta.get("type", "")
+            if page_type not in styled_types:
+                continue
+            lines = text.count("\n") + 1
+            if lines < min_lines:
+                continue
+            # Check for Obsidian callouts
+            if "> [!" not in body:
+                unstyled.append({
+                    "title": meta.get("title", page.stem),
+                    "type": page_type,
+                    "lines": lines,
+                })
+        except Exception:
+            pass
+    return unstyled
+
+
 def _check_orphan_pages(
     pages: List[Path], wiki_dir: Path
 ) -> List[str]:
@@ -332,6 +367,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         config.min_domain_pages,
         config.min_cross_domain_rels,
     )
+    unstyled_pages = _check_unstyled_pages(pages)
 
     total_issues = (
         len(dead_relationships)
@@ -340,12 +376,14 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         + len(orphan_pages)
         + sum(len(d["issues"]) for d in domain_health)
     )
+    # Unstyled pages are advisory — not counted in total_issues
 
     return {
         "orphan_pages": orphan_pages,
         "dead_relationships": dead_relationships,
         "stale_pages": stale_pages,
         "thin_pages": thin_pages,
+        "unstyled_pages": unstyled_pages,
         "domain_health": domain_health,
         "summary": {
             "pages_scanned": len(pages),
@@ -354,6 +392,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
             "stale_pages": len(stale_pages),
             "thin_pages": len(thin_pages),
             "orphan_pages": len(orphan_pages),
+            "unstyled_pages": len(unstyled_pages),
             "domain_health_issues": sum(len(d["issues"]) for d in domain_health),
         },
     }
@@ -422,8 +461,16 @@ def _print_human_report(report: Dict[str, Any]) -> None:
                 print(f"    - {issue}")
         print()
 
+    if report.get("unstyled_pages"):
+        print(f"Unstyled Pages ({len(report['unstyled_pages'])}) [advisory]:")
+        for p in report["unstyled_pages"]:
+            print(f"  {p['title']} [{p['type']}]: {p['lines']} lines, no callouts")
+        print()
+
     status = "PASS" if s["total_issues"] == 0 else "FAIL"
     print(f"{status}: {s['total_issues']} issue(s) found")
+    if s.get("unstyled_pages", 0) > 0:
+        print(f"  ({s['unstyled_pages']} unstyled pages — advisory, not blocking)")
 
 
 def main():
