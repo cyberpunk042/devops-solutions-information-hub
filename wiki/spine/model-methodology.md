@@ -562,5 +562,8 @@ Here's how a single task flows through the methodology, from selection to comple
 [[wiki/config/agent-directive.md]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Model Registry]]
+[[Model: Knowledge Evolution]]
+[[Model: Quality and Failure Prevention]]
+[[Model: SFIF and Architecture]]
 [[Model: Wiki Design]]
 [[Wiki Design Standards — What Good Styling Looks Like]]

@@ -262,4 +262,3 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 [[Harness Engineering]]
 [[Claude Code Context Management]]
 [[Model: Ecosystem Architecture]]
-[[Model: Design.md and IaC]]

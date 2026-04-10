@@ -134,6 +134,7 @@ Cross-referencing `Context-Aware Tool Loading`: the pattern page documents that 
 [[Decision: MCP vs CLI for Tool Integration]]
 [[Design.md Pattern]]
 [[Model: Claude Code]]
+[[Model: MCP and CLI Integration]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

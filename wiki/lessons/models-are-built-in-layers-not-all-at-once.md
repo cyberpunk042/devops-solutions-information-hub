@@ -69,3 +69,4 @@ The critical insight: at step 1, we claimed "models are done" because entry poin
 [[The Agent Must Practice What It Documents]]
 [[Never Skip Stages Even When Told to Continue]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Model: Quality and Failure Prevention]]

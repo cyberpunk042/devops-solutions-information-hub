@@ -108,7 +108,6 @@ Cross-referencing `Agent Orchestration Patterns` and `OpenFleet`: the OpenClaw a
 [[AI-Driven Content Pipeline]]
 [[Claude Code]]
 [[Gateway-Centric Routing]]
-[[Harness Engineering]]
 [[Local LLM Quantization]]
 [[Plane]]
 [[Synthesis: Claude Code Accuracy Tips]]

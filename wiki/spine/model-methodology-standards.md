@@ -325,3 +325,6 @@ Methodology failures from real operation, each traced to a specific lesson.
 [[wiki/config/methodology.yaml]]
 [[wiki/config/agent-directive.md]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[Quality Standards — What Good Failure Prevention Looks Like]]

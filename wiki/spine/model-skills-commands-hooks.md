@@ -346,4 +346,6 @@ Commands (user trigger)
 [[Model: Methodology]]
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
+[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[Model: Design.md and IaC]]
 [[Model: Ecosystem Architecture]]

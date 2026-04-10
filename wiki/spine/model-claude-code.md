@@ -493,3 +493,5 @@ Validated experience from operating Claude Code in this ecosystem.
 [[CLI Tools Beat MCP for Token Efficiency]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[Model: Design.md and IaC]]
+[[Model: Quality and Failure Prevention]]

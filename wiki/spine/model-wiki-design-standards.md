@@ -454,3 +454,4 @@ If any type were missing, the page would fail its own standard. ==This page demo
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Quality Standards — What Good Failure Prevention Looks Like]]

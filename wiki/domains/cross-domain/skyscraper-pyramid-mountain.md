@@ -149,4 +149,5 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 [[Knowledge Evolution Pipeline]]
 [[Methodology Framework]]
 [[Model: Methodology]]
+[[Model: Quality and Failure Prevention]]
 [[Model: SFIF and Architecture]]

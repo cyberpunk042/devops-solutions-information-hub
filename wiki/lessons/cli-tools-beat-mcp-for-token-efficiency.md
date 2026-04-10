@@ -115,6 +115,7 @@ The emerging practitioner consensus captured across multiple independent sources
 [[default assumption that MCP is the standard tool integration pattern]]
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Context-Aware Tool Loading]]
+[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
 [[Pattern: Skills + Cli]]

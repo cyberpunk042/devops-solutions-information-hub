@@ -165,6 +165,7 @@ Cross-referencing `WSL2 Development Patterns`: the lifecycle is fully documented
 [[Harness Engineering]]
 [[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
 [[Lesson: Automation Is the Bridge Between Knowledge and Action]]
+[[Model: MCP and CLI Integration]]
 [[Multi-Channel AI Agent Access]]
 [[OpenArms]]
 [[Plan Execute Review Cycle]]

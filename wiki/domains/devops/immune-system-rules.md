@@ -157,6 +157,7 @@ Cross-referencing `devops-control-plane` and `Agent Orchestration Patterns`: the
 [[Four-Project Ecosystem]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[Infrastructure as Code Patterns]]
+[[Model: Ecosystem Architecture]]
 [[Model: Quality and Failure Prevention]]
 [[Never Skip Stages Even When Told to Continue]]
 [[Never Synthesize from Descriptions Alone]]

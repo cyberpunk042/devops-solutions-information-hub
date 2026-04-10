@@ -169,6 +169,7 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 [[Plan Execute Review Cycle]]
 [[Knowledge Evolution Pipeline]]
 [[Infrastructure as Code Patterns]]
+[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[Methodology Framework]]
 [[Model: Methodology]]
 [[Model: SFIF and Architecture]]

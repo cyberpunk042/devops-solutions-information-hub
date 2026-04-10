@@ -118,6 +118,7 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 [[Claude Code Context Management]]
 [[Wiki Ingestion Pipeline]]
 [[Research Pipeline Orchestration]]
+[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
 [[Wiki Design Standards — What Good Styling Looks Like]]
