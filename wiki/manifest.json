@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-10T04:24:05.381523+00:00",
+  "generated": "2026-04-10T04:29:20.288042+00:00",
   "stats": {
-    "pages": 172,
+    "pages": 173,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1182,
-    "tags_unique": 636,
+    "relationships": 1189,
+    "tags_unique": 637,
     "layers": {
       "3": 5,
       "6": 5,
@@ -14,11 +14,11 @@
       "4": 22,
       "5": 11,
       "1": 24,
-      "spine": 30
+      "spine": 31
     },
     "maturity": {
       "growing": 133,
-      "seed": 16
+      "seed": 17
     }
   },
   "pages": [
@@ -10419,6 +10419,56 @@
       ]
     },
     {
+      "path": "spine/model-knowledge-evolution-standards.md",
+      "slug": "spine/model-knowledge-evolution-standards",
+      "title": "Evolution Standards \u2014 What Good Knowledge Promotion Looks Like",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "knowledge-evolution",
+        "standards",
+        "maturity",
+        "promotion",
+        "scoring",
+        "gold-standard",
+        "anti-patterns"
+      ],
+      "sources": [],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: MCP vs CLI for Tool Integration"
+        }
+      ]
+    },
+    {
       "path": "spine/model-knowledge-evolution.md",
       "slug": "spine/model-knowledge-evolution",
       "title": "Model: Knowledge Evolution",
@@ -10427,7 +10477,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "model",
         "spine",
@@ -10439,7 +10489,20 @@
         "evolution-pipeline",
         "second-brain"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "id": "src-karpathy-llm-wiki-idea-file",
+          "type": "documentation",
+          "file": "raw/articles/karpathy-llm-wiki-idea-file.md",
+          "title": "Karpathy LLM Wiki Idea File"
+        },
+        {
+          "id": "src-llm-wiki-v2-agentmemory",
+          "type": "documentation",
+          "file": "raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md",
+          "title": "LLM Wiki v2 \u2014 Extending Karpathy's Pattern with Agentmemory Lessons"
+        }
+      ],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
@@ -10453,19 +10516,23 @@
           "target": "Progressive Distillation"
         },
         {
-          "verb": "RELATES TO",
-          "target": "Model: SFIF and Architecture"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model: Ecosystem Architecture"
+          "verb": "BUILDS ON",
+          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
         },
         {
           "verb": "RELATES TO",
           "target": "Model: LLM Wiki"
         },
         {
-          "verb": "FEEDS INTO",
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Second Brain"
+        },
+        {
+          "verb": "RELATES TO",
           "target": "Model: Automation and Pipelines"
         },
         {
@@ -11645,8 +11712,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 48,
-      "relationship_count": 364
+      "page_count": 49,
+      "relationship_count": 371
     },
     "ai-agents": {
       "page_count": 34,
@@ -13154,10 +13221,12 @@
     "maturity": [
       "domains/knowledge-systems/knowledge-evolution-pipeline",
       "patterns/progressive-distillation",
+      "spine/model-knowledge-evolution-standards",
       "spine/model-knowledge-evolution"
     ],
     "scoring": [
       "domains/knowledge-systems/knowledge-evolution-pipeline",
+      "spine/model-knowledge-evolution-standards",
       "spine/model-knowledge-evolution"
     ],
     "llm-automation": [
@@ -13615,6 +13684,7 @@
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "spine/adoption-guide",
       "spine/model-claude-code-standards",
+      "spine/model-knowledge-evolution-standards",
       "spine/model-llm-wiki-standards",
       "spine/model-llm-wiki",
       "spine/model-methodology-standards",
@@ -14271,6 +14341,7 @@
     ],
     "gold-standard": [
       "spine/model-claude-code-standards",
+      "spine/model-knowledge-evolution-standards",
       "spine/model-llm-wiki-standards",
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
@@ -14279,6 +14350,7 @@
     ],
     "anti-patterns": [
       "spine/model-claude-code-standards",
+      "spine/model-knowledge-evolution-standards",
       "spine/model-methodology-standards",
       "spine/model-quality-failure-prevention-standards",
       "spine/model-skills-commands-hooks-standards",
@@ -14302,7 +14374,11 @@
       "spine/model-design-md"
     ],
     "knowledge-evolution": [
+      "spine/model-knowledge-evolution-standards",
       "spine/model-knowledge-evolution"
+    ],
+    "promotion": [
+      "spine/model-knowledge-evolution-standards"
     ],
     "wiki-lifecycle": [
       "spine/model-knowledge-evolution"

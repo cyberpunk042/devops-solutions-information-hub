@@ -7,8 +7,16 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
-sources: []
+updated: 2026-04-10
+sources:
+  - id: src-karpathy-llm-wiki-idea-file
+    type: documentation
+    file: raw/articles/karpathy-llm-wiki-idea-file.md
+    title: "Karpathy LLM Wiki Idea File"
+  - id: src-llm-wiki-v2-agentmemory
+    type: documentation
+    file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
+    title: "LLM Wiki v2 — Extending Karpathy's Pattern with Agentmemory Lessons"
 tags: [model, spine, knowledge-evolution, maturity, progressive-distillation, wiki-lifecycle, scoring, evolution-pipeline, second-brain]
 ---
 
@@ -16,158 +24,242 @@ tags: [model, spine, knowledge-evolution, maturity, progressive-distillation, wi
 
 ## Summary
 
-The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured, automated promotion pipeline. Raw files enter as seed-maturity pages; a deterministic scorer ranks them by six signals (relationship density, cross-domain references, source count, age, type weight, current maturity); the prompt builder assembles generation context from wiki relationships; an LLM backend generates evolved content; and a human review gate validates promotion to mature and canonical tiers. The pipeline is self-compounding: promoted pages add relationship edges that improve neighbor scores in subsequent runs. The outer loop — ingest → evolve → gap-analyze → research → repeat — is the wiki's steady-state improvement mechanism, preventing knowledge decay while continuously increasing the density and applicability of what is stored.
+The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured, automated promotion pipeline. Raw files enter as seed-maturity pages; a deterministic scorer ranks them by six signals; the prompt builder assembles generation context from wiki relationships; an LLM backend generates evolved content; and a human review gate validates promotion. ==The pipeline is self-compounding: promoted pages add relationship edges that improve neighbor scores in subsequent runs.== The outer loop — ingest → evolve → gap-analyze → research → repeat — is the wiki's steady-state improvement mechanism.
 
 ## Key Insights
 
-- **The scorer is deterministic; the generator is not**: ranking evolution candidates uses six reproducible signals with no LLM inference. This makes rankings auditable, schedulable, and immune to hallucination. The LLM is only invoked after a candidate is selected — for generation, not selection. The separation is deliberate.
+- **The scorer is deterministic; the generator is not.** Ranking uses six reproducible signals with no LLM inference — auditable, schedulable, immune to hallucination. The LLM is invoked only AFTER a candidate is selected. Separation is deliberate.
 
-- **Maturity is a lifecycle, not a tag**: seed → growing → mature → canonical is a promotion path with defined criteria. Pages are not born canonical. Forcing premature canonicalization produces false authority. Neglecting promotion produces orphaned seeds — pages that accumulated insights but never got distilled into actionable form.
+- **Maturity is a lifecycle, not a tag.** seed → growing → mature → canonical is a promotion path with defined criteria. Premature canonicalization produces false authority. Neglecting promotion produces orphaned seeds.
 
-- **The pipeline has increasing returns**: every evolved page creates new relationship edges back to its source concepts. Those edges increase source concept scores in subsequent scoring runs. A well-linked wiki evolves faster than a sparse one — the pipeline rewards prior investment in quality ingestion and cross-linking.
+- **The pipeline has increasing returns.** Every evolved page creates new relationship edges. Those edges increase source scores in subsequent runs. A well-linked wiki evolves faster than a sparse one.
 
-- **Prompt engineering is where pipeline intelligence lives**: the prompt builder assembles the candidate page, all pages it references, all pages that reference it, and domain context. A well-assembled prompt produces a canonical pattern page. A poorly assembled one produces a restatement. Builder quality scales with wiki density — another form of increasing returns.
+- **Prompt engineering is where pipeline intelligence lives.** The prompt builder assembles the candidate + all referenced pages + all referencing pages + domain context. Builder quality scales with wiki density — another form of increasing returns.
 
-- **The 6-layer architecture maps to Progressive Distillation**: raw files (Layer 0) → synthesized sources (Layer 1) → concepts (Layer 2) → lessons (Layer 4) → patterns (Layer 5) → decisions (Layer 6). Each layer is qualitatively different, not just compressed. See [[Progressive Distillation]] for the pattern that governs all six layers.
-
-- **Three LLM backends for three operating contexts**: `--backend claude-code` writes a prompt queue for session execution (human-in-the-loop, highest quality); `--backend openai` with LocalAI routes lower-complexity evolution to free local inference; `--backend aicp` routes through the devops AI control platform for fleet-integrated generation. Backend selection is separate from evolution logic.
+- **Three LLM backends for three operating contexts.** `claude-code` = human-in-the-loop, highest quality. `openai` = zero-cost local inference via LocalAI. `aicp` = fleet-integrated, complexity-routed.
 
 ## Deep Analysis
 
 ### The 6-Layer Density Architecture
 
-The wiki's six layers represent increasing levels of knowledge distillation. Each layer is a transformation, not a compression:
+> [!info] **Six layers of increasing knowledge distillation**
+> | Layer | Type | Maturity | What it contains | Transformation |
+> |-------|------|----------|-----------------|----------------|
+> | 0 | Raw files | — | Unprocessed transcripts, articles, notes in `raw/` | None — source of truth |
+> | 1 | Source synthesis | seed | What the source says, evidence preserved | Extraction — pull key claims |
+> | 2 | Concepts | seed → growing | Multi-source integration, synthesized understanding | Synthesis — merge across sources |
+> | 4 | Lessons | growing → mature | Validated insight — what was learned, with evidence | Distillation — WHY, not just WHAT |
+> | 5 | Patterns | mature | Structural template generalizing across 2+ instances | Abstraction — reusable form |
+> | 6 | Decisions | canonical | Resolved choice with rationale and alternatives | Resolution — actionable guidance |
 
-| Layer | Type | Maturity | What It Contains |
-|-------|------|----------|-----------------|
-| 0 | Raw files | — | Unprocessed transcripts, articles, notes in `raw/` |
-| 1 | Source synthesis | seed | What the source says, direct evidence preserved |
-| 2 | Concepts | seed → growing | Synthesized understanding, multi-source integration |
-| 4 | Lessons | growing → mature | Validated insight — what was learned and why it holds |
-| 5 | Patterns | mature | Structural template — reusable form that generalizes across instances |
-| 6 | Decisions | canonical | Resolved choice — rationale, alternatives considered, consequences |
+The gap (no Layer 3) is intentional — the jump from concept to lesson is a qualitative shift, not just compression. A lesson is a validated principle with operational evidence, not a dense concept. See [[Progressive Distillation]].
 
-The gaps (no Layer 3) are intentional — the numbering reflects density tiers in the original PARA/Zettelkasten-influenced design, where the jump from concept to lesson represents a qualitative shift that warrants a tier gap. A lesson is not a dense concept; it is a validated principle with operational evidence behind it.
+---
 
 ### The Six Scoring Signals
 
-The `evolve --score` command computes a composite score using these deterministic signals, in approximate order of weight:
+> [!info] **Deterministic scorer — no LLM inference**
+> | Signal | What it measures | Why it matters |
+> |--------|-----------------|----------------|
+> | **Cross-source convergence** (weight: 0.30) | How many distinct sources back the page | Multi-source = higher epistemic weight |
+> | **Relationship hub** (weight: 0.20) | How many pages reference or are referenced by this page | High connectivity = pattern candidate |
+> | **Domain layer gap** (weight: 0.15) | Missing layers in the page's domain | Domains with concepts but no lessons need evolution |
+> | **Open question density** (weight: 0.15) | How many open questions the page has | Questions = evolution directions |
+> | **Tag co-occurrence** (weight: 0.10) | Shared tags between this page and evolved pages | Tag overlap signals related evolution opportunity |
+> | **Orphaned references** (weight: 0.10) | Relationship targets that don't exist yet | Missing pages = evolution candidates |
 
-1. **Relationship count** — how many other pages this page references or is referenced by. High relationship density indicates a page that other knowledge depends on or builds from — a candidate for pattern or decision promotion.
+Full implementation: `tools/evolve.py` (1,321 lines). Run with `pipeline evolve --score --top 10 --json`.
 
-2. **Cross-domain references** — how many of its relationships point to pages in different domains. Cross-domain pages are high-value evolution targets because they surface generalizable insights, not domain-specific observations.
+> [!tip] **Scorer tuning history**
+> Initial weights overvalued tag co-occurrence (0.25) — produced candidates that were just tag-pair matches. Rebalanced to emphasize cross-source convergence (0.30) and relationship hubs (0.20). Added `_GENERIC_TAGS` filter to exclude low-signal tags (model, concept, spine). Dedup checks source overlap with existing evolved pages. See the scorer tuning task in [[Model: Methodology]] Real Example section.
 
-3. **Source count** — how many distinct sources back the page. Multi-source concepts have higher epistemic weight and are closer to promotable lessons.
-
-4. **Page age** — how long since creation. Pages that have existed for a while without promotion have had time to accumulate backlinks from new pages; revisiting them often reveals they qualify for promotion that wasn't clear at creation.
-
-5. **Type weight** — pattern and lesson candidates score higher than raw concepts at the same relationship count, because their page type signals that evolution is the expected next step.
-
-6. **Current maturity** — seed pages score higher than growing pages, which score higher than mature pages. This biases the scorer toward pages most in need of evolution, not pages already advanced.
-
-Full implementation: `tools/pipeline.py evolve --score` with optional `--top N --json` for machine-readable output. See [[Knowledge Evolution Pipeline]] for signal weight details and the composite formula.
+---
 
 ### The 8-Step Generation Loop
 
-```
-1. SCORE    → rank all eligible pages by composite score
-2. SELECT   → choose top N candidates (human-reviewed or automated)
-3. ASSEMBLE → prompt builder gathers candidate + all related pages + domain context
-4. GENERATE → LLM backend produces evolved page content (lesson/pattern/decision type)
-5. WRITE    → scaffolded page written to correct domain folder with full frontmatter
-6. POST     → post-chain validates, rebuilds indexes, regenerates wikilinks
-7. REVIEW   → human gate: verify maturity promotion before marking mature/canonical
-8. LOOP     → re-score; newly added relationships shift neighbor scores
-```
+> [!info] **The evolution pipeline end-to-end**
+> ```
+> 1. SCORE    → rank all eligible pages by composite score
+> 2. SELECT   → choose top N candidates (human-reviewed or automated)
+> 3. ASSEMBLE → prompt builder gathers candidate + all related pages + domain context
+> 4. GENERATE → LLM backend produces evolved page (lesson/pattern/decision type)
+> 5. WRITE    → scaffolded page with full frontmatter to correct directory
+> 6. POST     → post-chain validates, rebuilds indexes, regenerates wikilinks
+> 7. REVIEW   → human gate: verify maturity promotion before marking mature/canonical
+> 8. LOOP     → re-score; newly added relationships shift neighbor scores
+> ```
 
-The ASSEMBLE step is where pipeline quality is highest and most variable. A candidate concept page with 12 strong relationships pointing to primary sources produces a context package that almost writes the lesson itself. A candidate with 3 thin relationships to other seed pages produces weak generation context. This is why [[Multi-Stage Ingestion Beats Single-Pass Processing]] is a prerequisite for effective evolution: the pipeline's inputs depend entirely on ingestion quality.
+> [!warning] **The ASSEMBLE step is where quality is won or lost**
+> A candidate with 12 strong relationships to primary sources produces context that almost writes the lesson itself. A candidate with 3 thin relationships to other seed pages produces weak generation context. ==Ingestion quality directly determines evolution quality.== See [[Multi-Stage Ingestion Beats Single-Pass Processing]].
 
-### The Four Maturity Levels and Promotion Criteria
+---
 
-**Seed** — freshly ingested or created; minimal cross-linking; may have a single source. No special requirements beyond valid frontmatter and a Summary. Seeds are expected to remain seeds until enough related content accumulates to make evolution meaningful.
+### The Four Maturity Levels
 
-**Growing** — has 3+ relationships, 2+ sources, has been referenced by at least one other page. Growing pages are visible in the scorer and eligible for evolution runs. Most pages live here for weeks before promotion.
+> [!info] **Promotion criteria per level**
+> | Level | Criteria | How you get there |
+> |-------|---------|-------------------|
+> | **seed** | Valid frontmatter + Summary | Auto-generated or scaffolded |
+> | **growing** | 3+ relationships, 2+ sources, referenced by ≥1 page | Human review confirms |
+> | **mature** | Passed human review, validated against operational evidence, `derived_from` linked | Time + inbound references + review |
+> | **canonical** | Tested against real implementation, no known contradictions | Marked manually — should be RARE |
 
-**Mature** — has passed human review; the insight it captures has been validated against operational evidence; has a `derived_from` link to its source concepts. Mature pages are treated as reliable by the wiki's cross-reference tools and the LightRAG graph.
+> [!warning] **No auto-promotion**
+> The system SUGGESTS promotions (`pipeline evolve --review`). A human confirms. Premature canonicalization is worse than no promotion — it creates false authority that other pages cite.
 
-**Canonical** — the highest maturity tier; reserved for pages that have been tested against real implementation and have no known contradictions in the knowledge base. Canonical pages should be rare — premature canonicalization is a documented failure mode ([[Lesson: Schema Is the Real Product — Not the Content]]).
+---
 
 ### The Three LLM Backends
 
-**`--backend claude-code`** (session execution)
-Writes a prompt queue to disk for human execution in a Claude Code session. The human reviews each prompt, can edit it, and executes at their discretion. Highest quality — the human can inspect and improve the assembled context before generation. Slowest — requires a human in the loop.
+> [!info] **Backend selection is separate from evolution logic**
+> | Backend | How it works | Cost | Quality | Best for |
+> |---------|-------------|------|---------|----------|
+> | `--backend claude-code` | Writes prompt queue for human session execution | API cost | Highest (human reviews context) | Mature → canonical promotions |
+> | `--backend openai` | Direct API call (LocalAI when configured) | Free (local) | Good for routine | seed → growing bulk evolution |
+> | `--backend aicp` | Routes through AICP complexity scorer | Mixed (auto-routed) | Adaptive | Fleet-integrated evolution |
 
-**`--backend openai`** (direct API, uses LocalAI when configured)
-Calls an OpenAI-compatible API directly, producing pages without human review at the generation step. With LocalAI configured as the endpoint, this is zero-cost for seed → growing evolution. Review step still occurs after generation. Appropriate for high-volume, lower-stakes evolution runs.
-
-**`--backend aicp`** (fleet-integrated)
-Routes through the AICP inference platform, applying its complexity scorer and routing logic. High-complexity pages go to Claude; routine pages go to LocalAI. The AICP backend makes the evolution pipeline a first-class citizen of the fleet's inference budget management — evolution tasks compete for resources alongside agent tasks rather than running in a separate cost silo.
+---
 
 ### Two Documented Failure Modes
 
-The evolution pipeline documentation identifies two failure modes that must be actively prevented:
+> [!bug]- **Premature distillation**
+> Promoting a page to pattern/canonical before it has enough cross-domain evidence, source diversity, or relationship density. A single-source pattern page looks authoritative but is one person's observation. When cited as canonical, the authority claim is unsupported.
+>
+> **Guard:** Minimum signal thresholds before promotion eligibility. The scorer won't rank a page with <3 relationships and <2 sources.
 
-**Premature distillation** — promoting a page to pattern or canonical status before it has enough cross-domain evidence, source diversity, or relationship density to justify the authority that canonical tier confers. A single-source pattern page looks authoritative but is actually one person's observation of one implementation. When other agents or pages cite it as canonical, the authority claim is unsupported. The scorer guards against this by requiring minimum signal thresholds before a page is eligible for promotion.
+> [!bug]- **Distillation arrest**
+> Seeds that accumulate enough relationships to qualify for evolution but never get promoted. The value is there — cited, cross-linked, multi-sourced — but locked in seed format. No distilled lesson, no structural template, no decision rationale.
+>
+> **Guard:** `pipeline evolve --review` surfaces pages in growing maturity with scores above the promotion threshold that haven't been acted on. The weekly review cadence catches these.
 
-**Distillation arrest** — seeds that accumulate enough relationships to qualify for evolution but never get promoted. These are the most insidious failure mode because the value is there (the page is cited, cross-linked, multi-sourced) but it remains locked in seed format — no distilled lesson, no structural template, no explicit decision rationale. Distillation arrest often results from high-scoring candidates that the human reviewer keeps deferring. The `--review` flag surfaces these explicitly: pages in growing maturity with scores above the promotion threshold that have not been acted on.
+> [!tip] **Both failure modes have the same fix**
+> Run the evolution pipeline regularly AND act on its output. A pipeline that runs but whose output is never reviewed is equivalent to no pipeline.
 
-Both failure modes are addressed by the same mechanism: running the evolution pipeline regularly and acting on its output. A pipeline that runs but whose output is never reviewed is equivalent to no pipeline at all. The human-in-the-loop checkpoint between growing and mature is where both failure modes are caught or allowed to persist.
+---
 
-### Connection to the LLM Wiki Model
+### Source Page Coexistence
 
-The evolution pipeline's output — mature patterns and canonical decisions — is exactly the content that makes the LightRAG knowledge graph valuable. Pattern pages create hub nodes in the graph: many concepts reference them, many lessons derive from them, and they appear as common intermediaries in graph traversal. When `kb_sync.py` parses the wiki's relationships into the LightRAG graph, promoted pages are the high-connectivity nodes that make semantic search and graph-enhanced retrieval return relevant results.
+When a concept evolves into a lesson or pattern, the source page is PRESERVED, not deleted.
 
-This connection means evolution quality directly affects fleet intelligence quality. A wiki with mostly seed-maturity pages produces a sparse, low-signal graph. A wiki with well-evolved patterns and decisions produces a dense graph that enables contextually grounded navigation. See [[Model: LLM Wiki]] for the full LightRAG integration model.
+> [!abstract] **Why coexistence matters**
+> 1. **Evidence layer** — the evolved page makes a generalized claim. The source page contains the specific evidence. Deleting the source removes the evidence layer.
+> 2. **Graph needs both nodes** — LightRAG gains value from the parent-child relationship. Source = evidence node. Evolved = synthesis node. Queries traverse both directions.
+> 3. **Stale marking is honest** — `status: stale` signals supersession without deleting evidence value. The `derived_from` link navigates to the evolved version.
 
-### Evolved Pages and Their Source Pages
-
-A common question: when a concept page gets evolved into a lesson or pattern, should the source page be deleted, updated, or preserved?
-
-The correct answer is preserve and mark. Evolved pages coexist with their source pages. The source concept page gets `status: stale` and a `derived_from` reference pointing to the evolved page. The evolved page has a `derived_from` field in its frontmatter listing the source concepts.
-
-Why coexistence matters:
-
-1. **The source page preserves the evidence layer**: the evolved lesson or pattern makes a generalized claim. The source concept page contains the specific evidence (data points, source citations, implementation details) that justifies the claim. Deleting the source page removes the evidence layer — the evolved page becomes an assertion without grounding.
-
-2. **The graph needs both nodes**: LightRAG's knowledge graph gains value from the parent-child relationship between source concept and evolved page. Both nodes appear in graph traversal. The source page is the evidence node; the evolved page is the synthesis node. Queries can traverse from specific evidence to generalized insight or from generalized insight to supporting evidence.
-
-3. **Stale marking is honest**: `status: stale` signals that the page has been superseded by a more mature synthesis, but does not delete the page's evidence value. A wiki visitor encountering a stale page is directed to the evolved version via the `derived_from` link — they get the navigation benefit without losing the option to examine the primary source.
-
-The only case for removing a source page is if it is demonstrably wrong (not just superseded) and the wrongness would mislead someone who encounters it. In that case, the stale page should explicitly note the correction rather than being silently deleted.
+---
 
 ### The Weekly Evolution Cadence
 
-```
-Weekly review chain:
-  1. post              → validate, manifest, lint (catch decay since last run)
-  2. review            → surface pages ready for maturity promotion
-  3. gaps              → orphans, thin pages, open questions, weak domains
-  4. crossref          → missing backlinks, comparison candidates, domain bridges
+> [!info] **Codified in `pipeline chain review`**
+> ```
+> 1. post              → validate, manifest, lint (catch decay since last run)
+> 2. review            → surface pages ready for maturity promotion
+> 3. gaps              → orphans, thin pages, open questions, weak domains
+> 4. crossref          → missing backlinks, comparison candidates, domain bridges
+>
+> When evolution is queued:
+> 5. evolve --score --top 10   → rank candidates
+> 6. evolve --dry-run --top 3  → preview assembled context
+> 7. Execute top candidates     → generate lessons/patterns/decisions
+> 8. post                       → validate new evolved pages
+> 9. gaps                       → see what promotions unlocked
+> ```
 
-When evolution is queued:
-  5. evolve --score --top 10   → rank candidates, review the list
-  6. evolve --dry-run --top 3  → preview assembled context before generation
-  7. Execute top candidates     → generate lessons/patterns/decisions
-  8. post                       → validate new evolved pages, rebuild indexes
-  9. gaps                       → re-run to see what promotions unlocked
-```
+---
 
-This cadence is codified in `python3 -m tools.pipeline chain review`.
+### Key Pages
+
+| Page | Layer | Role in the model |
+|------|-------|-------------------|
+| [[Knowledge Evolution Pipeline]] | L2 | The pipeline concept — scorer, builder, backends, loop |
+| [[Progressive Distillation]] | L5 | The governing pattern — raw → synthesis → concept → lesson → pattern → decision |
+| [[Wiki Ingestion Pipeline]] | L2 | The input to evolution — ingestion quality determines evolution quality |
+| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | L4 | Lesson: each ingestion pass discovers what the previous missed |
+| [[LLM Knowledge Linting]] | L2 | Automated quality — detecting orphans, contradictions, staleness |
+| [[Decision: Wiki-First with LightRAG Upgrade Path]] | L6 | The scale decision — when graph-enhanced retrieval becomes necessary |
+| [[Decision: Local Model vs Cloud API for Routine Operations]] | L6 | Backend selection for routine evolution — local vs cloud trade-off |
+| [[Second Brain Architecture]] | L2 | PKM theory (PARA + Zettelkasten) that influenced the layer model |
+| [[Lesson: Schema Is the Real Product — Not the Content]] | L4 | Why the schema matters more than content — content is regenerable |
+| [[Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Why evolution fails when ingestion was shallow — garbage in, garbage out |
+
+---
+
+### Lessons Learned
+
+| Lesson | What was learned |
+|--------|-----------------|
+| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | Each ingestion pass discovers what the previous missed. Evolution quality depends on ingestion quality. |
+| [[Shallow Ingestion Is Systemic, Not Isolated]] | One shallow page → thin evolution candidates → weak lessons. Quality compounds across layers. |
+| [[Lesson: Schema Is the Real Product — Not the Content]] | Content is regenerable from sources. The schema that constrains evolution encodes irreplaceable operational knowledge. |
+| [[Models Are Built in Layers, Not All at Once]] | Evolution itself follows SFIF — scaffold the pipeline, build the foundation (scorer), add infrastructure (backends), then features (review cadence). |
+
+---
+
+### State of Knowledge
+
+> [!success] **Well-covered (built and operational)**
+> - 6-layer density architecture with promotion criteria per level
+> - Deterministic scorer with 6 signals, tuned weights, dedup logic (1,321-line implementation)
+> - 8-step generation loop with prompt builder
+> - Three LLM backends (claude-code, openai/LocalAI, aicp)
+> - Two failure modes documented with guards
+> - Weekly evolution cadence codified as pipeline chain
+> - Source page coexistence policy
+> - 10+ evolved pages generated (lessons, patterns, decisions)
+
+> [!warning] **Thin or unverified**
+> - LocalAI backend quality vs Claude — no systematic comparison exists
+> - The 200-page threshold for LightRAG — set empirically, no density metric defined
+> - Scorer gaming — manual cross-linking during ingestion could inflate scores artificially
+> - AICP backend integration — planned but not yet tested with real evolution runs
+> - Auto-evolution scheduling — `claude-code-scheduling` + `evolve` chain untested as a cron job
+> - Cross-wiki evolution — can one project's wiki evolve from another project's pages?
+
+---
+
+### How to Adopt
+
+> [!info] **Setting up the evolution pipeline for a new wiki**
+> 1. **Build the wiki first** — you need 20+ pages before evolution produces value. Ingest sources, create concept pages, build relationships.
+> 2. **Run `pipeline evolve --score`** — see what the scorer surfaces. If the top candidates make sense, the wiki is ready for evolution.
+> 3. **Start with `--backend claude-code`** — human-in-the-loop produces the highest quality evolved pages. Use these as the quality standard.
+> 4. **Add the weekly cadence** — `pipeline chain review` after every session or weekly. This catches both decay and missed promotion opportunities.
+> 5. **Add LocalAI backend** — once the quality standard is established, route routine seed → growing evolution to local inference for zero cost.
+
+> [!warning] **INVARIANT — never change these**
+> - Scorer is deterministic — no LLM in ranking. Auditable, schedulable, immune to hallucination.
+> - Human reviews maturity promotion — no auto-promotion from growing to mature or canonical.
+> - Source pages are preserved — evolved pages coexist with sources, never replace them.
+> - Post-chain runs after every evolution — validation errors block publication.
+> - `derived_from` links are mandatory on evolved pages — provenance is not optional.
+
+> [!tip] **PER-PROJECT — always adapt these**
+> - Scorer weights (which signals matter most depends on wiki content distribution)
+> - Backend selection (projects without LocalAI skip the openai backend)
+> - Evolution cadence (weekly for active wikis, monthly for stable ones)
+> - Promotion thresholds (how many relationships/sources before a page is eligible)
+> - Which layers exist (not every wiki needs all 6 layers — some projects only need L0-L2-L4)
 
 ## Open Questions
 
-- The 200-page threshold for LightRAG integration was set empirically — what specific graph density metric actually triggers the need for graph-enhanced retrieval vs pure index navigation?
-- How should the scorer handle pages that were highly connected at creation (manually cross-linked during ingestion) vs pages that accumulated connections organically over time? Manual seeding could inflate scores artificially.
-- Does the `--backend openai` / LocalAI path produce materially worse page quality than `--backend claude-code` for the same candidate? A systematic quality comparison would inform backend selection guidance.
+> [!question] **What graph density metric triggers the need for LightRAG?**
+> The 200-page threshold was set empirically. Is there a specific relationship-to-page ratio, average path length, or clustering coefficient that predicts when index navigation breaks down? (Requires: measuring navigation accuracy at different wiki sizes)
+
+> [!question] **Does manual cross-linking inflate scores?**
+> Pages cross-linked during ingestion start with higher relationship counts than organically connected pages. Should the scorer distinguish manually-seeded connections from organic ones? (Requires: comparing scorer output on manually-linked vs organically-linked candidate sets)
+
+> [!question] **What is the quality delta between LocalAI and Claude-generated evolution?**
+> Is the quality difference material for seed → growing promotion? Or does the human review gate catch quality issues regardless of backend? (Requires: blind comparison of pages generated by each backend on the same candidates)
 
 ## Relationships
 
 - BUILDS ON: [[Knowledge Evolution Pipeline]]
 - BUILDS ON: [[Progressive Distillation]]
-- RELATES TO: [[Model: SFIF and Architecture]]
-- RELATES TO: [[Model: Ecosystem Architecture]]
+- BUILDS ON: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 - RELATES TO: [[Model: LLM Wiki]]
-- FEEDS INTO: [[Model: Automation and Pipelines]]
+- RELATES TO: [[Model: Methodology]]
+- RELATES TO: [[Model: Second Brain]]
+- RELATES TO: [[Model: Automation and Pipelines]]
 - ENABLES: [[Decision: Wiki-First with LightRAG Upgrade Path]]
 - ENABLES: [[Decision: Local Model vs Cloud API for Routine Operations]]
 
@@ -175,11 +267,14 @@ This cadence is codified in `python3 -m tools.pipeline chain review`.
 
 [[Knowledge Evolution Pipeline]]
 [[Progressive Distillation]]
-[[Model: SFIF and Architecture]]
-[[Model: Ecosystem Architecture]]
+[[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Model: LLM Wiki]]
+[[Model: Methodology]]
+[[Model: Second Brain]]
 [[Model: Automation and Pipelines]]
 [[Decision: Wiki-First with LightRAG Upgrade Path]]
 [[Decision: Local Model vs Cloud API for Routine Operations]]
+[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[Model: Ecosystem Architecture]]
 [[Model: NotebookLM]]
-[[Model: Second Brain]]
+[[Model: SFIF and Architecture]]

@@ -10,6 +10,7 @@ Strategic architecture and domain overviews
 - [Model: Claude Code](model-claude-code.md) — Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from th...
 - [Model: Design.md and IaC](model-design-md.md) — The Design
 - [Model: Ecosystem Architecture](model-ecosystem.md) — The Ecosystem Architecture model describes how five projects — OpenFleet, AICP, devops-control-plane, the research wi...
+- [Evolution Standards — What Good Knowledge Promotion Looks Like](model-knowledge-evolution-standards.md) — This page defines the quality bar for KNOWLEDGE EVOLUTION
 - [Model: Knowledge Evolution](model-knowledge-evolution.md) — The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured,...
 - [LLM Wiki Standards — What Good Looks Like](model-llm-wiki-standards.md) — This page defines the quality bar for every page type in the LLM Wiki model
 - [Model: LLM Wiki](model-llm-wiki.md) — The LLM Wiki model defines a knowledge system where an LLM agent maintains a structured markdown wiki — ingesting sou...
@@ -30,4 +31,4 @@ Strategic architecture and domain overviews
 
 ## Tags
 
-`spine`, `model`, `standards`, `quality`, `gold-standard`, `anti-patterns`, `methodology`, `concept`, `skills`, `hooks`, `context-management`, `transferable`, `ecosystem`, `claude-code`, `harness`, `model-definition`, `harness-engineering`, `mcp`, `extension-system`, `design-md`
+`spine`, `model`, `standards`, `gold-standard`, `quality`, `anti-patterns`, `methodology`, `concept`, `skills`, `hooks`, `context-management`, `transferable`, `ecosystem`, `claude-code`, `harness`, `model-definition`, `harness-engineering`, `mcp`, `extension-system`, `design-md`
