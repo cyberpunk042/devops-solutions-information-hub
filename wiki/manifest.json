@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-10T01:01:38.991097+00:00",
+  "generated": "2026-04-10T02:02:18.233509+00:00",
   "stats": {
-    "pages": 162,
+    "pages": 165,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1162,
-    "tags_unique": 618,
+    "relationships": 1168,
+    "tags_unique": 624,
     "layers": {
       "3": 5,
       "6": 5,
@@ -14,11 +14,11 @@
       "4": 22,
       "5": 11,
       "1": 24,
-      "spine": 23
+      "spine": 24
     },
     "maturity": {
       "growing": 132,
-      "seed": 10
+      "seed": 11
     }
   },
   "pages": [
@@ -7358,6 +7358,56 @@
       "relationships": []
     },
     {
+      "path": "log/2026-04-09-directive-wiki-design-model-emerging.md",
+      "slug": "log/2026-04-09-directive-wiki-design-model-emerging",
+      "title": "Wiki Design Model Emerging \u2014 Obsidian Styling as Standard",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "wiki-design",
+        "styling",
+        "obsidian",
+        "callouts",
+        "emerging-standard"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "log/2026-04-09-directive-wiki-design-model-research.md",
+      "slug": "log/2026-04-09-directive-wiki-design-model-research",
+      "title": "Wiki Design Model \u2014 Research Sources",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "wiki-design",
+        "research",
+        "markdown",
+        "obsidian",
+        "remark"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-04-09-ingest-awesome-design-md.md",
       "slug": "log/2026-04-09-ingest-awesome-design-md",
       "title": "Ingest awesome-design-md repository",
@@ -11182,6 +11232,106 @@
           "target": "Model: Methodology"
         }
       ]
+    },
+    {
+      "path": "spine/model-wiki-design.md",
+      "slug": "spine/model-wiki-design",
+      "title": "Model: Wiki Design",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "wiki-design",
+        "model",
+        "formatting",
+        "obsidian",
+        "markdown",
+        "callouts",
+        "styling",
+        "remark",
+        "visual-design",
+        "standards"
+      ],
+      "sources": [
+        {
+          "id": "src-obsidian-basic-syntax",
+          "type": "documentation",
+          "url": "https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax",
+          "file": "raw/articles/obsidian-basic-formatting-syntax.md",
+          "title": "Obsidian Basic Formatting Syntax",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-obsidian-advanced-syntax",
+          "type": "documentation",
+          "url": "https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax",
+          "file": "raw/articles/obsidian-advanced-formatting-syntax.md",
+          "title": "Obsidian Advanced Formatting Syntax",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-obsidian-callouts",
+          "type": "documentation",
+          "url": "https://help.obsidian.md/Editing+and+formatting/Callouts",
+          "file": "raw/articles/obsidian-callouts-reference.md",
+          "title": "Obsidian Callouts Reference",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-markdown-basic",
+          "type": "documentation",
+          "url": "https://www.markdownguide.org/basic-syntax/",
+          "title": "Markdown Guide \u2014 Basic Syntax",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-markdown-extended",
+          "type": "documentation",
+          "url": "https://www.markdownguide.org/extended-syntax/",
+          "title": "Markdown Guide \u2014 Extended Syntax",
+          "ingested": "2026-04-09"
+        },
+        {
+          "id": "src-remarkjs",
+          "type": "documentation",
+          "url": "https://github.com/remarkjs/remark",
+          "file": "raw/articles/remarkjsremark.md",
+          "title": "remarkjs/remark \u2014 Markdown processor with plugins",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "[[Model: LLM Wiki]] (content structure is the foundation; design is the visual layer)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "[[LLM Wiki Standards \u2014 What Good Looks Like]] (quality standards inform design patterns)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Design.md Pattern]] (DESIGN.md is for UI systems; this model is for wiki pages \u2014 same principle, different domain)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Infrastructure as Code Patterns]] (CSS snippets and cssclasses are IaC for visual design)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "[[Model: Methodology]] (the methodology model page is the first to use the callout vocabulary extensively)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "All model pages (the callout vocabulary applies to every page in the wiki)"
+        }
+      ]
     }
   ],
   "domains": {
@@ -11190,8 +11340,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 41,
-      "relationship_count": 341
+      "page_count": 42,
+      "relationship_count": 347
     },
     "ai-agents": {
       "page_count": 34,
@@ -11218,7 +11368,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 15,
+      "page_count": 17,
       "relationship_count": 0
     }
   },
@@ -11537,12 +11687,15 @@
       "lessons/lesson-convergence-on-obsidian-knowledge-vault",
       "lessons/lesson-convergence-on-src-kepano-obsidian-skills",
       "log/2026-04-09-directive-styling-obsidian",
+      "log/2026-04-09-directive-wiki-design-model-emerging",
+      "log/2026-04-09-directive-wiki-design-model-research",
       "sources/src-axton-obsidian-visual-skills",
       "sources/src-karpathy-claude-code-10x",
       "sources/src-kepano-obsidian-skills",
       "sources/src-obsidian-claude-code-second-brain",
       "sources/src-pablo-mano-obsidian-cli-skill",
-      "spine/model-second-brain"
+      "spine/model-second-brain",
+      "spine/model-wiki-design"
     ],
     "notebooklm": [
       "comparisons/skills-architecture-patterns",
@@ -11890,8 +12043,10 @@
       "domains/knowledge-systems/wiki-ingestion-pipeline",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "lessons/lesson-convergence-on-claude-code-skills",
+      "log/2026-04-09-directive-wiki-design-model-research",
       "sources/src-karpathy-llm-wiki-idea-file",
-      "sources/src-kepano-obsidian-skills"
+      "sources/src-kepano-obsidian-skills",
+      "spine/model-wiki-design"
     ],
     "agent-configuration": [
       "domains/ai-agents/claude-code-skills",
@@ -12970,6 +13125,7 @@
     ],
     "research": [
       "domains/tools-and-platforms/notebooklm",
+      "log/2026-04-09-directive-wiki-design-model-research",
       "sources/src-notebooklm-claude-code-workflow",
       "spine/model-notebooklm"
     ],
@@ -13141,7 +13297,8 @@
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "spine/adoption-guide",
       "spine/model-llm-wiki-standards",
-      "spine/model-llm-wiki"
+      "spine/model-llm-wiki",
+      "spine/model-wiki-design"
     ],
     "cross-reference": [
       "lessons/lesson-convergence-on-wiki-ingestion-pipeline"
@@ -13253,6 +13410,8 @@
       "log/2026-04-09-directive-styling-obsidian",
       "log/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-09-directive-validate-second-brain-readiness",
+      "log/2026-04-09-directive-wiki-design-model-emerging",
+      "log/2026-04-09-directive-wiki-design-model-research",
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "directive": [
@@ -13270,6 +13429,8 @@
       "log/2026-04-09-directive-styling-obsidian",
       "log/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-09-directive-validate-second-brain-readiness",
+      "log/2026-04-09-directive-wiki-design-model-emerging",
+      "log/2026-04-09-directive-wiki-design-model-research",
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "critical-failure": [
@@ -13342,13 +13503,31 @@
       "log/2026-04-09-directive-stop-guessing-false-claims"
     ],
     "styling": [
-      "log/2026-04-09-directive-styling-obsidian"
+      "log/2026-04-09-directive-styling-obsidian",
+      "log/2026-04-09-directive-wiki-design-model-emerging",
+      "spine/model-wiki-design"
     ],
     "visual": [
       "log/2026-04-09-directive-styling-obsidian"
     ],
     "systemic": [
       "log/2026-04-09-directive-systemic-incompleteness"
+    ],
+    "wiki-design": [
+      "log/2026-04-09-directive-wiki-design-model-emerging",
+      "log/2026-04-09-directive-wiki-design-model-research",
+      "spine/model-wiki-design"
+    ],
+    "callouts": [
+      "log/2026-04-09-directive-wiki-design-model-emerging",
+      "spine/model-wiki-design"
+    ],
+    "emerging-standard": [
+      "log/2026-04-09-directive-wiki-design-model-emerging"
+    ],
+    "remark": [
+      "log/2026-04-09-directive-wiki-design-model-research",
+      "spine/model-wiki-design"
     ],
     "tool-design": [
       "patterns/context-aware-tool-loading"
@@ -13718,7 +13897,8 @@
       "spine/model-notebooklm",
       "spine/model-quality-failure-prevention",
       "spine/model-second-brain",
-      "spine/model-sfif-architecture"
+      "spine/model-sfif-architecture",
+      "spine/model-wiki-design"
     ],
     "concept": [
       "spine/model-automation-pipelines",
@@ -13807,6 +13987,12 @@
     ],
     "context-loading": [
       "spine/model-skills-commands-hooks"
+    ],
+    "formatting": [
+      "spine/model-wiki-design"
+    ],
+    "visual-design": [
+      "spine/model-wiki-design"
     ]
   },
   "orphaned_refs": [
@@ -13836,6 +14022,12 @@
       "target": "Adoption Guide",
       "referenced_by": [
         "Ecosystem Integration Interfaces"
+      ]
+    },
+    {
+      "target": "All model pages",
+      "referenced_by": [
+        "Model: Wiki Design"
       ]
     },
     {
@@ -14105,7 +14297,8 @@
       "target": "[[Design.md Pattern]]",
       "referenced_by": [
         "Spec-Driven Development",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
+        "Model: Wiki Design"
       ]
     },
     {
@@ -14171,7 +14364,8 @@
       "target": "[[Infrastructure as Code Patterns]]",
       "referenced_by": [
         "Execution Modes and End Conditions",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
+        "Model: Wiki Design"
       ]
     },
     {
@@ -14192,6 +14386,12 @@
       ]
     },
     {
+      "target": "[[LLM Wiki Standards \u2014 What Good Looks Like]]",
+      "referenced_by": [
+        "Model: Wiki Design"
+      ]
+    },
+    {
       "target": "[[MCP Integration Architecture]]",
       "referenced_by": [
         "Design.md Pattern"
@@ -14207,6 +14407,18 @@
       "target": "[[Methodology Framework]]",
       "referenced_by": [
         "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+      ]
+    },
+    {
+      "target": "[[Model: LLM Wiki]]",
+      "referenced_by": [
+        "Model: Wiki Design"
+      ]
+    },
+    {
+      "target": "[[Model: Methodology]]",
+      "referenced_by": [
+        "Model: Wiki Design"
       ]
     },
     {

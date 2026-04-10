@@ -160,7 +160,7 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 ## Backlinks
 
 [[Scaffold → Foundation → Infrastructure → Features]]
-[[[[Skyscraper]]
+[[Skyscraper]]
 [[Pyramid]]
 [[Mountain]]]]
 [[Model: Design.md and IaC]]

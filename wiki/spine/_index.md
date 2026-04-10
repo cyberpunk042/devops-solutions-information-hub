@@ -20,7 +20,8 @@ Strategic architecture and domain overviews
 - [Model: Second Brain](model-second-brain.md) — The Second Brain model describes the personal knowledge management (PKM) theoretical foundation that underlies this w...
 - [Model: SFIF and Architecture](model-sfif-architecture.md) — The SFIF and Architecture model describes the universal 4-stage build lifecycle (Scaffold → Foundation → Infrastructu...
 - [Model: Skills, Commands, and Hooks](model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
+- [Model: Wiki Design](model-wiki-design.md) — The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they ...
 
 ## Tags
 
-`spine`, `model`, `concept`, `methodology`, `standards`, `transferable`, `ecosystem`, `model-definition`, `skills`, `hooks`, `context-management`, `harness-engineering`, `mcp`, `design-md`, `aicp`, `integration`, `architecture`, `progressive-distillation`, `second-brain`, `quality`
+`model`, `spine`, `standards`, `concept`, `methodology`, `transferable`, `ecosystem`, `model-definition`, `skills`, `hooks`, `context-management`, `harness-engineering`, `mcp`, `design-md`, `aicp`, `integration`, `architecture`, `progressive-distillation`, `second-brain`, `quality`

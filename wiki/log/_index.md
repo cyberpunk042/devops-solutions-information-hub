@@ -19,6 +19,8 @@ Operator directives, session summaries, and task completion notes.
 | Date | Title | Type | Tags |
 |------|-------|------|------|
 | 2026-04-09 | [Ingest awesome-design-md repository](2026-04-09-ingest-awesome-design-md.md) | directive | `log`, `directive`, `ingestion`, `design-md` |
+| 2026-04-09 | [Wiki Design Model — Research Sources](2026-04-09-directive-wiki-design-model-research.md) | directive | `log`, `directive`, `wiki-design`, `research`, `markdown`, `obsidian`, `remark` |
+| 2026-04-09 | [Wiki Design Model Emerging — Obsidian Styling as Standard](2026-04-09-directive-wiki-design-model-emerging.md) | directive | `log`, `directive`, `wiki-design`, `styling`, `obsidian`, `callouts`, `emerging-standard` |
 | 2026-04-09 | [Validate Second Brain Readiness](2026-04-09-directive-validate-second-brain-readiness.md) | directive | `log`, `directive`, `second-brain`, `readiness`, `validation` |
 | 2026-04-09 | [Systemic Incompleteness — No Model Is Finished](2026-04-09-directive-systemic-incompleteness.md) | directive | `log`, `directive`, `failure-lesson`, `systemic`, `quality`, `honesty` |
 | 2026-04-09 | [Styling — Make It Look Good in Obsidian](2026-04-09-directive-styling-obsidian.md) | directive | `log`, `directive`, `styling`, `obsidian`, `visual`, `design` |
