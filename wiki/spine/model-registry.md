@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources: []
 tags: [models, registry, index, navigation, spine, entry-point]
 ---
@@ -18,9 +18,9 @@ tags: [models, registry, index, navigation, spine, entry-point]
 
 This is the entry point for all named models in the wiki. A model is a coherent system definition — not a reading list but a real specification with standards, schemas, adoption guidance, and real examples. Each model has a companion standards page that defines what GOOD looks like for that domain. Use this page to find any model and assess its maturity.
 
-## The Three-Layer Pattern
-
-Every model follows the same three-layer structure:
+> [!info] The Three-Layer Pattern
+>
+> Every model follows the same three-layer structure:
 
 | Layer | What it defines | Example |
 |-------|----------------|---------|
@@ -79,3 +79,4 @@ The [[Model: Methodology]] is the super-model — it GOVERNS how all work procee
 [[Model: Methodology]]
 [[Model: LLM Wiki]]
 [[Model: Wiki Design]]
+[[Models Are Systems, Not Documents]]
