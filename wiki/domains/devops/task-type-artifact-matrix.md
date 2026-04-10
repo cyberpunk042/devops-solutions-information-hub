@@ -195,10 +195,16 @@ The Task Type Artifact Matrix defines the 7 distinct task types in the OpenArms 
 
 ## Open Questions
 
-- How should the type system handle tasks that start as one type and evolve? A spike that reveals the answer is obvious and implementation should begin immediately — does this become a `module` or does the spike complete and a new `module` task get created?
-- Is there a case for a `spike+implement` type that allows code production after the research phase is committed? The current system requires a separate task to avoid commingling research and implementation. Is this overhead justified in all cases?
 - The `refactor` type lacks a Design stage, which means the "target state" is captured in the Document stage. Is a single Document artifact sufficient to capture both "current state" and "target state" analysis? Or should refactors use a two-document approach (current state in Document, target state in Design)?
 - How does the matrix interact with the `full-autonomous` execution mode that skips Document on non-epic/module tasks? A `task` type with `full-autonomous` would skip Document (already not required) and run scaffold → implement → test directly. But a `bug` type with `full-autonomous` would skip Document — which IS required for bugs. Is this a mode interaction bug in the methodology design?
+
+## Answered Open Questions
+
+> [!example]- How should the type system handle tasks that start as one type and evolve mid-execution?
+> Resolved in [[Decision: Task Type Edge Cases]]. The spike completes first (Document + Design stages with artifacts), then a new `task` or `module` is created for implementation. Never merge phases or mutate type mid-execution -- it breaks the stage-gate audit trail.
+
+> [!example]- Is there a case for a `spike+implement` compound type?
+> Resolved in [[Decision: Task Type Edge Cases]]. No. Spike produces knowledge; implementation is a separate deliverable. The constraint that spikes cannot produce code is the safety mechanism preventing "quick research" from sliding into unplanned implementation.
 
 ## Relationships
 

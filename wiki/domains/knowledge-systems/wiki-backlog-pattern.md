@@ -209,10 +209,16 @@ The OpenArms implementation (`/home/jfortin/openarms/wiki/`) is the direct refer
 
 ## Open Questions
 
-- What is the migration path from an external task board (Plane, Linear, Jira) to the Wiki Backlog Pattern? OpenFleet maintains both systems — is there value in keeping both, or does the duality create drift?
-- How does the Wiki Backlog Pattern handle tasks that require human input mid-execution? OpenFleet's solution is `fleet_request_input` (an MCP tool that is not yet built). OpenArms' solution is the `semi-autonomous` mode (pause after each task). What is the wiki-native solution for asynchronous human gating?
 - Can the knowledge evolution pipeline (`pipeline evolve --score`) be extended to also score backlog tasks by priority and dependency order? The scorer currently ranks knowledge pages by maturity/insight density. A unified scorer that ranks both knowledge gaps and backlog tasks would make the pipeline fully self-directing.
 - The sacrosanct verbatim log principle means that directives cannot be changed after they are written. How should conflicting directives be handled? OpenFleet's approach: newer directives take precedence, but old directives are never deleted. Is this sufficient, or do wikis need a directive supersession mechanism?
+
+## Answered Open Questions
+
+> [!example]- What is the migration path from an external task board to the Wiki Backlog Pattern?
+> Resolved in [[Decision: Task Type Edge Cases]]. Keep both systems in parallel. Plane for human-facing PM (burndown, sprint views, velocity); wiki backlog for agent-facing context (frontmatter state machine, stage gates). Separation of concerns, not drift.
+
+> [!example]- What is the wiki-native solution for asynchronous human gating?
+> Resolved in [[Decision: Task Type Edge Cases]]. Semi-autonomous mode + session artifacts. Agent writes its question to `wiki/log/`, sets task to `blocked` with `blocked_by` describing needed input, and stops. Human provides input as a new log entry or task edit. Next session picks up the unblocked task.
 
 ## Relationships
 

@@ -165,12 +165,24 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 
 ## Open Questions
 
-- How does command name collision resolve when personal and project scopes define the same command? Does project-scope override, or does personal-scope take precedence? The artemgetmann source does not document this behavior.
-- Is there a mechanism for commands to declare dependencies on other commands or skills? A `/review` command that requires the `evolve` skill to be installed has an implicit dependency — currently undeclared.
-- How should commands be versioned when distributed as part of a role package? If `/ingest` is updated to invoke a newer skill API, old installations break silently. A semver contract for command packages would solve this but does not currently exist.
-- Can a command read the current session mode (autonomous/semi-autonomous/document-only) to alter its behavior at runtime? Or does each mode require a separate command variant?
-- What is the right granularity for a "role"? Developer/Researcher/PM is obvious. But within Developer: frontend vs. backend vs. infrastructure each need different commands. Should roles be hierarchical (role → sub-role) or flat with tags?
 - How to share commands across the 4-project ecosystem without duplicating files? A symlink approach, a shared submodule, or a `~/.claude/commands/ecosystem/` install target populated by a single script?
+
+## Answered Open Questions
+
+> [!example]- How does command name collision resolve when personal and project scopes define the same command?
+> Resolved in [[Decision: Per-Role Command Design Decisions]]. Project scope overrides personal scope, matching Claude Code's documented settings hierarchy.
+
+> [!example]- Is there a mechanism for commands to declare dependencies on other commands or skills?
+> Resolved in [[Decision: Per-Role Command Design Decisions]]. Commands declare skill dependencies via frontmatter `requires: [skill-name]` — a convention, not yet enforced by the platform.
+
+> [!example]- How should commands be versioned when distributed as part of a role package?
+> Resolved in [[Decision: Per-Role Command Design Decisions]]. Semver in frontmatter `version: 1.0.0` with breaking changes bumping major version.
+
+> [!example]- Can a command read the current session mode to alter its behavior at runtime?
+> Resolved in [[Decision: Per-Role Command Design Decisions]]. Commands don't branch on mode. Hooks read session mode and enforce constraints — the Plannotator pattern (command sets context, hook provides enforcement).
+
+> [!example]- What is the right granularity for a "role"?
+> Resolved in [[Decision: Per-Role Command Design Decisions]]. Flat tags `roles: [developer, frontend]` rather than hierarchical role trees. Simplest model, revisit if insufficient.
 
 ## Relationships
 

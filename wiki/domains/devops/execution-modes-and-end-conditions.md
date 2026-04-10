@@ -428,11 +428,24 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 
 ## Open Questions
 
-- What is the correct behavior when a quality gate fails and max retries are exhausted? The current specification says the task becomes `blocked`. But should the agent create a new `bug` task describing the gate failure, so the blocker is tracked and eventually resolved?
-- How should the cost-limit end condition interact with a task that is mid-stage? If cost limit is reached during the Implement stage, the agent cannot commit partial implementation (it would leave code in an inconsistent state). Should the agent abandon the in-progress stage, revert to pre-stage state, and commit the reversion?
-- The `full-autonomous` mode skips Document on non-epic/module tasks. But the Document stage for tasks is often trivial (confirming existing wiki knowledge). Is there a `conditional-document` mode that runs Document only when no existing wiki page covers the topic?
-- How should the work loop handle tasks where the next stage's quality gate will definitively fail? If a task's scaffold stage requires type definitions but there are no types to define (it is a pure shell script), the quality gate "types compile" does not apply. Is there a mechanism to mark stage gates as N/A for specific tasks?
-- Should the completion log in `wiki/log/` be structured (YAML) or unstructured (prose)? Structured logs could be queried programmatically to produce session summaries and performance metrics. Prose logs are more readable for human review.
+(All previously open questions have been resolved -- see Answered Open Questions below.)
+
+## Answered Open Questions
+
+> [!example]- What is the correct behavior when a quality gate fails and max retries are exhausted?
+> Resolved in [[Decision: Execution Mode Edge Cases]]. Create a `bug` task describing the failure (gate name, error output, parent task ID, blocked stage). Set parent to `blocked` with `blocked_by: [T0XX]`. Makes the failure a trackable work item, not a silent dead end.
+
+> [!example]- How should cost-limit interact with a task that is mid-stage?
+> Resolved in [[Decision: Execution Mode Edge Cases]]. Complete the current stage and commit, then stop. Never abandon mid-stage -- partial commits corrupt the one-commit-per-stage audit trail. Cost limit is a soft boundary, not a hard kill.
+
+> [!example]- Is there a `conditional-document` mode that runs Document only when wiki coverage is missing?
+> Resolved in [[Decision: Execution Mode Edge Cases]]. No. Keep `full-autonomous` as-is. Document skip is per task type, not per topic. Adding an LLM judgment call introduces non-deterministic mode behavior. Use `autonomous` mode or promote to `module` if Document is needed.
+
+> [!example]- How should the work loop handle tasks where stage gates don't apply (N/A)?
+> Resolved in [[Decision: Execution Mode Edge Cases]]. Task frontmatter can declare `skip_gates: [types_compile]` -- explicit, auditable, declared rather than silently assumed.
+
+> [!example]- Should the completion log be structured (YAML) or unstructured (prose)?
+> Resolved in [[Decision: Execution Mode Edge Cases]]. Both: structured YAML frontmatter (queryable by tooling) with a prose body (readable by humans). A `note` type page with `note_type: completion` in frontmatter.
 
 ## Relationships
 

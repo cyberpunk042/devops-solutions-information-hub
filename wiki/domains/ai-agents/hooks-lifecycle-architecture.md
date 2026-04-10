@@ -126,11 +126,24 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 
 ## Open Questions
 
-- Can a single PreToolUse hook read the current stage from an external state file to make dynamic blocking decisions (e.g., block writes when `stage == "document"` and allow them when `stage == "implement"`)? This would require hooks to have read access to the filesystem — command handlers do, but is it within the documented pattern?
-- How do hooks interact with Claude Code's built-in `--dangerously-skip-permissions` flag? Can policy-scope hooks block this override, or does the flag bypass the entire hook system?
-- What is the hook invocation latency budget for command handlers in a fast-paced development session? If PreToolUse fires on every Bash call and each handler takes 100ms, a session with 500 tool calls adds ~50 seconds of overhead.
-- Can `agent`-type hook handlers themselves trigger further hooks (recursive hook chains)? What is the depth limit?
-- Is there a hook for plan generation specifically (before the agent commits to an execution strategy)? Plannotator suggests this exists but the 26-event list does not explicitly name a "PlanGenerated" event — is this handled via a `prompt` handler on UserPromptSubmit?
+(All previously open questions have been resolved -- see Answered Open Questions below.)
+
+## Answered Open Questions
+
+> [!example]- Can a PreToolUse hook read the current stage from an external state file for dynamic blocking decisions?
+> Resolved in [[Decision: Hooks Design Decisions]]. Yes -- command handlers have full filesystem access. Reading task frontmatter to check `current_stage` and blocking writes accordingly is within the documented pattern. Context Mode validates this exact approach.
+
+> [!example]- How do hooks interact with `--dangerously-skip-permissions`?
+> Resolved in [[Decision: Hooks Design Decisions]]. Policy-scope hooks SHOULD survive the flag. If they don't, treat it as a platform bug to report. Policy hooks are organization-enforced and should not be bypassable.
+
+> [!example]- What is the hook invocation latency budget for command handlers?
+> Resolved in [[Decision: Hooks Design Decisions]]. Target <=50ms per handler on hot-path hooks (PreToolUse). For handlers exceeding this budget (database lookups, network calls), use `async: true` for fire-and-forget.
+
+> [!example]- Can agent-type hook handlers trigger further hooks (recursive hook chains)?
+> Resolved in [[Decision: Hooks Design Decisions]]. Depth limit of 1. Agent handlers should execute in a context where hooks are suspended, or the runtime should enforce the limit. Prevents unbounded execution.
+
+> [!example]- Is there a hook for plan generation specifically?
+> Resolved in [[Decision: Hooks Design Decisions]]. No dedicated PlanGenerated event. Use UserPromptSubmit with a `prompt` handler -- Plannotator validates this pattern. PostToolUse or Stop hooks can intercept plan output if needed.
 
 ## Relationships
 
