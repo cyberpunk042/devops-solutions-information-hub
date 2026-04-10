@@ -105,5 +105,6 @@ This lesson applies far beyond wiki ingestion:
 [[Immune System Rules]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Quality and Failure Prevention]]
+[[Never Present Speculation as Fact]]
 [[Quality Standards — What Good Failure Prevention Looks Like]]
 [[Shallow Ingestion Is Systemic, Not Isolated]]

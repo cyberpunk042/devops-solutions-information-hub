@@ -99,3 +99,4 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 [[Skyscraper, Pyramid, Mountain]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Decision: Task Type Edge Cases]]
+[[Methodology Is a Framework, Not a Fixed Pipeline]]

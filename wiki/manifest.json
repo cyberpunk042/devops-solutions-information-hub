@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-10T21:05:44.143529+00:00",
+  "generated": "2026-04-10T21:10:42.646849+00:00",
   "stats": {
-    "pages": 176,
+    "pages": 179,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1196,
-    "tags_unique": 655,
+    "relationships": 1209,
+    "tags_unique": 660,
     "layers": {
       "3": 5,
       "6": 10,
       "2": 51,
-      "4": 23,
+      "4": 26,
       "5": 6,
       "1": 24,
       "spine": 31
     },
     "maturity": {
       "growing": 133,
-      "seed": 18
+      "seed": 21
     }
   },
   "pages": [
@@ -6383,6 +6383,58 @@
       ]
     },
     {
+      "path": "lessons/methodology-is-a-framework-not-a-fixed-pipeline.md",
+      "slug": "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
+      "title": "Methodology Is a Framework, Not a Fixed Pipeline",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "failure-lesson",
+        "methodology",
+        "flexibility",
+        "framework",
+        "composability",
+        "overfitting"
+      ],
+      "sources": [
+        {
+          "id": "directive-methodology-flexible",
+          "type": "log",
+          "file": "wiki/log/2026-04-09-directive-methodology-is-flexible-not-fixed.md",
+          "title": "Methodology Is Flexible \u2014 Multiple Chains, Not One Fixed Pipeline",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Methodology Framework",
+        "Stage-Gate Methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Models Are Systems, Not Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: Methodology Framework Design Decisions"
+        }
+      ]
+    },
+    {
       "path": "lessons/models-are-built-in-layers-not-all-at-once.md",
       "slug": "lessons/models-are-built-in-layers-not-all-at-once",
       "title": "Models Are Built in Layers, Not All at Once",
@@ -6567,6 +6619,58 @@
         {
           "verb": "FEEDS INTO",
           "target": "OpenFleet"
+        }
+      ]
+    },
+    {
+      "path": "lessons/never-present-speculation-as-fact.md",
+      "slug": "lessons/never-present-speculation-as-fact",
+      "title": "Never Present Speculation as Fact",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "failure-lesson",
+        "quality",
+        "honesty",
+        "false-claims",
+        "speculation",
+        "verification"
+      ],
+      "sources": [
+        {
+          "id": "directive-stop-guessing",
+          "type": "log",
+          "file": "wiki/log/2026-04-09-directive-stop-guessing-false-claims.md",
+          "title": "Stop Guessing \u2014 False Claims in Models",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Claude Code Context Management",
+        "Never Synthesize from Descriptions Alone"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Claude Code Context Management"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Synthesize from Descriptions Alone"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Shallow Ingestion Is Systemic, Not Isolated"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Quality and Failure Prevention"
         }
       ]
     },
@@ -7140,6 +7244,63 @@
         {
           "verb": "FEEDS INTO",
           "target": "AICP"
+        }
+      ]
+    },
+    {
+      "path": "lessons/systemic-incompleteness-is-invisible-to-validation.md",
+      "slug": "lessons/systemic-incompleteness-is-invisible-to-validation",
+      "title": "Systemic Incompleteness Is Invisible to Validation",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-10",
+      "updated": "2026-04-10",
+      "tags": [
+        "failure-lesson",
+        "quality",
+        "completeness",
+        "validation",
+        "depth",
+        "false-signals"
+      ],
+      "sources": [
+        {
+          "id": "directive-systemic-incompleteness",
+          "type": "log",
+          "file": "wiki/log/2026-04-09-directive-systemic-incompleteness.md",
+          "title": "Systemic Incompleteness \u2014 No Model Is Finished",
+          "ingested": "2026-04-09"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Model Registry",
+        "Models Are Built in Layers, Not All at Once",
+        "Models Are Systems, Not Documents"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model Registry"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Models Are Built in Layers, Not All at Once"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Models Are Systems, Not Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Quality and Failure Prevention"
         }
       ]
     },
@@ -11918,8 +12079,8 @@
       "relationship_count": 11
     },
     "cross-domain": {
-      "page_count": 46,
-      "relationship_count": 362
+      "page_count": 49,
+      "relationship_count": 375
     },
     "devops": {
       "page_count": 13,
@@ -12471,6 +12632,7 @@
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
       "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "lessons/models-are-built-in-layers-not-all-at-once",
       "lessons/never-skip-stages-even-when-told-to-continue",
       "lessons/never-synthesize-from-descriptions-alone",
@@ -12489,6 +12651,7 @@
     "framework": [
       "decisions/methodology-framework-design-decisions",
       "domains/cross-domain/methodology-framework",
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "spine/model-methodology"
     ],
     "model-selection": [
@@ -13234,9 +13397,11 @@
       "domains/cross-domain/skyscraper-pyramid-mountain",
       "lessons/infrastructure-must-be-reproducible-not-manual",
       "lessons/models-are-systems-not-documents",
+      "lessons/never-present-speculation-as-fact",
       "lessons/never-skip-stages-even-when-told-to-continue",
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
       "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-model-quality-links-schema",
       "log/2026-04-09-directive-models-are-not-documents",
@@ -13873,6 +14038,7 @@
     ],
     "validation": [
       "lessons/automated-knowledge-validation-prevents-wiki-decay",
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
       "log/2026-04-09-directive-validate-second-brain-readiness"
     ],
     "wiki-decay": [
@@ -13918,11 +14084,14 @@
     ],
     "failure-lesson": [
       "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "lessons/models-are-built-in-layers-not-all-at-once",
       "lessons/models-are-systems-not-documents",
+      "lessons/never-present-speculation-as-fact",
       "lessons/never-skip-stages-even-when-told-to-continue",
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
       "lessons/the-agent-must-practice-what-it-documents",
       "log/2026-04-09-directive-systemic-incompleteness"
     ],
@@ -13950,6 +14119,16 @@
     "relationships": [
       "lessons/llm-maintained-wikis-outperform-static-documentation"
     ],
+    "flexibility": [
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
+      "log/2026-04-09-directive-methodology-is-flexible-not-fixed"
+    ],
+    "composability": [
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline"
+    ],
+    "overfitting": [
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline"
+    ],
     "lesson": [
       "lessons/models-are-built-in-layers-not-all-at-once"
     ],
@@ -13972,6 +14151,7 @@
     ],
     "depth": [
       "lessons/models-are-systems-not-documents",
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
       "log/2026-04-09-directive-models-are-not-documents",
       "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-directive-stop-claiming-readiness"
@@ -14006,6 +14186,22 @@
     ],
     "deepening": [
       "lessons/multi-stage-ingestion-beats-single-pass"
+    ],
+    "honesty": [
+      "lessons/never-present-speculation-as-fact",
+      "log/2026-04-09-directive-stop-claiming-readiness",
+      "log/2026-04-09-directive-stop-guessing-false-claims",
+      "log/2026-04-09-directive-systemic-incompleteness"
+    ],
+    "false-claims": [
+      "lessons/never-present-speculation-as-fact",
+      "log/2026-04-09-directive-stop-guessing-false-claims"
+    ],
+    "speculation": [
+      "lessons/never-present-speculation-as-fact"
+    ],
+    "verification": [
+      "lessons/never-present-speculation-as-fact"
     ],
     "stage-gates": [
       "lessons/never-skip-stages-even-when-told-to-continue",
@@ -14074,6 +14270,13 @@
     "llm-extension": [
       "lessons/skills-architecture-is-dominant-extension-pattern"
     ],
+    "completeness": [
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
+      "log/2026-04-09-directive-bottom-up-model-completion"
+    ],
+    "false-signals": [
+      "lessons/systemic-incompleteness-is-invisible-to-validation"
+    ],
     "self-enforcement": [
       "lessons/the-agent-must-practice-what-it-documents"
     ],
@@ -14131,9 +14334,6 @@
     "discipline": [
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
     ],
-    "completeness": [
-      "log/2026-04-09-directive-bottom-up-model-completion"
-    ],
     "bottom-up": [
       "log/2026-04-09-directive-bottom-up-model-completion"
     ],
@@ -14155,9 +14355,6 @@
     ],
     "alignment": [
       "log/2026-04-09-directive-docs-layers-old-models"
-    ],
-    "flexibility": [
-      "log/2026-04-09-directive-methodology-is-flexible-not-fixed"
     ],
     "chains": [
       "log/2026-04-09-directive-methodology-is-flexible-not-fixed"
@@ -14181,14 +14378,6 @@
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "spine/model-llm-wiki-standards",
       "spine/model-wiki-design-standards"
-    ],
-    "honesty": [
-      "log/2026-04-09-directive-stop-claiming-readiness",
-      "log/2026-04-09-directive-stop-guessing-false-claims",
-      "log/2026-04-09-directive-systemic-incompleteness"
-    ],
-    "false-claims": [
-      "log/2026-04-09-directive-stop-guessing-false-claims"
     ],
     "styling": [
       "log/2026-04-09-directive-styling-obsidian",

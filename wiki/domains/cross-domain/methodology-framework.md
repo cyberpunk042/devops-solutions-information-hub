@@ -348,6 +348,7 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Decision: Methodology Framework Design Decisions]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
+[[Methodology Is a Framework, Not a Fixed Pipeline]]
 [[Model: Methodology]]
 [[Models Are Built in Layers, Not All at Once]]
 [[Never Skip Stages Even When Told to Continue]]

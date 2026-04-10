@@ -368,4 +368,6 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Model: Design.md and IaC]]
 [[Model: Local AI ($0 Target)]]
 [[Model: SFIF and Architecture]]
+[[Never Present Speculation as Fact]]
 [[Quality Standards — What Good Failure Prevention Looks Like]]
+[[Systemic Incompleteness Is Invisible to Validation]]

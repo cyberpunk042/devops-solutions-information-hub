@@ -80,3 +80,4 @@ The [[Model: Methodology]] is the super-model — it GOVERNS how all work procee
 [[Model: LLM Wiki]]
 [[Model: Wiki Design]]
 [[Models Are Systems, Not Documents]]
+[[Systemic Incompleteness Is Invisible to Validation]]

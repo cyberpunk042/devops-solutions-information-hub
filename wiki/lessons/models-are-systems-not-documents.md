@@ -84,3 +84,5 @@ The first 14 model pages failed every row of this table. They used file paths in
 [[Models Are Built in Layers, Not All at Once]]
 [[The Agent Must Practice What It Documents]]
 [[Model: LLM Wiki]]
+[[Methodology Is a Framework, Not a Fixed Pipeline]]
+[[Systemic Incompleteness Is Invisible to Validation]]

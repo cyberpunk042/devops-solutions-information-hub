@@ -183,6 +183,7 @@ The compaction lifecycle reveals something non-obvious: **context management is 
 [[Design.md Pattern]]
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
+[[Never Present Speculation as Fact]]
 [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
 [[Synthesis: Claude Code Accuracy Tips]]
 [[Synthesis: Claude Code Best Practice (shanraisshan)]]

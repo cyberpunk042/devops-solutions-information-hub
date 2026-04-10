@@ -108,3 +108,4 @@ This lesson applies to any system where automated agents produce artifacts from 
 [[Immune System Rules]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Quality and Failure Prevention]]
+[[Never Present Speculation as Fact]]

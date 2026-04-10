@@ -249,6 +249,7 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Framework]]
+[[Methodology Is a Framework, Not a Fixed Pipeline]]
 [[Model: Methodology]]
 [[Never Skip Stages Even When Told to Continue]]
 [[Never Synthesize from Descriptions Alone]]
