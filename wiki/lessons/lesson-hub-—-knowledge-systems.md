@@ -11,7 +11,7 @@ derived_from:
   - "Second Brain Architecture"
   - "Knowledge Evolution Pipeline"
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -37,6 +37,8 @@ This lesson matters when deciding where to invest evolution effort. If the knowl
 It also surfaces an architectural tension: a wiki that documents how it works must evolve its self-documentation as its tooling evolves. When a new pipeline command is added, the Research Pipeline Orchestration page (automation domain) needs updating — but so does this domain's own pages if the new command reflects a pattern change. The knowledge-systems domain has higher maintenance priority than other domains because it is the reference model for everything else.
 
 ## Insight
+
+> [!abstract] This wiki also documents itself — knowledge-systems is the meta-domain that explains the others.
 
 Most knowledge bases are about external domains — they document tools, practices, architectures, and decisions from the world outside the knowledge base. This wiki is unusual in that it also documents itself: how it ingests, how it evolves, how it exports, how it validates. The knowledge-systems domain is where this self-documentation lives.
 

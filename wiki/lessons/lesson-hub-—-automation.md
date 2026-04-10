@@ -11,7 +11,7 @@ derived_from:
   - "Wiki Event-Driven Automation"
   - "MCP Integration Architecture"
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-user-directive-ecosystem
     type: notes
@@ -38,7 +38,7 @@ It also applies when planning the evolution of the wiki system. The automation d
 
 ## Insight
 
-A knowledge base without automation is a static artifact. It grows only when humans deliberately invest time, and it decays the moment that investment stops. The automation domain solves this by creating feedback loops between the knowledge layer and the execution layer: changes in the wiki trigger pipeline operations, pipeline operations produce new knowledge, new knowledge triggers further synthesis.
+> [!warning] A knowledge base without automation is a static artifact that decays the moment human investment stops. It grows only when humans deliberately invest time, and it decays the moment that investment stops. The automation domain solves this by creating feedback loops between the knowledge layer and the execution layer: changes in the wiki trigger pipeline operations, pipeline operations produce new knowledge, new knowledge triggers further synthesis.
 
 Research Pipeline Orchestration documents the vision for turning the wiki into a self-extending research engine: input a list of URLs or topics, and the pipeline classifies each input, routes it through the appropriate chain (online research, local ingestion, cross-referencing, or deepening), executes in parallel where independent, sequences where dependent, and always runs the post-chain to maintain consistency. This is not just automation of existing manual steps — it is a qualitatively different mode of operation where the human's role shifts from executing research to directing it.
 

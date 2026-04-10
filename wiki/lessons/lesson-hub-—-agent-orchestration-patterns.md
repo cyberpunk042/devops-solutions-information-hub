@@ -11,7 +11,7 @@ derived_from:
   - "Plan Execute Review Cycle"
   - "Deterministic Shell, LLM Core"
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
@@ -37,6 +37,8 @@ This lesson applies when navigating the wiki cold — when a new reader, contrib
 Hub identification matters beyond navigation: the most connected pages are also the highest-value evolution candidates. A hub page with 10 inbound relationships has accumulated more cross-domain evidence than a leaf page with 1. When the evolution pipeline scores candidates, relationship density is one of the six deterministic signals — and Agent Orchestration Patterns will consistently rank near the top because it has been confirmed by the most independent sources.
 
 ## Insight
+
+> [!tip] Independent convergence = real constraints, not stylistic preference
 
 When multiple independent engineering teams face the same class of problem — coordinating autonomous or semi-autonomous AI execution — and converge on the same structural solutions without coordination, that convergence is evidence of real constraints, not stylistic preference. Agent Orchestration Patterns documents exactly this: three independent systems (OpenFleet's 12-step orchestrator, Harness Engineering's 5-verb workflow, Claude Code's superpowers brainstorm-plan-execute-verify loop) independently arrived at the same structural pattern: separate deliberation from execution, bound the execution phase, enforce a review gate before state is committed.
 
