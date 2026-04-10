@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-10T00:19:56.017631+00:00",
+  "generated": "2026-04-10T00:37:06.037837+00:00",
   "stats": {
-    "pages": 160,
+    "pages": 161,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1163,
-    "tags_unique": 612,
+    "relationships": 1162,
+    "tags_unique": 616,
     "layers": {
       "3": 5,
       "6": 5,
@@ -7018,6 +7018,30 @@
       ]
     },
     {
+      "path": "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW.md",
+      "slug": "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
+      "title": "FOLLOW THE WORKFLOW \u2014 Complete Failure to Practice Methodology",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "directive",
+        "critical-failure",
+        "methodology",
+        "workflow",
+        "discipline"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-04-09-directive-bottom-up-model-completion.md",
       "slug": "log/2026-04-09-directive-bottom-up-model-completion",
       "title": "Bottom-Up Model Completion \u2014 10+ Named Models Required",
@@ -10593,7 +10617,10 @@
         "backlog",
         "execution-modes",
         "framework",
-        "spine"
+        "spine",
+        "flexible",
+        "multi-track",
+        "multi-model"
       ],
       "sources": [
         {
@@ -10643,7 +10670,15 @@
         },
         {
           "verb": "GOVERNS",
-          "target": "Model: Skills + Commands + Hooks"
+          "target": "[[Model: Skills"
+        },
+        {
+          "verb": "GOVERNS",
+          "target": "Commands"
+        },
+        {
+          "verb": "GOVERNS",
+          "target": "and Hooks]]"
         },
         {
           "verb": "GOVERNS",
@@ -10687,19 +10722,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Scaffold"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Foundation"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Infrastructure"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Features]]"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "RELATES TO",
@@ -11144,7 +11167,7 @@
     },
     "cross-domain": {
       "page_count": 41,
-      "relationship_count": 342
+      "relationship_count": 341
     },
     "ai-agents": {
       "page_count": 34,
@@ -11171,7 +11194,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 13,
+      "page_count": 14,
       "relationship_count": 0
     }
   },
@@ -12072,6 +12095,7 @@
     "workflow": [
       "domains/ai-agents/per-role-command-architecture",
       "domains/knowledge-systems/wiki-ingestion-pipeline",
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
       "sources/src-claude-slash-commands",
       "sources/src-superpowers-end-of-vibe-coding"
     ],
@@ -12090,6 +12114,7 @@
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
       "lessons/the-agent-must-practice-what-it-documents",
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
       "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
       "log/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09-directive-quality-models-hub-mindset",
@@ -12353,7 +12378,8 @@
       "spine/model-llm-wiki"
     ],
     "multi-track": [
-      "domains/cross-domain/methodology-framework"
+      "domains/cross-domain/methodology-framework",
+      "spine/model-methodology"
     ],
     "skyscraper": [
       "domains/cross-domain/methodology-framework",
@@ -13187,6 +13213,7 @@
       "lessons/the-agent-must-practice-what-it-documents"
     ],
     "log": [
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
       "log/2026-04-09-directive-bottom-up-model-completion",
       "log/2026-04-09-directive-docs-layers-old-models",
       "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
@@ -13202,6 +13229,7 @@
       "log/2026-04-09-ingest-awesome-design-md"
     ],
     "directive": [
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
       "log/2026-04-09-directive-bottom-up-model-completion",
       "log/2026-04-09-directive-docs-layers-old-models",
       "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
@@ -13215,6 +13243,12 @@
       "log/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-04-09-ingest-awesome-design-md"
+    ],
+    "critical-failure": [
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
+    ],
+    "discipline": [
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW"
     ],
     "completeness": [
       "log/2026-04-09-directive-bottom-up-model-completion"
@@ -13716,6 +13750,12 @@
     "vram": [
       "spine/model-local-ai"
     ],
+    "flexible": [
+      "spine/model-methodology"
+    ],
+    "multi-model": [
+      "spine/model-methodology"
+    ],
     "grounded-research": [
       "spine/model-notebooklm"
     ],
@@ -13792,7 +13832,8 @@
       "referenced_by": [
         "Model: Claude Code",
         "Model: Ecosystem Architecture",
-        "Model: MCP and CLI Integration"
+        "Model: MCP and CLI Integration",
+        "Model: Methodology"
       ]
     },
     {
@@ -13822,27 +13863,9 @@
       ]
     },
     {
-      "target": "Features]]",
-      "referenced_by": [
-        "Model: Methodology"
-      ]
-    },
-    {
       "target": "Flexible Methodology Framework directive",
       "referenced_by": [
         "Methodology Framework"
-      ]
-    },
-    {
-      "target": "Foundation",
-      "referenced_by": [
-        "Model: Methodology"
-      ]
-    },
-    {
-      "target": "Infrastructure",
-      "referenced_by": [
-        "Model: Methodology"
       ]
     },
     {
@@ -13899,12 +13922,6 @@
       "target": "Model: SFIF + Architecture",
       "referenced_by": [
         "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
-      "target": "Model: Skills + Commands + Hooks",
-      "referenced_by": [
-        "Model: Methodology"
       ]
     },
     {
@@ -14163,7 +14180,8 @@
       "referenced_by": [
         "Model: Claude Code",
         "Model: Ecosystem Architecture",
-        "Model: MCP and CLI Integration"
+        "Model: MCP and CLI Integration",
+        "Model: Methodology"
       ]
     },
     {
@@ -14221,12 +14239,6 @@
       "referenced_by": [
         "Spec-Driven Development",
         "Task Lifecycle Stage-Gating"
-      ]
-    },
-    {
-      "target": "[[Scaffold",
-      "referenced_by": [
-        "Model: Methodology"
       ]
     },
     {
@@ -14344,7 +14356,8 @@
       "referenced_by": [
         "Model: Claude Code",
         "Model: Ecosystem Architecture",
-        "Model: MCP and CLI Integration"
+        "Model: MCP and CLI Integration",
+        "Model: Methodology"
       ]
     },
     {
