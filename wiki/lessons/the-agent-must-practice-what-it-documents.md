@@ -10,7 +10,7 @@ derived_from:
   - "Methodology Framework"
   - "Stage-Gate Methodology"
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: directive-follow-own-methodology
     type: log
@@ -39,17 +39,19 @@ The triggering signal is any moment where the agent has access to its own method
 
 ## Insight
 
-This failure is a meta-failure — a failure about failures. The wiki had already documented the correct methodology. The stage-gate concept page existed. The brainstorm-before-spec rule was written. The multi-pass ingestion principle was a wiki page. But none of these were in the agent's operational instructions. They were in the wiki — knowledge the agent had produced — but not in CLAUDE.md or the skill definitions — the instructions the agent actually follows during execution.
+> [!warning] Two kinds of agent knowledge — and only one matters for behavior
+>
+> | Kind | What It Is | Loaded When |
+> |------|-----------|-------------|
+> | **Knowledge produced** | Wiki pages, documentation, synthesized content | Only when explicitly read |
+> | **Knowledge operated under** | CLAUDE.md, skill definitions, system prompts | Session start — shapes every action |
+>
+> When methodology exists only in produced knowledge, the agent can describe it perfectly while violating it in practice. It can write a wiki page about stage gates while skipping a stage gate. The agent is the world's best documenter of rules it does not follow.
 
-The gap is architectural. An LLM agent has two kinds of knowledge:
-1. **Knowledge it has produced** — wiki pages, documentation, synthesized content. This exists in the project files but is not loaded into the agent's instruction context unless explicitly read.
-2. **Knowledge it operates under** — CLAUDE.md, skill definitions, system prompts. This is loaded at session start and shapes every action.
+The fix is structural: when the wiki evolves a methodology rule, that rule must be propagated to CLAUDE.md and/or the relevant skill definitions. The rule must exist in operational instructions, not just the knowledge base.
 
-When methodology exists only in category 1, the agent can describe the methodology perfectly but violate it in practice. It can write a wiki page about stage gates while simultaneously skipping a stage gate. The irony is complete: the agent is the world's best documenter of rules it does not follow.
-
-The fix is structural: when the wiki evolves a methodology rule, that rule must be propagated to CLAUDE.md and/or the relevant skill definitions. The rule must exist in the agent's operational instructions, not just in its knowledge base. The agent must practice what it documents.
-
-This also reveals a priority ordering. When the user said to update the rules first, they were establishing a precedent: **the agent's own operational rules take priority over producing more knowledge**. A wiki with 200 pages of well-documented methodology and an agent that violates that methodology is worse than a wiki with 50 pages and an agent that follows every rule. The rules must be enforced on the agent first, then documented in the wiki for external reference.
+> [!tip] Operational rules take priority over producing more knowledge
+> A wiki with 200 pages of well-documented methodology and an agent that violates that methodology is worse than 50 pages with an agent that follows every rule. Rules must be enforced on the agent first, then documented for external reference.
 
 ## Evidence
 
@@ -83,12 +85,15 @@ This lesson applies to any system that both produces and consumes its own method
 - **Organizations**: A company that has a code review policy document but no branch protection rules has documented a rule without enforcing it. The document is aspirational, not operational.
 - **Self-improving systems**: Any system that learns rules from experience and documents them must close the loop by making those rules operational. Learning without enforcement is note-taking, not improvement.
 
-**The enforcement hierarchy:**
-1. **Operational rules** (CLAUDE.md, CI checks, branch protection, pipeline gates) — enforced automatically
-2. **Documented methodology** (wiki pages, runbooks, process docs) — referenced by humans and agents
-3. **Tribal knowledge** (undocumented patterns) — the most dangerous, exists only in context
-
-Knowledge must flow upward: tribal knowledge should become documented methodology, and documented methodology should become operational rules. The agent's job is to accelerate this flow, not to accumulate documentation at level 2 while operating at level 3.
+> [!abstract] The enforcement hierarchy — knowledge must flow upward
+>
+> | Level | What It Is | Enforcement |
+> |-------|-----------|------------|
+> | **3. Operational rules** | CLAUDE.md, CI checks, pipeline gates | Automatic — agent follows by default |
+> | **2. Documented methodology** | Wiki pages, runbooks, process docs | Referenced by humans and agents |
+> | **1. Tribal knowledge** | Undocumented patterns | Dangerous — exists only in context |
+>
+> Knowledge must flow upward: tribal → documented → operational. The agent's job is to accelerate this flow, not accumulate at level 2 while operating at level 1.
 
 ## Relationships
 

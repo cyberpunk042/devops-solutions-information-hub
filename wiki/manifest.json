@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T16:34:56.438765+00:00",
+  "generated": "2026-04-10T16:43:54.200601+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
@@ -4091,7 +4091,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "para",
         "pkm",
@@ -4720,7 +4720,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "notebooklm",
         "cli",
@@ -5337,7 +5337,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "planning",
         "agent-behavior",
@@ -6949,7 +6949,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "failure-lesson",
         "methodology",

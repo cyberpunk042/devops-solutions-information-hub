@@ -7,7 +7,7 @@ domain: tools-and-platforms
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-notebooklm-py-official
     type: documentation
@@ -38,25 +38,28 @@ notebooklm-py is an unofficial Python package (9.5k GitHub stars, MIT licensed) 
 
 ## Key Insights
 
-- **Full NotebookLM automation**: Every action available in the NotebookLM web UI — plus several that aren't — is accessible from the command line. Notebooks, sources, chat, artifact generation, downloads, sharing, and research are all scriptable.
+> [!info] Full NotebookLM automation — 10 artifact types, all scriptable
+>
+> | Artifact | Formats | Pipeline Value |
+> |----------|---------|---------------|
+> | Audio | MP3, 4 formats, 3 lengths, 50+ languages | Podcast distribution |
+> | Video / Cinematic | MP4, 3 formats, 9 styles | Content production |
+> | Quizzes / Flashcards | JSON, Markdown, HTML | Parseable for wiki ingestion |
+> | Slide Decks | PDF, PPTX | Export targets |
+> | Infographics | PNG | Visual content |
+> | Mind Maps | JSON | Graph data → wiki relationship candidates |
+> | Data Tables | CSV | Structured comparison data |
+> | Reports | PDF | Research synthesis export |
 
-- **10 artifact types, all downloadable**: Audio (MP3, 4 formats, 3 lengths, 50+ languages), video (MP4, 3 formats, 9 styles), cinematic video, quizzes, flashcards, slide decks (PDF/PPTX), infographics (PNG), mind maps (JSON), data tables (CSV), reports (PDF). Each has a `generate` and `download` command pair.
+> [!tip] Source-grounded Q&A + web research from the terminal
+> `notebooklm ask "<question>"` queries loaded sources with citations (`--json` for structured output, `--save-as-note` to persist). `notebooklm source add-research "<query>"` triggers NotebookLM's web research agent — fast mode for quick results, deep mode for comprehensive source discovery.
 
-- **Async Python API**: The `NotebookLMClient` class uses async context managers with namespaced operations: `client.notebooks`, `client.sources`, `client.chat`, `client.artifacts`, `client.research`, `client.notes`, `client.sharing`. All methods are async, supporting concurrent operations.
+**Async Python API for pipeline integration.** `NotebookLMClient` with namespaced operations (notebooks, sources, chat, artifacts, research, notes, sharing) — all async, supporting concurrent operations.
 
-- **Web research with auto-import**: `notebooklm source add-research "<query>"` triggers NotebookLM's web research agent to find and import relevant sources automatically — fast mode for quick results, deep mode for comprehensive research.
+**Agent skill installation.** `notebooklm skill install` drops skill files into Claude Code and agents. Also `npx skills add teng-lin/notebooklm-py`. Context-based workflow: `notebooklm use <id>` sets active notebook for subsequent commands.
 
-- **Source-grounded Q&A from terminal**: `notebooklm ask "<question>"` queries loaded sources with citations. Supports `--json` for structured output, `-s <id>` for source-specific queries, `--save-as-note` to persist answers as notebook notes.
-
-- **Context-based workflow**: `notebooklm use <id>` sets the active notebook, and subsequent commands inherit it. Or use `-n/--notebook <id>` for explicit targeting — critical for parallel/automated workflows operating on multiple notebooks.
-
-- **Multi-profile support**: `notebooklm profile create/switch` manages multiple Google accounts, enabling workflows that span personal and organizational NotebookLM instances.
-
-- **Agent skill installation**: `notebooklm skill install` drops skill files into `~/.claude/skills/notebooklm` and `~/.agents/skills/notebooklm`. Also available via `npx skills add teng-lin/notebooklm-py`. The CLI includes `notebooklm agent show claude|codex` to print agent-specific instructions.
-
-- **Browser automation underneath**: Uses Playwright/Patchright for browser automation since no official NotebookLM API exists. This means authentication requires a real browser session, and the package is vulnerable to NotebookLM web UI changes.
-
-- **Structured exports fill a critical gap**: The web UI only shows artifacts inline. notebooklm-py enables downloading quizzes as JSON (parseable), flashcards as Markdown (ingestable), mind maps as JSON (graph data), and data tables as CSV (analyzable). These structured formats are what pipelines need.
+> [!warning] Browser automation — no official API
+> Uses Playwright/Patchright for browser automation since no official NotebookLM API exists. Authentication requires a real browser session. Vulnerable to web UI changes. Rate limiting under heavy automated use. Session expiration requires re-auth logic for long-running daemons. This is the single biggest production risk.
 
 ## Deep Analysis
 
@@ -113,12 +116,9 @@ async with await NotebookLMClient.from_storage() as client:
         "What contradictions exist between these sources?")
 ```
 
-### Risks and Constraints
+### Structured exports fill a critical gap
 
-- **No official API**: The entire package relies on browser automation and undocumented Google APIs. A NotebookLM web UI redesign could break everything. This is the single biggest risk for production pipelines.
-- **Authentication friction**: Initial setup requires a real browser window for Google OAuth. CI/CD environments need the `NOTEBOOKLM_AUTH_JSON` environment variable workaround.
-- **Rate limiting**: Heavy automated usage triggers Google's rate limits. The `--retry` flag with exponential backoff helps, but sustained high-volume pipelines need throttling.
-- **Session state**: Browser automation sessions can expire, requiring re-authentication. Long-running daemons need session refresh logic.
+The web UI only shows artifacts inline. notebooklm-py enables downloading quizzes as JSON (parseable), flashcards as Markdown (ingestable), mind maps as JSON (graph data), and data tables as CSV (analyzable). These structured formats are what automated pipelines need.
 
 ## Open Questions
 
@@ -127,21 +127,17 @@ async with await NotebookLMClient.from_storage() as client:
 
 ## Answered Open Questions
 
-### Can notebooklm-py's async API be wrapped as an MCP server for direct use in Claude Code conversations?
+> [!example]- Should notebooklm-py be wrapped as an MCP server?
+> Technically possible but architecturally inadvisable. MCP would load all tool schemas into every session. The correct architecture: CLI tool + Claude Code skill — load when needed, not registered as persistent overhead. PleasePrompto has a companion MCP server (TypeScript) for cross-context discoverability if needed, but CLI+Skill is preferred when NotebookLM is one of several tools.
 
-Cross-referencing `CLI Tools Beat MCP for Token Efficiency` and `Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py`: the MCP wrapping is technically possible but architecturally inadvisable for this use case. The `CLI Tools Beat MCP for Token Efficiency` lesson documents that an MCP server wrapping notebooklm-py would load all its tool schemas (notebook, source, chat, generate, download, sharing, agent commands) into every Claude Code session at startup — before any NotebookLM operation is requested. The `src-notebooklm-claude-code-workflow` synthesis explicitly confirms the correct architecture: "The integration uses notebooklm-py as a CLI tool with a corresponding Claude Code skill — not a NotebookLM MCP server. This is consistent with the CLI-over-MCP pattern for known-workflow integrations. The skill is loaded when needed, not registered as a persistent context overhead." The PleasePrompto project has a companion MCP server (notebooklm-mcp, TypeScript) for cases where cross-context discoverability matters, demonstrating that MCP wrapping is possible — but the CLI+Skill approach is preferred for sessions where NotebookLM is one of several tools rather than the primary interface.
+> [!example]- How does add-research deep mode compare to tools/ingest.py?
+> Complementary, not competing. `add-research` discovers sources (topic → primary sources loaded into notebook). `tools/ingest.py` produces wiki pages from known URLs. The two compose: deep mode as topic-to-sources discovery step → ingest.py processing discovered URLs into wiki pages.
 
-### How does the `add-research` deep mode compare to our `tools/ingest.py` + web search pipeline for source discovery?
+> [!example]- NotebookLM (Gemini) vs wiki (Claude) accuracy?
+> Different strengths. NotebookLM: source-faithful retrieval with citations — reliable for "what do these sources say?" The wiki: cross-domain synthesis, pattern recognition, relationship mapping across many sources. NotebookLM wins on grounding accuracy; wiki wins on emergent synthesis. They are different services in a layered architecture.
 
-Cross-referencing `Research Pipeline Orchestration`: the two approaches serve complementary roles rather than competing. The `Research Pipeline Orchestration` page documents the ONLINE RESEARCH pipeline as: web_search → fetch → save_raw → extract → analyze → synthesize → write → integrate. This pipeline produces wiki pages — structured knowledge synthesis. `notebooklm source add-research` (deep mode) triggers NotebookLM's web research agent to find and import relevant sources automatically — it produces sources loaded into a NotebookLM notebook, not wiki pages. Deep mode is "comprehensive research" finding primary sources; `tools/ingest.py` is purpose-built for wiki-format extraction from known URLs. The `Research Pipeline Orchestration` page also identifies a gap: "Fetch topics: WebSearch + WebFetch — Needs pipeline wrapper." The `add-research` deep mode could fill this gap as the topic-to-sources discovery step, with `tools/ingest.py` then processing the discovered URLs into wiki pages. The two tools compose rather than replace each other.
-
-### What is the quality/accuracy comparison between NotebookLM's source-grounded answers (Gemini) and the wiki's synthesized pages (Claude)?
-
-Cross-referencing `Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py`: the synthesis page provides the clearest comparison: "The wiki is the NotebookLM equivalent — a grounded knowledge base that Claude Code queries to get project-specific answers rather than relying on training data. The difference is ownership and integration depth — the wiki is project-owned and integrated with all tooling; NotebookLM is a SaaS with richer source ingestion and synthesis features." For accuracy, NotebookLM's Gemini-powered answers are grounded in uploaded sources with citations — reliable for "what do these specific sources say" questions. The wiki's Claude-synthesized pages are reliable for cross-domain synthesis, pattern recognition, and relationship mapping that requires reasoning across many sources. NotebookLM is more accurate for source-faithful retrieval; the wiki is more accurate for emergent synthesis. The competitive analysis use case confirms this division: NotebookLM synthesizes 250 competitor sources; Claude Code uses those synthesis results to make product decisions and write wiki-level insights.
-
-### Can notebook metadata and source lists be synced bidirectionally with wiki/manifest.json?
-
-Cross-referencing `Research Pipeline Orchestration`: the sync is architecturally feasible using the async Python API. The `Research Pipeline Orchestration` page defines an ECOSYSTEM SYNC pipeline type: "detect_changes → diff → update_or_create → cross_reference → integrate." Bidirectional sync between NotebookLM notebooks and wiki/manifest.json would work as follows: (1) manifest.json contains all wiki pages with their source URLs; (2) `notebooklm source list` returns the source URLs loaded into each notebook; (3) a sync script (extending tools/manifest.py or pipeline.py) can diff the two lists and call `notebooklm source add` for sources in manifest.json not yet in the notebook, and create stub wiki pages for notebook sources not yet in manifest.json. The existing `NotebookLMClient.notebooks` and `NotebookLMClient.sources` async API classes provide the programmatic access. Full bidirectional sync would require a mapping table (notebook ID → wiki domain) since the notebook structure and wiki domain structure may differ.
+> [!example]- Can notebook metadata sync bidirectionally with manifest.json?
+> Architecturally feasible via async API. Diff manifest.json source URLs against `notebooklm source list`; call `source add` for missing items in either direction. Requires a mapping table (notebook ID → wiki domain) since structures may differ.
 
 ## Relationships
 

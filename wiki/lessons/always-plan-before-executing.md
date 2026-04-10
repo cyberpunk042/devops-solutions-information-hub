@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
@@ -46,11 +46,13 @@ The triggering signal is any task that has multiple possible approaches, unclear
 
 ## Insight
 
-LLM agents are token-greedy executors by default: given a task, the model's natural tendency is to start doing. This is efficient for simple tasks but catastrophic for complex ones, because the model's early decisions narrow the solution space in ways that may be incorrect, and partial work is often harder to correct than starting over.
+> [!warning] LLM agents are token-greedy executors by default
+> Given a task, the model's natural tendency is to start doing. This is efficient for simple tasks but catastrophic for complex ones — early decisions narrow the solution space in ways that may be incorrect, and partial work is often harder to correct than starting over.
 
-Planning forces the agent to make its assumptions explicit before those assumptions are baked into actions. A written plan — whether a spec, an acceptance criteria list, or a decomposition into steps — surfaces ambiguity that the agent can resolve cheaply via a single question, rather than discovering the ambiguity mid-execution after multiple file edits have already been made.
+Planning forces assumptions to be explicit before they are baked into actions. A written plan surfaces ambiguity the agent can resolve cheaply via a single question, rather than discovering it mid-execution after multiple file edits.
 
-The planning step is also the correct place for critic roles and review: a Planner + Critic reviewing a proposed approach before coding begins costs roughly 5.5x the tokens of the planning alone, but avoids rework whose cost would be far higher. Investing upfront in understanding consistently beats investing downstream in correction. This principle holds whether the "agent" is a single Claude Code session, a harness-orchestrated multi-worker flow, or a 10-agent deterministic fleet.
+> [!tip] 5.5x planning cost prevents far costlier rework
+> A Planner + Critic reviewing a proposed approach before coding costs ~5.5x the planning tokens. But it avoids rework whose cost would be far higher. Investing upfront in understanding consistently beats investing downstream in correction. This holds for single sessions, harness workflows, and 10-agent fleets alike.
 
 ## Evidence
 

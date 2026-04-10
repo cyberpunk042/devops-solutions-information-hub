@@ -7,7 +7,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-10
 sources:
   - id: src-second-brain-research
     type: article
@@ -30,17 +30,18 @@ PARA is Tiago Forte's action-oriented personal knowledge management framework th
 
 ## Key Insights
 
-- **Action drives organization, not taxonomy**: PARA buckets are defined by actionability, not subject matter. A book about machine learning can live in Projects (currently reading for a deliverable), Areas (relevant to an ongoing ML responsibility), Resources (reference, not active), or Archives (read and no longer relevant). The same material belongs in different buckets at different lifecycle stages. This means PARA is not a taxonomy — it is an activity-relative filing system.
+> [!tip] Action drives organization, not taxonomy
+> PARA buckets are defined by actionability, not subject. The same book about ML can live in Projects (reading for a deliverable), Areas (ongoing responsibility), Resources (reference, not active), or Archives (consumed). PARA is an activity-relative filing system — the same material belongs in different buckets at different lifecycle stages.
 
-- **Projects are the defining category**: PARA's most important distinction is between Projects and Areas. A Project has a specific outcome and a deadline. An Area is an ongoing responsibility with no terminal state. Misclassifying Areas as Projects (treating "infrastructure reliability" as a Project) leads to perpetual "projects" that never complete. Misclassifying Projects as Areas leads to un-owned work with no delivery accountability.
+> [!warning] The Project/Area distinction is the critical classification
+> A Project has a specific outcome and a deadline. An Area is an ongoing responsibility with no terminal state. Misclassifying Areas as Projects → perpetual "projects" that never complete. Misclassifying Projects as Areas → un-owned work with no delivery accountability.
 
-- **Progressive summarization is the distillation layer**: Forte's progressive summarization technique layers highlighting over multiple passes — read and highlight key passages; bold the most critical highlights; write a one-paragraph executive summary. The goal is to make future retrieval fast: the summary is actionable in 30 seconds; the highlighted text is actionable in 2 minutes; the full source is available for deep reference. This is the same layered structure this wiki uses in ## Summary → ## Key Insights → ## Deep Analysis.
+> [!abstract] Progressive summarization = this wiki's page structure
+> Pass 1: Full source (raw/). Pass 2: Highlighted material (## Deep Analysis). Pass 3: Bold highlights (## Key Insights). Pass 4: Executive summary (## Summary). The goal: actionable in 30 seconds from the summary, 2 minutes from highlights, full depth on demand.
 
-- **CODE workflow closes the loop**: Capture (get everything out of your head and into a trusted system) → Organize (move to the right PARA bucket) → Distill (progressive summarization to reduce to essential value) → Express (use the knowledge to produce something). CODE is a workflow, not a structure — it describes how information moves through the system, not where it lives.
+**Archives are the secret to a healthy system.** Most PKM systems fail because people fear archiving. PARA treats it as first-class: inactive items move to Archives (retrievable but not cluttering active view). A clean active layer is what makes the system feel fast.
 
-- **Archives are the secret to a healthy system**: Most PKM systems fail because people fear archiving. PARA treats archiving as a first-class operation, not a concession. Inactive projects, completed responsibilities, and consumed resources belong in Archives — where they are retrievable but do not clutter the active view. A clean active layer (Projects + Areas) is what makes the system feel fast.
-
-- **PARA's weakness is what Zettelkasten fills**: PARA manages the lifecycle of information resources but does not process them into permanent knowledge. A book in Resources is still just a book — PARA gives it a bucket, not a place in your thinking. Zettelkasten fills this gap: Resources are the input; permanent notes linked to the Zettelkasten network are the output.
+**PARA's weakness is what Zettelkasten fills.** PARA manages lifecycle of resources but does not process them into permanent knowledge. A book in Resources is still just a book — PARA gives it a bucket, not a place in your thinking. Zettelkasten processes Resources into permanent linked notes.
 
 ## Deep Analysis
 
@@ -135,17 +136,14 @@ The recommended hybrid: PARA manages what lives outside the Zettelkasten (active
 
 ### Answered Open Questions
 
-**Q: Should `decisions/` be a sub-layer of Projects (each decision was a project) or Areas (ongoing decision framework)?**
+> [!example]- Should decisions/ be Projects or Areas in PARA?
+> Projects during deliberation, Resources after resolution. Each decision page is a bounded deliberation with a resolved outcome. `status: verified` marks the transition from active project to archived reference. Decisions are the Expression output of the CODE workflow.
 
-Cross-referencing `Second Brain Architecture` and `Knowledge Evolution Pipeline`: `decisions/` maps most precisely to Projects in PARA, not Areas. The `Second Brain Architecture` page documents the wiki's PARA mapping explicitly: "Project notes (PARA) → `wiki/spine/` — cross-cutting synthesis; `decisions/`." A Project in PARA "has a specific outcome and a deadline" — each decision page represents a bounded deliberation with a resolved outcome (the decision itself). The `PARA Methodology` page reinforces: "if you cannot describe when it will be done, it is not a Project" — decisions are done when the decision is made. Once made, the decision page moves to a reference role (Areas or Resources) rather than an active project. The `Knowledge Evolution Pipeline` page maps `wiki/decisions/` to the "Expression" phase of the CODE workflow — decisions are the output of distillation, not the container for ongoing work. The practical answer: `decisions/` is the Projects layer during deliberation, and becomes Resources (archived decisions, consulted for reference) after the decision is made. The `status: verified` frontmatter field marks the transition from active project to archived reference.
+> [!example]- What constitutes "expression" for a knowledge system?
+> Three forms: (1) export to consuming systems (LightRAG → OpenFleet, docs/kb/ → AICP); (2) decisions that change ecosystem behavior (canonical patterns informing sprint decisions); (3) research priorities driving new ingestion (gaps → queue → fetch). Expression for a wiki = whether synthesized knowledge changes behavior in the ecosystem.
 
-**Q: How should the CODE workflow's Express phase be operationalized for this wiki — beyond export profiles, what constitutes "expression" for a knowledge system?**
-
-Cross-referencing `Second Brain Architecture` and `Knowledge Evolution Pipeline`: expression has three operationalized forms in this wiki, beyond the documented export profiles. First, the `Second Brain Architecture` page maps the Express phase to "Export pipeline → openfleet, AICP; `decisions/` layer" — meaning export to sister projects is the primary expression mechanism. Second, the `Knowledge Evolution Pipeline` page's outer loop identifies the research phase as a form of expression: identifying gaps → queuing new sources → fetching → ingesting is the wiki "expressing" its understanding into research priorities. Third, the `PARA Methodology` page notes: "Expression is the test of whether knowledge was actually internalized" — for a knowledge system, the equivalent test is whether synthesized knowledge changes behavior in the ecosystem (an OpenFleet agent making better decisions because the wiki's LightRAG graph has been updated, or a sprint decision informed by a canonical pattern page). Expression for a knowledge system is: (1) export to consuming systems, (2) decisions that change ecosystem behavior, and (3) wiki-informed research priorities that drive new ingestion.
-
-**Q: Is progressive summarization best implemented as page sections, or should separate summary artifacts exist per domain (FAQ pages as Forte's "executive summary" layer)?**
-
-Cross-referencing `Second Brain Architecture` and `Zettelkasten Methodology`: both layers are valuable but serve different audiences and use cases. The `Second Brain Architecture` page identifies this directly as a gap: "Systematic FAQs per domain — PARA's progressive summarization produces 'executive summaries' at each layer. This wiki has `## Summary` sections per page, but no domain-level distillation artifacts." The `Zettelkasten Methodology` page confirms that the `domain-overview` page type is the correct structural answer: it requires `## Summary`, `## State of Knowledge`, `## Maturity Map`, `## Gaps`, and `## Priorities` sections — this is a domain-level progressive summarization artifact, not a page-level one. The `Second Brain Architecture` page explicitly recommends these belong in `wiki/domains/*/faq.md` files or as a `domain-overview` page type. The synthesis answer: page-level sections (`## Summary` + `## Key Insights` + `## Deep Analysis`) implement progressive summarization at the concept level (Forte's "layered notes"); `domain-overview` pages implement it at the domain level (Forte's "executive summary" layer for an entire subject area). Both are needed; `domain-overview` pages are the more urgently missing layer since per-page sections are already implemented.
+> [!example]- Progressive summarization: page sections or domain-level FAQs?
+> Both needed, different audiences. Page-level sections (Summary → Key Insights → Deep Analysis) implement per-concept progressive summarization. `domain-overview` pages (Summary, State of Knowledge, Maturity Map, Gaps, Priorities) implement domain-level executive summaries. Domain-overview pages are the more urgently missing layer.
 
 ## Relationships
 
