@@ -136,15 +136,17 @@ Cross-referencing `Infrastructure as Code Patterns` and `Agent Orchestration Pat
 
 ## Backlinks
 
-[[Claude Code Best Practices]] (CLAUDE.md is the same pattern for coding)]]
-[[Skills Architecture Patterns]] (static vs dynamic AI context)]]
-[[Harness Engineering]] (project-root config as agent guardrails)]]
-[[Claude Code Context Management]] (context budget considerations)]]
-[[MCP Integration Architecture]] (Design.md + MCP Stitch server)]]
-[[LLM Wiki Pattern]] (markdown as AI-native knowledge format)]]
+[[Claude Code Best Practices]]
+[[Skills Architecture Patterns]]
+[[Harness Engineering]]
+[[Claude Code Context Management]]
+[[MCP Integration Architecture]]
+[[LLM Wiki Pattern]]
 [[Hooks Lifecycle Architecture]]
 [[Infrastructure as Code Patterns]]
 [[Model: Design.md and IaC]]
 [[Model: Skills, Commands, and Hooks]]
 [[Model: Wiki Design]]
 [[Never Synthesize from Descriptions Alone]]
+[[Spec-Driven Development]]
+[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]

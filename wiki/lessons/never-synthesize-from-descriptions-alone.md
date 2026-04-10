@@ -96,10 +96,11 @@ This lesson applies far beyond wiki ingestion:
 
 [[Design.md Pattern]]
 [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-[[Stage-Gate Methodology]] (depth gates prevent surface-level output)]]
+[[Stage-Gate Methodology]]
 [[Multi-Stage Ingestion Beats Single-Pass Processing]]
 [[Always Plan Before Executing]]
 [[Wiki Ingestion Pipeline]]
-[[Immune System Rules]] (this lesson became a rule)]]
+[[Immune System Rules]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Quality and Failure Prevention]]
+[[Shallow Ingestion Is Systemic, Not Isolated]]

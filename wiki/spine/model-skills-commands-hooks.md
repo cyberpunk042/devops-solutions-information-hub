@@ -227,3 +227,4 @@ Another example: a developer's `/implement` command triggers an implementation s
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
 [[Model: Methodology]]
+[[Model: Ecosystem Architecture]]

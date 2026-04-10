@@ -154,5 +154,8 @@ Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orches
 [[Rework Prevention]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[Spec-Driven Development]]
 [[Synthesis: Claude Code Harness Engineering]]
 [[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[Task Lifecycle Stage-Gating]]
+[[Wiki Backlog Pattern]]

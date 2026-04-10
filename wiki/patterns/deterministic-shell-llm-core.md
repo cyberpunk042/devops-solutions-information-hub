@@ -133,3 +133,8 @@ Avoid or over-engineering Deterministic Shell, LLM Core when:
 [[Agent Orchestration Patterns]]
 [[Claude Code Best Practices]]
 [[Gateway-Centric Routing]]
+[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
+[[Model: Ecosystem Architecture]]
+[[Model: Quality and Failure Prevention]]
+[[Scaffold → Foundation → Infrastructure → Features]]
+[[Skyscraper, Pyramid, Mountain]]

@@ -108,4 +108,5 @@ Cross-referencing `Wiki Event-Driven Automation`: that page explicitly resolves 
 [[LLM Knowledge Linting]]
 [[Plane]]
 [[OpenFleet]]
+[[Claude Code Slash Commands (artemgetmann)]]
 [[Research Pipeline Orchestration]]

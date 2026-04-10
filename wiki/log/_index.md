@@ -18,6 +18,7 @@ Operator directives, session summaries, and task completion notes.
 
 | Date | Title | Type | Tags |
 |------|-------|------|------|
+| 2026-04-09 | [Session 2026-04-09 Summary](2026-04-09-session-summary.md) | session | `log`, `session`, `progress`, `summary` |
 | 2026-04-09 | [Ingest awesome-design-md repository](2026-04-09-ingest-awesome-design-md.md) | directive | `log`, `directive`, `ingestion`, `design-md` |
 | 2026-04-09 | [Wiki Design Model — Research Sources](2026-04-09-directive-wiki-design-model-research.md) | directive | `log`, `directive`, `wiki-design`, `research`, `markdown`, `obsidian`, `remark` |
 | 2026-04-09 | [Wiki Design Model Emerging — Obsidian Styling as Standard](2026-04-09-directive-wiki-design-model-emerging.md) | directive | `log`, `directive`, `wiki-design`, `styling`, `obsidian`, `callouts`, `emerging-standard` |

@@ -169,3 +169,4 @@ Cross-referencing `Second Brain Architecture` and `Zettelkasten Methodology`: bo
 [[Cross-Domain Patterns]]
 [[Model: Second Brain]]
 [[Progressive Distillation]]
+[[Wiki Backlog Pattern]]

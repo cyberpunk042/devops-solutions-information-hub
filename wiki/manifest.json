@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-10T02:17:09.391186+00:00",
+  "generated": "2026-04-10T02:53:43.676274+00:00",
   "stats": {
-    "pages": 166,
+    "pages": 167,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1172,
-    "tags_unique": 626,
+    "relationships": 1149,
+    "tags_unique": 629,
     "layers": {
       "3": 5,
       "6": 5,
@@ -51,11 +51,11 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[AICP]] (backend routing, circuit breaker)"
+          "target": "AICP"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]] ($0 evolution)"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "RELATES TO",
@@ -1534,27 +1534,27 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Best Practices]] (CLAUDE.md is the same pattern for coding)"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]] (static vs dynamic AI context)"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]] (project-root config as agent guardrails)"
+          "target": "Harness Engineering"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Context Management]] (context budget considerations)"
+          "target": "Claude Code Context Management"
         },
         {
           "verb": "ENABLES",
-          "target": "[[MCP Integration Architecture]] (Design.md + MCP Stitch server)"
+          "target": "MCP Integration Architecture"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[LLM Wiki Pattern]] (markdown as AI-native knowledge format)"
+          "target": "LLM Wiki Pattern"
         }
       ]
     },
@@ -2176,35 +2176,35 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Design.md Pattern]] (spec artifacts as first-class project documents)"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Rework Prevention]] (spec gates prevent the rework that occurs without them)"
+          "target": "Rework Prevention"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Plan Execute Review Cycle]] (spec is the output of the Plan phase and the input to Execute)"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Task Lifecycle Stage-Gating]] (spec-driven development requires stage enforcement to prevent spec-skipping)"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agent Orchestration Patterns]] (BMAD uses multi-agent spec production)"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]] (primary source \u2014 SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Harness Engineering]] (harness is the spec-driven development tooling layer)"
+          "target": "Harness Engineering"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "CONTRADICTS",
@@ -2259,43 +2259,43 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[Rework Prevention]] (stage gates prevent the root causes of rework)"
+          "target": "Rework Prevention"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Spec-Driven Development]] (specs are the artifact produced at stage boundaries)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Plan Execute Review Cycle]] (stage-gating is the implementation of phase separation)"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Immune System Rules]] (disease catalogue documents stage-gating failure modes)"
+          "target": "Immune System Rules"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]] (primary source \u2014 5-stage model, MCP blocking, teaching system)"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Agent Orchestration Patterns]] (multi-agent systems require stage-gating to coordinate contribution flow)"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]] (stage-gating applied at architectural scale)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Backlog Pattern]] (task frontmatter as state machine is the wiki implementation of stage-gating)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Spec-Driven Development]] (stages enforce spec phase before implementation phase)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "CONTRADICTS",
-          "target": "[[Task Lifecycle Stage-Gating]] (unstructured iterative coding without phase checkpoints)"
+          "target": "Task Lifecycle Stage-Gating"
         }
       ]
     },
@@ -2780,63 +2780,55 @@
       "relationships": [
         {
           "verb": "CONTAINS",
-          "target": "[[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "CONTAINS",
-          "target": "[[Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)"
+          "target": "Task Type Artifact Matrix"
         },
         {
           "verb": "CONTAINS",
-          "target": "[[Execution Modes and End Conditions]] (execution modes are model parameters)"
+          "target": "Execution Modes and End Conditions"
         },
         {
           "verb": "CONTAINS",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]] (SFIF is the project-level model)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "CONTAINS",
-          "target": "[[Spec-Driven Development]] (SDD is the execution track's methodology model)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "CONTAINS",
-          "target": "[[Skyscraper"
+          "target": "Skyscraper, Pyramid, Mountain"
         },
         {
           "verb": "CONTAINS",
-          "target": "Pyramid"
-        },
-        {
-          "verb": "CONTAINS",
-          "target": "Mountain]] (the quality dimension of model execution)"
-        },
-        {
-          "verb": "CONTAINS",
-          "target": "[[Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Backlog Hierarchy Rules]] (the PM track model that structures work items)"
+          "target": "Backlog Hierarchy Rules"
         },
         {
           "verb": "ENABLES",
-          "target": "[[LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Second Brain Architecture]] (the knowledge track operates within the second brain structure)"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Progressive Distillation]] (maturity progression is a model within the knowledge track)"
+          "target": "Progressive Distillation"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "IMPLEMENTS",
@@ -2844,7 +2836,7 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         }
       ]
     },
@@ -2894,11 +2886,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "RELATES TO",
@@ -2968,35 +2956,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Stage-Gate Methodology]] (the hierarchy enforces stage-gating at the container level)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Backlog Pattern]] (the file-based hierarchy IS the wiki backlog)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Plan Execute Review Cycle]] (the review ceiling for epics/modules IS the review phase)"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "USED BY",
-          "target": "[[Task Type Artifact Matrix]] (epic and module types follow all 5 stages; the hierarchy rules define how they relate)"
+          "target": "Task Type Artifact Matrix"
         },
         {
           "verb": "USED BY",
-          "target": "[[Execution Modes and End Conditions]] (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)"
+          "target": "Execution Modes and End Conditions"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]] (all four projects organize work in this hierarchy \u2014 Plane issues in OpenFleet, wiki backlog in OpenArms)"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Spec-Driven Development]] (epics/modules always have design docs; their stage requirements enforce spec-first)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Immune System Rules]] (hierarchy violations \u2014 manual readiness, premature done status \u2014 are detectable anti-patterns)"
+          "target": "Immune System Rules"
         }
       ]
     },
@@ -3107,43 +3095,43 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Stage-Gate Methodology]] (execution modes control which stages run; quality gates are stage transition requirements)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Task Lifecycle Stage-Gating]] (the work loop implements the stage-by-stage execution pattern)"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Backlog Hierarchy Rules]] (the work loop reads the hierarchy to find the next task)"
+          "target": "Backlog Hierarchy Rules"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Task Type Artifact Matrix]] (type determines which stages the loop executes)"
+          "target": "Task Type Artifact Matrix"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Plan Execute Review Cycle]] (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]] (git management rules as infrastructure \u2014 the commit convention IS the enforcement layer)"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Backlog Pattern]] (the work loop writes to the wiki backlog \u2014 step 6, 8, 11, 12)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]] (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Immune System Rules]] (the work loop structure defines what \"correct behavior\" looks like; deviations are the diseases the immune system detects)"
+          "target": "Immune System Rules"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Knowledge Evolution Pipeline]] (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)"
+          "target": "Knowledge Evolution Pipeline"
         }
       ]
     },
@@ -3451,43 +3439,43 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Task Lifecycle Stage-Gating]] (this page operationalizes the stage-gating concept for the devops domain)"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Spec-Driven Development]] (stages enforce the spec-before-implementation principle)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Plan Execute Review Cycle]] (stage gates implement the phase separation that PER describes)"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]] (SFIF is the architectural expression of the same staged progression principle)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "USED BY",
-          "target": "[[Task Type Artifact Matrix]] (each task type selects a subset of stages based on complexity)"
+          "target": "Task Type Artifact Matrix"
         },
         {
           "verb": "USED BY",
-          "target": "[[Backlog Hierarchy Rules]] (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)"
+          "target": "Backlog Hierarchy Rules"
         },
         {
           "verb": "USED BY",
-          "target": "[[Execution Modes and End Conditions]] (execution modes control which stages run and in what order)"
+          "target": "Execution Modes and End Conditions"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Backlog Pattern]] (the wiki IS the Document/Design stage artifact system)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]] (all four projects in the ecosystem apply this methodology)"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)"
+          "target": "Immune System Rules"
         },
         {
           "verb": "CONTRADICTS",
@@ -3547,35 +3535,35 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "[[Stage-Gate Methodology]] (the type matrix selects stage subsets from the full 5-stage system)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Task Lifecycle Stage-Gating]] (per-type stage selection is the flexibility layer of stage gating)"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "USED BY",
-          "target": "[[Backlog Hierarchy Rules]] (epics and modules follow the full 5-stage path; tasks use the 3-stage path)"
+          "target": "Backlog Hierarchy Rules"
         },
         {
           "verb": "USED BY",
-          "target": "[[Execution Modes and End Conditions]] (execution modes interact with type requirements \u2014 e.g., full-autonomous behavior differs by type)"
+          "target": "Execution Modes and End Conditions"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Spec-Driven Development]] (spike type formalizes research-without-implementation; docs type formalizes documentation-as-work)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Wiki Backlog Pattern]] (all 7 types appear in wiki backlog; type determines which stages are tracked in frontmatter)"
+          "target": "Wiki Backlog Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Four-Project Ecosystem]] (all four projects use task types \u2014 spike for research, docs for wiki, task/module/epic for features)"
+          "target": "Four-Project Ecosystem"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Immune System Rules]] (type violations \u2014 e.g., code produced during a spike \u2014 are detectable diseases)"
+          "target": "Immune System Rules"
         }
       ]
     },
@@ -4283,43 +4271,43 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "[[LLM Wiki Pattern]] (extends Karpathy's wiki pattern with project management types and an auto-loop)"
+          "target": "LLM Wiki Pattern"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Task Lifecycle Stage-Gating]] (the frontmatter state machine is the wiki implementation of stage gates)"
+          "target": "Task Lifecycle Stage-Gating"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Second Brain Architecture]] (the wiki-as-backlog is a second-brain that also executes)"
+          "target": "Second Brain Architecture"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Knowledge Evolution Pipeline]] (the auto-loop operationalizes the evolution pipeline)"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Spec-Driven Development]] (when wiki pages are spec artifacts, the wiki-as-backlog makes SDD self-executing)"
+          "target": "Spec-Driven Development"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[OpenFleet]] (17 epics in wiki/backlog/, verbatim PO log pattern)"
+          "target": "OpenFleet"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Memory Lifecycle Management]] (wiki/log/ as sacrosanct directive store is a memory management strategy)"
+          "target": "Memory Lifecycle Management"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Research Pipeline Orchestration]] (the auto-loop is an orchestration pattern applied to knowledge work)"
+          "target": "Research Pipeline Orchestration"
         },
         {
           "verb": "COMPARES TO",
-          "target": "[[PARA Methodology]] (wiki-backlog is PARA + task execution in one system)"
+          "target": "PARA Methodology"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Progressive Distillation]] (completed tasks produce knowledge pages that enter the distillation pipeline)"
+          "target": "Progressive Distillation"
         }
       ]
     },
@@ -5544,11 +5532,11 @@
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Always Plan Before Executing]] (plan the infrastructure approach before writing files)"
+          "target": "Always Plan Before Executing"
         },
         {
           "verb": "RELATES TO",
@@ -5556,11 +5544,11 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)"
+          "target": "Wiki Ingestion Pipeline"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Immune System Rules]] (this lesson became a rule)"
+          "target": "Immune System Rules"
         }
       ]
     },
@@ -6509,11 +6497,7 @@
         },
         {
           "verb": "DERIVED FROM",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "RELATES TO",
@@ -6525,11 +6509,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "RELATES TO",
@@ -6799,7 +6779,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Immune System Rules]] (this lesson became a rule)"
+          "target": "Immune System Rules"
         },
         {
           "verb": "BUILDS ON",
@@ -6857,7 +6837,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Stage-Gate Methodology]] (depth gates prevent surface-level output)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "RELATES TO",
@@ -6873,7 +6853,7 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[Immune System Rules]] (this lesson became a rule)"
+          "target": "Immune System Rules"
         }
       ]
     },
@@ -6932,15 +6912,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Stage-Gate Methodology]] (depth gates should catch truncation)"
+          "target": "Stage-Gate Methodology"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Never Synthesize from Descriptions Alone]] (same depth-verification principle)"
+          "target": "Never Synthesize from Descriptions Alone"
         },
         {
           "verb": "ENABLES",
-          "target": "[[Immune System Rules]] (this lesson became a rule)"
+          "target": "Immune System Rules"
         }
       ]
     },
@@ -6997,7 +6977,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Never Skip Stages Even When Told to Continue]] (the same incident)"
+          "target": "Never Skip Stages Even When Told to Continue"
         },
         {
           "verb": "RELATES TO",
@@ -7005,11 +6985,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Immune System Rules]] (this lesson IS the immune system principle)"
+          "target": "Immune System Rules"
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)"
+          "target": "Knowledge Evolution Pipeline"
         },
         {
           "verb": "ENABLES",
@@ -7430,6 +7410,28 @@
       "relationships": []
     },
     {
+      "path": "log/2026-04-09-session-summary.md",
+      "slug": "log/2026-04-09-session-summary",
+      "title": "Session 2026-04-09 Summary",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-09",
+      "updated": "2026-04-09",
+      "tags": [
+        "log",
+        "session",
+        "progress",
+        "summary"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "patterns/context-aware-tool-loading.md",
       "slug": "patterns/context-aware-tool-loading",
       "title": "Context-Aware Tool Loading",
@@ -7698,11 +7700,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "ENABLES",
@@ -8105,15 +8103,7 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "[[Skyscraper"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Pyramid"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Mountain]]"
+          "target": "Skyscraper, Pyramid, Mountain"
         },
         {
           "verb": "BUILDS ON",
@@ -8137,11 +8127,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "RELATES TO",
@@ -8202,27 +8188,27 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Design.md Pattern]] (this is the empirical evidence for that concept)"
+          "target": "Design.md Pattern"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)"
+          "target": "Infrastructure as Code Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Skills Architecture Patterns]] (static design context vs dynamic skill invocation)"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context \u2014 same tradeoff)"
+          "target": "Context-Aware Tool Loading"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Methodology Framework]] (DESIGN.md as a required artifact in the design stage)"
+          "target": "Methodology Framework"
         }
       ]
     },
@@ -8439,23 +8425,23 @@
       "relationships": [
         {
           "verb": "EXTENDS",
-          "target": "[[Claude Code Skills]] (adds concrete command examples to the skills architecture)"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)"
+          "target": "Skills Architecture Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]] (command authoring is an extension of best practice guidance)"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code]] (core platform this builds on)"
+          "target": "Claude Code"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Claude Code Scheduling]] (personal automation commands can be chained with scheduling)"
+          "target": "Claude Code Scheduling"
         }
       ]
     },
@@ -9196,27 +9182,27 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "[[Plan Execute Review Cycle]] (provides the tooling layer that makes plan-gate-review a concrete workflow)"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "EXTENDS",
-          "target": "[[Agent Orchestration Patterns]] (adds structured human oversight as a first-class hook in multi-step agent flows)"
+          "target": "Agent Orchestration Patterns"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]] (operationalizes the speculate \u2192 feedback \u2192 iterate loop with UI tooling)"
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Best Practices]] (plan-mode review is a best practice; Plannotator makes it frictionless)"
+          "target": "Claude Code Best Practices"
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Claude Code Skills]] (integrates as a Claude Code plugin, complements slash-command patterns)"
+          "target": "Claude Code Skills"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "[[Always Plan Before Executing]] (provides tooling that enforces the planning gate lesson)"
+          "target": "Always Plan Before Executing"
         }
       ]
     },
@@ -10170,15 +10156,7 @@
         },
         {
           "verb": "ENABLES",
-          "target": "[[Model: Skills"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Commands"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "and Hooks]]"
+          "target": "Model: Skills, Commands, and Hooks"
         },
         {
           "verb": "ENABLES",
@@ -10324,11 +10302,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "RELATES TO",
@@ -10340,15 +10314,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Skills"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Commands"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "and Hooks]]"
+          "target": "Model: Skills, Commands, and Hooks"
         },
         {
           "verb": "FEEDS INTO",
@@ -10461,11 +10427,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Shallow Ingestion Is Systemic"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Not Isolated]]"
+          "target": "Shallow Ingestion Is Systemic, Not Isolated"
         },
         {
           "verb": "RELATES TO",
@@ -10644,15 +10606,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Skills"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Commands"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "and Hooks]]"
+          "target": "Model: Skills, Commands, and Hooks"
         },
         {
           "verb": "RELATES TO",
@@ -10744,15 +10698,7 @@
         },
         {
           "verb": "GOVERNS",
-          "target": "[[Model: Skills"
-        },
-        {
-          "verb": "GOVERNS",
-          "target": "Commands"
-        },
-        {
-          "verb": "GOVERNS",
-          "target": "and Hooks]]"
+          "target": "Model: Skills, Commands, and Hooks"
         },
         {
           "verb": "GOVERNS",
@@ -10780,15 +10726,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Skyscraper"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Pyramid"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Mountain]]"
+          "target": "Skyscraper, Pyramid, Mountain"
         },
         {
           "verb": "RELATES TO",
@@ -10934,11 +10872,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Deterministic Shell"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "LLM Core]]"
+          "target": "Deterministic Shell, LLM Core"
         },
         {
           "verb": "BUILDS ON",
@@ -10950,19 +10884,11 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Shallow Ingestion Is Systemic"
+          "target": "Shallow Ingestion Is Systemic, Not Isolated"
         },
         {
           "verb": "BUILDS ON",
-          "target": "Not Isolated]]"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "[[Infrastructure Must Be Reproducible"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Not Manual]]"
+          "target": "Infrastructure Must Be Reproducible, Not Manual"
         },
         {
           "verb": "BUILDS ON",
@@ -11085,15 +11011,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "[[Skyscraper"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Pyramid"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Mountain]]"
+          "target": "Skyscraper, Pyramid, Mountain"
         },
         {
           "verb": "RELATES TO",
@@ -11250,7 +11168,8 @@
         "callouts",
         "examples",
         "gold-standard",
-        "anti-patterns"
+        "anti-patterns",
+        "visual-design"
       ],
       "sources": [],
       "layer": "spine",
@@ -11267,11 +11186,23 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "[[Model: Methodology]] (the first page to demonstrate all patterns)"
+          "target": "Model: Methodology"
         },
         {
           "verb": "RELATES TO",
           "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision: MCP vs CLI for Tool Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
         }
       ]
     },
@@ -11384,15 +11315,15 @@
     },
     "cross-domain": {
       "page_count": 43,
-      "relationship_count": 351
+      "relationship_count": 331
     },
     "ai-agents": {
       "page_count": 34,
-      "relationship_count": 295
+      "relationship_count": 293
     },
     "tools-and-platforms": {
       "page_count": 23,
-      "relationship_count": 161
+      "relationship_count": 160
     },
     "devops": {
       "page_count": 11,
@@ -11411,7 +11342,7 @@
       "relationship_count": 201
     },
     "log": {
-      "page_count": 17,
+      "page_count": 18,
       "relationship_count": 0
     }
   },
@@ -13456,7 +13387,8 @@
       "log/2026-04-09-directive-validate-second-brain-readiness",
       "log/2026-04-09-directive-wiki-design-model-emerging",
       "log/2026-04-09-directive-wiki-design-model-research",
-      "log/2026-04-09-ingest-awesome-design-md"
+      "log/2026-04-09-ingest-awesome-design-md",
+      "log/2026-04-09-session-summary"
     ],
     "directive": [
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
@@ -13576,6 +13508,15 @@
     "remark": [
       "log/2026-04-09-directive-wiki-design-model-research",
       "spine/model-wiki-design"
+    ],
+    "session": [
+      "log/2026-04-09-session-summary"
+    ],
+    "progress": [
+      "log/2026-04-09-session-summary"
+    ],
+    "summary": [
+      "log/2026-04-09-session-summary"
     ],
     "tool-design": [
       "patterns/context-aware-tool-loading"
@@ -14040,10 +13981,11 @@
     "anti-patterns": [
       "spine/model-wiki-design-standards"
     ],
-    "formatting": [
+    "visual-design": [
+      "spine/model-wiki-design-standards",
       "spine/model-wiki-design"
     ],
-    "visual-design": [
+    "formatting": [
       "spine/model-wiki-design"
     ],
     "emerging": [
@@ -14109,15 +14051,6 @@
       ]
     },
     {
-      "target": "Commands",
-      "referenced_by": [
-        "Model: Claude Code",
-        "Model: Ecosystem Architecture",
-        "Model: MCP and CLI Integration",
-        "Model: Methodology"
-      ]
-    },
-    {
       "target": "Cross-Domain",
       "referenced_by": [
         "AI Agents \u2014 Domain Overview",
@@ -14161,18 +14094,6 @@
       ]
     },
     {
-      "target": "LLM Core]]",
-      "referenced_by": [
-        "Skyscraper, Pyramid, Mountain",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Gateway-Centric Routing",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Ecosystem Architecture",
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
       "target": "Methodology Execution Modes",
       "referenced_by": [
         "Adoption Guide \u2014 How to Use This Wiki's Standards"
@@ -14206,40 +14127,9 @@
       ]
     },
     {
-      "target": "Mountain]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Methodology",
-        "Model: SFIF and Architecture"
-      ]
-    },
-    {
-      "target": "Not Isolated]]",
-      "referenced_by": [
-        "LLM Wiki Standards \u2014 What Good Looks Like",
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
-      "target": "Not Manual]]",
-      "referenced_by": [
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
       "target": "PARA methodology",
       "referenced_by": [
         "Second Brain Architecture"
-      ]
-    },
-    {
-      "target": "Pyramid",
-      "referenced_by": [
-        "Methodology Framework",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Methodology",
-        "Model: SFIF and Architecture"
       ]
     },
     {
@@ -14279,372 +14169,9 @@
       ]
     },
     {
-      "target": "[[AICP]]",
-      "referenced_by": [
-        "Local Inference Engine (Subsystem 3)"
-      ]
-    },
-    {
-      "target": "[[Agent Orchestration Patterns]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Always Plan Before Executing]]",
-      "referenced_by": [
-        "Infrastructure Must Be Reproducible, Not Manual",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Backlog Hierarchy Rules]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix"
-      ]
-    },
-    {
-      "target": "[[Claude Code Best Practices]]",
-      "referenced_by": [
-        "Design.md Pattern",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Claude Code Slash Commands (artemgetmann)",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Claude Code Context Management]]",
-      "referenced_by": [
-        "Design.md Pattern"
-      ]
-    },
-    {
-      "target": "[[Claude Code Scheduling]]",
-      "referenced_by": [
-        "Claude Code Slash Commands (artemgetmann)"
-      ]
-    },
-    {
-      "target": "[[Claude Code Skills]]",
-      "referenced_by": [
-        "Claude Code Slash Commands (artemgetmann)",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Claude Code]]",
-      "referenced_by": [
-        "Claude Code Slash Commands (artemgetmann)"
-      ]
-    },
-    {
-      "target": "[[Context-Aware Tool Loading]]",
-      "referenced_by": [
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Design.md Pattern]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Deterministic Shell",
-      "referenced_by": [
-        "Skyscraper, Pyramid, Mountain",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
-        "Gateway-Centric Routing",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Ecosystem Architecture",
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
-      "target": "[[Execution Modes and End Conditions]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Backlog Hierarchy Rules",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix"
-      ]
-    },
-    {
-      "target": "[[Four-Project Ecosystem]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Backlog Hierarchy Rules",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix"
-      ]
-    },
-    {
-      "target": "[[Harness Engineering]]",
-      "referenced_by": [
-        "Design.md Pattern",
-        "Spec-Driven Development"
-      ]
-    },
-    {
-      "target": "[[Immune System Rules]]",
-      "referenced_by": [
-        "Task Lifecycle Stage-Gating",
-        "Backlog Hierarchy Rules",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix",
-        "Infrastructure Must Be Reproducible, Not Manual",
-        "Never Skip Stages Even When Told to Continue",
-        "Never Synthesize from Descriptions Alone",
-        "Shallow Ingestion Is Systemic, Not Isolated",
-        "The Agent Must Practice What It Documents"
-      ]
-    },
-    {
-      "target": "[[Infrastructure Must Be Reproducible",
-      "referenced_by": [
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
-      "target": "[[Infrastructure as Code Patterns]]",
-      "referenced_by": [
-        "Execution Modes and End Conditions",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Knowledge Evolution Pipeline]]",
-      "referenced_by": [
-        "Local Inference Engine (Subsystem 3)",
-        "Execution Modes and End Conditions",
-        "Wiki Backlog Pattern",
-        "The Agent Must Practice What It Documents"
-      ]
-    },
-    {
-      "target": "[[LLM Wiki Pattern]]",
-      "referenced_by": [
-        "Design.md Pattern",
-        "Methodology Framework",
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[MCP Integration Architecture]]",
-      "referenced_by": [
-        "Design.md Pattern"
-      ]
-    },
-    {
-      "target": "[[Memory Lifecycle Management]]",
-      "referenced_by": [
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Methodology Framework]]",
-      "referenced_by": [
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Model: Methodology]]",
-      "referenced_by": [
-        "Wiki Design Standards \u2014 What Good Styling Looks Like"
-      ]
-    },
-    {
-      "target": "[[Model: Skills",
-      "referenced_by": [
-        "Model: Claude Code",
-        "Model: Ecosystem Architecture",
-        "Model: MCP and CLI Integration",
-        "Model: Methodology"
-      ]
-    },
-    {
-      "target": "[[Never Skip Stages Even When Told to Continue]]",
-      "referenced_by": [
-        "The Agent Must Practice What It Documents"
-      ]
-    },
-    {
-      "target": "[[Never Synthesize from Descriptions Alone]]",
-      "referenced_by": [
-        "Shallow Ingestion Is Systemic, Not Isolated"
-      ]
-    },
-    {
-      "target": "[[OpenFleet]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating",
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[PARA Methodology]]",
-      "referenced_by": [
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Plan Execute Review Cycle]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating",
-        "Backlog Hierarchy Rules",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Progressive Distillation]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Research Pipeline Orchestration]]",
-      "referenced_by": [
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Rework Prevention]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating"
-      ]
-    },
-    {
-      "target": "[[Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features]]",
-      "referenced_by": [
-        "Task Lifecycle Stage-Gating",
-        "Methodology Framework",
-        "Methodology Framework",
-        "Stage-Gate Methodology",
-        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
-      ]
-    },
-    {
-      "target": "[[Second Brain Architecture]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Shallow Ingestion Is Systemic",
-      "referenced_by": [
-        "LLM Wiki Standards \u2014 What Good Looks Like",
-        "Model: Quality and Failure Prevention"
-      ]
-    },
-    {
-      "target": "[[Skills Architecture Patterns]]",
-      "referenced_by": [
-        "Design.md Pattern",
-        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
-        "Claude Code Slash Commands (artemgetmann)"
-      ]
-    },
-    {
-      "target": "[[Skyscraper",
-      "referenced_by": [
-        "Methodology Framework",
-        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-        "Model: Methodology",
-        "Model: SFIF and Architecture"
-      ]
-    },
-    {
-      "target": "[[Spec-Driven Development]]",
-      "referenced_by": [
-        "Task Lifecycle Stage-Gating",
-        "Task Lifecycle Stage-Gating",
-        "Methodology Framework",
-        "Backlog Hierarchy Rules",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix",
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Stage-Gate Methodology]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Backlog Hierarchy Rules",
-        "Execution Modes and End Conditions",
-        "Task Type Artifact Matrix",
-        "Infrastructure Must Be Reproducible, Not Manual",
-        "Never Synthesize from Descriptions Alone",
-        "Shallow Ingestion Is Systemic, Not Isolated"
-      ]
-    },
-    {
-      "target": "[[Task Lifecycle Stage-Gating]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating",
-        "Methodology Framework",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix",
-        "Wiki Backlog Pattern"
-      ]
-    },
-    {
-      "target": "[[Task Type Artifact Matrix]]",
-      "referenced_by": [
-        "Methodology Framework",
-        "Backlog Hierarchy Rules",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology"
-      ]
-    },
-    {
-      "target": "[[Wiki Backlog Pattern]]",
-      "referenced_by": [
-        "Spec-Driven Development",
-        "Task Lifecycle Stage-Gating",
-        "Methodology Framework",
-        "Backlog Hierarchy Rules",
-        "Execution Modes and End Conditions",
-        "Stage-Gate Methodology",
-        "Task Type Artifact Matrix"
-      ]
-    },
-    {
-      "target": "[[Wiki Ingestion Pipeline]]",
-      "referenced_by": [
-        "Infrastructure Must Be Reproducible, Not Manual"
-      ]
-    },
-    {
       "target": "ai-driven-content-pipeline",
       "referenced_by": [
         "Synthesis: Claude + NotebookLM Content Automation"
-      ]
-    },
-    {
-      "target": "and Hooks]]",
-      "referenced_by": [
-        "Model: Claude Code",
-        "Model: Ecosystem Architecture",
-        "Model: MCP and CLI Integration",
-        "Model: Methodology"
       ]
     },
     {

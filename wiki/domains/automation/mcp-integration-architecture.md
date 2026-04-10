@@ -159,6 +159,7 @@ Cross-referencing `WSL2 Development Patterns`: the lifecycle is fully documented
 [[Context-Aware Tool Loading]]
 [[Decision: MCP vs CLI for Tool Integration]]
 [[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
+[[Design.md Pattern]]
 [[Four-Project Ecosystem]]
 [[Gateway-Centric Routing]]
 [[Harness Engineering]]

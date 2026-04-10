@@ -138,6 +138,7 @@ Cross-referencing `Immune System Rules` and `devops-control-plane`: the `Immune 
 [[Decision: Local Model vs Cloud API for Routine Operations]]
 [[Decision: Polling vs Event-Driven Change Detection]]
 [[Deterministic Shell, LLM Core]]
+[[Execution Modes and End Conditions]]
 [[Four-Project Ecosystem]]
 [[Gateway-Centric Routing]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
@@ -145,4 +146,5 @@ Cross-referencing `Immune System Rules` and `devops-control-plane`: the `Immune 
 [[Model: Wiki Design]]
 [[Scaffold → Foundation → Infrastructure → Features]]
 [[Skyscraper, Pyramid, Mountain]]
+[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
 [[WSL2 Development Patterns]]

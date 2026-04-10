@@ -120,3 +120,4 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 [[Research Pipeline Orchestration]]
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
+[[Wiki Design Standards — What Good Styling Looks Like]]

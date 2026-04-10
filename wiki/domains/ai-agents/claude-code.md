@@ -137,6 +137,7 @@ Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`:
 [[LLM Wiki Pattern]]
 [[Always Plan Before Executing]]
 [[CLI Tools Beat MCP for Token Efficiency]]
+[[Claude Code Slash Commands (artemgetmann)]]
 [[Decision: MCP vs CLI for Tool Integration]]
 [[Harness Engineering]]
 [[Hooks Lifecycle Architecture]]

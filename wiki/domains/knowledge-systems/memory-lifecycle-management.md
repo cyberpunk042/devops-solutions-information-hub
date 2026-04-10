@@ -106,4 +106,5 @@ Cross-referencing `Claude Code Context Management`: that page documents the lost
 [[Progressive Distillation]]
 [[Second Brain Architecture]]
 [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[Wiki Backlog Pattern]]
 [[Zettelkasten Methodology]]

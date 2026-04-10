@@ -162,3 +162,4 @@ Cross-referencing `Agent Orchestration Patterns`: yes, with explicit scope bound
 [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
 [[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
 [[WSL2 Development Patterns]]
+[[Wiki Backlog Pattern]]

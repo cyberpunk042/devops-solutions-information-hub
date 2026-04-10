@@ -121,3 +121,4 @@ The emerging practitioner consensus captured across multiple independent sources
 [[Pattern: Skills + Mcp]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
+[[Wiki Design Standards — What Good Styling Looks Like]]

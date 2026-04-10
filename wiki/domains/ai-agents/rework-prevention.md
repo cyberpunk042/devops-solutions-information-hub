@@ -171,3 +171,5 @@ Cross-referencing `Plan Execute Review Cycle` and `Harness Engineering`: partial
 [[Research Pipeline Orchestration]]
 [[Immune System Rules]]
 [[Model: Quality and Failure Prevention]]
+[[Spec-Driven Development]]
+[[Task Lifecycle Stage-Gating]]

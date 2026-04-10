@@ -115,6 +115,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[Gateway-Centric Routing]]
 [[Immune System Rules]]
 [[Knowledge Evolution Pipeline]]
+[[Local Inference Engine (Subsystem 3)]]
 [[Local LLM Quantization]]
 [[MCP Integration Architecture]]
 [[Model: Ecosystem Architecture]]
