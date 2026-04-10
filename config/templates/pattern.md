@@ -26,21 +26,32 @@ tags: []
 
 <!-- 2-3 sentences: what recurs and why it matters -->
 
+<!-- STYLING: After Summary, add a reference card if the pattern has named stages/components:
+     > [!info] Pattern Reference Card
+     > | Component | Role | ... |
+-->
+
 ## Pattern Description
 
-<!-- What is this pattern? How do you recognize it? Min 100 words. -->
+<!-- What is this pattern? How do you recognize it? Min 100 words.
+     STYLING: If the pattern has a core tradeoff or constraint, use > [!warning].
+     If there is a taxonomy (types, tiers, modes), use > [!abstract] with a table. -->
 
 ## Instances
 
-<!-- 2+ specific examples from the wiki. Reference pages directly. -->
+<!-- 2+ specific examples from the wiki. Reference pages directly.
+     STYLING: Use > [!example]- foldable per instance for detailed breakdowns.
+     A summary table at the top (instance | how it implements pattern) is ideal. -->
 
 ## When To Apply
 
-<!-- Conditions that make this pattern appropriate -->
+<!-- Conditions that make this pattern appropriate.
+     STYLING: > [!tip] for the positive cases. -->
 
 ## When Not To
 
-<!-- Anti-patterns, conditions where this fails or is counterproductive -->
+<!-- Anti-patterns, conditions where this fails or is counterproductive.
+     STYLING: > [!warning] for the negative cases. -->
 
 ## Relationships
 

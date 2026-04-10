@@ -85,6 +85,32 @@ Every evolved page must:
 - Have substantive content (not just template placeholders)
 - Pass `python3 -m tools.validate`
 - Have at least 2 relationships beyond DERIVED FROM
+- Be styled with Obsidian callouts (see below)
+
+## Styling Standards for Evolved Pages
+
+Evolved pages are promoted from seed concepts — they must look like promoted knowledge,
+not just longer versions of the seed. Apply styling from the wiki-agent skill's
+Styling Standards section. Key patterns for each evolved type:
+
+**Lesson pages:**
+- Core insight as `> [!warning]` or `> [!tip]` callout
+- If there is a taxonomy (layers, levels), use `> [!abstract]` with a table
+- Failure evidence as `> [!bug]-` foldable with verbatim quotes
+- Applicability as a table if listing multiple domains
+
+**Pattern pages:**
+- `> [!info]` reference card after Summary (components, stages, properties)
+- Instances as `> [!example]-` foldable per instance, or a summary table
+- When To Apply as `> [!tip]`, When Not To as `> [!warning]`
+
+**Decision pages:**
+- Decision statement as `> [!success]` callout with scenario-action table
+- Each rejected alternative with `> [!warning]` rationale
+
+**The rule:** If a page has >4 bullet-point insights, group them thematically and
+wrap the most important 1-2 in callouts. Reference data (thresholds, comparisons,
+taxonomies) should be tables inside callouts. Open questions as `> [!question]`.
 
 ## Post-Processing
 

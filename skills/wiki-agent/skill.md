@@ -50,6 +50,61 @@ Quality gates (every page):
 - Source provenance present
 - No >70% concept overlap with existing page (update instead)
 - title matches # Heading, domain matches folder
+- Styled with callouts (see Styling Standards below)
+
+## Styling Standards
+
+Every page you generate MUST include Obsidian callout styling. A page with correct
+content but no visual structure is INCOMPLETE.
+
+### Callout Types (semantic, not decorative)
+
+| Type | Meaning | Use For |
+|------|---------|---------|
+| `> [!info]` | Blue — what this is | Reference cards, architecture summaries |
+| `> [!abstract]` | Teal — conditions/taxonomy | Selection criteria, comparison tables, layer models |
+| `> [!tip]` | Cyan — guidance/recommendation | Best practices, key recommendations |
+| `> [!warning]` | Orange — caution/constraint | Critical constraints, failure modes, gotchas |
+| `> [!success]` | Green — verified/decided | Decisions made, validated approaches |
+| `> [!bug]-` | Red, foldable — failures | Failure incidents (always foldable) |
+| `> [!example]-` | Purple, foldable — proof | Detailed instances, long evidence (always foldable) |
+| `> [!question]` | Yellow — unresolved | Open questions with (Requires: ...) tag |
+
+### Per-Page-Type Patterns
+
+**Source synthesis** (`wiki/sources/src-*`):
+- `> [!info]` reference card after Summary with key data points (tool name, repo, stars, purpose)
+- Most important insight as `> [!tip]` in Key Insights
+
+**Concept pages** (`wiki/domains/`):
+- Reference card after Summary if the concept has named components, thresholds, or a taxonomy
+- Group Key Insights thematically if >6 insights; wrap the most important in callouts
+- Tables inside callouts for comparison data, stage definitions, or property lists
+- Open Questions as `> [!question]` callouts
+- Answered Questions as `> [!example]-` foldable callouts
+
+**Comparison pages** (`wiki/comparisons/`):
+- The comparison matrix table is the centerpiece — leave as plain table
+- Decision criteria as `> [!success]` / `> [!warning]` / `> [!tip]` callouts (choose X when...)
+
+**Lesson pages** (`wiki/lessons/`):
+- Core insight as `> [!warning]` or `> [!tip]` callout
+- Failure evidence as `> [!bug]-` foldable with verbatim quotes
+
+**Pattern pages** (`wiki/patterns/`):
+- Pattern reference card as `> [!info]` after Summary
+- When To Apply as `> [!tip]`, When Not To as `> [!warning]`
+
+**Decision pages** (`wiki/decisions/`):
+- Decision as `> [!success]` with scenario-action table
+- Rejected alternatives with `> [!warning]` rationale
+
+### What NOT to Style
+
+- Narrative prose that flows well — don't box every paragraph
+- Short content (1-3 lines) — callout adds overhead for minimal gain
+- Content already structured with tables and bold headers
+- Never use `[!info]` for everything — choose the specific semantic type
 
 Post-ingestion (every time):
 Run: `python3 -m tools.pipeline post`

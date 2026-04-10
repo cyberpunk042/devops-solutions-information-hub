@@ -23,11 +23,17 @@ tags: []
 
 ## Decision
 
-<!-- Clear statement of what to do -->
+<!-- Clear statement of what to do.
+     STYLING: Wrap in > [!success] callout with a scenario-to-action table:
+     > [!success] Decision
+     > | Scenario | Action |
+     > |----------|--------|
+-->
 
 ## Alternatives
 
-<!-- What else was considered. Min 2 alternatives with brief rationale for rejection. -->
+<!-- What else was considered. Min 2 alternatives with brief rationale for rejection.
+     STYLING: Each alternative as a subsection. Use > [!warning] for the rejected reason. -->
 
 ## Rationale
 
