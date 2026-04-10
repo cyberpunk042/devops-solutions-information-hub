@@ -326,6 +326,124 @@ The 13 guardrail rules (R01-R13) from the claude-code-harness project implement 
 > - **Pipeline chains** — `post` (6-step validation), `health`, `evolve`, `continue`, `review`. Deterministic orchestration at level 1.
 > - **No hooks yet** — operating at levels 0-1. Hook-based stage-gate enforcement is the planned next step.
 
+### Key Pages
+
+Every page that belongs to this model, organized by layer. This is the territory the model governs.
+
+| Page | Layer | Role in the model |
+|------|-------|-------------------|
+| [[Claude Code]] | L2 | The foundational concept — agent loop, tool dispatch, role in ecosystem |
+| [[Claude Code Best Practices]] | L2 | Operational discipline — planning, prompting, context hygiene |
+| [[Claude Code Context Management]] | L2 | The primary constraint — utilization, degradation, management strategies |
+| [[Claude Code Skills]] | L2 | Extension mechanism — SKILL.md format, progressive disclosure, context forking |
+| [[Harness Engineering]] | L2 | The governing concept — 5-verb workflow, enforcement hierarchy, 13 guardrail rules |
+| [[Hooks Lifecycle Architecture]] | L2 | 26 lifecycle events across 7 categories — the enforcement layer |
+| [[Per-Role Command Architecture]] | L2 | Role-segmented command palettes for different user contexts |
+| [[Design.md Pattern]] | L2 | DESIGN.md as IaC — human spec → machine executes. Part of Level 0 config. |
+| [[MCP Integration Architecture]] | L2 | Tool integration via Model Context Protocol — when and how |
+| [[Claude Code Scheduling]] | L2 | Cron-triggered autonomous operations — when the agent runs without a human |
+| [[Spec-Driven Development]] | L2 | The brainstorm → spec → plan → implement workflow using the extension system |
+| [[Always Plan Before Executing]] | L4 | Lesson: 95% confidence before changes. Planning prevents rework. |
+| [[CLI Tools Beat MCP for Token Efficiency]] | L4 | Lesson: 12x cost differential. Eager vs deferred loading. |
+| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | L4 | Lesson: skills beat MCP, hooks, and commands for capability extension. |
+| [[Context Management Is the Primary LLM Productivity Lever]] | L4 | Lesson: context hygiene = 3-5x more useful work per session. |
+| [[Context-Aware Tool Loading]] | L5 | Pattern: defer all tool schema loading until needed. Never pre-load. |
+| [[Plan Execute Review Cycle]] | L5 | Pattern: the 5-verb universal workflow that emerges across all frameworks. |
+| [[Deterministic Shell, LLM Core]] | L5 | Pattern: deterministic orchestration wrapping probabilistic LLM reasoning. |
+| [[Pattern: Skills + Claude Code]] | L5 | Pattern: skills as the primary Claude Code extension mechanism. |
+| [[Decision: MCP vs CLI for Tool Integration]] | L6 | Decision: CLI+Skills default, MCP for external bridges. Reversible. |
+
+---
+
+### Lessons Learned
+
+Validated experience from operating Claude Code in this ecosystem.
+
+| Lesson | What was learned |
+|--------|-----------------|
+| [[Always Plan Before Executing]] | The agent going down a wrong path and scrapping work wastes more tokens than any model cost. Plan first, 95% confidence, then execute. |
+| [[CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential on Playwright is structural — eager loading (MCP) vs deferred loading (CLI+Skills). Default to CLI for operational tasks. |
+| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills load on demand at zero baseline cost. For extending Claude Code with capabilities, skills are the correct default over MCP, hooks, or commands. |
+| [[Context Management Is the Primary LLM Productivity Lever]] | Context hygiene is a prerequisite, not an optimization. Lean CLAUDE.md, subagent isolation, targeted reads, manual compaction. |
+| [[Never Skip Stages Even When Told to Continue]] | "Continue" means advance within the current stage, not skip to the next. Claude Code agents are biased toward perceived progress — stage gates prevent this. |
+| [[The Agent Must Practice What It Documents]] | Methodology in wiki pages is useless if not in CLAUDE.md. Rules must exist in the agent's operational instructions, not just its knowledge base. |
+
+---
+
+### State of Knowledge
+
+> [!success] **Well-covered (multiple sources, real evidence, validated)**
+> - Extension system architecture (4 levels with cost-enforcement trade-offs)
+> - MCP vs CLI+Skills decision (12x measured differential, Microsoft recommendation, decision record)
+> - Skills as dominant pattern (convergent evidence across 10+ frameworks)
+> - Context management principles (lean CLAUDE.md, subagent isolation, deferred loading)
+> - Harness engineering concept (enforcement hierarchy, 13 guardrail rules, 5-verb workflow)
+> - Documentation layers (6-layer model with clear ownership)
+
+> [!warning] **Thin or unverified (needs deeper research)**
+> - Hooks in real production use — the 26-event taxonomy is documented but we have no ecosystem project using hooks for stage-gate enforcement yet
+> - Subagent concurrency limits — no benchmarks on parallel file operations
+> - Context degradation curve specifics — one practitioner's observations, not Anthropic data
+> - Claude Code scheduling patterns — cron-triggered autonomous operation is documented but untested
+> - Multi-agent coordination via Claude Code — OpenFleet implements this but the model page doesn't connect deeply to those patterns
+> - Hook-based methodology enforcement — the bridge between `methodology.yaml` and runtime execution doesn't exist yet
+
+> [!question] **Research needed to fill gaps**
+> - Fetch Anthropic's official Claude Code documentation on hooks (may have new features since last ingestion)
+> - Benchmark subagent concurrency on real wiki operations (parallel ingestion, parallel evolution)
+> - Implement one hook-based stage-gate enforcement as a proof of concept
+> - Deep-read OpenFleet's agent orchestration to connect multi-agent patterns to this model
+
+---
+
+### How to Adopt
+
+> [!info] **What you need to set up a Claude Code project with the full harness**
+> 1. `CLAUDE.md` — project conventions, schema, workflow rules. Under 200 lines. Point to detailed files, don't contain them.
+> 2. `skills/` or `.claude/skills/` — one skill per major workflow. SKILL.md with progressive disclosure folders.
+> 3. `.claude/commands/` — one `/command` per skill for user-facing triggers.
+> 4. Hooks (optional, recommended) — start with safety guardrails. Add workflow enforcement as methodology matures.
+> 5. `methodology.yaml` + `agent-directive.md` — if using the stage-gate methodology (recommended for any project beyond trivial).
+
+> [!warning] **INVARIANT — never change these**
+> - CLAUDE.md under 200 lines — it loads on EVERY message, every conversation
+> - Skills are folders with SKILL.md, not single files — progressive disclosure requires subdirectories
+> - Hooks block at execution time, not via instructions — the ~98% vs ~60% compliance gap is real
+> - CLI+Skills for operational tasks, MCP for external bridges — the cost differential is structural
+> - Documentation layers have clear owners — agent config ≠ wiki knowledge ≠ public docs ≠ code docs
+
+> [!tip] **PER-PROJECT — always adapt these**
+> - Which skills exist (wiki-agent vs frontend-builder vs deployment-manager — domain-specific)
+> - Which hooks to enable (safety guardrails are universal; workflow enforcement is project-specific)
+> - Which commands to expose (match the project's workflows, not a generic set)
+> - How deep the methodology goes (hotfix-only projects need 2 stages; complex projects need 5)
+> - MCP server scope (zero MCP for simple projects; multiple for ecosystem integration)
+
+> [!bug]- **What goes wrong if you skip this**
+> - **No CLAUDE.md** → agent has no project context. Every conversation starts from zero. No conventions, no schema, no workflow.
+> - **CLAUDE.md too large** → context bloat on every message. 500-line CLAUDE.md wastes 500 tokens × every message × every session.
+> - **No skills** → every capability must be re-explained per conversation. No reuse, no consistency.
+> - **No hooks** → safety depends on the model following instructions (~60% compliance). sudo, force-push, .env writes are not blocked.
+> - **No methodology** → stages skipped, artifacts missing, false readiness claims. See [[Model: Methodology]] for the 7 bugs that prove this.
+
+> [!example]- **Real instance: OpenArms as a live deployment**
+> - **CLAUDE.md = AGENTS.md** (symlinked) — 351 lines covering architecture boundaries, plugin SDK, channel implementation, gateway protocol
+> - **Progressive disclosure** — each subsystem has its own AGENTS.md (`src/plugin-sdk/AGENTS.md`, `src/channels/AGENTS.md`, `src/gateway/protocol/AGENTS.md`)
+> - **Embedded wiki** — wiki/ with backlog, adapted from this research wiki. Epics, modules, tasks with frontmatter state machines.
+> - **50+ skills** — bundled ecosystem, new skills directed to ClawHub marketplace
+> - **Methodology enforcement** — `methodology.yaml` + `agent-directive.md` governing autonomous agent operation
+> - **`read_when` metadata** — docs self-declare their relevance via frontmatter, enabling agents to know WHEN to load a doc without reading everything
+>
+> The key insight: documentation layers WORK when each layer has a clear owner (CLAUDE.md = agent, wiki/ = knowledge, docs/ = humans, src/ = developers) and the agent knows which layer to read for which purpose.
+
+> [!example]- **Real instance: this research wiki's harness**
+> - **CLAUDE.md** — 180 lines. Schema, ingestion modes, quality gates, tooling commands, agent methodology section with stage gates.
+> - **5 skills** — wiki-agent, evolve, continue, model-builder, notebooklm. Each a folder with `skill.md`.
+> - **9 commands** — `/continue`, `/evolve`, `/ingest`, `/review`, `/gaps`, `/status`, `/backlog`, `/log`, `/build-model`.
+> - **17 MCP tools** — wiki operations accessible from any Claude Code conversation.
+> - **Pipeline chains** — `post` (6-step validation), `health`, `evolve`, `continue`, `review`. Deterministic orchestration at level 1.
+> - **No hooks yet** — operating at levels 0-1. Hook-based stage-gate enforcement is the planned next step.
+
 ## Open Questions
 
 > [!question] **What is the optimal subagent concurrency?**
