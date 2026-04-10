@@ -16,12 +16,21 @@ tags: [domain-overview, automation]
 
 ## Summary
 
-The automation domain covers scheduling, pipeline orchestration, workflow automation, event-driven patterns, and service architecture for the research wiki and broader ecosystem. Five concept pages document the current and target automation state: Claude Code Scheduling (cron + remote task mechanisms), Wiki Event-Driven Automation (hook-based reactive processing), MCP Integration Architecture (the service layer evolution target), Research Pipeline Orchestration (the multi-pass automated ingestion vision), and AI-Driven Content Pipeline (the Claude + NotebookLM content generation pattern). The domain sits at the intersection of vision and implementation — several pages document what the automation should become rather than what it currently is. Confidence is medium for most pages, reflecting that these are architectural visions grounded in real sources but not yet fully implemented. MCP Integration Architecture and Research Pipeline Orchestration are the most forward-looking; Claude Code Scheduling is the most operational.
+The automation domain covers scheduling, pipeline orchestration, workflow automation, event-driven patterns, and service architecture for the research wiki and broader ecosystem. With 5 concept pages, it documents the current and target automation state: Claude Code Scheduling (cron + remote task mechanisms), Wiki Event-Driven Automation (hook-based reactive processing), MCP Integration Architecture (the service layer evolution target), Research Pipeline Orchestration (the multi-pass automated ingestion vision), and AI-Driven Content Pipeline (the Claude + NotebookLM content generation pattern). The domain sits at the intersection of vision and implementation — several pages document what the automation should become rather than what it currently is. Confidence is medium for most pages, reflecting architectural visions grounded in real sources but not yet fully implemented.
+
+> [!info] Domain at a glance
+>
+> | Metric | Value |
+> |--------|-------|
+> | Concept pages | 5 |
+> | Related model pages | [[Model: Automation and Pipelines]] |
+> | Decision pages | [[Decision: Polling vs Event-Driven Change Detection]] |
+> | Related lessons | 3+ (Automation Is Bridge Between Knowledge and Action, Infrastructure Must Be Reproducible Not Manual, etc.) |
 
 ## State of Knowledge
 
 > [!warning] Vision vs Implementation Gap
-> The automation domain sits at the intersection of vision and implementation — several pages document what the automation should become rather than what it currently is. MCP Integration Architecture and Research Pipeline Orchestration are the most forward-looking; Claude Code Scheduling is the most operational.
+> Several pages document what the automation should become rather than what it currently is. MCP Integration Architecture and Research Pipeline Orchestration are the most forward-looking; Claude Code Scheduling is the most operational.
 
 **Strong coverage:**
 - Claude Code Scheduling — two concrete mechanisms (local cron, Anthropic Cloud remote tasks) are well-documented with operational detail. Confidence: high.
@@ -37,12 +46,11 @@ The automation domain covers scheduling, pipeline orchestration, workflow automa
 
 ## Maturity Map
 
-**Established content (pre-maturity system):**
-- Claude Code Scheduling — operational, two mechanisms documented with concrete examples
-- MCP Integration Architecture — architectural specification, high implementation priority
-- Research Pipeline Orchestration — vision document with implementation gap analysis
-- Wiki Event-Driven Automation — pattern specification, six trigger points defined
-- AI-Driven Content Pipeline — synthesized from content team use case
+| Maturity | Pages |
+|----------|-------|
+| **growing** (all 5) | Claude Code Scheduling, MCP Integration Architecture, Research Pipeline Orchestration, Wiki Event-Driven Automation, AI-Driven Content Pipeline |
+
+All pages assigned maturity. All styled with callout vocabulary. All have standard sections.
 
 ## Gaps
 

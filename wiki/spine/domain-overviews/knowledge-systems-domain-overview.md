@@ -16,39 +16,49 @@ tags: [domain-overview, knowledge-systems]
 
 ## Summary
 
-The knowledge-systems domain covers the theory and architecture of building LLM-powered knowledge bases, from Karpathy's original wiki pattern through graph-enhanced RAG and structured ingestion pipelines. It is the intellectual foundation for this wiki's own design — the domain documents the patterns the wiki itself implements. Six concept pages cover the LLM Wiki Pattern (the Karpathy origin), LightRAG (graph-based RAG framework used in OpenFleet), the Wiki Ingestion Pipeline (the operational workflow), Memory Lifecycle Management (knowledge validity over time), the Wiki Knowledge Graph (typed relationship extensions), and the LLM Wiki vs RAG comparison. Confidence is high across the board, anchored by primary source documentation from Karpathy directly and the LightRAG EMNLP 2025 paper. This domain feeds every other domain: ai-agents use the wiki as their knowledge backbone, automation tools implement the ingestion pipeline, and tools-and-platforms provide the frontend layers (Obsidian, NotebookLM).
+The knowledge-systems domain covers the theory and architecture of building LLM-powered knowledge bases, from Karpathy's original wiki pattern through graph-enhanced RAG, structured ingestion pipelines, PKM theory, and knowledge evolution. It is the intellectual foundation for this wiki's own design — the domain documents the patterns the wiki itself implements. With 11 concept pages, it is the second-largest domain. Coverage spans the LLM Wiki Pattern (the Karpathy origin), LightRAG (graph-based RAG framework used in OpenFleet), the Wiki Ingestion Pipeline (the operational workflow), Memory Lifecycle Management (knowledge validity over time), the Wiki Knowledge Graph (typed relationship extensions), the LLM Wiki vs RAG comparison, Second Brain Architecture (PKM design), PARA Methodology, Zettelkasten Methodology, Wiki Backlog Pattern, and Knowledge Evolution Pipeline. Confidence is high across the board, anchored by primary source documentation from Karpathy directly and the LightRAG EMNLP 2025 paper. This domain feeds every other domain: ai-agents use the wiki as their knowledge backbone, automation tools implement the ingestion pipeline, and tools-and-platforms provide the frontend layers (Obsidian, NotebookLM).
+
+> [!info] Domain at a glance
+>
+> | Metric | Value |
+> |--------|-------|
+> | Concept pages | 11 |
+> | Related model pages | [[Model: LLM Wiki]], [[Model: Second Brain]], [[Model: Knowledge Evolution]] |
+> | Decision pages | [[Decision: Wiki-First with LightRAG Upgrade Path]] |
+> | Related lessons | 7+ (LLM-Maintained Wikis Outperform Static Documentation, Multi-Stage Ingestion Beats Single-Pass, Knowledge Systems Is Foundational Domain, etc.) |
 
 ## State of Knowledge
 
-> [!info] The Intellectual Foundation
+> [!abstract] The Intellectual Foundation
 > This domain documents the patterns the wiki itself implements. It feeds every other domain: ai-agents use the wiki as their knowledge backbone, automation tools implement the ingestion pipeline, and tools-and-platforms provide the frontend layers (Obsidian, NotebookLM).
 
-**Strong coverage:**
+**Authoritative coverage:**
 - LLM Wiki Pattern — primary source (Karpathy's idea file gist), two YouTube transcripts, LLM Wiki v2 extension document. The theoretical foundation is well-established. Confidence: high.
 - LightRAG — sourced from the official GitHub documentation and OpenFleet's live integration. Four query modes, indexing pipeline, kb_sync bypass, OpenFleet's 1,545 entities / 2,295 relationships. Confidence: high.
 - Wiki Ingestion Pipeline — three-phase workflow well documented from multiple Karpathy sources plus this project's own implementation. Confidence: high.
+- Knowledge Evolution Pipeline — maturity promotion mechanics, scoring algorithm, evolution candidates, review workflow. Confidence: high.
+- Second Brain Architecture — PKM theory synthesis from Forte, Karpathy, and Luhmann traditions. Confidence: high.
+
+**Good coverage:**
 - LLM Wiki vs RAG — dedicated comparison page synthesizing the two approaches with decision criteria.
 - Wiki Knowledge Graph — architectural extension proposal from LLM Wiki v2. Medium confidence (proposed, not yet fully implemented in this wiki).
+- PARA Methodology — Forte's four-category PKM framework with clear action orientation.
+- Zettelkasten Methodology — Luhmann's atomic-note system, three core principles.
+- Wiki Backlog Pattern — wiki as both knowledge base and project tracker.
 
 **Thin coverage:**
 - Memory Lifecycle Management — concept page exists but lacks implementation depth: how to implement staleness detection, which sources decay fastest, automation strategies.
-- Agentic Search vs Vector Search — lives in the comparisons domain rather than here; only weakly cross-referenced.
+- Agentic Search vs Vector Search — lives in the comparisons folder rather than here; only weakly cross-referenced.
 - No coverage of vector database selection, embedding model tradeoffs, or BM25 implementation details for hybrid search.
 - Obsidian graph integration with typed relationships — mentioned as a gap in Wiki Knowledge Graph but not investigated.
 
 ## Maturity Map
 
-**Established content (pre-maturity system):**
-- LLM Wiki Pattern — core concept, authoritative, the origin point for this entire project
-- LightRAG — well-sourced, production-tested in OpenFleet
-- Wiki Ingestion Pipeline — operational, the actual process used to build this wiki
-- LLM Wiki vs RAG — synthesized comparison, decision-quality
-- Wiki Knowledge Graph — synthesized from LLM Wiki v2, architectural vision
-- Memory Lifecycle Management — concept-level, needs implementation depth
+| Maturity | Pages |
+|----------|-------|
+| **growing** (all 11) | LLM Wiki Pattern, Wiki Ingestion Pipeline, LightRAG, Wiki Knowledge Graph, LLM Wiki vs RAG, Memory Lifecycle Management, Second Brain Architecture, PARA Methodology, Zettelkasten Methodology, Wiki Backlog Pattern, Knowledge Evolution Pipeline |
 
-**Lessons (evolved layer):**
-- Lesson: Convergence on LLM Wiki Pattern — cross-source validation of the core pattern
-- Lesson: Convergence on Wiki Ingestion Pipeline — operational validation
+All pages assigned maturity. All styled with callout vocabulary. All have standard sections.
 
 ## Gaps
 
@@ -71,9 +81,10 @@ The knowledge-systems domain covers the theory and architecture of building LLM-
 
 1. **[LLM Wiki Pattern](../../domains/knowledge-systems/llm-wiki-pattern.md)** — The origin. Karpathy's three-operation model (Ingest, Query, Lint) and the "Obsidian is the IDE, LLM is the programmer, wiki is the codebase" framing.
 2. **[Wiki Ingestion Pipeline](../../domains/knowledge-systems/wiki-ingestion-pipeline.md)** — The operational implementation of the LLM Wiki Pattern. How raw sources become interlinked pages, including batch ingestion and entity extraction.
-3. **[LightRAG](../../domains/knowledge-systems/lightrag.md)** — The graph-based RAG layer that extends the wiki into a queryable knowledge graph. Production-deployed in OpenFleet; integration path for this wiki is documented here.
-4. **[Wiki Knowledge Graph](../../domains/knowledge-systems/wiki-knowledge-graph.md)** — The typed-relationship extension to flat wikilinks. Describes entity extraction, graph traversal for impact analysis, and the scaling path beyond 200 pages.
-5. **[LLM Wiki vs RAG](../../domains/knowledge-systems/llm-wiki-vs-rag.md)** — Side-by-side comparison; decision criteria for choosing the wiki approach over traditional vector RAG.
+3. **[Knowledge Evolution Pipeline](../../domains/knowledge-systems/knowledge-evolution-pipeline.md)** — How pages promote from seed to canonical: scoring algorithm, evolution candidates, review workflow.
+4. **[Second Brain Architecture](../../domains/knowledge-systems/second-brain-architecture.md)** — The PKM architecture this wiki implements: externalized thinking from Forte, Karpathy, and Luhmann.
+5. **[LightRAG](../../domains/knowledge-systems/lightrag.md)** — The graph-based RAG layer that extends the wiki into a queryable knowledge graph. Production-deployed in OpenFleet.
+6. **[Wiki Knowledge Graph](../../domains/knowledge-systems/wiki-knowledge-graph.md)** — The typed-relationship extension to flat wikilinks. Entity extraction, graph traversal, scaling path beyond 200 pages.
 
 ## FAQ
 

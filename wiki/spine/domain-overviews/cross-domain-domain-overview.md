@@ -16,70 +16,79 @@ tags: [domain-overview, cross-domain]
 
 ## Summary
 
-The cross-domain area is not a subject-matter domain but a structural layer — it holds comparisons, patterns, decisions, and lessons that emerge from synthesizing across two or more subject domains. Currently it contains two comparison pages (Agentic Search vs Vector Search, Skills Architecture Patterns), two lesson pages (Always Plan Before Executing, CLI Tools Beat MCP for Token Efficiency), one pattern page (Plan Execute Review Cycle), and one decision page (Decision: MCP vs CLI for Tool Integration). While small in page count, the cross-domain content represents the highest synthesis quality in the wiki — these pages document the convergences, tradeoffs, and durable principles that no single-domain page can capture. The domain is deliberately sparse: cross-domain synthesis should be selective, representing only insights with multi-source validation. Coverage will grow as the evolved layers (lessons → patterns → decisions → principles) are populated through continued ingestion.
+The cross-domain area is not a subject-matter domain but a structural layer — it holds concept pages, comparisons, patterns, decisions, and lessons that emerge from synthesizing across two or more subject domains. The domain folder contains 2 concept pages (Methodology Framework, Skyscraper Pyramid Mountain), while cross-domain content also lives in the wiki's evolved layers: 29 lesson pages (in lessons/), 6 pattern pages (in patterns/), 13 decision pages (in decisions/), and 5 comparison pages (in comparisons/ including 2 cross-domain ones). This is the domain where convergences, tradeoffs, and durable principles live — content no single-domain page can capture. Cross-domain synthesis is deliberately selective, representing only insights with multi-source validation.
+
+> [!info] Domain at a glance
+>
+> | Metric | Value |
+> |--------|-------|
+> | Concept pages (in domain folder) | 2 |
+> | Lesson pages (wiki-wide) | 29 |
+> | Pattern pages (wiki-wide) | 6 |
+> | Decision pages (wiki-wide) | 13 |
+> | Comparison pages (wiki-wide) | 5 |
 
 ## State of Knowledge
 
 > [!abstract] Cross-Domain Synthesis Is the Highest-Value Layer
-> While small in page count, the cross-domain content represents the highest synthesis quality in the wiki — these pages document the convergences, tradeoffs, and durable principles that no single-domain page can capture.
+> While the domain folder is small, the evolved layers (lessons, patterns, decisions) represent the highest synthesis quality in the wiki — convergences validated across multiple sources and domains.
 
-**Strong coverage:**
-- Skills Architecture Patterns — synthesized from 8 sources across 3 ecosystems (Claude Code, Obsidian, NotebookLM). Identifies convergent design principles (SKILL.md as universal format, three-layer stratification, complexity spectrum). Confidence: high.
-- Plan Execute Review Cycle — pattern with 4 documented instances (OpenFleet orchestrator, Harness Engineering, Claude Code, Research Pipeline Orchestration). Cross-validated, growing maturity. Confidence: high.
-- Decision: MCP vs CLI for Tool Integration — derived from 4 sources, reversibility rated easy, decision clear. Confidence: high.
-- CLI Tools Beat MCP for Token Efficiency — lesson with multi-source convergence from harness engineering, Karpathy, and token optimization sources.
-- Always Plan Before Executing — lesson with convergence across harness engineering, superpowers, and OpenFleet.
+**Authoritative coverage:**
+- Methodology Framework — the meta-system for defining, selecting, and composing methodology models. Composable, recursive, transferable.
+- Skills Architecture Patterns — synthesized from 8 sources across 3 ecosystems (Claude Code, Obsidian, NotebookLM). Convergent design principles (SKILL.md as universal format, three-layer stratification). Confidence: high.
+- Plan Execute Review Cycle — pattern with 4 documented instances (OpenFleet orchestrator, Harness Engineering, Claude Code, Research Pipeline Orchestration). Confidence: high.
+- Deterministic Shell LLM Core — pattern extracted from OpenFleet + devops-control-plane + harness engineering.
+
+**Good coverage:**
+- 29 lesson pages across all domains — covering convergences from multi-source validation (e.g., Never Skip Stages, CLI Beats MCP, Always Plan Before Executing, Models Are Systems Not Documents).
+- 13 decision pages — concrete operational decisions with rationale and reversibility ratings.
+- 6 pattern pages — including Progressive Distillation, Gateway-Centric Routing, Context-Aware Tool Loading, Scaffold-Foundation-Infrastructure-Features.
+- Skyscraper Pyramid Mountain — architectural quality analogy for three structural states of a codebase.
 
 **Thin coverage:**
-- Agentic Search vs Vector Search — medium confidence comparison; the source set is adequate but the decision criteria for "which to use when" could be sharper.
-- No cross-domain synthesis exists yet for the "deterministic brain vs LLM-driven orchestration" pattern despite it appearing in OpenFleet, devops-control-plane, and harness engineering.
 - No principles page yet — the highest evolved layer (abstract, context-free principles derived from multiple patterns) has not been populated.
+- The compounding knowledge principle (file answers back into the wiki) appears across multiple pages but has not been synthesized as a dedicated pattern.
 
 ## Maturity Map
 
-**Comparison pages:**
-- Agentic Search vs Vector Search — synthesized, medium confidence, cross-domain
-- Skills Architecture Patterns — synthesized, high confidence, 8-source validation
+| Maturity | Pages |
+|----------|-------|
+| **growing** (concept, 2) | Methodology Framework, Skyscraper Pyramid Mountain |
 
-**Pattern pages (layer 5):**
-- Plan Execute Review Cycle — growing maturity, 4 instances, cross-validated
+**Evolved layers (all growing maturity):**
 
-**Lesson pages (layer 4):**
-- Always Plan Before Executing — synthesized, multi-source convergence
-- CLI Tools Beat MCP for Token Efficiency — synthesized, clear actionable lesson
+| Layer | Count | Notable pages |
+|-------|-------|---------------|
+| Lessons | 29 | Never Skip Stages, CLI Beats MCP, Always Plan Before Executing, Models Are Systems Not Documents, Schema Is the Real Product, Never Synthesize from Descriptions Alone |
+| Patterns | 6 | Plan Execute Review Cycle, Deterministic Shell LLM Core, Progressive Distillation, Gateway-Centric Routing, Context-Aware Tool Loading, Scaffold-Foundation-Infrastructure-Features |
+| Decisions | 13 | MCP vs CLI, Obsidian vs NotebookLM, Stage-Gate Operational, Local Model vs Cloud API, Wiki-First with LightRAG Upgrade Path |
+| Comparisons | 5 | Skills Architecture Patterns, Agentic Search vs Vector Search, Cross-Domain Patterns, LLM Wiki vs RAG |
 
-**Decision pages (layer 6):**
-- Decision: MCP vs CLI for Tool Integration — seed maturity, high confidence, actionable
-
-**Lesson archive (lessons/ directory):**
-- Lesson: Convergence on Claude Code Best Practices
-- Lesson: Convergence on Claude Code Skills
-- Lesson: Convergence on LLM Wiki Pattern
-- Lesson: Convergence on Obsidian Knowledge Vault
-- Lesson: Convergence on Wiki Ingestion Pipeline
+All concept pages assigned maturity. All styled with callout vocabulary.
 
 ## Gaps
 
-- **Deterministic vs LLM-driven orchestration pattern**: The pattern of using a deterministic state machine (zero LLM calls) for operational mechanics while reserving LLM calls for reasoning appears in OpenFleet's orchestrator, devops-control-plane's architecture, and harness engineering's guardrail hierarchy — but has not been extracted as a cross-domain pattern.
-- **Local-first inference as ecosystem principle**: The "local inference when adequate, cloud inference when necessary" principle appears in AICP, OpenFleet, Local LLM Quantization, and Claude Code scheduling — a candidate for a principles page.
-- **The compounding knowledge principle**: Karpathy's insight that filing query answers back into the wiki compounds knowledge over time appears in LLM Wiki Pattern, Wiki Event-Driven Automation, and Memory Lifecycle Management. A cross-domain synthesis would make this actionable.
-- **More lessons from ingestion**: Five convergence lessons were created but the underlying cross-source analyses for most topics have not been promoted to lessons or patterns.
 - **Principles layer (layer 7)**: The highest evolved layer is completely empty. Principles like "make intelligence persistent, not ephemeral" and "enforce at runtime, not by prompt" should be extractable from current content.
+- **Local-first inference as ecosystem principle**: The "local inference when adequate, cloud inference when necessary" principle appears in AICP, OpenFleet, Local LLM Quantization, and Claude Code scheduling — a candidate for the first principles page.
+- **The compounding knowledge principle**: Karpathy's insight that filing query answers back into the wiki compounds knowledge over time appears in LLM Wiki Pattern, Wiki Event-Driven Automation, and Memory Lifecycle Management. A cross-domain synthesis would make this actionable.
+- **Pattern promotion pipeline**: 29 lessons exist but only 6 have been promoted to patterns. Systematic review of lessons for pattern candidates is overdue.
 
 ## Priorities
 
-1. **Deterministic vs LLM-driven orchestration pattern** — Extract from OpenFleet + devops-control-plane + harness engineering; high reuse value
+1. **First principles page** — Begin the principles layer with 2-3 abstract, durable insights extracted from the 6 existing patterns
 2. **Local-first inference principle** — Synthesize from AICP + OpenFleet + Local LLM Quantization as a first principles page
-3. **Promote agentic search comparison** — Sharpen decision criteria for Agentic Search vs Vector Search; promote to decision page
-4. **Compounding knowledge pattern** — Extract the file-answers-back pattern from LLM Wiki Pattern + Wiki Event-Driven Automation + Memory Lifecycle
-5. **First principles page** — Begin the principles layer with 2-3 abstract, durable insights from current patterns
+3. **Compounding knowledge pattern** — Extract the file-answers-back pattern from LLM Wiki Pattern + Wiki Event-Driven Automation + Memory Lifecycle
+4. **Pattern promotion review** — Systematically review 29 lessons for promotion to pattern candidates
+5. **Promote agentic search comparison** — Sharpen decision criteria for Agentic Search vs Vector Search; promote to decision page
 
 ## Key Pages
 
-1. **[Skills Architecture Patterns](../../comparisons/skills-architecture-patterns.md)** — Cross-ecosystem synthesis across Claude Code, Obsidian, and NotebookLM. The convergence on SKILL.md as universal format and three-layer stratification.
-2. **[Plan Execute Review Cycle](../../patterns/plan-execute-review-cycle.md)** — The most-validated pattern in the wiki. Four independent instances across OpenFleet, harness engineering, Claude Code, and the research pipeline.
-3. **[Decision: MCP vs CLI for Tool Integration](../../decisions/mcp-vs-cli-for-tool-integration.md)** — Concrete decision with clear rationale. CLI + Skills beats MCP for token efficiency in interactive contexts.
-4. **[Agentic Search vs Vector Search](../../comparisons/agentic-search-vs-vector-search.md)** — Comparison of multi-tool agentic retrieval vs pure vector similarity for knowledge base queries.
+1. **[Methodology Framework](../../domains/cross-domain/methodology-framework.md)** — The meta-system for defining, selecting, and composing methodology models across the ecosystem.
+2. **[Skyscraper, Pyramid, Mountain](../../domains/cross-domain/skyscraper-pyramid-mountain.md)** — Architectural quality analogy: three structural states of a codebase (fragile, solid, organic).
+3. **[Plan Execute Review Cycle](../../patterns/plan-execute-review-cycle.md)** — The most-validated pattern in the wiki. Four independent instances across OpenFleet, harness engineering, Claude Code, and the research pipeline.
+4. **[Deterministic Shell LLM Core](../../patterns/deterministic-shell-llm-core.md)** — Use deterministic state machines for coordination, reserve LLM calls for reasoning.
+5. **[Skills Architecture Patterns](../../comparisons/skills-architecture-patterns.md)** — Cross-ecosystem synthesis across Claude Code, Obsidian, and NotebookLM.
+6. **[Decision: MCP vs CLI for Tool Integration](../../decisions/mcp-vs-cli-for-tool-integration.md)** — CLI + Skills beats MCP for token efficiency in interactive contexts.
 
 ## FAQ
 
@@ -89,8 +98,8 @@ Default to CLI+Skills for project-internal tooling — it is 12x cheaper in toke
 ### Q: What is the Plan-Execute-Review cycle and why does it appear across four independent projects?
 It is the pattern where agents plan before acting, execute from the plan, then review the output against the original intent. It emerged independently in OpenFleet's orchestrator, harness engineering, Claude Code best practices, and the research pipeline — four independent instances of the same loop. This convergence is strong evidence it reflects a real constraint in LLM agent reliability. See [[Plan Execute Review Cycle]].
 
-### Q: What is the deterministic vs LLM-driven orchestration pattern?
-Use a deterministic state machine (shell scripts, file reads, no LLM calls) for operational coordination — scheduling, routing, state tracking. Reserve LLM calls for actual reasoning work. This pattern appears in OpenFleet's 30s orchestrator, devops-control-plane's architecture, and harness engineering's enforcement hierarchy. A dedicated pattern page is a documented priority.
+### Q: What is the Deterministic Shell LLM Core pattern?
+Use a deterministic state machine (shell scripts, file reads, no LLM calls) for operational coordination — scheduling, routing, state tracking. Reserve LLM calls for actual reasoning work. This pattern appears in OpenFleet's 30s orchestrator, devops-control-plane's architecture, and harness engineering's enforcement hierarchy. See [[Deterministic Shell LLM Core]].
 
 ### Q: What does "CLI tools beat MCP for token efficiency" mean in practice?
 MCP servers add tool definitions to every message in the conversation, costing tokens continuously. CLI tools are called only when needed and cost tokens only at invocation. The empirical finding from harness engineering sources: CLI+Skills is approximately 12x more token-efficient than MCP for the same task. See [[CLI Tools Beat MCP for Token Efficiency]].

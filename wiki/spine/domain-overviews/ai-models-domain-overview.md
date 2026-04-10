@@ -16,7 +16,16 @@ tags: [domain-overview, ai-models]
 
 ## Summary
 
-The ai-models domain covers LLMs, embeddings, quantization, fine-tuning, and model evaluation — the foundational layer that all agent and knowledge system operations depend on. This is the least developed domain in the wiki, with a single concept page (Local LLM Quantization) and one associated source synthesis. The sparse coverage reflects the project's current focus: the ecosystem consumes models rather than building or evaluating them, so model knowledge is accumulated incidentally through other domains (AICP documents model routing, OpenFleet uses hermes-3b and bge-m3, LightRAG requires 32B+ context). The Local LLM Quantization page is well-sourced (TurboQuant-MLX article + Gemma 4 + SearXNG YouTube transcript) and establishes an important capability threshold: consumer hardware can now run 122B MoE models at usable speeds, and small models (Gemma 4 E4B, 9.6GB) now reliably handle multi-step agentic tool calling. This domain should grow significantly as AICP's LocalAI independence roadmap advances and the fleet transitions away from Claude API dependency.
+The ai-models domain covers LLMs, embeddings, quantization, fine-tuning, and model evaluation — the foundational layer that all agent and knowledge system operations depend on. With 1 concept page (Local LLM Quantization), it is the least developed domain in the wiki. The sparse coverage reflects the project's current focus: the ecosystem consumes models rather than building or evaluating them, so model knowledge is accumulated incidentally through other domains (AICP documents model routing, OpenFleet uses hermes-3b and bge-m3, LightRAG requires 32B+ context). The Local LLM Quantization page is well-sourced and establishes an important capability threshold: consumer hardware can now run 122B MoE models at usable speeds, and small models (Gemma 4 E4B, 9.6GB) now reliably handle multi-step agentic tool calling. This domain should grow significantly as AICP's LocalAI independence roadmap advances.
+
+> [!info] Domain at a glance
+>
+> | Metric | Value |
+> |--------|-------|
+> | Concept pages | 1 |
+> | Related model pages | [[Model: Local AI]] |
+> | Decision pages | [[Decision: Local Model vs Cloud API for Routine Operations]] |
+> | Related lessons | 1 (Graph-Enhanced Retrieval Bridges Wiki and Vector Search) |
 
 ## State of Knowledge
 
@@ -36,12 +45,11 @@ The ai-models domain covers LLMs, embeddings, quantization, fine-tuning, and mod
 
 ## Maturity Map
 
-**Established content (pre-maturity system):**
-- Local LLM Quantization — sole concept page; medium confidence; covers the quantization landscape adequately
+| Maturity | Pages |
+|----------|-------|
+| **growing** (1) | Local LLM Quantization |
 
-**Sources (processed):**
-- Synthesis: TurboQuant 122B LLM on MacBook — source synthesis corresponding to Local LLM Quantization
-- Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw — source synthesis covering Gemma 4 agentic tool calling
+Page assigned maturity. Styled with callout vocabulary. Has standard sections.
 
 ## Gaps
 

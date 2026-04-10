@@ -4,7 +4,7 @@ type: domain-overview
 domain: devops
 layer: spine
 status: synthesized
-confidence: medium
+confidence: high
 maturity: growing
 created: 2026-04-08
 updated: 2026-04-10
@@ -16,62 +16,86 @@ tags: [domain-overview, devops]
 
 ## Summary
 
-The devops domain covers CI/CD, deployment, monitoring, infrastructure-as-code, and SRE practices — the operational backbone of the four-project ecosystem. This is the sparsest domain in the wiki, with a single concept page (devops-control-plane) despite devops being the stated domain of the entire ecosystem. The sparse coverage is explained by scope: this wiki is a knowledge synthesis system, not an operational runbook. The devops-control-plane page is authoritative — sourced directly from the live project's README — and documents a sophisticated layered architecture with auto-detection of 20 technology stacks, AES-256-GCM encrypted vaults, append-only audit ledgers, and the 24 post-mortem-derived immune system rules that became OpenFleet's doctor.py. The domain's thin wiki coverage reflects that operational devops knowledge lives in code (scripts/, IaC files, CI configs) rather than documentation, but the synthesis gap is real: the ecosystem's devops patterns, failure modes, and operational lessons are insufficiently captured.
+The devops domain covers stage-gate methodology, ecosystem topology, backlog management, task governance, infrastructure patterns, and the control plane vision — the operational backbone of the four-project ecosystem. With 9 concept pages, the domain has grown significantly from its original single page to become a well-developed methodology hub. Coverage now spans Stage-Gate Methodology (the 5-stage sequential system), Four-Project Ecosystem (topology), Immune System Rules (24 post-mortem-derived governance rules), Infrastructure as Code Patterns, WSL2 Development Patterns, Backlog Hierarchy Rules, Task Type Artifact Matrix, Execution Modes and End Conditions, and devops-control-plane. The domain defines how work proceeds across all projects — methodology, not just infrastructure.
+
+> [!info] Domain at a glance
+>
+> | Metric | Value |
+> |--------|-------|
+> | Concept pages | 9 |
+> | Related model pages | [[Model: Methodology]], [[Model: Ecosystem]], [[Model: SFIF Architecture]] |
+> | Decision pages | [[Decision: Stage-Gate Operational Decisions]], [[Decision: Task Type Edge Cases]], [[Decision: Execution Mode Edge Cases]] |
+> | Related lessons | 5+ (Never Skip Stages Even When Told to Continue, Infrastructure Must Be Reproducible Not Manual, Methodology Is a Framework Not a Fixed Pipeline, etc.) |
 
 ## State of Knowledge
 
-> [!question] Why Is DevOps the Sparsest Domain?
-> The sparse wiki coverage reflects that operational devops knowledge lives in code (scripts/, IaC files, CI configs) rather than documentation, but the synthesis gap is real: the ecosystem's devops patterns, failure modes, and operational lessons are insufficiently captured.
+> [!tip] From Sparse to Methodology Hub
+> The devops domain has evolved from a single concept page to a 9-page methodology hub. It now defines how work proceeds across all projects — stage gates, task governance, ecosystem topology, and infrastructure patterns.
 
-**Strong coverage:**
-- devops-control-plane — sourced from the live README. Architecture (layered: interfaces → core → policy → adapters → infrastructure), 20 stack definitions, dual vault system, audit ledger, 29 service packages. Confidence: authoritative for the platform design; medium for operational practice.
+**Authoritative coverage:**
+- Stage-Gate Methodology — the 5-stage sequential system (Document → Design → Scaffold → Implement → Test) governing all work. Multiple sources, heavily cross-referenced.
+- Immune System Rules — 24 governance rules from 16 post-mortems. The operational guardrail system, now distilled with callout styling.
+- Four-Project Ecosystem — the personal devops infrastructure topology across openfleet, AICP, DSPD, devops-control-plane.
+- devops-control-plane — sourced from the live README. Architecture (layered: interfaces → core → policy → adapters → infrastructure), 20 stack definitions, dual vault system, audit ledger.
 
-**Known gaps drawn from other domains:**
-- OpenFleet's IaC approach (42+ scripts/, setup.sh, zero-manual-commands philosophy) is documented in the ai-agents domain but not here where it belongs as a devops pattern.
+**Good coverage:**
+- Task Type Artifact Matrix — 7 task types (epic, module, task, bug, hotfix, spike, chore) with required artifacts per type.
+- Backlog Hierarchy Rules — EPIC → MODULE → TASK three-level structure, status propagation, upward aggregation.
+- Execution Modes and End Conditions — operational envelope for autonomous agent execution.
+- Infrastructure as Code Patterns — IaC beyond Terraform: config-as-code patterns in the ecosystem.
+- WSL2 Development Patterns — Linux dev ecosystem alongside Windows tools, inotify limits, service management.
+
+**Thin coverage:**
 - CI/CD pipelines — the ecosystem projects use GitHub Actions but no wiki page covers their pipeline designs, testing strategies, or deployment workflows.
 - Docker Compose and Kubernetes — both used (OpenFleet services, Plane self-hosting, AICP LocalAI) but no devops-domain synthesis of the container orchestration approach.
-- Monitoring and observability — OpenFleet's 9-service architecture (PostgreSQL, Redis, LocalAI, LightRAG, IRC, Mission Control) requires monitoring but no coverage exists.
-- The 24 immune system rules — documented as originating in devops-control-plane and implemented in OpenFleet's doctor.py but never extracted as a standalone devops pattern.
+- Monitoring and observability — OpenFleet's 9-service architecture requires monitoring but no coverage exists.
 
 ## Maturity Map
 
-**Established content (pre-maturity system):**
-- devops-control-plane — sole concept page; authoritative for platform architecture; gaps in operational practice documentation
+| Maturity | Pages |
+|----------|-------|
+| **growing** (all 9) | Stage-Gate Methodology, Four-Project Ecosystem, Task Type Artifact Matrix, Backlog Hierarchy Rules, Execution Modes and End Conditions, Immune System Rules, devops-control-plane, Infrastructure as Code Patterns, WSL2 Development Patterns |
+
+All pages assigned maturity. All styled with callout vocabulary. All have standard sections.
 
 ## Gaps
 
-- **IaC patterns**: The ecosystem-wide approach to Infrastructure-as-Code (scripts/, setup.sh, Compose files) needs documentation. OpenFleet's 42+ scripts represent significant operational knowledge that is not synthesized.
-- **Immune system rules as pattern**: The 24 rules derived from 16 post-mortems are a transferable devops asset. A dedicated pattern page (or decisions page) would make them reusable beyond OpenFleet.
 - **CI/CD architecture**: GitHub Actions pipelines across the four projects — what they test, how they deploy, what quality gates they enforce — are completely undocumented in the wiki.
 - **Service dependency map**: The production service topology (PostgreSQL → Mission Control, Redis → RQ queue, LocalAI → fleet agents, LightRAG → navigator) is described in OpenFleet but not consolidated as a devops architectural view.
 - **Secrets management**: The devops-control-plane vault (AES-256-GCM) is described but its role as a potential centralized credential store for all ecosystem projects hasn't been evaluated.
-- **WSL2 devops constraints**: The ecosystem runs on WSL2 (Windows Subsystem for Linux). This affects service startup, networking, inotify availability, and daemon management in ways that standard Linux devops documentation doesn't cover.
+- **Container orchestration synthesis**: Docker Compose and Kubernetes are both used across projects but no dedicated page synthesizes the container orchestration approach.
+- **Monitoring and observability**: No coverage of how the ecosystem monitors services, tracks health, or alerts on anomalies.
 
 ## Priorities
 
-1. **Immune system rules page** — Extract the 24 post-mortem-derived rules as a transferable devops pattern; high signal from a real operational track record
-2. **IaC patterns synthesis** — Document the ecosystem-wide scripting philosophy and the key patterns in OpenFleet's scripts/
-3. **Service dependency map** — Consolidate the production service topology across the ecosystem
-4. **WSL2 devops constraints** — Document where standard devops assumptions break on WSL2 and what the workarounds are
-5. **CI/CD architecture** — Survey and document the GitHub Actions workflows across the four projects
+1. **CI/CD architecture** — Survey and document the GitHub Actions workflows across the four projects
+2. **Service dependency map** — Consolidate the production service topology across the ecosystem
+3. **Container orchestration synthesis** — Document the Docker Compose / Kubernetes approach across projects
+4. **Monitoring and observability** — Design the observability strategy for the multi-service ecosystem
+5. **Secrets management evaluation** — Assess devops-control-plane vault as centralized credential store
 
 ## Key Pages
 
-1. **[devops-control-plane](../../domains/devops/devops-control-plane.md)** — The only page in this domain. Covers the unified solution management platform, 20 stack auto-detection, encrypted vaults, audit ledger, and the post-mortem-derived immune system rules that became OpenFleet's doctor.py.
+1. **[Stage-Gate Methodology](../../domains/devops/stage-gate-methodology.md)** — The 5-stage sequential system (Document → Design → Scaffold → Implement → Test) governing all work across the ecosystem.
+2. **[Four-Project Ecosystem](../../domains/devops/four-project-ecosystem.md)** — The personal devops infrastructure topology: openfleet, AICP, DSPD, devops-control-plane.
+3. **[Immune System Rules](../../domains/devops/immune-system-rules.md)** — 24 operational governance rules derived from 16 post-mortems. The guardrail system adopted by OpenFleet's doctor.py.
+4. **[Task Type Artifact Matrix](../../domains/devops/task-type-artifact-matrix.md)** — The 7 task types and their required artifacts: epic, module, task, bug, hotfix, spike, chore.
+5. **[Infrastructure as Code Patterns](../../domains/devops/infrastructure-as-code-patterns.md)** — IaC beyond Terraform: config-as-code, scripts/, setup.sh patterns across the ecosystem.
+6. **[devops-control-plane](../../domains/devops/devops-control-plane.md)** — Unified solution management platform: 20 stack auto-detection, encrypted vaults, audit ledger.
 
 ## FAQ
 
-### Q: What is devops-control-plane and how does it relate to OpenFleet?
-devops-control-plane is the unified solution management platform underlying the ecosystem — it provides the 20 stack auto-detection, AES-256-GCM encrypted vaults, and audit ledger. Its 24 post-mortem-derived immune system rules were adopted directly into OpenFleet's doctor.py as the agent guardrail system. See [[devops-control-plane]] and [[OpenFleet]].
+### Q: What is the Stage-Gate Methodology and why is it mandatory?
+Stage-Gate is the 5-stage sequential system — Document → Design → Scaffold → Implement → Test — that governs all work across the ecosystem. Skipping stages is a violation. The methodology ensures that understanding precedes design, design precedes implementation, and verification follows all work. See [[Stage-Gate Methodology]].
 
-### Q: What are the 24 immune system rules and where should I apply them?
-The 24 rules originated from 16 real post-mortems across projects. They cover failure modes like runaway loops, permission drift, stale state reads, and cost spikes. They are implemented in OpenFleet's doctor.py and are transferable to any agent harness as a checklist. A standalone pattern page distilling these rules is a documented priority. See [[Harness Engineering]].
+### Q: What are the 24 Immune System Rules and where should I apply them?
+The 24 rules originated from 16 real post-mortems across projects. They cover failure modes like runaway loops, permission drift, stale state reads, and cost spikes. They are implemented in OpenFleet's doctor.py and are transferable to any agent harness as a checklist. See [[Immune System Rules]].
 
-### Q: How does the ecosystem handle secrets and credentials across four projects?
-devops-control-plane implements a dual vault system with AES-256-GCM encryption and append-only audit ledgers. Whether this vault can serve as a centralized credential store for all four projects (OpenFleet, AICP, DSPD, devops-control-plane) is an open question — it is architecturally plausible but not yet evaluated. See [[devops-control-plane]].
+### Q: How do the four ecosystem projects relate to each other?
+openfleet (agent fleet), AICP (AI Control Platform), DSPD (the research wiki), and devops-control-plane (infrastructure management) form a single personal devops infrastructure. The wiki documents all four and acts as the shared knowledge backbone. See [[Four-Project Ecosystem]].
 
 ### Q: What WSL2-specific devops constraints should I know about?
-The ecosystem runs on WSL2 (Windows Subsystem for Linux), which affects service startup (no systemd by default), networking (bridged vs NAT), inotify watch limits (relevant for the wiki watcher daemon), and daemon lifecycle management. Standard Linux devops documentation often does not account for these constraints — this is a documented gap in the wiki.
+WSL2 affects service startup (no systemd by default), networking (bridged vs NAT), inotify watch limits (relevant for the wiki watcher daemon), and daemon lifecycle management. Standard Linux devops documentation often does not account for these constraints. See [[WSL2 Development Patterns]].
 
 ## Relationships
 

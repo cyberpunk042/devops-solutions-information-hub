@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T21:28:13.276311+00:00",
+  "generated": "2026-04-10T21:36:47.989227+00:00",
   "stats": {
     "pages": 184,
     "domains": 9,
@@ -10473,7 +10473,7 @@
       "type": "domain-overview",
       "domain": "devops",
       "status": "synthesized",
-      "confidence": "medium",
+      "confidence": "high",
       "created": "2026-04-08",
       "updated": "2026-04-10",
       "tags": [
