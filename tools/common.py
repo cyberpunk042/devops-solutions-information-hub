@@ -208,6 +208,10 @@ def rebuild_domain_index(domain_dir: Path, domain_name: str, description: str) -
 
     Scans all .md files in domain_dir (excluding _index.md),
     returns the regenerated _index.md content.
+
+    If the existing _index.md has curated content above ## Pages,
+    that content is preserved. Only the ## Pages and ## Tags sections
+    are regenerated.
     """
     pages_info = []
     all_tags: list = []
@@ -228,14 +232,32 @@ def rebuild_domain_index(domain_dir: Path, domain_name: str, description: str) -
         for tag in meta.get("tags", []):
             all_tags.append(tag)
 
-    lines = [
-        f"# {domain_name.replace('-', ' ').title()}",
-        "",
-        description,
-        "",
-        "## Pages",
-        "",
-    ]
+    # Preserve curated content above ## Pages if it exists
+    curated_header = ""
+    index_path = domain_dir / "_index.md"
+    if index_path.exists():
+        existing = index_path.read_text(encoding="utf-8")
+        pages_marker = "\n## Pages\n"
+        if pages_marker in existing:
+            curated_header = existing[:existing.index(pages_marker)]
+        elif "\n## Pages" in existing:
+            # Handle ## Pages without trailing newline
+            idx = existing.index("\n## Pages")
+            curated_header = existing[:idx]
+
+    if curated_header.strip():
+        # Use existing curated header
+        lines = [curated_header.rstrip(), "", "## Pages", ""]
+    else:
+        # Generate default header
+        lines = [
+            f"# {domain_name.replace('-', ' ').title()}",
+            "",
+            description,
+            "",
+            "## Pages",
+            "",
+        ]
 
     if pages_info:
         for p in pages_info:

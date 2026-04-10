@@ -2,7 +2,7 @@
 
 Structured side-by-side evaluations with comparison matrices and decision criteria.
 
-## Pages
+## Overview
 
 | Comparison | What It Evaluates |
 |-----------|------------------|
@@ -10,3 +10,5 @@ Structured side-by-side evaluations with comparison matrices and decision criter
 | [[Agentic Search vs Vector Search]] | When agent-driven search outperforms embedding similarity |
 | [[Skills Architecture Patterns]] | Claude Code vs Obsidian vs NotebookLM skill ecosystems |
 | [[Cross-Domain Patterns]] | 6 patterns that recur across independent systems — the first-principles layer |
+
+## Pages
