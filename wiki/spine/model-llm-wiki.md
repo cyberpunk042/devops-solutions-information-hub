@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -32,11 +32,20 @@ This is one of 14+ named models that a wiki can contain. The [[Methodology Frame
 
 ## Key Insights
 
-- Maintenance economics: wikis fail from abandoned upkeep, not lack of content. Making the LLM handle ALL bookkeeping eliminates this structurally.
-- Three operations: **Ingest** (source → structured pages), **Query** (navigate via indexes + relationships), **Lint** (validate, detect orphans, flag contradictions).
+> [!tip] Maintenance economics: LLMs eliminate the fatal flaw
+> Wikis fail from abandoned upkeep, not lack of content. Making the LLM handle ALL bookkeeping — cross-references, indexes, validation, relationship discovery — eliminates this structurally. The cost of maintenance drops to near-zero.
+
+> [!info] Three core operations
+>
+> | Operation | What It Does | Tooling |
+> |-----------|-------------|---------|
+> | **Ingest** | Source → structured pages with relationships | `pipeline run`, wiki-agent skill |
+> | **Query** | Navigate via indexes + relationships, synthesize answers | MCP wiki_search, skill-guided reads |
+> | **Lint** | Validate, detect orphans, flag contradictions, check staleness | `pipeline post`, `tools/lint.py` |
+
 - The schema is the real product — content is regenerable from raw sources; the schema that constrains content encodes irreplaceable operational knowledge.
 - Knowledge compounds through density layers — each layer denser and more actionable than the previous.
-- A wiki can host multiple named MODELS (e.g., Claude Code model, Methodology model, Second Brain model). Each model is a coherent system with its own entry point, pages, and standards. The wiki is the container; models are the organized knowledge within it.
+- A wiki hosts multiple named MODELS. Each model is a coherent system with entry point, pages, and standards. The wiki is the container; models are the organized knowledge within it.
 
 ## Deep Analysis
 
@@ -349,9 +358,8 @@ Methodology files: `wiki/config/methodology.yaml` (machine-readable) and `wiki/c
 
 ### Scale Boundary
 
-Below ~200 pages: index-driven navigation is cheaper and more accurate than vector search.
-
-Above ~200 pages: add graph-enhanced retrieval (e.g., LightRAG) as an ADDITIVE layer. The wiki stays the same — the retrieval layer indexes it. See [[Decision: Wiki-First with LightRAG Upgrade Path]].
+> [!warning] ~200 pages is the index-navigation ceiling
+> Below ~200: index-driven navigation is cheaper and more accurate than vector search. Above ~200: add graph-enhanced retrieval (LightRAG) as an ADDITIVE layer — the wiki stays the same, the retrieval layer indexes it. See [[Decision: Wiki-First with LightRAG Upgrade Path]].
 
 ### How to Adopt
 
@@ -413,7 +421,7 @@ From building with this model — validated experience:
 
 ## Open Questions
 
-- What is the minimum viable wiki? Can a project start with just raw/ + wiki/domains/ + config/wiki-schema.yaml and add the other layers later? What's the smallest structure that demonstrates value? (Requires: empirical testing with a fresh project)
+> [!question] What is the minimum viable wiki? Can a project start with just raw/ + wiki/domains/ + config/wiki-schema.yaml and add the other layers later? What's the smallest structure that demonstrates value? (Requires: empirical testing with a fresh project)
 - How do multiple agents co-author a wiki without conflicts? The current model assumes one agent + one operator. With OpenFleet's 10-agent architecture, merge conflicts on frontmatter, competing relationship claims, and simultaneous page creation need resolution. (Requires: multi-agent testing)
 - Optimal starting schema complexity? A new adopter could start with 5 types (concept, source-synthesis, lesson, decision, note) and grow to 16 — or start comprehensive. Which leads to better adoption? (Requires: 2+ adoption experiences)
 - Can the LLM Wiki coexist with Confluence/Notion in an organization? Possible boundary: LLM Wiki for AI-maintained synthesized knowledge, Confluence for human-authored team docs. The wiki ingests FROM Confluence but doesn't replace it. (Requires: enterprise context testing)

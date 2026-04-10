@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T17:42:47.357752+00:00",
+  "generated": "2026-04-10T17:56:05.948548+00:00",
   "stats": {
     "pages": 175,
     "domains": 9,
@@ -601,7 +601,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "decision",
         "rag",
@@ -2324,7 +2324,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "quantization",
         "local-llm",
@@ -4881,7 +4881,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "notebooklm",
         "google",
@@ -5673,7 +5673,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "skills",
         "llm-extension",
@@ -5757,7 +5757,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "lightrag",
         "graph-retrieval",
@@ -5839,7 +5839,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "linting",
         "validation",
@@ -5915,7 +5915,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "llm-wiki",
         "knowledge-management",
@@ -6003,7 +6003,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "obsidian",
         "knowledge-infrastructure",
@@ -6084,7 +6084,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "notebooklm",
         "research-engine",
@@ -6164,7 +6164,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "llm-wiki",
         "maintenance",
@@ -6240,7 +6240,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "schema",
         "karpathy",
@@ -6305,7 +6305,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "skills",
         "interoperability",
@@ -6381,7 +6381,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "ingestion",
         "multi-pass",
@@ -6704,7 +6704,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "lesson",
         "failure-lesson",
@@ -9722,7 +9722,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "adoption",
         "transferable",
@@ -9775,7 +9775,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "ai-agents"
@@ -9820,7 +9820,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "ai-models"
@@ -9861,7 +9861,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "automation"
@@ -9906,7 +9906,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "cross-domain"
@@ -9951,7 +9951,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "devops"
@@ -9992,7 +9992,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "knowledge-systems"
@@ -10037,7 +10037,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-10",
       "tags": [
         "domain-overview",
         "tools-and-platforms"
@@ -10647,7 +10647,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "standards",
         "quality",
@@ -10696,7 +10696,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-10",
       "tags": [
         "llm-wiki",
         "model",
