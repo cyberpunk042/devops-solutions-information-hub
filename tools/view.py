@@ -39,7 +39,8 @@ def load_manifest() -> Dict[str, Any]:
     return json.load(open(manifest_path, encoding="utf-8"))
 
 
-def _summary_for(page: Dict, root: Path, max_len: int = 120) -> str:
+def _summary_for(page: Dict, root: Path) -> str:
+    """Get the first sentence of the Summary section — the densest information."""
     page_path = root / "wiki" / page["path"]
     if not page_path.exists():
         return ""
@@ -47,10 +48,28 @@ def _summary_for(page: Dict, root: Path, max_len: int = 120) -> str:
         text = page_path.read_text(encoding="utf-8")
         _, body = parse_frontmatter(text)
         sections = parse_sections(body)
-        summary = sections.get("Summary", "").strip().split("\n")[0]
-        if len(summary) > max_len:
-            summary = summary[:max_len - 3] + "..."
-        return summary
+        raw = sections.get("Summary", "").strip()
+        if not raw:
+            return ""
+        # Get first line (skip callouts/tables that might be right after summary)
+        first_line = ""
+        for line in raw.split("\n"):
+            line = line.strip()
+            if line and not line.startswith(">") and not line.startswith("|"):
+                first_line = line
+                break
+        if not first_line:
+            return ""
+        # Cut at first sentence boundary (. followed by space or end)
+        for i, ch in enumerate(first_line):
+            if ch == "." and i > 30:  # At least 30 chars before cutting
+                # Check it's a real sentence end (not "e.g." or "Dr." or "v1.0")
+                after = first_line[i + 1:i + 2] if i + 1 < len(first_line) else ""
+                before = first_line[i - 1:i] if i > 0 else ""
+                if after in (" ", "", "\n") and before not in (".", "g", "e"):
+                    return first_line[: i + 1]
+        # No clean sentence end found — return the whole first line
+        return first_line
     except Exception:
         return ""
 
@@ -103,11 +122,12 @@ RESEARCH WIKI ({total} pages, {rels} relationships)
         name = m["title"].replace("Model: ", "")
         mat = m.get("maturity", "")
         std = None
-        words = name.split()[:2]
-        for s in standards:
-            if any(w in s["title"] for w in words):
-                std = "✓"
-                break
+        first_word = name.split()[0]
+        if first_word not in ("and", "the", "a"):
+            for s in standards:
+                if first_word in s["title"]:
+                    std = "✓"
+                    break
         std_str = f" [standards: {std}]" if std else ""
         print(f"│   │   ├── {name} [{mat}]{std_str}")
     print("│   │")
@@ -160,7 +180,7 @@ def cmd_spine(manifest: Dict, root: Path):
     print("\n=== SPINE ===\n")
     for p in pages:
         if "Super-Model" in p.get("title", "") and p.get("path", "").startswith("spine/"):
-            s = _summary_for(p, root, 150)
+            s = _summary_for(p, root)
             print(f"  ★ {p['title']}")
             if s:
                 print(f"    {s}")
@@ -184,12 +204,16 @@ def cmd_spine(manifest: Dict, root: Path):
         name = title.replace("Model: ", "")
         mat = m.get("maturity", "")
         std = None
-        words = name.split()[:2]
+        # Match standards by checking if the model's key words appear together
+        name_lower = name.lower()
         for st in standards_map:
-            if any(w in st for w in words):
+            st_lower = st.lower()
+            # Must match first word of model name (not just any word)
+            first_word = name.split()[0].lower()
+            if first_word in st_lower and first_word not in ("and", "the", "a"):
                 std = st
                 break
-        summary = _summary_for(m, root, 100)
+        summary = _summary_for(m, root)
         print(f"  {title} [{mat}]")
         if std:
             print(f"    Standards: {std}")
@@ -225,7 +249,7 @@ def cmd_model(manifest: Dict, root: Path, model_name: str):
         return
 
     title = model["title"]
-    summary = _summary_for(model, root, 200)
+    summary = _summary_for(model, root)
     print(f"\n=== {title} ===\n")
     if summary:
         print(f"  {summary}\n")
@@ -273,7 +297,7 @@ def cmd_domain(manifest: Dict, root: Path, domain: str, brief: bool = False):
         if brief:
             print(f"  {title}" + (f" [{mat}]" if mat else ""))
         else:
-            summary = _summary_for(p, root, 120)
+            summary = _summary_for(p, root)
             print(f"  {title}" + (f" [{mat}]" if mat else ""))
             if summary:
                 print(f"    {summary}")
@@ -305,7 +329,7 @@ def cmd_decisions(manifest: Dict, root: Path):
     decisions = [p for p in manifest["pages"] if p.get("type") == "decision"]
     print(f"\n=== DECISIONS ({len(decisions)}) ===\n")
     for d in sorted(decisions, key=lambda x: x.get("title", "")):
-        summary = _summary_for(d, root, 150)
+        summary = _summary_for(d, root)
         print(f"  {d['title']}")
         if summary:
             print(f"    {summary}")
@@ -376,7 +400,7 @@ def cmd_search(manifest: Dict, root: Path, query: str, filter_type: Optional[str
     filt = f" (type={filter_type})" if filter_type else ""
     print(f"\n=== Search: '{query}'{filt} — {len(results)} results ===\n")
     for _, p in results[:15]:
-        summary = _summary_for(p, root, 100)
+        summary = _summary_for(p, root)
         print(f"  [{p.get('type','')}] {p.get('title','')}")
         if summary:
             print(f"    {summary}")
