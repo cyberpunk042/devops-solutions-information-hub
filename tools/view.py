@@ -1,21 +1,20 @@
-"""Wiki view and search CLI.
+"""Wiki view — browse the knowledge tree.
 
-Query the wiki by type, domain, maturity, tag, or free text.
-Browse pages with summaries. Trace relationships.
+Shows the wiki's structure as a navigable tree, not a flat dump.
+Think of it as opening a manual: spine → models → domains → pages.
 
 Usage:
-    python3 -m tools.view                           # Overview dashboard
-    python3 -m tools.view type lesson               # All lessons with summaries
-    python3 -m tools.view type decision              # All decisions with choices
-    python3 -m tools.view domain ai-agents           # Domain pages + state
-    python3 -m tools.view domain ai-agents --brief   # Just titles
-    python3 -m tools.view maturity canonical          # Pages at maturity level
-    python3 -m tools.view tag harness-engineering    # Pages with tag
-    python3 -m tools.view refs "Agent Orchestration" # What references / is referenced by
-    python3 -m tools.view search "context management" # Free text search with summaries
-    python3 -m tools.view search "hooks" --type lesson # Faceted search
-    python3 -m tools.view models                     # All 15 models with standards
-    python3 -m tools.view decisions                  # All decisions with choices
+    python3 -m tools.view                        # The full tree (10-second overview)
+    python3 -m tools.view spine                  # Spine detail: models + standards
+    python3 -m tools.view model methodology      # One model with its member pages
+    python3 -m tools.view domain ai-agents       # One domain with pages + summaries
+    python3 -m tools.view lessons                # All lessons grouped by type
+    python3 -m tools.view decisions              # All decisions with their choices
+    python3 -m tools.view search "context"       # Find pages matching a query
+    python3 -m tools.view refs "Page Title"      # What connects to what
+
+Cross-platform: runs on Linux, macOS, Windows via Python.
+Shell shortcut: ./wiki (Linux/macOS) or wiki.cmd (Windows)
 """
 
 import argparse
@@ -41,7 +40,6 @@ def load_manifest() -> Dict[str, Any]:
 
 
 def _summary_for(page: Dict, root: Path, max_len: int = 120) -> str:
-    """Get the Summary section content for a page."""
     page_path = root / "wiki" / page["path"]
     if not page_path.exists():
         return ""
@@ -49,7 +47,7 @@ def _summary_for(page: Dict, root: Path, max_len: int = 120) -> str:
         text = page_path.read_text(encoding="utf-8")
         _, body = parse_frontmatter(text)
         sections = parse_sections(body)
-        summary = sections.get("Summary", "").strip()
+        summary = sections.get("Summary", "").strip().split("\n")[0]
         if len(summary) > max_len:
             summary = summary[:max_len - 3] + "..."
         return summary
@@ -57,314 +55,354 @@ def _summary_for(page: Dict, root: Path, max_len: int = 120) -> str:
         return ""
 
 
-def cmd_overview(manifest: Dict, root: Path):
-    """Dashboard overview."""
-    stats = manifest.get("stats", {})
+def _get_targets(rel: Dict) -> List[str]:
+    targets = rel.get("targets", [])
+    if not targets and "target" in rel:
+        targets = [rel["target"]]
+    return targets
+
+
+# ---------------------------------------------------------------------------
+# Commands
+# ---------------------------------------------------------------------------
+
+def cmd_tree(manifest: Dict, root: Path):
+    """The full tree — understand the wiki in 10 seconds."""
     pages = manifest["pages"]
+    models = [p for p in pages if p.get("title", "").startswith("Model:")]
+    standards = [p for p in pages if "Standards" in p.get("title", "") and "What Good" in p.get("title", "")]
+    decisions = [p for p in pages if p.get("type") == "decision"]
+    lessons = [p for p in pages if p.get("type") == "lesson"]
+    patterns_list = [p for p in pages if p.get("type") == "pattern"]
+    comparisons = [p for p in pages if p.get("type") == "comparison"]
+    concepts = [p for p in pages if p.get("type") == "concept"]
+    sources = [p for p in pages if p.get("type") == "source-synthesis"]
+    overviews = [p for p in pages if p.get("type") == "domain-overview"]
 
-    print(f"\n=== Wiki Dashboard ===")
-    print(f"Pages: {stats.get('pages', len(pages))}")
-    print(f"Relationships: {stats.get('relationships', 0)}")
-    print()
-
-    # By type
-    type_counts = {}
-    for p in pages:
-        t = p.get("type", "unknown")
-        type_counts[t] = type_counts.get(t, 0) + 1
-    print("By type:")
-    for t, c in sorted(type_counts.items(), key=lambda x: -x[1]):
-        print(f"  {c:>3}  {t}")
-
-    # By domain
-    print("\nBy domain:")
     domain_counts = {}
     for p in pages:
-        d = p.get("domain", "unknown")
-        domain_counts[d] = domain_counts.get(d, 0) + 1
-    for d, c in sorted(domain_counts.items(), key=lambda x: -x[1]):
-        print(f"  {c:>3}  {d}")
+        if p.get("type") == "concept" and p.get("path", "").startswith("domains/"):
+            d = p.get("domain", "unknown")
+            domain_counts[d] = domain_counts.get(d, 0) + 1
 
-    # By maturity
-    print("\nBy maturity:")
-    mat_counts = {}
+    stats = manifest.get("stats", {})
+    total = stats.get("pages", len(pages))
+    rels = stats.get("relationships", 0)
+
+    print(f"""
+RESEARCH WIKI ({total} pages, {rels} relationships)
+│
+├── SPINE
+│   ├── Super-Model: Research Wiki as Ecosystem Intelligence Hub
+│   ├── Model Registry (entry point)
+│   ├── Adoption Guide
+│   │""")
+
+    print(f"│   ├── MODELS ({len(models)}) + STANDARDS ({len(standards)})")
+    for m in sorted(models, key=lambda x: x.get("title", "")):
+        name = m["title"].replace("Model: ", "")
+        mat = m.get("maturity", "")
+        std = None
+        words = name.split()[:2]
+        for s in standards:
+            if any(w in s["title"] for w in words):
+                std = "✓"
+                break
+        std_str = f" [standards: {std}]" if std else ""
+        print(f"│   │   ├── {name} [{mat}]{std_str}")
+    print("│   │")
+
+    sorted_domains = sorted(domain_counts.keys())
+    print(f"│   └── DOMAIN OVERVIEWS ({len(overviews)})")
+    for i, d_name in enumerate(sorted_domains):
+        c = domain_counts[d_name]
+        connector = "└" if i == len(sorted_domains) - 1 else "├"
+        print(f"│       {connector}── {d_name} ({c} concepts)")
+    print("│")
+
+    print(f"├── KNOWLEDGE LAYERS")
+    print(f"│   ├── L6 Decisions ({len(decisions)})")
+    print(f"│   ├── L5 Patterns ({len(patterns_list)})")
+    print(f"│   ├── L4 Lessons ({len(lessons)})")
+    print(f"│   ├── L3 Comparisons ({len(comparisons)})")
+    print(f"│   ├── L2 Concepts ({len(concepts)} across {len(domain_counts)} domains)")
+    print(f"│   └── L1 Sources ({len(sources)})")
+    print("│")
+
+    backlog = [p for p in pages if p.get("domain") == "backlog"]
+    logs = [p for p in pages if p.get("type") == "note"]
+    print(f"└── OPERATIONAL")
+    print(f"    ├── Backlog ({len(backlog)} items)")
+    print(f"    └── Log ({len(logs)} entries)")
+    print()
+    print("Drill down:")
+    print("  view spine          Models + standards detail")
+    print("  view model X        One model's member pages")
+    print("  view domain X       One domain's concept pages")
+    print("  view lessons        All lessons by category")
+    print("  view decisions      All decisions with summaries")
+    print("  view search \"X\"     Find pages matching a query")
+    print("  view refs \"X\"       Trace relationships for a page")
+
+
+def cmd_spine(manifest: Dict, root: Path):
+    """Spine detail: super-model, models, standards."""
+    pages = manifest["pages"]
+    models = sorted(
+        [p for p in pages if p.get("title", "").startswith("Model:")],
+        key=lambda x: x.get("title", ""),
+    )
+    standards_list = [p for p in pages if "Standards" in p.get("title", "") and "What Good" in p.get("title", "")]
+    standards_map = {s["title"]: s for s in standards_list}
+
+    # Super-model
+    print("\n=== SPINE ===\n")
     for p in pages:
-        m = p.get("maturity", "") or "unset"
-        mat_counts[m] = mat_counts.get(m, 0) + 1
-    for m, c in sorted(mat_counts.items(), key=lambda x: -x[1]):
-        print(f"  {c:>3}  {m}")
+        if "Super-Model" in p.get("title", ""):
+            s = _summary_for(p, root, 150)
+            print(f"  ★ {p['title']}")
+            if s:
+                print(f"    {s}")
+            print()
+    for p in pages:
+        if p.get("title") == "Model Registry":
+            print(f"  ★ Model Registry — entry point for all {len(models)} models")
+            print()
+    for p in pages:
+        if "Adoption Guide" in p.get("title", ""):
+            print(f"  ★ {p['title']}")
+            print()
+            break
+
+    # Models
+    print(f"  --- Models ({len(models)}) ---\n")
+    for m in models:
+        title = m["title"]
+        name = title.replace("Model: ", "")
+        mat = m.get("maturity", "")
+        std = None
+        words = name.split()[:2]
+        for st in standards_map:
+            if any(w in st for w in words):
+                std = st
+                break
+        summary = _summary_for(m, root, 100)
+        print(f"  {title} [{mat}]")
+        if std:
+            print(f"    Standards: {std}")
+        if summary:
+            print(f"    {summary}")
+        print()
 
 
-def cmd_type(manifest: Dict, root: Path, page_type: str, brief: bool = False):
-    """List pages of a given type with summaries."""
-    pages = [p for p in manifest["pages"] if p.get("type") == page_type]
-    if not pages:
-        print(f"No pages of type '{page_type}'")
+def cmd_model(manifest: Dict, root: Path, model_name: str):
+    """One model with member pages and references."""
+    pages = manifest["pages"]
+    model = None
+    for p in pages:
+        t = p.get("title", "")
+        if model_name.lower() in t.lower() and (t.startswith("Model:") or "Super-Model" in t):
+            model = p
+            break
+
+    if not model:
+        print(f"Model not found: '{model_name}'")
+        print("\nAvailable:")
+        for p in sorted(pages, key=lambda x: x.get("title", "")):
+            if p.get("title", "").startswith("Model:"):
+                print(f"  {p['title']}")
         return
 
-    print(f"\n=== {page_type} ({len(pages)} pages) ===\n")
-    for p in sorted(pages, key=lambda x: x.get("title", "")):
-        title = p.get("title", p.get("slug", ""))
-        domain = p.get("domain", "")
-        if brief:
-            print(f"  [{domain}] {title}")
+    title = model["title"]
+    summary = _summary_for(model, root, 200)
+    print(f"\n=== {title} ===\n")
+    if summary:
+        print(f"  {summary}\n")
+
+    rels = model.get("relationships", [])
+    if rels:
+        print("  Relationships:")
+        for r in rels:
+            verb = r.get("verb", "")
+            for t in _get_targets(r):
+                print(f"    {verb}: {t}")
+        print()
+
+    inbound = []
+    for p in pages:
+        if p["title"] == title:
+            continue
+        for r in p.get("relationships", []):
+            for t in _get_targets(r):
+                if t == title:
+                    inbound.append((p["title"], p.get("type", "")))
+    if inbound:
+        print(f"  Referenced by ({len(inbound)}):")
+        for t, typ in sorted(set(inbound)):
+            print(f"    [{typ}] {t}")
+
+
+def cmd_domain(manifest: Dict, root: Path, domain: str, brief: bool = False):
+    """One domain with concept pages."""
+    all_domains = sorted(set(p.get("domain", "") for p in manifest["pages"] if p.get("type") == "concept"))
+    if domain not in all_domains:
+        matches = [d for d in all_domains if domain.lower() in d.lower()]
+        if matches:
+            domain = matches[0]
         else:
-            summary = _summary_for(p, root, 150)
-            print(f"  [{domain}] {title}")
+            print(f"Domain not found: '{domain}'")
+            print(f"Available: {', '.join(all_domains)}")
+            return
+
+    concepts = [p for p in manifest["pages"] if p.get("domain") == domain and p.get("type") == "concept"]
+    print(f"\n=== {domain} ({len(concepts)} concept pages) ===\n")
+    for p in sorted(concepts, key=lambda x: x.get("title", "")):
+        title = p.get("title", "")
+        mat = p.get("maturity", "")
+        if brief:
+            print(f"  {title}" + (f" [{mat}]" if mat else ""))
+        else:
+            summary = _summary_for(p, root, 120)
+            print(f"  {title}" + (f" [{mat}]" if mat else ""))
             if summary:
                 print(f"    {summary}")
             print()
 
 
-def cmd_domain(manifest: Dict, root: Path, domain: str, brief: bool = False):
-    """Show domain pages with state."""
-    pages = [p for p in manifest["pages"] if p.get("domain") == domain]
-    if not pages:
-        print(f"No pages in domain '{domain}'")
-        return
+def cmd_lessons(manifest: Dict, root: Path):
+    """All lessons grouped by category."""
+    lessons = [p for p in manifest["pages"] if p.get("type") == "lesson"]
+    failure = [l for l in lessons if "failure-lesson" in l.get("tags", [])]
+    hub = [l for l in lessons if any(k in l.get("title", "") for k in ["Highest-Connected", "Bridge", "Foundational Domain"])]
+    evolved = [l for l in lessons if any(k in l.get("title", "") for k in ["Speculation", "Hub, Not", "Framework, Not", "Systems, Not", "Preach", "Incompleteness"])]
+    # Everything else
+    seen = set(id(l) for group in [failure, hub, evolved] for l in group)
+    other = [l for l in lessons if id(l) not in seen]
 
-    print(f"\n=== {domain} ({len(pages)} pages) ===\n")
+    print(f"\n=== LESSONS ({len(lessons)}) ===\n")
+    for label, group in [("Failure Lessons", failure), ("Evolved from Directives", evolved),
+                          ("Domain Hubs", hub), ("Other", other)]:
+        if group:
+            print(f"  --- {label} ({len(group)}) ---")
+            for l in sorted(group, key=lambda x: x.get("title", "")):
+                print(f"    {l['title']}")
+            print()
 
-    # Group by type
-    by_type = {}
-    for p in pages:
-        t = p.get("type", "unknown")
-        by_type.setdefault(t, []).append(p)
 
-    for t, ps in sorted(by_type.items()):
-        print(f"  --- {t} ({len(ps)}) ---")
-        for p in sorted(ps, key=lambda x: x.get("title", "")):
-            title = p.get("title", "")
-            maturity = p.get("maturity", "")
-            if brief:
-                print(f"    {title}" + (f" [{maturity}]" if maturity else ""))
-            else:
-                summary = _summary_for(p, root, 120)
-                print(f"    {title}" + (f" [{maturity}]" if maturity else ""))
-                if summary:
-                    print(f"      {summary}")
-                print()
+def cmd_decisions(manifest: Dict, root: Path):
+    """All decisions with summaries."""
+    decisions = [p for p in manifest["pages"] if p.get("type") == "decision"]
+    print(f"\n=== DECISIONS ({len(decisions)}) ===\n")
+    for d in sorted(decisions, key=lambda x: x.get("title", "")):
+        summary = _summary_for(d, root, 150)
+        print(f"  {d['title']}")
+        if summary:
+            print(f"    {summary}")
+        print()
 
 
 def cmd_refs(manifest: Dict, root: Path, query: str):
-    """Show what a page references and what references it."""
-    # Find the page
+    """Trace relationships."""
     target = None
     for p in manifest["pages"]:
-        if query.lower() in p.get("title", "").lower() or query.lower() in p.get("slug", "").lower():
+        if query.lower() in p.get("title", "").lower():
             target = p
             break
-
     if not target:
         print(f"Page not found: '{query}'")
         return
 
     title = target["title"]
-    print(f"\n=== References for: {title} ===\n")
+    print(f"\n=== {title} ===\n")
 
-    # Outbound
     rels = target.get("relationships", [])
     if rels:
-        print(f"  Outbound ({len(rels)}):")
+        print(f"  Points to ({len(rels)}):")
         for r in rels:
-            verb = r.get("verb", "RELATES TO")
-            # Handle both 'target' (singular) and 'targets' (list) formats
-            targets = r.get("targets", [])
-            if not targets and "target" in r:
-                targets = [r["target"]]
-            for t in targets:
-                print(f"    {verb}: {t}")
-    else:
-        print("  Outbound: none")
+            for t in _get_targets(r):
+                print(f"    {r.get('verb', 'RELATES TO')}: {t}")
 
-    # Inbound
     inbound = []
     for p in manifest["pages"]:
         if p["title"] == title:
             continue
         for r in p.get("relationships", []):
-            rel_targets = r.get("targets", [])
-            if not rel_targets and "target" in r:
-                rel_targets = [r["target"]]
-            for t in rel_targets:
+            for t in _get_targets(r):
                 if t == title:
-                    inbound.append((p["title"], r.get("verb", "RELATES TO")))
+                    inbound.append((p["title"], r.get("verb", "")))
 
-    print(f"\n  Inbound ({len(inbound)}):")
-    if inbound:
-        for src, verb in sorted(inbound):
-            print(f"    {verb}: {src}")
-    else:
-        print("    none")
+    print(f"\n  Pointed to by ({len(inbound)}):")
+    for src, verb in sorted(inbound):
+        print(f"    {verb}: {src}")
 
 
-def cmd_search(manifest: Dict, root: Path, query: str,
-               filter_type: Optional[str] = None,
-               filter_domain: Optional[str] = None):
-    """Free text search with optional facets."""
+def cmd_search(manifest: Dict, root: Path, query: str, filter_type: Optional[str] = None):
+    """Search with ranked results."""
     results = []
     ql = query.lower()
-
     for p in manifest["pages"]:
-        # Check title, tags, domain
+        if filter_type and p.get("type") != filter_type:
+            continue
         title = p.get("title", "").lower()
         tags = " ".join(p.get("tags", [])).lower()
-        domain = p.get("domain", "").lower()
-        ptype = p.get("type", "")
-
-        if filter_type and ptype != filter_type:
-            continue
-        if filter_domain and p.get("domain") != filter_domain:
-            continue
-
         score = 0
         if ql in title:
             score += 3
         if ql in tags:
             score += 2
-        if ql in domain:
-            score += 1
-
-        # Check page body if no metadata match
         if score == 0:
-            page_path = root / "wiki" / p["path"]
-            if page_path.exists():
+            pp = root / "wiki" / p["path"]
+            if pp.exists():
                 try:
-                    text = page_path.read_text(encoding="utf-8", errors="ignore").lower()
-                    if ql in text:
+                    if ql in pp.read_text(encoding="utf-8", errors="ignore").lower():
                         score = 1
                 except Exception:
                     pass
-
         if score > 0:
             results.append((score, p))
 
     results.sort(key=lambda x: -x[0])
-
-    filters = []
-    if filter_type:
-        filters.append(f"type={filter_type}")
-    if filter_domain:
-        filters.append(f"domain={filter_domain}")
-    filter_str = f" ({', '.join(filters)})" if filters else ""
-
-    print(f"\n=== Search: '{query}'{filter_str} — {len(results)} results ===\n")
-    for score, p in results[:20]:
-        title = p.get("title", "")
-        domain = p.get("domain", "")
-        ptype = p.get("type", "")
-        summary = _summary_for(p, root, 120)
-        print(f"  [{ptype}] [{domain}] {title}")
+    filt = f" (type={filter_type})" if filter_type else ""
+    print(f"\n=== Search: '{query}'{filt} — {len(results)} results ===\n")
+    for _, p in results[:15]:
+        summary = _summary_for(p, root, 100)
+        print(f"  [{p.get('type','')}] {p.get('title','')}")
         if summary:
             print(f"    {summary}")
         print()
-
-    if len(results) > 20:
-        print(f"  ... and {len(results) - 20} more")
-
-
-def cmd_models(manifest: Dict, root: Path):
-    """Show all models with their standards pages."""
-    models = [p for p in manifest["pages"] if p.get("title", "").startswith("Model:")]
-    standards = {p["title"]: p for p in manifest["pages"] if "Standards" in p.get("title", "")}
-
-    print(f"\n=== Models ({len(models)}) ===\n")
-    for m in sorted(models, key=lambda x: x.get("title", "")):
-        title = m["title"]
-        maturity = m.get("maturity", "")
-        # Find matching standards page
-        std = None
-        for st, sp in standards.items():
-            if any(word in st for word in title.replace("Model: ", "").split()[:2]):
-                std = st
-                break
-
-        print(f"  {title} [{maturity}]")
-        if std:
-            print(f"    Standards: {std}")
-        summary = _summary_for(m, root, 120)
-        if summary:
-            print(f"    {summary}")
-        print()
-
-
-def cmd_decisions(manifest: Dict, root: Path):
-    """Show all decisions with their choices."""
-    decisions = [p for p in manifest["pages"] if p.get("type") == "decision"]
-
-    print(f"\n=== Decisions ({len(decisions)}) ===\n")
-    for d in sorted(decisions, key=lambda x: x.get("title", "")):
-        title = d.get("title", "")
-        summary = _summary_for(d, root, 150)
-        print(f"  {title}")
-        if summary:
-            print(f"    {summary}")
-        print()
+    if len(results) > 15:
+        print(f"  ... +{len(results) - 15} more")
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Wiki view and search",
-        formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Commands:
-  (none)              Dashboard overview
-  type <type>         List pages of a type (lesson, decision, pattern, concept, etc.)
-  domain <domain>     Show domain pages grouped by type
-  refs <title>        Show outbound and inbound relationships for a page
-  search <query>      Free text search with summaries
-  models              All models with standards pages
-  decisions           All decisions with summaries
-
-Options:
-  --brief             Titles only, no summaries
-  --type TYPE         Filter search by page type
-  --domain DOMAIN     Filter search by domain
-""",
-    )
-    parser.add_argument("command", nargs="?", default="overview",
-                        help="Command: overview, type, domain, refs, search, models, decisions")
-    parser.add_argument("argument", nargs="?", default=None,
-                        help="Argument for the command (type name, domain name, search query, etc.)")
-    parser.add_argument("--brief", action="store_true", help="Titles only")
-    parser.add_argument("--type", dest="filter_type", help="Filter by page type")
-    parser.add_argument("--domain", dest="filter_domain", help="Filter by domain")
-
+    parser = argparse.ArgumentParser(description="Browse the wiki knowledge tree")
+    parser.add_argument("command", nargs="?", default="tree")
+    parser.add_argument("argument", nargs="?", default=None)
+    parser.add_argument("--brief", action="store_true")
+    parser.add_argument("--type", dest="filter_type")
     args = parser.parse_args()
+
     root = get_project_root()
     manifest = load_manifest()
 
-    if args.command == "overview" or args.command is None:
-        cmd_overview(manifest, root)
-    elif args.command == "type":
-        if not args.argument:
-            print("Usage: python3 -m tools.view type <type>")
-            sys.exit(1)
-        cmd_type(manifest, root, args.argument, brief=args.brief)
-    elif args.command == "domain":
-        if not args.argument:
-            print("Usage: python3 -m tools.view domain <domain>")
-            sys.exit(1)
-        cmd_domain(manifest, root, args.argument, brief=args.brief)
-    elif args.command == "refs":
-        if not args.argument:
-            print("Usage: python3 -m tools.view refs <page-title>")
-            sys.exit(1)
-        cmd_refs(manifest, root, args.argument)
-    elif args.command == "search":
-        if not args.argument:
-            print("Usage: python3 -m tools.view search <query>")
-            sys.exit(1)
-        cmd_search(manifest, root, args.argument,
-                   filter_type=args.filter_type, filter_domain=args.filter_domain)
-    elif args.command == "models":
-        cmd_models(manifest, root)
-    elif args.command == "decisions":
-        cmd_decisions(manifest, root)
+    cmds = {
+        "tree": lambda: cmd_tree(manifest, root),
+        "spine": lambda: cmd_spine(manifest, root),
+        "models": lambda: cmd_spine(manifest, root),
+        "model": lambda: cmd_model(manifest, root, args.argument or ""),
+        "domain": lambda: cmd_domain(manifest, root, args.argument or "", brief=args.brief),
+        "lessons": lambda: cmd_lessons(manifest, root),
+        "decisions": lambda: cmd_decisions(manifest, root),
+        "refs": lambda: cmd_refs(manifest, root, args.argument or ""),
+        "search": lambda: cmd_search(manifest, root, args.argument or "", filter_type=args.filter_type),
+    }
+
+    fn = cmds.get(args.command)
+    if fn:
+        fn()
     else:
-        print(f"Unknown command: {args.command}")
-        parser.print_help()
-        sys.exit(1)
+        print(f"Unknown: {args.command}")
+        cmd_tree(manifest, root)
 
 
 if __name__ == "__main__":
