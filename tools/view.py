@@ -405,8 +405,6 @@ def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
             print(f"    ## {s}  ({line_count} lines)")
 
     print(f"\n  [{path}]")
-    key = title.replace("Model: ", "").split()[0].lower()
-    print(f"\n  Full page:  python3 wiki.py model {key} --full")
 
     # Build title→path lookup
     title_to_path = {}
@@ -436,6 +434,9 @@ def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
         print(f"\n  REFERENCED BY ({len(set(i[:2] for i in inbound))})")
         for t, typ, fpath in sorted(set(inbound)):
             print(f"    [{typ}] {t}  [{fpath}]")
+
+    key = title.replace("Model: ", "").replace("Super-Model: ", "").split()[0].lower()
+    print(f"\n  Full page:  python3 wiki.py model {key} --full")
 
 
 def cmd_domain(manifest: Dict, root: Path, domain: str, brief: bool = False):
