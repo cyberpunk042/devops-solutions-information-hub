@@ -228,7 +228,7 @@ def cmd_spine(manifest: Dict, root: Path):
     print(f"  e.g.  model {keys[0]},  model {keys[2]},  model {keys[-1]}")
 
 
-def cmd_model(manifest: Dict, root: Path, model_name: str):
+def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
     """One model with member pages and references."""
     pages = manifest["pages"]
 
@@ -256,20 +256,173 @@ def cmd_model(manifest: Dict, root: Path, model_name: str):
 
     title = model["title"]
     path = "wiki/" + model.get("path", "")
-    summary = _summary_for(model, root)
-    print(f"\n=== {title} ===\n")
-    if summary:
-        print(f"  {summary}")
-    print(f"  [{path}]\n")
 
+    # Read the actual page
+    page_path = root / "wiki" / model.get("path", "")
+    if page_path.exists():
+        text = page_path.read_text(encoding="utf-8")
+        _, body = parse_frontmatter(text)
+
+        # --full: print the entire page and stop
+        if full:
+            print(f"\n{'=' * 70}")
+            print(f"  {title}")
+            print(f"  [{path}]")
+            print(f"{'=' * 70}\n")
+            print(body)
+            return
+        sections = parse_sections(body)
+
+        print(f"\n{'=' * 70}")
+        print(f"  {title}")
+        print(f"{'=' * 70}\n")
+
+        # Summary
+        summary = sections.get("Summary", "").strip()
+        if summary:
+            # Strip callout syntax for clean display
+            clean = "\n".join(
+                l for l in summary.split("\n")
+                if not l.strip().startswith("> [!") and not l.strip().startswith(">")
+                or l.strip().startswith("> |")  # keep table rows inside callouts
+            )
+            if not clean.strip():
+                clean = summary  # fallback to raw if everything was callout
+            for line in clean.strip().split("\n"):
+                print(f"  {line.strip()}")
+            print()
+
+        # Key Insights (if present)
+        insights = sections.get("Key Insights", "").strip()
+        if insights:
+            print("  KEY INSIGHTS")
+            print("  " + "-" * 40)
+            for line in insights.split("\n"):
+                line = line.strip()
+                if not line:
+                    continue
+                # Skip callout markers but keep content
+                if line.startswith("> [!"):
+                    continue
+                if line.startswith("> "):
+                    line = line[2:]
+                if line.startswith("- **") or line.startswith("**"):
+                    print(f"  {line}")
+                elif line.startswith("|"):
+                    print(f"  {line}")
+                elif line.startswith("- "):
+                    print(f"  {line}")
+            print()
+
+        # Key Pages table (if present)
+        deep = sections.get("Deep Analysis", "")
+        key_pages_section = sections.get("Key Pages", "")
+        # Also check inside Deep Analysis for Key Pages subsection
+        if not key_pages_section and "### Key Pages" in deep:
+            idx = deep.index("### Key Pages")
+            key_pages_section = deep[idx:]
+            # Cut at next ### if present
+            next_h = key_pages_section.find("\n### ", 5)
+            if next_h > 0:
+                key_pages_section = key_pages_section[:next_h]
+
+        if key_pages_section:
+            print("  KEY PAGES")
+            print("  " + "-" * 40)
+            for line in key_pages_section.split("\n"):
+                line = line.strip()
+                if line.startswith("|") and "---" not in line:
+                    print(f"  {line}")
+                elif line.startswith("- ") or line.startswith("1."):
+                    print(f"  {line}")
+            print()
+
+        # Lessons Learned (if present)
+        lessons = sections.get("Lessons Learned", "")
+        if not lessons and "### Lessons Learned" in deep:
+            idx = deep.index("### Lessons Learned")
+            lessons = deep[idx:]
+            next_h = lessons.find("\n### ", 5)
+            if next_h > 0:
+                lessons = lessons[:next_h]
+
+        if lessons:
+            print("  LESSONS LEARNED")
+            print("  " + "-" * 40)
+            for line in lessons.split("\n"):
+                line = line.strip()
+                if line.startswith("|") and "---" not in line:
+                    print(f"  {line}")
+            print()
+
+        # State of Knowledge (if present)
+        state = sections.get("State of Knowledge", "")
+        if not state and "### State of Knowledge" in deep:
+            idx = deep.index("### State of Knowledge")
+            state = deep[idx:]
+            next_h = state.find("\n### ", 5)
+            if next_h > 0:
+                state = state[:next_h]
+
+        if state:
+            print("  STATE OF KNOWLEDGE")
+            print("  " + "-" * 40)
+            for line in state.split("\n"):
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    if line.startswith("> "):
+                        line = line[2:]
+                    print(f"  {line}")
+            print()
+
+        # Open Questions
+        oqs = sections.get("Open Questions", "").strip()
+        if oqs:
+            q_lines = [l.strip() for l in oqs.split("\n") if l.strip().startswith("- ") or l.strip().startswith("> [!question]")]
+            if q_lines:
+                print(f"  OPEN QUESTIONS ({len(q_lines)})")
+                print("  " + "-" * 40)
+                for q in q_lines[:5]:
+                    q = q.lstrip("- ").lstrip("> [!question] ")
+                    if len(q) > 100:
+                        cut = q[:100].rfind(" ")
+                        q = q[:cut] + "..." if cut > 50 else q[:97] + "..."
+                    print(f"  - {q}")
+                if len(q_lines) > 5:
+                    print(f"  ... +{len(q_lines) - 5} more")
+                print()
+
+    # Section glossary — show what else is in the full page
+    all_sections = list(sections.keys())
+    shown = {"Summary", "Key Insights", "Key Pages", "Lessons Learned", "State of Knowledge", "Open Questions"}
+    remaining = [s for s in all_sections if s not in shown and s not in ("Relationships", "Backlinks", "")]
+    if remaining:
+        print(f"\n  MORE IN THIS PAGE")
+        print("  " + "-" * 40)
+        for s in remaining:
+            content = sections.get(s, "")
+            line_count = len([l for l in content.split("\n") if l.strip()])
+            print(f"    ## {s}  ({line_count} lines)")
+
+    print(f"\n  [{path}]")
+    key = title.replace("Model: ", "").split()[0].lower()
+    print(f"\n  Full page:  python3 wiki.py model {key} --full")
+
+    # Build title→path lookup
+    title_to_path = {}
+    for p in pages:
+        title_to_path[p.get("title", "")] = "wiki/" + p.get("path", "")
+
+    # Relationships
     rels = model.get("relationships", [])
     if rels:
-        print("  Relationships:")
+        print(f"\n  RELATIONSHIPS ({len(rels)} outbound)")
         for r in rels:
             verb = r.get("verb", "")
             for t in _get_targets(r):
-                print(f"    {verb}: {t}")
-        print()
+                fpath = title_to_path.get(t, "")
+                ref = f"  [{fpath}]" if fpath else ""
+                print(f"    {verb}: {t}{ref}")
 
     inbound = []
     for p in pages:
@@ -278,11 +431,11 @@ def cmd_model(manifest: Dict, root: Path, model_name: str):
         for r in p.get("relationships", []):
             for t in _get_targets(r):
                 if t == title:
-                    inbound.append((p["title"], p.get("type", "")))
+                    inbound.append((p["title"], p.get("type", ""), "wiki/" + p.get("path", "")))
     if inbound:
-        print(f"  Referenced by ({len(inbound)}):")
-        for t, typ in sorted(set(inbound)):
-            print(f"    [{typ}] {t}")
+        print(f"\n  REFERENCED BY ({len(set(i[:2] for i in inbound))})")
+        for t, typ, fpath in sorted(set(inbound)):
+            print(f"    [{typ}] {t}  [{fpath}]")
 
 
 def cmd_domain(manifest: Dict, root: Path, domain: str, brief: bool = False):
@@ -430,6 +583,7 @@ def main():
     parser.add_argument("command", nargs="?", default="tree")
     parser.add_argument("argument", nargs="?", default=None)
     parser.add_argument("--brief", action="store_true")
+    parser.add_argument("--full", action="store_true", help="Show full page content")
     parser.add_argument("--type", dest="filter_type")
     args = parser.parse_args()
 
@@ -440,7 +594,7 @@ def main():
         "tree": lambda: cmd_tree(manifest, root),
         "spine": lambda: cmd_spine(manifest, root),
         "models": lambda: cmd_spine(manifest, root),
-        "model": lambda: cmd_model(manifest, root, args.argument or ""),
+        "model": lambda: cmd_model(manifest, root, args.argument or "", full=args.full),
         "domain": lambda: cmd_domain(manifest, root, args.argument or "", brief=args.brief),
         "lessons": lambda: cmd_lessons(manifest, root),
         "decisions": lambda: cmd_decisions(manifest, root),
