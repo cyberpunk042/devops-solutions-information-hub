@@ -137,3 +137,4 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 [[Models Are Systems, Not Documents]]
 [[Epic: Artifact Type System]]
 [[Standards-by-Example]]
+[[Coverage Blindness — Modeling Only What You Know]]

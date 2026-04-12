@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T15:35:23.616002+00:00",
+  "generated": "2026-04-12T15:42:16.284523+00:00",
   "stats": {
-    "pages": 231,
+    "pages": 234,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1513,
-    "tags_unique": 731,
+    "relationships": 1534,
+    "tags_unique": 736,
     "layers": {
       "3": 5,
       "6": 13,
       "2": 51,
-      "4": 28,
+      "4": 31,
       "5": 9,
       "1": 24,
       "spine": 51
     },
     "maturity": {
       "growing": 134,
-      "seed": 68
+      "seed": 71
     }
   },
   "pages": [
@@ -7815,6 +7815,59 @@
       ]
     },
     {
+      "path": "lessons/coverage-blindness-modeling-only-what-you-know.md",
+      "slug": "lessons/coverage-blindness-modeling-only-what-you-know",
+      "title": "Coverage Blindness \u2014 Modeling Only What You Know",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "coverage",
+        "blindness",
+        "taxonomy",
+        "lesson",
+        "gap"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Methodology Artifact Taxonomy",
+        "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
+        "Methodology Standards Initiative \u2014 Honest Assessment"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Standards Initiative \u2014 Honest Assessment"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Systemic Incompleteness Is Invisible to Validation"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search.md",
       "slug": "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
       "title": "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
@@ -9213,6 +9266,126 @@
         {
           "verb": "FEEDS INTO",
           "target": "Research Pipeline Orchestration"
+        }
+      ]
+    },
+    {
+      "path": "lessons/three-classes-of-methodology-output.md",
+      "slug": "lessons/three-classes-of-methodology-output",
+      "title": "Three Classes of Methodology Output",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "artifacts",
+        "documents",
+        "documentation",
+        "taxonomy",
+        "lesson"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Methodology Artifact Taxonomy",
+        "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
+        "Construction and Testing Artifacts \u2014 Standards and Guide"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Construction and Testing Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "lessons/universal-stages-domain-specific-artifacts.md",
+      "slug": "lessons/universal-stages-domain-specific-artifacts",
+      "title": "Universal Stages, Domain-Specific Artifacts",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "domain-specific",
+        "universal",
+        "stages",
+        "artifacts",
+        "lesson"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Methodology Artifact Taxonomy",
+        "Artifact Chain: TypeScript/Node Domain",
+        "Artifact Chain: Python/Wiki Domain",
+        "Artifact Chain: Infrastructure/IaC Domain",
+        "Artifact Chain: Knowledge/Evolution Domain"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Artifact Chain: TypeScript/Node Domain"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Artifact Chain: Python/Wiki Domain"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Artifact Chain: Infrastructure/IaC Domain"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Artifact Chain: Knowledge/Evolution Domain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15208,8 +15381,8 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 95,
-      "relationship_count": 635
+      "page_count": 98,
+      "relationship_count": 656
     },
     "devops": {
       "page_count": 14,
@@ -15366,6 +15539,7 @@
       "domains/cross-domain/requirements-and-design-artifacts",
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
+      "lessons/coverage-blindness-modeling-only-what-you-know",
       "lessons/infrastructure-must-be-reproducible-not-manual",
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -15373,6 +15547,8 @@
       "lessons/never-synthesize-from-descriptions-alone",
       "lessons/shallow-ingestion-is-systemic-not-isolated",
       "lessons/the-agent-must-practice-what-it-documents",
+      "lessons/three-classes-of-methodology-output",
+      "lessons/universal-stages-domain-specific-artifacts",
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
       "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
       "log/2026-04-09-directive-never-stop-at-surface",
@@ -16611,6 +16787,8 @@
       "domains/cross-domain/methodology-artifact-taxonomy",
       "domains/cross-domain/requirements-and-design-artifacts",
       "domains/devops/stage-gate-methodology",
+      "lessons/three-classes-of-methodology-output",
+      "lessons/universal-stages-domain-specific-artifacts",
       "sources/methodology-artifact-taxonomy-research"
     ],
     "immutable-checkpoints": [
@@ -16827,7 +17005,8 @@
       "domains/cross-domain/domain-chain-infrastructure",
       "domains/cross-domain/domain-chain-knowledge",
       "domains/cross-domain/domain-chain-python-wiki",
-      "domains/cross-domain/domain-chain-typescript"
+      "domains/cross-domain/domain-chain-typescript",
+      "lessons/universal-stages-domain-specific-artifacts"
     ],
     "deployment": [
       "domains/cross-domain/deployment-closure-monitoring-artifacts"
@@ -16913,13 +17092,17 @@
     ],
     "taxonomy": [
       "domains/cross-domain/methodology-artifact-taxonomy",
+      "lessons/coverage-blindness-modeling-only-what-you-know",
+      "lessons/three-classes-of-methodology-output",
       "sources/methodology-artifact-taxonomy-research"
     ],
     "documents": [
-      "domains/cross-domain/methodology-artifact-taxonomy"
+      "domains/cross-domain/methodology-artifact-taxonomy",
+      "lessons/three-classes-of-methodology-output"
     ],
     "documentation": [
       "domains/cross-domain/methodology-artifact-taxonomy",
+      "lessons/three-classes-of-methodology-output",
       "log/2026-04-09-directive-docs-layers-old-models"
     ],
     "protocol": [
@@ -17600,6 +17783,24 @@
     "CLAUDE.md": [
       "lessons/context-management-is-primary-productivity-lever"
     ],
+    "coverage": [
+      "lessons/coverage-blindness-modeling-only-what-you-know"
+    ],
+    "blindness": [
+      "lessons/coverage-blindness-modeling-only-what-you-know"
+    ],
+    "lesson": [
+      "lessons/coverage-blindness-modeling-only-what-you-know",
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "lessons/standards-must-preach-by-example",
+      "lessons/the-wiki-is-a-hub-not-a-silo",
+      "lessons/three-classes-of-methodology-output",
+      "lessons/universal-stages-domain-specific-artifacts",
+      "spine/standards/lesson-page-standards"
+    ],
+    "gap": [
+      "lessons/coverage-blindness-modeling-only-what-you-know"
+    ],
     "wiki-graph": [
       "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
     ],
@@ -17654,12 +17855,6 @@
     ],
     "overfitting": [
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline"
-    ],
-    "lesson": [
-      "lessons/models-are-built-in-layers-not-all-at-once",
-      "lessons/standards-must-preach-by-example",
-      "lessons/the-wiki-is-a-hub-not-a-silo",
-      "spine/standards/lesson-page-standards"
     ],
     "process": [
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -17806,6 +18001,12 @@
     ],
     "knowledge-flow": [
       "lessons/the-wiki-is-a-hub-not-a-silo"
+    ],
+    "universal": [
+      "lessons/universal-stages-domain-specific-artifacts"
+    ],
+    "stages": [
+      "lessons/universal-stages-domain-specific-artifacts"
     ],
     "log": [
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
@@ -18603,6 +18804,9 @@
     {
       "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like",
       "referenced_by": [
+        "Coverage Blindness \u2014 Modeling Only What You Know",
+        "Three Classes of Methodology Output",
+        "Universal Stages, Domain-Specific Artifacts",
         "Comparison Page Standards",
         "Concept Page Standards",
         "Decision Page Standards",
