@@ -296,9 +296,9 @@ Examples:
 - DERIVED FROM: [[Always Plan Before Executing]]
 - BUILDS ON: [[Model: Claude Code]]
 - BUILDS ON: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Plan-Execute-Review Cycle]]
+- RELATES TO: [[Plan Execute Review Cycle]]
 - FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -307,12 +307,11 @@ Examples:
 [[Always Plan Before Executing]]
 [[Model: Claude Code]]
 [[Model: Skills, Commands, and Hooks]]
-[[Plan-Execute-Review Cycle]]
+[[Plan Execute Review Cycle]]
 [[Methodology Adoption Guide]]
-[[Model: Methodology Standards — What Good Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[AI Agent Artifacts — Standards and Guide]]
 [[Enforcement Hook Patterns]]
 [[How AI Agents Consume the Methodology Wiki]]
 [[Methodology Framework]]
-[[Methodology Standards — What Good Execution Looks Like]]
 [[Stage-Aware Skill Injection]]

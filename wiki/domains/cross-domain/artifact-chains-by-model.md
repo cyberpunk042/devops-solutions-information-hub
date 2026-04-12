@@ -210,7 +210,7 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 - BUILDS ON: [[Model: Methodology]]
 - RELATES TO: [[Execution Modes and End Conditions]]
 - RELATES TO: [[Backlog Hierarchy Rules]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -220,7 +220,7 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 [[Model: Methodology]]
 [[Execution Modes and End Conditions]]
 [[Backlog Hierarchy Rules]]
-[[Model: Methodology Standards — What Good Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Artifact Chain: Infrastructure/IaC Domain]]
 [[Artifact Chain: Knowledge/Evolution Domain]]
 [[Artifact Chain: Python/Wiki Domain]]
@@ -230,7 +230,6 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 [[Initiation and Planning Artifacts — Standards and Guide]]
 [[Methodology Adoption Guide]]
 [[Methodology Artifact Taxonomy]]
-[[Methodology Standards — What Good Execution Looks Like]]
 [[Model Composition Rules]]
 [[Requirements and Design Artifacts — Standards and Guide]]
 [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]

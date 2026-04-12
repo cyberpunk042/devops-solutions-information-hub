@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T16:52:41.011640+00:00",
+  "generated": "2026-04-12T16:55:07.608434+00:00",
   "stats": {
     "pages": 238,
     "domains": 9,
@@ -175,7 +175,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         }
       ]
     },
@@ -233,7 +233,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Ecosystem"
+          "target": "Model: Ecosystem Architecture"
         },
         {
           "verb": "RELATES TO",
@@ -309,7 +309,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Plan-Execute-Review Cycle"
+          "target": "Plan Execute Review Cycle"
         }
       ]
     },
@@ -356,7 +356,7 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "IMPLEMENTS",
@@ -364,7 +364,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -903,7 +903,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -3688,7 +3688,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -3756,7 +3756,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -4321,7 +4321,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         }
       ]
     },
@@ -4458,7 +4458,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -4545,7 +4545,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -4592,15 +4592,15 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         },
         {
           "verb": "RELATES TO",
-          "target": "Plan-Execute-Review Cycle"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Ecosystem"
+          "target": "Model: Ecosystem Architecture"
         },
         {
           "verb": "FEEDS INTO",
@@ -4779,7 +4779,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -4791,7 +4791,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Plan-Execute-Review Cycle"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "ENABLES",
@@ -4926,11 +4926,11 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
-          "target": "Plan-Execute-Review Cycle"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "ENABLES",
@@ -5002,7 +5002,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -8137,7 +8137,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -9575,7 +9575,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -9642,7 +9642,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -10263,7 +10263,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Plan-Execute-Review Cycle"
+          "target": "Plan Execute Review Cycle"
         },
         {
           "verb": "FEEDS INTO",
@@ -10271,7 +10271,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -10529,7 +10529,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -10957,7 +10957,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -11060,7 +11060,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         }
       ]
     },
@@ -12965,7 +12965,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         },
         {
           "verb": "FEEDS INTO",
@@ -13004,7 +13004,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "FEEDS INTO",
@@ -13069,7 +13069,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -13081,7 +13081,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Ecosystem"
+          "target": "Model: Ecosystem Architecture"
         },
         {
           "verb": "FEEDS INTO",
@@ -13136,7 +13136,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -19026,67 +19026,10 @@
       ]
     },
     {
-      "target": "Model: Ecosystem",
-      "referenced_by": [
-        "Portable Methodology Engine",
-        "Methodology Evolution Protocol",
-        "Methodology Adoption Guide"
-      ]
-    },
-    {
-      "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like",
-      "referenced_by": [
-        "Artifact Type System",
-        "Standards-by-Example",
-        "E003 Artifact Type System \u2014 Requirements Spec",
-        "Methodology Artifact Taxonomy",
-        "Methodology Standards Initiative \u2014 Infrastructure Analysis",
-        "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
-        "Learning Path: Methodology Fundamentals",
-        "Methodology System Map"
-      ]
-    },
-    {
       "target": "Model: Local AI",
       "referenced_by": [
         "Model: Automation and Pipelines",
         "Model: NotebookLM"
-      ]
-    },
-    {
-      "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like",
-      "referenced_by": [
-        "Decision: Artifact System Design Decisions",
-        "How AI Agents Consume the Methodology Wiki",
-        "Methodology Config Architecture \u2014 How the Pieces Fit Together",
-        "Coverage Blindness \u2014 Modeling Only What You Know",
-        "Three Classes of Methodology Output",
-        "Universal Stages, Domain-Specific Artifacts"
-      ]
-    },
-    {
-      "target": "Model: Methodology Standards \u2014 What Good Looks Like",
-      "referenced_by": [
-        "Standards-by-Example",
-        "Artifact Chains by Methodology Model",
-        "Methodology Evolution Protocol",
-        "Methodology Standards Initiative \u2014 Gap Analysis",
-        "Model Composition Rules",
-        "CLAUDE.md Structural Patterns for Agent Compliance",
-        "Enforcement Hook Patterns",
-        "Stage-Aware Skill Injection",
-        "Evolution: Methodology System",
-        "Methodology Adoption Guide"
-      ]
-    },
-    {
-      "target": "Plan-Execute-Review Cycle",
-      "referenced_by": [
-        "Agent Compliance Framework",
-        "Methodology Evolution Protocol",
-        "Methodology Standards Initiative \u2014 Gap Analysis",
-        "Methodology Standards Initiative \u2014 Infrastructure Analysis",
-        "CLAUDE.md Structural Patterns for Agent Compliance"
       ]
     },
     {

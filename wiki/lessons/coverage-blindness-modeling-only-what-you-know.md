@@ -99,7 +99,7 @@ This lesson applies when:
 - DERIVED FROM: [[Methodology Standards Initiative — Honest Assessment]]
 - RELATES TO: [[Systemic Incompleteness Is Invisible to Validation]]
 - RELATES TO: [[Model: Quality and Failure Prevention]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -108,5 +108,5 @@ This lesson applies when:
 [[Methodology Standards Initiative — Honest Assessment]]
 [[Systemic Incompleteness Is Invisible to Validation]]
 [[Model: Quality and Failure Prevention]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]

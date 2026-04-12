@@ -70,7 +70,7 @@ Create a generic, parameterizable methodology configuration system that the wiki
 - BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[Methodology Framework]]
 - FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Ecosystem]]
+- FEEDS INTO: [[Model: Ecosystem Architecture]]
 - RELATES TO: [[Four-Project Ecosystem]]
 
 ## Backlinks
@@ -81,6 +81,6 @@ Create a generic, parameterizable methodology configuration system that the wiki
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Framework]]
 [[Model: Methodology]]
-[[Model: Ecosystem]]
+[[Model: Ecosystem Architecture]]
 [[Four-Project Ecosystem]]
 [[E003 Artifact Type System — Design Document]]

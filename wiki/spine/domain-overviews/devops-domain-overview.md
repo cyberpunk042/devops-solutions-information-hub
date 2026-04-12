@@ -23,7 +23,7 @@ The devops domain covers stage-gate methodology, ecosystem topology, backlog man
 > | Metric | Value |
 > |--------|-------|
 > | Concept pages | 9 |
-> | Related model pages | [[Model: Methodology]], [[Model: Ecosystem]], [[Model: SFIF Architecture]] |
+> | Related model pages | [[Model: Methodology]], [[Model: Ecosystem Architecture]], [[Model: SFIF Architecture]] |
 > | Decision pages | [[Decision: Stage-Gate Operational Decisions]], [[Decision: Task Type Edge Cases]], [[Decision: Execution Mode Edge Cases]] |
 > | Related lessons | 5+ (Never Skip Stages Even When Told to Continue, Infrastructure Must Be Reproducible Not Manual, Methodology Is a Framework Not a Fixed Pipeline, etc.) |
 

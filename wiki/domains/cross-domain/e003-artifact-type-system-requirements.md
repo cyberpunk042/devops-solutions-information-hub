@@ -268,7 +268,7 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 - RELATES TO: [[Task Type Artifact Matrix]]
 - RELATES TO: [[Stage-Gate Methodology]]
 - FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[LLM Wiki Standards — What Good Looks Like]]
 
 ## Backlinks
 
@@ -279,5 +279,5 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 [[Task Type Artifact Matrix]]
 [[Stage-Gate Methodology]]
 [[Model: Methodology]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[E003 Artifact Type System — Design Document]]

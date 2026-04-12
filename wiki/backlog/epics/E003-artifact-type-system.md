@@ -91,7 +91,7 @@ Nothing. Can start immediately.
 - BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[Methodology Framework]]
 - FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[LLM Wiki Standards — What Good Looks Like]]
 
 ## Backlinks
 
@@ -102,7 +102,7 @@ Nothing. Can start immediately.
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Framework]]
 [[Model: Methodology]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[E003 Artifact Type System — Design Document]]
 [[E003 Artifact Type System — Requirements Spec]]
 [[Methodology Standards Initiative — Honest Assessment]]

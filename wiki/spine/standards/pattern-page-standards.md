@@ -95,7 +95,7 @@ Standards for pattern pages — recurring structural phenomena observed across �
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Plan-Execute-Review Cycle]] — 165 lines, 13 relationships
+> [!success] [[Plan Execute Review Cycle]] — 165 lines, 13 relationships
 >
 > **Why it's the standard:**
 > - 4 detailed instances (OpenFleet, Harness Engineering, Claude Code, Research Pipeline) each showing the pattern differently

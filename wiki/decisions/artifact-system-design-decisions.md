@@ -100,7 +100,7 @@ No decision creates a one-way door.
 - DERIVED FROM: [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
 - RELATES TO: [[Model: Methodology]]
 - RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -110,4 +110,4 @@ No decision creates a one-way door.
 [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
 [[Model: Methodology]]
 [[Stage-Gate Methodology]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]

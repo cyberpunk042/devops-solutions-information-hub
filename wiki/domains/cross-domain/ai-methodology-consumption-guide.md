@@ -187,7 +187,7 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 - RELATES TO: [[Methodology System Map]]
 - RELATES TO: [[Methodology Config Architecture — How the Pieces Fit Together]]
 - FEEDS INTO: [[Model: Claude Code]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -198,4 +198,4 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 [[Methodology System Map]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]
 [[Model: Claude Code]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]

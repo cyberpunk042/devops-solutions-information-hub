@@ -162,7 +162,7 @@ Mandatory skills create soft quality gates — the agent should not advance with
 - BUILDS ON: [[Enforcement Hook Patterns]]
 - RELATES TO: [[Stage-Gate Methodology]]
 - FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -172,6 +172,5 @@ Mandatory skills create soft quality gates — the agent should not advance with
 [[Enforcement Hook Patterns]]
 [[Stage-Gate Methodology]]
 [[Methodology Adoption Guide]]
-[[Model: Methodology Standards — What Good Looks Like]]
-[[AI Agent Artifacts — Standards and Guide]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[AI Agent Artifacts — Standards and Guide]]

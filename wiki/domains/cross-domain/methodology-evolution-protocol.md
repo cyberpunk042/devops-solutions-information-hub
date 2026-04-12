@@ -152,22 +152,21 @@ note_type: session
 
 - BUILDS ON: [[Model: Methodology]]
 - BUILDS ON: [[Methodology Adoption Guide]]
-- RELATES TO: [[Model: Methodology Standards — What Good Looks Like]]
-- RELATES TO: [[Plan-Execute-Review Cycle]]
-- FEEDS INTO: [[Model: Ecosystem]]
+- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[Plan Execute Review Cycle]]
+- FEEDS INTO: [[Model: Ecosystem Architecture]]
 - FEEDS INTO: [[Model: Quality and Failure Prevention]]
 
 ## Backlinks
 
 [[Model: Methodology]]
 [[Methodology Adoption Guide]]
-[[Model: Methodology Standards — What Good Looks Like]]
-[[Plan-Execute-Review Cycle]]
-[[Model: Ecosystem]]
+[[Methodology Standards — What Good Execution Looks Like]]
+[[Plan Execute Review Cycle]]
+[[Model: Ecosystem Architecture]]
 [[Model: Quality and Failure Prevention]]
 [[AI Agent Artifacts — Standards and Guide]]
 [[Decision: Methodology Stage Extension Decisions]]
 [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
 [[Evolution: Methodology System]]
 [[Methodology Framework]]
-[[Methodology Standards — What Good Execution Looks Like]]

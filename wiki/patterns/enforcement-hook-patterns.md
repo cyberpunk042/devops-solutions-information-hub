@@ -205,7 +205,7 @@ esac
 - RELATES TO: [[Stage-Gate Methodology]]
 - RELATES TO: [[Model: Claude Code]]
 - FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -215,9 +215,8 @@ esac
 [[Stage-Gate Methodology]]
 [[Model: Claude Code]]
 [[Methodology Adoption Guide]]
-[[Model: Methodology Standards — What Good Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[AI Agent Artifacts — Standards and Guide]]
 [[Construction and Testing Artifacts — Standards and Guide]]
 [[Methodology Framework]]
-[[Methodology Standards — What Good Execution Looks Like]]
 [[Stage-Aware Skill Injection]]

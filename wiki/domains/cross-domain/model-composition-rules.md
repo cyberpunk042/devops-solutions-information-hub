@@ -155,7 +155,7 @@ Multiple models run simultaneously on independent tracks. They don't share stage
 - RELATES TO: [[Stage-Gate Methodology]]
 - RELATES TO: [[Execution Modes and End Conditions]]
 - RELATES TO: [[Backlog Hierarchy Rules]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -165,5 +165,5 @@ Multiple models run simultaneously on independent tracks. They don't share stage
 [[Stage-Gate Methodology]]
 [[Execution Modes and End Conditions]]
 [[Backlog Hierarchy Rules]]
-[[Model: Methodology Standards — What Good Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Methodology Adoption Guide]]

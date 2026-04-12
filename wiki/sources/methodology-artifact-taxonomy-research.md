@@ -295,7 +295,7 @@ Based on the research, the methodology artifact system needs:
 - FEEDS INTO: [[Artifact Chains by Methodology Model]]
 - RELATES TO: [[Stage-Gate Methodology]]
 - RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
 
 ## Backlinks
 
@@ -304,7 +304,7 @@ Based on the research, the methodology artifact system needs:
 [[Artifact Chains by Methodology Model]]
 [[Stage-Gate Methodology]]
 [[Task Type Artifact Matrix]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Coverage Blindness — Modeling Only What You Know]]
 [[Methodology Artifact Taxonomy]]
 [[Three Classes of Methodology Output]]

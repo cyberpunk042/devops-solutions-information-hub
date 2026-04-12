@@ -91,7 +91,7 @@ This lesson applies when:
 - DERIVED FROM: [[Construction and Testing Artifacts — Standards and Guide]]
 - RELATES TO: [[Model: Methodology]]
 - RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -100,5 +100,5 @@ This lesson applies when:
 [[Construction and Testing Artifacts — Standards and Guide]]
 [[Model: Methodology]]
 [[Stage-Gate Methodology]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]

@@ -68,7 +68,7 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 - FEEDS INTO: [[Model: Claude Code]]
 - RELATES TO: [[Never Skip Stages Even When Told to Continue]]
 - RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Plan-Execute-Review Cycle]]
+- RELATES TO: [[Plan Execute Review Cycle]]
 
 ## Backlinks
 
@@ -81,5 +81,5 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 [[Model: Claude Code]]
 [[Never Skip Stages Even When Told to Continue]]
 [[Always Plan Before Executing]]
-[[Plan-Execute-Review Cycle]]
+[[Plan Execute Review Cycle]]
 [[E003 Artifact Type System — Design Document]]

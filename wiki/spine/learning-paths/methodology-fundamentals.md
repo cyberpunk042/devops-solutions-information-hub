@@ -90,12 +90,12 @@ After completing this path you should be able to:
 
 - BUILDS ON: [[Model: Methodology]]
 - BUILDS ON: [[Methodology Adoption Guide]]
-- RELATES TO: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
 - FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
 [[Model: Methodology]]
 [[Methodology Adoption Guide]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]

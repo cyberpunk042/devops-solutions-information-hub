@@ -50,7 +50,7 @@ Every page type now has its own dedicated standards document in `wiki/spine/stan
 > | reference | [[Reference Page Standards]] | [[Methodology Adoption Guide]] |
 > | deep-dive | [[Deep-Dive Page Standards]] | [[Adoption Guide — How to Use This Wiki's Standards]] |
 > | lesson | [[Lesson Page Standards]] | [[CLI Tools Beat MCP for Token Efficiency]] |
-> | pattern | [[Pattern Page Standards]] | [[Plan-Execute-Review Cycle]] |
+> | pattern | [[Pattern Page Standards]] | [[Plan Execute Review Cycle]] |
 > | decision | [[Decision Page Standards]] | [[Execution Mode Edge Cases]] |
 > | domain-overview | [[Domain Overview Page Standards]] | [[Cross-Domain — Domain Overview]] |
 > | evolution | [[Evolution Page Standards]] | [[Evolution: Methodology System]] |
@@ -281,18 +281,24 @@ What makes it the standard:
 [[Never Synthesize from Descriptions Alone]]
 [[Shallow Ingestion Is Systemic, Not Isolated]]
 [[The Agent Must Practice What It Documents]]
+[[Artifact Type System]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Comparison Page Standards]]
 [[Concept Page Standards]]
 [[Decision Page Standards]]
 [[Deep-Dive Page Standards]]
 [[Domain Overview Page Standards]]
+[[E003 Artifact Type System — Requirements Spec]]
 [[Evolution Page Standards]]
 [[Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
 [[Learning Path Page Standards]]
+[[Learning Path: Methodology Fundamentals]]
 [[Lesson Page Standards]]
+[[Methodology Artifact Taxonomy]]
+[[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Methodology System Map]]
 [[Model: Wiki Design]]
 [[Models Are Built in Layers, Not All at Once]]
 [[Operations Plan Page Standards]]
@@ -300,4 +306,6 @@ What makes it the standard:
 [[Quality Standards — What Good Failure Prevention Looks Like]]
 [[Reference Page Standards]]
 [[Source-Synthesis Page Standards]]
+[[Standards-by-Example]]
+[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
 [[Wiki Design Standards — What Good Styling Looks Like]]

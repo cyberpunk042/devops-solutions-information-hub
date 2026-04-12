@@ -258,7 +258,7 @@ Before the taxonomy: understand that methodology produces three fundamentally di
 - FEEDS INTO: [[Artifact Chains by Methodology Model]]
 - RELATES TO: [[Stage-Gate Methodology]]
 - RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
 - RELATES TO: [[Methodology Adoption Guide]]
 
 ## Backlinks
@@ -269,7 +269,7 @@ Before the taxonomy: understand that methodology produces three fundamentally di
 [[Artifact Chains by Methodology Model]]
 [[Stage-Gate Methodology]]
 [[Task Type Artifact Matrix]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Adoption Guide]]
 [[AI Agent Artifacts — Standards and Guide]]
 [[Artifact Chain: Infrastructure/IaC Domain]]

@@ -209,8 +209,8 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 - BUILDS ON: [[Task Type Artifact Matrix]]
 - BUILDS ON: [[Execution Modes and End Conditions]]
 - BUILDS ON: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[Model: LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Plan-Execute-Review Cycle]]
+- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[Plan Execute Review Cycle]]
 - ENABLES: [[Model: Quality and Failure Prevention]]
 
 ## Backlinks
@@ -221,8 +221,8 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 [[Task Type Artifact Matrix]]
 [[Execution Modes and End Conditions]]
 [[Backlog Hierarchy Rules]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
-[[Plan-Execute-Review Cycle]]
+[[LLM Wiki Standards — What Good Looks Like]]
+[[Plan Execute Review Cycle]]
 [[Model: Quality and Failure Prevention]]
 [[Agent Compliance Framework]]
 [[Artifact Type System]]

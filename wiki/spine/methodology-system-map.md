@@ -226,7 +226,7 @@ Complete map of the methodology system — every component, where it lives, what
 - BUILDS ON: [[Model: Methodology]]
 - BUILDS ON: [[Methodology Framework]]
 - RELATES TO: [[Methodology Adoption Guide]]
-- RELATES TO: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
 - RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
@@ -234,7 +234,7 @@ Complete map of the methodology system — every component, where it lives, what
 [[Model: Methodology]]
 [[Methodology Framework]]
 [[Methodology Adoption Guide]]
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[How AI Agents Consume the Methodology Wiki]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]

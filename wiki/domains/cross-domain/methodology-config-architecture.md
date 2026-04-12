@@ -127,7 +127,7 @@ A reasoning document examining how the wiki's config files, the methodology syst
 > | "What are ALL the artifact types that exist?" | [[Methodology Artifact Taxonomy]] (78 types, 11 categories) |
 > | "How does this work for MY domain?" | [[Artifact Chain: TypeScript/Node Domain]] (or Python/Wiki, Infrastructure, Knowledge) |
 > | "What are the structural patterns that help agents comply?" | [[CLAUDE.md Structural Patterns for Agent Compliance]] |
-> | "What went wrong when methodology was ignored?" | [[Model: Methodology Standards — What Good Execution Looks Like]] anti-pattern gallery |
+> | "What went wrong when methodology was ignored?" | [[Methodology Standards — What Good Execution Looks Like]] anti-pattern gallery |
 >
 > The configs answer STRUCTURAL questions (what type? what sections? what gate?). The wiki answers UNDERSTANDING questions (what does good look like? when should I use this? what went wrong before?). Neither can replace the other.
 
@@ -168,7 +168,7 @@ A reasoning document examining how the wiki's config files, the methodology syst
 - RELATES TO: [[Methodology Framework]]
 - RELATES TO: [[Methodology System Map]]
 - RELATES TO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -179,5 +179,5 @@ A reasoning document examining how the wiki's config files, the methodology syst
 [[Methodology Framework]]
 [[Methodology System Map]]
 [[Methodology Adoption Guide]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[How AI Agents Consume the Methodology Wiki]]

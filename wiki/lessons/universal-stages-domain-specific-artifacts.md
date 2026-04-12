@@ -99,7 +99,7 @@ This lesson applies when:
 - RELATES TO: [[Stage-Gate Methodology]]
 - RELATES TO: [[Model: Methodology]]
 - FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -111,4 +111,4 @@ This lesson applies when:
 [[Stage-Gate Methodology]]
 [[Model: Methodology]]
 [[Methodology Adoption Guide]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
