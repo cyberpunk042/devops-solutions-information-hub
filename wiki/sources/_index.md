@@ -4,6 +4,7 @@ Source synthesis pages — one per ingested source.
 
 ## Pages
 
+- [Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research](methodology-artifact-taxonomy-research.md) — Comprehensive research into methodology artifacts across five domains: traditional SDLC, Agile/Scrum, DevOps/Infrastr...
 - [Synthesis: awesome-design-md — 58 Design Systems for AI Agents](src-awesome-design-md.md) — A curated collection of 58 DESIGN
 - [Synthesis: axtonliu/axton-obsidian-visual-skills](src-axton-obsidian-visual-skills.md) — This repository provides a Visual Skills Pack for Obsidian that enables Claude Code to generate Excalidraw diagrams, ...
 - [Synthesis: Claude Code Accuracy Tips](src-claude-code-accuracy-tips.md) — A practitioner's guide to 7 techniques for improving Claude Code accuracy, presented by a former Amazon/Microsoft sen...
@@ -31,4 +32,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `skills`, `obsidian`, `notebooklm`, `automation`, `subagents`, `cli`, `mcp`, `context-management`, `skill`, `knowledge-base`, `second-brain`, `superpowers`, `agent-teams`, `commands`, `workflow`, `python`, `hooks`, `claude-code-plugin`, `openclaw`
+`claude-code`, `skills`, `obsidian`, `notebooklm`, `automation`, `subagents`, `cli`, `mcp`, `context-management`, `skill`, `knowledge-base`, `second-brain`, `research`, `ai-agents`, `superpowers`, `agent-teams`, `commands`, `workflow`, `python`, `hooks`

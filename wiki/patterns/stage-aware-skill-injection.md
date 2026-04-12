@@ -173,4 +173,5 @@ Mandatory skills create soft quality gates — the agent should not advance with
 [[Stage-Gate Methodology]]
 [[Methodology Adoption Guide]]
 [[Model: Methodology Standards — What Good Looks Like]]
+[[AI Agent Artifacts — Standards and Guide]]
 [[Methodology Standards — What Good Execution Looks Like]]

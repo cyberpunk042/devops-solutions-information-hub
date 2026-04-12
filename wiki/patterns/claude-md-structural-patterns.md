@@ -310,6 +310,7 @@ Examples:
 [[Plan-Execute-Review Cycle]]
 [[Methodology Adoption Guide]]
 [[Model: Methodology Standards — What Good Looks Like]]
+[[AI Agent Artifacts — Standards and Guide]]
 [[Enforcement Hook Patterns]]
 [[Methodology Framework]]
 [[Methodology Standards — What Good Execution Looks Like]]

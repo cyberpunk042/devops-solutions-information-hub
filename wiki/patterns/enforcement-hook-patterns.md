@@ -216,6 +216,8 @@ esac
 [[Model: Claude Code]]
 [[Methodology Adoption Guide]]
 [[Model: Methodology Standards — What Good Looks Like]]
+[[AI Agent Artifacts — Standards and Guide]]
+[[Construction and Testing Artifacts — Standards and Guide]]
 [[Methodology Framework]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Stage-Aware Skill Injection]]

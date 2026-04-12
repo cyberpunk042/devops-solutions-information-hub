@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-12T00:56:26.840776+00:00",
+  "generated": "2026-04-12T15:16:21.570745+00:00",
   "stats": {
-    "pages": 220,
+    "pages": 227,
     "domains": 9,
-    "sources": 24,
+    "sources": 25,
     "comparisons": 5,
-    "relationships": 1437,
-    "tags_unique": 708,
+    "relationships": 1485,
+    "tags_unique": 727,
     "layers": {
       "3": 5,
       "6": 13,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 134,
-      "seed": 57
+      "seed": 64
     }
   },
   "pages": [
@@ -3412,6 +3412,96 @@
       ]
     },
     {
+      "path": "domains/cross-domain/ai-agent-artifacts.md",
+      "slug": "domains/cross-domain/ai-agent-artifacts",
+      "title": "AI Agent Artifacts \u2014 Standards and Guide",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "ai-agents",
+        "artifacts",
+        "persona",
+        "skills",
+        "hooks",
+        "enforcement",
+        "compliance",
+        "standards"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "nxcode-agentic",
+          "type": "article",
+          "url": "https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026"
+        },
+        {
+          "id": "openarms-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        },
+        {
+          "id": "openarms-directive",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/agent-directive-v1.md"
+        },
+        {
+          "id": "operator-rules",
+          "type": "file",
+          "file": "raw/notes/2026-04-12-restart-directive.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Aware Skill Injection"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Evolution Protocol"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
       "path": "domains/cross-domain/artifact-chains-by-model.md",
       "slug": "domains/cross-domain/artifact-chains-by-model",
       "title": "Artifact Chains by Methodology Model",
@@ -3476,6 +3566,140 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/construction-and-testing-artifacts.md",
+      "slug": "domains/cross-domain/construction-and-testing-artifacts",
+      "title": "Construction and Testing Artifacts \u2014 Standards and Guide",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "construction",
+        "testing",
+        "artifacts",
+        "scaffold",
+        "implement",
+        "test",
+        "domain-specific",
+        "standards"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "openarms-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        },
+        {
+          "id": "nxcode-agentic",
+          "type": "article",
+          "url": "https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/deployment-closure-monitoring-artifacts.md",
+      "slug": "domains/cross-domain/deployment-closure-monitoring-artifacts",
+      "title": "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "deployment",
+        "closure",
+        "monitoring",
+        "artifacts",
+        "operations",
+        "lessons-learned",
+        "standards"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "sdlcforms",
+          "type": "article",
+          "url": "https://www.sdlcforms.com/UnderstandingSDLC.html"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Operations Plan Page Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Note Page Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Lesson Page Standards"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Evolution Protocol"
         }
       ]
     },
@@ -3633,6 +3857,147 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/initiation-and-planning-artifacts.md",
+      "slug": "domains/cross-domain/initiation-and-planning-artifacts",
+      "title": "Initiation and Planning Artifacts \u2014 Standards and Guide",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "initiation",
+        "planning",
+        "artifacts",
+        "project-charter",
+        "wbs",
+        "risk",
+        "standards"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "sdlcforms",
+          "type": "article",
+          "url": "https://www.sdlcforms.com/UnderstandingSDLC.html"
+        },
+        {
+          "id": "openarms-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Epic Page Standards"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-artifact-taxonomy.md",
+      "slug": "domains/cross-domain/methodology-artifact-taxonomy",
+      "title": "Methodology Artifact Taxonomy",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "taxonomy",
+        "artifacts",
+        "documents",
+        "documentation",
+        "reference",
+        "framework"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy-research",
+          "type": "wiki",
+          "file": "wiki/sources/methodology-artifact-taxonomy-research.md"
+        },
+        {
+          "id": "openarms-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        },
+        {
+          "id": "sdlcforms",
+          "type": "article",
+          "url": "https://www.sdlcforms.com/UnderstandingSDLC.html"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -4090,6 +4455,78 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/requirements-and-design-artifacts.md",
+      "slug": "domains/cross-domain/requirements-and-design-artifacts",
+      "title": "Requirements and Design Artifacts \u2014 Standards and Guide",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "requirements",
+        "design",
+        "artifacts",
+        "adr",
+        "tech-spec",
+        "interface-spec",
+        "standards"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "openarms-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        },
+        {
+          "id": "adr-github",
+          "type": "documentation",
+          "url": "https://adr.github.io/"
+        },
+        {
+          "id": "martin-fowler-adr",
+          "type": "article",
+          "url": "https://martinfowler.com/bliki/ArchitectureDecisionRecord.html"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision Page Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Reference Page Standards"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
         }
       ]
     },
@@ -9821,6 +10258,109 @@
       ]
     },
     {
+      "path": "sources/methodology-artifact-taxonomy-research.md",
+      "slug": "sources/methodology-artifact-taxonomy-research",
+      "title": "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "artifacts",
+        "taxonomy",
+        "research",
+        "sdlc",
+        "agile",
+        "devops",
+        "ai-agents",
+        "knowledge-management"
+      ],
+      "sources": [
+        {
+          "id": "sdlcforms",
+          "type": "article",
+          "url": "https://www.sdlcforms.com/UnderstandingSDLC.html"
+        },
+        {
+          "id": "nxcode-agentic",
+          "type": "article",
+          "url": "https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026"
+        },
+        {
+          "id": "adr-github",
+          "type": "documentation",
+          "url": "https://adr.github.io/"
+        },
+        {
+          "id": "geeksforgeeks-artifacts",
+          "type": "article",
+          "url": "https://www.geeksforgeeks.org/software-engineering/artifact-software-development/"
+        },
+        {
+          "id": "wikipedia-artifacts",
+          "type": "article",
+          "url": "https://en.wikipedia.org/wiki/Artifact_(software_development)"
+        },
+        {
+          "id": "openarms-document-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        },
+        {
+          "id": "atlassian-scrum",
+          "type": "article",
+          "url": "https://www.atlassian.com/agile/scrum/artifacts"
+        },
+        {
+          "id": "zettelkasten-method",
+          "type": "article",
+          "url": "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
+        },
+        {
+          "id": "martin-fowler-adr",
+          "type": "article",
+          "url": "https://martinfowler.com/bliki/ArchitectureDecisionRecord.html"
+        },
+        {
+          "id": "google-cloud-adr",
+          "type": "documentation",
+          "url": "https://cloud.google.com/architecture/architecture-decision-records"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
       "path": "sources/src-awesome-design-md.md",
       "slug": "sources/src-awesome-design-md",
       "title": "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents",
@@ -14394,8 +14934,8 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 84,
-      "relationship_count": 559
+      "page_count": 91,
+      "relationship_count": 607
     },
     "devops": {
       "page_count": 14,
@@ -14528,15 +15068,21 @@
       "decisions/methodology-framework-design-decisions",
       "domains/ai-agents/per-role-command-architecture",
       "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/ai-agent-artifacts",
       "domains/cross-domain/artifact-chains-by-model",
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/cross-domain/deployment-closure-monitoring-artifacts",
       "domains/cross-domain/e003-artifact-type-system-design",
       "domains/cross-domain/e003-artifact-type-system-requirements",
+      "domains/cross-domain/initiation-and-planning-artifacts",
+      "domains/cross-domain/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-evolution-protocol",
       "domains/cross-domain/methodology-framework",
       "domains/cross-domain/methodology-standards-initiative-gaps",
       "domains/cross-domain/methodology-standards-initiative-honest-assessment",
       "domains/cross-domain/methodology-standards-initiative-infrastructure",
       "domains/cross-domain/model-composition-rules",
+      "domains/cross-domain/requirements-and-design-artifacts",
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
       "lessons/infrastructure-must-be-reproducible-not-manual",
@@ -14552,6 +15098,7 @@
       "log/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09-directive-record-process-skills-supermodel",
       "patterns/stage-aware-skill-injection",
+      "sources/methodology-artifact-taxonomy-research",
       "spine/adoption-guide",
       "spine/evolution-log/methodology-evolution-history",
       "spine/learning-paths/methodology-fundamentals",
@@ -14604,6 +15151,7 @@
     ],
     "enforcement": [
       "backlog/epics/E005-agent-compliance-framework",
+      "domains/cross-domain/ai-agent-artifacts",
       "patterns/claude-md-structural-patterns",
       "patterns/enforcement-hook-patterns",
       "spine/evolution-log/methodology-evolution-history",
@@ -14620,6 +15168,7 @@
       "domains/ai-agents/hooks-lifecycle-architecture",
       "domains/ai-agents/per-role-command-architecture",
       "domains/automation/wiki-event-driven-automation",
+      "domains/cross-domain/ai-agent-artifacts",
       "patterns/enforcement-hook-patterns",
       "sources/src-context-mode",
       "sources/src-shanraisshan-claude-code-best-practice",
@@ -14648,6 +15197,7 @@
       "domains/ai-agents/claude-code",
       "domains/ai-agents/openclaw",
       "domains/ai-agents/per-role-command-architecture",
+      "domains/cross-domain/ai-agent-artifacts",
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/cli-tools-beat-mcp-for-token-efficiency",
@@ -14677,6 +15227,11 @@
     ],
     "standards": [
       "backlog/epics/E006-standards-by-example",
+      "domains/cross-domain/ai-agent-artifacts",
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/cross-domain/deployment-closure-monitoring-artifacts",
+      "domains/cross-domain/initiation-and-planning-artifacts",
+      "domains/cross-domain/requirements-and-design-artifacts",
       "lessons/models-are-systems-not-documents",
       "lessons/skill-specification-is-key-to-interoperability",
       "lessons/standards-must-preach-by-example",
@@ -14763,6 +15318,7 @@
     ],
     "testing": [
       "backlog/tasks/T001-test-openai-backend",
+      "domains/cross-domain/construction-and-testing-artifacts",
       "sources/src-playwright-cli-vs-mcp"
     ],
     "blocked": [
@@ -14880,7 +15436,9 @@
       "domains/ai-agents/agent-orchestration-patterns",
       "domains/ai-agents/design-md-pattern",
       "domains/ai-agents/openfleet",
+      "domains/cross-domain/ai-agent-artifacts",
       "lessons/agent-orchestration-is-highest-connected-concept",
+      "sources/methodology-artifact-taxonomy-research",
       "sources/src-awesome-design-md",
       "spine/domain-overviews/ai-agents-domain-overview"
     ],
@@ -14906,6 +15464,7 @@
       "domains/knowledge-systems/zettelkasten-methodology",
       "lessons/llm-maintained-wikis-outperform-static-documentation",
       "lessons/notebooklm-as-grounded-research-engine",
+      "sources/methodology-artifact-taxonomy-research",
       "spine/model-second-brain"
     ],
     "architecture": [
@@ -15170,6 +15729,7 @@
     ],
     "framework": [
       "decisions/methodology-framework-design-decisions",
+      "domains/cross-domain/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-framework",
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "spine/methodology-system-map",
@@ -15296,6 +15856,7 @@
       "domains/devops/infrastructure-as-code-patterns",
       "domains/devops/stage-gate-methodology",
       "domains/devops/wsl2-development-patterns",
+      "sources/methodology-artifact-taxonomy-research",
       "spine/domain-overviews/devops-domain-overview"
     ],
     "skyscraper": [
@@ -15722,6 +16283,7 @@
     "planning": [
       "domains/ai-agents/rework-prevention",
       "domains/ai-agents/spec-driven-development",
+      "domains/cross-domain/initiation-and-planning-artifacts",
       "lessons/always-plan-before-executing",
       "lessons/context-management-is-primary-productivity-lever",
       "sources/src-shanraisshan-claude-code-best-practice",
@@ -15758,13 +16320,21 @@
     ],
     "artifacts": [
       "domains/ai-agents/spec-driven-development",
-      "domains/devops/stage-gate-methodology"
+      "domains/cross-domain/ai-agent-artifacts",
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/cross-domain/deployment-closure-monitoring-artifacts",
+      "domains/cross-domain/initiation-and-planning-artifacts",
+      "domains/cross-domain/methodology-artifact-taxonomy",
+      "domains/cross-domain/requirements-and-design-artifacts",
+      "domains/devops/stage-gate-methodology",
+      "sources/methodology-artifact-taxonomy-research"
     ],
     "immutable-checkpoints": [
       "domains/ai-agents/spec-driven-development"
     ],
     "sdlc": [
-      "domains/ai-agents/spec-driven-development"
+      "domains/ai-agents/spec-driven-development",
+      "sources/methodology-artifact-taxonomy-research"
     ],
     "design-before-code": [
       "domains/ai-agents/spec-driven-development"
@@ -15925,6 +16495,12 @@
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
     ],
+    "persona": [
+      "domains/cross-domain/ai-agent-artifacts"
+    ],
+    "compliance": [
+      "domains/cross-domain/ai-agent-artifacts"
+    ],
     "artifact-chains": [
       "domains/cross-domain/artifact-chains-by-model"
     ],
@@ -15942,11 +16518,47 @@
     ],
     "reference": [
       "domains/cross-domain/artifact-chains-by-model",
+      "domains/cross-domain/methodology-artifact-taxonomy",
       "spine/methodology-system-map",
       "spine/standards/reference-page-standards"
     ],
+    "construction": [
+      "domains/cross-domain/construction-and-testing-artifacts"
+    ],
+    "scaffold": [
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/devops/stage-gate-methodology",
+      "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "implement": [
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/devops/stage-gate-methodology"
+    ],
+    "test": [
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/devops/stage-gate-methodology"
+    ],
+    "domain-specific": [
+      "domains/cross-domain/construction-and-testing-artifacts"
+    ],
+    "deployment": [
+      "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
+    "closure": [
+      "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
+    "monitoring": [
+      "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
+    "operations": [
+      "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
+    "lessons-learned": [
+      "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
     "design": [
       "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/requirements-and-design-artifacts",
       "domains/devops/stage-gate-methodology",
       "log/2026-04-09-directive-styling-obsidian"
     ],
@@ -15955,7 +16567,31 @@
       "domains/cross-domain/e003-artifact-type-system-requirements"
     ],
     "requirements": [
-      "domains/cross-domain/e003-artifact-type-system-requirements"
+      "domains/cross-domain/e003-artifact-type-system-requirements",
+      "domains/cross-domain/requirements-and-design-artifacts"
+    ],
+    "initiation": [
+      "domains/cross-domain/initiation-and-planning-artifacts"
+    ],
+    "project-charter": [
+      "domains/cross-domain/initiation-and-planning-artifacts"
+    ],
+    "wbs": [
+      "domains/cross-domain/initiation-and-planning-artifacts"
+    ],
+    "risk": [
+      "domains/cross-domain/initiation-and-planning-artifacts"
+    ],
+    "taxonomy": [
+      "domains/cross-domain/methodology-artifact-taxonomy",
+      "sources/methodology-artifact-taxonomy-research"
+    ],
+    "documents": [
+      "domains/cross-domain/methodology-artifact-taxonomy"
+    ],
+    "documentation": [
+      "domains/cross-domain/methodology-artifact-taxonomy",
+      "log/2026-04-09-directive-docs-layers-old-models"
     ],
     "protocol": [
       "domains/cross-domain/methodology-evolution-protocol"
@@ -16008,6 +16644,15 @@
     ],
     "infrastructure-analysis": [
       "domains/cross-domain/methodology-standards-initiative-infrastructure"
+    ],
+    "adr": [
+      "domains/cross-domain/requirements-and-design-artifacts"
+    ],
+    "tech-spec": [
+      "domains/cross-domain/requirements-and-design-artifacts"
+    ],
+    "interface-spec": [
+      "domains/cross-domain/requirements-and-design-artifacts"
     ],
     "refactoring": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -16185,16 +16830,6 @@
       "domains/devops/infrastructure-as-code-patterns"
     ],
     "document": [
-      "domains/devops/stage-gate-methodology"
-    ],
-    "scaffold": [
-      "domains/devops/stage-gate-methodology",
-      "patterns/scaffold-foundation-infrastructure-features"
-    ],
-    "implement": [
-      "domains/devops/stage-gate-methodology"
-    ],
-    "test": [
       "domains/devops/stage-gate-methodology"
     ],
     "hard-boundaries": [
@@ -16539,6 +17174,7 @@
     "research": [
       "domains/tools-and-platforms/notebooklm",
       "log/2026-04-09-directive-wiki-design-model-research",
+      "sources/methodology-artifact-taxonomy-research",
       "sources/src-notebooklm-claude-code-workflow",
       "spine/model-notebooklm"
     ],
@@ -16914,9 +17550,6 @@
     "bottom-up": [
       "log/2026-04-09-directive-bottom-up-model-completion"
     ],
-    "documentation": [
-      "log/2026-04-09-directive-docs-layers-old-models"
-    ],
     "code-docs": [
       "log/2026-04-09-directive-docs-layers-old-models"
     ],
@@ -17081,6 +17714,9 @@
     ],
     "injection": [
       "patterns/stage-aware-skill-injection"
+    ],
+    "agile": [
+      "sources/methodology-artifact-taxonomy-research"
     ],
     "awesome-list": [
       "sources/src-awesome-design-md"
@@ -17629,7 +18265,9 @@
         "Artifact Type System",
         "Standards-by-Example",
         "E003 Artifact Type System \u2014 Requirements Spec",
+        "Methodology Artifact Taxonomy",
         "Methodology Standards Initiative \u2014 Infrastructure Analysis",
+        "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
         "Learning Path: Methodology Fundamentals",
         "Methodology System Map",
         "Comparison Page Standards",
