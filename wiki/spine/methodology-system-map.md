@@ -124,6 +124,31 @@ Complete map of the methodology system — every component, where it lives, what
 > | task | [[Task Page Standards]] |
 > | note | [[Note Page Standards]] |
 
+> [!abstract] AI Agent Consumption & Elevation
+>
+> | Page | What It Explains |
+> |------|-----------------|
+> | [[How AI Agents Consume the Methodology Wiki]] | 4 entry paths, 3 consumption modes, active vs passive, cross-project |
+> | [[Methodology Config Architecture — How the Pieces Fit Together]] | 6-layer config stack reasoning, what each layer CAN/CANNOT enforce |
+>
+> **16 pages have AI Quick Start callouts** — 5-line actionable guides at the top of each methodology page
+> **7 lessons have Self-Check sections** — 4 questions to ask BEFORE acting, preventing known failures
+
+> [!abstract] Decisions Resolved
+>
+> | Page | What It Resolves |
+> |------|-----------------|
+> | [[Decision: Artifact System Design Decisions]] | 6 decisions: templates, interface spec, bridge pattern, scaffold checks, compliance, completion logs |
+> | [[Decision: Methodology Stage Extension Decisions]] | 4 decisions: initiation stage, deploy stage, status reports, drift detection |
+
+> [!abstract] Lessons Evolved This Session
+>
+> | Page | What It Teaches |
+> |------|----------------|
+> | [[Three Classes of Methodology Output]] | Artifact vs document vs documentation — different quality rules per class |
+> | [[Coverage Blindness — Modeling Only What You Know]] | 100% of 20% = invisible incompleteness. Research outside your system. |
+> | [[Universal Stages, Domain-Specific Artifacts]] | Doc/design = universal. Scaffold/implement/test = domain-specific. |
+
 > [!abstract] History & Learning
 >
 > | Page | What It Explains |
@@ -138,10 +163,10 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | File | Lines | What It Defines | Read By |
 > |------|-------|----------------|---------|
-> | `config/methodology.yaml` | ~400 | 9 models with artifact chains, stages, modes, end conditions, quality tiers | Skills, agents, documentation |
-> | `config/artifact-types.yaml` | ~280 | 17 page types: categories, content thresholds, styling directives, verification methods | validate.py, lint.py |
+> | `config/methodology.yaml` | ~520 | 9 models with artifact chains + template hints, stages, modes, end conditions, quality tiers | Skills, agents, documentation |
+> | `config/artifact-types.yaml` | ~390 | 17 page types + 3 artifact classes + categories, content thresholds, styling, verification | validate.py, lint.py |
 > | `config/domain-profiles/typescript.yaml` | ~60 | TypeScript/Node overrides: pnpm gates, src/ paths, test patterns | Projects adopting methodology |
-> | `config/domain-profiles/python-wiki.yaml` | ~60 | Python/wiki overrides: pipeline post gates, wiki/ paths | This wiki |
+> | `config/domain-profiles/python-wiki.yaml` | ~135 | Python/wiki overrides: pipeline post gates, wiki/ paths, knowledge operations, real example | This wiki |
 > | `config/domain-profiles/infrastructure.yaml` | ~60 | IaC overrides: terraform gates, .tf paths | Infra projects |
 > | `config/wiki-schema.yaml` | ~240 | Frontmatter fields, enums, required sections per type, relationship verbs | validate.py, pipeline.py |
 > | `config/quality-standards.yaml` | ~20 | Linting thresholds, export readiness, duplicate detection | lint.py |
