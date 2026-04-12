@@ -17,6 +17,7 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 ## Pages
 
 - [AI Agent Artifacts — Standards and Guide](ai-agent-artifacts.md) — Guide to artifacts specific to AI agent workflows — document types that don't exist in traditional SDLC because they ...
+- [How AI Agents Consume the Methodology Wiki](ai-methodology-consumption-guide.md) — This page bridges the gap between the methodology wiki as KNOWLEDGE and the methodology wiki as OPERATIONAL GUIDANCE ...
 - [Artifact Chains by Methodology Model](artifact-chains-by-model.md) — Complete artifact chain documentation for all 9 methodology models
 - [Construction and Testing Artifacts — Standards and Guide](construction-and-testing-artifacts.md) — Guide to the artifacts produced during the Scaffold, Implement, and Test stages — the stages where THINGS GET BUILT A...
 - [Deployment, Closure, and Monitoring Artifacts — Standards and Guide](deployment-closure-monitoring-artifacts.md) — Guide to the artifacts produced AFTER implementation — deployment (how to ship), closure (what was learned), and moni...
@@ -41,4 +42,4 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `architecture`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `requirements`, `framework`, `recursive`, `multi-track`, `skyscraper`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `architecture`, `ai-agents`, `second-brain`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `requirements`, `framework`, `recursive`

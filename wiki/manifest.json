@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-12T16:00:35.173640+00:00",
+  "generated": "2026-04-12T16:07:57.618694+00:00",
   "stats": {
-    "pages": 237,
+    "pages": 238,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1555,
-    "tags_unique": 742,
+    "relationships": 1563,
+    "tags_unique": 743,
     "layers": {
       "3": 5,
       "6": 15,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 134,
-      "seed": 74
+      "seed": 75
     }
   },
   "pages": [
@@ -3611,6 +3611,84 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/ai-methodology-consumption-guide.md",
+      "slug": "domains/cross-domain/ai-methodology-consumption-guide",
+      "title": "How AI Agents Consume the Methodology Wiki",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "ai-agents",
+        "methodology",
+        "consumption",
+        "integration",
+        "second-brain",
+        "guide"
+      ],
+      "sources": [
+        {
+          "id": "methodology-model",
+          "type": "wiki",
+          "file": "wiki/spine/model-methodology.md"
+        },
+        {
+          "id": "adoption-guide",
+          "type": "wiki",
+          "file": "wiki/spine/methodology-adoption-guide.md"
+        },
+        {
+          "id": "agent-artifacts",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/ai-agent-artifacts.md"
+        },
+        {
+          "id": "claude-md-patterns",
+          "type": "wiki",
+          "file": "wiki/patterns/claude-md-structural-patterns.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Agent Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology System Map"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Config Architecture \u2014 How the Pieces Fit Together"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15577,8 +15655,8 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 101,
-      "relationship_count": 677
+      "page_count": 102,
+      "relationship_count": 685
     },
     "devops": {
       "page_count": 14,
@@ -15661,6 +15739,7 @@
     "integration": [
       "backlog/epics/E002-ecosystem-integration",
       "domains/automation/mcp-integration-architecture",
+      "domains/cross-domain/ai-methodology-consumption-guide",
       "domains/devops/four-project-ecosystem",
       "spine/model-ecosystem",
       "spine/model-mcp-cli-integration",
@@ -15717,6 +15796,7 @@
       "domains/ai-agents/per-role-command-architecture",
       "domains/ai-agents/task-lifecycle-stage-gating",
       "domains/cross-domain/ai-agent-artifacts",
+      "domains/cross-domain/ai-methodology-consumption-guide",
       "domains/cross-domain/artifact-chains-by-model",
       "domains/cross-domain/construction-and-testing-artifacts",
       "domains/cross-domain/deployment-closure-monitoring-artifacts",
@@ -16094,6 +16174,7 @@
       "domains/ai-agents/design-md-pattern",
       "domains/ai-agents/openfleet",
       "domains/cross-domain/ai-agent-artifacts",
+      "domains/cross-domain/ai-methodology-consumption-guide",
       "lessons/agent-orchestration-is-highest-connected-concept",
       "sources/methodology-artifact-taxonomy-research",
       "sources/src-awesome-design-md",
@@ -16462,6 +16543,7 @@
     ],
     "second-brain": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
+      "domains/cross-domain/ai-methodology-consumption-guide",
       "domains/cross-domain/domain-chain-knowledge",
       "domains/knowledge-systems/knowledge-evolution-pipeline",
       "domains/knowledge-systems/llm-wiki-pattern",
@@ -17195,6 +17277,14 @@
     ],
     "persona": [
       "domains/cross-domain/ai-agent-artifacts"
+    ],
+    "consumption": [
+      "domains/cross-domain/ai-methodology-consumption-guide"
+    ],
+    "guide": [
+      "domains/cross-domain/ai-methodology-consumption-guide",
+      "spine/adoption-guide",
+      "spine/methodology-adoption-guide"
     ],
     "artifact-chains": [
       "domains/cross-domain/artifact-chains-by-model"
@@ -18715,10 +18805,6 @@
       "spine/methodology-adoption-guide",
       "spine/super-model"
     ],
-    "guide": [
-      "spine/adoption-guide",
-      "spine/methodology-adoption-guide"
-    ],
     "domain-overview": [
       "spine/domain-overviews/ai-agents-domain-overview",
       "spine/domain-overviews/ai-models-domain-overview",
@@ -19033,6 +19119,7 @@
       "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like",
       "referenced_by": [
         "Decision: Artifact System Design Decisions",
+        "How AI Agents Consume the Methodology Wiki",
         "Methodology Config Architecture \u2014 How the Pieces Fit Together",
         "Coverage Blindness \u2014 Modeling Only What You Know",
         "Three Classes of Methodology Output",

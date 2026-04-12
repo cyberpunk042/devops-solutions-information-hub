@@ -82,6 +82,44 @@ Artifact type details: `config/artifact-types.yaml`
 Templates for ALL artifacts: `config/templates/` (wiki types) and `config/templates/methodology/` (stage documents)
 
 # ---------------------------------------------------------------------------
+# USING THE SECOND BRAIN — this wiki IS your knowledge base
+# ---------------------------------------------------------------------------
+
+This project IS a research-grade knowledge wiki. You have 237+ pages of synthesized
+methodology knowledge available. USE IT before producing anything.
+
+## Before Starting ANY Work
+
+1. Check `wiki/spine/model-methodology.md` — understand which model applies
+2. Check `wiki/spine/methodology-system-map.md` — find any component you need
+3. Check the per-type standards in `wiki/spine/standards/` — know what GOOD looks like BEFORE writing
+
+## Before Producing ANY Artifact
+
+1. Identify the artifact class: is it a DOCUMENT (constraining), ARTIFACT (by-product), or DOCUMENTATION (explaining)?
+2. Check `wiki/domains/cross-domain/methodology-artifact-taxonomy.md` — 78 types across 11 categories
+3. Check the domain chain for your domain — what specific artifacts does this stage produce HERE?
+   - TypeScript: `wiki/domains/cross-domain/domain-chain-typescript.md`
+   - Python/Wiki: `wiki/domains/cross-domain/domain-chain-python-wiki.md`
+   - Infrastructure: `wiki/domains/cross-domain/domain-chain-infrastructure.md`
+   - Knowledge: `wiki/domains/cross-domain/domain-chain-knowledge.md`
+4. Check `wiki/spine/standards/{type}-page-standards.md` — section-by-section quality bar
+
+## When You Don't Know Something
+
+1. Search the wiki FIRST: `python3 -m tools.view search "query"`
+2. Check existing pages: `python3 -m tools.view refs "Page Title"` for relationships
+3. Check the manifest: `wiki/manifest.json` for page metadata
+4. Research online SECOND — only after checking what the wiki already knows
+
+## The Knowledge Evolution Pipeline
+
+This wiki grows through progressive distillation:
+- L0: Raw sources in raw/ → L1: Source syntheses → L2: Concepts → L3: Comparisons
+- L4: Lessons (≥3 evidence items) → L5: Patterns (≥2 instances) → L6: Decisions (alternatives + rationale)
+- When you LEARN something during work, it should feed back into the wiki as a lesson, pattern, or decision
+
+# ---------------------------------------------------------------------------
 # WHAT THIS IS — project structure and schema
 # ---------------------------------------------------------------------------
 
