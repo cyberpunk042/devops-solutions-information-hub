@@ -20,6 +20,10 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [Artifact Chains by Methodology Model](artifact-chains-by-model.md) — Complete artifact chain documentation for all 9 methodology models
 - [Construction and Testing Artifacts — Standards and Guide](construction-and-testing-artifacts.md) — Guide to the artifacts produced during the Scaffold, Implement, and Test stages — the stages where THINGS GET BUILT A...
 - [Deployment, Closure, and Monitoring Artifacts — Standards and Guide](deployment-closure-monitoring-artifacts.md) — Guide to the artifacts produced AFTER implementation — deployment (how to ship), closure (what was learned), and moni...
+- [Artifact Chain: Infrastructure/IaC Domain](domain-chain-infrastructure.md) — Artifact chain resolution for Infrastructure as Code projects (devops-control-plane, Terraform, Docker, CI/CD)
+- [Artifact Chain: Knowledge/Evolution Domain](domain-chain-knowledge.md) — Artifact chain resolution for knowledge work — source ingestion, synthesis, evolution, and domain curation
+- [Artifact Chain: Python/Wiki Domain](domain-chain-python-wiki.md) — Complete artifact chain resolution for Python tool projects and knowledge wikis (the research wiki itself)
+- [Artifact Chain: TypeScript/Node Domain](domain-chain-typescript.md) — Complete artifact chain resolution for TypeScript/Node
 - [E003 Artifact Type System — Design Document](e003-artifact-type-system-design.md) — Design decisions and architecture for the Artifact Type System
 - [E003 Artifact Type System — Requirements Spec](e003-artifact-type-system-requirements.md) — Formal requirements for the Artifact Type System — the foundation epic of the Methodology Standards Initiative
 - [Initiation and Planning Artifacts — Standards and Guide](initiation-and-planning-artifacts.md) — Complete guide to the artifacts produced BEFORE methodology execution begins — the initiation and planning phases tha...
@@ -36,4 +40,4 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `models`, `reference`, `stage-gate`, `design`, `artifact-types`, `e003`, `type-system`, `architecture`, `requirements`, `framework`, `recursive`, `multi-track`, `skyscraper`, `gap-analysis`, `artifact-system`, `agent-compliance`, `epic-planning`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `architecture`, `requirements`, `framework`, `recursive`, `multi-track`, `skyscraper`

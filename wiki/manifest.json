@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-12T15:16:21.570745+00:00",
+  "generated": "2026-04-12T15:22:09.910572+00:00",
   "stats": {
-    "pages": 227,
+    "pages": 231,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1485,
-    "tags_unique": 727,
+    "relationships": 1513,
+    "tags_unique": 731,
     "layers": {
       "3": 5,
       "6": 13,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 134,
-      "seed": 64
+      "seed": 68
     }
   },
   "pages": [
@@ -3700,6 +3700,280 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Evolution Protocol"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/domain-chain-infrastructure.md",
+      "slug": "domains/cross-domain/domain-chain-infrastructure",
+      "title": "Artifact Chain: Infrastructure/IaC Domain",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "artifact-chain",
+        "infrastructure",
+        "terraform",
+        "iac",
+        "domain-specific",
+        "devops-control-plane"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "terraform-docs",
+          "type": "documentation",
+          "url": "https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Construction and Testing Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chain: TypeScript/Node Domain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chain: Python/Wiki Domain"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/domain-chain-knowledge.md",
+      "slug": "domains/cross-domain/domain-chain-knowledge",
+      "title": "Artifact Chain: Knowledge/Evolution Domain",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "artifact-chain",
+        "knowledge",
+        "evolution",
+        "wiki",
+        "domain-specific",
+        "second-brain"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "wiki-evolve",
+          "type": "file",
+          "file": "tools/evolve.py"
+        },
+        {
+          "id": "zettelkasten",
+          "type": "article",
+          "url": "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chain: TypeScript/Node Domain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chain: Python/Wiki Domain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chain: Infrastructure/IaC Domain"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/domain-chain-python-wiki.md",
+      "slug": "domains/cross-domain/domain-chain-python-wiki",
+      "title": "Artifact Chain: Python/Wiki Domain",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "artifact-chain",
+        "python",
+        "wiki",
+        "domain-specific",
+        "research-wiki"
+      ],
+      "sources": [
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "wiki-pipeline",
+          "type": "file",
+          "file": "tools/pipeline.py"
+        },
+        {
+          "id": "wiki-validate",
+          "type": "file",
+          "file": "tools/validate.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Construction and Testing Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chain: TypeScript/Node Domain"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/domain-chain-typescript.md",
+      "slug": "domains/cross-domain/domain-chain-typescript",
+      "title": "Artifact Chain: TypeScript/Node Domain",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "artifact-chain",
+        "typescript",
+        "node",
+        "domain-specific",
+        "openarms",
+        "openfleet"
+      ],
+      "sources": [
+        {
+          "id": "openarms-chain",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+        },
+        {
+          "id": "openarms-methodology",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        },
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Construction and Testing Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Requirements and Design Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -14934,8 +15208,8 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 91,
-      "relationship_count": 607
+      "page_count": 95,
+      "relationship_count": 635
     },
     "devops": {
       "page_count": 14,
@@ -14995,6 +15269,7 @@
     ],
     "evolution": [
       "backlog/epics/E001-local-inference-engine",
+      "domains/cross-domain/domain-chain-knowledge",
       "domains/cross-domain/methodology-evolution-protocol",
       "domains/knowledge-systems/knowledge-evolution-pipeline",
       "log/2026-04-10-directive-quality-evolution-epic",
@@ -15029,6 +15304,7 @@
       "domains/ai-agents/rework-prevention",
       "domains/ai-agents/spec-driven-development",
       "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/domain-chain-typescript",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/four-project-ecosystem",
       "domains/devops/immune-system-rules",
@@ -15045,6 +15321,7 @@
     "openarms": [
       "backlog/epics/E002-ecosystem-integration",
       "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/domain-chain-typescript",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/execution-modes-and-end-conditions",
       "domains/devops/four-project-ecosystem",
@@ -15072,6 +15349,10 @@
       "domains/cross-domain/artifact-chains-by-model",
       "domains/cross-domain/construction-and-testing-artifacts",
       "domains/cross-domain/deployment-closure-monitoring-artifacts",
+      "domains/cross-domain/domain-chain-infrastructure",
+      "domains/cross-domain/domain-chain-knowledge",
+      "domains/cross-domain/domain-chain-python-wiki",
+      "domains/cross-domain/domain-chain-typescript",
       "domains/cross-domain/e003-artifact-type-system-design",
       "domains/cross-domain/e003-artifact-type-system-requirements",
       "domains/cross-domain/initiation-and-planning-artifacts",
@@ -15752,6 +16033,7 @@
     ],
     "second-brain": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface",
+      "domains/cross-domain/domain-chain-knowledge",
       "domains/knowledge-systems/knowledge-evolution-pipeline",
       "domains/knowledge-systems/llm-wiki-pattern",
       "domains/knowledge-systems/para-methodology",
@@ -15929,6 +16211,7 @@
     ],
     "infrastructure": [
       "decisions/wiki-first-with-lightrag-upgrade-path",
+      "domains/cross-domain/domain-chain-infrastructure",
       "domains/devops/devops-control-plane",
       "patterns/enforcement-hook-patterns",
       "patterns/scaffold-foundation-infrastructure-features"
@@ -16157,6 +16440,7 @@
     ],
     "typescript": [
       "domains/ai-agents/harness-engineering",
+      "domains/cross-domain/domain-chain-typescript",
       "sources/src-harness-engineering"
     ],
     "lifecycle": [
@@ -16539,7 +16823,11 @@
       "domains/devops/stage-gate-methodology"
     ],
     "domain-specific": [
-      "domains/cross-domain/construction-and-testing-artifacts"
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/cross-domain/domain-chain-infrastructure",
+      "domains/cross-domain/domain-chain-knowledge",
+      "domains/cross-domain/domain-chain-python-wiki",
+      "domains/cross-domain/domain-chain-typescript"
     ],
     "deployment": [
       "domains/cross-domain/deployment-closure-monitoring-artifacts"
@@ -16555,6 +16843,47 @@
     ],
     "lessons-learned": [
       "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
+    "artifact-chain": [
+      "domains/cross-domain/domain-chain-infrastructure",
+      "domains/cross-domain/domain-chain-knowledge",
+      "domains/cross-domain/domain-chain-python-wiki",
+      "domains/cross-domain/domain-chain-typescript"
+    ],
+    "terraform": [
+      "domains/cross-domain/domain-chain-infrastructure"
+    ],
+    "iac": [
+      "domains/cross-domain/domain-chain-infrastructure",
+      "domains/devops/infrastructure-as-code-patterns",
+      "spine/model-design-md"
+    ],
+    "devops-control-plane": [
+      "domains/cross-domain/domain-chain-infrastructure",
+      "domains/devops/four-project-ecosystem",
+      "spine/model-ecosystem"
+    ],
+    "knowledge": [
+      "domains/cross-domain/domain-chain-knowledge"
+    ],
+    "wiki": [
+      "domains/cross-domain/domain-chain-knowledge",
+      "domains/cross-domain/domain-chain-python-wiki",
+      "domains/knowledge-systems/wiki-ingestion-pipeline",
+      "log/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "python": [
+      "domains/cross-domain/domain-chain-python-wiki",
+      "domains/tools-and-platforms/notebooklm-py-cli",
+      "sources/src-claude-world-notebooklm-skill",
+      "sources/src-pleaseprompto-notebooklm-skill"
+    ],
+    "research-wiki": [
+      "domains/cross-domain/domain-chain-python-wiki",
+      "domains/devops/four-project-ecosystem"
+    ],
+    "node": [
+      "domains/cross-domain/domain-chain-typescript"
     ],
     "design": [
       "domains/cross-domain/e003-artifact-type-system-design",
@@ -16775,13 +17104,6 @@
     "time-limit": [
       "domains/devops/execution-modes-and-end-conditions"
     ],
-    "devops-control-plane": [
-      "domains/devops/four-project-ecosystem",
-      "spine/model-ecosystem"
-    ],
-    "research-wiki": [
-      "domains/devops/four-project-ecosystem"
-    ],
     "multi-project": [
       "domains/devops/four-project-ecosystem",
       "spine/model-ecosystem"
@@ -16810,10 +17132,6 @@
     ],
     "agent-safety": [
       "domains/devops/immune-system-rules"
-    ],
-    "iac": [
-      "domains/devops/infrastructure-as-code-patterns",
-      "spine/model-design-md"
     ],
     "infrastructure-as-code": [
       "domains/devops/infrastructure-as-code-patterns",
@@ -17054,10 +17372,6 @@
     "verbatim-log": [
       "domains/knowledge-systems/wiki-backlog-pattern"
     ],
-    "wiki": [
-      "domains/knowledge-systems/wiki-ingestion-pipeline",
-      "log/2026-04-09-directive-docs-layers-old-models"
-    ],
     "data-processing": [
       "domains/knowledge-systems/wiki-ingestion-pipeline"
     ],
@@ -17140,11 +17454,6 @@
     ],
     "agent-access": [
       "domains/tools-and-platforms/multi-channel-ai-agent-access"
-    ],
-    "python": [
-      "domains/tools-and-platforms/notebooklm-py-cli",
-      "sources/src-claude-world-notebooklm-skill",
-      "sources/src-pleaseprompto-notebooklm-skill"
     ],
     "api": [
       "domains/tools-and-platforms/notebooklm-py-cli"
