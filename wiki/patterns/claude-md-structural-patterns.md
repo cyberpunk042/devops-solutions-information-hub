@@ -12,11 +12,13 @@ derived_from:
   - "Always Plan Before Executing"
 instances:
   - page: "OpenArms AGENTS.md"
-    context: "411-line agent directive with hard/soft rule separation, sacrosanct section, 20 operational lessons"
-  - page: "Research Wiki CLAUDE.md"
-    context: "200-line flat prose — lower compliance rates, agents lose thread"
+    context: "410 lines, 0 tables, 0 dividers, 44 bullet lists, 0 numbered lists — documents what fails but doesn't use structural techniques"
   - page: "OpenArms agent-directive.md"
-    context: "Short-form (83 lines) with tables, commands, access levels — higher compliance"
+    context: "424 lines, 3 tables, 9 dividers, 31 numbered lists, 14-step work loop — implements all 6 structural techniques, highest compliance"
+  - page: "Research Wiki CLAUDE.md"
+    context: "170 lines, restructured 2026-04-11 with tables, dividers, ALLOWED/FORBIDDEN — intermediate compliance"
+  - page: "OpenArms stage skills (5 files)"
+    context: "29-43 lines each, MUST/MUST NOT lists, runtime state injection, stage-specific narrowing — highest per-stage compliance"
 created: 2026-04-11
 updated: 2026-04-11
 sources:
@@ -52,13 +54,28 @@ Structural formatting techniques that improve agent compliance with methodology 
 
 ### Why Structure Matters More Than Content
 
-LLMs process CLAUDE.md as part of their system prompt. The structural properties of the text affect compliance more than the semantic content:
+LLMs process CLAUDE.md as part of their system prompt. The structural properties of the text affect compliance more than the semantic content.
 
-> [!warning] The Flat Prose Problem
+> [!warning] The Evidence: 75% Violation Rate From Prose Instructions
 >
-> A 200-line block of narrative instructions creates a "wall of text" that agents scan non-uniformly. Rules buried in paragraph 15 receive less attention than rules in paragraph 1. Rules stated in prose ("you should try to...") receive less compliance than rules in tables or lists ("FORBIDDEN: ..."). This is not a reading comprehension failure — it's an attention distribution problem.
+> OpenArms ran autonomous agents overnight (2026-04-10). Instructions about stage boundaries existed in AGENTS.md since v4. Violation rate: 75%. The same rules reformatted as numbered sequences + tables + per-stage skills achieved ~90% compliance. The CONTENT was identical — the STRUCTURE changed compliance by 65 percentage points.
 
-The patterns below address this by creating **structural distinctiveness** — making important rules visually different from surrounding text so they receive disproportionate attention.
+> [!abstract] Quantified Comparison: Two Documents With the Same Rules
+>
+> | Metric | AGENTS.md (low compliance) | agent-directive.md (high compliance) |
+> |--------|---------------------------|--------------------------------------|
+> | Lines | 410 | 424 |
+> | Tables | 0 | 3 major tables |
+> | Divider lines | 0 | 9 visual breaks |
+> | Numbered lists | 0 | 31 (14-step loop, 8 hierarchy rules, etc.) |
+> | Bullet lists | 44 | 18 |
+> | Code blocks | 2 | 10 |
+> | Sections avg length | 19 lines (shallow) | 42 lines (deep, sequential) |
+> | Organization | Topic-based (independent) | Process-based (sequential) |
+>
+> AGENTS.md documents what FAILED. agent-directive.md implements what WORKS. Same information, different structure, vastly different compliance.
+
+The core insight: compliance comes from **removing choice** — tables eliminate interpretation, numbered sequences create cognitive chains that are hard to skip, stage-specific injection prevents seeing ahead, command checkpoints make transitions explicit.
 
 ### Pattern 1: Sacrosanct Section
 
@@ -207,23 +224,51 @@ Examples:
 
 ## Instances
 
-> [!example]- Instance 1: OpenArms AGENTS.md (411 lines, high compliance)
+> [!example]- Instance 1: OpenArms agent-directive.md (424 lines — HIGHEST compliance)
 >
-> Uses: Sacrosanct section (top), Hard rules table, ALLOWED/FORBIDDEN per stage, Progressive disclosure (identity → rules → workflow → background), Command checkpoints (/stage-complete, /task-done, /concern), Section dividers throughout, Anchor phrases ("instruction-based enforcement doesn't work" repeated in learnings and methodology sections), Concrete examples (commit format, Done When format).
+> **Uses ALL 6 techniques:**
+> - 14-step numbered work loop (31% of document) — creates cognitive chain agents must follow sequentially
+> - 3 major tables: task_type→stages, readiness ranges, stage methodology (what you DO / do NOT)
+> - 9 divider lines at major section breaks
+> - Sections labeled MANDATORY/REQUIRED in headings
+> - Per-stage Quality Gates (5 separate subsections, 3-4 checkpoints each)
+> - "What You Must Never Do" section with 14 numbered items + causal explanations
 >
-> Result: Combined with infrastructure enforcement, achieved viable autonomous agent runs. Agents follow stage boundaries ~90% of the time (up from ~25% with prose-only).
+> **Result:** Combined with infrastructure enforcement (hooks + harness), achieved ~90% stage boundary compliance. The 14-step loop is the core — agents can't skip a numbered step without acknowledging the skip.
 
-> [!example]- Instance 2: Research Wiki CLAUDE.md (200 lines, moderate compliance)
+> [!example]- Instance 2: OpenArms AGENTS.md (410 lines — LOW compliance despite good content)
 >
-> Uses: Progressive disclosure (partially — structure is logical but flat), Some concrete examples (pipeline commands). Missing: Sacrosanct section, Hard/soft separation, ALLOWED/FORBIDDEN lists, Command checkpoints, Section dividers, Anchor phrases.
+> **Uses 0 of the 6 techniques:**
+> - 0 tables, 0 dividers, 0 numbered lists
+> - 44 bullet lists (pick-and-choose, not sequential)
+> - Topic-based organization (independent sections, no sequence)
+> - 19-line average sections (shallow, browsable but not enforcing)
+> - Contains the BEST wisdom in the ecosystem (20 operational lessons, each traced to a specific bug)
 >
-> Result: Agents frequently skip stages, produce wrong artifacts, ignore quality gates. Compliance is instruction-dependent (varies by model and session length).
+> **Result:** 75% violation rate on stage boundaries despite clear prose rules. The Learnings section DOCUMENTS why agent-directive.md works better — but AGENTS.md itself doesn't use those lessons in its own format. The irony is the evidence.
 
-> [!example]- Instance 3: OpenArms agent-directive.md short form (83 lines, focused compliance)
+> [!example]- Instance 3: OpenArms Stage Skills (5 files, 29-43 lines each — HIGHEST per-stage compliance)
 >
-> Uses: Hard vs soft tables, Access level table (CAN vs CANNOT), Commands table, Stage workflow in 6 numbered steps. Compact but highly structured.
+> **The key technique: stage-specific narrowing**
+> - Agent sees ONLY its current stage's skill — no cross-stage visibility
+> - Each skill reads runtime state: `!cat .openarms/current-task-id`
+> - MUST/MUST NOT lists (3-5 items, not 14)
+> - Ends with explicit checkpoint: "When Done: Call /stage-complete"
+> - Shortest, most focused instructions produce highest compliance per-rule
 >
-> Result: Higher per-rule compliance than the long-form AGENTS.md for the specific rules it covers. Shows that compact + structured > verbose + flat.
+> **Result:** "One task at a time. Seeing 8 tasks causes rushing. Seeing 1 task causes focus." Same principle applied to stages.
+
+> [!example]- Instance 4: Research Wiki CLAUDE.md (170 lines — INTERMEDIATE, restructured 2026-04-11)
+>
+> **Uses 5 of 6 techniques (after restructure):**
+> - Sacrosanct section with operator quotes at top
+> - ALLOWED/FORBIDDEN per-stage table
+> - Hard vs Soft rule separation as tables
+> - 7 divider lines
+> - Model selection table
+> - Missing: numbered work loop (not applicable — wiki doesn't have a harness)
+>
+> **Result:** Improved from flat prose. Not yet measured quantitatively — needs multiple sessions to assess.
 
 ## When To Apply
 

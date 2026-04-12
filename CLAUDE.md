@@ -33,17 +33,15 @@ spine for the devops ecosystem (openfleet, AICP, DSPD, devops-control-plane).
 "Continue" means advance within the CURRENT stage. NOT skip to the next stage.
 "Get started" means start the CURRENT stage. NOT skip to the end.
 
-## Hard Rules (violations will be caught)
+## Hard Rules (MANDATORY — numbered, sequential, no exceptions)
 
-| Rule | Why |
-|------|-----|
-| NEVER skip stages | Document before design. Design before scaffold. Scaffold before implement. |
-| NEVER write code during document/design | Understanding first, then building. |
-| ALWAYS log directives verbatim in raw/notes/ BEFORE acting | Core methodology. Proactive, not reactive. |
-| ALWAYS read full files before synthesizing | `wc -l` first. Offset reads for >200 lines. Page ≥0.25× source length. |
-| ALWAYS verify depth | Source DESCRIBES a thing → you MUST read a real INSTANCE. README ≠ understanding. |
-| ALWAYS run `pipeline post` after wiki changes | 6-step chain validates everything. Errors block completion. |
-| NEVER claim done without evidence | Run the command. Show the output. 0 errors = done. |
+1. NEVER skip stages. Document before design. Design before scaffold. Scaffold before implement.
+2. NEVER write code during document/design. Understanding first, then building.
+3. ALWAYS log directives verbatim in raw/notes/ BEFORE acting. Core methodology. Proactive, not reactive.
+4. ALWAYS read full files before synthesizing. `wc -l` first. Offset reads for >200 lines. Page ≥0.25× source length.
+5. ALWAYS verify depth. Source DESCRIBES a thing → you MUST read a real INSTANCE. README ≠ understanding.
+6. ALWAYS run `pipeline post` after wiki changes. 6-step chain validates everything. Errors block completion.
+7. NEVER claim done without evidence. Run the command. Show the output. 0 errors = done.
 
 ## Soft Rules (require judgment)
 
