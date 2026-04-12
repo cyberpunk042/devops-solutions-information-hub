@@ -75,6 +75,15 @@ This lesson applies when:
 >
 > Small projects where one person does everything may not need formal class distinction — the same person writes the spec, builds the code, and writes the docs. The distinction matters when: (a) agents follow specs as binding constraints, (b) validation tooling checks different things for different types, (c) multiple people/agents produce different types and need to know what quality bar applies.
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself BEFORE producing any artifact:
+>
+> 1. **What CLASS am I producing?** Document (constraining spec), Artifact (by-product), or Documentation (explaining)?
+> 2. **Am I applying the RIGHT quality rules for this class?** A requirements spec needs binding FR/NFR/AC — not a nice summary.
+> 3. **Am I treating a DOCUMENT as if it were documentation?** If I'm writing a "nice explanation" when I should be writing "binding constraints that agents must follow" — I'm misclassifying.
+> 4. **Am I treating 15 different things as one thing?** If I'm putting 15 entries in one page instead of giving each its own proper treatment — I'm compressing different classes into one.
+
 ## Relationships
 
 - DERIVED FROM: [[Methodology Artifact Taxonomy]]

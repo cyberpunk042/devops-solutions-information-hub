@@ -83,6 +83,15 @@ This lesson applies when:
 >
 > Small projects or spikes that intentionally use a subset of artifacts (Pyramid tier). The lesson is about UNINTENTIONAL incompleteness — not knowing what you're missing. Intentional compression with documented reasoning (Pyramid) is a valid choice. The problem is when the system BELIEVES it's complete because it can't see what it doesn't define.
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself BEFORE declaring a type system, taxonomy, or coverage report "complete":
+>
+> 1. **Did I research OUTSIDE my own system?** If my artifact types are based only on what I currently produce, I'm blind to what I don't produce.
+> 2. **Am I reporting "0 errors" on a narrow scope?** What am I NOT checking? What types am I NOT validating?
+> 3. **Would an external taxonomy (SDLC, Agile, IEEE) have types I don't?** If yes, my system is incomplete — even if it passes its own tests.
+> 4. **Am I at 100% of 20%?** Full validation of a partial scope creates false confidence. Check the denominator.
+
 ## Relationships
 
 - DERIVED FROM: [[Methodology Artifact Taxonomy]]

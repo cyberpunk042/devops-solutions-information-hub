@@ -81,6 +81,15 @@ This lesson applies to any system with sequential stages and a decision-making a
 
 **Anti-pattern to watch for:** An agent that interprets every positive signal ("sounds good," "great," "let's go") as permission to advance to the next stage. These are acknowledgments, not gate approvals.
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself when you hear "continue", "go ahead", "get started", "sounds good":
+>
+> 1. **What stage am I currently in?** Document? Design? Scaffold? Implement? Test?
+> 2. **Does the user's words EXPLICITLY name a different stage?** "Skip to implement" = explicit. "Continue" = NOT explicit.
+> 3. **If not explicit → stay in my current stage.** Advance WITHIN the stage, not TO the next stage.
+> 4. **Am I feeling the urge to "show progress" by jumping ahead?** That urge is the bias. Resist it. Understanding feels slow but IS the work.
+
 ## Relationships
 
 - DERIVED FROM: [[Stage-Gate Methodology]]

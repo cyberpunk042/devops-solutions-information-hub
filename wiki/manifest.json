@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-12T16:26:40.973654+00:00",
+  "generated": "2026-04-12T16:32:10.679192+00:00",
   "stats": {
     "pages": 238,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1563,
+    "relationships": 1559,
     "tags_unique": 743,
     "layers": {
       "3": 5,
@@ -8584,24 +8584,7 @@
         "Model Registry",
         "Models Are Built in Layers, Not All at Once"
       ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Model Registry"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Models Are Built in Layers, Not All at Once"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "The Agent Must Practice What It Documents"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Model: LLM Wiki"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "lessons/multi-stage-ingestion-beats-single-pass.md",
@@ -15656,7 +15639,7 @@
     },
     "cross-domain": {
       "page_count": 102,
-      "relationship_count": 685
+      "relationship_count": 681
     },
     "devops": {
       "page_count": 14,

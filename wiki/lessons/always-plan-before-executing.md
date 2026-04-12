@@ -82,6 +82,15 @@ Even at the individual agent level, Claude Code's best practices recommend using
 
 **Anti-pattern to avoid:** Treating planning as an optional courtesy step ("here's what I'm going to do...") rather than an enforced workflow gate. The lesson's value comes from making planning a blocker on execution, not a preamble that can be skimmed or skipped.
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself BEFORE writing any code or producing any artifact:
+>
+> 1. **Do I have a plan?** Not a vague idea — a specific plan with steps. If not, I'm about to prompt-react.
+> 2. **Did the user approve the plan?** If I planned in my head without presenting it, it's not an approved plan.
+> 3. **Am I skipping Document/Design stages because "the solution is obvious"?** The solution felt obvious to the OpenArms agent that produced 2,073 orphaned lines too.
+> 4. **Is this a 5.5x token cost decision?** Planning costs 1x. Rework costs 5.5x. Planning is cheaper even when it feels slower.
+
 ## Relationships
 
 - DERIVED FROM: [[Harness Engineering]]

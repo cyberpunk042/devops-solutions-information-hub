@@ -68,6 +68,15 @@ A standard that exists only as text is an ASPIRATION. A standard that demonstrat
 > [!abstract] The general principle
 > The highest-quality proof that a standard works is an artifact that follows it. Ship the standard AND the example as one artifact wherever possible.
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself when writing ANY standard, rule, or quality bar:
+>
+> 1. **Does this standard have an exemplar?** If I'm defining what good looks like but can't point to a page that IS good, the standard is untested.
+> 2. **Does my OWN page follow the standard I'm defining?** If my standards page about callout usage has zero callouts, it fails its own test.
+> 3. **Am I writing rules I don't follow?** Check: would my current work pass the quality bar I just wrote? If not, fix my work FIRST.
+> 4. **Is the exemplar ANNOTATED?** Pointing at a page and saying "like this" isn't enough. The reader needs to know WHY each choice was made.
+
 ## Relationships
 
 - DERIVED FROM: [[The Agent Must Practice What It Documents]]

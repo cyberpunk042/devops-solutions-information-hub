@@ -73,6 +73,15 @@ The first 14 model pages failed every row of this table. They used file paths in
 
 ## Relationships
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself when creating or reviewing a model page:
+>
+> 1. **Is this a SYSTEM or a reading list?** A system defines components, interactions, failure modes, adoption paths. A reading list just links to other pages.
+> 2. **Could someone IMPLEMENT from this page?** If they'd need to read 5 other pages to understand how it works, it's a reading list, not a system definition.
+> 3. **Does it have concrete examples?** Not "this is used in many projects" — WHICH projects, showing WHAT, with what RESULT?
+> 4. **Would the operator say "there is no trace of what I asked"?** The original 14 model pages were 80-110 line reading lists. The operator's response: "mindless document." Systems are 200+ lines with structure.
+
 - DERIVED FROM: [[Model Registry]]
 - RELATES TO: [[Models Are Built in Layers, Not All at Once]]
 - RELATES TO: [[The Agent Must Practice What It Documents]]
@@ -80,10 +89,6 @@ The first 14 model pages failed every row of this table. They used file paths in
 
 ## Backlinks
 
-[[Model Registry]]
-[[Models Are Built in Layers, Not All at Once]]
-[[The Agent Must Practice What It Documents]]
-[[Model: LLM Wiki]]
 [[Methodology Is a Framework, Not a Fixed Pipeline]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Standards Initiative — Honest Assessment]]

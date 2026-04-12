@@ -80,6 +80,15 @@ This lesson applies when:
 >
 > Projects that operate in a single domain and will never share methodology across domains don't need the two-layer split. A TypeScript-only team can hardcode everything. The split matters when methodology must be PORTABLE — shared across the research wiki, OpenArms, OpenFleet, AICP, and devops-control-plane, each with different technology stacks.
 
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself BEFORE defining artifacts or building methodology configs:
+>
+> 1. **Am I putting domain-specific content in the universal layer?** If my methodology.yaml mentions `pnpm tsgo` or `.ts` files, it's not portable. Domain specifics go in domain-profiles ONLY.
+> 2. **Am I reinventing document/design templates per domain?** Requirements Specs and ADRs look the same everywhere. Don't create TypeScript-flavored requirements templates — use the universal one.
+> 3. **Did I check the domain chain page for MY domain?** The scaffold/implement/test artifacts are COMPLETELY different per domain. Don't guess — read the chain page.
+> 4. **Am I hardcoding when I should be configuring?** If the same artifact works for 3 domains with different paths, it should be a generic artifact + domain profile override, not 3 separate artifact definitions.
+
 ## Relationships
 
 - DERIVED FROM: [[Methodology Artifact Taxonomy]]
