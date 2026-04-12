@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T00:49:18.336691+00:00",
+  "generated": "2026-04-12T00:56:26.840776+00:00",
   "stats": {
     "pages": 220,
     "domains": 9,
@@ -352,7 +352,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "Models Are Systems Not Documents"
+          "target": "Models Are Systems, Not Documents"
         },
         {
           "verb": "IMPLEMENTS",
@@ -3874,7 +3874,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Models Are Systems Not Documents"
+          "target": "Models Are Systems, Not Documents"
         },
         {
           "verb": "RELATES TO",
@@ -3932,7 +3932,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Models Are Systems Not Documents"
+          "target": "Models Are Systems, Not Documents"
         },
         {
           "verb": "FEEDS INTO",
@@ -3940,7 +3940,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Epic: Standards-by-Example"
+          "target": "Standards-by-Example"
         }
       ]
     },
@@ -11725,7 +11725,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Super-Model"
+          "target": "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
         }
       ]
     },
@@ -11764,7 +11764,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Super-Model"
+          "target": "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
         }
       ]
     },
@@ -11841,7 +11841,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Super-Model"
+          "target": "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
         }
       ]
     },
@@ -17612,8 +17612,7 @@
     {
       "target": "Epic: Standards-by-Example",
       "referenced_by": [
-        "Artifact Type System",
-        "Methodology Standards Initiative \u2014 Honest Assessment"
+        "Artifact Type System"
       ]
     },
     {
@@ -17690,14 +17689,6 @@
       ]
     },
     {
-      "target": "Models Are Systems Not Documents",
-      "referenced_by": [
-        "Standards-by-Example",
-        "Methodology Standards Initiative \u2014 Gap Analysis",
-        "Methodology Standards Initiative \u2014 Honest Assessment"
-      ]
-    },
-    {
       "target": "Plan-Execute-Review Cycle",
       "referenced_by": [
         "Agent Compliance Framework",
@@ -17705,14 +17696,6 @@
         "Methodology Standards Initiative \u2014 Gap Analysis",
         "Methodology Standards Initiative \u2014 Infrastructure Analysis",
         "CLAUDE.md Structural Patterns for Agent Compliance"
-      ]
-    },
-    {
-      "target": "Super-Model",
-      "referenced_by": [
-        "Evolution: Methodology System",
-        "Learning Path: Methodology Fundamentals",
-        "Methodology Adoption Guide"
       ]
     },
     {

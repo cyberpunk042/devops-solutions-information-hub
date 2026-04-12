@@ -81,7 +81,7 @@ The methodology system is at v1.0 — first complete version with:
 - BUILDS ON: [[Stage-Gate Methodology]]
 - RELATES TO: [[Methodology Evolution Protocol]]
 - RELATES TO: [[Model: Methodology Standards — What Good Looks Like]]
-- FEEDS INTO: [[Super-Model]]
+- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
@@ -89,4 +89,4 @@ The methodology system is at v1.0 — first complete version with:
 [[Stage-Gate Methodology]]
 [[Methodology Evolution Protocol]]
 [[Model: Methodology Standards — What Good Looks Like]]
-[[Super-Model]]
+[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]

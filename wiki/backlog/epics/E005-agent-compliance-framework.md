@@ -6,7 +6,7 @@ status: in-progress
 priority: P0
 task_type: epic
 current_stage: document
-readiness: 15
+readiness: 30
 stages_completed: [document]
 artifacts:
   - wiki/patterns/claude-md-structural-patterns.md

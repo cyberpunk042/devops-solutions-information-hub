@@ -81,7 +81,7 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 
 - DEPENDS ON: [[Epic: Artifact Type System]] (E003)
 - BUILDS ON: [[Standards Must Preach by Example]]
-- BUILDS ON: [[Models Are Systems Not Documents]]
+- BUILDS ON: [[Models Are Systems, Not Documents]]
 - IMPLEMENTS: [[Model: LLM Wiki Standards — What Good Looks Like]]
 - IMPLEMENTS: [[Model: Quality and Failure Prevention]]
 - FEEDS INTO: [[Model: Methodology Standards — What Good Looks Like]]
@@ -91,8 +91,9 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 
 [[Epic: Artifact Type System]]
 [[Standards Must Preach by Example]]
-[[Models Are Systems Not Documents]]
+[[Models Are Systems, Not Documents]]
 [[Model: LLM Wiki Standards — What Good Looks Like]]
 [[Model: Quality and Failure Prevention]]
 [[Model: Methodology Standards — What Good Looks Like]]
 [[Model: Wiki Design]]
+[[Methodology Standards Initiative — Honest Assessment]]

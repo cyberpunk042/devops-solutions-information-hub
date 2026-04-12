@@ -241,7 +241,7 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 - RELATES TO: [[Stage-Gate Methodology]]
 - RELATES TO: [[Four-Project Ecosystem]]
 - FEEDS INTO: [[Model: Ecosystem]]
-- FEEDS INTO: [[Super-Model]]
+- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
@@ -252,7 +252,7 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 [[Stage-Gate Methodology]]
 [[Four-Project Ecosystem]]
 [[Model: Ecosystem]]
-[[Super-Model]]
+[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Enforcement Hook Patterns]]
 [[Learning Path: Methodology Fundamentals]]
