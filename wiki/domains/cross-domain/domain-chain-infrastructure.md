@@ -19,6 +19,14 @@ tags: [methodology, artifact-chain, infrastructure, terraform, iac, domain-speci
 
 # Artifact Chain: Infrastructure/IaC Domain
 
+> [!tip] AI Quick Start — Working on Infrastructure as Code
+>
+> 1. **Gate commands:** `terraform validate` (syntax), `terraform plan` (changes correct), `terraform apply` (staging only)
+> 2. **Scaffold:** `variable` and `output` blocks + module interfaces. NO `resource` blocks. NO `data` sources.
+> 3. **Implement:** `resource` blocks + module implementations + existing environment configs reference new modules
+> 4. **Test:** `terraform plan` shows expected changes (no surprise destroys) + `terraform apply` succeeds in staging
+> 5. **Unique to infra:** Deploy stage (optional, production apply), drift detection (use bug-fix model), state management
+
 ## Summary
 
 Artifact chain resolution for Infrastructure as Code projects (devops-control-plane, Terraform, Docker, CI/CD). Maps methodology stages to IaC-specific artifacts. The unique characteristic of this domain: the "scaffold" stage defines infrastructure STRUCTURE (variables, outputs, module interfaces), the "implement" stage creates RESOURCES (actual infrastructure), and the "test" stage verifies via `terraform plan` and `terraform apply` against a staging environment. State management and drift detection add artifact types not found in code domains.

@@ -22,6 +22,14 @@ tags: [methodology, artifact-chain, knowledge, evolution, wiki, domain-specific,
 
 # Artifact Chain: Knowledge/Evolution Domain
 
+> [!tip] AI Quick Start — Working on Wiki Knowledge (Ingestion, Evolution, Curation)
+>
+> 1. **Ingesting a source?** Fetch → read FULL file → synthesize (≥25% ratio to raw) → `pipeline post` → cross-reference
+> 2. **Evolving a lesson/pattern/decision?** Find ≥2 convergent pages → write evolved page with evidence → `pipeline post`
+> 3. **Scaffold in this domain** = `pipeline scaffold <type> "Title"` — creates frontmatter + section headings
+> 4. **Implement in this domain** = write real content in every section, meeting per-type quality bar
+> 5. **Progressive distillation layers:** L0 raw → L1 synthesis → L2 concept → L3 comparison → L4 lesson → L5 pattern → L6 decision
+
 ## Summary
 
 Artifact chain resolution for knowledge work — source ingestion, synthesis, evolution, and domain curation. This domain is UNIQUE because the artifacts are THEMSELVES wiki pages — the product and the methodology documentation are the same medium. The "scaffold" equivalent is frontmatter + section structure. The "implement" equivalent is substantive content. The "test" equivalent is pipeline post validation. This domain primarily uses two methodology models: Documentation (single wiki page) and Knowledge Evolution (distill from existing pages).

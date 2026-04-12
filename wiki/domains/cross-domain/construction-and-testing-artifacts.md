@@ -22,6 +22,14 @@ tags: [methodology, construction, testing, artifacts, scaffold, implement, test,
 
 # Construction and Testing Artifacts — Standards and Guide
 
+> [!tip] AI Quick Start — You're in Scaffold, Implement, or Test Stage
+>
+> 1. **These stages are DOMAIN-SPECIFIC** — what you produce depends entirely on your tech stack
+> 2. **Check your domain chain page** for concrete file paths, gate commands, and ALLOWED/FORBIDDEN code examples
+> 3. **Scaffold rule:** ZERO behavior. Types, schemas, stubs only. Function bodies ≤ 3 lines.
+> 4. **Implement rule:** MUST wire into existing runtime. Code nobody imports is orphaned (Bug 6: 2,073 lines).
+> 5. **Test rule:** ZERO failures. Replace ALL placeholders with real assertions. Run the gate command.
+
 ## Summary
 
 Guide to the artifacts produced during the Scaffold, Implement, and Test stages — the stages where THINGS GET BUILT AND VERIFIED. Unlike requirements and design artifacts (which are domain-agnostic documents), construction and testing artifacts are HIGHLY DOMAIN-SPECIFIC. A TypeScript project scaffolds .ts type files; a Python project scaffolds .yaml configs; an infrastructure project scaffolds .tf variable definitions. This page defines the universal patterns that apply across all domains, then specifies the per-domain variations.

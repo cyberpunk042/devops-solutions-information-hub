@@ -28,6 +28,14 @@ tags: [methodology, ai-agents, artifacts, persona, skills, hooks, enforcement, c
 
 # AI Agent Artifacts — Standards and Guide
 
+> [!tip] AI Quick Start — Artifacts That Govern HOW AGENTS WORK
+>
+> 1. **These are about YOU** — persona templates, skill definitions, hooks, stage skills define how agents behave
+> 2. **CLAUDE.md is IaC for agent behavior** — human writes config, machine reads it as binding constraints
+> 3. **Stage skills narrow your visible scope** — you only see your current stage's rules (prevents rushing ahead)
+> 4. **Hooks enforce at tool level** — pre-bash blocks git commands, pre-write blocks wrong-scope writes
+> 5. **The operator's .agent/ rule system** is a third enforcement tier — per-prompt rule injection with self-tests. Study it as research material.
+
 ## Summary
 
 Guide to artifacts specific to AI agent workflows — document types that don't exist in traditional SDLC because they govern HOW AGENTS WORK, not what they build. These include agent persona templates, skill definitions, stage skills for context injection, hook configurations for enforcement, prompt queues for batch execution, and compliance reports for monitoring. This category is the NEWEST in the taxonomy — emerging from 2025-2026 agentic engineering practice. The operator's own `.agent/` rule system (pasted during this session) is a real-world instance of production-grade AI agent methodology artifacts.
@@ -217,3 +225,4 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 [[Model: Methodology]]
 [[Methodology Evolution Protocol]]
 [[Methodology Adoption Guide]]
+[[How AI Agents Consume the Methodology Wiki]]

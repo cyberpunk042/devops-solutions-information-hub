@@ -19,6 +19,14 @@ tags: [methodology, deployment, closure, monitoring, artifacts, operations, less
 
 # Deployment, Closure, and Monitoring Artifacts — Standards and Guide
 
+> [!tip] AI Quick Start — AFTER Implementation Is Done
+>
+> 1. **Need deployment docs?** Use the operations-plan template — sequential steps with Action/Expected/Validation/Rollback
+> 2. **Completing an epic?** Write a Lessons Learned page (type: lesson) — what worked, what didn't, what to do differently
+> 3. **Completing a task?** Write a completion log in wiki/log/ — stages done, artifacts produced, concerns raised
+> 4. **Closure artifacts feed the knowledge evolution pipeline** — lessons → patterns → decisions
+> 5. **Compliance reports are the biggest gap** — no automated methodology adherence checking exists yet
+
 ## Summary
 
 Guide to the artifacts produced AFTER implementation — deployment (how to ship), closure (what was learned), and monitoring (ongoing tracking). These are the most commonly SKIPPED artifact categories in agile and AI agent workflows. Teams build features, verify they work, and move on — without writing the operations guide, capturing lessons, or tracking compliance. This gap is why production incidents happen, knowledge is lost, and methodology violations go undetected.

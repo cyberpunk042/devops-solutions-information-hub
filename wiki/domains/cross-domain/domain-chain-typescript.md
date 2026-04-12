@@ -22,6 +22,14 @@ tags: [methodology, artifact-chain, typescript, node, domain-specific, openarms,
 
 # Artifact Chain: TypeScript/Node Domain
 
+> [!tip] AI Quick Start — Working in a TypeScript/Node Project
+>
+> 1. **Gate commands:** `pnpm tsgo` (types compile), `pnpm check` (lint), `pnpm test -- path/to/test.ts` (tests pass)
+> 2. **Scaffold:** `.ts` type exports + `.test.ts` stubs with placeholders. NO function bodies > 3 lines. NO if/for/while.
+> 3. **Implement:** Business logic + bridge module if needed + EXISTING file modified with `import` of your new code
+> 4. **Test:** Real assertions replacing every placeholder. `pnpm test -- file.ts` shows 0 failures.
+> 5. **Full 24-artifact chain table** below — this is the most detailed chain in the ecosystem (from OpenArms).
+
 ## Summary
 
 Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, OpenFleet). Maps every methodology model's stages to concrete TypeScript artifacts — file paths, export patterns, gate commands, and real examples from the OpenArms codebase. This is the most evolved domain chain in the ecosystem, validated through 93 completed tasks and 9 methodology versions. The document/design stages use universal artifacts (same as all domains). The scaffold/implement/test stages use TypeScript-specific artifacts.

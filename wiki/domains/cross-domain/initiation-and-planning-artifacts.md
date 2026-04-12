@@ -22,6 +22,14 @@ tags: [methodology, initiation, planning, artifacts, project-charter, wbs, risk,
 
 # Initiation and Planning Artifacts — Standards and Guide
 
+> [!tip] AI Quick Start — BEFORE Methodology Stages Begin
+>
+> 1. **Working on an epic?** Check: does the epic have an operator directive in raw/notes/? That's your initiation artifact.
+> 2. **Need to break down work?** The WBS = Epic → Module → Task hierarchy. See [[Backlog Hierarchy Rules]] for the 8 rules.
+> 3. **Need risk assessment?** That's the Gap Analysis — produced during Document stage, not separately.
+> 4. **Task or module level?** You INHERIT these from the parent epic — don't produce them again.
+> 5. **These artifacts are domain-agnostic** — same structure whether TypeScript, Python, or Infrastructure.
+
 ## Summary
 
 Complete guide to the artifacts produced BEFORE methodology execution begins — the initiation and planning phases that set up an epic or project for success. These artifacts answer: WHY are we doing this (initiation), and HOW will we organize the work (planning). Most task-level work inherits these from the parent epic. Module-level work may produce lightweight versions. Only epic and project-scale work requires the full set. In our methodology, these map to the pre-Document stage or the early Document stage at epic scale.

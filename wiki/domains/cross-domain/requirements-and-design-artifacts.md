@@ -25,6 +25,14 @@ tags: [methodology, requirements, design, artifacts, adr, tech-spec, interface-s
 
 # Requirements and Design Artifacts — Standards and Guide
 
+> [!tip] AI Quick Start — You're in Document or Design Stage
+>
+> 1. **Document stage?** Produce: Requirements Spec (FR/NFR/AC), Infrastructure Analysis (file:line tables), Gap Analysis (per-gap with complexity)
+> 2. **Design stage?** Produce: ADR (decision + alternatives + rationale), Tech Spec (components + API tables), Test Plan (test IDs + inputs + expected)
+> 3. **Templates:** `config/templates/methodology/` has templates for all of these — scaffold from them
+> 4. **The chain has dependencies:** ADR depends on requirements. Tech Spec depends on ADR. Interface Spec depends on Tech Spec. Test Plan depends on Interface Spec. Don't skip upstream documents.
+> 5. **Scale matters:** Epic = full 8 documents. Module = sections in epic docs. Task = inherits from epic.
+
 ## Summary
 
 Complete guide to the artifacts produced during the Document and Design stages — the specifications that CONSTRAIN all subsequent work. Requirements define WHAT must be built. Design defines HOW it will be built. Together they are the blueprints — without them, scaffold/implement/test stages have nothing to build from. OpenArms proved this: "The documents ARE the gates. You CANNOT skip documents. The scaffold stage won't pass validation if there's no interface spec to scaffold FROM." This page covers 17 artifact types across requirements (7) and design (10), with quality standards, templates, domain variations, and the critical chain dependencies between them.

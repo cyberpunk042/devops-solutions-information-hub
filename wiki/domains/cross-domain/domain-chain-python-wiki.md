@@ -22,6 +22,14 @@ tags: [methodology, artifact-chain, python, wiki, domain-specific, research-wiki
 
 # Artifact Chain: Python/Wiki Domain
 
+> [!tip] AI Quick Start — Working in the Research Wiki or a Python Tool Project
+>
+> 1. **Gate command for EVERYTHING:** `python3 -m tools.pipeline post` — run it after every change, 0 errors = pass
+> 2. **Scaffold:** `config/*.yaml` schemas + `config/templates/*.md` templates. YAML declarations only, no Python logic.
+> 3. **Implement:** `tools/*.py` with real logic + wiki pages with real content + pipeline.py modified to call new tools
+> 4. **Test:** `pipeline post` 0 errors + `tools/validate` 0 errors + new lint issues should not increase
+> 5. **Knowledge operations below:** ingestion (raw→synthesis), evolution (synthesis→lesson/pattern/decision), curation (domain overviews)
+
 ## Summary
 
 Complete artifact chain resolution for Python tool projects and knowledge wikis (the research wiki itself). Maps every methodology model's stages to concrete Python/wiki artifacts — file paths, validation commands, and real examples from this wiki's own development. The document/design stages use universal artifacts (same as all domains). The scaffold stage produces YAML configs and markdown templates. The implement stage produces Python tool code and wiki content pages. The test stage uses `pipeline post` as the universal gate.
