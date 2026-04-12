@@ -171,3 +171,6 @@ This is the first version of the super-model. It is honest about its maturity:
 [[Model: LLM Wiki]]
 [[Four-Project Ecosystem]]
 [[Model: Ecosystem Architecture]]
+[[Evolution: Methodology System]]
+[[Learning Path: Methodology Fundamentals]]
+[[Methodology Adoption Guide]]
