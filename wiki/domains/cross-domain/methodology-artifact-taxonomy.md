@@ -22,6 +22,14 @@ tags: [methodology, taxonomy, artifacts, documents, documentation, reference, fr
 
 # Methodology Artifact Taxonomy
 
+> [!tip] AI Quick Start — What You Do With This Page
+>
+> 1. **Determine the CLASS** of what you're producing: DOCUMENT (constraining spec), ARTIFACT (by-product of work), or DOCUMENTATION (explaining for users)
+> 2. **Find the CATEGORY** (11 categories below) — which phase of work produces this?
+> 3. **Find the specific TYPE** within that category — what is it called, what does it contain?
+> 4. **Check if it's a wiki page type** — if yes, there's a template in `config/templates/` and a standards doc in `wiki/spine/standards/`
+> 5. **Check the domain chain** for your domain — what does this artifact look like in YOUR tech stack?
+
 ## Summary
 
 The complete classification of every artifact, document, and documentation type produced during software development methodology execution. Organized into 11 categories with 78 types. This is the FRAMEWORK — it defines what each type IS, when it's produced, who the audience is, and what quality looks like. Projects select which types apply to their domain via domain profiles. Individual types are defined here; per-model chains are defined in [[Artifact Chains by Methodology Model]]; per-type standards are in `wiki/spine/standards/`.

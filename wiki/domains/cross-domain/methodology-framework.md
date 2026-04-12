@@ -24,6 +24,14 @@ tags: [methodology, meta-methodology, stage-gate, composable, recursive, framewo
 
 # Methodology Framework
 
+> [!tip] AI Quick Start — This Is the META (the system that contains all models)
+>
+> 1. **If you need to understand what a "model" IS**: read "What Is a Methodology Model" below — a model is DATA (Name + Stages + Artifacts + Gates + Protocols + Parameters)
+> 2. **If you need to understand how models COMPOSE**: read "Model Composition" — sequential, nested, conditional, parallel
+> 3. **If you need the specific models**: go to [[Model: Methodology]] — the 9 named models with real examples
+> 4. **If you need the complete artifact spectrum**: go to [[Methodology Artifact Taxonomy]] — 78 types across 11 categories
+> 5. **This page is for UNDERSTANDING the framework. For DOING the work, use the model page and your domain chain.**
+
 ## Summary
 
 The Methodology Framework is the meta-system that defines, selects, composes, and adapts methodology models across the entire DevOps ecosystem. It is not itself a methodology — it is the system that CONTAINS methodologies. Where Stage-Gate Methodology describes a specific 5-stage sequence, where SFIF describes a specific 4-stage build lifecycle, and where Task Type Artifact Matrix maps task types to stage subsets, this framework defines what a methodology model IS, how models are SELECTED for a given situation, how models COMPOSE into larger execution structures, how models are ADAPTED per-instance, and how the same framework applies recursively at every scale from project to task. It also defines the multi-track property — that execution, project management, and knowledge tracks each run their own methodology model simultaneously on the same project — and the quality dimension that makes the choice between skyscraper rigor and pyramid pragmatism explicit rather than accidental. Every specific methodology page in this wiki is an INSTANCE of a model defined within this framework.

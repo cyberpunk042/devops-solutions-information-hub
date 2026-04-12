@@ -20,6 +20,14 @@ tags: [methodology, system-map, reference, navigation, framework]
 
 # Methodology System Map
 
+> [!tip] AI Quick Start — This Is Your Navigation Hub
+>
+> - **Need to understand methodology?** → Knowledge Layer tables below
+> - **Need a config file?** → Configuration Layer table
+> - **Need to know what tool validates what?** → Tooling Layer table
+> - **Need to add something new?** → "How to Extend the System" section at the bottom
+> - **Need a specific page?** → Ctrl+F / search this page — every methodology page is listed here
+
 ## Summary
 
 Complete map of the methodology system — every component, where it lives, what it does, and how they connect. Use this page when you need to find something specific in the methodology, understand how pieces relate, or extend the system. This is the lookup table; [[Model: Methodology]] is the explanation.
@@ -203,4 +211,5 @@ Complete map of the methodology system — every component, where it lives, what
 [[Methodology Adoption Guide]]
 [[Model: LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[How AI Agents Consume the Methodology Wiki]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]

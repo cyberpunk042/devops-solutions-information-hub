@@ -14,6 +14,14 @@ tags: [standards, quality, examples, wiki-model, best-practices, gold-standard]
 
 # LLM Wiki Standards — What Good Looks Like
 
+> [!tip] AI Quick Start — What You Do With This Page
+>
+> 1. **Before creating any wiki page**: find your page type in the "Per-Type Standards Index" table below
+> 2. **Read the dedicated standards doc** for that type (e.g., [[Concept Page Standards]] for concept pages)
+> 3. **Look at the exemplar** referenced in the standards doc — your page should LOOK like that
+> 4. **Check the anti-patterns table** at the bottom — are you about to make a known mistake?
+> 5. **Three properties of every good page**: SPECIFIC (data points, not vague claims), CONNECTED (rich relationships), ACTIONABLE (reader knows what to do)
+
 ## Summary
 
 This page defines the quality bar for every page type in the LLM Wiki model. For each type, it identifies the gold-standard example from this wiki, explains WHY it's the standard, and extracts the concrete patterns that make it good. Use this when creating new pages — don't just follow the template, match the standard.

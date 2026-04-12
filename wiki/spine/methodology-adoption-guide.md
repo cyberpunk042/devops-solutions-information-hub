@@ -26,6 +26,14 @@ tags: [methodology, adoption, guide, onboarding, ecosystem]
 
 # Methodology Adoption Guide
 
+> [!tip] AI Quick Start — Setting Up Methodology for Your Project
+>
+> 1. **Pick your tier**: Tier 1 (just read) → Tier 2 (configure) → Tier 3 (validate) → Tier 4 (enforce)
+> 2. **Pick your domain**: TypeScript, Python/Wiki, or Infrastructure — see per-domain quick starts below
+> 3. **Copy the right files**: `config/methodology.yaml` + your domain profile from `config/domain-profiles/`
+> 4. **Update your CLAUDE.md**: add the stage gate table and hard rules from this wiki's CLAUDE.md
+> 5. **Invariants that NEVER change**: stage boundaries are hard, readiness is computed, one commit per stage
+
 ## Summary
 
 Step-by-step guide for any project to adopt the research wiki's methodology. Covers the four adoption tiers — from reading the wiki models to running full infrastructure enforcement. Includes concrete configuration examples for TypeScript, Python/wiki, and infrastructure projects. The wiki produces the methodology; projects consume it at whatever depth matches their needs.
@@ -260,6 +268,7 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 [[Artifact Chain: TypeScript/Node Domain]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Enforcement Hook Patterns]]
+[[How AI Agents Consume the Methodology Wiki]]
 [[Learning Path: Methodology Fundamentals]]
 [[Methodology Artifact Taxonomy]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]

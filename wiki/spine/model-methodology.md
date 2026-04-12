@@ -34,6 +34,14 @@ tags: [methodology, model, stage-gate, task-types, composable, backlog, executio
 
 # Model: Methodology
 
+> [!tip] AI Quick Start — What You Do With This Page
+>
+> 1. **Determine your task type** (epic, module, task, bug, spike, docs, refactor, hotfix, integration, evolve)
+> 2. **Find the model** in the Model Catalog section below — it tells you which stages apply
+> 3. **Check ALLOWED/FORBIDDEN** per stage in the Stage Boundaries section — know what you CAN and CANNOT produce
+> 4. **Check your domain chain** for concrete artifacts: [[Artifact Chain: TypeScript/Node Domain]], [[Artifact Chain: Python/Wiki Domain]], [[Artifact Chain: Infrastructure/IaC Domain]], or [[Artifact Chain: Knowledge/Evolution Domain]]
+> 5. **Before declaring done**: run the Methodology Execution Checklist in [[Methodology Standards — What Good Execution Looks Like]]
+
 ## Summary
 
 The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[Model: LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[Methodology Framework]]. The portable methodology engine lives in `config/methodology.yaml` (9 models with full artifact chains), `config/artifact-types.yaml` (17 page types with templates and thresholds), and `config/domain-profiles/` (TypeScript, Python/wiki, Infrastructure overrides). For the complete system map showing every component, see [[Methodology System Map]]. For adoption, see [[Methodology Adoption Guide]]. For execution quality standards, see [[Methodology Standards — What Good Execution Looks Like]].
@@ -641,6 +649,7 @@ Here's how a single task flows through the methodology, from selection to comple
 [[E003 Artifact Type System — Requirements Spec]]
 [[Epic Page Standards]]
 [[Evolution: Methodology System]]
+[[How AI Agents Consume the Methodology Wiki]]
 [[Initiation and Planning Artifacts — Standards and Guide]]
 [[Learning Path: Methodology Fundamentals]]
 [[Methodology Artifact Taxonomy]]

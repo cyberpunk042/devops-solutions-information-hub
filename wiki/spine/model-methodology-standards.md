@@ -19,6 +19,14 @@ tags: [methodology, standards, quality, stage-gate, execution, gold-standard, an
 
 # Methodology Standards — What Good Execution Looks Like
 
+> [!tip] AI Quick Start — What You Do With This Page
+>
+> 1. **Before completing any stage**: scroll to "The Methodology Execution Checklist" — run it
+> 2. **If producing artifacts**: check "Per-Type Artifact Standards" for your artifact's quality bar
+> 3. **If unsure about quality tier**: read "Gold Standard: Quality Tier Selection" — Pyramid is valid if deliberate
+> 4. **If something feels wrong**: check the "Anti-Pattern Gallery" — your situation may be a known failure mode
+> 5. **For the full artifact spectrum**: follow links to per-category guides and domain chains in "Beyond Wiki Pages"
+
 ## Summary
 
 This page defines the quality bar for METHODOLOGY EXECUTION. Where [[Model: Methodology]] defines the system (9 models, 5 condition dimensions, 4 composition modes, stage boundaries), this page shows what it looks like when that system is followed WELL — and what it looks like when it fails. ==Every gold standard on this page is a real instance from this wiki or the OpenArms ecosystem.== No hypotheticals. The methodology was hardened by real bugs; the standards are demonstrated by real successes.
