@@ -1,0 +1,68 @@
+---
+title: "Note Page Standards"
+type: concept
+domain: cross-domain
+layer: spine
+status: synthesized
+confidence: high
+maturity: seed
+created: 2026-04-11
+updated: 2026-04-11
+sources:
+  - id: artifact-types
+    type: file
+    file: config/artifact-types.yaml
+tags: [standards, note, page-type, quality, exemplar, log]
+---
+
+# Note Page Standards
+
+## Summary
+
+Standards for note pages — log entries recording directives, session summaries, or completion reports. The critical rule: operator words are VERBATIM. Never paraphrase. The `note_type` field (directive, session, completion) determines the structure.
+
+## Key Insights
+
+1. **Directive notes preserve operator intent exactly.** Quotes are verbatim. Interpretation is clearly separated. The operator's exact words are sacrosanct.
+
+2. **Session notes record what happened.** Key decisions, artifacts produced, state changes. Not a conversation transcript — a structured summary.
+
+3. **Completion notes record what was done.** Stages completed, artifacts produced, concerns raised, verification results.
+
+## Deep Analysis
+
+### Required Sections
+
+| Section | Purpose | Minimum |
+|---------|---------|---------|
+| **Summary** | What happened or was directed | 10 words |
+
+### Per note_type structure
+
+| Type | Additional Content |
+|------|-------------------|
+| **directive** | Verbatim quotes in blockquotes, then interpretation section |
+| **session** | Decisions list, artifacts list, state changes |
+| **completion** | Stages done, artifacts, gate results, concerns |
+
+### The Gold-Standard Exemplar
+
+> [!success] [[Models Are Not Documents — They Must Be Usable Systems]] — 49 lines
+>
+> - Operator words quoted VERBATIM
+> - Interpretation clearly separated from quotes
+> - Summary is actionable: states what needs to change
+
+### Template
+
+`config/templates/note.md` — scaffold via `python3 -m tools.pipeline scaffold note "Title"`
+
+## Relationships
+
+- RELATES TO: [[Model: Methodology]]
+- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+
+## Backlinks
+
+[[Model: Methodology]]
+[[Model: Methodology Standards — What Good Execution Looks Like]]

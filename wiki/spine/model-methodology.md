@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-11
 sources:
   - id: src-openarms-methodology
     type: documentation
@@ -36,7 +36,7 @@ tags: [methodology, model, stage-gate, task-types, composable, backlog, executio
 
 ## Summary
 
-The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[Model: LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[Methodology Framework]]. The executable configuration lives in `wiki/config/methodology.yaml` and `wiki/config/agent-directive.md`.
+The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[Model: LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[Methodology Framework]]. The portable methodology engine lives in `config/methodology.yaml` (9 models with full artifact chains), `config/artifact-types.yaml` (17 page types with templates and thresholds), and `config/domain-profiles/` (TypeScript, Python/wiki, Infrastructure overrides). For the complete system map showing every component, see [[Methodology System Map]]. For adoption, see [[Methodology Adoption Guide]]. For execution quality standards, see [[Methodology Standards — What Good Execution Looks Like]].
 
 ## Key Insights
 
@@ -448,26 +448,58 @@ See [[Skyscraper, Pyramid, Mountain]].
 
 ### How to Adopt
 
-> [!info] **What you need**
-> 1. `methodology.yaml` — defines your models (stages, task types, modes, end conditions). Start by copying from `wiki/config/methodology.yaml` and adapting.
-> 2. `agent-directive.md` — defines the work loop, stage enforcement rules, git management, quality gates. Start by copying from `wiki/config/agent-directive.md` and adapting commands for your project.
+**Full guide:** [[Methodology Adoption Guide]] — 4 tiers of adoption with per-domain quick starts.
 
-> [!warning] **INVARIANT — never change these**
+> [!abstract] Adoption Tiers
+>
+> | Tier | What You Get | Effort |
+> |------|-------------|--------|
+> | **1. Read** | Read this page + standards pages, follow manually | Minutes |
+> | **2. Configure** | Copy `config/methodology.yaml` + domain profile, reference in CLAUDE.md | Hours |
+> | **3. Validate** | Add `config/artifact-types.yaml` checks to your validation pipeline | Days |
+> | **4. Enforce** | Add hooks, stage skills, deterministic dispatch (see [[Enforcement Hook Patterns]]) | Weeks |
+
+> [!info] **The Methodology Engine — config stack**
+>
+> | File | What It Defines |
+> |------|----------------|
+> | `config/methodology.yaml` | 9 models with artifact chains, execution modes, end conditions, quality tiers |
+> | `config/artifact-types.yaml` | 17 page types with content thresholds, styling directives, verification methods |
+> | `config/domain-profiles/*.yaml` | Per-domain overrides: path patterns, gate commands, forbidden zones (TypeScript, Python/wiki, Infrastructure) |
+> | `config/templates/` | 16 wiki page templates + 6 methodology document templates |
+> | `config/wiki-schema.yaml` | Frontmatter schema, required sections, relationship verbs |
+>
+> **Resolution order:** methodology.yaml (models) → artifact-types.yaml (type detail) → domain profile (project-specific)
+
+> [!warning] **INVARIANTS — never change these**
 > - Stage boundaries are hard (ALLOWED/FORBIDDEN enforced)
 > - Readiness derived from stage completion, not subjective assessment
 > - Backlog hierarchy: epic → module → task, readiness flows upward
 > - One commit per stage
 > - Models are DATA defined in config, not CODE
+> - "Continue" = advance within current stage, NOT skip ahead
 
 > [!tip] **PER-PROJECT — always adapt these**
 > - Which models exist and their stage sequences
-> - Per-stage artifact requirements (code vs wiki pages vs Terraform)
-> - Gate mechanisms (hooks vs CI vs manual review vs post-chain)
-> - Which task types exist
+> - Per-stage artifact requirements (resolved by domain profile)
+> - Gate commands (pnpm tsgo for TypeScript, pipeline post for wiki, terraform validate for IaC)
 > - Execution mode defaults and end conditions
+> - Enforcement depth (Tier 1-4 per [[Methodology Adoption Guide]])
+
+See also: [[Model Composition Rules]] for how models combine, [[Methodology Evolution Protocol]] for how the methodology evolves, [[Artifact Chains by Methodology Model]] for full per-model artifact chains.
 
 > [!bug]- **What goes wrong if you skip this**
 > See the 7 bugs above. Every one was found within hours of starting autonomous agent operation. Without explicit methodology: binary status (Bug 1), unchecked epics (Bug 2), rogue tasks (Bug 3), lost files (Bug 4), stage violations (Bug 5), orphaned code (Bug 6), invisible work (Bug 7). The methodology exists because these failures HAPPENED.
+
+### Agent Compliance
+
+Agents ignore methodology due to confusion, broadness, and poor instruction formatting. Three pattern systems address this:
+
+1. **[[CLAUDE.md Structural Patterns for Agent Compliance]]** — 8 patterns that improve compliance: sacrosanct section, hard/soft rule separation, ALLOWED/FORBIDDEN lists, progressive disclosure, command checkpoints, section dividers, anchor phrases, concrete examples. Evidence: OpenArms went from 25% to ~90% stage boundary compliance using these patterns.
+
+2. **[[Enforcement Hook Patterns]]** — 4 hook types (scope guard, write guard, artifact tracker, context rebuilder) that prevent violations at the tool level. Hooks are Tier 4 adoption — the most effective enforcement (blocks wrong actions before they happen).
+
+3. **[[Stage-Aware Skill Injection]]** — Which skills are recommended, mandatory, or blocked per stage. Prevents wrong-phase skill usage (brainstorming during test, TDD during document).
 
 ### Real Example: End-to-End Task Execution
 
@@ -537,9 +569,16 @@ Here's how a single task flows through the methodology, from selection to comple
 - BUILDS ON: [[Backlog Hierarchy Rules]]
 - BUILDS ON: [[Execution Modes and End Conditions]]
 - BUILDS ON: [[Skyscraper, Pyramid, Mountain]]
+- CONTAINS: [[Artifact Chains by Methodology Model]]
+- CONTAINS: [[Model Composition Rules]]
+- CONTAINS: [[Methodology Adoption Guide]]
+- CONTAINS: [[Methodology Evolution Protocol]]
+- CONTAINS: [[CLAUDE.md Structural Patterns for Agent Compliance]]
+- CONTAINS: [[Enforcement Hook Patterns]]
+- CONTAINS: [[Stage-Aware Skill Injection]]
 - RELATES TO: [[Spec-Driven Development]]
 - RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]
-- RELATES TO: [[Adoption Guide — How to Use This Wiki's Standards]]
+- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
@@ -554,14 +593,30 @@ Here's how a single task flows through the methodology, from selection to comple
 [[Backlog Hierarchy Rules]]
 [[Execution Modes and End Conditions]]
 [[Skyscraper, Pyramid, Mountain]]
+[[Artifact Chains by Methodology Model]]
+[[Model Composition Rules]]
+[[Methodology Adoption Guide]]
+[[Methodology Evolution Protocol]]
+[[CLAUDE.md Structural Patterns for Agent Compliance]]
+[[Enforcement Hook Patterns]]
+[[Stage-Aware Skill Injection]]
 [[Spec-Driven Development]]
 [[Scaffold → Foundation → Infrastructure → Features]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Artifact Type System]]
+[[E003 Artifact Type System — Requirements Spec]]
+[[Epic Page Standards]]
+[[Evolution: Methodology System]]
+[[Learning Path: Methodology Fundamentals]]
+[[Methodology Standards Initiative — Gap Analysis]]
+[[Methodology Standards Initiative — Infrastructure Analysis]]
+[[Methodology System Map]]
 [[Model Registry]]
 [[Model: Knowledge Evolution]]
 [[Model: Quality and Failure Prevention]]
 [[Model: SFIF and Architecture]]
 [[Model: Wiki Design]]
+[[Note Page Standards]]
+[[Portable Methodology Engine]]
 [[Standards Must Preach by Example]]
 [[Wiki Design Standards — What Good Styling Looks Like]]

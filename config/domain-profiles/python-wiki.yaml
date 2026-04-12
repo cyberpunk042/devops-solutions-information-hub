@@ -1,0 +1,68 @@
+# Domain Profile: Python/Wiki
+#
+# For projects like the research wiki — Python tools, markdown wiki pages,
+# pipeline-based validation, YAML config, Obsidian-compatible output.
+#
+# Layers over generic methodology.yaml definitions.
+
+domain: python-wiki
+description: "Python tool projects and knowledge wikis"
+examples: [devops-solutions-research-wiki]
+
+stage_overrides:
+  document:
+    gate_commands:
+      - "python3 -m tools.pipeline post"  # validates all wiki pages
+    path_patterns:
+      wiki-page: "wiki/**/*.md"
+    forbidden_zones:
+      - "tools/"  # no tool code during document stage (understanding, not building)
+      - "src/"
+
+  design:
+    gate_commands:
+      - "python3 -m tools.pipeline post"
+    path_patterns:
+      design-document: "wiki/domains/**/*.md"
+    forbidden_zones:
+      - "tools/"
+      - "src/"
+
+  scaffold:
+    gate_commands:
+      - "python3 -m tools.pipeline post"
+    path_patterns:
+      type-definition: "config/**/*.yaml"    # schemas, configs
+      test-stub: "tests/**/*.py"             # if tests exist
+      config-file: "config/**/*.yaml"
+    forbidden_zones: []
+    verification:
+      no-business-logic: "config files contain only declarations, no Python logic"
+
+  implement:
+    gate_commands:
+      - "python3 -m tools.pipeline post"
+      - "python3 -m tools.validate"
+    path_patterns:
+      wiki-page: "wiki/**/*.md"
+      implementation: "tools/**/*.py"
+      config-file: "config/**/*.yaml"
+    verification:
+      pipeline-post-passes: "python3 -m tools.pipeline post exits 0 with 0 validation errors"
+
+  test:
+    gate_commands:
+      - "python3 -m tools.pipeline post"
+      - "python3 -m tools.validate"
+    path_patterns:
+      test-implementation: "tests/**/*.py"
+      test-results: null  # pipeline post IS the test
+    verification:
+      tests-pass: "pipeline post exits 0"
+
+# Wiki-specific conventions
+conventions:
+  page_structure: "YAML frontmatter → # Title → ## Sections per wiki-schema.yaml"
+  relationship_format: "- VERB: Target Name (optional context)"
+  filename: "kebab-case, ASCII-only, max 80 chars"
+  validation: "python3 -m tools.pipeline post (runs 6-step chain)"

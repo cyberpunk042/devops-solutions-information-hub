@@ -321,5 +321,4 @@ The wiki proves that knowledge work and code work can share the same methodology
 [[Task Type Artifact Matrix]]
 [[Execution Modes and End Conditions]]
 [[Ecosystem Integration Interfaces]]
-[[Model: Methodology]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]

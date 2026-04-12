@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-11
 sources: []
 tags: [standards, quality, examples, wiki-model, best-practices, gold-standard]
 ---
@@ -27,6 +27,34 @@ This page defines the quality bar for every page type in the LLM Wiki model. For
 > The best pages in the wiki share three properties: they are SPECIFIC (data points, not vague claims), they are CONNECTED (rich relationships to other pages), and they are ACTIONABLE (the reader knows what to do after reading).
 
 ## Deep Analysis
+
+### Per-Type Standards System
+
+Every page type now has its own dedicated standards document in `wiki/spine/standards/`. Each standards doc includes: section-by-section quality bar, gold-standard exemplar with reasoning, common failures, content thresholds from `config/artifact-types.yaml`, and template reference.
+
+> [!info] Per-Type Standards Index
+>
+> | Type | Standards Doc | Exemplar |
+> |------|--------------|----------|
+> | concept | [[Concept Page Standards]] | [[Methodology Framework]] |
+> | source-synthesis | [[Source-Synthesis Page Standards]] | [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] |
+> | comparison | [[Comparison Page Standards]] | [[Cross-Domain Patterns]] |
+> | reference | [[Reference Page Standards]] | [[Methodology Adoption Guide]] |
+> | deep-dive | [[Deep-Dive Page Standards]] | [[Adoption Guide — How to Use This Wiki's Standards]] |
+> | lesson | [[Lesson Page Standards]] | [[CLI Tools Beat MCP for Token Efficiency]] |
+> | pattern | [[Pattern Page Standards]] | [[Plan-Execute-Review Cycle]] |
+> | decision | [[Decision Page Standards]] | [[Execution Mode Edge Cases]] |
+> | domain-overview | [[Domain Overview Page Standards]] | [[Cross-Domain — Domain Overview]] |
+> | evolution | [[Evolution Page Standards]] | [[Evolution: Methodology System]] |
+> | learning-path | [[Learning Path Page Standards]] | [[Learning Path: Methodology Fundamentals]] |
+> | operations-plan | [[Operations Plan Page Standards]] | [[Operations Plan: Wiki Post-Ingestion Validation]] |
+> | epic | [[Epic Page Standards]] | [[Artifact Type System]] |
+> | task | [[Task Page Standards]] | [[Test OpenAI backend with LocalAI]] |
+> | note | [[Note Page Standards]] | [[Models Are Not Documents — They Must Be Usable Systems]] |
+
+The summaries below are quick reference. For full quality bars, common failures, and styling requirements, read the dedicated standards doc.
+
+---
 
 ### Gold Standard: Concept Page
 
@@ -110,13 +138,16 @@ What makes it the standard:
 
 ### Gold Standard: Epic
 
-**Reference**: [[Local Inference Engine (Subsystem 3)]] — 58 lines
+**Reference**: [[Artifact Type System]] — 105 lines, 95% readiness, all 5 stages complete
 
 What makes it the standard:
-- **Goals are concrete and measurable** — "Wire `pipeline evolve --auto --backend openai` to LocalAI" not "improve local model support."
-- **Done When uses checkboxes** — each item is testable. You can look at the checkbox and verify independently.
-- **Blocked is explicit** — "Waiting for 19GB VRAM hardware upgrade." Not silently stuck.
-- **Artifacts list exists from document stage** — even at 10% readiness, the artifacts produced so far are tracked.
+- **Goals are concrete and measurable** — "Create templates for all 8 page types currently missing" not "improve templates."
+- **Done When uses checkboxes with specific outputs** — "Templates exist for all page types agents create" can be verified with `ls config/templates/`.
+- **Dependencies are explicit** — "None — this is the foundation epic."
+- **Artifacts list tracks ALL stage outputs** — 22 artifacts across document, design, scaffold, implement. Every deliverable is named.
+- **Readiness reflects actual stage completion** — 95% because all 5 stages are done, pending operator review.
+
+Also strong: [[Local Inference Engine (Subsystem 3)]] — good Blocked section, good artifact tracking from document stage.
 
 ### Gold Standard: Task
 
@@ -135,6 +166,76 @@ What makes it the standard:
 - **Operator's words are VERBATIM** — quoted exactly, not paraphrased. This is sacrosanct.
 - **Interpretation section is the agent's understanding** — clearly separated from the operator's words.
 - **Summary is actionable** — states the problem and what needs to change, not just "the user said something."
+
+### Gold Standard: Reference Page
+
+**Reference**: [[Methodology Adoption Guide]] — 259 lines, 8 relationships
+
+What makes it the standard:
+- **Progressive disclosure structure** — 4 tiers of adoption, each more detailed than the last. Reader finds their tier and stops. Doesn't force experts through basics.
+- **Concrete code examples** — YAML blocks, bash commands, CLAUDE.md snippets. Not "configure your project" — shows EXACTLY what to configure.
+- **Per-domain quick starts** — TypeScript, Python/wiki, Infrastructure each get their own callout with 4-step checklist. Actionable in minutes.
+- **Invariants section at the bottom** — rules that apply at ALL tiers. Ensures the core principles survive even at Tier 1 adoption.
+
+**The bar for a reference page**: the reader should be able to LOOK UP what they need and ACT on it without reading the entire page. If the page must be read linearly to be useful, it's a concept, not a reference.
+
+### Gold Standard: Deep-Dive Page
+
+**Reference**: [[Adoption Guide — How to Use This Wiki's Standards]] — 325 lines
+
+What makes it the standard:
+- **Substantial depth** (325 lines) — a deep-dive earns its name through exhaustive analysis, not surface coverage.
+- **5 core principles in Key Insights** — each principle is a complete idea, not a pointer to another section.
+- **Multi-subsection Deep Analysis** — step-by-step walkthrough with recursive framework explanation.
+- **Multiple callout types** (abstract, warning, tip) — structural variety aids scanning.
+
+**The bar for a deep-dive page**: Deep Analysis must be ≥200 words with ≥3 subsections. If the analysis fits in one section, it's a concept, not a deep-dive. Callouts are REQUIRED — deep-dives must structure their analysis visually.
+
+### Gold Standard: Domain Overview Page
+
+**Reference**: [[Cross-Domain — Domain Overview]] — 126 lines
+
+What makes it the standard:
+- **State of Knowledge has 3 tiers** — Authoritative, Good, and Thin coverage. Honest assessment of where the domain stands.
+- **Maturity Map groups pages by maturity** — seed, growing, mature, canonical. Shows the domain's internal quality distribution.
+- **Gaps section is specific and actionable** — names exactly what's missing, not "more research needed."
+- **Key Pages list is curated** — recommended reading order, not alphabetical dump.
+
+**The bar for a domain overview page**: the Maturity Map must reflect the ACTUAL distribution of pages in the domain. Gaps must name specific missing topics. Key Pages must have a recommended reading order.
+
+### Gold Standard: Evolution Page
+
+**Reference**: [[Evolution: Methodology System]] — 120 lines
+
+What makes it the standard:
+- **Timeline entries have dates AND significance** — not just "something happened" but why it mattered. Each entry explains the impact.
+- **Key Shifts section identifies turning points** — not a restatement of the timeline but an interpretation: what CHANGED direction?
+- **Current State is honest** — states what's done AND what's next. Not just a victory lap.
+
+**The bar for an evolution page**: Timeline must have ≥5 dated entries. Key Shifts must identify ≥2 turning points. Current State must name next frontiers.
+
+### Gold Standard: Learning Path Page
+
+**Reference**: [[Learning Path: Methodology Fundamentals]] — 68 lines
+
+What makes it the standard:
+- **Sequence has 8 ordered pages** — each with a [[wikilink]] AND a 1-sentence annotation explaining WHY this page is at this position.
+- **Prerequisites are specific** — not "basic knowledge" but exact pages to read first.
+- **Outcomes are testable** — "you should be able to select the correct methodology model for any task type" is verifiable. "You should understand methodology" is not.
+
+**The bar for a learning-path page**: Sequence must have ≥3 pages in recommended order. Each page must have a 1-sentence annotation. Outcomes must be testable capabilities, not vague understanding.
+
+### Gold Standard: Operations Plan Page
+
+**Reference**: [[Operations Plan: Wiki Post-Ingestion Validation]] — 90 lines
+
+What makes it the standard:
+- **Every step has 4 components** — Action, Expected output, Validation, Rollback. A "dumb" agent can follow this mechanically.
+- **Prerequisites are checkboxes** — verifiable BEFORE step 1 begins.
+- **Rollback section covers partial failure** — what to do if step 3 fails after steps 1-2 succeeded.
+- **Completion Criteria are checkboxes** — verifiable AFTER all steps complete.
+
+**The bar for an operations plan**: ≥3 sequential steps. Each step has Action + Expected output + Validation + Rollback. A different agent could follow this plan and get the same result. If judgment is required, it's a design plan, not an operations plan.
 
 ### Anti-Patterns — What Bad Looks Like
 

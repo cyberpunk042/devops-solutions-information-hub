@@ -404,6 +404,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
     )
     unstyled_pages = _check_unstyled_pages(pages)
     filename_issues = _check_filename_hygiene(pages)
+    standards_issues = _check_standards_exemplars(pages)
 
     total_issues = (
         len(dead_relationships)
@@ -421,6 +422,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         "thin_pages": thin_pages,
         "unstyled_pages": unstyled_pages,
         "filename_issues": filename_issues,
+        "standards_issues": standards_issues,
         "domain_health": domain_health,
         "summary": {
             "pages_scanned": len(pages),
@@ -430,9 +432,66 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
             "thin_pages": len(thin_pages),
             "orphan_pages": len(orphan_pages),
             "unstyled_pages": len(unstyled_pages),
+            "standards_issues": len(standards_issues),
             "domain_health_issues": sum(len(d["issues"]) for d in domain_health),
         },
     }
+
+
+def _check_standards_exemplars(
+    pages: List[Path],
+) -> List[Dict[str, str]]:
+    """Check that standards pages reference exemplars that exist.
+
+    Finds standards pages (model-*-standards.md) and checks that
+    [[Page Title]] references in Gold Standard sections resolve to
+    existing wiki pages. Returns advisory issues — not blocking.
+    """
+    import re as _re
+    issues: List[Dict[str, str]] = []
+
+    # Build title set from all pages
+    known_titles: set = set()
+    for page in pages:
+        try:
+            text = page.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(text)
+            if meta and "title" in meta:
+                known_titles.add(meta["title"])
+        except Exception:
+            continue
+
+    # Check standards pages
+    for page in pages:
+        if "model-" not in page.name or "standards" not in page.name:
+            continue
+        try:
+            text = page.read_text(encoding="utf-8")
+            meta, body = parse_frontmatter(text)
+            if not meta:
+                continue
+            title = meta.get("title", "")
+            # Find all [[references]] in Gold Standard sections
+            in_gold_section = False
+            in_backlinks = False
+            for line in body.split("\n"):
+                if line.startswith("### Gold Standard"):
+                    in_gold_section = True
+                elif line.startswith("## Backlinks"):
+                    in_backlinks = True
+                elif line.startswith("## ") and not line.startswith("### "):
+                    in_gold_section = False
+                if in_gold_section and not in_backlinks:
+                    refs = _re.findall(r"\[\[([^\]]+)\]\]", line)
+                    for ref in refs:
+                        if ref not in known_titles:
+                            issues.append({
+                                "standards_page": title,
+                                "missing_exemplar": ref,
+                            })
+        except Exception:
+            continue
+    return issues
 
 
 def _config_from_quality_standards(path: Path) -> Optional[LintConfig]:
@@ -502,6 +561,12 @@ def _print_human_report(report: Dict[str, Any]) -> None:
         print(f"Filename Issues ({len(report['filename_issues'])}):")
         for p in report["filename_issues"]:
             print(f"  {p['file']}: {p['issue']}")
+        print()
+
+    if report.get("standards_issues"):
+        print(f"Standards Self-Validation ({len(report['standards_issues'])}) [advisory]:")
+        for p in report["standards_issues"]:
+            print(f"  {p['standards_page']}: exemplar '{p['missing_exemplar']}' not found")
         print()
 
     if report.get("unstyled_pages"):

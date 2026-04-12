@@ -52,6 +52,7 @@ enums:
     - module
     - task
     - note
+    - operations-plan
   status:
     - raw
     - processing
@@ -197,11 +198,23 @@ required_sections:
     - Goals
     - Done When
     - Relationships
+  module:
+    - Summary
+    - Goals
+    - Done When
+    - Relationships
   task:
     - Summary
     - Done When
   note:
     - Summary
+  operations-plan:
+    - Summary
+    - Prerequisites
+    - Steps
+    - Rollback
+    - Completion Criteria
+    - Relationships
 
 relationship_verbs:
   - BUILDS ON

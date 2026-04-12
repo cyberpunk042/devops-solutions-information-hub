@@ -277,6 +277,23 @@ The Methodology Framework exists in a defined hierarchy of authority:
 
 This separation between definition and instance is what makes the framework sustainable. The framework can evolve without breaking projects. Projects can adapt without corrupting the framework. The wiki serves as the single source of truth, and the export/sync mechanism (LightRAG, kb_sync.py) propagates the definitions.
 
+**The Portable Methodology Engine** implements this transferability concretely:
+
+> [!info] Methodology Config Stack (the portable engine)
+>
+> | Config File | What It Defines | Role |
+> |-------------|----------------|------|
+> | `config/methodology.yaml` | 9 models with artifact chains, execution modes, quality tiers | The canonical methodology definition |
+> | `config/artifact-types.yaml` | 17 page types with templates, content thresholds, styling, verification | What artifacts look like per type |
+> | `config/domain-profiles/*.yaml` | Per-domain overrides (TypeScript, Python/wiki, Infrastructure) | How to adapt to a specific stack |
+> | `config/templates/` | 22 templates (16 wiki types + 6 methodology documents) | The structural skeleton per type |
+>
+> Projects adopt at 4 tiers — from reading wiki models (Tier 1) to full infrastructure enforcement with hooks and deterministic dispatch (Tier 4). See [[Methodology Adoption Guide]] for the full guide.
+>
+> The methodology evolves via an evidence-driven protocol: collect compliance data → identify patterns → propose changes → test in wiki → propagate to consumers. See [[Methodology Evolution Protocol]].
+
+For how models compose (sequential, nested, conditional, parallel) with formal rules and conflict resolution, see [[Model Composition Rules]].
+
 ## Open Questions
 
 All 7 original questions resolved in [[Decision: Methodology Framework Design Decisions]].
@@ -344,6 +361,12 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 - BUILDS ON: [[Progressive Distillation]] (maturity progression is a model within the knowledge track)
 - RELATES TO: [[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)
 - FEEDS INTO: [[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)
+- CONTAINS: [[Model Composition Rules]] (formal composition patterns: sequential, nested, conditional, parallel)
+- CONTAINS: [[Methodology Adoption Guide]] (4-tier adoption from read to enforce)
+- CONTAINS: [[Methodology Evolution Protocol]] (evidence-driven versioned improvement)
+- CONTAINS: [[Artifact Chains by Methodology Model]] (full chains for all 9 models)
+- CONTAINS: [[CLAUDE.md Structural Patterns for Agent Compliance]] (8 patterns for agent compliance)
+- CONTAINS: [[Enforcement Hook Patterns]] (4 hook types for infrastructure enforcement)
 - IMPLEMENTS: [[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
 
 ## Backlinks
@@ -361,15 +384,29 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Progressive Distillation]]
 [[Four-Project Ecosystem]]
 [[Wiki Backlog Pattern]]
+[[Model Composition Rules]]
+[[Methodology Adoption Guide]]
+[[Methodology Evolution Protocol]]
+[[Artifact Chains by Methodology Model]]
+[[CLAUDE.md Structural Patterns for Agent Compliance]]
+[[Enforcement Hook Patterns]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
+[[Artifact Type System]]
+[[Concept Page Standards]]
 [[Decision: Methodology Framework Design Decisions]]
 [[Decision: Quality Tier Operational Decisions]]
+[[E003 Artifact Type System — Design Document]]
+[[E003 Artifact Type System — Requirements Spec]]
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Is a Framework, Not a Fixed Pipeline]]
+[[Methodology Standards Initiative — Gap Analysis]]
+[[Methodology Standards Initiative — Infrastructure Analysis]]
+[[Methodology System Map]]
 [[Model: Methodology]]
 [[Models Are Built in Layers, Not All at Once]]
 [[Never Skip Stages Even When Told to Continue]]
+[[Portable Methodology Engine]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
 [[The Agent Must Practice What It Documents]]

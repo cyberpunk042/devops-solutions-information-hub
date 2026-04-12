@@ -1,0 +1,79 @@
+---
+title: "Deep-Dive Page Standards"
+type: concept
+domain: cross-domain
+layer: spine
+status: synthesized
+confidence: high
+maturity: seed
+created: 2026-04-11
+updated: 2026-04-11
+sources:
+  - id: artifact-types
+    type: file
+    file: config/artifact-types.yaml
+tags: [standards, deep-dive, page-type, quality, exemplar]
+---
+
+# Deep-Dive Page Standards
+
+## Summary
+
+Standards for deep-dive pages — extended analysis that goes significantly deeper than a concept page. The Deep Analysis section IS the page — ≥200 words with ≥3 subsections. Callouts are REQUIRED, not optional. If the analysis fits in one section, it's a concept, not a deep-dive.
+
+## Key Insights
+
+1. **A deep-dive earns its name through exhaustive analysis.** The minimum 200-word Deep Analysis is a floor, not a target. Strong deep-dives are 300-500+ words of structured analysis.
+
+2. **Callouts are required because deep-dives must be scannable.** A 400-word block of prose is an essay. A 400-word analysis with `> [!info]`, `> [!warning]`, `> [!example]-` foldable sections is a reference.
+
+3. **Use for topics that outgrow concept pages.** If a concept page's Deep Analysis exceeds 300 words, consider splitting: the concept page keeps the overview, a deep-dive gets the extended analysis.
+
+## Deep Analysis
+
+### Required Sections
+
+| Section | Purpose | Minimum |
+|---------|---------|---------|
+| **Summary** | What this deep-dive explores | 30 words |
+| **Key Insights** | High-level takeaways for non-readers | 3-8 items |
+| **Deep Analysis** | The primary content | 200 words, ≥3 subsections |
+| **Relationships** | Connections | ≥2 |
+
+### Quality Bar
+
+- Deep Analysis ≥200 words, ≥3 `###` subsections
+- Callouts REQUIRED: `> [!info]`, `> [!abstract]`, `> [!warning]`, `> [!example]-`
+- Conclusions section recommended — synthesize findings
+- Open Questions encouraged — surface subproblems for future work
+
+### The Gold-Standard Exemplar
+
+> [!success] [[Adoption Guide — How to Use This Wiki's Standards]] — 325 lines
+>
+> - 5 core principles in Key Insights
+> - Multi-subsection Deep Analysis with step-by-step walkthrough
+> - Multiple callout types creating visual structure
+> - Recursive framework explanation
+
+### Common Failures
+
+| Failure | What It Looks Like | The Fix |
+|---------|-------------------|---------|
+| **Shallow deep-dive** | <200 words in Deep Analysis | Go deeper or keep as concept page |
+| **Single-block analysis** | No subsections, one long essay | ≥3 `###` subsections, one mechanism per section |
+| **No callouts** | Prose-only at 300+ lines | Required: use callouts for structure |
+
+### Template
+
+`config/templates/deep-dive.md` — scaffold via `python3 -m tools.pipeline scaffold deep-dive "Title"`
+
+## Relationships
+
+- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+
+## Backlinks
+
+[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[Model: Methodology Standards — What Good Execution Looks Like]]

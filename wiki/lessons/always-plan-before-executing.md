@@ -105,6 +105,8 @@ Even at the individual agent level, Claude Code's best practices recommend using
 [[Research Pipeline Orchestration]]
 [[Rework Prevention]]
 [[Agent Orchestration Patterns]]
+[[Agent Compliance Framework]]
+[[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Context Management Is the Primary LLM Productivity Lever]]
 [[Immune System Rules]]
 [[Infrastructure Must Be Reproducible, Not Manual]]

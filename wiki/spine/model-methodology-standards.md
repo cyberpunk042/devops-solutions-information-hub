@@ -5,9 +5,9 @@ domain: cross-domain
 layer: spine
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-11
 sources:
   - id: src-openarms-methodology-evolution
     type: documentation
@@ -274,6 +274,130 @@ Methodology failures from real operation, each traced to a specific lesson.
 
 ---
 
+### Gold Standard: Artifact Chain Execution
+
+What proper artifact production across a full epic looks like — using the artifact type system.
+
+> [!info] **Reference: E003 Artifact Type System** — 5 stages, 22 artifacts, all acceptance criteria verified
+>
+> | Stage | Artifacts Produced | Template Used | Gate |
+> |-------|--------------------|---------------|------|
+> | **Document** | Infrastructure analysis, Gap analysis, Requirements spec | methodology/infrastructure-analysis, methodology/gap-analysis, methodology/requirements-spec | Wiki pages exist, no code |
+> | **Design** | Design document with 7 decisions | methodology/design-plan | Design doc exists, decisions have rationale |
+> | **Scaffold** | artifact-types.yaml, 16 templates, schema update, scaffolder update | (config files + templates) | Pipeline post passes, no logic in configs |
+> | **Implement** | methodology.yaml (9 models), 3 domain profiles, artifact chains wiki page, validate.py extension | (code + config + wiki) | Pipeline post 0 errors, validation catches type thresholds |
+> | **Test** | AC-1 through AC-10 verified with commands | (verification output) | All 10 acceptance criteria pass |
+>
+> **What makes this the standard:**
+> - Every stage used the correct methodology template for its artifacts
+> - Artifact dependencies were respected: design depended on document artifacts, scaffold depended on design
+> - The full chain is defined in `config/methodology.yaml` under `feature-development.chain`
+> - Domain profile (`python-wiki`) resolved gate commands to `pipeline post`
+
+**The bar:** Every methodology model has a defined artifact chain in `config/methodology.yaml`. Every stage in that chain specifies required, optional, and forbidden artifacts. Domain profiles in `config/domain-profiles/` resolve generic artifact types to concrete paths and gate commands. See [[Artifact Chains by Methodology Model]] for all 9 model chains.
+
+---
+
+### Gold Standard: CLAUDE.md Structure
+
+What a methodology-compliant CLAUDE.md looks like — using the 8 structural patterns.
+
+> [!info] **Reference: This wiki's CLAUDE.md** — restructured 2026-04-11 using all 8 patterns
+>
+> | Pattern | How It's Applied |
+> |---------|-----------------|
+> | Sacrosanct section | Operator directives at line 8, verbatim quotes, non-negotiable |
+> | Hard vs soft separation | Two explicit tables with different headers |
+> | ALLOWED/FORBIDDEN | Per-stage table: Document/Design/Scaffold/Implement/Test columns |
+> | Progressive disclosure | Identity → Hard rules → Models → Structure → Quality → Tooling |
+> | Command checkpoints | `pipeline post` as the universal verification command |
+> | Section dividers | `# -----------` between every major section |
+> | Anchor phrases | "Continue means current stage" repeated in hard rules AND stage table |
+> | Concrete examples | Exact pipeline commands, exact scaffold syntax |
+
+**The bar:** A CLAUDE.md that uses ≥5 of the 8 patterns from [[CLAUDE.md Structural Patterns for Agent Compliance]]. At minimum: sacrosanct section, hard/soft separation, ALLOWED/FORBIDDEN per stage.
+
+---
+
+### Gold Standard: Operations Plan vs Design Plan
+
+What the distinction looks like in practice — two fundamentally different documents.
+
+> [!abstract] The Critical Distinction
+>
+> | Dimension | Operations Plan | Design Plan |
+> |-----------|----------------|-------------|
+> | Template | `config/templates/operations-plan.md` | `config/templates/methodology/design-plan.md` |
+> | Wiki type | `operations-plan` (new type) | `concept` (with methodology template) |
+> | Structure | Sequential steps with Action/Expected/Validation/Rollback | Decisions with rationale + rejected alternatives |
+> | Judgment | None — mechanical, delegatable to any agent | High — trade-offs, alternatives, evidence |
+> | Example | [[Operations Plan: Wiki Post-Ingestion Validation]] | [[E003 Artifact Type System — Design Document]] |
+
+**The bar:** If someone asks "what's the plan?", determine which kind first. Operations plan = "do these steps in order." Design plan = "here are the options, here's what we chose and why." Using one when the other is needed is a methodology failure.
+
+---
+
+### Gold Standard: Enforcement Infrastructure
+
+What a project with methodology enforcement looks like — from Tier 1 (read) to Tier 4 (full enforcement).
+
+> [!info] **Reference: [[Methodology Adoption Guide]] — 4 tiers of adoption**
+>
+> | Tier | What You Get | Evidence It Works |
+> |------|-------------|-------------------|
+> | 1. Read | Models + standards pages | Manual compliance, variable |
+> | 2. Configure | methodology.yaml + domain profile in CLAUDE.md | ALLOWED/FORBIDDEN tables visible, ~50-60% compliance |
+> | 3. Validate | artifact-types.yaml checked by validation pipeline | Post-hoc detection of violations |
+> | 4. Enforce | Hooks + harness + deterministic dispatch | ~90% compliance (OpenArms v9 evidence) |
+
+**The bar:** Know your tier. Document it. A project at Tier 2 that claims Tier 4 compliance is at Mountain quality tier. See [[Enforcement Hook Patterns]] for Tier 4 infrastructure and [[Stage-Aware Skill Injection]] for skill-level enforcement.
+
+---
+
+### The Methodology Engine
+
+The complete machine-readable system for methodology execution.
+
+> [!info] **The Methodology Config Stack**
+>
+> | Config File | What It Defines | Lines |
+> |-------------|----------------|-------|
+> | `config/methodology.yaml` | 9 models with artifact chains, modes, end conditions, quality tiers | ~400 |
+> | `config/artifact-types.yaml` | 17 page types with thresholds, styling, verification methods | ~280 |
+> | `config/domain-profiles/*.yaml` | Per-domain overrides: paths, gates, forbidden zones (3 profiles) | ~60 each |
+> | `config/wiki-schema.yaml` | Frontmatter schema, required sections, relationship verbs | ~240 |
+> | `config/quality-standards.yaml` | Linting thresholds, export readiness, duplicate detection | ~20 |
+> | `config/templates/` | 16 wiki page templates + 6 methodology document templates | 22 files |
+>
+> **Resolution order:** methodology.yaml (models) → artifact-types.yaml (type detail) → domain profile (project-specific) → wiki-schema.yaml (structural validation)
+
+**The bar:** A project that has adopted the methodology should have: methodology.yaml (generic or project-override), a declared domain profile, and CLAUDE.md referencing both. See [[Methodology Evolution Protocol]] for how the wiki updates propagate to consumers.
+
+---
+
+### Per-Type Artifact Standards
+
+Every page type produced during methodology execution has its own standards doc in `wiki/spine/standards/`. These define what good artifacts look like at each stage:
+
+> [!info] Methodology-Relevant Per-Type Standards
+>
+> | Produced During | Type | Standards Doc |
+> |----------------|------|--------------|
+> | Document stage | concept (for requirements, infra analysis, gap analysis) | [[Concept Page Standards]] |
+> | Document stage | source-synthesis (for ingested sources) | [[Source-Synthesis Page Standards]] |
+> | Design stage | decision (for ADRs) | [[Decision Page Standards]] |
+> | Design stage | reference (for tech specs, test plans) | [[Reference Page Standards]] |
+> | Implement stage | operations-plan (for sequential execution checklists) | [[Operations Plan Page Standards]] |
+> | Any stage | note (for directive logs, session logs) | [[Note Page Standards]] |
+> | Evolution | lesson, pattern, decision | [[Lesson Page Standards]], [[Pattern Page Standards]], [[Decision Page Standards]] |
+> | PM track | epic, task | [[Epic Page Standards]], [[Task Page Standards]] |
+>
+> **Full list:** See [[LLM Wiki Standards — What Good Looks Like]] for all 15 types.
+
+**The bar:** Every artifact produced at every stage should meet its type's standards. An agent producing a requirements spec (concept type) during document stage should consult [[Concept Page Standards]] for the quality bar. A lesson being evolved should meet [[Lesson Page Standards]].
+
+---
+
 ### The Methodology Execution Checklist
 
 > [!tip] **Run this at every stage transition**
@@ -308,20 +432,31 @@ Methodology failures from real operation, each traced to a specific lesson.
 
 - BUILDS ON: [[Model: Methodology]]
 - BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[Artifact Chains by Methodology Model]]
+- BUILDS ON: [[CLAUDE.md Structural Patterns for Agent Compliance]]
+- BUILDS ON: [[Enforcement Hook Patterns]]
+- BUILDS ON: [[Stage-Aware Skill Injection]]
+- RELATES TO: [[Methodology Adoption Guide]]
+- RELATES TO: [[Methodology Evolution Protocol]]
 - RELATES TO: [[Never Skip Stages Even When Told to Continue]]
 - RELATES TO: [[The Agent Must Practice What It Documents]]
 - RELATES TO: [[Models Are Built in Layers, Not All at Once]]
-- RELATES TO: [[Wiki Design Standards — What Good Styling Looks Like]]
 
 ## Backlinks
 
 [[Model: Methodology]]
 [[LLM Wiki Standards — What Good Looks Like]]
+[[Artifact Chains by Methodology Model]]
+[[CLAUDE.md Structural Patterns for Agent Compliance]]
+[[Enforcement Hook Patterns]]
+[[Stage-Aware Skill Injection]]
+[[Methodology Adoption Guide]]
+[[Methodology Evolution Protocol]]
 [[Never Skip Stages Even When Told to Continue]]
 [[The Agent Must Practice What It Documents]]
 [[Models Are Built in Layers, Not All at Once]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[Methodology System Map]]
 [[Quality Standards — What Good Failure Prevention Looks Like]]

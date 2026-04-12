@@ -831,10 +831,15 @@ def scaffold_page(page_type: str, title: str, project_root: Path,
                   verbose: bool = True) -> Dict[str, Any]:
     """Create a new page from template. Returns {ok, path, error}."""
     template_dir = project_root / "config" / "templates"
+    # Support methodology/ prefix: "methodology/requirements-spec" → config/templates/methodology/requirements-spec.md
     template_path = template_dir / f"{page_type}.md"
 
     if not template_path.exists():
-        return {"ok": False, "error": f"No template for type: {page_type}"}
+        # Try methodology subdirectory for slash-prefixed types
+        if "/" in page_type:
+            template_path = template_dir / f"{page_type}.md"
+        if not template_path.exists():
+            return {"ok": False, "error": f"No template for type: {page_type}"}
 
     template = template_path.read_text(encoding="utf-8")
     today = datetime.now().strftime("%Y-%m-%d")
@@ -854,8 +859,15 @@ def scaffold_page(page_type: str, title: str, project_root: Path,
         "domain-overview": "wiki/spine/domain-overviews",
         "learning-path": "wiki/spine/learning-paths",
         "evolution": "wiki/spine/evolution-log",
+        "operations-plan": "wiki/domains",
+        "epic": "wiki/backlog/epics",
+        "module": "wiki/backlog/modules",
+        "task": "wiki/backlog/tasks",
+        "note": "wiki/log",
     }
-    out_dir = project_root / type_dirs.get(page_type, "wiki")
+    # Methodology templates output to wiki/domains/{domain}/
+    base_type = page_type.split("/")[0] if "/" in page_type else page_type
+    out_dir = project_root / type_dirs.get(base_type, "wiki")
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / f"{slug}.md"
 

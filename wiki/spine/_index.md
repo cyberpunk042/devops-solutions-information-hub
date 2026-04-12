@@ -4,6 +4,43 @@ Strategic architecture: models, standards, domain overviews, and the adoption gu
 
 **Entry point:** [[Model Registry]] — all 15 models with status and standards links.
 
+## Methodology System
+
+| Page | What It Covers |
+|------|---------------|
+| [[Methodology System Map]] | Complete system map — every component, where it lives, how to extend — LOOKUP |
+| [[Model: Methodology]] | The 9 named models, stage gates, composition, quality tiers — UNDERSTAND |
+| [[Methodology Standards — What Good Execution Looks Like]] | Gold standards for methodology execution with real examples |
+| [[Methodology Adoption Guide]] | 4-tier adoption from read to enforce, per-domain quick starts |
+| [[Artifact Chains by Methodology Model]] | Full artifact chains for all 9 models |
+| [[Model Composition Rules]] | Sequential, nested, conditional, parallel composition |
+| [[Methodology Evolution Protocol]] | Evidence-driven versioned improvement |
+| [[CLAUDE.md Structural Patterns for Agent Compliance]] | 8 patterns that improve agent compliance |
+| [[Enforcement Hook Patterns]] | 4 hook types for infrastructure enforcement |
+| [[Stage-Aware Skill Injection]] | Per-stage skill recommendations and restrictions |
+
+## Per-Type Page Standards
+
+Every page type has its own standards doc with: section-by-section quality bar, gold-standard exemplar, common failures, content thresholds, and template reference.
+
+| Type | Standards Page | Exemplar |
+|------|--------------|----------|
+| concept | [[Concept Page Standards]] | [[Methodology Framework]] |
+| source-synthesis | [[Source-Synthesis Page Standards]] | [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] |
+| comparison | [[Comparison Page Standards]] | [[Cross-Domain Patterns]] |
+| reference | [[Reference Page Standards]] | [[Methodology Adoption Guide]] |
+| deep-dive | [[Deep-Dive Page Standards]] | [[Adoption Guide — How to Use This Wiki's Standards]] |
+| lesson | [[Lesson Page Standards]] | [[CLI Tools Beat MCP for Token Efficiency]] |
+| pattern | [[Pattern Page Standards]] | [[Plan-Execute-Review Cycle]] |
+| decision | [[Decision Page Standards]] | [[Execution Mode Edge Cases]] |
+| domain-overview | [[Domain Overview Page Standards]] | [[Cross-Domain — Domain Overview]] |
+| evolution | [[Evolution Page Standards]] | [[Evolution: Methodology System]] |
+| learning-path | [[Learning Path Page Standards]] | [[Learning Path: Methodology Fundamentals]] |
+| operations-plan | [[Operations Plan Page Standards]] | [[Operations Plan: Wiki Post-Ingestion Validation]] |
+| epic | [[Epic Page Standards]] | [[Artifact Type System]] |
+| task | [[Task Page Standards]] | [[Test OpenAI backend with LocalAI]] |
+| note | [[Note Page Standards]] | [[Models Are Not Documents — They Must Be Usable Systems]] |
+
 ## Domain Overviews
 
 | Overview | Domain |
@@ -19,6 +56,8 @@ Strategic architecture: models, standards, domain overviews, and the adoption gu
 ## Pages
 
 - [Adoption Guide — How to Use This Wiki's Standards](adoption-guide.md) — This guide explains how any project in the ecosystem (or outside it) picks up the methodology, stage-gate system, bac...
+- [Methodology Adoption Guide](methodology-adoption-guide.md) — Step-by-step guide for any project to adopt the research wiki's methodology
+- [Methodology System Map](methodology-system-map.md) — Complete map of the methodology system — every component, where it lives, what it does, and how they connect
 - [Model: Automation and Pipelines](model-automation-pipelines.md) — The Automation and Pipelines model describes how this wiki transforms knowledge work from manual operations into auto...
 - [Claude Code Standards — What Good Agent Configuration Looks Like](model-claude-code-standards.md) — This page defines the quality bar for CLAUDE CODE CONFIGURATION
 - [Model: Claude Code](model-claude-code.md) — Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from th...
@@ -46,4 +85,4 @@ Strategic architecture: models, standards, domain overviews, and the adoption gu
 
 ## Tags
 
-`spine`, `model`, `standards`, `quality`, `gold-standard`, `anti-patterns`, `methodology`, `concept`, `skills`, `hooks`, `ecosystem`, `context-management`, `integration`, `second-brain`, `adoption`, `transferable`, `claude-code`, `harness`, `model-definition`, `harness-engineering`
+`spine`, `model`, `standards`, `quality`, `gold-standard`, `methodology`, `anti-patterns`, `ecosystem`, `concept`, `skills`, `hooks`, `adoption`, `context-management`, `integration`, `second-brain`, `transferable`, `guide`, `navigation`, `framework`, `claude-code`

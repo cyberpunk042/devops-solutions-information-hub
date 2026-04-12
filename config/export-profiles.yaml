@@ -63,3 +63,24 @@ aicp:
       - ai-agents
       - security
       - knowledge-systems
+
+methodology:
+  description: "Export methodology engine config bundle for consumer projects"
+  target_format: methodology-bundle
+  output_dir: null  # set per invocation via --output
+  bundle_files:
+    - config/methodology.yaml
+    - config/artifact-types.yaml
+    - config/domain-profiles/typescript.yaml
+    - config/domain-profiles/python-wiki.yaml
+    - config/domain-profiles/infrastructure.yaml
+    - config/wiki-schema.yaml
+    - config/quality-standards.yaml
+  bundle_wiki_pages:
+    - wiki/spine/methodology-adoption-guide.md
+    - wiki/domains/cross-domain/artifact-chains-by-model.md
+    - wiki/domains/cross-domain/model-composition-rules.md
+    - wiki/domains/cross-domain/methodology-evolution-protocol.md
+  transforms:
+    frontmatter: preserve
+    resolution: full

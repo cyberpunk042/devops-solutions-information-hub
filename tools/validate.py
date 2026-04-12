@@ -208,6 +208,89 @@ def validate_page(
                 "message": "Log page should have a note_type field",
             })
 
+    # --- Enhanced validation from artifact-types.yaml (optional layer) ---
+    artifact_types_path = schema_path.parent / "artifact-types.yaml"
+    if artifact_types_path.exists():
+        artifact_config = load_config(artifact_types_path)
+        if artifact_config and "types" in artifact_config:
+            type_def = artifact_config["types"].get(page_type, {})
+            thresholds = type_def.get("content_thresholds", {})
+
+            # Per-type summary word count
+            summary_min = thresholds.get("summary_min_words", 0)
+            summary_text = sections.get("Summary", "")
+            if summary_min and summary_text and word_count(summary_text) < summary_min:
+                warnings.append({
+                    "code": "summary_below_threshold",
+                    "message": f"Summary has {word_count(summary_text)} words (type '{page_type}' requires {summary_min})",
+                })
+
+            # Per-type deep analysis word count
+            analysis_min = thresholds.get("deep_analysis_min_words", 0)
+            analysis_text = sections.get("Deep Analysis", "")
+            if analysis_min and analysis_text and word_count(analysis_text) < analysis_min:
+                warnings.append({
+                    "code": "analysis_below_threshold",
+                    "message": f"Deep Analysis has {word_count(analysis_text)} words (type '{page_type}' requires {analysis_min})",
+                })
+
+            # Per-type relationship count
+            rel_min = thresholds.get("min_relationships", 0)
+            rel_text = sections.get("Relationships", "")
+            if rel_min and rel_text:
+                rels = parse_relationships(rel_text)
+                if len(rels) < rel_min:
+                    warnings.append({
+                        "code": "few_relationships",
+                        "message": f"Only {len(rels)} relationships (type '{page_type}' recommends {rel_min})",
+                    })
+
+            # Per-type insight word count (lessons)
+            insight_min = thresholds.get("insight_min_words", 0)
+            insight_text = sections.get("Insight", "")
+            if insight_min and insight_text and word_count(insight_text) < insight_min:
+                warnings.append({
+                    "code": "insight_below_threshold",
+                    "message": f"Insight has {word_count(insight_text)} words (type '{page_type}' requires {insight_min})",
+                })
+
+            # Per-type rationale word count (decisions)
+            rationale_min = thresholds.get("rationale_min_words", 0)
+            rationale_text = sections.get("Rationale", "")
+            if rationale_min and rationale_text and word_count(rationale_text) < rationale_min:
+                warnings.append({
+                    "code": "rationale_below_threshold",
+                    "message": f"Rationale has {word_count(rationale_text)} words (type '{page_type}' requires {rationale_min})",
+                })
+
+            # Per-type pattern description word count
+            desc_min = thresholds.get("pattern_description_min_words", 0)
+            desc_text = sections.get("Pattern Description", "")
+            if desc_min and desc_text and word_count(desc_text) < desc_min:
+                warnings.append({
+                    "code": "description_below_threshold",
+                    "message": f"Pattern Description has {word_count(desc_text)} words (type '{page_type}' requires {desc_min})",
+                })
+
+            # Required frontmatter per type
+            req_fm = type_def.get("required_frontmatter", [])
+            for field in req_fm:
+                if field not in meta:
+                    warnings.append({
+                        "code": "type_missing_field",
+                        "message": f"Type '{page_type}' recommends field: {field}",
+                        "field": field,
+                    })
+
+            # Styling check — callouts required
+            styling = type_def.get("styling", {})
+            if styling.get("callouts_required"):
+                if body and "> [!" not in body:
+                    warnings.append({
+                        "code": "missing_callouts",
+                        "message": f"Type '{page_type}' requires Obsidian callouts (> [!type]) but none found",
+                    })
+
     return result
 
 

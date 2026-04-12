@@ -451,4 +451,5 @@ From building with this model — validated experience:
 [[Model Registry]]
 [[Model: Wiki Design]]
 [[Models Are Systems, Not Documents]]
+[[Operations Plan: Wiki Post-Ingestion Validation]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]

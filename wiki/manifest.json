@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-10T21:43:50.918383+00:00",
+  "generated": "2026-04-12T00:39:16.300729+00:00",
   "stats": {
-    "pages": 185,
+    "pages": 220,
     "domains": 9,
     "sources": 24,
     "comparisons": 5,
-    "relationships": 1238,
-    "tags_unique": 672,
+    "relationships": 1437,
+    "tags_unique": 708,
     "layers": {
       "3": 5,
       "6": 13,
       "2": 51,
       "4": 28,
-      "5": 6,
+      "5": 9,
       "1": 24,
-      "spine": 32
+      "spine": 51
     },
     "maturity": {
-      "growing": 133,
-      "seed": 27
+      "growing": 134,
+      "seed": 57
     }
   },
   "pages": [
@@ -113,6 +113,262 @@
         {
           "verb": "RELATES TO",
           "target": "Decision: Wiki-First with LightRAG Upgrade Path"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/E003-artifact-type-system.md",
+      "slug": "backlog/epics/E003-artifact-type-system",
+      "title": "Artifact Type System",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "artifact-types",
+        "templates",
+        "exemplars",
+        "type-system",
+        "foundation"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-11-methodology-standards-directive.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "ENABLES",
+          "target": "Epic: Portable Methodology Engine"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Epic: Agent Compliance Framework"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Epic: Standards-by-Example"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Gap Analysis"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/E004-portable-methodology-engine.md",
+      "slug": "backlog/epics/E004-portable-methodology-engine",
+      "title": "Portable Methodology Engine",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "in-progress",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "methodology-engine",
+        "portable",
+        "ecosystem",
+        "configuration"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-11-methodology-standards-directive.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "DEPENDS ON",
+          "target": "Epic: Artifact Type System"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Epic: Agent Compliance Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Gap Analysis"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Ecosystem"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Four-Project Ecosystem"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/E005-agent-compliance-framework.md",
+      "slug": "backlog/epics/E005-agent-compliance-framework",
+      "title": "Agent Compliance Framework",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "in-progress",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "agent-compliance",
+        "enforcement",
+        "hooks",
+        "claude-md",
+        "skills",
+        "validation"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-11-methodology-standards-directive.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "DEPENDS ON",
+          "target": "Epic: Artifact Type System"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Epic: Portable Methodology Engine"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Gap Analysis"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Skip Stages Even When Told to Continue"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plan-Execute-Review Cycle"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/E006-standards-by-example.md",
+      "slug": "backlog/epics/E006-standards-by-example",
+      "title": "Standards-by-Example",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "in-progress",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "standards",
+        "exemplars",
+        "annotations",
+        "quality",
+        "self-validation"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-11-methodology-standards-directive.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "DEPENDS ON",
+          "target": "Epic: Artifact Type System"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Standards Must Preach by Example"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Models Are Systems Not Documents"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
         }
       ]
     },
@@ -3156,6 +3412,290 @@
       ]
     },
     {
+      "path": "domains/cross-domain/artifact-chains-by-model.md",
+      "slug": "domains/cross-domain/artifact-chains-by-model",
+      "title": "Artifact Chains by Methodology Model",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "artifact-chains",
+        "models",
+        "reference",
+        "stage-gate"
+      ],
+      "sources": [
+        {
+          "id": "methodology-config",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        },
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "design-doc",
+          "type": "file",
+          "file": "wiki/domains/cross-domain/e003-artifact-type-system-design.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Modes and End Conditions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/e003-artifact-type-system-design.md",
+      "slug": "domains/cross-domain/e003-artifact-type-system-design",
+      "title": "E003 Artifact Type System \u2014 Design Document",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "design",
+        "artifact-types",
+        "e003",
+        "type-system",
+        "architecture"
+      ],
+      "sources": [
+        {
+          "id": "requirements-spec",
+          "type": "file",
+          "file": "wiki/domains/cross-domain/e003-artifact-type-system-requirements.md"
+        },
+        {
+          "id": "openarms-artifact-spec",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-artifact-spec.md"
+        },
+        {
+          "id": "openarms-methodology",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        },
+        {
+          "id": "wiki-schema",
+          "type": "file",
+          "file": "config/wiki-schema.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Epic: Artifact Type System"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "E003 Artifact Type System \u2014 Requirements Spec"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Epic: Portable Methodology Engine"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Epic: Agent Compliance Framework"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/e003-artifact-type-system-requirements.md",
+      "slug": "domains/cross-domain/e003-artifact-type-system-requirements",
+      "title": "E003 Artifact Type System \u2014 Requirements Spec",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "requirements",
+        "artifact-types",
+        "e003",
+        "type-system",
+        "templates"
+      ],
+      "sources": [
+        {
+          "id": "infrastructure-analysis",
+          "type": "file",
+          "file": "wiki/domains/cross-domain/methodology-standards-initiative-infrastructure.md"
+        },
+        {
+          "id": "gap-analysis",
+          "type": "file",
+          "file": "wiki/domains/cross-domain/methodology-standards-initiative-gaps.md"
+        },
+        {
+          "id": "openarms-methodology",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        },
+        {
+          "id": "openarms-artifact-spec",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-artifact-spec.md"
+        },
+        {
+          "id": "wiki-schema",
+          "type": "file",
+          "file": "config/wiki-schema.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Epic: Artifact Type System"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Gap Analysis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-evolution-protocol.md",
+      "slug": "domains/cross-domain/methodology-evolution-protocol",
+      "title": "Methodology Evolution Protocol",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "evolution",
+        "protocol",
+        "versioning",
+        "feedback-loop"
+      ],
+      "sources": [
+        {
+          "id": "openarms-evolution",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        },
+        {
+          "id": "methodology-config",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plan-Execute-Review Cycle"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Quality and Failure Prevention"
+        }
+      ]
+    },
+    {
       "path": "domains/cross-domain/methodology-framework.md",
       "slug": "domains/cross-domain/methodology-framework",
       "title": "Methodology Framework",
@@ -3250,8 +3790,306 @@
           "target": "Wiki Backlog Pattern"
         },
         {
+          "verb": "CONTAINS",
+          "target": "Model Composition Rules"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Methodology Evolution Protocol"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
           "verb": "IMPLEMENTS",
           "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-standards-initiative-gaps.md",
+      "slug": "domains/cross-domain/methodology-standards-initiative-gaps",
+      "title": "Methodology Standards Initiative \u2014 Gap Analysis",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "gap-analysis",
+        "artifact-system",
+        "agent-compliance",
+        "epic-planning"
+      ],
+      "sources": [
+        {
+          "id": "infrastructure-analysis",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-standards-initiative-infrastructure.md"
+        },
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-11-methodology-standards-directive.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Standards Must Preach by Example"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Models Are Systems Not Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plan-Execute-Review Cycle"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Model: Skills, Commands, and Hooks"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-standards-initiative-honest-assessment.md",
+      "slug": "domains/cross-domain/methodology-standards-initiative-honest-assessment",
+      "title": "Methodology Standards Initiative \u2014 Honest Assessment",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "assessment",
+        "gap-analysis",
+        "self-critique",
+        "honest"
+      ],
+      "sources": [
+        {
+          "id": "operator-feedback",
+          "type": "file",
+          "file": "raw/notes/2026-04-11-methodology-full-directive-log.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Gap Analysis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Standards Must Preach by Example"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Models Are Systems Not Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Epic: Artifact Type System"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Epic: Standards-by-Example"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-standards-initiative-infrastructure.md",
+      "slug": "domains/cross-domain/methodology-standards-initiative-infrastructure",
+      "title": "Methodology Standards Initiative \u2014 Infrastructure Analysis",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "infrastructure-analysis",
+        "artifact-system",
+        "agent-compliance",
+        "epic-planning"
+      ],
+      "sources": [
+        {
+          "id": "openarms-methodology",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        },
+        {
+          "id": "openarms-agents",
+          "type": "file",
+          "file": "/home/jfortin/openarms/AGENTS.md"
+        },
+        {
+          "id": "wiki-schema",
+          "type": "file",
+          "file": "config/wiki-schema.yaml"
+        },
+        {
+          "id": "wiki-quality",
+          "type": "file",
+          "file": "config/quality-standards.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Task Type Artifact Matrix"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Execution Modes and End Conditions"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plan-Execute-Review Cycle"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Model: Quality and Failure Prevention"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/model-composition-rules.md",
+      "slug": "domains/cross-domain/model-composition-rules",
+      "title": "Model Composition Rules",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "composition",
+        "models",
+        "recursive",
+        "multi-track"
+      ],
+      "sources": [
+        {
+          "id": "methodology-framework",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-framework.md"
+        },
+        {
+          "id": "methodology-config",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        },
+        {
+          "id": "openarms-methodology",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Modes and End Conditions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
         }
       ]
     },
@@ -3318,6 +4156,47 @@
         {
           "verb": "RELATES TO",
           "target": "Knowledge Evolution Pipeline"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/wiki-post-ingestion-operations-plan.md",
+      "slug": "domains/cross-domain/wiki-post-ingestion-operations-plan",
+      "title": "Operations Plan: Wiki Post-Ingestion Validation",
+      "type": "operations-plan",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "operations-plan",
+        "post-ingestion",
+        "validation",
+        "pipeline"
+      ],
+      "sources": [
+        {
+          "id": "pipeline-post",
+          "type": "file",
+          "file": "tools/pipeline.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Model: LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
         }
       ]
     },
@@ -8185,6 +9064,77 @@
       "relationships": []
     },
     {
+      "path": "patterns/claude-md-structural-patterns.md",
+      "slug": "patterns/claude-md-structural-patterns",
+      "title": "CLAUDE.md Structural Patterns for Agent Compliance",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "claude-md",
+        "agent-compliance",
+        "structural-patterns",
+        "formatting",
+        "enforcement"
+      ],
+      "sources": [
+        {
+          "id": "openarms-agents",
+          "type": "file",
+          "file": "/home/jfortin/openarms/AGENTS.md"
+        },
+        {
+          "id": "openarms-directive",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/agent-directive.md"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Model: Methodology",
+        "Never Skip Stages Even When Told to Continue",
+        "Always Plan Before Executing"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Never Skip Stages Even When Told to Continue"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Claude Code"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Plan-Execute-Review Cycle"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
       "path": "patterns/context-aware-tool-loading.md",
       "slug": "patterns/context-aware-tool-loading",
       "title": "Context-Aware Tool Loading",
@@ -8373,6 +9323,72 @@
         {
           "verb": "FEEDS INTO",
           "target": "Gateway-Centric Routing"
+        }
+      ]
+    },
+    {
+      "path": "patterns/enforcement-hook-patterns.md",
+      "slug": "patterns/enforcement-hook-patterns",
+      "title": "Enforcement Hook Patterns",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "hooks",
+        "enforcement",
+        "agent-compliance",
+        "infrastructure",
+        "claude-code"
+      ],
+      "sources": [
+        {
+          "id": "openarms-hooks",
+          "type": "file",
+          "file": "/home/jfortin/openarms/scripts/methodology/hooks/"
+        },
+        {
+          "id": "openarms-agents",
+          "type": "file",
+          "file": "/home/jfortin/openarms/AGENTS.md"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Model: Skills, Commands, and Hooks",
+        "Model: Methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
         }
       ]
     },
@@ -8740,6 +9756,67 @@
         {
           "verb": "RELATES TO",
           "target": "Infrastructure as Code Patterns"
+        }
+      ]
+    },
+    {
+      "path": "patterns/stage-aware-skill-injection.md",
+      "slug": "patterns/stage-aware-skill-injection",
+      "title": "Stage-Aware Skill Injection",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "skills",
+        "stage-gate",
+        "injection",
+        "agent-compliance",
+        "methodology"
+      ],
+      "sources": [
+        {
+          "id": "openarms-mapping",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/skill-stage-mapping.yaml"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Model: Skills, Commands, and Hooks",
+        "Model: Methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
         }
       ]
     },
@@ -10598,6 +11675,232 @@
       ]
     },
     {
+      "path": "spine/evolution-log/methodology-evolution-history.md",
+      "slug": "spine/evolution-log/methodology-evolution-history",
+      "title": "Evolution: Methodology System",
+      "type": "evolution",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "evolution",
+        "methodology",
+        "history",
+        "stage-gate",
+        "enforcement"
+      ],
+      "sources": [
+        {
+          "id": "openarms-evolution",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        },
+        {
+          "id": "wiki-methodology",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Evolution Protocol"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Super-Model"
+        }
+      ]
+    },
+    {
+      "path": "spine/learning-paths/methodology-fundamentals.md",
+      "slug": "spine/learning-paths/methodology-fundamentals",
+      "title": "Learning Path: Methodology Fundamentals",
+      "type": "learning-path",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "learning-path",
+        "methodology",
+        "onboarding",
+        "fundamentals"
+      ],
+      "sources": [],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Super-Model"
+        }
+      ]
+    },
+    {
+      "path": "spine/methodology-adoption-guide.md",
+      "slug": "spine/methodology-adoption-guide",
+      "title": "Methodology Adoption Guide",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "adoption",
+        "guide",
+        "onboarding",
+        "ecosystem"
+      ],
+      "sources": [
+        {
+          "id": "methodology-config",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        },
+        {
+          "id": "domain-profiles",
+          "type": "file",
+          "file": "config/domain-profiles/"
+        },
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "openarms-evidence",
+          "type": "file",
+          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model Composition Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Super-Model"
+        }
+      ]
+    },
+    {
+      "path": "spine/methodology-system-map.md",
+      "slug": "spine/methodology-system-map",
+      "title": "Methodology System Map",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "methodology",
+        "system-map",
+        "reference",
+        "navigation",
+        "framework"
+      ],
+      "sources": [
+        {
+          "id": "methodology-config",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        },
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "spine/model-automation-pipelines.md",
       "slug": "spine/model-automation-pipelines",
       "title": "Model: Automation and Pipelines",
@@ -11171,7 +12474,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-11",
       "tags": [
         "standards",
         "quality",
@@ -11434,7 +12737,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-11",
       "tags": [
         "methodology",
         "standards",
@@ -11454,7 +12757,7 @@
         }
       ],
       "layer": "spine",
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [],
       "relationships": [
         {
@@ -11464,6 +12767,30 @@
         {
           "verb": "BUILDS ON",
           "target": "LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Stage-Aware Skill Injection"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Evolution Protocol"
         },
         {
           "verb": "RELATES TO",
@@ -11476,10 +12803,6 @@
         {
           "verb": "RELATES TO",
           "target": "Models Are Built in Layers, Not All at Once"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Wiki Design Standards \u2014 What Good Styling Looks Like"
         }
       ]
     },
@@ -11492,7 +12815,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-11",
       "tags": [
         "methodology",
         "model",
@@ -11586,6 +12909,34 @@
           "target": "Skyscraper, Pyramid, Mountain"
         },
         {
+          "verb": "CONTAINS",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Model Composition Rules"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Methodology Evolution Protocol"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "Stage-Aware Skill Injection"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Spec-Driven Development"
         },
@@ -11595,7 +12946,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "Adoption Guide \u2014 How to Use This Wiki's Standards"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -12326,6 +13677,665 @@
       ]
     },
     {
+      "path": "spine/standards/comparison-page-standards.md",
+      "slug": "spine/standards/comparison-page-standards",
+      "title": "Comparison Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "comparison",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "exemplar",
+          "type": "wiki",
+          "file": "wiki/comparisons/cross-domain-patterns.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/concept-page-standards.md",
+      "slug": "spine/standards/concept-page-standards",
+      "title": "Concept Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "concept",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "wiki-schema",
+          "type": "file",
+          "file": "config/wiki-schema.yaml"
+        },
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "exemplar",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-framework.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/decision-page-standards.md",
+      "slug": "spine/standards/decision-page-standards",
+      "title": "Decision Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "decision",
+        "page-type",
+        "quality",
+        "exemplar",
+        "evolved-page"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "exemplar",
+          "type": "wiki",
+          "file": "wiki/decisions/execution-mode-edge-cases.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/deep-dive-page-standards.md",
+      "slug": "spine/standards/deep-dive-page-standards",
+      "title": "Deep-Dive Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "deep-dive",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/domain-overview-page-standards.md",
+      "slug": "spine/standards/domain-overview-page-standards",
+      "title": "Domain Overview Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "domain-overview",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/epic-page-standards.md",
+      "slug": "spine/standards/epic-page-standards",
+      "title": "Epic Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "epic",
+        "page-type",
+        "quality",
+        "exemplar",
+        "backlog"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/evolution-page-standards.md",
+      "slug": "spine/standards/evolution-page-standards",
+      "title": "Evolution Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "evolution",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/learning-path-page-standards.md",
+      "slug": "spine/standards/learning-path-page-standards",
+      "title": "Learning Path Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "learning-path",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/lesson-page-standards.md",
+      "slug": "spine/standards/lesson-page-standards",
+      "title": "Lesson Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "lesson",
+        "page-type",
+        "quality",
+        "exemplar",
+        "evolved-page"
+      ],
+      "sources": [
+        {
+          "id": "wiki-schema",
+          "type": "file",
+          "file": "config/wiki-schema.yaml"
+        },
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "exemplar",
+          "type": "wiki",
+          "file": "wiki/lessons/cli-tools-beat-mcp-for-token-efficiency.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/note-page-standards.md",
+      "slug": "spine/standards/note-page-standards",
+      "title": "Note Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "note",
+        "page-type",
+        "quality",
+        "exemplar",
+        "log"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/operations-plan-page-standards.md",
+      "slug": "spine/standards/operations-plan-page-standards",
+      "title": "Operations Plan Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "operations-plan",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/pattern-page-standards.md",
+      "slug": "spine/standards/pattern-page-standards",
+      "title": "Pattern Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "pattern",
+        "page-type",
+        "quality",
+        "exemplar",
+        "evolved-page"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "exemplar",
+          "type": "wiki",
+          "file": "wiki/patterns/plan-execute-review-cycle.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/reference-page-standards.md",
+      "slug": "spine/standards/reference-page-standards",
+      "title": "Reference Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "reference",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/source-synthesis-page-standards.md",
+      "slug": "spine/standards/source-synthesis-page-standards",
+      "title": "Source-Synthesis Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "source-synthesis",
+        "page-type",
+        "quality",
+        "exemplar"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Wiki Design"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/task-page-standards.md",
+      "slug": "spine/standards/task-page-standards",
+      "title": "Task Page Standards",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-11",
+      "updated": "2026-04-11",
+      "tags": [
+        "standards",
+        "task",
+        "page-type",
+        "quality",
+        "exemplar",
+        "backlog"
+      ],
+      "sources": [
+        {
+          "id": "artifact-types",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "spine/super-model.md",
       "slug": "spine/super-model",
       "title": "Super-Model: Research Wiki as Ecosystem Intelligence Hub",
@@ -12380,12 +14390,12 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 3,
-      "relationship_count": 11
+      "page_count": 7,
+      "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 53,
-      "relationship_count": 393
+      "page_count": 84,
+      "relationship_count": 559
     },
     "devops": {
       "page_count": 14,
@@ -12445,17 +14455,22 @@
     ],
     "evolution": [
       "backlog/epics/E001-local-inference-engine",
+      "domains/cross-domain/methodology-evolution-protocol",
       "domains/knowledge-systems/knowledge-evolution-pipeline",
       "log/2026-04-10-directive-quality-evolution-epic",
       "patterns/progressive-distillation",
-      "spine/model-llm-wiki"
+      "spine/evolution-log/methodology-evolution-history",
+      "spine/model-llm-wiki",
+      "spine/standards/evolution-page-standards"
     ],
     "ecosystem": [
       "backlog/epics/E002-ecosystem-integration",
+      "backlog/epics/E004-portable-methodology-engine",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/the-wiki-is-a-hub-not-a-silo",
       "spine/adoption-guide",
+      "spine/methodology-adoption-guide",
       "spine/model-ecosystem",
       "spine/super-model"
     ],
@@ -12505,6 +14520,244 @@
     "export": [
       "backlog/epics/E002-ecosystem-integration"
     ],
+    "methodology": [
+      "backlog/epics/E003-artifact-type-system",
+      "backlog/epics/E004-portable-methodology-engine",
+      "backlog/epics/E005-agent-compliance-framework",
+      "backlog/epics/E006-standards-by-example",
+      "decisions/methodology-framework-design-decisions",
+      "domains/ai-agents/per-role-command-architecture",
+      "domains/ai-agents/task-lifecycle-stage-gating",
+      "domains/cross-domain/artifact-chains-by-model",
+      "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/e003-artifact-type-system-requirements",
+      "domains/cross-domain/methodology-evolution-protocol",
+      "domains/cross-domain/methodology-framework",
+      "domains/cross-domain/methodology-standards-initiative-gaps",
+      "domains/cross-domain/methodology-standards-initiative-honest-assessment",
+      "domains/cross-domain/methodology-standards-initiative-infrastructure",
+      "domains/cross-domain/model-composition-rules",
+      "domains/devops/stage-gate-methodology",
+      "domains/devops/task-type-artifact-matrix",
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "lessons/never-skip-stages-even-when-told-to-continue",
+      "lessons/never-synthesize-from-descriptions-alone",
+      "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/the-agent-must-practice-what-it-documents",
+      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
+      "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
+      "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
+      "patterns/stage-aware-skill-injection",
+      "spine/adoption-guide",
+      "spine/evolution-log/methodology-evolution-history",
+      "spine/learning-paths/methodology-fundamentals",
+      "spine/methodology-adoption-guide",
+      "spine/methodology-system-map",
+      "spine/model-methodology-standards",
+      "spine/model-methodology",
+      "spine/model-quality-failure-prevention"
+    ],
+    "artifact-types": [
+      "backlog/epics/E003-artifact-type-system",
+      "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/e003-artifact-type-system-requirements"
+    ],
+    "templates": [
+      "backlog/epics/E003-artifact-type-system",
+      "domains/cross-domain/e003-artifact-type-system-requirements"
+    ],
+    "exemplars": [
+      "backlog/epics/E003-artifact-type-system",
+      "backlog/epics/E006-standards-by-example"
+    ],
+    "type-system": [
+      "backlog/epics/E003-artifact-type-system",
+      "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/e003-artifact-type-system-requirements"
+    ],
+    "foundation": [
+      "backlog/epics/E003-artifact-type-system",
+      "log/2026-04-09-directive-bottom-up-model-completion",
+      "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "methodology-engine": [
+      "backlog/epics/E004-portable-methodology-engine"
+    ],
+    "portable": [
+      "backlog/epics/E004-portable-methodology-engine"
+    ],
+    "configuration": [
+      "backlog/epics/E004-portable-methodology-engine",
+      "spine/model-claude-code-standards"
+    ],
+    "agent-compliance": [
+      "backlog/epics/E005-agent-compliance-framework",
+      "domains/cross-domain/methodology-standards-initiative-gaps",
+      "domains/cross-domain/methodology-standards-initiative-infrastructure",
+      "patterns/claude-md-structural-patterns",
+      "patterns/enforcement-hook-patterns",
+      "patterns/stage-aware-skill-injection"
+    ],
+    "enforcement": [
+      "backlog/epics/E005-agent-compliance-framework",
+      "patterns/claude-md-structural-patterns",
+      "patterns/enforcement-hook-patterns",
+      "spine/evolution-log/methodology-evolution-history",
+      "spine/model-quality-failure-prevention-standards"
+    ],
+    "hooks": [
+      "backlog/epics/E005-agent-compliance-framework",
+      "decisions/extension-system-operational-decisions",
+      "decisions/hooks-design-decisions",
+      "decisions/per-role-command-design-decisions",
+      "domains/ai-agents/claude-code-best-practices",
+      "domains/ai-agents/claude-code-skills",
+      "domains/ai-agents/claude-code",
+      "domains/ai-agents/hooks-lifecycle-architecture",
+      "domains/ai-agents/per-role-command-architecture",
+      "domains/automation/wiki-event-driven-automation",
+      "patterns/enforcement-hook-patterns",
+      "sources/src-context-mode",
+      "sources/src-shanraisshan-claude-code-best-practice",
+      "spine/model-claude-code-standards",
+      "spine/model-claude-code",
+      "spine/model-skills-commands-hooks-standards",
+      "spine/model-skills-commands-hooks"
+    ],
+    "claude-md": [
+      "backlog/epics/E005-agent-compliance-framework",
+      "domains/ai-agents/design-md-pattern",
+      "domains/devops/infrastructure-as-code-patterns",
+      "lessons/the-agent-must-practice-what-it-documents",
+      "patterns/claude-md-structural-patterns",
+      "sources/src-playwright-mcp-visual-testing",
+      "spine/model-design-md"
+    ],
+    "skills": [
+      "backlog/epics/E005-agent-compliance-framework",
+      "comparisons/skills-architecture-patterns",
+      "decisions/extension-system-operational-decisions",
+      "decisions/mcp-vs-cli-for-tool-integration",
+      "decisions/per-role-command-design-decisions",
+      "domains/ai-agents/claude-code-best-practices",
+      "domains/ai-agents/claude-code-skills",
+      "domains/ai-agents/claude-code",
+      "domains/ai-agents/openclaw",
+      "domains/ai-agents/per-role-command-architecture",
+      "domains/tools-and-platforms/notebooklm-skills",
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/cli-tools-beat-mcp-for-token-efficiency",
+      "lessons/skill-specification-is-key-to-interoperability",
+      "lessons/skills-architecture-is-dominant-extension-pattern",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
+      "patterns/context-aware-tool-loading",
+      "patterns/stage-aware-skill-injection",
+      "sources/src-axton-obsidian-visual-skills",
+      "sources/src-claude-notebooklm-content-team",
+      "sources/src-kepano-obsidian-skills",
+      "sources/src-notebooklm-claude-code-workflow",
+      "sources/src-obsidian-claude-code-second-brain",
+      "sources/src-playwright-cli-vs-mcp",
+      "sources/src-shanraisshan-claude-code-best-practice",
+      "spine/model-claude-code-standards",
+      "spine/model-claude-code",
+      "spine/model-skills-commands-hooks-standards",
+      "spine/model-skills-commands-hooks"
+    ],
+    "validation": [
+      "backlog/epics/E005-agent-compliance-framework",
+      "domains/cross-domain/wiki-post-ingestion-operations-plan",
+      "lessons/automated-knowledge-validation-prevents-wiki-decay",
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
+      "log/2026-04-09-directive-validate-second-brain-readiness"
+    ],
+    "standards": [
+      "backlog/epics/E006-standards-by-example",
+      "lessons/models-are-systems-not-documents",
+      "lessons/skill-specification-is-key-to-interoperability",
+      "lessons/standards-must-preach-by-example",
+      "log/2026-04-09-directive-record-process-skills-supermodel",
+      "log/2026-04-10-directive-quality-evolution-epic",
+      "spine/adoption-guide",
+      "spine/model-claude-code-standards",
+      "spine/model-knowledge-evolution-standards",
+      "spine/model-llm-wiki-standards",
+      "spine/model-llm-wiki",
+      "spine/model-methodology-standards",
+      "spine/model-quality-failure-prevention-standards",
+      "spine/model-skills-commands-hooks-standards",
+      "spine/model-wiki-design-standards",
+      "spine/model-wiki-design",
+      "spine/standards/comparison-page-standards",
+      "spine/standards/concept-page-standards",
+      "spine/standards/decision-page-standards",
+      "spine/standards/deep-dive-page-standards",
+      "spine/standards/domain-overview-page-standards",
+      "spine/standards/epic-page-standards",
+      "spine/standards/evolution-page-standards",
+      "spine/standards/learning-path-page-standards",
+      "spine/standards/lesson-page-standards",
+      "spine/standards/note-page-standards",
+      "spine/standards/operations-plan-page-standards",
+      "spine/standards/pattern-page-standards",
+      "spine/standards/reference-page-standards",
+      "spine/standards/source-synthesis-page-standards",
+      "spine/standards/task-page-standards",
+      "spine/super-model"
+    ],
+    "annotations": [
+      "backlog/epics/E006-standards-by-example"
+    ],
+    "quality": [
+      "backlog/epics/E006-standards-by-example",
+      "domains/cross-domain/skyscraper-pyramid-mountain",
+      "lessons/infrastructure-must-be-reproducible-not-manual",
+      "lessons/models-are-systems-not-documents",
+      "lessons/never-present-speculation-as-fact",
+      "lessons/never-skip-stages-even-when-told-to-continue",
+      "lessons/never-synthesize-from-descriptions-alone",
+      "lessons/shallow-ingestion-is-systemic-not-isolated",
+      "lessons/standards-must-preach-by-example",
+      "lessons/systemic-incompleteness-is-invisible-to-validation",
+      "lessons/the-agent-must-practice-what-it-documents",
+      "log/2026-04-09-directive-model-quality-links-schema",
+      "log/2026-04-09-directive-models-are-not-documents",
+      "log/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
+      "log/2026-04-09-directive-stop-claiming-readiness",
+      "log/2026-04-09-directive-stop-guessing-false-claims",
+      "log/2026-04-09-directive-systemic-incompleteness",
+      "log/2026-04-10-directive-quality-evolution-epic",
+      "spine/model-claude-code-standards",
+      "spine/model-llm-wiki-standards",
+      "spine/model-methodology-standards",
+      "spine/model-quality-failure-prevention-standards",
+      "spine/model-quality-failure-prevention",
+      "spine/model-skills-commands-hooks-standards",
+      "spine/standards/comparison-page-standards",
+      "spine/standards/concept-page-standards",
+      "spine/standards/decision-page-standards",
+      "spine/standards/deep-dive-page-standards",
+      "spine/standards/domain-overview-page-standards",
+      "spine/standards/epic-page-standards",
+      "spine/standards/evolution-page-standards",
+      "spine/standards/learning-path-page-standards",
+      "spine/standards/lesson-page-standards",
+      "spine/standards/note-page-standards",
+      "spine/standards/operations-plan-page-standards",
+      "spine/standards/pattern-page-standards",
+      "spine/standards/reference-page-standards",
+      "spine/standards/source-synthesis-page-standards",
+      "spine/standards/task-page-standards",
+      "spine/super-model"
+    ],
+    "self-validation": [
+      "backlog/epics/E006-standards-by-example"
+    ],
     "openai-backend": [
       "backlog/tasks/T001-test-openai-backend"
     ],
@@ -12548,7 +14801,8 @@
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/llm-wiki-vs-rag",
-      "domains/knowledge-systems/llm-wiki-vs-rag"
+      "domains/knowledge-systems/llm-wiki-vs-rag",
+      "spine/standards/comparison-page-standards"
     ],
     "glob-grep": [
       "comparisons/agentic-search-vs-vector-search"
@@ -12654,38 +14908,10 @@
       "lessons/notebooklm-as-grounded-research-engine",
       "spine/model-second-brain"
     ],
-    "skills": [
-      "comparisons/skills-architecture-patterns",
-      "decisions/extension-system-operational-decisions",
-      "decisions/mcp-vs-cli-for-tool-integration",
-      "decisions/per-role-command-design-decisions",
-      "domains/ai-agents/claude-code-best-practices",
-      "domains/ai-agents/claude-code-skills",
-      "domains/ai-agents/claude-code",
-      "domains/ai-agents/openclaw",
-      "domains/ai-agents/per-role-command-architecture",
-      "domains/tools-and-platforms/notebooklm-skills",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem",
-      "lessons/cli-tools-beat-mcp-for-token-efficiency",
-      "lessons/skill-specification-is-key-to-interoperability",
-      "lessons/skills-architecture-is-dominant-extension-pattern",
-      "log/2026-04-09-directive-record-process-skills-supermodel",
-      "patterns/context-aware-tool-loading",
-      "sources/src-axton-obsidian-visual-skills",
-      "sources/src-claude-notebooklm-content-team",
-      "sources/src-kepano-obsidian-skills",
-      "sources/src-notebooklm-claude-code-workflow",
-      "sources/src-obsidian-claude-code-second-brain",
-      "sources/src-playwright-cli-vs-mcp",
-      "sources/src-shanraisshan-claude-code-best-practice",
-      "spine/model-claude-code-standards",
-      "spine/model-claude-code",
-      "spine/model-skills-commands-hooks-standards",
-      "spine/model-skills-commands-hooks"
-    ],
     "architecture": [
       "comparisons/skills-architecture-patterns",
       "decisions/wiki-first-with-lightrag-upgrade-path",
+      "domains/cross-domain/e003-artifact-type-system-design",
       "domains/cross-domain/skyscraper-pyramid-mountain",
       "domains/devops/four-project-ecosystem",
       "patterns/scaffold-foundation-infrastructure-features",
@@ -12710,6 +14936,7 @@
       "lessons/always-plan-before-executing",
       "lessons/context-management-is-primary-productivity-lever",
       "lessons/skills-architecture-is-dominant-extension-pattern",
+      "patterns/enforcement-hook-patterns",
       "sources/src-axton-obsidian-visual-skills",
       "sources/src-claude-code-accuracy-tips",
       "sources/src-claude-notebooklm-content-team",
@@ -12776,7 +15003,8 @@
       "comparisons/skills-architecture-patterns",
       "decisions/extension-system-operational-decisions",
       "decisions/methodology-framework-design-decisions",
-      "domains/ai-agents/hooks-lifecycle-architecture"
+      "domains/ai-agents/hooks-lifecycle-architecture",
+      "domains/cross-domain/model-composition-rules"
     ],
     "execution-modes": [
       "decisions/execution-mode-edge-cases",
@@ -12814,27 +15042,11 @@
       "decisions/stage-gate-operational-decisions",
       "decisions/task-type-edge-cases"
     ],
-    "hooks": [
-      "decisions/extension-system-operational-decisions",
-      "decisions/hooks-design-decisions",
-      "decisions/per-role-command-design-decisions",
-      "domains/ai-agents/claude-code-best-practices",
-      "domains/ai-agents/claude-code-skills",
-      "domains/ai-agents/claude-code",
-      "domains/ai-agents/hooks-lifecycle-architecture",
-      "domains/ai-agents/per-role-command-architecture",
-      "domains/automation/wiki-event-driven-automation",
-      "sources/src-context-mode",
-      "sources/src-shanraisshan-claude-code-best-practice",
-      "spine/model-claude-code-standards",
-      "spine/model-claude-code",
-      "spine/model-skills-commands-hooks-standards",
-      "spine/model-skills-commands-hooks"
-    ],
     "versioning": [
       "decisions/extension-system-operational-decisions",
       "decisions/methodology-framework-design-decisions",
-      "decisions/per-role-command-design-decisions"
+      "decisions/per-role-command-design-decisions",
+      "domains/cross-domain/methodology-evolution-protocol"
     ],
     "harness": [
       "decisions/extension-system-operational-decisions",
@@ -12851,8 +15063,11 @@
     "stage-gate": [
       "decisions/hooks-design-decisions",
       "decisions/stage-gate-operational-decisions",
+      "domains/cross-domain/artifact-chains-by-model",
       "domains/cross-domain/methodology-framework",
       "domains/devops/stage-gate-methodology",
+      "patterns/stage-aware-skill-injection",
+      "spine/evolution-log/methodology-evolution-history",
       "spine/model-methodology-standards",
       "spine/model-methodology"
     ],
@@ -12953,34 +15168,11 @@
       "spine/model-claude-code",
       "spine/model-mcp-cli-integration"
     ],
-    "methodology": [
-      "decisions/methodology-framework-design-decisions",
-      "domains/ai-agents/per-role-command-architecture",
-      "domains/ai-agents/task-lifecycle-stage-gating",
-      "domains/cross-domain/methodology-framework",
-      "domains/devops/stage-gate-methodology",
-      "domains/devops/task-type-artifact-matrix",
-      "lessons/infrastructure-must-be-reproducible-not-manual",
-      "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
-      "lessons/models-are-built-in-layers-not-all-at-once",
-      "lessons/never-skip-stages-even-when-told-to-continue",
-      "lessons/never-synthesize-from-descriptions-alone",
-      "lessons/shallow-ingestion-is-systemic-not-isolated",
-      "lessons/the-agent-must-practice-what-it-documents",
-      "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
-      "log/2026-04-09-directive-methodology-is-flexible-not-fixed",
-      "log/2026-04-09-directive-never-stop-at-surface",
-      "log/2026-04-09-directive-quality-models-hub-mindset",
-      "log/2026-04-09-directive-record-process-skills-supermodel",
-      "spine/adoption-guide",
-      "spine/model-methodology-standards",
-      "spine/model-methodology",
-      "spine/model-quality-failure-prevention"
-    ],
     "framework": [
       "decisions/methodology-framework-design-decisions",
       "domains/cross-domain/methodology-framework",
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
+      "spine/methodology-system-map",
       "spine/model-methodology"
     ],
     "model-selection": [
@@ -13162,7 +15354,8 @@
       "decisions/task-type-edge-cases"
     ],
     "decision": [
-      "decisions/wiki-first-with-lightrag-upgrade-path"
+      "decisions/wiki-first-with-lightrag-upgrade-path",
+      "spine/standards/decision-page-standards"
     ],
     "lightrag": [
       "decisions/wiki-first-with-lightrag-upgrade-path",
@@ -13176,6 +15369,7 @@
     "infrastructure": [
       "decisions/wiki-first-with-lightrag-upgrade-path",
       "domains/devops/devops-control-plane",
+      "patterns/enforcement-hook-patterns",
       "patterns/scaffold-foundation-infrastructure-features"
     ],
     "multi-agent": [
@@ -13358,13 +15552,6 @@
     "design-system": [
       "domains/ai-agents/design-md-pattern",
       "sources/src-awesome-design-md"
-    ],
-    "claude-md": [
-      "domains/ai-agents/design-md-pattern",
-      "domains/devops/infrastructure-as-code-patterns",
-      "lessons/the-agent-must-practice-what-it-documents",
-      "sources/src-playwright-mcp-visual-testing",
-      "spine/model-design-md"
     ],
     "google-stitch": [
       "domains/ai-agents/design-md-pattern",
@@ -13698,6 +15885,7 @@
     ],
     "pipeline": [
       "domains/automation/research-pipeline-orchestration",
+      "domains/cross-domain/wiki-post-ingestion-operations-plan",
       "domains/knowledge-systems/knowledge-evolution-pipeline",
       "domains/knowledge-systems/wiki-ingestion-pipeline",
       "lessons/automation-is-bridge-between-knowledge-and-action",
@@ -13737,12 +15925,52 @@
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
     ],
+    "artifact-chains": [
+      "domains/cross-domain/artifact-chains-by-model"
+    ],
+    "models": [
+      "domains/cross-domain/artifact-chains-by-model",
+      "domains/cross-domain/model-composition-rules",
+      "lessons/models-are-built-in-layers-not-all-at-once",
+      "lessons/models-are-systems-not-documents",
+      "log/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09-directive-model-quality-links-schema",
+      "log/2026-04-09-directive-models-are-not-documents",
+      "log/2026-04-09-directive-quality-models-hub-mindset",
+      "spine/model-registry",
+      "spine/super-model"
+    ],
+    "reference": [
+      "domains/cross-domain/artifact-chains-by-model",
+      "spine/methodology-system-map",
+      "spine/standards/reference-page-standards"
+    ],
+    "design": [
+      "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/devops/stage-gate-methodology",
+      "log/2026-04-09-directive-styling-obsidian"
+    ],
+    "e003": [
+      "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/e003-artifact-type-system-requirements"
+    ],
+    "requirements": [
+      "domains/cross-domain/e003-artifact-type-system-requirements"
+    ],
+    "protocol": [
+      "domains/cross-domain/methodology-evolution-protocol"
+    ],
+    "feedback-loop": [
+      "domains/cross-domain/methodology-evolution-protocol",
+      "patterns/plan-execute-review-cycle"
+    ],
     "composable": [
       "domains/cross-domain/methodology-framework",
       "spine/model-methodology"
     ],
     "recursive": [
       "domains/cross-domain/methodology-framework",
+      "domains/cross-domain/model-composition-rules",
       "patterns/scaffold-foundation-infrastructure-features",
       "spine/model-sfif-architecture"
     ],
@@ -13753,34 +15981,33 @@
     ],
     "multi-track": [
       "domains/cross-domain/methodology-framework",
+      "domains/cross-domain/model-composition-rules",
       "spine/model-methodology"
     ],
-    "quality": [
-      "domains/cross-domain/skyscraper-pyramid-mountain",
-      "lessons/infrastructure-must-be-reproducible-not-manual",
-      "lessons/models-are-systems-not-documents",
-      "lessons/never-present-speculation-as-fact",
-      "lessons/never-skip-stages-even-when-told-to-continue",
-      "lessons/never-synthesize-from-descriptions-alone",
-      "lessons/shallow-ingestion-is-systemic-not-isolated",
-      "lessons/standards-must-preach-by-example",
-      "lessons/systemic-incompleteness-is-invisible-to-validation",
-      "lessons/the-agent-must-practice-what-it-documents",
-      "log/2026-04-09-directive-model-quality-links-schema",
-      "log/2026-04-09-directive-models-are-not-documents",
-      "log/2026-04-09-directive-never-stop-at-surface",
-      "log/2026-04-09-directive-quality-models-hub-mindset",
-      "log/2026-04-09-directive-stop-claiming-readiness",
-      "log/2026-04-09-directive-stop-guessing-false-claims",
-      "log/2026-04-09-directive-systemic-incompleteness",
-      "log/2026-04-10-directive-quality-evolution-epic",
-      "spine/model-claude-code-standards",
-      "spine/model-llm-wiki-standards",
-      "spine/model-methodology-standards",
-      "spine/model-quality-failure-prevention-standards",
-      "spine/model-quality-failure-prevention",
-      "spine/model-skills-commands-hooks-standards",
-      "spine/super-model"
+    "gap-analysis": [
+      "domains/cross-domain/methodology-standards-initiative-gaps",
+      "domains/cross-domain/methodology-standards-initiative-honest-assessment",
+      "lessons/multi-stage-ingestion-beats-single-pass"
+    ],
+    "artifact-system": [
+      "domains/cross-domain/methodology-standards-initiative-gaps",
+      "domains/cross-domain/methodology-standards-initiative-infrastructure"
+    ],
+    "epic-planning": [
+      "domains/cross-domain/methodology-standards-initiative-gaps",
+      "domains/cross-domain/methodology-standards-initiative-infrastructure"
+    ],
+    "assessment": [
+      "domains/cross-domain/methodology-standards-initiative-honest-assessment"
+    ],
+    "self-critique": [
+      "domains/cross-domain/methodology-standards-initiative-honest-assessment"
+    ],
+    "honest": [
+      "domains/cross-domain/methodology-standards-initiative-honest-assessment"
+    ],
+    "infrastructure-analysis": [
+      "domains/cross-domain/methodology-standards-initiative-infrastructure"
     ],
     "refactoring": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -13800,14 +16027,24 @@
     "systems-course": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
     ],
+    "operations-plan": [
+      "domains/cross-domain/wiki-post-ingestion-operations-plan",
+      "spine/standards/operations-plan-page-standards"
+    ],
+    "post-ingestion": [
+      "domains/cross-domain/wiki-post-ingestion-operations-plan"
+    ],
     "backlog": [
       "domains/devops/backlog-hierarchy-rules",
-      "spine/model-methodology"
+      "spine/model-methodology",
+      "spine/standards/epic-page-standards",
+      "spine/standards/task-page-standards"
     ],
     "epic": [
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
-      "log/2026-04-10-directive-quality-evolution-epic"
+      "log/2026-04-10-directive-quality-evolution-epic",
+      "spine/standards/epic-page-standards"
     ],
     "module": [
       "domains/devops/backlog-hierarchy-rules",
@@ -13815,7 +16052,8 @@
     ],
     "task": [
       "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/task-type-artifact-matrix"
+      "domains/devops/task-type-artifact-matrix",
+      "spine/standards/task-page-standards"
     ],
     "hierarchy": [
       "domains/devops/backlog-hierarchy-rules"
@@ -13948,10 +16186,6 @@
     ],
     "document": [
       "domains/devops/stage-gate-methodology"
-    ],
-    "design": [
-      "domains/devops/stage-gate-methodology",
-      "log/2026-04-09-directive-styling-obsidian"
     ],
     "scaffold": [
       "domains/devops/stage-gate-methodology",
@@ -14387,11 +16621,6 @@
     "connectivity": [
       "lessons/agent-orchestration-is-highest-connected-concept"
     ],
-    "validation": [
-      "lessons/automated-knowledge-validation-prevents-wiki-decay",
-      "lessons/systemic-incompleteness-is-invisible-to-validation",
-      "log/2026-04-09-directive-validate-second-brain-readiness"
-    ],
     "wiki-decay": [
       "lessons/automated-knowledge-validation-prevents-wiki-decay",
       "lessons/wiki-maintenance-problem-solved-by-llm-automation"
@@ -14484,17 +16713,8 @@
     "lesson": [
       "lessons/models-are-built-in-layers-not-all-at-once",
       "lessons/standards-must-preach-by-example",
-      "lessons/the-wiki-is-a-hub-not-a-silo"
-    ],
-    "models": [
-      "lessons/models-are-built-in-layers-not-all-at-once",
-      "lessons/models-are-systems-not-documents",
-      "log/2026-04-09-directive-bottom-up-model-completion",
-      "log/2026-04-09-directive-model-quality-links-schema",
-      "log/2026-04-09-directive-models-are-not-documents",
-      "log/2026-04-09-directive-quality-models-hub-mindset",
-      "spine/model-registry",
-      "spine/super-model"
+      "lessons/the-wiki-is-a-hub-not-a-silo",
+      "spine/standards/lesson-page-standards"
     ],
     "process": [
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -14517,28 +16737,7 @@
     "usability": [
       "lessons/models-are-systems-not-documents"
     ],
-    "standards": [
-      "lessons/models-are-systems-not-documents",
-      "lessons/skill-specification-is-key-to-interoperability",
-      "lessons/standards-must-preach-by-example",
-      "log/2026-04-09-directive-record-process-skills-supermodel",
-      "log/2026-04-10-directive-quality-evolution-epic",
-      "spine/adoption-guide",
-      "spine/model-claude-code-standards",
-      "spine/model-knowledge-evolution-standards",
-      "spine/model-llm-wiki-standards",
-      "spine/model-llm-wiki",
-      "spine/model-methodology-standards",
-      "spine/model-quality-failure-prevention-standards",
-      "spine/model-skills-commands-hooks-standards",
-      "spine/model-wiki-design-standards",
-      "spine/model-wiki-design",
-      "spine/super-model"
-    ],
     "cross-reference": [
-      "lessons/multi-stage-ingestion-beats-single-pass"
-    ],
-    "gap-analysis": [
       "lessons/multi-stage-ingestion-beats-single-pass"
     ],
     "deepening": [
@@ -14683,7 +16882,8 @@
       "log/2026-04-09-ingest-awesome-design-md",
       "log/2026-04-09-session-summary",
       "log/2026-04-10-directive-quality-evolution-epic",
-      "log/2026-04-10-session-summary"
+      "log/2026-04-10-session-summary",
+      "spine/standards/note-page-standards"
     ],
     "directive": [
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
@@ -14713,10 +16913,6 @@
     ],
     "bottom-up": [
       "log/2026-04-09-directive-bottom-up-model-completion"
-    ],
-    "foundation": [
-      "log/2026-04-09-directive-bottom-up-model-completion",
-      "patterns/scaffold-foundation-infrastructure-features"
     ],
     "documentation": [
       "log/2026-04-09-directive-docs-layers-old-models"
@@ -14802,6 +16998,13 @@
     "gated": [
       "log/2026-04-10-directive-quality-evolution-epic"
     ],
+    "structural-patterns": [
+      "patterns/claude-md-structural-patterns"
+    ],
+    "formatting": [
+      "patterns/claude-md-structural-patterns",
+      "spine/model-wiki-design"
+    ],
     "tool-design": [
       "patterns/context-aware-tool-loading"
     ],
@@ -14848,9 +17051,6 @@
     "agent-workflow": [
       "patterns/plan-execute-review-cycle"
     ],
-    "feedback-loop": [
-      "patterns/plan-execute-review-cycle"
-    ],
     "synthesis": [
       "patterns/progressive-distillation"
     ],
@@ -14878,6 +17078,9 @@
     ],
     "design-lifecycle": [
       "patterns/scaffold-foundation-infrastructure-features"
+    ],
+    "injection": [
+      "patterns/stage-aware-skill-injection"
     ],
     "awesome-list": [
       "sources/src-awesome-design-md"
@@ -15135,10 +17338,12 @@
     ],
     "adoption": [
       "spine/adoption-guide",
+      "spine/methodology-adoption-guide",
       "spine/super-model"
     ],
     "guide": [
-      "spine/adoption-guide"
+      "spine/adoption-guide",
+      "spine/methodology-adoption-guide"
     ],
     "domain-overview": [
       "spine/domain-overviews/ai-agents-domain-overview",
@@ -15147,13 +17352,35 @@
       "spine/domain-overviews/cross-domain-domain-overview",
       "spine/domain-overviews/devops-domain-overview",
       "spine/domain-overviews/knowledge-systems-domain-overview",
-      "spine/domain-overviews/tools-and-platforms-domain-overview"
+      "spine/domain-overviews/tools-and-platforms-domain-overview",
+      "spine/standards/domain-overview-page-standards"
     ],
     "ai-models": [
       "spine/domain-overviews/ai-models-domain-overview"
     ],
     "tools-and-platforms": [
       "spine/domain-overviews/tools-and-platforms-domain-overview"
+    ],
+    "history": [
+      "spine/evolution-log/methodology-evolution-history"
+    ],
+    "learning-path": [
+      "spine/learning-paths/methodology-fundamentals",
+      "spine/standards/learning-path-page-standards"
+    ],
+    "onboarding": [
+      "spine/learning-paths/methodology-fundamentals",
+      "spine/methodology-adoption-guide"
+    ],
+    "fundamentals": [
+      "spine/learning-paths/methodology-fundamentals"
+    ],
+    "system-map": [
+      "spine/methodology-system-map"
+    ],
+    "navigation": [
+      "spine/methodology-system-map",
+      "spine/model-registry"
     ],
     "model": [
       "spine/model-automation-pipelines",
@@ -15174,7 +17401,8 @@
       "spine/model-automation-pipelines",
       "spine/model-local-ai",
       "spine/model-notebooklm",
-      "spine/model-second-brain"
+      "spine/model-second-brain",
+      "spine/standards/concept-page-standards"
     ],
     "spine": [
       "spine/model-automation-pipelines",
@@ -15194,9 +17422,6 @@
     ],
     "pipelines": [
       "spine/model-automation-pipelines"
-    ],
-    "configuration": [
-      "spine/model-claude-code-standards"
     ],
     "gold-standard": [
       "spine/model-claude-code-standards",
@@ -15273,9 +17498,6 @@
       "spine/model-quality-failure-prevention-standards",
       "spine/model-quality-failure-prevention"
     ],
-    "enforcement": [
-      "spine/model-quality-failure-prevention-standards"
-    ],
     "rework": [
       "spine/model-quality-failure-prevention"
     ],
@@ -15283,9 +17505,6 @@
       "spine/model-registry"
     ],
     "index": [
-      "spine/model-registry"
-    ],
-    "navigation": [
       "spine/model-registry"
     ],
     "entry-point": [
@@ -15301,11 +17520,59 @@
       "spine/model-wiki-design-standards",
       "spine/model-wiki-design"
     ],
-    "formatting": [
-      "spine/model-wiki-design"
-    ],
     "emerging": [
       "spine/model-wiki-design"
+    ],
+    "page-type": [
+      "spine/standards/comparison-page-standards",
+      "spine/standards/concept-page-standards",
+      "spine/standards/decision-page-standards",
+      "spine/standards/deep-dive-page-standards",
+      "spine/standards/domain-overview-page-standards",
+      "spine/standards/epic-page-standards",
+      "spine/standards/evolution-page-standards",
+      "spine/standards/learning-path-page-standards",
+      "spine/standards/lesson-page-standards",
+      "spine/standards/note-page-standards",
+      "spine/standards/operations-plan-page-standards",
+      "spine/standards/pattern-page-standards",
+      "spine/standards/reference-page-standards",
+      "spine/standards/source-synthesis-page-standards",
+      "spine/standards/task-page-standards"
+    ],
+    "exemplar": [
+      "spine/standards/comparison-page-standards",
+      "spine/standards/concept-page-standards",
+      "spine/standards/decision-page-standards",
+      "spine/standards/deep-dive-page-standards",
+      "spine/standards/domain-overview-page-standards",
+      "spine/standards/epic-page-standards",
+      "spine/standards/evolution-page-standards",
+      "spine/standards/learning-path-page-standards",
+      "spine/standards/lesson-page-standards",
+      "spine/standards/note-page-standards",
+      "spine/standards/operations-plan-page-standards",
+      "spine/standards/pattern-page-standards",
+      "spine/standards/reference-page-standards",
+      "spine/standards/source-synthesis-page-standards",
+      "spine/standards/task-page-standards"
+    ],
+    "evolved-page": [
+      "spine/standards/decision-page-standards",
+      "spine/standards/lesson-page-standards",
+      "spine/standards/pattern-page-standards"
+    ],
+    "deep-dive": [
+      "spine/standards/deep-dive-page-standards"
+    ],
+    "note": [
+      "spine/standards/note-page-standards"
+    ],
+    "pattern": [
+      "spine/standards/pattern-page-standards"
+    ],
+    "source-synthesis": [
+      "spine/standards/source-synthesis-page-standards"
     ]
   },
   "orphaned_refs": [
@@ -15316,10 +17583,136 @@
       ]
     },
     {
+      "target": "Epic: Agent Compliance Framework",
+      "referenced_by": [
+        "Artifact Type System",
+        "Portable Methodology Engine",
+        "E003 Artifact Type System \u2014 Design Document"
+      ]
+    },
+    {
+      "target": "Epic: Artifact Type System",
+      "referenced_by": [
+        "Portable Methodology Engine",
+        "Agent Compliance Framework",
+        "Standards-by-Example",
+        "E003 Artifact Type System \u2014 Design Document",
+        "E003 Artifact Type System \u2014 Requirements Spec",
+        "Methodology Standards Initiative \u2014 Honest Assessment"
+      ]
+    },
+    {
+      "target": "Epic: Portable Methodology Engine",
+      "referenced_by": [
+        "Artifact Type System",
+        "Agent Compliance Framework",
+        "E003 Artifact Type System \u2014 Design Document"
+      ]
+    },
+    {
+      "target": "Epic: Standards-by-Example",
+      "referenced_by": [
+        "Artifact Type System",
+        "Methodology Standards Initiative \u2014 Honest Assessment"
+      ]
+    },
+    {
+      "target": "Model: Ecosystem",
+      "referenced_by": [
+        "Portable Methodology Engine",
+        "Methodology Evolution Protocol",
+        "Methodology Adoption Guide"
+      ]
+    },
+    {
+      "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like",
+      "referenced_by": [
+        "Artifact Type System",
+        "Standards-by-Example",
+        "E003 Artifact Type System \u2014 Requirements Spec",
+        "Methodology Standards Initiative \u2014 Infrastructure Analysis",
+        "Learning Path: Methodology Fundamentals",
+        "Methodology System Map",
+        "Comparison Page Standards",
+        "Concept Page Standards",
+        "Decision Page Standards",
+        "Deep-Dive Page Standards",
+        "Domain Overview Page Standards",
+        "Evolution Page Standards",
+        "Learning Path Page Standards",
+        "Lesson Page Standards",
+        "Operations Plan Page Standards",
+        "Pattern Page Standards",
+        "Reference Page Standards",
+        "Source-Synthesis Page Standards"
+      ]
+    },
+    {
       "target": "Model: Local AI",
       "referenced_by": [
         "Model: Automation and Pipelines",
         "Model: NotebookLM"
+      ]
+    },
+    {
+      "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like",
+      "referenced_by": [
+        "Comparison Page Standards",
+        "Concept Page Standards",
+        "Decision Page Standards",
+        "Deep-Dive Page Standards",
+        "Domain Overview Page Standards",
+        "Epic Page Standards",
+        "Evolution Page Standards",
+        "Learning Path Page Standards",
+        "Lesson Page Standards",
+        "Note Page Standards",
+        "Operations Plan Page Standards",
+        "Pattern Page Standards",
+        "Reference Page Standards",
+        "Source-Synthesis Page Standards",
+        "Task Page Standards"
+      ]
+    },
+    {
+      "target": "Model: Methodology Standards \u2014 What Good Looks Like",
+      "referenced_by": [
+        "Standards-by-Example",
+        "Artifact Chains by Methodology Model",
+        "Methodology Evolution Protocol",
+        "Methodology Standards Initiative \u2014 Gap Analysis",
+        "Model Composition Rules",
+        "CLAUDE.md Structural Patterns for Agent Compliance",
+        "Enforcement Hook Patterns",
+        "Stage-Aware Skill Injection",
+        "Evolution: Methodology System",
+        "Methodology Adoption Guide"
+      ]
+    },
+    {
+      "target": "Models Are Systems Not Documents",
+      "referenced_by": [
+        "Standards-by-Example",
+        "Methodology Standards Initiative \u2014 Gap Analysis",
+        "Methodology Standards Initiative \u2014 Honest Assessment"
+      ]
+    },
+    {
+      "target": "Plan-Execute-Review Cycle",
+      "referenced_by": [
+        "Agent Compliance Framework",
+        "Methodology Evolution Protocol",
+        "Methodology Standards Initiative \u2014 Gap Analysis",
+        "Methodology Standards Initiative \u2014 Infrastructure Analysis",
+        "CLAUDE.md Structural Patterns for Agent Compliance"
+      ]
+    },
+    {
+      "target": "Super-Model",
+      "referenced_by": [
+        "Evolution: Methodology System",
+        "Learning Path: Methodology Fundamentals",
+        "Methodology Adoption Guide"
       ]
     },
     {
