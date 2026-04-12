@@ -241,9 +241,9 @@ def configure_obsidian(project_root: Path):
 
 def list_services(project_root: Path):
     """List available service templates and their install status."""
-    template_dir = project_root / "config" / "services"
+    template_dir = project_root / "services"
     if not template_dir.exists():
-        log_error("No service templates found in config/services/")
+        log_error("No service templates found in services/")
         return
 
     systemd_dir = Path.home() / ".config" / "systemd" / "user"
@@ -283,7 +283,7 @@ def install_service(service_name: str, project_root: Path, target: str = None) -
         log_error("systemd services only supported on Linux/WSL")
         return False
 
-    template_dir = project_root / "config" / "services"
+    template_dir = project_root / "services"
     template_path = template_dir / f"{service_name}.service.template"
 
     if not template_path.exists():
