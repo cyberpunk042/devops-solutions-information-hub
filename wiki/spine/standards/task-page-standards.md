@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, task, page-type, quality, exemplar, backlog]
 ---
 
@@ -73,7 +73,7 @@ Standards for task pages — the atomic work unit. Tasks are SHORT. Summary + Do
 
 **Good:**
 ```markdown
-- [ ] `tools/validate.py` reads `config/artifact-types.yaml` for per-type thresholds
+- [ ] `tools/validate.py` reads `wiki/config/artifact-types.yaml` for per-type thresholds
 - [ ] `python3 -m tools.pipeline post` passes with 0 errors
 - [ ] Thin decision page triggers `rationale_below_threshold` warning
 ```
@@ -117,7 +117,7 @@ Standards for task pages — the atomic work unit. Tasks are SHORT. Summary + Do
 
 ### Template
 
-`config/templates/task.md` — scaffold via `python3 -m tools.pipeline scaffold task "Title"`
+`wiki/config/templates/task.md` — scaffold via `python3 -m tools.pipeline scaffold task "Title"`
 
 ## Relationships
 

@@ -14,7 +14,7 @@ sources:
     file: /home/jfortin/openarms/wiki/config/methodology.yaml
   - id: wiki-methodology
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
 tags: [evolution, methodology, history, stage-gate, enforcement]
 ---
 

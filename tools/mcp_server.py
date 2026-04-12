@@ -58,7 +58,7 @@ server = FastMCP(
 
 ROOT = get_project_root()
 WIKI_DIR = ROOT / "wiki"
-CONFIG_DIR = ROOT / "config"
+CONFIG_DIR = WIKI_DIR / "config"
 
 
 # ---------------------------------------------------------------------------

@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, deep-dive, page-type, quality, exemplar]
 ---
 
@@ -66,7 +66,7 @@ Standards for deep-dive pages — extended analysis that goes significantly deep
 
 ### Template
 
-`config/templates/deep-dive.md` — scaffold via `python3 -m tools.pipeline scaffold deep-dive "Title"`
+`wiki/config/templates/deep-dive.md` — scaffold via `python3 -m tools.pipeline scaffold deep-dive "Title"`
 
 ## Relationships
 

@@ -11,10 +11,10 @@ updated: 2026-04-12
 sources:
   - id: methodology-config
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [methodology, system-map, reference, navigation, framework]
 ---
 
@@ -163,14 +163,14 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | File | Lines | What It Defines | Read By |
 > |------|-------|----------------|---------|
-> | `config/methodology.yaml` | ~520 | 9 models with artifact chains + template hints, stages, modes, end conditions, quality tiers | Skills, agents, documentation |
-> | `config/artifact-types.yaml` | ~390 | 17 page types + 3 artifact classes + categories, content thresholds, styling, verification | validate.py, lint.py |
-> | `config/domain-profiles/typescript.yaml` | ~60 | TypeScript/Node overrides: pnpm gates, src/ paths, test patterns | Projects adopting methodology |
-> | `config/domain-profiles/python-wiki.yaml` | ~135 | Python/wiki overrides: pipeline post gates, wiki/ paths, knowledge operations, real example | This wiki |
-> | `config/domain-profiles/infrastructure.yaml` | ~60 | IaC overrides: terraform gates, .tf paths | Infra projects |
-> | `config/wiki-schema.yaml` | ~240 | Frontmatter fields, enums, required sections per type, relationship verbs | validate.py, pipeline.py |
-> | `config/quality-standards.yaml` | ~20 | Linting thresholds, export readiness, duplicate detection | lint.py |
-> | `config/export-profiles.yaml` | ~90 | Export transforms for openfleet, AICP, methodology bundle | export.py |
+> | `wiki/config/methodology.yaml` | ~520 | 9 models with artifact chains + template hints, stages, modes, end conditions, quality tiers | Skills, agents, documentation |
+> | `wiki/config/artifact-types.yaml` | ~390 | 17 page types + 3 artifact classes + categories, content thresholds, styling, verification | validate.py, lint.py |
+> | `wiki/config/domain-profiles/typescript.yaml` | ~60 | TypeScript/Node overrides: pnpm gates, src/ paths, test patterns | Projects adopting methodology |
+> | `wiki/config/domain-profiles/python-wiki.yaml` | ~135 | Python/wiki overrides: pipeline post gates, wiki/ paths, knowledge operations, real example | This wiki |
+> | `wiki/config/domain-profiles/infrastructure.yaml` | ~60 | IaC overrides: terraform gates, .tf paths | Infra projects |
+> | `wiki/config/wiki-schema.yaml` | ~240 | Frontmatter fields, enums, required sections per type, relationship verbs | validate.py, pipeline.py |
+> | `wiki/config/quality-standards.yaml` | ~20 | Linting thresholds, export readiness, duplicate detection | lint.py |
+> | `wiki/config/export-profiles.yaml` | ~90 | Export transforms for openfleet, AICP, methodology bundle | export.py |
 >
 > **Resolution order:** methodology.yaml → artifact-types.yaml → domain profile → wiki-schema.yaml
 
@@ -178,8 +178,8 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | Directory | Count | Types |
 > |-----------|-------|-------|
-> | `config/templates/` | 16 | All wiki page types (concept through operations-plan) |
-> | `config/templates/methodology/` | 6 | Stage documents (requirements-spec, infra-analysis, gap-analysis, design-plan, tech-spec, test-plan) |
+> | `wiki/config/templates/` | 16 | All wiki page types (concept through operations-plan) |
+> | `wiki/config/templates/methodology/` | 6 | Stage documents (requirements-spec, infra-analysis, gap-analysis, design-plan, tech-spec, test-plan) |
 >
 > Scaffold any template: `python3 -m tools.pipeline scaffold <type> "Title"`
 > Scaffold methodology templates: `python3 -m tools.pipeline scaffold methodology/<name> "Title"`
@@ -193,30 +193,30 @@ Complete map of the methodology system — every component, where it lives, what
 > | `tools/validate.py` | Frontmatter fields, enums, required sections, per-type content thresholds, styling requirements | wiki-schema.yaml + artifact-types.yaml |
 > | `tools/lint.py` | Orphans, dead relationships, thin pages, stale pages, unstyled pages, filename hygiene, standards self-validation | quality-standards.yaml |
 > | `tools/pipeline.py post` | Runs validate + lint + index rebuild + manifest + wikilinks | All config files |
-> | `tools/pipeline.py scaffold` | Creates pages from templates | config/templates/ |
+> | `tools/pipeline.py scaffold` | Creates pages from templates | wiki/config/templates/ |
 
 ### How to Extend the System
 
 > [!tip] Adding a New Methodology Model
 >
-> 1. Define the model in `config/methodology.yaml` under `models:` — name, stages, chain (required/forbidden/gate per stage)
+> 1. Define the model in `wiki/config/methodology.yaml` under `models:` — name, stages, chain (required/forbidden/gate per stage)
 > 2. Add model selection rule in `model_selection.by_task_type` or `overrides`
 > 3. Document in [[Model: Methodology]] under "The Model Catalog"
 > 4. Add artifact chain to [[Artifact Chains by Methodology Model]]
 
 > [!tip] Adding a New Page Type
 >
-> 1. Add to `enums.type` in `config/wiki-schema.yaml`
-> 2. Add `required_sections` in `config/wiki-schema.yaml`
-> 3. Add type definition in `config/artifact-types.yaml`
-> 4. Create template in `config/templates/<type>.md`
+> 1. Add to `enums.type` in `wiki/config/wiki-schema.yaml`
+> 2. Add `required_sections` in `wiki/config/wiki-schema.yaml`
+> 3. Add type definition in `wiki/config/artifact-types.yaml`
+> 4. Create template in `wiki/config/templates/<type>.md`
 > 5. Create standards doc in `wiki/spine/standards/<type>-page-standards.md`
 > 6. Add to scaffolder type_dirs in `tools/pipeline.py`
 > 7. Update Per-Type Standards table in spine _index.md
 
 > [!tip] Adding a New Domain Profile
 >
-> 1. Create `config/domain-profiles/<domain>.yaml` with stage_overrides
+> 1. Create `wiki/config/domain-profiles/<domain>.yaml` with stage_overrides
 > 2. Define gate_commands, path_patterns, forbidden_zones per stage
 > 3. Add to Methodology Adoption Guide per-domain quick start
 > 4. Add to Domain Profile Resolution table in Artifact Chains page

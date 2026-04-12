@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, domain-overview, page-type, quality, exemplar]
 ---
 
@@ -56,7 +56,7 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 
 ### Template
 
-`config/templates/domain-overview.md` — scaffold via `python3 -m tools.pipeline scaffold domain-overview "Title"`
+`wiki/config/templates/domain-overview.md` — scaffold via `python3 -m tools.pipeline scaffold domain-overview "Title"`
 
 ## Relationships
 

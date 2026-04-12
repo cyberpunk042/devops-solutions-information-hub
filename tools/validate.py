@@ -298,10 +298,19 @@ def validate_wiki(
     wiki_dir: Path, schema_path: Path
 ) -> List[Dict[str, Any]]:
     """Validate all .md files in a directory."""
+    skip_dirs = {"config", ".obsidian", ".evolve-queue"}
+    skip_names = {"index.md"}
     results = []
     for md_file in sorted(wiki_dir.rglob("*.md")):
         if md_file.name.startswith("_"):
             continue
+        if md_file.name in skip_names and md_file.parent == wiki_dir:
+            continue
+        try:
+            if any(d in skip_dirs for d in md_file.relative_to(wiki_dir).parts):
+                continue
+        except ValueError:
+            pass
         results.append(validate_page(md_file, schema_path))
     return results
 
@@ -314,7 +323,7 @@ def main():
     args = parser.parse_args()
 
     root = get_project_root()
-    schema_path = Path(args.schema) if args.schema else root / "config" / "schema.yaml"
+    schema_path = Path(args.schema) if args.schema else root / "wiki" / "config" / "wiki-schema.yaml"
 
     if args.path:
         target = Path(args.path)

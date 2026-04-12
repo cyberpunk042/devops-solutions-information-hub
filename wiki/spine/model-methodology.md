@@ -44,7 +44,7 @@ tags: [methodology, model, stage-gate, task-types, composable, backlog, executio
 
 ## Summary
 
-The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[Model: LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[Methodology Framework]]. The portable methodology engine lives in `config/methodology.yaml` (9 models with full artifact chains), `config/artifact-types.yaml` (17 page types with templates and thresholds), and `config/domain-profiles/` (TypeScript, Python/wiki, Infrastructure overrides). For the complete system map showing every component, see [[Methodology System Map]]. For adoption, see [[Methodology Adoption Guide]]. For execution quality standards, see [[Methodology Standards — What Good Execution Looks Like]].
+The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[Model: LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[Methodology Framework]]. The portable methodology engine lives in `wiki/config/methodology.yaml` (9 models with full artifact chains), `wiki/config/artifact-types.yaml` (17 page types with templates and thresholds), and `wiki/config/domain-profiles/` (TypeScript, Python/wiki, Infrastructure overrides). For the complete system map showing every component, see [[Methodology System Map]]. For adoption, see [[Methodology Adoption Guide]]. For execution quality standards, see [[Methodology Standards — What Good Execution Looks Like]].
 
 ## Key Insights
 
@@ -204,7 +204,7 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 > [!abstract] **Selected when**
 > task_type = `refactor`. Restructuring without changing behavior.
 
-> [!example]- **Real instance: Renaming `config/schema.yaml` → `config/wiki-schema.yaml`**
+> [!example]- **Real instance: Renaming `config/schema.yaml` → `wiki/config/wiki-schema.yaml`**
 > 1. **Document** — Identify all references: tools/pipeline.py, tools/validate.py, tools/common.py, CLAUDE.md
 > 2. **Scaffold** — Create the new file name via `mv`
 > 3. **Implement** — Update all references with sed, verify pipeline still finds the schema
@@ -277,7 +277,7 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 
 > [!example]- **Real instance: This research wiki's own lifecycle**
 > 1. **Scaffold** — CLAUDE.md, raw/, wiki/, tools/ directories, Python venv, tech stack chosen
-> 2. **Foundation** — tools/common.py, config/wiki-schema.yaml, config/templates/, validation tooling
+> 2. **Foundation** — tools/common.py, wiki/config/wiki-schema.yaml, wiki/config/templates/, validation tooling
 > 3. **Infrastructure** — tools/pipeline.py (13 chains), MCP server (17 tools), sync service, watcher daemon, evolve engine
 > 4. **Features** — Evolution pipeline, backlog system, model-building skill, 14 named models, standards documents
 
@@ -463,19 +463,19 @@ See [[Skyscraper, Pyramid, Mountain]].
 > | Tier | What You Get | Effort |
 > |------|-------------|--------|
 > | **1. Read** | Read this page + standards pages, follow manually | Minutes |
-> | **2. Configure** | Copy `config/methodology.yaml` + domain profile, reference in CLAUDE.md | Hours |
-> | **3. Validate** | Add `config/artifact-types.yaml` checks to your validation pipeline | Days |
+> | **2. Configure** | Copy `wiki/config/methodology.yaml` + domain profile, reference in CLAUDE.md | Hours |
+> | **3. Validate** | Add `wiki/config/artifact-types.yaml` checks to your validation pipeline | Days |
 > | **4. Enforce** | Add hooks, stage skills, deterministic dispatch (see [[Enforcement Hook Patterns]]) | Weeks |
 
 > [!info] **The Methodology Engine — config stack**
 >
 > | File | What It Defines |
 > |------|----------------|
-> | `config/methodology.yaml` | 9 models with artifact chains, execution modes, end conditions, quality tiers |
-> | `config/artifact-types.yaml` | 17 page types with content thresholds, styling directives, verification methods |
-> | `config/domain-profiles/*.yaml` | Per-domain overrides: path patterns, gate commands, forbidden zones (TypeScript, Python/wiki, Infrastructure) |
-> | `config/templates/` | 16 wiki page templates + 6 methodology document templates |
-> | `config/wiki-schema.yaml` | Frontmatter schema, required sections, relationship verbs |
+> | `wiki/config/methodology.yaml` | 9 models with artifact chains, execution modes, end conditions, quality tiers |
+> | `wiki/config/artifact-types.yaml` | 17 page types with content thresholds, styling directives, verification methods |
+> | `wiki/config/domain-profiles/*.yaml` | Per-domain overrides: path patterns, gate commands, forbidden zones (TypeScript, Python/wiki, Infrastructure) |
+> | `wiki/config/templates/` | 16 wiki page templates + 6 methodology document templates |
+> | `wiki/config/wiki-schema.yaml` | Frontmatter schema, required sections, relationship verbs |
 >
 > **Resolution order:** methodology.yaml (models) → artifact-types.yaml (type detail) → domain profile (project-specific)
 

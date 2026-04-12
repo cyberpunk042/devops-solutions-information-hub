@@ -19,7 +19,7 @@ sources:
     file: /home/jfortin/openarms/wiki/config/methodology.yaml
   - id: wiki-schema
     type: file
-    file: config/wiki-schema.yaml
+    file: wiki/config/wiki-schema.yaml
 tags: [methodology, design, artifact-types, e003, type-system, architecture]
 ---
 
@@ -47,14 +47,14 @@ Design decisions and architecture for the Artifact Type System. Resolves all ope
 >
 > | Document Type | Wiki `type:` | Template Location | Rationale |
 > |--------------|-------------|-------------------|-----------|
-> | Requirements spec | concept | config/templates/methodology/requirements-spec.md | It IS a concept — the concept of what's required |
-> | Infrastructure analysis | concept | config/templates/methodology/infrastructure-analysis.md | It IS a concept — mapping of what exists |
-> | Gap analysis | concept | config/templates/methodology/gap-analysis.md | It IS a concept — mapping of what's missing |
-> | ADR / Design decision | decision | config/templates/decision.md (existing) | An ADR IS a decision — same schema, same structure |
-> | Tech spec | reference | config/templates/methodology/tech-spec.md | It IS a reference — API tables, interface definitions |
-> | Design plan | concept | config/templates/methodology/design-plan.md | Complex analysis with alternatives — concept structure fits |
-> | Operations plan | operations-plan | config/templates/methodology/operations-plan.md | **NEW TYPE** — structurally incompatible with existing types |
-> | Test plan | reference | config/templates/methodology/test-plan.md | It IS a reference — test ID tables, setup procedures |
+> | Requirements spec | concept | wiki/config/templates/methodology/requirements-spec.md | It IS a concept — the concept of what's required |
+> | Infrastructure analysis | concept | wiki/config/templates/methodology/infrastructure-analysis.md | It IS a concept — mapping of what exists |
+> | Gap analysis | concept | wiki/config/templates/methodology/gap-analysis.md | It IS a concept — mapping of what's missing |
+> | ADR / Design decision | decision | wiki/config/templates/decision.md (existing) | An ADR IS a decision — same schema, same structure |
+> | Tech spec | reference | wiki/config/templates/methodology/tech-spec.md | It IS a reference — API tables, interface definitions |
+> | Design plan | concept | wiki/config/templates/methodology/design-plan.md | Complex analysis with alternatives — concept structure fits |
+> | Operations plan | operations-plan | wiki/config/templates/methodology/operations-plan.md | **NEW TYPE** — structurally incompatible with existing types |
+> | Test plan | reference | wiki/config/templates/methodology/test-plan.md | It IS a reference — test ID tables, setup procedures |
 
 **Why not a separate category?** The wiki's power is the knowledge graph. Every page is linked, searchable, validated, exportable. A parallel document system outside the wiki would fragment the graph, require separate validation tooling, and break the "single container" principle. The three pages I created today (infrastructure analysis, gap analysis, requirements spec) are already wiki pages — and they work fine.
 
@@ -125,7 +125,7 @@ This is the "deterministic checklist" the operator described — clear, sequenti
 > [!success] Decision: Two template directories — wiki pages and methodology documents
 >
 > ```
-> config/templates/
+> wiki/config/templates/
 > ├── concept.md              ← NEW (wiki page type)
 > ├── source-synthesis.md     ← NEW (wiki page type)
 > ├── comparison.md           ← NEW (wiki page type)
@@ -163,7 +163,7 @@ This is the "deterministic checklist" the operator described — clear, sequenti
 
 ### Decision 4: Artifact Type Config Schema
 
-> [!success] Decision: New `config/artifact-types.yaml` that EXTENDS wiki-schema.yaml
+> [!success] Decision: New `wiki/config/artifact-types.yaml` that EXTENDS wiki-schema.yaml
 >
 > wiki-schema.yaml keeps: frontmatter field definitions, enums, required_sections (for backwards compatibility).
 > artifact-types.yaml adds: per-type detail (content thresholds, styling requirements, verification methods, template references, category organization).
@@ -171,7 +171,7 @@ This is the "deterministic checklist" the operator described — clear, sequenti
 **Schema structure:**
 
 ```yaml
-# config/artifact-types.yaml
+# wiki/config/artifact-types.yaml
 
 categories:
   knowledge-pages:
@@ -203,7 +203,7 @@ categories:
 types:
   concept:
     category: knowledge-pages
-    template: config/templates/concept.md
+    template: wiki/config/templates/concept.md
     # required_sections inherited from wiki-schema.yaml
     content_thresholds:
       summary_min_words: 30
@@ -217,7 +217,7 @@ types:
 
   source-synthesis:
     category: knowledge-pages
-    template: config/templates/source-synthesis.md
+    template: wiki/config/templates/source-synthesis.md
     content_thresholds:
       summary_min_words: 30
       min_relationships: 1
@@ -232,7 +232,7 @@ types:
 
   comparison:
     category: knowledge-pages
-    template: config/templates/comparison.md
+    template: wiki/config/templates/comparison.md
     content_thresholds:
       summary_min_words: 30
       deep_analysis_min_words: 100
@@ -244,7 +244,7 @@ types:
 
   reference:
     category: knowledge-pages
-    template: config/templates/reference.md
+    template: wiki/config/templates/reference.md
     content_thresholds:
       summary_min_words: 30
       min_relationships: 1
@@ -255,7 +255,7 @@ types:
 
   deep-dive:
     category: knowledge-pages
-    template: config/templates/deep-dive.md
+    template: wiki/config/templates/deep-dive.md
     content_thresholds:
       summary_min_words: 30
       deep_analysis_min_words: 200  # higher bar — this IS the analysis
@@ -267,7 +267,7 @@ types:
 
   lesson:
     category: evolved-pages
-    template: config/templates/lesson.md
+    template: wiki/config/templates/lesson.md
     content_thresholds:
       summary_min_words: 30
       insight_min_words: 50
@@ -284,7 +284,7 @@ types:
 
   pattern:
     category: evolved-pages
-    template: config/templates/pattern.md
+    template: wiki/config/templates/pattern.md
     content_thresholds:
       summary_min_words: 30
       pattern_description_min_words: 100
@@ -301,7 +301,7 @@ types:
 
   decision:
     category: evolved-pages
-    template: config/templates/decision.md
+    template: wiki/config/templates/decision.md
     content_thresholds:
       summary_min_words: 30
       rationale_min_words: 100
@@ -319,7 +319,7 @@ types:
 
   domain-overview:
     category: navigation-pages
-    template: config/templates/domain-overview.md
+    template: wiki/config/templates/domain-overview.md
     content_thresholds:
       summary_min_words: 30
       min_relationships: 3
@@ -328,7 +328,7 @@ types:
 
   evolution:
     category: navigation-pages
-    template: config/templates/evolution.md
+    template: wiki/config/templates/evolution.md
     content_thresholds:
       summary_min_words: 30
     verification:
@@ -336,7 +336,7 @@ types:
 
   learning-path:
     category: navigation-pages
-    template: config/templates/learning-path.md
+    template: wiki/config/templates/learning-path.md
     content_thresholds:
       summary_min_words: 30
       min_sequence_items: 3  # at least 3 pages in sequence
@@ -345,7 +345,7 @@ types:
 
   operations-plan:
     category: methodology-documents
-    template: config/templates/operations-plan.md
+    template: wiki/config/templates/operations-plan.md
     content_thresholds:
       summary_min_words: 30
       min_steps: 3  # at least 3 steps
@@ -357,7 +357,7 @@ types:
 
   epic:
     category: backlog-pages
-    template: config/templates/epic.md
+    template: wiki/config/templates/epic.md
     required_frontmatter:
       - priority
       - task_type
@@ -368,7 +368,7 @@ types:
 
   task:
     category: backlog-pages
-    template: config/templates/task.md
+    template: wiki/config/templates/task.md
     required_frontmatter:
       - priority
       - task_type
@@ -380,7 +380,7 @@ types:
 
   note:
     category: backlog-pages
-    template: config/templates/note.md
+    template: wiki/config/templates/note.md
     content_thresholds:
       summary_min_words: 10  # notes are short
     verification:
@@ -402,7 +402,7 @@ types:
 **Config structure (showing Feature Development as example):**
 
 ```yaml
-# Inside config/methodology.yaml (the portable version)
+# Inside wiki/config/methodology.yaml (the portable version)
 
 models:
   feature-development:
@@ -681,7 +681,7 @@ models:
 **Profile schema:**
 
 ```yaml
-# config/domain-profiles/typescript.yaml
+# wiki/config/domain-profiles/typescript.yaml
 domain: typescript
 description: "TypeScript/Node.js projects (OpenArms, OpenFleet)"
 stage_overrides:
@@ -701,7 +701,7 @@ stage_overrides:
     path_patterns:
       test-implementation: "src/**/*.test.ts"
 
-# config/domain-profiles/python-wiki.yaml
+# wiki/config/domain-profiles/python-wiki.yaml
 domain: python-wiki
 description: "Python projects and knowledge wikis (research-wiki)"
 stage_overrides:
@@ -718,7 +718,7 @@ stage_overrides:
   test:
     gate_commands: ["python3 -m tools.pipeline post", "python3 -m tools.validate"]
 
-# config/domain-profiles/infrastructure.yaml
+# wiki/config/domain-profiles/infrastructure.yaml
 domain: infrastructure
 description: "Infrastructure as Code projects (devops-control-plane)"
 stage_overrides:
@@ -778,7 +778,7 @@ The validator already works. We don't rewrite it. We add layers:
 
 > [!question] Should the `module` backlog type get its own required_sections in wiki-schema.yaml? Currently undefined. Recommendation: yes — same as epic (Summary, Goals, Done When, Relationships). (Decision: yes, add during M5.)
 
-> [!question] Should methodology templates (config/templates/methodology/) be accessible via the scaffolder, and if so, with what syntax? Recommendation: `pipeline scaffold methodology/requirements-spec "Title"` — the `/` in the type triggers the methodology subdirectory lookup. (Decision: yes, implement during M5.)
+> [!question] Should methodology templates (wiki/config/templates/methodology/) be accessible via the scaffolder, and if so, with what syntax? Recommendation: `pipeline scaffold methodology/requirements-spec "Title"` — the `/` in the type triggers the methodology subdirectory lookup. (Decision: yes, implement during M5.)
 
 ## Relationships
 

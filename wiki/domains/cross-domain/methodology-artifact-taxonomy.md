@@ -27,7 +27,7 @@ tags: [methodology, taxonomy, artifacts, documents, documentation, reference, fr
 > 1. **Determine the CLASS** of what you're producing: DOCUMENT (constraining spec), ARTIFACT (by-product of work), or DOCUMENTATION (explaining for users)
 > 2. **Find the CATEGORY** (11 categories below) — which phase of work produces this?
 > 3. **Find the specific TYPE** within that category — what is it called, what does it contain?
-> 4. **Check if it's a wiki page type** — if yes, there's a template in `config/templates/` and a standards doc in `wiki/spine/standards/`
+> 4. **Check if it's a wiki page type** — if yes, there's a template in `wiki/config/templates/` and a standards doc in `wiki/spine/standards/`
 > 5. **Check the domain chain** for your domain — what does this artifact look like in YOUR tech stack?
 
 ## Summary
@@ -100,7 +100,7 @@ Before the taxonomy: understand that methodology produces three fundamentally di
 > | **Requirements Inspection Checklist** | Verification that requirements are complete, consistent, testable | Document stage | Quality assurance |
 > | **Service Level Agreement (SLA)** | Performance, availability, response time commitments | Document stage | Service-oriented systems |
 >
-> **In our methodology:** The Requirements Spec template (config/templates/methodology/requirements-spec.md) combines BRD + FRD + AC into one document for most tasks. SRS-level formality is only needed for regulated or safety-critical work. Use Cases are embedded in requirements as scenarios.
+> **In our methodology:** The Requirements Spec template (wiki/config/templates/methodology/requirements-spec.md) combines BRD + FRD + AC into one document for most tasks. SRS-level formality is only needed for regulated or safety-critical work. Use Cases are embedded in requirements as scenarios.
 >
 > **OpenArms instance:** Document #1 in the chain — "FR-N items with Input/Output/Constraints. All AC items are testable."
 
@@ -121,7 +121,7 @@ Before the taxonomy: understand that methodology produces three fundamentally di
 > | **API Specification** | Endpoints, request/response formats, authentication | Design stage | API-first systems |
 > | **Test Plan** | Test strategy, test cases with IDs, inputs, expected outputs | Design stage | All testable work |
 >
-> **In our methodology:** ADR uses the decision template. Tech Spec and Config Spec use the reference template. Interface Spec is TypeScript-specific (other domains have equivalents). Test Plan uses config/templates/methodology/test-plan.md.
+> **In our methodology:** ADR uses the decision template. Tech Spec and Config Spec use the reference template. Interface Spec is TypeScript-specific (other domains have equivalents). Test Plan uses wiki/config/templates/methodology/test-plan.md.
 >
 > **ADR variants:** Nygard (lightweight), MADR (tradeoff analysis), Y-Statement ("In context C, facing F, we decided D..."), IBM UMF (table layout), Tyree-Akerman (forces + consequences). Our decision template is closest to MADR.
 

@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, reference, page-type, quality, exemplar]
 ---
 
@@ -65,7 +65,7 @@ Standards for reference pages — LOOKUP material that readers consult for speci
 
 ### Template
 
-`config/templates/reference.md` — scaffold via `python3 -m tools.pipeline scaffold reference "Title"`
+`wiki/config/templates/reference.md` — scaffold via `python3 -m tools.pipeline scaffold reference "Title"`
 
 ## Relationships
 

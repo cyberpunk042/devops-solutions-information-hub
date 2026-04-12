@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, learning-path, page-type, quality, exemplar]
 ---
 
@@ -51,7 +51,7 @@ Standards for learning path pages — curated sequences that guide a reader thro
 
 ### Template
 
-`config/templates/learning-path.md` — scaffold via `python3 -m tools.pipeline scaffold learning-path "Title"`
+`wiki/config/templates/learning-path.md` — scaffold via `python3 -m tools.pipeline scaffold learning-path "Title"`
 
 ## Relationships
 

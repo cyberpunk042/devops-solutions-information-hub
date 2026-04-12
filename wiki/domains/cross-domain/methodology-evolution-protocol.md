@@ -13,7 +13,7 @@ sources:
     file: /home/jfortin/openarms/wiki/config/methodology.yaml
   - id: methodology-config
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
 tags: [methodology, evolution, protocol, versioning, feedback-loop]
 ---
 

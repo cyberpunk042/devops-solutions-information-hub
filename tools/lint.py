@@ -381,9 +381,12 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         Dict with keys: orphan_pages, dead_relationships, stale_pages,
         thin_pages, domain_health, summary.
     """
+    skip_dirs = {"config", ".obsidian", ".evolve-queue"}
     pages = []
     for md_file in sorted(wiki_dir.rglob("*.md")):
         if md_file.name == "_index.md":
+            continue
+        if any(d in skip_dirs for d in md_file.relative_to(wiki_dir).parts):
             continue
         pages.append(md_file)
 
@@ -611,7 +614,7 @@ def main():
 
     root = get_project_root()
 
-    config_path = Path(args.config) if args.config else root / "config" / "quality-standards.yaml"
+    config_path = Path(args.config) if args.config else root / "wiki" / "config" / "quality-standards.yaml"
     lint_config = _config_from_quality_standards(config_path)
     if lint_config is None:
         # Use sensible defaults if config is missing

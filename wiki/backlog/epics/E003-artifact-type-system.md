@@ -13,27 +13,27 @@ artifacts:
   - wiki/domains/cross-domain/methodology-standards-initiative-gaps.md
   - wiki/domains/cross-domain/e003-artifact-type-system-requirements.md
   - wiki/domains/cross-domain/e003-artifact-type-system-design.md
-  - config/artifact-types.yaml
-  - config/templates/concept.md
-  - config/templates/source-synthesis.md
-  - config/templates/comparison.md
-  - config/templates/reference.md
-  - config/templates/deep-dive.md
-  - config/templates/epic.md
-  - config/templates/module.md
-  - config/templates/task.md
-  - config/templates/note.md
-  - config/templates/operations-plan.md
-  - config/templates/methodology/requirements-spec.md
-  - config/templates/methodology/infrastructure-analysis.md
-  - config/templates/methodology/gap-analysis.md
-  - config/templates/methodology/design-plan.md
-  - config/templates/methodology/tech-spec.md
-  - config/templates/methodology/test-plan.md
-  - config/methodology.yaml
-  - config/domain-profiles/typescript.yaml
-  - config/domain-profiles/python-wiki.yaml
-  - config/domain-profiles/infrastructure.yaml
+  - wiki/config/artifact-types.yaml
+  - wiki/config/templates/concept.md
+  - wiki/config/templates/source-synthesis.md
+  - wiki/config/templates/comparison.md
+  - wiki/config/templates/reference.md
+  - wiki/config/templates/deep-dive.md
+  - wiki/config/templates/epic.md
+  - wiki/config/templates/module.md
+  - wiki/config/templates/task.md
+  - wiki/config/templates/note.md
+  - wiki/config/templates/operations-plan.md
+  - wiki/config/templates/methodology/requirements-spec.md
+  - wiki/config/templates/methodology/infrastructure-analysis.md
+  - wiki/config/templates/methodology/gap-analysis.md
+  - wiki/config/templates/methodology/design-plan.md
+  - wiki/config/templates/methodology/tech-spec.md
+  - wiki/config/templates/methodology/test-plan.md
+  - wiki/config/methodology.yaml
+  - wiki/config/domain-profiles/typescript.yaml
+  - wiki/config/domain-profiles/python-wiki.yaml
+  - wiki/config/domain-profiles/infrastructure.yaml
   - wiki/domains/cross-domain/artifact-chains-by-model.md
   - raw/notes/2026-04-11-methodology-standards-directive.md
 confidence: high
@@ -59,7 +59,7 @@ Define every document and artifact type in the methodology with: formal type def
 - Formalize the operations plan vs design plan distinction as separate document types with separate templates
 - Map the complete artifact chain for every methodology model (9 models × stages × artifacts × dependencies)
 - Define domain-specific artifact variations (TypeScript project, Python project, wiki/knowledge, infrastructure)
-- Create a machine-readable artifact type definition schema (config/artifact-types.yaml or extension to wiki-schema.yaml)
+- Create a machine-readable artifact type definition schema (wiki/config/artifact-types.yaml or extension to wiki-schema.yaml)
 - Document the artifact chain as both wiki pages (human-readable) and config (machine-readable)
 
 ## Done When

@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, operations-plan, page-type, quality, exemplar]
 ---
 
@@ -65,7 +65,7 @@ Standards for operations plan pages — sequential deterministic checklists that
 
 ### Template
 
-`config/templates/operations-plan.md` — scaffold via `python3 -m tools.pipeline scaffold operations-plan "Title"`
+`wiki/config/templates/operations-plan.md` — scaffold via `python3 -m tools.pipeline scaffold operations-plan "Title"`
 
 ## Relationships
 

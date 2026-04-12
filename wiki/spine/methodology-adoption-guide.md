@@ -11,13 +11,13 @@ updated: 2026-04-11
 sources:
   - id: methodology-config
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
   - id: domain-profiles
     type: file
-    file: config/domain-profiles/
+    file: wiki/config/domain-profiles/
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: openarms-evidence
     type: file
     file: /home/jfortin/openarms/wiki/config/methodology.yaml
@@ -30,7 +30,7 @@ tags: [methodology, adoption, guide, onboarding, ecosystem]
 >
 > 1. **Pick your tier**: Tier 1 (just read) → Tier 2 (configure) → Tier 3 (validate) → Tier 4 (enforce)
 > 2. **Pick your domain**: TypeScript, Python/Wiki, or Infrastructure — see per-domain quick starts below
-> 3. **Copy the right files**: `config/methodology.yaml` + your domain profile from `config/domain-profiles/`
+> 3. **Copy the right files**: `wiki/config/methodology.yaml` + your domain profile from `wiki/config/domain-profiles/`
 > 4. **Update your CLAUDE.md**: add the stage gate table and hard rules from this wiki's CLAUDE.md
 > 5. **Invariants that NEVER change**: stage boundaries are hard, readiness is computed, one commit per stage
 
@@ -84,7 +84,7 @@ Copy the methodology config and declare your domain profile.
 
 ```bash
 # From the research wiki
-cp config/methodology.yaml /your-project/config/methodology.yaml
+cp wiki/config/methodology.yaml /your-project/config/methodology.yaml
 ```
 
 Or reference it directly if your project has access to the wiki repo.
@@ -93,7 +93,7 @@ Or reference it directly if your project has access to the wiki repo.
 
 ```bash
 # Choose the profile matching your stack
-cp config/domain-profiles/typescript.yaml /your-project/config/domain-profile.yaml
+cp wiki/config/domain-profiles/typescript.yaml /your-project/config/domain-profile.yaml
 # or: python-wiki.yaml, infrastructure.yaml
 ```
 
@@ -136,7 +136,7 @@ overrides:
 ## Methodology
 
 This project uses the research wiki methodology engine.
-Config: config/methodology.yaml (generic) + config/methodology-overrides.yaml (project)
+Config: wiki/config/methodology.yaml (generic) + config/methodology-overrides.yaml (project)
 Domain profile: typescript
 
 ### Stage Gates (enforced)
@@ -160,7 +160,7 @@ Extend your project's validation to check methodology compliance.
 **Option A: Use artifact-types.yaml for per-type validation**
 
 ```bash
-cp config/artifact-types.yaml /your-project/config/artifact-types.yaml
+cp wiki/config/artifact-types.yaml /your-project/config/artifact-types.yaml
 ```
 
 Then extend your validation tool to read it (see research wiki's tools/validate.py for the pattern — it reads artifact-types.yaml for content thresholds, styling requirements, and per-type frontmatter checks).

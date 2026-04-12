@@ -54,7 +54,7 @@ Systematic identification of gaps between what the methodology standards initiat
 | **Current state** | 6 templates exist (lesson, pattern, decision, domain-overview, evolution, learning-path). 8 page types have no template. |
 | **Required state** | Every page type that agents create has a template defining: required sections, section ordering, minimum content guidance, styling directives, frontmatter defaults. |
 | **Impact** | Agents creating concept, source-synthesis, comparison, reference, deep-dive pages operate without structural guidance. Output quality varies wildly. |
-| **Affected scope** | config/templates/, skills/wiki-agent/, tools/pipeline.py (scaffold command) |
+| **Affected scope** | wiki/config/templates/, skills/wiki-agent/, tools/pipeline.py (scaffold command) |
 | **Complexity** | M — templates for knowledge types are straightforward; backlog types (epic, task, module) need domain-specific guidance |
 
 #### Gap A2: No Formal Artifact Type Definitions
@@ -84,7 +84,7 @@ Systematic identification of gaps between what the methodology standards initiat
 | **Current state** | "Plan" appears in multiple contexts: design-only mode, plan chain alias, superpowers writing-plans skill. No formal distinction between operations plan (deterministic checklist) and design plan (analysis, alternatives, trade-offs). |
 | **Required state** | Two distinct document types with different templates: Operations Plan (sequential steps, validation criteria, delegatable to mechanical agent) and Design Plan (problem analysis, alternatives, decisions, rationale, not delegatable). |
 | **Impact** | Agents produce shallow todo lists when design thinking is required. Or they overthink simple mechanical sequences. The operator can't specify "give me an operations plan, not a design" because the vocabulary doesn't exist. |
-| **Affected scope** | config/wiki-schema.yaml (new types or subtypes), config/templates/ (new templates), methodology model definitions |
+| **Affected scope** | wiki/config/wiki-schema.yaml (new types or subtypes), wiki/config/templates/ (new templates), methodology model definitions |
 | **Complexity** | M — defining the types is clear; the complexity is in making the distinction legible to agents |
 
 #### Gap A5: Domain-Adaptive Artifact Variations

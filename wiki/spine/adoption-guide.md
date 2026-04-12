@@ -266,7 +266,7 @@ Your project defines its own MCP tools that expose methodology state. OpenFleet 
 
 The wiki exports knowledge to sister projects via file-based transfer profiles. Export transforms YAML frontmatter to markdown headers for compatibility with downstream systems.
 
-Your project can consume wiki exports (methodology definitions, patterns, lessons) and produce its own exports for other consumers. The export mechanism is defined in `config/export-profiles.yaml`.
+Your project can consume wiki exports (methodology definitions, patterns, lessons) and produce its own exports for other consumers. The export mechanism is defined in `wiki/config/export-profiles.yaml`.
 
 ### Reference Implementations
 

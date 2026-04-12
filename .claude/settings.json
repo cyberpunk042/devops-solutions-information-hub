@@ -39,7 +39,8 @@
       "WebFetch(domain:www.sdlcforms.com)",
       "WebFetch(domain:www.leanware.co)",
       "WebFetch(domain:www.nxcode.io)",
-      "WebFetch(domain:en.wikipedia.org)"
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(grep -l \"lesson-convergence-on-obsidian-knowledge-vault\" /home/jfortin/devops-solutions-research-wiki/wiki/lessons/*.md)"
     ]
   }
 }

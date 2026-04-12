@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: exemplar
     type: wiki
     file: wiki/patterns/plan-execute-review-cycle.md
@@ -128,7 +128,7 @@ Standards for pattern pages — recurring structural phenomena observed across �
 
 ### Template
 
-`config/templates/pattern.md` — scaffold via `python3 -m tools.pipeline scaffold pattern "Title"`
+`wiki/config/templates/pattern.md` — scaffold via `python3 -m tools.pipeline scaffold pattern "Title"`
 
 ## Relationships
 

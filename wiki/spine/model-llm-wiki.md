@@ -58,7 +58,7 @@ An LLM Wiki has three layers:
 3. **Meta layer** — schema, templates, validation rules. Defines how the wiki works.
 
 The distinction between `config/` (meta layer — schema, templates) and `wiki/config/` (wiki layer — methodology, agent directive) is intentional:
-- `config/wiki-schema.yaml` and `config/templates/` define the wiki's STRUCTURE — page types, fields, validation rules. These rarely change.
+- `wiki/config/wiki-schema.yaml` and `wiki/config/templates/` define the wiki's STRUCTURE — page types, fields, validation rules. These rarely change.
 - `wiki/config/methodology.yaml` and `wiki/config/agent-directive.md` define the WORK PROCESS — stages, task types, execution modes. These evolve with the project.
 
 ### Repository Structure
@@ -281,7 +281,7 @@ Format: `- VERB: [[Target]]` — one per line. Regex: `^([A-Z][A-Z /\-]+?):\s*(.
 
 ### Page Templates
 
-Templates in `config/templates/` use `{{placeholder}}` variables for scaffolding. Six templates exist:
+Templates in `wiki/config/templates/` use `{{placeholder}}` variables for scaffolding. Six templates exist:
 
 | Template | Layer | Key structure |
 |----------|-------|--------------|
@@ -364,8 +364,8 @@ Methodology files: `wiki/config/methodology.yaml` (machine-readable) and `wiki/c
 ### How to Adopt
 
 1. **Create the repository structure** — raw/, wiki/ (with all subdirectories), config/. The structure above is the reference.
-2. **Define your schema** — copy `config/wiki-schema.yaml`. For a code project: add types like `api-spec` or `architecture`, remove types you won't use. For a research wiki: the default types work well. For a small project: start with `concept`, `source-synthesis`, `lesson`, `decision` — add more as the wiki grows.
-3. **Create page templates** — at minimum: lesson, pattern, decision. Templates define section structure + placeholder variables. Copy from `config/templates/`.
+2. **Define your schema** — copy `wiki/config/wiki-schema.yaml`. For a code project: add types like `api-spec` or `architecture`, remove types you won't use. For a research wiki: the default types work well. For a small project: start with `concept`, `source-synthesis`, `lesson`, `decision` — add more as the wiki grows.
+3. **Create page templates** — at minimum: lesson, pattern, decision. Templates define section structure + placeholder variables. Copy from `wiki/config/templates/`.
 4. **Write agent instructions** — CLAUDE.md (or equivalent) must include: schema conventions, naming rules, quality gates, the three operations. The agent reads this at session start.
 5. **Adapt quality gates** — the GATES are universal (frontmatter valid, sections present, summary ≥30 words). The COMMANDS that check them are project-specific (Python validator, TypeScript linter, manual checklist).
 6. **Start ingesting** — 5-10 sources build the initial knowledge base. The wiki grows from there.
@@ -421,7 +421,7 @@ From building with this model — validated experience:
 
 ## Open Questions
 
-> [!question] What is the minimum viable wiki? Can a project start with just raw/ + wiki/domains/ + config/wiki-schema.yaml and add the other layers later? What's the smallest structure that demonstrates value? (Requires: empirical testing with a fresh project)
+> [!question] What is the minimum viable wiki? Can a project start with just raw/ + wiki/domains/ + wiki/config/wiki-schema.yaml and add the other layers later? What's the smallest structure that demonstrates value? (Requires: empirical testing with a fresh project)
 - How do multiple agents co-author a wiki without conflicts? The current model assumes one agent + one operator. With OpenFleet's 10-agent architecture, merge conflicts on frontmatter, competing relationship claims, and simultaneous page creation need resolution. (Requires: multi-agent testing)
 - Optimal starting schema complexity? A new adopter could start with 5 types (concept, source-synthesis, lesson, decision, note) and grow to 16 — or start comprehensive. Which leads to better adoption? (Requires: 2+ adoption experiences)
 - Can the LLM Wiki coexist with Confluence/Notion in an organization? Possible boundary: LLM Wiki for AI-maintained synthesized knowledge, Confluence for human-authored team docs. The wiki ingests FROM Confluence but doesn't replace it. (Requires: enterprise context testing)

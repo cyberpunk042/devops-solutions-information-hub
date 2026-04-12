@@ -293,10 +293,10 @@ This separation between definition and instance is what makes the framework sust
 >
 > | Config File | What It Defines | Role |
 > |-------------|----------------|------|
-> | `config/methodology.yaml` | 9 models with artifact chains, execution modes, quality tiers | The canonical methodology definition |
-> | `config/artifact-types.yaml` | 17 page types with templates, content thresholds, styling, verification | What artifacts look like per type |
-> | `config/domain-profiles/*.yaml` | Per-domain overrides (TypeScript, Python/wiki, Infrastructure) | How to adapt to a specific stack |
-> | `config/templates/` | 22 templates (16 wiki types + 6 methodology documents) | The structural skeleton per type |
+> | `wiki/config/methodology.yaml` | 9 models with artifact chains, execution modes, quality tiers | The canonical methodology definition |
+> | `wiki/config/artifact-types.yaml` | 17 page types with templates, content thresholds, styling, verification | What artifacts look like per type |
+> | `wiki/config/domain-profiles/*.yaml` | Per-domain overrides (TypeScript, Python/wiki, Infrastructure) | How to adapt to a specific stack |
+> | `wiki/config/templates/` | 22 templates (16 wiki types + 6 methodology documents) | The structural skeleton per type |
 >
 > Projects adopt at 4 tiers — from reading wiki models (Tier 1) to full infrastructure enforcement with hooks and deterministic dispatch (Tier 4). See [[Methodology Adoption Guide]] for the full guide.
 >

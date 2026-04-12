@@ -9,12 +9,12 @@ current_stage: document
 readiness: 15
 stages_completed: [document]
 artifacts:
-  - config/methodology.yaml
-  - config/domain-profiles/typescript.yaml
-  - config/domain-profiles/python-wiki.yaml
-  - config/domain-profiles/infrastructure.yaml
-  - config/artifact-types.yaml
-  - config/export-profiles.yaml
+  - wiki/config/methodology.yaml
+  - wiki/config/domain-profiles/typescript.yaml
+  - wiki/config/domain-profiles/python-wiki.yaml
+  - wiki/config/domain-profiles/infrastructure.yaml
+  - wiki/config/artifact-types.yaml
+  - wiki/config/export-profiles.yaml
   - wiki/domains/cross-domain/model-composition-rules.md
   - wiki/spine/methodology-adoption-guide.md
   - wiki/domains/cross-domain/methodology-evolution-protocol.md

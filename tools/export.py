@@ -213,7 +213,7 @@ def main() -> None:
 
     project_root = get_project_root()
     wiki_dir = Path(args.wiki) if args.wiki else project_root / "wiki"
-    profiles_path = Path(args.profiles) if args.profiles else project_root / "config" / "export-profiles.yaml"
+    profiles_path = Path(args.profiles) if args.profiles else project_root / "wiki" / "config" / "export-profiles.yaml"
 
     results = export_wiki(wiki_dir, args.profile, profiles_path, dry_run=args.dry)
 

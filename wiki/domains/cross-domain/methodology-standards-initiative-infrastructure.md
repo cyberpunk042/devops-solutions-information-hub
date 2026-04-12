@@ -16,10 +16,10 @@ sources:
     file: /home/jfortin/openarms/AGENTS.md
   - id: wiki-schema
     type: file
-    file: config/wiki-schema.yaml
+    file: wiki/config/wiki-schema.yaml
   - id: wiki-quality
     type: file
-    file: config/quality-standards.yaml
+    file: wiki/config/quality-standards.yaml
 tags: [methodology, infrastructure-analysis, artifact-system, agent-compliance, epic-planning]
 ---
 
@@ -54,9 +54,9 @@ Complete mapping of the methodology and artifact infrastructure across the resea
 > | Methodology concept pages | 7 | wiki/domains/devops/, cross-domain/ | Growing maturity, authoritative |
 > | Spine models | 15 | wiki/spine/model-*.md | Growing-to-mature |
 > | Standards pages | 7 | wiki/spine/model-*-standards.md | Seed-to-growing |
-> | Page templates | 6 | config/templates/ | Skeleton only, no exemplars |
-> | Schema definition | 1 | config/wiki-schema.yaml | Complete for structure |
-> | Quality standards | 1 | config/quality-standards.yaml | Thresholds only |
+> | Page templates | 6 | wiki/config/templates/ | Skeleton only, no exemplars |
+> | Schema definition | 1 | wiki/config/wiki-schema.yaml | Complete for structure |
+> | Quality standards | 1 | wiki/config/quality-standards.yaml | Thresholds only |
 > | Validation tooling | 1 | tools/validate.py | Page quality, not methodology |
 > | Lint checks | 1 | tools/lint.py | Orphans, dead rels, thin pages |
 > | Skills | 5 | skills/ | Operational, styling-aware |

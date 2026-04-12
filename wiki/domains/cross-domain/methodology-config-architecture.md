@@ -10,16 +10,16 @@ updated: 2026-04-12
 sources:
   - id: methodology-yaml
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
   - id: artifact-types-yaml
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: wiki-schema-yaml
     type: file
-    file: config/wiki-schema.yaml
+    file: wiki/config/wiki-schema.yaml
   - id: quality-standards-yaml
     type: file
-    file: config/quality-standards.yaml
+    file: wiki/config/quality-standards.yaml
   - id: taxonomy
     type: wiki
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
@@ -70,7 +70,7 @@ A reasoning document examining how the wiki's config files, the methodology syst
 >   ↓ defines linting thresholds, export readiness, duplicate detection
 >   ↓ tools/lint.py reads this
 >
-> Layer 6: config/templates/
+> Layer 6: wiki/config/templates/
 >   ↓ 22 templates (16 wiki types + 6 methodology documents)
 >   ↓ tools/pipeline.py scaffold reads these
 > ```

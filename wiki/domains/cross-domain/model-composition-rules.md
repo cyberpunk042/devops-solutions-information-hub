@@ -13,7 +13,7 @@ sources:
     file: wiki/domains/cross-domain/methodology-framework.md
   - id: methodology-config
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
   - id: openarms-methodology
     type: file
     file: /home/jfortin/openarms/wiki/config/methodology.yaml

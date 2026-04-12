@@ -174,7 +174,7 @@ def run_lint(wiki_dir: Path) -> Dict[str, Any]:
 def post_chain(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
     """Run the full post-ingestion chain. Returns structured report."""
     wiki_dir = project_root / "wiki"
-    config_dir = project_root / "config"
+    config_dir = wiki_dir / "config"
     schema_path = config_dir / "wiki-schema.yaml"
     domains_config = config_dir / "domains.yaml"
     manifest_path = wiki_dir / "manifest.json"
@@ -830,7 +830,7 @@ def scaffold_page(page_type: str, title: str, project_root: Path,
                   domain: str = None, derived_from: List[str] = None,
                   verbose: bool = True) -> Dict[str, Any]:
     """Create a new page from template. Returns {ok, path, error}."""
-    template_dir = project_root / "config" / "templates"
+    template_dir = project_root / "wiki" / "config" / "templates"
     # Support methodology/ prefix: "methodology/requirements-spec" → config/templates/methodology/requirements-spec.md
     template_path = template_dir / f"{page_type}.md"
 

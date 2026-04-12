@@ -70,7 +70,7 @@ The Wiki Design model defines the VISUAL layer of the knowledge system — how p
 
 | Layer | What it defines | Where it lives | Example |
 |-------|----------------|----------------|---------|
-| **Content Structure** | Types, fields, sections, schema | `config/wiki-schema.yaml` + [[Model: LLM Wiki]] | "A lesson requires: Summary, Context, Insight, Evidence, Applicability, Relationships" |
+| **Content Structure** | Types, fields, sections, schema | `wiki/config/wiki-schema.yaml` + [[Model: LLM Wiki]] | "A lesson requires: Summary, Context, Insight, Evidence, Applicability, Relationships" |
 | **Content Quality** | What "good" looks like per type | [[LLM Wiki Standards — What Good Looks Like]] | "A lesson's Evidence section must have ≥3 independent data points" |
 | **Visual Design** | How pages look in Obsidian | **This model** | "Use `> [!example]-` for real instances, always foldable" |
 

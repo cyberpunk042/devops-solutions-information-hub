@@ -13,18 +13,18 @@
 ### Task 1: Create Service Templates
 
 **Files:**
-- Create: `config/services/wiki-sync.service.template`
-- Create: `config/services/wiki-watcher.service.template`
+- Create: `services/wiki-sync.service.template`
+- Create: `services/wiki-watcher.service.template`
 
 - [ ] **Step 1: Create the services directory**
 
 ```bash
-mkdir -p config/services
+mkdir -p services
 ```
 
 - [ ] **Step 2: Create wiki-sync.service.template**
 
-Create `config/services/wiki-sync.service.template`:
+Create `services/wiki-sync.service.template`:
 
 ```ini
 [Unit]
@@ -44,7 +44,7 @@ WantedBy=default.target
 
 - [ ] **Step 3: Create wiki-watcher.service.template**
 
-Create `config/services/wiki-watcher.service.template`:
+Create `services/wiki-watcher.service.template`:
 
 ```ini
 [Unit]
@@ -65,7 +65,7 @@ WantedBy=default.target
 - [ ] **Step 4: Commit**
 
 ```bash
-git add config/services/
+git add services/
 git commit -m "feat: service unit templates for wiki-sync and wiki-watcher"
 ```
 
@@ -87,7 +87,7 @@ Add after the `configure_obsidian()` function (after line 231), before the CLI s
 
 def list_services(project_root: Path):
     """List available service templates and their install status."""
-    template_dir = project_root / "config" / "services"
+    template_dir = project_root / "services"
     if not template_dir.exists():
         log_error("No service templates found in config/services/")
         return
@@ -130,7 +130,7 @@ def install_service(service_name: str, project_root: Path) -> bool:
         log_error("systemd services only supported on Linux/WSL")
         return False
 
-    template_dir = project_root / "config" / "services"
+    template_dir = project_root / "services"
     template_path = template_dir / f"{service_name}.service.template"
 
     if not template_path.exists():

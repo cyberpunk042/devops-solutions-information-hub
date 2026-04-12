@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: exemplar
     type: wiki
     file: wiki/decisions/execution-mode-edge-cases.md
@@ -130,7 +130,7 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 
 ### Template
 
-`config/templates/decision.md` — scaffold via `python3 -m tools.pipeline scaffold decision "Title"`
+`wiki/config/templates/decision.md` — scaffold via `python3 -m tools.pipeline scaffold decision "Title"`
 
 ## Relationships
 

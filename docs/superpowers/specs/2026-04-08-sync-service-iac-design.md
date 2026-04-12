@@ -13,7 +13,7 @@ Extend `tools/setup.py` with a `--services` subcommand that generates systemd us
 ## Architecture
 
 ```
-config/services/
+services/
 ├── wiki-sync.service.template       # Sync daemon template
 └── wiki-watcher.service.template    # Watcher daemon template
 

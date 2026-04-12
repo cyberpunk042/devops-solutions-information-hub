@@ -81,9 +81,9 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 | Artifact | File Pattern | Content | Gate |
 |----------|-------------|---------|------|
 | Config Schemas | `config/**/*.yaml` | YAML structure definitions, enum values, required fields | YAML parses without errors |
-| Template Files | `config/templates/**/*.md` | Frontmatter defaults, section headings, inline guidance | Template variables resolve |
+| Template Files | `wiki/config/templates/**/*.md` | Frontmatter defaults, section headings, inline guidance | Template variables resolve |
 | Tool Stubs | `tools/**/*.py` | Function signatures with `pass` or `raise NotImplementedError` | `python -c "import tools.X"` succeeds |
-| Schema Updates | `config/wiki-schema.yaml` | New types, sections, enums | `pipeline post` passes |
+| Schema Updates | `wiki/config/wiki-schema.yaml` | New types, sections, enums | `pipeline post` passes |
 
 > [!warning] FORBIDDEN in Python/Wiki scaffold
 > - Business logic in tool files (parsing, validation, transformation)

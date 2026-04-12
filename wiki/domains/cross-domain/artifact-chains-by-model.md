@@ -10,10 +10,10 @@ updated: 2026-04-11
 sources:
   - id: methodology-config
     type: file
-    file: config/methodology.yaml
+    file: wiki/config/methodology.yaml
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: design-doc
     type: file
     file: wiki/domains/cross-domain/e003-artifact-type-system-design.md
@@ -24,7 +24,7 @@ tags: [methodology, artifact-chains, models, reference, stage-gate]
 
 ## Summary
 
-Complete artifact chain documentation for all 9 methodology models. For each model: the stage sequence, required artifacts per stage, dependencies between artifacts, and what domain profiles resolve. Machine-readable authority is `config/methodology.yaml`; this page provides human-readable context, rationale, and a full worked example for the Feature Development model.
+Complete artifact chain documentation for all 9 methodology models. For each model: the stage sequence, required artifacts per stage, dependencies between artifacts, and what domain profiles resolve. Machine-readable authority is `wiki/config/methodology.yaml`; this page provides human-readable context, rationale, and a full worked example for the Feature Development model.
 
 ## Reference Content
 
@@ -74,7 +74,7 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 > - Gate: Design doc exists, no code files created
 >
 > **Scaffold Stage (50→80%):**
-> - Artifact 1: config/artifact-types.yaml — type definitions with thresholds (zero behavior)
+> - Artifact 1: wiki/config/artifact-types.yaml — type definitions with thresholds (zero behavior)
 > - Artifact 2: 16 template files — empty structures with placeholders
 > - Artifact 3: Schema update — new type added to enum and required_sections
 > - Depends on: Design document

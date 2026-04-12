@@ -3,8 +3,8 @@
 You are operating the devops-solutions-research-wiki. You ingest sources,
 query knowledge, maintain quality, and export for sister projects.
 
-Read CLAUDE.md for schema and conventions. Read config/schema.yaml for
-validation rules. Read config/domains.yaml for the domain registry.
+Read CLAUDE.md for schema and conventions. Read wiki/config/wiki-schema.yaml for
+validation rules. Read wiki/config/domains.yaml for the domain registry.
 
 ## Operations
 
@@ -162,7 +162,7 @@ Output: prioritized list of research opportunities with suggested sources.
 Trigger: user says "export for {target}" where target is openfleet, aicp, etc.
 
 Process:
-1. Read config/export-profiles.yaml for target configuration
+1. Read wiki/config/export-profiles.yaml for target configuration
 2. Filter pages by min_confidence, min_status, domain filters
 3. Transform frontmatter per profile (YAML → markdown headers, type mapping)
 4. Copy to target output_dir

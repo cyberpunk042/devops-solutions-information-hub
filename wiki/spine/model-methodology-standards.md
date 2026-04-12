@@ -299,10 +299,10 @@ What proper artifact production across a full epic looks like — using the arti
 > **What makes this the standard:**
 > - Every stage used the correct methodology template for its artifacts
 > - Artifact dependencies were respected: design depended on document artifacts, scaffold depended on design
-> - The full chain is defined in `config/methodology.yaml` under `feature-development.chain`
+> - The full chain is defined in `wiki/config/methodology.yaml` under `feature-development.chain`
 > - Domain profile (`python-wiki`) resolved gate commands to `pipeline post`
 
-**The bar:** Every methodology model has a defined artifact chain in `config/methodology.yaml`. Every stage in that chain specifies required, optional, and forbidden artifacts. Domain profiles in `config/domain-profiles/` resolve generic artifact types to concrete paths and gate commands. See [[Artifact Chains by Methodology Model]] for all 9 model chains.
+**The bar:** Every methodology model has a defined artifact chain in `wiki/config/methodology.yaml`. Every stage in that chain specifies required, optional, and forbidden artifacts. Domain profiles in `wiki/config/domain-profiles/` resolve generic artifact types to concrete paths and gate commands. See [[Artifact Chains by Methodology Model]] for all 9 model chains.
 
 ---
 
@@ -335,7 +335,7 @@ What the distinction looks like in practice — two fundamentally different docu
 >
 > | Dimension | Operations Plan | Design Plan |
 > |-----------|----------------|-------------|
-> | Template | `config/templates/operations-plan.md` | `config/templates/methodology/design-plan.md` |
+> | Template | `wiki/config/templates/operations-plan.md` | `wiki/config/templates/methodology/design-plan.md` |
 > | Wiki type | `operations-plan` (new type) | `concept` (with methodology template) |
 > | Structure | Sequential steps with Action/Expected/Validation/Rollback | Decisions with rationale + rejected alternatives |
 > | Judgment | None — mechanical, delegatable to any agent | High — trade-offs, alternatives, evidence |
@@ -370,12 +370,12 @@ The complete machine-readable system for methodology execution.
 >
 > | Config File | What It Defines | Lines |
 > |-------------|----------------|-------|
-> | `config/methodology.yaml` | 9 models with artifact chains, modes, end conditions, quality tiers | ~400 |
-> | `config/artifact-types.yaml` | 17 page types with thresholds, styling, verification methods | ~280 |
-> | `config/domain-profiles/*.yaml` | Per-domain overrides: paths, gates, forbidden zones (3 profiles) | ~60 each |
-> | `config/wiki-schema.yaml` | Frontmatter schema, required sections, relationship verbs | ~240 |
-> | `config/quality-standards.yaml` | Linting thresholds, export readiness, duplicate detection | ~20 |
-> | `config/templates/` | 16 wiki page templates + 6 methodology document templates | 22 files |
+> | `wiki/config/methodology.yaml` | 9 models with artifact chains, modes, end conditions, quality tiers | ~400 |
+> | `wiki/config/artifact-types.yaml` | 17 page types with thresholds, styling, verification methods | ~280 |
+> | `wiki/config/domain-profiles/*.yaml` | Per-domain overrides: paths, gates, forbidden zones (3 profiles) | ~60 each |
+> | `wiki/config/wiki-schema.yaml` | Frontmatter schema, required sections, relationship verbs | ~240 |
+> | `wiki/config/quality-standards.yaml` | Linting thresholds, export readiness, duplicate detection | ~20 |
+> | `wiki/config/templates/` | 16 wiki page templates + 6 methodology document templates | 22 files |
 >
 > **Resolution order:** methodology.yaml (models) → artifact-types.yaml (type detail) → domain profile (project-specific) → wiki-schema.yaml (structural validation)
 

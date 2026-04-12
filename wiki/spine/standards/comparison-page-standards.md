@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: exemplar
     type: wiki
     file: wiki/comparisons/cross-domain-patterns.md
@@ -89,7 +89,7 @@ Standards for comparison pages — structured evaluations of alternatives across
 
 ### Template
 
-`config/templates/comparison.md` — scaffold via `python3 -m tools.pipeline scaffold comparison "Title"`
+`wiki/config/templates/comparison.md` — scaffold via `python3 -m tools.pipeline scaffold comparison "Title"`
 
 ## Relationships
 

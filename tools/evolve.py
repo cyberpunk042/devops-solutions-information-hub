@@ -643,7 +643,7 @@ def build_prompt(candidate: Candidate, project_root: Path) -> str:
         Complete prompt string.
     """
     wiki_dir = project_root / "wiki"
-    template_dir = project_root / "config" / "templates"
+    template_dir = project_root / "wiki" / "config" / "templates"
 
     # Read source pages
     source_materials: List[str] = []

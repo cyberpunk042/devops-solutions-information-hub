@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-12T16:57:01.295707+00:00",
+  "generated": "2026-04-12T18:10:12.711090+00:00",
   "stats": {
-    "pages": 238,
+    "pages": 237,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
@@ -830,23 +830,6 @@
           "target": "LLM Wiki Pattern"
         }
       ]
-    },
-    {
-      "path": "config/agent-directive.md",
-      "slug": "config/agent-directive",
-      "title": "agent-directive",
-      "type": "",
-      "domain": "",
-      "status": "",
-      "confidence": "",
-      "created": "",
-      "updated": "",
-      "tags": [],
-      "sources": [],
-      "layer": "",
-      "maturity": "",
-      "derived_from": [],
-      "relationships": []
     },
     {
       "path": "decisions/artifact-system-design-decisions.md",
@@ -3713,12 +3696,12 @@
         {
           "id": "methodology-config",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         },
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "design-doc",
@@ -4205,7 +4188,7 @@
         {
           "id": "wiki-schema",
           "type": "file",
-          "file": "config/wiki-schema.yaml"
+          "file": "wiki/config/wiki-schema.yaml"
         }
       ],
       "layer": "",
@@ -4284,7 +4267,7 @@
         {
           "id": "wiki-schema",
           "type": "file",
-          "file": "config/wiki-schema.yaml"
+          "file": "wiki/config/wiki-schema.yaml"
         }
       ],
       "layer": "",
@@ -4488,22 +4471,22 @@
         {
           "id": "methodology-yaml",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         },
         {
           "id": "artifact-types-yaml",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "wiki-schema-yaml",
           "type": "file",
-          "file": "config/wiki-schema.yaml"
+          "file": "wiki/config/wiki-schema.yaml"
         },
         {
           "id": "quality-standards-yaml",
           "type": "file",
-          "file": "config/quality-standards.yaml"
+          "file": "wiki/config/quality-standards.yaml"
         },
         {
           "id": "taxonomy",
@@ -4575,7 +4558,7 @@
         {
           "id": "methodology-config",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         }
       ],
       "layer": "",
@@ -4888,12 +4871,12 @@
         {
           "id": "wiki-schema",
           "type": "file",
-          "file": "config/wiki-schema.yaml"
+          "file": "wiki/config/wiki-schema.yaml"
         },
         {
           "id": "wiki-quality",
           "type": "file",
-          "file": "config/quality-standards.yaml"
+          "file": "wiki/config/quality-standards.yaml"
         }
       ],
       "layer": "",
@@ -4964,7 +4947,7 @@
         {
           "id": "methodology-config",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         },
         {
           "id": "openarms-methodology",
@@ -12944,7 +12927,7 @@
         {
           "id": "wiki-methodology",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         }
       ],
       "layer": "spine",
@@ -13033,17 +13016,17 @@
         {
           "id": "methodology-config",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         },
         {
           "id": "domain-profiles",
           "type": "file",
-          "file": "config/domain-profiles/"
+          "file": "wiki/config/domain-profiles/"
         },
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "openarms-evidence",
@@ -13110,12 +13093,12 @@
         {
           "id": "methodology-config",
           "type": "file",
-          "file": "config/methodology.yaml"
+          "file": "wiki/config/methodology.yaml"
         },
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -14941,7 +14924,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "exemplar",
@@ -14988,12 +14971,12 @@
         {
           "id": "wiki-schema",
           "type": "file",
-          "file": "config/wiki-schema.yaml"
+          "file": "wiki/config/wiki-schema.yaml"
         },
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "exemplar",
@@ -15045,7 +15028,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "exemplar",
@@ -15096,7 +15079,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15134,7 +15117,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15173,7 +15156,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15215,7 +15198,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15253,7 +15236,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15292,12 +15275,12 @@
         {
           "id": "wiki-schema",
           "type": "file",
-          "file": "config/wiki-schema.yaml"
+          "file": "wiki/config/wiki-schema.yaml"
         },
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "exemplar",
@@ -15349,7 +15332,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15387,7 +15370,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15430,7 +15413,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         },
         {
           "id": "exemplar",
@@ -15481,7 +15464,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15519,7 +15502,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",
@@ -15562,7 +15545,7 @@
         {
           "id": "artifact-types",
           "type": "file",
-          "file": "config/artifact-types.yaml"
+          "file": "wiki/config/artifact-types.yaml"
         }
       ],
       "layer": "spine",

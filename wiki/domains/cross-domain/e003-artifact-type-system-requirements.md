@@ -22,7 +22,7 @@ sources:
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-artifact-spec.md
   - id: wiki-schema
     type: file
-    file: config/wiki-schema.yaml
+    file: wiki/config/wiki-schema.yaml
 tags: [methodology, requirements, artifact-types, e003, type-system, templates]
 ---
 
@@ -97,9 +97,9 @@ Formal requirements for the Artifact Type System — the foundation epic of the 
 ```
 python3 -m tools.pipeline scaffold <type> <title>
 ```
-The scaffolder SHALL read templates from config/templates/ and fill in variables.
+The scaffolder SHALL read templates from wiki/config/templates/ and fill in variables.
 
-**FR-2.4** Templates for methodology documents (requirements spec, ADR, operations plan, etc.) SHALL be separate from wiki page templates, stored in config/templates/methodology/ or similar.
+**FR-2.4** Templates for methodology documents (requirements spec, ADR, operations plan, etc.) SHALL be separate from wiki page templates, stored in wiki/config/templates/methodology/ or similar.
 
 #### FR-3: Operations Plan vs Design Plan
 
@@ -214,7 +214,7 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 > | ID | Criterion | Verification |
 > |----|-----------|-------------|
 > | AC-1 | Artifact type taxonomy config exists in config/ with all types defined | File exists, YAML parses, all types from FR-1.1 present |
-> | AC-2 | Templates exist for all 9 missing page types | `ls config/templates/` shows all types; scaffolder can generate from each |
+> | AC-2 | Templates exist for all 9 missing page types | `ls wiki/config/templates/` shows all types; scaffolder can generate from each |
 > | AC-3 | Operations plan template is structurally distinct from design plan template | Templates differ in required sections; reviewer can distinguish at a glance |
 > | AC-4 | Artifact chains documented for all 9 models | Wiki pages exist; each chain shows required/optional/forbidden/dependencies per stage |
 > | AC-5 | Artifact chains available as machine-readable config | YAML config exists; matches wiki page content |
@@ -241,7 +241,7 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 >
 > | Module | Scope | Estimate | Key Deliverables |
 > |--------|-------|----------|-----------------|
-> | M1: Taxonomy | Define all artifact types in YAML + wiki page | L | config/artifact-types.yaml, wiki page |
+> | M1: Taxonomy | Define all artifact types in YAML + wiki page | L | wiki/config/artifact-types.yaml, wiki page |
 > | M2: Knowledge Templates | Templates for concept, source-synthesis, comparison, reference, deep-dive | M | 5 template files |
 > | M3: Backlog Templates | Templates for epic, module, task, note | S | 4 template files |
 > | M4: Plan Types | Operations plan vs design plan definitions + templates | M | 2 template files, schema update |

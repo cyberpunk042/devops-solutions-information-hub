@@ -50,7 +50,7 @@ What a well-configured project root looks like.
 
 > [!success] **What makes it the standard**
 > - **Under 200 lines** — respects the per-message cost. Every line is charged on every message in every conversation.
-> - **Routes, doesn't contain** — points to `wiki/config/methodology.yaml` and `wiki/config/agent-directive.md` instead of containing 424 lines of methodology inline. Points to `config/wiki-schema.yaml` instead of embedding the schema.
+> - **Routes, doesn't contain** — points to `wiki/config/methodology.yaml` and `wiki/config/agent-directive.md` instead of containing 424 lines of methodology inline. Points to `wiki/config/wiki-schema.yaml` instead of embedding the schema.
 > - **Structured as sections** — Project Structure, Page Schema, Ingestion Modes, Quality Gates, Post-Ingestion, Tooling, Agent Methodology, Conventions. The agent can scan section headers to find what it needs.
 > - **Commands listed with exact syntax** — `python3 -m tools.pipeline post`, `python3 -m tools.validate`, etc. The agent doesn't guess the command format.
 > - **Quality gates are explicit** — 9 gates listed, each with a testable condition (Summary ≥30 words, ≥1 relationship, title matches heading).
@@ -59,7 +59,7 @@ What a well-configured project root looks like.
 > [!bug]- **Anti-pattern: the encyclopedia CLAUDE.md**
 > A 500+ line CLAUDE.md that contains the full methodology, all schema definitions, all tool documentation, all conventions, and every rule ever learned. Loads on every message. 500 tokens wasted per message × 100 messages per session = 50,000 tokens burned on repeated context before any real work happens.
 >
-> **The fix:** CLAUDE.md as routing table. Point to files. `wiki/config/methodology.yaml` for methodology. `config/wiki-schema.yaml` for schema. Skills for capability instructions. CLAUDE.md tells the agent WHERE to look, not WHAT to know.
+> **The fix:** CLAUDE.md as routing table. Point to files. `wiki/config/methodology.yaml` for methodology. `wiki/config/wiki-schema.yaml` for schema. Skills for capability instructions. CLAUDE.md tells the agent WHERE to look, not WHAT to know.
 
 > [!bug]- **Anti-pattern: the empty CLAUDE.md**
 > A project with no CLAUDE.md or a 10-line stub. Every conversation starts from zero. The agent doesn't know the project structure, conventions, or quality gates. It re-discovers them by reading files — burning tokens on exploration that should be free.

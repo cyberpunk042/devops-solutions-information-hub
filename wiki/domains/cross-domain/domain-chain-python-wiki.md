@@ -25,7 +25,7 @@ tags: [methodology, artifact-chain, python, wiki, domain-specific, research-wiki
 > [!tip] AI Quick Start — Working in the Research Wiki or a Python Tool Project
 >
 > 1. **Gate command for EVERYTHING:** `python3 -m tools.pipeline post` — run it after every change, 0 errors = pass
-> 2. **Scaffold:** `config/*.yaml` schemas + `config/templates/*.md` templates. YAML declarations only, no Python logic.
+> 2. **Scaffold:** `wiki/config/*.yaml` schemas + `wiki/config/templates/*.md` templates. YAML declarations only, no Python logic.
 > 3. **Implement:** `tools/*.py` with real logic + wiki pages with real content + pipeline.py modified to call new tools
 > 4. **Test:** `pipeline post` 0 errors + `tools/validate` 0 errors + new lint issues should not increase
 > 5. **Knowledge operations below:** ingestion (raw→synthesis), evolution (synthesis→lesson/pattern/decision), curation (domain overviews)
@@ -63,8 +63,8 @@ Complete artifact chain resolution for Python tool projects and knowledge wikis 
 > | 6 | design | Schema Spec | `wiki/domains/{domain}/{slug}-schema-spec.md` | YAML shapes concrete, not placeholder |
 > | 7 | design | Test Plan | `wiki/domains/{domain}/{slug}-test-plan.md` | Validation scenarios defined |
 > | 8 | scaffold | Config Schema | `config/{name}.yaml` | YAML parses, structure matches spec |
-> | 9 | scaffold | Templates | `config/templates/{type}.md` | Variables resolve, sections match schema |
-> | 10 | scaffold | Schema Update | `config/wiki-schema.yaml` | New types/sections added, pipeline post passes |
+> | 9 | scaffold | Templates | `wiki/config/templates/{type}.md` | Variables resolve, sections match schema |
+> | 10 | scaffold | Schema Update | `wiki/config/wiki-schema.yaml` | New types/sections added, pipeline post passes |
 > | 11 | scaffold | Tool Stub | `tools/{name}.py` | `python -c "import tools.{name}"` succeeds |
 > | 12 | implement | Tool Logic | `tools/{name}.py` | Functions with real logic, `pipeline post` passes |
 > | 13 | implement | Wiki Pages | `wiki/{domain}/{slug}.md` | Valid frontmatter, required sections, ≥30 word summary |
@@ -82,17 +82,17 @@ Complete artifact chain resolution for Python tool projects and knowledge wikis 
 >
 > **ALLOWED:**
 > ```yaml
-> # Config schema (config/artifact-types.yaml)
+> # Config schema (wiki/config/artifact-types.yaml)
 > types:
 >   concept:
 >     category: knowledge-pages
->     template: config/templates/concept.md
+>     template: wiki/config/templates/concept.md
 >     content_thresholds:
 >       summary_min_words: 30
 > ```
 >
 > ```markdown
-> <!-- Template file (config/templates/concept.md) -->
+> <!-- Template file (wiki/config/templates/concept.md) -->
 > ---
 > title: "{{title}}"
 > type: concept
@@ -136,14 +136,14 @@ Complete artifact chain resolution for Python tool projects and knowledge wikis 
 > **Design:** Design document with 7 decisions — as wiki page
 >
 > **Scaffold:**
-> - `config/artifact-types.yaml` — 17 types defined (config schema)
-> - `config/templates/*.md` — 16 wiki templates + 6 methodology templates
-> - `config/wiki-schema.yaml` — operations-plan type added
+> - `wiki/config/artifact-types.yaml` — 17 types defined (config schema)
+> - `wiki/config/templates/*.md` — 16 wiki templates + 6 methodology templates
+> - `wiki/config/wiki-schema.yaml` — operations-plan type added
 > - `tools/pipeline.py` — scaffolder updated for new types (stub integration)
 >
 > **Implement:**
-> - `config/methodology.yaml` — 9 models with artifact chains
-> - `config/domain-profiles/*.yaml` — 3 domain profiles
+> - `wiki/config/methodology.yaml` — 9 models with artifact chains
+> - `wiki/config/domain-profiles/*.yaml` — 3 domain profiles
 > - `tools/validate.py` — reads artifact-types.yaml for per-type thresholds
 > - `wiki/domains/cross-domain/artifact-chains-by-model.md` — documentation page
 >

@@ -11,10 +11,10 @@ updated: 2026-04-11
 sources:
   - id: wiki-schema
     type: file
-    file: config/wiki-schema.yaml
+    file: wiki/config/wiki-schema.yaml
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: exemplar
     type: wiki
     file: wiki/domains/cross-domain/methodology-framework.md
@@ -138,7 +138,7 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 
 ### Template
 
-`config/templates/concept.md` — scaffold via `python3 -m tools.pipeline scaffold concept "Title"`
+`wiki/config/templates/concept.md` — scaffold via `python3 -m tools.pipeline scaffold concept "Title"`
 
 ## Open Questions
 

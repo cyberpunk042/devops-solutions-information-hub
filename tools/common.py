@@ -152,19 +152,29 @@ def load_config(path: Path) -> Optional[Dict[str, Any]]:
         return yaml.safe_load(f)
 
 
+_SKIP_DIRS = {"config", ".obsidian", ".evolve-queue"}
+
+
 def find_wiki_pages(wiki_dir: Path) -> List[Path]:
-    """Find all .md files in wiki/ excluding _index.md files."""
+    """Find all .md files in wiki/ excluding _index.md and non-content dirs."""
     pages = []
     for md_file in sorted(wiki_dir.rglob("*.md")):
         if md_file.name == "_index.md":
+            continue
+        if any(d in _SKIP_DIRS for d in md_file.relative_to(wiki_dir).parts):
             continue
         pages.append(md_file)
     return pages
 
 
 def find_all_wiki_files(wiki_dir: Path) -> List[Path]:
-    """Find all .md files in wiki/ including _index.md files."""
-    return sorted(wiki_dir.rglob("*.md"))
+    """Find all .md files in wiki/ including _index.md but excluding non-content dirs."""
+    pages = []
+    for md_file in sorted(wiki_dir.rglob("*.md")):
+        if any(d in _SKIP_DIRS for d in md_file.relative_to(wiki_dir).parts):
+            continue
+        pages.append(md_file)
+    return pages
 
 
 def get_project_root() -> Path:

@@ -38,7 +38,7 @@ This page defines the quality bar for every page type in the LLM Wiki model. For
 
 ### Per-Type Standards System
 
-Every page type now has its own dedicated standards document in `wiki/spine/standards/`. Each standards doc includes: section-by-section quality bar, gold-standard exemplar with reasoning, common failures, content thresholds from `config/artifact-types.yaml`, and template reference.
+Every page type now has its own dedicated standards document in `wiki/spine/standards/`. Each standards doc includes: section-by-section quality bar, gold-standard exemplar with reasoning, common failures, content thresholds from `wiki/config/artifact-types.yaml`, and template reference.
 
 > [!info] Per-Type Standards Index
 >
@@ -150,7 +150,7 @@ What makes it the standard:
 
 What makes it the standard:
 - **Goals are concrete and measurable** — "Create templates for all 8 page types currently missing" not "improve templates."
-- **Done When uses checkboxes with specific outputs** — "Templates exist for all page types agents create" can be verified with `ls config/templates/`.
+- **Done When uses checkboxes with specific outputs** — "Templates exist for all page types agents create" can be verified with `ls wiki/config/templates/`.
 - **Dependencies are explicit** — "None — this is the foundation epic."
 - **Artifacts list tracks ALL stage outputs** — 22 artifacts across document, design, scaffold, implement. Every deliverable is named.
 - **Readiness reflects actual stage completion** — 95% because all 5 stages are done, pending operator review.

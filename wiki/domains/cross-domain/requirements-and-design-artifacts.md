@@ -29,7 +29,7 @@ tags: [methodology, requirements, design, artifacts, adr, tech-spec, interface-s
 >
 > 1. **Document stage?** Produce: Requirements Spec (FR/NFR/AC), Infrastructure Analysis (file:line tables), Gap Analysis (per-gap with complexity)
 > 2. **Design stage?** Produce: ADR (decision + alternatives + rationale), Tech Spec (components + API tables), Test Plan (test IDs + inputs + expected)
-> 3. **Templates:** `config/templates/methodology/` has templates for all of these — scaffold from them
+> 3. **Templates:** `wiki/config/templates/methodology/` has templates for all of these — scaffold from them
 > 4. **The chain has dependencies:** ADR depends on requirements. Tech Spec depends on ADR. Interface Spec depends on Tech Spec. Test Plan depends on Interface Spec. Don't skip upstream documents.
 > 5. **Scale matters:** Epic = full 8 documents. Module = sections in epic docs. Task = inherits from epic.
 
@@ -65,7 +65,7 @@ These are produced during the Document stage (0-25% readiness). They answer: WHA
 > | **AC format** | AC-N: [Verifiable statement that maps to Done When] |
 > | **Quality bar** | Every FR has Input/Output/Constraints. Every AC is testable by running a command. Out of Scope explicitly names exclusions. |
 > | **Anti-pattern** | "The system should be good" — vague, unverifiable. Must be: "FR-1: When X happens, the system must produce Y within Z seconds." |
-> | **Template** | config/templates/methodology/requirements-spec.md |
+> | **Template** | wiki/config/templates/methodology/requirements-spec.md |
 > | **Variants** | BRD (business language, epic-level), FRD (functional detail, task-level), SRS (IEEE 830 formal, regulated systems) |
 >
 > **Good example from OpenArms:** "FR-1: When the agent calls /stage-complete during scaffold stage, the harness must verify that no new src/ files contain function bodies with control flow. Input: list of files from stage-files.log. Output: PASSED with next stage instructions or FAILED with file:line direction. Constraint: must complete in < 10 seconds."
@@ -81,7 +81,7 @@ These are produced during the Document stage (0-25% readiness). They answer: WHA
 > | **Sections** | Existing Infrastructure (File:line:export table), Data Flow, Dependencies, Integration Points |
 > | **Quality bar** | Every referenced file VERIFIED to exist. Integration points have file:function:line. Data flow shows actual path, not theoretical. |
 > | **Anti-pattern** | "There are config files" — must be: "src/config/types.agents.ts (45 LOC, exports AgentConfig type, relevant: add optional team field)" |
-> | **Template** | config/templates/methodology/infrastructure-analysis.md |
+> | **Template** | wiki/config/templates/methodology/infrastructure-analysis.md |
 >
 > | Domain | What "infrastructure" means |
 > |--------|---------------------------|
@@ -99,7 +99,7 @@ These are produced during the Document stage (0-25% readiness). They answer: WHA
 > | **Format per gap** | Gap N: Title. Current state (with file refs). Required state. Impact. Affected files. Complexity (S/M/L/XL). |
 > | **Quality bar** | At least one gap identified. Each gap references existing files. Impact is specific ("blocks scaffold stage") not vague. |
 > | **Anti-pattern** | "More research needed" — that's a task, not a gap. Name WHAT specifically is missing. |
-> | **Template** | config/templates/methodology/gap-analysis.md |
+> | **Template** | wiki/config/templates/methodology/gap-analysis.md |
 
 ### The Design Stage Artifacts (5 types)
 
@@ -115,7 +115,7 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > | **Quality bar** | ≥1 alternative with specific rejection reason. Decision is ONE clear statement. Consequences include risks. |
 > | **Variants** | Nygard (lightweight), MADR (tradeoff analysis), Y-Statement ("In context C, facing F, we decided D...") |
 > | **Status lifecycle** | Proposed → Accepted → Superseded (with link to replacement) |
-> | **Template** | config/templates/decision.md (our decision type IS an ADR) |
+> | **Template** | wiki/config/templates/decision.md (our decision type IS an ADR) |
 > | **Anti-pattern** | "We decided to use X" — no context, no alternatives, no consequences. |
 >
 > **Extended record types beyond ADR:** Pattern Descriptions (documenting recurring solutions), Approved Standards (establishing norms), Exception Requests (when standards can't be met), Compliance Assessments (verifying adherence).
@@ -128,7 +128,7 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > |--------|---------|
 > | **Sections** | Component Specs (responsibility/location/dependencies/consumers), API Table (function/input/output/side effects), Algorithm (pseudocode), Error Handling (error→response table), State Management |
 > | **Quality bar** | Every exported function has an API entry. Every error case has a handling strategy. Component locations are real paths. |
-> | **Template** | config/templates/methodology/tech-spec.md |
+> | **Template** | wiki/config/templates/methodology/tech-spec.md |
 > | **Anti-pattern** | "The system will process data" — must specify WHICH data, WHAT processing, WHERE the result goes. |
 >
 > | Domain | Tech Spec variations |
@@ -158,7 +158,7 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > |--------|---------|
 > | **Sections** | Config Shape (concrete YAML), Environment Variables (table: var/type/default/description), CLI Flags (table), Defaults (where each comes from), Precedence (CLI > env > config > built-in) |
 > | **Quality bar** | Config shape is CONCRETE YAML, not placeholder. Every env var has a default. Precedence is explicit. |
-> | **Template** | config/templates/methodology/tech-spec.md (config section) |
+> | **Template** | wiki/config/templates/methodology/tech-spec.md (config section) |
 
 #### Test Plan
 
@@ -168,7 +168,7 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > |--------|---------|
 > | **Sections** | Unit Tests (table: ID/component/input/expected), Integration Tests (table: setup/steps/expected), E2E Tests, Regression Tests, Test Data requirements |
 > | **Quality bar** | ≥5 unit tests defined. ≥2 integration tests. ≥1 e2e test. Every exported function has ≥1 test. Test IDs used in scaffold stubs. |
-> | **Template** | config/templates/methodology/test-plan.md |
+> | **Template** | wiki/config/templates/methodology/test-plan.md |
 > | **Anti-pattern** | "We will test the system" — must name specific test cases with inputs and expected outputs. |
 >
 > **The chain dependency:** Test Plan defines test IDs → Scaffold creates test stubs matching those IDs → Test stage fills stubs with real assertions. Without the Test Plan, the scaffold creates arbitrary stubs that don't match what needs testing.

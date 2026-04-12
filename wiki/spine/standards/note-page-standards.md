@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, note, page-type, quality, exemplar, log]
 ---
 
@@ -55,7 +55,7 @@ Standards for note pages — log entries recording directives, session summaries
 
 ### Template
 
-`config/templates/note.md` — scaffold via `python3 -m tools.pipeline scaffold note "Title"`
+`wiki/config/templates/note.md` — scaffold via `python3 -m tools.pipeline scaffold note "Title"`
 
 ## Relationships
 

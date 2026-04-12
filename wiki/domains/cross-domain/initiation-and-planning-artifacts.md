@@ -69,7 +69,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **Quality bar** | Operator's EXACT words quoted. Scope boundaries explicit. Success criteria testable. |
 > | **Anti-pattern** | Paraphrased intent ("the user wants to improve quality") — must be verbatim quotes |
 > | **In our wiki** | raw/notes/ directive logs + epic Summary + Goals sections |
-> | **Template** | config/templates/epic.md (the Summary section IS the charter) |
+> | **Template** | wiki/config/templates/epic.md (the Summary section IS the charter) |
 >
 > **Example from this wiki:**
 > "we need to establish a strong method of work with the Wiki LLM structure and Methodology structure and execution and we need to establish standards for everything with example of document on top of the standards documents for each artifact type." — This is the initiation artifact for E003-E006.
@@ -138,7 +138,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **What it contains** | Per-risk/gap: current state (with evidence), required state, impact if unaddressed, affected scope, mitigation, complexity estimate |
 > | **Quality bar** | Every gap references existing files/components. Impact is specific ("blocks scaffold stage") not vague ("could cause problems"). |
 > | **Anti-pattern** | "More research needed" as a gap — that's not a gap, it's a task. Name WHAT needs researching. |
-> | **Template** | config/templates/methodology/gap-analysis.md |
+> | **Template** | wiki/config/templates/methodology/gap-analysis.md |
 > | **OpenArms example** | Document #3 in the chain — "Per-gap: current state with file refs, required state, impact, affected files, complexity" |
 
 #### Project Plan / Backlog

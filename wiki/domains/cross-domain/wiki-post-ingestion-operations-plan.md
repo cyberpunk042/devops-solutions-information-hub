@@ -24,7 +24,7 @@ Sequential operations plan for validating the wiki after any content change. Thi
 
 - [ ] Python 3.11+ installed with venv at `.venv/` (verify: `.venv/bin/python --version`)
 - [ ] Wiki pages exist in `wiki/` directory (verify: `ls wiki/`)
-- [ ] Config files present: `config/wiki-schema.yaml`, `config/quality-standards.yaml` (verify: `ls config/*.yaml`)
+- [ ] Config files present: `wiki/config/wiki-schema.yaml`, `wiki/config/quality-standards.yaml` (verify: `ls wiki/config/*.yaml`)
 - [ ] At least one wiki page was created or modified since last run
 
 ## Steps
@@ -45,7 +45,7 @@ Sequential operations plan for validating the wiki after any content change. Thi
 
 ### Step 3: Validate All Pages
 
-- **Action:** Check every page against `config/wiki-schema.yaml` (required fields, enums, sections) and `config/artifact-types.yaml` (per-type thresholds)
+- **Action:** Check every page against `wiki/config/wiki-schema.yaml` (required fields, enums, sections) and `wiki/config/artifact-types.yaml` (per-type thresholds)
 - **Expected output:** 0 validation errors. Warnings are advisory.
 - **Validation:** Exit code 0 from the validate step. If errors >0, the chain reports FAIL.
 - **Rollback:** Fix the page(s) with errors, re-run from step 3

@@ -67,8 +67,8 @@ spine for the devops ecosystem (openfleet, AICP, DSPD, devops-control-plane).
 | integration | integration | scaffold → implement → test | Wire existing modules |
 | evolve | knowledge-evolution | document → implement | Distill lessons/patterns/decisions |
 
-Full model definitions with artifact chains: `config/methodology.yaml`
-Artifact type details: `config/artifact-types.yaml`
+Full model definitions with artifact chains: `wiki/config/methodology.yaml`
+Artifact type details: `wiki/config/artifact-types.yaml`
 
 ## Per-Scale Artifact Requirements
 
@@ -79,7 +79,7 @@ Artifact type details: `config/artifact-types.yaml`
 | Task | Task description (from plan) → implement → verify |
 | Hotfix | Nothing — fix, test, commit |
 
-Templates for ALL artifacts: `config/templates/` (wiki types) and `config/templates/methodology/` (stage documents)
+Templates for ALL artifacts: `wiki/config/templates/` (wiki types) and `wiki/config/templates/methodology/` (stage documents)
 
 # ---------------------------------------------------------------------------
 # USING THE SECOND BRAIN — this wiki IS your knowledge base
@@ -129,7 +129,8 @@ This wiki grows through progressive distillation:
 - `wiki/` — Processed knowledge (domains/, sources/, comparisons/, lessons/, patterns/, decisions/, spine/, backlog/, log/, config/, index.md, manifest.json)
 - `tools/` — Python utilities (lint, manifest, export, validate, stats)
 - `skills/` — Claude skill definitions
-- `config/` — Schema, domain registry, export profiles, quality standards, methodology engine, artifact types, domain profiles, templates
+- `config/` — Project infrastructure (service templates)
+- `wiki/config/` — Wiki schema, domain registry, export profiles, quality standards, methodology engine, artifact types, domain profiles, templates
 - `docs/` — Project documentation and specs
 
 **Start here:** `wiki/spine/model-registry.md` — lists all 15 named models with their
@@ -145,7 +146,7 @@ Page types: concept, source-synthesis, comparison, reference, deep-dive, index,
   lesson, pattern, decision, domain-overview, learning-path, evolution,
   operations-plan, epic, module, task, note
 
-Every type has a template in `config/templates/`. Scaffold via:
+Every type has a template in `wiki/config/templates/`. Scaffold via:
 `python3 -m tools.pipeline scaffold <type> <title>`
 
 ## Page Structure
@@ -160,7 +161,7 @@ Every page follows this section order:
     ## Relationships    ← VERB: target format, one per line
 
 Evolved page types (lesson, pattern, decision) have additional required sections.
-See `config/templates/` for section structure per type.
+See `wiki/config/templates/` for section structure per type.
 
 ## Relationship Conventions
 
@@ -175,14 +176,14 @@ Format: `- VERB: Target Name (optional context)`
 # QUALITY GATES — every page, every time
 # ---------------------------------------------------------------------------
 
-- Complete frontmatter with valid values per `config/wiki-schema.yaml`
+- Complete frontmatter with valid values per `wiki/config/wiki-schema.yaml`
 - Summary ≥30 words
 - ≥1 relationship (unless first in new domain)
 - Reachable from domain _index.md
 - Source provenance (URL or file reference)
 - No >70% concept overlap with existing pages
 - title field matches # Heading, domain field matches folder path
-- Per-type content thresholds defined in `config/artifact-types.yaml`
+- Per-type content thresholds defined in `wiki/config/artifact-types.yaml`
 - Evolved pages (lesson, pattern, decision) require Obsidian callouts
 - Every stage transition: previous stage's artifacts exist
 

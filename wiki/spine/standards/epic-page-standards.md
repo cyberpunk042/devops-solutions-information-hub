@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, epic, page-type, quality, exemplar, backlog]
 ---
 
@@ -25,7 +25,7 @@ Standards for epic pages — strategic containers that break into modules and ta
 
 1. **Epics trace to operator directives.** Every epic exists because the operator said something. The `sources` field links to the raw/notes/ directive log. No invented epics.
 
-2. **Done When items are VERIFIABLE.** "Improve quality" is not verifiable. "Templates exist for all page types" is verifiable with `ls config/templates/`. Each item should have an implicit or explicit verification command.
+2. **Done When items are VERIFIABLE.** "Improve quality" is not verifiable. "Templates exist for all page types" is verifiable with `ls wiki/config/templates/`. Each item should have an implicit or explicit verification command.
 
 3. **Artifacts list grows across stages.** As the epic progresses through stages, the artifacts list accumulates all deliverables. This is the audit trail — what was actually produced.
 
@@ -66,7 +66,7 @@ Standards for epic pages — strategic containers that break into modules and ta
 
 ### Template
 
-`config/templates/epic.md` — scaffold via `python3 -m tools.pipeline scaffold epic "Title"`
+`wiki/config/templates/epic.md` — scaffold via `python3 -m tools.pipeline scaffold epic "Title"`
 
 ## Relationships
 

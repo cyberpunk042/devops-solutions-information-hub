@@ -11,10 +11,10 @@ updated: 2026-04-11
 sources:
   - id: wiki-schema
     type: file
-    file: config/wiki-schema.yaml
+    file: wiki/config/wiki-schema.yaml
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
   - id: exemplar
     type: wiki
     file: wiki/lessons/cli-tools-beat-mcp-for-token-efficiency.md
@@ -152,7 +152,7 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 
 ### Template
 
-`config/templates/lesson.md` — scaffold via `python3 -m tools.pipeline scaffold lesson "Title"`
+`wiki/config/templates/lesson.md` — scaffold via `python3 -m tools.pipeline scaffold lesson "Title"`
 
 ## Open Questions
 

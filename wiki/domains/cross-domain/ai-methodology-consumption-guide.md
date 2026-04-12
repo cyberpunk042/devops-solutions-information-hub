@@ -108,7 +108,7 @@ This page bridges the gap between the methodology wiki as KNOWLEDGE and the meth
 > 2. What class of output? (document = constraining, artifact = by-product, documentation = explaining)
 > 3. Check the artifact taxonomy for the specific type
 > 4. Check the per-type standards for quality bar
-> 5. Check if there's a template: `config/templates/` or `config/templates/methodology/`
+> 5. Check if there's a template: `wiki/config/templates/` or `wiki/config/templates/methodology/`
 
 #### EXECUTE Mode — Producing Output
 
@@ -118,7 +118,7 @@ This page bridges the gap between the methodology wiki as KNOWLEDGE and the meth
 >
 > **The execution checklist (every artifact, every time):**
 > 1. Which type am I creating? → Read its standards page in `wiki/spine/standards/`
-> 2. Which template? → Scaffold from `config/templates/`
+> 2. Which template? → Scaffold from `wiki/config/templates/`
 > 3. Section by section: does my content meet the quality bar from the standards page?
 > 4. Does the gold-standard exemplar referenced in the standards page LOOK like what I'm producing?
 > 5. Am I in the right stage for this artifact? (check ALLOWED/FORBIDDEN)

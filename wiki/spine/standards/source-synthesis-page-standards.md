@@ -11,7 +11,7 @@ updated: 2026-04-11
 sources:
   - id: artifact-types
     type: file
-    file: config/artifact-types.yaml
+    file: wiki/config/artifact-types.yaml
 tags: [standards, source-synthesis, page-type, quality, exemplar]
 ---
 
@@ -93,7 +93,7 @@ Standards for source-synthesis pages — processed versions of raw sources (arti
 
 ### Template
 
-`config/templates/source-synthesis.md` — scaffold via `python3 -m tools.pipeline scaffold source-synthesis "Title"`
+`wiki/config/templates/source-synthesis.md` — scaffold via `python3 -m tools.pipeline scaffold source-synthesis "Title"`
 
 ## Relationships
 
