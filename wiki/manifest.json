@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-12T15:42:16.284523+00:00",
+  "generated": "2026-04-12T15:46:32.193384+00:00",
   "stats": {
-    "pages": 234,
+    "pages": 236,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1534,
-    "tags_unique": 736,
+    "relationships": 1547,
+    "tags_unique": 739,
     "layers": {
       "3": 5,
-      "6": 13,
+      "6": 15,
       "2": 51,
       "4": 31,
       "5": 9,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 134,
-      "seed": 71
+      "seed": 73
     }
   },
   "pages": [
@@ -849,6 +849,65 @@
       "relationships": []
     },
     {
+      "path": "decisions/artifact-system-design-decisions.md",
+      "slug": "decisions/artifact-system-design-decisions",
+      "title": "Decision: Artifact System Design Decisions",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "decision",
+        "artifacts",
+        "templates",
+        "bridge-pattern",
+        "compliance",
+        "design"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Methodology Artifact Taxonomy",
+        "Requirements and Design Artifacts \u2014 Standards and Guide",
+        "Construction and Testing Artifacts \u2014 Standards and Guide",
+        "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Requirements and Design Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Construction and Testing Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "decisions/execution-mode-edge-cases.md",
       "slug": "decisions/execution-mode-edge-cases",
       "title": "Decision: Execution Mode Edge Cases",
@@ -1215,6 +1274,60 @@
         {
           "verb": "RELATES TO",
           "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
+        }
+      ]
+    },
+    {
+      "path": "decisions/methodology-stage-extension-decisions.md",
+      "slug": "decisions/methodology-stage-extension-decisions",
+      "title": "Decision: Methodology Stage Extension Decisions",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "decision",
+        "stages",
+        "initiation",
+        "deployment",
+        "drift",
+        "status-report"
+      ],
+      "sources": [],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Initiation and Planning Artifacts \u2014 Standards and Guide",
+        "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide",
+        "Artifact Chain: Infrastructure/IaC Domain"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Initiation and Planning Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Artifact Chain: Infrastructure/IaC Domain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Gate Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Evolution Protocol"
         }
       ]
     },
@@ -15381,8 +15494,8 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 98,
-      "relationship_count": 656
+      "page_count": 100,
+      "relationship_count": 669
     },
     "devops": {
       "page_count": 14,
@@ -15515,7 +15628,9 @@
       "backlog/epics/E004-portable-methodology-engine",
       "backlog/epics/E005-agent-compliance-framework",
       "backlog/epics/E006-standards-by-example",
+      "decisions/artifact-system-design-decisions",
       "decisions/methodology-framework-design-decisions",
+      "decisions/methodology-stage-extension-decisions",
       "domains/ai-agents/per-role-command-architecture",
       "domains/ai-agents/task-lifecycle-stage-gating",
       "domains/cross-domain/ai-agent-artifacts",
@@ -15572,6 +15687,7 @@
     ],
     "templates": [
       "backlog/epics/E003-artifact-type-system",
+      "decisions/artifact-system-design-decisions",
       "domains/cross-domain/e003-artifact-type-system-requirements"
     ],
     "exemplars": [
@@ -16022,6 +16138,40 @@
       "domains/ai-agents/hooks-lifecycle-architecture",
       "domains/cross-domain/model-composition-rules"
     ],
+    "decision": [
+      "decisions/artifact-system-design-decisions",
+      "decisions/methodology-stage-extension-decisions",
+      "decisions/wiki-first-with-lightrag-upgrade-path",
+      "spine/standards/decision-page-standards"
+    ],
+    "artifacts": [
+      "decisions/artifact-system-design-decisions",
+      "domains/ai-agents/spec-driven-development",
+      "domains/cross-domain/ai-agent-artifacts",
+      "domains/cross-domain/construction-and-testing-artifacts",
+      "domains/cross-domain/deployment-closure-monitoring-artifacts",
+      "domains/cross-domain/initiation-and-planning-artifacts",
+      "domains/cross-domain/methodology-artifact-taxonomy",
+      "domains/cross-domain/requirements-and-design-artifacts",
+      "domains/devops/stage-gate-methodology",
+      "lessons/three-classes-of-methodology-output",
+      "lessons/universal-stages-domain-specific-artifacts",
+      "sources/methodology-artifact-taxonomy-research"
+    ],
+    "bridge-pattern": [
+      "decisions/artifact-system-design-decisions"
+    ],
+    "compliance": [
+      "decisions/artifact-system-design-decisions",
+      "domains/cross-domain/ai-agent-artifacts"
+    ],
+    "design": [
+      "decisions/artifact-system-design-decisions",
+      "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/requirements-and-design-artifacts",
+      "domains/devops/stage-gate-methodology",
+      "log/2026-04-09-directive-styling-obsidian"
+    ],
     "execution-modes": [
       "decisions/execution-mode-edge-cases",
       "domains/ai-agents/per-role-command-architecture",
@@ -16204,6 +16354,24 @@
       "decisions/methodology-framework-design-decisions",
       "domains/cross-domain/methodology-framework"
     ],
+    "stages": [
+      "decisions/methodology-stage-extension-decisions",
+      "lessons/universal-stages-domain-specific-artifacts"
+    ],
+    "initiation": [
+      "decisions/methodology-stage-extension-decisions",
+      "domains/cross-domain/initiation-and-planning-artifacts"
+    ],
+    "deployment": [
+      "decisions/methodology-stage-extension-decisions",
+      "domains/cross-domain/deployment-closure-monitoring-artifacts"
+    ],
+    "drift": [
+      "decisions/methodology-stage-extension-decisions"
+    ],
+    "status-report": [
+      "decisions/methodology-stage-extension-decisions"
+    ],
     "knowledge-interface": [
       "decisions/obsidian-vs-notebooklm-as-knowledge-interface"
     ],
@@ -16371,10 +16539,6 @@
     ],
     "mid-execution": [
       "decisions/task-type-edge-cases"
-    ],
-    "decision": [
-      "decisions/wiki-first-with-lightrag-upgrade-path",
-      "spine/standards/decision-page-standards"
     ],
     "lightrag": [
       "decisions/wiki-first-with-lightrag-upgrade-path",
@@ -16778,19 +16942,6 @@
       "sources/src-claude-code-accuracy-tips",
       "sources/src-superpowers-end-of-vibe-coding"
     ],
-    "artifacts": [
-      "domains/ai-agents/spec-driven-development",
-      "domains/cross-domain/ai-agent-artifacts",
-      "domains/cross-domain/construction-and-testing-artifacts",
-      "domains/cross-domain/deployment-closure-monitoring-artifacts",
-      "domains/cross-domain/initiation-and-planning-artifacts",
-      "domains/cross-domain/methodology-artifact-taxonomy",
-      "domains/cross-domain/requirements-and-design-artifacts",
-      "domains/devops/stage-gate-methodology",
-      "lessons/three-classes-of-methodology-output",
-      "lessons/universal-stages-domain-specific-artifacts",
-      "sources/methodology-artifact-taxonomy-research"
-    ],
     "immutable-checkpoints": [
       "domains/ai-agents/spec-driven-development"
     ],
@@ -16960,9 +17111,6 @@
     "persona": [
       "domains/cross-domain/ai-agent-artifacts"
     ],
-    "compliance": [
-      "domains/cross-domain/ai-agent-artifacts"
-    ],
     "artifact-chains": [
       "domains/cross-domain/artifact-chains-by-model"
     ],
@@ -17007,9 +17155,6 @@
       "domains/cross-domain/domain-chain-python-wiki",
       "domains/cross-domain/domain-chain-typescript",
       "lessons/universal-stages-domain-specific-artifacts"
-    ],
-    "deployment": [
-      "domains/cross-domain/deployment-closure-monitoring-artifacts"
     ],
     "closure": [
       "domains/cross-domain/deployment-closure-monitoring-artifacts"
@@ -17064,12 +17209,6 @@
     "node": [
       "domains/cross-domain/domain-chain-typescript"
     ],
-    "design": [
-      "domains/cross-domain/e003-artifact-type-system-design",
-      "domains/cross-domain/requirements-and-design-artifacts",
-      "domains/devops/stage-gate-methodology",
-      "log/2026-04-09-directive-styling-obsidian"
-    ],
     "e003": [
       "domains/cross-domain/e003-artifact-type-system-design",
       "domains/cross-domain/e003-artifact-type-system-requirements"
@@ -17077,9 +17216,6 @@
     "requirements": [
       "domains/cross-domain/e003-artifact-type-system-requirements",
       "domains/cross-domain/requirements-and-design-artifacts"
-    ],
-    "initiation": [
-      "domains/cross-domain/initiation-and-planning-artifacts"
     ],
     "project-charter": [
       "domains/cross-domain/initiation-and-planning-artifacts"
@@ -18005,9 +18141,6 @@
     "universal": [
       "lessons/universal-stages-domain-specific-artifacts"
     ],
-    "stages": [
-      "lessons/universal-stages-domain-specific-artifacts"
-    ],
     "log": [
       "log/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
       "log/2026-04-09-directive-bottom-up-model-completion",
@@ -18804,6 +18937,7 @@
     {
       "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like",
       "referenced_by": [
+        "Decision: Artifact System Design Decisions",
         "Coverage Blindness \u2014 Modeling Only What You Know",
         "Three Classes of Methodology Output",
         "Universal Stages, Domain-Specific Artifacts",
