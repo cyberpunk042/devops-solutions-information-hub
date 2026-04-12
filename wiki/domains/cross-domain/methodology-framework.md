@@ -110,6 +110,8 @@ A methodology model is a first-class entity with a precise definition. It consis
 - Quality target (skyscraper, pyramid, mountain)
 - Execution mode (autonomous, semi-autonomous, guided, custom)
 
+**Artifact types span 11 categories and 78+ distinct types** across the full SDLC. The complete taxonomy is defined in [[Methodology Artifact Taxonomy]]. Per-domain artifact chains (TypeScript, Python/Wiki, Infrastructure, Knowledge) are documented in the domain chain pages. The three fundamental classes of output are: **artifacts** (by-products of work), **documents** (specifications that constrain work), and **documentation** (explanations for users/maintainers). See [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]] for the research behind the taxonomy.
+
 The critical distinction is that a model is DATA, not CODE. It is defined in a configuration file (methodology.yaml, CLAUDE.md, or equivalent), not embedded in implementation logic. This means models can be:
 - Created without changing any code
 - Versioned alongside the project

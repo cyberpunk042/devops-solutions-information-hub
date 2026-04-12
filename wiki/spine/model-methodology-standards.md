@@ -396,6 +396,23 @@ Every page type produced during methodology execution has its own standards doc 
 
 **The bar:** Every artifact produced at every stage should meet its type's standards. An agent producing a requirements spec (concept type) during document stage should consult [[Concept Page Standards]] for the quality bar. A lesson being evolved should meet [[Lesson Page Standards]].
 
+### Beyond Wiki Pages — The Full Artifact Spectrum
+
+The per-type standards above cover wiki page types. But methodology execution produces artifacts BEYOND wiki pages — code files, test results, deployment packages, compliance reports. The full taxonomy of 78 artifact types across 11 categories is documented in:
+
+> [!info] Complete Artifact Research
+>
+> | Resource | What It Covers |
+> |----------|---------------|
+> | [[Methodology Artifact Taxonomy]] | All 78 types: initiation, planning, requirements, design, construction, testing, deployment, closure, monitoring, knowledge, AI agent |
+> | [[Initiation and Planning Artifacts — Standards and Guide]] | Charters, WBS, risk analysis — BEFORE methodology starts |
+> | [[Requirements and Design Artifacts — Standards and Guide]] | BRD/FRD/SRS, ADR variants, tech specs, interface specs, test plans |
+> | [[Construction and Testing Artifacts — Standards and Guide]] | Per-domain scaffold/implement/test with ALLOWED/FORBIDDEN |
+> | [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | Operations guides, lessons learned, compliance reports |
+> | [[AI Agent Artifacts — Standards and Guide]] | Personas, skills, hooks, stage skills, compliance reports |
+>
+> Per-domain chains: [[Artifact Chain: TypeScript/Node Domain]], [[Artifact Chain: Python/Wiki Domain]], [[Artifact Chain: Infrastructure/IaC Domain]], [[Artifact Chain: Knowledge/Evolution Domain]]
+
 ---
 
 ### The Methodology Execution Checklist
