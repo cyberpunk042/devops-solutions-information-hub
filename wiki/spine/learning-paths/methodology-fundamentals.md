@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-12
 sources: []
 tags: [learning-path, methodology, onboarding, fundamentals]
 ---
@@ -26,31 +26,65 @@ Guided sequence for understanding the research wiki's methodology system — fro
 
 ## Sequence
 
-1. **[[Methodology Framework]]** — Start here. Defines what a methodology model IS: Name + Stages + Gates + Protocols + Parameters. Understand that models are DATA, not code — configurations that shape execution.
+### Part 1: Understanding the System (LEARN mode)
 
-2. **[[Stage-Gate Methodology]]** — The 5 universal stages (Document → Design → Scaffold → Implement → Test). Pay attention to the ALLOWED/FORBIDDEN lists — these are the hard boundaries that prevent most methodology failures.
+1. **[[Methodology Framework]]** — Start here. Defines what a methodology model IS: Name + Stages + Gates + Protocols + Parameters. Models are DATA, not code — configurations that shape execution.
 
-3. **[[Model: Methodology]]** — The 9 named models and their stage sequences. Focus on Feature Development (the most complex) and Documentation (the simplest) as two endpoints of the spectrum.
+2. **[[Stage-Gate Methodology]]** — The 5 universal stages (Document → Design → Scaffold → Implement → Test). Pay attention to ALLOWED/FORBIDDEN lists — these are the hard boundaries that prevent most failures.
 
-4. **[[Task Type Artifact Matrix]]** — How task type determines which model to use. The matrix prevents over-process on simple work and enforces full staging on complex work.
+3. **[[Model: Methodology]]** — The 9 named models and their stage sequences. Focus on Feature Development (most complex) and Documentation (simplest) as two endpoints.
 
-5. **[[Artifact Chains by Methodology Model]]** — What each stage produces for each model. Study the Feature Development worked example — it shows all 5 stages producing all required artifacts.
+4. **[[Methodology Artifact Taxonomy]]** — The full spectrum: 78 artifact types across 11 categories. Learn the 3-class distinction: artifact (by-product), document (constraining spec), documentation (explaining). This changes how you think about what you produce.
 
-6. **[[Skyscraper, Pyramid, and Mountain]]** — Quality tiers. Understand that choosing your tier is EXPLICIT — Mountain (chaos) is never acceptable. Pyramid (deliberate compression) requires documented reasoning for what was skipped.
+### Part 2: Making Decisions (DECIDE mode)
 
-7. **[[Execution Modes and End Conditions]]** — How agents execute: autonomous, semi-autonomous, document-only. The 14-step work loop is the atomic unit of execution.
+5. **[[Task Type Artifact Matrix]]** — How task type determines which model to use. The matrix prevents over-process on simple work and enforces full staging on complex work.
 
-8. **[[Model Composition Rules]]** — How models combine for multi-layered work: sequential, nested, conditional, parallel. This is the advanced topic.
+6. **[[Skyscraper, Pyramid, and Mountain]]** — Quality tiers. Choosing your tier is EXPLICIT — Mountain (chaos) is never acceptable. Pyramid (deliberate compression) requires documented reasoning.
+
+7. **[[Requirements and Design Artifacts — Standards and Guide]]** — The 17 document/design artifact types with chain dependencies. ADR depends on requirements. Tech spec depends on ADR. Breaking the chain means building without blueprints.
+
+### Part 3: Executing Work (EXECUTE mode)
+
+8. **[[Artifact Chains by Methodology Model]]** — What each stage produces for each model. Study the Feature Development worked example — all 5 stages, all required artifacts.
+
+9. **Your domain chain** — Read the one for YOUR tech stack:
+   - [[Artifact Chain: TypeScript/Node Domain]] — pnpm, vitest, Zod
+   - [[Artifact Chain: Python/Wiki Domain]] — pipeline post, YAML configs
+   - [[Artifact Chain: Infrastructure/IaC Domain]] — Terraform, Docker
+   - [[Artifact Chain: Knowledge/Evolution Domain]] — L0-L6 progressive distillation
+
+10. **[[Execution Modes and End Conditions]]** — How agents execute: autonomous, semi-autonomous, document-only. The 14-step work loop is the atomic unit.
+
+### Part 4: Advanced Topics
+
+11. **[[Model Composition Rules]]** — How models combine: sequential, nested, conditional, parallel.
+
+12. **[[How AI Agents Consume the Methodology Wiki]]** — 4 entry paths, 3 consumption modes, active vs passive. The wiki is a THINKING PARTNER, not a reference manual.
+
+13. **[[Methodology Standards — What Good Execution Looks Like]]** — Gold standards with real examples, anti-patterns, execution checklists. Read this BEFORE declaring work done.
+
+### Part 5: Key Lessons (prevent known failures)
+
+14. **[[Never Skip Stages Even When Told to Continue]]** — "Continue" = current stage, NOT next stage.
+15. **[[Always Plan Before Executing]]** — Planning costs 1x. Rework costs 5.5x.
+16. **[[Three Classes of Methodology Output]]** — Different classes need different quality rules.
+17. **[[Coverage Blindness — Modeling Only What You Know]]** — 100% of 20% = invisible incompleteness.
 
 ## Outcomes
 
 After completing this path you should be able to:
 - Select the correct methodology model for any task type and scale
+- Identify the 3 classes of output and apply the right quality rules per class
 - Follow the stage sequence and produce correct artifacts at each stage
 - Identify ALLOWED and FORBIDDEN actions at each stage
 - Choose an appropriate quality tier with documented reasoning
+- Know the full 78-type artifact spectrum (not just the 17 wiki page types)
+- Read and follow your domain-specific artifact chain
 - Understand how models compose for complex, multi-layered work
+- Use the wiki as an active thinking partner, not a passive reference
 - Configure a project to adopt the methodology at any of the 4 tiers
+- Recognize and prevent the most common methodology failures
 
 ## Relationships
 
