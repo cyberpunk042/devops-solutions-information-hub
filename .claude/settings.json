@@ -33,7 +33,13 @@
       "Bash(.venv/bin/python -m tools.pipeline post)",
       "WebFetch(domain:getdesign.md)",
       "Bash(python3 -m tools.validate)",
-      "WebFetch(domain:www.markdownguide.org)"
+      "WebFetch(domain:www.markdownguide.org)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "WebFetch(domain:www.sdlcforms.com)",
+      "WebFetch(domain:www.leanware.co)",
+      "WebFetch(domain:www.nxcode.io)",
+      "WebFetch(domain:en.wikipedia.org)"
     ]
   }
 }

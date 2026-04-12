@@ -171,3 +171,4 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 [[Model: Knowledge Evolution]]
 [[Model: Wiki Design]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

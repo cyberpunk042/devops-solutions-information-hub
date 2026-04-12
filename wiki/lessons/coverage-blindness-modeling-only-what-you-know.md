@@ -100,3 +100,4 @@ This lesson applies when:
 [[Systemic Incompleteness Is Invisible to Validation]]
 [[Model: Quality and Failure Prevention]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Config Architecture — How the Pieces Fit Together]]

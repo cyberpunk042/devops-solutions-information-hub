@@ -305,4 +305,6 @@ Based on the research, the methodology artifact system needs:
 [[Stage-Gate Methodology]]
 [[Task Type Artifact Matrix]]
 [[Model: LLM Wiki Standards — What Good Looks Like]]
+[[Coverage Blindness — Modeling Only What You Know]]
 [[Methodology Artifact Taxonomy]]
+[[Three Classes of Methodology Output]]

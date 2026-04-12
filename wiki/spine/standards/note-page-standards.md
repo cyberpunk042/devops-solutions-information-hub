@@ -66,3 +66,4 @@ Standards for note pages — log entries recording directives, session summaries
 
 [[Model: Methodology]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

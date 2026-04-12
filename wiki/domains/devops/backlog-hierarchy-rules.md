@@ -307,6 +307,7 @@ Signal: The acceptance criteria (documented in the epic's design stage) were nev
 [[Decision: Execution Mode Edge Cases]]
 [[Decision: Stage-Gate Operational Decisions]]
 [[Epic Page Standards]]
+[[Initiation and Planning Artifacts — Standards and Guide]]
 [[Methodology Framework]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Model Composition Rules]]

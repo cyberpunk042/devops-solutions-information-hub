@@ -203,3 +203,4 @@ Complete map of the methodology system — every component, where it lives, what
 [[Methodology Adoption Guide]]
 [[Model: LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Config Architecture — How the Pieces Fit Together]]

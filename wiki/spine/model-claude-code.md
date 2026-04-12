@@ -492,6 +492,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[Always Plan Before Executing]]
 [[CLI Tools Beat MCP for Token Efficiency]]
 [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[AI Agent Artifacts — Standards and Guide]]
 [[Agent Compliance Framework]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]

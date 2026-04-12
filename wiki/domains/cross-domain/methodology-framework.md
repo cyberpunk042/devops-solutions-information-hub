@@ -402,6 +402,7 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[Infrastructure Must Be Reproducible, Not Manual]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Artifact Taxonomy]]
+[[Methodology Config Architecture — How the Pieces Fit Together]]
 [[Methodology Is a Framework, Not a Fixed Pipeline]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]

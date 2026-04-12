@@ -234,6 +234,8 @@ The Task Type Artifact Matrix defines the 7 distinct task types in the OpenArms 
 [[Decision: Task Type Edge Cases]]
 [[E003 Artifact Type System — Design Document]]
 [[E003 Artifact Type System — Requirements Spec]]
+[[Methodology Artifact Taxonomy]]
 [[Methodology Framework]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Model: Methodology]]
+[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]

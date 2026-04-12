@@ -92,3 +92,4 @@ This lesson applies when:
 [[Model: Methodology]]
 [[Stage-Gate Methodology]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Config Architecture — How the Pieces Fit Together]]

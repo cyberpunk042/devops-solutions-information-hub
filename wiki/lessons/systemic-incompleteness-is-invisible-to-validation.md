@@ -85,3 +85,4 @@ The agent's error was treating validation as a quality signal rather than a form
 [[Models Are Systems, Not Documents]]
 [[The Agent Must Practice What It Documents]]
 [[Model: Quality and Failure Prevention]]
+[[Coverage Blindness — Modeling Only What You Know]]

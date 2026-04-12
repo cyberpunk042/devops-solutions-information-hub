@@ -161,3 +161,4 @@ Unlike code domains where artifacts flow through stages linearly (document → d
 [[Artifact Chain: Python/Wiki Domain]]
 [[Artifact Chain: Infrastructure/IaC Domain]]
 [[Methodology Adoption Guide]]
+[[Universal Stages, Domain-Specific Artifacts]]

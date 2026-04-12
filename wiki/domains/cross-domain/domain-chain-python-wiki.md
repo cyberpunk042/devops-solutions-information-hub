@@ -184,3 +184,4 @@ Complete artifact chain resolution for Python tool projects and knowledge wikis 
 [[Methodology Adoption Guide]]
 [[Artifact Chain: Infrastructure/IaC Domain]]
 [[Artifact Chain: Knowledge/Evolution Domain]]
+[[Universal Stages, Domain-Specific Artifacts]]

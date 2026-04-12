@@ -145,3 +145,4 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 [[Model: Knowledge Evolution]]
 [[Model: Wiki Design]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Requirements and Design Artifacts — Standards and Guide]]

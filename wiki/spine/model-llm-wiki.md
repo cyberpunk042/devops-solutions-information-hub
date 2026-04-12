@@ -447,6 +447,7 @@ From building with this model — validated experience:
 [[Knowledge Evolution Pipeline]]
 [[Model: Methodology]]
 [[Model: Knowledge Evolution]]
+[[Artifact Chain: Knowledge/Evolution Domain]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model Registry]]
 [[Model: Wiki Design]]

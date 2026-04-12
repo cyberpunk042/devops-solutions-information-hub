@@ -366,6 +366,7 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Model: Automation and Pipelines]]
 [[Skyscraper, Pyramid, Mountain]]
 [[Agent Compliance Framework]]
+[[Coverage Blindness — Modeling Only What You Know]]
 [[Methodology Evolution Protocol]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]

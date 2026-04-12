@@ -346,6 +346,7 @@ Commands (user trigger)
 [[Model: Methodology]]
 [[Model: Claude Code]]
 [[Model: MCP and CLI Integration]]
+[[AI Agent Artifacts — Standards and Guide]]
 [[Agent Compliance Framework]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Enforcement Hook Patterns]]

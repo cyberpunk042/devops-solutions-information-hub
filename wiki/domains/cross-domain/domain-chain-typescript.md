@@ -214,3 +214,4 @@ Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, Op
 [[Artifact Chain: Infrastructure/IaC Domain]]
 [[Artifact Chain: Knowledge/Evolution Domain]]
 [[Artifact Chain: Python/Wiki Domain]]
+[[Universal Stages, Domain-Specific Artifacts]]

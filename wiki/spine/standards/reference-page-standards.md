@@ -76,3 +76,4 @@ Standards for reference pages — LOOKUP material that readers consult for speci
 
 [[Model: LLM Wiki Standards — What Good Looks Like]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Requirements and Design Artifacts — Standards and Guide]]
