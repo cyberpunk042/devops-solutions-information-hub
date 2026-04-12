@@ -497,5 +497,6 @@ Validated experience from operating Claude Code in this ecosystem.
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Enforcement Hook Patterns]]
+[[How AI Agents Consume the Methodology Wiki]]
 [[Model: Design.md and IaC]]
 [[Model: Quality and Failure Prevention]]

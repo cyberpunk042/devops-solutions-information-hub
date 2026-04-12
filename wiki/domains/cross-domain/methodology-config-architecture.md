@@ -180,3 +180,4 @@ A reasoning document examining how the wiki's config files, the methodology syst
 [[Methodology System Map]]
 [[Methodology Adoption Guide]]
 [[Model: Methodology Standards — What Good Execution Looks Like]]
+[[How AI Agents Consume the Methodology Wiki]]
