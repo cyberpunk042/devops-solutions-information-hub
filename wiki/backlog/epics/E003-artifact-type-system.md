@@ -84,9 +84,9 @@ Nothing. Can start immediately.
 
 ## Relationships
 
-- ENABLES: [[Epic: Portable Methodology Engine]] (E004)
-- ENABLES: [[Epic: Agent Compliance Framework]] (E005)
-- ENABLES: [[Epic: Standards-by-Example]] (E006)
+- ENABLES: [[Portable Methodology Engine]] (E004)
+- ENABLES: [[Agent Compliance Framework]] (E005)
+- ENABLES: [[Standards-by-Example]] (E006)
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[Methodology Framework]]
@@ -95,11 +95,14 @@ Nothing. Can start immediately.
 
 ## Backlinks
 
-[[Epic: Portable Methodology Engine]]
-[[Epic: Agent Compliance Framework]]
-[[Epic: Standards-by-Example]]
+[[Portable Methodology Engine]]
+[[Agent Compliance Framework]]
+[[Standards-by-Example]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Framework]]
 [[Model: Methodology]]
 [[Model: LLM Wiki Standards — What Good Looks Like]]
+[[E003 Artifact Type System — Design Document]]
+[[E003 Artifact Type System — Requirements Spec]]
+[[Methodology Standards Initiative — Honest Assessment]]

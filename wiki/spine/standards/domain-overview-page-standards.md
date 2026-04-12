@@ -60,10 +60,10 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki Standards — What Good Looks Like]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]

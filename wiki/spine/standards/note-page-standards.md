@@ -60,10 +60,10 @@ Standards for note pages — log entries recording directives, session summaries
 ## Relationships
 
 - RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
 [[Model: Methodology]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

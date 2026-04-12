@@ -59,8 +59,8 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 
 ## Relationships
 
-- DEPENDS ON: [[Epic: Artifact Type System]] (E003)
-- DEPENDS ON: [[Epic: Portable Methodology Engine]] (E004)
+- DEPENDS ON: [[Artifact Type System]] (E003)
+- DEPENDS ON: [[Portable Methodology Engine]] (E004)
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[Model: Quality and Failure Prevention]]
@@ -72,8 +72,8 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 
 ## Backlinks
 
-[[Epic: Artifact Type System]]
-[[Epic: Portable Methodology Engine]]
+[[Artifact Type System]]
+[[Portable Methodology Engine]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Model: Quality and Failure Prevention]]
@@ -82,3 +82,4 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 [[Never Skip Stages Even When Told to Continue]]
 [[Always Plan Before Executing]]
 [[Plan-Execute-Review Cycle]]
+[[E003 Artifact Type System — Design Document]]

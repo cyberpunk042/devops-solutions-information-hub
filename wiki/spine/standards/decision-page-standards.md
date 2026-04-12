@@ -134,15 +134,15 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
 - RELATES TO: [[Model: Knowledge Evolution]]
 - RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Knowledge Evolution]]
 [[Model: Wiki Design]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Requirements and Design Artifacts — Standards and Guide]]

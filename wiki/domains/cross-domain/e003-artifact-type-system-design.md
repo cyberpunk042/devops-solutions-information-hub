@@ -782,20 +782,20 @@ The validator already works. We don't rewrite it. We add layers:
 
 ## Relationships
 
-- IMPLEMENTS: [[Epic: Artifact Type System]] (E003)
+- IMPLEMENTS: [[Artifact Type System]] (E003)
 - BUILDS ON: [[E003 Artifact Type System — Requirements Spec]]
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
 - RELATES TO: [[Methodology Framework]]
 - RELATES TO: [[Task Type Artifact Matrix]]
-- FEEDS INTO: [[Epic: Portable Methodology Engine]] (E004)
-- FEEDS INTO: [[Epic: Agent Compliance Framework]] (E005)
+- FEEDS INTO: [[Portable Methodology Engine]] (E004)
+- FEEDS INTO: [[Agent Compliance Framework]] (E005)
 
 ## Backlinks
 
-[[Epic: Artifact Type System]]
+[[Artifact Type System]]
 [[E003 Artifact Type System — Requirements Spec]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology Framework]]
 [[Task Type Artifact Matrix]]
-[[Epic: Portable Methodology Engine]]
-[[Epic: Agent Compliance Framework]]
+[[Portable Methodology Engine]]
+[[Agent Compliance Framework]]

@@ -126,7 +126,7 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
 - RELATES TO: [[Standards Must Preach by Example]]
 - RELATES TO: [[Models Are Systems, Not Documents]]
-- FEEDS INTO: [[Epic: Artifact Type System]]
+- FEEDS INTO: [[Artifact Type System]]
 - FEEDS INTO: [[Standards-by-Example]]
 
 ## Backlinks
@@ -135,6 +135,6 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Standards Must Preach by Example]]
 [[Models Are Systems, Not Documents]]
-[[Epic: Artifact Type System]]
+[[Artifact Type System]]
 [[Standards-by-Example]]
 [[Coverage Blindness — Modeling Only What You Know]]

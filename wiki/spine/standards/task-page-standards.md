@@ -122,9 +122,9 @@ Standards for task pages — the atomic work unit. Tasks are SHORT. Summary + Do
 ## Relationships
 
 - BUILDS ON: [[Backlog Hierarchy Rules]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
 [[Backlog Hierarchy Rules]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]

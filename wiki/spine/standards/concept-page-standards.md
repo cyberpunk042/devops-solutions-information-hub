@@ -146,14 +146,14 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
 - BUILDS ON: [[Methodology Framework]]
 - RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Framework]]
 [[Model: Wiki Design]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]

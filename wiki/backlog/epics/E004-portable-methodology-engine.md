@@ -64,8 +64,8 @@ Create a generic, parameterizable methodology configuration system that the wiki
 
 ## Relationships
 
-- DEPENDS ON: [[Epic: Artifact Type System]] (E003)
-- ENABLES: [[Epic: Agent Compliance Framework]] (E005)
+- DEPENDS ON: [[Artifact Type System]] (E003)
+- ENABLES: [[Agent Compliance Framework]] (E005)
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[Methodology Framework]]
@@ -75,11 +75,12 @@ Create a generic, parameterizable methodology configuration system that the wiki
 
 ## Backlinks
 
-[[Epic: Artifact Type System]]
-[[Epic: Agent Compliance Framework]]
+[[Artifact Type System]]
+[[Agent Compliance Framework]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Framework]]
 [[Model: Methodology]]
 [[Model: Ecosystem]]
 [[Four-Project Ecosystem]]
+[[E003 Artifact Type System — Design Document]]

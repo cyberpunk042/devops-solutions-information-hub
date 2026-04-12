@@ -97,12 +97,12 @@ Standards for source-synthesis pages — processed versions of raw sources (arti
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
 - RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Model: Wiki Design]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]

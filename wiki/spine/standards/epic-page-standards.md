@@ -72,11 +72,11 @@ Standards for epic pages — strategic containers that break into modules and ta
 
 - BUILDS ON: [[Backlog Hierarchy Rules]]
 - RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
 [[Backlog Hierarchy Rules]]
 [[Model: Methodology]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Initiation and Planning Artifacts — Standards and Guide]]

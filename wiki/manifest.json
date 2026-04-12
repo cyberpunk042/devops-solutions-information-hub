@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T16:48:44.894290+00:00",
+  "generated": "2026-04-12T16:52:41.011640+00:00",
   "stats": {
     "pages": 238,
     "domains": 9,
@@ -147,15 +147,15 @@
       "relationships": [
         {
           "verb": "ENABLES",
-          "target": "Epic: Portable Methodology Engine"
+          "target": "Portable Methodology Engine"
         },
         {
           "verb": "ENABLES",
-          "target": "Epic: Agent Compliance Framework"
+          "target": "Agent Compliance Framework"
         },
         {
           "verb": "ENABLES",
-          "target": "Epic: Standards-by-Example"
+          "target": "Standards-by-Example"
         },
         {
           "verb": "BUILDS ON",
@@ -209,11 +209,11 @@
       "relationships": [
         {
           "verb": "DEPENDS ON",
-          "target": "Epic: Artifact Type System"
+          "target": "Artifact Type System"
         },
         {
           "verb": "ENABLES",
-          "target": "Epic: Agent Compliance Framework"
+          "target": "Agent Compliance Framework"
         },
         {
           "verb": "BUILDS ON",
@@ -273,11 +273,11 @@
       "relationships": [
         {
           "verb": "DEPENDS ON",
-          "target": "Epic: Artifact Type System"
+          "target": "Artifact Type System"
         },
         {
           "verb": "DEPENDS ON",
-          "target": "Epic: Portable Methodology Engine"
+          "target": "Portable Methodology Engine"
         },
         {
           "verb": "BUILDS ON",
@@ -344,7 +344,7 @@
       "relationships": [
         {
           "verb": "DEPENDS ON",
-          "target": "Epic: Artifact Type System"
+          "target": "Artifact Type System"
         },
         {
           "verb": "BUILDS ON",
@@ -4214,7 +4214,7 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "Epic: Artifact Type System"
+          "target": "Artifact Type System"
         },
         {
           "verb": "BUILDS ON",
@@ -4234,11 +4234,11 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Epic: Portable Methodology Engine"
+          "target": "Portable Methodology Engine"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Epic: Agent Compliance Framework"
+          "target": "Agent Compliance Framework"
         }
       ]
     },
@@ -4293,7 +4293,7 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "Epic: Artifact Type System"
+          "target": "Artifact Type System"
         },
         {
           "verb": "BUILDS ON",
@@ -4849,7 +4849,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Epic: Artifact Type System"
+          "target": "Artifact Type System"
         },
         {
           "verb": "FEEDS INTO",
@@ -14955,7 +14955,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -14963,7 +14963,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15007,7 +15007,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "BUILDS ON",
@@ -15019,7 +15019,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15059,7 +15059,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -15071,7 +15071,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15105,11 +15105,11 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15143,11 +15143,11 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15190,7 +15190,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15224,11 +15224,11 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15262,11 +15262,11 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15311,7 +15311,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -15323,7 +15323,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15362,7 +15362,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15396,7 +15396,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -15404,7 +15404,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15444,7 +15444,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -15456,7 +15456,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15490,11 +15490,11 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15528,7 +15528,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "Model: LLM Wiki Standards \u2014 What Good Looks Like"
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
         },
         {
           "verb": "RELATES TO",
@@ -15536,7 +15536,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15575,7 +15575,7 @@
         },
         {
           "verb": "FEEDS INTO",
-          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -19026,39 +19026,6 @@
       ]
     },
     {
-      "target": "Epic: Agent Compliance Framework",
-      "referenced_by": [
-        "Artifact Type System",
-        "Portable Methodology Engine",
-        "E003 Artifact Type System \u2014 Design Document"
-      ]
-    },
-    {
-      "target": "Epic: Artifact Type System",
-      "referenced_by": [
-        "Portable Methodology Engine",
-        "Agent Compliance Framework",
-        "Standards-by-Example",
-        "E003 Artifact Type System \u2014 Design Document",
-        "E003 Artifact Type System \u2014 Requirements Spec",
-        "Methodology Standards Initiative \u2014 Honest Assessment"
-      ]
-    },
-    {
-      "target": "Epic: Portable Methodology Engine",
-      "referenced_by": [
-        "Artifact Type System",
-        "Agent Compliance Framework",
-        "E003 Artifact Type System \u2014 Design Document"
-      ]
-    },
-    {
-      "target": "Epic: Standards-by-Example",
-      "referenced_by": [
-        "Artifact Type System"
-      ]
-    },
-    {
       "target": "Model: Ecosystem",
       "referenced_by": [
         "Portable Methodology Engine",
@@ -19076,19 +19043,7 @@
         "Methodology Standards Initiative \u2014 Infrastructure Analysis",
         "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
         "Learning Path: Methodology Fundamentals",
-        "Methodology System Map",
-        "Comparison Page Standards",
-        "Concept Page Standards",
-        "Decision Page Standards",
-        "Deep-Dive Page Standards",
-        "Domain Overview Page Standards",
-        "Evolution Page Standards",
-        "Learning Path Page Standards",
-        "Lesson Page Standards",
-        "Operations Plan Page Standards",
-        "Pattern Page Standards",
-        "Reference Page Standards",
-        "Source-Synthesis Page Standards"
+        "Methodology System Map"
       ]
     },
     {
@@ -19106,22 +19061,7 @@
         "Methodology Config Architecture \u2014 How the Pieces Fit Together",
         "Coverage Blindness \u2014 Modeling Only What You Know",
         "Three Classes of Methodology Output",
-        "Universal Stages, Domain-Specific Artifacts",
-        "Comparison Page Standards",
-        "Concept Page Standards",
-        "Decision Page Standards",
-        "Deep-Dive Page Standards",
-        "Domain Overview Page Standards",
-        "Epic Page Standards",
-        "Evolution Page Standards",
-        "Learning Path Page Standards",
-        "Lesson Page Standards",
-        "Note Page Standards",
-        "Operations Plan Page Standards",
-        "Pattern Page Standards",
-        "Reference Page Standards",
-        "Source-Synthesis Page Standards",
-        "Task Page Standards"
+        "Universal Stages, Domain-Specific Artifacts"
       ]
     },
     {

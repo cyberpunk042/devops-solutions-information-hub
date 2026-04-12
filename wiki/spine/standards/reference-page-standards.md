@@ -69,11 +69,11 @@ Standards for reference pages — LOOKUP material that readers consult for speci
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki Standards — What Good Looks Like]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Requirements and Design Artifacts — Standards and Guide]]

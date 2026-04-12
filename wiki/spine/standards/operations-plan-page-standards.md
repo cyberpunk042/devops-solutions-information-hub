@@ -69,13 +69,13 @@ Standards for operations plan pages — sequential deterministic checklists that
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
 - RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Model: Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki Standards — What Good Looks Like]]
+[[LLM Wiki Standards — What Good Looks Like]]
 [[Stage-Gate Methodology]]
-[[Model: Methodology Standards — What Good Execution Looks Like]]
+[[Methodology Standards — What Good Execution Looks Like]]
 [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

@@ -261,7 +261,7 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 
 ## Relationships
 
-- IMPLEMENTS: [[Epic: Artifact Type System]] (E003)
+- IMPLEMENTS: [[Artifact Type System]] (E003)
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
 - RELATES TO: [[Methodology Framework]]
@@ -272,7 +272,7 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 
 ## Backlinks
 
-[[Epic: Artifact Type System]]
+[[Artifact Type System]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Framework]]

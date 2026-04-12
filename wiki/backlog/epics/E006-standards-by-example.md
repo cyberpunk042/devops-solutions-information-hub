@@ -79,7 +79,7 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 
 ## Relationships
 
-- DEPENDS ON: [[Epic: Artifact Type System]] (E003)
+- DEPENDS ON: [[Artifact Type System]] (E003)
 - BUILDS ON: [[Standards Must Preach by Example]]
 - BUILDS ON: [[Models Are Systems, Not Documents]]
 - IMPLEMENTS: [[Model: LLM Wiki Standards — What Good Looks Like]]
@@ -89,7 +89,7 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 
 ## Backlinks
 
-[[Epic: Artifact Type System]]
+[[Artifact Type System]]
 [[Standards Must Preach by Example]]
 [[Models Are Systems, Not Documents]]
 [[Model: LLM Wiki Standards — What Good Looks Like]]
