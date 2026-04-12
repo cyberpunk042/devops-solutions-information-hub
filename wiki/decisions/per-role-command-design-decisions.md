@@ -5,7 +5,7 @@ domain: ai-agents
 layer: 6
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Per-Role Command Architecture"
   - "Claude Code Skills"

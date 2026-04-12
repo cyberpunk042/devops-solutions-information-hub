@@ -116,7 +116,6 @@ This lesson applies to any system that both produces and consumes its own method
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Model: Quality and Failure Prevention]]
 [[Models Are Built in Layers, Not All at Once]]
-[[Models Are Systems, Not Documents]]
 [[Quality Standards — What Good Failure Prevention Looks Like]]
 [[Standards Must Preach by Example]]
 [[Systemic Incompleteness Is Invisible to Validation]]

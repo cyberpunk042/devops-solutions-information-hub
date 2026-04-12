@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 reversibility: moderate
 derived_from:
   - "Initiation and Planning Artifacts — Standards and Guide"

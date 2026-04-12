@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Model: Skills, Commands, and Hooks"
   - "Model: Methodology"

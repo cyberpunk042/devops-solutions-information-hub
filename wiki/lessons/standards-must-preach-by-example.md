@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: authoritative
-maturity: seed
+maturity: growing
 derived_from:
   - "The Agent Must Practice What It Documents"
   - "Wiki Design Standards — What Good Styling Looks Like"

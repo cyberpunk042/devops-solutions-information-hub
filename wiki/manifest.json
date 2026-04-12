@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-12T16:37:55.012193+00:00",
+  "generated": "2026-04-12T16:42:22.174212+00:00",
   "stats": {
     "pages": 238,
     "domains": 9,
@@ -17,8 +17,8 @@
       "spine": 51
     },
     "maturity": {
-      "growing": 134,
-      "seed": 75
+      "growing": 156,
+      "seed": 53
     }
   },
   "pages": [
@@ -869,7 +869,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Methodology Artifact Taxonomy",
         "Requirements and Design Artifacts \u2014 Standards and Guide",
@@ -928,7 +928,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Execution Modes and End Conditions",
         "Stage-Gate Methodology",
@@ -978,7 +978,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Claude Code Skills",
         "Hooks Lifecycle Architecture",
@@ -1032,7 +1032,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Hooks Lifecycle Architecture",
         "Per-Role Command Architecture",
@@ -1247,7 +1247,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Methodology Framework",
         "Stage-Gate Methodology",
@@ -1298,7 +1298,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Initiation and Planning Artifacts \u2014 Standards and Guide",
         "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide",
@@ -1447,7 +1447,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Per-Role Command Architecture",
         "Claude Code Skills",
@@ -1576,7 +1576,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Skyscraper, Pyramid, Mountain",
         "Methodology Framework"
@@ -1620,7 +1620,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Stage-Gate Methodology",
         "Task Lifecycle Stage-Gating",
@@ -1668,7 +1668,7 @@
       ],
       "sources": [],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Task Type Artifact Matrix",
         "Stage-Gate Methodology",
@@ -8108,7 +8108,7 @@
       ],
       "sources": [],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Methodology Artifact Taxonomy",
         "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
@@ -8476,7 +8476,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Methodology Framework",
         "Stage-Gate Methodology"
@@ -8579,7 +8579,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model Registry",
         "Models Are Built in Layers, Not All at Once"
@@ -8699,7 +8699,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Claude Code Context Management",
         "Never Synthesize from Descriptions Alone"
@@ -9324,7 +9324,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "The Agent Must Practice What It Documents",
         "Wiki Design Standards \u2014 What Good Styling Looks Like"
@@ -9376,7 +9376,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model Registry",
         "Models Are Built in Layers, Not All at Once",
@@ -9502,7 +9502,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Four-Project Ecosystem",
         "Model: Ecosystem Architecture"
@@ -9546,7 +9546,7 @@
       ],
       "sources": [],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Methodology Artifact Taxonomy",
         "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
@@ -9599,7 +9599,7 @@
       ],
       "sources": [],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Methodology Artifact Taxonomy",
         "Artifact Chain: TypeScript/Node Domain",
@@ -10234,7 +10234,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model: Methodology",
         "Never Skip Stages Even When Told to Continue",
@@ -10497,7 +10497,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model: Skills, Commands, and Hooks",
         "Model: Methodology"
@@ -10925,7 +10925,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model: Skills, Commands, and Hooks",
         "Model: Methodology"

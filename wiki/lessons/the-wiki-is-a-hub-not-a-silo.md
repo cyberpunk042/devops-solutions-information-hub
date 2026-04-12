@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: authoritative
-maturity: seed
+maturity: growing
 derived_from:
   - "Four-Project Ecosystem"
   - "Model: Ecosystem Architecture"

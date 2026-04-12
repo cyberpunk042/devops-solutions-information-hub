@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Skyscraper, Pyramid, Mountain"
   - "Methodology Framework"

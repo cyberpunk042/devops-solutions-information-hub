@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Model: Methodology"
   - "Never Skip Stages Even When Told to Continue"
@@ -312,6 +312,7 @@ Examples:
 [[Model: Methodology Standards — What Good Looks Like]]
 [[AI Agent Artifacts — Standards and Guide]]
 [[Enforcement Hook Patterns]]
+[[How AI Agents Consume the Methodology Wiki]]
 [[Methodology Framework]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Stage-Aware Skill Injection]]

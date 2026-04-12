@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Methodology Artifact Taxonomy"
   - "Artifact Chain: TypeScript/Node Domain"

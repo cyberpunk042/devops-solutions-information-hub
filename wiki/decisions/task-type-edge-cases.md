@@ -5,7 +5,7 @@ domain: devops
 layer: 6
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Task Type Artifact Matrix"
   - "Stage-Gate Methodology"

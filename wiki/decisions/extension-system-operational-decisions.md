@@ -5,7 +5,7 @@ domain: ai-agents
 layer: 6
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Claude Code Skills"
   - "Hooks Lifecycle Architecture"

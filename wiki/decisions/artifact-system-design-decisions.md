@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 reversibility: moderate
 derived_from:
   - "Methodology Artifact Taxonomy"

@@ -5,7 +5,7 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: authoritative
-maturity: seed
+maturity: growing
 derived_from:
   - "Model Registry"
   - "Models Are Built in Layers, Not All at Once"
