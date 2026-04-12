@@ -90,6 +90,7 @@ A standard that exists only as text is an ASPIRATION. A standard that demonstrat
 [[Wiki Design Standards — What Good Styling Looks Like]]
 [[Model: Methodology]]
 [[Model: Quality and Failure Prevention]]
+[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Standards Initiative — Honest Assessment]]
 [[Standards-by-Example]]

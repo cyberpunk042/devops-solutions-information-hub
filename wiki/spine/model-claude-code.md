@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-12
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
@@ -56,7 +56,11 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 
 - **CLI+Skills beats MCP for operational tasks.** 12x cost differential measured on Playwright CLI vs MCP. MCP loads all tool schemas at startup; CLI+Skills loads nothing until invoked. MCP wins for external service bridges and tool discovery. See [[Decision: MCP vs CLI for Tool Integration]].
 
-- **Harness engineering is the governing concept.** CLAUDE.md + Skills + Hooks + Commands + Subagents form a coordinated control system. The 13 guardrail rules (R01-R13) block dangerous operations at execution time — not as suggestions the model may ignore, but as hooks that prevent the operation from completing.
+- **Harness engineering is the governing concept.** CLAUDE.md + Skills + Hooks + Commands + Subagents form a coordinated control system. OpenArms v10 proves this with quantified evidence: 4 hooks (215 lines) achieved 100% stage boundary compliance where 28 CLAUDE.md rules achieved 25%. OpenFleet extends further with MCP tool blocking at the server level and a 3-line immune system (prevention → detection → correction). See [[Infrastructure Enforcement Proves Instructions Fail]], [[Three Lines of Defense — Immune System for Agent Quality]].
+
+- **Context compaction is a reset event.** All behavioral corrections accumulated during a session are lost after compaction. OpenArms solved this with a post-compact hook that rebuilds full state from files. OpenFleet solves it with PRUNE (kill session, regrow fresh). Any enforcement that depends on accumulated context must be rebuilt via infrastructure. See [[Context Compaction Is a Reset Event]].
+
+- **Structured context is proto-programming.** Markdown is the programming language of AI agents. Consistent structure across all injections (frontmatter, MUST/MUST NOT blocks, stage protocols) creates patterns agents follow mechanically. OpenFleet's validation matrix (29 scenarios, 2,444 lines) demonstrates this — same structural skeleton for every injection, content varies but shape is constant. See [[Structured Context Is Proto-Programming for AI Agents]].
 
 - **Subagent parallelism for context isolation.** The Agent tool spawns workers that share the filesystem but not the conversation context. Each subagent gets a fresh context window, protecting the main conversation from bloat.
 
@@ -248,7 +252,7 @@ Harness engineering ties the extension system into a coordinated control system.
 > | 2 | Runtime guardrails | ~98% (execution-time blocking) | Hooks: block sudo, force-push, .env writes |
 > | 3 | Deterministic orchestration | 100% (no LLM in loop) | OpenFleet 30-second brain cycle |
 
-The 13 guardrail rules (R01-R13) from the claude-code-harness project implement level 2: denial rules (block sudo, .git/.env writes, force-push), query rules (flag out-of-scope writes), security rules (prevent --no-verify, direct main pushes), and post-execution checks (warn assertion tampering). These are TypeScript hooks with real enforcement, not prompt suggestions.
+The 13 guardrail rules (R01-R13) from the claude-code-harness project implement level 2. OpenArms v10 evolved this into a 4-hook system (pre-bash 48L, pre-write 106L, post-write 36L, post-compact 29L) backed by a 1,033-line model-aware stage validator. OpenFleet implements level 2-3 via MCP tool blocking + 30-second doctor cycle immune system. Real-world enforcement data: instructions alone = 25% compliance, hooks = 100% stage compliance, but behavioral failures persist (20% clean completion rate). See [[Enforcement Hook Patterns]] for the full implementation evidence, and [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] for the risks of over-enforcement.
 
 > [!tip] **The 5-verb universal workflow**
 > Setup → Plan → Work → Review → Release. This appears independently in:
@@ -496,6 +500,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[Agent Compliance Framework]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[Context Compaction Is a Reset Event]]
 [[Enforcement Hook Patterns]]
 [[How AI Agents Consume the Methodology Wiki]]
 [[Model: Design.md and IaC]]

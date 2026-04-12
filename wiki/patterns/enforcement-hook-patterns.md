@@ -34,7 +34,7 @@ tags: [hooks, enforcement, agent-compliance, infrastructure, claude-code]
 
 ## Summary
 
-Reusable hook patterns that enforce methodology compliance through infrastructure rather than instructions. Discovered through OpenArms's evolution from instruction-based enforcement (75% violation rate) to infrastructure enforcement (~90% compliance). Four hook types cover the enforcement surface: pre-tool hooks prevent wrong actions, post-tool hooks track state changes.
+Reusable hook patterns that enforce methodology compliance through infrastructure rather than instructions. Discovered through OpenArms's evolution from instruction-based enforcement (75% violation rate) to infrastructure enforcement (100% stage boundary compliance in v10, verified across 5 production runs). Four hook types cover the enforcement surface: pre-tool hooks prevent wrong actions, post-tool hooks track state changes. Total implementation: 215 lines of shell scripts replaced 28 CLAUDE.md rules that achieved 25% compliance.
 
 > [!info] Hook Pattern Reference Card
 >
@@ -49,14 +49,15 @@ Reusable hook patterns that enforce methodology compliance through infrastructur
 
 > [!abstract] The Enforcement Hierarchy
 >
-> | Level | Mechanism | Strength | Coverage |
-> |-------|-----------|----------|----------|
-> | 1. Instructions | CLAUDE.md prose | Weakest — 25% compliance | Everything (but soft) |
-> | 2. Structured instructions | ALLOWED/FORBIDDEN tables | Moderate — 50-60% | Rules that can be enumerated |
-> | 3. Advisory hooks | Hook warns but doesn't block | Good — 70% | Actions with clear right/wrong |
-> | 4. Blocking hooks | Hook prevents the action | Best — 90%+ | Critical violations only |
+> | Level | Mechanism | Measured Compliance | Coverage |
+> |-------|-----------|-------------------|----------|
+> | 1. Instructions | CLAUDE.md prose | 25% (OpenArms v4-v8 overnight) | Everything (but soft) |
+> | 2. Structured instructions | ALLOWED/FORBIDDEN tables, numbered sequences | ~60% (OpenArms CLAUDE.md restructured) | Rules that can be enumerated |
+> | 3. Advisory hooks | Hook warns but doesn't block | ~70% (estimated) | Actions with clear right/wrong |
+> | 4. Blocking hooks | Hook prevents the action | 100% stage boundaries (OpenArms v10, 5 runs) | Critical violations only |
+> | 5. MCP tool blocking | MCP server refuses tool call per stage | 100% tool-level (OpenFleet production) | Fleet with MCP server |
 >
-> Hooks are Level 3-4. Use them for violations that would be expensive to fix after the fact. Don't hook everything — over-hooking creates friction and the agent wastes tokens on denied attempts.
+> Hooks are Level 3-5. Use them for violations that would be expensive to fix after the fact. Don't hook everything — over-hooking creates friction and blocks correct actions. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] for the risks of over-enforcement.
 
 ### Pattern 1: Scope Guard (Pre-Bash)
 
@@ -159,17 +160,40 @@ esac
 
 ## Instances
 
-> [!example]- Instance: OpenArms Enforcement Infrastructure (14 scripts + 4 hooks)
+> [!example]- Instance: OpenArms v10 Enforcement Infrastructure (14 scripts + 4 hooks)
 >
-> **pre-bash.sh:** Blocks git add/commit/push/revert/reset/clean. Agent uses /stage-complete command which triggers harness git operations.
+> **pre-bash.sh (48 lines):** Feature-flag gated (`.openarms/methodology-enforced`). Extracts command JSON via `node -e`. Hard blocks `git (add|commit|push|revert|reset|clean|stash|checkout --)` via regex. Stage-scopes test commands: `pnpm test -- (scoped)` only when current-stage == "test". Everything else (build, tsgo, check, ls, grep) passes.
 >
-> **pre-write.sh:** Blocks src/ writes during document/design stages. Blocks _index.md editing (auto-maintained). Blocks .openarms/ state file editing (harness-owned).
+> **pre-write.sh (106 lines):** 5 enforcement layers:
+> 1. `.openarms/` directory blocked (state managed by harness)
+> 2. Methodology infrastructure locked (scripts/, commands/, skills/, settings.json) unless meta-task flag set
+> 3. Task frontmatter fields (status, readiness, current_stage, stages_completed, artifacts) blocked via grep on old_string
+> 4. `src/` blocked during document/design stages
+> 5. Real test assertions blocked during implement stage — counts `expect(` calls minus placeholders (`expect(true)`, `expect(1).toBe(1)`, `.toBeDefined()`), max 2 real assertions allowed
 >
-> **post-write.sh:** Appends every created/modified file path to `.openarms/stage-files.log`. The validate-stage.cjs script reads this log to check which artifacts were produced.
+> **post-write.sh (36 lines):** Appends `${stage}:${filepath}` to `.openarms/stage-files.log`. Stage-tagging enables filtering to current stage only in validate-stage.cjs. Non-fatal: `>> log 2>/dev/null || true`.
 >
-> **post-compact.sh:** Calls `build-reinstruciton.cjs` which reads methodology.yaml + skill-stage-mapping.yaml and outputs fresh stage-specific instructions. This is the most complex hook — it effectively rebuilds the agent's methodology context from scratch after compaction.
+> **post-compact.sh (29 lines):** Calls `build-reinstruction.cjs` which reads ALL state from `.openarms/` (current-stage, current-task-id, stage-files.log, required-stages.json, stages-completed.json, current-model-config.json). Returns full task state as `additionalContext` in hook response. See [[Context Compaction Is a Reset Event]] for why this is critical.
 >
-> **Result:** Combined with 14 enforcement scripts, achieved ~90% stage boundary compliance. The pre-write hook alone eliminated the most common violation (writing code during document stage).
+> **validate-stage.cjs (1,033 lines):** The core enforcement engine. Model-aware: reads `current-model-config.json` to adapt validation per task type. Business logic detection: parses function signatures, strips strings/comments via state machine, counts control flow. Phantom file filtering: reverted files don't count as artifacts (git diff checks). Integration wiring: verifies at least one existing src/ file modified (blocks standalone new modules). Readiness capped by model config (research = 50%, feature-dev = 100%).
+>
+> **Result:** 0% stage boundary violations across 5 production runs (v10). Was 75% in v8. The hooks alone achieved what 28 CLAUDE.md rules could not.
+>
+> **Remaining gap:** Behavioral failures (6 classes) persist despite perfect stage enforcement. Clean completion rate = 20%. See [[Agent Failure Taxonomy — Six Classes of Behavioral Failure]].
+
+> [!example]- Instance: OpenFleet MCP Tool Blocking + Agent Hooks (10 agents, production)
+>
+> OpenFleet enforces at a HIGHER level than Claude Code hooks — tools are blocked per stage in `methodology.yaml` `tools_blocked` field. The MCP server itself refuses the tool call before it reaches any hook.
+>
+> **Per-role hooks** (config/agent-hooks.yaml):
+> - software-engineer: destructive command detection (blocks rm -rf, DROP TABLE, etc.)
+> - devsecops-expert: credential scanning on file writes
+> - All roles: conventional commit format validation on `fleet_commit` via PreToolUse
+> - All roles: progress trail recording on PostToolUse for state-modifying calls → `.fleet-trail.log`
+>
+> **9 security-guidance patterns** injected via plugin (not hardcoded hooks). Per-role, context-aware.
+>
+> **Key difference from OpenArms:** Enforcement is declarative YAML, not shell scripts. The MCP server reads the config and enforces — no hook code to maintain per rule.
 
 > [!example]- Instance: Research Wiki (No hooks currently)
 >
@@ -217,6 +241,13 @@ esac
 [[Methodology Adoption Guide]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[AI Agent Artifacts — Standards and Guide]]
+[[Agent Failure Taxonomy — Six Classes of Behavioral Failure]]
 [[Construction and Testing Artifacts — Standards and Guide]]
+[[Context Compaction Is a Reset Event]]
+[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[Harness-Owned Loop — Deterministic Agent Execution]]
+[[Infrastructure Enforcement Proves Instructions Fail]]
 [[Methodology Framework]]
 [[Stage-Aware Skill Injection]]
+[[Three Lines of Defense — Immune System for Agent Quality]]
+[[Validation Matrix — Test Suite for Context Injection]]

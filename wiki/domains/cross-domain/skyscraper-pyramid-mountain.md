@@ -156,3 +156,4 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 [[Model: Methodology]]
 [[Model: Quality and Failure Prevention]]
 [[Model: SFIF and Architecture]]
+[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]

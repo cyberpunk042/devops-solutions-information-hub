@@ -138,3 +138,5 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 [[Artifact Type System]]
 [[Standards-by-Example]]
 [[Coverage Blindness — Modeling Only What You Know]]
+[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[New Content Must Integrate Into Existing Pages]]

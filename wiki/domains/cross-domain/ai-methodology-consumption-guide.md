@@ -199,3 +199,5 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 [[Methodology Config Architecture — How the Pieces Fit Together]]
 [[Model: Claude Code]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[Structured Context Is Proto-Programming for AI Agents]]

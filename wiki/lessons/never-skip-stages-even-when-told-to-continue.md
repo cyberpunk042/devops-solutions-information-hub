@@ -107,6 +107,8 @@ This lesson applies to any system with sequential stages and a decision-making a
 [[Knowledge Evolution Pipeline]]
 [[Agent Compliance Framework]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
+[[Follow the Method of Work Not the Methodology Label]]
+[[Infrastructure Enforcement Proves Instructions Fail]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Model: Quality and Failure Prevention]]
 [[Models Are Built in Layers, Not All at Once]]

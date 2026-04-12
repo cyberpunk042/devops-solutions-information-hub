@@ -272,6 +272,7 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 [[Model: Methodology]]
 [[Model: Claude Code]]
 [[Model: LLM Wiki]]
+[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[Methodology Adoption Guide]]
 [[Methodology Evolution Protocol]]
 [[Portable Methodology Engine]]

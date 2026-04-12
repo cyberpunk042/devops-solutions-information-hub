@@ -174,3 +174,4 @@ Mandatory skills create soft quality gates — the agent should not advance with
 [[Methodology Adoption Guide]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[AI Agent Artifacts — Standards and Guide]]
+[[Infrastructure Enforcement Proves Instructions Fail]]

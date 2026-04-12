@@ -239,22 +239,22 @@ This is not a "build it and ship it" project. It is a continuously evolving syst
 
 | File | Lines | Purpose | Last Updated |
 |------|-------|---------|-------------|
-| config/methodology.yaml | 517 | 9 models with artifact chains + template hints, execution modes, quality tiers | 2026-04-12 |
-| config/artifact-types.yaml | 389 | 17 types + 3 artifact classes, categories, thresholds, styling, verification | 2026-04-12 |
-| config/wiki-schema.yaml | 240 | Frontmatter schema, 17 type enums, required sections, relationship verbs | 2026-04-12 |
-| config/schema.yaml | 240 | Copy of wiki-schema.yaml (used by validate.py) | 2026-04-12 |
-| config/quality-standards.yaml | 20 | Linting thresholds, export readiness, duplicate detection | 2026-04-09 |
-| config/export-profiles.yaml | 90 | Export transforms for openfleet, AICP, methodology bundle | 2026-04-11 |
-| config/domain-profiles/typescript.yaml | 60 | TypeScript/Node overrides | 2026-04-11 |
-| config/domain-profiles/python-wiki.yaml | 135 | Python/Wiki overrides + knowledge operations | 2026-04-12 |
-| config/domain-profiles/infrastructure.yaml | 60 | Infrastructure/IaC overrides | 2026-04-11 |
+| wiki/config/methodology.yaml | 517 | 9 models with artifact chains + template hints, execution modes, quality tiers | 2026-04-12 |
+| wiki/config/artifact-types.yaml | 389 | 17 types + 3 artifact classes, categories, thresholds, styling, verification | 2026-04-12 |
+| wiki/config/wiki-schema.yaml | 240 | Frontmatter schema, 17 type enums, required sections, relationship verbs | 2026-04-12 |
+| wiki/config/wiki-schema.yaml | 240 | Copy of wiki-schema.yaml (used by validate.py) | 2026-04-12 |
+| wiki/config/quality-standards.yaml | 20 | Linting thresholds, export readiness, duplicate detection | 2026-04-09 |
+| wiki/config/export-profiles.yaml | 90 | Export transforms for openfleet, AICP, methodology bundle | 2026-04-11 |
+| wiki/config/domain-profiles/typescript.yaml | 60 | TypeScript/Node overrides | 2026-04-11 |
+| wiki/config/domain-profiles/python-wiki.yaml | 135 | Python/Wiki overrides + knowledge operations | 2026-04-12 |
+| wiki/config/domain-profiles/infrastructure.yaml | 60 | Infrastructure/IaC overrides | 2026-04-11 |
 
 ## Templates
 
 | Directory | Count | Types |
 |-----------|-------|-------|
-| config/templates/ | 16 | concept, source-synthesis, comparison, reference, deep-dive, lesson, pattern, decision, domain-overview, evolution, learning-path, epic, module, task, note, operations-plan |
-| config/templates/methodology/ | 6 | requirements-spec, infrastructure-analysis, gap-analysis, design-plan, tech-spec, test-plan |
+| wiki/config/templates/ | 16 | concept, source-synthesis, comparison, reference, deep-dive, lesson, pattern, decision, domain-overview, evolution, learning-path, epic, module, task, note, operations-plan |
+| wiki/config/templates/methodology/ | 6 | requirements-spec, infrastructure-analysis, gap-analysis, design-plan, tech-spec, test-plan |
 
 ## Page Type Distribution
 
@@ -337,7 +337,7 @@ This is not a "build it and ship it" project. It is a continuously evolving syst
 
 **Reasoning:** A Requirements Spec (document) constrains future work — it's BINDING. A concept page (documentation) explains something — it's INFORMATIONAL. A test result (artifact) is produced by running code — it's a BY-PRODUCT. Applying the same validation to all three produces wrong quality bars: documents need structural completeness checks, documentation needs accuracy checks, artifacts need gate command checks.
 
-**Implementation:** Added `artifact_classes` section to config/artifact-types.yaml with `artifact_class` field per type. Decisions and operations-plans are "document" class (binding). Concepts, lessons, patterns are "documentation" class (informational). Code files, test results, git commits are "artifact" class (by-products).
+**Implementation:** Added `artifact_classes` section to wiki/config/artifact-types.yaml with `artifact_class` field per type. Decisions and operations-plans are "document" class (binding). Concepts, lessons, patterns are "documentation" class (informational). Code files, test results, git commits are "artifact" class (by-products).
 
 **What it changed:** Agents now know WHICH quality rules apply when they produce output.
 
@@ -610,4 +610,35 @@ After that, the loop broke and production became coherent.
 ## Priority 4: Before Ingesting New Sources
 10. `wiki/sources/methodology-artifact-taxonomy-research.md` — what we already researched
 11. `CLAUDE.md` — current agent configuration including "Using the Second Brain" section
-12. `config/methodology.yaml` — current model definitions
+12. `wiki/config/methodology.yaml` — current model definitions
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ADDENDUM: POST-SESSION STRUCTURAL CLEANUP (same day, continuation session)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+## What Was Fixed
+
+**Root/Wiki Conflation:** 84 ghost files existed at repo root (comparisons/, decisions/, domains/, lessons/, patterns/, sources/, spine/) — stale April 6-8 copies of content that lived in wiki/. All removed after confirming wiki/ versions were newer and more complete.
+
+**Config Relocation:** All wiki-specific config (wiki-schema.yaml, artifact-types.yaml, methodology.yaml, quality-standards.yaml, export-profiles.yaml, domains.yaml, templates/, domain-profiles/) moved from root config/ to wiki/config/. Root config/ now only contains services/ (systemd templates — project infrastructure).
+
+**Tool Updates:** All tool path references updated: pipeline.py, validate.py, lint.py, export.py, evolve.py, mcp_server.py, setup.py. Config exclusion added to find_wiki_pages(), validate_wiki(), lint scanning so templates aren't counted as wiki pages.
+
+**48 wiki pages updated:** All in-content references to `config/` paths updated to `wiki/config/`.
+
+**Stale files removed:** Root manifest.json (72 entries, stale), root index.md (23 lines, outdated), root .obsidian/ (duplicate vault config).
+
+## Knowledge Extracted Into Wiki
+
+3 new lessons + 1 new pattern extracted from session handoff knowledge into proper wiki pages:
+
+| Page | Type | What It Captures |
+|------|------|-----------------|
+| [[Hardcoded Instances Fail — Build Frameworks Not Solutions]] | lesson | Phase 1 failure: copying OpenArms values ≠ building a framework |
+| [[New Content Must Integrate Into Existing Pages]] | lesson | Discoverability failure: 37 pages created, operator found nothing |
+| [[Follow the Method of Work Not the Methodology Label]] | lesson | Research-produce loop: "follow methodology" maps to different mental models |
+| [[Ecosystem Feedback Loop — Wiki as Source of Truth]] | pattern | The operator's vision: bidirectional flow, framework over instance, constant evolution |
+
+## Updated State
+
+Super-model updated to v1.2. Pages: 237 (clean). Relationships: 1,559+. Lessons: 37. Patterns: 11. Structure: clean root/wiki separation.

@@ -37,9 +37,10 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [Methodology Standards Initiative — Infrastructure Analysis](methodology-standards-initiative-infrastructure.md) — Complete mapping of the methodology and artifact infrastructure across the research wiki and its most evolved consume...
 - [Model Composition Rules](model-composition-rules.md) — Formal rules for how methodology models combine when work is multi-layered
 - [Requirements and Design Artifacts — Standards and Guide](requirements-and-design-artifacts.md) — Complete guide to the artifacts produced during the Document and Design stages — the specifications that CONSTRAIN al...
+- [SDLC Customization Framework — Phases, Scale, and Chain Selection](sdlc-customization-framework.md) — Projects don't all need the same SDLC rigor
 - [Skyscraper, Pyramid, Mountain](skyscraper-pyramid-mountain.md) — Skyscraper, Pyramid, Mountain is an architectural quality analogy that describes the three structural states a codeba...
 - [Operations Plan: Wiki Post-Ingestion Validation](wiki-post-ingestion-operations-plan.md) — Sequential operations plan for validating the wiki after any content change
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `architecture`, `ai-agents`, `second-brain`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `requirements`, `framework`, `recursive`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `architecture`, `framework`, `ai-agents`, `second-brain`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `requirements`, `recursive`

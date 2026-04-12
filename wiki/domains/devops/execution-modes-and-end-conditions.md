@@ -475,6 +475,7 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Artifact Chains by Methodology Model]]
 [[Decision: Execution Mode Edge Cases]]
+[[Follow the Method of Work Not the Methodology Label]]
 [[Methodology Framework]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Model Composition Rules]]

@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-12T18:13:48.513335+00:00",
+  "generated": "2026-04-12T19:38:48.413290+00:00",
   "stats": {
-    "pages": 237,
+    "pages": 252,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1559,
-    "tags_unique": 743,
+    "relationships": 1656,
+    "tags_unique": 785,
     "layers": {
       "3": 5,
       "6": 15,
       "2": 51,
-      "4": 31,
-      "5": 9,
+      "4": 39,
+      "5": 15,
       "1": 24,
       "spine": 51
     },
     "maturity": {
-      "growing": 156,
-      "seed": 53
+      "growing": 170,
+      "seed": 54
     }
   },
   "pages": [
@@ -5062,6 +5062,70 @@
       ]
     },
     {
+      "path": "domains/cross-domain/sdlc-customization-framework.md",
+      "slug": "domains/cross-domain/sdlc-customization-framework",
+      "title": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "sdlc",
+        "customization",
+        "framework",
+        "phases",
+        "scale",
+        "chain-selection",
+        "methodology",
+        "project-lifecycle"
+      ],
+      "sources": [
+        {
+          "id": "operator-sdlc-vision",
+          "type": "directive",
+          "file": "raw/notes/2026-04-12-mega-vision-directive.md",
+          "description": "Operator vision for SDLC customization \u2014 project phases, scale tiers, three chain types"
+        },
+        {
+          "id": "methodology-model",
+          "type": "file",
+          "file": "wiki/config/methodology.yaml",
+          "description": "Current 9-model methodology system \u2014 foundation for SDLC customization"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Skyscraper, Pyramid, Mountain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
       "path": "domains/cross-domain/skyscraper-pyramid-mountain.md",
       "slug": "domains/cross-domain/skyscraper-pyramid-mountain",
       "title": "Skyscraper, Pyramid, Mountain",
@@ -7571,6 +7635,72 @@
       "relationships": []
     },
     {
+      "path": "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure.md",
+      "slug": "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
+      "title": "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "agent-failure",
+        "taxonomy",
+        "behavioral",
+        "compliance",
+        "quality",
+        "quantified-evidence",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-e016",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms E016 critical review \u2014 5 runs analyzed, 6 failure classes identified, 4/5 runs failed by 'did I have to manually fix' standard"
+        },
+        {
+          "id": "openarms-v10",
+          "type": "observation",
+          "file": "raw/articles/openarms-methodology-v10-v11.md",
+          "description": "OpenArms v10\u2192v11 transition \u2014 infrastructure is solved, agent behavior is the remaining frontier"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Model: Quality and Failure Prevention",
+        "Infrastructure Enforcement Proves Instructions Fail"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "lessons/agent-orchestration-is-highest-connected-concept.md",
       "slug": "lessons/agent-orchestration-is-highest-connected-concept",
       "title": "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki",
@@ -7976,6 +8106,67 @@
       ]
     },
     {
+      "path": "lessons/context-compaction-is-a-reset-event.md",
+      "slug": "lessons/context-compaction-is-a-reset-event",
+      "title": "Context Compaction Is a Reset Event",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "context-compaction",
+        "reset",
+        "agent-behavior",
+        "enforcement",
+        "memory-loss",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-compaction",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms v10 \u2014 post-compact hook rebuilds task state; without it, all corrections lost"
+        },
+        {
+          "id": "openarms-v10-learnings",
+          "type": "observation",
+          "file": "raw/articles/openarms-methodology-v10-v11.md",
+          "description": "OpenArms CLAUDE.md learning: 'After compaction, re-read ALL memories first \u2014 all old illnesses return'"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Infrastructure Enforcement Proves Instructions Fail",
+        "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Claude Code"
+        }
+      ]
+    },
+    {
       "path": "lessons/context-management-is-primary-productivity-lever.md",
       "slug": "lessons/context-management-is-primary-productivity-lever",
       "title": "Context Management Is the Primary LLM Productivity Lever",
@@ -8125,6 +8316,142 @@
       ]
     },
     {
+      "path": "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md",
+      "slug": "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
+      "title": "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "enforcement",
+        "bypass",
+        "mindful",
+        "risk",
+        "justified-override",
+        "nuance",
+        "lesson-learned"
+      ],
+      "sources": [
+        {
+          "id": "operator-nuance",
+          "type": "directive",
+          "file": "raw/notes/2026-04-12-mega-vision-directive.md",
+          "description": "Operator: 'things like blocking tools or things at various stages have risk and must be mindful and we have to present reasons and we have to offer a way to justify and bypass with a good reason even'"
+        },
+        {
+          "id": "openarms-t086",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms T086 \u2014 operator reverted agent's correct fnm fix twice because it looked like scope creep. The block was wrong."
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Infrastructure Enforcement Proves Instructions Fail",
+        "Enforcement Hook Patterns",
+        "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "lessons/follow-the-method-of-work-not-the-methodology-label.md",
+      "slug": "lessons/follow-the-method-of-work-not-the-methodology-label",
+      "title": "Follow the Method of Work Not the Methodology Label",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "agent-failure",
+        "execution",
+        "circular-failure",
+        "method-of-work",
+        "lesson-learned"
+      ],
+      "sources": [
+        {
+          "id": "session-loop",
+          "type": "observation",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "Agent looped between research and production because 'follow the methodology' was interpreted differently by operator and agent"
+        },
+        {
+          "id": "operator-method",
+          "type": "directive",
+          "file": "raw/notes/2026-04-12-restart-from-scratch.md",
+          "description": "Operator gave explicit 5-step method: record requirements \u2192 research \u2192 synthesize \u2192 investigate code \u2192 suggest solutions"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Model: Methodology",
+        "Never Skip Stages Even When Told to Continue"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Never Skip Stages Even When Told to Continue"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Modes and End Conditions"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search.md",
       "slug": "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
       "title": "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search",
@@ -8203,6 +8530,159 @@
         {
           "verb": "ENABLES",
           "target": "Wiki Knowledge Graph"
+        }
+      ]
+    },
+    {
+      "path": "lessons/hardcoded-instances-fail-build-frameworks-not-solutions.md",
+      "slug": "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
+      "title": "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "framework",
+        "anti-pattern",
+        "quality",
+        "lesson-learned",
+        "agent-failure"
+      ],
+      "sources": [
+        {
+          "id": "phase1-failure",
+          "type": "observation",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "37 files produced in Phase 1 of methodology initiative \u2014 operator called 'complete crap'"
+        },
+        {
+          "id": "openarms-yaml",
+          "type": "observation",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "OpenArms methodology.yaml used as blueprint \u2014 produced specific instance instead of generic framework"
+        },
+        {
+          "id": "operator-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-04-11-methodology-standards-directive.md",
+          "description": "Operator explicitly said 'we want better... not hardcoded' and 'build FRAMEWORKS not instances'"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Methodology Standards Initiative \u2014 Honest Assessment",
+        "Model: Methodology",
+        "Methodology Framework"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Standards Initiative \u2014 Honest Assessment"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Coverage Blindness \u2014 Modeling Only What You Know"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Standards Must Preach by Example"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "lessons/infrastructure-enforcement-proves-instructions-fail.md",
+      "slug": "lessons/infrastructure-enforcement-proves-instructions-fail",
+      "title": "Infrastructure Enforcement Proves Instructions Fail",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "enforcement",
+        "hooks",
+        "infrastructure",
+        "instructions",
+        "compliance",
+        "agent-failure",
+        "quantified-evidence"
+      ],
+      "sources": [
+        {
+          "id": "openarms-v8-overnight",
+          "type": "observation",
+          "file": "raw/articles/openarms-methodology-scan.md",
+          "description": "OpenArms v8 overnight autonomous run \u2014 75% stage boundary violations despite explicit CLAUDE.md rules"
+        },
+        {
+          "id": "openarms-v10-review",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms v10 critical review \u2014 0% stage violations after hooks, but 80% behavioral failure rate"
+        },
+        {
+          "id": "openarms-v10-methodology",
+          "type": "observation",
+          "file": "raw/articles/openarms-methodology-v10-v11.md",
+          "description": "OpenArms methodology evolution v8\u2192v10 \u2014 infrastructure enforcement replaces instruction-based enforcement"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "CLAUDE.md Structural Patterns for Agent Compliance",
+        "Enforcement Hook Patterns",
+        "Model: Quality and Failure Prevention"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Stage-Aware Skill Injection"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Skip Stages Even When Told to Continue"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -8831,6 +9311,71 @@
       ]
     },
     {
+      "path": "lessons/new-content-must-integrate-into-existing-pages.md",
+      "slug": "lessons/new-content-must-integrate-into-existing-pages",
+      "title": "New Content Must Integrate Into Existing Pages",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "wiki",
+        "discoverability",
+        "integration",
+        "anti-pattern",
+        "lesson-learned",
+        "agent-failure"
+      ],
+      "sources": [
+        {
+          "id": "phase1-disconnect",
+          "type": "observation",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "37 new pages created alongside existing pages without any wiring \u2014 operator could not find deliverables"
+        },
+        {
+          "id": "discoverability-test",
+          "type": "observation",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "Operator navigated wiki cold and found 'just flim traces... no way to piece anything together'"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Methodology Standards Initiative \u2014 Honest Assessment",
+        "Model: LLM Wiki"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Methodology Standards Initiative \u2014 Honest Assessment"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Always Plan Before Executing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Coverage Blindness \u2014 Modeling Only What You Know"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "LLM Wiki Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
       "path": "lessons/notebooklm-as-grounded-research-engine.md",
       "slug": "lessons/notebooklm-as-grounded-research-engine",
       "title": "NotebookLM as Grounded Research Engine Not Just Note Storage",
@@ -9328,6 +9873,87 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model: Quality and Failure Prevention"
+        }
+      ]
+    },
+    {
+      "path": "lessons/structured-context-is-proto-programming-for-ai-agents.md",
+      "slug": "lessons/structured-context-is-proto-programming-for-ai-agents",
+      "title": "Structured Context Is Proto-Programming for AI Agents",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "proto-programming",
+        "structured-context",
+        "markdown",
+        "agent-compliance",
+        "magic-tricks",
+        "context-engineering",
+        "frontmatter"
+      ],
+      "sources": [
+        {
+          "id": "operator-insight",
+          "type": "directive",
+          "file": "raw/notes/2026-04-12-mega-vision-directive.md",
+          "description": "Operator: 'Markdown is the language of AI. Markdown offers proto-programming and proto-programming is what AI does best.'"
+        },
+        {
+          "id": "openfleet-validation-matrix",
+          "type": "observation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "description": "OpenFleet validation-matrix \u2014 29 structured context scenarios (2,444 lines) defining exactly what agents receive per condition"
+        },
+        {
+          "id": "openarms-compliance",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms structural patterns improved compliance from 25% to 60% (instructions alone) and 100% with hooks"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "CLAUDE.md Structural Patterns for Agent Compliance",
+        "Model: Design.md and IaC",
+        "Model: Skills, Commands, and Hooks"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Design.md and IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model: Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "How AI Agents Consume the Methodology Wiki"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Config Architecture \u2014 How the Pieces Fit Together"
         }
       ]
     },
@@ -10358,6 +10984,72 @@
       ]
     },
     {
+      "path": "patterns/contribution-gating-cross-agent-inputs-before-work.md",
+      "slug": "patterns/contribution-gating-cross-agent-inputs-before-work",
+      "title": "Contribution Gating \u2014 Cross-Agent Inputs Before Work",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "contribution-gating",
+        "cross-agent",
+        "multi-agent",
+        "synergy-matrix",
+        "quality",
+        "rework-prevention",
+        "openfleet"
+      ],
+      "sources": [
+        {
+          "id": "openfleet-contributions",
+          "type": "observation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "description": "OpenFleet contribution system \u2014 synergy-matrix.yaml defines cross-role requirements, contributions.py gates WORK stage"
+        },
+        {
+          "id": "openfleet-synergy",
+          "type": "observation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "description": "Synergy matrix: 115 lines YAML defining required/recommended/conditional contributions per role pair"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Three Lines of Defense \u2014 Immune System for Agent Quality",
+        "Model: Quality and Failure Prevention"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+        }
+      ]
+    },
+    {
       "path": "patterns/deterministic-shell-llm-core.md",
       "slug": "patterns/deterministic-shell-llm-core",
       "title": "Deterministic Shell, LLM Core",
@@ -10447,6 +11139,86 @@
         {
           "verb": "FEEDS INTO",
           "target": "Gateway-Centric Routing"
+        }
+      ]
+    },
+    {
+      "path": "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth.md",
+      "slug": "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth",
+      "title": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "ecosystem",
+        "feedback-loop",
+        "source-of-truth",
+        "second-brain",
+        "constant-evolution",
+        "architecture-pattern"
+      ],
+      "sources": [
+        {
+          "id": "operator-vision",
+          "type": "directive",
+          "file": "raw/notes/2026-04-12-context-regather-directive.md",
+          "description": "Operator directive: 'the brain will become the source of truth from which they feedback and will take the pieces and adapt them to each individual project'"
+        },
+        {
+          "id": "openarms-evidence",
+          "type": "observation",
+          "file": "raw/articles/openarms-methodology-scan.md",
+          "description": "OpenArms methodology.yaml derived from wiki's generic base + TypeScript domain profile \u2014 first consumer"
+        },
+        {
+          "id": "greater-model-principle",
+          "type": "directive",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "Operator: 'never blinding ourself by their limiting models but always thinking of a greater model and a CONSTANT EVOLUTION'"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Four-Project Ecosystem",
+        "Model: Ecosystem Architecture",
+        "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Ecosystem Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "How AI Agents Consume the Methodology Wiki"
         }
       ]
     },
@@ -10606,6 +11378,71 @@
         {
           "verb": "FEEDS INTO",
           "target": "Research Pipeline Orchestration"
+        }
+      ]
+    },
+    {
+      "path": "patterns/harness-owned-loop-deterministic-agent-execution.md",
+      "slug": "patterns/harness-owned-loop-deterministic-agent-execution",
+      "title": "Harness-Owned Loop \u2014 Deterministic Agent Execution",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "harness",
+        "deterministic",
+        "orchestration",
+        "agent-execution",
+        "loop-ownership",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "openarms-harness",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms agent-run-harness.ts \u2014 harness dispatches one task at a time, agent never sees backlog"
+        },
+        {
+          "id": "openfleet-orchestrator",
+          "type": "observation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "description": "OpenFleet orchestrator.py (2,246 lines) \u2014 6-step deterministic cycle with storm response and budget sync"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Model: Quality and Failure Prevention",
+        "Infrastructure Enforcement Proves Instructions Fail"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Compaction Is a Reset Event"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -10937,6 +11774,196 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "patterns/three-lines-of-defense-immune-system-for-agent-quality.md",
+      "slug": "patterns/three-lines-of-defense-immune-system-for-agent-quality",
+      "title": "Three Lines of Defense \u2014 Immune System for Agent Quality",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "immune-system",
+        "three-lines-defense",
+        "enforcement",
+        "detection",
+        "correction",
+        "quality",
+        "agent-fleet",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "openfleet-immune",
+          "type": "observation",
+          "file": "raw/articles/openfleet-immune-system.md",
+          "description": "OpenFleet immune system design \u2014 3 lines of defense, doctor cycle, 746 lines across 3 files"
+        },
+        {
+          "id": "openarms-hooks",
+          "type": "observation",
+          "file": "raw/articles/openarms-agent-behavior-failures.md",
+          "description": "OpenArms hooks as Line 1 implementation \u2014 215 lines, 100% stage boundary enforcement"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Model: Quality and Failure Prevention",
+        "Enforcement Hook Patterns"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy \u2014 Six Classes of Behavioral Failure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "patterns/tier-based-context-depth-trust-earned-through-approval-rates.md",
+      "slug": "patterns/tier-based-context-depth-trust-earned-through-approval-rates",
+      "title": "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "tier-progression",
+        "context-depth",
+        "trust",
+        "approval-rates",
+        "agent-quality",
+        "cost-optimization",
+        "openfleet"
+      ],
+      "sources": [
+        {
+          "id": "openfleet-tiers",
+          "type": "observation",
+          "file": "raw/articles/openfleet-methodology-scan.md",
+          "description": "OpenFleet tier-profiles.yaml (56 lines) + tier_progression.py (352 lines) \u2014 data-driven trust progression"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Three Lines of Defense \u2014 Immune System for Agent Quality",
+        "Model: Quality and Failure Prevention"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model: Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Enforcement Proves Instructions Fail"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "patterns/validation-matrix-test-suite-for-context-injection.md",
+      "slug": "patterns/validation-matrix-test-suite-for-context-injection",
+      "title": "Validation Matrix \u2014 Test Suite for Context Injection",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "validation-matrix",
+        "testing",
+        "context-injection",
+        "quality-assurance",
+        "structured-context",
+        "openfleet"
+      ],
+      "sources": [
+        {
+          "id": "openfleet-matrix",
+          "type": "observation",
+          "file": "raw/articles/openfleet-validation-matrix-samples.md",
+          "description": "OpenFleet validation-matrix/ \u2014 29 scenario files (2,444 lines) defining expected context injection per condition"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Structured Context Is Proto-Programming for AI Agents",
+        "Three Lines of Defense \u2014 Immune System for Agent Quality"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
         },
         {
           "verb": "FEEDS INTO",
@@ -13275,7 +14302,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-12",
       "tags": [
         "claude-code",
         "model-definition",
@@ -14313,7 +15340,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-12",
       "tags": [
         "model",
         "spine",
@@ -14644,7 +15671,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-12",
       "tags": [
         "skills",
         "commands",
@@ -15621,16 +16648,16 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 102,
-      "relationship_count": 681
+      "page_count": 108,
+      "relationship_count": 721
     },
     "devops": {
       "page_count": 14,
       "relationship_count": 99
     },
     "ai-agents": {
-      "page_count": 37,
-      "relationship_count": 309
+      "page_count": 46,
+      "relationship_count": 366
     },
     "tools-and-platforms": {
       "page_count": 23,
@@ -15697,6 +16724,7 @@
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/the-wiki-is-a-hub-not-a-silo",
+      "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "spine/adoption-guide",
       "spine/methodology-adoption-guide",
       "spine/model-ecosystem",
@@ -15707,6 +16735,7 @@
       "domains/automation/mcp-integration-architecture",
       "domains/cross-domain/ai-methodology-consumption-guide",
       "domains/devops/four-project-ecosystem",
+      "lessons/new-content-must-integrate-into-existing-pages",
       "spine/model-ecosystem",
       "spine/model-mcp-cli-integration",
       "spine/super-model"
@@ -15727,9 +16756,12 @@
       "domains/knowledge-systems/wiki-backlog-pattern",
       "lessons/agent-orchestration-is-highest-connected-concept",
       "lessons/always-plan-before-executing",
+      "patterns/contribution-gating-cross-agent-inputs-before-work",
       "patterns/deterministic-shell-llm-core",
       "patterns/gateway-centric-routing",
       "patterns/plan-execute-review-cycle",
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates",
+      "patterns/validation-matrix-test-suite-for-context-injection",
       "spine/model-ecosystem"
     ],
     "openarms": [
@@ -15744,6 +16776,8 @@
       "domains/knowledge-systems/wiki-backlog-pattern",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
+      "lessons/context-compaction-is-a-reset-event",
       "log/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/gateway-centric-routing",
       "spine/model-ecosystem"
@@ -15782,9 +16816,12 @@
       "domains/cross-domain/methodology-standards-initiative-infrastructure",
       "domains/cross-domain/model-composition-rules",
       "domains/cross-domain/requirements-and-design-artifacts",
+      "domains/cross-domain/sdlc-customization-framework",
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
       "lessons/coverage-blindness-modeling-only-what-you-know",
+      "lessons/follow-the-method-of-work-not-the-methodology-label",
+      "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
       "lessons/infrastructure-must-be-reproducible-not-manual",
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "lessons/models-are-built-in-layers-not-all-at-once",
@@ -15848,6 +16885,7 @@
       "backlog/epics/E005-agent-compliance-framework",
       "domains/cross-domain/methodology-standards-initiative-gaps",
       "domains/cross-domain/methodology-standards-initiative-infrastructure",
+      "lessons/structured-context-is-proto-programming-for-ai-agents",
       "patterns/claude-md-structural-patterns",
       "patterns/enforcement-hook-patterns",
       "patterns/stage-aware-skill-injection"
@@ -15855,8 +16893,12 @@
     "enforcement": [
       "backlog/epics/E005-agent-compliance-framework",
       "domains/cross-domain/ai-agent-artifacts",
+      "lessons/context-compaction-is-a-reset-event",
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
+      "lessons/infrastructure-enforcement-proves-instructions-fail",
       "patterns/claude-md-structural-patterns",
       "patterns/enforcement-hook-patterns",
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/evolution-log/methodology-evolution-history",
       "spine/model-quality-failure-prevention-standards"
     ],
@@ -15872,6 +16914,7 @@
       "domains/ai-agents/per-role-command-architecture",
       "domains/automation/wiki-event-driven-automation",
       "domains/cross-domain/ai-agent-artifacts",
+      "lessons/infrastructure-enforcement-proves-instructions-fail",
       "patterns/enforcement-hook-patterns",
       "sources/src-context-mode",
       "sources/src-shanraisshan-claude-code-best-practice",
@@ -15973,6 +17016,8 @@
     "quality": [
       "backlog/epics/E006-standards-by-example",
       "domains/cross-domain/skyscraper-pyramid-mountain",
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
+      "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
       "lessons/infrastructure-must-be-reproducible-not-manual",
       "lessons/models-are-systems-not-documents",
       "lessons/never-present-speculation-as-fact",
@@ -15990,6 +17035,8 @@
       "log/2026-04-09-directive-stop-guessing-false-claims",
       "log/2026-04-09-directive-systemic-incompleteness",
       "log/2026-04-10-directive-quality-evolution-epic",
+      "patterns/contribution-gating-cross-agent-inputs-before-work",
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/model-claude-code-standards",
       "spine/model-llm-wiki-standards",
       "spine/model-methodology-standards",
@@ -16022,6 +17069,7 @@
     "testing": [
       "backlog/tasks/T001-test-openai-backend",
       "domains/cross-domain/construction-and-testing-artifacts",
+      "patterns/validation-matrix-test-suite-for-context-injection",
       "sources/src-playwright-cli-vs-mcp"
     ],
     "blocked": [
@@ -16121,6 +17169,7 @@
       "lessons/multi-stage-ingestion-beats-single-pass",
       "patterns/deterministic-shell-llm-core",
       "patterns/gateway-centric-routing",
+      "patterns/harness-owned-loop-deterministic-agent-execution",
       "patterns/plan-execute-review-cycle",
       "sources/src-shanraisshan-claude-code-best-practice",
       "spine/model-automation-pipelines"
@@ -16295,7 +17344,9 @@
     ],
     "compliance": [
       "decisions/artifact-system-design-decisions",
-      "domains/cross-domain/ai-agent-artifacts"
+      "domains/cross-domain/ai-agent-artifacts",
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
+      "lessons/infrastructure-enforcement-proves-instructions-fail"
     ],
     "design": [
       "decisions/artifact-system-design-decisions",
@@ -16349,6 +17400,7 @@
     "harness": [
       "decisions/extension-system-operational-decisions",
       "patterns/deterministic-shell-llm-core",
+      "patterns/harness-owned-loop-deterministic-agent-execution",
       "spine/model-claude-code-standards",
       "spine/model-quality-failure-prevention"
     ],
@@ -16394,6 +17446,7 @@
     "cost-optimization": [
       "decisions/local-model-vs-cloud-api-for-routine-operations",
       "domains/ai-agents/claude-code-context-management",
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates",
       "sources/src-token-hacks-claude-code"
     ],
     "backend-selection": [
@@ -16470,6 +17523,8 @@
       "decisions/methodology-framework-design-decisions",
       "domains/cross-domain/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-framework",
+      "domains/cross-domain/sdlc-customization-framework",
+      "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
       "lessons/methodology-is-a-framework-not-a-fixed-pipeline",
       "spine/methodology-system-map",
       "spine/model-methodology"
@@ -16524,6 +17579,7 @@
       "lessons/schema-is-the-real-product",
       "lessons/wiki-maintenance-problem-solved-by-llm-automation",
       "log/2026-04-09-directive-validate-second-brain-readiness",
+      "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "patterns/progressive-distillation",
       "sources/src-karpathy-claude-code-10x",
       "sources/src-karpathy-llm-wiki-idea-file",
@@ -16680,12 +17736,14 @@
       "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
     ],
     "scale": [
-      "decisions/wiki-first-with-lightrag-upgrade-path"
+      "decisions/wiki-first-with-lightrag-upgrade-path",
+      "domains/cross-domain/sdlc-customization-framework"
     ],
     "infrastructure": [
       "decisions/wiki-first-with-lightrag-upgrade-path",
       "domains/cross-domain/domain-chain-infrastructure",
       "domains/devops/devops-control-plane",
+      "lessons/infrastructure-enforcement-proves-instructions-fail",
       "patterns/enforcement-hook-patterns",
       "patterns/scaffold-foundation-infrastructure-features"
     ],
@@ -16694,6 +17752,7 @@
       "domains/ai-agents/openclaw",
       "domains/ai-agents/openfleet",
       "domains/ai-agents/spec-driven-development",
+      "patterns/contribution-gating-cross-agent-inputs-before-work",
       "sources/src-llm-wiki-v2-agentmemory"
     ],
     "deterministic-brain": [
@@ -16788,6 +17847,7 @@
     ],
     "context-engineering": [
       "domains/ai-agents/claude-code-context-management",
+      "lessons/structured-context-is-proto-programming-for-ai-agents",
       "sources/src-shanraisshan-claude-code-best-practice"
     ],
     "markdown": [
@@ -16796,6 +17856,7 @@
       "domains/knowledge-systems/wiki-ingestion-pipeline",
       "domains/tools-and-platforms/obsidian-knowledge-vault",
       "lessons/skills-architecture-is-dominant-extension-pattern",
+      "lessons/structured-context-is-proto-programming-for-ai-agents",
       "log/2026-04-09-directive-wiki-design-model-research",
       "sources/src-karpathy-llm-wiki-idea-file",
       "sources/src-kepano-obsidian-skills",
@@ -16934,7 +17995,8 @@
       "domains/ai-agents/task-lifecycle-stage-gating"
     ],
     "context-injection": [
-      "domains/ai-agents/hooks-lifecycle-architecture"
+      "domains/ai-agents/hooks-lifecycle-architecture",
+      "patterns/validation-matrix-test-suite-for-context-injection"
     ],
     "blocking-pattern": [
       "domains/ai-agents/hooks-lifecycle-architecture"
@@ -17035,7 +18097,8 @@
     ],
     "rework-prevention": [
       "domains/ai-agents/rework-prevention",
-      "lessons/always-plan-before-executing"
+      "lessons/always-plan-before-executing",
+      "patterns/contribution-gating-cross-agent-inputs-before-work"
     ],
     "planning": [
       "domains/ai-agents/rework-prevention",
@@ -17052,6 +18115,7 @@
     "agent-behavior": [
       "domains/ai-agents/rework-prevention",
       "lessons/always-plan-before-executing",
+      "lessons/context-compaction-is-a-reset-event",
       "lessons/the-agent-must-practice-what-it-documents"
     ],
     "test-driven": [
@@ -17080,6 +18144,7 @@
     ],
     "sdlc": [
       "domains/ai-agents/spec-driven-development",
+      "domains/cross-domain/sdlc-customization-framework",
       "sources/methodology-artifact-taxonomy-research"
     ],
     "design-before-code": [
@@ -17335,6 +18400,7 @@
       "domains/cross-domain/domain-chain-knowledge",
       "domains/cross-domain/domain-chain-python-wiki",
       "domains/knowledge-systems/wiki-ingestion-pipeline",
+      "lessons/new-content-must-integrate-into-existing-pages",
       "log/2026-04-09-directive-docs-layers-old-models"
     ],
     "python": [
@@ -17365,10 +18431,12 @@
       "domains/cross-domain/initiation-and-planning-artifacts"
     ],
     "risk": [
-      "domains/cross-domain/initiation-and-planning-artifacts"
+      "domains/cross-domain/initiation-and-planning-artifacts",
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
     ],
     "taxonomy": [
       "domains/cross-domain/methodology-artifact-taxonomy",
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
       "lessons/coverage-blindness-modeling-only-what-you-know",
       "lessons/three-classes-of-methodology-output",
       "sources/methodology-artifact-taxonomy-research"
@@ -17400,6 +18468,7 @@
     ],
     "feedback-loop": [
       "domains/cross-domain/methodology-evolution-protocol",
+      "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "patterns/plan-execute-review-cycle"
     ],
     "composable": [
@@ -17455,6 +18524,18 @@
     ],
     "interface-spec": [
       "domains/cross-domain/requirements-and-design-artifacts"
+    ],
+    "customization": [
+      "domains/cross-domain/sdlc-customization-framework"
+    ],
+    "phases": [
+      "domains/cross-domain/sdlc-customization-framework"
+    ],
+    "chain-selection": [
+      "domains/cross-domain/sdlc-customization-framework"
+    ],
+    "project-lifecycle": [
+      "domains/cross-domain/sdlc-customization-framework"
     ],
     "refactoring": [
       "domains/cross-domain/skyscraper-pyramid-mountain"
@@ -17583,6 +18664,7 @@
     ],
     "immune-system": [
       "domains/devops/immune-system-rules",
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/model-quality-failure-prevention"
     ],
     "post-mortem": [
@@ -18033,6 +19115,20 @@
     "pm-agent": [
       "domains/tools-and-platforms/plane"
     ],
+    "agent-failure": [
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
+      "lessons/follow-the-method-of-work-not-the-methodology-label",
+      "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
+      "lessons/infrastructure-enforcement-proves-instructions-fail",
+      "lessons/new-content-must-integrate-into-existing-pages"
+    ],
+    "behavioral": [
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure"
+    ],
+    "quantified-evidence": [
+      "lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure",
+      "lessons/infrastructure-enforcement-proves-instructions-fail"
+    ],
     "hub-page": [
       "lessons/agent-orchestration-is-highest-connected-concept"
     ],
@@ -18067,6 +19163,15 @@
     "agent-design": [
       "lessons/cli-tools-beat-mcp-for-token-efficiency"
     ],
+    "context-compaction": [
+      "lessons/context-compaction-is-a-reset-event"
+    ],
+    "reset": [
+      "lessons/context-compaction-is-a-reset-event"
+    ],
+    "memory-loss": [
+      "lessons/context-compaction-is-a-reset-event"
+    ],
     "productivity": [
       "lessons/context-management-is-primary-productivity-lever"
     ],
@@ -18091,12 +19196,47 @@
     "gap": [
       "lessons/coverage-blindness-modeling-only-what-you-know"
     ],
+    "bypass": [
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+    ],
+    "mindful": [
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+    ],
+    "justified-override": [
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+    ],
+    "nuance": [
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+    ],
+    "lesson-learned": [
+      "lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
+      "lessons/follow-the-method-of-work-not-the-methodology-label",
+      "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
+      "lessons/new-content-must-integrate-into-existing-pages"
+    ],
+    "execution": [
+      "lessons/follow-the-method-of-work-not-the-methodology-label",
+      "spine/model-methodology-standards"
+    ],
+    "circular-failure": [
+      "lessons/follow-the-method-of-work-not-the-methodology-label"
+    ],
+    "method-of-work": [
+      "lessons/follow-the-method-of-work-not-the-methodology-label"
+    ],
     "wiki-graph": [
       "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
     ],
     "bm25": [
       "lessons/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
       "sources/src-context-mode"
+    ],
+    "anti-pattern": [
+      "lessons/hardcoded-instances-fail-build-frameworks-not-solutions",
+      "lessons/new-content-must-integrate-into-existing-pages"
+    ],
+    "instructions": [
+      "lessons/infrastructure-enforcement-proves-instructions-fail"
     ],
     "failure-lesson": [
       "lessons/infrastructure-must-be-reproducible-not-manual",
@@ -18217,6 +19357,9 @@
     "layer-1": [
       "lessons/never-synthesize-from-descriptions-alone"
     ],
+    "discoverability": [
+      "lessons/new-content-must-integrate-into-existing-pages"
+    ],
     "research-engine": [
       "lessons/notebooklm-as-grounded-research-engine"
     ],
@@ -18258,6 +19401,19 @@
     ],
     "example": [
       "lessons/standards-must-preach-by-example"
+    ],
+    "proto-programming": [
+      "lessons/structured-context-is-proto-programming-for-ai-agents"
+    ],
+    "structured-context": [
+      "lessons/structured-context-is-proto-programming-for-ai-agents",
+      "patterns/validation-matrix-test-suite-for-context-injection"
+    ],
+    "magic-tricks": [
+      "lessons/structured-context-is-proto-programming-for-ai-agents"
+    ],
+    "frontmatter": [
+      "lessons/structured-context-is-proto-programming-for-ai-agents"
     ],
     "completeness": [
       "lessons/systemic-incompleteness-is-invisible-to-validation",
@@ -18450,8 +19606,19 @@
       "patterns/context-aware-tool-loading",
       "sources/src-claude-code-accuracy-tips"
     ],
+    "contribution-gating": [
+      "patterns/contribution-gating-cross-agent-inputs-before-work"
+    ],
+    "cross-agent": [
+      "patterns/contribution-gating-cross-agent-inputs-before-work",
+      "sources/src-pablo-mano-obsidian-cli-skill"
+    ],
+    "synergy-matrix": [
+      "patterns/contribution-gating-cross-agent-inputs-before-work"
+    ],
     "deterministic": [
       "patterns/deterministic-shell-llm-core",
+      "patterns/harness-owned-loop-deterministic-agent-execution",
       "patterns/plan-execute-review-cycle"
     ],
     "llm-core": [
@@ -18466,6 +19633,15 @@
     "separation-of-concerns": [
       "patterns/deterministic-shell-llm-core"
     ],
+    "source-of-truth": [
+      "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth"
+    ],
+    "constant-evolution": [
+      "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth"
+    ],
+    "architecture-pattern": [
+      "patterns/ecosystem-feedback-loop-wiki-as-source-of-truth"
+    ],
     "single-control-plane": [
       "patterns/gateway-centric-routing"
     ],
@@ -18474,6 +19650,17 @@
     ],
     "agent-dispatch": [
       "patterns/gateway-centric-routing"
+    ],
+    "agent-execution": [
+      "patterns/harness-owned-loop-deterministic-agent-execution"
+    ],
+    "loop-ownership": [
+      "patterns/harness-owned-loop-deterministic-agent-execution"
+    ],
+    "pattern": [
+      "patterns/harness-owned-loop-deterministic-agent-execution",
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality",
+      "spine/standards/pattern-page-standards"
     ],
     "agent-workflow": [
       "patterns/plan-execute-review-cycle"
@@ -18508,6 +19695,39 @@
     ],
     "injection": [
       "patterns/stage-aware-skill-injection"
+    ],
+    "three-lines-defense": [
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality"
+    ],
+    "detection": [
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality"
+    ],
+    "correction": [
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality"
+    ],
+    "agent-fleet": [
+      "patterns/three-lines-of-defense-immune-system-for-agent-quality"
+    ],
+    "tier-progression": [
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates"
+    ],
+    "context-depth": [
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates"
+    ],
+    "trust": [
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates"
+    ],
+    "approval-rates": [
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates"
+    ],
+    "agent-quality": [
+      "patterns/tier-based-context-depth-trust-earned-through-approval-rates"
+    ],
+    "validation-matrix": [
+      "patterns/validation-matrix-test-suite-for-context-injection"
+    ],
+    "quality-assurance": [
+      "patterns/validation-matrix-test-suite-for-context-injection"
     ],
     "agile": [
       "sources/methodology-artifact-taxonomy-research"
@@ -18633,9 +19853,6 @@
     "notebooklm-py": [
       "sources/src-notebooklm-claude-code-workflow",
       "spine/model-notebooklm"
-    ],
-    "cross-agent": [
-      "sources/src-pablo-mano-obsidian-cli-skill"
     ],
     "cursor": [
       "sources/src-pablo-mano-obsidian-cli-skill"
@@ -18908,9 +20125,6 @@
     "vram": [
       "spine/model-local-ai"
     ],
-    "execution": [
-      "spine/model-methodology-standards"
-    ],
     "flexible": [
       "spine/model-methodology"
     ],
@@ -18993,9 +20207,6 @@
     ],
     "note": [
       "spine/standards/note-page-standards"
-    ],
-    "pattern": [
-      "spine/standards/pattern-page-standards"
     ],
     "source-synthesis": [
       "spine/standards/source-synthesis-page-standards"

@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
@@ -48,7 +48,9 @@ The AI agent extension ecosystem is a four-level hierarchy: CLAUDE.md (always lo
 
 - **Loading cost is the governing constraint.** CLAUDE.md loads once and stays. Skills load on invocation and can fork. Hooks fire at boundaries with near-zero context cost. Commands are effectively free. This cost gradient determines correct placement.
 
-- **Hooks close the compliance gap.** Instruction files achieve ~60% compliance under context pressure. Hooks achieve ~98% because they operate at the infrastructure level. This is the fundamental reason hooks exist alongside skills — they enforce what skills can only request.
+- **Hooks close the compliance gap — quantified.** Instruction files achieve ~25% compliance for stage boundaries (OpenArms v4-v8 overnight). Structured instructions (ALLOWED/FORBIDDEN tables) improve to ~60%. Hooks achieve 100% for stage boundaries (OpenArms v10, 5 production runs). MCP tool blocking achieves 100% for tool-level rules (OpenFleet production). This is the fundamental reason hooks exist alongside skills — they enforce what skills can only request. But enforcement must be mindful: every block needs a reason and a justified bypass mechanism. See [[Infrastructure Enforcement Proves Instructions Fail]], [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+
+- **Dynamic skill injection per stage and role.** OpenArms v10 implements skill-stage-mapping.yaml (299 lines) with 3 layers: generic (all agents), role-specific (engineer/pm), and plugin (superpowers, context7). Stage restrictions block incompatible skills — TDD blocked in document/design, brainstorming blocked in test. OpenFleet extends this with tier-based depth control: expert tier gets full protocol, lightweight gets minimal rules. See [[Tier-Based Context Depth — Trust Earned Through Approval Rates]].
 
 - **The Plannotator pattern generalizes.** A command triggers a workflow; a hook intercepts and enforces structural gates within that workflow. This command+hook composition is the correct architecture for any interactive approval workflow.
 
@@ -355,3 +357,4 @@ Commands (user trigger)
 [[Model: Design.md and IaC]]
 [[Model: Ecosystem Architecture]]
 [[Stage-Aware Skill Injection]]
+[[Structured Context Is Proto-Programming for AI Agents]]

@@ -104,45 +104,44 @@ Each project adapts the super-model to its context:
 > - Feed operational learnings back to the wiki (incidents, methodology evolution, tool discoveries)
 > - Adopt at least Tier 1 (schema + templates + quality gates)
 
-## What "v1.1" Means
+## What "v1.2" Means
 
-Updated to reflect the Methodology Standards Initiative (2026-04-11/12):
+Updated to reflect structural cleanup and artifact extraction (2026-04-12):
 
-> [!abstract] v1.1 state assessment
+> [!abstract] v1.2 state assessment
 >
 > | Aspect | State | Evidence |
 > |--------|-------|---------|
-> | **Pages** | 238 total | +47 from session (was 191) |
+> | **Pages** | 237 total | Clean count after structural cleanup (removed ghost files, config excluded from page count) |
 > | **Models** | 15 defined + 9 methodology models | [[Model Registry]] + [[Model: Methodology]] |
 > | **Standards** | 7 model standards + 15 per-type standards | wiki/spine/standards/ — one per page type |
 > | **Artifact taxonomy** | 78 types across 11 categories | [[Methodology Artifact Taxonomy]] — researched from 10 online sources |
 > | **Domain chains** | 4 domains | TypeScript, Python/Wiki, Infrastructure, Knowledge — concrete paths + gates |
 > | **Decisions** | 15 resolved | 61 open questions answered including 10 from taxonomy research |
-> | **Lessons** | 34 codified | Including: Three Classes, Coverage Blindness, Universal Stages |
-> | **Patterns** | 9 documented | Including: CLAUDE.md Structural Patterns (quantified evidence), Enforcement Hooks |
+> | **Lessons** | 37 codified | +3 new: Hardcoded Instances, Integrate Into Existing Pages, Method of Work vs Methodology Label |
+> | **Patterns** | 11 documented | +1 new: Ecosystem Feedback Loop (the vision codified) |
 > | **AI elevation** | 16 Quick Starts + 7 Self-Checks | Every methodology page has actionable AI guidance |
-> | **Maturity** | 156 growing, 53 seed | 22 pages promoted from seed this session |
-> | **Config stack** | 6 layers | methodology.yaml (520L) + artifact-types.yaml (390L) + 3 domain profiles + schema + quality + templates |
-> | **Relationships** | 1,559 | Rich knowledge graph |
+> | **Maturity** | ~156 growing, ~53 seed | 22 pages promoted from seed during methodology initiative |
+> | **Config stack** | 6 layers in wiki/config/ | methodology.yaml (517L) + artifact-types.yaml (389L) + 3 domain profiles + schema + quality + templates |
+> | **Relationships** | 1,559+ | Rich knowledge graph |
 > | **Validation** | 0 errors | All pages pass pipeline post |
+> | **Structure** | Clean separation | Root = project infra. wiki/ = all content + config. No ghost files. |
 >
-> **What v1.1 added over v1.0:**
-> - Full artifact taxonomy (78 types from online research — was 17 wiki types only)
-> - 3-class distinction: artifact vs document vs documentation (in artifact-types.yaml)
-> - Per-category deep dives (5 pages: initiation through AI agents)
-> - Per-domain artifact chains (4 pages with concrete file paths and gate commands)
-> - AI consumption guide (how agents use the wiki as a thinking partner)
-> - AI Quick Start callouts on 16 methodology pages
-> - Self-Check sections on 7 key lessons (prevent known failures)
-> - Config improvements: artifact_class, template hints, deepened Python/Wiki profile
-> - Expanded learning path (8 → 17 pages in 5 structured parts)
+> **What v1.2 added over v1.1:**
+> - Structural cleanup: moved all wiki config from root config/ to wiki/config/, removed 84 ghost files from root, updated all tool path references
+> - 3 new lessons extracted from session failures (hardcoded instances, integration, method of work)
+> - 1 new pattern: Ecosystem Feedback Loop — the operator's vision codified as a wiki pattern with instances, applicability, and anti-patterns
+> - All tools updated to reference wiki/config/ (pipeline, validate, lint, export, evolve, MCP server)
+> - Config exclusion from page scanning (templates and configs no longer counted as wiki pages)
 >
-> **What v1.1 does NOT have:**
+> **What v1.2 does NOT have:**
 > - Canonical maturity on any model (all growing — promotions gated by operator)
 > - Automated compliance checking (identified as gap, not yet built)
 > - "Magic tricks" deep dive (operator's .agent/ rule system captured as research, not yet analyzed)
 > - Multi-agent handoff artifact format (needs research)
-> - Full resolution of framework vs instance design question
+> - Annotated exemplars (standards reference exemplars but don't annotate them inline)
+> - OpenArms/OpenFleet knowledge refresh (planned for next phase)
+> - 10-15 new source ingestions (operator has material ready)
 
 ## How to Use This Page
 
@@ -192,6 +191,8 @@ Updated to reflect the Methodology Standards Initiative (2026-04-11/12):
 [[Model: LLM Wiki]]
 [[Four-Project Ecosystem]]
 [[Model: Ecosystem Architecture]]
+[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[Evolution: Methodology System]]
 [[Learning Path: Methodology Fundamentals]]
 [[Methodology Adoption Guide]]
+[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]

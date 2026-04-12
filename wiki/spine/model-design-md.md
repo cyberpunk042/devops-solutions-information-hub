@@ -226,3 +226,4 @@ Maps to [[Context-Aware Tool Loading]]:
 [[Model: SFIF and Architecture]]
 [[Model: Quality and Failure Prevention]]
 [[Claude Code Best Practices]]
+[[Structured Context Is Proto-Programming for AI Agents]]

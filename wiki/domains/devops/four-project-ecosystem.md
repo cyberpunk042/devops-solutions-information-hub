@@ -218,6 +218,7 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[Infrastructure as Code Patterns]]
 [[Adoption Guide — How to Use This Wiki's Standards]]
 [[Backlog Hierarchy Rules]]
+[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[Ecosystem Integration Interfaces]]
 [[Execution Modes and End Conditions]]
 [[Methodology Adoption Guide]]

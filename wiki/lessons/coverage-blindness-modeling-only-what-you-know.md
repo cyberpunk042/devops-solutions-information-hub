@@ -109,4 +109,6 @@ This lesson applies when:
 [[Systemic Incompleteness Is Invisible to Validation]]
 [[Model: Quality and Failure Prevention]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]
+[[New Content Must Integrate Into Existing Pages]]

@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-12
 sources:
   - id: src-harness-engineering-article
     type: article
@@ -35,15 +35,23 @@ Quality and failure prevention for AI agents is not a set of best practices — 
 
 ## Key Insights
 
-- **Three-layer defense is the minimum viable quality architecture.** Structural prevention (hooks, doctor.py) blocks bad actions. Teaching (CLAUDE.md, skills, memory) shapes behavior. Review (human gates) catches what automation misses. Any single layer alone is insufficient.
+- **Three-layer defense is the minimum viable quality architecture.** Structural prevention (hooks, doctor.py) blocks bad actions. Teaching (CLAUDE.md, skills, memory) shapes behavior. Review (human gates) catches what automation misses. Any single layer alone is insufficient. See [[Three Lines of Defense — Immune System for Agent Quality]] for the full pattern with implementation evidence from OpenFleet (746 lines, production) and OpenArms (215 lines, 100% stage compliance).
+
+- **Instructions fail, infrastructure works — quantified.** OpenArms v8: 28 CLAUDE.md rules, 75% stage boundary violations overnight. v10: 4 hooks (215 lines), 0% stage boundary violations across 5 production runs. The same rules, different enforcement mechanism, categorical difference. See [[Infrastructure Enforcement Proves Instructions Fail]] for the full evidence chain.
+
+- **Six behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: weakest-checker optimization, environment patching without escalation, fatigue cliff in later stages, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[Agent Failure Taxonomy — Six Classes of Behavioral Failure]].
+
+- **Enforcement must be mindful — hard blocks need justified bypass.** Blind enforcement creates its own failures. Every block must explain WHY, every system must offer bypass with logged justification. OpenArms T086: agent's correct fix reverted twice by over-enforcement. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+
+- **Context compaction is a reset event.** All behavioral corrections accumulated during a session are lost after compaction. Post-compact hooks must rebuild full state from files. See [[Context Compaction Is a Reset Event]].
 
 - **Failure lessons must be codified, not just remembered.** Each failure maps to a concrete enforcement mechanism. A lesson that exists only as documentation is a suggestion. A lesson encoded in CLAUDE.md, enforced by a hook, and checked by the post-chain is a rule.
 
-- **Rework is multiplicative, not additive.** Redoing work requires reverting, re-planning, re-executing, and re-verifying. In a multi-agent fleet, one bad dispatch cascades. Prevention is cheaper than cure — the break-even threshold is only 12% rework reduction.
+- **Rework is multiplicative, not additive.** Redoing work requires reverting, re-planning, re-executing, and re-verifying. In a multi-agent fleet, one bad dispatch cascades. Prevention is cheaper than cure. Contribution gating (cross-agent inputs BEFORE work) is the most effective rework prevention. See [[Contribution Gating — Cross-Agent Inputs Before Work]].
 
 - **Depth verification is the single highest-leverage quality rule.** Reading the thing itself rather than a description of the thing prevents the most common class of hollow synthesis.
 
-- **Methodology IS failure prevention.** Stage gates, quality gates per stage, "do not advance until the gate passes" — these are the operational form of every lesson in this model.
+- **Methodology IS failure prevention.** Stage gates, quality gates per stage, "do not advance until the gate passes" — these are the operational form of every lesson in this model. The [[Harness-Owned Loop — Deterministic Agent Execution]] pattern takes this further: the agent never controls its own loop, never sees the backlog, never manages git.
 
 ## Deep Analysis
 
@@ -366,7 +374,11 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Model: Automation and Pipelines]]
 [[Skyscraper, Pyramid, Mountain]]
 [[Agent Compliance Framework]]
+[[Agent Failure Taxonomy — Six Classes of Behavioral Failure]]
+[[Contribution Gating — Cross-Agent Inputs Before Work]]
 [[Coverage Blindness — Modeling Only What You Know]]
+[[Harness-Owned Loop — Deterministic Agent Execution]]
+[[Infrastructure Enforcement Proves Instructions Fail]]
 [[Methodology Evolution Protocol]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
@@ -379,3 +391,5 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Standards Must Preach by Example]]
 [[Standards-by-Example]]
 [[Systemic Incompleteness Is Invisible to Validation]]
+[[Three Lines of Defense — Immune System for Agent Quality]]
+[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
