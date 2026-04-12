@@ -208,9 +208,11 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 
 ## Open Questions
 
-> [!question] Should the Requirements Spec template have variant modes (BRD for epics, FRD for tasks, SRS for regulated)? (Currently one template. May need scale-aware variants.)
+> [!question] ~~Should the Requirements Spec template have variant modes (BRD for epics, FRD for tasks, SRS for regulated)?~~
+> **RESOLVED:** One template with scale-aware guidance sections. See [[Decision: Artifact System Design Decisions]].
 
-> [!question] Should the Interface Spec be a separate document or always a section in the Tech Spec? (OpenArms separates them. For smaller projects, combining may reduce overhead.)
+> [!question] ~~Should the Interface Spec be a separate document or always a section in the Tech Spec?~~
+> **RESOLVED:** Section in Tech Spec by default, separate when interface exceeds 100 lines. See [[Decision: Artifact System Design Decisions]].
 
 ## Relationships
 
@@ -229,3 +231,5 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 [[Decision Page Standards]]
 [[Reference Page Standards]]
 [[Artifact Chains by Methodology Model]]
+[[Artifact Chain: TypeScript/Node Domain]]
+[[Decision: Artifact System Design Decisions]]

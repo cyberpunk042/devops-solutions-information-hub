@@ -147,11 +147,14 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 
 ## Open Questions
 
-> [!question] Should Compliance Reports be generated automatically by the pipeline? (Yes — extend tools/validate.py or create tools/compliance.py that checks git log against methodology expectations)
+> [!question] ~~Should Compliance Reports be generated automatically by the pipeline?~~
+> **RESOLVED:** Yes — extend pipeline with basic compliance checking. See [[Decision: Artifact System Design Decisions]].
 
-> [!question] Should the wiki have a formal Status Report template for periodic epic health updates? (Currently status is implicit in backlog readiness. A formal report would make trends visible.)
+> [!question] ~~Should the wiki have a formal Status Report template?~~
+> **RESOLVED:** Yes — lightweight template as note type, not new page type. See [[Decision: Methodology Stage Extension Decisions]].
 
-> [!question] Should Completion Logs be REQUIRED (blocking) or RECOMMENDED (advisory) for every task? (OpenArms makes them automatic via harness. Without a harness, requiring them manually adds friction.)
+> [!question] ~~Should Completion Logs be REQUIRED or RECOMMENDED?~~
+> **RESOLVED:** Required for epic/module, advisory for tasks. See [[Decision: Artifact System Design Decisions]].
 
 ## Relationships
 
@@ -174,3 +177,5 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 [[Lesson Page Standards]]
 [[Artifact Chains by Methodology Model]]
 [[Methodology Evolution Protocol]]
+[[Decision: Artifact System Design Decisions]]
+[[Decision: Methodology Stage Extension Decisions]]

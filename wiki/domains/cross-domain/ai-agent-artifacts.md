@@ -185,11 +185,14 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 
 ## Open Questions
 
-> [!question] Should the operator's .agent/ rule system be studied as a methodology model for the wiki? It represents a THIRD enforcement tier beyond CLAUDE.md and hooks: per-prompt rule injection with mandatory processing. (Requires: deep analysis session with the operator about the "magic tricks")
+> [!question] Should the operator's .agent/ rule system be studied as a methodology model for the wiki?
+> **DEFERRED:** Needs operator brainstorm session about the "magic tricks." The rule system is captured as research material in [[raw/notes/2026-04-12-restart-directive.md]]. Represents a THIRD enforcement tier: per-prompt rule injection with mandatory processing.
 
-> [!question] Should agent persona templates be wiki page types or external config files? (Currently external — CLAUDE.md and skills/. But they contain knowledge that should be in the wiki for discoverability.)
+> [!question] Should agent persona templates be wiki page types or external config files?
+> **DEFERRED:** Needs operator input. Currently external (CLAUDE.md, skills/). The knowledge in them SHOULD be in the wiki for discoverability, but the configs must remain external for agent consumption. Likely answer: wiki pages DOCUMENT the persona, config files ARE the persona.
 
-> [!question] How do multi-agent handoff artifacts work? When Feature Author passes to Test Generator, what artifact format ensures nothing is lost? (Requires: research into multi-agent orchestration patterns.)
+> [!question] How do multi-agent handoff artifacts work?
+> **DEFERRED:** Needs deeper research into multi-agent orchestration patterns. The agentic engineering research (nxcode.io) describes the pipeline (Feature Author → Test Generator → Code Reviewer) but doesn't specify the handoff artifact format.
 
 ## Relationships
 

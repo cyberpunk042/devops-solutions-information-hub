@@ -158,9 +158,11 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 
 ## Open Questions
 
-> [!question] Should there be an explicit "Initiation" stage before Document for epic-scale work? (Currently initiation is folded into the Document stage. Separating it would make the charter/directive a formal gate.)
+> [!question] ~~Should there be an explicit "Initiation" stage before Document for epic-scale work?~~
+> **RESOLVED:** No — fold initiation into Document stage at epic scale. See [[Decision: Methodology Stage Extension Decisions]].
 
-> [!question] Should the wiki have a formal Business Case template for investment decisions? (Currently implicit — the operator decides. But for fleet agents proposing work autonomously, a Business Case becomes important.)
+> [!question] Should the wiki have a formal Business Case template for investment decisions?
+> **DEFERRED:** Needs operator input — relevant when fleet agents propose work autonomously.
 
 ## Relationships
 
@@ -179,3 +181,4 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 [[Model: Methodology]]
 [[Artifact Chains by Methodology Model]]
 [[Epic Page Standards]]
+[[Decision: Methodology Stage Extension Decisions]]

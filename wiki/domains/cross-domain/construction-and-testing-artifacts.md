@@ -179,9 +179,11 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 
 ## Open Questions
 
-> [!question] Should the bridge pattern be REQUIRED for integration tasks or RECOMMENDED? (OpenArms recommends it. Making it required would add overhead for simple integrations where interfaces already match.)
+> [!question] ~~Should the bridge pattern be REQUIRED for integration tasks or RECOMMENDED?~~
+> **RESOLVED:** Recommended, not required. Required when interface mismatch detected. See [[Decision: Artifact System Design Decisions]].
 
-> [!question] Should there be a "Scaffold Checklist" that agents run BEFORE calling /stage-complete? (Self-check: "do any of my new files have function bodies > 3 lines?")
+> [!question] ~~Should there be a "Scaffold Checklist" that agents run BEFORE calling /stage-complete?~~
+> **RESOLVED:** Yes — advisory self-check before gate. Blocking when harness exists. See [[Decision: Artifact System Design Decisions]].
 
 ## Relationships
 
@@ -198,3 +200,8 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 [[Model: Methodology]]
 [[Enforcement Hook Patterns]]
 [[Artifact Chains by Methodology Model]]
+[[Artifact Chain: Infrastructure/IaC Domain]]
+[[Artifact Chain: Python/Wiki Domain]]
+[[Artifact Chain: TypeScript/Node Domain]]
+[[Decision: Artifact System Design Decisions]]
+[[Three Classes of Methodology Output]]

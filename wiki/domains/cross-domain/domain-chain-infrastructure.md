@@ -153,9 +153,11 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 
 ## Open Questions
 
-> [!question] Should infrastructure projects have a "Deploy" stage beyond "Test"? (Currently our methodology stops at Test. But infrastructure has a critical production-apply step that code projects handle via CI/CD. Adding a Deploy stage for IaC may be warranted.)
+> [!question] ~~Should infrastructure projects have a "Deploy" stage beyond "Test"?~~
+> **RESOLVED:** Yes — optional domain-specific stage for Infrastructure only. See [[Decision: Methodology Stage Extension Decisions]].
 
-> [!question] How does drift detection fit into the methodology? (Drift is infrastructure-specific — the real state diverges from config. Should there be a periodic "compliance" model that checks for drift?)
+> [!question] ~~How does drift detection fit into the methodology?~~
+> **RESOLVED:** Model as periodic monitoring task using bug-fix model. Not a new methodology model. See [[Decision: Methodology Stage Extension Decisions]].
 
 ## Relationships
 
@@ -177,3 +179,5 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 [[Artifact Chain: Python/Wiki Domain]]
 [[Methodology Adoption Guide]]
 [[Artifact Chain: Knowledge/Evolution Domain]]
+[[Decision: Methodology Stage Extension Decisions]]
+[[Universal Stages, Domain-Specific Artifacts]]
