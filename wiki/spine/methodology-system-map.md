@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-12
 sources:
   - id: methodology-config
     type: file
@@ -66,6 +66,27 @@ Complete map of the methodology system — every component, where it lives, what
 > | [[Model Composition Rules]] | Sequential, nested, conditional, parallel composition |
 > | [[Methodology Adoption Guide]] | 4-tier adoption from read to enforce |
 > | [[Methodology Evolution Protocol]] | Evidence-driven versioned improvement |
+
+> [!abstract] Artifact Taxonomy & Per-Category Standards
+>
+> | Page | What It Explains |
+> |------|-----------------|
+> | [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]] | Online research: 78 types from 10 sources |
+> | [[Methodology Artifact Taxonomy]] | Complete 78-type reference across 11 categories |
+> | [[Initiation and Planning Artifacts — Standards and Guide]] | 15 types: charters, WBS, risk, planning |
+> | [[Requirements and Design Artifacts — Standards and Guide]] | 17 types: BRD/FRD/SRS, ADR, tech spec, interface spec, test plan |
+> | [[Construction and Testing Artifacts — Standards and Guide]] | 15 types: per-domain scaffold/implement/test |
+> | [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | 17 types: operations, lessons, compliance |
+> | [[AI Agent Artifacts — Standards and Guide]] | 6 types: personas, skills, hooks, compliance |
+
+> [!abstract] Per-Domain Artifact Chains
+>
+> | Page | Domain |
+> |------|--------|
+> | [[Artifact Chain: TypeScript/Node Domain]] | OpenArms, OpenFleet — pnpm, vitest, Zod |
+> | [[Artifact Chain: Python/Wiki Domain]] | Research wiki — pipeline post, YAML configs |
+> | [[Artifact Chain: Infrastructure/IaC Domain]] | devops-control-plane — Terraform, Docker |
+> | [[Artifact Chain: Knowledge/Evolution Domain]] | Wiki evolution — L0-L6 progressive distillation |
 
 > [!abstract] Agent Compliance Pages
 >
