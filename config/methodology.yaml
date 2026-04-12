@@ -71,10 +71,10 @@ models:
           - artifact: wiki-page
             count: "1+"
             purpose: "Requirements spec, infrastructure analysis, gap analysis"
-          # Methodology templates used:
-          #   methodology/requirements-spec — for formal FR/NFR/AC
-          #   methodology/infrastructure-analysis — for mapping existing state
-          #   methodology/gap-analysis — for current vs required delta
+            templates:
+              - methodology/requirements-spec    # formal FR/NFR/AC
+              - methodology/infrastructure-analysis  # mapping existing state
+              - methodology/gap-analysis         # current vs required delta
         forbidden: [code-file, test-file]
         gate:
           checks: [wiki-page-exists, no-code-files-created]
@@ -85,11 +85,11 @@ models:
             count: "1+"
             purpose: "Design decisions, tech spec, config shapes, type sketches (IN DOCS)"
             depends_on: [document.wiki-page]
-          # Methodology templates used:
-          #   methodology/design-plan — for complex decision analysis
-          #   decision template — for ADRs
-          #   methodology/tech-spec — for API/interface definitions
-          #   methodology/test-plan — for test strategy
+            templates:
+              - methodology/design-plan    # complex decision analysis
+              - decision                   # ADRs (architecture decision records)
+              - methodology/tech-spec      # API/interface definitions
+              - methodology/test-plan      # test strategy and test cases
         forbidden: [code-file, test-file]
         gate:
           checks: [design-doc-exists, no-code-files-created]
