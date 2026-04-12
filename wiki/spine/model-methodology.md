@@ -501,6 +501,31 @@ Agents ignore methodology due to confusion, broadness, and poor instruction form
 
 3. **[[Stage-Aware Skill Injection]]** — Which skills are recommended, mandatory, or blocked per stage. Prevents wrong-phase skill usage (brainstorming during test, TDD during document).
 
+### Artifact Taxonomy — The Full Spectrum
+
+The real-world SDLC has 78+ distinct artifact types across 11 categories. Our methodology models produce a SUBSET based on the model and domain. The complete taxonomy and per-domain chains are documented separately:
+
+> [!info] Artifact System
+>
+> | Resource | What It Covers |
+> |----------|---------------|
+> | [[Methodology Artifact Taxonomy]] | All 78 types across 11 categories — the complete reference |
+> | [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]] | Online research behind the taxonomy (10 sources) |
+> | [[Initiation and Planning Artifacts — Standards and Guide]] | Pre-methodology: charters, WBS, risk, planning |
+> | [[Requirements and Design Artifacts — Standards and Guide]] | Document + Design stages: specs, ADRs, test plans |
+> | [[Construction and Testing Artifacts — Standards and Guide]] | Scaffold + Implement + Test: per-domain variations |
+> | [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | Post-implementation: operations, lessons, compliance |
+> | [[AI Agent Artifacts — Standards and Guide]] | Agent-specific: personas, skills, hooks, compliance |
+
+> [!info] Per-Domain Artifact Chains
+>
+> | Domain | Chain Page |
+> |--------|-----------|
+> | TypeScript/Node | [[Artifact Chain: TypeScript/Node Domain]] — 24-artifact chain from OpenArms |
+> | Python/Wiki | [[Artifact Chain: Python/Wiki Domain]] — pipeline-based, config scaffolding |
+> | Infrastructure/IaC | [[Artifact Chain: Infrastructure/IaC Domain]] — Terraform stages, drift detection |
+> | Knowledge/Evolution | [[Artifact Chain: Knowledge/Evolution Domain]] — L0-L6 progressive distillation |
+
 ### Real Example: End-to-End Task Execution
 
 Here's how a single task flows through the methodology, from selection to completion.
