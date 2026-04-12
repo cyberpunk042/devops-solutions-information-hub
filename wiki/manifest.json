@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-12T15:50:53.084879+00:00",
+  "generated": "2026-04-12T15:58:01.023118+00:00",
   "stats": {
-    "pages": 236,
+    "pages": 237,
     "domains": 9,
     "sources": 25,
     "comparisons": 5,
-    "relationships": 1547,
-    "tags_unique": 739,
+    "relationships": 1555,
+    "tags_unique": 742,
     "layers": {
       "3": 5,
       "6": 15,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 134,
-      "seed": 73
+      "seed": 74
     }
   },
   "pages": [
@@ -4385,6 +4385,89 @@
         {
           "verb": "RELATES TO",
           "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/methodology-config-architecture.md",
+      "slug": "domains/cross-domain/methodology-config-architecture",
+      "title": "Methodology Config Architecture \u2014 How the Pieces Fit Together",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-12",
+      "tags": [
+        "methodology",
+        "config",
+        "architecture",
+        "flexible-model",
+        "wiki-config",
+        "reasoning"
+      ],
+      "sources": [
+        {
+          "id": "methodology-yaml",
+          "type": "file",
+          "file": "config/methodology.yaml"
+        },
+        {
+          "id": "artifact-types-yaml",
+          "type": "file",
+          "file": "config/artifact-types.yaml"
+        },
+        {
+          "id": "wiki-schema-yaml",
+          "type": "file",
+          "file": "config/wiki-schema.yaml"
+        },
+        {
+          "id": "quality-standards-yaml",
+          "type": "file",
+          "file": "config/quality-standards.yaml"
+        },
+        {
+          "id": "taxonomy",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Artifact Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Three Classes of Methodology Output"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Coverage Blindness \u2014 Modeling Only What You Know"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology System Map"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -15494,8 +15577,8 @@
       "relationship_count": 44
     },
     "cross-domain": {
-      "page_count": 100,
-      "relationship_count": 669
+      "page_count": 101,
+      "relationship_count": 677
     },
     "devops": {
       "page_count": 14,
@@ -15645,6 +15728,7 @@
       "domains/cross-domain/e003-artifact-type-system-requirements",
       "domains/cross-domain/initiation-and-planning-artifacts",
       "domains/cross-domain/methodology-artifact-taxonomy",
+      "domains/cross-domain/methodology-config-architecture",
       "domains/cross-domain/methodology-evolution-protocol",
       "domains/cross-domain/methodology-framework",
       "domains/cross-domain/methodology-standards-initiative-gaps",
@@ -16044,6 +16128,7 @@
       "comparisons/skills-architecture-patterns",
       "decisions/wiki-first-with-lightrag-upgrade-path",
       "domains/cross-domain/e003-artifact-type-system-design",
+      "domains/cross-domain/methodology-config-architecture",
       "domains/cross-domain/skyscraper-pyramid-mountain",
       "domains/devops/four-project-ecosystem",
       "patterns/scaffold-foundation-infrastructure-features",
@@ -17241,6 +17326,19 @@
       "lessons/three-classes-of-methodology-output",
       "log/2026-04-09-directive-docs-layers-old-models"
     ],
+    "config": [
+      "domains/cross-domain/methodology-config-architecture",
+      "lessons/schema-is-the-real-product"
+    ],
+    "flexible-model": [
+      "domains/cross-domain/methodology-config-architecture"
+    ],
+    "wiki-config": [
+      "domains/cross-domain/methodology-config-architecture"
+    ],
+    "reasoning": [
+      "domains/cross-domain/methodology-config-architecture"
+    ],
     "protocol": [
       "domains/cross-domain/methodology-evolution-protocol"
     ],
@@ -18071,9 +18169,6 @@
     ],
     "knowledge-infrastructure": [
       "lessons/obsidian-as-knowledge-infrastructure"
-    ],
-    "config": [
-      "lessons/schema-is-the-real-product"
     ],
     "design-principles": [
       "lessons/schema-is-the-real-product"
@@ -18938,6 +19033,7 @@
       "target": "Model: Methodology Standards \u2014 What Good Execution Looks Like",
       "referenced_by": [
         "Decision: Artifact System Design Decisions",
+        "Methodology Config Architecture \u2014 How the Pieces Fit Together",
         "Coverage Blindness \u2014 Modeling Only What You Know",
         "Three Classes of Methodology Output",
         "Universal Stages, Domain-Specific Artifacts",

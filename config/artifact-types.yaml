@@ -43,14 +43,39 @@ categories:
     # methodology-specific templates in config/templates/methodology/
 
 # ---------------------------------------------------------------------------
+# Artifact Classes — the three fundamental output types
+#
+# Each wiki page type belongs to one class. The class determines:
+# - Quality rules (documents must be binding; documentation must be accurate)
+# - Validation approach (documents: structural + completeness; docs: accuracy)
+# - Lifecycle (documents: draft→approved→superseded; docs: created→updated)
+#
+# See wiki lesson: "Three Classes of Methodology Output"
+# ---------------------------------------------------------------------------
+artifact_classes:
+  document:
+    description: "Written specification that CONSTRAINS future work — binding, complete, verifiable"
+    examples: [requirements-spec, ADR, tech-spec, test-plan, operations-plan]
+    quality_rule: "Must be binding — agents read it as instructions, not suggestions"
+  artifact:
+    description: "Tangible by-product of work — produced as side effect, validated by gate commands"
+    examples: [source-code, test-results, git-commits, deployment-packages]
+    quality_rule: "Must exist and pass gate command — structural validity, not semantic quality"
+  documentation:
+    description: "Explanatory material for users/maintainers — accurate, findable, maintainable"
+    examples: [concept, source-synthesis, lesson, pattern, domain-overview, user-guide]
+    quality_rule: "Must be accurate and useful — reader learns or decides from it"
+
+# ---------------------------------------------------------------------------
 # Type Definitions — per-type detail extending wiki-schema.yaml
 # ---------------------------------------------------------------------------
 types:
 
-  # === Knowledge Pages ===
+  # === Knowledge Pages (class: documentation) ===
 
   concept:
     category: knowledge-pages
+    artifact_class: documentation
     template: config/templates/concept.md
     content_thresholds:
       summary_min_words: 30
@@ -64,6 +89,7 @@ types:
 
   source-synthesis:
     category: knowledge-pages
+    artifact_class: documentation
     template: config/templates/source-synthesis.md
     content_thresholds:
       summary_min_words: 30
@@ -79,6 +105,7 @@ types:
 
   comparison:
     category: knowledge-pages
+    artifact_class: documentation
     template: config/templates/comparison.md
     content_thresholds:
       summary_min_words: 30
@@ -116,6 +143,7 @@ types:
 
   lesson:
     category: evolved-pages
+    artifact_class: documentation
     template: config/templates/lesson.md
     content_thresholds:
       summary_min_words: 30
@@ -133,6 +161,7 @@ types:
 
   pattern:
     category: evolved-pages
+    artifact_class: documentation
     template: config/templates/pattern.md
     content_thresholds:
       summary_min_words: 30
@@ -150,6 +179,7 @@ types:
 
   decision:
     category: evolved-pages
+    artifact_class: document  # decisions are BINDING — they constrain future work
     template: config/templates/decision.md
     content_thresholds:
       summary_min_words: 30
@@ -249,6 +279,7 @@ types:
 
   operations-plan:
     category: methodology-documents
+    artifact_class: document  # operations plans are BINDING sequential instructions
     template: config/templates/operations-plan.md
     content_thresholds:
       summary_min_words: 30

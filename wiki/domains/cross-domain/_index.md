@@ -28,6 +28,7 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [E003 Artifact Type System — Requirements Spec](e003-artifact-type-system-requirements.md) — Formal requirements for the Artifact Type System — the foundation epic of the Methodology Standards Initiative
 - [Initiation and Planning Artifacts — Standards and Guide](initiation-and-planning-artifacts.md) — Complete guide to the artifacts produced BEFORE methodology execution begins — the initiation and planning phases tha...
 - [Methodology Artifact Taxonomy](methodology-artifact-taxonomy.md) — The complete classification of every artifact, document, and documentation type produced during software development ...
+- [Methodology Config Architecture — How the Pieces Fit Together](methodology-config-architecture.md) — A reasoning document examining how the wiki's config files, the methodology system, and the LLM wiki knowledge layer ...
 - [Methodology Evolution Protocol](methodology-evolution-protocol.md) — How the methodology evolves based on evidence, not theory
 - [Methodology Framework](methodology-framework.md) — The Methodology Framework is the meta-system that defines, selects, composes, and adapts methodology models across th...
 - [Methodology Standards Initiative — Gap Analysis](methodology-standards-initiative-gaps.md) — Systematic identification of gaps between what the methodology standards initiative requires and what currently exists
@@ -40,4 +41,4 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `architecture`, `requirements`, `framework`, `recursive`, `multi-track`, `skyscraper`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `architecture`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `requirements`, `framework`, `recursive`, `multi-track`, `skyscraper`
