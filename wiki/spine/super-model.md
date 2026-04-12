@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: seed
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-12
 sources: []
 tags: [super-model, second-brain, hub, ecosystem, adoption, models, standards, integration, quality]
 ---
@@ -104,27 +104,45 @@ Each project adapts the super-model to its context:
 > - Feed operational learnings back to the wiki (incidents, methodology evolution, tool discoveries)
 > - Adopt at least Tier 1 (schema + templates + quality gates)
 
-## What "v1.0" Means
+## What "v1.1" Means
 
-This is the first version of the super-model. It is honest about its maturity:
+Updated to reflect the Methodology Standards Initiative (2026-04-11/12):
 
-> [!abstract] v1.0 state assessment
+> [!abstract] v1.1 state assessment
 >
 > | Aspect | State | Evidence |
 > |--------|-------|---------|
-> | **Models** | 15 defined, all at growing maturity | [[Model Registry]] — 200-500 lines each, standard sections |
-> | **Standards** | 7 companion pages | Quality bars defined for methodology, wiki, design, claude code, skills, evolution, quality |
-> | **Decisions** | 13 resolved | 51 open questions answered via cross-referencing |
-> | **Lessons** | 31 codified | 6 from operator directives, 11 convergence, 8 core failure/practice |
-> | **Lint** | 1 issue (expected) | 0 dead relationships, 0 orphans, 0 thin pages |
-> | **Styling** | 86% (159/184) | All content pages styled with Obsidian callout vocabulary |
-> | **Adoption proof** | 3 projects | OpenArms (full), OpenFleet (full), AICP (partial) |
+> | **Pages** | 238 total | +47 from session (was 191) |
+> | **Models** | 15 defined + 9 methodology models | [[Model Registry]] + [[Model: Methodology]] |
+> | **Standards** | 7 model standards + 15 per-type standards | wiki/spine/standards/ — one per page type |
+> | **Artifact taxonomy** | 78 types across 11 categories | [[Methodology Artifact Taxonomy]] — researched from 10 online sources |
+> | **Domain chains** | 4 domains | TypeScript, Python/Wiki, Infrastructure, Knowledge — concrete paths + gates |
+> | **Decisions** | 15 resolved | 61 open questions answered including 10 from taxonomy research |
+> | **Lessons** | 34 codified | Including: Three Classes, Coverage Blindness, Universal Stages |
+> | **Patterns** | 9 documented | Including: CLAUDE.md Structural Patterns (quantified evidence), Enforcement Hooks |
+> | **AI elevation** | 16 Quick Starts + 7 Self-Checks | Every methodology page has actionable AI guidance |
+> | **Maturity** | 156 growing, 53 seed | 22 pages promoted from seed this session |
+> | **Config stack** | 6 layers | methodology.yaml (520L) + artifact-types.yaml (390L) + 3 domain profiles + schema + quality + templates |
+> | **Relationships** | 1,559 | Rich knowledge graph |
+> | **Validation** | 0 errors | All pages pass pipeline post |
 >
-> **What v1.0 does NOT have:**
-> - Canonical maturity on any model (all are growing — promotions gated by operator)
-> - Automated adoption validation (no tool that checks a project's compliance with the super-model)
-> - Complete open question resolution (86 remain, mostly needing external research)
-> - New source ingestion this session (evolution has been internal cross-referencing)
+> **What v1.1 added over v1.0:**
+> - Full artifact taxonomy (78 types from online research — was 17 wiki types only)
+> - 3-class distinction: artifact vs document vs documentation (in artifact-types.yaml)
+> - Per-category deep dives (5 pages: initiation through AI agents)
+> - Per-domain artifact chains (4 pages with concrete file paths and gate commands)
+> - AI consumption guide (how agents use the wiki as a thinking partner)
+> - AI Quick Start callouts on 16 methodology pages
+> - Self-Check sections on 7 key lessons (prevent known failures)
+> - Config improvements: artifact_class, template hints, deepened Python/Wiki profile
+> - Expanded learning path (8 → 17 pages in 5 structured parts)
+>
+> **What v1.1 does NOT have:**
+> - Canonical maturity on any model (all growing — promotions gated by operator)
+> - Automated compliance checking (identified as gap, not yet built)
+> - "Magic tricks" deep dive (operator's .agent/ rule system captured as research, not yet analyzed)
+> - Multi-agent handoff artifact format (needs research)
+> - Full resolution of framework vs instance design question
 
 ## How to Use This Page
 
@@ -139,7 +157,10 @@ This is the first version of the super-model. It is honest about its maturity:
 | Page | Role |
 |------|------|
 | [[Model Registry]] | All 15 models with status and standards links |
-| [[Adoption Guide — How to Use This Wiki's Standards]] | Detailed adoption walkthrough |
+| [[Methodology System Map]] | Complete lookup for every methodology component |
+| [[Methodology Artifact Taxonomy]] | 78 artifact types across 11 categories |
+| [[Methodology Adoption Guide]] | 4-tier adoption with per-domain quick starts |
+| [[How AI Agents Consume the Methodology Wiki]] | 4 entry paths, 3 consumption modes |
 | [[Methodology Framework]] | The meta-methodology that governs all models |
 | [[Four-Project Ecosystem]] | The 5-project topology and knowledge flow |
 
