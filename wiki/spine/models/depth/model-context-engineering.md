@@ -143,6 +143,34 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 > - Formal structural grammar not defined (what are the "language constructs" of markdown as programming?)
 > - Per-context CLAUDE.md splitting not implemented (OpenArms still has one file for 5 contexts)
 
+### Key Pages
+
+| Page | Layer | Role in the model |
+|------|-------|-------------------|
+| [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | lesson | The core insight — structure programs behavior |
+| [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] | pattern | 8 quantified patterns for agent context |
+| [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] | lesson | Why structured state survives compaction |
+| [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth]] | pattern | Expert/capable/lightweight tier system |
+| [[validation-matrix-test-suite-for-context-injection|Validation Matrix]] | pattern | 29-scenario test suite for context injection |
+| [[model-markdown-as-iac|Model — Markdown as IaC]] | model | How markdown files configure agent behavior |
+
+### How to Adopt
+
+> [!info] What you need
+> - CLAUDE.md with structured sections (headers, tables, MUST/MUST NOT lists)
+> - Consistent formatting across ALL context injections (skills, prompts, stage protocols)
+> - Per-context markers if multiple cognitive contexts read the same file
+
+> [!warning] Invariants (do not change per project)
+> - Structure governs behavior more than content — this is the fundamental principle
+> - Compaction destroys prose, preserves structure — design for survival
+> - Sub-agents don't inherit CLAUDE.md — inject rules in the spawn prompt
+
+> [!tip] Per-project adaptations
+> - Tier system (expert/capable/lightweight) adapts to your trust levels
+> - Context budget depends on your typical task complexity and context window size
+> - Structural patterns can be customized but the CONSISTENCY matters more than the specific patterns
+
 ## Open Questions
 
 > [!question] ~~Can we define a formal grammar for structured context?~~
