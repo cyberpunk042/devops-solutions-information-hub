@@ -183,7 +183,7 @@ The models and chains are ORTHOGONAL dimensions. Every model × chain combinatio
 > POC→MVP: hypothesis validated, first external user. MVP→Staging: product-market fit, first SLA. Staging→Production: compliance met, rollback tested. See [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]. Remaining: define measurable triggers specific to this ecosystem.
 
 > [!question] ~~How does the research wiki itself select its chain?~~
-> **RESOLVED:** Identity: type=system, domain=knowledge, phase=production, scale=medium (267 pages), pm_level=L1 → Chain: Default. Not Full (no sprint planning needed). Not Simplified (267 pages need real quality standards). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]].
+> **RESOLVED:** Identity: type=system, domain=knowledge, phase=production, scale=medium (297 pages), pm_level=L1 → Chain: Default. Not Full (no sprint planning needed). Not Simplified (297 pages need real quality standards). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]].
 
 ## Relationships
 

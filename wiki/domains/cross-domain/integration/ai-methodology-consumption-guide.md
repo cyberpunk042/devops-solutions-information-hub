@@ -29,7 +29,7 @@ tags: [ai-agents, methodology, consumption, integration, second-brain, guide]
 
 ## Summary
 
-This page bridges the gap between the methodology wiki as KNOWLEDGE and the methodology wiki as OPERATIONAL GUIDANCE for AI agents. The wiki contains 237+ pages of methodology knowledge — but an AI agent doesn't read the whole wiki. It enters through specific paths, reads specific pages, and needs to translate what it reads into specific actions. This guide defines those paths, explains what agents should extract from each page type, and shows how the second brain becomes an active thinking partner rather than a passive reference.
+This page bridges the gap between the methodology wiki as KNOWLEDGE and the methodology wiki as OPERATIONAL GUIDANCE for AI agents. The wiki contains 297+ pages of methodology knowledge — but an AI agent doesn't read the whole wiki. It enters through specific paths, reads specific pages, and needs to translate what it reads into specific actions. This guide defines those paths, explains what agents should extract from each page type, and shows how the second brain becomes an active thinking partner rather than a passive reference.
 
 ## Key Insights
 
@@ -54,7 +54,7 @@ This page bridges the gap between the methodology wiki as KNOWLEDGE and the meth
 > | **MCP tools** | wiki_search, wiki_read_page, wiki_status, wiki_gaps | Structured access via tools | Cross-project knowledge queries |
 > | **Export bundle** | methodology.yaml + artifact-types.yaml + domain-profiles + key wiki pages | Config files + selected pages | Project bootstrapping |
 >
-> **The richest path is direct read.** An agent with the wiki as its working directory has the full 237+ pages available. The thinnest path is export bundle — only configs and selected pages.
+> **The richest path is direct read.** An agent with the wiki as its working directory has the full 297+ pages available. The thinnest path is export bundle — only configs and selected pages.
 
 ### What Agents Should Extract from Each Page Type
 
