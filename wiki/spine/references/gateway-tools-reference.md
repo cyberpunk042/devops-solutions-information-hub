@@ -110,19 +110,19 @@ When running ON the second brain, both are the same (auto-detected).
 > | **The flow the gateway implements** | [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] |
 > | **The identity protocol** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **The integration chain** | [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]] |
-> | **The sub-super-model** | [[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]] |
+> | **The sub-super-model** | [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]] |
 > | **The principle behind structure** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
 
 ## Relationships
 
-- PART OF: [[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
+- PART OF: [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
 - IMPLEMENTS: [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
 - RELATES TO: [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 - RELATES TO: [[methodology-system-map|Methodology System Map]]
 
 ## Backlinks
 
-[[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
+[[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[methodology-system-map|Methodology System Map]]

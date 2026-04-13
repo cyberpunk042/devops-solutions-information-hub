@@ -158,8 +158,8 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 > | Direction | Go To |
 > |-----------|-------|
 > | **The principle this implements** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
-> | **The sub-super-model** | [[sub-model-knowledge-architecture-layers-maturity-and-evolution|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]] |
-> | **The enforcement hierarchy** | [[sub-model-enforcement-hierarchy-from-instructions-to-immune-system|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]] |
+> | **The sub-super-model** | [[knowledge-architecture|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]] |
+> | **The enforcement hierarchy** | [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]] |
 > | **The validation matrix pattern** | [[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]] |
 > | **The tier system** | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] |
 > | **The Goldilocks flow** | [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] — context depth adapts per identity |

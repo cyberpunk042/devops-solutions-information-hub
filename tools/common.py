@@ -333,7 +333,7 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
     # --- Collect epics ---
     epics = []
     if epics_dir.exists():
-        for md_file in sorted(epics_dir.glob("*.md")):
+        for md_file in sorted(epics_dir.rglob("*.md")):
             if md_file.name == "_index.md":
                 continue
             text = md_file.read_text(encoding="utf-8")
@@ -354,7 +354,7 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
     # --- Collect tasks ---
     tasks = []
     if tasks_dir.exists():
-        for md_file in sorted(tasks_dir.glob("*.md")):
+        for md_file in sorted(tasks_dir.rglob("*.md")):
             if md_file.name == "_index.md":
                 continue
             text = md_file.read_text(encoding="utf-8")
@@ -377,12 +377,13 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
     # Build filename lookup for epics
     epic_files = {}
     if epics_dir.exists():
-        for md_file in sorted(epics_dir.glob("*.md")):
+        for md_file in sorted(epics_dir.rglob("*.md")):
             if md_file.name != "_index.md":
                 text = md_file.read_text(encoding="utf-8")
                 meta, _ = parse_frontmatter(text)
                 if meta and meta.get("title"):
-                    epic_files[meta["title"]] = md_file.name
+                    # Use relative path from epics_dir for subfolder support
+                    epic_files[meta["title"]] = str(md_file.relative_to(epics_dir))
 
     epic_rows = "\n".join(
         f"| {e['id']} | [{e['title']}](epics/{epic_files.get(e['title'], '')}) | {e['priority']} | {e['status']} | {e['readiness']} |"
@@ -441,12 +442,12 @@ See [tasks/_index.md](tasks/_index.md)
     # Build filename lookup for tasks
     task_files = {}
     if tasks_dir.exists():
-        for md_file in sorted(tasks_dir.glob("*.md")):
+        for md_file in sorted(tasks_dir.rglob("*.md")):
             if md_file.name != "_index.md":
                 text = md_file.read_text(encoding="utf-8")
                 meta, _ = parse_frontmatter(text)
                 if meta and meta.get("title"):
-                    task_files[meta["title"]] = md_file.name
+                    task_files[meta["title"]] = str(md_file.relative_to(tasks_dir))
 
     task_rows = "\n".join(
         f"| {t['id']} | [{t['title']}]({task_files.get(t['title'], '')}) | {t['priority']} | {t['status']} | {t['stage']} | {t['readiness']} | {t['epic']} |"
@@ -486,7 +487,7 @@ def rebuild_log_index(log_dir: Path) -> None:
     today = __import__("datetime").date.today().isoformat()
 
     entries = []
-    for md_file in sorted(log_dir.glob("*.md"), reverse=True):
+    for md_file in sorted(log_dir.rglob("*.md"), reverse=True):
         if md_file.name == "_index.md":
             continue
         text = md_file.read_text(encoding="utf-8")
@@ -498,12 +499,13 @@ def rebuild_log_index(log_dir: Path) -> None:
         note_type = meta.get("note_type", meta.get("type", ""))
         tags = meta.get("tags", [])
         tags_str = ", ".join(f"`{t}`" for t in tags) if tags else ""
+        rel_path = str(md_file.relative_to(log_dir))
         entries.append({
             "date": date,
             "title": title,
             "type": note_type,
             "tags": tags_str,
-            "file": md_file.name,
+            "file": rel_path,
         })
 
     rows = "\n".join(

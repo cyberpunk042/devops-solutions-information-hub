@@ -212,7 +212,7 @@ When blocked:
 
 ## Relationships
 
-- PART OF: [[sub-model-goldilocks-protocol-identity-and-adaptation|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
+- PART OF: [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 - BUILDS ON: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
@@ -221,7 +221,7 @@ When blocked:
 
 ## Backlinks
 
-[[sub-model-goldilocks-protocol-identity-and-adaptation|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
+[[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[model-methodology|Model — Methodology]]

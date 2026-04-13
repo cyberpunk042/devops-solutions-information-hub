@@ -196,11 +196,11 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 >
 > | Sub-Model | Domain | Enter When You Need |
 > |-----------|--------|-------------------|
-> | [[sub-model-goldilocks-protocol-identity-and-adaptation|Sub-Model — Goldilocks Protocol — Identity and Adaptation]] | Identity, chains, adaptation | "What am I? What process is right for me?" |
-> | [[sub-model-enforcement-hierarchy-from-instructions-to-immune-system|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]] | Enforcement, hooks, harness, compliance | "How do I make agents follow methodology?" |
-> | [[sub-model-knowledge-architecture-layers-maturity-and-evolution|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]] | Layers, types, evolution, standards | "How does knowledge grow? What quality bar applies?" |
-> | [[sub-model-work-management-hierarchy-tracking-and-pm-levels|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]] | Backlog, readiness/progress, PM levels | "How do I organize and track work?" |
-> | [[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]] | Ecosystem, gateway, dual-scope, feedback | "How do I connect to the second brain?" |
+> | [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]] | Identity, chains, adaptation | "What am I? What process is right for me?" |
+> | [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]] | Enforcement, hooks, harness, compliance | "How do I make agents follow methodology?" |
+> | [[knowledge-architecture|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]] | Layers, types, evolution, standards | "How does knowledge grow? What quality bar applies?" |
+> | [[work-management|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]] | Backlog, readiness/progress, PM levels | "How do I organize and track work?" |
+> | [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]] | Ecosystem, gateway, dual-scope, feedback | "How do I connect to the second brain?" |
 
 Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, entry points (CLI + Obsidian + MCP), and how to navigate from there. Start at the sub-model that matches your question, then drill into specifics.
 
@@ -255,9 +255,9 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
-[[sub-model-enforcement-hierarchy-from-instructions-to-immune-system|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
-[[sub-model-goldilocks-protocol-identity-and-adaptation|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
-[[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
-[[sub-model-knowledge-architecture-layers-maturity-and-evolution|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]]
-[[sub-model-work-management-hierarchy-tracking-and-pm-levels|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]]
+[[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
+[[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
+[[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
+[[knowledge-architecture|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]]
+[[work-management|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
