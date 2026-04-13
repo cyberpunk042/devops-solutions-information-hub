@@ -22,7 +22,7 @@ tags: [ecosystem, model, openfleet, aicp, openarms, devops-control-plane, multi-
 # Model — Ecosystem Architecture
 ## Summary
 
-The Ecosystem Architecture model describes how five projects — OpenFleet, AICP, devops-control-plane, the research wiki, and OpenArms — form a self-sustaining system where each project has a single primary role and defined integration points. Projects integrate via files and shared protocols, not tightly coupled APIs — enabling independent evolution while maintaining system coherence. ==This model is the map of the entire ecosystem: understand it to understand why every other spine model exists.==
+The Ecosystem Architecture model describes how multiple projects form a self-sustaining system where each project has a single primary role and defined integration points. Projects integrate via files and shared protocols, not tightly coupled APIs — enabling independent evolution while maintaining system coherence. The model defines HOW projects form ecosystems — the patterns, integration points, and knowledge flows that apply regardless of which projects are involved. This ecosystem's 5-project topology is one instance of these patterns. ==This model is the map of the entire ecosystem: understand it to understand why every other spine model exists.==
 
 ## Key Insights
 
@@ -37,6 +37,41 @@ The Ecosystem Architecture model describes how five projects — OpenFleet, AICP
 - **File-based integration is the coherence mechanism.** Markdown exports, LightRAG graph, JSON manifests — not APIs. Any project can be replaced without cascading failures.
 
 ## Deep Analysis
+
+### Generic Ecosystem Patterns
+
+Any multi-project ecosystem can be classified by its topology. Choose based on team size, project count, and governance needs:
+
+| Pattern | What It Means | When It Applies |
+|---------|---------------|-----------------|
+| Hub-and-spoke | One central knowledge system, projects feed to/from it | 2+ projects sharing methodology or knowledge |
+| Peer-to-peer | Projects share directly without central hub | Small ecosystems where all projects know each other |
+| Federated | Each project has its own wiki, periodic sync | Large orgs where central control isn't practical |
+
+### Ecosystem at Different Scales
+
+| Scale | Topology | Integration | PM Level |
+|-------|----------|-------------|----------|
+| 2 projects | Simple hub-and-spoke | Shared CLAUDE.md + methodology.yaml | L1 (Wiki) |
+| 3-5 projects | Hub-and-spoke with roles | Gateway tools + export profiles | L1-L2 |
+| 5-10 projects | Federated or orchestrated | MCP tools + fleet dispatch | L2-L3 |
+| 10+ projects | Federated with governance | Full PM tooling + compliance | L3 |
+
+### Universal Ecosystem Invariants
+
+These hold regardless of scale, topology, or project count:
+
+- **Single responsibility per project** — overlap between projects creates integration debt
+- **File-based or protocol-based integration** — tight API coupling causes cascading failures
+- **Knowledge loop must be active** — a central knowledge system feeds project intelligence, not just human reading
+- **Deterministic orchestration** — no LLM in the orchestration/routing loop
+- **Governance from real failures** — rules extracted from post-mortems, not from theory
+
+---
+
+### Instance — Our Ecosystem
+
+> [!info] The following sections describe this wiki's specific 5-project ecosystem as one instance of the patterns above. Your ecosystem may have different projects, different counts, and different integration mechanisms.
 
 ### The Five Projects
 
@@ -217,12 +252,8 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 > 4. **Extract governance from failures** — post-mortems → rules → enforcement. The devops-control-plane pattern.
 > 5. **Apply deterministic shell + LLM core** — orchestration is deterministic. Reasoning is LLM. Never mix them.
 
-> [!warning] **INVARIANT — never change these**
-> - Single responsibility per project (overlap = integration debt)
-> - File-based integration (tight coupling = cascading failures)
-> - Knowledge loop active (wiki feeds fleet intelligence, not just human reading)
-> - Deterministic orchestration (no LLM in the orchestration loop)
-> - Governance from real failures (rules from post-mortems, not from theory)
+> [!warning] **INVARIANT — see Universal Ecosystem Invariants above**
+> The five invariants (single responsibility, file-based integration, active knowledge loop, deterministic orchestration, governance from failures) apply to any ecosystem instance.
 
 > [!tip] **PER-PROJECT — always adapt these**
 > - Which projects exist (not every ecosystem needs 5 — start with wiki + one operational project)

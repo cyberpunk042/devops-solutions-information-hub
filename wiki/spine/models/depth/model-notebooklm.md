@@ -18,7 +18,7 @@ tags: [model, concept, spine, notebooklm, research, content-pipeline, notebooklm
 # Model — NotebookLM
 ## Summary
 
-The NotebookLM model describes how Google's free, source-grounded AI research tool functions as a complementary research engine alongside Claude Code in the wiki ecosystem. NotebookLM constrains all outputs to user-uploaded sources — making it reliable for "what do these sources say" questions where Claude's training data would introduce noise or hallucination. The `notebooklm-py` Python package (9.5K stars) exposes the full NotebookLM API as a CLI, enabling programmatic notebook management, batch source ingestion, source-grounded Q&A, and generation of 10 artifact types (audio, slide decks, reports, mind maps, quizzes). The model positions NotebookLM as the grounded research and fact-checking layer, with the wiki as the long-term synthesis and compounding layer. The division of labor is precise: NotebookLM is the brain (grounded knowledge retrieval), Claude Code is the hands (execution and judgment).
+This model addresses a fundamental question for any knowledge wiki: how external grounded research tools complement a knowledge wiki — verify claims, explore topics from different angles, and generate content that feeds back into the wiki. The generic framework applies regardless of which tool you choose. NotebookLM is the reference implementation used in this ecosystem; alternatives exist for different contexts and constraints. The division of labor is precise: the external research tool is the brain (grounded knowledge retrieval), the wiki agent is the hands (execution and judgment).
 
 ## Key Insights
 
@@ -35,6 +35,36 @@ The NotebookLM model describes how Google's free, source-grounded AI research to
 - **Research flows back into the wiki.** Generated reports and synthesized summaries are not terminal artifacts — they are inputs to the wiki ingestion pipeline. The flow: research question → NotebookLM notebook with sources → download generated report → drop in `raw/` → `python3 -m tools.pipeline post` → synthesized wiki page with provenance.
 
 ## Deep Analysis
+
+### External Research Tool Options
+
+The model-level question is: which external research tool complements your wiki? The answer depends on your constraints:
+
+| Tool | Strength | Limitation | Best For |
+|------|----------|-----------|----------|
+| NotebookLM | Grounded in YOUR sources, audio overview | Google-only, free tier limits | Source verification, audio summaries |
+| Perplexity | Web-wide search with citations | Not grounded in your specific sources | Broad topic research, finding new sources |
+| Claude (direct) | Deep analysis, follows instructions | No persistent source library | One-off deep analysis, synthesis |
+| Custom RAG | Full control, local data | Requires engineering investment | Enterprise, privacy-sensitive, large corpus |
+| Elicit / Consensus | Academic paper focused | Narrow to academic literature | Research-heavy knowledge bases |
+
+### Universal Integration Pattern
+
+Regardless of which tool you choose, the integration pattern is the same:
+
+1. **Research question** identified in the wiki or by the operator
+2. **External tool** ingests sources and produces grounded output
+3. **Output artifact** (report, summary, structured data) is downloaded
+4. **Wiki ingestion** processes the artifact into a synthesized page with provenance
+5. **Cross-referencing** connects the new page to existing knowledge
+
+The external tool is always the research layer; the wiki is always the synthesis and retention layer. Generated artifacts are inputs to the wiki, never terminal outputs.
+
+---
+
+### Instance — NotebookLM
+
+> [!info] The following sections describe NotebookLM as the reference implementation of the external research tool pattern. The principles above apply to any tool in the table.
 
 ### What NotebookLM Is and Is Not
 

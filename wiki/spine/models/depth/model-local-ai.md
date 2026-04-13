@@ -25,7 +25,7 @@ tags: [model, concept, spine, local-ai, aicp, zero-cost, backend-routing, comple
 # Model — Local AI ($0 Target)
 ## Summary
 
-The Local AI model describes the ecosystem's strategy for reducing Claude API costs toward zero by routing routine operations to locally-run quantized models. [[aicp|AICP]] (AI Control Platform) is the orchestration layer: it scores task complexity, checks circuit breaker states, and routes deterministically-validatable tasks (status checks, index rebuilds, manifest regeneration, lint) to LocalAI, while reserving Claude for complex reasoning (architecture decisions, deep synthesis, security review). The current hardware baseline (8GB VRAM) supports Qwen3 and Gemma4 model families with Stages 1 and 2 of the 5-stage LocalAI independence roadmap complete. Stage 3 (progressive offload targeting 80%+ Claude token reduction) is blocked pending the 8GB → 19GB VRAM hardware upgrade, but the routing infrastructure is already operational.
+The Local AI model describes how to reduce AI costs through local inference, model routing, and intelligent fallback — the principles apply regardless of which local inference stack you use. The core pattern is universal: score task complexity, route simple tasks to free local models, reserve expensive cloud APIs for complex reasoning. AICP is one implementation of these patterns; the framework transfers to any multi-model setup.
 
 ## Key Insights
 
@@ -42,6 +42,44 @@ The Local AI model describes the ecosystem's strategy for reducing Claude API co
 - **Gemma 4 E4B's tool-calling reliability is the key capability breakthrough.** Prior local models failed unpredictably on multi-step agentic operations (tool calls, structured output, sequential reasoning). Gemma 4 E4B at 9.6GB changed this. It reliably executes multi-step tool sequences — meaning it can run the post-chain, invoke lint, scaffold pages, and update manifests without a human in the loop.
 
 ## Deep Analysis
+
+### Generic Local Inference Patterns
+
+The core question is: how do you split work between free local models and paid cloud APIs? Four patterns, from simplest to most sophisticated:
+
+| Pattern | What It Does | When To Use |
+|---------|-------------|-------------|
+| Single local model | One model handles everything | Solo developer, simple tasks, cost = $0 |
+| Router + fallback | Local for routine, cloud for complex | Medium scale, cost optimization |
+| Tiered routing | Multiple local models by capability + cloud fallback | Fleet/production, quality-sensitive |
+| Cloud-only with caching | No local models, cache frequent prompts | When hardware is limited |
+
+### Local Inference Stack Options
+
+| Stack | Strengths | Requirements |
+|-------|-----------|-------------|
+| Ollama | Simple setup, broad model support | 8GB+ VRAM |
+| llama.cpp / MLX | Maximum performance, fine-tuning | Technical expertise |
+| LocalAI | OpenAI-compatible API, drop-in replacement | Docker or bare metal |
+| vLLM | Production-grade serving, batching | 24GB+ VRAM |
+| LM Studio | GUI, easy model management | Desktop, not server |
+
+### Universal Routing Invariants
+
+These hold regardless of which stack or pattern you choose:
+
+- **Complex reasoning, security review, and novel synthesis always route to cloud** — local models are not reliable enough for high-stakes judgment
+- **Circuit breakers must be active on every backend** — no routing without health checks
+- **The complexity scorer threshold is the routing mechanism** — not manual human selection
+- **The $0 target applies to maintenance, not creation** — knowledge creation remains cloud; routine operations become free
+
+---
+
+### Instance — AICP Routing
+
+> [!info] The following sections describe AICP's specific implementation of the routing patterns above. Your stack may use different models, different thresholds, and different infrastructure.
+
+The [[aicp|AICP]] (AI Control Platform) is this ecosystem's orchestration layer: it scores task complexity, checks circuit breaker states, and routes deterministically-validatable tasks (status checks, index rebuilds, manifest regeneration, lint) to LocalAI, while reserving Claude for complex reasoning (architecture decisions, deep synthesis, security review).
 
 ### The 5-Stage LocalAI Independence Roadmap
 
@@ -122,12 +160,10 @@ The $0 target is for routine wiki maintenance and fleet operations, not for know
 
 ### Hardware Dependency and the Upgrade Path
 
-The VRAM constraint is not an architectural flaw — it is a deliberate design choice to build the routing infrastructure first and scale the hardware second. AICP Stages 1 and 2 were built on 8GB VRAM intentionally, to validate the routing model before investing in hardware. The upgrade from 8GB to 19GB VRAM is the single biggest capability unlock in the roadmap, enabling:
+> [!note] Personal context — this ecosystem's specific hardware situation
+> The current baseline is 8GB VRAM with a planned upgrade to 19GB. AICP Stages 1-2 were built on 8GB intentionally to validate the routing model before investing in hardware. The 19GB upgrade enables Gemma4-26B MoE, simultaneous model loading, and Stage 3-4 progressive offload.
 
-- Gemma4-26B MoE for complex local reasoning
-- Running two medium models simultaneously (embed + generate)
-- Larger context windows for multi-file local analysis
-- Stage 3–4 progressive offload
+The general principle: build the routing infrastructure first, scale the hardware second. VRAM is the primary physical constraint for any local inference setup — it determines which models you can run and how many simultaneously. The routing architecture should be validated on minimal hardware before scaling up.
 
 ### Key Pages
 
