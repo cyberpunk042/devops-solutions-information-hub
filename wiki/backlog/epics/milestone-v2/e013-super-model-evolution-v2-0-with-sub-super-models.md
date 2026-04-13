@@ -155,11 +155,11 @@ Root Super-Model (v2.0) — dashboard + routing
 > [!question] Is 5 sub-super-models the right number?
 > Could be fewer (merge Goldilocks + Work Management since they both deal with "how much process"). Could be more (split Knowledge Architecture into "wiki structure" + "evolution pipeline"). The design task (T-E013-01) must resolve this.
 
-> [!question] Should sub-super-models be spine pages or domain pages?
-> Current super-model is spine. Sub-super-models could be spine (navigational) or cross-domain (conceptual). Recommendation: spine — they're navigation hubs, not knowledge content.
+> [!question] ~~Should sub-super-models be spine pages or domain pages?~~
+> **RESOLVED:** Created as spine pages under `spine/super-model/`. They are navigation hubs, not knowledge content. See [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] for the root and siblings in `wiki/spine/super-model/`.
 
-> [!question] What happens to the current super-model v1.3 content?
-> Don't delete — evolve. The v1.3 assessment, adoption tiers, model dependency graph, quality contract, and per-project adaptation all move into the appropriate sub-super-model. The root keeps only the routing table + version assessment.
+> [!question] ~~What happens to the current super-model v1.3 content?~~
+> **RESOLVED:** Evolved to v2.0 with a routing table. The v1.3 content was decomposed into sub-super-model pages (goldilocks-protocol, enforcement-hierarchy, knowledge-architecture, work-management, integration-ecosystem). See [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]].
 
 ## Handoff Context
 

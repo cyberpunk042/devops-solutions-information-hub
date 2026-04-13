@@ -176,14 +176,14 @@ The models and chains are ORTHOGONAL dimensions. Every model × chain combinatio
 > [!question] Should chain selection be per-project or per-task? **PARTIALLY RESOLVED**
 > Yes — per-task within a project default. A production project (Full chain default) doing a hotfix uses Hotfix model (2 stages, minimal process) — this IS simplified chain applied to one task. The methodology model already handles this. The project chain sets the DEFAULT; the model can override downward (never upward). Remaining: formalize the override rules in methodology.yaml.
 
-> [!question] How do chains map to the wiki's 4-tier adoption guide? **RESOLVED**
-> They're PARALLEL dimensions. Tiers = enforcement depth (read→configure→validate→enforce). Chains = process weight (simplified→default→full). Recommended pairings: Simplified+Tier1-2, Default+Tier2-3, Full+Tier3-4. See [[methodology-adoption-guide|Methodology Adoption Guide]].
+> [!question] ~~How do chains map to the wiki's 4-tier adoption guide?~~
+> **RESOLVED:** Parallel dimensions. Tiers = enforcement depth (read→configure→validate→enforce). Chains = process weight (simplified→default→full). Pairings: Simplified+Tier1-2, Default+Tier2-3, Full+Tier3-4. See [[methodology-adoption-guide|Methodology Adoption Guide]].
 
 > [!question] What triggers a phase transition? **PARTIALLY RESOLVED**
 > POC→MVP: hypothesis validated, first external user. MVP→Staging: product-market fit, first SLA. Staging→Production: compliance met, rollback tested. See [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]. Remaining: define measurable triggers specific to this ecosystem.
 
-> [!question] How does the research wiki itself select its chain? **RESOLVED**
-> Identity: type=system, domain=knowledge, phase=production, scale=medium (267 pages), pm_level=L1. Chain: Default. NOT Full (no sprint planning needed). NOT Simplified (267 pages need real quality standards). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]].
+> [!question] ~~How does the research wiki itself select its chain?~~
+> **RESOLVED:** Identity: type=system, domain=knowledge, phase=production, scale=medium (267 pages), pm_level=L1 → Chain: Default. Not Full (no sprint planning needed). Not Simplified (267 pages need real quality standards). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]].
 
 ## Relationships
 

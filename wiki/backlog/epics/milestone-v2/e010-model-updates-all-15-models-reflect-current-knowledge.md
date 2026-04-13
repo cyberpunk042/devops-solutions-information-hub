@@ -159,8 +159,8 @@ None. This is the foundation epic. Start immediately.
 > [!question] How deep should "depth models" (M3) updates be?
 > Some models (NotebookLM, Local AI) may not need significant session-specific updates. A brief review confirming "no changes needed" is acceptable — but it must be CONFIRMED, not assumed.
 
-> [!question] Should the filename `model-design-md.md` be renamed in this epic or in E019 (Obsidian)?
-> It creates confusion with design concepts. Recommendation: rename in E019 since it's a browse/navigation concern, not a content concern. Note it here so E019 picks it up.
+> [!question] ~~Should the filename `model-design-md.md` be renamed in this epic or in E019 (Obsidian)?~~
+> **RESOLVED:** Renamed to `model-markdown-as-iac.md` this session. See [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]].
 
 ## Handoff Context
 

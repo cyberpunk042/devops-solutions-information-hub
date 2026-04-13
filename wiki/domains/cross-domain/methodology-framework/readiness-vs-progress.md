@@ -182,8 +182,8 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 
 ## Open Questions
 
-> [!question] Should readiness and progress use the same 0-100 scale or different scales? **RESOLVED**
-> **Two separate fields, both 0-100.** OpenFleet evidence: `task_readiness` (0-99, gate at 99) + `task_progress` (0-100, 70=done claim, 90=reviewed, 100=delivered). The 99 gate on readiness is a HUMAN CONFIRMATION gate, not a numeric threshold — the PO confirms "this is ready" at 99. A single collapsed field hides whether the problem is definition (low readiness) or execution (low progress) — two fundamentally different problems requiring different responses. The wiki recommends: both fields on all work items (milestone, epic, module, task). See [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]].
+> [!question] ~~Should readiness and progress use the same 0-100 scale or different scales?~~
+> **RESOLVED:** Two separate fields, both 0-100. OpenFleet evidence: `task_readiness` (0-99, gate at 99) + `task_progress` (0-100, 70=done claim, 90=reviewed, 100=delivered). The 99 gate is a human confirmation gate, not a numeric threshold. A single collapsed field hides whether the problem is definition (low readiness) or execution (low progress). See [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]].
 
 > [!question] How does readiness propagate for milestones? **PARTIALLY RESOLVED**
 > Milestone readiness = AVERAGE of child epic readiness (same rule as epic→task). Simple average, not weighted. The Goldilocks principle applies: for a Simplified chain milestone, all epics crossing 50% readiness may be sufficient to start work. For a Full chain milestone, all epics must cross 99%. The THRESHOLD adapts per chain, but the PROPAGATION is always average. Remaining: should any epic at 0% block the milestone regardless of average?

@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-13T16:51:17.270991+00:00",
+  "generated": "2026-04-13T17:15:33.863754+00:00",
   "stats": {
-    "pages": 295,
+    "pages": 296,
     "domains": 9,
     "sources": 28,
     "comparisons": 5,
-    "relationships": 1977,
-    "tags_unique": 846,
+    "relationships": 1979,
+    "tags_unique": 850,
     "layers": {
       "3": 4,
       "6": 16,
@@ -17,7 +17,7 @@
       "spine": 61
     },
     "maturity": {
-      "growing": 252
+      "growing": 253
     }
   },
   "pages": [
@@ -1215,6 +1215,38 @@
         {
           "verb": "BUILDS ON",
           "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
+      "path": "backlog/operator-decision-queue.md",
+      "slug": "backlog/operator-decision-queue",
+      "title": "Operator Decision Queue",
+      "type": "reference",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "backlog",
+        "decisions",
+        "operator",
+        "review",
+        "queue"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Milestone \u2014 Second Brain Complete System \u2014 v2.0"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
         }
       ]
     },
@@ -19375,8 +19407,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 22,
-      "relationship_count": 126
+      "page_count": 23,
+      "relationship_count": 128
     },
     "cross-domain": {
       "page_count": 134,
@@ -20097,6 +20129,25 @@
     ],
     "complete-system": [
       "backlog/milestones/second-brain-complete-system-v2-0"
+    ],
+    "backlog": [
+      "backlog/operator-decision-queue",
+      "domains/devops/backlog-hierarchy-rules",
+      "spine/models/foundation/model-methodology",
+      "spine/standards/epic-page-standards",
+      "spine/standards/task-page-standards"
+    ],
+    "decisions": [
+      "backlog/operator-decision-queue"
+    ],
+    "operator": [
+      "backlog/operator-decision-queue"
+    ],
+    "review": [
+      "backlog/operator-decision-queue"
+    ],
+    "queue": [
+      "backlog/operator-decision-queue"
     ],
     "openai-backend": [
       "backlog/tasks/T001-test-openai-backend"
@@ -21620,12 +21671,6 @@
     ],
     "post-ingestion": [
       "domains/cross-domain/wiki-post-ingestion-operations-plan"
-    ],
-    "backlog": [
-      "domains/devops/backlog-hierarchy-rules",
-      "spine/models/foundation/model-methodology",
-      "spine/standards/epic-page-standards",
-      "spine/standards/task-page-standards"
     ],
     "status-propagation": [
       "domains/devops/backlog-hierarchy-rules"

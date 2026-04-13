@@ -112,8 +112,8 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM â€
 
 ## Open Questions
 
-> [!question] Single flow page or sequence of pages?
-> Single with internal anchors = complete view, Ctrl+F searchable. Sequence = each decision is its own page. Recommendation: single page with anchors. Gateway `flow` command walks through it step by step.
+> [!question] ~~Single flow page or sequence of pages?~~
+> **RESOLVED:** A single flow page was created (`goldilocks-flow.md`). See [[goldilocks-flow|Goldilocks Flow â€” From Identity to Action]].
 
 > [!question] How to handle "I don't know my execution mode"?
 > Can't auto-detect (harness decides at runtime). Recommendation: show capabilities detected, ask user to choose. "We detected harness code. Are you running in harness mode?"

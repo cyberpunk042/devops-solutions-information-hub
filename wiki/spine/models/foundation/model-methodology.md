@@ -834,6 +834,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[identity-profile|OpenArms — Identity Profile]]
 [[identity-profile|OpenFleet — Identity Profile]]
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[operator-decision-queue|Operator Decision Queue]]
 [[E004-portable-methodology-engine|Portable Methodology Engine]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
