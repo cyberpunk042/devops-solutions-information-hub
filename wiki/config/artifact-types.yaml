@@ -23,7 +23,7 @@ categories:
     description: "Wiki pages distilled from other pages via cross-referencing"
     layer_range: [4, 6]
     requires_derived_from: true
-    types: [lesson, pattern, decision]
+    types: [lesson, pattern, decision, principle]
 
   navigation-pages:
     description: "Pages that organize, curate, and guide through other pages"
@@ -195,6 +195,25 @@ types:
       gate: pipeline-post
     required_frontmatter:
       - reversibility
+
+  principle:
+    category: evolved-pages
+    artifact_class: document  # principles are the highest knowledge layer — governing truths
+    template: config/templates/principle.md
+    content_thresholds:
+      summary_min_words: 30
+      min_relationships: 3
+      min_derived_from: 3  # ≥3 source lessons/patterns
+    styling:
+      callouts_required: true
+      callout_map:
+        Statement: "[!tip] the governing principle"
+        Application: "[!info] how to apply"
+        Boundaries: "[!warning] when it doesn't apply"
+    verification:
+      gate: pipeline-post
+    required_frontmatter:
+      - derived_from
 
   # === Navigation Pages ===
 
