@@ -138,6 +138,7 @@ def sync_rsync(source: str, target: str, reverse: bool = False,
     if delete:
         cmd.append("--delete")
     cmd.extend([
+        "--exclude", ".git/",
         "--exclude", ".gitkeep",
         "--exclude", ".obsidian/workspace*.json",
         "--exclude", ".obsidian/workspace",
