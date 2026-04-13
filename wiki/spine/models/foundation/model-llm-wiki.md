@@ -490,7 +490,8 @@ From building with this model — validated experience:
 > [!question] ~~What is the minimum viable wiki?~~
 > **RESOLVED:** Depends on identity profile. Solo + POC + micro: raw/ + wiki/domains/ + 1 template is enough. The simplified SDLC chain defines the minimal process. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for the full identity-to-chain routing. (Remaining: test empirically on a fresh project — E016)
 
-> [!question] How do multiple agents co-author a wiki without conflicts?
+> [!question] ~~How do multiple agents co-author a wiki without conflicts?~~
+> **RESOLVED:** File-level partitioning + git merge + harness-resolved conflicts. Each agent works different files. OpenFleet contribution gating prevents overlap.
 > OpenFleet has 10 agents but they don't write to the wiki simultaneously. The contribution system gates inputs. Real multi-agent co-authoring remains untested. (Requires: multi-agent testing)
 
 > [!question] ~~When does LightRAG become necessary?~~

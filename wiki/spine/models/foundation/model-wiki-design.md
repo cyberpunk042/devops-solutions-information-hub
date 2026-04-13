@@ -192,28 +192,6 @@ NOT for the wiki. For `docs/` content rendered via Docusaurus or similar static 
 > [!bug]- **`[!bug]-` — Failures, incidents, bugs** (always foldable)
 > Red 🐛. Use for real failures from operation. Always foldable. "This went wrong."
 
-> [!question] **`[!question]` — Open items, needs research**
-> Purple ❓. Use for genuinely unresolved questions. "This is not yet answered."
-
-> [!warning] **Callout anti-patterns**
-> - Using `[!info]` for everything — choose the specific type
-> - Non-foldable examples that are 20+ lines — always fold examples
-> - Callout title without body when the content is important — title-only works for labels, not for content
-> - Putting critical content ONLY in a callout title — won't survive degradation to plain text
-> - Nesting more than 2 levels — becomes unreadable
-> - Using `[!note]` (gray, generic) when a specific type exists
-> - Using blockquotes (`>`) for non-quotes — use callouts for semantic boxes, blockquotes for actual quotations
-
-> [!tip] **Callout syntax quick reference**
-> ```markdown
-> > [!type] Custom Title         ← always visible
-> > Body content                 ← visible (or hidden if folded)
->
-> > [!type]- Collapsed by default  ← fold with -
-> > [!type]+ Expanded by default   ← fold with +
-> ```
-> Nesting: add `>` levels. Custom types: CSS snippets in `.obsidian/snippets/`.
-
 ### Page Layout Patterns
 
 How each page type should be visually structured. These patterns use the callout vocabulary above:

@@ -188,7 +188,8 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 > [!question] How does readiness propagate for milestones? **PARTIALLY RESOLVED**
 > Milestone readiness = AVERAGE of child epic readiness (same rule as epic→task). Simple average, not weighted. The Goldilocks principle applies: for a Simplified chain milestone, all epics crossing 50% readiness may be sufficient to start work. For a Full chain milestone, all epics must cross 99%. The THRESHOLD adapts per chain, but the PROPAGATION is always average. Remaining: should any epic at 0% block the milestone regardless of average?
 
-> [!question] What is the minimum readiness threshold for dispatch?
+> [!question] ~~What is the minimum readiness threshold for dispatch?~~
+> **RESOLVED:** Per chain level. Simplified: 30 (operator judgment). Default: 80. Full: 99 (PO confirms). Defined in SDLC chain configs.
 > OpenFleet gates at 99. Is that too high for simplified chain projects? Should the gate be configurable per SDLC chain? (Requires: data from different project types.)
 
 ## Relationships

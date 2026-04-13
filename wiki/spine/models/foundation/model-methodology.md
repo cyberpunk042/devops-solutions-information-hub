@@ -739,7 +739,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > **RESOLVED:** Mechanical gates yes (schema, type checking, tests). Judgment gates no (design quality, requirement completeness). Full enforcement = both.
 > **Partially resolved.** OpenArms v10: 100% stage compliance via hooks. Stage GATES are fully automatable. Stage QUALITY is not — 7 behavioral failures persist at 80% rate. The boundary: anything checkable at the tool-call level (did you write to src/ during document?) = automate. Anything requiring judgment (is this requirements spec good enough?) = human gate. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] for the full boundary analysis.
 
-> [!question] **What is the minimum viable methodology?**
+> [!question] ~~****What is the minimum viable methodology?****~~
+> **RESOLVED:** The simplified chain. One gate (pipeline post), advisory stages, operator as reviewer. Everything else is progressive addition.
 > **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified chain (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default chain (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full chain (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
 
 ### How This Connects — Navigate From Here

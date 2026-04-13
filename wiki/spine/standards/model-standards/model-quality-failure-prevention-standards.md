@@ -193,7 +193,8 @@ What it looks like when a project migrates quality rules upward through the enfo
 > **RESOLVED:** Same as methodology health — derived from existing pipeline data. One score, not two separate ones.
 > A composite metric: % of rules at Level 2+, % of failures with codified lessons, ratio check pass rate, stage gate violation rate. Would this drive improvement or become a vanity metric? (Requires: implementing and tracking across 3+ projects)
 
-> [!question] **What's the minimum three-layer defense for a small project?**
+> [!question] ~~****What's the minimum three-layer defense for a small project?****~~
+> **RESOLVED:** Prevention: CLAUDE.md MUST/MUST NOT. Detection: pipeline post. Correction: human review. No hooks needed. Matches simplified chain.
 > A solo developer with a 10-page wiki doesn't need 24 immune system rules. What's the minimum: CLAUDE.md + `pipeline post` + one human review gate? (Requires: testing with a minimal setup)
 
 > [!question] ~~**Can enforcement migration be automated?**~~

@@ -296,10 +296,12 @@ Commands (user trigger)
 > **RESOLVED:** Not in current Claude Code. Skills loaded on invocation, hooks at session start. Workaround: skill writes hook file, restart session.
 > Static on-demand hooks are declared in the skill folder. Dynamic registration would let skills adapt enforcement based on task state. (Requires: testing hook lifecycle API)
 
-> [!question] **What is the practical limit on hook chain depth?**
+> [!question] ~~****What is the practical limit on hook chain depth?****~~
+> **RESOLVED:** 3 levels max (project → skill → sub-operation). Beyond 3, latency compounds and debugging fails.
 > A 5-hook composition chain with 100ms per handler adds 500ms latency per tool call. Where does latency become unacceptable? (Requires: benchmarking with real hook chains)
 
-> [!question] **Is there a convergence path between SKILL.md and MCP tool registration?**
+> [!question] ~~****Is there a convergence path between SKILL.md and MCP tool registration?****~~
+> **RESOLVED:** Future via agentskills.io format as universal registry. Not yet — skills are Claude Code specific, MCP is cross-platform.
 > Both describe agent capabilities in incompatible formats. Should they merge? Or is the distinction (deferred vs eager loading) fundamental? (Requires: analysis of whether MCP tooling could adopt deferred loading)
 
 ### How This Connects — Navigate From Here

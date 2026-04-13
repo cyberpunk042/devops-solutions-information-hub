@@ -151,7 +151,8 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 > **RESOLVED:** Best available page. The exemplar demonstrates the standard at its highest, with honest "What could still improve" notes.
 > Best = aspirational ("this is the gold standard"). Typical = achievable ("this is what good normally looks like"). Recommendation: best — standards should RAISE the bar, not describe the average.
 
-> [!question] What about the new `principle` and `milestone` types?
+> [!question] ~~What about the new `principle` and `milestone` types?~~
+> **RESOLVED:** Need standards pages. Principle and milestone exist in schema but lack dedicated page-type standards docs. Add to standards backlog.
 > These were added the 2026-04-12 session. They don't have standards pages yet. Should E011 create them? Recommendation: yes — add 2 more standards pages (principle-page-standards.md, milestone-page-standards.md) as tasks T-E011-18 and T-E011-19.
 
 ## Handoff Context

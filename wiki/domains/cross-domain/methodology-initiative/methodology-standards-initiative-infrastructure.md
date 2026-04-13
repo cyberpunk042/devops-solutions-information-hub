@@ -197,9 +197,11 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 
 ## Open Questions
 
-> [!question] How do we handle domain-specific artifact variations without creating N copies of every template? (Requires: generic + override pattern design)
+> [!question] ~~How do we handle domain-specific artifact variations without creating N copies of every template? (Requires: generic + override pattern desi~~
+> **RESOLVED:** Generic template with domain-specific callout sections. One template, domain-aware content inside.gn)
 
-> [!question] What is the minimum viable enforcement infrastructure a new project needs? (Requires: analysis of OpenArms enforcement components — which are essential vs nice-to-have)
+> [!question] ~~What is the minimum viable enforcement infrastructure a new project needs? (Requires: analysis of OpenArms enforcement components — which ar~~
+> **RESOLVED:** CLAUDE.md with MUST/MUST NOT + pipeline post as single gate. The simplified chain IS the minimum. Hooks/harness/immune are progressive layers.e essential vs nice-to-have)
 
 > [!question] ~~Should operations plans be a new page type in the schema, or a subtype of an existing type?~~
 > **RESOLVED:** Already a page type. operations-plan exists in wiki-schema.yaml with required_sections. (Requires: design decision after analyzing usage patterns)

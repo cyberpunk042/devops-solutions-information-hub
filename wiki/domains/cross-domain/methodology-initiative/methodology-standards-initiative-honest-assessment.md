@@ -116,9 +116,11 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 
 ## Open Questions
 
-> [!question] Should the existing config files (methodology.yaml, artifact-types.yaml) be kept as practical infrastructure, or rewritten as framework instances? (Both is likely the answer — keep the files but also document the meta-framework)
+> [!question] ~~Should the existing config files (methodology.yaml, artifact-types.yaml) be kept as practical infrastructure, or rewritten as framework inst~~
+> **RESOLVED:** Keep. They ARE framework instances in practice. Rewriting breaks working tooling for theoretical purity.ances? (Both is likely the answer — keep the files but also document the meta-framework)
 
-> [!question] How many of the 17 artifact types need their own dedicated standards doc? All 17, or can some be grouped? (e.g., epic/module/task are all backlog types with similar standards)
+> [!question] ~~How many of the 17 artifact types need their own dedicated standards doc? All 17, or can some be grouped? (e.g., epic/module/task are all ba~~
+> **RESOLVED:** 15 exist. Epic/module/task share backlog patterns. 2 pending (principle, milestone) noted in E011.cklog types with similar standards)
 
 > [!question] ~~What are the "magic tricks" the operator referenced? This needs a dedicated brainstorming session.~~
 > **RESOLVED:** Structured context engineering. Operator stated: "The magic trick is structural engineering." Already documented in model-context-engineering.md.

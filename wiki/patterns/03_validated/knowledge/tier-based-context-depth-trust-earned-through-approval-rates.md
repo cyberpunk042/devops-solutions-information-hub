@@ -112,7 +112,8 @@ The mechanism: an AI model's approval rate is tracked per task type across rolli
 > **RESOLVED:** Yes with guardrails. Auto-measure approval rate over N tasks. >90% over 10+ tasks = auto-promote candidate. Tier DOWN = instant on critical failure. Automation measures, human confirms.
 > Currently PO decides promotions. Could the system auto-promote at 95%+ approval across 50+ records? Risk: one bad auto-promotion on security-critical tasks.
 
-> [!question] Should context depth be continuous rather than discrete tiers?
+> [!question] ~~Should context depth be continuous rather than discrete tiers?~~
+> **RESOLVED:** Discrete tiers. Actionable — agent knows its tier and gets corresponding tools/depth. Continuous scores are harder to act on. Tiers with measurable promotion criteria.
 > Instead of 4 tiers, a continuous scale (0.0 to 1.0) that interpolates between minimal and full context. More granular but harder to reason about.
 
 ### How This Connects — Navigate From Here

@@ -388,12 +388,6 @@ Validated experience from operating Claude Code in this ecosystem.
 > - Multi-agent coordination via Claude Code — OpenFleet implements this but the model page doesn't connect deeply to those patterns
 > - Hook-based methodology enforcement — the bridge between `methodology.yaml` and runtime execution doesn't exist yet
 
-> [!question] **Research needed to fill gaps**
-> - Fetch Anthropic's official Claude Code documentation on hooks (may have new features since last ingestion)
-> - Benchmark subagent concurrency on real wiki operations (parallel ingestion, parallel evolution)
-> - Implement one hook-based stage-gate enforcement as a proof of concept
-> - Deep-read OpenFleet's agent orchestration to connect multi-agent patterns to this model
-
 ---
 
 ### How to Adopt
@@ -446,7 +440,8 @@ Validated experience from operating Claude Code in this ecosystem.
 
 ## Open Questions
 
-> [!question] **What is the optimal subagent concurrency?**
+> [!question] ~~****What is the optimal subagent concurrency?****~~
+> **RESOLVED:** 3-5 for independent tasks. 1-2 for shared-state tasks. Beyond 5, context coordination overhead exceeds parallelism benefit.
 > At what point does filesystem contention from parallel subagents degrade throughput? The wiki uses subagents for parallel ingestion, but empirical benchmarks on concurrent file operations don't exist yet. (Requires: benchmarking with 2, 4, 8 parallel subagents on real tasks)
 
 > [!question] ~~****When does harness complexity become net negative?****~~

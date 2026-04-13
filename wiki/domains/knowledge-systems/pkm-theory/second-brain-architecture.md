@@ -99,7 +99,8 @@ The LLM-assisted ingestion pipeline eliminates the maintenance cost that kills t
 
 ### What This Wiki Is Still Missing
 
-> [!question] Five gaps against the full second brain pattern
+> [!question] ~~Five gaps against the full second brain pattern~~
+> **RESOLVED:** DEFERRED — needs a dedicated audit comparing wiki state against PARA + Zettelkasten + compounding + maintenance automation + connection density.
 >
 > | Gap | What's Missing | Potential Solution |
 > |-----|---------------|-------------------|

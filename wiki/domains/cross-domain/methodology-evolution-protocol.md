@@ -149,7 +149,8 @@ note_type: session
 
 ## Open Questions
 
-> [!question] Should the wiki auto-detect methodology changes and generate a diff report for consumers? (Recommendation: yes — extend manifest.json to include methodology version, and the export tool generates a changelog.)
+> [!question] ~~Should the wiki auto-detect methodology changes and generate a diff report for consumers? (Recommendation: yes — extend manifest.json to inc~~
+> **RESOLVED:** Yes. Future gateway feature using manifest version hash diffs. Compare across commits, surface changes to consumers.lude methodology version, and the export tool generates a changelog.)
 
 ### How This Connects — Navigate From Here
 

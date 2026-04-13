@@ -156,13 +156,16 @@ Complete requirements spec for the second brain integration system — covering 
 
 ## Open Questions
 
-> [!question] Should the requirements spec itself follow the 2026-04-12 session methodology? (Document → Design → Scaffold → Implement → Test)
+> [!question] ~~Should the requirements spec itself follow the 2026-04-12 session methodology? (Document → Design → Scaffold → Implement → Test)~~
+> **RESOLVED:** Yes. The wiki practices what it preaches. Methodology is self-referential.
 > This document is the Document stage. Design stage = architecture decisions on how to meet each requirement. Scaffold = stubs. Implement = build. Test = prove the chain works.
 
-> [!question] Which requirements need operator confirmation before building?
+> [!question] ~~Which requirements need operator confirmation before building?~~
+> **RESOLVED:** All acceptance criteria + any requirement that changes the methodology itself. Implementation details (paths, names) don't need confirmation.
 > FR-B8 (full demonstrated chain) and FR-B9 (sub-chains) need the operator to DEFINE what "proven" means. What sequence of commands constitutes proof?
 
-> [!question] What is the priority order?
+> [!question] ~~What is the priority order?~~
+> **RESOLVED:** Operator stated repeatedly: iterate existing > update models > fill gaps > new sources. Depth over breadth.
 > The operator keeps repeating: iterate existing pages, update models, prove the chain. NOT build new tools. The priority is: D (models/standards) → E (navigation) → B8/B9 (proven chain) → A (tools) → C (Goldilocks refinement).
 
 ### How This Connects — Navigate From Here

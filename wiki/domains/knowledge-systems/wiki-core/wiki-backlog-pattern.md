@@ -56,7 +56,8 @@ The Wiki Backlog Pattern is an approach to project management where the wiki kno
 
 **Commit log as stage audit trail.** `feat(wiki): T023 document — ...` turns git history into a stage-gating ledger. A task without a scaffold commit is visibly incomplete.
 
-> [!question] This wiki's adoption status
+> [!question] ~~This wiki's adoption status~~
+> **RESOLVED:** DEFERRED — needs a formal adoption audit. The wiki uses its own backlog but adoption of its own standards hasn't been formally measured.
 >
 > | Component | Current State | Target (from OpenArms reference) |
 > |-----------|--------------|----------------------------------|

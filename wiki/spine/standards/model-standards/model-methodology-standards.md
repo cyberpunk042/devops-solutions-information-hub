@@ -446,10 +446,12 @@ The per-type standards above cover wiki page types. But methodology execution pr
 
 ## Open Questions
 
-> [!question] **Can methodology compliance be measured automatically?**
+> [!question] ~~****Can methodology compliance be measured automatically?****~~
+> **RESOLVED:** Mechanical compliance yes (schema, stage gates, gate commands). Judgment compliance no (design quality). Score = automated gates passed / total.
 > A compliance checker could: verify one-commit-per-stage in git log, check that FORBIDDEN artifacts don't appear in stage diffs, verify readiness matches stages_completed. OpenArms built `agent-report.py` for this. Should the wiki have an equivalent? (Requires: defining measurable compliance signals)
 
-> [!question] **What's the failure rate of stage-gate enforcement in practice?**
+> [!question] ~~****What's the failure rate of stage-gate enforcement in practice?****~~
+> **RESOLVED:** OpenArms data: 75% violation rate without infrastructure, 0% with hooks. 25% compliance instructions-only, 100% with hooks.
 > OpenArms found 7 bugs in one day. This wiki had 3+ methodology violations in one session. Is this the expected learning curve, or does it indicate the enforcement mechanisms are insufficient? (Requires: tracking violations over multiple sessions)
 
 > [!question] ~~**Should there be a "methodology health" score per project?**~~

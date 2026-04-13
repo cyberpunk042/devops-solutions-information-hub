@@ -118,7 +118,8 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 > **RESOLVED:** Both. Already implemented. YAML for policy config, wiki page for explanation.
 > YAML = machine-readable, composable, validatable. Wiki pages = human-readable, discoverable. Both? Config for machines, wiki page explaining the config for humans?
 
-> [!question] How do phase transitions trigger chain upgrades?
+> [!question] ~~How do phase transitions trigger chain upgrades?~~
+> **RESOLVED:** SDLC chain upgrade_triggers are signals. When triggers are met, operator decides. Not automatic.
 > POC→MVP: manual operator decision? Metric-based (first paying user, first SLA)? Should the wiki recommend triggers or just document options?
 
 > [!question] ~~Should the simplified chain have ANY stage gates?~~

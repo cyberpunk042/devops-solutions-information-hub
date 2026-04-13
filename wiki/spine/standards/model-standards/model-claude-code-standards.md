@@ -222,14 +222,16 @@ What all four levels working together looks like.
 
 ## Open Questions
 
-> [!question] **What is the ideal CLAUDE.md structure?**
+> [!question] ~~****What is the ideal CLAUDE.md structure?****~~
+> **RESOLVED:** Documented in model-context-engineering and claude-md-structural-patterns. Sacrosanct → identity → hard rules → soft rules → methodology → tooling → ingestion.
 > Should CLAUDE.md have a standardized section order across all projects? (Project Structure → Schema → Commands → Quality Gates → Methodology → Conventions?) Or should each project adapt freely? (Requires: comparing CLAUDE.md across 5+ projects)
 
 > [!question] ~~**Should skills have a quality schema?**~~
 > **RESOLVED:** Yes eventually — validate skill.md structure (name, description, trigger, content). Not urgent until skill count grows beyond ~20.
 > Like wiki pages have `wiki-schema.yaml`, should skills have a validation schema checking for trigger phrases, operations, quality bar, and gotchas? (Requires: enough skills to see the pattern — currently 5 in this wiki, 50+ in OpenArms)
 
-> [!question] **How do you test hooks without breaking things?**
+> [!question] ~~****How do you test hooks without breaking things?****~~
+> **RESOLVED:** --dry-run flag on hook execution. Hook reports what it WOULD block without blocking. Test in conversation mode before enabling in harness.
 > Hook testing requires triggering the blocked operation and verifying the block. But the blocked operation IS the dangerous thing. Dry-run mode for hooks? Test harness that simulates tool calls? (Requires: hook testing infrastructure design)
 
 ### Annotated Exemplar

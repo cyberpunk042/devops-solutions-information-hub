@@ -123,7 +123,8 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 > **RESOLVED:** Only for hotfixes (plan=0, execute+review merged). Feature-dev cycle is the minimum — compression = skipping planning = the documented failure mode.
 > Is the 5-verb cycle already at minimum viable complexity, or can it be optimized for specific task types? (Requires: comparative analysis of framework performance across task categories)
 
-> [!question] **How do best practices change as models improve?**
+> [!question] ~~****How do best practices change as models improve?****~~
+> **RESOLVED:** Structural practices (CLAUDE.md, stage gates, hooks) are durable. Tactical practices (token optimization, subagent strategy) shift with model generations. Review tactical on major releases.
 > Does plan mode become less necessary as models improve at self-correction? Does the compliance problem diminish with larger context windows? (Requires: longitudinal tracking across model generations)
 
 ## Answered Open Questions

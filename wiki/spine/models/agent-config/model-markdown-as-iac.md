@@ -224,7 +224,8 @@ The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUD
 > **RESOLVED:** When total injected context exceeds ~10% of context window for routine tasks. ~5+ simultaneous companion files or >20k tokens of config.
 > Four files at ~750 lines total = ~4,000 tokens. At what point does this overhead measurably degrade accuracy? Is there a project-specific threshold? (Requires: measuring accuracy with and without companion files loaded)
 
-> [!question] **Is there a DESIGN.md equivalent for interaction behavior?**
+> [!question] ~~****Is there a DESIGN.md equivalent for interaction behavior?****~~
+> **RESOLVED:** INTERACTIONS.md for UI projects. Wiki doesn't need it. A 10th section in DESIGN.md or separate file for interaction specs.
 > Animations, state transitions, loading patterns, micro-interactions — the current 9-section structure doesn't capture these. Should it be a 10th section or a separate INTERACTIONS.md? (Requires: surveying how AI agents handle interaction specs)
 
 > [!question] ~~****Does DESIGN.md value decrease as LLMs improve at visual design?****~~

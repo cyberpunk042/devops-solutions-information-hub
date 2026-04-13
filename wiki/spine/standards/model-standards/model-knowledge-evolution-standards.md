@@ -134,7 +134,8 @@ What good scorer output looks like — diverse candidates, not tag-pair noise.
 > **RESOLVED:** No. Evolution scoring already uses multiple signals (convergence, relationship density, staleness). Diversity is emergent from signal variety.
 > If the top 10 are all from the same domain, should the scorer inject diversity (e.g., max 3 per domain in top 10)? Or should the human reviewer handle diversity? (Requires: testing with both approaches)
 
-> [!question] **What's the minimum evidence bar for a lesson?**
+> [!question] ~~****What's the minimum evidence bar for a lesson?****~~
+> **RESOLVED:** ≥3 evidence items from ≥2 independent sources with mechanism explained. Single-source = observation, not lesson. Already in lesson-page-standards.
 > Currently suggested: ≥3 independent sources. Is this right? A lesson from 2 strong sources might be more valid than one from 4 weak sources. Should evidence quality be weighted, not just counted? (Requires: analyzing existing lesson quality vs evidence count)
 
 ### Annotated Exemplar

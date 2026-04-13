@@ -202,7 +202,8 @@ What good command → skill → hook composition looks like.
 > **RESOLVED:** Yes — the harness knows the agent role and can filter available commands. Already how OpenFleet dispatch works.
 > Instead of manually installing role-appropriate command sets, can the system detect the user's role (developer, researcher, PM) and surface the right commands? (Requires: role detection mechanism)
 
-> [!question] **What's the optimal hook count per project?**
+> [!question] ~~****What's the optimal hook count per project?****~~
+> **RESOLVED:** Per chain level. Simplified: 0. Default: 1-2 (pre-commit, optional pre-write). Full: 4+ (all hook points). Defined in chain configs.
 > claude-code-harness has 13 rules. Is that the sweet spot? At what count does hook overhead (latency, maintenance) exceed the value of enforcement? (Requires: tracking hook maintenance cost vs violations prevented)
 
 ### Annotated Exemplar

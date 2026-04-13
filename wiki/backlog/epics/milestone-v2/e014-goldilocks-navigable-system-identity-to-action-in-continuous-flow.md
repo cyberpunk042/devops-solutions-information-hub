@@ -115,10 +115,12 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM �
 > [!question] ~~Single flow page or sequence of pages?~~
 > **RESOLVED:** A single flow page was created (`goldilocks-flow.md`). See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]].
 
-> [!question] How to handle "I don't know my execution mode"?
+> [!question] ~~How to handle "I don't know my execution mode"?~~
+> **RESOLVED:** Gateway what-do-i-need. Auto-detects what it can (domain, scale), says "unknown — declare in CLAUDE.md" for what it can't.
 > Can't auto-detect (harness decides at runtime). Recommendation: show capabilities detected, ask user to choose. "We detected harness code. Are you running in harness mode?"
 
-> [!question] How to handle chain upgrades mid-project?
+> [!question] ~~How to handle chain upgrades mid-project?~~
+> **RESOLVED:** Decision page documenting why. Apply new chain to new tasks. In-progress tasks finish under old chain. No retroactive rework.
 > POC→MVP transitions change the recommended chain. The flow should advisory: "Your tests + CI suggest MVP. Consider upgrading to default chain."
 
 ## Handoff Context

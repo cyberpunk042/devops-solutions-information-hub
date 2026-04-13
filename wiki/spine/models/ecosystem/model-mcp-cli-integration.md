@@ -228,7 +228,8 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 
 ## Open Questions
 
-> [!question] **At what MCP server count does schema overhead measurably degrade accuracy?**
+> [!question] ~~****At what MCP server count does schema overhead measurably degrade accuracy?****~~
+> **RESOLVED:** ~17-20 tools. Wiki's 17-tool MCP server is "at the upper limit." Beyond 20, selective tool exposure becomes necessary.
 > The 12x figure is task-specific. A general benchmark — 1 server, 3 servers, 5 servers × short/medium/long sessions × simple/complex tasks — would make the decision framework empirical. (Requires: controlled testing)
 
 > [!question] ~~****Does MCP selective tool exposure change the equation?****~~

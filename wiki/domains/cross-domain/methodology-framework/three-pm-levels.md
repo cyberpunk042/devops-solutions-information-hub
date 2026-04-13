@@ -184,7 +184,8 @@ L2 comes in two forms depending on whether a harness or a full system provides e
 > **RESOLVED:** The second brain IS L1. It's the foundation all PM levels build on. L2 = harness reads the wiki. L3 = PM tool syncs with the wiki. The brain feeds every level.
 > The research wiki (this project) is the second brain. L1 projects reference it for methodology and standards. L2 projects consume it via MCP tools. L3 projects may integrate it into sprint planning. Is the second brain a cross-level service or an L1 component?
 
-> [!question] What determines when to upgrade harness versions?
+> [!question] ~~What determines when to upgrade harness versions?~~
+> **RESOLVED:** SDLC chain upgrade triggers. v1→v2: when agents violate rules. v2→v3: when full SDLC tracking needed. Defined in chain configs.
 > v1→v2: "when agents violate rules" is clear. v2→v3: "when you need organizational tracking" is vague. Can we define specific triggers (team size, compliance requirements, multi-project threshold)?
 
 ## Relationships

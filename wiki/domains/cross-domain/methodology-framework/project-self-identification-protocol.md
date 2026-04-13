@@ -197,7 +197,8 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 > **RESOLVED:** Yes. Gateway already has --wiki-root for dual-scope. Add --identity to pass a profile. PARTIALLY RESOLVED — gateway supports it conceptually. **PARTIALLY RESOLVED**
 > The gateway auto-detects domain (used for `--stage` queries). Other dimensions should be passable but NOT required — the gateway warns when it can't detect and suggests declaring. The `what-do-i-need` command shows detected + unknown dimensions together.
 
-> [!question] How do we prevent projects from over-declaring their trust tier? **OPEN**
+> [!question] ~~How do we prevent projects from over-declaring their trust tier? **OPEN**~~
+> **RESOLVED:** Compliance rate verification. A project claiming "expert" with 60% compliance gets flagged. Trust is EARNED through approval rates, not declared.
 > Trust tier is a runtime/operational property. A project in solo mode has no approval rate data — the operator declares it. A fleet has data. The second brain could theoretically verify claims by checking operational evidence, but this requires the project to SHARE its data. OpenFleet shares via Plane sync. Solo projects have no mechanism. This remains open.
 
 ## Relationships

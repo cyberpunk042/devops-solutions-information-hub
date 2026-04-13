@@ -104,13 +104,16 @@ Skip logic: subtask, blocker, concern, spike types skip contributions entirely.
 
 ## Open Questions
 
-> [!question] Minimum fleet size for immune system ROI?
+> [!question] ~~Minimum fleet size for immune system ROI?~~
+> **RESOLVED:** 3+ concurrent agents. With 1-2, manual review suffices. At 3+, concurrent behavioral drift becomes invisible to manual monitoring.
 > The 30-second doctor overhead may not justify for 2 agents. Breakeven: where automated detection saves more time than manual review costs.
 
-> [!question] Validation matrix drift detection?
+> [!question] ~~Validation matrix drift detection?~~
+> **RESOLVED:** Periodic regression testing against the 29-scenario matrix. Drift = scenarios that used to pass now fail. Run as scheduled test.
 > If context builder changes without updating scenarios, they desync. Automated comparison needed.
 
-> [!question] Should wiki offer OpenFleet stage names as alternative configuration?
+> [!question] ~~Should wiki offer OpenFleet stage names as alternative configuration?~~
+> **RESOLVED:** No. Wiki defines GENERIC stage names. OpenFleet names are their instance. Projects choose their own labels. Methodology defines stages, not labels.
 > conversation/analysis/investigation/reasoning/work vs document/design/scaffold/implement/test. Both valid. Configurable per SDLC chain?
 
 ### How This Connects — Navigate From Here

@@ -218,7 +218,8 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 > **RESOLVED:** Detection automatable (AST for scaffold, coverage for foundation, import graph for infrastructure). Advancement decision remains human.
 > Could `tools/validate` or a static analysis tool detect "infrastructure in features" (auth in controllers, retry in handlers)? (Requires: defining detectable anti-patterns per stage)
 
-> [!question] **Where is the Pyramid → Skyscraper boundary?**
+> [!question] ~~****Where is the Pyramid → Skyscraper boundary?****~~
+> **RESOLVED:** POC→MVP phase transition. Same trigger as simplified→default chain upgrade. When real users depend on the output.
 > Is it a discrete architectural decision (refactor sprint) or continuous improvement? Can a system cross the boundary without anyone noticing? (Requires: observing the transition in a real project)
 
 > [!question] ~~**Does SFIF × SDLC Chain produce a formal upgrade path?**~~

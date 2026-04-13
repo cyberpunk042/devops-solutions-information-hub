@@ -152,7 +152,8 @@ Root Super-Model (v2.0) — dashboard + routing
 
 ## Open Questions
 
-> [!question] Is 5 sub-super-models the right number?
+> [!question] ~~Is 5 sub-super-models the right number?~~
+> **RESOLVED:** Follows domain count. Currently 5 (Goldilocks, Enforcement, Knowledge, Work Management, Integration). Grows with domains.
 > Could be fewer (merge Goldilocks + Work Management since they both deal with "how much process"). Could be more (split Knowledge Architecture into "wiki structure" + "evolution pipeline"). The design task (T-E013-01) must resolve this.
 
 > [!question] ~~Should sub-super-models be spine pages or domain pages?~~

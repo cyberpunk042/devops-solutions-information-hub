@@ -218,7 +218,8 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 
 ## Open Questions
 
-> [!question] What is the minimum viable super-model for a project that only needs knowledge architecture (no methodology)?
+> [!question] ~~What is the minimum viable super-model for a project that only needs knowledge architecture (no methodology)?~~
+> **RESOLVED:** LLM Wiki model + Knowledge Evolution model + wiki-schema.yaml + pipeline post. Tier 1 adoption. No methodology models needed.
 > A project that wants structured wiki pages but not stage gates. Tier 1 covers this — but the current Tier 1 bundles schema + methodology. Should there be a Tier 0: "just the wiki, no process"?
 
 > [!question] ~~How should the super-model version when models evolve independently?~~

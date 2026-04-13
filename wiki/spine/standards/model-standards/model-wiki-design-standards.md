@@ -134,11 +134,6 @@ The 8 callout types are not interchangeable. Each has a semantic purpose, a colo
 >
 > **Used in**: [[model-methodology|Model — Methodology]] "What Goes Wrong" — 7 bugs, each a `[!bug]-` with title showing the design input and version bump. Scannable as a list, expandable per bug.
 
-> [!question] **`[!question]` — Open items and unresolved questions** — Yellow
-> Use for genuinely unresolved questions that need research or testing. "This is not yet answered."
->
-> **Used in**: Open Questions sections across all pages. Also appropriate for knowledge gaps in domain overviews.
-
 ---
 
 ### Technique 2: Progressive Disclosure with Foldable Callouts
@@ -430,7 +425,8 @@ If any type were missing, the page would fail its own standard. ==This page demo
 > **RESOLVED:** No gate. Styling is a quality dimension handled during operator knowledge sweep, not a pipeline gate.
 > Before pages are marked `growing`, should styling be checked against this standard? Currently quality reviews focus on content (evidence, specificity, relationships). Adding a visual quality dimension would catch raw pages earlier but adds process overhead. (Requires: testing with a review workflow on 5+ pages)
 
-> [!question] **When do we create CSS snippets?**
+> [!question] ~~****When do we create CSS snippets?****~~
+> **RESOLVED:** When default Obsidian rendering is insufficient AND maintenance cost is justified. Currently: never. CSS is aspirational debt.
 > Custom CSS could define new callout types — `[!model]`, `[!stage]` — with unique colors and Lucide icons. But the 8 built-in types need to stabilize across 20+ styled pages first. Premature CSS is premature optimization. (Requires: callout vocabulary stability across 20+ styled pages)
 
 > [!question] ~~**Should before/after examples include Obsidian screenshots?**~~

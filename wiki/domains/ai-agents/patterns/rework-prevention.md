@@ -134,7 +134,8 @@ The Harness Engineering insight quantifies this: 5.5x planning overhead at the s
 
 ## Open Questions
 
-> [!question] Can rework rate be measured per agent or per task type?
+> [!question] ~~Can rework rate be measured per agent or per task type?~~
+> **RESOLVED:** Per task type at L1 (track tasks-completed-without-rework per model). Per agent at L2+ (fleet-level tracking).
 > Requires: per-agent rework tracking in OpenFleet's orchestrator. The existing audit ledger tracks task state transitions but does not currently classify which transitions represent rework cycles vs. normal flow. This would enable calibrated prevention investment — spending more on prevention for task types with historically high rework rates.
 
 ## Answered Open Questions

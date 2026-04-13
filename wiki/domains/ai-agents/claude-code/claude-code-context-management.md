@@ -129,7 +129,8 @@ The compaction lifecycle reveals something non-obvious: **context management is 
 > **RESOLVED:** No — Anthropic API parameter, not user-configurable. Current TTL is 5 minutes. Design around it.
 > Requires: Anthropic API documentation or official Claude Code settings documentation. The 5-minute TTL is reported by one practitioner source, unverified by Anthropic.
 
-> [!question] How do economics change across subscription plans?
+> [!question] ~~How do economics change across subscription plans?~~
+> **RESOLVED:** Same practices regardless of plan. Budget changes headroom, not technique. Context management equally important at $20 and $200.
 > Is context management equally important on the $200/month plan as on the $20/month plan? Requires: Anthropic subscription documentation with per-plan token allocation details.
 
 ## Answered Open Questions

@@ -780,9 +780,11 @@ The validator already works. We don't rewrite it. We add layers:
 
 ## Open Questions
 
-> [!question] Should the `module` backlog type get its own required_sections in wiki-schema.yaml? Currently undefined. Recommendation: yes — same as epic (Summary, Goals, Done When, Relationships). (Decision: yes, add during M5.)
+> [!question] ~~Should the `module` backlog type get its own required_sections in wiki-schema.yaml? Currently undefined. Recommendation: yes — same as epic ~~
+> **RESOLVED:** Yes. Summary, Module Breakdown, Dependencies, Done When. Same pattern as epic but lighter.(Summary, Goals, Done When, Relationships). (Decision: yes, add during M5.)
 
-> [!question] Should methodology templates (wiki/config/templates/methodology/) be accessible via the scaffolder, and if so, with what syntax? Recommendation: `pipeline scaffold methodology/requirements-spec "Title"` — the `/` in the type triggers the methodology subdirectory lookup. (Decision: yes, implement during M5.)
+> [!question] ~~Should methodology templates (wiki/config/templates/methodology/) be accessible via the scaffolder, and if so, with what syntax? Recommendat~~
+> **RESOLVED:** Yes. `pipeline scaffold methodology/requirements-spec "Title"`. Already partially implemented.ion: `pipeline scaffold methodology/requirements-spec "Title"` — the `/` in the type triggers the methodology subdirectory lookup. (Decision: yes, implement during M5.)
 
 ### How This Connects — Navigate From Here
 

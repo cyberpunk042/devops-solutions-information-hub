@@ -184,7 +184,8 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > [!question] ~~Should there be an explicit "Initiation" stage before Document for epic-scale work?~~
 > **RESOLVED:** No — fold initiation into Document stage at epic scale. See [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]].
 
-> [!question] Should the wiki have a formal Business Case template for investment decisions?
+> [!question] ~~Should the wiki have a formal Business Case template for investment decisions?~~
+> **RESOLVED:** Yes, lightweight. For when fleet agents propose autonomous work. Template: problem, proposed solution, estimated cost, expected benefit, alternatives, approval.
 > **DEFERRED:** Needs operator input — relevant when fleet agents propose work autonomously.
 
 ### How This Connects — Navigate From Here
