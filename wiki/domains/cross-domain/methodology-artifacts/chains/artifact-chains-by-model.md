@@ -6,7 +6,7 @@ type: reference
 domain: cross-domain
 status: synthesized
 confidence: authoritative
-maturity: seed
+maturity: growing
 created: 2026-04-11
 updated: 2026-04-11
 sources:

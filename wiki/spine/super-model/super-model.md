@@ -8,7 +8,7 @@ domain: cross-domain
 layer: spine
 status: synthesized
 confidence: authoritative
-maturity: seed
+maturity: growing
 created: 2026-04-10
 updated: 2026-04-12
 sources: []
@@ -267,6 +267,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[identity-profile|Research Wiki — Identity Profile]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]

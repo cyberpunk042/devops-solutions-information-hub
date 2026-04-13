@@ -7,7 +7,7 @@ type: operations-plan
 domain: cross-domain
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-11
 updated: 2026-04-11
 sources:

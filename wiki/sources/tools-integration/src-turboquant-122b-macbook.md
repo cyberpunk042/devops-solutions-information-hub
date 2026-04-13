@@ -5,7 +5,7 @@ aliases:
   - "Synthesis: TurboQuant 122B LLM on MacBook"
 type: source-synthesis
 layer: 1
-maturity: seed
+maturity: growing
 domain: ai-models
 status: synthesized
 confidence: medium

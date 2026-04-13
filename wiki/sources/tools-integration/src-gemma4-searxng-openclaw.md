@@ -5,7 +5,7 @@ aliases:
   - "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw"
 type: source-synthesis
 layer: 1
-maturity: seed
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: medium

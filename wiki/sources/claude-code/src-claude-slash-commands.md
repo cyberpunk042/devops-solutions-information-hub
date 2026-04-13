@@ -4,7 +4,7 @@ aliases:
   - "Claude Code Slash Commands (artemgetmann)"
 type: source-synthesis
 layer: 1
-maturity: seed
+maturity: growing
 domain: ai-agents
 status: synthesized
 confidence: medium

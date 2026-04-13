@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass"
   - "Hardcoded Instances Fail — Build Frameworks Not Solutions"

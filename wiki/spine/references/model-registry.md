@@ -96,6 +96,7 @@ The [[model-methodology|Model — Methodology]] is the super-model — it GOVERN
 [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
 [[2026-04-09-ingest-awesome-design-md|Ingest awesome-design-md repository]]
 [[2026-04-09-directive-model-quality-links-schema|Model Quality + Links + Schema Naming Issues]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[2026-04-09-directive-quality-models-hub-mindset|Quality Models — Hub Mindset — OpenArms Methodology Learnings]]
 [[2026-04-09-directive-record-process-skills-supermodel|Record the Process — Skills, Super-Model, Preach by Example]]
 [[2026-04-09-directive-stop-guessing-false-claims|Stop Guessing — False Claims in Models]]

@@ -9,7 +9,7 @@ type: reference
 domain: cross-domain
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 created: 2026-04-12
 updated: 2026-04-12
 sources:

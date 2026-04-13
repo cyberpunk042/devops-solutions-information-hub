@@ -6,7 +6,7 @@ type: reference
 domain: cross-domain
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-13
 updated: 2026-04-13
 sources:
@@ -184,7 +184,7 @@ The research wiki's primary export to the ecosystem is the methodology framework
 [[model-methodology|Model — Methodology]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-second-brain|Model — Second Brain]]
-[[Research Wiki as Ecosystem Intelligence Hub]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[methodology-system-map|Methodology System Map]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]

@@ -5,7 +5,7 @@ aliases:
   - "Synthesis: Claude + NotebookLM Content Automation"
 type: source-synthesis
 layer: 1
-maturity: seed
+maturity: growing
 domain: automation
 status: synthesized
 confidence: high

@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Structured Context Is Proto-Programming for AI Agents"
   - "CLAUDE.md Structural Patterns for Agent Compliance"

@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: authoritative
-maturity: seed
+maturity: growing
 derived_from:
   - "Infrastructure Enforcement Proves Instructions Fail"
   - "Harness Ownership Converges Independently Across Projects"

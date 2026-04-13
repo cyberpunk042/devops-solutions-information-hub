@@ -8,7 +8,7 @@ domain: cross-domain
 layer: spine
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-11
 updated: 2026-04-12
 sources: []

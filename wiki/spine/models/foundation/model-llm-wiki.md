@@ -556,6 +556,7 @@ From building with this model — validated experience:
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[model-registry|Model Registry]]
 [[model-wiki-design|Model — Wiki Design]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
 [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]

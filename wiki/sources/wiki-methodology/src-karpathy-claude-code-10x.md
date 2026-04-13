@@ -5,7 +5,7 @@ aliases:
   - "Synthesis: Karpathy LLM Wiki Method via Claude Code"
 type: source-synthesis
 layer: 1
-maturity: seed
+maturity: growing
 domain: knowledge-systems
 status: synthesized
 confidence: high

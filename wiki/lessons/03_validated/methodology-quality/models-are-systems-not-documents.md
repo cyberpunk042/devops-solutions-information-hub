@@ -84,8 +84,6 @@ The first 14 model pages failed every row of this table. They used file paths in
 > | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
-## Relationships
-
 ## Self-Check — Am I About to Make This Mistake?
 
 > [!warning] Ask yourself when creating or reviewing a model page:
@@ -95,6 +93,8 @@ The first 14 model pages failed every row of this table. They used file paths in
 > 3. **Does it have concrete examples?** Not "this is used in many projects" — WHICH projects, showing WHAT, with what RESULT?
 > 4. **Would the operator say "there is no trace of what I asked"?** The original 14 model pages were 80-110 line reading lists. The operator's response: "mindless document." Systems are 200+ lines with structure.
 
+## Relationships
+
 - DERIVED FROM: [[model-registry|Model Registry]]
 - RELATES TO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 - RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
@@ -102,6 +102,10 @@ The first 14 model pages failed every row of this table. They used file paths in
 
 ## Backlinks
 
+[[model-registry|Model Registry]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[model-llm-wiki|Model — LLM Wiki]]
 [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
 [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 [[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
