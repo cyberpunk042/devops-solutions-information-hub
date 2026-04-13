@@ -234,8 +234,8 @@ The wiki IS a second brain — and a second brain is a HUB, not a silo. It aggre
 > [!question] Stale page handling in PARA
 > PARA's Archives bucket suggests active archival; the wiki's `status: stale` is a passive marker. Should stale pages be moved to an explicit archive domain?
 
-> [!question] Does the wiki need a "Projects" equivalent?
-> PARA's Projects bucket — active work with a deadline — has no direct wiki analog. Should active research campaigns get a `wiki/projects/` layer?
+> [!question] ~~Does the wiki need a "Projects" equivalent?~~
+> **RESOLVED:** The `wiki/ecosystem/project_profiles/` layer, created 2026-04-13, serves this function. Each project profile (OpenFleet, OpenArms, AICP, devops-control-plane, research-wiki) is an active-work context tracking the project's identity, artifact chain, and methodology adaptations — exactly what PARA's Projects bucket provides. See [[identity-profile|Research Wiki — Identity Profile]].
 
 > [!question] Zettelkasten emergence at scale
 > Luhmann needed 90,000 notes before his Zettelkasten became a genuine conversation partner. At what page count does this wiki's connection graph start generating non-obvious insights reliably?

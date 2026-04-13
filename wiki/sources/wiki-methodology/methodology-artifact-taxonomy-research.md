@@ -287,7 +287,8 @@ Based on the research, the methodology artifact system needs:
 
 > [!question] Should the taxonomy distinguish between mandatory and optional artifacts per model? (Yes — OpenArms does this with required/optional in methodology.yaml. Needs generalization.)
 
-> [!question] How do we handle the 12 SDLC initiation documents? These don't map to our stage-gate system which starts at Document. (Requires: design — possibly a "pre-document" or "charter" stage for epic-scale work)
+> [!question] ~~How do we handle the 12 SDLC initiation documents? These don't map to our stage-gate system which starts at Document.~~
+> **RESOLVED:** Initiation artifacts exist BEFORE the stage-gate system begins (pre-Document). In our ecosystem, the operator's verbatim directive in raw/notes/ serves as the Project Charter. The WBS maps to the Epic→Module→Task breakdown. Risk analysis maps to Gap Analysis produced during the Document stage. Scale determines which subset is required (task/module inherits from epic; only epic and project-scale work needs the full set). See [[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]].
 
 > [!question] Should ADR variants (Nygard, MADR, Y-Statement) be separate templates or one template with variant guidance? (Requires: design decision)
 
