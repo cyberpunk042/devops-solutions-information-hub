@@ -65,12 +65,14 @@ Karpathy's framing makes the infrastructure metaphor explicit: "Obsidian is the 
 - **Any team knowledge system**: The Git plugin provides free multi-device sync and version history, removing the need for paid Obsidian Sync or custom backend infrastructure.
 - **Operational project management**: Per-project folders with overview, conversation log, links, and documents — combined with the Obsidian database plugin for a central dashboard — is a viable LLM-assisted project management system.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I treating Obsidian as just a markdown editor instead of programmable knowledge infrastructure?** — Obsidian provides graph view for emergent relationship discovery, CLI for LLM agent integration, and Git plugin for version control. If you are only using it to read files, you are using 10% of the platform.
+> 2. **Am I editing wiki pages directly in Obsidian instead of through the LLM pipeline?** — The LLM Wiki pattern uses Obsidian as the human READ interface, not the write interface. All writes flow through Claude Code to maintain formatting, relationship linking, and index consistency.
+> 3. **Am I ignoring the graph view feedback loop?** — After ingesting new sources, check the graph view. Does the new content form a connected cluster joining the existing graph, or disconnected nodes? The visual signal guides what needs more relationships.
+> 4. **Am I building custom sync/storage infrastructure when Obsidian + Git provides it for free?** — Git plugin gives version history, branching, and multi-device sync with no database infrastructure. Before building custom backends, verify Obsidian + Git does not already solve the problem.
 
 ### How This Connects — Navigate From Here
 

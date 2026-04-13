@@ -94,12 +94,14 @@ The mechanism: creating new pages is easy and feels productive. Updating existin
 > | New lessons/patterns | The learning path that covers the topic |
 > | Any batch of 5+ pages | Run the discoverability test: navigate cold from the spine |
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. If I delete all my new pages, can the operator tell anything changed? (If no, the integration is missing.)
-> 2. Have I updated the ENTRY POINTS — the pages the operator navigates to first?
-> 3. Do the existing high-traffic pages have SECTIONS (not just links) pointing to the new content?
-> 4. Can someone find my work starting from the model registry?
+> 1. **If I delete all my new pages, can the operator tell anything changed?** — If no, the integration is missing. The new content exists but is invisible from the pages people actually navigate to.
+> 2. **Have I updated the ENTRY POINTS — the pages the operator navigates to first?** — Creating new pages is easy. Updating existing high-traffic pages to reference them is harder and more important. Every new subsystem needs a section (not just a link) in its parent model page.
+> 3. **Do the existing high-traffic pages have SECTIONS pointing to the new content, not just links?** — A link buried in a Relationships section is not discoverable. A dedicated section with context is. Integration means structural presence in the entry points.
+> 4. **Can someone find my work starting from the model registry, navigating cold with no guidance?** — The discoverability test is the only validation that matters. Run it: start from spine pages and try to reach your new content in 2 clicks.
 
 ### How This Connects — Navigate From Here
 

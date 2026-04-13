@@ -68,12 +68,14 @@ The failure is conceptual, not technical. The agent understood the 5-stage seque
 > [!abstract] The general principle
 > When a system is CONFIGURABLE, document the configuration model (what can vary, what selects between options, how options compose). When a system is FIXED, document the behavior. Treating a configurable system as fixed produces documentation that's correct for one case and wrong for all others.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I treating the methodology as one fixed 5-stage pipeline?** — The methodology has multiple named models (research, feature-dev, hotfix, evolution, etc.) with different stage sequences. Am I applying the right model for this task, or defaulting to Document-Design-Scaffold-Implement-Test for everything?
+> 2. **Am I documenting one instance of a configurable system as if it were the entire system?** — If the system supports multiple modes, conditional selection, and composable sequences, documenting only one path produces documentation that is correct for one case and wrong for all others.
+> 3. **Have I described what can VARY, not just what IS?** — For any configurable system: what selects between options? How do options compose? What are the adaptation points? If I only described the default configuration, I have documented an instance, not a framework.
+> 4. **Am I overfitting to the concrete case I know best?** — This is the same failure as documenting one wiki's schema as "the schema" instead of the schema design principles. Check: does my documentation cover the space of possibilities, or just the one I have seen?
 
 ### How This Connects — Navigate From Here
 

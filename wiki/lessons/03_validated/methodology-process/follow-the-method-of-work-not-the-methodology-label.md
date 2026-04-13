@@ -109,12 +109,14 @@ This is different from a methodology stage gate. Stage gates define WHAT is allo
 > | Operator frustration is escalating | The ambiguity is the cause — resolve it with specificity, not effort |
 > | Task is novel (no prior instance to follow) | The methodology model says WHAT stages to follow; the method of work says HOW to progress within them |
 
-> [!warning] Self-Check — Am I In a Loop?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Have I alternated between research and production more than once the 2026-04-12 session?
-> 2. Has the operator said both "research more" and "produce already" in different cycles?
-> 3. Do I have a NUMBERED, SEQUENTIAL procedure I'm following, or just a stage label?
-> 4. Could I tell someone exactly which step I'm on and what the next step is?
+> 1. **Am I following the methodology LABEL or an actual method of work?** — "Follow the methodology" is ambiguous. Do you have a numbered, sequential procedure with concrete deliverables per step? If you only have a stage name (e.g., "Document stage"), you have a label, not a method.
+> 2. **Have I alternated between research and production more than once this session?** — If yes, you are in the destructive loop. STOP and propose a specific method: "Here is my procedure: 1... 2... 3..." The loop breaks with specificity, not effort.
+> 3. **Could I tell someone exactly which step I am on and what the next step produces?** — If the answer is vague ("I'm in the research phase"), the method is not specific enough. Each step should have a clear deliverable.
+> 4. **Am I REASONING from assumptions instead of INVESTIGATING?** — Step 4 of the method is "investigate the codebase" not "reason about the codebase." Grep takes seconds and produces facts. Assumptions take minutes and produce wrong answers. When in doubt, look.
 
 ### How This Connects — Navigate From Here
 

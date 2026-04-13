@@ -61,12 +61,14 @@ The Research Pipeline Orchestration page answers its open question about paralle
 - **Cross-domain research**: When a question about automation, pipeline design, or knowledge system reliability leads to agent orchestration principles, this page is the correct reference. It is cited by pages in at least three domains (ai-agents, automation, knowledge-systems).
 - **Architecture review**: When evaluating a new system's design for autonomous operation reliability, the structural checklist from Agent Orchestration Patterns — deterministic brain? scope-bounded sub-agents? fresh context per task? plan-execute-review enforced? — is the fastest framework for identifying gaps.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I treating agent orchestration as a peripheral topic instead of the core connector?** — If your work touches AI agents, automation, or pipeline design, orchestration patterns are likely the central concept, not a side reference. Check the hub page before building from scratch.
+> 2. **Am I designing an autonomous system without checking for independent convergence?** — Three separate systems arrived at plan-execute-review independently. If your design deviates from this structure, do you have evidence that your context is genuinely different, or are you ignoring a real constraint?
+> 3. **Am I reading leaf pages without first reading the hub they connect through?** — If you jumped to a specific pattern or tool page without reading Agent Orchestration Patterns first, you are missing the vocabulary that makes the specific page comprehensible.
+> 4. **Am I building orchestration logic without the structural checklist?** — Deterministic brain? Scope-bounded sub-agents? Fresh context per task? Plan-execute-review enforced? If you cannot answer yes to all four, the design has a gap.
 
 ### How This Connects — Navigate From Here
 

@@ -114,12 +114,14 @@ The gateway tool embodies this: `--wiki-root` switches between perspectives. Sam
 > | **Agent write-back** | Agent learns something during work on a project | `gateway contribute --type lesson --title "..." --content "..."` |
 > | **Cross-pollinate** | Same pattern observed in 2+ projects | Create wiki pattern/principle, both projects reference it |
 
-> [!warning] Self-Check — Am I Treating the Wiki as a Silo?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. When was the last time I scanned a sister project for new learnings?
-> 2. Do my model pages reference ecosystem operational data, or only external articles?
-> 3. Can a project agent query the wiki without reading wiki pages directly? (Gateway tools exist for this.)
-> 4. Is there a feedback path — can projects write BACK to the wiki, not just read from it?
+> 1. **Am I treating the wiki as a self-contained reading digest instead of an ecosystem hub?** — If the wiki only ingests external articles and never scans sister projects for operational learnings, it is a silo. When was the last time you ran `pipeline scan` on a sister project?
+> 2. **Do my model pages reference ecosystem operational data, or only external articles?** — A methodology model that cites YouTube transcripts but not OpenArms' 7 methodology bugs or OpenFleet's orchestrator convergence is missing its highest-value evidence.
+> 3. **Is there a feedback path — can projects write BACK to the wiki, not just read from it?** — Knowledge must flow in both directions. If projects consume wiki knowledge but never contribute operational learnings back, the hub is half-built. Gateway contribute tools exist for this.
+> 4. **Am I building tools that work only toward the second brain, not also toward project internal wikis?** — The dual-perspective principle: everything must work from TWO perspectives — a project looking AT the wiki, and a project looking at ITS OWN wiki. Same tool, two contexts.
 
 ### How This Connects — Navigate From Here
 

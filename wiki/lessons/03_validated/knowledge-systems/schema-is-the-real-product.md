@@ -62,12 +62,14 @@ The practical test: this wiki's `config/schema.yaml` defines valid page types, r
 - **When evaluating knowledge systems**: The right question is not "how many pages does it have?" but "how well-defined is its schema?" A 50-page wiki with a mature schema is more valuable than a 500-page wiki with none.
 - **For any team or organization building a shared knowledge base**: the schema negotiation is the hardest and most important part. Who decides what a "concept" page is? What relationship verbs are canonical? What are the quality gates? These decisions are the schema, and they should be explicit artifacts, not informal conventions.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I focusing on producing more content when the schema is not right?** — If the page types, relationship verbs, status lifecycle, or quality gates are unclear or inconsistent, adding more pages makes the problem worse. Fix the schema first, then the content.
+> 2. **Am I about to do a bulk ingestion without locking down schema conventions?** — Retrofitting schema onto 200 inconsistently structured pages costs 10x more than establishing conventions at 20 pages. Schema discipline before volume.
+> 3. **Am I evaluating this knowledge base by page count instead of schema maturity?** — A 50-page wiki with a mature schema (defined types, validated relationships, quality gates) is more valuable than a 500-page wiki with none. Count the schema decisions, not the pages.
+> 4. **If I lost all the content but kept the schema and raw sources, could I rebuild?** — If yes, the schema is the real product. If no, the schema is incomplete. This thought experiment reveals where the irreplaceable operational knowledge actually lives.
 
 ### How This Connects — Navigate From Here
 

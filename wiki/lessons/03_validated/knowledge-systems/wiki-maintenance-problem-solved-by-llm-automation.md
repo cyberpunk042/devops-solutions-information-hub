@@ -65,12 +65,14 @@ This lesson applies to:
 - **Team knowledge management**: Teams that rely on manually-maintained documentation should expect it to decay. The correct response is not to hire a dedicated documentation engineer — it is to adopt an LLM-maintained wiki architecture where the maintenance cost is near zero.
 - **Wiki design decisions**: Design the wiki schema and tooling to minimize what the human must do and maximize what the LLM can automate. Every operation that requires human attention is a future maintenance debt. Every operation that can be automated is a maintenance debt eliminated.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I doing wiki maintenance manually — updating cross-references, fixing indexes, adding tags by hand?** — Every manual maintenance task is a future abandonment trigger. If the LLM can automate it (and it almost always can), it should be automated. Your role is curation, not bookkeeping.
+> 2. **Am I designing a wiki that requires human discipline to stay maintained?** — If the wiki's health depends on someone remembering to update indexes, check links, or rebuild manifests, it will fail. Design for zero-human-maintenance of structural concerns.
+> 3. **Am I keeping the wiki small "to keep it manageable" instead of letting it grow freely?** — That is the pre-LLM constraint. With automated maintenance, the wiki can grow without increasing human burden. The design question is "how do I structure it so the LLM can maintain it at any scale?"
+> 4. **Am I placing human review at routine operations instead of at strategic decisions?** — Human attention is scarce. Reserve it for curation (which sources to ingest, which contradictions to resolve, which pages to promote) and let the LLM handle all bookkeeping.
 
 ### How This Connects — Navigate From Here
 

@@ -66,12 +66,14 @@ This lesson applies to:
 - **Content production workflows**: The claude-world architecture (discover trends, research via NotebookLM, generate via Claude, publish) is reusable for any content team. The grounding step prevents publishing confabulated claims.
 - **System design principle**: When composing an agentic system, identify which component needs a grounding guarantee and route only those queries to a grounded engine. Don't use NotebookLM as a general note-storage layer — it's wasteful. Don't use a general LLM for source-grounded factual retrieval — it's unreliable.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I using a grounded research tool (like NotebookLM) as a storage layer instead of a verification engine?** — NotebookLM's value is source-grounded Q&A, not note accumulation. If you are dumping notes INTO it instead of querying it FOR grounded answers, you are using it backwards.
+> 2. **Am I answering domain-specific factual questions from training data when curated sources exist?** — If a NotebookLM notebook with relevant sources exists, route the question there. Training data is unverifiable and potentially stale; source-grounded answers have citations.
+> 3. **Am I confusing per-session grounding accuracy with long-term knowledge compounding?** — NotebookLM excels at accurate, source-grounded answers to specific questions. The wiki excels at compounding synthesized knowledge across sessions. They are complementary layers, not alternatives.
+> 4. **Am I working around a tool's constraint instead of leveraging it?** — If a tool forces source-grounding, that constraint IS the value proposition. Architecturally, isolate it into the component where the grounding guarantee matters most.
 
 ### How This Connects — Navigate From Here
 

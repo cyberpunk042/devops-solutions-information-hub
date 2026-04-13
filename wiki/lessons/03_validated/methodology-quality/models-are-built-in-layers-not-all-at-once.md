@@ -73,12 +73,14 @@ The critical insight: at step 1, we claimed "models are done" because entry poin
 - Enforcement systems: instructions (scaffold) → hooks (infrastructure) → model-aware validation (features). Each layer must be complete before the next matters.
 - Any batch production of wiki pages: 37 pages ≠ done. Integration into existing entry points ≠ done. Operator navigation test = done.
 
-> [!warning] Self-Check — Am I Mistaking Scaffold for Done?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Can the operator FIND what I produced by navigating from pages they already know?
-> 2. Do the new pages connect into the existing knowledge graph, or form an isolated cluster?
-> 3. Is the "readiness" based on file count (scaffold) or on verifiable quality (features)?
-> 4. Have I applied the SFIF test: which layer am I actually at?
+> 1. **Am I claiming something is "done" because the structure exists, or because the substance is complete?** — Scaffold (entry points exist) is not foundation (every page has its place) is not infrastructure (real definitions) is not features (standards + examples). Which layer are you actually at?
+> 2. **Am I confusing file count with completeness?** — 37 files produced in one sprint felt like 90% done. The operator said "complete crap." Volume of scaffold is not completion. Apply the SFIF test: scaffold, foundation, infrastructure, or features?
+> 3. **Can the operator FIND what I produced by navigating from pages they already know?** — If the new pages form an isolated cluster invisible from the main graph, they do not exist from the operator's perspective. Integration into entry points is part of completion.
+> 4. **Would I bet my credibility on "this is ready" right now?** — The anti-pattern is claiming readiness prematurely. Each false readiness claim burns operator trust. Before claiming done, run the usability test: can someone else pick this up and USE it?
 
 ### How This Connects — Navigate From Here
 

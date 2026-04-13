@@ -68,12 +68,14 @@ This lesson applies to:
 - **LightRAG integration**: When the wiki is synced to LightRAG via `kb_sync.py`, entity and relationship consistency depends on wiki structural validity. A wiki with broken wikilinks produces a knowledge graph with dangling edges.
 - **Team wikis at any scale**: The post-chain pattern scales from single-author to multi-author wikis because validation is deterministic and machine-enforced — not dependent on reviewer discipline.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I relying on manual review instead of running the automated post-chain?** — If you just made wiki changes and plan to "check them later" instead of running `pipeline post`, you are creating the exact gap where silent decay enters. Run the chain now.
+> 2. **Did I skip validation because "it's just a small change"?** — Decay is the accumulation of small changes that each seem harmless. A renamed concept, a missing index entry, a broken wikilink — none are critical alone, all compound. Small changes need validation too.
+> 3. **Am I treating validation-green as quality-green?** — Validation catches structural violations (broken links, missing fields). It does NOT catch semantic drift (stale claims, contradictions between pages). Are you also checking for semantic consistency?
+> 4. **Is there a path from ingestion to validation that runs without human intervention?** — If any step in the chain requires a human to remember to run it, that step will eventually be skipped. The chain must be automatic or it will fail.
 
 ### How This Connects — Navigate From Here
 

@@ -77,12 +77,14 @@ From the LLM Wiki Pattern on the Memex lineage: "Karpathy explicitly connects th
 - **Any team knowledge base**: The pattern scales from personal (one person + LLM) to team (shared wiki, multiple contributors, LLM handles merge and cross-reference) without changing the fundamental architecture.
 - **Research and competitive intelligence**: The "file answers back into the wiki" compounding mechanic makes this pattern especially powerful for ongoing research — each session builds on the last.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I maintaining documentation manually when LLM automation could handle it?** — Cross-references, index updates, relationship linking, tag management, validation checks — if you are doing any of these by hand, you are accepting the maintenance burden that kills wikis. Automate the bookkeeping.
+> 2. **Am I updating a wiki page without triggering the post-chain?** — Every manual edit that bypasses the automated maintenance pipeline (index rebuild, manifest, validate, wikilinks, lint) creates structural debt. The chain exists to eliminate the maintenance failure mode.
+> 3. **Am I evaluating a knowledge tool by its features instead of its maintenance economics?** — The right question is not "does it have good features?" but "will the maintenance burden grow faster than the value?" Tools without automated maintenance will fail for the same historical reasons all previous wikis failed.
+> 4. **Am I treating the schema as static configuration instead of co-evolved operational knowledge?** — The CLAUDE.md / schema is "the real product" — it encodes accumulated operational knowledge. If you are not evolving it alongside the wiki, you are missing the compounding mechanism.
 
 ### How This Connects — Navigate From Here
 

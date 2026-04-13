@@ -63,12 +63,14 @@ The cross-domain connectivity pattern is visible in the relationship verbs. LLM 
 - **Schema change evaluation**: Any proposed change to `config/schema.yaml` or `CLAUDE.md` should be cross-checked against the knowledge-systems domain pages. If the change is significant enough to update schema, it likely warrants updating the knowledge-systems pages that document the schema rationale.
 - **Cross-domain bridge identification**: When a concept in another domain seems to connect to how the wiki itself works, that connection probably routes through a knowledge-systems page. Making the connection explicit (via a Relationships entry) strengthens the wiki's self-documentation.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I building domain knowledge without understanding the knowledge system foundation?** — If you are working in automation, ai-agents, or any other domain without first reading LLM Wiki Pattern, Second Brain Architecture, and Knowledge Evolution Pipeline, you are building on a foundation you do not understand.
+> 2. **Am I evolving other domains while knowledge-systems pages are thin or outdated?** — Knowledge-systems is the meta-domain. Gaps here propagate everywhere. If the ingestion pipeline page is wrong, every domain that uses ingestion is affected. Prioritize the foundation.
+> 3. **Am I changing schema or tooling without updating the knowledge-systems pages that document it?** — A schema change significant enough to update `config/schema.yaml` likely warrants updating the self-documentation pages. The wiki must document itself accurately.
+> 4. **Am I onboarding to a new domain without starting from knowledge-systems?** — The three core pages (LLM Wiki Pattern, Second Brain Architecture, Knowledge Evolution Pipeline) provide the conceptual vocabulary for every other domain. Skipping them makes all other pages harder to interpret.
 
 ### How This Connects — Navigate From Here
 

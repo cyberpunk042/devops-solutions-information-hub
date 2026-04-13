@@ -66,12 +66,14 @@ This lesson applies to:
 - **OpenFleet and AICP integration**: Both sister projects can query this wiki's knowledge via LightRAG once `kb_sync.py` is configured to point at the research wiki's manifest. The same query engine that serves OpenFleet's agent fleet can serve AICP's context assembly.
 - **Any knowledge system design**: When choosing between wiki navigation and RAG, the answer is "start with the wiki, add the graph query engine at the scale boundary." The wiki gives you curation and compounding; the graph query engine gives you scale.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I using only keyword or vector search when relationship-based navigation exists?** — If the wiki has typed relationships (BUILDS ON, ENABLES, CONTRADICTS) and you are searching by keyword instead of following edges, you are ignoring the highest-quality retrieval path available.
+> 2. **Am I writing generic RELATES TO relationships when a specific verb would carry more signal?** — Every `RELATES TO` is a missed opportunity for graph traversal. Could it be CONTRADICTS, ENABLES, SUPERSEDES, or BUILDS ON? Specific verbs become queryable graph edges.
+> 3. **Am I treating wiki navigation and RAG as an either-or choice?** — The wiki is the authoring layer; a graph query engine is the retrieval layer. They are complementary, not competing. If you are choosing one over the other, you are accepting an unnecessary tradeoff.
+> 4. **Am I at the scale boundary where index navigation breaks down?** — Under 200 pages, index navigation is cheaper and more accurate. Above 200, you need a query engine. Know which side of the boundary you are on before choosing your retrieval strategy.
 
 ### How This Connects — Navigate From Here
 

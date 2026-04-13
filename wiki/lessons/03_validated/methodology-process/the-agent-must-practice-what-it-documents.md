@@ -97,12 +97,14 @@ This lesson applies to any system that both produces and consumes its own method
 >
 > Knowledge must flow upward: tribal → documented → operational. The agent's job is to accelerate this flow, not accumulate at level 2 while operating at level 1.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I documenting a standard I am not currently following?** — Check: does the rule exist in CLAUDE.md or skill definitions (operational knowledge), or only in wiki pages (produced knowledge)? If only in wiki pages, the agent can describe it perfectly while violating it in practice.
+> 2. **Am I about to skip a step that the wiki's own methodology says is required?** — Brainstorm before spec. Research before design. Depth verification before synthesis. These rules exist because the agent skipped them before. Are you about to repeat the pattern?
+> 3. **When the wiki evolved a new methodology rule, did I propagate it to CLAUDE.md?** — Knowledge must flow upward: tribal knowledge to documented methodology to operational rules. If a lesson became a rule but the rule is not in the operational instructions, the lesson was learned but not enforced.
+> 4. **Would the operator catch a gap between what I document and what I do?** — The most dangerous form of technical debt is invisible in the artifacts. The documentation looks correct, but actual behavior diverges. Run the self-test: am I doing what I say?
 
 ### How This Connects — Navigate From Here
 

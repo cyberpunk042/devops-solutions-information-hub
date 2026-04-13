@@ -69,12 +69,14 @@ From Claude Code Best Practices: "All workflows converge on one pattern: Ten maj
 - **openfleet / AICP agent design**: When building LLM agents for sister projects, the harness (runtime guardrails, plan→work→review cycle, subagent isolation) should be structural, not advisory. Build context hygiene into the system architecture.
 - **Operator productivity**: The most impactful optimization for any Claude Code operator is not prompt cleverness — it is ensuring the right information is present in context at the right time, and irrelevant information is absent.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I optimizing prompt wording when context selection matters more?** — The model capability is fixed. What varies is what information is present, how it is structured, and how much noise has accumulated. Are you tweaking words or managing context?
+> 2. **Am I about to execute a non-trivial task without a plan artifact?** — The biggest source of wasted tokens is going down the wrong path and scrapping work. Does a plan exist that constrains the next steps? If not, create one before executing.
+> 3. **Is my CLAUDE.md bloated beyond a routing table?** — Every message re-reads it. If it exceeds 200 lines of dense content, the bloat compounds per interaction. Is it an index pointing to detail files, or an encyclopedia?
+> 4. **Am I running a complex task in the main conversation instead of a forked subagent?** — Cross-task context accumulation degrades output quality. If the task is self-contained, fork it. The main conversation should see only the final result, not intermediate steps.
 
 ### How This Connects — Navigate From Here
 

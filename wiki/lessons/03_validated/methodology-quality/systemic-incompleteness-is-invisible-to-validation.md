@@ -72,12 +72,14 @@ The agent's error was treating validation as a quality signal rather than a form
 > [!abstract] The general principle
 > Automated quality gates check STRUCTURE. Completeness requires JUDGMENT — can someone who wasn't involved in creating this actually use it? If the only way to verify completeness is human review, then human review is a required stage, not an optional luxury.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I treating validation-green and page count as proof that the work is done?** — Validation checks format (frontmatter, summaries, relationships). It does NOT check whether the content is deep enough, whether the models are usable, or whether entire categories are missing. Zero errors means well-formed, not complete.
+> 2. **Could someone who was NOT involved in creating this actually USE it?** — Not "can they read it" but "can they pick it up, understand it, and apply it without asking the author?" This is the real completion test. Entry points, standards, adoption guidance, tested instances — does it have all four?
+> 3. **Am I moving on to the next thing instead of asking "is this actually complete?"** — The "what's next?" impulse after hitting validation-green is the exact trigger for systemic incompleteness. Pause and run the usability test before moving on.
+> 4. **Am I measuring breadth (number of topics touched) instead of depth (any topic fully complete)?** — 128 pages across 14 models with zero complete models is worse than 30 pages across 3 fully complete models. Breadth without depth is the definition of systemic incompleteness.
 
 ### How This Connects — Navigate From Here
 

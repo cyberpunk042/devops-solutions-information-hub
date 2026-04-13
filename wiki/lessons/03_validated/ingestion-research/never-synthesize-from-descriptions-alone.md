@@ -86,12 +86,14 @@ This lesson applies far beyond wiki ingestion:
 
 **The general rule**: if your source is N steps removed from the actual artifact, you are at Layer 0. Go to Layer 1 before synthesizing. If you cannot reach Layer 1 (the artifact is behind a paywall, requires authentication, or no longer exists), state that limitation explicitly in the synthesis rather than writing as if you had full depth.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I writing about something without having read a real instance of it?** — If your source is a README, catalog, index page, or description, you are at Layer 0. Have you opened an actual instance (a real config file, a real API response, a real DESIGN.md)? Description is metadata. Instance is data.
+> 2. **Is my source N steps removed from the actual artifact?** — A curated list links to tools. A tool's README describes its output. The output itself is the knowledge. Each step of indirection loses depth. How many steps removed are you from the thing itself?
+> 3. **Could I pass a "prove me" challenge right now?** — If the operator said "show me the actual thing, not the description," could you produce a real instance with specific details (tables, conventions, numbers) that the description never mentioned?
+> 4. **Am I filling in gaps with plausible-sounding content instead of stating "I haven't read a real instance"?** — Layer 0 synthesis produces confident headings that match the description but contain zero depth. If your sections are generic enough to apply to any instance, you have not read a specific one.
 
 ### How This Connects — Navigate From Here
 

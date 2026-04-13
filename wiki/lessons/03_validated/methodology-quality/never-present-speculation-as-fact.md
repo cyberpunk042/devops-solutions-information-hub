@@ -68,12 +68,14 @@ The deeper failure: the agent didn't read what the operator pointed to. The oper
 > [!abstract] Quality of information > quantity of pages
 > The solution to lacking quality information is MORE RESEARCH, not more guessing. One verified data point is worth more than ten plausible-sounding fabrications.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I stating a specific number, threshold, or claim without a source citation?** — If you cannot point to exactly where the data came from (a source file, a measurement, a practitioner report), it is speculation. Say "one practitioner reported..." or "approximately..." instead of stating it as fact.
+> 2. **Am I filling in gaps with plausible-sounding content instead of marking them as unknown?** — The temptation is to produce complete-looking output. But fabricated details presented as facts erode trust more than honest gaps. Use "(Requires: research)" or "no data available" for unknowns.
+> 3. **Am I generalizing from limited evidence without qualifying the generalization?** — "Context degrades at 40%" (presented as universal fact) vs "one practitioner reported degradation around 40% in their setup" (qualified claim). The difference is intellectual honesty.
+> 4. **Would the operator's response be "prove it" — and could I?** — Before writing any quantitative claim or definitive statement, ask: if challenged, can I produce the source? If not, downgrade the confidence language now, before you are challenged.
 
 ### How This Connects — Navigate From Here
 

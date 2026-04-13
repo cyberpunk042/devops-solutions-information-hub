@@ -63,12 +63,14 @@ The skills-beat-MCP finding is independently confirmed in the harness engineerin
 - **Operator tooling**: Skills are the natural unit of sharing in Claude Code communities. Build operator-specific skills for recurring workflows (infrastructure provisioning, incident response, deployment pipelines).
 - **Context management**: Use `context: fork` in complex skills to keep intermediate steps out of the main orchestrator's context window.
 
-> [!warning] Self-Check — Am I About to Make This Mistake?
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself:
 >
-> 1. Am I applying this lesson to my current context?
-> 2. Do I have evidence that this applies HERE, or am I assuming?
-> 3. What would change if this lesson didn't apply to my situation?
-> 4. Have I checked the boundaries — where does this lesson NOT apply?
+> 1. **Am I building custom MCP tooling when a skill (markdown + bundled script) would achieve 80% of the value at 10% of the cost?** — Skills are plain markdown with no compiled code, no API registration, no infrastructure. Before investing in MCP, verify that a skill does not already solve the problem more simply.
+> 2. **Am I building a monolithic tool when a composable skill would be more portable?** — Skills can be shared as community packages, composed hierarchically, and iterated through natural language. A custom tool locks you into one implementation. Which do you need?
+> 3. **Am I loading all tool schemas into context at startup (MCP pattern) when contextual skill loading would be more token-efficient?** — MCP loads everything upfront; skills load only when triggered. For token-sensitive workflows, this difference compounds across every interaction.
+> 4. **Am I running a complex skill in the main conversation instead of using `context: fork`?** — Skill execution in the main thread pollutes the orchestrator's context with intermediate steps. Fork the skill so the main conversation sees only the final result.
 
 ### How This Connects — Navigate From Here
 
