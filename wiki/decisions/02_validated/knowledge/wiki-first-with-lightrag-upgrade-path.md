@@ -71,7 +71,7 @@ Moderate. Activating LightRAG is additive — it does not change wiki files, so 
 - **Hardware requirements**: LightRAG's indexing pipeline (if using LLM-based extraction rather than kb_sync bypass) requires minimum 32B parameter model with 32KB context. JSON storage backend (`--storage-type json`) avoids the Neo4j/PostgreSQL database dependency, enabling zero-database-dependency deployment.
 
 > [!info] SDLC Chain Context
-> This decision was calibrated for a medium-scale wiki (~267 pages) with hierarchical domain indexes. At different chain levels:
+> This decision was calibrated for a medium-scale wiki (~297 pages) with hierarchical domain indexes. At different chain levels:
 > - **Simplified chain:** A small project wiki (<50 pages) may never hit the LightRAG trigger — pure index navigation with a flat structure is sufficient indefinitely.
 > - **Full chain:** A fleet-wide knowledge base spanning multiple projects would hit the 200-page ceiling immediately; LightRAG or equivalent graph query becomes a day-one requirement, not a deferred upgrade.
 > See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.

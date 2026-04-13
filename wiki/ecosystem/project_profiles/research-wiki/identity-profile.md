@@ -158,7 +158,7 @@ The research wiki's primary export to the ecosystem is the methodology framework
 > |-----------|-------|
 > | **Ecosystem overview** | [[four-project-ecosystem\|Four-Project Ecosystem]] |
 > | **Super-model (brain overview)** | [[super-model\|Research Wiki as Ecosystem Intelligence Hub]] |
-> | **Model registry (all 15 models)** | [[model-registry\|Model Registry]] |
+> | **Model registry (all 16 models)** | [[model-registry\|Model Registry]] |
 > | **Methodology model** | [[model-methodology\|Model — Methodology]] |
 > | **Second brain model** | [[model-second-brain\|Model — Second Brain]] |
 > | **Ecosystem model** | [[model-ecosystem\|Model — Ecosystem Architecture]] |

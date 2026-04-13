@@ -229,7 +229,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **All 15 models listed** | [[model-registry|Model Registry]] |
+> | **All 16 models listed** | [[model-registry|Model Registry]] |
 > | **Foundation model: wiki** | [[model-llm-wiki|Model — LLM Wiki]] |
 > | **Foundation model: methodology** | [[model-methodology|Model — Methodology]] |
 > | **System map (find anything)** | [[methodology-system-map|Methodology System Map]] |

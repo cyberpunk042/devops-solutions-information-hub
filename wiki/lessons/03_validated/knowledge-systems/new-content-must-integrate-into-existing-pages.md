@@ -109,7 +109,7 @@ The mechanism: creating new pages is easy and feels productive. Updating existin
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What entry points exist?** | [[methodology-system-map|Methodology System Map]] — every component listed. [[model-registry|Model Registry]] — all 15 models. |
+> | **What entry points exist?** | [[methodology-system-map|Methodology System Map]] — every component listed. [[model-registry|Model Registry]] — all 16 models. |
 > | **How does the wiki's own structure help?** | [[model-llm-wiki|Model — LLM Wiki]] — domain indexes, manifest, wikilink generation |
 > | **What does good integration look like?** | Phase 2 of the 2026-04-12 session: 6 spine pages updated with "How This Weaves Together" navigation tables |
 > | **How does the Goldilocks protocol help?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity-based entry points: who you are determines where you start |

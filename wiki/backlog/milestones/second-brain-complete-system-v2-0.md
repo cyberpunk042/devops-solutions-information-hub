@@ -26,7 +26,7 @@ epics:
 acceptance_criteria:
   - "Operator can browse Obsidian from any entry point and find everything"
   - "Operator can run CLI/gateway and find everything"
-  - "All 15 models fully updated with current session knowledge"
+  - "All 16 models fully updated with current session knowledge"
   - "All 15 per-type standards have inline annotated exemplars"
   - "Full integration chain proven end-to-end with a real project"
   - "Goldilocks navigable as a system, not just a concept page"
@@ -75,7 +75,7 @@ Transform the second brain from a collection of 279 knowledge pages into a compl
 >
 > | Epic | Focus | What It Delivers | Dependencies |
 > |------|-------|-----------------|-------------|
-> | **E010: Model Updates** | Update ALL 15 models with current knowledge | Every model page reflects ALL session learnings, sister project evidence, principles | None — can start immediately |
+> | **E010: Model Updates** | Update ALL 16 models with current knowledge | Every model page reflects ALL session learnings, sister project evidence, principles | None — can start immediately |
 > | **E011: Standards Exemplification** | Inline annotated exemplars for ALL 15 per-type standards | Every standard shows WHAT good looks like with WHY annotations | E010 (models inform what "good" means) |
 > | **E012: Template Enrichment** | Templates as rich examples of proto-programming | Every template teaches through structure, not just placeholders | E011 (standards define what templates must demonstrate) |
 > | **E013: Super-Model Evolution** | Update super-model to v2.0 + create sub-super-models | Goldilocks super-model, Enforcement super-model, Knowledge super-model | E010 (models must be current first) |

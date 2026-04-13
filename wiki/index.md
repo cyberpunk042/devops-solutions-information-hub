@@ -1,6 +1,6 @@
 # Research Wiki — Master Index
 
-Central intelligence spine for the devops ecosystem. 175 pages of synthesized
+Central intelligence spine for the devops ecosystem. 297 pages of synthesized
 knowledge across AI agents, knowledge systems, devops, automation, and tools.
 
 ## How to Browse This Wiki
@@ -17,7 +17,7 @@ This wiki is organized like a library. Start at the level that matches what you 
 | **Comparisons** | Side-by-side evaluations with structured matrices | [comparisons/](comparisons/) |
 | **Sources** | Individual source syntheses — the raw evidence layer | [sources/](sources/) |
 
-**If you're new:** Read the [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] for the big picture, then [[model-registry|Model Registry]] for all 15 models.
+**If you're new:** Read the [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] for the big picture, then [[model-registry|Model Registry]] for all 16 models.
 
 **If you're an agent from another project:** [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] → choose your adoption tier → follow the model dependency graph.
 
@@ -32,7 +32,7 @@ This wiki is organized like a library. Start at the level that matches what you 
 | [[model-claude-code|Model — Claude Code]] | The agent runtime — extensions, context, harness | [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]] |
 | [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] | Three-layer defense, failure lessons | [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]] |
 
-See [[model-registry|Model Registry]] for all 15 models with maturity status and line counts.
+See [[model-registry|Model Registry]] for all 16 models with maturity status and line counts.
 
 ## Domains — Knowledge by Topic
 

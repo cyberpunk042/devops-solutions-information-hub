@@ -181,7 +181,7 @@ Root Super-Model (v2.0) — dashboard + routing
 >
 > **Key files to read first:**
 > - `wiki/spine/super-model.md` — current v1.3 (the source material to decompose)
-> - `wiki/spine/references/model-registry.md` — all 15 models with status
+> - `wiki/spine/references/model-registry.md` — all 16 models with status
 > - `wiki/spine/references/methodology-system-map.md` — complete lookup for every component
 > - `wiki/domains/cross-domain/project-self-identification-protocol.md` — the Goldilocks protocol that becomes a sub-SM
 > - This milestone page: `wiki/backlog/milestones/second-brain-complete-system-v2-0.md`

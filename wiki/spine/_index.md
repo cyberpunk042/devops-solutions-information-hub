@@ -2,7 +2,7 @@
 
 Strategic architecture: models, standards, domain overviews, and the adoption guide.
 
-**Entry point:** [[model-registry|Model Registry]] — all 15 models with status and standards links.
+**Entry point:** [[model-registry|Model Registry]] — all 16 models with status and standards links.
 
 ## Methodology System
 

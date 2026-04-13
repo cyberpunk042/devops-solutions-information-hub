@@ -58,7 +58,7 @@ The first 14 model pages failed every row of this table. They used file paths in
 
 **The operator's response:** "There is also no trace of what I asked in the model.. it look like mindless document.... do you not know what a model is?"
 
-**The fix:** All 15 models rebuilt with the model-builder skill over two sessions. Model pages grew from 80-110 lines to 200-500+ lines with full standard sections. 7 companion standards pages created. The Model Registry created as the entry point.
+**The fix:** All 16 models rebuilt with the model-builder skill over two sessions. Model pages grew from 80-110 lines to 200-500+ lines with full standard sections. 7 companion standards pages created. The Model Registry created as the entry point.
 
 **Source:** `wiki/log/2026-04-09-directive-models-are-not-documents.md`
 
