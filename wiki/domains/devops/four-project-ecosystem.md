@@ -113,7 +113,7 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 | Repo | devops-solutions-research-wiki |
 | Role | Knowledge synthesis, second brain, central intelligence spine |
 | Core component | Ingestion pipeline (5-stage), post-chain (6-step), LightRAG export |
-| MCP server | 15 tools exposed to Claude Code and other agents |
+| MCP server | 17 tools exposed to Claude Code and other agents |
 | Knowledge export | wiki/domains/ → LightRAG (OpenFleet), docs/kb/ (AICP) |
 | Post-mortem record | Captures operational lessons for all ecosystem projects |
 

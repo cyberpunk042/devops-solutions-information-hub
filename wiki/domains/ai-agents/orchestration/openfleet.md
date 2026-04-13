@@ -54,7 +54,7 @@ OpenFleet is an AI-native project lifecycle orchestration framework implementing
 
 ## Deep Analysis
 
-### Orchestrator 9-Step Cycle
+### Orchestrator 12-Step Cycle
 
 Every 30 seconds (configurable: turbo=5s, standard=30s, economic=60s):
 1. Storm monitor evaluation
@@ -107,7 +107,7 @@ Every 30 seconds (configurable: turbo=5s, standard=30s, economic=60s):
 
 Cross-referencing `Agent Orchestration Patterns` and `Four-Project Ecosystem`: the answer varies by role and is already partially resolved by the silent heartbeat strategy. The `Four-Project Ecosystem` page documents: "silent heartbeats for idle agents save 70% cost." The `Agent Orchestration Patterns` page confirms the three cycle speed modes — turbo=5s (high responsiveness, high cost), standard=30s (balanced), economic=60s (low cost, reduced responsiveness). The optimal frequency per role is: fleet-ops (30m heartbeat, as documented) operates at a much lower frequency than the orchestrator cycle because its role is strategic coordination, not real-time dispatch. The `Immune System Rules` page documents that the 3-strike window is tuned for the standard 30s cycle — turbo mode risks false positive escalation. The practical answer: active task-executing agents (software-engineer, qa-engineer) benefit from standard=30s; idle agents should be silenced; fleet-ops operates at its own 30m cadence independent of the orchestrator cycle. The economic=60s mode is appropriate for non-critical background agents (technical-writer, ux-designer) when no active sprint is running.
 
-**Q: Can the deterministic brain's 9-step cycle be extended with plugin hooks?**
+**Q: Can the deterministic brain's 12-step cycle be extended with plugin hooks?**
 
 Cross-referencing `Harness Engineering` and `Immune System Rules`: yes, and the mechanism is already designed for it. The `Harness Engineering` page documents that the harness pattern hierarchy includes "Level 3: Runtime guardrails via hooks, TypeScript engine" — the deterministic orchestrator is Level 4, and hooks can be added at the execution boundaries. The `Immune System Rules` page documents that doctor.py runs at step 6 of the 12-step cycle — a pre-existing plugin point. The `Harness Engineering` page also notes: "PreToolUse hooks for measuring skill usage, PostToolUse hooks for auto-formatting, Stop hooks to nudge Claude to verify." Applied to the orchestrator: each numbered step is a natural plugin point where a Python callable could be registered and invoked. The `Agent Orchestration Patterns` page's answered question on "minimal orchestration overhead" confirms the pipeline chains (`python3 -m tools.pipeline chain ingest`) already implement a hook-based extension model at Level 2. Extending the 12-step cycle with registered Python callables per step is architecturally consistent with the ecosystem's IaC-only philosophy.
 
