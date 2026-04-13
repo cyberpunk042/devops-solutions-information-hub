@@ -11,7 +11,17 @@ confidence: high
 maturity: growing
 created: 2026-04-09
 updated: 2026-04-12
-sources: []
+sources:
+  - id: src-zettelkasten-methodology
+    type: wiki
+    file: wiki/domains/knowledge-systems/pkm-theory/zettelkasten-methodology.md
+  - id: src-para-methodology
+    type: wiki
+    file: wiki/domains/knowledge-systems/pkm-theory/para-methodology.md
+  - id: src-karpathy-llm-wiki-idea-file
+    type: documentation
+    file: raw/articles/karpathy-llm-wiki-idea-file.md
+    title: Karpathy LLM Wiki Idea File
 tags: [model, concept, spine, second-brain, pkm, zettelkasten, para, obsidian, knowledge-management, progressive-distillation]
 ---
 
@@ -212,9 +222,10 @@ The wiki IS a second brain — and a second brain is a HUB, not a silo. It aggre
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Content structure** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Knowledge evolution** | [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **PKM foundations** | [[para-methodology|PARA Methodology]] · [[zettelkasten-methodology|Zettelkasten Methodology]] |
+> | **Ecosystem architecture** | [[model-ecosystem|Model — Ecosystem Architecture]] |
 
 ## Relationships
 

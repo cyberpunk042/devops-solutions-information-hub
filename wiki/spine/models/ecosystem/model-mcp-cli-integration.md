@@ -243,9 +243,10 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Claude Code runtime** | [[model-claude-code|Model — Claude Code]] |
+> | **Automation pipelines** | [[model-automation-pipelines|Model — Automation and Pipelines]] |
+> | **Gateway tools** | [[gateway-tools-reference|Gateway Tools Reference]] |
+> | **Extension system** | [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] |
 
 ## Relationships
 

@@ -447,9 +447,11 @@ Validated experience from operating Claude Code in this ecosystem.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Extension system** | [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] |
+> | **Markdown as IaC** | [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] |
+> | **Enforcement patterns** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] |
+> | **Context engineering** | [[model-context-engineering|Model — Context Engineering]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
 
 ## Relationships
 

@@ -307,9 +307,11 @@ Commands (user trigger)
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Claude Code runtime** | [[model-claude-code|Model — Claude Code]] |
+> | **Enforcement patterns** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] |
+> | **Stage-aware injection** | [[stage-aware-skill-injection|Stage-Aware Skill Injection]] |
+> | **Markdown as IaC** | [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
 
 ## Relationships
 

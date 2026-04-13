@@ -268,9 +268,11 @@ See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the a
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Five-project topology** | [[four-project-ecosystem|Four-Project Ecosystem]] |
+> | **Project profiles** | `wiki/ecosystem/project_profiles/` |
+> | **Integration chain** | [[model-mcp-cli-integration|Model — MCP and CLI Integration]] |
+> | **MCP and CLI tooling** | [[model-mcp-cli-integration|Model — MCP and CLI Integration]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
 
 ## Relationships
 

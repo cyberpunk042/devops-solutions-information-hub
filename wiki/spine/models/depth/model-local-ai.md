@@ -11,7 +11,14 @@ confidence: high
 maturity: growing
 created: 2026-04-09
 updated: 2026-04-09
-sources: []
+sources:
+  - id: src-aicp-identity-profile
+    type: wiki
+    file: wiki/ecosystem/project_profiles/aicp/identity-profile.md
+  - id: src-turboquant-122b-macbook
+    type: wiki
+    file: wiki/sources/tools-integration/src-turboquant-122b-macbook.md
+    title: Synthesis — TurboQuant 122B on MacBook
 tags: [model, concept, spine, local-ai, aicp, zero-cost, backend-routing, complexity-scoring, vram]
 ---
 
@@ -190,9 +197,10 @@ The VRAM constraint is not an architectural flaw — it is a deliberate design c
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **MCP and CLI integration** | [[model-mcp-cli-integration|Model — MCP and CLI Integration]] |
+> | **Ecosystem architecture** | [[model-ecosystem|Model — Ecosystem Architecture]] |
+> | **AICP project profile** | [[aicp|AICP]] |
+> | **Automation pipelines** | [[model-automation-pipelines|Model — Automation and Pipelines]] |
 
 ## Relationships
 

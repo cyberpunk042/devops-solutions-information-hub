@@ -11,7 +11,15 @@ confidence: high
 maturity: growing
 created: 2026-04-09
 updated: 2026-04-12
-sources: []
+sources:
+  - id: src-pipeline-py
+    type: code
+    file: tools/pipeline.py
+    title: Wiki Pipeline Orchestrator
+  - id: src-wiki-automation-ops
+    type: wiki
+    file: wiki/domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline.md
+    title: Wiki Ingestion Pipeline
 tags: [model, concept, spine, automation, pipelines, orchestration, event-driven, post-chain]
 ---
 
@@ -190,9 +198,10 @@ The gateway (`tools/gateway.py`) is a new pipeline entry point — it provides s
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **MCP and CLI integration** | [[model-mcp-cli-integration|Model — MCP and CLI Integration]] |
+> | **Knowledge evolution** | [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Gateway tools** | [[gateway-tools-reference|Gateway Tools Reference]] |
 
 ## Relationships
 

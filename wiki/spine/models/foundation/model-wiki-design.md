@@ -359,9 +359,11 @@ Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox �
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Wiki design standards** | [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]] |
+> | **Content structure model** | [[model-llm-wiki|Model — LLM Wiki]] · [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Callout vocabulary in action** | [[model-methodology|Model — Methodology]] |
+> | **Obsidian as graph interface** | [[obsidian-knowledge-vault|Obsidian Knowledge Vault]] |
+> | **Templates directory** | `wiki/config/templates/` |
 
 ## Relationships
 

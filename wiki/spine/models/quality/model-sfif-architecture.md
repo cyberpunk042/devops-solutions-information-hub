@@ -223,9 +223,10 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Quality model** | [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Quality tiers** | [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] |
+> | **Methodology standards** | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
 
 ## Relationships
 

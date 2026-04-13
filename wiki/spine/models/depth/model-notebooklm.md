@@ -213,9 +213,10 @@ The two tools occupy different positions in the knowledge lifecycle: NotebookLM 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Second brain model** | [[model-second-brain|Model — Second Brain]] |
+> | **Knowledge evolution** | [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Local AI ($0 target)** | [[model-local-ai|Model — Local AI ($0 Target)]] |
+> | **Automation pipelines** | [[model-automation-pipelines|Model — Automation and Pipelines]] |
 
 ## Relationships
 

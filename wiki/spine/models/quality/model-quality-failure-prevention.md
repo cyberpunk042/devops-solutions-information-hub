@@ -365,9 +365,10 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Enforcement patterns** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] |
+> | **Three lines of defense** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
+> | **Failure taxonomy** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] |
+> | **SFIF architecture** | [[model-sfif-architecture|Model — SFIF and Architecture]] |
 
 ## Relationships
 

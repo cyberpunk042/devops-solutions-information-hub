@@ -217,9 +217,11 @@ The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUD
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Claude Code runtime** | [[model-claude-code|Model — Claude Code]] |
+> | **Extension system** | [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] |
+> | **Design.md pattern** | [[design-md-pattern|Design.md Pattern]] |
+> | **Context engineering** | [[model-context-engineering|Model — Context Engineering]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
 
 ## Relationships
 

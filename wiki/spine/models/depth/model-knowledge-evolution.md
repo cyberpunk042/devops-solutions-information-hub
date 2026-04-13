@@ -283,9 +283,10 @@ Evolved pages organize into maturity-based subfolders: `00_inbox → 01_drafts �
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Content structure** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Progressive distillation** | [[progressive-distillation|Progressive Distillation]] |
+> | **Knowledge domain chain** | [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]] |
+> | **Evolution standards** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
 
 ## Relationships
 

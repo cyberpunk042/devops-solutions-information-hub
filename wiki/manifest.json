@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T14:37:47.101641+00:00",
+  "generated": "2026-04-13T14:52:34.243750+00:00",
   "stats": {
     "pages": 305,
     "domains": 9,
@@ -17571,7 +17571,19 @@
         "complexity-scoring",
         "vram"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "id": "src-aicp-identity-profile",
+          "type": "wiki",
+          "file": "wiki/ecosystem/project_profiles/aicp/identity-profile.md"
+        },
+        {
+          "id": "src-turboquant-122b-macbook",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-turboquant-122b-macbook.md",
+          "title": "Synthesis \u2014 TurboQuant 122B on MacBook"
+        }
+      ],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
@@ -17687,7 +17699,24 @@
         "knowledge-management",
         "progressive-distillation"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "id": "src-zettelkasten-methodology",
+          "type": "wiki",
+          "file": "wiki/domains/knowledge-systems/pkm-theory/zettelkasten-methodology.md"
+        },
+        {
+          "id": "src-para-methodology",
+          "type": "wiki",
+          "file": "wiki/domains/knowledge-systems/pkm-theory/para-methodology.md"
+        },
+        {
+          "id": "src-karpathy-llm-wiki-idea-file",
+          "type": "documentation",
+          "file": "raw/articles/karpathy-llm-wiki-idea-file.md",
+          "title": "Karpathy LLM Wiki Idea File"
+        }
+      ],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
@@ -17750,7 +17779,20 @@
         "event-driven",
         "post-chain"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "id": "src-pipeline-py",
+          "type": "code",
+          "file": "tools/pipeline.py",
+          "title": "Wiki Pipeline Orchestrator"
+        },
+        {
+          "id": "src-wiki-automation-ops",
+          "type": "wiki",
+          "file": "wiki/domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline.md",
+          "title": "Wiki Ingestion Pipeline"
+        }
+      ],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
