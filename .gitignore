@@ -33,3 +33,5 @@ wiki/.evolve-queue/*.prompt.md
 
 # Auto-scaffolded pattern stubs from scorer (low-value, need manual curation)
 wiki/patterns/pattern-*-+-*.md
+
+.sync-state.json
