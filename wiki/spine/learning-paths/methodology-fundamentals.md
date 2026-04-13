@@ -76,7 +76,7 @@ Guided sequence for understanding the research wiki's methodology system — fro
 ### Part 6: Key Lessons (prevent known failures)
 
 18. **[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]** — "Continue" = current stage, NOT next stage.
-19. **[[always-plan-before-executing|Always Plan Before Executing]]** — Planning costs 1x. Rework costs 5.5x.
+19. **[[always-plan-before-executing|Always Plan Before Executing]]** — Breezing mode planning costs ~5.5x tokens upfront. Rework after bad implementation costs far more.
 20. **[[three-classes-of-methodology-output|Three Classes of Methodology Output]]** — Different classes need different quality rules.
 21. **[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]** — 100% of 20% = invisible incompleteness.
 22. **[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]** — Copying instance values ≠ building a framework.

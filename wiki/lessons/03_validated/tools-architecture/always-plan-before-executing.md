@@ -104,7 +104,7 @@ Even at the individual agent level, Claude Code's best practices recommend using
 > 1. **Do I have a plan?** Not a vague idea — a specific plan with steps. If not, I'm about to prompt-react.
 > 2. **Did the user approve the plan?** If I planned in my head without presenting it, it's not an approved plan.
 > 3. **Am I skipping Document/Design stages because "the solution is obvious"?** The solution felt obvious to the OpenArms agent that produced 2,073 orphaned lines too.
-> 4. **Is this a 5.5x token cost decision?** Planning costs 1x. Rework costs 5.5x. Planning is cheaper even when it feels slower.
+> 4. **Am I investing in planning or gambling on rework?** Breezing mode planning costs ~5.5x tokens upfront. Rework after a bad implementation costs far more. The exact rework multiplier is unquantified, but the direction is clear.
 
 ### How This Connects — Navigate From Here
 
@@ -113,7 +113,7 @@ Even at the individual agent level, Claude Code's best practices recommend using
 > | Direction | Go To |
 > |-----------|-------|
 > | **What methodology enforces planning?** | [[model-methodology|Model — Methodology]] — Document and Design stages come BEFORE Scaffold/Implement/Test. Stage gates prevent skipping. |
-> | **What is the cost of NOT planning?** | OpenArms evidence: planning costs 1x, rework costs 5.5x. 686 passing tests but 0 verified features because tests weren't planned against specs. |
+> | **What is the cost of NOT planning?** | OpenArms evidence: Breezing mode costs ~5.5x planning tokens but prevents rework. 686 passing tests but 0 verified features because tests weren't planned against specs. |
 > | **How does contribution gating enforce planning?** | [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]] — architect design + QA tests collected BEFORE work starts. Planning is STRUCTURAL, not optional. |
 > | **What readiness threshold gates execution?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness (planning completeness) must cross threshold before progress (execution) begins |
 > | **What is the explicit method of work?** | [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]] — record requirements → research → synthesize → investigate → suggest solutions |

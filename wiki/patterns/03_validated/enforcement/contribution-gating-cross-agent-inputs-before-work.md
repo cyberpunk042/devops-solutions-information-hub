@@ -71,7 +71,7 @@ The implementing agent receives contributions AS CONTEXT — architect's design,
 >
 > With contribution gating, specialist inputs arrive BEFORE work. The implementing agent builds to spec from the start. Review becomes verification (does it match the design?) instead of discovery (what's wrong with this?).
 >
-> OpenArms's rework economics: planning costs 1x, rework costs 5.5x. Contribution gating front-loads the planning cost and eliminates most rework.
+> Rework economics: Breezing mode planning costs ~5.5x tokens upfront, but prevents rework whose cost is far higher (exact multiplier unquantified). Contribution gating front-loads the planning cost and eliminates most rework.
 
 **Anti-pattern detection:** The system flags `siloed_work` when required contributions are missing but a task somehow advanced. This catches bypass attempts or orchestrator bugs.
 
