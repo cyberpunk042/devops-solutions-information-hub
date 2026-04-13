@@ -1,5 +1,7 @@
 ---
-title: "Model Composition Rules"
+title: Model Composition Rules
+aliases:
+  - "Model Composition Rules"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -153,27 +155,27 @@ Multiple models run simultaneously on independent tracks. They don't share stage
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Framework]]
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Artifact Chains by Methodology Model]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Execution Modes and End Conditions]]
-- RELATES TO: [[Backlog Hierarchy Rules]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+- RELATES TO: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Artifact Chains by Methodology Model]]
-[[Stage-Gate Methodology]]
-[[Execution Modes and End Conditions]]
-[[Backlog Hierarchy Rules]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Methodology Adoption Guide]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]

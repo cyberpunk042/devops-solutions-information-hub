@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: PleasePrompto/notebooklm-skill"
+title: Synthesis — PleasePrompto-notebooklm-skill
+aliases:
+  - "Synthesis — PleasePrompto-notebooklm-skill"
+  - "Synthesis: PleasePrompto-notebooklm-skill"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    url: "https://github.com/PleasePrompto/notebooklm-skill"
+    url: https://github.com/PleasePrompto/notebooklm-skill
     file: raw/articles/pleasepromptonotebooklm-skill.md
-    title: "PleasePrompto/notebooklm-skill"
+    title: PleasePrompto/notebooklm-skill
     ingested: 2026-04-08
 tags: [notebooklm, claude-code, skill, source-grounded, browser-automation, python, patchright, anti-hallucination, library-management, stateless, rag-alternative, local-only, quick-start, mcp-alternative]
 ---
-
-# Synthesis: PleasePrompto/notebooklm-skill
-
+# Synthesis — PleasePrompto-notebooklm-skill
 ## Summary
 
 This repository provides a Claude Code Skill that lets Claude directly query Google NotebookLM for source-grounded, citation-backed answers based exclusively on uploaded documents. The skill uses browser automation (Patchright, a Playwright-based stealth library) to open Chrome in a headless instance, submit questions, and return answers to Claude Code programmatically. It focuses on eliminating hallucinations by grounding all responses in user-uploaded documents rather than general training data. The skill operates in a stateless model where each question opens a fresh browser session, asks the question, retrieves the answer with a follow-up prompt ("Is that ALL you need to know?"), and closes. A library management system lets users save NotebookLM notebook links with tags and descriptions so Claude can auto-select the right notebook for each query. Works only with local Claude Code (not web UI). Companion to the TypeScript-based PleasePrompto/notebooklm-mcp which provides persistent sessions and multi-tool support.
@@ -102,21 +103,21 @@ Cross-referencing `NotebookLM Skills`: the `NotebookLM Skills` page addresses th
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-pleaseprompto-notebooklm-skill
-- FEEDS INTO: [[NotebookLM Skills]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[NotebookLM]]
-- COMPARES TO: src-claude-world-notebooklm-skill
+- DERIVED FROM: [[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+- FEEDS INTO: [[notebooklm-skills|NotebookLM Skills]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- COMPARES TO: [[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
 
 ## Backlinks
 
-[[src-pleaseprompto-notebooklm-skill]]
-[[NotebookLM Skills]]
-[[Claude Code Skills]]
-[[NotebookLM]]
-[[src-claude-world-notebooklm-skill]]
+[[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[claude-code-skills|Claude Code Skills]]
+[[notebooklm|NotebookLM]]
+[[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]

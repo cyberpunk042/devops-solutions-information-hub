@@ -1,5 +1,7 @@
 ---
-title: "Context Compaction Is a Reset Event"
+title: Context Compaction Is a Reset Event
+aliases:
+  - "Context Compaction Is a Reset Event"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -15,7 +17,7 @@ sources:
   - id: openarms-compaction
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms v10 — post-compact hook rebuilds task state; without it, all corrections lost"
+    description: OpenArms v10 — post-compact hook rebuilds task state; without it, all corrections lost
   - id: openarms-v10-learnings
     type: observation
     file: raw/articles/openarms-methodology-v10-v11.md
@@ -105,29 +107,30 @@ OpenFleet solves it differently — the immune system's PRUNE response kills the
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What other behavioral failures exist?** | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — compaction is one of 7 failure dimensions |
-> | **How does OpenFleet handle compaction?** | [[Three Lines of Defense — Immune System for Agent Quality]] — PRUNE kills session, regrows fresh (no context preservation) |
-> | **How does OpenArms handle compaction?** | [[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — post-compact hook (29 lines) rebuilds from files |
+> | **What other behavioral failures exist?** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — compaction is one of 7 failure dimensions |
+> | **How does OpenFleet handle compaction?** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] — PRUNE kills session, regrows fresh (no context preservation) |
+> | **How does OpenArms handle compaction?** | [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — post-compact hook (29 lines) rebuilds from files |
 > | **Where do corrections go if not in context?** | Memory vs Wiki distinction: project knowledge → wiki (shared, versioned). Session continuity → Claude Code memory (ephemeral). Default to wiki. |
-> | **How does structured context help?** | [[Structured Context Is Proto-Programming for AI Agents]] — consistent structure survives compaction better than prose |
-> | **What is the right enforcement level?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — harness v2+ includes post-compact hooks |
+> | **How does structured context help?** | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] — consistent structure survives compaction better than prose |
+> | **What is the right enforcement level?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — harness v2+ includes post-compact hooks |
 
 ## Relationships
 
-- DERIVED FROM: [[Infrastructure Enforcement Proves Instructions Fail]]
-- DERIVED FROM: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Enforcement Hook Patterns]]
-- FEEDS INTO: [[Model: Claude Code]]
+- DERIVED FROM: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- DERIVED FROM: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- FEEDS INTO: [[model-claude-code|Model — Claude Code]]
 
 ## Backlinks
 
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Enforcement Hook Patterns]]
-[[Model: Claude Code]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[model-claude-code|Model — Claude Code]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[model-context-engineering|Model — Context Engineering]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]

@@ -1,5 +1,7 @@
 ---
-title: "Deterministic Shell, LLM Core"
+title: Deterministic Shell, LLM Core
+aliases:
+  - "Deterministic Shell, LLM Core"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -11,29 +13,17 @@ derived_from:
   - "Harness Engineering"
   - "AICP"
 instances:
-  - page: "OpenFleet"
-    context: "Deterministic Python orchestrator (zero LLM calls, pure state machine, 30-second cycle) surrounds 10 LLM-powered agents. The orchestrator handles dispatch, security scanning, anomaly detection, and budget gating; agents handle reasoning, synthesis, and code generation."
-  - page: "AICP"
-    context: "Python complexity router and circuit breaker (deterministic) selects which LLM backend handles each task. The router evaluates keywords, history depth, and profile thresholds; the selected LLM backend (LocalAI or Claude) handles the actual reasoning."
-  - page: "Research Pipeline Orchestration"
-    context: "Python pipeline tools (tools/pipeline.py, tools/validate.py, tools/manifest.py) form the deterministic shell: they orchestrate, validate, and route. Claude Code generates page content and performs synthesis — the creative and reasoning core."
-  - page: "Harness Engineering"
-    context: "13 TypeScript guardrail rules (R01-R13) form the deterministic enforcement shell: they block dangerous operations, query out-of-scope writes, and enforce the Plan→Work→Review cycle at execution time. The LLM (Claude) executes within the guardrail boundaries."
+  - {'page': 'OpenFleet', 'context': 'Deterministic Python orchestrator (zero LLM calls, pure state machine, 30-second cycle) surrounds 10 LLM-powered agents. The orchestrator handles dispatch, security scanning, anomaly detection, and budget gating; agents handle reasoning, synthesis, and code generation.'}
+  - {'page': 'AICP', 'context': 'Python complexity router and circuit breaker (deterministic) selects which LLM backend handles each task. The router evaluates keywords, history depth, and profile thresholds; the selected LLM backend (LocalAI or Claude) handles the actual reasoning.'}
+  - {'page': 'Research Pipeline Orchestration', 'context': 'Python pipeline tools (tools/pipeline.py, tools/validate.py, tools/manifest.py) form the deterministic shell: they orchestrate, validate, and route. Claude Code generates page content and performs synthesis — the creative and reasoning core.'}
+  - {'page': 'Harness Engineering', 'context': '13 TypeScript guardrail rules (R01-R13) form the deterministic enforcement shell: they block dangerous operations, query out-of-scope writes, and enforce the Plan→Work→Review cycle at execution time. The LLM (Claude) executes within the guardrail boundaries.'}
 created: 2026-04-08
 updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
-  - id: src-harness-engineering-article
-    type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
-  - id: src-aicp-local
-    type: documentation
-    file: ../devops-expert-local-ai/CLAUDE.md
-    title: "AICP — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
 tags: [deterministic, orchestration, llm-core, shell-pattern, guardrails, harness, openfleet, aicp, reliability, separation-of-concerns, agent-architecture]
 ---
 
@@ -115,38 +105,38 @@ Avoid or over-engineering Deterministic Shell, LLM Core when:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[OpenFleet]]
-- DERIVED FROM: [[Harness Engineering]]
-- DERIVED FROM: [[AICP]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Immune System Rules]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- ENABLES: [[Infrastructure as Code Patterns]]
-- RELATES TO: [[Agent Orchestration Patterns]]
-- BUILDS ON: [[Claude Code Best Practices]]
-- FEEDS INTO: [[Gateway-Centric Routing]]
+- DERIVED FROM: [[openfleet|OpenFleet]]
+- DERIVED FROM: [[harness-engineering|Harness Engineering]]
+- DERIVED FROM: [[aicp|AICP]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[immune-system-rules|Immune System Rules]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- ENABLES: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- RELATES TO: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- BUILDS ON: [[claude-code-best-practices|Claude Code Best Practices]]
+- FEEDS INTO: [[gateway-centric-routing|Gateway-Centric Routing]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Harness Engineering]]
-[[AICP]]
-[[Plan Execute Review Cycle]]
-[[Immune System Rules]]
-[[Research Pipeline Orchestration]]
-[[Infrastructure as Code Patterns]]
-[[Agent Orchestration Patterns]]
-[[Claude Code Best Practices]]
-[[Gateway-Centric Routing]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Model: Ecosystem Architecture]]
-[[Model: Quality and Failure Prevention]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
+[[openfleet|OpenFleet]]
+[[harness-engineering|Harness Engineering]]
+[[aicp|AICP]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[immune-system-rules|Immune System Rules]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]

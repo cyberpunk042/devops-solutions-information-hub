@@ -1,5 +1,8 @@
 ---
-title: "Model: Ecosystem Architecture"
+title: Model — Ecosystem Architecture
+aliases:
+  - "Model — Ecosystem Architecture"
+  - "Model: Ecosystem Architecture"
 type: concept
 domain: cross-domain
 layer: spine
@@ -12,16 +15,11 @@ sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
-  - id: src-devops-control-plane-local
-    type: documentation
-    file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
 tags: [ecosystem, model, openfleet, aicp, openarms, devops-control-plane, multi-project, integration, spine, architecture]
 ---
 
-# Model: Ecosystem Architecture
-
+# Model — Ecosystem Architecture
 ## Summary
 
 The Ecosystem Architecture model describes how five projects — OpenFleet, AICP, devops-control-plane, the research wiki, and OpenArms — form a self-sustaining system where each project has a single primary role and defined integration points. Projects integrate via files and shared protocols, not tightly coupled APIs — enabling independent evolution while maintaining system coherence. ==This model is the map of the entire ecosystem: understand it to understand why every other spine model exists.==
@@ -51,7 +49,7 @@ The Ecosystem Architecture model describes how five projects — OpenFleet, AICP
 
 10 agents: fleet-ops, project-manager, devsecops-expert, architect, software-engineer, qa-engineer, devops, technical-writer, ux-designer, accountability-generator. Each has a `SOUL.md` (identity) and `HEARTBEAT.md` (periodic checklist). Connected through OpenClaw (WebSocket gateway), managed via Mission Control UI.
 
-See [[OpenFleet]] for the seven-layer stack and LightRAG integration.
+See [[openfleet|OpenFleet]] for the seven-layer stack and LightRAG integration.
 
 ---
 
@@ -62,7 +60,7 @@ See [[OpenFleet]] for the seven-layer stack and LightRAG integration.
 
 5-stage roadmap: routine tasks → complex reasoning → 78 skills migrated → voice pipeline → full local-first. At completion: 80%+ Claude API cost reduction.
 
-See [[AICP]] for routing logic, circuit breaker, and the independence roadmap.
+See [[aicp|AICP]] for routing logic, circuit breaker, and the independence roadmap.
 
 ---
 
@@ -71,7 +69,7 @@ See [[AICP]] for routing logic, circuit breaker, and the independence roadmap.
 > [!info] **16 post-mortems → 24 rules → OpenFleet's immune system**
 > Not a monitoring system — a governance codification system. When something goes wrong, the lesson gets extracted, formalized as a rule, and committed. `doctor.py` enforces these rules on every agent action.
 
-See [[Immune System Rules]] for the 24 rules and their origins.
+See [[immune-system-rules|Immune System Rules]] for the 24 rules and their origins.
 
 ---
 
@@ -124,7 +122,7 @@ Completes the human interface layer. The fleet operates autonomously; the human 
 
 ### The Deterministic Shell + LLM Core Pattern
 
-The [[Deterministic Shell, LLM Core]] pattern appears throughout the ecosystem:
+The [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] pattern appears throughout the ecosystem:
 
 > [!info] **Four implementations of the same pattern**
 > | System | Deterministic shell | LLM core | What it prevents |
@@ -169,15 +167,15 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Four-Project Ecosystem]] | L2 | The foundational concept — why 5 projects, single responsibility per project |
-| [[OpenFleet]] | L2 | Agent workforce — 10 agents, deterministic orchestrator, OpenClaw |
-| [[AICP]] | L2 | Inference routing — complexity scorer, LocalAI independence roadmap |
-| [[Immune System Rules]] | L2 | 24 governance rules from 16 post-mortems |
-| [[OpenArms]] | L2 | Multi-channel personal access via OpenClaw |
-| [[Gateway-Centric Routing]] | L5 | Pattern: single gateway for fleet governance |
-| [[Deterministic Shell, LLM Core]] | L5 | Pattern: deterministic orchestration wrapping LLM reasoning |
-| [[Scaffold → Foundation → Infrastructure → Features]] | L5 | Pattern: universal build lifecycle across all 5 projects |
-| [[Decision: Wiki-First with LightRAG Upgrade Path]] | L6 | Scale decision for wiki → fleet knowledge integration |
+| [[four-project-ecosystem|Four-Project Ecosystem]] | L2 | The foundational concept — why 5 projects, single responsibility per project |
+| [[openfleet|OpenFleet]] | L2 | Agent workforce — 10 agents, deterministic orchestrator, OpenClaw |
+| [[aicp|AICP]] | L2 | Inference routing — complexity scorer, LocalAI independence roadmap |
+| [[immune-system-rules|Immune System Rules]] | L2 | 24 governance rules from 16 post-mortems |
+| [[openarms|OpenArms]] | L2 | Multi-channel personal access via OpenClaw |
+| [[gateway-centric-routing|Gateway-Centric Routing]] | L5 | Pattern: single gateway for fleet governance |
+| [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | L5 | Pattern: deterministic orchestration wrapping LLM reasoning |
+| [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] | L5 | Pattern: universal build lifecycle across all 5 projects |
+| [[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]] | L6 | Scale decision for wiki → fleet knowledge integration |
 
 ---
 
@@ -185,9 +183,9 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[Infrastructure Must Be Reproducible, Not Manual]] | All 5 projects deploy via IaC tooling, not manual config. Learned from early sync service failures. |
-| [[The Agent Must Practice What It Documents]] | The wiki documents methodology that all projects follow. When the wiki agent didn't follow its own rules, the entire ecosystem's credibility was undermined. |
-| [[Models Are Built in Layers, Not All at Once]] | The ecosystem itself was built in SFIF layers — scaffold (5 project shells), foundation (core tooling), infrastructure (integration points), features (agent fleet + evolution pipeline). |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | All 5 projects deploy via IaC tooling, not manual config. Learned from early sync service failures. |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | The wiki documents methodology that all projects follow. When the wiki agent didn't follow its own rules, the entire ecosystem's credibility was undermined. |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | The ecosystem itself was built in SFIF layers — scaffold (5 project shells), foundation (core tooling), infrastructure (integration points), features (agent fleet + evolution pipeline). |
 
 ---
 
@@ -248,7 +246,7 @@ The ecosystem projects operate at different PM levels, creating a layered manage
 
 Each level wraps the previous. L2 (OpenArms/OpenFleet) reads L1's Wiki LLM data. L3 (OpenFleet→Plane) syncs with L2's orchestrator state. The research wiki feeds ALL levels as the knowledge source of truth.
 
-See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and [[Readiness vs Progress — Two-Dimensional Work Tracking]] for the two-dimensional tracking model that operates at every level.
+See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] for the two-dimensional tracking model that operates at every level.
 
 ## Open Questions
 
@@ -270,44 +268,44 @@ See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Four-Project Ecosystem]]
-- BUILDS ON: [[OpenFleet]]
-- BUILDS ON: [[AICP]]
-- BUILDS ON: [[Immune System Rules]]
-- BUILDS ON: [[Gateway-Centric Routing]]
-- BUILDS ON: [[Deterministic Shell, LLM Core]]
-- RELATES TO: [[Model: MCP and CLI Integration]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Claude Code]]
-- FEEDS INTO: [[Model: LLM Wiki]]
+- BUILDS ON: [[four-project-ecosystem|Four-Project Ecosystem]]
+- BUILDS ON: [[openfleet|OpenFleet]]
+- BUILDS ON: [[aicp|AICP]]
+- BUILDS ON: [[immune-system-rules|Immune System Rules]]
+- BUILDS ON: [[gateway-centric-routing|Gateway-Centric Routing]]
+- BUILDS ON: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- RELATES TO: [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-claude-code|Model — Claude Code]]
+- FEEDS INTO: [[model-llm-wiki|Model — LLM Wiki]]
 
 ## Backlinks
 
-[[Four-Project Ecosystem]]
-[[OpenFleet]]
-[[AICP]]
-[[Immune System Rules]]
-[[Gateway-Centric Routing]]
-[[Deterministic Shell, LLM Core]]
-[[Model: MCP and CLI Integration]]
-[[Model: Knowledge Evolution]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Methodology]]
-[[Model: Claude Code]]
-[[Model: LLM Wiki]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Methodology Adoption Guide]]
-[[Methodology Evolution Protocol]]
-[[Portable Methodology Engine]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[The Wiki Is a Hub, Not a Silo]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[immune-system-rules|Immune System Rules]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-methodology|Model — Methodology]]
+[[model-claude-code|Model — Claude Code]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]

@@ -1,5 +1,7 @@
 ---
-title: "Claude Code Slash Commands (artemgetmann)"
+title: Claude Code Slash Commands (artemgetmann)
+aliases:
+  - "Claude Code Slash Commands (artemgetmann)"
 type: source-synthesis
 layer: 1
 maturity: seed
@@ -55,22 +57,22 @@ A small open-source collection of reusable Claude Code slash commands installabl
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Claude Code Skills]] (adds concrete command examples to the skills architecture)
-- IMPLEMENTS: [[Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)
-- RELATES TO: [[Claude Code Best Practices]] (command authoring is an extension of best practice guidance)
-- RELATES TO: [[Claude Code]] (core platform this builds on)
-- FEEDS INTO: [[Claude Code Scheduling]] (personal automation commands can be chained with scheduling)
+- EXTENDS: [[claude-code-skills|Claude Code Skills]] (adds concrete command examples to the skills architecture)
+- IMPLEMENTS: [[skills-architecture-patterns|Skills Architecture Patterns]] (demonstrates per-command tool scoping and argument patterns)
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]] (command authoring is an extension of best practice guidance)
+- RELATES TO: [[claude-code|Claude Code]] (core platform this builds on)
+- FEEDS INTO: [[claude-code-scheduling|Claude Code Scheduling]] (personal automation commands can be chained with scheduling)
 
 ## Backlinks
 
-[[Claude Code Skills]]
-[[Skills Architecture Patterns]]
-[[Claude Code Best Practices]]
-[[Claude Code]]
-[[Claude Code Scheduling]]
-[[Per-Role Command Architecture]]
+[[claude-code-skills|Claude Code Skills]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code|Claude Code]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[per-role-command-architecture|Per-Role Command Architecture]]

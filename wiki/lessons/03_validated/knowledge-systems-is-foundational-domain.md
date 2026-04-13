@@ -1,5 +1,8 @@
 ---
-title: "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki"
+title: Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki
+aliases:
+  - "Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki"
+  - "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,17 +18,12 @@ updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
-  - id: src-pipeline-tooling
-    type: documentation
-    file: tools/pipeline.py
-    title: "Wiki Pipeline Tool"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    title: Karpathy LLM Wiki Idea File
 tags: [knowledge-systems, hub-domain, second-brain, llm-wiki, foundational, self-referential, cross-domain]
 ---
 
-# Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki
-
+# Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki
 ## Summary
 
 The knowledge-systems domain is the only domain in this wiki where the wiki documents how it works. LLM Wiki Pattern describes this wiki's architecture, Second Brain Architecture maps its design to PKM principles, and Knowledge Evolution Pipeline describes its maintenance loop. Every other domain consumes knowledge-systems outputs (the ingestion pattern, the evolution pipeline, the schema) or feeds raw material into them. This self-referential quality makes knowledge-systems the foundation layer everything else stands on.
@@ -78,29 +76,29 @@ The cross-domain connectivity pattern is visible in the relationship verbs. LLM 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[LLM Wiki Pattern]]
-- DERIVED FROM: [[Second Brain Architecture]]
-- DERIVED FROM: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Second Brain Architecture]]
-- RELATES TO: [[Knowledge Evolution Pipeline]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- FEEDS INTO: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- DERIVED FROM: [[second-brain-architecture|Second Brain Architecture]]
+- DERIVED FROM: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[second-brain-architecture|Second Brain Architecture]]
+- RELATES TO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- FEEDS INTO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[LLM Wiki vs RAG]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]

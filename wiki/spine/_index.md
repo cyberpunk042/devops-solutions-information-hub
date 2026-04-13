@@ -2,22 +2,22 @@
 
 Strategic architecture: models, standards, domain overviews, and the adoption guide.
 
-**Entry point:** [[Model Registry]] — all 15 models with status and standards links.
+**Entry point:** [[model-registry|Model Registry]] — all 15 models with status and standards links.
 
 ## Methodology System
 
 | Page | What It Covers |
 |------|---------------|
-| [[Methodology System Map]] | Complete system map — every component, where it lives, how to extend — LOOKUP |
-| [[Model: Methodology]] | The 9 named models, stage gates, composition, quality tiers — UNDERSTAND |
-| [[Methodology Standards — What Good Execution Looks Like]] | Gold standards for methodology execution with real examples |
-| [[Methodology Adoption Guide]] | 4-tier adoption from read to enforce, per-domain quick starts |
-| [[Artifact Chains by Methodology Model]] | Full artifact chains for all 9 models |
-| [[Model Composition Rules]] | Sequential, nested, conditional, parallel composition |
-| [[Methodology Evolution Protocol]] | Evidence-driven versioned improvement |
-| [[CLAUDE.md Structural Patterns for Agent Compliance]] | 8 patterns that improve agent compliance |
-| [[Enforcement Hook Patterns]] | 4 hook types for infrastructure enforcement |
-| [[Stage-Aware Skill Injection]] | Per-stage skill recommendations and restrictions |
+| [[methodology-system-map|Methodology System Map]] | Complete system map — every component, where it lives, how to extend — LOOKUP |
+| [[model-methodology|Model — Methodology]] | The 9 named models, stage gates, composition, quality tiers — UNDERSTAND |
+| [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] | Gold standards for methodology execution with real examples |
+| [[methodology-adoption-guide|Methodology Adoption Guide]] | 4-tier adoption from read to enforce, per-domain quick starts |
+| [[artifact-chains-by-model|Artifact Chains by Methodology Model]] | Full artifact chains for all 9 models |
+| [[model-composition-rules|Model Composition Rules]] | Sequential, nested, conditional, parallel composition |
+| [[methodology-evolution-protocol|Methodology Evolution Protocol]] | Evidence-driven versioned improvement |
+| [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] | 8 patterns that improve agent compliance |
+| [[enforcement-hook-patterns|Enforcement Hook Patterns]] | 4 hook types for infrastructure enforcement |
+| [[stage-aware-skill-injection|Stage-Aware Skill Injection]] | Per-stage skill recommendations and restrictions |
 
 ## Per-Type Page Standards
 
@@ -25,33 +25,33 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 | Type | Standards Page | Exemplar |
 |------|--------------|----------|
-| concept | [[Concept Page Standards]] | [[Methodology Framework]] |
-| source-synthesis | [[Source-Synthesis Page Standards]] | [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] |
-| comparison | [[Comparison Page Standards]] | [[Cross-Domain Patterns]] |
-| reference | [[Reference Page Standards]] | [[Methodology Adoption Guide]] |
-| deep-dive | [[Deep-Dive Page Standards]] | [[Adoption Guide — How to Use This Wiki's Standards]] |
-| lesson | [[Lesson Page Standards]] | [[CLI Tools Beat MCP for Token Efficiency]] |
-| pattern | [[Pattern Page Standards]] | [[Plan-Execute-Review Cycle]] |
-| decision | [[Decision Page Standards]] | [[Execution Mode Edge Cases]] |
-| domain-overview | [[Domain Overview Page Standards]] | [[Cross-Domain — Domain Overview]] |
-| evolution | [[Evolution Page Standards]] | [[Evolution: Methodology System]] |
-| learning-path | [[Learning Path Page Standards]] | [[Learning Path: Methodology Fundamentals]] |
-| operations-plan | [[Operations Plan Page Standards]] | [[Operations Plan: Wiki Post-Ingestion Validation]] |
-| epic | [[Epic Page Standards]] | [[Artifact Type System]] |
-| task | [[Task Page Standards]] | [[Test OpenAI backend with LocalAI]] |
-| note | [[Note Page Standards]] | [[Models Are Not Documents — They Must Be Usable Systems]] |
+| concept | [[concept-page-standards|Concept Page Standards]] | [[methodology-framework|Methodology Framework]] |
+| source-synthesis | [[source-synthesis-page-standards|Source-Synthesis Page Standards]] | [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]] |
+| comparison | [[comparison-page-standards|Comparison Page Standards]] | [[cross-domain-patterns|Cross-Domain Patterns]] |
+| reference | [[reference-page-standards|Reference Page Standards]] | [[methodology-adoption-guide|Methodology Adoption Guide]] |
+| deep-dive | [[deep-dive-page-standards|Deep-Dive Page Standards]] | [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]] |
+| lesson | [[lesson-page-standards|Lesson Page Standards]] | [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] |
+| pattern | [[pattern-page-standards|Pattern Page Standards]] | [[Plan-Execute-Review Cycle]] |
+| decision | [[decision-page-standards|Decision Page Standards]] | [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]] |
+| domain-overview | [[domain-overview-page-standards|Domain Overview Page Standards]] | [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] |
+| evolution | [[evolution-page-standards|Evolution Page Standards]] | [[methodology-evolution-history|Evolution — Methodology System]] |
+| learning-path | [[learning-path-page-standards|Learning Path Page Standards]] | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+| operations-plan | [[operations-plan-page-standards|Operations Plan Page Standards]] | [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]] |
+| epic | [[epic-page-standards|Epic Page Standards]] | [[E003-artifact-type-system|Artifact Type System]] |
+| task | [[task-page-standards|Task Page Standards]] | [[T001-test-openai-backend|Test OpenAI backend with LocalAI]] |
+| note | [[note-page-standards|Note Page Standards]] | [[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]] |
 
 ## Domain Overviews
 
 | Overview | Domain |
 |----------|--------|
-| [[AI Agents — Domain Overview]] | Agent orchestration, Claude Code, harness engineering |
-| [[AI Models — Domain Overview]] | Local LLM quantization, model capabilities |
-| [[Automation — Domain Overview]] | Pipelines, MCP integration, event-driven automation |
-| [[Cross-Domain — Domain Overview]] | Methodology framework, quality tiers |
-| [[Devops — Domain Overview]] | Stage gates, ecosystem, infrastructure patterns |
-| [[Knowledge Systems — Domain Overview]] | LLM Wiki, PKM theory, evolution pipeline |
-| [[Tools And Platforms — Domain Overview]] | Obsidian, NotebookLM, AICP, OpenArms |
+| [[ai-agents-domain-overview|AI Agents — Domain Overview]] | Agent orchestration, Claude Code, harness engineering |
+| [[ai-models-domain-overview|AI Models — Domain Overview]] | Local LLM quantization, model capabilities |
+| [[automation-domain-overview|Automation — Domain Overview]] | Pipelines, MCP integration, event-driven automation |
+| [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] | Methodology framework, quality tiers |
+| [[devops-domain-overview|Devops — Domain Overview]] | Stage gates, ecosystem, infrastructure patterns |
+| [[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]] | LLM Wiki, PKM theory, evolution pipeline |
+| [[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]] | Obsidian, NotebookLM, AICP, OpenArms |
 
 ## Pages
 
@@ -63,34 +63,38 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Devops — Domain Overview](domain-overviews/devops-domain-overview.md) — The devops domain covers stage-gate methodology, ecosystem topology, backlog management, task governance, infrastruct...
 - [Knowledge Systems — Domain Overview](domain-overviews/knowledge-systems-domain-overview.md) — The knowledge-systems domain covers the theory and architecture of building LLM-powered knowledge bases, from Karpath...
 - [Tools And Platforms — Domain Overview](domain-overviews/tools-and-platforms-domain-overview.md) — The tools-and-platforms domain covers the software tools, platforms, CLI utilities, and SaaS products used across the...
-- [Evolution: Methodology System](evolution-log/methodology-evolution-history.md) — How the methodology system evolved from prose instructions to infrastructure-enforced stage gates
+- [Evolution — Methodology System](evolution-log/methodology-evolution-history.md) — How the methodology system evolved from prose instructions to infrastructure-enforced stage gates
 - [Frontmatter Field Reference — Complete Parameter Documentation](frontmatter-field-reference.md) — Complete reference for every YAML frontmatter field used in the wiki
-- [Learning Path: Methodology Fundamentals](learning-paths/methodology-fundamentals.md) — Guided sequence for understanding the research wiki's methodology system — from what a methodology model IS, through ...
+- [Gateway Tools Reference — Complete Command Documentation](gateway-tools-reference.md) — Complete reference for the wiki gateway — the unified Python interface serving humans (CLI), AI agents (programmatic)...
+- [Goldilocks Flow — From Identity to Action](goldilocks-flow.md) — The complete decision flow from "who am I?" to "what do I do next?" — every decision point with criteria, defaults, a...
+- [Learning Path — Methodology Fundamentals](learning-paths/methodology-fundamentals.md) — Guided sequence for understanding the research wiki's methodology system — from what a methodology model IS, through ...
 - [Methodology Adoption Guide](methodology-adoption-guide.md) — Step-by-step guide for any project to adopt the research wiki's methodology
 - [Methodology System Map](methodology-system-map.md) — Complete map of the methodology system — every component, where it lives, what it does, and how they connect
-- [Model: Automation and Pipelines](model-automation-pipelines.md) — The Automation and Pipelines model describes how this wiki transforms knowledge work from manual operations into auto...
+- [Model — Automation and Pipelines](model-automation-pipelines.md) — The Automation and Pipelines model describes how this wiki transforms knowledge work from manual operations into auto...
 - [Claude Code Standards — What Good Agent Configuration Looks Like](model-claude-code-standards.md) — This page defines the quality bar for CLAUDE CODE CONFIGURATION
-- [Model: Claude Code](model-claude-code.md) — Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from th...
-- [Model: Design.md and IaC](model-design-md.md) — The Design
-- [Model: Ecosystem Architecture](model-ecosystem.md) — The Ecosystem Architecture model describes how five projects — OpenFleet, AICP, devops-control-plane, the research wi...
+- [Model — Claude Code](model-claude-code.md) — Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from th...
+- [Model — Context Engineering](model-context-engineering.md) — Context engineering is the discipline of designing WHAT information reaches an AI agent, in WHAT STRUCTURE, at WHAT D...
+- [Model — Ecosystem Architecture](model-ecosystem.md) — The Ecosystem Architecture model describes how five projects — OpenFleet, AICP, devops-control-plane, the research wi...
 - [Evolution Standards — What Good Knowledge Promotion Looks Like](model-knowledge-evolution-standards.md) — This page defines the quality bar for KNOWLEDGE EVOLUTION
-- [Model: Knowledge Evolution](model-knowledge-evolution.md) — The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured,...
+- [Model — Knowledge Evolution](model-knowledge-evolution.md) — The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured,...
 - [LLM Wiki Standards — What Good Looks Like](model-llm-wiki-standards.md) — This page defines the quality bar for every page type in the LLM Wiki model
-- [Model: LLM Wiki](model-llm-wiki.md) — The LLM Wiki model defines a knowledge system where an LLM agent maintains a structured markdown wiki — ingesting sou...
-- [Model: Local AI ($0 Target)](model-local-ai.md) — The Local AI model describes the ecosystem's strategy for reducing Claude API costs toward zero by routing routine op...
-- [Model: MCP and CLI Integration](model-mcp-cli-integration.md) — The MCP and CLI Integration model resolves one of the most consequential architectural decisions in LLM agent design:...
+- [Model — LLM Wiki](model-llm-wiki.md) — The LLM Wiki model defines a knowledge system where an LLM agent maintains a structured markdown wiki — ingesting sou...
+- [Model — Local AI ($0 Target)](model-local-ai.md) — The Local AI model describes the ecosystem's strategy for reducing Claude API costs toward zero by routing routine op...
+- [Model — Markdown as IaC — Design.md and Agent Configuration](model-markdown-as-iac.md) — The Design
+- [Model — MCP and CLI Integration](model-mcp-cli-integration.md) — The MCP and CLI Integration model resolves one of the most consequential architectural decisions in LLM agent design:...
 - [Methodology Standards — What Good Execution Looks Like](model-methodology-standards.md) — This page defines the quality bar for METHODOLOGY EXECUTION
-- [Model: Methodology](model-methodology.md) — The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes
-- [Model: NotebookLM](model-notebooklm.md) — The NotebookLM model describes how Google's free, source-grounded AI research tool functions as a complementary resea...
+- [Model — Methodology](model-methodology.md) — The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes
+- [Model — NotebookLM](model-notebooklm.md) — The NotebookLM model describes how Google's free, source-grounded AI research tool functions as a complementary resea...
 - [Quality Standards — What Good Failure Prevention Looks Like](model-quality-failure-prevention-standards.md) — This page defines the quality bar for FAILURE PREVENTION
-- [Model: Quality and Failure Prevention](model-quality-failure-prevention.md) — Quality and failure prevention for AI agents is not a set of best practices — it is a system with three enforcement l...
+- [Model — Quality and Failure Prevention](model-quality-failure-prevention.md) — Quality and failure prevention for AI agents is not a set of best practices — it is a system with three enforcement l...
 - [Model Registry](model-registry.md) — This is the entry point for all named models in the wiki
-- [Model: Second Brain](model-second-brain.md) — The Second Brain model describes the personal knowledge management (PKM) theoretical foundation that underlies this w...
-- [Model: SFIF and Architecture](model-sfif-architecture.md) — The SFIF and Architecture model describes the universal 4-stage build lifecycle (Scaffold → Foundation → Infrastructu...
+- [Model — Second Brain](model-second-brain.md) — The Second Brain model describes the personal knowledge management (PKM) theoretical foundation that underlies this w...
+- [Model — SFIF and Architecture](model-sfif-architecture.md) — The SFIF and Architecture model describes the universal 4-stage build lifecycle (Scaffold → Foundation → Infrastructu...
 - [Extension Standards — What Good Skills, Commands, and Hooks Look Like](model-skills-commands-hooks-standards.md) — This page defines the quality bar for the EXTENSION SYSTEM
-- [Model: Skills, Commands, and Hooks](model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
+- [Model — Skills, Commands, and Hooks](model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
 - [Wiki Design Standards — What Good Styling Looks Like](model-wiki-design-standards.md) — This page defines the quality bar for VISUAL DESIGN in the wiki
-- [Model: Wiki Design](model-wiki-design.md) — The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they ...
+- [Model — Wiki Design](model-wiki-design.md) — The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they ...
+- [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
 - [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (74 pages)
 - [Decision Page Standards](standards/decision-page-standards.md) — Standards for decision pages — the highest-layer evolved page type (Layer 6)
@@ -106,8 +110,13 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Reference Page Standards](standards/reference-page-standards.md) — Standards for reference pages — LOOKUP material that readers consult for specific answers, not read linearly
 - [Source-Synthesis Page Standards](standards/source-synthesis-page-standards.md) — Standards for source-synthesis pages — processed versions of raw sources (articles, videos, papers, repos)
 - [Task Page Standards](standards/task-page-standards.md) — Standards for task pages — the atomic work unit
-- [Super-Model: Research Wiki as Ecosystem Intelligence Hub](super-model.md) — This is the super-model — the packaging of all 15 models, 7 standards pages, and the full knowledge architecture into...
+- [Sub-Model — Enforcement Hierarchy — From Instructions to Immune System](sub-model-enforcement-hierarchy-from-instructions-to-immune-system.md) — Navigation hub for enforcement — how to make agents actually follow methodology
+- [Sub-Model — Goldilocks Protocol — Identity and Adaptation](sub-model-goldilocks-protocol-identity-and-adaptation.md) — Navigation hub for the Goldilocks system — identity declaration, chain selection, methodology adaptation, and the pri...
+- [Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback](sub-model-integration-and-ecosystem-dual-perspective-and-feedback.md) — Navigation hub for ecosystem integration — how the second brain connects to projects, how feedback flows, and how too...
+- [Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution](sub-model-knowledge-architecture-layers-maturity-and-evolution.md) — Navigation hub for the knowledge system — how knowledge flows from raw sources through progressive distillation to pr...
+- [Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels](sub-model-work-management-hierarchy-tracking-and-pm-levels.md) — Navigation hub for work management — how work is organized, tracked, and enforced
+- [Super-Model — Research Wiki as Ecosystem Intelligence Hub](super-model.md) — This is the super-model — the packaging of all 15 models, 7 standards pages, and the full knowledge architecture into...
 
 ## Tags
 
-`standards`, `quality`, `page-type`, `exemplar`, `spine`, `model`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `concept`, `ecosystem`, `skills`, `hooks`, `adoption`, `evolution`, `stage-gate`, `reference`, `context-management`, `integration`
+`standards`, `quality`, `spine`, `page-type`, `exemplar`, `model`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `reference`, `concept`, `sub-model`, `navigation-hub`, `ecosystem`, `skills`, `hooks`, `integration`, `second-brain`, `adoption`

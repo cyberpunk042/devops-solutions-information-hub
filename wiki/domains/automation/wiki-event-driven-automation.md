@@ -1,5 +1,7 @@
 ---
-title: "Wiki Event-Driven Automation"
+title: Wiki Event-Driven Automation
+aliases:
+  - "Wiki Event-Driven Automation"
 type: concept
 layer: 2
 maturity: growing
@@ -11,13 +13,13 @@ updated: 2026-04-10
 sources:
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=Y2rpFa43jTo"
+    url: https://www.youtube.com/watch?v=Y2rpFa43jTo
     file: raw/transcripts/obsidian-claude-code-the-second-brain-setup-that-actually-works.txt
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
     ingested: 2026-04-08
@@ -84,46 +86,46 @@ The hooks architecture for wiki event automation maps directly to Claude Code's 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- DERIVED FROM: src-obsidian-claude-code-second-brain
-- EXTENDS: [[LLM Wiki Pattern]]
-- EXTENDS: [[Wiki Ingestion Pipeline]]
-- BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: [[Claude Code Scheduling]]
-- ENABLES: [[Memory Lifecycle Management]]
-- ENABLES: [[LLM Knowledge Linting]]
-- RELATES TO: [[AI-Driven Content Pipeline]]
-- FEEDS INTO: [[MCP Integration Architecture]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Claude Code Best Practices]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- DERIVED FROM: [[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+- EXTENDS: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- EXTENDS: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[claude-code-scheduling|Claude Code Scheduling]]
+- ENABLES: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- ENABLES: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- RELATES TO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- FEEDS INTO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
 
 ## Backlinks
 
-[[src-llm-wiki-v2-agentmemory]]
-[[src-obsidian-claude-code-second-brain]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Claude Code Scheduling]]
-[[Memory Lifecycle Management]]
-[[LLM Knowledge Linting]]
-[[AI-Driven Content Pipeline]]
-[[MCP Integration Architecture]]
-[[Research Pipeline Orchestration]]
-[[Claude Code Best Practices]]
-[[Agent Orchestration Patterns]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Model: Automation and Pipelines]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Obsidian CLI]]
-[[Plan Execute Review Cycle]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[notebooklm-py CLI]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[obsidian-cli|Obsidian CLI]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[notebooklm-py-cli|notebooklm-py CLI]]

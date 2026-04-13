@@ -1,5 +1,7 @@
 ---
-title: "Learning Path Page Standards"
+title: Learning Path Page Standards
+aliases:
+  - "Learning Path Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -43,11 +45,19 @@ Standards for learning path pages — curated sequences that guide a reader thro
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Learning Path: Methodology Fundamentals]] — 68 lines
+> [!success] [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] — 68 lines
 >
-> - 8 ordered pages, each with [[wikilink]] + annotation
+> - 8 ordered pages, each with `[[wikilink]]` + annotation
 > - Prerequisites name specific starting pages
 > - Outcomes are testable: "select the correct model," "identify ALLOWED/FORBIDDEN actions"
+
+### Annotated Exemplar: [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+
+> [!example]- What makes a good learning path
+>
+> **30 pages in 8 parts:** Organized by learning mode (LEARN → DECIDE → EXECUTE → ENFORCE → LESSONS → PRINCIPLES → GOLDILOCKS). Each part has a PURPOSE, not just a topic.
+> **Per-page annotations:** "Start here. Defines what a methodology model IS" — not just a title link but WHY to read it NOW and what it enables for the NEXT page.
+> **Testable outcomes:** "After completing this path you should be able to: select the correct SDLC chain based on phase and scale" — verifiable, not vague.
 
 ### Template
 
@@ -55,10 +65,10 @@ Standards for learning path pages — curated sequences that guide a reader thro
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

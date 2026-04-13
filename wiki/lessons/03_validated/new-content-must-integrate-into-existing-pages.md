@@ -1,5 +1,7 @@
 ---
-title: "New Content Must Integrate Into Existing Pages"
+title: New Content Must Integrate Into Existing Pages
+aliases:
+  - "New Content Must Integrate Into Existing Pages"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,11 +17,11 @@ sources:
   - id: phase1-disconnect
     type: observation
     file: docs/SESSION-2026-04-12-handoff.md
-    description: "37 new pages created alongside existing pages without any wiring — operator could not find deliverables"
+    description: 37 new pages created alongside existing pages without any wiring — operator could not find deliverables
   - id: discoverability-test
     type: observation
     file: docs/SESSION-2026-04-12-handoff.md
-    description: "Operator navigated wiki cold and found 'just flim traces... no way to piece anything together'"
+    description: Operator navigated wiki cold and found 'just flim traces... no way to piece anything together'
 tags: [wiki, discoverability, integration, anti-pattern, lesson-learned, agent-failure]
 ---
 
@@ -105,26 +107,26 @@ The mechanism: creating new pages is easy and feels productive. Updating existin
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What entry points exist?** | [[Methodology System Map]] — every component listed. [[Model Registry]] — all 15 models. |
-> | **How does the wiki's own structure help?** | [[Model: LLM Wiki]] — domain indexes, manifest, wikilink generation |
+> | **What entry points exist?** | [[methodology-system-map|Methodology System Map]] — every component listed. [[model-registry|Model Registry]] — all 15 models. |
+> | **How does the wiki's own structure help?** | [[model-llm-wiki|Model — LLM Wiki]] — domain indexes, manifest, wikilink generation |
 > | **What does good integration look like?** | Phase 2 of this session: 6 spine pages updated with "How This Weaves Together" navigation tables |
-> | **How does the Goldilocks protocol help?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity-based entry points: who you are determines where you start |
+> | **How does the Goldilocks protocol help?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity-based entry points: who you are determines where you start |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Standards Initiative — Honest Assessment]]
-- BUILDS ON: [[Model: LLM Wiki]]
-- RELATES TO: [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Coverage Blindness — Modeling Only What You Know]]
-- FEEDS INTO: [[LLM Wiki Standards — What Good Looks Like]]
+- DERIVED FROM: [[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+- FEEDS INTO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 
 ## Backlinks
 
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Model: LLM Wiki]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Always Plan Before Executing]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]

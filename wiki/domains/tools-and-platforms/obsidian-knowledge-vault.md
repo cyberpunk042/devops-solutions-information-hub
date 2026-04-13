@@ -1,5 +1,7 @@
 ---
-title: "Obsidian Knowledge Vault"
+title: Obsidian Knowledge Vault
+aliases:
+  - "Obsidian Knowledge Vault"
 type: concept
 layer: 2
 maturity: growing
@@ -12,17 +14,17 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=Y2rpFa43jTo"
+    url: https://www.youtube.com/watch?v=Y2rpFa43jTo
     file: raw/transcripts/obsidian-claude-code-the-second-brain-setup-that-actually-works.txt
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
     ingested: 2026-04-08
@@ -89,44 +91,41 @@ Cross-referencing `Obsidian Skills Ecosystem`: yes, and the ecosystem is documen
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-claude-code-10x
-- DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- DERIVED FROM: src-obsidian-claude-code-second-brain
-- IMPLEMENTS: [[LLM Wiki Pattern]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- USED BY: [[Obsidian Skills Ecosystem]]
-- RELATES TO: [[LLM Knowledge Linting]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+- IMPLEMENTS: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- USED BY: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- RELATES TO: [[llm-knowledge-linting|LLM Knowledge Linting]]
 
 ## Backlinks
 
-[[src-karpathy-claude-code-10x]]
-[[src-karpathy-llm-wiki-idea-file]]
-[[src-obsidian-claude-code-second-brain]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Wiki Knowledge Graph]]
-[[Obsidian Skills Ecosystem]]
-[[LLM Knowledge Linting]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Obsidian CLI]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[Second Brain Architecture]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-[[Synthesis: kepano/obsidian-skills]]
-[[Synthesis: pablo-mano/Obsidian-CLI-skill]]
-[[Zettelkasten Methodology]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-skills|Claude Code Skills]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[obsidian-cli|Obsidian CLI]]
+[[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+[[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]

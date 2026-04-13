@@ -1,5 +1,7 @@
 ---
-title: "Harness Engineering"
+title: Harness Engineering
+aliases:
+  - "Harness Engineering"
 type: concept
 layer: 2
 maturity: growing
@@ -11,20 +13,20 @@ updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
     file: raw/articles/building-claude-code-harness-engineering.md
-    title: "Building Claude Code with Harness Engineering"
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
   - id: src-harness-engineering-github
     type: documentation
-    url: "https://github.com/Chachamaru127/claude-code-harness"
-    title: "claude-code-harness GitHub"
+    url: https://github.com/Chachamaru127/claude-code-harness
+    title: claude-code-harness GitHub
     ingested: 2026-04-08
   - id: src-claude-code-accuracy-tips
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
+    url: https://www.youtube.com/watch?v=D5bRTv6GhXk
     file: raw/transcripts/claude-code-works-better-when-you-do-this.txt
-    title: "Claude Code Works Better When You Do This"
+    title: Claude Code Works Better When You Do This
     ingested: 2026-04-08
 tags: [harness-engineering, guardrails, plan-work-review, runtime-safety, agent-orchestration, claude-code, spec-driven, typescript]
 ---
@@ -153,7 +155,7 @@ What the research wiki's own harness looks like — a concrete Level 0-2 impleme
 > | 2 — Pipeline | `tools/validate.py` (exit code blocks) | Zero-tolerance for schema violations |
 
 > [!warning] **What's missing (the Level 3 gap)**
-> No PreToolUse hooks for stage-gate enforcement. The methodology says "no implementation during document stage" but nothing BLOCKS Write calls to `tools/` during the document stage. This is the gap between Level 2 (instruction-enforced) and Level 3 (hook-enforced). See [[Model: Quality and Failure Prevention]] for the planned hook-based enforcement design.
+> No PreToolUse hooks for stage-gate enforcement. The methodology says "no implementation during document stage" but nothing BLOCKS Write calls to `tools/` during the document stage. This is the gap between Level 2 (instruction-enforced) and Level 3 (hook-enforced). See [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] for the planned hook-based enforcement design.
 
 ---
 
@@ -177,21 +179,21 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 ## Answered Open Questions
 
 > [!example]- At what point does harness complexity become net negative?
-> Resolved in [[Decision: Extension System Operational Decisions]]. Not yet a concern at current scale; the harness infrastructure is still net positive relative to the rework it prevents.
+> Resolved in [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]. Not yet a concern at current scale; the harness infrastructure is still net positive relative to the rework it prevents.
 
 > [!example]- Should this ecosystem implement R01-R04 as Python hooks?
-> Resolved in [[Decision: Extension System Operational Decisions]]. Yes — start with R01 (block dangerous ops) and R04 (require review for force-push), which cover the highest-risk surface with minimal implementation effort.
+> Resolved in [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]. Yes — start with R01 (block dangerous ops) and R04 (require review for force-push), which cover the highest-risk surface with minimal implementation effort.
 
 ### Previously Answered
 
 > [!success] **Python hooks, not TypeScript, for this ecosystem**
-> Cross-referencing [[Decision: MCP vs CLI for Tool Integration]] and [[Immune System Rules]]: the ecosystem's toolchain is pure Python. doctor.py (24 production rules) is Python with zero LLM calls. Implementing equivalent rules in Python hooks via Claude Code's `settings.json` configuration keeps enforcement language consistent, avoids Node.js dependency, and makes rules maintainable by the same engineers who maintain the pipeline. A YAML rule file format could be a backend-agnostic abstraction executed by either Python or TypeScript engines.
+> Cross-referencing [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] and [[immune-system-rules|Immune System Rules]]: the ecosystem's toolchain is pure Python. doctor.py (24 production rules) is Python with zero LLM calls. Implementing equivalent rules in Python hooks via Claude Code's `settings.json` configuration keeps enforcement language consistent, avoids Node.js dependency, and makes rules maintainable by the same engineers who maintain the pipeline. A YAML rule file format could be a backend-agnostic abstraction executed by either Python or TypeScript engines.
 
 > [!success] **Yes, guardrail rules can protect wiki operations**
-> Cross-referencing [[Context-Aware Tool Loading]] and [[Knowledge Evolution Pipeline]]: (1) **Deny rule**: block deletion of wiki pages with relationship count above threshold (protect high-connectivity hubs). (2) **Query rule**: flag writes to `wiki/domains/` that don't update `_index.md` (detect orphan creation). (3) **Post-execution check**: run `tools/validate` after wiki writes, block on non-zero exit. (4) **Canonical protection**: block deletion of `maturity: canonical` pages without explicit override. All implementable as PreToolUse hooks.
+> Cross-referencing [[context-aware-tool-loading|Context-Aware Tool Loading]] and [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]: (1) **Deny rule**: block deletion of wiki pages with relationship count above threshold (protect high-connectivity hubs). (2) **Query rule**: flag writes to `wiki/domains/` that don't update `_index.md` (detect orphan creation). (3) **Post-execution check**: run `tools/validate` after wiki writes, block on non-zero exit. (4) **Canonical protection**: block deletion of `maturity: canonical` pages without explicit override. All implementable as PreToolUse hooks.
 
 > [!success] **Interactive = reactive enforcement; autonomous = proactive enforcement**
-> Cross-referencing [[OpenFleet]], [[Immune System Rules]], [[Rework Prevention]]: the Plan-Execute-Review cycle stays the same, but interactive harness catches violations as they occur (PreToolUse at boundaries) while autonomous harness detects precursors before they occur (doctor.py every 30 seconds, 3-strike accumulation). The cost difference: one undetected autonomous violation cascades to ~5 downstream reworks, making proactive detection orders of magnitude cheaper.
+> Cross-referencing [[openfleet|OpenFleet]], [[immune-system-rules|Immune System Rules]], [[rework-prevention|Rework Prevention]]: the Plan-Execute-Review cycle stays the same, but interactive harness catches violations as they occur (PreToolUse at boundaries) while autonomous harness detects precursors before they occur (doctor.py every 30 seconds, 3-strike accumulation). The cost difference: one undetected autonomous violation cascades to ~5 downstream reworks, making proactive detection orders of magnitude cheaper.
 
 ### How This Connects — Navigate From Here
 
@@ -199,51 +201,51 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Claude Code Best Practices]]
-- EXTENDS: [[Claude Code Skills]]
-- BUILDS ON: [[Claude Code]]
-- PARALLELS: [[OpenFleet]]
-- RELATES TO: [[Immune System Rules]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Rework Prevention]]
-- FEEDS INTO: [[Model: Claude Code]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
+- EXTENDS: [[claude-code-best-practices|Claude Code Best Practices]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[claude-code|Claude Code]]
+- PARALLELS: [[openfleet|OpenFleet]]
+- RELATES TO: [[immune-system-rules|Immune System Rules]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[rework-prevention|Rework Prevention]]
+- FEEDS INTO: [[model-claude-code|Model — Claude Code]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 
 ## Backlinks
 
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Claude Code]]
-[[OpenFleet]]
-[[Immune System Rules]]
-[[Research Pipeline Orchestration]]
-[[MCP Integration Architecture]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Model: Claude Code]]
-[[Model: Quality and Failure Prevention]]
-[[Agent Orchestration Patterns]]
-[[Always Plan Before Executing]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: Extension System Operational Decisions]]
-[[Decision: Hooks Design Decisions]]
-[[Design.md Pattern]]
-[[Deterministic Shell, LLM Core]]
-[[Hooks Lifecycle Architecture]]
-[[Infrastructure as Code Patterns]]
-[[Model: MCP and CLI Integration]]
-[[Model: Skills, Commands, and Hooks]]
-[[Per-Role Command Architecture]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Spec-Driven Development]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code|Claude Code]]
+[[openfleet|OpenFleet]]
+[[immune-system-rules|Immune System Rules]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[rework-prevention|Rework Prevention]]
+[[model-claude-code|Model — Claude Code]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]
+[[hooks-design-decisions|Decision — Hooks Design Decisions]]
+[[design-md-pattern|Design.md Pattern]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[spec-driven-development|Spec-Driven Development]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]

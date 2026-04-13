@@ -1,5 +1,7 @@
 ---
-title: "Record the Process — Skills, Super-Model, Preach by Example"
+title: Record the Process — Skills, Super-Model, Preach by Example
+aliases:
+  - "Record the Process — Skills, Super-Model, Preach by Example"
 type: note
 domain: log
 note_type: directive
@@ -39,8 +41,8 @@ Multiple requirements:
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

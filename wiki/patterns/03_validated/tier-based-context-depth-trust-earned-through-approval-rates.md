@@ -1,5 +1,7 @@
 ---
-title: "Tier-Based Context Depth — Trust Earned Through Approval Rates"
+title: Tier-Based Context Depth — Trust Earned Through Approval Rates
+aliases:
+  - "Tier-Based Context Depth — Trust Earned Through Approval Rates"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -10,17 +12,15 @@ derived_from:
   - "Three Lines of Defense — Immune System for Agent Quality"
   - "Model: Quality and Failure Prevention"
 instances:
-  - page: "Three Lines of Defense — Immune System for Agent Quality"
-    context: "Tier profiles control what the doctor shows vs hides from agents at different trust levels"
-  - page: "Harness-Owned Loop — Deterministic Agent Execution"
-    context: "Orchestrator uses tier to determine context depth for dispatch — lightweight agents get minimal context"
+  - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': 'Tier profiles control what the doctor shows vs hides from agents at different trust levels'}
+  - {'page': 'Harness-Owned Loop — Deterministic Agent Execution', 'context': 'Orchestrator uses tier to determine context depth for dispatch — lightweight agents get minimal context'}
 created: 2026-04-12
 updated: 2026-04-12
 sources:
   - id: openfleet-tiers
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "OpenFleet tier-profiles.yaml (56 lines) + tier_progression.py (352 lines) — data-driven trust progression"
+    description: OpenFleet tier-profiles.yaml (56 lines) + tier_progression.py (352 lines) — data-driven trust progression
 tags: [tier-progression, context-depth, trust, approval-rates, agent-quality, cost-optimization, openfleet]
 ---
 
@@ -120,30 +120,31 @@ The mechanism: an AI model's approval rate is tracked per task type across rolli
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **How is trust earned?** | [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — approval rates per model per task type, rolling 20-record windows |
-> | **How does context depth relate to structured context?** | [[Structured Context Is Proto-Programming for AI Agents]] — same structural skeleton at every tier, content depth varies |
+> | **How is trust earned?** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — approval rates per model per task type, rolling 20-record windows |
+> | **How does context depth relate to structured context?** | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] — same structural skeleton at every tier, content depth varies |
 > | **What about cost optimization?** | 10x cost reduction on routine calls (500 tokens lightweight vs 5,000 expert). Budget mode changes propagate to CRON intervals. |
-> | **How does this fit Goldilocks?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — trust tier is one of 7 identity dimensions. Expert gets full context. Trainee gets minimal. |
+> | **How does this fit Goldilocks?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — trust tier is one of 7 identity dimensions. Expert gets full context. Trainee gets minimal. |
 > | **Solo agent version?** | No formal tiers. Implicit: methodology model selection (research = light, feature-dev = full) acts as tier approximation. |
 
 ## Relationships
 
-- DERIVED FROM: [[Three Lines of Defense — Immune System for Agent Quality]]
-- DERIVED FROM: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Structured Context Is Proto-Programming for AI Agents]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- DERIVED FROM: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Model: Quality and Failure Prevention]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Methodology Adoption Guide]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Validation Matrix — Test Suite for Context Injection]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-context-engineering|Model — Context Engineering]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

@@ -1,5 +1,8 @@
 ---
-title: "Decision: Methodology Framework Design Decisions"
+title: Decision — Methodology Framework Design Decisions
+aliases:
+  - "Decision — Methodology Framework Design Decisions"
+  - "Decision: Methodology Framework Design Decisions"
 type: decision
 domain: cross-domain
 layer: 6
@@ -18,8 +21,7 @@ sources: []
 tags: [methodology, framework, model-selection, composition, versioning, quality-tiers, meta-methodology, design-decisions]
 ---
 
-# Decision: Methodology Framework Design Decisions
-
+# Decision — Methodology Framework Design Decisions
 ## Summary
 
 Seven open questions from the Methodology Framework page resolved by cross-referencing the stage-gate methodology, task type artifact matrix, Skyscraper/Pyramid/Mountain quality tiers, and the wiki's own recursive application of SFIF. These are architectural questions about how the meta-methodology operates — selection engine design, composition strategy, mid-execution model changes, quality granularity, track synchronization, self-application, and versioning.
@@ -77,11 +79,11 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 
 ## Dependencies
 
-- [[Methodology Framework]] — these decisions complete the open questions
-- [[Stage-Gate Methodology]] — stage mechanics drive the mid-execution change decision
-- [[Task Type Artifact Matrix]] — type-to-model mapping is the selection engine's primary input
-- [[Skyscraper, Pyramid, Mountain]] — quality tier sufficiency assessment
-- [[Scaffold → Foundation → Infrastructure → Features]] — SFIF phase boundaries drive the sync decision
+- [[methodology-framework|Methodology Framework]] — these decisions complete the open questions
+- [[stage-gate-methodology|Stage-Gate Methodology]] — stage mechanics drive the mid-execution change decision
+- [[task-type-artifact-matrix|Task Type Artifact Matrix]] — type-to-model mapping is the selection engine's primary input
+- [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — quality tier sufficiency assessment
+- [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] — SFIF phase boundaries drive the sync decision
 
 ### How This Connects — Navigate From Here
 
@@ -89,26 +91,26 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Framework]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- BUILDS ON: [[Task Type Artifact Matrix]]
-- RELATES TO: [[Skyscraper, Pyramid, Mountain]]
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]
+- DERIVED FROM: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- BUILDS ON: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- RELATES TO: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Decision: Quality Tier Operational Decisions]]
-[[Decision: Task Type Edge Cases]]
-[[Methodology Is a Framework, Not a Fixed Pipeline]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]
+[[task-type-edge-cases|Decision — Task Type Edge Cases]]
+[[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]

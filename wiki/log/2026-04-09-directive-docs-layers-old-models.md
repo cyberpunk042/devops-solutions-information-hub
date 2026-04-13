@@ -1,5 +1,7 @@
 ---
-title: "Documentation Layers + Old Model Tolerance"
+title: Documentation Layers + Old Model Tolerance
+aliases:
+  - "Documentation Layers + Old Model Tolerance"
 type: note
 domain: log
 note_type: directive
@@ -48,8 +50,8 @@ When the second brain attaches to a project that predates the new model:
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

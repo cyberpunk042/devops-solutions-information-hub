@@ -1,5 +1,7 @@
 ---
-title: "Deep-Dive Page Standards"
+title: Deep-Dive Page Standards
+aliases:
+  - "Deep-Dive Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -49,7 +51,7 @@ Standards for deep-dive pages — extended analysis that goes significantly deep
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Adoption Guide — How to Use This Wiki's Standards]] — 325 lines
+> [!success] [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]] — 325 lines
 >
 > - 5 core principles in Key Insights
 > - Multi-subsection Deep Analysis with step-by-step walkthrough
@@ -64,16 +66,25 @@ Standards for deep-dive pages — extended analysis that goes significantly deep
 | **Single-block analysis** | No subsections, one long essay | ≥3 `###` subsections, one mechanism per section |
 | **No callouts** | Prose-only at 300+ lines | Required: use callouts for structure |
 
+### Annotated Exemplar: [[methodology-adoption-guide|Methodology Adoption Guide]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Progressive disclosure:** 4 adoption tiers presented in increasing complexity. Reader doesn't need to read all 4 — they pick their tier and read that section. Each tier has: what you get, effort, prerequisites.
+> **Concrete code examples:** YAML, bash, and markdown examples throughout — not "configure your project" but the ACTUAL config to paste.
+> **Per-domain quick starts:** 3 domain-specific callouts (TypeScript, Python/Wiki, Infrastructure) — reader picks their stack.
+> **Invariants section:** 7 rules that apply at EVERY tier. Clear boundary between what adapts and what never changes.
+
 ### Template
 
 `wiki/config/templates/deep-dive.md` — scaffold via `python3 -m tools.pipeline scaffold deep-dive "Title"`
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

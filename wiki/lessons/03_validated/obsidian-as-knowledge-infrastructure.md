@@ -1,5 +1,7 @@
 ---
-title: "Obsidian as Knowledge Infrastructure Not Just Note-Taking"
+title: Obsidian as Knowledge Infrastructure Not Just Note-Taking
+aliases:
+  - "Obsidian as Knowledge Infrastructure Not Just Note-Taking"
 type: lesson
 domain: tools-and-platforms
 layer: 4
@@ -12,15 +14,7 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
-  - id: src-obsidian-claude-code-second-brain
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=Y2rpFa43jTo"
-    title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
-  - id: src-karpathy-llm-wiki-idea-file
-    type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
 tags: [obsidian, knowledge-infrastructure, graph-view, obsidian-cli, second-brain, git-sync, llm-wiki, knowledge-vault]
 derived_from:
   - "Obsidian Knowledge Vault"
@@ -84,27 +78,27 @@ Karpathy's framing makes the infrastructure metaphor explicit: "Obsidian is the 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Obsidian Knowledge Vault]]
-- DERIVED FROM: [[LLM Wiki Pattern]]
-- IMPLEMENTS: [[LLM Wiki Pattern]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Obsidian Skills Ecosystem]]
-- RELATES TO: [[Wiki Knowledge Graph]]
+- DERIVED FROM: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- DERIVED FROM: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- IMPLEMENTS: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
 
 ## Backlinks
 
-[[Obsidian Knowledge Vault]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Obsidian Skills Ecosystem]]
-[[Wiki Knowledge Graph]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-skills|Claude Code Skills]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]

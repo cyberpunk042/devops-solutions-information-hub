@@ -1,5 +1,7 @@
 ---
-title: "Zettelkasten Methodology"
+title: Zettelkasten Methodology
+aliases:
+  - "Zettelkasten Methodology"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-second-brain-research
     type: article
     file: raw/articles/second-brain-pkm-research.md
-    title: "Second Brain / PKM Research"
+    title: Second Brain / PKM Research
     ingested: 2026-04-08
   - id: src-zettelkasten-basb
     type: article
-    url: "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
-    title: "Combining Zettelkasten and Building a Second Brain"
+    url: https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/
+    title: Combining Zettelkasten and Building a Second Brain
     ingested: 2026-04-08
 tags: [zettelkasten, pkm, luhmann, atomic-notes, permanent-notes, heterarchical, bidirectional-links, knowledge-management, second-brain, connections, emergence]
 ---
@@ -80,7 +82,7 @@ Steps 1-4 are performed during ingestion. Step 5 is performed during cross-refer
 | Own words | LLM synthesis in own synthesis voice, not source quotes |
 | Permanent (context-independent) | `## Summary` written as standalone claim; no assumed prior context |
 | Heterarchical linking | `## Relationships` with typed verbs; no strict folder hierarchy within domains |
-| Bidirectional links | `## Backlinks` section; Obsidian `[[wikilinks]]` for graph visualization |
+| Bidirectional links | `## Backlinks` section; Obsidian ``[[wikilinks]]`` for graph visualization |
 | Note emergence | `pipeline crossref` surfaces unexpected connections; LightRAG graph traversal |
 | Source provenance | `derived_from` and `sources` frontmatter fields |
 | Fleeting → Literature → Permanent | `raw/` → `wiki/sources/` → `wiki/domains/` |
@@ -146,31 +148,31 @@ Cross-referencing `Wiki Knowledge Graph` and `AICP`: the scale threshold is appr
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Second Brain Architecture]]
-- COMPARES TO: [[PARA Methodology]]
-- IMPLEMENTS: [[Memory Lifecycle Management]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
+- BUILDS ON: [[second-brain-architecture|Second Brain Architecture]]
+- COMPARES TO: [[para-methodology|PARA Methodology]]
+- IMPLEMENTS: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[PARA Methodology]]
-[[Memory Lifecycle Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki Pattern]]
-[[Knowledge Evolution Pipeline]]
-[[Obsidian Knowledge Vault]]
-[[Cross-Domain Patterns]]
-[[Model: Second Brain]]
-[[Progressive Distillation]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[para-methodology|PARA Methodology]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[model-second-brain|Model — Second Brain]]
+[[progressive-distillation|Progressive Distillation]]

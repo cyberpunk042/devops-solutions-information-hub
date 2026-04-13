@@ -1,5 +1,7 @@
 ---
-title: "Scaffold → Foundation → Infrastructure → Features"
+title: Scaffold → Foundation → Infrastructure → Features
+aliases:
+  - "Scaffold → Foundation → Infrastructure → Features"
 type: pattern
 domain: cross-domain
 layer: 5
@@ -10,25 +12,17 @@ derived_from:
   - "Four-Project Ecosystem"
   - "Progressive Distillation"
 instances:
-  - page: "Research Wiki"
-    context: "Scaffold (CLAUDE.md, directory structure, tech stack) → Foundation (tools/common.py, schema.yaml, config/) → Infrastructure (pipeline.py, MCP server, 15 tools) → Features (evolve pipeline, sync service, watcher daemon)."
-  - page: "OpenFleet"
-    context: "Scaffold (monorepo layout, agent identity model) → Foundation (orchestrator, agent base model, SOUL.md template) → Infrastructure (board sync, doctor.py, immune system rules) → Features (10 specialized agents, Mission Control UI, Open Gateway)."
-  - page: "AICP"
-    context: "Scaffold (venv, profile system, CLAUDE.md) → Foundation (backend router, circuit breaker, complexity scorer) → Infrastructure (MCP tools, guardrails pipeline, path protection) → Features (backend routing, voice pipeline, 5-stage LocalAI independence roadmap)."
-  - page: "Front-Middleware-Backend"
-    context: "Each layer (frontend, middleware, backend) independently traverses SFIF. The frontend has its own scaffold (design system decisions) → foundation (component library, routing) → infrastructure (auth, state management) → features (screens, flows). Same for middleware and backend."
+  - {'page': 'Research Wiki', 'context': 'Scaffold (CLAUDE.md, directory structure, tech stack) → Foundation (tools/common.py, schema.yaml, config/) → Infrastructure (pipeline.py, MCP server, 15 tools) → Features (evolve pipeline, sync service, watcher daemon).'}
+  - {'page': 'OpenFleet', 'context': 'Scaffold (monorepo layout, agent identity model) → Foundation (orchestrator, agent base model, SOUL.md template) → Infrastructure (board sync, doctor.py, immune system rules) → Features (10 specialized agents, Mission Control UI, Open Gateway).'}
+  - {'page': 'AICP', 'context': 'Scaffold (venv, profile system, CLAUDE.md) → Foundation (backend router, circuit breaker, complexity scorer) → Infrastructure (MCP tools, guardrails pipeline, path protection) → Features (backend routing, voice pipeline, 5-stage LocalAI independence roadmap).'}
+  - {'page': 'Front-Middleware-Backend', 'context': 'Each layer (frontend, middleware, backend) independently traverses SFIF. The frontend has its own scaffold (design system decisions) → foundation (component library, routing) → infrastructure (auth, state management) → features (screens, flows). Same for middleware and backend.'}
 created: 2026-04-09
 updated: 2026-04-10
 sources:
   - id: src-four-project-ecosystem
     type: documentation
     file: wiki/domains/devops/four-project-ecosystem.md
-    title: "Four-Project Ecosystem"
-  - id: src-user-articulation
-    type: note
-    file: raw/notes/scaffold-foundation-infrastructure-features.md
-    title: "User articulation of SFIF build lifecycle pattern"
+    title: Four-Project Ecosystem
 tags: [scaffold, foundation, infrastructure, features, build-lifecycle, architecture, cross-domain, sfif, recursive, poc, mvp, project-structure, design-lifecycle]
 ---
 
@@ -162,41 +156,41 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[Skyscraper, Pyramid, Mountain]]
-- BUILDS ON: [[Progressive Distillation]]
-- IMPLEMENTED BY: [[OpenFleet]]
-- IMPLEMENTED BY: [[AICP]]
-- RELATES TO: [[Four-Project Ecosystem]]
-- RELATES TO: [[Deterministic Shell, LLM Core]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- FEEDS INTO: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[Infrastructure as Code Patterns]]
+- RELATES TO: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+- BUILDS ON: [[progressive-distillation|Progressive Distillation]]
+- IMPLEMENTED BY: [[openfleet|OpenFleet]]
+- IMPLEMENTED BY: [[aicp|AICP]]
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
+- RELATES TO: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- FEEDS INTO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 
 ## Backlinks
 
-[[Skyscraper, Pyramid, Mountain]]
-[[Progressive Distillation]]
-[[OpenFleet]]
-[[AICP]]
-[[Four-Project Ecosystem]]
-[[Deterministic Shell, LLM Core]]
-[[Plan Execute Review Cycle]]
-[[Knowledge Evolution Pipeline]]
-[[Infrastructure as Code Patterns]]
-[[Decision: Methodology Framework Design Decisions]]
-[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Model: SFIF and Architecture]]
-[[Models Are Built in Layers, Not All at Once]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Stage-Gate Methodology]]
-[[Task Lifecycle Stage-Gating]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[progressive-distillation|Progressive Distillation]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+[[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

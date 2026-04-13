@@ -1,5 +1,7 @@
 ---
-title: "Methodology Config Architecture — How the Pieces Fit Together"
+title: Methodology Config Architecture — How the Pieces Fit Together
+aliases:
+  - "Methodology Config Architecture — How the Pieces Fit Together"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -124,10 +126,10 @@ A reasoning document examining how the wiki's config files, the methodology syst
 > | "What does GOOD look like for this type?" | wiki/spine/standards/{type}-page-standards.md |
 > | "What model should I use for this task?" | methodology.yaml model_selection |
 > | "What artifacts do I produce at this stage?" | methodology.yaml chains + domain-profile resolution |
-> | "What are ALL the artifact types that exist?" | [[Methodology Artifact Taxonomy]] (78 types, 11 categories) |
-> | "How does this work for MY domain?" | [[Artifact Chain: TypeScript/Node Domain]] (or Python/Wiki, Infrastructure, Knowledge) |
-> | "What are the structural patterns that help agents comply?" | [[CLAUDE.md Structural Patterns for Agent Compliance]] |
-> | "What went wrong when methodology was ignored?" | [[Methodology Standards — What Good Execution Looks Like]] anti-pattern gallery |
+> | "What are ALL the artifact types that exist?" | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types, 11 categories) |
+> | "How does this work for MY domain?" | [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] (or Python/Wiki, Infrastructure, Knowledge) |
+> | "What are the structural patterns that help agents comply?" | [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] |
+> | "What went wrong when methodology was ignored?" | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] anti-pattern gallery |
 >
 > The configs answer STRUCTURAL questions (what type? what sections? what gate?). The wiki answers UNDERSTANDING questions (what does good look like? when should I use this? what went wrong before?). Neither can replace the other.
 
@@ -165,30 +167,30 @@ A reasoning document examining how the wiki's config files, the methodology syst
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Three Classes of Methodology Output]]
-- BUILDS ON: [[Coverage Blindness — Modeling Only What You Know]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Methodology Framework]]
-- RELATES TO: [[Methodology System Map]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+- BUILDS ON: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[methodology-system-map|Methodology System Map]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Three Classes of Methodology Output]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Model: Methodology]]
-[[Methodology Framework]]
-[[Methodology System Map]]
-[[Methodology Adoption Guide]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Structured Context Is Proto-Programming for AI Agents]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[model-methodology|Model — Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[methodology-system-map|Methodology System Map]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

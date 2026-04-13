@@ -1,5 +1,7 @@
 ---
-title: "LLM Wiki vs RAG"
+title: LLM Wiki vs RAG
+aliases:
+  - "LLM Wiki vs RAG"
 type: comparison
 layer: 3
 maturity: growing
@@ -12,17 +14,17 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: wiki/sources/src-karpathy-claude-code-10x.md
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
 tags: [llm-wiki, rag, comparison, knowledge-retrieval, hybrid-search, vector-search, knowledge-management, cross-domain]
 ---
 
@@ -142,44 +144,44 @@ Cross-referencing the LLM Wiki Pattern and Knowledge Evolution Pipeline pages: t
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- COMPARES TO: [[LLM Wiki Pattern]]
-- EXTENDS: [[Agentic Search vs Vector Search]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[LightRAG]]
-- RELATES TO: [[Memory Lifecycle Management]]
-- RELATES TO: [[NotebookLM]]
+- COMPARES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- EXTENDS: [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[lightrag|LightRAG]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[notebooklm|NotebookLM]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Agentic Search vs Vector Search]]
-[[Wiki Knowledge Graph]]
-[[Wiki Ingestion Pipeline]]
-[[LightRAG]]
-[[Memory Lifecycle Management]]
-[[NotebookLM]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Model: NotebookLM]]
-[[Model: Second Brain]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Second Brain Architecture]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[lightrag|LightRAG]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[notebooklm|NotebookLM]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[model-notebooklm|Model — NotebookLM]]
+[[model-second-brain|Model — Second Brain]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]

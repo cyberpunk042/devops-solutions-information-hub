@@ -2,32 +2,32 @@
 
 The operational backbone: stage-gate methodology, ecosystem topology, backlog management, task governance, infrastructure patterns, and the control plane vision. This domain defines how work proceeds across all projects.
 
-**Model:** [[Model: Methodology]] | **Standards:** [[Methodology Standards — What Good Execution Looks Like]]
+**Model:** [[model-methodology|Model — Methodology]] | **Standards:** [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ### Start Here
 
-1. [[Stage-Gate Methodology]] — The 5-stage sequential system governing all work
-2. [[Four-Project Ecosystem]] — The personal devops infrastructure topology
-3. [[Task Type Artifact Matrix]] — The 7 task types and their required artifacts
+1. [[stage-gate-methodology|Stage-Gate Methodology]] — The 5-stage sequential system governing all work
+2. [[four-project-ecosystem|Four-Project Ecosystem]] — The personal devops infrastructure topology
+3. [[task-type-artifact-matrix|Task Type Artifact Matrix]] — The 7 task types and their required artifacts
 
 ### Methodology
 
 | Page | What it covers |
 |------|---------------|
-| [[Stage-Gate Methodology]] | Document → Design → Scaffold → Implement → Test |
-| [[Task Type Artifact Matrix]] | 7 task types: epic, module, task, bug, hotfix, spike, chore |
-| [[Backlog Hierarchy Rules]] | EPIC → MODULE → TASK three-level structure |
-| [[Execution Modes and End Conditions]] | Operational envelope for autonomous agent execution |
-| [[Immune System Rules]] | 24 governance rules from 16 post-mortems |
+| [[stage-gate-methodology|Stage-Gate Methodology]] | Document → Design → Scaffold → Implement → Test |
+| [[task-type-artifact-matrix|Task Type Artifact Matrix]] | 7 task types: epic, module, task, bug, hotfix, spike, chore |
+| [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] | EPIC → MODULE → TASK three-level structure |
+| [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] | Operational envelope for autonomous agent execution |
+| [[immune-system-rules|Immune System Rules]] | 24 governance rules from 16 post-mortems |
 
 ### Ecosystem and Infrastructure
 
 | Page | What it covers |
 |------|---------------|
-| [[Four-Project Ecosystem]] | openfleet, AICP, DSPD, devops-control-plane |
+| [[four-project-ecosystem|Four-Project Ecosystem]] | openfleet, AICP, DSPD, devops-control-plane |
 | [[devops-control-plane]] | Unified solution management platform |
-| [[Infrastructure as Code Patterns]] | IaC beyond Terraform: config-as-code in the ecosystem |
-| [[WSL2 Development Patterns]] | Linux dev ecosystem alongside Windows tools |
+| [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] | IaC beyond Terraform: config-as-code in the ecosystem |
+| [[wsl2-development-patterns|WSL2 Development Patterns]] | Linux dev ecosystem alongside Windows tools |
 
 ## Pages
 

@@ -1,5 +1,7 @@
 ---
-title: "Task Page Standards"
+title: Task Page Standards
+aliases:
+  - "Task Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -90,7 +92,7 @@ Standards for task pages — the atomic work unit. Tasks are SHORT. Summary + Do
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Test OpenAI backend with LocalAI]] — 33 lines
+> [!success] [[T001-test-openai-backend|Test OpenAI backend with LocalAI]] — 33 lines
 >
 > - Short and focused — one deliverable
 > - Done When items verifiable with commands
@@ -115,16 +117,25 @@ Standards for task pages — the atomic work unit. Tasks are SHORT. Summary + Do
 | Min Done When items | 1 |
 | Required frontmatter | priority, task_type, current_stage, readiness, epic |
 
+### Annotated Exemplar: Well-defined task standards
+
+> [!example]- What makes a good task page
+>
+> **Short and focused:** Tasks are ATOMIC — 20-50 lines. If it needs design decisions, it's a module not a task.
+> **Done When names FILES:** "- [ ] `wiki/lessons/new-lesson.md` passes pipeline post" — not "lesson is written." The file name IS the verification.
+> **Frontmatter audit trail:** current_stage, readiness, progress, stages_completed, artifacts — the HISTORY of execution is in the frontmatter, not in prose.
+> **Specific Done When prevents cheating:** "src/hooks/event-firing.ts imports workspace-coordinator" tells the agent WHERE and WHAT. "Wired into runtime" lets the agent satisfy it cheaply under fatigue.
+
 ### Template
 
 `wiki/config/templates/task.md` — scaffold via `python3 -m tools.pipeline scaffold task "Title"`
 
 ## Relationships
 
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Backlog Hierarchy Rules]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

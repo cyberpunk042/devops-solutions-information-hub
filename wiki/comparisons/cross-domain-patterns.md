@@ -1,5 +1,7 @@
 ---
-title: "Cross-Domain Patterns"
+title: Cross-Domain Patterns
+aliases:
+  - "Cross-Domain Patterns"
 type: comparison
 layer: 3
 maturity: growing
@@ -12,17 +14,17 @@ sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
   - id: src-claude-code-accuracy-tips
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
+    url: https://www.youtube.com/watch?v=D5bRTv6GhXk
+    title: Claude Code Works Better When You Do This
     ingested: 2026-04-08
 tags: [cross-domain, patterns, meta-analysis, plan-execute-review, progressive-distillation, deferred-loading, context-aware, orchestration, knowledge-systems, ai-agents]
 ---
@@ -174,33 +176,33 @@ Certain structural patterns recur independently across multiple domains in this 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Context-Aware Tool Loading]]
-- RELATES TO: [[Agent Orchestration Patterns]]
-- RELATES TO: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[Zettelkasten Methodology]]
-- RELATES TO: [[PARA Methodology]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- BUILDS ON: [[Second Brain Architecture]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- RELATES TO: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- RELATES TO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[zettelkasten-methodology|Zettelkasten Methodology]]
+- RELATES TO: [[para-methodology|PARA Methodology]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- BUILDS ON: [[second-brain-architecture|Second Brain Architecture]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[Plan Execute Review Cycle]]
-[[Context-Aware Tool Loading]]
-[[Agent Orchestration Patterns]]
-[[Knowledge Evolution Pipeline]]
-[[Zettelkasten Methodology]]
-[[PARA Methodology]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[Second Brain Architecture]]
-[[Research Pipeline Orchestration]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[para-methodology|PARA Methodology]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]

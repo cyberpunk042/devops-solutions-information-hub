@@ -1,5 +1,7 @@
 ---
-title: "Three Lines of Defense — Immune System for Agent Quality"
+title: Three Lines of Defense — Immune System for Agent Quality
+aliases:
+  - "Three Lines of Defense — Immune System for Agent Quality"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -10,23 +12,20 @@ derived_from:
   - "Model: Quality and Failure Prevention"
   - "Enforcement Hook Patterns"
 instances:
-  - page: "Model: Quality and Failure Prevention"
-    context: "Three-layer defense model defined: structural prevention, teaching, review — the immune system instantiates this at runtime"
-  - page: "Infrastructure Enforcement Proves Instructions Fail"
-    context: "Structural prevention (Line 1) proven by OpenArms hooks — 75% → 0% stage violations"
-  - page: "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
-    context: "6 behavioral failure classes that Line 2 (detection) and Line 3 (correction) address"
+  - {'page': 'Model: Quality and Failure Prevention', 'context': 'Three-layer defense model defined: structural prevention, teaching, review — the immune system instantiates this at runtime'}
+  - {'page': 'Infrastructure Enforcement Proves Instructions Fail', 'context': 'Structural prevention (Line 1) proven by OpenArms hooks — 75% → 0% stage violations'}
+  - {'page': 'Agent Failure Taxonomy — Seven Classes of Behavioral Failure', 'context': '6 behavioral failure classes that Line 2 (detection) and Line 3 (correction) address'}
 created: 2026-04-12
 updated: 2026-04-12
 sources:
   - id: openfleet-immune
     type: observation
     file: raw/articles/openfleet-immune-system.md
-    description: "OpenFleet immune system design — 3 lines of defense, doctor cycle, 746 lines across 3 files"
+    description: OpenFleet immune system design — 3 lines of defense, doctor cycle, 746 lines across 3 files
   - id: openarms-hooks
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms hooks as Line 1 implementation — 215 lines, 100% stage boundary enforcement"
+    description: OpenArms hooks as Line 1 implementation — 215 lines, 100% stage boundary enforcement
 tags: [immune-system, three-lines-defense, enforcement, detection, correction, quality, agent-fleet, pattern]
 ---
 
@@ -126,42 +125,42 @@ Key design principle: "seeing the pattern does not break the pattern — it's fo
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Line 1 (Prevention) in detail** | [[Enforcement Hook Patterns]] — real implementations. [[Contribution Gating — Cross-Agent Inputs Before Work]] — contributions as prevention. |
-> | **Line 2 (Detection) deeper** | [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — doctor cycle every 30s, 5 diseases, persistent health profiles |
-> | **Line 3 (Correction) options** | [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] — graduated response must be mindful |
-> | **What fails despite all 3 lines?** | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — behavioral failures beyond infrastructure |
-> | **Solo agent version?** | [[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — Line 1 only, no Lines 2-3. Result: 0% stage violations, 80% behavioral failures. |
-> | **What PM level needs this?** | [[Three PM Levels — Wiki to Fleet to Full Tool]] — L2+ (fleet/harness). L1 relies on human as immune system. |
-> | **Goldilocks question** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — full immune system is overkill for solo agent. Match enforcement to identity. |
+> | **Line 1 (Prevention) in detail** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] — real implementations. [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]] — contributions as prevention. |
+> | **Line 2 (Detection) deeper** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — doctor cycle every 30s, 5 diseases, persistent health profiles |
+> | **Line 3 (Correction) options** | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] — graduated response must be mindful |
+> | **What fails despite all 3 lines?** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — behavioral failures beyond infrastructure |
+> | **Solo agent version?** | [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — Line 1 only, no Lines 2-3. Result: 0% stage violations, 80% behavioral failures. |
+> | **What PM level needs this?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L2+ (fleet/harness). L1 relies on human as immune system. |
+> | **Goldilocks question** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — full immune system is overkill for solo agent. Match enforcement to identity. |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Quality and Failure Prevention]]
-- DERIVED FROM: [[Enforcement Hook Patterns]]
-- BUILDS ON: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- RELATES TO: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- DERIVED FROM: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- BUILDS ON: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- RELATES TO: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Model: Quality and Failure Prevention]]
-[[Enforcement Hook Patterns]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Methodology Adoption Guide]]
-[[Context Compaction Is a Reset Event]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Validation Matrix — Test Suite for Context Injection]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

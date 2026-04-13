@@ -1,5 +1,7 @@
 ---
-title: "Stage-Gate Methodology"
+title: Stage-Gate Methodology
+aliases:
+  - "Stage-Gate Methodology"
 type: concept
 layer: 2
 domain: devops
@@ -15,12 +17,12 @@ sources:
   - id: src-openarms-methodology-yaml-full
     type: documentation
     file: raw/articles/openarms-methodology-yaml-full.md
-    title: "OpenArms Methodology YAML + Agent Directive — Full Reference"
+    title: OpenArms Methodology YAML + Agent Directive — Full Reference
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
 tags: [stage-gate, methodology, openarms, openfleet, document, design, scaffold, implement, test, hard-boundaries, artifacts, quality-gates, readiness, work-modes, knowledge-work, devops, autonomous-agents]
 ---
@@ -216,16 +218,16 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 ## Answered Open Questions
 
 > [!example]- Minimum viable quality gate for low-tooling contexts?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Protocol enforcement via CLAUDE.md MUST/MUST NOT rules plus one-commit-per-stage convention. Observable evidence = commit message names the stage + diff touches only permitted file categories.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Protocol enforcement via CLAUDE.md MUST/MUST NOT rules plus one-commit-per-stage convention. Observable evidence = commit message names the stage + diff touches only permitted file categories.
 
 > [!example]- How should stages handle discovery tasks?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding. Maximum 2 retries before escalating to human review.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding. Maximum 2 retries before escalating to human review.
 
 > [!example]- Can stage-gate be applied retroactively to partial work?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Document after the fact by creating the missing artifacts, but mark them as retroactive. The work is treated as having been done out of order, not as invalid.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Document after the fact by creating the missing artifacts, but mark them as retroactive. The work is treated as having been done out of order, not as invalid.
 
 > [!example]- How does readiness interact with partial stage completion?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Task remains at the previous stage threshold until the current stage is fully complete. Incomplete Design = still at 25% (Document ceiling), not 26%.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Task remains at the previous stage threshold until the current stage is fully complete. Incomplete Design = still at 25% (Document ceiling), not 26%.
 
 ### How This Connects — Navigate From Here
 
@@ -233,67 +235,67 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Task Lifecycle Stage-Gating]] (this page operationalizes the stage-gating concept for the devops domain)
-- DERIVED FROM: [[Spec-Driven Development]] (stages enforce the spec-before-implementation principle)
-- BUILDS ON: [[Plan Execute Review Cycle]] (stage gates implement the phase separation that PER describes)
-- IMPLEMENTS: [[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the architectural expression of the same staged progression principle)
-- USED BY: [[Task Type Artifact Matrix]] (each task type selects a subset of stages based on complexity)
-- USED BY: [[Backlog Hierarchy Rules]] (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)
-- USED BY: [[Execution Modes and End Conditions]] (execution modes control which stages run and in what order)
-- RELATES TO: [[Wiki Backlog Pattern]] (the wiki IS the Document/Design stage artifact system)
-- RELATES TO: [[Four-Project Ecosystem]] (all four projects in the ecosystem apply this methodology)
-- FEEDS INTO: [[Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)
+- DERIVED FROM: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (this page operationalizes the stage-gating concept for the devops domain)
+- DERIVED FROM: [[spec-driven-development|Spec-Driven Development]] (stages enforce the spec-before-implementation principle)
+- BUILDS ON: [[plan-execute-review-cycle|Plan Execute Review Cycle]] (stage gates implement the phase separation that PER describes)
+- IMPLEMENTS: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (SFIF is the architectural expression of the same staged progression principle)
+- USED BY: [[task-type-artifact-matrix|Task Type Artifact Matrix]] (each task type selects a subset of stages based on complexity)
+- USED BY: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] (tasks are the unit that stages apply to; epics and modules aggregate stage completion upward)
+- USED BY: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] (execution modes control which stages run and in what order)
+- RELATES TO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (the wiki IS the Document/Design stage artifact system)
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]] (all four projects in the ecosystem apply this methodology)
+- FEEDS INTO: [[immune-system-rules|Immune System Rules]] (violations of stage hard boundaries are the diseases the immune system detects)
 
 ## Backlinks
 
-[[Task Lifecycle Stage-Gating]]
-[[Spec-Driven Development]]
-[[Plan Execute Review Cycle]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Task Type Artifact Matrix]]
-[[Backlog Hierarchy Rules]]
-[[Execution Modes and End Conditions]]
-[[Wiki Backlog Pattern]]
-[[Four-Project Ecosystem]]
-[[Immune System Rules]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Artifact Chains by Methodology Model]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Decision: Artifact System Design Decisions]]
-[[Decision: Execution Mode Edge Cases]]
-[[Decision: Hooks Design Decisions]]
-[[Decision: Methodology Framework Design Decisions]]
-[[Decision: Methodology Stage Extension Decisions]]
-[[Decision: Stage-Gate Operational Decisions]]
-[[Decision: Task Type Edge Cases]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Enforcement Hook Patterns]]
-[[Evolution: Methodology System]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Initiation and Planning Artifacts — Standards and Guide]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Adoption Guide]]
-[[Methodology Artifact Taxonomy]]
-[[Methodology Framework]]
-[[Methodology Is a Framework, Not a Fixed Pipeline]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Model Composition Rules]]
-[[Model: Methodology]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Never Synthesize from Descriptions Alone]]
-[[Operations Plan Page Standards]]
-[[Operations Plan: Wiki Post-Ingestion Validation]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Requirements and Design Artifacts — Standards and Guide]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Stage-Aware Skill Injection]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[The Agent Must Practice What It Documents]]
-[[Three Classes of Methodology Output]]
-[[Universal Stages, Domain-Specific Artifacts]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[spec-driven-development|Spec-Driven Development]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[immune-system-rules|Immune System Rules]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
+[[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
+[[hooks-design-decisions|Decision — Hooks Design Decisions]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+[[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]]
+[[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
+[[task-type-edge-cases|Decision — Task Type Edge Cases]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[methodology-evolution-history|Evolution — Methodology System]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-framework|Methodology Framework]]
+[[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-composition-rules|Model Composition Rules]]
+[[model-methodology|Model — Methodology]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[operations-plan-page-standards|Operations Plan Page Standards]]
+[[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]

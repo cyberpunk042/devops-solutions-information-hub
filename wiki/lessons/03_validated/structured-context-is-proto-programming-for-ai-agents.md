@@ -1,5 +1,7 @@
 ---
-title: "Structured Context Is Proto-Programming for AI Agents"
+title: Structured Context Is Proto-Programming for AI Agents
+aliases:
+  - "Structured Context Is Proto-Programming for AI Agents"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -8,7 +10,7 @@ confidence: high
 maturity: growing
 derived_from:
   - "CLAUDE.md Structural Patterns for Agent Compliance"
-  - "Model: Design.md and IaC"
+  - "Model: Markdown as IaC — Design.md and Agent Configuration"
   - "Model: Skills, Commands, and Hooks"
 created: 2026-04-12
 updated: 2026-04-12
@@ -20,11 +22,11 @@ sources:
   - id: openfleet-validation-matrix
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "OpenFleet validation-matrix — 29 structured context scenarios (2,444 lines) defining exactly what agents receive per condition"
+    description: OpenFleet validation-matrix — 29 structured context scenarios (2,444 lines) defining exactly what agents receive per condition
   - id: openarms-compliance
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms structural patterns improved compliance from 25% to 60% (instructions alone) and 100% with hooks"
+    description: OpenArms structural patterns improved compliance from 25% to 60% (instructions alone) and 100% with hooks
 tags: [proto-programming, structured-context, markdown, agent-compliance, magic-tricks, context-engineering, frontmatter]
 ---
 
@@ -161,36 +163,37 @@ This is why OpenArms's 8 CLAUDE.md structural patterns improved compliance from 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **How does structure enforce behavior?** | [[Enforcement Hook Patterns]] — hooks are structural enforcement. [[Infrastructure Enforcement Proves Instructions Fail]] — quantified proof. |
-> | **What is the validation matrix?** | [[Validation Matrix — Test Suite for Context Injection]] — 29 scenarios testing structured context |
-> | **How does tier control context depth?** | [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same structure, different depth per tier |
+> | **How does structure enforce behavior?** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] — hooks are structural enforcement. [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] — quantified proof. |
+> | **What is the validation matrix?** | [[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]] — 29 scenarios testing structured context |
+> | **How does tier control context depth?** | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same structure, different depth per tier |
 > | **What are the Five Cognitive Contexts?** | Five contexts reading one CLAUDE.md (detailed in evidence above). Fix: move per-context rules to skills/commands. |
-> | **How does this connect to Goldilocks?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity DECLARES which context, structure ADAPTS per declaration |
+> | **How does this connect to Goldilocks?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity DECLARES which context, structure ADAPTS per declaration |
 > | **What global standards apply?** | CloudEvents (structured event format), OpenAPI (structured API spec), DDD (bounded context = structural boundary) |
 
 ## Relationships
 
-- DERIVED FROM: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- DERIVED FROM: [[Model: Design.md and IaC]]
-- BUILDS ON: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- FEEDS INTO: [[How AI Agents Consume the Methodology Wiki]]
-- FEEDS INTO: [[Methodology Config Architecture — How the Pieces Fit Together]]
+- DERIVED FROM: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- DERIVED FROM: [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+- BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- FEEDS INTO: [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+- FEEDS INTO: [[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
 
 ## Backlinks
 
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Model: Design.md and IaC]]
-[[Model: Skills, Commands, and Hooks]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Validation Matrix — Test Suite for Context Injection]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

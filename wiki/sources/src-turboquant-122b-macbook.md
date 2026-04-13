@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: TurboQuant 122B LLM on MacBook"
+title: Synthesis — TurboQuant 122B LLM on MacBook
+aliases:
+  - "Synthesis — TurboQuant 122B LLM on MacBook"
+  - "Synthesis: TurboQuant 122B LLM on MacBook"
 type: source-synthesis
 layer: 1
 maturity: seed
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-turboquant-122b-macbook
     type: article
-    url: "https://medium.com/data-science-collective/how-i-run-122b-parameter-llms-on-a-macbook-outperforming-mxfp4-and-standard-quantization-on-apple-0552ee3da1f7"
+    url: https://medium.com/data-science-collective/how-i-run-122b-parameter-llms-on-a-macbook-outperforming-mxfp4-and-standard-quantization-on-apple-0552ee3da1f7
     file: raw/articles/turboquant-122b-llm-macbook-mlx.md
-    title: "How I Run 122B Parameter LLMs on a MacBook"
+    title: How I Run 122B Parameter LLMs on a MacBook
     ingested: 2026-04-08
 tags: [quantization, turboquant, mlx, apple-silicon, moe, local-llm, m4-max, 122b-parameters]
 ---
-
-# Synthesis: TurboQuant 122B LLM on MacBook
-
+# Synthesis — TurboQuant 122B LLM on MacBook
 ## Summary
 
 TurboQuant, originally Google's quantization technique, has been adapted for Apple Silicon via MLX and extended to Mixture-of-Experts (MoE) architectures, enabling 122B parameter models to run on a MacBook M4 Max (64GB RAM) at 44 tokens/second. The method outperforms both MXFP4 (Apple's native mixed-precision format) and standard affine quantization across multiple bit-widths. This represents a significant milestone for local-first AI: consumer hardware can now run models that rival cloud-hosted inference in size, with competitive throughput.
@@ -45,17 +46,17 @@ TurboQuant, originally Google's quantization technique, has been adapted for App
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-turboquant-122b-macbook
-- RELATES TO: [[AICP]]
-- RELATES TO: [[LightRAG]]
+- DERIVED FROM: [[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[lightrag|LightRAG]]
 
 ## Backlinks
 
-[[src-turboquant-122b-macbook]]
-[[AICP]]
-[[LightRAG]]
+[[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
+[[aicp|AICP]]
+[[lightrag|LightRAG]]

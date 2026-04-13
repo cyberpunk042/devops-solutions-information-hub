@@ -1,5 +1,7 @@
 ---
-title: "Claude Code"
+title: Claude Code
+aliases:
+  - "Claude Code"
 type: concept
 layer: 2
 maturity: growing
@@ -11,21 +13,21 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
+    url: https://github.com/shanraisshan/claude-code-best-practice
     file: raw/articles/shanraisshanclaude-code-best-practice.md
-    title: "Claude Code Best Practices"
+    title: Claude Code Best Practices
     ingested: 2026-04-08
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=7sInxhTDA7U"
+    url: https://www.youtube.com/watch?v=7sInxhTDA7U
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
+    url: https://www.youtube.com/watch?v=49V-5Ock8LU
     file: raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt
-    title: "18 Claude Code Token Hacks in 18 Minutes"
+    title: 18 Claude Code Token Hacks in 18 Minutes
     ingested: 2026-04-08
 tags: [claude-code, ai-agent, coding-agent, anthropic, skills, hooks, mcp, subagents, context-management, automation]
 ---
@@ -115,48 +117,48 @@ Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- ENABLES: [[OpenFleet]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[Claude Code Skills]]
-- ENABLES: [[Claude Code Best Practices]]
-- ENABLES: [[Claude Code Context Management]]
-- RELATES TO: [[OpenClaw]]
-- RELATES TO: [[AICP]]
-- RELATES TO: [[Obsidian CLI]]
-- RELATES TO: [[notebooklm-py CLI]]
-- RELATES TO: [[LLM Wiki Pattern]]
+- ENABLES: [[openfleet|OpenFleet]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[claude-code-skills|Claude Code Skills]]
+- ENABLES: [[claude-code-best-practices|Claude Code Best Practices]]
+- ENABLES: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[openclaw|OpenClaw]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[obsidian-cli|Obsidian CLI]]
+- RELATES TO: [[notebooklm-py-cli|notebooklm-py CLI]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[OpenClaw]]
-[[AICP]]
-[[Obsidian CLI]]
-[[notebooklm-py CLI]]
-[[LLM Wiki Pattern]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Claude Code Slash Commands (artemgetmann)]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Local LLM Quantization]]
-[[MCP Integration Architecture]]
-[[Model: Claude Code]]
-[[OpenArms]]
-[[Plan Execute Review Cycle]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[devops-control-plane]]
+[[openfleet|OpenFleet]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[openclaw|OpenClaw]]
+[[aicp|AICP]]
+[[obsidian-cli|Obsidian CLI]]
+[[notebooklm-py-cli|notebooklm-py CLI]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[harness-engineering|Harness Engineering]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[model-claude-code|Model — Claude Code]]
+[[openarms|OpenArms]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[devops-control-plane|devops-control-plane]]

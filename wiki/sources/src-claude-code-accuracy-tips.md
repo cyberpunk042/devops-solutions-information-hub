@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Claude Code Accuracy Tips"
+title: Synthesis — Claude Code Accuracy Tips
+aliases:
+  - "Synthesis — Claude Code Accuracy Tips"
+  - "Synthesis: Claude Code Accuracy Tips"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-claude-code-accuracy-tips
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
+    url: https://www.youtube.com/watch?v=D5bRTv6GhXk
     file: raw/transcripts/claude-code-works-better-when-you-do-this.txt
-    title: "Claude Code Works Better When You Do This"
+    title: Claude Code Works Better When You Do This
     ingested: 2026-04-08
 tags: [claude-code, accuracy, context-management, subagents, superpowers, agent-teams, context7, notebooklm, cli-over-mcp]
 ---
-
-# Synthesis: Claude Code Accuracy Tips
-
+# Synthesis — Claude Code Accuracy Tips
 ## Summary
 
 A practitioner's guide to 7 techniques for improving Claude Code accuracy, presented by a former Amazon/Microsoft senior AI engineer building a startup (BookZero.AI) entirely with Claude Code. The tips form a progressive stack: (1) track context consumption via status line progress bar to know when to /clear, (2) delegate to subagents for fresh context per task, (3) use superpowers plugin for spec-driven development with automated sub-agent management, (4) use agent teams for cross-communication between workers, (5) use Context7 MCP/skill for up-to-date library documentation, (6) use NotebookLM as external knowledge base to keep context clean, (7) prefer CLI+Skills over MCP for token efficiency and accuracy. The progression moves from basic context hygiene to full agentic orchestration.
@@ -51,33 +52,33 @@ A practitioner's guide to 7 techniques for improving Claude Code accuracy, prese
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-code-accuracy-tips
-- EXTENDS: [[Claude Code Best Practices]]
-- EXTENDS: [[Claude Code Context Management]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[NotebookLM]]
-- RELATES TO: [[OpenClaw]]
-- SUPPORTS: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-- SUPPORTS: [[CLI Tools Beat MCP for Token Efficiency]]
-- SUPPORTS: [[Decision: MCP vs CLI for Tool Integration]]
+- DERIVED FROM: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- EXTENDS: [[claude-code-best-practices|Claude Code Best Practices]]
+- EXTENDS: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- RELATES TO: [[openclaw|OpenClaw]]
+- SUPPORTS: [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- SUPPORTS: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- SUPPORTS: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
 
 ## Backlinks
 
-[[src-claude-code-accuracy-tips]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[NotebookLM]]
-[[OpenClaw]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Context-Aware Tool Loading]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[notebooklm|NotebookLM]]
+[[openclaw|OpenClaw]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]

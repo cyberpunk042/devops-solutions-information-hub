@@ -1,5 +1,7 @@
 ---
-title: "AICP"
+title: AICP
+aliases:
+  - "AICP"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-aicp-local
     type: documentation
     file: ../devops-expert-local-ai/CLAUDE.md
-    title: "AICP — Local Project Documentation"
+    title: AICP — Local Project Documentation
     ingested: 2026-04-08
 tags: [aicp, localai, ai-control-platform, backend-routing, think-edit-act, guardrails, circuit-breaker, fleet-integration, local-first]
 ---
@@ -101,46 +103,46 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- USED BY: [[OpenFleet]]
-- BUILDS ON: [[LightRAG]]
-- RELATES TO: [[Claude Code]]
-- RELATES TO: [[OpenClaw]]
-- ENABLES: [[Claude Code Skills]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
+- USED BY: [[openfleet|OpenFleet]]
+- BUILDS ON: [[lightrag|LightRAG]]
+- RELATES TO: [[claude-code|Claude Code]]
+- RELATES TO: [[openclaw|OpenClaw]]
+- ENABLES: [[claude-code-skills|Claude Code Skills]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
 - RELATES TO: [[devops-control-plane]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[LightRAG]]
-[[Claude Code]]
-[[OpenClaw]]
-[[Claude Code Skills]]
-[[Wiki Knowledge Graph]]
-[[devops-control-plane]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Deterministic Shell, LLM Core]]
-[[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Immune System Rules]]
-[[Knowledge Evolution Pipeline]]
-[[Local Inference Engine (Subsystem 3)]]
-[[Local LLM Quantization]]
-[[MCP Integration Architecture]]
-[[Model: Ecosystem Architecture]]
-[[Model: Local AI ($0 Target)]]
-[[Multi-Channel AI Agent Access]]
-[[OpenArms]]
-[[Plane]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
-[[Synthesis: TurboQuant 122B LLM on MacBook]]
+[[openfleet|OpenFleet]]
+[[lightrag|LightRAG]]
+[[claude-code|Claude Code]]
+[[openclaw|OpenClaw]]
+[[claude-code-skills|Claude Code Skills]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[devops-control-plane|devops-control-plane]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[immune-system-rules|Immune System Rules]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-local-ai|Model — Local AI ($0 Target)]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[openarms|OpenArms]]
+[[plane|Plane]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]

@@ -1,5 +1,7 @@
 ---
-title: "The Wiki Maintenance Problem Is Solved by LLM Automation"
+title: The Wiki Maintenance Problem Is Solved by LLM Automation
+aliases:
+  - "The Wiki Maintenance Problem Is Solved by LLM Automation"
 type: lesson
 domain: knowledge-systems
 layer: 4
@@ -15,15 +17,7 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
-  - id: src-karpathy-llm-wiki-idea-file
-    type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
-  - id: src-llm-wiki-v2-agentmemory
-    type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
 tags: [llm-wiki, maintenance, automation, karpathy, wiki-decay, second-brain, compounding-knowledge]
 ---
 
@@ -84,28 +78,28 @@ This lesson applies to:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-- DERIVED FROM: [[LLM Wiki Pattern]]
-- BUILDS ON: [[LLM Knowledge Linting]]
-- ENABLES: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[Second Brain Architecture]]
-- FEEDS INTO: [[LLM-Maintained Wikis Outperform Static Documentation]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- BUILDS ON: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[second-brain-architecture|Second Brain Architecture]]
+- FEEDS INTO: [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[LLM Wiki Pattern]]
-[[LLM Knowledge Linting]]
-[[Knowledge Evolution Pipeline]]
-[[Second Brain Architecture]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[LLM Wiki vs RAG]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]

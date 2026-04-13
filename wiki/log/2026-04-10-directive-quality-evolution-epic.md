@@ -1,5 +1,7 @@
 ---
-title: "Quality Evolution Epic — Level Up Everything, One File at a Time"
+title: Quality Evolution Epic — Level Up Everything, One File at a Time
+aliases:
+  - "Quality Evolution Epic — Level Up Everything, One File at a Time"
 type: note
 domain: log
 note_type: directive
@@ -44,8 +46,8 @@ Operator directive establishing the quality evolution epic: level up the entire 
 
 ## Relationships
 
-- FEEDS INTO: [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+- FEEDS INTO: [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
 
 ## Backlinks
 
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]

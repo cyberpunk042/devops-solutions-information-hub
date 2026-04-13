@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Obsidian + Claude Code Second Brain Setup"
+title: Synthesis — Obsidian + Claude Code Second Brain Setup
+aliases:
+  - "Synthesis — Obsidian + Claude Code Second Brain Setup"
+  - "Synthesis: Obsidian + Claude Code Second Brain Setup"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=Y2rpFa43jTo"
+    url: https://www.youtube.com/watch?v=Y2rpFa43jTo
     file: raw/transcripts/obsidian-claude-code-the-second-brain-setup-that-actually-works.txt
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
     ingested: 2026-04-08
 tags: [obsidian, claude-code, second-brain, git-sync, obsidian-cli, skills, project-management, gmail-integration]
 ---
-
-# Synthesis: Obsidian + Claude Code Second Brain Setup
-
+# Synthesis — Obsidian + Claude Code Second Brain Setup
 ## Summary
 
 This video demonstrates a practical implementation of using Claude Code as an AI assistant for managing an Obsidian-based second brain. The presenter (Eric Tech) walks through three main components: (1) setting up Obsidian with Git/GitHub for free version control and cloud sync using the Obsidian Git community plugin, (2) enabling the Obsidian CLI to allow Claude Code to interact with Obsidian programmatically, and (3) building custom Claude Code skills -- specifically an "onboard projects" skill -- that automates the process of ingesting data from multiple sources (Gmail, local files, screenshots) into a structured Obsidian project folder. The workflow creates per-project folders with standardized files (overview, conversation log, links, documents) and a projects dashboard using Obsidian's database plugin. The presenter demonstrates querying the knowledge base through Claude Code to get project status, action items, and even draft email responses.
@@ -84,23 +85,24 @@ Cross-referencing the `WSL2 Development Patterns` page: the page directly addres
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-obsidian-claude-code-second-brain
-- EXTENDS: [[Obsidian Knowledge Vault]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[AI-Driven Content Pipeline]]
+- DERIVED FROM: [[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+- EXTENDS: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
 
 ## Backlinks
 
-[[src-obsidian-claude-code-second-brain]]
-[[Obsidian Knowledge Vault]]
-[[Claude Code Skills]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[AI-Driven Content Pipeline]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[claude-code-skills|Claude Code Skills]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]

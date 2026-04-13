@@ -1,5 +1,7 @@
 ---
-title: "Portable Methodology Engine"
+title: Portable Methodology Engine
+aliases:
+  - "Portable Methodology Engine"
 type: epic
 domain: backlog
 status: in-progress
@@ -7,21 +9,23 @@ priority: P0
 task_type: epic
 current_stage: document
 readiness: 15
-stages_completed: [document]
+stages_completed:
+  - "document"
 artifacts:
-  - wiki/config/methodology.yaml
-  - wiki/config/domain-profiles/typescript.yaml
-  - wiki/config/domain-profiles/python-wiki.yaml
-  - wiki/config/domain-profiles/infrastructure.yaml
-  - wiki/config/artifact-types.yaml
-  - wiki/config/export-profiles.yaml
-  - wiki/domains/cross-domain/model-composition-rules.md
-  - wiki/spine/methodology-adoption-guide.md
-  - wiki/domains/cross-domain/methodology-evolution-protocol.md
+  - "wiki/config/methodology.yaml"
+  - "wiki/config/domain-profiles/typescript.yaml"
+  - "wiki/config/domain-profiles/python-wiki.yaml"
+  - "wiki/config/domain-profiles/infrastructure.yaml"
+  - "wiki/config/artifact-types.yaml"
+  - "wiki/config/export-profiles.yaml"
+  - "wiki/domains/cross-domain/model-composition-rules.md"
+  - "wiki/spine/methodology-adoption-guide.md"
+  - "wiki/domains/cross-domain/methodology-evolution-protocol.md"
 confidence: high
 created: 2026-04-11
 updated: 2026-04-11
-depends_on: [E003]
+depends_on:
+  - "E003"
 sources:
   - id: operator-directive
     type: file
@@ -68,28 +72,28 @@ Create a generic, parameterizable methodology configuration system that the wiki
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DEPENDS ON: [[Artifact Type System]] (E003)
-- ENABLES: [[Agent Compliance Framework]] (E005)
-- BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
-- BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
-- IMPLEMENTS: [[Methodology Framework]]
-- FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
-- RELATES TO: [[Four-Project Ecosystem]]
+- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- ENABLES: [[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)
+- BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+- BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+- IMPLEMENTS: [[methodology-framework|Methodology Framework]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
 
 ## Backlinks
 
-[[Artifact Type System]]
-[[Agent Compliance Framework]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Model: Ecosystem Architecture]]
-[[Four-Project Ecosystem]]
-[[E003 Artifact Type System — Design Document]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]]

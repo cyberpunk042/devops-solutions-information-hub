@@ -1,5 +1,7 @@
 ---
-title: "Evolution Page Standards"
+title: Evolution Page Standards
+aliases:
+  - "Evolution Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -43,11 +45,19 @@ Standards for evolution pages — historical narratives tracking how a concept, 
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Evolution: Methodology System]] — 92 lines
+> [!success] [[methodology-evolution-history|Evolution — Methodology System]] — 92 lines
 >
 > - 9 dated timeline entries, each with significance explanation
 > - 5 Key Shifts identifying real turning points (instructions→infrastructure, project→portable, etc.)
 > - Current State names achievements AND next frontiers
+
+### Annotated Exemplar: [[methodology-evolution-history|Evolution — Methodology System]]
+
+> [!example]- What makes a good evolution page
+>
+> **Timeline with significance:** Every entry has a date AND why it mattered. "2026-04-08 — Infrastructure enforcement deployed (violations: 75%→0%)" — not just "hooks added."
+> **Key Shifts:** ≥2 turning points with Before/Evidence/After structure. Shows the DIRECTION change, not just events.
+> **Current State:** Honest table with aspect/state/evidence. Numbers where possible.
 
 ### Template
 
@@ -55,10 +65,10 @@ Standards for evolution pages — historical narratives tracking how a concept, 
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

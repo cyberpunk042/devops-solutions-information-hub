@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Claude + NotebookLM Content Automation"
+title: Synthesis — Claude + NotebookLM Content Automation
+aliases:
+  - "Synthesis — Claude + NotebookLM Content Automation"
+  - "Synthesis: Claude + NotebookLM Content Automation"
 type: source-synthesis
 layer: 1
 maturity: seed
@@ -12,13 +15,11 @@ sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
     file: raw/transcripts/claude-notebooklm-content-team.txt
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
+    title: Claude + NotebookLM = Your 24/7 Content Team
     ingested: 2026-04-08
 tags: [claude-code, notebooklm, automation, skills, scheduling, google]
 ---
-
-# Synthesis: Claude + NotebookLM Content Automation
-
+# Synthesis — Claude + NotebookLM Content Automation
 ## Summary
 
 This video demonstrates how to connect Claude Code to Google's NotebookLM to create a fully automated content research and generation pipeline. Instead of manually adding sources and clicking generate in NotebookLM, users can instruct Claude Code as an AI agent to perform the entire workflow: researching topics, loading sources into NotebookLM, and generating assets like slide decks, podcast audio, video summaries, mind maps, and flashcards. The presenter (Jay) walks through the setup process using a NotebookLM skill (a markdown instruction file), shows how to customize slide designs through skill editing, and demonstrates scheduling recurring research tasks using both local cron jobs and Anthropic's remote task feature. The key insight is that Claude Code acts as an orchestration layer that removes the human bottleneck from NotebookLM's content generation capabilities.
@@ -54,21 +55,21 @@ This video demonstrates how to connect Claude Code to Google's NotebookLM to cre
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-notebooklm-content-team
-- RELATES TO: notebooklm
-- RELATES TO: claude-code-skills
-- RELATES TO: claude-code-scheduling
-- RELATES TO: ai-driven-content-pipeline
+- DERIVED FROM: [[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code-scheduling|Claude Code Scheduling]]
+- RELATES TO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
 
 ## Backlinks
 
-[[src-claude-notebooklm-content-team]]
-[[notebooklm]]
-[[claude-code-skills]]
-[[claude-code-scheduling]]
-[[ai-driven-content-pipeline]]
+[[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+[[notebooklm|NotebookLM]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]

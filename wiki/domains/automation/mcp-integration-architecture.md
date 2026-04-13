@@ -1,5 +1,7 @@
 ---
-title: "MCP Integration Architecture"
+title: MCP Integration Architecture
+aliases:
+  - "MCP Integration Architecture"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-user-directive-integration
     type: notes
     file: raw/notes/2026-04-08-user-directive-integration-vision.md
-    title: "User Directive — Integration Vision & Service Architecture"
+    title: User Directive — Integration Vision & Service Architecture
     ingested: 2026-04-08
   - id: src-user-directive-ecosystem
     type: notes
     file: raw/notes/2026-04-08-user-directive-ecosystem-connections.md
-    title: "User Directive — Ecosystem Connections & Automation Vision"
+    title: User Directive — Ecosystem Connections & Automation Vision
     ingested: 2026-04-08
 tags: [mcp, model-context-protocol, integration, services, daemon, watcher, rsync, bidirectional-sync, claude-replaceable]
 ---
@@ -146,47 +148,47 @@ Tools:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- BUILDS ON: [[Obsidian CLI]]
-- BUILDS ON: [[notebooklm-py CLI]]
-- BUILDS ON: [[Claude Code]]
-- ENABLES: [[Research Pipeline Orchestration]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[AICP]]
-- RELATES TO: [[Wiki Event-Driven Automation]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- BUILDS ON: [[obsidian-cli|Obsidian CLI]]
+- BUILDS ON: [[notebooklm-py-cli|notebooklm-py CLI]]
+- BUILDS ON: [[claude-code|Claude Code]]
+- ENABLES: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
 
 ## Backlinks
 
-[[Wiki Ingestion Pipeline]]
-[[Obsidian CLI]]
-[[notebooklm-py CLI]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
-[[OpenFleet]]
-[[AICP]]
-[[Wiki Event-Driven Automation]]
-[[Agent Orchestration Patterns]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Design.md Pattern]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Harness Engineering]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Model: MCP and CLI Integration]]
-[[Multi-Channel AI Agent Access]]
-[[OpenArms]]
-[[Plan Execute Review Cycle]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[WSL2 Development Patterns]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[obsidian-cli|Obsidian CLI]]
+[[notebooklm-py-cli|notebooklm-py CLI]]
+[[claude-code|Claude Code]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[design-md-pattern|Design.md Pattern]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[harness-engineering|Harness Engineering]]
+[[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
+[[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[openarms|OpenArms]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]

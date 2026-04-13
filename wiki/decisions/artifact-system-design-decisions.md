@@ -1,5 +1,8 @@
 ---
-title: "Decision: Artifact System Design Decisions"
+title: Decision — Artifact System Design Decisions
+aliases:
+  - "Decision — Artifact System Design Decisions"
+  - "Decision: Artifact System Design Decisions"
 type: decision
 domain: cross-domain
 layer: 6
@@ -18,8 +21,7 @@ sources: []
 tags: [methodology, decision, artifacts, templates, bridge-pattern, compliance, design]
 ---
 
-# Decision: Artifact System Design Decisions
-
+# Decision — Artifact System Design Decisions
 ## Summary
 
 Resolves 6 structural design questions about the methodology artifact system: requirements spec variants, interface spec separation, bridge pattern enforcement, scaffold self-checks, compliance automation, and completion log requirements. Each decision follows the principle: simplest mechanism at current scale with clear upgrade triggers.
@@ -98,27 +100,27 @@ No decision creates a one-way door.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Artifact Taxonomy]]
-- DERIVED FROM: [[Requirements and Design Artifacts — Standards and Guide]]
-- DERIVED FROM: [[Construction and Testing Artifacts — Standards and Guide]]
-- DERIVED FROM: [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- DERIVED FROM: [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+- DERIVED FROM: [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+- DERIVED FROM: [[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Requirements and Design Artifacts — Standards and Guide]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[Model: Methodology]]
-[[Stage-Gate Methodology]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[model-methodology|Model — Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

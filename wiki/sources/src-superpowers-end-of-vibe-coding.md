@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)"
+title: Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)
+aliases:
+  - "Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)"
+  - "Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-superpowers-end-of-vibe-coding
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=TX91PdBn_IA"
+    url: https://www.youtube.com/watch?v=TX91PdBn_IA
     file: raw/transcripts/claude-code-superpowers-the-end-of-vibe-coding-full-tutorial.txt
-    title: "Claude Code + SUPERPOWERS = The End of Vibe Coding? (Full Tutorial)"
+    title: Claude Code + SUPERPOWERS = The End of Vibe Coding? (Full Tutorial)
     ingested: 2026-04-08
 tags: [superpowers, claude-code, tdd, git-worktrees, subagents, spec-driven-development, planning, implementation, production, workflow]
 ---
-
-# Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)
-
+# Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)
 ## Summary
 
 A full end-to-end tutorial of the Agentyk Superpowers plugin for Claude Code, demonstrating the complete workflow from Jira ticket to merged production feature: brainstorm → spec → 11-task implementation plan → sub-agent execution → code review → merge. The key differentiator from other spec-driven development frameworks (GSD, SpecKit, BDD) is built-in TDD: tests are written first, then implementation, then refactoring — the cycle used at enterprise scale (Amazon, Microsoft). Git worktrees isolate implementation in a separate environment, each of the 11 tasks runs in a fresh sub-agent context window, and a final code review agent catches critical issues before merge. Demonstrated live on BookWorm.ai, a production bookkeeping SaaS.
@@ -103,27 +104,27 @@ Cross-referencing `Agent Orchestration Patterns` and `Plan Execute Review Cycle`
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-superpowers-end-of-vibe-coding
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Synthesis: Claude Code Accuracy Tips]]
-- EXTENDS: [[Claude Code]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- EXTENDS: [[claude-code|Claude Code]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[src-superpowers-end-of-vibe-coding]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Harness Engineering]]
-[[Plan Execute Review Cycle]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-skills|Claude Code Skills]]
+[[harness-engineering|Harness Engineering]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[claude-code|Claude Code]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]

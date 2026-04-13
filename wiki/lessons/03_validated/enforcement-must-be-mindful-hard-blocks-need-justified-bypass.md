@@ -1,5 +1,7 @@
 ---
-title: "Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass"
+title: Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass
+aliases:
+  - "Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -20,7 +22,7 @@ sources:
   - id: openarms-t086
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms T086 — operator reverted agent's correct fnm fix twice because it looked like scope creep. The block was wrong."
+    description: OpenArms T086 — operator reverted agent's correct fnm fix twice because it looked like scope creep. The block was wrong.
 tags: [enforcement, bypass, mindful, risk, justified-override, nuance, lesson-learned]
 ---
 
@@ -118,32 +120,32 @@ If the enforcement system had a justified bypass — "I need to modify this infr
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What enforcement exists to be mindful OF?** | [[Enforcement Hook Patterns]] — 5-level hierarchy from instructions to MCP blocking |
-> | **What happens without mindful enforcement?** | [[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — T086: correct fix reverted because enforcement had no bypass |
-> | **How does OpenFleet handle bypass?** | [[Three Lines of Defense — Immune System for Agent Quality]] — ESCALATE action: alert human, dispatch blocked until PO responds |
+> | **What enforcement exists to be mindful OF?** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] — 5-level hierarchy from instructions to MCP blocking |
+> | **What happens without mindful enforcement?** | [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — T086: correct fix reverted because enforcement had no bypass |
+> | **How does OpenFleet handle bypass?** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] — ESCALATE action: alert human, dispatch blocked until PO responds |
 > | **What escalation protocol does OpenArms need?** | OpenArms lesson: agent-escalation-with-justification — block + reason + proposal + justification, operator decides |
 > | **How do global standards inform this?** | SRP (each enforcement layer has one responsibility), Onion Architecture (inner layers don't know about outer = agents don't see the doctor) |
-> | **Where does this fit in the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — over-enforcement is as wrong as under-enforcement |
+> | **Where does this fit in the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — over-enforcement is as wrong as under-enforcement |
 
 ## Relationships
 
-- DERIVED FROM: [[Infrastructure Enforcement Proves Instructions Fail]]
-- DERIVED FROM: [[Enforcement Hook Patterns]]
-- DERIVED FROM: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- DERIVED FROM: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- DERIVED FROM: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Enforcement Hook Patterns]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Methodology Adoption Guide]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]

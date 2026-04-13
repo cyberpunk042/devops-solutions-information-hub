@@ -1,5 +1,7 @@
 ---
-title: "AI-Driven Content Pipeline"
+title: AI-Driven Content Pipeline
+aliases:
+  - "AI-Driven Content Pipeline"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
     file: raw/transcripts/claude-notebooklm-content-team.txt
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
+    title: Claude + NotebookLM = Your 24/7 Content Team
     ingested: 2026-04-08
 tags: [content-pipeline, automation, claude-code, notebooklm, orchestration, content-generation]
 ---
@@ -87,37 +89,37 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Research Pipeline Orchestr
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-notebooklm-content-team
-- BUILDS ON: [[NotebookLM]]
-- BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: [[Claude Code Scheduling]]
-- IMPLEMENTS: [[OpenClaw]]
-- PARALLELS: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[NotebookLM Skills]]
-- RELATES TO: [[Skills Architecture Patterns]]
+- DERIVED FROM: [[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+- BUILDS ON: [[notebooklm|NotebookLM]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[claude-code-scheduling|Claude Code Scheduling]]
+- IMPLEMENTS: [[openclaw|OpenClaw]]
+- PARALLELS: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[notebooklm-skills|NotebookLM Skills]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
 
 ## Backlinks
 
-[[src-claude-notebooklm-content-team]]
-[[NotebookLM]]
-[[Claude Code Skills]]
-[[Claude Code Scheduling]]
-[[OpenClaw]]
-[[Wiki Ingestion Pipeline]]
-[[NotebookLM Skills]]
-[[Skills Architecture Patterns]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Model: NotebookLM]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Obsidian CLI]]
-[[OpenFleet]]
-[[Research Pipeline Orchestration]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Wiki Event-Driven Automation]]
-[[notebooklm-py CLI]]
+[[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+[[notebooklm|NotebookLM]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[openclaw|OpenClaw]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[model-notebooklm|Model — NotebookLM]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[obsidian-cli|Obsidian CLI]]
+[[openfleet|OpenFleet]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[notebooklm-py-cli|notebooklm-py CLI]]

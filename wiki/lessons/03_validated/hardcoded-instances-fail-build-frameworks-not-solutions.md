@@ -1,5 +1,7 @@
 ---
-title: "Hardcoded Instances Fail — Build Frameworks Not Solutions"
+title: Hardcoded Instances Fail — Build Frameworks Not Solutions
+aliases:
+  - "Hardcoded Instances Fail — Build Frameworks Not Solutions"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -16,15 +18,15 @@ sources:
   - id: phase1-failure
     type: observation
     file: docs/SESSION-2026-04-12-handoff.md
-    description: "37 files produced in Phase 1 of methodology initiative — operator called 'complete crap'"
+    description: 37 files produced in Phase 1 of methodology initiative — operator called 'complete crap'
   - id: openarms-yaml
     type: observation
     file: docs/SESSION-2026-04-12-handoff.md
-    description: "OpenArms methodology.yaml used as blueprint — produced specific instance instead of generic framework"
+    description: OpenArms methodology.yaml used as blueprint — produced specific instance instead of generic framework
   - id: operator-directive
     type: directive
     file: raw/notes/2026-04-11-methodology-standards-directive.md
-    description: "Operator explicitly said 'we want better... not hardcoded' and 'build FRAMEWORKS not instances'"
+    description: Operator explicitly said 'we want better... not hardcoded' and 'build FRAMEWORKS not instances'
 tags: [methodology, framework, anti-pattern, quality, lesson-learned, agent-failure]
 ---
 
@@ -114,33 +116,33 @@ The solution: design the framework FIRST (what are the extension points, what va
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **How to build frameworks instead?** | [[Methodology Framework]] — the META that defines how to define models |
-> | **What does the SDLC framework look like?** | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — three chains, not one hardcoded pipeline |
+> | **How to build frameworks instead?** | [[methodology-framework|Methodology Framework]] — the META that defines how to define models |
+> | **What does the SDLC framework look like?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — three chains, not one hardcoded pipeline |
 > | **How do global standards help?** | OpenAPI (define the interface, not the instance), DDD (bounded contexts as extension points), Strategy pattern (select at runtime, not compile-time) |
-> | **What is the Goldilocks approach?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile selects chain, chain selects process. Framework adapts; instances don't. |
+> | **What is the Goldilocks approach?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile selects chain, chain selects process. Framework adapts; instances don't. |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Standards Initiative — Honest Assessment]]
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Methodology Framework]]
-- RELATES TO: [[Coverage Blindness — Modeling Only What You Know]]
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Standards Must Preach by Example]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[standards-must-preach-by-example|Standards Must Preach by Example]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Model: Methodology]]
-[[Methodology Framework]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Always Plan Before Executing]]
-[[Standards Must Preach by Example]]
-[[Methodology Adoption Guide]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Follow the Method of Work Not the Methodology Label]]
-[[New Content Must Integrate Into Existing Pages]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Quality Evolution Epic — Level Up Everything, One File at a Time]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[model-methodology|Model — Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
+[[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[2026-04-10-directive-quality-evolution-epic|Quality Evolution Epic — Level Up Everything, One File at a Time]]

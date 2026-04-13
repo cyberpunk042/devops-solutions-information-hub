@@ -1,5 +1,7 @@
 ---
 title: "Methodology Is a Framework, Not a Fixed Pipeline"
+aliases:
+  - "Methodology Is a Framework, Not a Fixed Pipeline"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -79,22 +81,22 @@ The failure is conceptual, not technical. The agent understood the 5-stage seque
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Framework]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Models Are Systems, Not Documents]]
-- RELATES TO: [[Decision: Methodology Framework Design Decisions]]
+- DERIVED FROM: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+- RELATES TO: [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Models Are Systems, Not Documents]]
-[[Decision: Methodology Framework Design Decisions]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]

@@ -1,5 +1,8 @@
 ---
-title: "Operations Plan: Wiki Post-Ingestion Validation"
+title: Operations Plan — Wiki Post-Ingestion Validation
+aliases:
+  - "Operations Plan — Wiki Post-Ingestion Validation"
+  - "Operations Plan: Wiki Post-Ingestion Validation"
 type: operations-plan
 domain: cross-domain
 status: synthesized
@@ -14,8 +17,7 @@ sources:
 tags: [operations-plan, post-ingestion, validation, pipeline]
 ---
 
-# Operations Plan: Wiki Post-Ingestion Validation
-
+# Operations Plan — Wiki Post-Ingestion Validation
 ## Summary
 
 Sequential operations plan for validating the wiki after any content change. This is the deterministic 6-step pipeline post chain — any agent can execute it mechanically. Run after every ingestion, every edit, every evolution. If any step fails, the change is not complete.
@@ -52,7 +54,7 @@ Sequential operations plan for validating the wiki after any content change. Thi
 
 ### Step 4: Regenerate Wikilinks
 
-- **Action:** Convert `[[Page Title]]` wikilinks to Obsidian-compatible format for graph view
+- **Action:** Convert ``[[Page Title]]`` wikilinks to Obsidian-compatible format for graph view
 - **Expected output:** Wikilinks updated in all pages. Backlinks sections regenerated.
 - **Validation:** Spot-check one page: `grep "## Backlinks" wiki/spine/model-methodology.md` — section exists
 - **Rollback:** Re-run — wikilinks are regenerated from relationship sections
@@ -93,18 +95,18 @@ The pipeline never modifies page content — it only regenerates indexes, manife
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Model: LLM Wiki]]
-- RELATES TO: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Stage-Gate Methodology]]
+- IMPLEMENTS: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
 
 ## Backlinks
 
-[[Model: LLM Wiki]]
-[[Model: Quality and Failure Prevention]]
-[[Stage-Gate Methodology]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[stage-gate-methodology|Stage-Gate Methodology]]

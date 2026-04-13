@@ -1,5 +1,7 @@
 ---
-title: "Multi-Stage Ingestion Beats Single-Pass Processing"
+title: Multi-Stage Ingestion Beats Single-Pass Processing
+aliases:
+  - "Multi-Stage Ingestion Beats Single-Pass Processing"
 type: lesson
 domain: knowledge-systems
 layer: 4
@@ -11,16 +13,8 @@ updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
-  - id: src-llm-wiki-v2-agentmemory
-    type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
-    title: "LLM Wiki v2 — Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
-  - id: src-user-directive-ecosystem
-    type: notes
-    file: raw/notes/2026-04-08-user-directive-ecosystem-connections.md
-    title: "User Directive — Ecosystem Connections & Automation Vision"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    title: Karpathy LLM Wiki Idea File
 tags: [ingestion, multi-pass, pipeline, cross-reference, gap-analysis, deepening, orchestration, compounding-knowledge]
 derived_from:
   - "Wiki Ingestion Pipeline"
@@ -86,35 +80,35 @@ From the LLM Wiki Pattern on the compounding mechanic: "Filing answers back into
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Wiki Ingestion Pipeline]]
-- DERIVED FROM: [[Research Pipeline Orchestration]]
-- BUILDS ON: [[LLM Wiki Pattern]]
-- ENABLES: [[LLM Knowledge Linting]]
-- ENABLES: [[Wiki Knowledge Graph]]
-- ENABLES: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[Memory Lifecycle Management]]
-- FEEDS INTO: [[OpenFleet]]
+- DERIVED FROM: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- DERIVED FROM: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- ENABLES: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- ENABLES: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- FEEDS INTO: [[openfleet|OpenFleet]]
 
 ## Backlinks
 
-[[Wiki Ingestion Pipeline]]
-[[Research Pipeline Orchestration]]
-[[LLM Wiki Pattern]]
-[[LLM Knowledge Linting]]
-[[Wiki Knowledge Graph]]
-[[Wiki Event-Driven Automation]]
-[[Memory Lifecycle Management]]
-[[OpenFleet]]
-[[Model: Knowledge Evolution]]
-[[Never Synthesize from Descriptions Alone]]
-[[Progressive Distillation]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[openfleet|OpenFleet]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[progressive-distillation|Progressive Distillation]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]

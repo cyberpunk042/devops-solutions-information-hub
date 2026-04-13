@@ -1,5 +1,7 @@
 ---
-title: "LLM-Maintained Wikis Outperform Static Documentation"
+title: LLM-Maintained Wikis Outperform Static Documentation
+aliases:
+  - "LLM-Maintained Wikis Outperform Static Documentation"
 type: lesson
 domain: knowledge-systems
 layer: 4
@@ -12,15 +14,15 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    title: Karpathy LLM Wiki Idea File
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
-    title: "LLM Wiki v2 — Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
+    title: LLM Wiki v2 — Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
 tags: [llm-wiki, knowledge-management, static-docs, maintenance, compounding-knowledge, relationships, quality-gates]
 derived_from:
   - "LLM Wiki Pattern"
@@ -88,32 +90,32 @@ From the LLM Wiki Pattern on the Memex lineage: "Karpathy explicitly connects th
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[LLM Wiki Pattern]]
-- DERIVED FROM: [[Wiki Ingestion Pipeline]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[LLM Knowledge Linting]]
-- ENABLES: [[Wiki Knowledge Graph]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[Memory Lifecycle Management]]
-- FEEDS INTO: [[OpenFleet]]
+- DERIVED FROM: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- DERIVED FROM: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- ENABLES: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- FEEDS INTO: [[openfleet|OpenFleet]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
-[[LLM Knowledge Linting]]
-[[Wiki Knowledge Graph]]
-[[Obsidian Knowledge Vault]]
-[[Memory Lifecycle Management]]
-[[OpenFleet]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[openfleet|OpenFleet]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]

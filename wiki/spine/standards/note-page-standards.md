@@ -1,5 +1,7 @@
 ---
-title: "Note Page Standards"
+title: Note Page Standards
+aliases:
+  - "Note Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -47,11 +49,19 @@ Standards for note pages — log entries recording directives, session summaries
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Models Are Not Documents — They Must Be Usable Systems]] — 49 lines
+> [!success] [[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]] — 49 lines
 >
 > - Operator words quoted VERBATIM
 > - Interpretation clearly separated from quotes
 > - Summary is actionable: states what needs to change
+
+### Annotated Exemplar: See directive notes in raw/notes/
+
+> [!example]- What makes a good note (directive type)
+>
+> **Operator words verbatim:** Block quotes with EXACT words. Not paraphrased. Not interpreted. The verbatim section IS the authority.
+> **Interpretation separated:** After the verbatim quotes, clearly marked interpretation: "What the operator is actually saying." Keeps observation separate from analysis.
+> **Requirements extracted:** Numbered list of concrete requirements derived from the directive. Each is specific and actionable.
 
 ### Template
 
@@ -59,11 +69,11 @@ Standards for note pages — log entries recording directives, session summaries
 
 ## Relationships
 
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[model-methodology|Model — Methodology]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

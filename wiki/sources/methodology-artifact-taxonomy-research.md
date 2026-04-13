@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research"
+title: Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research
+aliases:
+  - "Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research"
+  - "Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research"
 type: source-synthesis
 domain: cross-domain
 status: synthesized
@@ -10,39 +13,38 @@ updated: 2026-04-12
 sources:
   - id: sdlcforms
     type: article
-    url: "https://www.sdlcforms.com/UnderstandingSDLC.html"
+    url: https://www.sdlcforms.com/UnderstandingSDLC.html
   - id: nxcode-agentic
     type: article
-    url: "https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026"
+    url: https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026
   - id: adr-github
     type: documentation
-    url: "https://adr.github.io/"
+    url: https://adr.github.io/
   - id: geeksforgeeks-artifacts
     type: article
-    url: "https://www.geeksforgeeks.org/software-engineering/artifact-software-development/"
+    url: https://www.geeksforgeeks.org/software-engineering/artifact-software-development/
   - id: wikipedia-artifacts
     type: article
-    url: "https://en.wikipedia.org/wiki/Artifact_(software_development)"
+    url: https://en.wikipedia.org/wiki/Artifact_(software_development)
   - id: openarms-document-chain
     type: file
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
   - id: atlassian-scrum
     type: article
-    url: "https://www.atlassian.com/agile/scrum/artifacts"
+    url: https://www.atlassian.com/agile/scrum/artifacts
   - id: zettelkasten-method
     type: article
-    url: "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
+    url: https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/
   - id: martin-fowler-adr
     type: article
-    url: "https://martinfowler.com/bliki/ArchitectureDecisionRecord.html"
+    url: https://martinfowler.com/bliki/ArchitectureDecisionRecord.html
   - id: google-cloud-adr
     type: documentation
-    url: "https://cloud.google.com/architecture/architecture-decision-records"
+    url: https://cloud.google.com/architecture/architecture-decision-records
 tags: [methodology, artifacts, taxonomy, research, sdlc, agile, devops, ai-agents, knowledge-management]
 ---
 
-# Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research
-
+# Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research
 ## Summary
 
 Comprehensive research into methodology artifacts across five domains: traditional SDLC, Agile/Scrum, DevOps/Infrastructure, AI Agent workflows, and Knowledge Management systems. The real-world SDLC has 100+ distinct document types across 8 phases. OpenArms uses ~24. Our wiki defines 17 page types. The gap between what elite teams produce and what we currently model is massive — our system covers roughly 20% of the artifact space. This research maps the FULL taxonomy, classifies every artifact type, identifies per-domain variations, and establishes the foundation for building a complete methodology artifact system.
@@ -295,26 +297,26 @@ Based on the research, the methodology artifact system needs:
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Framework]]
-- FEEDS INTO: [[Artifact Chains by Methodology Model]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[methodology-framework|Methodology Framework]]
+- FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Methodology Framework]]
-[[Artifact Chains by Methodology Model]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Methodology Artifact Taxonomy]]
-[[Three Classes of Methodology Output]]
+[[model-methodology|Model — Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]

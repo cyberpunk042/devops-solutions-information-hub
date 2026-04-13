@@ -1,5 +1,7 @@
 ---
-title: "Infrastructure as Code Patterns"
+title: Infrastructure as Code Patterns
+aliases:
+  - "Infrastructure as Code Patterns"
 type: concept
 layer: 2
 maturity: growing
@@ -12,18 +14,18 @@ sources:
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
   - id: src-design-md-research
     type: article
-    url: "https://github.com/VoltAgent/awesome-design-md"
+    url: https://github.com/VoltAgent/awesome-design-md
     file: raw/articles/design-md-pattern-research.md
-    title: "Design.md Pattern Research"
+    title: Design.md Pattern Research
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, iac, infrastructure-as-code, claude-md, design-md, schema-yaml, setup-py, service-templates, agent-configuration, markdown-config]
 ---
@@ -99,7 +101,7 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 ### IaC Anti-Pattern: Manual Setup Steps
 
 > [!warning] **If a human performs a step manually, it should be a file**
-> The ecosystem explicitly rejects manual setup. "Pipeline Not Manual" (feedback principle) and OpenFleet's "IaC-only operations" philosophy: if a step isn't encoded in a spec file and automated, it is reproducibility debt. The next person, machine, or future session cannot reliably reproduce the environment. See [[Infrastructure Must Be Reproducible, Not Manual]].
+> The ecosystem explicitly rejects manual setup. "Pipeline Not Manual" (feedback principle) and OpenFleet's "IaC-only operations" philosophy: if a step isn't encoded in a spec file and automated, it is reproducibility debt. The next person, machine, or future session cannot reliably reproduce the environment. See [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]].
 
 ## Open Questions
 
@@ -123,39 +125,39 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Design.md Pattern]]
+- EXTENDS: [[design-md-pattern|Design.md Pattern]]
 - RELATES TO: [[devops-control-plane]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[Skills Architecture Patterns]]
-- BUILDS ON: [[Immune System Rules]]
-- ENABLES: [[Claude Code Best Practices]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
+- BUILDS ON: [[immune-system-rules|Immune System Rules]]
+- ENABLES: [[claude-code-best-practices|Claude Code Best Practices]]
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[devops-control-plane]]
-[[OpenFleet]]
-[[Harness Engineering]]
-[[Skills Architecture Patterns]]
-[[Immune System Rules]]
-[[Claude Code Best Practices]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Deterministic Shell, LLM Core]]
-[[Execution Modes and End Conditions]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Model: Design.md and IaC]]
-[[Model: Wiki Design]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-[[WSL2 Development Patterns]]
+[[design-md-pattern|Design.md Pattern]]
+[[devops-control-plane|devops-control-plane]]
+[[openfleet|OpenFleet]]
+[[harness-engineering|Harness Engineering]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[immune-system-rules|Immune System Rules]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-wiki-design|Model — Wiki Design]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]

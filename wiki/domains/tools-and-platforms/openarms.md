@@ -1,5 +1,7 @@
 ---
-title: "OpenArms"
+title: OpenArms
+aliases:
+  - "OpenArms"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-openarms-local
     type: documentation
     file: raw/articles/openarms-readme.md
-    title: "OpenArms — Project Documentation"
+    title: OpenArms — Project Documentation
     ingested: 2026-04-08
 tags: [openarms, ai-assistant, messaging, plugin-sdk, multi-channel, gateway, sandbox, media-pipeline]
 ---
@@ -124,31 +126,31 @@ Cross-referencing `OpenFleet`: OpenArms's `sessions_send` is a synchronous withi
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[AICP]]
-- RELATES TO: [[OpenFleet]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[openfleet|OpenFleet]]
 - RELATES TO: [[devops-control-plane]]
-- BUILDS ON: [[Claude Code Skills]]
-- RELATES TO: [[MCP Integration Architecture]]
-- ENABLES: [[Multi-Channel AI Agent Access]]
-- RELATES TO: [[Claude Code]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- ENABLES: [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+- RELATES TO: [[claude-code|Claude Code]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[AICP]]
-[[OpenFleet]]
-[[devops-control-plane]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[Multi-Channel AI Agent Access]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
-[[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
+[[aicp|AICP]]
+[[openfleet|OpenFleet]]
+[[devops-control-plane|devops-control-plane]]
+[[claude-code-skills|Claude Code Skills]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[claude-code|Claude Code]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[gateway-centric-routing|Gateway-Centric Routing]]

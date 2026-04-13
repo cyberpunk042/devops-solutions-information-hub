@@ -1,5 +1,10 @@
 ---
-title: "Artifact Chain: Infrastructure/IaC Domain"
+title: Artifact Chain — Infrastructure-IaC Domain
+aliases:
+  - "Artifact Chain — Infrastructure-IaC Domain"
+  - "Artifact Chain — Infrastructure/IaC Domain"
+  - "Artifact Chain: Infrastructure-IaC Domain"
+  - "Artifact Chain: Infrastructure/IaC Domain"
 type: reference
 domain: cross-domain
 status: synthesized
@@ -13,12 +18,11 @@ sources:
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
   - id: terraform-docs
     type: documentation
-    url: "https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code"
+    url: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
 tags: [methodology, artifact-chain, infrastructure, terraform, iac, domain-specific, devops-control-plane]
 ---
 
-# Artifact Chain: Infrastructure/IaC Domain
-
+# Artifact Chain — Infrastructure-IaC Domain
 > [!tip] AI Quick Start — Working on Infrastructure as Code
 >
 > 1. **Gate commands:** `terraform validate` (syntax), `terraform plan` (changes correct), `terraform apply` (staging only)
@@ -162,10 +166,10 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 ## Open Questions
 
 > [!question] ~~Should infrastructure projects have a "Deploy" stage beyond "Test"?~~
-> **RESOLVED:** Yes — optional domain-specific stage for Infrastructure only. See [[Decision: Methodology Stage Extension Decisions]].
+> **RESOLVED:** Yes — optional domain-specific stage for Infrastructure only. See [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]].
 
 > [!question] ~~How does drift detection fit into the methodology?~~
-> **RESOLVED:** Model as periodic monitoring task using bug-fix model. Not a new methodology model. See [[Decision: Methodology Stage Extension Decisions]].
+> **RESOLVED:** Model as periodic monitoring task using bug-fix model. Not a new methodology model. See [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]].
 
 ### How This Connects — Navigate From Here
 
@@ -173,29 +177,29 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Construction and Testing Artifacts — Standards and Guide]]
-- RELATES TO: [[Artifact Chains by Methodology Model]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Artifact Chain: TypeScript/Node Domain]]
-- RELATES TO: [[Artifact Chain: Python/Wiki Domain]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+- RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+- RELATES TO: [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Artifact Chains by Methodology Model]]
-[[Model: Methodology]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Methodology Adoption Guide]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Decision: Methodology Stage Extension Decisions]]
-[[Universal Stages, Domain-Specific Artifacts]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[model-methodology|Model — Methodology]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]

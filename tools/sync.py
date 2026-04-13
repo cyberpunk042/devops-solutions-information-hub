@@ -125,7 +125,7 @@ def sync_rsync(source: str, target: str, reverse: bool = False,
     src = source.rstrip("/") + "/"
     dst = target.rstrip("/") + "/"
 
-    cmd = ["rsync", "-a", "--update"]
+    cmd = ["rsync", "-a", "--checksum"]
     if verbose:
         cmd.append("-v")
     if delete:

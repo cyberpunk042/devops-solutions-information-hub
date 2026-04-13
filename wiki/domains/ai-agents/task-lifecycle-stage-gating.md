@@ -1,5 +1,7 @@
 ---
-title: "Task Lifecycle Stage-Gating"
+title: Task Lifecycle Stage-Gating
+aliases:
+  - "Task Lifecycle Stage-Gating"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
   - id: src-openarms-methodology-scan
     type: documentation
     file: raw/articles/openarms-methodology-scan.md
-    title: "OpenArms Methodology Scan — Deep Research Findings"
+    title: OpenArms Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
 tags: [stage-gating, task-lifecycle, methodology, phase-boundaries, anti-corruption, mcp-tools, sfif, openfleet, openarms, autonomous-agents, readiness-score, one-commit-per-stage, work-modes]
 ---
@@ -212,13 +214,13 @@ The SFIF (Scaffold → Foundation → Infrastructure → Features) pattern from 
 ## Answered Open Questions
 
 > [!example]- Minimum viable stage-gating for solo developer?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. CLAUDE.md MUST/MUST NOT rules plus one-commit-per-stage convention. No MCP infrastructure required.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. CLAUDE.md MUST/MUST NOT rules plus one-commit-per-stage convention. No MCP infrastructure required.
 
 > [!example]- Can readiness be computed automatically from artifacts?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Check the artifacts paths listed in task frontmatter against the filesystem. If an artifact is listed but does not exist, readiness is invalid.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Check the artifacts paths listed in task frontmatter against the filesystem. If an artifact is listed but does not exist, readiness is invalid.
 
 > [!example]- How should stage-gating handle discovery tasks?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding from the discovery. Maximum 2 retries before escalating.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding from the discovery. Maximum 2 retries before escalating.
 
 ### How This Connects — Navigate From Here
 
@@ -226,38 +228,38 @@ The SFIF (Scaffold → Foundation → Infrastructure → Features) pattern from 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Rework Prevention]] (stage gates prevent the root causes of rework)
-- BUILDS ON: [[Spec-Driven Development]] (specs are the artifact produced at stage boundaries)
-- IMPLEMENTS: [[Plan Execute Review Cycle]] (stage-gating is the implementation of phase separation)
-- RELATES TO: [[Immune System Rules]] (disease catalogue documents stage-gating failure modes)
-- RELATES TO: [[OpenFleet]] (primary source — 5-stage model, MCP blocking, teaching system)
-- RELATES TO: [[Agent Orchestration Patterns]] (multi-agent systems require stage-gating to coordinate contribution flow)
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]] (stage-gating applied at architectural scale)
-- FEEDS INTO: [[Wiki Backlog Pattern]] (task frontmatter as state machine is the wiki implementation of stage-gating)
-- FEEDS INTO: [[Spec-Driven Development]] (stages enforce spec phase before implementation phase)
-- CONTRADICTS: [[Task Lifecycle Stage-Gating]] (unstructured iterative coding without phase checkpoints)
+- BUILDS ON: [[rework-prevention|Rework Prevention]] (stage gates prevent the root causes of rework)
+- BUILDS ON: [[spec-driven-development|Spec-Driven Development]] (specs are the artifact produced at stage boundaries)
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]] (stage-gating is the implementation of phase separation)
+- RELATES TO: [[immune-system-rules|Immune System Rules]] (disease catalogue documents stage-gating failure modes)
+- RELATES TO: [[openfleet|OpenFleet]] (primary source — 5-stage model, MCP blocking, teaching system)
+- RELATES TO: [[agent-orchestration-patterns|Agent Orchestration Patterns]] (multi-agent systems require stage-gating to coordinate contribution flow)
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (stage-gating applied at architectural scale)
+- FEEDS INTO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (task frontmatter as state machine is the wiki implementation of stage-gating)
+- FEEDS INTO: [[spec-driven-development|Spec-Driven Development]] (stages enforce spec phase before implementation phase)
+- CONTRADICTS: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (unstructured iterative coding without phase checkpoints)
 
 ## Backlinks
 
-[[Rework Prevention]]
-[[Spec-Driven Development]]
-[[Plan Execute Review Cycle]]
-[[Immune System Rules]]
-[[OpenFleet]]
-[[Agent Orchestration Patterns]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Wiki Backlog Pattern]]
-[[Task Lifecycle Stage-Gating]]
-[[Decision: Stage-Gate Operational Decisions]]
-[[Execution Modes and End Conditions]]
-[[Hooks Lifecycle Architecture]]
-[[Methodology Framework]]
-[[Per-Role Command Architecture]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
+[[rework-prevention|Rework Prevention]]
+[[spec-driven-development|Spec-Driven Development]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[immune-system-rules|Immune System Rules]]
+[[openfleet|OpenFleet]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[methodology-framework|Methodology Framework]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]

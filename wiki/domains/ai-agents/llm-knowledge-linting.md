@@ -1,5 +1,7 @@
 ---
-title: "LLM Knowledge Linting"
+title: LLM Knowledge Linting
+aliases:
+  - "LLM Knowledge Linting"
 type: concept
 layer: 2
 maturity: growing
@@ -12,19 +14,19 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
 tags: [linting, knowledge-quality, health-check, llm-agent, wiki-maintenance, data-integrity, self-healing, contradiction-resolution]
 ---
@@ -97,42 +99,39 @@ Cross-referencing `Wiki Knowledge Graph` and `Knowledge Evolution Pipeline`: thi
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-claude-code-10x
-- DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- BUILDS ON: [[LLM Wiki Pattern]]
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[Memory Lifecycle Management]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[Wiki Event-Driven Automation]]
-- CONSTRAINED BY: [[Claude Code Context Management]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- ENABLED BY: [[Claude Code Scheduling]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- CONSTRAINED BY: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- ENABLED BY: [[claude-code-scheduling|Claude Code Scheduling]]
 
 ## Backlinks
 
-[[src-karpathy-claude-code-10x]]
-[[src-karpathy-llm-wiki-idea-file]]
-[[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Memory Lifecycle Management]]
-[[Obsidian Knowledge Vault]]
-[[Wiki Event-Driven Automation]]
-[[Claude Code Context Management]]
-[[Wiki Knowledge Graph]]
-[[Claude Code Scheduling]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[OpenClaw]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[openclaw|OpenClaw]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]

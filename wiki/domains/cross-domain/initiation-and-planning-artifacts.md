@@ -1,5 +1,7 @@
 ---
-title: "Initiation and Planning Artifacts — Standards and Guide"
+title: Initiation and Planning Artifacts — Standards and Guide
+aliases:
+  - "Initiation and Planning Artifacts — Standards and Guide"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -13,7 +15,7 @@ sources:
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
   - id: sdlcforms
     type: article
-    url: "https://www.sdlcforms.com/UnderstandingSDLC.html"
+    url: https://www.sdlcforms.com/UnderstandingSDLC.html
   - id: openarms-chain
     type: file
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
@@ -25,7 +27,7 @@ tags: [methodology, initiation, planning, artifacts, project-charter, wbs, risk,
 > [!tip] AI Quick Start — BEFORE Methodology Stages Begin
 >
 > 1. **Working on an epic?** Check: does the epic have an operator directive in raw/notes/? That's your initiation artifact.
-> 2. **Need to break down work?** The WBS = Epic → Module → Task hierarchy. See [[Backlog Hierarchy Rules]] for the 8 rules.
+> 2. **Need to break down work?** The WBS = Epic → Module → Task hierarchy. See [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] for the 8 rules.
 > 3. **Need risk assessment?** That's the Gap Analysis — produced during Document stage, not separately.
 > 4. **Task or module level?** You INHERIT these from the parent epic — don't produce them again.
 > 5. **These artifacts are domain-agnostic** — same structure whether TypeScript, Python, or Infrastructure.
@@ -118,7 +120,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **What it contains** | Hierarchical tree: each node is a deliverable (not an activity). Leaf nodes are tasks with estimates. |
 > | **Quality bar** | Every leaf task is atomic (one deliverable), estimable (XS/S/M/L/XL), and has a Done When. No task larger than L. |
 > | **Anti-pattern** | Tasks that are actually epics ("Build the authentication system" as a single task) |
-> | **In our methodology** | The epic's module/task breakdown in the backlog. Epic → Module → Task hierarchy per [[Backlog Hierarchy Rules]]. |
+> | **In our methodology** | The epic's module/task breakdown in the backlog. Epic → Module → Task hierarchy per [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]. |
 > | **OpenArms example** | E014 broke into 14 tasks (T089-T102), each with task_type, estimate, depends_on. Readiness computed from children. |
 >
 > **The 8 rules from Backlog Hierarchy Rules apply here:**
@@ -167,7 +169,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 ## Open Questions
 
 > [!question] ~~Should there be an explicit "Initiation" stage before Document for epic-scale work?~~
-> **RESOLVED:** No — fold initiation into Document stage at epic scale. See [[Decision: Methodology Stage Extension Decisions]].
+> **RESOLVED:** No — fold initiation into Document stage at epic scale. See [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]].
 
 > [!question] Should the wiki have a formal Business Case template for investment decisions?
 > **DEFERRED:** Needs operator input — relevant when fleet agents propose work autonomously.
@@ -178,25 +180,25 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Artifact Chains by Methodology Model]]
-- FEEDS INTO: [[Epic Page Standards]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- FEEDS INTO: [[epic-page-standards|Epic Page Standards]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Backlog Hierarchy Rules]]
-[[Stage-Gate Methodology]]
-[[Model: Methodology]]
-[[Artifact Chains by Methodology Model]]
-[[Epic Page Standards]]
-[[Decision: Methodology Stage Extension Decisions]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology|Model — Methodology]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[epic-page-standards|Epic Page Standards]]
+[[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]]

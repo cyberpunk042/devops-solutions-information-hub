@@ -1,5 +1,8 @@
 ---
-title: "Model: SFIF and Architecture"
+title: Model — SFIF and Architecture
+aliases:
+  - "Model — SFIF and Architecture"
+  - "Model: SFIF and Architecture"
 type: concept
 domain: cross-domain
 layer: spine
@@ -12,8 +15,7 @@ sources: []
 tags: [model, spine, sfif, architecture, quality-tiers, build-lifecycle, skyscraper, pyramid, mountain, recursive, cross-domain]
 ---
 
-# Model: SFIF and Architecture
-
+# Model — SFIF and Architecture
 ## Summary
 
 The SFIF and Architecture model describes the universal 4-stage build lifecycle (Scaffold → Foundation → Infrastructure → Features) and the 3-tier quality analogy (Skyscraper/Pyramid/Mountain) that together form a complete framework for building, auditing, and improving software systems. ==SFIF is recursive — it applies at project, feature, component, and design levels simultaneously, each advancing at its own pace.== The four ecosystem projects each have documented SFIF instances making the abstract pattern concrete.
@@ -45,7 +47,7 @@ The SFIF and Architecture model describes the universal 4-stage build lifecycle 
 > [!warning] **The Infrastructure/Feature boundary is the most commonly violated**
 > Infrastructure ENABLES. Features USE what infrastructure enables. Auth logic in a feature controller = infrastructure that was skipped. Retry logic in every API call = infrastructure that was never built.
 
-See [[Scaffold → Foundation → Infrastructure → Features]] for full stage descriptions, anti-patterns per stage, and the recursive property.
+See [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] for full stage descriptions, anti-patterns per stage, and the recursive property.
 
 ---
 
@@ -62,7 +64,7 @@ See [[Scaffold → Foundation → Infrastructure → Features]] for full stage d
 >
 > **Mountain is reversible** — but the reversal is expensive. The correct path: Mountain → Pyramid (stabilize around constraints) → Skyscraper (when conditions allow full refactor).
 
-See [[Skyscraper, Pyramid, Mountain]] for the full tier analysis and the improvement path.
+See [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] for the full tier analysis and the improvement path.
 
 ---
 
@@ -119,7 +121,7 @@ The SFIF pattern has a direct analog in the wiki's 6-layer knowledge architectur
 > | Concepts | Infrastructure | Multi-source synthesis others can depend on |
 > | Lessons/Patterns/Decisions | Features | Specialized value on the stable conceptual base |
 
-A wiki page that skips Foundation (jumping from raw notes to a pattern) produces the knowledge equivalent of a Mountain: pattern-typed content that is a single-source restatement with no cross-linking. See [[Progressive Distillation]].
+A wiki page that skips Foundation (jumping from raw notes to a pattern) produces the knowledge equivalent of a Mountain: pattern-typed content that is a single-source restatement with no cross-linking. See [[progressive-distillation|Progressive Distillation]].
 
 ---
 
@@ -127,12 +129,12 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Scaffold → Foundation → Infrastructure → Features]] | L5 | The pattern definition — 4 stages, exit criteria, recursive property, 4 instances |
-| [[Skyscraper, Pyramid, Mountain]] | L2 | The quality tier framework — structural state assessment |
-| [[Progressive Distillation]] | L5 | Knowledge analog — same density-increasing structure applied to knowledge |
-| [[Four-Project Ecosystem]] | L2 | The projects that implement SFIF instances |
-| [[Models Are Built in Layers, Not All at Once]] | L4 | Lesson: model-building follows SFIF — scaffold ≠ substance |
-| [[Infrastructure as Code Patterns]] | L2 | IaC as the scaffold layer's primary artifact class |
+| [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] | L5 | The pattern definition — 4 stages, exit criteria, recursive property, 4 instances |
+| [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] | L2 | The quality tier framework — structural state assessment |
+| [[progressive-distillation|Progressive Distillation]] | L5 | Knowledge analog — same density-increasing structure applied to knowledge |
+| [[four-project-ecosystem|Four-Project Ecosystem]] | L2 | The projects that implement SFIF instances |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | L4 | Lesson: model-building follows SFIF — scaffold ≠ substance |
+| [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] | L2 | IaC as the scaffold layer's primary artifact class |
 
 ---
 
@@ -140,9 +142,9 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[Models Are Built in Layers, Not All at Once]] | Building this wiki's models followed SFIF: scaffold (entry points) → foundation (maturity assignment) → infrastructure (system definitions) → features (standards pages). Claiming "done" at scaffold level was a documented failure. |
-| [[Infrastructure Must Be Reproducible, Not Manual]] | Infrastructure stage artifacts must be IaC. Manual infra = Mountain-tier infrastructure that drifts silently. |
-| [[Never Skip Stages Even When Told to Continue]] | "Continue" means advance within the current SFIF stage, not skip to Features. Stage skipping is how Mountains are built. |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | Building this wiki's models followed SFIF: scaffold (entry points) → foundation (maturity assignment) → infrastructure (system definitions) → features (standards pages). Claiming "done" at scaffold level was a documented failure. |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | Infrastructure stage artifacts must be IaC. Manual infra = Mountain-tier infrastructure that drifts silently. |
+| [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] | "Continue" means advance within the current SFIF stage, not skip to Features. Stage skipping is how Mountains are built. |
 
 ---
 
@@ -200,7 +202,7 @@ SFIF and the SDLC Customization Framework are complementary:
 > | Pyramid | Middle Ground | 3 (Defined) | Deliberate compression — SFIF stages with selected artifacts |
 > | Mountain | Simplified or None | 1-2 (Initial/Managed) | POC decisions never revisited. Acceptable for POC phase only. |
 >
-> See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] for phase × scale decision matrix.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for phase × scale decision matrix.
 
 The phase progression (POC → MVP → Staging → Production) also maps to SFIF: POC is the Scaffold of the product lifecycle. MVP is Foundation. Staging is Infrastructure. Production is Features at scale. The pattern IS recursive — SFIF at the product level mirrors SFIF at the code level.
 
@@ -221,30 +223,30 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Scaffold → Foundation → Infrastructure → Features]]
-- BUILDS ON: [[Skyscraper, Pyramid, Mountain]]
-- BUILDS ON: [[Progressive Distillation]]
-- RELATES TO: [[Model: Design.md and IaC]]
-- RELATES TO: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Four-Project Ecosystem]]
+- BUILDS ON: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+- BUILDS ON: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+- BUILDS ON: [[progressive-distillation|Progressive Distillation]]
+- RELATES TO: [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+- RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
 
 ## Backlinks
 
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Progressive Distillation]]
-[[Model: Design.md and IaC]]
-[[Model: Quality and Failure Prevention]]
-[[Model: Knowledge Evolution]]
-[[Model: Methodology]]
-[[Four-Project Ecosystem]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[Model: Local AI ($0 Target)]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[progressive-distillation|Progressive Distillation]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-methodology|Model — Methodology]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[model-local-ai|Model — Local AI ($0 Target)]]

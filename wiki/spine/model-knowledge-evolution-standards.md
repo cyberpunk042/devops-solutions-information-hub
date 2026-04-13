@@ -1,5 +1,7 @@
 ---
-title: "Evolution Standards — What Good Knowledge Promotion Looks Like"
+title: Evolution Standards — What Good Knowledge Promotion Looks Like
+aliases:
+  - "Evolution Standards — What Good Knowledge Promotion Looks Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -16,7 +18,7 @@ tags: [knowledge-evolution, standards, maturity, promotion, scoring, gold-standa
 
 ## Summary
 
-This page defines the quality bar for KNOWLEDGE EVOLUTION. Where [[Model: Knowledge Evolution]] defines the system (scorer, prompt builder, backends, maturity lifecycle), this page shows what GOOD evolution looks like — from proper candidate scoring through quality generation to honest maturity promotion. ==Every gold standard is a real evolved page from this wiki.==
+This page defines the quality bar for KNOWLEDGE EVOLUTION. Where [[model-knowledge-evolution|Model — Knowledge Evolution]] defines the system (scorer, prompt builder, backends, maturity lifecycle), this page shows what GOOD evolution looks like — from proper candidate scoring through quality generation to honest maturity promotion. ==Every gold standard is a real evolved page from this wiki.==
 
 ## Key Insights
 
@@ -32,7 +34,7 @@ This page defines the quality bar for KNOWLEDGE EVOLUTION. Where [[Model: Knowle
 
 ### Gold Standard: Evolved Lesson Page
 
-> [!success] **Gold standard: [[CLI Tools Beat MCP for Token Efficiency]]** (122 lines, L4, growing)
+> [!success] **Gold standard: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]** (122 lines, L4, growing)
 > **What makes it the standard:**
 > - **`derived_from`**: 3 sources (Accuracy Tips, Harness Engineering, Claude Code). Not one source extrapolated — three independent sources CONVERGING.
 > - **Evidence section**: 8 discrete evidence items. Each has a **bold source label**, a specific claim with data ("12x cost differential"), and a `(src-xxx)` parenthetical. Every claim is traceable.
@@ -49,7 +51,7 @@ This page defines the quality bar for KNOWLEDGE EVOLUTION. Where [[Model: Knowle
 
 ### Gold Standard: Evolved Pattern Page
 
-> [!success] **Gold standard: [[Scaffold → Foundation → Infrastructure → Features]]** (176 lines, L5, growing)
+> [!success] **Gold standard: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]** (176 lines, L5, growing)
 > **What makes it the standard:**
 > - **`instances` frontmatter field**: 4 concrete occurrences (Research Wiki, OpenFleet, AICP, Front-Middleware-Backend). Not "this appears in many projects" — WHICH projects and HOW.
 > - **Pattern Description with testable exit criteria**: "Scaffold is done when direction is set." "Foundation is done when there's a single entry point." Criteria you can CHECK, not feelings about completeness.
@@ -65,7 +67,7 @@ This page defines the quality bar for KNOWLEDGE EVOLUTION. Where [[Model: Knowle
 
 ### Gold Standard: Evolved Decision Page
 
-> [!success] **Gold standard: [[Decision: MCP vs CLI for Tool Integration]]** (121 lines, L6, growing)
+> [!success] **Gold standard: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]** (121 lines, L6, growing)
 > **What makes it the standard:**
 > - **Decision section is ONE clear statement**: "Default to CLI+Skills for project-internal tooling. Use MCP for external service bridges." No hedging, no "it depends on many factors."
 > - **3 rejected alternatives with specific reasons**: MCP-First ("loads all schemas at startup"), Skills-Only ("can't block dangerous operations"), CLI-Only ("loses MCP's genuine advantages for external services").
@@ -140,24 +142,24 @@ What good scorer output looks like — diverse candidates, not tag-pair noise.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Knowledge Evolution]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[CLI Tools Beat MCP for Token Efficiency]] (lesson gold standard)
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]] (pattern gold standard)
-- RELATES TO: [[Decision: MCP vs CLI for Tool Integration]] (decision gold standard)
+- BUILDS ON: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] (lesson gold standard)
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (pattern gold standard)
+- RELATES TO: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] (decision gold standard)
 
 ## Backlinks
 
-[[Model: Knowledge Evolution]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Decision: MCP vs CLI for Tool Integration]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]

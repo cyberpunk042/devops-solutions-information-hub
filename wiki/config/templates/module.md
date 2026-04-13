@@ -62,6 +62,23 @@ tags: []
 <!-- Active blockers. Remove when resolved.
      Types: technical, dependency, decision, environment, clarification, scope, external, quality -->
 
+
+
+<!-- READINESS vs PROGRESS for modules:
+     - readiness = AVERAGE of child task readiness (derived, never manual)
+     - progress = AVERAGE of child task progress (derived, never manual)
+     See: wiki/domains/cross-domain/readiness-vs-progress.md -->
+
+## Summary
+
+<!-- 2-3 sentences: what this module delivers within its parent epic.
+     A module is a scoped subsystem — independently reviewable with its own design.
+     
+     EXAMPLE (replace):
+     "Update the 3 core models (Methodology, LLM Wiki, Quality) with all session knowledge.
+     These models are referenced by everything else — they must be current before other models
+     can reference them correctly." -->
+
 ## Relationships
 
 - PART OF: [[{{epic_title}}]]

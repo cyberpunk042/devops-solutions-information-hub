@@ -1,5 +1,7 @@
 ---
-title: "Decision Page Standards"
+title: Decision Page Standards
+aliases:
+  - "Decision Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -96,7 +98,7 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Execution Mode Edge Cases]] — 113 lines, 9 relationships
+> [!success] [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]] — 113 lines, 9 relationships
 >
 > **Why it's the standard:**
 > - Decision section uses `> [!success]` with clear scenario-action table
@@ -106,9 +108,9 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 > - Every decision has explicit cost-benefit reasoning
 > - `> [!tip]` for positive guidance, `> [!warning]` for rejected alternatives
 >
-> Also strong: [[Methodology Framework Design Decisions]] — resolves 7 open questions with nuanced mid-execution model change reasoning.
+> Also strong: [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]] — resolves 7 open questions with nuanced mid-execution model change reasoning.
 
-### Annotated Exemplar: [[Decision: When to Use Milestone vs Epic vs Module vs Task]]
+### Annotated Exemplar: [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >
@@ -153,15 +155,15 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Knowledge Evolution]]
-[[Model: Wiki Design]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Requirements and Design Artifacts — Standards and Guide]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]

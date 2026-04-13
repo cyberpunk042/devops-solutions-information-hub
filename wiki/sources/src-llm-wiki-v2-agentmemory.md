@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+title: "Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+aliases:
+  - "Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+  - "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
 tags: [llm-wiki-v2, agentmemory, memory-lifecycle, knowledge-graph, confidence-scoring, automation, multi-agent, scaling]
 ---
-
-# Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons
-
+# Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons
 ## Summary
 
 This document by Rohit Ghumare extends Karpathy's original LLM Wiki pattern with lessons learned from building agentmemory, a persistent memory engine for AI coding agents built on the iii-engine. It validates the original pattern's core insight ("stop re-deriving, start compiling") and three-layer architecture while identifying six major gaps exposed by production use: (1) missing memory lifecycle management (confidence scoring, supersession, forgetting, consolidation tiers), (2) flat page structure that misses opportunities for typed knowledge graphs, (3) search that breaks beyond ~100-200 pages, (4) manual operations that should be event-driven, (5) insufficient quality controls and self-correction, and (6) no support for multi-agent or collaborative use. The document proposes an implementation spectrum from minimal viable wiki to full collaborative system, framing the schema document as "the real product" of the pattern.
@@ -94,23 +95,26 @@ Partially answerable from existing wiki knowledge: structural conflicts (two age
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- BUILDS ON: [[LLM Wiki Pattern]]
-- BUILDS ON: src-karpathy-llm-wiki-idea-file
-- EXTENDS: [[LLM Knowledge Linting]]
-- EXTENDS: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- BUILDS ON: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- EXTENDS: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- EXTENDS: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[src-karpathy-llm-wiki-idea-file]]
-[[LLM Knowledge Linting]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]

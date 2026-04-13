@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior"
+title: Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior
+aliases:
+  - "Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior"
+  - "Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior"
 type: source-synthesis
 domain: ai-agents
 status: synthesized
@@ -11,20 +14,19 @@ sources:
   - id: openarms-behavior-review
     type: documentation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "Critical review — agent behavior across 5 runs (253 lines)"
+    description: Critical review — agent behavior across 5 runs (253 lines)
   - id: openarms-v10-evolution
     type: documentation
     file: raw/articles/openarms-methodology-v10-v11.md
-    description: "Methodology evolution v10→v11 (238 lines)"
+    description: Methodology evolution v10→v11 (238 lines)
   - id: openarms-methodology-scan
     type: documentation
     file: raw/articles/openarms-methodology-scan.md
-    description: "Full OpenArms methodology scan (745 lines)"
+    description: Full OpenArms methodology scan (745 lines)
 tags: [openarms, enforcement, hooks, agent-behavior, v10, infrastructure, source-synthesis]
 ---
 
-# Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior
-
+# Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior
 ## Summary
 
 OpenArms v10 proves that infrastructure enforcement achieves 100% stage boundary compliance where instructions achieved 25%, but reveals that 6 behavioral failure classes persist even with perfect infrastructure — producing only a 20% clean completion rate (1 of 5 runs need no manual fixes). The evolution from v1→v10 documents the complete journey from prompt-based rules to hooks, commands, harness-owned loops, and model-aware validation, providing quantified evidence at every step.
@@ -128,27 +130,27 @@ OpenArms has distilled 18 lesson files + 4 findings docs in `wiki/domains/learni
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- FEEDS INTO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- FEEDS INTO: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- FEEDS INTO: [[Enforcement Hook Patterns]]
-- FEEDS INTO: [[Context Compaction Is a Reset Event]]
-- FEEDS INTO: [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-- RELATES TO: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
+- FEEDS INTO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- FEEDS INTO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- FEEDS INTO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- FEEDS INTO: [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+- FEEDS INTO: [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+- RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 
 ## Backlinks
 
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Enforcement Hook Patterns]]
-[[Context Compaction Is a Reset Event]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Model: Quality and Failure Prevention]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]

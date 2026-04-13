@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Playwright MCP for Visual Development Testing"
+title: Synthesis — Playwright MCP for Visual Development Testing
+aliases:
+  - "Synthesis — Playwright MCP for Visual Development Testing"
+  - "Synthesis: Playwright MCP for Visual Development Testing"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-playwright-mcp-visual-testing
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=NjOqPbUecC4"
+    url: https://www.youtube.com/watch?v=NjOqPbUecC4
     file: raw/transcripts/claude-code-now-has-eyes-playwright-mcp-integration.txt
-    title: "Claude Code Now Has Eyes | Playwright MCP Integration"
+    title: Claude Code Now Has Eyes | Playwright MCP Integration
     ingested: 2026-04-08
 tags: [playwright, mcp, visual-testing, frontend, claude-code, design-review, responsive-design, subagents, claude-md, qa]
 ---
-
-# Synthesis: Playwright MCP for Visual Development Testing
-
+# Synthesis — Playwright MCP for Visual Development Testing
 ## Summary
 
 Demonstrates how to embed Playwright MCP into a front-end development workflow so that Claude Code can see and verify its own UI changes. The core insight is that Claude coding front-end without browser vision is blind — it cannot verify that implemented features actually look correct. By adding a `visual development and testing` section to CLAUDE.md and a `design review agent` sub-agent definition, every front-end change triggers automated visual verification: screenshot capture, responsive testing across viewport sizes, design principles compliance checking, and accessibility validation. The workflow closes the loop between implementation and verification without human intervention.
@@ -91,25 +92,25 @@ Cross-referencing `Design.md Pattern` and `Harness Engineering`: the Design.md P
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-playwright-mcp-visual-testing
-- RELATES TO: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Claude Code Skills]]
-- EXTENDS: [[MCP Integration Architecture]]
-- RELATES TO: [[Harness Engineering]]
+- DERIVED FROM: [[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
+- RELATES TO: [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- EXTENDS: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
 
 ## Backlinks
 
-[[src-playwright-mcp-visual-testing]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[Harness Engineering]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[harness-engineering|Harness Engineering]]

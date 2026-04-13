@@ -1,5 +1,7 @@
 ---
 title: "Infrastructure Must Be Reproducible, Not Manual"
+aliases:
+  - "Infrastructure Must Be Reproducible, Not Manual"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -101,27 +103,27 @@ This lesson applies universally across infrastructure work:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Infrastructure as Code Patterns]]
-- DERIVED FROM: [[Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)
-- RELATES TO: [[Always Plan Before Executing]] (plan the infrastructure approach before writing files)
-- RELATES TO: [[Methodology Framework]]
-- BUILDS ON: [[Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)
-- ENABLES: [[Immune System Rules]] (this lesson became a rule)
+- DERIVED FROM: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]] (the setup tooling IS a stage gate for infrastructure)
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]] (plan the infrastructure approach before writing files)
+- RELATES TO: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]] (the pipeline itself is reproducible tooling)
+- ENABLES: [[immune-system-rules|Immune System Rules]] (this lesson became a rule)
 
 ## Backlinks
 
-[[Infrastructure as Code Patterns]]
-[[Stage-Gate Methodology]]
-[[Always Plan Before Executing]]
-[[Methodology Framework]]
-[[Wiki Ingestion Pipeline]]
-[[Immune System Rules]]
-[[Model: Quality and Failure Prevention]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[methodology-framework|Methodology Framework]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[immune-system-rules|Immune System Rules]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

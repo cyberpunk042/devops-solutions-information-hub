@@ -1,5 +1,7 @@
 ---
-title: "notebooklm-py CLI"
+title: notebooklm-py CLI
+aliases:
+  - "notebooklm-py CLI"
 type: concept
 layer: 2
 maturity: growing
@@ -11,21 +13,21 @@ updated: 2026-04-10
 sources:
   - id: src-notebooklm-py-official
     type: documentation
-    url: "https://github.com/teng-lin/notebooklm-py"
+    url: https://github.com/teng-lin/notebooklm-py
     file: raw/articles/notebooklm-py-official-docs.md
-    title: "notebooklm-py — Official Documentation"
+    title: notebooklm-py — Official Documentation
     ingested: 2026-04-08
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    url: "https://github.com/claude-world/notebooklm-skill"
+    url: https://github.com/claude-world/notebooklm-skill
     file: raw/articles/claude-worldnotebooklm-skill.md
-    title: "claude-world/notebooklm-skill"
+    title: claude-world/notebooklm-skill
     ingested: 2026-04-08
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    url: "https://github.com/PleasePrompto/notebooklm-skill"
+    url: https://github.com/PleasePrompto/notebooklm-skill
     file: raw/articles/pleasepromptonotebooklm-skill.md
-    title: "PleasePrompto/notebooklm-skill"
+    title: PleasePrompto/notebooklm-skill
     ingested: 2026-04-08
 tags: [notebooklm, cli, python, api, automation, browser-automation, content-pipeline, agent-tools, google, research-tool]
 ---
@@ -145,32 +147,32 @@ The web UI only shows artifacts inline. notebooklm-py enables downloading quizze
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[NotebookLM]]
-- EXTENDS: [[NotebookLM Skills]]
-- ENABLES: [[AI-Driven Content Pipeline]]
-- PARALLELS: [[Obsidian CLI]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- ENABLES: [[Wiki Event-Driven Automation]]
+- BUILDS ON: [[notebooklm|NotebookLM]]
+- EXTENDS: [[notebooklm-skills|NotebookLM Skills]]
+- ENABLES: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- PARALLELS: [[obsidian-cli|Obsidian CLI]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
 
 ## Backlinks
 
-[[NotebookLM]]
-[[NotebookLM Skills]]
-[[AI-Driven Content Pipeline]]
-[[Obsidian CLI]]
-[[Claude Code Skills]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki Pattern]]
-[[Wiki Event-Driven Automation]]
-[[Claude Code]]
-[[MCP Integration Architecture]]
-[[Model: NotebookLM]]
-[[Research Pipeline Orchestration]]
+[[notebooklm|NotebookLM]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[obsidian-cli|Obsidian CLI]]
+[[claude-code-skills|Claude Code Skills]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[claude-code|Claude Code]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[model-notebooklm|Model — NotebookLM]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]

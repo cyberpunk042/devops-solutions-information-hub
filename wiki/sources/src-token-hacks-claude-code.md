@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: 18 Claude Code Token Hacks in 18 Minutes"
+title: Synthesis — 18 Claude Code Token Hacks in 18 Minutes
+aliases:
+  - "Synthesis — 18 Claude Code Token Hacks in 18 Minutes"
+  - "Synthesis: 18 Claude Code Token Hacks in 18 Minutes"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
+    url: https://www.youtube.com/watch?v=49V-5Ock8LU
     file: raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt
-    title: "18 Claude Code Token Hacks in 18 Minutes"
+    title: 18 Claude Code Token Hacks in 18 Minutes
     ingested: 2026-04-08
 tags: [claude-code, token-management, context-window, cost-optimization, prompt-caching, MCP-overhead, compact, peak-hours, sub-agents]
 ---
-
-# Synthesis: 18 Claude Code Token Hacks in 18 Minutes
-
+# Synthesis — 18 Claude Code Token Hacks in 18 Minutes
 ## Summary
 
 This video presents 18 token management techniques for Claude Code, organized into three tiers (beginner, intermediate, advanced). The core premise is that most users do not understand how Claude Code's token billing works: every message re-reads the entire conversation history, making costs compound exponentially rather than linearly. One developer tracked a 100+ message chat and found 98.5% of tokens were spent re-reading old history. Beyond conversation history, Claude also reloads CLAUDE.md, MCP server definitions, system prompts, skills, and files on every turn -- invisible overhead that constantly drains the context window. The video covers techniques from simple habits (start fresh conversations, batch prompts) through visibility tools (/context, /cost, status line) to architectural decisions (model selection, sub-agent cost awareness, peak hour scheduling, CLAUDE.md as evolving constitution).
@@ -59,19 +60,19 @@ This video presents 18 token management techniques for Claude Code, organized in
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-token-hacks-claude-code
-- ENABLES: [[Claude Code Context Management]]
-- BUILDS ON: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code Best Practices]]
+- DERIVED FROM: [[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+- ENABLES: [[claude-code-context-management|Claude Code Context Management]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
 
 ## Backlinks
 
-[[src-token-hacks-claude-code]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
+[[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-best-practices|Claude Code Best Practices]]

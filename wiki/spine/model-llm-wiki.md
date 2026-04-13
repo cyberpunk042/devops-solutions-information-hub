@@ -1,5 +1,8 @@
 ---
-title: "Model: LLM Wiki"
+title: Model — LLM Wiki
+aliases:
+  - "Model — LLM Wiki"
+  - "Model: LLM Wiki"
 type: concept
 domain: cross-domain
 layer: spine
@@ -12,23 +15,21 @@ sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 — Extending Karpathy's Pattern with Agentmemory Lessons"
+    title: LLM Wiki v2 — Extending Karpathy's Pattern with Agentmemory Lessons
     ingested: 2026-04-08
 tags: [llm-wiki, model, knowledge-system, schema, ingestion, evolution, standards, transferable]
 ---
-
-# Model: LLM Wiki
-
+# Model — LLM Wiki
 ## Summary
 
 The LLM Wiki model defines a knowledge system where an LLM agent maintains a structured markdown wiki — ingesting sources, synthesizing pages, cross-referencing relationships, evolving insights through density layers, and linting for quality. The model solves the wiki maintenance problem: wikis historically die because humans abandon upkeep. With an LLM handling all mechanical operations, the wiki compounds knowledge instead of decaying. This model is technology-agnostic — it defines structure and rules, not tools.
 
-This is one of 14+ named models that a wiki can contain. The [[Methodology Framework]] is the super-model that governs HOW work is done. This page defines WHAT the wiki IS. See [[Model: Methodology]] for the work process.
+This is one of 14+ named models that a wiki can contain. The [[methodology-framework|Methodology Framework]] is the super-model that governs HOW work is done. This page defines WHAT the wiki IS. See [[model-methodology|Model — Methodology]] for the work process.
 
 ## Key Insights
 
@@ -129,7 +130,7 @@ Domains are knowledge categories. They grow organically:
 | Log | wiki/log/ | Operator voice | Directives (verbatim), session logs |
 | Config | wiki/config/ | Work process | methodology.yaml, agent-directive.md |
 
-Knowledge layers (L0-L6) implement [[Progressive Distillation]]: raw → synthesis → concept → lesson → pattern → decision.
+Knowledge layers (L0-L6) implement [[progressive-distillation|Progressive Distillation]]: raw → synthesis → concept → lesson → pattern → decision.
 
 ### Complete Page Type Catalog
 
@@ -190,7 +191,7 @@ Every page must have these 9 fields:
 | `subdomain` | Concepts | Finer categorization when a domain grows large. |
 | `aliases` | Any page | Alternative names (e.g., "SFIF" for "Scaffold-Foundation-Infrastructure-Features"). |
 | `priority` | Backlog | `P0` (critical) / `P1` (high) / `P2` (medium) / `P3` (low). |
-| `task_type` | Backlog | Determines required stages. See [[Stage-Gate Methodology]]. |
+| `task_type` | Backlog | Determines required stages. See [[stage-gate-methodology|Stage-Gate Methodology]]. |
 | `current_stage` | Backlog | `document` / `design` / `scaffold` / `implement` / `test`. |
 | `readiness` | Backlog | 0-100%. Computed from stages completed vs required. |
 | `stages_completed` | Backlog | List of finished stages with verified artifacts. |
@@ -250,9 +251,9 @@ Relationships are explicit, typed, bidirectional via auto-generated backlinks:
 ```markdown
 ## Relationships
 
-- BUILDS ON: [[Page Title]]
-- ENABLES: [[Another Page]]
-- CONTRADICTS: [[Some Assumption]]
+- BUILDS ON: `[[Page Title]]`
+- ENABLES: `[[Another Page]]`
+- CONTRADICTS: `[[Some Assumption]]`
 ```
 
 **17 relationship verbs:**
@@ -277,7 +278,7 @@ Relationships are explicit, typed, bidirectional via auto-generated backlinks:
 | ENABLED BY | Inverse of ENABLES |
 | CONTRASTS WITH | Different approach to same problem |
 
-Format: `- VERB: [[Target]]` — one per line. Regex: `^([A-Z][A-Z /\-]+?):\s*(.+)$`
+Format: `- VERB: `[[Target]]`` — one per line. Regex: `^([A-Z][A-Z /\-]+?):\s*(.+)$`
 
 ### Page Templates
 
@@ -356,10 +357,43 @@ Methodology files: `wiki/config/methodology.yaml` (machine-readable) and `wiki/c
 4. **Validate** — run quality gates (fail = fix, not skip)
 5. **Review** — maturity promotion: seed → growing → mature → canonical (never auto-promoted)
 
+### Maturity-Based Folder Structure
+
+Evolved knowledge pages (lessons, patterns, decisions) organize into maturity-based subfolders that reflect their quality level:
+
+> [!info] Folder Maturity Pipeline
+>
+> | Folder | What's In It | Promotion Criteria |
+> |--------|-------------|-------------------|
+> | `00_inbox/` | New contributions, just arrived | Has frontmatter, passes validation |
+> | `01_drafts/` | Early content, thin | Needs more evidence or depth |
+> | `02_synthesized/` | Has evidence, needs validation | ≥80 lines, evidence present |
+> | `03_validated/` | Full evidence, self-check, navigation weave | ≥100 lines, self-check section, navigation section, ≥2 evidence items |
+> | `04_principles/` | Distilled from ≥3 validated items | ≥3 validated lessons converge on same mechanism |
+
+The scalability rule: when any folder exceeds ~10 items, add sub-structure (clusters/, related/, unrelated/). This keeps browsing manageable at every level.
+
+Currently the research wiki has: 40 validated lessons, 15 validated patterns, 3 principles (hypothesis). Zero inbox, zero drafts, zero synthesized — everything was promoted during the 2026-04-12 session. The inbox is ready for new incoming knowledge from source ingestion.
+
+### Dual-Scope: Second Brain AND Project Wiki
+
+The wiki tools work in TWO directions:
+
+> [!abstract] Dual-Scope Operations
+>
+> | Direction | What Happens | How |
+> |-----------|-------------|-----|
+> | **Project → Second Brain** | Project queries methodology, standards, chains, templates | `gateway query --stage document --wiki-root ~/brain` or auto-detect |
+> | **Second Brain → Project** | Standards applied to project's own wiki pages | Project runs pipeline tools on its own wiki |
+> | **Project → Second Brain (feedback)** | Project contributes learnings back | `gateway contribute --type lesson --wiki-root ~/brain` |
+> | **Self (second brain = project)** | The wiki operates on itself | Default mode — no --wiki-root needed |
+
+The `--wiki-root` flag targets a project wiki. The `--brain` flag targets the second brain. Auto-detection finds the second brain in sibling directories. When running ON the second brain itself, both are the same.
+
 ### Scale Boundary
 
 > [!warning] ~200 pages is the index-navigation ceiling
-> Below ~200: index-driven navigation is cheaper and more accurate than vector search. Above ~200: add graph-enhanced retrieval (LightRAG) as an ADDITIVE layer — the wiki stays the same, the retrieval layer indexes it. See [[Decision: Wiki-First with LightRAG Upgrade Path]].
+> Below ~200: index-driven navigation is cheaper and more accurate than vector search. Above ~200: add graph-enhanced retrieval (LightRAG) as an ADDITIVE layer — the wiki stays the same, the retrieval layer indexes it. See [[Decision — Wiki-First with LightRAG Upgrade Path]].
 
 ### How to Adopt
 
@@ -398,7 +432,7 @@ This research wiki is the reference implementation. Project-specific details (Py
 | [[Knowledge Evolution Pipeline]] | How pages evolve through density layers |
 | [[Progressive Distillation]] | The pattern: raw → synthesis → lesson → pattern → decision |
 | [[LLM Wiki vs RAG]] | When wiki navigation outperforms vector search |
-| [[Decision: Wiki-First with LightRAG Upgrade Path]] | The scale decision |
+| [[Decision — Wiki-First with LightRAG Upgrade Path]] | The scale decision |
 | [[Second Brain Architecture]] | PKM theory (PARA, Zettelkasten) mapped to this model |
 | [[Wiki Backlog Pattern]] | How the wiki tracks its own work |
 
@@ -410,11 +444,11 @@ See [[LLM Wiki Standards — What Good Looks Like]] for the gold-standard exampl
 
 Every YAML frontmatter field is not just metadata — it is the interface through which tools, agents, MCP servers, and enforcement systems read and act on page state. A complete reference of every field, what it enables, and what automation reads it is at [[Frontmatter Field Reference — Complete Parameter Documentation]].
 
-Key fields for work management: `readiness` (definition completeness) and `progress` (execution completeness) are TWO independent dimensions tracked at every hierarchy level. See [[Readiness vs Progress — Two-Dimensional Work Tracking]].
+Key fields for work management: `readiness` (definition completeness) and `progress` (execution completeness) are TWO independent dimensions tracked at every hierarchy level. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]].
 
 ### Gateway Vision
 
-The wiki is evolving toward a unified gateway interface (Python CLI + MCP + programmatic API) that serves humans, AI agents, and external tools through one engine. Operations include: query by stage/domain/chain, archive/move with reference updates, agent write-back (remarks, lessons, corrections), config visualization, and template access. See [[Wiki Gateway Tools — Unified Knowledge Interface]] for the epic.
+The wiki is evolving toward a unified gateway interface (Python CLI + MCP + programmatic API) that serves humans, AI agents, and external tools through one engine. Operations include: query by stage/domain/chain, archive/move with reference updates, agent write-back (remarks, lessons, corrections), config visualization, and template access. See [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] for the epic.
 
 ### Lessons Learned
 
@@ -422,22 +456,45 @@ From building with this model — validated experience:
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[LLM-Maintained Wikis Outperform Static Documentation]] | Maintenance economics is the differentiator |
-| [[Lesson: Schema Is the Real Product — Not the Content]] | Schema survives; content is regenerable |
-| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | Each pass discovers what the previous missed |
-| [[Never Synthesize from Descriptions Alone]] | Read the THING, not the description (Layer 0 → Layer 1) |
-| [[Shallow Ingestion Is Systemic, Not Isolated]] | One defect = audit ALL similar artifacts |
-| [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | Without linting, wikis decay silently |
-| [[New Content Must Integrate Into Existing Pages]] | If entry points don't link to it, it doesn't exist |
-| [[Hardcoded Instances Fail — Build Frameworks Not Solutions]] | Copy values ≠ build framework. Portability test. |
-| [[Structured Context Is Proto-Programming for AI Agents]] | Markdown IS the programming language for AI. Consistent structure > content. |
+| [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] | Maintenance economics is the differentiator |
+| [[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]] | Schema survives; content is regenerable |
+| [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]] | Each pass discovers what the previous missed |
+| [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] | Read the THING, not the description (Layer 0 → Layer 1) |
+| [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | One defect = audit ALL similar artifacts |
+| [[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]] | Without linting, wikis decay silently |
+| [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]] | If entry points don't link to it, it doesn't exist |
+| [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]] | Copy values ≠ build framework. Portability test. |
+| [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Markdown IS the programming language for AI. Consistent structure > content. |
+
+### State of Knowledge
+
+> [!success] **Well-covered**
+> - Complete page type catalog (19 types including milestone + principle added this session)
+> - Maturity-based folder structure (00_inbox→04_principles) implemented and populated
+> - 3 core operations (ingest, query, lint) with real tooling (pipeline, gateway, MCP server)
+> - Evolution pipeline running (scores, promotes, detects staleness)
+> - Gateway tools with dual-scope (second brain + project wiki)
+> - Frontmatter as programmatic interface — every field documented with automation enablement
+> - Agent write-back (contribute command) creates structured entries in inbox
+> - 9 lessons from building with this model, each backed by specific incidents
+
+> [!warning] **Thin or unverified**
+> - Multi-agent wiki co-authoring — untested, potential for merge conflicts
+> - Location mapping — implemented but never used in practice (no pages archived yet)
+> - Scale beyond 280 pages — approaching the ~200 ceiling where LightRAG becomes needed
+> - Enterprise coexistence (Confluence/Notion alongside LLM Wiki)
+> - Minimal viable wiki — the simplest structure that works hasn't been tested empirically
 
 ## Open Questions
 
-> [!question] What is the minimum viable wiki? Can a project start with just raw/ + wiki/domains/ + wiki/config/wiki-schema.yaml and add the other layers later? What's the smallest structure that demonstrates value? (Requires: empirical testing with a fresh project)
-- How do multiple agents co-author a wiki without conflicts? The current model assumes one agent + one operator. With OpenFleet's 10-agent architecture, merge conflicts on frontmatter, competing relationship claims, and simultaneous page creation need resolution. (Requires: multi-agent testing)
-- Optimal starting schema complexity? A new adopter could start with 5 types (concept, source-synthesis, lesson, decision, note) and grow to 16 — or start comprehensive. Which leads to better adoption? (Requires: 2+ adoption experiences)
-- Can the LLM Wiki coexist with Confluence/Notion in an organization? Possible boundary: LLM Wiki for AI-maintained synthesized knowledge, Confluence for human-authored team docs. The wiki ingests FROM Confluence but doesn't replace it. (Requires: enterprise context testing)
+> [!question] What is the minimum viable wiki? **PARTIALLY RESOLVED via Goldilocks**
+> Depends on identity profile. Solo + POC + micro: raw/ + wiki/domains/ + 1 template is enough. The simplified SDLC chain defines the minimal process. (Remaining: test empirically on a fresh project — E016)
+
+> [!question] How do multiple agents co-author a wiki without conflicts?
+> OpenFleet has 10 agents but they don't write to the wiki simultaneously. The contribution system gates inputs. Real multi-agent co-authoring remains untested. (Requires: multi-agent testing)
+
+> [!question] When does LightRAG become necessary?
+> The wiki is at ~280 pages — above the ~200 index-navigation ceiling. LightRAG integration is designed but not deployed. (Requires: benchmarking search accuracy with current page count)
 
 ### How This All Weaves Together — Navigation from This Page
 
@@ -445,47 +502,48 @@ From building with this model — validated experience:
 >
 > | You Want To Know... | Go To |
 > |---------------------|-------|
-> | **"How does methodology govern wiki work?"** | [[Model: Methodology]] — 9 models, stage gates, the super-model that governs ALL work |
-> | **"What level of wiki do I need?"** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile determines wiki scope: second brain vs project wiki vs both |
-> | **"What fields does every page need?"** | [[Frontmatter Field Reference — Complete Parameter Documentation]] — 9 required, 20+ optional, each enables specific automation |
-> | **"How do I track work in the wiki?"** | [[Backlog Hierarchy Rules]] — Milestone→Epic→Module→Task, [[Readiness vs Progress — Two-Dimensional Work Tracking]] |
-> | **"How do agents consume the wiki?"** | [[How AI Agents Consume the Methodology Wiki]] — 4 entry paths, 3 consumption modes |
-> | **"What does 'good' look like per page type?"** | [[LLM Wiki Standards — What Good Looks Like]] — gold-standard exemplar per type |
-> | **"How do I adopt this for my project?"** | [[Methodology Adoption Guide]] — 4 tiers, per-domain quick starts |
-> | **"What tools exist for wiki operations?"** | [[Wiki Gateway Tools — Unified Knowledge Interface]] — planned unified interface for humans, agents, and MCP |
+> | **"How does methodology govern wiki work?"** | [[model-methodology|Model — Methodology]] — 9 models, stage gates, the super-model that governs ALL work |
+> | **"What level of wiki do I need?"** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile determines wiki scope: second brain vs project wiki vs both |
+> | **"What fields does every page need?"** | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — 9 required, 20+ optional, each enables specific automation |
+> | **"How do I track work in the wiki?"** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — Milestone→Epic→Module→Task, [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] |
+> | **"How do agents consume the wiki?"** | [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]] — 4 entry paths, 3 consumption modes |
+> | **"What does 'good' look like per page type?"** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] — gold-standard exemplar per type |
+> | **"How do I adopt this for my project?"** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers, per-domain quick starts |
+> | **"What tools exist for wiki operations?"** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — planned unified interface for humans, agents, and MCP |
 > | **"Where does memory vs wiki content go?"** | Memory = ephemeral per-session. Wiki = shared project knowledge. Default to wiki. See OpenArms lesson on memory/wiki conflation (7th failure class). |
 >
 > **Dual-scope principle:** Wiki tools work on BOTH the second brain (information hub) AND project-internal wikis. One toolset, two contexts. A project queries the second brain for standards, then applies them to its own wiki.
 
 ## Relationships
 
-- FEEDS INTO: [[Model: Second Brain]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
-- ENABLES: [[Model: Claude Code]]
-- BUILDS ON: [[LLM Wiki Pattern]]
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- BUILDS ON: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Model: Knowledge Evolution]]
+- FEEDS INTO: [[model-second-brain|Model — Second Brain]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
+- ENABLES: [[model-claude-code|Model — Claude Code]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- BUILDS ON: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
 
 ## Backlinks
 
-[[Model: Second Brain]]
-[[Model: Ecosystem Architecture]]
-[[Model: Claude Code]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Knowledge Evolution Pipeline]]
-[[Model: Methodology]]
-[[Model: Knowledge Evolution]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Frontmatter Field Reference — Complete Parameter Documentation]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model Registry]]
-[[Model: Wiki Design]]
-[[New Content Must Integrate Into Existing Pages]]
-[[Operations Plan: Wiki Post-Ingestion Validation]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
+[[model-second-brain|Model — Second Brain]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-claude-code|Model — Claude Code]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[model-methodology|Model — Methodology]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-registry|Model Registry]]
+[[model-wiki-design|Model — Wiki Design]]
+[[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
+[[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

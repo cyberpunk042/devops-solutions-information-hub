@@ -1,5 +1,7 @@
 ---
-title: "Gateway-Centric Routing"
+title: Gateway-Centric Routing
+aliases:
+  - "Gateway-Centric Routing"
 type: pattern
 domain: tools-and-platforms
 layer: 5
@@ -11,29 +13,25 @@ derived_from:
   - "OpenClaw"
   - "OpenFleet"
 instances:
-  - page: "OpenArms"
-    context: "Single local gateway daemon (ws://127.0.0.1:18789) routes all 20+ messaging channels (Telegram, Discord, Slack, Signal, iMessage, WhatsApp, Matrix, etc.) through one control plane. Adding a new channel means configuring one gateway, not N consumer integrations."
-  - page: "OpenClaw"
-    context: "Multi-agent single gateway: all 10 OpenFleet agents connect through a single WebSocket gateway. Session management, heartbeat coordination, tool streaming, and agent identity are all handled centrally — agents are isolated but the routing infrastructure is shared."
-  - page: "Research Pipeline Orchestration"
-    context: "Wiki MCP server (tools/mcp_server.py, 15 tools) acts as a gateway: any Claude Code conversation or OpenArms agent connects once to the MCP server and gains access to all wiki operations. Tools are discoverable through the gateway without per-tool configuration."
-  - page: "OpenFleet"
-    context: "OpenFleet's deterministic orchestrator acts as the task routing gateway: all PO directives enter via the orchestrator, which evaluates readiness, security, budget, and agent availability before dispatching to the appropriate agent. No agent receives work except through the gateway."
+  - {'page': 'OpenArms', 'context': 'Single local gateway daemon (ws://127.0.0.1:18789) routes all 20+ messaging channels (Telegram, Discord, Slack, Signal, iMessage, WhatsApp, Matrix, etc.) through one control plane. Adding a new channel means configuring one gateway, not N consumer integrations.'}
+  - {'page': 'OpenClaw', 'context': 'Multi-agent single gateway: all 10 OpenFleet agents connect through a single WebSocket gateway. Session management, heartbeat coordination, tool streaming, and agent identity are all handled centrally — agents are isolated but the routing infrastructure is shared.'}
+  - {'page': 'Research Pipeline Orchestration', 'context': 'Wiki MCP server (tools/mcp_server.py, 15 tools) acts as a gateway: any Claude Code conversation or OpenArms agent connects once to the MCP server and gains access to all wiki operations. Tools are discoverable through the gateway without per-tool configuration.'}
+  - {'page': 'OpenFleet', 'context': "OpenFleet's deterministic orchestrator acts as the task routing gateway: all PO directives enter via the orchestrator, which evaluates readiness, security, budget, and agent availability before dispatching to the appropriate agent. No agent receives work except through the gateway."}
 created: 2026-04-08
 updated: 2026-04-10
 sources:
   - id: src-openarms-local
     type: documentation
     file: raw/articles/openarms-readme.md
-    title: "OpenArms — Project Documentation"
+    title: OpenArms — Project Documentation
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
   - id: src-openclaw-docs
     type: documentation
-    url: "https://github.com/anthropics/claude-code"
-    title: "OpenClaw — Agent Framework Documentation"
+    url: https://github.com/anthropics/claude-code
+    title: OpenClaw — Agent Framework Documentation
 tags: [gateway, routing, single-control-plane, multi-channel, orchestration, openarms, openclaw, openfleet, mcp, websocket, agent-dispatch]
 ---
 
@@ -117,34 +115,34 @@ Avoid Gateway-Centric Routing when:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[OpenArms]]
-- DERIVED FROM: [[OpenClaw]]
-- DERIVED FROM: [[OpenFleet]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Multi-Channel AI Agent Access]]
-- RELATES TO: [[Deterministic Shell, LLM Core]]
-- ENABLES: [[Multi-Channel AI Agent Access]]
-- BUILDS ON: [[Infrastructure as Code Patterns]]
-- RELATES TO: [[AICP]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[openarms|OpenArms]]
+- DERIVED FROM: [[openclaw|OpenClaw]]
+- DERIVED FROM: [[openfleet|OpenFleet]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+- RELATES TO: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- ENABLES: [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+- BUILDS ON: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- RELATES TO: [[aicp|AICP]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[OpenArms]]
-[[OpenClaw]]
-[[OpenFleet]]
-[[MCP Integration Architecture]]
-[[Multi-Channel AI Agent Access]]
-[[Deterministic Shell, LLM Core]]
-[[Infrastructure as Code Patterns]]
-[[AICP]]
-[[Research Pipeline Orchestration]]
-[[Model: Ecosystem Architecture]]
-[[Model: Local AI ($0 Target)]]
+[[openarms|OpenArms]]
+[[openclaw|OpenClaw]]
+[[openfleet|OpenFleet]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[aicp|AICP]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-local-ai|Model — Local AI ($0 Target)]]

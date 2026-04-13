@@ -1,5 +1,7 @@
 ---
-title: "Deployment, Closure, and Monitoring Artifacts — Standards and Guide"
+title: Deployment, Closure, and Monitoring Artifacts — Standards and Guide
+aliases:
+  - "Deployment, Closure, and Monitoring Artifacts — Standards and Guide"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -13,7 +15,7 @@ sources:
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
   - id: sdlcforms
     type: article
-    url: "https://www.sdlcforms.com/UnderstandingSDLC.html"
+    url: https://www.sdlcforms.com/UnderstandingSDLC.html
 tags: [methodology, deployment, closure, monitoring, artifacts, operations, lessons-learned, standards]
 ---
 
@@ -156,13 +158,13 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 ## Open Questions
 
 > [!question] ~~Should Compliance Reports be generated automatically by the pipeline?~~
-> **RESOLVED:** Yes — extend pipeline with basic compliance checking. See [[Decision: Artifact System Design Decisions]].
+> **RESOLVED:** Yes — extend pipeline with basic compliance checking. See [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]].
 
 > [!question] ~~Should the wiki have a formal Status Report template?~~
-> **RESOLVED:** Yes — lightweight template as note type, not new page type. See [[Decision: Methodology Stage Extension Decisions]].
+> **RESOLVED:** Yes — lightweight template as note type, not new page type. See [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]].
 
 > [!question] ~~Should Completion Logs be REQUIRED or RECOMMENDED?~~
-> **RESOLVED:** Required for epic/module, advisory for tasks. See [[Decision: Artifact System Design Decisions]].
+> **RESOLVED:** Required for epic/module, advisory for tasks. See [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]].
 
 ### How This Connects — Navigate From Here
 
@@ -170,30 +172,30 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Operations Plan Page Standards]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Note Page Standards]]
-- RELATES TO: [[Lesson Page Standards]]
-- FEEDS INTO: [[Artifact Chains by Methodology Model]]
-- FEEDS INTO: [[Methodology Evolution Protocol]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[operations-plan-page-standards|Operations Plan Page Standards]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[note-page-standards|Note Page Standards]]
+- RELATES TO: [[lesson-page-standards|Lesson Page Standards]]
+- FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- FEEDS INTO: [[methodology-evolution-protocol|Methodology Evolution Protocol]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Operations Plan Page Standards]]
-[[Model: Methodology]]
-[[Model: Knowledge Evolution]]
-[[Note Page Standards]]
-[[Lesson Page Standards]]
-[[Artifact Chains by Methodology Model]]
-[[Methodology Evolution Protocol]]
-[[Decision: Artifact System Design Decisions]]
-[[Decision: Methodology Stage Extension Decisions]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[operations-plan-page-standards|Operations Plan Page Standards]]
+[[model-methodology|Model — Methodology]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[note-page-standards|Note Page Standards]]
+[[lesson-page-standards|Lesson Page Standards]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
+[[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]]

@@ -1,5 +1,7 @@
 ---
-title: "Claude Code Skills"
+title: Claude Code Skills
+aliases:
+  - "Claude Code Skills"
 type: concept
 layer: 2
 maturity: growing
@@ -12,25 +14,25 @@ sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
     file: raw/transcripts/claude-notebooklm-content-team.txt
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
+    title: Claude + NotebookLM = Your 24/7 Content Team
     ingested: 2026-04-08
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=Y2rpFa43jTo"
+    url: https://www.youtube.com/watch?v=Y2rpFa43jTo
     file: raw/transcripts/obsidian-claude-code-the-second-brain-setup-that-actually-works.txt
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
     ingested: 2026-04-08
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
+    url: https://github.com/shanraisshan/claude-code-best-practice
     file: raw/articles/shanraisshanclaude-code-best-practice.md
-    title: "shanraisshan/claude-code-best-practice"
+    title: shanraisshan/claude-code-best-practice
     ingested: 2026-04-08
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
+    url: https://www.youtube.com/watch?v=49V-5Ock8LU
     file: raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt
-    title: "18 Claude Code Token Hacks in 18 Minutes"
+    title: 18 Claude Code Token Hacks in 18 Minutes
     ingested: 2026-04-08
 tags: [claude-code, skills, markdown, agent-configuration, extensibility, obsidian-cli, multi-step-workflows, gmail-integration, progressive-disclosure, context-forking, hooks]
 ---
@@ -124,10 +126,10 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 ## Answered Open Questions
 
 > [!example]- Is there a versioning or update mechanism for skills?
-> Resolved in [[Decision: Extension System Operational Decisions]]. CHANGELOG section in SKILL.md tracks breaking changes; wait for agentskills.io for ecosystem-wide versioning.
+> Resolved in [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]. CHANGELOG section in SKILL.md tracks breaking changes; wait for agentskills.io for ecosystem-wide versioning.
 
 > [!example]- Can skills formally compose other skills?
-> Resolved in [[Decision: Extension System Operational Decisions]]. Formal skill-to-skill composition is not supported; de facto composition happens through shared CLIs and bundled scripts.
+> Resolved in [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]. Formal skill-to-skill composition is not supported; de facto composition happens through shared CLIs and bundled scripts.
 
 > [!example]- Maximum practical complexity before unreliability?
 > The ceiling is not a fixed line count but a function of session context pressure. Any skill consuming a substantial fraction of the context window triggers degradation. Resolution: `context: fork` for extensive skills — this isolates execution in a sub-agent. The practical upper bound: ~100 lines unfork'd before degradation risk becomes significant; with `context: fork`, the ceiling is effectively the sub-agent's full context budget.
@@ -144,83 +146,80 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-notebooklm-content-team
-- DERIVED FROM: src-obsidian-claude-code-second-brain
-- DERIVED FROM: src-shanraisshan-claude-code-best-practice
-- DERIVED FROM: src-token-hacks-claude-code
-- ENABLES: [[AI-Driven Content Pipeline]]
-- ENABLES: [[Claude Code Scheduling]]
-- ENABLES: [[Claude Code Best Practices]]
-- ENABLES: [[Claude Code Context Management]]
-- ENABLES: [[Wiki Event-Driven Automation]]
-- BUILDS ON: [[NotebookLM]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[Skills Architecture Patterns]]
-- USED BY: [[OpenFleet]]
-- USED BY: [[AICP]]
-- BUILDS ON: [[OpenClaw]]
-- BUILDS ON: [[Claude Code]]
+- DERIVED FROM: [[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+- DERIVED FROM: [[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+- DERIVED FROM: [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+- DERIVED FROM: [[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+- ENABLES: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- ENABLES: [[claude-code-scheduling|Claude Code Scheduling]]
+- ENABLES: [[claude-code-best-practices|Claude Code Best Practices]]
+- ENABLES: [[claude-code-context-management|Claude Code Context Management]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- BUILDS ON: [[notebooklm|NotebookLM]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
+- USED BY: [[openfleet|OpenFleet]]
+- USED BY: [[aicp|AICP]]
+- BUILDS ON: [[openclaw|OpenClaw]]
+- BUILDS ON: [[claude-code|Claude Code]]
 
 ## Backlinks
 
-[[src-claude-notebooklm-content-team]]
-[[src-obsidian-claude-code-second-brain]]
-[[src-shanraisshan-claude-code-best-practice]]
-[[src-token-hacks-claude-code]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Scheduling]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Wiki Event-Driven Automation]]
-[[NotebookLM]]
-[[Obsidian Knowledge Vault]]
-[[Skills Architecture Patterns]]
-[[OpenFleet]]
-[[AICP]]
-[[OpenClaw]]
-[[Claude Code]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Claude Code Slash Commands (artemgetmann)]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Context-Aware Tool Loading]]
-[[Decision: Extension System Operational Decisions]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Decision: Per-Role Command Design Decisions]]
-[[Harness Engineering]]
-[[Model: Claude Code]]
-[[Model: Skills, Commands, and Hooks]]
-[[Multi-Channel AI Agent Access]]
-[[NotebookLM Skills]]
-[[Obsidian CLI]]
-[[Obsidian Skills Ecosystem]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[OpenArms]]
-[[Per-Role Command Architecture]]
-[[Plan Execute Review Cycle]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[Synthesis: PleasePrompto/notebooklm-skill]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-[[Synthesis: claude-world/notebooklm-skill]]
-[[Synthesis: kepano/obsidian-skills]]
-[[Synthesis: pablo-mano/Obsidian-CLI-skill]]
-[[notebooklm-py CLI]]
+[[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[notebooklm|NotebookLM]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[openclaw|OpenClaw]]
+[[claude-code|Claude Code]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]
+[[harness-engineering|Harness Engineering]]
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[obsidian-cli|Obsidian CLI]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[openarms|OpenArms]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
+[[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+[[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+[[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
+[[notebooklm-py-cli|notebooklm-py CLI]]

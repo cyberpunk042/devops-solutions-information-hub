@@ -1,5 +1,7 @@
 ---
-title: "Wiki Backlog Pattern"
+title: Wiki Backlog Pattern
+aliases:
+  - "Wiki Backlog Pattern"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-openarms-methodology-scan
     type: documentation
     file: raw/articles/openarms-methodology-scan.md
-    title: "OpenArms Methodology Scan — Deep Research Findings"
+    title: OpenArms Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
 tags: [wiki-backlog, frontmatter-state-machine, auto-loop, pm-in-wiki, epics, tasks, llm-wiki, knowledge-base, project-management, autonomous-agents, operator-directives, verbatim-log, second-brain, openarms, openfleet]
 ---
@@ -215,10 +217,10 @@ The OpenArms implementation (`/home/jfortin/openarms/wiki/`) is the direct refer
 ## Answered Open Questions
 
 > [!example]- What is the migration path from an external task board to the Wiki Backlog Pattern?
-> Resolved in [[Decision: Task Type Edge Cases]]. Keep both systems in parallel. Plane for human-facing PM (burndown, sprint views, velocity); wiki backlog for agent-facing context (frontmatter state machine, stage gates). Separation of concerns, not drift.
+> Resolved in [[task-type-edge-cases|Decision — Task Type Edge Cases]]. Keep both systems in parallel. Plane for human-facing PM (burndown, sprint views, velocity); wiki backlog for agent-facing context (frontmatter state machine, stage gates). Separation of concerns, not drift.
 
 > [!example]- What is the wiki-native solution for asynchronous human gating?
-> Resolved in [[Decision: Task Type Edge Cases]]. Semi-autonomous mode + session artifacts. Agent writes its question to `wiki/log/`, sets task to `blocked` with `blocked_by` describing needed input, and stops. Human provides input as a new log entry or task edit. Next session picks up the unblocked task.
+> Resolved in [[task-type-edge-cases|Decision — Task Type Edge Cases]]. Semi-autonomous mode + session artifacts. Agent writes its question to `wiki/log/`, sets task to `blocked` with `blocked_by` describing needed input, and stops. Human provides input as a new log entry or task edit. Next session picks up the unblocked task.
 
 ### How This Connects — Navigate From Here
 
@@ -226,38 +228,38 @@ The OpenArms implementation (`/home/jfortin/openarms/wiki/`) is the direct refer
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Pattern]] (extends Karpathy's wiki pattern with project management types and an auto-loop)
-- BUILDS ON: [[Task Lifecycle Stage-Gating]] (the frontmatter state machine is the wiki implementation of stage gates)
-- BUILDS ON: [[Second Brain Architecture]] (the wiki-as-backlog is a second-brain that also executes)
-- IMPLEMENTS: [[Knowledge Evolution Pipeline]] (the auto-loop operationalizes the evolution pipeline)
-- ENABLES: [[Spec-Driven Development]] (when wiki pages are spec artifacts, the wiki-as-backlog makes SDD self-executing)
-- RELATES TO: [[OpenFleet]] (17 epics in wiki/backlog/, verbatim PO log pattern)
-- RELATES TO: [[Memory Lifecycle Management]] (wiki/log/ as sacrosanct directive store is a memory management strategy)
-- RELATES TO: [[Research Pipeline Orchestration]] (the auto-loop is an orchestration pattern applied to knowledge work)
-- COMPARES TO: [[PARA Methodology]] (wiki-backlog is PARA + task execution in one system)
-- FEEDS INTO: [[Progressive Distillation]] (completed tasks produce knowledge pages that enter the distillation pipeline)
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]] (extends Karpathy's wiki pattern with project management types and an auto-loop)
+- BUILDS ON: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (the frontmatter state machine is the wiki implementation of stage gates)
+- BUILDS ON: [[second-brain-architecture|Second Brain Architecture]] (the wiki-as-backlog is a second-brain that also executes)
+- IMPLEMENTS: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]] (the auto-loop operationalizes the evolution pipeline)
+- ENABLES: [[spec-driven-development|Spec-Driven Development]] (when wiki pages are spec artifacts, the wiki-as-backlog makes SDD self-executing)
+- RELATES TO: [[openfleet|OpenFleet]] (17 epics in wiki/backlog/, verbatim PO log pattern)
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]] (wiki/log/ as sacrosanct directive store is a memory management strategy)
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]] (the auto-loop is an orchestration pattern applied to knowledge work)
+- COMPARES TO: [[para-methodology|PARA Methodology]] (wiki-backlog is PARA + task execution in one system)
+- FEEDS INTO: [[progressive-distillation|Progressive Distillation]] (completed tasks produce knowledge pages that enter the distillation pipeline)
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Task Lifecycle Stage-Gating]]
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Spec-Driven Development]]
-[[OpenFleet]]
-[[Memory Lifecycle Management]]
-[[Research Pipeline Orchestration]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[Backlog Hierarchy Rules]]
-[[Decision: Task Type Edge Cases]]
-[[Execution Modes and End Conditions]]
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[spec-driven-development|Spec-Driven Development]]
+[[openfleet|OpenFleet]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[para-methodology|PARA Methodology]]
+[[progressive-distillation|Progressive Distillation]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[task-type-edge-cases|Decision — Task Type Edge Cases]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]

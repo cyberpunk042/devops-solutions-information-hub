@@ -1,5 +1,8 @@
 ---
-title: "Model: Skills, Commands, and Hooks"
+title: Model — Skills, Commands, and Hooks
+aliases:
+  - "Model — Skills, Commands, and Hooks"
+  - "Model: Skills, Commands, and Hooks"
 type: concept
 domain: cross-domain
 layer: spine
@@ -11,33 +14,12 @@ updated: 2026-04-12
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
-    title: "shanraisshan/claude-code-best-practice"
-  - id: src-claude-code-hooks-reference
-    type: documentation
-    url: "https://code.claude.com/docs/en/hooks"
-    title: "Claude Code Hooks Reference — Full Research"
-  - id: src-claude-slash-commands
-    type: github-repo
-    url: "https://github.com/artemgetmann/claude-slash-commands"
-    title: "Claude Code Slash Commands (artemgetmann)"
-  - id: src-plannotator
-    type: github-repo
-    url: "https://github.com/backnotprop/plannotator"
-    title: "Plannotator — Interactive Plan & Code Review for AI Agents"
-  - id: src-kepano-obsidian-skills
-    type: documentation
-    url: "https://github.com/kepano/obsidian-skills"
-    title: "kepano/obsidian-skills"
-  - id: src-awesome-design-md
-    type: documentation
-    url: "https://github.com/VoltAgent/awesome-design-md"
-    title: "VoltAgent/awesome-design-md — 58 Design Systems"
+    url: https://github.com/shanraisshan/claude-code-best-practice
+    title: shanraisshan/claude-code-best-practice
 tags: [skills, commands, hooks, model-definition, ai-agent-extension, per-role, plannotator, design-md, context-loading, lifecycle, harness-engineering, spine]
 ---
 
-# Model: Skills, Commands, and Hooks
-
+# Model — Skills, Commands, and Hooks
 ## Summary
 
 The AI agent extension ecosystem is a four-level hierarchy: CLAUDE.md (always loaded, static instructions) at the base, Skills (on-demand, dynamic instruction sets) as the primary extension mechanism, Hooks (lifecycle event handlers, structural enforcement) as the control plane, and Commands (lightweight slash-command triggers) as the user-facing entry point. These levels are not independent features — they compose into a coordinated system where commands invoke skills, hooks enforce invariants that skills alone cannot guarantee, and configuration files provide the static context governing everything. ==The central design principle is context-aware loading: static context enters at startup, dynamic context enters on invocation, and the cost difference between eager and deferred loading is up to 12x.==
@@ -48,9 +30,9 @@ The AI agent extension ecosystem is a four-level hierarchy: CLAUDE.md (always lo
 
 - **Loading cost is the governing constraint.** CLAUDE.md loads once and stays. Skills load on invocation and can fork. Hooks fire at boundaries with near-zero context cost. Commands are effectively free. This cost gradient determines correct placement.
 
-- **Hooks close the compliance gap — quantified.** Instruction files achieve ~25% compliance for stage boundaries (OpenArms v4-v8 overnight). Structured instructions (ALLOWED/FORBIDDEN tables) improve to ~60%. Hooks achieve 100% for stage boundaries (OpenArms v10, 5 production runs). MCP tool blocking achieves 100% for tool-level rules (OpenFleet production). This is the fundamental reason hooks exist alongside skills — they enforce what skills can only request. But enforcement must be mindful: every block needs a reason and a justified bypass mechanism. See [[Infrastructure Enforcement Proves Instructions Fail]], [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+- **Hooks close the compliance gap — quantified.** Instruction files achieve ~25% compliance for stage boundaries (OpenArms v4-v8 overnight). Structured instructions (ALLOWED/FORBIDDEN tables) improve to ~60%. Hooks achieve 100% for stage boundaries (OpenArms v10, 5 production runs). MCP tool blocking achieves 100% for tool-level rules (OpenFleet production). This is the fundamental reason hooks exist alongside skills — they enforce what skills can only request. But enforcement must be mindful: every block needs a reason and a justified bypass mechanism. See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]], [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
-- **Dynamic skill injection per stage and role.** OpenArms v10 implements skill-stage-mapping.yaml (299 lines) with 3 layers: generic (all agents), role-specific (engineer/pm), and plugin (superpowers, context7). Stage restrictions block incompatible skills — TDD blocked in document/design, brainstorming blocked in test. OpenFleet extends this with tier-based depth control: expert tier gets full protocol, lightweight gets minimal rules. See [[Tier-Based Context Depth — Trust Earned Through Approval Rates]].
+- **Dynamic skill injection per stage and role.** OpenArms v10 implements skill-stage-mapping.yaml (299 lines) with 3 layers: generic (all agents), role-specific (engineer/pm), and plugin (superpowers, context7). Stage restrictions block incompatible skills — TDD blocked in document/design, brainstorming blocked in test. OpenFleet extends this with tier-based depth control: expert tier gets full protocol, lightweight gets minimal rules. See [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]].
 
 - **The Plannotator pattern generalizes.** A command triggers a workflow; a hook intercepts and enforces structural gates within that workflow. This command+hook composition is the correct architecture for any interactive approval workflow.
 
@@ -69,9 +51,9 @@ The AI agent extension ecosystem is a four-level hierarchy: CLAUDE.md (always lo
 > | **SOUL.md** | Personality, tone, communication style | Every message | All response generation |
 > | **.claude/settings.json** | Hooks, permissions, MCP servers, tools | Session start | Claude Code runtime |
 
-CLAUDE.md is the most critical — the project brain, loaded into every conversation. It defines domain, conventions, quality gates, and workflow. Keep it under 200 lines. See [[Claude Code Best Practices]].
+CLAUDE.md is the most critical — the project brain, loaded into every conversation. It defines domain, conventions, quality gates, and workflow. Keep it under 200 lines. See [[claude-code-best-practices|Claude Code Best Practices]].
 
-DESIGN.md extends into the visual domain. A 312-line DESIGN.md like Anthropic's captures an entire design system as machine-readable constraints: semantic color names, typography hierarchy, component styles, Do's/Don'ts as constraint engineering. See [[Design.md Pattern]].
+DESIGN.md extends into the visual domain. A 312-line DESIGN.md like Anthropic's captures an entire design system as machine-readable constraints: semantic color names, typography hierarchy, component styles, Do's/Don'ts as constraint engineering. See [[design-md-pattern|Design.md Pattern]].
 
 > [!warning] **Level 0 cost**
 > Everything here loads at session start and persists the ENTIRE conversation. Every unnecessary line in CLAUDE.md occupies context for the full session. This is why it must be concise — it's the highest-cost configuration surface.
@@ -112,7 +94,7 @@ my-skill/
 > Each is self-contained. A subagent loaded with wiki-agent + CLAUDE.md can ingest sources independently.
 
 > [!abstract] **Why skills are the dominant pattern**
-> Skills load on demand at zero baseline cost. MCP loads at startup. Hooks enforce but don't teach. Commands trigger but carry no knowledge. For extending an agent with new CAPABILITIES, skills are the correct default. See [[Skills Architecture Is the Dominant LLM Extension Pattern]].
+> Skills load on demand at zero baseline cost. MCP loads at startup. Hooks enforce but don't teach. Commands trigger but carry no knowledge. For extending an agent with new CAPABILITIES, skills are the correct default. See [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]].
 
 ---
 
@@ -184,7 +166,7 @@ my-skill/
 | 2 — Hooks | At boundaries | Near-zero (fire and return) | Enforcement doesn't need persistent context |
 | 3 — Commands | On `/invoke` | One-time injection | Triggers the real work in skills/hooks |
 
-The measured cost difference: MCP servers that eagerly load all tool schemas at session start consume up to 12x more tokens than skills that load equivalent capabilities on demand. See [[CLI Tools Beat MCP for Token Efficiency]].
+The measured cost difference: MCP servers that eagerly load all tool schemas at session start consume up to 12x more tokens than skills that load equivalent capabilities on demand. See [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]].
 
 ---
 
@@ -204,7 +186,7 @@ The most sophisticated composition pattern — a command triggers a workflow, a 
 > The command sets up context. The hook provides structural enforcement. Without hooks, the command can only *ask* Claude to pause — ~60% compliance. With hooks, the pause is guaranteed.
 
 > [!tip] **This pattern generalizes to any approval workflow**
-> Code review, maturity promotion (`seed → growing → mature`), architecture proposals, deployment sign-off. The command is the user-facing affordance. The hook is the infrastructure guarantee. See [[Plannotator — Interactive Plan & Code Review for AI Agents]].
+> Code review, maturity promotion (`seed → growing → mature`), architecture proposals, deployment sign-off. The command is the user-facing affordance. The hook is the infrastructure guarantee. See [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]].
 
 ---
 
@@ -230,18 +212,18 @@ Commands (user trigger)
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Claude Code Skills]] | L2 | The L1 extension mechanism — SKILL.md format, progressive disclosure, context forking |
-| [[Hooks Lifecycle Architecture]] | L2 | The L2 control plane — 26 events, 7 categories, blocking/reverse/injection patterns |
-| [[Per-Role Command Architecture]] | L2 | The L3 user interface — role segmentation, command palettes, execution mode mapping |
-| [[Design.md Pattern]] | L2 | Part of L0 config — visual design system as machine-readable constraints |
-| [[Claude Code Best Practices]] | L2 | Teaching content — planning discipline, CLAUDE.md structure, skill architecture |
-| [[Context-Aware Tool Loading]] | L5 | The organizing pattern — defer loading, never pre-load, measured cost differential |
-| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | L4 | Lesson: skills beat MCP, hooks, and commands for capability extension |
-| [[CLI Tools Beat MCP for Token Efficiency]] | L4 | Lesson: eager vs deferred loading — the 12x cost differential |
-| [[Skill Specification Is the Key to Ecosystem Interoperability]] | L4 | Lesson: format choice compounds into distribution gains |
-| [[Plannotator — Interactive Plan & Code Review for AI Agents]] | L2 | The command+hook composition pattern for interactive approval workflows |
-| [[Harness Engineering]] | L2 | The governing concept — all four levels as a coordinated control system |
-| [[Decision: MCP vs CLI for Tool Integration]] | L6 | When to use MCP (external bridges) vs CLI+Skills (operational tasks) |
+| [[claude-code-skills|Claude Code Skills]] | L2 | The L1 extension mechanism — SKILL.md format, progressive disclosure, context forking |
+| [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] | L2 | The L2 control plane — 26 events, 7 categories, blocking/reverse/injection patterns |
+| [[per-role-command-architecture|Per-Role Command Architecture]] | L2 | The L3 user interface — role segmentation, command palettes, execution mode mapping |
+| [[design-md-pattern|Design.md Pattern]] | L2 | Part of L0 config — visual design system as machine-readable constraints |
+| [[claude-code-best-practices|Claude Code Best Practices]] | L2 | Teaching content — planning discipline, CLAUDE.md structure, skill architecture |
+| [[context-aware-tool-loading|Context-Aware Tool Loading]] | L5 | The organizing pattern — defer loading, never pre-load, measured cost differential |
+| [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | L4 | Lesson: skills beat MCP, hooks, and commands for capability extension |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | L4 | Lesson: eager vs deferred loading — the 12x cost differential |
+| [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]] | L4 | Lesson: format choice compounds into distribution gains |
+| [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]] | L2 | The command+hook composition pattern for interactive approval workflows |
+| [[harness-engineering|Harness Engineering]] | L2 | The governing concept — all four levels as a coordinated control system |
+| [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] | L6 | When to use MCP (external bridges) vs CLI+Skills (operational tasks) |
 
 ---
 
@@ -249,11 +231,11 @@ Commands (user trigger)
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills load on demand at zero baseline. For extending with capabilities, skills are the correct default. |
-| [[CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential. Eager loading (MCP) vs deferred loading (skills). Default to CLI for operational tasks. |
-| [[Skill Specification Is the Key to Ecosystem Interoperability]] | agentskills.io format works across 5+ agent platforms. Format choice is a one-time decision with compounding gains. |
-| [[The Agent Must Practice What It Documents]] | Skills that teach methodology must also be in CLAUDE.md. Teaching and enforcement must be layered. |
-| [[Always Plan Before Executing]] | Planning prevents rework — and the extension system is HOW planning is operationalized (skills carry the planning workflow). |
+| [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills load on demand at zero baseline. For extending with capabilities, skills are the correct default. |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential. Eager loading (MCP) vs deferred loading (skills). Default to CLI for operational tasks. |
+| [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]] | agentskills.io format works across 5+ agent platforms. Format choice is a one-time decision with compounding gains. |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | Skills that teach methodology must also be in CLAUDE.md. Teaching and enforcement must be layered. |
+| [[always-plan-before-executing|Always Plan Before Executing]] | Planning prevents rework — and the extension system is HOW planning is operationalized (skills carry the planning workflow). |
 
 ---
 
@@ -325,46 +307,46 @@ Commands (user trigger)
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: [[Hooks Lifecycle Architecture]]
-- BUILDS ON: [[Per-Role Command Architecture]]
-- BUILDS ON: [[Design.md Pattern]]
-- BUILDS ON: [[Context-Aware Tool Loading]]
-- BUILDS ON: [[Skill Specification Is the Key to Ecosystem Interoperability]]
-- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Claude Code]]
-- FEEDS INTO: [[Model: MCP and CLI Integration]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- BUILDS ON: [[per-role-command-architecture|Per-Role Command Architecture]]
+- BUILDS ON: [[design-md-pattern|Design.md Pattern]]
+- BUILDS ON: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- BUILDS ON: [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+- RELATES TO: [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-claude-code|Model — Claude Code]]
+- FEEDS INTO: [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 
 ## Backlinks
 
-[[Claude Code Skills]]
-[[Hooks Lifecycle Architecture]]
-[[Per-Role Command Architecture]]
-[[Design.md Pattern]]
-[[Context-Aware Tool Loading]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Harness Engineering]]
-[[Claude Code Best Practices]]
-[[Model: Methodology]]
-[[Model: Claude Code]]
-[[Model: MCP and CLI Integration]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Agent Compliance Framework]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Model: Design.md and IaC]]
-[[Model: Ecosystem Architecture]]
-[[Stage-Aware Skill Injection]]
-[[Structured Context Is Proto-Programming for AI Agents]]
+[[claude-code-skills|Claude Code Skills]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[design-md-pattern|Design.md Pattern]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[harness-engineering|Harness Engineering]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[model-methodology|Model — Methodology]]
+[[model-claude-code|Model — Claude Code]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

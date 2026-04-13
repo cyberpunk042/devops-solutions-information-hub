@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: claude-world/notebooklm-skill"
+title: Synthesis — claude-world-notebooklm-skill
+aliases:
+  - "Synthesis — claude-world-notebooklm-skill"
+  - "Synthesis: claude-world-notebooklm-skill"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    url: "https://github.com/claude-world/notebooklm-skill"
+    url: https://github.com/claude-world/notebooklm-skill
     file: raw/articles/claude-worldnotebooklm-skill.md
-    title: "claude-world/notebooklm-skill"
+    title: claude-world/notebooklm-skill
     ingested: 2026-04-08
 tags: [notebooklm, claude-code, mcp, content-pipeline, automation, python, trending-topics, artifact-generation, social-publishing, rss, batch, skill, mcp-server, trend-pulse, threads-viral-agent, uvx, pypi]
 ---
-
-# Synthesis: claude-world/notebooklm-skill
-
+# Synthesis — claude-world-notebooklm-skill
 ## Summary
 
 This repository provides a full-pipeline tool that connects trending topic discovery, NotebookLM deep research, Claude-powered content generation, and multi-platform publishing. It operates as either a Claude Code Skill (via SKILL.md) or a standalone MCP Server, built on the notebooklm-py v0.3.4 async Python library. The tool manages a four-phase workflow: source collection (URLs, PDFs, RSS, trending topics), NotebookLM research (notebook creation, source ingestion, question-asking, artifact generation), Claude content generation (articles, social posts, newsletters), and multi-platform publishing (blogs, Threads/X, newsletters). It supports 9 downloadable artifact types from NotebookLM including audio podcasts, video, slides, reports, quizzes, flashcards, mind maps, data tables, and study guides. Available via `uvx notebooklm-skill` (zero-install) or `pip install notebooklm-skill` from PyPI.
@@ -92,22 +93,22 @@ Cross-referencing `notebooklm-py CLI` and `AI-Driven Content Pipeline`: the `not
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-world-notebooklm-skill
-- FEEDS INTO: [[NotebookLM Skills]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[NotebookLM]]
-- COMPARES TO: src-pleaseprompto-notebooklm-skill
+- DERIVED FROM: [[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+- FEEDS INTO: [[notebooklm-skills|NotebookLM Skills]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- COMPARES TO: [[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
 
 ## Backlinks
 
-[[src-claude-world-notebooklm-skill]]
-[[NotebookLM Skills]]
-[[Claude Code Skills]]
-[[NotebookLM]]
-[[src-pleaseprompto-notebooklm-skill]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[claude-code-skills|Claude Code Skills]]
+[[notebooklm|NotebookLM]]
+[[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]

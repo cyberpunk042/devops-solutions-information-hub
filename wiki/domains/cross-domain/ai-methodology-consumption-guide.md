@@ -1,5 +1,7 @@
 ---
-title: "How AI Agents Consume the Methodology Wiki"
+title: How AI Agents Consume the Methodology Wiki
+aliases:
+  - "How AI Agents Consume the Methodology Wiki"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -158,7 +160,7 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 >    - Exported knowledge pages (if methodology bundle was exported)
 > 4. **What they should read:** The domain chain for their stack + the model page + relevant standards
 >
-> The wiki is the AUTHORITATIVE source. The project's CLAUDE.md is a CONFIGURED REFERENCE to the wiki. When methodology evolves in the wiki, projects update their references. See [[Methodology Evolution Protocol]] for how this propagation works.
+> The wiki is the AUTHORITATIVE source. The project's CLAUDE.md is a CONFIGURED REFERENCE to the wiki. When methodology evolves in the wiki, projects update their references. See [[methodology-evolution-protocol|Methodology Evolution Protocol]] for how this propagation works.
 
 ### What's Missing for Full AI Consumption
 
@@ -184,31 +186,31 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Methodology Adoption Guide]]
-- BUILDS ON: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- BUILDS ON: [[AI Agent Artifacts — Standards and Guide]]
-- RELATES TO: [[Methodology System Map]]
-- RELATES TO: [[Methodology Config Architecture — How the Pieces Fit Together]]
-- FEEDS INTO: [[Model: Claude Code]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- BUILDS ON: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- BUILDS ON: [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+- RELATES TO: [[methodology-system-map|Methodology System Map]]
+- RELATES TO: [[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+- FEEDS INTO: [[model-claude-code|Model — Claude Code]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Methodology Adoption Guide]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Methodology System Map]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Model: Claude Code]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
+[[model-methodology|Model — Methodology]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[methodology-system-map|Methodology System Map]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[model-claude-code|Model — Claude Code]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

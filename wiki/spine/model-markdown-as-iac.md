@@ -1,5 +1,8 @@
 ---
-title: "Model: Design.md and IaC"
+title: Model — Markdown as IaC — Design.md and Agent Configuration
+aliases:
+  - "Model — Markdown as IaC — Design.md and Agent Configuration"
+  - "Model: Markdown as IaC — Design.md and Agent Configuration"
 type: concept
 domain: cross-domain
 layer: spine
@@ -7,18 +10,17 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: src-awesome-design-md
     type: documentation
-    url: "https://github.com/VoltAgent/awesome-design-md"
+    url: https://github.com/VoltAgent/awesome-design-md
     file: raw/articles/voltagentawesome-design-md.md
-    title: "VoltAgent/awesome-design-md — 58 Design Systems"
+    title: VoltAgent/awesome-design-md — 58 Design Systems
 tags: [model, spine, design-md, iac, markdown-config, claude-md, agents-md, soul-md, ai-configuration, infrastructure-as-code]
 ---
 
-# Model: Design.md and IaC
-
+# Model — Markdown as IaC — Design.md and Agent Configuration
 ## Summary
 
 The Design.md and IaC model describes the convergence of Infrastructure as Code with AI agent configuration: markdown files at the project root serve as binding specifications that AI agents read and execute. ==This pattern generalizes from traditional IaC (Terraform, Ansible) into the AI domain== — producing a companion file ecosystem: CLAUDE.md (behavioral constraints), DESIGN.md (visual design system), AGENTS.md (architecture), and SOUL.md (agent identity). The 9-section DESIGN.md standard, documented in 58+ production implementations including Claude (Anthropic)'s 312-line specification, is the most complete instance.
@@ -55,7 +57,7 @@ The Design.md and IaC model describes the convergence of Infrastructure as Code 
 > [!tip] **Section 9 is unique to DESIGN.md**
 > No other design spec format (Figma tokens, Storybook, design tokens JSON) includes a built-in usage manual for AI. Claude's DESIGN.md has 5 complete component prompts baked in — the file teaches the AI how to use itself.
 
-See [[Design.md Pattern]] for full depth and the 312-line Claude example.
+See [[design-md-pattern|Design.md Pattern]] for full depth and the 312-line Claude example.
 
 ---
 
@@ -118,7 +120,7 @@ Separated by scope deliberately — no single file handles behavior AND visual A
 
 ### The Two-Tier Configuration Model
 
-Maps to [[Context-Aware Tool Loading]]:
+Maps to [[context-aware-tool-loading|Context-Aware Tool Loading]]:
 
 > [!info] **Tier 1 vs Tier 2**
 > | Tier | Loading | Cost | Contents |
@@ -135,11 +137,11 @@ Maps to [[Context-Aware Tool Loading]]:
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Design.md Pattern]] | L2 | The foundational concept — 9-section standard, Claude example, Do's/Don'ts |
-| [[Infrastructure as Code Patterns]] | L2 | The IaC spectrum — traditional and AI-agent configuration as one pattern |
-| [[Context-Aware Tool Loading]] | L5 | Loading pattern — eager vs deferred, governs Tier 1 vs Tier 2 decision |
-| [[Claude Code Best Practices]] | L2 | CLAUDE.md structure guidance — under 200 lines, routing table pattern |
-| [[Synthesis: awesome-design-md]] | L1 | Source: 58+ production DESIGN.md implementations |
+| [[design-md-pattern|Design.md Pattern]] | L2 | The foundational concept — 9-section standard, Claude example, Do's/Don'ts |
+| [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] | L2 | The IaC spectrum — traditional and AI-agent configuration as one pattern |
+| [[context-aware-tool-loading|Context-Aware Tool Loading]] | L5 | Loading pattern — eager vs deferred, governs Tier 1 vs Tier 2 decision |
+| [[claude-code-best-practices|Claude Code Best Practices]] | L2 | CLAUDE.md structure guidance — under 200 lines, routing table pattern |
+| [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]] | L1 | Source: 58+ production DESIGN.md implementations |
 
 ---
 
@@ -147,9 +149,9 @@ Maps to [[Context-Aware Tool Loading]]:
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[Infrastructure Must Be Reproducible, Not Manual]] | Companion files ARE IaC. Manual agent configuration that isn't in CLAUDE.md/DESIGN.md is invisible, unrepeatable config. |
-| [[The Agent Must Practice What It Documents]] | CLAUDE.md must contain the rules the agent follows, not just rules it documents. Config files are operational, not aspirational. |
-| [[Never Synthesize from Descriptions Alone]] | Reading awesome-design-md (a catalog of DESIGN.md files) ≠ reading a DESIGN.md file. We read the actual 312-line Claude example. |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | Companion files ARE IaC. Manual agent configuration that isn't in CLAUDE.md/DESIGN.md is invisible, unrepeatable config. |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | CLAUDE.md must contain the rules the agent follows, not just rules it documents. Config files are operational, not aspirational. |
+| [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] | Reading awesome-design-md (a catalog of DESIGN.md files) ≠ reading a DESIGN.md file. We read the actual 312-line Claude example. |
 
 ---
 
@@ -194,6 +196,10 @@ Maps to [[Context-Aware Tool Loading]]:
 > - The specific Do's and Don'ts (derived from auditing AI output against YOUR design language)
 > - AGENTS.md scope (simple projects may put architecture notes in CLAUDE.md)
 
+### Structured Context as Proto-Programming (NEW)
+
+The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUDE.md structures program agent behavior through form (tables, numbered lists, callouts), not just content. The [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] formalizes this. Five cognitive contexts reading one CLAUDE.md means the structure must DECLARE which context it addresses.
+
 ## Open Questions
 
 > [!question] **When does the companion file ecosystem tip into context overhead?**
@@ -211,30 +217,31 @@ Maps to [[Context-Aware Tool Loading]]:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Design.md Pattern]]
-- BUILDS ON: [[Infrastructure as Code Patterns]]
-- BUILDS ON: [[Context-Aware Tool Loading]]
-- RELATES TO: [[Model: Claude Code]]
-- RELATES TO: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Model: SFIF and Architecture]]
-- RELATES TO: [[Model: Quality and Failure Prevention]]
-- ENABLES: [[Claude Code Best Practices]]
+- BUILDS ON: [[design-md-pattern|Design.md Pattern]]
+- BUILDS ON: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- BUILDS ON: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[model-sfif-architecture|Model — SFIF and Architecture]]
+- RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- ENABLES: [[claude-code-best-practices|Claude Code Best Practices]]
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[Infrastructure as Code Patterns]]
-[[Context-Aware Tool Loading]]
-[[Model: Claude Code]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: SFIF and Architecture]]
-[[Model: Quality and Failure Prevention]]
-[[Claude Code Best Practices]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Structured Context Is Proto-Programming for AI Agents]]
+[[design-md-pattern|Design.md Pattern]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[model-context-engineering|Model — Context Engineering]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

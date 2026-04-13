@@ -1,5 +1,7 @@
 ---
-title: "LLM Wiki Standards — What Good Looks Like"
+title: LLM Wiki Standards — What Good Looks Like
+aliases:
+  - "LLM Wiki Standards — What Good Looks Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -17,7 +19,7 @@ tags: [standards, quality, examples, wiki-model, best-practices, gold-standard]
 > [!tip] AI Quick Start — What You Do With This Page
 >
 > 1. **Before creating any wiki page**: find your page type in the "Per-Type Standards Index" table below
-> 2. **Read the dedicated standards doc** for that type (e.g., [[Concept Page Standards]] for concept pages)
+> 2. **Read the dedicated standards doc** for that type (e.g., [[concept-page-standards|Concept Page Standards]] for concept pages)
 > 3. **Look at the exemplar** referenced in the standards doc — your page should LOOK like that
 > 4. **Check the anti-patterns table** at the bottom — are you about to make a known mistake?
 > 5. **Three properties of every good page**: SPECIFIC (data points, not vague claims), CONNECTED (rich relationships), ACTIONABLE (reader knows what to do)
@@ -44,21 +46,21 @@ Every page type now has its own dedicated standards document in `wiki/spine/stan
 >
 > | Type | Standards Doc | Exemplar |
 > |------|--------------|----------|
-> | concept | [[Concept Page Standards]] | [[Methodology Framework]] |
-> | source-synthesis | [[Source-Synthesis Page Standards]] | [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] |
-> | comparison | [[Comparison Page Standards]] | [[Cross-Domain Patterns]] |
-> | reference | [[Reference Page Standards]] | [[Methodology Adoption Guide]] |
-> | deep-dive | [[Deep-Dive Page Standards]] | [[Adoption Guide — How to Use This Wiki's Standards]] |
-> | lesson | [[Lesson Page Standards]] | [[CLI Tools Beat MCP for Token Efficiency]] |
-> | pattern | [[Pattern Page Standards]] | [[Plan Execute Review Cycle]] |
-> | decision | [[Decision Page Standards]] | [[Execution Mode Edge Cases]] |
-> | domain-overview | [[Domain Overview Page Standards]] | [[Cross-Domain — Domain Overview]] |
-> | evolution | [[Evolution Page Standards]] | [[Evolution: Methodology System]] |
-> | learning-path | [[Learning Path Page Standards]] | [[Learning Path: Methodology Fundamentals]] |
-> | operations-plan | [[Operations Plan Page Standards]] | [[Operations Plan: Wiki Post-Ingestion Validation]] |
-> | epic | [[Epic Page Standards]] | [[Artifact Type System]] |
-> | task | [[Task Page Standards]] | [[Test OpenAI backend with LocalAI]] |
-> | note | [[Note Page Standards]] | [[Models Are Not Documents — They Must Be Usable Systems]] |
+> | concept | [[concept-page-standards|Concept Page Standards]] | [[methodology-framework|Methodology Framework]] |
+> | source-synthesis | [[source-synthesis-page-standards|Source-Synthesis Page Standards]] | [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]] |
+> | comparison | [[comparison-page-standards|Comparison Page Standards]] | [[cross-domain-patterns|Cross-Domain Patterns]] |
+> | reference | [[reference-page-standards|Reference Page Standards]] | [[methodology-adoption-guide|Methodology Adoption Guide]] |
+> | deep-dive | [[deep-dive-page-standards|Deep-Dive Page Standards]] | [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]] |
+> | lesson | [[lesson-page-standards|Lesson Page Standards]] | [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] |
+> | pattern | [[pattern-page-standards|Pattern Page Standards]] | [[plan-execute-review-cycle|Plan Execute Review Cycle]] |
+> | decision | [[decision-page-standards|Decision Page Standards]] | [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]] |
+> | domain-overview | [[domain-overview-page-standards|Domain Overview Page Standards]] | [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] |
+> | evolution | [[evolution-page-standards|Evolution Page Standards]] | [[methodology-evolution-history|Evolution — Methodology System]] |
+> | learning-path | [[learning-path-page-standards|Learning Path Page Standards]] | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+> | operations-plan | [[operations-plan-page-standards|Operations Plan Page Standards]] | [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]] |
+> | epic | [[epic-page-standards|Epic Page Standards]] | [[E003-artifact-type-system|Artifact Type System]] |
+> | task | [[task-page-standards|Task Page Standards]] | [[T001-test-openai-backend|Test OpenAI backend with LocalAI]] |
+> | note | [[note-page-standards|Note Page Standards]] | [[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]] |
 
 The summaries below are quick reference. For full quality bars, common failures, and styling requirements, read the dedicated standards doc.
 
@@ -66,7 +68,7 @@ The summaries below are quick reference. For full quality bars, common failures,
 
 ### Gold Standard: Concept Page
 
-**Reference**: [[Methodology Framework]] — 347 lines, 17 relationships
+**Reference**: [[methodology-framework|Methodology Framework]] — 347 lines, 17 relationships
 
 What makes it the standard:
 - **Key Insights section has 8 discrete, numbered insights** — each is a self-contained statement, not a vague bullet. "Models are selected per-condition" not "models can be flexible."
@@ -79,7 +81,7 @@ What makes it the standard:
 
 ### Gold Standard: Source-Synthesis Page
 
-**Reference**: [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] — 254 lines from a 1,057-line source
+**Reference**: [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]] — 254 lines from a 1,057-line source
 
 What makes it the standard:
 - **The raw source was 1,057 lines. The synthesis is 254.** Not a 60-line summary — a 254-line extraction that captures the MECHANISM, not just the surface.
@@ -92,7 +94,7 @@ What makes it the standard:
 
 ### Gold Standard: Lesson Page
 
-**Reference**: [[CLI Tools Beat MCP for Token Efficiency]] — 122 lines, 9 relationships
+**Reference**: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] — 122 lines, 9 relationships
 
 What makes it the standard:
 - **Summary states the lesson in ONE sentence** that is immediately actionable: "CLI tools paired with skill files consistently outperform MCP server integrations on token cost and output accuracy."
@@ -109,7 +111,7 @@ What makes it the standard:
 
 ### Gold Standard: Pattern Page
 
-**Reference**: [[Scaffold → Foundation → Infrastructure → Features]] — 176 lines, 13 relationships
+**Reference**: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] — 176 lines, 13 relationships
 
 What makes it the standard:
 - **The `instances` frontmatter field lists 4 concrete occurrences** — each with `page` (where to find it) and `context` (how it manifests there). Not "this appears in many projects" — WHICH projects and HOW.
@@ -122,7 +124,7 @@ What makes it the standard:
 
 ### Gold Standard: Decision Page
 
-**Reference**: [[Decision: MCP vs CLI for Tool Integration]] — 121 lines, 9 relationships
+**Reference**: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] — 121 lines, 9 relationships
 
 What makes it the standard:
 - **Decision section is ONE clear statement** — "Default to CLI+Skills for project-internal tooling. Use MCP for external service bridges and cross-conversation tool discovery."
@@ -135,7 +137,7 @@ What makes it the standard:
 
 ### Gold Standard: Comparison Page
 
-**Reference**: [[Cross-Domain Patterns]] — 189 lines, 10 relationships
+**Reference**: [[cross-domain-patterns|Cross-Domain Patterns]] — 189 lines, 10 relationships
 
 What makes it the standard:
 - **Comparison Matrix is a TABLE** — not paragraphs of prose. Columns: pattern name, domains it appears in, instances, underlying constraint. Each row is a data point.
@@ -146,7 +148,7 @@ What makes it the standard:
 
 ### Gold Standard: Epic
 
-**Reference**: [[Artifact Type System]] — 105 lines, 95% readiness, all 5 stages complete
+**Reference**: [[E003-artifact-type-system|Artifact Type System]] — 105 lines, 95% readiness, all 5 stages complete
 
 What makes it the standard:
 - **Goals are concrete and measurable** — "Create templates for all 8 page types currently missing" not "improve templates."
@@ -155,11 +157,11 @@ What makes it the standard:
 - **Artifacts list tracks ALL stage outputs** — 22 artifacts across document, design, scaffold, implement. Every deliverable is named.
 - **Readiness reflects actual stage completion** — 95% because all 5 stages are done, pending operator review.
 
-Also strong: [[Local Inference Engine (Subsystem 3)]] — good Blocked section, good artifact tracking from document stage.
+Also strong: [[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]] — good Blocked section, good artifact tracking from document stage.
 
 ### Gold Standard: Task
 
-**Reference**: [[Test OpenAI backend with LocalAI]] — 33 lines
+**Reference**: [[T001-test-openai-backend|Test OpenAI backend with LocalAI]] — 33 lines
 
 What makes it the standard:
 - **Short and focused** — a task is NOT an essay. Summary + Done When, that's it.
@@ -168,7 +170,7 @@ What makes it the standard:
 
 ### Gold Standard: Note (Directive)
 
-**Reference**: [[Models Are Not Documents — They Must Be Usable Systems]] — 49 lines
+**Reference**: [[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]] — 49 lines
 
 What makes it the standard:
 - **Operator's words are VERBATIM** — quoted exactly, not paraphrased. This is sacrosanct.
@@ -177,7 +179,7 @@ What makes it the standard:
 
 ### Gold Standard: Reference Page
 
-**Reference**: [[Methodology Adoption Guide]] — 259 lines, 8 relationships
+**Reference**: [[methodology-adoption-guide|Methodology Adoption Guide]] — 259 lines, 8 relationships
 
 What makes it the standard:
 - **Progressive disclosure structure** — 4 tiers of adoption, each more detailed than the last. Reader finds their tier and stops. Doesn't force experts through basics.
@@ -189,7 +191,7 @@ What makes it the standard:
 
 ### Gold Standard: Deep-Dive Page
 
-**Reference**: [[Adoption Guide — How to Use This Wiki's Standards]] — 325 lines
+**Reference**: [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]] — 325 lines
 
 What makes it the standard:
 - **Substantial depth** (325 lines) — a deep-dive earns its name through exhaustive analysis, not surface coverage.
@@ -201,7 +203,7 @@ What makes it the standard:
 
 ### Gold Standard: Domain Overview Page
 
-**Reference**: [[Cross-Domain — Domain Overview]] — 126 lines
+**Reference**: [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] — 126 lines
 
 What makes it the standard:
 - **State of Knowledge has 3 tiers** — Authoritative, Good, and Thin coverage. Honest assessment of where the domain stands.
@@ -213,7 +215,7 @@ What makes it the standard:
 
 ### Gold Standard: Evolution Page
 
-**Reference**: [[Evolution: Methodology System]] — 120 lines
+**Reference**: [[methodology-evolution-history|Evolution — Methodology System]] — 120 lines
 
 What makes it the standard:
 - **Timeline entries have dates AND significance** — not just "something happened" but why it mattered. Each entry explains the impact.
@@ -224,10 +226,10 @@ What makes it the standard:
 
 ### Gold Standard: Learning Path Page
 
-**Reference**: [[Learning Path: Methodology Fundamentals]] — 68 lines
+**Reference**: [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] — 68 lines
 
 What makes it the standard:
-- **Sequence has 8 ordered pages** — each with a [[wikilink]] AND a 1-sentence annotation explaining WHY this page is at this position.
+- **Sequence has 8 ordered pages** — each with a `[[wikilink]]` AND a 1-sentence annotation explaining WHY this page is at this position.
 - **Prerequisites are specific** — not "basic knowledge" but exact pages to read first.
 - **Outcomes are testable** — "you should be able to select the correct methodology model for any task type" is verifiable. "You should understand methodology" is not.
 
@@ -235,7 +237,7 @@ What makes it the standard:
 
 ### Gold Standard: Operations Plan Page
 
-**Reference**: [[Operations Plan: Wiki Post-Ingestion Validation]] — 90 lines
+**Reference**: [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]] — 90 lines
 
 What makes it the standard:
 - **Every step has 4 components** — Action, Expected output, Validation, Rollback. A "dumb" agent can follow this mechanically.
@@ -270,53 +272,54 @@ What makes it the standard:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Methodology Framework]]
-- RELATES TO: [[Never Synthesize from Descriptions Alone]]
-- RELATES TO: [[Shallow Ingestion Is Systemic, Not Isolated]]
-- RELATES TO: [[The Agent Must Practice What It Documents]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+- RELATES TO: [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
 
 ## Backlinks
 
-[[Model: LLM Wiki]]
-[[Stage-Gate Methodology]]
-[[Methodology Framework]]
-[[Never Synthesize from Descriptions Alone]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[The Agent Must Practice What It Documents]]
-[[Artifact Type System]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Comparison Page Standards]]
-[[Concept Page Standards]]
-[[Decision Page Standards]]
-[[Deep-Dive Page Standards]]
-[[Domain Overview Page Standards]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Evolution Page Standards]]
-[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
-[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
-[[Learning Path Page Standards]]
-[[Learning Path: Methodology Fundamentals]]
-[[Lesson Page Standards]]
-[[Methodology Artifact Taxonomy]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Methodology System Map]]
-[[Model: Wiki Design]]
-[[Models Are Built in Layers, Not All at Once]]
-[[New Content Must Integrate Into Existing Pages]]
-[[Operations Plan Page Standards]]
-[[Pattern Page Standards]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
-[[Reference Page Standards]]
-[[Source-Synthesis Page Standards]]
-[[Standards-by-Example]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[comparison-page-standards|Comparison Page Standards]]
+[[concept-page-standards|Concept Page Standards]]
+[[decision-page-standards|Decision Page Standards]]
+[[deep-dive-page-standards|Deep-Dive Page Standards]]
+[[domain-overview-page-standards|Domain Overview Page Standards]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e|E011 — Standards Exemplification — All 15 Per-Type Standards with Inline Annotated Exemplars]]
+[[evolution-page-standards|Evolution Page Standards]]
+[[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[learning-path-page-standards|Learning Path Page Standards]]
+[[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+[[lesson-page-standards|Lesson Page Standards]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[methodology-system-map|Methodology System Map]]
+[[model-wiki-design|Model — Wiki Design]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
+[[operations-plan-page-standards|Operations Plan Page Standards]]
+[[pattern-page-standards|Pattern Page Standards]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[reference-page-standards|Reference Page Standards]]
+[[source-synthesis-page-standards|Source-Synthesis Page Standards]]
+[[E006-standards-by-example|Standards-by-Example]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

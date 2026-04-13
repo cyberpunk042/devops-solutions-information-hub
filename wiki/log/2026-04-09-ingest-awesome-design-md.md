@@ -1,5 +1,7 @@
 ---
-title: "Ingest awesome-design-md repository"
+title: Ingest awesome-design-md repository
+aliases:
+  - "Ingest awesome-design-md repository"
 type: note
 domain: log
 note_type: directive
@@ -26,12 +28,12 @@ Operator directive to ingest the VoltAgent/awesome-design-md repository — a cu
 
 ## Interpretation
 
-New source to ingest: VoltAgent/awesome-design-md — the curated collection of DESIGN.md files for AI agents. Connects to the existing Design.md Pattern page ([[Design.md Pattern]]) which was created from earlier research on this exact repo. This is a deeper ingest of the full repository content.
+New source to ingest: VoltAgent/awesome-design-md — the curated collection of DESIGN.md files for AI agents. Connects to the existing Design.md Pattern page ([[design-md-pattern|Design.md Pattern]]) which was created from earlier research on this exact repo. This is a deeper ingest of the full repository content.
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

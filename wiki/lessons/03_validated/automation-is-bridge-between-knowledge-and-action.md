@@ -1,5 +1,8 @@
 ---
-title: "Lesson: Automation Is the Bridge Between Knowledge and Action"
+title: Lesson — Automation Is the Bridge Between Knowledge and Action
+aliases:
+  - "Lesson — Automation Is the Bridge Between Knowledge and Action"
+  - "Lesson: Automation Is the Bridge Between Knowledge and Action"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -16,16 +19,11 @@ sources:
   - id: src-user-directive-ecosystem
     type: notes
     file: raw/notes/2026-04-08-user-directive-ecosystem-connections.md
-    title: "User Directive — Ecosystem Connections & Automation Vision"
-  - id: src-llm-wiki-v2-agentmemory
-    type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: User Directive — Ecosystem Connections & Automation Vision
 tags: [automation, bridge, knowledge-action, pipeline, event-driven, mcp, cross-domain]
 ---
 
-# Lesson: Automation Is the Bridge Between Knowledge and Action
-
+# Lesson — Automation Is the Bridge Between Knowledge and Action
 ## Summary
 
 The automation domain occupies a distinct structural position in this wiki: it bridges what the knowledge-systems domain knows with what the devops ecosystem actually does. Research Pipeline Orchestration turns wiki knowledge into systematic research execution. Wiki Event-Driven Automation turns wiki changes into autonomous maintenance operations. MCP Integration Architecture turns wiki tools into capabilities accessible from any agent or conversation. Without the automation layer, the wiki is an archive; with it, the wiki is an operational system.
@@ -78,29 +76,29 @@ The automation domain's connectivity pattern confirms its bridge role. Research 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Research Pipeline Orchestration]]
-- DERIVED FROM: [[Wiki Event-Driven Automation]]
-- DERIVED FROM: [[MCP Integration Architecture]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[MCP Integration Architecture]]
-- FEEDS INTO: [[Knowledge Evolution Pipeline]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
-- RELATES TO: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- DERIVED FROM: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- DERIVED FROM: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- FEEDS INTO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[MCP Integration Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Agent Orchestration Patterns]]
-[[LLM Wiki Pattern]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]

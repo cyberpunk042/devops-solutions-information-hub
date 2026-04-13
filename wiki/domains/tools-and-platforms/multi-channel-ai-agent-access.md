@@ -1,5 +1,7 @@
 ---
-title: "Multi-Channel AI Agent Access"
+title: Multi-Channel AI Agent Access
+aliases:
+  - "Multi-Channel AI Agent Access"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-openarms-local
     type: documentation
     file: raw/articles/openarms-readme.md
-    title: "OpenArms — Project Documentation"
+    title: OpenArms — Project Documentation
     ingested: 2026-04-08
 tags: [multi-channel, ai-assistant, messaging, openarms, gateway, telegram, discord, slack, signal, imessage, whatsapp, matrix, channel-routing, agent-access]
 ---
@@ -133,27 +135,27 @@ Cross-referencing `OpenArms` and `OpenFleet`: both pages document the relevant i
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- ENABLES: [[OpenArms]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[AICP]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
-- RELATES TO: [[Research Pipeline Orchestration]]
+- ENABLES: [[openarms|OpenArms]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[aicp|AICP]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[OpenArms]]
-[[MCP Integration Architecture]]
-[[Claude Code Skills]]
-[[OpenFleet]]
-[[AICP]]
-[[Agent Orchestration Patterns]]
-[[Research Pipeline Orchestration]]
-[[Gateway-Centric Routing]]
+[[openarms|OpenArms]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[claude-code-skills|Claude Code Skills]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[gateway-centric-routing|Gateway-Centric Routing]]

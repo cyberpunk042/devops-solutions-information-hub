@@ -1,5 +1,7 @@
 ---
-title: "Research Pipeline Orchestration"
+title: Research Pipeline Orchestration
+aliases:
+  - "Research Pipeline Orchestration"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-user-directive-ecosystem
     type: notes
     file: raw/notes/2026-04-08-user-directive-ecosystem-connections.md
-    title: "User Directive — Ecosystem Connections & Automation Vision"
+    title: User Directive — Ecosystem Connections & Automation Vision
     ingested: 2026-04-08
   - id: src-user-directive-integration
     type: notes
     file: raw/notes/2026-04-08-user-directive-integration-vision.md
-    title: "User Directive — Integration Vision & Service Architecture"
+    title: User Directive — Integration Vision & Service Architecture
     ingested: 2026-04-08
 tags: [pipeline, orchestration, automation, chain-operations, group-operations, tree-operations, research-automation, ingestion, multi-pass]
 ---
@@ -125,59 +127,59 @@ The gap between current state and the vision:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- BUILDS ON: [[Wiki Event-Driven Automation]]
-- ENABLES: [[LLM Wiki Pattern]]
-- RELATES TO: [[AI-Driven Content Pipeline]]
-- RELATES TO: [[Claude Code Scheduling]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Obsidian CLI]]
-- RELATES TO: [[notebooklm-py CLI]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- BUILDS ON: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- ENABLES: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- RELATES TO: [[claude-code-scheduling|Claude Code Scheduling]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[obsidian-cli|Obsidian CLI]]
+- RELATES TO: [[notebooklm-py-cli|notebooklm-py CLI]]
 
 ## Backlinks
 
-[[Wiki Ingestion Pipeline]]
-[[Wiki Event-Driven Automation]]
-[[LLM Wiki Pattern]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Scheduling]]
-[[MCP Integration Architecture]]
-[[Obsidian CLI]]
-[[notebooklm-py CLI]]
-[[Agent Orchestration Patterns]]
-[[Always Plan Before Executing]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Context-Aware Tool Loading]]
-[[Cross-Domain Patterns]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Deterministic Shell, LLM Core]]
-[[Gateway-Centric Routing]]
-[[Harness Engineering]]
-[[Knowledge Evolution Pipeline]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Model: Automation and Pipelines]]
-[[Multi-Channel AI Agent Access]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[OpenArms]]
-[[PARA Methodology]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Second Brain Architecture]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[The Wiki Is a Hub, Not a Silo]]
-[[WSL2 Development Patterns]]
-[[Wiki Backlog Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[obsidian-cli|Obsidian CLI]]
+[[notebooklm-py-cli|notebooklm-py CLI]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[harness-engineering|Harness Engineering]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
+[[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[openarms|OpenArms]]
+[[para-methodology|PARA Methodology]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[rework-prevention|Rework Prevention]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]

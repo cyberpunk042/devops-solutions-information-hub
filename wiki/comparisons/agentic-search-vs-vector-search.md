@@ -1,5 +1,7 @@
 ---
-title: "Agentic Search vs Vector Search"
+title: Agentic Search vs Vector Search
+aliases:
+  - "Agentic Search vs Vector Search"
 type: comparison
 layer: 3
 maturity: growing
@@ -12,23 +14,23 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: wiki/sources/src-karpathy-claude-code-10x.md
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    file: [[Synthesis: Karpathy's LLM Wiki Idea File]]
-    title: "Karpathy LLM Wiki Idea File"
+    file: [["Synthesis — Karpathy's LLM Wiki Idea File"]]
+    title: Karpathy LLM Wiki Idea File
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
     file: wiki/sources/src-llm-wiki-v2-agentmemory.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    file: [[Synthesis: Claude Code Best Practice (shanraisshan)]]
-    title: "shanraisshan/claude-code-best-practice"
+    file: [['Synthesis — Claude Code Best Practice (shanraisshan)']]
+    title: shanraisshan/claude-code-best-practice
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    file: [[Synthesis: PleasePrompto/notebooklm-skill]]
-    title: "PleasePrompto/notebooklm-skill"
+    file: [['Synthesis — PleasePrompto-notebooklm-skill']]
+    title: PleasePrompto/notebooklm-skill
 tags: [agentic-search, vector-search, rag, hybrid-search, knowledge-retrieval, comparison, glob-grep, index-navigation]
 ---
 
@@ -139,29 +141,29 @@ Cross-referencing `Wiki Knowledge Graph` and `LightRAG`: yes, they converge subs
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- SYNTHESIZES: [[LLM Wiki vs RAG]]
-- SYNTHESIZES: [[Claude Code Best Practices]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[NotebookLM]]
-- RELATES TO: [[NotebookLM Skills]]
-- RELATES TO: [[Memory Lifecycle Management]]
+- SYNTHESIZES: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- SYNTHESIZES: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- RELATES TO: [[notebooklm-skills|NotebookLM Skills]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
 
 ## Backlinks
 
-[[LLM Wiki vs RAG]]
-[[Claude Code Best Practices]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[NotebookLM]]
-[[NotebookLM Skills]]
-[[Memory Lifecycle Management]]
-[[LightRAG]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[notebooklm|NotebookLM]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[lightrag|LightRAG]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]

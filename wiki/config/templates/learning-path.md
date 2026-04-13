@@ -43,6 +43,10 @@ tags: [learning-path]
 
 ### Part 1: Understanding the System (LEARN mode)
 
+<!-- EXAMPLE entries (replace with your content):
+     1. **[[Model: Methodology]]** — Start here. Defines the 9 models and when to use each. Foundation for everything.
+     2. **[[Stage-Gate Methodology]]** — The 5 stages with ALLOWED/FORBIDDEN. Requires: knowing models exist (from page 1). -->
+
 1. **[[{{page_1}}]]** — Start here. {{why this page first — what foundation it provides}}.
 
 2. **[[{{page_2}}]]** — {{what this adds on top of page 1}}.

@@ -1,5 +1,7 @@
 ---
-title: "Wiki Knowledge Graph"
+title: Wiki Knowledge Graph
+aliases:
+  - "Wiki Knowledge Graph"
 type: concept
 layer: 2
 maturity: growing
@@ -11,9 +13,9 @@ updated: 2026-04-10
 sources:
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
 tags: [knowledge-graph, entity-extraction, typed-relationships, graph-traversal, structured-knowledge, hybrid-search]
 ---
@@ -88,47 +90,47 @@ Cross-referencing `Context-Aware Tool Loading` and `CLI Tools Beat MCP for Token
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- EXTENDS: [[LLM Wiki Pattern]]
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[Memory Lifecycle Management]]
-- RELATES TO: [[LLM Wiki vs RAG]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[LLM Knowledge Linting]]
-- PARALLELS: [[LightRAG]]
-- FEEDS INTO: [[OpenFleet]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- EXTENDS: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- PARALLELS: [[lightrag|LightRAG]]
+- FEEDS INTO: [[openfleet|OpenFleet]]
 
 ## Backlinks
 
-[[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Memory Lifecycle Management]]
-[[LLM Wiki vs RAG]]
-[[Obsidian Knowledge Vault]]
-[[LLM Knowledge Linting]]
-[[LightRAG]]
-[[OpenFleet]]
-[[AICP]]
-[[Agentic Search vs Vector Search]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Claude Code Context Management]]
-[[Cross-Domain Patterns]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Four-Project Ecosystem]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[Progressive Distillation]]
-[[Second Brain Architecture]]
-[[Zettelkasten Methodology]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[lightrag|LightRAG]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[progressive-distillation|Progressive Distillation]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]

@@ -1,5 +1,7 @@
 ---
-title: "Never Stop at Surface — Depth Verification Rule"
+title: Never Stop at Surface — Depth Verification Rule
+aliases:
+  - "Never Stop at Surface — Depth Verification Rule"
 type: note
 domain: log
 note_type: directive
@@ -48,8 +50,8 @@ This is the same principle as "read the full file" but at a higher level: read t
 
 ## Relationships
 
-- FEEDS INTO: [[Never Synthesize from Descriptions Alone]]
+- FEEDS INTO: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
 
 ## Backlinks
 
-[[Never Synthesize from Descriptions Alone]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]

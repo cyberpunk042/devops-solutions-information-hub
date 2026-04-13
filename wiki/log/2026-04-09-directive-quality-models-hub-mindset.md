@@ -1,5 +1,7 @@
 ---
-title: "Quality Models — Hub Mindset — OpenArms Methodology Learnings"
+title: Quality Models — Hub Mindset — OpenArms Methodology Learnings
+aliases:
+  - "Quality Models — Hub Mindset — OpenArms Methodology Learnings"
 type: note
 domain: log
 note_type: directive
@@ -44,8 +46,8 @@ Models are low quality. Must redo them one at a time starting with Methodology. 
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

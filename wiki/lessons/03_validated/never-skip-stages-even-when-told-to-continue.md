@@ -1,5 +1,7 @@
 ---
-title: "Never Skip Stages Even When Told to Continue"
+title: Never Skip Stages Even When Told to Continue
+aliases:
+  - "Never Skip Stages Even When Told to Continue"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,7 +17,7 @@ sources:
   - id: directive-stop-rushing
     type: log
     file: raw/notes/2026-04-09-user-directive-stop-rushing.md
-    title: "User Directive — STOP RUSHING"
+    title: User Directive — STOP RUSHING
     ingested: 2026-04-09
 tags: [failure-lesson, methodology, quality, stage-gates, rushing, misinterpretation, hard-boundaries, brainstorm]
 ---
@@ -96,33 +98,33 @@ This lesson applies to any system with sequential stages and a decision-making a
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **How are stage boundaries enforced?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] — hooks enforce boundaries at tool-call level |
+> | **How are stage boundaries enforced?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] — hooks enforce boundaries at tool-call level |
 > | **What happens when boundaries are violated?** | OpenArms v8 overnight: 75% violations. Stage 3→5 skips produced orphaned code (2,073 lines nobody imported). |
-> | **What methodology models define stages?** | [[Model: Methodology]] — 9 models with different stage sequences. Research=2, Feature-dev=5, Hotfix=2. |
-> | **What is the Goldilocks for stages?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] — POC may use simplified chain (2-3 stages). Production uses full (5 stages). |
-> | **How does readiness track stage progress?** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness advances through definition stages, progress through execution stages |
+> | **What methodology models define stages?** | [[model-methodology|Model — Methodology]] — 9 models with different stage sequences. Research=2, Feature-dev=5, Hotfix=2. |
+> | **What is the Goldilocks for stages?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] — POC may use simplified chain (2-3 stages). Production uses full (5 stages). |
+> | **How does readiness track stage progress?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness advances through definition stages, progress through execution stages |
 
 ## Relationships
 
-- DERIVED FROM: [[Stage-Gate Methodology]]
-- DERIVED FROM: [[Methodology Framework]]
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Immune System Rules]] (this lesson became a rule)
-- BUILDS ON: [[Knowledge Evolution Pipeline]]
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]]
+- DERIVED FROM: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[immune-system-rules|Immune System Rules]] (this lesson became a rule)
+- BUILDS ON: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Methodology Framework]]
-[[Always Plan Before Executing]]
-[[Immune System Rules]]
-[[Knowledge Evolution Pipeline]]
-[[Agent Compliance Framework]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[FOLLOW THE WORKFLOW — Complete Failure to Practice Methodology]]
-[[Follow the Method of Work Not the Methodology Label]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Model: Quality and Failure Prevention]]
-[[Models Are Built in Layers, Not All at Once]]
-[[The Agent Must Practice What It Documents]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[immune-system-rules|Immune System Rules]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[2026-04-09-directive-FOLLOW-THE-WORKFLOW|FOLLOW THE WORKFLOW — Complete Failure to Practice Methodology]]
+[[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]

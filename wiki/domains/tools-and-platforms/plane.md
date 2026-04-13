@@ -1,5 +1,7 @@
 ---
-title: "Plane"
+title: Plane
+aliases:
+  - "Plane"
 type: concept
 layer: 2
 maturity: growing
@@ -11,13 +13,13 @@ updated: 2026-04-10
 sources:
   - id: src-plane-docs
     type: documentation
-    url: "https://plane.so"
-    title: "Plane — Open-Source Project Management"
+    url: https://plane.so
+    title: Plane — Open-Source Project Management
     ingested: 2026-04-08
   - id: src-dspd-local
     type: documentation
     file: ../devops-solution-product-development/CLAUDE.md
-    title: "DSPD — Plane Fleet Integration"
+    title: DSPD — Plane Fleet Integration
     ingested: 2026-04-08
 tags: [plane, project-management, sprints, kanban, rest-api, webhooks, self-hosted, docker, fleet-integration, pm-agent]
 ---
@@ -98,22 +100,22 @@ Cross-referencing `OpenFleet` and the DSPD fleet integration documented in this 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- USED BY: [[OpenFleet]]
-- RELATES TO: [[AICP]]
-- RELATES TO: [[OpenClaw]]
+- USED BY: [[openfleet|OpenFleet]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[openclaw|OpenClaw]]
 - RELATES TO: [[devops-control-plane]]
-- ENABLES: [[Claude Code Scheduling]]
+- ENABLES: [[claude-code-scheduling|Claude Code Scheduling]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[AICP]]
-[[OpenClaw]]
-[[devops-control-plane]]
-[[Claude Code Scheduling]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[openclaw|OpenClaw]]
+[[devops-control-plane|devops-control-plane]]
+[[claude-code-scheduling|Claude Code Scheduling]]

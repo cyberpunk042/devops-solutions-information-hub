@@ -1,5 +1,7 @@
 ---
-title: "Per-Role Command Architecture"
+title: Per-Role Command Architecture
+aliases:
+  - "Per-Role Command Architecture"
 type: concept
 domain: ai-agents
 status: synthesized
@@ -13,13 +15,13 @@ sources:
     type: github-repo
     url: https://github.com/artemgetmann/claude-slash-commands
     file: raw/articles/artemgetmannclaude-slash-commands.md
-    title: "Claude Code Slash Commands (artemgetmann)"
+    title: Claude Code Slash Commands (artemgetmann)
     ingested: 2026-04-09
   - id: src-plannotator
     type: github-repo
     url: https://github.com/backnotprop/plannotator
     file: raw/articles/backnotpropplannotator.md
-    title: "Plannotator — Interactive Plan & Code Review for AI Agents"
+    title: Plannotator — Interactive Plan & Code Review for AI Agents
     ingested: 2026-04-09
 tags: [slash-commands, per-role, commands, workflow, developer-experience, methodology, skills, hooks, plannotator, automation, execution-modes, ecosystem-sharing]
 ---
@@ -170,19 +172,19 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 ## Answered Open Questions
 
 > [!example]- How does command name collision resolve when personal and project scopes define the same command?
-> Resolved in [[Decision: Per-Role Command Design Decisions]]. Project scope overrides personal scope, matching Claude Code's documented settings hierarchy.
+> Resolved in [[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]. Project scope overrides personal scope, matching Claude Code's documented settings hierarchy.
 
 > [!example]- Is there a mechanism for commands to declare dependencies on other commands or skills?
-> Resolved in [[Decision: Per-Role Command Design Decisions]]. Commands declare skill dependencies via frontmatter `requires: [skill-name]` — a convention, not yet enforced by the platform.
+> Resolved in [[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]. Commands declare skill dependencies via frontmatter `requires: [skill-name]` — a convention, not yet enforced by the platform.
 
 > [!example]- How should commands be versioned when distributed as part of a role package?
-> Resolved in [[Decision: Per-Role Command Design Decisions]]. Semver in frontmatter `version: 1.0.0` with breaking changes bumping major version.
+> Resolved in [[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]. Semver in frontmatter `version: 1.0.0` with breaking changes bumping major version.
 
 > [!example]- Can a command read the current session mode to alter its behavior at runtime?
-> Resolved in [[Decision: Per-Role Command Design Decisions]]. Commands don't branch on mode. Hooks read session mode and enforce constraints — the Plannotator pattern (command sets context, hook provides enforcement).
+> Resolved in [[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]. Commands don't branch on mode. Hooks read session mode and enforce constraints — the Plannotator pattern (command sets context, hook provides enforcement).
 
 > [!example]- What is the right granularity for a "role"?
-> Resolved in [[Decision: Per-Role Command Design Decisions]]. Flat tags `roles: [developer, frontend]` rather than hierarchical role trees. Simplest model, revisit if insufficient.
+> Resolved in [[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]. Flat tags `roles: [developer, frontend]` rather than hierarchical role trees. Simplest model, revisit if insufficient.
 
 ### How This Connects — Navigate From Here
 
@@ -190,32 +192,32 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: [[Claude Code Slash Commands (artemgetmann)]]
-- EXTENDS: [[Harness Engineering]]
-- IMPLEMENTS: [[Hooks Lifecycle Architecture]]
-- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Task Lifecycle Stage-Gating]]
-- FEEDS INTO: [[Skills Architecture Is the Dominant LLM Extension Pattern]]
-- FEEDS INTO: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+- EXTENDS: [[harness-engineering|Harness Engineering]]
+- IMPLEMENTS: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- RELATES TO: [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+- FEEDS INTO: [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+- FEEDS INTO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Claude Code Skills]]
-[[Claude Code Slash Commands (artemgetmann)]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Claude Code Best Practices]]
-[[Task Lifecycle Stage-Gating]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Decision: Per-Role Command Design Decisions]]
-[[Model: Skills, Commands, and Hooks]]
+[[claude-code-skills|Claude Code Skills]]
+[[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+[[harness-engineering|Harness Engineering]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]

@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Claude Code Harness Engineering"
+title: Synthesis — Claude Code Harness Engineering
+aliases:
+  - "Synthesis — Claude Code Harness Engineering"
+  - "Synthesis: Claude Code Harness Engineering"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,20 +14,18 @@ updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
     file: raw/articles/building-claude-code-harness-engineering.md
-    title: "Building Claude Code with Harness Engineering"
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
   - id: src-harness-engineering-github
     type: documentation
-    url: "https://github.com/Chachamaru127/claude-code-harness"
-    title: "claude-code-harness GitHub"
+    url: https://github.com/Chachamaru127/claude-code-harness
+    title: claude-code-harness GitHub
     ingested: 2026-04-08
 tags: [harness-engineering, claude-code, guardrails, plan-work-review, agent-teams, typescript, runtime-safety, spec-driven]
 ---
-
-# Synthesis: Claude Code Harness Engineering
-
+# Synthesis — Claude Code Harness Engineering
 ## Summary
 
 Harness engineering is the practice of building structured control systems around an LLM coding agent — not just prompt engineering but runtime guardrails, quality validation, and rerunnable verification. Anthropic's own Claude Code uses a streaming agent loop, permission-governed tool dispatch, and context management layer. The community claude-code-harness project (Chachamaru127) implements this as a 5-verb workflow (Setup → Plan → Work → Review → Release) with a TypeScript guardrail engine enforcing 13 rules (R01-R13) at execution time through hooks. The project supports parallel workers, 4-perspective code review (security, performance, quality, accessibility), and agent team orchestration. Claude Code crossed $1B annualized revenue within 6 months of launch.
@@ -54,29 +55,29 @@ Harness engineering is the practice of building structured control systems aroun
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
 - DERIVED FROM: src-harness-engineering-article
 - DERIVED FROM: src-harness-engineering-github
-- EXTENDS: [[Claude Code Best Practices]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[OpenClaw]]
+- EXTENDS: [[claude-code-best-practices|Claude Code Best Practices]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code|Claude Code]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[openclaw|OpenClaw]]
 
 ## Backlinks
 
-[[Cross-Domain Patterns]]
-[[Harness Engineering]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Claude Code]]
-[[OpenFleet]]
-[[OpenClaw]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: MCP vs CLI for Tool Integration]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[harness-engineering|Harness Engineering]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code|Claude Code]]
+[[openfleet|OpenFleet]]
+[[openclaw|OpenClaw]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]

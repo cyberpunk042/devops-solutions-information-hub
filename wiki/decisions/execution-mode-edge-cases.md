@@ -1,5 +1,8 @@
 ---
-title: "Decision: Execution Mode Edge Cases"
+title: Decision — Execution Mode Edge Cases
+aliases:
+  - "Decision — Execution Mode Edge Cases"
+  - "Decision: Execution Mode Edge Cases"
 type: decision
 domain: devops
 layer: 6
@@ -17,8 +20,7 @@ sources: []
 tags: [execution-modes, quality-gates, cost-limit, stage-failure, completion-log, edge-cases, design-decisions]
 ---
 
-# Decision: Execution Mode Edge Cases
-
+# Decision — Execution Mode Edge Cases
 ## Summary
 
 Five open questions from the Execution Modes page resolved by cross-referencing the stage-gate methodology, task type artifact matrix, and rework prevention principles. These are operational edge cases that arise during autonomous execution — what happens when quality gates fail permanently, when cost limits hit mid-stage, when stages don't apply, and how completion should be logged.
@@ -68,10 +70,10 @@ All easy. Frontmatter conventions, mode behavior, and log format can all be chan
 
 ## Dependencies
 
-- [[Execution Modes and End Conditions]] — these decisions complete the open questions
-- [[Stage-Gate Methodology]] — one-commit-per-stage invariant drives the cost limit decision
-- [[Rework Prevention]] — compound cost model drives the "finish the stage" decision
-- [[Backlog Hierarchy Rules]] — blocked_by pattern drives the bug task creation
+- [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] — these decisions complete the open questions
+- [[stage-gate-methodology|Stage-Gate Methodology]] — one-commit-per-stage invariant drives the cost limit decision
+- [[rework-prevention|Rework Prevention]] — compound cost model drives the "finish the stage" decision
+- [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — blocked_by pattern drives the bug task creation
 
 ### How This Connects — Navigate From Here
 
@@ -79,24 +81,24 @@ All easy. Frontmatter conventions, mode behavior, and log format can all be chan
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Execution Modes and End Conditions]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- BUILDS ON: [[Rework Prevention]]
-- RELATES TO: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[Task Type Artifact Matrix]]
+- DERIVED FROM: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- BUILDS ON: [[rework-prevention|Rework Prevention]]
+- RELATES TO: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
 
 ## Backlinks
 
-[[Execution Modes and End Conditions]]
-[[Stage-Gate Methodology]]
-[[Rework Prevention]]
-[[Backlog Hierarchy Rules]]
-[[Task Type Artifact Matrix]]
-[[Decision: Stage-Gate Operational Decisions]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[rework-prevention|Rework Prevention]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]

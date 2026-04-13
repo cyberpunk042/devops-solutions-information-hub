@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw"
+title: Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw
+aliases:
+  - "Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw"
+  - "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw"
 type: source-synthesis
 layer: 1
 maturity: seed
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-gemma4-searxng-openclaw
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=T0CKsU0hQx4"
+    url: https://www.youtube.com/watch?v=T0CKsU0hQx4
     file: raw/transcripts/gemma-4-searxng-100-free-amp-private-openclaw-full-setup.txt
-    title: "Gemma 4 + SearXNG = 100% FREE & PRIVATE OpenClaw (Full Setup)"
+    title: Gemma 4 + SearXNG = 100% FREE & PRIVATE OpenClaw (Full Setup)
     ingested: 2026-04-08
 tags: [gemma4, openclaw, ollama, searxng, local-first, privacy, self-hosted, web-search, free-ai, tool-calling]
 ---
-
-# Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw
-
+# Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw
 ## Summary
 
 A practical tutorial on running OpenClaw 100% free and 100% private using Google's Gemma 4 open-source models via Ollama and SearXNG for self-hosted web search. The presenter demonstrates that even the smallest Gemma 4 model (E2B, 7.2GB) handles multi-step agentic tool calling reliably — a capability previously only available with larger models. The full stack: Ollama for model serving, Gemma 4 E2B/E4B/26B models for inference, SearXNG via Docker for web search, and OpenClaw's native Ollama integration for zero-configuration setup. Total cost: $0, no data leaves the device.
@@ -49,21 +50,21 @@ A practical tutorial on running OpenClaw 100% free and 100% private using Google
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-gemma4-searxng-openclaw
-- EXTENDS: [[OpenClaw]]
-- RELATES TO: [[AICP]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[LightRAG]]
+- DERIVED FROM: [[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
+- EXTENDS: [[openclaw|OpenClaw]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[lightrag|LightRAG]]
 
 ## Backlinks
 
-[[src-gemma4-searxng-openclaw]]
-[[OpenClaw]]
-[[AICP]]
-[[OpenFleet]]
-[[LightRAG]]
+[[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[openclaw|OpenClaw]]
+[[aicp|AICP]]
+[[openfleet|OpenFleet]]
+[[lightrag|LightRAG]]

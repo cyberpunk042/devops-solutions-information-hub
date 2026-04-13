@@ -1,5 +1,8 @@
 ---
-title: "Decision: Polling vs Event-Driven Change Detection"
+title: Decision — Polling vs Event-Driven Change Detection
+aliases:
+  - "Decision — Polling vs Event-Driven Change Detection"
+  - "Decision: Polling vs Event-Driven Change Detection"
 type: decision
 domain: devops
 layer: 6
@@ -17,16 +20,11 @@ sources:
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
-  - id: src-user-directive-ecosystem
-    type: notes
-    file: raw/notes/2026-04-08-user-directive-ecosystem-connections.md
-    title: "User Directive — Ecosystem Connections & Automation Vision"
+    title: devops-control-plane — Local Project Documentation
 tags: [polling, inotify, fswatch, wsl2, change-detection, watcher, daemon, event-driven, filesystem, devops]
 ---
 
-# Decision: Polling vs Event-Driven Change Detection
-
+# Decision — Polling vs Event-Driven Change Detection
 ## Summary
 
 On WSL2, polling is the correct change detection strategy for the wiki watcher daemon. The inotify kernel subsystem is unreliable across the /mnt/c boundary between WSL2's Linux filesystem and the Windows NTFS mount, making event-driven approaches fragile for the common case where source files originate on the Windows side. Polling the Linux-side wiki/ path at 5–10 second intervals is reliable, low-overhead, and sufficient for a personal wiki's edit-observe feedback loop. Event-driven (inotify or fswatch) becomes appropriate only when the wiki is deployed on native Linux or macOS where filesystem event delivery is reliable.
@@ -98,28 +96,28 @@ The current polling implementation can run indefinitely without degradation — 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[WSL2 Development Patterns]]
-- DERIVED FROM: [[Wiki Event-Driven Automation]]
-- DERIVED FROM: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Infrastructure as Code Patterns]]
+- DERIVED FROM: [[wsl2-development-patterns|WSL2 Development Patterns]]
+- DERIVED FROM: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- DERIVED FROM: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 - RELATES TO: [[devops-control-plane]]
-- ENABLES: [[Wiki Event-Driven Automation]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
 
 ## Backlinks
 
-[[WSL2 Development Patterns]]
-[[Wiki Event-Driven Automation]]
-[[Research Pipeline Orchestration]]
-[[Infrastructure as Code Patterns]]
-[[devops-control-plane]]
-[[Obsidian Knowledge Vault]]
-[[Model: Automation and Pipelines]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[devops-control-plane|devops-control-plane]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]

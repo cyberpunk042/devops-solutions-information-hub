@@ -1,5 +1,7 @@
 ---
-title: "LightRAG"
+title: LightRAG
+aliases:
+  - "LightRAG"
 type: concept
 layer: 2
 maturity: growing
@@ -11,13 +13,13 @@ updated: 2026-04-10
 sources:
   - id: src-lightrag-docs
     type: documentation
-    url: "https://github.com/HKUDS/LightRAG"
-    title: "LightRAG — Graph-Based RAG Framework"
+    url: https://github.com/HKUDS/LightRAG
+    title: LightRAG — Graph-Based RAG Framework
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — LightRAG Integration"
+    title: OpenFleet — LightRAG Integration
     ingested: 2026-04-08
 tags: [lightrag, rag, knowledge-graph, entity-extraction, graph-retrieval, vector-search, hybrid-search, mcp, openfleet]
 ---
@@ -103,31 +105,31 @@ Cross-referencing `LLM Wiki vs RAG` and `Wiki Knowledge Graph`: the LightRAG pag
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- USED BY: [[OpenFleet]]
-- ENABLES: [[Wiki Knowledge Graph]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- RELATES TO: [[Agentic Search vs Vector Search]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- USED BY: [[AICP]]
-- RELATES TO: [[LLM Wiki Pattern]]
+- USED BY: [[openfleet|OpenFleet]]
+- ENABLES: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- RELATES TO: [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- USED BY: [[aicp|AICP]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
-[[Agentic Search vs Vector Search]]
-[[Wiki Ingestion Pipeline]]
-[[AICP]]
-[[LLM Wiki Pattern]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Local LLM Quantization]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
-[[Synthesis: TurboQuant 122B LLM on MacBook]]
+[[openfleet|OpenFleet]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[aicp|AICP]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]

@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Karpathy LLM Wiki Method via Claude Code"
+title: Synthesis — Karpathy LLM Wiki Method via Claude Code
+aliases:
+  - "Synthesis — Karpathy LLM Wiki Method via Claude Code"
+  - "Synthesis: Karpathy LLM Wiki Method via Claude Code"
 type: source-synthesis
 layer: 1
 maturity: seed
@@ -12,13 +15,11 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
 tags: [karpathy, llm-wiki, obsidian, knowledge-base, claude-code, second-brain]
 ---
-
-# Synthesis: Karpathy LLM Wiki Method via Claude Code
-
+# Synthesis — Karpathy LLM Wiki Method via Claude Code
 ## Summary
 
 This video breaks down Andrej Karpathy's viral post about using LLMs to build personal knowledge bases from raw source documents. The presenter demonstrates the full workflow: setting up an Obsidian vault, feeding raw documents (PDFs, web articles, transcripts) into Claude Code, and having the LLM automatically organize everything into interlinked markdown wiki pages with indexes, relationships, and tags. The video covers the architecture (raw folder plus wiki folder with index and log), compares this approach to traditional semantic search RAG, discusses scaling limitations, and shows practical use cases including a YouTube transcript knowledge system and a personal second brain plugged into an AI executive assistant. Karpathy's key insight is that well-organized markdown files with LLM-maintained indexes eliminate the need for vector databases and embedding pipelines at small to medium scale.
@@ -45,24 +46,25 @@ This video breaks down Andrej Karpathy's viral post about using LLMs to build pe
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-claude-code-10x
-- ENABLES: [[LLM Wiki Pattern]]
-- ENABLES: [[LLM Wiki vs RAG]]
-- ENABLES: [[Obsidian Knowledge Vault]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[LLM Knowledge Linting]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- ENABLES: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- ENABLES: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[llm-knowledge-linting|LLM Knowledge Linting]]
 
 ## Backlinks
 
-[[src-karpathy-claude-code-10x]]
-[[LLM Wiki Pattern]]
-[[LLM Wiki vs RAG]]
-[[Obsidian Knowledge Vault]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Knowledge Linting]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]

@@ -1,5 +1,7 @@
 ---
-title: "Never Present Speculation as Fact"
+title: Never Present Speculation as Fact
+aliases:
+  - "Never Present Speculation as Fact"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,7 +17,7 @@ sources:
   - id: directive-stop-guessing
     type: log
     file: wiki/log/2026-04-09-directive-stop-guessing-false-claims.md
-    title: "Stop Guessing — False Claims in Models"
+    title: Stop Guessing — False Claims in Models
     ingested: 2026-04-09
 tags: [failure-lesson, quality, honesty, false-claims, speculation, verification]
 ---
@@ -79,22 +81,22 @@ The deeper failure: the agent didn't read what the operator pointed to. The oper
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Claude Code Context Management]]
-- RELATES TO: [[Never Synthesize from Descriptions Alone]]
-- RELATES TO: [[Shallow Ingestion Is Systemic, Not Isolated]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
+- DERIVED FROM: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+- RELATES TO: [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 
 ## Backlinks
 
-[[Claude Code Context Management]]
-[[Never Synthesize from Descriptions Alone]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Model: Quality and Failure Prevention]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

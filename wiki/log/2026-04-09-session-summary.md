@@ -1,5 +1,7 @@
 ---
-title: "Session 2026-04-09 Summary"
+title: Session 2026-04-09 Summary
+aliases:
+  - "Session 2026-04-09 Summary"
 type: note
 domain: log
 note_type: session
@@ -46,8 +48,8 @@ Read docs/SESSION-2026-04-09.md for full context.
 
 ## Relationships
 
-- RELATES TO: [[Evolution: Methodology System]]
+- RELATES TO: [[methodology-evolution-history|Evolution — Methodology System]]
 
 ## Backlinks
 
-[[Evolution: Methodology System]]
+[[methodology-evolution-history|Evolution — Methodology System]]

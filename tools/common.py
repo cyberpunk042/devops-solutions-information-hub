@@ -132,14 +132,18 @@ def _split_targets(text: str) -> List[str]:
         targets.append("".join(current).strip())
 
     # Strip [[ ]] wikilink brackets from targets
-    # Handles: [[Target]], [[Target]] (context note), [[Target, With Commas]]
+    # Handles: [[Target]], [[file|Target]], [[Target]] (context note)
     cleaned = []
     for t in targets:
         t = t.strip()
         # Extract target from [[...]] even if followed by (context)
         wl_match = re.match(r'\[\[(.+?)\]\]', t)
         if wl_match:
-            t = wl_match.group(1).strip()
+            inner = wl_match.group(1).strip()
+            # Handle [[filename|Display Title]] — use display title for matching
+            if '|' in inner:
+                inner = inner.split('|', 1)[1].strip()
+            t = inner
         cleaned.append(t)
     return [t for t in cleaned if t]
 
@@ -303,9 +307,28 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
     Scans epics/, modules/, and tasks/ for .md files (excluding _index.md).
     Reads frontmatter and rebuilds table-based indexes.
     """
+    milestones_dir = backlog_dir / "milestones"
     epics_dir = backlog_dir / "epics"
     tasks_dir = backlog_dir / "tasks"
     today = __import__("datetime").date.today().isoformat()
+
+    # --- Collect milestones ---
+    milestones = []
+    if milestones_dir.exists():
+        for md_file in sorted(milestones_dir.glob("*.md")):
+            if md_file.name == "_index.md":
+                continue
+            text = md_file.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(text)
+            if not meta:
+                continue
+            milestones.append({
+                "title": meta.get("title", md_file.stem),
+                "target_date": meta.get("target_date", ""),
+                "status": meta.get("status", ""),
+                "file": md_file.name,
+                "epics": ", ".join(meta.get("epics", [])),
+            })
 
     # --- Collect epics ---
     epics = []
@@ -368,6 +391,19 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
         for e in epics
     ) or "<!-- No epics yet -->"
 
+    milestone_rows = "\n".join(
+        f"| [{m['title']}](milestones/{m['file']}) | {m['target_date']} | {m['status']} | {m['epics']} |"
+        for m in milestones
+    ) or "<!-- No milestones yet -->"
+
+    milestones_section = f"""## Milestones
+
+| Milestone | Target | Status | Epics |
+|-----------|--------|--------|-------|
+{milestone_rows}
+
+""" if milestones else ""
+
     backlog_index_content = f"""---
 title: "Backlog"
 type: index
@@ -382,9 +418,9 @@ tags: [backlog, planning, epics, roadmap]
 
 # Backlog
 
-All planned work, organized by epics, modules, and tasks.
+All planned work, organized by milestones, epics, modules, and tasks.
 
-## Epics
+{milestones_section}## Epics
 
 | ID | Epic | Priority | Status | Readiness |
 |----|------|----------|--------|-----------|

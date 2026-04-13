@@ -1,5 +1,8 @@
 ---
-title: "Decision: Task Type Edge Cases"
+title: Decision — Task Type Edge Cases
+aliases:
+  - "Decision — Task Type Edge Cases"
+  - "Decision: Task Type Edge Cases"
 type: decision
 domain: devops
 layer: 6
@@ -17,8 +20,7 @@ sources: []
 tags: [task-types, spike, type-evolution, mid-execution, design-decisions]
 ---
 
-# Decision: Task Type Edge Cases
-
+# Decision — Task Type Edge Cases
 ## Summary
 
 Four open questions from the Task Type Artifact Matrix and Wiki Backlog Pattern pages — what happens when tasks change type mid-execution, whether spike+implement should exist, how to migrate from external boards, and how to handle async human gating.
@@ -65,10 +67,10 @@ All easy. Adding a spike+implement type later is additive. Migrating from parall
 
 ## Dependencies
 
-- [[Task Type Artifact Matrix]] — resolves 2 of its open questions
-- [[Wiki Backlog Pattern]] — resolves 2 of its open questions
-- [[Stage-Gate Methodology]] — stage-gate integrity drives the spike decision
-- [[Decision: Methodology Framework Design Decisions]] — mid-execution type change already resolved there
+- [[task-type-artifact-matrix|Task Type Artifact Matrix]] — resolves 2 of its open questions
+- [[wiki-backlog-pattern|Wiki Backlog Pattern]] — resolves 2 of its open questions
+- [[stage-gate-methodology|Stage-Gate Methodology]] — stage-gate integrity drives the spike decision
+- [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]] — mid-execution type change already resolved there
 
 ### How This Connects — Navigate From Here
 
@@ -76,23 +78,23 @@ All easy. Adding a spike+implement type later is additive. Migrating from parall
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Task Type Artifact Matrix]]
-- DERIVED FROM: [[Wiki Backlog Pattern]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- RELATES TO: [[Decision: Methodology Framework Design Decisions]]
-- RELATES TO: [[Rework Prevention]]
+- DERIVED FROM: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- DERIVED FROM: [[wiki-backlog-pattern|Wiki Backlog Pattern]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+- RELATES TO: [[rework-prevention|Rework Prevention]]
 
 ## Backlinks
 
-[[Task Type Artifact Matrix]]
-[[Wiki Backlog Pattern]]
-[[Stage-Gate Methodology]]
-[[Decision: Methodology Framework Design Decisions]]
-[[Rework Prevention]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+[[rework-prevention|Rework Prevention]]

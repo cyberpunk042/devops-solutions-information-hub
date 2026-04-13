@@ -51,6 +51,20 @@ tags: [operations-plan]
 <!-- How to verify the ENTIRE plan succeeded.
      Format: - [ ] Verifiable criterion -->
 
+
+
+### Step 1: {{Action title}}
+
+<!-- EXAMPLE step (replace with your content): -->
+
+- **Action:** Run the gateway auto-detection on your project
+- **Command:** `python3 -m tools.gateway what-do-i-need`
+- **Expected output:** Detected identity with recommended chain and first steps
+- **Validation:** Domain and scale match your project. Execution mode says "unknown" (correct — can't auto-detect)
+- **Rollback:** No state changed — this is a read-only query
+
+### Step 2: {{Next action}}
+
 ## Relationships
 
 - IMPLEMENTS: {{what_this_plan_executes}}

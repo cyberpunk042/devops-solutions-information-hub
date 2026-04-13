@@ -1,5 +1,7 @@
 ---
-title: "Ecosystem Integration Interfaces"
+title: Ecosystem Integration Interfaces
+aliases:
+  - "Ecosystem Integration Interfaces"
 type: epic
 domain: backlog
 status: draft
@@ -7,10 +9,11 @@ priority: P2
 task_type: epic
 current_stage: document
 readiness: 15
-stages_completed: [document]
+stages_completed:
+  - "document"
 artifacts:
-  - wiki/domains/devops/four-project-ecosystem.md
-  - [[Adoption Guide — How to Use This Wiki's Standards]]
+  - "wiki/domains/devops/four-project-ecosystem.md"
+  - [["Adoption Guide — How to Use This Wiki's Standards"]]
 confidence: high
 created: 2026-04-09
 updated: 2026-04-09
@@ -46,22 +49,22 @@ Make the wiki's knowledge and methodology consumable by each sister project thro
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Four-Project Ecosystem]]
+- BUILDS ON: [[four-project-ecosystem|Four-Project Ecosystem]]
 - ENABLES: OpenFleet, AICP, OpenArms, devops-control-plane
-- RELATES TO: [[Adoption Guide — How to Use This Wiki's Standards]]
-- RELATES TO: [[Decision: Wiki-First with LightRAG Upgrade Path]]
+- RELATES TO: [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+- RELATES TO: [[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
 
 ## Backlinks
 
-[[Four-Project Ecosystem]]
-[[OpenFleet]]
-[[AICP]]
-[[OpenArms]]
-[[devops-control-plane]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[openarms|OpenArms]]
+[[devops-control-plane|devops-control-plane]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]

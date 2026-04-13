@@ -1,5 +1,7 @@
 ---
-title: "Methodology Framework"
+title: Methodology Framework
+aliases:
+  - "Methodology Framework"
 type: concept
 layer: 2
 domain: cross-domain
@@ -12,12 +14,12 @@ sources:
   - id: src-openarms-methodology
     type: documentation
     file: raw/articles/openarms-methodology-yaml-full.md
-    title: "OpenArms Methodology YAML + Agent Directive"
+    title: OpenArms Methodology YAML + Agent Directive
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Deep Scan"
+    title: OpenFleet Methodology Deep Scan
     ingested: 2026-04-09
 tags: [methodology, meta-methodology, stage-gate, composable, recursive, framework, transferable, multi-track, skyscraper, sfif]
 ---
@@ -28,8 +30,8 @@ tags: [methodology, meta-methodology, stage-gate, composable, recursive, framewo
 >
 > 1. **If you need to understand what a "model" IS**: read "What Is a Methodology Model" below — a model is DATA (Name + Stages + Artifacts + Gates + Protocols + Parameters)
 > 2. **If you need to understand how models COMPOSE**: read "Model Composition" — sequential, nested, conditional, parallel
-> 3. **If you need the specific models**: go to [[Model: Methodology]] — the 9 named models with real examples
-> 4. **If you need the complete artifact spectrum**: go to [[Methodology Artifact Taxonomy]] — 78 types across 11 categories
+> 3. **If you need the specific models**: go to [[model-methodology|Model — Methodology]] — the 9 named models with real examples
+> 4. **If you need the complete artifact spectrum**: go to [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] — 78 types across 11 categories
 > 5. **This page is for UNDERSTANDING the framework. For DOING the work, use the model page and your domain chain.**
 
 ## Summary
@@ -118,7 +120,7 @@ A methodology model is a first-class entity with a precise definition. It consis
 - Quality target (skyscraper, pyramid, mountain)
 - Execution mode (autonomous, semi-autonomous, guided, custom)
 
-**Artifact types span 11 categories and 78+ distinct types** across the full SDLC. The complete taxonomy is defined in [[Methodology Artifact Taxonomy]]. Per-domain artifact chains (TypeScript, Python/Wiki, Infrastructure, Knowledge) are documented in the domain chain pages. The three fundamental classes of output are: **artifacts** (by-products of work), **documents** (specifications that constrain work), and **documentation** (explanations for users/maintainers). See [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]] for the research behind the taxonomy.
+**Artifact types span 11 categories and 78+ distinct types** across the full SDLC. The complete taxonomy is defined in [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]. Per-domain artifact chains (TypeScript, Python/Wiki, Infrastructure, Knowledge) are documented in the domain chain pages. The three fundamental classes of output are: **artifacts** (by-products of work), **documents** (specifications that constrain work), and **documentation** (explanations for users/maintainers). See [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]] for the research behind the taxonomy.
 
 The critical distinction is that a model is DATA, not CODE. It is defined in a configuration file (methodology.yaml, CLAUDE.md, or equivalent), not embedded in implementation logic. This means models can be:
 - Created without changing any code
@@ -298,38 +300,38 @@ This separation between definition and instance is what makes the framework sust
 > | `wiki/config/domain-profiles/*.yaml` | Per-domain overrides (TypeScript, Python/wiki, Infrastructure) | How to adapt to a specific stack |
 > | `wiki/config/templates/` | 22 templates (16 wiki types + 6 methodology documents) | The structural skeleton per type |
 >
-> Projects adopt at 4 tiers — from reading wiki models (Tier 1) to full infrastructure enforcement with hooks and deterministic dispatch (Tier 4). See [[Methodology Adoption Guide]] for the full guide.
+> Projects adopt at 4 tiers — from reading wiki models (Tier 1) to full infrastructure enforcement with hooks and deterministic dispatch (Tier 4). See [[methodology-adoption-guide|Methodology Adoption Guide]] for the full guide.
 >
-> The methodology evolves via an evidence-driven protocol: collect compliance data → identify patterns → propose changes → test in wiki → propagate to consumers. See [[Methodology Evolution Protocol]].
+> The methodology evolves via an evidence-driven protocol: collect compliance data → identify patterns → propose changes → test in wiki → propagate to consumers. See [[methodology-evolution-protocol|Methodology Evolution Protocol]].
 
-For how models compose (sequential, nested, conditional, parallel) with formal rules and conflict resolution, see [[Model Composition Rules]].
+For how models compose (sequential, nested, conditional, parallel) with formal rules and conflict resolution, see [[model-composition-rules|Model Composition Rules]].
 
 ## Open Questions
 
-All 7 original questions resolved in [[Decision: Methodology Framework Design Decisions]].
+All 7 original questions resolved in [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 ## Answered Open Questions
 
 > [!example]- Selection engine formalization?
-> Lookup table with fallback scoring. Simple first — upgrade to scoring when lookup fails 3+ times. See [[Decision: Methodology Framework Design Decisions]].
+> Lookup table with fallback scoring. Simple first — upgrade to scoring when lookup fails 3+ times. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 > [!example]- Declarative vs imperative composition?
-> Declarative config for sequences, imperative only for conditional branches. Conditions declared in config; evaluation is code. See [[Decision: Methodology Framework Design Decisions]].
+> Declarative config for sequences, imperative only for conditional branches. Conditions declared in config; evaluation is code. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 > [!example]- Mid-execution model change?
-> Promote the task (e.g., task → module). Completed stages preserved. Restart from next required stage. See [[Decision: Methodology Framework Design Decisions]].
+> Promote the task (e.g., task → module). Completed stages preserved. Restart from next required stage. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 > [!example]- Quality dimension granularity?
-> Three tiers sufficient. Per-stage overrides for mixed-rigor projects. See [[Decision: Methodology Framework Design Decisions]].
+> Three tiers sufficient. Per-stage overrides for mixed-rigor projects. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 > [!example]- Track synchronization?
-> Soft sync at SFIF phase boundaries. Not hard gates. See [[Decision: Methodology Framework Design Decisions]].
+> Soft sync at SFIF phase boundaries. Not hard gates. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 > [!example]- Framework as a model (meta-meta)?
-> Yes — and this wiki already does it. The framework page IS the Document stage. See [[Decision: Methodology Framework Design Decisions]].
+> Yes — and this wiki already does it. The framework page IS the Document stage. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 > [!example]- Model versioning?
-> Semver on methodology.yaml. Manual compatibility check at current scale. See [[Decision: Methodology Framework Design Decisions]].
+> Semver on methodology.yaml. Manual compatibility check at current scale. See [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]].
 
 ### Model Registry
 
@@ -337,22 +339,22 @@ The Methodology Framework is the super-model. These are the named sub-models it 
 
 | Model | Lines | What it defines |
 |-------|-------|----------------|
-| [[Model: LLM Wiki]] | 444 | The wiki structure, schema, operations, evolution |
-| [[Model: Methodology]] | 249 | The stage-gate system, task types, composability |
-| [[Model: Claude Code]] | 230 | The agent platform, extensions, context discipline |
-| [[Model: Skills, Commands, and Hooks]] | 229 | The extension hierarchy, hooks lifecycle |
-| [[Model: Quality and Failure Prevention]] | 269 | The 3-layer defense, failure lessons, harness engineering |
-| [[Model: MCP and CLI Integration]] | 180 | The two integration strategies, decision framework |
-| [[Model: Ecosystem Architecture]] | 179 | The 5-project ecosystem, integration interfaces |
-| [[Model: Knowledge Evolution]] | 185 | The evolution pipeline, maturity lifecycle |
-| [[Model: Design.md and IaC]] | 174 | Markdown-as-AI-config, companion file ecosystem |
-| [[Model: SFIF and Architecture]] | 170 | The 4-stage build lifecycle, quality tiers |
-| [[Model: Second Brain]] | 163 | PKM theory, PARA + Zettelkasten, Obsidian |
-| [[Model: Automation and Pipelines]] | 144 | Pipeline chains, event-driven automation |
-| [[Model: NotebookLM]] | 172 | Grounded research engine, content pipeline |
-| [[Model: Local AI ($0 Target)]] | 147 | AICP routing, local inference, $0 target |
+| [[model-llm-wiki|Model — LLM Wiki]] | 444 | The wiki structure, schema, operations, evolution |
+| [[model-methodology|Model — Methodology]] | 249 | The stage-gate system, task types, composability |
+| [[model-claude-code|Model — Claude Code]] | 230 | The agent platform, extensions, context discipline |
+| [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] | 229 | The extension hierarchy, hooks lifecycle |
+| [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] | 269 | The 3-layer defense, failure lessons, harness engineering |
+| [[model-mcp-cli-integration|Model — MCP and CLI Integration]] | 180 | The two integration strategies, decision framework |
+| [[model-ecosystem|Model — Ecosystem Architecture]] | 179 | The 5-project ecosystem, integration interfaces |
+| [[model-knowledge-evolution|Model — Knowledge Evolution]] | 185 | The evolution pipeline, maturity lifecycle |
+| [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] | 174 | Markdown-as-AI-config, companion file ecosystem |
+| [[model-sfif-architecture|Model — SFIF and Architecture]] | 170 | The 4-stage build lifecycle, quality tiers |
+| [[model-second-brain|Model — Second Brain]] | 163 | PKM theory, PARA + Zettelkasten, Obsidian |
+| [[model-automation-pipelines|Model — Automation and Pipelines]] | 144 | Pipeline chains, event-driven automation |
+| [[model-notebooklm|Model — NotebookLM]] | 172 | Grounded research engine, content pipeline |
+| [[model-local-ai|Model — Local AI ($0 Target)]] | 147 | AICP routing, local inference, $0 target |
 
-Quality standard: [[LLM Wiki Standards — What Good Looks Like]]
+Quality standard: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 
 When adding a new model: create the page via the model-builder skill (`/build-model`), then add it to this registry.
 
@@ -362,76 +364,76 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- CONTAINS: [[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)
-- CONTAINS: [[Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)
-- CONTAINS: [[Execution Modes and End Conditions]] (execution modes are model parameters)
-- CONTAINS: [[Scaffold → Foundation → Infrastructure → Features]] (SFIF is the project-level model)
-- CONTAINS: [[Spec-Driven Development]] (SDD is the execution track's methodology model)
-- CONTAINS: [[Skyscraper, Pyramid, Mountain]] (the quality dimension of model execution)
-- CONTAINS: [[Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)
-- ENABLES: [[Backlog Hierarchy Rules]] (the PM track model that structures work items)
-- ENABLES: [[LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)
-- ENABLES: [[Second Brain Architecture]] (the knowledge track operates within the second brain structure)
-- BUILDS ON: [[Progressive Distillation]] (maturity progression is a model within the knowledge track)
-- RELATES TO: [[Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)
-- FEEDS INTO: [[Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)
-- CONTAINS: [[Model Composition Rules]] (formal composition patterns: sequential, nested, conditional, parallel)
-- CONTAINS: [[Methodology Adoption Guide]] (4-tier adoption from read to enforce)
-- CONTAINS: [[Methodology Evolution Protocol]] (evidence-driven versioned improvement)
-- CONTAINS: [[Artifact Chains by Methodology Model]] (full chains for all 9 models)
-- CONTAINS: [[CLAUDE.md Structural Patterns for Agent Compliance]] (8 patterns for agent compliance)
-- CONTAINS: [[Enforcement Hook Patterns]] (4 hook types for infrastructure enforcement)
-- IMPLEMENTS: [[Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
+- CONTAINS: [[stage-gate-methodology|Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)
+- CONTAINS: [[task-type-artifact-matrix|Task Type Artifact Matrix]] (task-type-to-model selection is one selection axis)
+- CONTAINS: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] (execution modes are model parameters)
+- CONTAINS: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (SFIF is the project-level model)
+- CONTAINS: [[spec-driven-development|Spec-Driven Development]] (SDD is the execution track's methodology model)
+- CONTAINS: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] (the quality dimension of model execution)
+- CONTAINS: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (stage-gating is the enforcement mechanism for models)
+- ENABLES: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] (the PM track model that structures work items)
+- ENABLES: [[llm-wiki-pattern|LLM Wiki Pattern]] (the knowledge track model for wiki-based knowledge management)
+- ENABLES: [[second-brain-architecture|Second Brain Architecture]] (the knowledge track operates within the second brain structure)
+- BUILDS ON: [[progressive-distillation|Progressive Distillation]] (maturity progression is a model within the knowledge track)
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]] (the ecosystem is the highest-level instance of the framework)
+- FEEDS INTO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (PM track methodology feeds backlog structure)
+- CONTAINS: [[model-composition-rules|Model Composition Rules]] (formal composition patterns: sequential, nested, conditional, parallel)
+- CONTAINS: [[methodology-adoption-guide|Methodology Adoption Guide]] (4-tier adoption from read to enforce)
+- CONTAINS: [[methodology-evolution-protocol|Methodology Evolution Protocol]] (evidence-driven versioned improvement)
+- CONTAINS: [[artifact-chains-by-model|Artifact Chains by Methodology Model]] (full chains for all 9 models)
+- CONTAINS: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] (8 patterns for agent compliance)
+- CONTAINS: [[enforcement-hook-patterns|Enforcement Hook Patterns]] (4 hook types for infrastructure enforcement)
+- IMPLEMENTS: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (raw/notes/2026-04-09-user-directive-raw-idea-flow-patterns-standards.md)
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[Execution Modes and End Conditions]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Spec-Driven Development]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Task Lifecycle Stage-Gating]]
-[[Backlog Hierarchy Rules]]
-[[LLM Wiki Pattern]]
-[[Second Brain Architecture]]
-[[Progressive Distillation]]
-[[Four-Project Ecosystem]]
-[[Wiki Backlog Pattern]]
-[[Model Composition Rules]]
-[[Methodology Adoption Guide]]
-[[Methodology Evolution Protocol]]
-[[Artifact Chains by Methodology Model]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Artifact Type System]]
-[[Concept Page Standards]]
-[[Decision: Methodology Framework Design Decisions]]
-[[Decision: Quality Tier Operational Decisions]]
-[[E003 Artifact Type System — Design Document]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Artifact Taxonomy]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Methodology Is a Framework, Not a Fixed Pipeline]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology System Map]]
-[[Model: Methodology]]
-[[Models Are Built in Layers, Not All at Once]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Portable Methodology Engine]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-[[The Agent Must Practice What It Documents]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[spec-driven-development|Spec-Driven Development]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[progressive-distillation|Progressive Distillation]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[model-composition-rules|Model Composition Rules]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[concept-page-standards|Concept Page Standards]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+[[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]
+[[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-system-map|Methodology System Map]]
+[[model-methodology|Model — Methodology]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]

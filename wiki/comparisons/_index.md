@@ -6,10 +6,10 @@ Structured side-by-side evaluations with comparison matrices and decision criter
 
 | Comparison | What It Evaluates |
 |-----------|------------------|
-| [[LLM Wiki vs RAG]] | Wiki navigation vs vector search — scale boundary, hybrid path |
-| [[Agentic Search vs Vector Search]] | When agent-driven search outperforms embedding similarity |
-| [[Skills Architecture Patterns]] | Claude Code vs Obsidian vs NotebookLM skill ecosystems |
-| [[Cross-Domain Patterns]] | 6 patterns that recur across independent systems — the first-principles layer |
+| [[llm-wiki-vs-rag|LLM Wiki vs RAG]] | Wiki navigation vs vector search — scale boundary, hybrid path |
+| [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]] | When agent-driven search outperforms embedding similarity |
+| [[skills-architecture-patterns|Skills Architecture Patterns]] | Claude Code vs Obsidian vs NotebookLM skill ecosystems |
+| [[cross-domain-patterns|Cross-Domain Patterns]] | 6 patterns that recur across independent systems — the first-principles layer |
 
 ## Pages
 

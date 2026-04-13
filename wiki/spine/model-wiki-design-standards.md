@@ -1,5 +1,7 @@
 ---
-title: "Wiki Design Standards — What Good Styling Looks Like"
+title: Wiki Design Standards — What Good Styling Looks Like
+aliases:
+  - "Wiki Design Standards — What Good Styling Looks Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -16,7 +18,7 @@ tags: [wiki-design, standards, styling, callouts, examples, gold-standard, anti-
 
 ## Summary
 
-This page defines the quality bar for VISUAL DESIGN in the wiki. Where [[Model: Wiki Design]] defines the system (callout vocabulary, formatting contexts, layout patterns), this page shows what GOOD looks like — and it does so by BEING what good looks like. ==Every technique documented on this page is demonstrated by this page.== That is the contract. If a technique doesn't appear here in its natural form, it hasn't earned its place in the standard.
+This page defines the quality bar for VISUAL DESIGN in the wiki. Where [[model-wiki-design|Model — Wiki Design]] defines the system (callout vocabulary, formatting contexts, layout patterns), this page shows what GOOD looks like — and it does so by BEING what good looks like. ==Every technique documented on this page is demonstrated by this page.== That is the contract. If a technique doesn't appear here in its natural form, it hasn't earned its place in the standard.
 
 ## Key Insights
 
@@ -32,7 +34,7 @@ This page defines the quality bar for VISUAL DESIGN in the wiki. Where [[Model: 
 
 ### The Transformation — Why Styling Exists
 
-Here is the same content in three forms. This is a real entry from [[Model: Methodology]]'s catalog.
+Here is the same content in three forms. This is a real entry from [[model-methodology|Model — Methodology]]'s catalog.
 
 > [!example]- **Version 1: Raw markdown** (click to see the problem)
 > ```markdown
@@ -98,39 +100,39 @@ The 8 callout types are not interchangeable. Each has a semantic purpose, a colo
 >
 > This callout itself IS the example. It introduces the info type, provides its definition, and gives context. The blue color signals "neutral information" — no action required, just understanding.
 >
-> **Used in**: [[Model: Wiki Design]] emphasis hierarchy reference card, [[Model: Methodology]] model headers.
+> **Used in**: [[model-wiki-design|Model — Wiki Design]] emphasis hierarchy reference card, [[model-methodology|Model — Methodology]] model headers.
 
 > [!abstract] **`[!abstract]` — Conditions and summaries** — Teal
 > Use for distilled essence — selection conditions, preconditions, executive summaries, TL;DRs. "Here is when this applies."
 >
-> **Used in**: [[Model: Methodology]] — every model catalog entry has `[!abstract] Selected when` stating its trigger conditions.
+> **Used in**: [[model-methodology|Model — Methodology]] — every model catalog entry has `[!abstract] Selected when` stating its trigger conditions.
 
 > [!tip] **`[!tip]` — Guidance and best practices** — Cyan
 > Use for actionable advice — what to DO with the information. Design insights, recommendations, heuristics. "Here is something useful to apply."
 >
-> **Used in**: [[Model: Methodology]] — "Why it stops at design" tips explain non-obvious design choices after model entries.
+> **Used in**: [[model-methodology|Model — Methodology]] — "Why it stops at design" tips explain non-obvious design choices after model entries.
 
 > [!warning] **`[!warning]` — Cautions and anti-patterns** — Orange
 > Use for things that can go WRONG. Misuse patterns, common mistakes, dangerous assumptions. "Be careful here."
 >
-> **Used in**: [[Model: Wiki Design]] — structural anti-patterns, callout anti-patterns, emphasis soup warning.
+> **Used in**: [[model-wiki-design|Model — Wiki Design]] — structural anti-patterns, callout anti-patterns, emphasis soup warning.
 
 > [!example]- **`[!example]-` — Real instances and demonstrations** — Purple (always foldable)
 > Use for concrete instances from the ecosystem. ==Always foldable== (`-` suffix) — collapsed for scanning, expandable for proof. "Here is evidence."
 >
 > **Why always foldable**: Examples are PROOF, not primary content. A page with 9 models and 9 expanded examples is 9x too long to scan. Folded, the 9 model headers are a scannable catalog. The reader expands only the one they need.
 >
-> **Used in**: Every model catalog entry in [[Model: Methodology]], every worked example in model selection.
+> **Used in**: Every model catalog entry in [[model-methodology|Model — Methodology]], every worked example in model selection.
 
 > [!success] **`[!success]` — Verified outcomes and confirmed facts** — Green
 > Use for things that are PROVEN — selection outcomes, test results, validated decisions. "This is verified."
 >
-> **Used in**: [[Model: Methodology]] model selection — `[!success] Result → Research model` confirms which model was selected after condition evaluation.
+> **Used in**: [[model-methodology|Model — Methodology]] model selection — `[!success] Result → Research model` confirms which model was selected after condition evaluation.
 
 > [!bug]- **`[!bug]-` — Failures and incidents** — Red (always foldable)
 > Use for real failures from operation. What happened, how it was found, what the fix was. Always foldable — failures are reference material, not primary reading.
 >
-> **Used in**: [[Model: Methodology]] "What Goes Wrong" — 7 bugs, each a `[!bug]-` with title showing the design input and version bump. Scannable as a list, expandable per bug.
+> **Used in**: [[model-methodology|Model — Methodology]] "What Goes Wrong" — 7 bugs, each a `[!bug]-` with title showing the design input and version bump. Scannable as a list, expandable per bug.
 
 > [!question] **`[!question]` — Open items and unresolved questions** — Yellow
 > Use for genuinely unresolved questions that need research or testing. "This is not yet answered."
@@ -195,7 +197,7 @@ A bare table floating in prose looks like data. A table inside `[!info]` looks l
 > | 5 | `` `code` `` | `Technical reference` | Files, commands, field values |
 > | 6 (lowest) | plain text | Normal prose | Everything else |
 
-That table above is from [[Model: Wiki Design]]. Without the `[!info]` wrapper, it would be indistinguishable from a one-time comparison. Inside the blue callout, it reads as "this is reference material you should internalize." The callout provides semantic framing — it tells the reader HOW to read the table.
+That table above is from [[Model — Wiki Design]]. Without the `[!info]` wrapper, it would be indistinguishable from a one-time comparison. Inside the blue callout, it reads as "this is reference material you should internalize." The callout provides semantic framing — it tells the reader HOW to read the table.
 
 > [!example]- **The markdown that produces a reference card**
 > ```markdown
@@ -239,14 +241,14 @@ The `[!example]-` provides context (the condition evaluation table). The nested 
 
 All 6 emphasis levels working together in one passage. This is from the description of the Feature Development model:
 
-> The **Feature Development** model uses 5 stages: `document` → `design` → `scaffold` → `implement` → `test`. It is selected when *the solution isn't already known* and the task_type is `epic`, `module`, or `refactor`. ==Stage boundaries are enforced, not suggested== — the `scaffold` stage FORBIDS business logic (see [[Model: Methodology]], Bug 5). The model traces to OpenArms' first autonomous agent run, where 7 bugs in one day hardened every stage boundary.
+> The **Feature Development** model uses 5 stages: `document` → `design` → `scaffold` → `implement` → `test`. It is selected when *the solution isn't already known* and the task_type is `epic`, `module`, or `refactor`. ==Stage boundaries are enforced, not suggested== — the `scaffold` stage FORBIDS business logic (see [[model-methodology|Model — Methodology]], Bug 5). The model traces to OpenArms' first autonomous agent run, where 7 bugs in one day hardened every stage boundary.
 
 **What each level does in that passage:**
 - **Bold** marks key terms: **Feature Development** — the name you need to recognize
 - `Code` marks technical values: `document`, `scaffold`, `epic` — things you'd type in a config file
 - *Italic* adds stress: *the solution isn't already known* — emphasis within prose, not a key term
 - ==Highlight== marks the critical rule: ==Stage boundaries are enforced, not suggested== — the must-not-miss takeaway
-- [[Wikilinks]] connect: [[Model: Methodology]] — follow for depth
+- `[[Wikilinks]]` connect: [[model-methodology|Model — Methodology]] — follow for depth
 - Plain text carries the narrative between emphasis points
 
 > [!bug]- **Anti-pattern: emphasis soup**
@@ -260,7 +262,7 @@ All 6 emphasis levels working together in one passage. This is from the descript
 
 Complete layout patterns from real pages in this wiki. Each demonstrates how a different page type achieves visual structure.
 
-> [!example]- **Model catalog entry** — from [[Model: Methodology]]
+> [!example]- **Model catalog entry** — from [[model-methodology|Model — Methodology]]
 > The standard for presenting a named methodology model:
 >
 > 1. `> [!info]` — **Blue header** with stage overview + purpose. Reader sees "Feature Development: document → design → scaffold → implement → test" and knows WHAT this is in 2 seconds.
@@ -271,7 +273,7 @@ Complete layout patterns from real pages in this wiki. Each demonstrates how a d
 >
 > 9 models follow this exact pattern. The reader scans all 9 by reading info headers. Dive deep by expanding any example.
 
-> [!example]- **Lesson page** — from [[CLI Tools Beat MCP for Token Efficiency]]
+> [!example]- **Lesson page** — from [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
 > The gold-standard lesson (122 lines, 9 relationships):
 >
 > 1. **Summary** — the lesson in ONE actionable sentence. "CLI tools paired with skill files consistently outperform MCP server integrations on token cost and output accuracy."
@@ -283,7 +285,7 @@ Complete layout patterns from real pages in this wiki. Each demonstrates how a d
 >
 > **The bar**: Evidence section needs ≥3 independent sources. If only one source, it's an observation, not a lesson. Insight explains the MECHANISM (why), not just the observation (what).
 
-> [!example]- **Decision page** — from [[Decision: MCP vs CLI for Tool Integration]]
+> [!example]- **Decision page** — from [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
 > The gold-standard decision (121 lines, 9 relationships):
 >
 > 1. **Decision** — ONE clear statement. "Default to CLI+Skills for project-internal tooling. Use MCP for external service bridges."
@@ -294,7 +296,7 @@ Complete layout patterns from real pages in this wiki. Each demonstrates how a d
 >
 > **The bar**: ≥2 alternatives with concrete rejection reasons. Rationale references specific evidence, not general reasoning. Reversibility is honest.
 
-> [!example]- **Pattern page** — from [[Scaffold → Foundation → Infrastructure → Features]]
+> [!example]- **Pattern page** — from [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 > The gold-standard pattern (176 lines, 13 relationships):
 >
 > 1. **Summary** — names the 4 stages with exit criteria in one paragraph.
@@ -323,7 +325,7 @@ Each anti-pattern shown as it appears in the wild, then fixed.
 >
 > Colors carry meaning. Blue = neutral context. Red = failure. Green = verified. When a reader sees green, they trust the content is confirmed. A green callout around an unverified claim is a lie in color.
 >
-> **Fix:** Match type to purpose per the callout vocabulary in [[Model: Wiki Design]].
+> **Fix:** Match type to purpose per the callout vocabulary in [[model-wiki-design|Model — Wiki Design]].
 
 > [!bug]- **Non-foldable long examples**
 > A 30-line real instance expanded inline, blocking the page flow. The reader scrolls past it to reach the next section. Context is lost, flow is broken.
@@ -439,29 +441,29 @@ If any type were missing, the page would fail its own standard. ==This page demo
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Wiki Design]]
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Model: Methodology]] (first page to demonstrate all callout patterns)
-- RELATES TO: [[The Agent Must Practice What It Documents]]
-- RELATES TO: [[CLI Tools Beat MCP for Token Efficiency]] (lesson layout reference)
-- RELATES TO: [[Decision: MCP vs CLI for Tool Integration]] (decision layout reference)
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]] (pattern layout reference)
+- BUILDS ON: [[model-wiki-design|Model — Wiki Design]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-methodology|Model — Methodology]] (first page to demonstrate all callout patterns)
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- RELATES TO: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] (lesson layout reference)
+- RELATES TO: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] (decision layout reference)
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (pattern layout reference)
 
 ## Backlinks
 
-[[Model: Wiki Design]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Methodology]]
-[[The Agent Must Practice What It Documents]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
-[[Standards Must Preach by Example]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology|Model — Methodology]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]

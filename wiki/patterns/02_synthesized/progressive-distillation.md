@@ -1,5 +1,7 @@
 ---
-title: "Progressive Distillation"
+title: Progressive Distillation
+aliases:
+  - "Progressive Distillation"
 type: pattern
 domain: knowledge-systems
 layer: 5
@@ -10,29 +12,25 @@ derived_from:
   - "Second Brain Architecture"
   - "Knowledge Evolution Pipeline"
 instances:
-  - page: "Knowledge Evolution Pipeline"
-    context: "Six-layer wiki architecture (raw → seed → growing → mature → canonical) with deterministic scoring engine that promotes pages through maturity layers."
-  - page: "Second Brain Architecture"
-    context: "PARA progressive summarization (raw → highlights → bold → summary) and Zettelkasten note lifecycle (fleeting → literature → permanent) both instantiate the pattern."
-  - page: "NotebookLM"
-    context: "Source → research → artifact pipeline: raw source files loaded into notebook, synthesized into grounded research, then generated as 10 artifact types."
-  - page: "Research Wiki"
-    context: "The wiki itself: raw/ → sources/ → domains/ → lessons/ → patterns/ → decisions/. Six layers, each qualitatively different from the previous."
+  - {'page': 'Knowledge Evolution Pipeline', 'context': 'Six-layer wiki architecture (raw → seed → growing → mature → canonical) with deterministic scoring engine that promotes pages through maturity layers.'}
+  - {'page': 'Second Brain Architecture', 'context': 'PARA progressive summarization (raw → highlights → bold → summary) and Zettelkasten note lifecycle (fleeting → literature → permanent) both instantiate the pattern.'}
+  - {'page': 'NotebookLM', 'context': 'Source → research → artifact pipeline: raw source files loaded into notebook, synthesized into grounded research, then generated as 10 artifact types.'}
+  - {'page': 'Research Wiki', 'context': 'The wiki itself: raw/ → sources/ → domains/ → lessons/ → patterns/ → decisions/. Six layers, each qualitatively different from the previous.'}
 created: 2026-04-08
 updated: 2026-04-10
 sources:
   - id: src-second-brain-research
     type: article
     file: raw/articles/second-brain-pkm-research.md
-    title: "Second Brain / PKM Research"
+    title: Second Brain / PKM Research
   - id: src-zettelkasten-basb
     type: article
-    url: "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
-    title: "Combining Zettelkasten and Building a Second Brain"
+    url: https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/
+    title: Combining Zettelkasten and Building a Second Brain
   - id: src-pipeline-tooling
     type: documentation
     file: tools/pipeline.py
-    title: "Wiki Pipeline Tool — evolve command"
+    title: Wiki Pipeline Tool — evolve command
 tags: [progressive-distillation, knowledge-systems, maturity, zettelkasten, para, synthesis, second-brain, evolution, density, distillation]
 ---
 
@@ -98,7 +96,7 @@ The value compounds at each layer: a well-distilled decision page is denser in a
 > This is a concept page that DESCRIBES a claim. It is not distilled — it is restated.
 
 > [!example]- **After: lesson page (Layer 4) — distilled, multi-source, actionable**
-> [[CLI Tools Beat MCP for Token Efficiency]] (122 lines): Summary states the lesson in one actionable sentence. Context lists 5 specific trigger conditions. Insight explains the MECHANISM (schema tokens displacing task context — "context pollution"). Evidence has 8 discrete items from 4 independent sources with data ("12x cost differential", "98% reduction", "3x more features"). Applicability names 4 domains + 4 counterexamples. CONTRADICTS relationship challenges the default assumption.
+> [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] (122 lines): Summary states the lesson in one actionable sentence. Context lists 5 specific trigger conditions. Insight explains the MECHANISM (schema tokens displacing task context — "context pollution"). Evidence has 8 discrete items from 4 independent sources with data ("12x cost differential", "98% reduction", "3x more features"). Applicability names 4 domains + 4 counterexamples. CONTRADICTS relationship challenges the default assumption.
 >
 > This is a lesson that TEACHES a principle. The transformation from concept to lesson added: mechanism explanation (WHY not just WHAT), convergent evidence (4 sources not 1), measured data (12x, not "more efficient"), honest boundaries (when MCP still wins), and actionability (the reader can DECIDE after reading).
 
@@ -167,39 +165,39 @@ Three-layer distillation in a content generation context: raw sources (uploaded 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Second Brain Architecture]]
-- DERIVED FROM: [[Knowledge Evolution Pipeline]]
-- IMPLEMENTS: [[Memory Lifecycle Management]]
-- RELATES TO: [[PARA Methodology]]
-- RELATES TO: [[Zettelkasten Methodology]]
-- ENABLES: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[NotebookLM]]
-- BUILDS ON: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
+- DERIVED FROM: [[second-brain-architecture|Second Brain Architecture]]
+- DERIVED FROM: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- IMPLEMENTS: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[para-methodology|PARA Methodology]]
+- RELATES TO: [[zettelkasten-methodology|Zettelkasten Methodology]]
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- BUILDS ON: [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Memory Lifecycle Management]]
-[[PARA Methodology]]
-[[Zettelkasten Methodology]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[NotebookLM]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Methodology Framework]]
-[[Model: Knowledge Evolution]]
-[[Model: SFIF and Architecture]]
-[[Model: Second Brain]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Wiki Backlog Pattern]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[para-methodology|PARA Methodology]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[notebooklm|NotebookLM]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[methodology-framework|Methodology Framework]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[model-second-brain|Model — Second Brain]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]

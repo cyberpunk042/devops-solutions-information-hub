@@ -1,5 +1,7 @@
 ---
-title: "Methodology Standards Initiative — Gap Analysis"
+title: Methodology Standards Initiative — Gap Analysis
+aliases:
+  - "Methodology Standards Initiative — Gap Analysis"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -288,35 +290,35 @@ Systematic identification of gaps between what the methodology standards initiat
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
-- FEEDS INTO: [[Methodology Framework]]
-- FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[Standards Must Preach by Example]]
-- RELATES TO: [[Models Are Systems, Not Documents]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- ENABLES: [[Model: Quality and Failure Prevention]]
-- ENABLES: [[Model: Skills, Commands, and Hooks]]
+- BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+- FEEDS INTO: [[methodology-framework|Methodology Framework]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[standards-must-preach-by-example|Standards Must Preach by Example]]
+- RELATES TO: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- ENABLES: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- ENABLES: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 
 ## Backlinks
 
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Standards Must Preach by Example]]
-[[Models Are Systems, Not Documents]]
-[[Plan Execute Review Cycle]]
-[[Model: Quality and Failure Prevention]]
-[[Model: Skills, Commands, and Hooks]]
-[[Agent Compliance Framework]]
-[[Artifact Type System]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Portable Methodology Engine]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]

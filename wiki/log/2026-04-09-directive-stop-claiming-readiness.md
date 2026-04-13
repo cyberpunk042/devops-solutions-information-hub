@@ -1,5 +1,7 @@
 ---
-title: "Stop Claiming Readiness Without Proof"
+title: Stop Claiming Readiness Without Proof
+aliases:
+  - "Stop Claiming Readiness Without Proof"
 type: note
 domain: log
 note_type: directive
@@ -40,8 +42,8 @@ The agent ran a "readiness validation" that counted files and printed checkmarks
 
 ## Relationships
 
-- FEEDS INTO: [[Models Are Built in Layers, Not All at Once]]
+- FEEDS INTO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 
 ## Backlinks
 
-[[Models Are Built in Layers, Not All at Once]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]

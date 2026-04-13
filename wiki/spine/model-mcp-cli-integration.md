@@ -1,5 +1,8 @@
 ---
-title: "Model: MCP and CLI Integration"
+title: Model — MCP and CLI Integration
+aliases:
+  - "Model — MCP and CLI Integration"
+  - "Model: MCP and CLI Integration"
 type: concept
 domain: cross-domain
 layer: spine
@@ -7,25 +10,16 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: src-playwright-cli-vs-mcp
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=nN5R9DFYsXY"
+    url: https://www.youtube.com/watch?v=nN5R9DFYsXY
     title: "Claude Code + Playwright CLI: Automate QA with Less Tokens"
-  - id: src-claude-code-accuracy-tips
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
-  - id: src-harness-engineering-article
-    type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
 tags: [mcp, cli, integration, model, token-efficiency, tool-integration, playwright, sandbox, spine, context-management]
 ---
 
-# Model: MCP and CLI Integration
-
+# Model — MCP and CLI Integration
 ## Summary
 
 The MCP and CLI Integration model resolves one of the most consequential architectural decisions in LLM agent design: how to expose external tools to an agent without degrading its context window. MCP servers load all tool schemas at session startup (eager). CLI tools paired with skills load on demand (deferred). A third approach — the context-mode sandbox — isolates heavy operations in a subagent with a clean context window. ==Empirically, CLI produces a 12x token cost differential for operational tooling. The decision is resolved: CLI+Skills default, MCP for external bridges, sandbox for heavy operations.==
@@ -74,7 +68,7 @@ The clearest empirical validation of the CLI-over-MCP decision.
 >
 > **Result:** 12x fewer tokens with CLI. Accuracy equivalent or better — the model wasn't operating in a degraded context state.
 >
-> **Counter-case:** In interactive visual development (designer iterating on component appearance), MCP's always-available property makes tight feedback loops faster. The 12x differential is the default for QA automation; MCP is correct for interactive visual iteration. See [[Synthesis: Playwright MCP for Visual Development Testing]].
+> **Counter-case:** In interactive visual development (designer iterating on component appearance), MCP's always-available property makes tight feedback loops faster. The 12x differential is the default for QA automation; MCP is correct for interactive visual iteration. See [[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]].
 
 ---
 
@@ -111,7 +105,7 @@ The clearest empirical validation of the CLI-over-MCP decision.
 
 ---
 
-### The [[Context-Aware Tool Loading]] Pattern
+### The [[context-aware-tool-loading|Context-Aware Tool Loading]] Pattern
 
 The MCP vs CLI decision generalizes to any information entering an agent's context:
 
@@ -165,15 +159,15 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Decision: MCP vs CLI for Tool Integration]] | L6 | The resolved decision — CLI default, MCP for external bridges |
-| [[CLI Tools Beat MCP for Token Efficiency]] | L4 | The lesson — 12x measured differential, structural mechanism |
-| [[Context-Aware Tool Loading]] | L5 | The generalized pattern — eager/deferred/external |
-| [[MCP Integration Architecture]] | L2 | MCP server design, tool registration, schema management |
-| [[Claude Code Context Management]] | L2 | Context discipline — the constraint MCP/CLI choices optimize for |
-| [[Harness Engineering]] | L2 | Context-mode sandbox pattern for isolated heavy operations |
-| [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]] | L1 | The primary evidence — 10-step QA test comparison |
-| [[Synthesis: Playwright MCP for Visual Development Testing]] | L1 | The counter-evidence — when MCP wins for interactive visual iteration |
-| [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] | L1 | The sandbox evidence — 98% context saving |
+| [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] | L6 | The resolved decision — CLI default, MCP for external bridges |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | L4 | The lesson — 12x measured differential, structural mechanism |
+| [[context-aware-tool-loading|Context-Aware Tool Loading]] | L5 | The generalized pattern — eager/deferred/external |
+| [[mcp-integration-architecture|MCP Integration Architecture]] | L2 | MCP server design, tool registration, schema management |
+| [[claude-code-context-management|Claude Code Context Management]] | L2 | Context discipline — the constraint MCP/CLI choices optimize for |
+| [[harness-engineering|Harness Engineering]] | L2 | Context-mode sandbox pattern for isolated heavy operations |
+| [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]] | L1 | The primary evidence — 10-step QA test comparison |
+| [[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]] | L1 | The counter-evidence — when MCP wins for interactive visual iteration |
+| [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]] | L1 | The sandbox evidence — 98% context saving |
 
 ---
 
@@ -181,9 +175,9 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential is structural (eager vs deferred loading). Default to CLI for operational tasks. |
-| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills' zero-baseline-cost property is what makes CLI+Skills viable — the skill teaching the CLI tool costs nothing until invoked. |
-| [[Context Management Is the Primary LLM Productivity Lever]] | The MCP vs CLI decision IS a context management decision. Every MCP server connection is a context budget choice. |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential is structural (eager vs deferred loading). Default to CLI for operational tasks. |
+| [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills' zero-baseline-cost property is what makes CLI+Skills viable — the skill teaching the CLI tool costs nothing until invoked. |
+| [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]] | The MCP vs CLI decision IS a context management decision. Every MCP server connection is a context budget choice. |
 
 ---
 
@@ -228,6 +222,10 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 > - Whether to use the context-mode sandbox (depends on whether heavy operations exist)
 > - MCP server tool count (the wiki has 17 — a project with 5 tools may expose all via MCP affordably)
 
+### Gateway Tools as Unified Interface (NEW)
+
+The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstrates the dual-scope principle: `--wiki-root` targets a project, `--brain` targets the second brain, auto-detection finds both. MCP server extension (E015) will expose gateway operations as MCP tools. See [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]].
+
 ## Open Questions
 
 > [!question] **At what MCP server count does schema overhead measurably degrade accuracy?**
@@ -245,30 +243,30 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[CLI Tools Beat MCP for Token Efficiency]]
-- BUILDS ON: [[Context-Aware Tool Loading]]
-- BUILDS ON: [[Decision: MCP vs CLI for Tool Integration]]
-- BUILDS ON: [[MCP Integration Architecture]]
-- RELATES TO: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Model: Claude Code]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[Claude Code Context Management]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
+- BUILDS ON: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- BUILDS ON: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- BUILDS ON: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+- BUILDS ON: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
 
 ## Backlinks
 
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[MCP Integration Architecture]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Claude Code]]
-[[Harness Engineering]]
-[[Claude Code Context Management]]
-[[Model: Ecosystem Architecture]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-claude-code|Model — Claude Code]]
+[[harness-engineering|Harness Engineering]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[model-ecosystem|Model — Ecosystem Architecture]]

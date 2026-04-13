@@ -1,5 +1,7 @@
 ---
-title: "Spec-Driven Development"
+title: Spec-Driven Development
+aliases:
+  - "Spec-Driven Development"
 type: concept
 layer: 2
 maturity: growing
@@ -12,22 +14,22 @@ sources:
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
   - id: src-openarms-methodology-scan
     type: documentation
     file: raw/articles/openarms-methodology-scan.md
-    title: "OpenArms Methodology Scan — Deep Research Findings"
+    title: OpenArms Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
   - id: src-superpowers-end-of-vibe-coding
     type: youtube-transcript
     file: raw/articles/superpowers-end-of-vibe-coding.md
-    title: "Claude Code + SUPERPOWERS = The End of Vibe Coding? (Full Tutorial)"
+    title: Claude Code + SUPERPOWERS = The End of Vibe Coding? (Full Tutorial)
     ingested: 2026-04-08
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
     file: raw/articles/shanraisshan-claude-code-best-practice.md
-    title: "shanraisshan/claude-code-best-practice"
+    title: shanraisshan/claude-code-best-practice
     ingested: 2026-04-08
 tags: [spec-driven-development, bmad, spec-kit, superpowers, openfleet, planning, artifacts, immutable-checkpoints, multi-agent, sdlc, design-before-code, spec-to-code, phase-gating]
 ---
@@ -122,10 +124,10 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 ## Answered Open Questions
 
 > [!example]- Can spec quality be evaluated automatically?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Partially — lint checks can validate required fields (verbatim reference, target files, step mapping). Semantic completeness remains a human judgment, but structural completeness is automatable.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Partially — lint checks can validate required fields (verbatim reference, target files, step mapping). Semantic completeness remains a human judgment, but structural completeness is automatable.
 
 > [!example]- Minimum viable spec for small tasks?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Task type determines spec scope: `docs` = Document stage only, `spike` = Document + Design, `task` = Scaffold + Implement + Test. The tiered approach matches spec overhead to task complexity.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Task type determines spec scope: `docs` = Document stage only, `spike` = Document + Design, `task` = Scaffold + Implement + Test. The tiered approach matches spec overhead to task complexity.
 
 ### How This Connects — Navigate From Here
 
@@ -133,35 +135,35 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Design.md Pattern]] (spec artifacts as first-class project documents)
-- BUILDS ON: [[Rework Prevention]] (spec gates prevent the rework that occurs without them)
-- IMPLEMENTS: [[Plan Execute Review Cycle]] (spec is the output of the Plan phase and the input to Execute)
-- RELATES TO: [[Task Lifecycle Stage-Gating]] (spec-driven development requires stage enforcement to prevent spec-skipping)
-- RELATES TO: [[Agent Orchestration Patterns]] (BMAD uses multi-agent spec production)
-- RELATES TO: [[OpenFleet]] (primary source — SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)
-- RELATES TO: [[Harness Engineering]] (harness is the spec-driven development tooling layer)
-- FEEDS INTO: [[Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)
+- BUILDS ON: [[design-md-pattern|Design.md Pattern]] (spec artifacts as first-class project documents)
+- BUILDS ON: [[rework-prevention|Rework Prevention]] (spec gates prevent the rework that occurs without them)
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]] (spec is the output of the Plan phase and the input to Execute)
+- RELATES TO: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (spec-driven development requires stage enforcement to prevent spec-skipping)
+- RELATES TO: [[agent-orchestration-patterns|Agent Orchestration Patterns]] (BMAD uses multi-agent spec production)
+- RELATES TO: [[openfleet|OpenFleet]] (primary source — SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)
+- RELATES TO: [[harness-engineering|Harness Engineering]] (harness is the spec-driven development tooling layer)
+- FEEDS INTO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[Rework Prevention]]
-[[Plan Execute Review Cycle]]
-[[Task Lifecycle Stage-Gating]]
-[[Agent Orchestration Patterns]]
-[[OpenFleet]]
-[[Harness Engineering]]
-[[Wiki Backlog Pattern]]
-[[Backlog Hierarchy Rules]]
-[[Decision: Stage-Gate Operational Decisions]]
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Stage-Gate Methodology]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Task Type Artifact Matrix]]
+[[design-md-pattern|Design.md Pattern]]
+[[rework-prevention|Rework Prevention]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[openfleet|OpenFleet]]
+[[harness-engineering|Harness Engineering]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]

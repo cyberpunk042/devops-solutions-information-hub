@@ -1,5 +1,7 @@
 ---
-title: "NotebookLM Skills"
+title: NotebookLM Skills
+aliases:
+  - "NotebookLM Skills"
 type: concept
 layer: 2
 maturity: growing
@@ -11,15 +13,15 @@ updated: 2026-04-10
 sources:
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    url: "https://github.com/claude-world/notebooklm-skill"
+    url: https://github.com/claude-world/notebooklm-skill
     file: raw/articles/claude-worldnotebooklm-skill.md
-    title: "claude-world/notebooklm-skill"
+    title: claude-world/notebooklm-skill
     ingested: 2026-04-08
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    url: "https://github.com/PleasePrompto/notebooklm-skill"
+    url: https://github.com/PleasePrompto/notebooklm-skill
     file: raw/articles/pleasepromptonotebooklm-skill.md
-    title: "PleasePrompto/notebooklm-skill"
+    title: PleasePrompto/notebooklm-skill
     ingested: 2026-04-08
 tags: [notebooklm, claude-code, skills, mcp, browser-automation, content-pipeline, source-grounded]
 ---
@@ -94,35 +96,33 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-world-notebooklm-skill
-- DERIVED FROM: src-pleaseprompto-notebooklm-skill
-- EXTENDS: [[Claude Code Skills]]
-- BUILDS ON: [[NotebookLM]]
-- RELATES TO: [[Obsidian Skills Ecosystem]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- ENABLES: [[AI-Driven Content Pipeline]]
-- RELATES TO: [[Skills Architecture Patterns]]
+- DERIVED FROM: [[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+- DERIVED FROM: [[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[notebooklm|NotebookLM]]
+- RELATES TO: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
 
 ## Backlinks
 
-[[src-claude-world-notebooklm-skill]]
-[[src-pleaseprompto-notebooklm-skill]]
-[[Claude Code Skills]]
-[[NotebookLM]]
-[[Obsidian Skills Ecosystem]]
-[[LLM Wiki Pattern]]
-[[AI-Driven Content Pipeline]]
-[[Skills Architecture Patterns]]
-[[Agentic Search vs Vector Search]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[OpenClaw]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: PleasePrompto/notebooklm-skill]]
-[[Synthesis: claude-world/notebooklm-skill]]
-[[notebooklm-py CLI]]
+[[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+[[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+[[claude-code-skills|Claude Code Skills]]
+[[notebooklm|NotebookLM]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[openclaw|OpenClaw]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[notebooklm-py-cli|notebooklm-py CLI]]

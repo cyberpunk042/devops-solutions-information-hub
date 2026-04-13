@@ -1,5 +1,7 @@
 ---
-title: "Rework Prevention"
+title: Rework Prevention
+aliases:
+  - "Rework Prevention"
 type: concept
 layer: 2
 maturity: growing
@@ -11,13 +13,13 @@ updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [rework-prevention, planning, quality-gates, spec-compliance, agent-behavior, harness-engineering, openfleet, test-driven, context-management, cost-of-rework]
 ---
@@ -152,34 +154,34 @@ The Harness Engineering insight quantifies this: 5.5x planning overhead at the s
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- ENABLED BY: [[Always Plan Before Executing]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- ENABLED BY: [[always-plan-before-executing|Always Plan Before Executing]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[Always Plan Before Executing]]
-[[Agent Orchestration Patterns]]
-[[Harness Engineering]]
-[[OpenFleet]]
-[[Plan Execute Review Cycle]]
-[[Claude Code Best Practices]]
-[[Wiki Ingestion Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Decision: Execution Mode Edge Cases]]
-[[Decision: Task Type Edge Cases]]
-[[Immune System Rules]]
-[[Model: Quality and Failure Prevention]]
-[[Spec-Driven Development]]
-[[Task Lifecycle Stage-Gating]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[harness-engineering|Harness Engineering]]
+[[openfleet|OpenFleet]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
+[[task-type-edge-cases|Decision — Task Type Edge Cases]]
+[[immune-system-rules|Immune System Rules]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[spec-driven-development|Spec-Driven Development]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]

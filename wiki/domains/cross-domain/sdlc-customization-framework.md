@@ -1,37 +1,38 @@
 ---
-title: "SDLC Customization Framework — Phases, Scale, and Chain Selection"
+title: SDLC Customization Framework — Phases, Scale, and Chain Selection
+aliases:
+  - "SDLC Customization Framework — Phases, Scale, and Chain Selection"
 type: concept
 domain: cross-domain
 status: synthesized
-confidence: medium
+confidence: high
 maturity: seed
 created: 2026-04-12
 updated: 2026-04-12
-confidence: high
 sources:
   - id: operator-sdlc-vision
     type: directive
     file: raw/notes/2026-04-12-mega-vision-directive.md
-    description: "Operator vision for SDLC customization — project phases, scale tiers, three chain types"
+    description: Operator vision for SDLC customization — project phases, scale tiers, three chain types
   - id: methodology-model
     type: file
     file: wiki/config/methodology.yaml
-    description: "Current 9-model methodology system — foundation for SDLC customization"
+    description: Current 9-model methodology system — foundation for SDLC customization
   - id: epam-adlc
     type: article
-    url: "https://www.epam.com/insights/ai/blogs/agentic-development-lifecycle-explained"
+    url: https://www.epam.com/insights/ai/blogs/agentic-development-lifecycle-explained
     description: "EPAM: Agentic Development Lifecycle (ADLC) — new model for AI systems beyond traditional SDLC"
   - id: cmmi-levels
     type: article
-    url: "https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration"
+    url: https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration
     description: "CMMI: 5 maturity levels — Initial, Managed, Defined, Quantitatively Managed, Optimizing"
   - id: lean-startup-bml
     type: article
-    url: "https://theleanstartup.com/principles"
-    description: "Lean Startup Build-Measure-Learn cycle — validated learning, POC→MVP→production progression"
+    url: https://theleanstartup.com/principles
+    description: Lean Startup Build-Measure-Learn cycle — validated learning, POC→MVP→production progression
   - id: pwc-agentic-sdlc
     type: article
-    url: "https://www.pwc.com/m1/en/publications/2026/docs/future-of-solutions-dev-and-delivery-in-the-rise-of-gen-ai.pdf"
+    url: https://www.pwc.com/m1/en/publications/2026/docs/future-of-solutions-dev-and-delivery-in-the-rise-of-gen-ai.pdf
     description: "PwC 2026: Agentic SDLC in practice — autonomous software delivery"
 tags: [sdlc, customization, framework, phases, scale, chain-selection, methodology, project-lifecycle, cmmi, lean-startup, agentic-sdlc]
 ---
@@ -162,13 +163,13 @@ The models and chains are ORTHOGONAL dimensions. Every model × chain combinatio
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What identity determines my chain?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — 7 questions → chain selection |
-> | **What enforcement matches each chain?** | Simplified → L1 advisory. Default → L2 hooks+commands. Full → L3 immune system+fleet. See [[Three PM Levels — Wiki to Fleet to Full Tool]] |
-> | **How does readiness/progress work per chain?** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — both dimensions at every level, gates tighter on full chain |
-> | **What global standards validate this?** | CMMI Levels 1-5 map to our chains. Lean Startup BML maps to our phases. See [[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]] |
-> | **How does SFIF relate?** | [[Model: SFIF and Architecture]] — Skyscraper≈Full, Pyramid≈Default, Mountain≈Simplified. SFIF at product level: POC=Scaffold, MVP=Foundation, Staging=Infrastructure, Production=Features |
-> | **What methodology models work per chain?** | [[Model: Methodology]] — all 9 models work in all chains, but chain determines artifact depth per model |
-> | **Where is the backlog hierarchy?** | [[Backlog Hierarchy Rules]] — Milestone→Epic→Module→Task. Full chain uses all 4 levels. Simplified may skip milestones+modules. |
+> | **What identity determines my chain?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 questions → chain selection |
+> | **What enforcement matches each chain?** | Simplified → L1 advisory. Default → L2 hooks+commands. Full → L3 immune system+fleet. See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] |
+> | **How does readiness/progress work per chain?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — both dimensions at every level, gates tighter on full chain |
+> | **What global standards validate this?** | CMMI Levels 1-5 map to our chains. Lean Startup BML maps to our phases. See [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]] |
+> | **How does SFIF relate?** | [[model-sfif-architecture|Model — SFIF and Architecture]] — Skyscraper≈Full, Pyramid≈Default, Mountain≈Simplified. SFIF at product level: POC=Scaffold, MVP=Foundation, Staging=Infrastructure, Production=Features |
+> | **What methodology models work per chain?** | [[model-methodology|Model — Methodology]] — all 9 models work in all chains, but chain determines artifact depth per model |
+> | **Where is the backlog hierarchy?** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — Milestone→Epic→Module→Task. Full chain uses all 4 levels. Simplified may skip milestones+modules. |
 
 ## Open Questions
 
@@ -176,36 +177,38 @@ The models and chains are ORTHOGONAL dimensions. Every model × chain combinatio
 > Yes — per-task within a project default. A production project (Full chain default) doing a hotfix uses Hotfix model (2 stages, minimal process) — this IS simplified chain applied to one task. The methodology model already handles this. The project chain sets the DEFAULT; the model can override downward (never upward). Remaining: formalize the override rules in methodology.yaml.
 
 > [!question] How do chains map to the wiki's 4-tier adoption guide? **RESOLVED**
-> They're PARALLEL dimensions. Tiers = enforcement depth (read→configure→validate→enforce). Chains = process weight (simplified→default→full). Recommended pairings: Simplified+Tier1-2, Default+Tier2-3, Full+Tier3-4. See [[Methodology Adoption Guide]].
+> They're PARALLEL dimensions. Tiers = enforcement depth (read→configure→validate→enforce). Chains = process weight (simplified→default→full). Recommended pairings: Simplified+Tier1-2, Default+Tier2-3, Full+Tier3-4. See [[methodology-adoption-guide|Methodology Adoption Guide]].
 
 > [!question] What triggers a phase transition? **PARTIALLY RESOLVED**
-> POC→MVP: hypothesis validated, first external user. MVP→Staging: product-market fit, first SLA. Staging→Production: compliance met, rollback tested. See [[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]. Remaining: define measurable triggers specific to this ecosystem.
+> POC→MVP: hypothesis validated, first external user. MVP→Staging: product-market fit, first SLA. Staging→Production: compliance met, rollback tested. See [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]. Remaining: define measurable triggers specific to this ecosystem.
 
 > [!question] How does the research wiki itself select its chain? **RESOLVED**
-> Identity: type=system, domain=knowledge, phase=production, scale=medium (267 pages), pm_level=L1. Chain: Default. NOT Full (no sprint planning needed). NOT Simplified (267 pages need real quality standards). See [[Project Self-Identification Protocol — The Goldilocks Framework]].
+> Identity: type=system, domain=knowledge, phase=production, scale=medium (267 pages), pm_level=L1. Chain: Default. NOT Full (no sprint planning needed). NOT Simplified (267 pages need real quality standards). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]].
 
 ## Relationships
 
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Methodology Framework]]
-- RELATES TO: [[Skyscraper, Pyramid, Mountain]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Methodology Framework]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Methodology Adoption Guide]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[SDLC Rules and Structure — Customizable Project Lifecycle]]
-[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
+[[model-methodology|Model — Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
+[[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
+[[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

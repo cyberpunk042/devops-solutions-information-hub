@@ -2,12 +2,12 @@
 
 Structured failure analysis and convergence insights synthesized from real incidents, post-mortems, and cross-source pattern detection. Every lesson has a trigger, a finding, and an action.
 
-**Model:** [[Model: Quality and Failure Prevention]] | **Standards:** [[Quality Standards — What Good Failure Prevention Looks Like]]
+**Model:** [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] | **Standards:** [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 
 ### Start Here
 
-1. [[The Agent Must Practice What It Documents]] — The root failure lesson
-2. [[LLM-Maintained Wikis Outperform Static Documentation]] — The root convergence lesson
+1. [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] — The root failure lesson
+2. [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] — The root convergence lesson
 3. [[Agent Orchestration Is the Highest-Connected Concept in the Wiki]] — The most connected hub
 
 ### Failure Lessons
@@ -16,12 +16,12 @@ Hard-won rules from post-mortems and agent death analyses.
 
 | Lesson | Core finding |
 |--------|-------------|
-| [[The Agent Must Practice What It Documents]] | Documenting methodology without following it is the deepest failure |
-| [[Never Skip Stages Even When Told to Continue]] | "Get started" means the current stage, not "skip to the end" |
-| [[Never Synthesize from Descriptions Alone]] | A README about a format is not understanding the format |
-| [[Shallow Ingestion Is Systemic, Not Isolated]] | Subagents consistently read only ~60 lines of 300-1000+ line files |
-| [[Infrastructure Must Be Reproducible, Not Manual]] | Never manually create systemd/cron; build into reproducible tooling |
-| [[Models Are Built in Layers, Not All at Once]] | Models follow SFIF: scaffold, fill, iterate, finish |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | Documenting methodology without following it is the deepest failure |
+| [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] | "Get started" means the current stage, not "skip to the end" |
+| [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] | A README about a format is not understanding the format |
+| [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | Subagents consistently read only ~60 lines of 300-1000+ line files |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | Never manually create systemd/cron; build into reproducible tooling |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | Models follow SFIF: scaffold, fill, iterate, finish |
 
 ### Practice Lessons
 
@@ -29,10 +29,10 @@ Operational patterns that improve agent effectiveness.
 
 | Lesson | Core finding |
 |--------|-------------|
-| [[Always Plan Before Executing]] | Explicit plans before action produce dramatically better results |
-| [[CLI Tools Beat MCP for Token Efficiency]] | CLI + skill files outperform MCP for token efficiency |
-| [[Context Management Is the Primary LLM Productivity Lever]] | Context window management is the biggest productivity multiplier |
-| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | Extract, cross-reference, identify gaps, deepen — not one-shot |
+| [[always-plan-before-executing|Always Plan Before Executing]] | Explicit plans before action produce dramatically better results |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | CLI + skill files outperform MCP for token efficiency |
+| [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]] | Context window management is the biggest productivity multiplier |
+| [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]] | Extract, cross-reference, identify gaps, deepen — not one-shot |
 
 ### Convergence Lessons
 
@@ -40,14 +40,14 @@ Independent sources arriving at the same conclusion.
 
 | Lesson | Core finding |
 |--------|-------------|
-| [[LLM-Maintained Wikis Outperform Static Documentation]] | LLM maintenance with validation and quality gates beats static docs |
-| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | Bundled markdown packages are the dominant extension pattern |
-| [[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]] | Wiki navigation vs vector RAG is a false binary |
-| [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | Wikis without automated validation decay silently |
-| [[Obsidian as Knowledge Infrastructure Not Just Note-Taking]] | Obsidian is programmable knowledge infrastructure, not a markdown editor |
-| [[NotebookLM as Grounded Research Engine Not Just Note Storage]] | NotebookLM is a grounded research engine, not just note storage |
-| [[The Wiki Maintenance Problem Is Solved by LLM Automation]] | LLMs solve the maintenance burden that killed every previous wiki attempt |
-| [[Skill Specification Is the Key to Ecosystem Interoperability]] | Open specification roots make skills portable across platforms |
+| [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] | LLM maintenance with validation and quality gates beats static docs |
+| [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | Bundled markdown packages are the dominant extension pattern |
+| [[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]] | Wiki navigation vs vector RAG is a false binary |
+| [[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]] | Wikis without automated validation decay silently |
+| [[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]] | Obsidian is programmable knowledge infrastructure, not a markdown editor |
+| [[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]] | NotebookLM is a grounded research engine, not just note storage |
+| [[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]] | LLMs solve the maintenance burden that killed every previous wiki attempt |
+| [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]] | Open specification roots make skills portable across platforms |
 | [[Schema Is the Real Product — Not the Content]] | The schema file is the real product; content is generated from it |
 
 ### Domain Hubs
@@ -63,10 +63,10 @@ Lessons that synthesize an entire domain's structural position.
 ## Pages
 
 - [Agent Failure Taxonomy — Seven Classes of Behavioral Failure](03_validated/agent-failure-taxonomy-seven-classes-of-behavioral-failure.md) — After infrastructure enforcement solves stage boundary violations (75% → 0%), six classes of BEHAVIORAL failure remain
-- [Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki](03_validated/agent-orchestration-is-highest-connected-concept.md) — Agent Orchestration Patterns is the most inbound-linked concept in the ai-agents domain
+- [Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki](03_validated/agent-orchestration-is-highest-connected-concept.md) — Agent Orchestration Patterns is the most inbound-linked concept in the ai-agents domain
 - [Always Plan Before Executing](03_validated/always-plan-before-executing.md) — LLM agents produce dramatically better results when they produce an explicit plan before taking action — not as a sof...
 - [Automated Knowledge Validation Prevents Silent Wiki Decay](03_validated/automated-knowledge-validation-prevents-wiki-decay.md) — Wikis without automated validation decay silently: pages go stale, relationships break, orphaned concepts accumulate,...
-- [Lesson: Automation Is the Bridge Between Knowledge and Action](03_validated/automation-is-bridge-between-knowledge-and-action.md) — The automation domain occupies a distinct structural position in this wiki: it bridges what the knowledge-systems dom...
+- [Lesson — Automation Is the Bridge Between Knowledge and Action](03_validated/automation-is-bridge-between-knowledge-and-action.md) — The automation domain occupies a distinct structural position in this wiki: it bridges what the knowledge-systems dom...
 - [CLI Tools Beat MCP for Token Efficiency](03_validated/cli-tools-beat-mcp-for-token-efficiency.md) — When integrating external tools into LLM-powered workflows, CLI tools paired with skill files consistently outperform...
 - [Context Compaction Is a Reset Event](03_validated/context-compaction-is-a-reset-event.md) — When an LLM agent's context is compacted (summarized to reduce token count), all behavioral corrections accumulated d...
 - [Context Management Is the Primary LLM Productivity Lever](03_validated/context-management-is-primary-productivity-lever.md) — Across all sources analyzing Claude Code effectiveness — practitioner guides, harness engineering frameworks, accurac...
@@ -78,7 +78,7 @@ Lessons that synthesize an entire domain's structural position.
 - [Harness Ownership Converges Independently Across Projects](03_validated/harness-ownership-converges-independently-across-projects.md) — Three independent projects — OpenArms (solo agent, TypeScript), OpenFleet (10-agent fleet, Python), and the harness e...
 - [Infrastructure Enforcement Proves Instructions Fail](03_validated/infrastructure-enforcement-proves-instructions-fail.md) — Instruction-based agent enforcement (rules in CLAUDE
 - [Infrastructure Must Be Reproducible, Not Manual](03_validated/infrastructure-must-be-reproducible-not-manual.md) — The AI agent attempted to create a systemd service file by directly writing it with `cat >` instead of building the s...
-- [Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki](03_validated/knowledge-systems-is-foundational-domain.md) — The knowledge-systems domain is the only domain in this wiki where the wiki documents how it works
+- [Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki](03_validated/knowledge-systems-is-foundational-domain.md) — The knowledge-systems domain is the only domain in this wiki where the wiki documents how it works
 - [LLM-Maintained Wikis Outperform Static Documentation](03_validated/llm-maintained-wikis-outperform-static-documentation.md) — Having an LLM maintain a structured wiki — with validation, relationship discovery, quality gates, and index auto-mai...
 - [Methodology Is a Framework, Not a Fixed Pipeline](03_validated/methodology-is-a-framework-not-a-fixed-pipeline.md) — The Methodology model page collapsed the entire methodology framework into a single 5-stage pipeline (Document → Desi...
 - [Models Are Built in Layers, Not All at Once](03_validated/models-are-built-in-layers-not-all-at-once.md) — Building the 14 named models for this wiki followed the same SFIF pattern that the wiki documents as universal: scaff...
@@ -90,7 +90,7 @@ Lessons that synthesize an entire domain's structural position.
 - [New Content Must Integrate Into Existing Pages](03_validated/new-content-must-integrate-into-existing-pages.md) — Creating new wiki pages next to existing ones without weaving the new content INTO the existing high-traffic pages pr...
 - [NotebookLM as Grounded Research Engine Not Just Note Storage](03_validated/notebooklm-as-grounded-research-engine.md) — Three independent implementations of NotebookLM integrations (PleasePrompto, claude-world, and the notebooklm-py work...
 - [Obsidian as Knowledge Infrastructure Not Just Note-Taking](03_validated/obsidian-as-knowledge-infrastructure.md) — Multiple independent projects converge on Obsidian not as a markdown editor but as programmable knowledge infrastruct...
-- [Lesson: Schema Is the Real Product — Not the Content](03_validated/schema-is-the-real-product.md) — Karpathy's primary source document identifies the schema file (CLAUDE
+- [Lesson — Schema Is the Real Product — Not the Content](03_validated/schema-is-the-real-product.md) — Karpathy's primary source document identifies the schema file (CLAUDE
 - [Shallow Ingestion Is Systemic, Not Isolated](03_validated/shallow-ingestion-is-systemic-not-isolated.md) — Subagents consistently read only the first ~60 lines of raw files that were 300-1000+ lines long, due to the Read too...
 - [Skill Specification Is the Key to Ecosystem Interoperability](03_validated/skill-specification-is-key-to-interoperability.md) — When a skill definition format is rooted in an open specification rather than a proprietary platform, skills become p...
 - [Skills Architecture Is the Dominant LLM Extension Pattern](03_validated/skills-architecture-is-dominant-extension-pattern.md) — Skills — bundled markdown packages that combine instructions, context, scripts, and design guidance — have emerged as...
@@ -102,9 +102,9 @@ Lessons that synthesize an entire domain's structural position.
 - [Three Classes of Methodology Output](03_validated/three-classes-of-methodology-output.md) — Methodology execution produces three fundamentally different classes of output — artifacts, documents, and documentat...
 - [Universal Stages, Domain-Specific Artifacts](03_validated/universal-stages-domain-specific-artifacts.md) — The methodology's stage sequence (Document → Design → Scaffold → Implement → Test) is universal across all domains
 - [The Wiki Maintenance Problem Is Solved by LLM Automation](03_validated/wiki-maintenance-problem-solved-by-llm-automation.md) — Every personal wiki attempt before LLMs failed for the same reason: maintenance burden grew faster than value, and hu...
-- [Principle: Infrastructure Over Instructions for Process Enforcement](04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md) — For any process rule that can be checked at the tool-call level, infrastructure enforcement (hooks, commands, harness...
-- [Principle: Right Process for Right Context — The Goldilocks Imperative](04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md) — Process must adapt to context
-- [Principle: Structured Context Governs Agent Behavior More Than Content](04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md) — When instructing AI agents, the SHAPE of information (headers, tables, YAML blocks, callout types, MUST/MUST NOT list...
+- [Principle — Infrastructure Over Instructions for Process Enforcement](04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md) — For any process rule that can be checked at the tool-call level, infrastructure enforcement (hooks, commands, harness...
+- [Principle — Right Process for Right Context — The Goldilocks Imperative](04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md) — Process must adapt to context
+- [Principle — Structured Context Governs Agent Behavior More Than Content](04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md) — When instructing AI agents, the SHAPE of information (headers, tables, YAML blocks, callout types, MUST/MUST NOT list...
 
 ## Tags
 

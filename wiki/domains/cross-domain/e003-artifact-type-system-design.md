@@ -1,5 +1,7 @@
 ---
-title: "E003 Artifact Type System — Design Document"
+title: E003 Artifact Type System — Design Document
+aliases:
+  - "E003 Artifact Type System — Design Document"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -786,26 +788,26 @@ The validator already works. We don't rewrite it. We add layers:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Artifact Type System]] (E003)
-- BUILDS ON: [[E003 Artifact Type System — Requirements Spec]]
-- BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
-- RELATES TO: [[Methodology Framework]]
-- RELATES TO: [[Task Type Artifact Matrix]]
-- FEEDS INTO: [[Portable Methodology Engine]] (E004)
-- FEEDS INTO: [[Agent Compliance Framework]] (E005)
+- IMPLEMENTS: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- BUILDS ON: [[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+- BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+- RELATES TO: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- FEEDS INTO: [[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)
+- FEEDS INTO: [[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)
 
 ## Backlinks
 
-[[Artifact Type System]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology Framework]]
-[[Task Type Artifact Matrix]]
-[[Portable Methodology Engine]]
-[[Agent Compliance Framework]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-framework|Methodology Framework]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]

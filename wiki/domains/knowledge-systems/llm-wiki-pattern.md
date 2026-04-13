@@ -1,5 +1,7 @@
 ---
-title: "LLM Wiki Pattern"
+title: LLM Wiki Pattern
+aliases:
+  - "LLM Wiki Pattern"
 type: concept
 layer: 2
 maturity: growing
@@ -12,19 +14,19 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
 tags: [llm-wiki, knowledge-base, markdown, karpathy, second-brain, index-files, memex, schema, compounding-knowledge]
 ---
@@ -152,82 +154,79 @@ A practical advantage is radical simplicity. No databases, no embedding models, 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-claude-code-10x
-- DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[Memory Lifecycle Management]]
-- ENABLES: [[Wiki Knowledge Graph]]
-- ENABLES: [[Wiki Event-Driven Automation]]
-- USED BY: [[Obsidian Knowledge Vault]]
-- FEEDS INTO: [[LLM Knowledge Linting]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[NotebookLM]]
-- RELATES TO: [[Skills Architecture Patterns]]
-- RELATES TO: [[Agentic Search vs Vector Search]]
-- CONTRASTS WITH: [[LightRAG]]
-- USED BY: [[OpenFleet]]
-- ENABLED BY: [[Claude Code]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- ENABLES: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- USED BY: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- FEEDS INTO: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
+- RELATES TO: [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+- CONTRASTS WITH: [[lightrag|LightRAG]]
+- USED BY: [[openfleet|OpenFleet]]
+- ENABLED BY: [[claude-code|Claude Code]]
 
 ## Backlinks
 
-[[src-karpathy-claude-code-10x]]
-[[src-karpathy-llm-wiki-idea-file]]
-[[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki vs RAG]]
-[[Wiki Ingestion Pipeline]]
-[[Memory Lifecycle Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Event-Driven Automation]]
-[[Obsidian Knowledge Vault]]
-[[LLM Knowledge Linting]]
-[[Claude Code Context Management]]
-[[NotebookLM]]
-[[Skills Architecture Patterns]]
-[[Agentic Search vs Vector Search]]
-[[LightRAG]]
-[[OpenFleet]]
-[[Claude Code]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Claude Code Best Practices]]
-[[Context-Aware Tool Loading]]
-[[Cross-Domain Patterns]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Design.md Pattern]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Methodology Framework]]
-[[Model: LLM Wiki]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[NotebookLM Skills]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Obsidian CLI]]
-[[Obsidian Skills Ecosystem]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[Research Pipeline Orchestration]]
-[[Second Brain Architecture]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[Synthesis: kepano/obsidian-skills]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
-[[Wiki Backlog Pattern]]
-[[Zettelkasten Methodology]]
-[[notebooklm-py CLI]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[notebooklm|NotebookLM]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[lightrag|LightRAG]]
+[[openfleet|OpenFleet]]
+[[claude-code|Claude Code]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[design-md-pattern|Design.md Pattern]]
+[[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[methodology-framework|Methodology Framework]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[obsidian-cli|Obsidian CLI]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[para-methodology|PARA Methodology]]
+[[progressive-distillation|Progressive Distillation]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[notebooklm-py-cli|notebooklm-py CLI]]

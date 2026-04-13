@@ -1,5 +1,7 @@
 ---
-title: "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search"
+title: Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search
+aliases:
+  - "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search"
 type: lesson
 domain: knowledge-systems
 layer: 4
@@ -15,16 +17,8 @@ derived_from:
 sources:
   - id: src-lightrag-docs
     type: documentation
-    url: "https://github.com/HKUDS/LightRAG"
-    title: "LightRAG — Graph-Based RAG Framework"
-  - id: src-llm-wiki-v2-agentmemory
-    type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
-  - id: src-karpathy-llm-wiki-idea-file
-    type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
+    url: https://github.com/HKUDS/LightRAG
+    title: LightRAG — Graph-Based RAG Framework
 tags: [lightrag, graph-retrieval, hybrid-search, wiki-graph, knowledge-graph, rag, vector-search, bm25]
 ---
 
@@ -85,27 +79,27 @@ This lesson applies to:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[LightRAG]]
-- DERIVED FROM: [[LLM Wiki vs RAG]]
-- DERIVED FROM: [[Wiki Knowledge Graph]]
-- EXTENDS: [[LLM Wiki Pattern]]
-- BUILDS ON: [[LightRAG]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- FEEDS INTO: [[OpenFleet]]
+- DERIVED FROM: [[lightrag|LightRAG]]
+- DERIVED FROM: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- DERIVED FROM: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- EXTENDS: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- BUILDS ON: [[lightrag|LightRAG]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- FEEDS INTO: [[openfleet|OpenFleet]]
 - ENABLES: Wiki Knowledge Graph
 
 ## Backlinks
 
-[[LightRAG]]
-[[LLM Wiki vs RAG]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki Pattern]]
-[[OpenFleet]]
+[[lightrag|LightRAG]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[openfleet|OpenFleet]]

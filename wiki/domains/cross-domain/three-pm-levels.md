@@ -1,5 +1,7 @@
 ---
-title: "Three PM Levels — Wiki to Fleet to Full Tool"
+title: Three PM Levels — Wiki to Fleet to Full Tool
+aliases:
+  - "Three PM Levels — Wiki to Fleet to Full Tool"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -15,11 +17,11 @@ sources:
   - id: openfleet-orchestrator
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "OpenFleet orchestrator as L2 implementation — Mission Control, dispatch, immune system"
+    description: OpenFleet orchestrator as L2 implementation — Mission Control, dispatch, immune system
   - id: openarms-harness
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms harness as L1→L2 transition — standalone to enforced methodology"
+    description: OpenArms harness as L1→L2 transition — standalone to enforced methodology
 tags: [project-management, pm-levels, wiki-llm, fleet, plane, harness, sdlc, scalability, traceability]
 ---
 
@@ -80,18 +82,32 @@ Project management for AI-agent-driven work operates at three levels, each wrapp
 
 ---
 
-### Level 2: Fleet System (Orchestrated)
+### Level 2: Harness-Enforced (Single Agent or Small Team)
 
-> [!info] L2 Architecture (wraps L1)
+L2 comes in two forms depending on whether a harness or a full system provides enforcement:
+
+> [!info] L2 via Harness (OpenArms pattern — wraps ONE agent)
+>
+> | Component | Purpose | Enforcement |
+> |-----------|---------|-------------|
+> | Harness loop | Spawns agent sessions, dispatches tasks | Structural — agent doesn't control its own loop |
+> | Hooks | Pre/Post ToolUse shell scripts | Structural — blocks actions at tool level |
+> | Commands | /stage-complete, /task-done, /concern | Structural — harness validates before committing |
+> | Model-aware validator | Checks artifacts per stage per model | Structural — adapts per methodology model |
+>
+> The harness decides its own version at launch: v1 (basic loop), v2 (with enforcement), v3 (future: full SDLC). The PROJECT doesn't declare the version — the harness does based on its flags and capabilities.
+
+> [!info] L2 via Full System (OpenFleet pattern — orchestrates MANY agents)
 >
 > | Component | Purpose | Enforcement |
 > |-----------|---------|-------------|
 > | Orchestrator | 6-step deterministic cycle: security → doctor → contributions → approvals → dispatch → health | Structural — pure Python, no LLM in loop |
-> | Hooks | Pre/Post ToolUse shell scripts | Structural — blocks actions at tool level |
-> | Commands | /stage-complete, /task-done, /concern | Structural — harness validates before committing |
+> | MCP tool blocking | Tools refused per stage at server level | Structural — stronger than hooks |
 > | Immune system | 3-line defense: prevent → detect → correct | Active — 30s doctor cycle |
 > | Contribution gating | Cross-agent inputs required before work | Structural — dispatch blocked without contributions |
 > | Tier system | Context depth based on trust | Data-driven — approval rates control tiers |
+>
+> A full system wraps harnesses — each agent in the fleet may run under its own harness, and the orchestrator coordinates them. The system decides which agents run, in what mode, with what context depth.
 > | Mission Control | Kanban board, agent lifecycle, real-time state | Observability — full visibility into fleet state |
 
 **What L2 adds over L1:** Real-time enforcement (hooks, commands), behavioral detection (immune system), multi-agent coordination (contributions, dispatch), trust management (tiers), readiness gating (dispatch blocked until 99).
@@ -151,12 +167,12 @@ Project management for AI-agent-driven work operates at three levels, each wrapp
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What enforcement exists at each level?** | L1: [[CLAUDE.md Structural Patterns for Agent Compliance]]. L2: [[Enforcement Hook Patterns]] + [[Harness-Owned Loop — Deterministic Agent Execution]]. L3: + [[Three Lines of Defense — Immune System for Agent Quality]] |
-> | **What SDLC chain matches each level?** | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — L1=simplified, L2=default, L3=full |
-> | **How does the wiki serve all levels?** | L1: agent reads wiki pages. L2: harness queries wiki config. L3: Plane syncs with wiki state. All read from [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]] |
-> | **What tools serve each level?** | [[Wiki Gateway Tools — Unified Knowledge Interface]] — same gateway, adapted per PM level |
+> | **What enforcement exists at each level?** | L1: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]. L2: [[enforcement-hook-patterns|Enforcement Hook Patterns]] + [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]. L3: + [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
+> | **What SDLC chain matches each level?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — L1=simplified, L2=default, L3=full |
+> | **How does the wiki serve all levels?** | L1: agent reads wiki pages. L2: harness queries wiki config. L3: Plane syncs with wiki state. All read from [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] |
+> | **What tools serve each level?** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — same gateway, adapted per PM level |
 > | **What harness version maps here?** | v1→L1, v2→L2, v3→L3. See harness version table in this page. |
-> | **Goldilocks question** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — PM level is one of 7 identity dimensions |
+> | **Goldilocks question** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — PM level is one of 7 identity dimensions |
 
 ## Open Questions
 
@@ -171,31 +187,31 @@ Project management for AI-agent-driven work operates at three levels, each wrapp
 
 ## Relationships
 
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- BUILDS ON: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- RELATES TO: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- BUILDS ON: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
 
 ## Backlinks
 
-[[Backlog Hierarchy Rules]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Methodology Adoption Guide]]
-[[Model: Ecosystem Architecture]]
-[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
-[[Frontmatter Field Reference — Complete Parameter Documentation]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[SDLC Rules and Structure — Customizable Project Lifecycle]]
-[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
+[[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]

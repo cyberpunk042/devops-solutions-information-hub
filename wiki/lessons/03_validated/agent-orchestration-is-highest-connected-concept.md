@@ -1,5 +1,8 @@
 ---
-title: "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki"
+title: Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki
+aliases:
+  - "Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki"
+  - "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -16,16 +19,11 @@ sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
-  - id: src-harness-engineering-article
-    type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    title: OpenFleet — Local Project Documentation
 tags: [orchestration, ai-agents, hub-page, knowledge-graph, connectivity, cross-domain, openfleet, harness-engineering]
 ---
 
-# Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki
-
+# Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki
 ## Summary
 
 Agent Orchestration Patterns is the most inbound-linked concept in the ai-agents domain. It sits at the junction where OpenFleet's deterministic brain, Harness Engineering's 5-verb workflow, the Plan Execute Review Cycle pattern, and the Deterministic Shell LLM Core pattern all converge. Understanding this page is effectively a prerequisite for understanding the entire ai-agents domain and much of the automation domain that feeds from it.
@@ -76,27 +74,27 @@ The Research Pipeline Orchestration page answers its open question about paralle
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Agent Orchestration Patterns]]
-- DERIVED FROM: [[Plan Execute Review Cycle]]
-- DERIVED FROM: [[Deterministic Shell, LLM Core]]
-- RELATES TO: [[Agent Orchestration Patterns]]
-- FEEDS INTO: [[Plan Execute Review Cycle]]
-- FEEDS INTO: [[Deterministic Shell, LLM Core]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[MCP Integration Architecture]]
+- DERIVED FROM: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- DERIVED FROM: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- DERIVED FROM: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- RELATES TO: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- FEEDS INTO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- FEEDS INTO: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
 
 ## Backlinks
 
-[[Agent Orchestration Patterns]]
-[[Plan Execute Review Cycle]]
-[[Deterministic Shell, LLM Core]]
-[[Research Pipeline Orchestration]]
-[[MCP Integration Architecture]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[mcp-integration-architecture|MCP Integration Architecture]]

@@ -1,5 +1,7 @@
 ---
-title: "Extension Standards — What Good Skills, Commands, and Hooks Look Like"
+title: Extension Standards — What Good Skills, Commands, and Hooks Look Like
+aliases:
+  - "Extension Standards — What Good Skills, Commands, and Hooks Look Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -11,12 +13,8 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
-    title: "shanraisshan/claude-code-best-practice"
-  - id: src-claude-code-hooks-reference
-    type: documentation
-    url: "https://code.claude.com/docs/en/hooks"
-    title: "Claude Code Hooks Reference"
+    url: https://github.com/shanraisshan/claude-code-best-practice
+    title: shanraisshan/claude-code-best-practice
 tags: [skills, commands, hooks, standards, gold-standard, anti-patterns, extension-system, quality]
 ---
 
@@ -24,7 +22,7 @@ tags: [skills, commands, hooks, standards, gold-standard, anti-patterns, extensi
 
 ## Summary
 
-This page defines the quality bar for the EXTENSION SYSTEM. Where [[Model: Skills, Commands, and Hooks]] defines the four-level hierarchy (CLAUDE.md → Skills → Hooks → Commands), this page shows what GOOD looks like at each level — and what breaks when the standard isn't met. ==Every gold standard references a real artifact from this ecosystem or a documented best practice from the community.==
+This page defines the quality bar for the EXTENSION SYSTEM. Where [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] defines the four-level hierarchy (CLAUDE.md → Skills → Hooks → Commands), this page shows what GOOD looks like at each level — and what breaks when the standard isn't met. ==Every gold standard references a real artifact from this ecosystem or a documented best practice from the community.==
 
 ## Key Insights
 
@@ -211,22 +209,22 @@ What good command → skill → hook composition looks like.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Claude Code Standards — What Good Agent Configuration Looks Like]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[Quality Standards — What Good Failure Prevention Looks Like]]
+- BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 
 ## Backlinks
 
-[[Model: Skills, Commands, and Hooks]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]

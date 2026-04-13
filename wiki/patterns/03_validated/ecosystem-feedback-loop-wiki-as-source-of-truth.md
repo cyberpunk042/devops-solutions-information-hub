@@ -1,5 +1,7 @@
 ---
-title: "Ecosystem Feedback Loop — Wiki as Source of Truth"
+title: Ecosystem Feedback Loop — Wiki as Source of Truth
+aliases:
+  - "Ecosystem Feedback Loop — Wiki as Source of Truth"
 type: pattern
 domain: cross-domain
 layer: 5
@@ -11,14 +13,10 @@ derived_from:
   - "Model: Ecosystem Architecture"
   - "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
 instances:
-  - page: "Model: Methodology"
-    context: "Methodology models defined in wiki, exported to OpenArms/OpenFleet via domain profiles, bug findings feed back as lessons"
-  - page: "Model: LLM Wiki"
-    context: "Wiki architecture is the reference implementation — other projects adopt schema, templates, quality gates"
-  - page: "Methodology Adoption Guide"
-    context: "4-tier adoption enables any project to consume from the wiki at appropriate depth"
-  - page: "Model: Claude Code"
-    context: "Claude Code best practices synthesized from multiple projects, fed back as a single model consumed by all"
+  - {'page': 'Model: Methodology', 'context': 'Methodology models defined in wiki, exported to OpenArms/OpenFleet via domain profiles, bug findings feed back as lessons'}
+  - {'page': 'Model: LLM Wiki', 'context': 'Wiki architecture is the reference implementation — other projects adopt schema, templates, quality gates'}
+  - {'page': 'Methodology Adoption Guide', 'context': '4-tier adoption enables any project to consume from the wiki at appropriate depth'}
+  - {'page': 'Model: Claude Code', 'context': 'Claude Code best practices synthesized from multiple projects, fed back as a single model consumed by all'}
 created: 2026-04-12
 updated: 2026-04-12
 sources:
@@ -29,7 +27,7 @@ sources:
   - id: openarms-evidence
     type: observation
     file: raw/articles/openarms-methodology-scan.md
-    description: "OpenArms methodology.yaml derived from wiki's generic base + TypeScript domain profile — first consumer"
+    description: OpenArms methodology.yaml derived from wiki's generic base + TypeScript domain profile — first consumer
   - id: greater-model-principle
     type: directive
     file: docs/SESSION-2026-04-12-handoff.md
@@ -135,41 +133,41 @@ The pattern has three properties that distinguish it from simple documentation:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What is the source of truth?** | [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]] — v1.3 state, 264 pages, all models |
-> | **How do projects adopt from the wiki?** | [[Methodology Adoption Guide]] — 4 tiers, per-domain quick starts, SDLC chain selection |
+> | **What is the source of truth?** | [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] — v1.3 state, 264 pages, all models |
+> | **How do projects adopt from the wiki?** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers, per-domain quick starts, SDLC chain selection |
 > | **What does the feedback look like?** | This session: OpenArms fed back 22 distilled lessons → wiki captured 7+ new mechanisms. OpenFleet fed back immune system + tiers + contributions. |
-> | **What PM level enables feedback?** | [[Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (manual feedback), L2 (structured via fleet tools), L3 (automated via Plane sync) |
-> | **How do gateway tools enable this?** | [[Wiki Gateway Tools — Unified Knowledge Interface]] — agents write back remarks, lessons, corrections via structured gateway |
-> | **What is the Goldilocks for feedback?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — POC projects read only. Production projects feed back actively. |
+> | **What PM level enables feedback?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (manual feedback), L2 (structured via fleet tools), L3 (automated via Plane sync) |
+> | **How do gateway tools enable this?** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — agents write back remarks, lessons, corrections via structured gateway |
+> | **What is the Goldilocks for feedback?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — POC projects read only. Production projects feed back actively. |
 
 ## Relationships
 
-- DERIVED FROM: [[Four-Project Ecosystem]]
-- DERIVED FROM: [[Model: Ecosystem Architecture]]
-- BUILDS ON: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Model: LLM Wiki]]
-- RELATES TO: [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-- FEEDS INTO: [[How AI Agents Consume the Methodology Wiki]]
+- DERIVED FROM: [[four-project-ecosystem|Four-Project Ecosystem]]
+- DERIVED FROM: [[model-ecosystem|Model — Ecosystem Architecture]]
+- BUILDS ON: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+- FEEDS INTO: [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 
 ## Backlinks
 
-[[Four-Project Ecosystem]]
-[[Model: Ecosystem Architecture]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Methodology Adoption Guide]]
-[[Model: Methodology]]
-[[Model: LLM Wiki]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[The Wiki Is a Hub, Not a Silo]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology|Model — Methodology]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

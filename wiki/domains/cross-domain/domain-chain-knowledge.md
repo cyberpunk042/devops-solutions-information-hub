@@ -1,5 +1,10 @@
 ---
-title: "Artifact Chain: Knowledge/Evolution Domain"
+title: Artifact Chain — Knowledge-Evolution Domain
+aliases:
+  - "Artifact Chain — Knowledge-Evolution Domain"
+  - "Artifact Chain — Knowledge/Evolution Domain"
+  - "Artifact Chain: Knowledge-Evolution Domain"
+  - "Artifact Chain: Knowledge/Evolution Domain"
 type: reference
 domain: cross-domain
 status: synthesized
@@ -16,12 +21,11 @@ sources:
     file: tools/evolve.py
   - id: zettelkasten
     type: article
-    url: "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
+    url: https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/
 tags: [methodology, artifact-chain, knowledge, evolution, wiki, domain-specific, second-brain]
 ---
 
-# Artifact Chain: Knowledge/Evolution Domain
-
+# Artifact Chain — Knowledge-Evolution Domain
 > [!tip] AI Quick Start — Working on Wiki Knowledge (Ingestion, Evolution, Curation)
 >
 > 1. **Ingesting a source?** Fetch → read FULL file → synthesize (≥25% ratio to raw) → `pipeline post` → cross-reference
@@ -152,31 +156,31 @@ Unlike code domains where artifacts flow through stages linearly (document → d
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Model: Knowledge Evolution]]
-- BUILDS ON: [[Model: LLM Wiki]]
-- RELATES TO: [[Artifact Chains by Methodology Model]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Artifact Chain: TypeScript/Node Domain]]
-- RELATES TO: [[Artifact Chain: Python/Wiki Domain]]
-- RELATES TO: [[Artifact Chain: Infrastructure/IaC Domain]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+- RELATES TO: [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+- RELATES TO: [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Model: Knowledge Evolution]]
-[[Model: LLM Wiki]]
-[[Artifact Chains by Methodology Model]]
-[[Model: Methodology]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Methodology Adoption Guide]]
-[[Universal Stages, Domain-Specific Artifacts]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[model-methodology|Model — Methodology]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]

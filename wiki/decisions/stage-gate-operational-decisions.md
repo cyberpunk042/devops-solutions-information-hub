@@ -1,5 +1,8 @@
 ---
-title: "Decision: Stage-Gate Operational Decisions"
+title: Decision — Stage-Gate Operational Decisions
+aliases:
+  - "Decision — Stage-Gate Operational Decisions"
+  - "Decision: Stage-Gate Operational Decisions"
 type: decision
 domain: devops
 layer: 6
@@ -12,13 +15,12 @@ derived_from:
   - "Backlog Hierarchy Rules"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-12
 sources: []
 tags: [stage-gate, readiness, discovery, minimum-viable, retroactive, design-decisions]
 ---
 
-# Decision: Stage-Gate Operational Decisions
-
+# Decision — Stage-Gate Operational Decisions
 ## Summary
 
 Eleven operational questions from Stage-Gate Methodology, Task Lifecycle Stage-Gating, and Backlog Hierarchy Rules — the mechanics of how stage gates work in edge cases. Minimum viable gating for solo developers, automatic readiness computation, discovery-driven tasks, retroactive staging, partial completion, sub-module readiness weighting, and epic review in solo context.
@@ -76,10 +78,10 @@ All easy. These are interpretive guidelines for an existing system. None require
 
 ## Dependencies
 
-- [[Stage-Gate Methodology]] — resolves 4 of its open questions
-- [[Task Lifecycle Stage-Gating]] — resolves 3 of its open questions
-- [[Backlog Hierarchy Rules]] — resolves 4 of its open questions
-- [[Spec-Driven Development]] — resolves 2 of its open questions
+- [[stage-gate-methodology|Stage-Gate Methodology]] — resolves 4 of its open questions
+- [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] — resolves 3 of its open questions
+- [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — resolves 4 of its open questions
+- [[spec-driven-development|Spec-Driven Development]] — resolves 2 of its open questions
 
 ### How This Connects — Navigate From Here
 
@@ -87,23 +89,23 @@ All easy. These are interpretive guidelines for an existing system. None require
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Stage-Gate Methodology]]
-- DERIVED FROM: [[Task Lifecycle Stage-Gating]]
-- DERIVED FROM: [[Backlog Hierarchy Rules]]
-- BUILDS ON: [[Spec-Driven Development]]
-- RELATES TO: [[Decision: Execution Mode Edge Cases]]
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]]
+- DERIVED FROM: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+- DERIVED FROM: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- BUILDS ON: [[spec-driven-development|Spec-Driven Development]]
+- RELATES TO: [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Task Lifecycle Stage-Gating]]
-[[Backlog Hierarchy Rules]]
-[[Spec-Driven Development]]
-[[Decision: Execution Mode Edge Cases]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[spec-driven-development|Spec-Driven Development]]
+[[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]

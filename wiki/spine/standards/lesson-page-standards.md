@@ -1,5 +1,7 @@
 ---
-title: "Lesson Page Standards"
+title: Lesson Page Standards
+aliases:
+  - "Lesson Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -117,7 +119,7 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[CLI Tools Beat MCP for Token Efficiency]] — 122 lines, 9 relationships
+> [!success] [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] — 122 lines, 9 relationships
 >
 > **Why it's the standard:**
 > - Summary: ONE actionable sentence
@@ -129,7 +131,7 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 >
 > **The test:** After reading this lesson, could you decide between CLI and MCP for your next tool integration? If yes, the lesson succeeded. If you'd need to read the sources yourself, it failed.
 
-### Annotated Exemplar: [[Infrastructure Enforcement Proves Instructions Fail]]
+### Annotated Exemplar: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >
@@ -177,14 +179,14 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 > **Relationships annotation:**
 > 7 relationships using 4 different verbs (DERIVED FROM, BUILDS ON, RELATES TO, FEEDS INTO). Not all RELATES TO — verb choice carries meaning.
 
-### Second Exemplar Reference: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+### Second Exemplar Reference: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 
 > [!success] Why this exemplar works
 >
 > - **Taxonomy in the insight:** 6-row table with columns: class name, what happens, root cause, infrastructure fix? ← each class is a complete unit
 > - **Evidence per class:** Separate `> [!bug]-` foldable for each failure class with file:line-level specifics
 > - **Quantified assertion:** "Clean completion rate: 20%" — not "sometimes fails" but a measured percentage
-> - **Connects to prior art:** BUILDS ON [[Infrastructure Enforcement Proves Instructions Fail]] — explicitly says "even with 0% stage violations, these 6 classes persist"
+> - **Connects to prior art:** BUILDS ON [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] — explicitly says "even with 0% stage violations, these 6 classes persist"
 > - **Mitigation table in applicability:** Each class → how to detect + how to mitigate
 
 ### Common Failures
@@ -218,15 +220,15 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Knowledge Evolution]]
-[[Model: Wiki Design]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

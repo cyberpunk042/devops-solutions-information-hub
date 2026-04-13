@@ -1,5 +1,8 @@
 ---
-title: "Model: Claude Code"
+title: Model — Claude Code
+aliases:
+  - "Model — Claude Code"
+  - "Model: Claude Code"
 type: concept
 domain: cross-domain
 layer: spine
@@ -11,37 +14,12 @@ updated: 2026-04-12
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
-    title: "Claude Code Best Practices"
-  - id: src-karpathy-claude-code-10x
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=7sInxhTDA7U"
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
-  - id: src-token-hacks-claude-code
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
-    title: "18 Claude Code Token Hacks in 18 Minutes"
-  - id: src-harness-engineering-article
-    type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
-  - id: src-claude-code-hooks-reference
-    type: documentation
-    url: "https://code.claude.com/docs/en/hooks"
-    title: "Claude Code Hooks Reference"
-  - id: src-claude-code-accuracy-tips
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
-  - id: src-playwright-cli-vs-mcp
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=nN5R9DFYsXY"
-    title: "Claude Code + Playwright CLI: Automate QA with Less Tokens"
+    url: https://github.com/shanraisshan/claude-code-best-practice
+    title: Claude Code Best Practices
 tags: [claude-code, model-definition, agent-architecture, skills, hooks, context-management, harness-engineering, mcp, extension-system, spine]
 ---
 
-# Model: Claude Code
-
+# Model — Claude Code
 ## Summary
 
 Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from the terminal. This model defines how the agent works as an extensible runtime: the core agent loop, the four-level extension system (CLAUDE.md, Skills, Hooks, Commands), the context management discipline that governs session quality, the MCP vs CLI+Skills decision that shapes tool integration, and the harness engineering concept that coordinates all layers into a governed system. This is the execution engine behind the research wiki's ingestion pipeline, every OpenFleet agent, and the primary human-to-system interface for the entire ecosystem. Understanding this model means knowing how to extend Claude Code correctly, constrain it safely, and keep its context window healthy.
@@ -54,15 +32,19 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 
 - **Context window is the primary constraint.** Every architectural decision — lean CLAUDE.md, deferred skill loading, CLI over MCP — traces back to using context efficiently. Degradation at higher utilization is probabilistic, not deterministic — well-managed sessions can work effectively throughout, but careless context loading accelerates problems.
 
-- **CLI+Skills beats MCP for operational tasks.** 12x cost differential measured on Playwright CLI vs MCP. MCP loads all tool schemas at startup; CLI+Skills loads nothing until invoked. MCP wins for external service bridges and tool discovery. See [[Decision: MCP vs CLI for Tool Integration]].
+- **CLI+Skills beats MCP for operational tasks.** 12x cost differential measured on Playwright CLI vs MCP. MCP loads all tool schemas at startup; CLI+Skills loads nothing until invoked. MCP wins for external service bridges and tool discovery. See [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]].
 
-- **Harness engineering is the governing concept.** CLAUDE.md + Skills + Hooks + Commands + Subagents form a coordinated control system. OpenArms v10 proves this with quantified evidence: 4 hooks (215 lines) achieved 100% stage boundary compliance where 28 CLAUDE.md rules achieved 25%. OpenFleet extends further with MCP tool blocking at the server level and a 3-line immune system (prevention → detection → correction). See [[Infrastructure Enforcement Proves Instructions Fail]], [[Three Lines of Defense — Immune System for Agent Quality]].
+- **Harness engineering is the governing concept.** CLAUDE.md + Skills + Hooks + Commands + Subagents form a coordinated control system. OpenArms v10 proves this with quantified evidence: 4 hooks (215 lines) achieved 100% stage boundary compliance where 28 CLAUDE.md rules achieved 25%. OpenFleet extends further with MCP tool blocking at the server level and a 3-line immune system (prevention → detection → correction). See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]], [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]].
 
-- **Context compaction is a reset event.** All behavioral corrections accumulated during a session are lost after compaction. OpenArms solved this with a post-compact hook that rebuilds full state from files. OpenFleet solves it with PRUNE (kill session, regrow fresh). Any enforcement that depends on accumulated context must be rebuilt via infrastructure. See [[Context Compaction Is a Reset Event]].
+- **Context compaction is a reset event.** All behavioral corrections accumulated during a session are lost after compaction. OpenArms solved this with a post-compact hook that rebuilds full state from files. OpenFleet solves it with PRUNE (kill session, regrow fresh). Any enforcement that depends on accumulated context must be rebuilt via infrastructure. See [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]].
 
-- **Structured context is proto-programming.** Markdown is the programming language of AI agents. Consistent structure across all injections (frontmatter, MUST/MUST NOT blocks, stage protocols) creates patterns agents follow mechanically. OpenFleet's validation matrix (29 scenarios, 2,444 lines) demonstrates this — same structural skeleton for every injection, content varies but shape is constant. See [[Structured Context Is Proto-Programming for AI Agents]].
+- **Structured context is proto-programming.** Markdown is the programming language of AI agents. Consistent structure across all injections (frontmatter, MUST/MUST NOT blocks, stage protocols) creates patterns agents follow mechanically. OpenFleet's validation matrix (29 scenarios, 2,444 lines) demonstrates this — same structural skeleton for every injection, content varies but shape is constant. See [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]].
 
-- **Subagent parallelism for context isolation.** The Agent tool spawns workers that share the filesystem but not the conversation context. Each subagent gets a fresh context window, protecting the main conversation from bloat.
+- **Subagent parallelism for context isolation.** The Agent tool spawns workers that share the filesystem but not the conversation context. Each subagent gets a fresh context window, protecting the main conversation from bloat. BUT: sub-agents don't inherit CLAUDE.md behavioral rules — compliance is ~33% even when rules are included in the spawn prompt. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] (Class 5).
+
+- **Five cognitive contexts read one CLAUDE.md.** OpenArms discovered that interactive operator (A), solo agent (B), sub-agents (C), persona templates (D), and provisioned live agents (E) all read the SAME directive file. Rules meant for one context actively mislead another. Example: "After compaction, re-read ALL memories" — Context A has persistent memory, Context B does not. Fix: move per-context rules to skills, keep CLAUDE.md for shared rules clearly marked per-context.
+
+- **SDLC chains adapt Claude Code configuration.** A POC project needs a lean CLAUDE.md with 2-3 methodology models. A production fleet needs full methodology.yaml + domain profiles + hooks + commands. The identity profile determines which level of Claude Code configuration is appropriate. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]].
 
 ## Deep Analysis
 
@@ -79,7 +61,7 @@ Claude Code's core is a tool-use loop: the model receives a prompt, decides whic
 > | **Loop has no fixed depth** | Agent continues calling tools until task is done | Powerful for multi-step tasks, but unbounded sessions can exhaust context |
 
 > [!warning] **Compaction is not free**
-> The `/compact` mechanism summarizes history to reclaim space, but quality degrades after 3-4 compactions (one practitioner's observation, not a hard limit). At that point, a fresh session with a transferred summary is the correct move — not another compaction. See [[Claude Code Context Management]].
+> The `/compact` mechanism summarizes history to reclaim space, but quality degrades after 3-4 compactions (one practitioner's observation, not a hard limit). At that point, a fresh session with a transferred summary is the correct move — not another compaction. See [[claude-code-context-management|Claude Code Context Management]].
 
 ---
 
@@ -135,7 +117,7 @@ Claude Code exposes four extension levels. Each has different loading behavior, 
 >
 > Each is a folder with `skill.md` defining the capability. The `wiki-agent` skill includes the full ingestion workflow, quality gates, and three modes (auto, guided, smart). The `model-builder` skill includes the styling standards checklist. None of these cost anything until invoked.
 
-This is why skills are the dominant extension pattern. See [[Skills Architecture Is the Dominant LLM Extension Pattern]].
+This is why skills are the dominant extension pattern. See [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]].
 
 ---
 
@@ -159,7 +141,7 @@ This is why skills are the dominant extension pattern. See [[Skills Architecture
 > [!example]- **Real instance: stage-gate enforcement via hooks**
 > A `PreToolUse` hook can block all Write/Edit calls to `src/` during a documentation phase, enforcing "no implementation in document stage" at the infrastructure level. This is the bridge between methodology (instructions that may be ignored) and enforcement (hooks that cannot be bypassed). OpenArms Bug 5 — scaffold producing 135 lines of business logic — could have been prevented by a hook that blocked Write to source files during the scaffold stage.
 
-See [[Hooks Lifecycle Architecture]] for the full 26-event taxonomy.
+See [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] for the full 26-event taxonomy.
 
 ---
 
@@ -236,7 +218,7 @@ The Playwright comparison provides the clearest evidence: MCP dumps the full acc
 > - Exploratory testing where full visibility at every step has genuine value
 > - The planned NotebookLM and Obsidian MCP integrations are correct uses — they bridge services not accessible via filesystem
 
-See [[Decision: MCP vs CLI for Tool Integration]] for the full decision record with reversibility analysis.
+See [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] for the full decision record with reversibility analysis.
 
 ---
 
@@ -252,7 +234,7 @@ Harness engineering ties the extension system into a coordinated control system.
 > | 2 | Runtime guardrails | ~98% (execution-time blocking) | Hooks: block sudo, force-push, .env writes |
 > | 3 | Deterministic orchestration | 100% (no LLM in loop) | OpenFleet 30-second brain cycle |
 
-The 13 guardrail rules (R01-R13) from the claude-code-harness project implement level 2. OpenArms v10 evolved this into a 4-hook system (pre-bash 48L, pre-write 106L, post-write 36L, post-compact 29L) backed by a 1,033-line model-aware stage validator. OpenFleet implements level 2-3 via MCP tool blocking + 30-second doctor cycle immune system. Real-world enforcement data: instructions alone = 25% compliance, hooks = 100% stage compliance, but behavioral failures persist (20% clean completion rate). See [[Enforcement Hook Patterns]] for the full implementation evidence, and [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] for the risks of over-enforcement.
+The 13 guardrail rules (R01-R13) from the claude-code-harness project implement level 2. OpenArms v10 evolved this into a 4-hook system (pre-bash 48L, pre-write 106L, post-write 36L, post-compact 29L) backed by a 1,033-line model-aware stage validator. OpenFleet implements level 2-3 via MCP tool blocking + 30-second doctor cycle immune system. Real-world enforcement data: instructions alone = 25% compliance, hooks = 100% stage compliance, but behavioral failures persist (20% clean completion rate). See [[enforcement-hook-patterns|Enforcement Hook Patterns]] for the full implementation evidence, and [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] for the risks of over-enforcement.
 
 > [!tip] **The 5-verb universal workflow**
 > Setup → Plan → Work → Review → Release. This appears independently in:
@@ -260,7 +242,7 @@ The 13 guardrail rules (R01-R13) from the claude-code-harness project implement 
 > - **OpenFleet**: task-dispatch → execute → review → complete
 > - **This wiki's pipeline**: extract → analyze → synthesize → write → integrate
 >
-> The convergence across 10+ open-source frameworks confirms this cycle is inherent to effective AI-assisted development. See [[Plan Execute Review Cycle]].
+> The convergence across 10+ open-source frameworks confirms this cycle is inherent to effective AI-assisted development. See [[plan-execute-review-cycle|Plan Execute Review Cycle]].
 
 > [!abstract] **This ecosystem's current operating level**
 > Levels 0-1 (prompt guidance + workflow orchestration via skills and pipeline chains). Level 2 (hook-based runtime guardrails) is the natural next step — the wiki's methodology.yaml defines stage boundaries, but enforcement is currently instruction-based, not hook-based. Level 3 (deterministic orchestration) is already implemented in OpenFleet's brain.
@@ -290,16 +272,16 @@ The 13 guardrail rules (R01-R13) from the claude-code-harness project implement 
 ### Key Lessons from This Ecosystem
 
 > [!tip] **1. Always Plan Before Executing**
-> The biggest source of token waste is not expensive models — it is the agent going down a wrong path and scrapping work. Boris Cherny (Claude Code's creator) recommends: "Do not make any changes until you have 95% confidence in what you need to build." See [[Always Plan Before Executing]].
+> The biggest source of token waste is not expensive models — it is the agent going down a wrong path and scrapping work. Boris Cherny (Claude Code's creator) recommends: "Do not make any changes until you have 95% confidence in what you need to build." See [[always-plan-before-executing|Always Plan Before Executing]].
 
 > [!tip] **2. Context Management Is the Primary Lever**
-> A developer who practices context hygiene gets 3-5x more useful work per session than one who does not. Lean CLAUDE.md, proper skill loading, subagent isolation, targeted reads — these are prerequisites, not optimizations. See [[Context Management Is the Primary LLM Productivity Lever]].
+> A developer who practices context hygiene gets 3-5x more useful work per session than one who does not. Lean CLAUDE.md, proper skill loading, subagent isolation, targeted reads — these are prerequisites, not optimizations. See [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]].
 
 > [!tip] **3. Skills Are the Dominant Extension Pattern**
-> Skills load on demand at zero baseline cost. MCP loads at startup. Hooks enforce constraints but don't teach. Commands trigger but carry no knowledge. For extending Claude Code with new capabilities, skills are the correct default. See [[Skills Architecture Is the Dominant LLM Extension Pattern]].
+> Skills load on demand at zero baseline cost. MCP loads at startup. Hooks enforce constraints but don't teach. Commands trigger but carry no knowledge. For extending Claude Code with new capabilities, skills are the correct default. See [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]].
 
 > [!tip] **4. CLI Beats MCP for Token Efficiency**
-> The 12x cost differential on Playwright is not an outlier — it's the structural consequence of eager loading (MCP) vs deferred loading (CLI+Skills). For any tool that doesn't need cross-conversation discovery, CLI+Skills wins. See [[CLI Tools Beat MCP for Token Efficiency]].
+> The 12x cost differential on Playwright is not an outlier — it's the structural consequence of eager loading (MCP) vs deferred loading (CLI+Skills). For any tool that doesn't need cross-conversation discovery, CLI+Skills wins. See [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]].
 
 ---
 
@@ -336,26 +318,26 @@ Every page that belongs to this model, organized by layer. This is the territory
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Claude Code]] | L2 | The foundational concept — agent loop, tool dispatch, role in ecosystem |
-| [[Claude Code Best Practices]] | L2 | Operational discipline — planning, prompting, context hygiene |
-| [[Claude Code Context Management]] | L2 | The primary constraint — utilization, degradation, management strategies |
-| [[Claude Code Skills]] | L2 | Extension mechanism — SKILL.md format, progressive disclosure, context forking |
-| [[Harness Engineering]] | L2 | The governing concept — 5-verb workflow, enforcement hierarchy, 13 guardrail rules |
-| [[Hooks Lifecycle Architecture]] | L2 | 26 lifecycle events across 7 categories — the enforcement layer |
-| [[Per-Role Command Architecture]] | L2 | Role-segmented command palettes for different user contexts |
-| [[Design.md Pattern]] | L2 | DESIGN.md as IaC — human spec → machine executes. Part of Level 0 config. |
-| [[MCP Integration Architecture]] | L2 | Tool integration via Model Context Protocol — when and how |
-| [[Claude Code Scheduling]] | L2 | Cron-triggered autonomous operations — when the agent runs without a human |
-| [[Spec-Driven Development]] | L2 | The brainstorm → spec → plan → implement workflow using the extension system |
-| [[Always Plan Before Executing]] | L4 | Lesson: 95% confidence before changes. Planning prevents rework. |
-| [[CLI Tools Beat MCP for Token Efficiency]] | L4 | Lesson: 12x cost differential. Eager vs deferred loading. |
-| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | L4 | Lesson: skills beat MCP, hooks, and commands for capability extension. |
-| [[Context Management Is the Primary LLM Productivity Lever]] | L4 | Lesson: context hygiene = 3-5x more useful work per session. |
-| [[Context-Aware Tool Loading]] | L5 | Pattern: defer all tool schema loading until needed. Never pre-load. |
-| [[Plan Execute Review Cycle]] | L5 | Pattern: the 5-verb universal workflow that emerges across all frameworks. |
-| [[Deterministic Shell, LLM Core]] | L5 | Pattern: deterministic orchestration wrapping probabilistic LLM reasoning. |
-| [[Pattern: Skills + Claude Code]] | L5 | Pattern: skills as the primary Claude Code extension mechanism. |
-| [[Decision: MCP vs CLI for Tool Integration]] | L6 | Decision: CLI+Skills default, MCP for external bridges. Reversible. |
+| [[claude-code|Claude Code]] | L2 | The foundational concept — agent loop, tool dispatch, role in ecosystem |
+| [[claude-code-best-practices|Claude Code Best Practices]] | L2 | Operational discipline — planning, prompting, context hygiene |
+| [[claude-code-context-management|Claude Code Context Management]] | L2 | The primary constraint — utilization, degradation, management strategies |
+| [[claude-code-skills|Claude Code Skills]] | L2 | Extension mechanism — SKILL.md format, progressive disclosure, context forking |
+| [[harness-engineering|Harness Engineering]] | L2 | The governing concept — 5-verb workflow, enforcement hierarchy, 13 guardrail rules |
+| [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] | L2 | 26 lifecycle events across 7 categories — the enforcement layer |
+| [[per-role-command-architecture|Per-Role Command Architecture]] | L2 | Role-segmented command palettes for different user contexts |
+| [[design-md-pattern|Design.md Pattern]] | L2 | DESIGN.md as IaC — human spec → machine executes. Part of Level 0 config. |
+| [[mcp-integration-architecture|MCP Integration Architecture]] | L2 | Tool integration via Model Context Protocol — when and how |
+| [[claude-code-scheduling|Claude Code Scheduling]] | L2 | Cron-triggered autonomous operations — when the agent runs without a human |
+| [[spec-driven-development|Spec-Driven Development]] | L2 | The brainstorm → spec → plan → implement workflow using the extension system |
+| [[always-plan-before-executing|Always Plan Before Executing]] | L4 | Lesson: 95% confidence before changes. Planning prevents rework. |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | L4 | Lesson: 12x cost differential. Eager vs deferred loading. |
+| [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | L4 | Lesson: skills beat MCP, hooks, and commands for capability extension. |
+| [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]] | L4 | Lesson: context hygiene = 3-5x more useful work per session. |
+| [[context-aware-tool-loading|Context-Aware Tool Loading]] | L5 | Pattern: defer all tool schema loading until needed. Never pre-load. |
+| [[plan-execute-review-cycle|Plan Execute Review Cycle]] | L5 | Pattern: the 5-verb universal workflow that emerges across all frameworks. |
+| [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | L5 | Pattern: deterministic orchestration wrapping probabilistic LLM reasoning. |
+| Pattern: Skills + Claude Code | L5 | Pattern: skills as the primary Claude Code extension mechanism. |
+| [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] | L6 | Decision: CLI+Skills default, MCP for external bridges. Reversible. |
 
 ---
 
@@ -365,12 +347,12 @@ Validated experience from operating Claude Code in this ecosystem.
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[Always Plan Before Executing]] | The agent going down a wrong path and scrapping work wastes more tokens than any model cost. Plan first, 95% confidence, then execute. |
-| [[CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential on Playwright is structural — eager loading (MCP) vs deferred loading (CLI+Skills). Default to CLI for operational tasks. |
-| [[Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills load on demand at zero baseline cost. For extending Claude Code with capabilities, skills are the correct default over MCP, hooks, or commands. |
-| [[Context Management Is the Primary LLM Productivity Lever]] | Context hygiene is a prerequisite, not an optimization. Lean CLAUDE.md, subagent isolation, targeted reads, manual compaction. |
-| [[Never Skip Stages Even When Told to Continue]] | "Continue" means advance within the current stage, not skip to the next. Claude Code agents are biased toward perceived progress — stage gates prevent this. |
-| [[The Agent Must Practice What It Documents]] | Methodology in wiki pages is useless if not in CLAUDE.md. Rules must exist in the agent's operational instructions, not just its knowledge base. |
+| [[always-plan-before-executing|Always Plan Before Executing]] | The agent going down a wrong path and scrapping work wastes more tokens than any model cost. Plan first, 95% confidence, then execute. |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | 12x cost differential on Playwright is structural — eager loading (MCP) vs deferred loading (CLI+Skills). Default to CLI for operational tasks. |
+| [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | Skills load on demand at zero baseline cost. For extending Claude Code with capabilities, skills are the correct default over MCP, hooks, or commands. |
+| [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]] | Context hygiene is a prerequisite, not an optimization. Lean CLAUDE.md, subagent isolation, targeted reads, manual compaction. |
+| [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] | "Continue" means advance within the current stage, not skip to the next. Claude Code agents are biased toward perceived progress — stage gates prevent this. |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | Methodology in wiki pages is useless if not in CLAUDE.md. Rules must exist in the agent's operational instructions, not just its knowledge base. |
 
 ---
 
@@ -428,7 +410,7 @@ Validated experience from operating Claude Code in this ecosystem.
 > - **CLAUDE.md too large** → context bloat on every message. 500-line CLAUDE.md wastes 500 tokens × every message × every session.
 > - **No skills** → every capability must be re-explained per conversation. No reuse, no consistency.
 > - **No hooks** → safety depends on the model following instructions (~60% compliance). sudo, force-push, .env writes are not blocked.
-> - **No methodology** → stages skipped, artifacts missing, false readiness claims. See [[Model: Methodology]] for the 7 bugs that prove this.
+> - **No methodology** → stages skipped, artifacts missing, false readiness claims. See [[model-methodology|Model — Methodology]] for the 7 bugs that prove this.
 
 > [!example]- **Real instance: OpenArms as a live deployment**
 > - **CLAUDE.md = AGENTS.md** (symlinked) — 351 lines covering architecture boundaries, plugin SDK, channel implementation, gateway protocol
@@ -465,53 +447,54 @@ Validated experience from operating Claude Code in this ecosystem.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Claude Code]]
-- BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: [[Hooks Lifecycle Architecture]]
-- BUILDS ON: [[Claude Code Best Practices]]
-- BUILDS ON: [[Claude Code Context Management]]
-- BUILDS ON: [[Harness Engineering]]
-- BUILDS ON: [[Decision: MCP vs CLI for Tool Integration]]
-- ENABLES: [[Model: Skills, Commands, and Hooks]]
-- ENABLES: [[Model: MCP and CLI Integration]]
-- ENABLES: [[Model: LLM Wiki]]
-- ENABLES: [[Model: Ecosystem Architecture]]
-- RELATES TO: [[Model: Methodology]]
-- IMPLEMENTS: [[Plan Execute Review Cycle]]
-- IMPLEMENTS: [[Context-Aware Tool Loading]]
-- DERIVED FROM: [[Always Plan Before Executing]], [[CLI Tools Beat MCP for Token Efficiency]], [[Skills Architecture Is the Dominant LLM Extension Pattern]]
+- BUILDS ON: [[claude-code|Claude Code]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- BUILDS ON: [[claude-code-best-practices|Claude Code Best Practices]]
+- BUILDS ON: [[claude-code-context-management|Claude Code Context Management]]
+- BUILDS ON: [[harness-engineering|Harness Engineering]]
+- BUILDS ON: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+- ENABLES: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- ENABLES: [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+- ENABLES: [[model-llm-wiki|Model — LLM Wiki]]
+- ENABLES: [[model-ecosystem|Model — Ecosystem Architecture]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- IMPLEMENTS: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- DERIVED FROM: [[always-plan-before-executing|Always Plan Before Executing]], [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]], [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 
 ## Backlinks
 
-[[Claude Code]]
-[[Claude Code Skills]]
-[[Hooks Lifecycle Architecture]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Harness Engineering]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: MCP and CLI Integration]]
-[[Model: LLM Wiki]]
-[[Model: Ecosystem Architecture]]
-[[Model: Methodology]]
-[[Plan Execute Review Cycle]]
-[[Context-Aware Tool Loading]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Agent Compliance Framework]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Context Compaction Is a Reset Event]]
-[[Enforcement Hook Patterns]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Model: Design.md and IaC]]
-[[Model: Quality and Failure Prevention]]
+[[claude-code|Claude Code]]
+[[claude-code-skills|Claude Code Skills]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[harness-engineering|Harness Engineering]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-methodology|Model — Methodology]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[model-context-engineering|Model — Context Engineering]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

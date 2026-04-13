@@ -1,5 +1,7 @@
 ---
-title: "CLAUDE.md Structural Patterns for Agent Compliance"
+title: CLAUDE.md Structural Patterns for Agent Compliance
+aliases:
+  - "CLAUDE.md Structural Patterns for Agent Compliance"
 type: pattern
 domain: cross-domain
 layer: 5
@@ -11,14 +13,10 @@ derived_from:
   - "Never Skip Stages Even When Told to Continue"
   - "Always Plan Before Executing"
 instances:
-  - page: "OpenArms AGENTS.md"
-    context: "410 lines, 0 tables, 0 dividers, 44 bullet lists, 0 numbered lists — documents what fails but doesn't use structural techniques"
-  - page: "OpenArms agent-directive.md"
-    context: "424 lines, 3 tables, 9 dividers, 31 numbered lists, 14-step work loop — implements all 6 structural techniques, highest compliance"
-  - page: "Research Wiki CLAUDE.md"
-    context: "170 lines, restructured 2026-04-11 with tables, dividers, ALLOWED/FORBIDDEN — intermediate compliance"
-  - page: "OpenArms stage skills (5 files)"
-    context: "29-43 lines each, MUST/MUST NOT lists, runtime state injection, stage-specific narrowing — highest per-stage compliance"
+  - {'page': 'OpenArms AGENTS.md', 'context': "410 lines, 0 tables, 0 dividers, 44 bullet lists, 0 numbered lists — documents what fails but doesn't use structural techniques"}
+  - {'page': 'OpenArms agent-directive.md', 'context': '424 lines, 3 tables, 9 dividers, 31 numbered lists, 14-step work loop — implements all 6 structural techniques, highest compliance'}
+  - {'page': 'Research Wiki CLAUDE.md', 'context': '170 lines, restructured 2026-04-11 with tables, dividers, ALLOWED/FORBIDDEN — intermediate compliance'}
+  - {'page': 'OpenArms stage skills (5 files)', 'context': '29-43 lines each, MUST/MUST NOT lists, runtime state injection, stage-specific narrowing — highest per-stage compliance'}
 created: 2026-04-11
 updated: 2026-04-11
 sources:
@@ -295,39 +293,40 @@ Examples:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Methodology]]
-- DERIVED FROM: [[Never Skip Stages Even When Told to Continue]]
-- DERIVED FROM: [[Always Plan Before Executing]]
-- BUILDS ON: [[Model: Claude Code]]
-- BUILDS ON: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[model-methodology|Model — Methodology]]
+- DERIVED FROM: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+- DERIVED FROM: [[always-plan-before-executing|Always Plan Before Executing]]
+- BUILDS ON: [[model-claude-code|Model — Claude Code]]
+- BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Always Plan Before Executing]]
-[[Model: Claude Code]]
-[[Model: Skills, Commands, and Hooks]]
-[[Plan Execute Review Cycle]]
-[[Methodology Adoption Guide]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Enforcement Hook Patterns]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Methodology Framework]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Stage-Aware Skill Injection]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
+[[model-methodology|Model — Methodology]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[methodology-framework|Methodology Framework]]
+[[model-context-engineering|Model — Context Engineering]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]

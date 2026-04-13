@@ -1,5 +1,7 @@
 ---
-title: "NotebookLM"
+title: NotebookLM
+aliases:
+  - "NotebookLM"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
     file: raw/transcripts/claude-notebooklm-content-team.txt
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
+    title: Claude + NotebookLM = Your 24/7 Content Team
     ingested: 2026-04-08
 tags: [notebooklm, google, research, content-generation, free-tools]
 ---
@@ -78,35 +80,35 @@ Cross-referencing `AI-Driven Content Pipeline` and `Agentic Search vs Vector Sea
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-notebooklm-content-team
-- USED BY: [[AI-Driven Content Pipeline]]
-- ENABLES: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code Scheduling]]
-- ENABLES: [[NotebookLM Skills]]
-- CONTRASTS WITH: [[LLM Wiki vs RAG]]
-- RELATES TO: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+- USED BY: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- ENABLES: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code-scheduling|Claude Code Scheduling]]
+- ENABLES: [[notebooklm-skills|NotebookLM Skills]]
+- CONTRASTS WITH: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[src-claude-notebooklm-content-team]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Skills]]
-[[Claude Code Scheduling]]
-[[NotebookLM Skills]]
-[[LLM Wiki vs RAG]]
-[[LLM Wiki Pattern]]
-[[Agentic Search vs Vector Search]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Model: NotebookLM]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Progressive Distillation]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: PleasePrompto/notebooklm-skill]]
-[[Synthesis: claude-world/notebooklm-skill]]
-[[notebooklm-py CLI]]
+[[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[model-notebooklm|Model — NotebookLM]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[progressive-distillation|Progressive Distillation]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
+[[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+[[notebooklm-py-cli|notebooklm-py CLI]]

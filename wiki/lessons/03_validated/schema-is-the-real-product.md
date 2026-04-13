@@ -1,5 +1,8 @@
 ---
-title: "Lesson: Schema Is the Real Product — Not the Content"
+title: Lesson — Schema Is the Real Product — Not the Content
+aliases:
+  - "Lesson — Schema Is the Real Product — Not the Content"
+  - "Lesson: Schema Is the Real Product — Not the Content"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,13 +18,12 @@ updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    title: Karpathy LLM Wiki Idea File
 tags: [schema, karpathy, llm-wiki, second-brain, knowledge-systems, config, design-principles]
 ---
 
-# Lesson: Schema Is the Real Product — Not the Content
-
+# Lesson — Schema Is the Real Product — Not the Content
 ## Summary
 
 Karpathy's primary source document identifies the schema file (CLAUDE.md or AGENTS.md) as the most important artifact in an LLM wiki system — not the wiki pages themselves. Content is regenerable from raw sources; the schema encodes accumulated operational knowledge about how to organize, validate, and evolve that content, and it is not regenerable without starting over. This wiki's `config/schema.yaml` and `CLAUDE.md` are more strategically valuable than any individual page.
@@ -73,27 +75,27 @@ The practical test: this wiki's `config/schema.yaml` defines valid page types, r
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: Karpathy's LLM Wiki Idea File]]
-- DERIVED FROM: [[LLM Wiki Pattern]]
-- DERIVED FROM: [[Second Brain Architecture]]
-- RELATES TO: [[Knowledge Evolution Pipeline]]
-- BUILDS ON: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- DERIVED FROM: [[second-brain-architecture|Second Brain Architecture]]
+- RELATES TO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[LLM Wiki Pattern]]
-[[Second Brain Architecture]]
-[[Knowledge Evolution Pipeline]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki vs RAG]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]

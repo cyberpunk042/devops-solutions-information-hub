@@ -1,5 +1,7 @@
 ---
-title: "PARA Methodology"
+title: PARA Methodology
+aliases:
+  - "PARA Methodology"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-second-brain-research
     type: article
     file: raw/articles/second-brain-pkm-research.md
-    title: "Second Brain / PKM Research"
+    title: Second Brain / PKM Research
     ingested: 2026-04-08
   - id: src-zettelkasten-basb
     type: article
-    url: "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
-    title: "Combining Zettelkasten and Building a Second Brain"
+    url: https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/
+    title: Combining Zettelkasten and Building a Second Brain
     ingested: 2026-04-08
 tags: [para, pkm, second-brain, tiago-forte, projects, areas, resources, archives, code-workflow, progressive-summarization, knowledge-management, action-oriented]
 ---
@@ -151,30 +153,30 @@ The recommended hybrid: PARA manages what lives outside the Zettelkasten (active
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Second Brain Architecture]]
-- COMPARES TO: [[Zettelkasten Methodology]]
-- IMPLEMENTS: [[Memory Lifecycle Management]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Knowledge Evolution Pipeline]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[LLM Wiki Pattern]]
+- BUILDS ON: [[second-brain-architecture|Second Brain Architecture]]
+- COMPARES TO: [[zettelkasten-methodology|Zettelkasten Methodology]]
+- IMPLEMENTS: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[Zettelkasten Methodology]]
-[[Memory Lifecycle Management]]
-[[Wiki Ingestion Pipeline]]
-[[Knowledge Evolution Pipeline]]
-[[Research Pipeline Orchestration]]
-[[LLM Wiki Pattern]]
-[[Cross-Domain Patterns]]
-[[Model: Second Brain]]
-[[Progressive Distillation]]
-[[Wiki Backlog Pattern]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[model-second-brain|Model — Second Brain]]
+[[progressive-distillation|Progressive Distillation]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]

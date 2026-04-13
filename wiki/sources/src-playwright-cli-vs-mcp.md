@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens"
+title: Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens
+aliases:
+  - "Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens"
+  - "Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-playwright-cli-vs-mcp
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=nN5R9DFYsXY"
+    url: https://www.youtube.com/watch?v=nN5R9DFYsXY
     file: raw/transcripts/claude-code-playwright-cli-automate-qa-with-less-tokens.txt
     title: "Claude Code + Playwright CLI: Automate QA with Less Tokens"
     ingested: 2026-04-08
 tags: [playwright, mcp, cli, token-efficiency, qa-automation, context-management, skills, testing, claude-code]
 ---
-
-# Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens
-
+# Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens
 ## Summary
 
 A direct side-by-side comparison of Playwright's MCP server integration vs. its CLI tool integration for AI-driven QA automation inside Claude Code. The CLI uses a "sticky notes" approach — saving full page data to YAML on disk and only loading it into context on demand — while MCP dumps the full accessibility tree into context at every navigation step. The CLI approach uses dramatically fewer tokens, produces higher accuracy on known-page tests, and Microsoft (Playwright's creator) now officially recommends CLI over MCP for AI agent use. A concrete 6-phase QA workflow with screenshot reporting is demonstrated.
@@ -82,27 +83,27 @@ Cross-referencing `Decision: MCP vs CLI for Tool Integration` and `Context-Aware
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-playwright-cli-vs-mcp
-- EXTENDS: [[CLI Tools Beat MCP for Token Efficiency]]
-- SUPPORTS: [[Decision: MCP vs CLI for Tool Integration]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Synthesis: Claude Code Accuracy Tips]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- EXTENDS: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- SUPPORTS: [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[src-playwright-cli-vs-mcp]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Claude Code Skills]]
-[[Claude Code Context Management]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Research Pipeline Orchestration]]
-[[Context-Aware Tool Loading]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]

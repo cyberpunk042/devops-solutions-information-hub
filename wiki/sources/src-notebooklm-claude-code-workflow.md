@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
+title: Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py
+aliases:
+  - "Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py"
+  - "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-notebooklm-claude-code-workflow
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=fV17ZkPBlAc"
+    url: https://www.youtube.com/watch?v=fV17ZkPBlAc
     file: raw/transcripts/this-notebooklm-claude-code-workflow-is-insane.txt
-    title: "This NotebookLM + Claude Code Workflow Is Insane"
+    title: This NotebookLM + Claude Code Workflow Is Insane
     ingested: 2026-04-08
 tags: [notebooklm, claude-code, research, competitive-analysis, cli, skills, knowledge-base, automation, notebooklm-py]
 ---
-
-# Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py
-
+# Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py
 ## Summary
 
 Demonstrates a practical integration of NotebookLM and Claude Code using the open-source `notebooklm-py` CLI library, which exposes all NotebookLM features (notebook CRUD, source insertion, querying, content generation, artifact download) as CLI commands and an installable skill set for Claude Code. The core architectural insight is the division of labor: NotebookLM is the "brain" (grounded research, source synthesis, knowledge base queries) and Claude Code is the "hands" (execution, product decisions, content creation). A competitive analysis use case demonstrates analyzing 35 competitors across 3 tiers, generating reports, slide decks, and mind maps, then using the NotebookLM knowledge base to drive Jira-level product decisions from Claude Code.
@@ -82,29 +83,29 @@ Cross-referencing `notebooklm-py CLI` and `Decision: MCP vs CLI for Tool Integra
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-notebooklm-claude-code-workflow
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Synthesis: Claude Code Accuracy Tips]]
-- RELATES TO: [[Memory Lifecycle Management]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[src-notebooklm-claude-code-workflow]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Skills]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Memory Lifecycle Management]]
-[[Research Pipeline Orchestration]]
-[[LLM Wiki vs RAG]]
-[[Context-Aware Tool Loading]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-skills|Claude Code Skills]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]

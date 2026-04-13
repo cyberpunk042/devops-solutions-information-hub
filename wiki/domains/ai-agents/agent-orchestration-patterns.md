@@ -1,5 +1,7 @@
 ---
-title: "Agent Orchestration Patterns"
+title: Agent Orchestration Patterns
+aliases:
+  - "Agent Orchestration Patterns"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
 tags: [orchestration, ai-agents, multi-agent, deterministic-brain, sub-agent, delegation, plan-execute-review, fleet-management, harness-engineering, openfleet]
 ---
@@ -130,42 +132,42 @@ Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` page
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[OpenFleet]]
-- IMPLEMENTS: [[Harness Engineering]]
-- BUILDS ON: [[Plan Execute Review Cycle]]
-- ENABLES: [[Always Plan Before Executing]]
-- ENABLES: [[Rework Prevention]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- FEEDS INTO: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[MCP Integration Architecture]]
+- IMPLEMENTS: [[openfleet|OpenFleet]]
+- IMPLEMENTS: [[harness-engineering|Harness Engineering]]
+- BUILDS ON: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- ENABLES: [[always-plan-before-executing|Always Plan Before Executing]]
+- ENABLES: [[rework-prevention|Rework Prevention]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- FEEDS INTO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Harness Engineering]]
-[[Plan Execute Review Cycle]]
-[[Always Plan Before Executing]]
-[[Rework Prevention]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[MCP Integration Architecture]]
-[[Cross-Domain Patterns]]
-[[Decision: Hooks Design Decisions]]
-[[Deterministic Shell, LLM Core]]
-[[Hooks Lifecycle Architecture]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Multi-Channel AI Agent Access]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Spec-Driven Development]]
-[[Task Lifecycle Stage-Gating]]
+[[openfleet|OpenFleet]]
+[[harness-engineering|Harness Engineering]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[rework-prevention|Rework Prevention]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[hooks-design-decisions|Decision — Hooks Design Decisions]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
+[[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[spec-driven-development|Spec-Driven Development]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]

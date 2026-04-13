@@ -1,5 +1,7 @@
 ---
-title: "Wiki Ingestion Pipeline"
+title: Wiki Ingestion Pipeline
+aliases:
+  - "Wiki Ingestion Pipeline"
 type: concept
 layer: 2
 maturity: growing
@@ -12,19 +14,19 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
 tags: [ingestion, pipeline, claude-code, wiki, markdown, data-processing, workflow, entity-extraction, event-driven]
 ---
@@ -94,70 +96,67 @@ Cross-referencing `Knowledge Evolution Pipeline` and `WSL2 Development Patterns`
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-claude-code-10x
-- DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- IMPLEMENTS: [[LLM Wiki Pattern]]
-- USED BY: [[Obsidian Knowledge Vault]]
-- FEEDS INTO: [[LLM Knowledge Linting]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- EXTENDS: [[Research Pipeline Orchestration]]
-- RELATES TO: [[notebooklm-py CLI]]
-- RELATES TO: [[Obsidian CLI]]
-- RELATES TO: [[Wiki Event-Driven Automation]]
-- PARALLELS: [[AI-Driven Content Pipeline]]
-- CONSTRAINED BY: [[Claude Code Context Management]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- IMPLEMENTS: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- USED BY: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- FEEDS INTO: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- EXTENDS: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[notebooklm-py-cli|notebooklm-py CLI]]
+- RELATES TO: [[obsidian-cli|Obsidian CLI]]
+- RELATES TO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- PARALLELS: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- CONSTRAINED BY: [[claude-code-context-management|Claude Code Context Management]]
 
 ## Backlinks
 
-[[src-karpathy-claude-code-10x]]
-[[src-karpathy-llm-wiki-idea-file]]
-[[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Obsidian Knowledge Vault]]
-[[LLM Knowledge Linting]]
-[[Wiki Knowledge Graph]]
-[[Research Pipeline Orchestration]]
-[[notebooklm-py CLI]]
-[[Obsidian CLI]]
-[[Wiki Event-Driven Automation]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code Context Management]]
-[[Claude Code]]
-[[Claude Code Best Practices]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Knowledge Evolution Pipeline]]
-[[LLM Wiki vs RAG]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[LightRAG]]
-[[MCP Integration Architecture]]
-[[Memory Lifecycle Management]]
-[[Model: LLM Wiki]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Never Synthesize from Descriptions Alone]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[PARA Methodology]]
-[[Per-Role Command Architecture]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Second Brain Architecture]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Synthesis: Obsidian + Claude Code Second Brain Setup]]
-[[WSL2 Development Patterns]]
-[[Zettelkasten Methodology]]
-[[devops-control-plane]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[notebooklm-py-cli|notebooklm-py CLI]]
+[[obsidian-cli|Obsidian CLI]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code|Claude Code]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[lightrag|LightRAG]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[para-methodology|PARA Methodology]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[rework-prevention|Rework Prevention]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[devops-control-plane|devops-control-plane]]

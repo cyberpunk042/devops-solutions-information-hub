@@ -9,7 +9,7 @@ This wiki is organized like a library. Start at the level that matches what you 
 
 | Level | What You'll Find | Start Here |
 |-------|-----------------|------------|
-| **Models** | System definitions — the big picture, 15 named models | [[Model Registry]] |
+| **Models** | System definitions — the big picture, 15 named models | [[model-registry|Model Registry]] |
 | **Domains** | Concept pages grouped by topic (53 pages across 7 domains) | Domain list below |
 | **Patterns** | Recurring structures validated across 2+ independent systems | [patterns/](patterns/) |
 | **Lessons** | Codified experience — what worked, what failed, why | [lessons/](lessons/) |
@@ -17,9 +17,9 @@ This wiki is organized like a library. Start at the level that matches what you 
 | **Comparisons** | Side-by-side evaluations with structured matrices | [comparisons/](comparisons/) |
 | **Sources** | Individual source syntheses — the raw evidence layer | [sources/](sources/) |
 
-**If you're new:** Read the [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]] for the big picture, then [[Model Registry]] for all 15 models.
+**If you're new:** Read the [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] for the big picture, then [[model-registry|Model Registry]] for all 15 models.
 
-**If you're an agent from another project:** [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]] → choose your adoption tier → follow the model dependency graph.
+**If you're an agent from another project:** [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] → choose your adoption tier → follow the model dependency graph.
 
 ## Models — The Big Picture
 
@@ -27,12 +27,12 @@ This wiki is organized like a library. Start at the level that matches what you 
 
 | Model | What It Defines | Standards |
 |-------|----------------|-----------|
-| [[Model: Methodology]] | HOW all work proceeds — the super-model | [[Methodology Standards — What Good Execution Looks Like]] |
-| [[Model: LLM Wiki]] | WHAT the wiki IS — content structure, schema, operations | [[LLM Wiki Standards — What Good Looks Like]] |
-| [[Model: Claude Code]] | The agent runtime — extensions, context, harness | [[Claude Code Standards — What Good Agent Configuration Looks Like]] |
-| [[Model: Quality and Failure Prevention]] | Three-layer defense, failure lessons | [[Quality Standards — What Good Failure Prevention Looks Like]] |
+| [[model-methodology|Model — Methodology]] | HOW all work proceeds — the super-model | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
+| [[model-llm-wiki|Model — LLM Wiki]] | WHAT the wiki IS — content structure, schema, operations | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+| [[model-claude-code|Model — Claude Code]] | The agent runtime — extensions, context, harness | [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]] |
+| [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] | Three-layer defense, failure lessons | [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]] |
 
-See [[Model Registry]] for all 15 models with maturity status and line counts.
+See [[model-registry|Model Registry]] for all 15 models with maturity status and line counts.
 
 ## Domains — Knowledge by Topic
 

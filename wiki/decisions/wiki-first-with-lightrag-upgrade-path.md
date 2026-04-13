@@ -1,5 +1,8 @@
 ---
-title: "Decision: Wiki-First with LightRAG Upgrade Path"
+title: Decision — Wiki-First with LightRAG Upgrade Path
+aliases:
+  - "Decision — Wiki-First with LightRAG Upgrade Path"
+  - "Decision: Wiki-First with LightRAG Upgrade Path"
 type: decision
 domain: cross-domain
 layer: 6
@@ -16,17 +19,12 @@ updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
-  - id: src-lightrag-docs
-    type: documentation
-    url: "https://github.com/HKUDS/LightRAG"
-    title: "LightRAG — Graph-Based RAG Framework"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    title: Karpathy LLM Wiki Idea File
 tags: [decision, rag, lightrag, llm-wiki, knowledge-systems, scale, infrastructure, architecture]
 ---
 
-# Decision: Wiki-First with LightRAG Upgrade Path
-
+# Decision — Wiki-First with LightRAG Upgrade Path
 ## Summary
 
 This wiki operates in wiki-first mode — pure structured markdown with index navigation — until it approaches 200 pages, at which point LightRAG integration activates as an additive query layer. No RAG infrastructure is built prematurely. The wiki's existing `## Relationships` sections are already formatted for direct insertion into LightRAG via `kb_sync.py`, making the upgrade path low-friction when the scale trigger is reached.
@@ -78,28 +76,28 @@ Moderate. Activating LightRAG is additive — it does not change wiki files, so 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[LLM Wiki vs RAG]]
-- DERIVED FROM: [[LightRAG]]
-- DERIVED FROM: [[Knowledge Evolution Pipeline]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- ENABLES: [[Wiki Knowledge Graph]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- DERIVED FROM: [[lightrag|LightRAG]]
+- DERIVED FROM: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- ENABLES: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[LLM Wiki vs RAG]]
-[[LightRAG]]
-[[Knowledge Evolution Pipeline]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki Pattern]]
-[[Research Pipeline Orchestration]]
-[[Ecosystem Integration Interfaces]]
-[[Model: Knowledge Evolution]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[lightrag|LightRAG]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]

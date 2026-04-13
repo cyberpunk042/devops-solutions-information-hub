@@ -1,5 +1,8 @@
 ---
-title: "Model: Quality and Failure Prevention"
+title: Model — Quality and Failure Prevention
+aliases:
+  - "Model — Quality and Failure Prevention"
+  - "Model: Quality and Failure Prevention"
 type: concept
 domain: cross-domain
 layer: spine
@@ -11,47 +14,45 @@ updated: 2026-04-12
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
 tags: [model, spine, quality, failure-prevention, harness, immune-system, rework, depth-verification, stage-gates, methodology]
 ---
-
-# Model: Quality and Failure Prevention
-
+# Model — Quality and Failure Prevention
 ## Summary
 
 Quality and failure prevention for AI agents is not a set of best practices — it is a system with three enforcement layers (structural prevention, teaching, review), six codified failure lessons, and deterministic mechanisms that cannot be bypassed by prompt engineering. The model synthesizes evidence from four domains: harness engineering (13 guardrail rules enforced via hooks), OpenFleet's immune system (24 rules from 16 post-mortems), rework prevention economics, and this wiki's own operational failures. ==The central thesis: quality enforcement must live in code that runs at execution time, not in documentation that the agent may or may not consult.==
 
 ## Key Insights
 
-- **Three-layer defense is the minimum viable quality architecture.** Structural prevention (hooks, doctor.py) blocks bad actions. Teaching (CLAUDE.md, skills, memory) shapes behavior. Review (human gates) catches what automation misses. Any single layer alone is insufficient. See [[Three Lines of Defense — Immune System for Agent Quality]] for the full pattern with implementation evidence from OpenFleet (746 lines, production) and OpenArms (215 lines, 100% stage compliance).
+- **Three-layer defense is the minimum viable quality architecture.** Structural prevention (hooks, doctor.py) blocks bad actions. Teaching (CLAUDE.md, skills, memory) shapes behavior. Review (human gates) catches what automation misses. Any single layer alone is insufficient. See [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] for the full pattern with implementation evidence from OpenFleet (746 lines, production) and OpenArms (215 lines, 100% stage compliance).
 
-- **Instructions fail, infrastructure works — quantified.** OpenArms v8: 28 CLAUDE.md rules, 75% stage boundary violations overnight. v10: 4 hooks (215 lines), 0% stage boundary violations across 5 production runs. The same rules, different enforcement mechanism, categorical difference. See [[Infrastructure Enforcement Proves Instructions Fail]] for the full evidence chain.
+- **Instructions fail, infrastructure works — quantified.** OpenArms v8: 28 CLAUDE.md rules, 75% stage boundary violations overnight. v10: 4 hooks (215 lines), 0% stage boundary violations across 5 production runs. The same rules, different enforcement mechanism, categorical difference. See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] for the full evidence chain.
 
-- **Six behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: weakest-checker optimization, environment patching without escalation, fatigue cliff in later stages, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
+- **Six behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: weakest-checker optimization, environment patching without escalation, fatigue cliff in later stages, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
 
-- **Enforcement must be mindful — hard blocks need justified bypass.** Blind enforcement creates its own failures. Every block must explain WHY, every system must offer bypass with logged justification. OpenArms T086: agent's correct fix reverted twice by over-enforcement. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+- **Enforcement must be mindful — hard blocks need justified bypass.** Blind enforcement creates its own failures. Every block must explain WHY, every system must offer bypass with logged justification. OpenArms T086: agent's correct fix reverted twice by over-enforcement. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
-- **Context compaction is a reset event.** All behavioral corrections accumulated during a session are lost after compaction. Post-compact hooks must rebuild full state from files. See [[Context Compaction Is a Reset Event]].
+- **Context compaction is a reset event.** All behavioral corrections accumulated during a session are lost after compaction. Post-compact hooks must rebuild full state from files. See [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]].
 
 - **Failure lessons must be codified, not just remembered.** Each failure maps to a concrete enforcement mechanism. A lesson that exists only as documentation is a suggestion. A lesson encoded in CLAUDE.md, enforced by a hook, and checked by the post-chain is a rule.
 
-- **Rework is multiplicative, not additive.** Redoing work requires reverting, re-planning, re-executing, and re-verifying. In a multi-agent fleet, one bad dispatch cascades. Prevention is cheaper than cure. Contribution gating (cross-agent inputs BEFORE work) is the most effective rework prevention. See [[Contribution Gating — Cross-Agent Inputs Before Work]].
+- **Rework is multiplicative, not additive.** Redoing work requires reverting, re-planning, re-executing, and re-verifying. In a multi-agent fleet, one bad dispatch cascades. Prevention is cheaper than cure. Contribution gating (cross-agent inputs BEFORE work) is the most effective rework prevention. See [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]].
 
 - **Depth verification is the single highest-leverage quality rule.** Reading the thing itself rather than a description of the thing prevents the most common class of hollow synthesis.
 
-- **Methodology IS failure prevention.** Stage gates, quality gates per stage, "do not advance until the gate passes" — these are the operational form of every lesson in this model. The [[Harness-Owned Loop — Deterministic Agent Execution]] pattern takes this further: the agent never controls its own loop, never sees the backlog, never manages git.
+- **Methodology IS failure prevention.** Stage gates, quality gates per stage, "do not advance until the gate passes" — these are the operational form of every lesson in this model. The [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] pattern takes this further: the agent never controls its own loop, never sees the backlog, never manages git.
 
 ## Deep Analysis
 
@@ -67,9 +68,9 @@ Quality and failure prevention for AI agents is not a set of best practices — 
 **Layer 1 — Structural Prevention** blocks bad actions at execution time. The agent cannot bypass these through reasoning, confidence, or prompt injection.
 
 > [!example]- **Implementations across the ecosystem**
-> - **[[Harness Engineering]]**: 13 TypeScript guardrail rules (R01-R13) enforced via Claude Code hooks. Denial rules block sudo, .env writes, force-push. Query rules flag out-of-scope writes. Security rules prevent --no-verify and direct main pushes.
-> - **[[Immune System Rules]]**: 24 Python rules in doctor.py running at step 6 of the 12-step orchestrator cycle. Zero LLM calls — pure state evaluation. Five categories: liveness, loop detection, state integrity, behavioral security, resource exhaustion.
-> - **[[Deterministic Shell, LLM Core]]**: The architectural pattern. The LLM operates only in the execution phase, surrounded by deterministic code. The shell enforces invariants that cannot be social-engineered.
+> - **[[harness-engineering|Harness Engineering]]**: 13 TypeScript guardrail rules (R01-R13) enforced via Claude Code hooks. Denial rules block sudo, .env writes, force-push. Query rules flag out-of-scope writes. Security rules prevent --no-verify and direct main pushes.
+> - **[[immune-system-rules|Immune System Rules]]**: 24 Python rules in doctor.py running at step 6 of the 12-step orchestrator cycle. Zero LLM calls — pure state evaluation. Five categories: liveness, loop detection, state integrity, behavioral security, resource exhaustion.
+> - **[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]**: The architectural pattern. The LLM operates only in the execution phase, surrounded by deterministic code. The shell enforces invariants that cannot be social-engineered.
 
 > [!tip] **The critical property**
 > Structural prevention is deterministic, fast (microseconds per check), cheap (no token cost), and auditable (no inference variability). An LLM-based quality gate would be unreliable by design.
@@ -101,42 +102,42 @@ Each lesson was extracted from a real operational failure in this wiki. Each map
 >
 > **The principle:** Layer 0 (description of a thing) is not Layer 1 (an instance of the thing). Minimum bar: examine at least one real instance.
 >
-> **Enforcement:** CLAUDE.md quality gates + wiki-agent skill depth verification + memory directive. The 0.25 ratio rule (25% of ingestion on primary sources) provides a measurable threshold. See [[Never Synthesize from Descriptions Alone]].
+> **Enforcement:** CLAUDE.md quality gates + wiki-agent skill depth verification + memory directive. The 0.25 ratio rule (25% of ingestion on primary sources) provides a measurable threshold. See [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]].
 
 > [!bug]- **2. Never Skip Stages Even When Told to Continue**
 > **The failure:** Agent treated "continue" as permission to skip brainstorm and jump to spec writing. User response: "WTF ???? WHAT SPEC ??? WTF ???????"
 >
 > **The principle:** "Continue" = advance within current stage. Only "skip to X" authorizes stage-skipping.
 >
-> **Enforcement:** CLAUDE.md stage gates + mandatory post-chain (errors block completion). See [[Never Skip Stages Even When Told to Continue]].
+> **Enforcement:** CLAUDE.md stage gates + mandatory post-chain (errors block completion). See [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]].
 
 > [!bug]- **3. Shallow Ingestion Is Systemic, Not Isolated**
 > **The failure:** Thin pages accumulated — minimal summaries, sparse relationships, no deep analysis. The evolution pipeline had no quality candidates to promote.
 >
 > **The principle:** Soft quality gates degrade the entire system. One skipped gate creates systematic downstream degradation.
 >
-> **Enforcement:** Validation requires ≥30-word summaries, ≥1 relationship, source provenance, no >70% overlap. See [[Shallow Ingestion Is Systemic, Not Isolated]].
+> **Enforcement:** Validation requires ≥30-word summaries, ≥1 relationship, source provenance, no >70% overlap. See [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]].
 
 > [!bug]- **4. Infrastructure Must Be Reproducible, Not Manual**
 > **The failure:** Agent tried to `cat >` a systemd service file directly. Configuration silently diverged across environments.
 >
 > **The principle:** Any infrastructure step not encoded in a script is a quality gap. Manual steps are undocumented, unrepeatable, invisible.
 >
-> **Enforcement:** `python -m tools.setup` handles all setup. `--services` deploys daemons reproducibly. No manual infra creation. See [[Infrastructure Must Be Reproducible, Not Manual]].
+> **Enforcement:** `python -m tools.setup` handles all setup. `--services` deploys daemons reproducibly. No manual infra creation. See [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]].
 
 > [!bug]- **5. The Agent Must Practice What It Documents**
 > **The failure:** Wiki documented methodology extensively — stage gates, brainstorm-before-spec, depth verification. Agent skipped all of them. Documentation was correct; behavior was not.
 >
 > **The principle:** Methodology in wiki pages is useless if not in CLAUDE.md. Rules must exist in the agent's OPERATIONAL instructions, not just its knowledge base.
 >
-> **Enforcement:** CLAUDE.md contains the rules the agent follows. When the wiki evolves a rule, it must propagate to CLAUDE.md. See [[The Agent Must Practice What It Documents]].
+> **Enforcement:** CLAUDE.md contains the rules the agent follows. When the wiki evolves a rule, it must propagate to CLAUDE.md. See [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]].
 
 > [!bug]- **6. Models Are Built in Layers, Not All at Once**
 > **The failure:** 14 model pages batch-produced as 80-110 line reading lists. Agent claimed "models are ready." User: "I dont even see 2% of it..."
 >
 > **The principle:** Structure (pages exist) ≠ substance (pages define systems). The SFIF pattern applies to model-building itself: scaffold → foundation → infrastructure → features.
 >
-> **Enforcement:** Model-builder skill defines the quality bar (≥150 lines, system definition not reading list, Key Pages, Lessons, State of Knowledge, How to Adopt). See [[Models Are Built in Layers, Not All at Once]].
+> **Enforcement:** Model-builder skill defines the quality bar (≥150 lines, system definition not reading list, Key Pages, Lessons, State of Knowledge, How to Adopt). See [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]].
 
 ---
 
@@ -247,23 +248,23 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Harness Engineering]] | L2 | The coordinated enforcement architecture — 13 rules, 5-verb workflow, enforcement hierarchy |
-| [[Immune System Rules]] | L2 | 24 production rules from 16 post-mortems — liveness, loops, state, security, resources |
-| [[Rework Prevention]] | L2 | Cost model justifying quality gates — prevention vs rework economics |
-| [[Deterministic Shell, LLM Core]] | L5 | The architectural pattern — deterministic code surrounding probabilistic LLM |
-| [[LLM Knowledge Linting]] | L2 | Automated quality maintenance — detecting orphans, contradictions, staleness |
-| [[Task Lifecycle Stage Gating]] | L2 | Stage-gate mechanics — how tasks progress through gates |
-| [[Skyscraper, Pyramid, Mountain]] | L2 | Quality tier framework — explicit choice vs accidental chaos |
-| [[Never Synthesize from Descriptions Alone]] | L4 | Failure lesson — depth verification origin |
-| [[Never Skip Stages Even When Told to Continue]] | L4 | Failure lesson — stage-gate enforcement origin |
-| [[Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Failure lesson — systemic quality degradation |
-| [[Infrastructure Must Be Reproducible, Not Manual]] | L4 | Failure lesson — reproducible tooling origin |
-| [[The Agent Must Practice What It Documents]] | L4 | Failure lesson — operational rules vs documentation gap |
-| [[Models Are Built in Layers, Not All at Once]] | L4 | Failure lesson — structure ≠ substance |
-| [[Plan Execute Review Cycle]] | L5 | The universal workflow that harness engineering codifies |
-| [[Always Plan Before Executing]] | L4 | The planning discipline that prevents the most rework |
-| [[Claude Code Best Practices]] | L2 | Teaching layer content — planning discipline, context hygiene, skill architecture |
-| [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | L4 | Why automated linting prevents the most common quality failure mode |
+| [[harness-engineering|Harness Engineering]] | L2 | The coordinated enforcement architecture — 13 rules, 5-verb workflow, enforcement hierarchy |
+| [[immune-system-rules|Immune System Rules]] | L2 | 24 production rules from 16 post-mortems — liveness, loops, state, security, resources |
+| [[rework-prevention|Rework Prevention]] | L2 | Cost model justifying quality gates — prevention vs rework economics |
+| [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | L5 | The architectural pattern — deterministic code surrounding probabilistic LLM |
+| [[llm-knowledge-linting|LLM Knowledge Linting]] | L2 | Automated quality maintenance — detecting orphans, contradictions, staleness |
+| [[stage-gate-methodology|Stage-Gate Methodology]] | L2 | Stage-gate mechanics — how tasks progress through gates |
+| [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] | L2 | Quality tier framework — explicit choice vs accidental chaos |
+| [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] | L4 | Failure lesson — depth verification origin |
+| [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] | L4 | Failure lesson — stage-gate enforcement origin |
+| [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Failure lesson — systemic quality degradation |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | L4 | Failure lesson — reproducible tooling origin |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | L4 | Failure lesson — operational rules vs documentation gap |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | L4 | Failure lesson — structure ≠ substance |
+| [[plan-execute-review-cycle|Plan Execute Review Cycle]] | L5 | The universal workflow that harness engineering codifies |
+| [[always-plan-before-executing|Always Plan Before Executing]] | L4 | The planning discipline that prevents the most rework |
+| [[claude-code-best-practices|Claude Code Best Practices]] | L2 | Teaching layer content — planning discipline, context hygiene, skill architecture |
+| [[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]] | L4 | Why automated linting prevents the most common quality failure mode |
 
 ---
 
@@ -271,14 +272,14 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 
 | Lesson | What was learned | Enforcement mechanism |
 |--------|-----------------|---------------------|
-| [[Never Synthesize from Descriptions Alone]] | Layer 0 ≠ Layer 1. Read the thing, not the description. | CLAUDE.md + wiki-agent skill + 0.25 ratio rule |
-| [[Never Skip Stages Even When Told to Continue]] | "Continue" = within current stage. Stage gates are hard boundaries. | CLAUDE.md stage gates + mandatory post-chain |
-| [[Shallow Ingestion Is Systemic, Not Isolated]] | Soft gates degrade the entire system. Quality compounds. | Validation: ≥30 words, ≥1 relationship, source provenance |
-| [[Infrastructure Must Be Reproducible, Not Manual]] | Manual steps are undocumented, unrepeatable, invisible. | `tools/setup.py` handles all infra deployment |
-| [[The Agent Must Practice What It Documents]] | Rules in wiki pages ≠ rules the agent follows. Must be in CLAUDE.md. | CLAUDE.md contains operational rules, not just documentation |
-| [[Models Are Built in Layers, Not All at Once]] | Structure ≠ substance. Follow SFIF for model building. | Model-builder skill with quality bar + checklist |
-| [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | 7 behavioral failures persist after 100% infrastructure enforcement. 20% clean completion rate. | Deep evidence: overnight run degradation data, specific fix options per class |
-| [[Harness Ownership Converges Independently Across Projects]] | 3 independent projects converged on harness-owned loop. Not preference — structural requirement. | Convergence evidence from OpenArms, OpenFleet, and external harness engineering article |
+| [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] | Layer 0 ≠ Layer 1. Read the thing, not the description. | CLAUDE.md + wiki-agent skill + 0.25 ratio rule |
+| [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] | "Continue" = within current stage. Stage gates are hard boundaries. | CLAUDE.md stage gates + mandatory post-chain |
+| [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | Soft gates degrade the entire system. Quality compounds. | Validation: ≥30 words, ≥1 relationship, source provenance |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | Manual steps are undocumented, unrepeatable, invisible. | `tools/setup.py` handles all infra deployment |
+| [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | Rules in wiki pages ≠ rules the agent follows. Must be in CLAUDE.md. | CLAUDE.md contains operational rules, not just documentation |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | Structure ≠ substance. Follow SFIF for model building. | Model-builder skill with quality bar + checklist |
+| [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | 7 behavioral failures persist after 100% infrastructure enforcement. 20% clean completion rate. | Deep evidence: overnight run degradation data, specific fix options per class |
+| [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]] | 3 independent projects converged on harness-owned loop. Not preference — structural requirement. | Convergence evidence from OpenArms, OpenFleet, and external harness engineering article |
 
 > [!bug]- Critical Evidence: 2,073 Lines of Orphaned Code — Tests Alone Prove Nothing
 >
@@ -364,63 +365,63 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Harness Engineering]]
-- BUILDS ON: [[Immune System Rules]]
-- BUILDS ON: [[Rework Prevention]]
-- BUILDS ON: [[Deterministic Shell, LLM Core]]
-- BUILDS ON: [[Never Synthesize from Descriptions Alone]]
-- BUILDS ON: [[Never Skip Stages Even When Told to Continue]]
-- BUILDS ON: [[Shallow Ingestion Is Systemic, Not Isolated]]
-- BUILDS ON: [[Infrastructure Must Be Reproducible, Not Manual]]
-- BUILDS ON: [[The Agent Must Practice What It Documents]]
-- BUILDS ON: [[Models Are Built in Layers, Not All at Once]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Model: Claude Code]]
-- RELATES TO: [[Model: Automation and Pipelines]]
-- RELATES TO: [[Skyscraper, Pyramid, Mountain]]
+- BUILDS ON: [[harness-engineering|Harness Engineering]]
+- BUILDS ON: [[immune-system-rules|Immune System Rules]]
+- BUILDS ON: [[rework-prevention|Rework Prevention]]
+- BUILDS ON: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- BUILDS ON: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+- BUILDS ON: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+- BUILDS ON: [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+- BUILDS ON: [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+- BUILDS ON: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- BUILDS ON: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[model-automation-pipelines|Model — Automation and Pipelines]]
+- RELATES TO: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[Immune System Rules]]
-[[Rework Prevention]]
-[[Deterministic Shell, LLM Core]]
-[[Never Synthesize from Descriptions Alone]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[The Agent Must Practice What It Documents]]
-[[Models Are Built in Layers, Not All at Once]]
-[[Model: Methodology]]
-[[Model: Claude Code]]
-[[Model: Automation and Pipelines]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Agent Compliance Framework]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Methodology Evolution Protocol]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Model: Design.md and IaC]]
-[[Model: Local AI ($0 Target)]]
-[[Model: SFIF and Architecture]]
-[[Never Present Speculation as Fact]]
-[[Operations Plan: Wiki Post-Ingestion Validation]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
-[[Standards Must Preach by Example]]
-[[Standards-by-Example]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Systemic Incompleteness Is Invisible to Validation]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[harness-engineering|Harness Engineering]]
+[[immune-system-rules|Immune System Rules]]
+[[rework-prevention|Rework Prevention]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[model-methodology|Model — Methodology]]
+[[model-claude-code|Model — Claude Code]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-local-ai|Model — Local AI ($0 Target)]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[never-present-speculation-as-fact|Never Present Speculation as Fact]]
+[[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[E006-standards-by-example|Standards-by-Example]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]

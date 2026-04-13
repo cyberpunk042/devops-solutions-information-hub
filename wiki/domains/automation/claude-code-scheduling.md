@@ -1,5 +1,7 @@
 ---
-title: "Claude Code Scheduling"
+title: Claude Code Scheduling
+aliases:
+  - "Claude Code Scheduling"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
     file: raw/transcripts/claude-notebooklm-content-team.txt
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
+    title: Claude + NotebookLM = Your 24/7 Content Team
     ingested: 2026-04-08
 tags: [claude-code, scheduling, cron, remote-tasks, automation, anthropic-cloud]
 ---
@@ -94,30 +96,30 @@ Cross-referencing `Wiki Event-Driven Automation`: that page explicitly resolves 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-claude-notebooklm-content-team
-- BUILDS ON: [[Claude Code Skills]]
-- ENABLES: [[AI-Driven Content Pipeline]]
-- RELATES TO: [[NotebookLM]]
-- ENABLES: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[LLM Knowledge Linting]]
-- RELATES TO: [[Plane]]
-- RELATES TO: [[OpenFleet]]
+- DERIVED FROM: [[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- ENABLES: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- RELATES TO: [[plane|Plane]]
+- RELATES TO: [[openfleet|OpenFleet]]
 
 ## Backlinks
 
-[[src-claude-notebooklm-content-team]]
-[[Claude Code Skills]]
-[[AI-Driven Content Pipeline]]
-[[NotebookLM]]
-[[Wiki Event-Driven Automation]]
-[[LLM Knowledge Linting]]
-[[Plane]]
-[[OpenFleet]]
-[[Claude Code Slash Commands (artemgetmann)]]
-[[Research Pipeline Orchestration]]
+[[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
+[[claude-code-skills|Claude Code Skills]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[notebooklm|NotebookLM]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[plane|Plane]]
+[[openfleet|OpenFleet]]
+[[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]

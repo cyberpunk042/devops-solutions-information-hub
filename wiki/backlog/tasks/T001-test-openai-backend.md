@@ -1,5 +1,7 @@
 ---
-title: "Test OpenAI backend with LocalAI"
+title: Test OpenAI backend with LocalAI
+aliases:
+  - "Test OpenAI backend with LocalAI"
 type: task
 domain: backlog
 status: blocked
@@ -8,9 +10,9 @@ epic: E001
 task_type: task
 current_stage: scaffold
 readiness: 0
-stages_completed: []
-artifacts: []
-depends_on: []
+stages_completed:
+artifacts:
+depends_on:
 confidence: high
 created: 2026-04-09
 updated: 2026-04-09

@@ -1,5 +1,7 @@
 ---
-title: "Devops — Domain Overview"
+title: Devops — Domain Overview
+aliases:
+  - "Devops — Domain Overview"
 type: domain-overview
 domain: devops
 layer: spine
@@ -23,8 +25,8 @@ The devops domain covers stage-gate methodology, ecosystem topology, backlog man
 > | Metric | Value |
 > |--------|-------|
 > | Concept pages | 9 |
-> | Related model pages | [[Model: Methodology]], [[Model: Ecosystem Architecture]], [[Model: SFIF Architecture]] |
-> | Decision pages | [[Decision: Stage-Gate Operational Decisions]], [[Decision: Task Type Edge Cases]], [[Decision: Execution Mode Edge Cases]] |
+> | Related model pages | [[model-methodology|Model — Methodology]], [[model-ecosystem|Model — Ecosystem Architecture]], [[model-sfif-architecture|Model — SFIF and Architecture]] |
+> | Decision pages | [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]], [[task-type-edge-cases|Decision — Task Type Edge Cases]], [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]] |
 > | Related lessons | 5+ (Never Skip Stages Even When Told to Continue, Infrastructure Must Be Reproducible Not Manual, Methodology Is a Framework Not a Fixed Pipeline, etc.) |
 
 ## State of Knowledge
@@ -86,16 +88,16 @@ All pages assigned maturity. All styled with callout vocabulary. All have standa
 ## FAQ
 
 ### Q: What is the Stage-Gate Methodology and why is it mandatory?
-Stage-Gate is the 5-stage sequential system — Document → Design → Scaffold → Implement → Test — that governs all work across the ecosystem. Skipping stages is a violation. The methodology ensures that understanding precedes design, design precedes implementation, and verification follows all work. See [[Stage-Gate Methodology]].
+Stage-Gate is the 5-stage sequential system — Document → Design → Scaffold → Implement → Test — that governs all work across the ecosystem. Skipping stages is a violation. The methodology ensures that understanding precedes design, design precedes implementation, and verification follows all work. See [[stage-gate-methodology|Stage-Gate Methodology]].
 
 ### Q: What are the 24 Immune System Rules and where should I apply them?
-The 24 rules originated from 16 real post-mortems across projects. They cover failure modes like runaway loops, permission drift, stale state reads, and cost spikes. They are implemented in OpenFleet's doctor.py and are transferable to any agent harness as a checklist. See [[Immune System Rules]].
+The 24 rules originated from 16 real post-mortems across projects. They cover failure modes like runaway loops, permission drift, stale state reads, and cost spikes. They are implemented in OpenFleet's doctor.py and are transferable to any agent harness as a checklist. See [[immune-system-rules|Immune System Rules]].
 
 ### Q: How do the four ecosystem projects relate to each other?
-openfleet (agent fleet), AICP (AI Control Platform), DSPD (the research wiki), and devops-control-plane (infrastructure management) form a single personal devops infrastructure. The wiki documents all four and acts as the shared knowledge backbone. See [[Four-Project Ecosystem]].
+openfleet (agent fleet), AICP (AI Control Platform), DSPD (the research wiki), and devops-control-plane (infrastructure management) form a single personal devops infrastructure. The wiki documents all four and acts as the shared knowledge backbone. See [[four-project-ecosystem|Four-Project Ecosystem]].
 
 ### Q: What WSL2-specific devops constraints should I know about?
-WSL2 affects service startup (no systemd by default), networking (bridged vs NAT), inotify watch limits (relevant for the wiki watcher daemon), and daemon lifecycle management. Standard Linux devops documentation often does not account for these constraints. See [[WSL2 Development Patterns]].
+WSL2 affects service startup (no systemd by default), networking (bridged vs NAT), inotify watch limits (relevant for the wiki watcher daemon), and daemon lifecycle management. Standard Linux devops documentation often does not account for these constraints. See [[wsl2-development-patterns|WSL2 Development Patterns]].
 
 ## Relationships
 
@@ -107,9 +109,9 @@ WSL2 affects service startup (no systemd by default), networking (bridged vs NAT
 
 ## Backlinks
 
-[[AI Agents — Domain Overview]]
-[[Tools And Platforms — Domain Overview]]
-[[Automation — Domain Overview]]
-[[Knowledge Systems — Domain Overview]]
-[[AI Models — Domain Overview]]
-[[Cross-Domain — Domain Overview]]
+[[ai-agents-domain-overview|AI Agents — Domain Overview]]
+[[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+[[automation-domain-overview|Automation — Domain Overview]]
+[[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+[[ai-models-domain-overview|AI Models — Domain Overview]]
+[[cross-domain-domain-overview|Cross-Domain — Domain Overview]]

@@ -267,9 +267,16 @@ def _check_orphan_pages(
                 resolved = (index_file.parent / linked_file).resolve()
                 referenced_files.add(str(resolved))
                 referenced_titles.add(match.group(1).strip())
-            # Wikilink patterns: [[Page Title]]
+            # Wikilink patterns: [[Page Title]] or [[filename|Page Title]]
             for match in re.finditer(r"\[\[([^\]]+)\]\]", content):
-                referenced_titles.add(match.group(1).strip())
+                inner = match.group(1).strip()
+                if '|' in inner:
+                    # [[filename|title]] — index both filename stem and display title
+                    parts = inner.split('|', 1)
+                    referenced_titles.add(parts[0].strip())
+                    referenced_titles.add(parts[1].strip())
+                else:
+                    referenced_titles.add(inner)
         except Exception:
             pass
 

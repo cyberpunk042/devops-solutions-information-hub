@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: kepano/obsidian-skills"
+title: Synthesis — kepano-obsidian-skills
+aliases:
+  - "Synthesis — kepano-obsidian-skills"
+  - "Synthesis: kepano-obsidian-skills"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-kepano-obsidian-skills
     type: documentation
-    url: "https://github.com/kepano/obsidian-skills"
+    url: https://github.com/kepano/obsidian-skills
     file: raw/articles/kepanoobsidian-skills.md
-    title: "kepano/obsidian-skills"
+    title: kepano/obsidian-skills
     ingested: 2026-04-08
 tags: [obsidian, skills, agent-skills, claude-code, codex-cli, markdown, json-canvas]
 ---
-
-# Synthesis: kepano/obsidian-skills
-
+# Synthesis — kepano-obsidian-skills
 ## Summary
 
 This repository, maintained by Kepano (the creator of Obsidian), provides the official set of Agent Skills for Obsidian. The skills follow the Agent Skills specification (agentskills.io), making them compatible with any skills-compatible agent including Claude Code, Codex CLI, and OpenCode. The collection includes five skills: obsidian-markdown (creating and editing Obsidian Flavored Markdown with wikilinks, embeds, callouts, and properties), obsidian-bases (creating and editing Obsidian Bases with views, filters, formulas, and summaries), json-canvas (creating and editing JSON Canvas files with nodes, edges, groups, and connections), obsidian-cli (interacting with vaults via the Obsidian CLI for plugin and theme development), and defuddle (extracting clean markdown from web pages using the Defuddle tool to remove clutter and save tokens).
@@ -72,22 +73,24 @@ Cross-referencing `Skills Architecture Patterns` and `Harness Engineering`: the 
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-kepano-obsidian-skills
-- FEEDS INTO: [[Obsidian Skills Ecosystem]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- IMPLEMENTS: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+- FEEDS INTO: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- IMPLEMENTS: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[src-kepano-obsidian-skills]]
-[[Obsidian Skills Ecosystem]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
-[[LLM Wiki Pattern]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[claude-code-skills|Claude Code Skills]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+[[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]

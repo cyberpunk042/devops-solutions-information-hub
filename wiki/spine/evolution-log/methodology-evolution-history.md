@@ -1,5 +1,8 @@
 ---
-title: "Evolution: Methodology System"
+title: Evolution — Methodology System
+aliases:
+  - "Evolution — Methodology System"
+  - "Evolution: Methodology System"
 type: evolution
 domain: cross-domain
 layer: spine
@@ -18,8 +21,7 @@ sources:
 tags: [evolution, methodology, history, stage-gate, enforcement]
 ---
 
-# Evolution: Methodology System
-
+# Evolution — Methodology System
 ## Summary
 
 How the methodology system evolved from prose instructions to infrastructure-enforced stage gates. Tracks the journey from OpenArms v1 (manual rules) through v9 (14 enforcement scripts + 4 hooks) and the research wiki's formalization into a portable methodology engine with artifact chains, domain profiles, and structural compliance patterns.
@@ -77,18 +79,18 @@ The methodology system is at v1.0 — first complete version with:
 
 ## Relationships
 
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- RELATES TO: [[Methodology Evolution Protocol]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
-- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[methodology-evolution-protocol|Methodology Evolution Protocol]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Stage-Gate Methodology]]
-[[Methodology Evolution Protocol]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Session 2026-04-09 Summary]]
-[[Session 2026-04-10 Summary]]
+[[model-methodology|Model — Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[2026-04-09-session-summary|Session 2026-04-09 Summary]]
+[[2026-04-10-session-summary|Session 2026-04-10 Summary]]

@@ -1,5 +1,7 @@
 ---
-title: "Infrastructure Enforcement Proves Instructions Fail"
+title: Infrastructure Enforcement Proves Instructions Fail
+aliases:
+  - "Infrastructure Enforcement Proves Instructions Fail"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -16,15 +18,15 @@ sources:
   - id: openarms-v8-overnight
     type: observation
     file: raw/articles/openarms-methodology-scan.md
-    description: "OpenArms v8 overnight autonomous run — 75% stage boundary violations despite explicit CLAUDE.md rules"
+    description: OpenArms v8 overnight autonomous run — 75% stage boundary violations despite explicit CLAUDE.md rules
   - id: openarms-v10-review
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms v10 critical review — 0% stage violations after hooks, but 80% behavioral failure rate"
+    description: OpenArms v10 critical review — 0% stage violations after hooks, but 80% behavioral failure rate
   - id: openarms-v10-methodology
     type: observation
     file: raw/articles/openarms-methodology-v10-v11.md
-    description: "OpenArms methodology evolution v8→v10 — infrastructure enforcement replaces instruction-based enforcement"
+    description: OpenArms methodology evolution v8→v10 — infrastructure enforcement replaces instruction-based enforcement
 tags: [enforcement, hooks, infrastructure, instructions, compliance, agent-failure, quantified-evidence]
 ---
 
@@ -95,7 +97,7 @@ This doesn't mean instructions are useless. Instructions handle the 80% of behav
 
 ## Applicability
 
-> [!abstract] The Four Enforcement Tiers (from [[Methodology Adoption Guide]])
+> [!abstract] The Four Enforcement Tiers (from [[methodology-adoption-guide|Methodology Adoption Guide]])
 >
 > | Tier | What You Use | When |
 > |------|-------------|------|
@@ -119,46 +121,46 @@ This doesn't mean instructions are useless. Instructions handle the 80% of behav
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What fails AFTER enforcement works?** | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — 7 behavioral classes persist at 80% failure rate |
-> | **How does enforcement scale to fleets?** | [[Three Lines of Defense — Immune System for Agent Quality]] — prevention + detection + correction |
-> | **What does the enforcement code look like?** | [[Enforcement Hook Patterns]] — real OpenArms v10 implementations (48+106+36+29 lines) |
-> | **When is enforcement too much?** | [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] — every block needs a reason |
-> | **Why does this converge across projects?** | [[Harness Ownership Converges Independently Across Projects]] — 3 independent systems, same conclusion |
-> | **How do I adopt the right level?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity determines enforcement level |
+> | **What fails AFTER enforcement works?** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — 7 behavioral classes persist at 80% failure rate |
+> | **How does enforcement scale to fleets?** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] — prevention + detection + correction |
+> | **What does the enforcement code look like?** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] — real OpenArms v10 implementations (48+106+36+29 lines) |
+> | **When is enforcement too much?** | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] — every block needs a reason |
+> | **Why does this converge across projects?** | [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]] — 3 independent systems, same conclusion |
+> | **How do I adopt the right level?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity determines enforcement level |
 > | **What global standards apply?** | Onion Architecture (inner layers don't know about outer), Chain of Responsibility (enforcement hierarchy) |
 
 ## Relationships
 
-- DERIVED FROM: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- DERIVED FROM: [[Enforcement Hook Patterns]]
-- BUILDS ON: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Stage-Aware Skill Injection]]
-- RELATES TO: [[Never Skip Stages Even When Told to Continue]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- DERIVED FROM: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- BUILDS ON: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+- RELATES TO: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Model: Quality and Failure Prevention]]
-[[Stage-Aware Skill Injection]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Methodology Adoption Guide]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Context Compaction Is a Reset Event]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]

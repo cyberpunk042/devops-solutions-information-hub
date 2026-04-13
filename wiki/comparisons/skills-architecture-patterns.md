@@ -1,5 +1,7 @@
 ---
-title: "Skills Architecture Patterns"
+title: Skills Architecture Patterns
+aliases:
+  - "Skills Architecture Patterns"
 type: comparison
 layer: 3
 maturity: growing
@@ -11,40 +13,40 @@ updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
-    file: [[Synthesis: Claude + NotebookLM Content Automation]]
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
+    file: [['Synthesis — Claude + NotebookLM Content Automation']]
+    title: Claude + NotebookLM = Your 24/7 Content Team
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    file: [[Synthesis: Claude Code Best Practice (shanraisshan)]]
-    title: "shanraisshan/claude-code-best-practice"
+    file: [['Synthesis — Claude Code Best Practice (shanraisshan)']]
+    title: shanraisshan/claude-code-best-practice
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    file: [[Synthesis: Obsidian + Claude Code Second Brain Setup]]
+    file: [['Synthesis — Obsidian + Claude Code Second Brain Setup']]
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
   - id: src-kepano-obsidian-skills
     type: documentation
-    file: [[Synthesis: kepano/obsidian-skills]]
-    title: "kepano/obsidian-skills"
+    file: [['Synthesis — kepano-obsidian-skills']]
+    title: kepano/obsidian-skills
   - id: src-axton-obsidian-visual-skills
     type: documentation
-    file: [[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-    title: "axtonliu/axton-obsidian-visual-skills"
+    file: [['Synthesis — axtonliu-axton-obsidian-visual-skills']]
+    title: axtonliu/axton-obsidian-visual-skills
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
-    file: [[Synthesis: pablo-mano/Obsidian-CLI-skill]]
-    title: "pablo-mano/Obsidian-CLI-skill"
+    file: [['Synthesis — pablo-mano-Obsidian-CLI-skill']]
+    title: pablo-mano/Obsidian-CLI-skill
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    file: [[Synthesis: claude-world/notebooklm-skill]]
-    title: "claude-world/notebooklm-skill"
+    file: [['Synthesis — claude-world-notebooklm-skill']]
+    title: claude-world/notebooklm-skill
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    file: [[Synthesis: PleasePrompto/notebooklm-skill]]
-    title: "PleasePrompto/notebooklm-skill"
+    file: [['Synthesis — PleasePrompto-notebooklm-skill']]
+    title: PleasePrompto/notebooklm-skill
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    file: [[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-    title: "18 Claude Code Token Hacks in 18 Minutes"
+    file: [['Synthesis — 18 Claude Code Token Hacks in 18 Minutes']]
+    title: 18 Claude Code Token Hacks in 18 Minutes
 tags: [skills, architecture, patterns, cross-domain, claude-code, obsidian, notebooklm, SKILL-md, agent-extensibility, composition]
 ---
 
@@ -173,33 +175,33 @@ The connection to context management is the critical constraint that shapes all 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- SYNTHESIZES: [[Claude Code Skills]]
-- SYNTHESIZES: [[Obsidian Skills Ecosystem]]
-- SYNTHESIZES: [[NotebookLM Skills]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[AI-Driven Content Pipeline]]
-- RELATES TO: [[LLM Wiki Pattern]]
+- SYNTHESIZES: [[claude-code-skills|Claude Code Skills]]
+- SYNTHESIZES: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- SYNTHESIZES: [[notebooklm-skills|NotebookLM Skills]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Claude Code Skills]]
-[[Obsidian Skills Ecosystem]]
-[[NotebookLM Skills]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[AI-Driven Content Pipeline]]
-[[LLM Wiki Pattern]]
-[[Claude Code Slash Commands (artemgetmann)]]
-[[Decision: Extension System Operational Decisions]]
-[[Design.md Pattern]]
-[[Infrastructure as Code Patterns]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
+[[claude-code-skills|Claude Code Skills]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+[[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]
+[[design-md-pattern|Design.md Pattern]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]

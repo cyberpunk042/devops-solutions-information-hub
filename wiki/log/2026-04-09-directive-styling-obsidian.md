@@ -1,5 +1,7 @@
 ---
-title: "Styling — Make It Look Good in Obsidian"
+title: Styling — Make It Look Good in Obsidian
+aliases:
+  - "Styling — Make It Look Good in Obsidian"
 type: note
 domain: log
 note_type: directive
@@ -32,8 +34,8 @@ The pages are structurally correct but visually raw in Obsidian. The user wants:
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

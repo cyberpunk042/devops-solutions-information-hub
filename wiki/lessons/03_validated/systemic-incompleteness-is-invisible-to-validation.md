@@ -1,5 +1,7 @@
 ---
-title: "Systemic Incompleteness Is Invisible to Validation"
+title: Systemic Incompleteness Is Invisible to Validation
+aliases:
+  - "Systemic Incompleteness Is Invisible to Validation"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -11,12 +13,12 @@ derived_from:
   - "Models Are Built in Layers, Not All at Once"
   - "Models Are Systems, Not Documents"
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: directive-systemic-incompleteness
     type: log
     file: wiki/log/2026-04-09-directive-systemic-incompleteness.md
-    title: "Systemic Incompleteness — No Model Is Finished"
+    title: Systemic Incompleteness — No Model Is Finished
     ingested: 2026-04-09
 tags: [failure-lesson, quality, completeness, validation, depth, false-signals]
 ---
@@ -83,25 +85,25 @@ The agent's error was treating validation as a quality signal rather than a form
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Model Registry]]
-- RELATES TO: [[Models Are Built in Layers, Not All at Once]]
-- RELATES TO: [[Models Are Systems, Not Documents]]
-- RELATES TO: [[The Agent Must Practice What It Documents]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
+- DERIVED FROM: [[model-registry|Model Registry]]
+- RELATES TO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+- RELATES TO: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 
 ## Backlinks
 
-[[Model Registry]]
-[[Models Are Built in Layers, Not All at Once]]
-[[Models Are Systems, Not Documents]]
-[[The Agent Must Practice What It Documents]]
-[[Model: Quality and Failure Prevention]]
-[[Coverage Blindness — Modeling Only What You Know]]
+[[model-registry|Model Registry]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]

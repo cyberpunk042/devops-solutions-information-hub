@@ -1,5 +1,7 @@
 ---
-title: "Concept Page Standards"
+title: Concept Page Standards
+aliases:
+  - "Concept Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -104,7 +106,7 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Methodology Framework]] — 383 lines, 17+ relationships
+> [!success] [[methodology-framework|Methodology Framework]] — 383 lines, 17+ relationships
 >
 > **Why it's the standard:**
 > - 7 components defined in a reference card table (Model, Selection, Composition, Adaptation, Recursion, Multi-Track, Quality Target)
@@ -117,11 +119,53 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 >
 > **The test:** After reading this page, could you CREATE a new methodology model from scratch? If yes, the concept page succeeded. If you'd need to read 5 other pages, it's a reference list, not a concept.
 
+### Annotated Exemplar: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Frontmatter annotations:**
+> ```yaml
+> type: concept              # ← correct type
+> domain: cross-domain       # ← cross-domain because it applies to ALL projects
+> confidence: high           # ← justified: backed by CMMI, Lean Startup, EPAM ADLC research
+> maturity: seed             # ← honest: concept is new this session, needs operator review
+> sources:                   # ← 7 sources with mix of directives, files, and external URLs
+>   - id: cmmi-levels
+>     type: article
+>     url: "https://en.wikipedia.org/wiki/..."  # ← external research gives credibility
+> ```
+> Multiple source TYPES (directive, file, article) show this isn't based on one perspective.
+>
+> **Summary annotation:**
+> "Projects don't all need the same SDLC rigor." — ONE sentence that captures the ENTIRE concept. A reader knows immediately: this page is about adapting process to context. The summary names the 3 dimensions (phase, scale, chain) so the reader can assess relevance in seconds.
+>
+> **Key Insights annotation:**
+> 4 insights, each self-contained:
+> - Insight 1: "Project phase determines flexibility" — names the dimension, explains the impact
+> - Insight 2: "Codebase scale determines rigor needs" — concrete breakpoints (10k/100k/1M/5M/15M)
+> - Insight 3: "Three chains cover the spectrum" — names all three, links to configs
+> - Insight 4: "Phase and scale are independent dimensions" — prevents a common conflation
+> Each insight has enough detail to stand alone — reading ONLY Key Insights gives a complete picture.
+>
+> **Deep Analysis annotation:**
+> 5 subsections (Dimension 1: Phase, Dimension 2: Scale, Dimension 3: Chains, External Research, Interaction Matrix):
+> - Phase table: 4 rows (POC/MVP/Staging/Production) × 5 columns (characteristics, loop length, docs required, flexibility) — COMPLETE specification in a single table
+> - Scale table: 5 tiers with "What Breaks Without Process" column — teaches through consequences
+> - Chain comparison: 3 chains × 6 dimensions — reader can CHOOSE from this table alone
+> - External Research: CMMI + Lean Startup + ADLC — external validation, not just internal reasoning
+> - Interaction matrix: Phase × Scale → recommended chain — the DECISION TABLE. This is what makes the concept actionable.
+>
+> **Navigation weave annotation:**
+> `> [!abstract] From SDLC Framework → Related Knowledge` with 7 rows linking to: Goldilocks, PM levels, readiness/progress, global standards, SFIF, methodology models, backlog hierarchy. From THIS page you can reach ANY part of the system.
+>
+> **Open Questions annotation:**
+> 4 questions — each PARTIALLY RESOLVED with evidence and "remaining" note. Not just "we don't know" but "here's what we found and here's what still needs testing." Shows intellectual honesty + forward direction.
+
 ### Common Failures
 
 | Failure | What It Looks Like | The Fix |
 |---------|-------------------|---------|
-| **Reading list** | "This concept involves X, Y, Z. See [[X]], [[Y]], [[Z]]." | Define the SYSTEM — how X, Y, Z interact, what breaks without one |
+| **Reading list** | "This concept involves X, Y, Z. See `[[X]]`, `[[Y]]`, `[[Z]]`." | Define the SYSTEM — how X, Y, Z interact, what breaks without one |
 | **Vague insights** | "This is useful in many situations" | Name the situations. Be specific. Data points > adjectives. |
 | **Essay analysis** | 500 words of unbroken prose | Add `###` subsections. One mechanism per subsection. |
 | **Missing instances** | "This works well in practice" | WHICH practice? Name the wiki page, the project, the date. |
@@ -146,14 +190,14 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- BUILDS ON: [[Methodology Framework]]
-- RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Framework]]
-[[Model: Wiki Design]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[methodology-framework|Methodology Framework]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

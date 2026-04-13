@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: awesome-design-md — 58 Design Systems for AI Agents"
+title: Synthesis — awesome-design-md — 58 Design Systems for AI Agents
+aliases:
+  - "Synthesis — awesome-design-md — 58 Design Systems for AI Agents"
+  - "Synthesis: awesome-design-md — 58 Design Systems for AI Agents"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,21 +14,19 @@ updated: 2026-04-10
 sources:
   - id: src-awesome-design-md
     type: documentation
-    url: "https://github.com/VoltAgent/awesome-design-md"
+    url: https://github.com/VoltAgent/awesome-design-md
     file: raw/articles/voltagentawesome-design-md.md
-    title: "VoltAgent/awesome-design-md"
+    title: VoltAgent/awesome-design-md
     ingested: 2026-04-09
   - id: src-claude-design-md
     type: artifact
-    url: "https://getdesign.md/claude/design-md"
+    url: https://getdesign.md/claude/design-md
     file: raw/articles/claude-design-md-example.md
-    title: "Claude (Anthropic) DESIGN.md — Full 312-line Example"
+    title: Claude (Anthropic) DESIGN.md — Full 312-line Example
     ingested: 2026-04-09
 tags: [design-md, design-system, ai-agents, google-stitch, markdown-config, ui-consistency, awesome-list, voltagent, machine-specification]
 ---
-
-# Synthesis: awesome-design-md — 58 Design Systems for AI Agents
-
+# Synthesis — awesome-design-md — 58 Design Systems for AI Agents
 ## Summary
 
 A curated collection of 58 DESIGN.md files extracted from real production websites, maintained by VoltAgent. Each file captures a complete design system in the Google Stitch 9-section format: not a style guide summary but a machine-specification where every value an AI agent needs to generate matching UI is spelled out — semantic color names with rationale, a 16-role typography hierarchy table, per-component CSS values including shadow strings and padding in pixels, 5 breakpoints with collapsing strategies, and ready-to-paste agent prompts. The Claude DESIGN.md alone is 312 lines of structured markdown; extrapolated across the collection, awesome-design-md represents roughly 18,000 lines of design knowledge in a format LLMs read natively. The collection spans 7 categories: AI/ML (12 sites), Developer Tools (14), Infrastructure (6), Design/Productivity (10), Fintech (4), Enterprise/Consumer (7), and Car Brands (5).
@@ -104,24 +105,24 @@ Developer Tools (14) and AI/ML (12) dominate — these communities are building 
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Design.md Pattern]] (this is the empirical evidence for that concept)
-- RELATES TO: [[Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)
-- RELATES TO: [[Skills Architecture Patterns]] (static design context vs dynamic skill invocation)
-- RELATES TO: [[Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)
-- RELATES TO: [[Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context — same tradeoff)
-- FEEDS INTO: [[Methodology Framework]] (DESIGN.md as a required artifact in the design stage)
+- EXTENDS: [[design-md-pattern|Design.md Pattern]] (this is the empirical evidence for that concept)
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] (DESIGN.md as part of the IaC spectrum)
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]] (static design context vs dynamic skill invocation)
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]] (CLAUDE.md + DESIGN.md + AGENTS.md as context stack)
+- RELATES TO: [[context-aware-tool-loading|Context-Aware Tool Loading]] (DESIGN.md is eager-loaded static context — same tradeoff)
+- FEEDS INTO: [[methodology-framework|Methodology Framework]] (DESIGN.md as a required artifact in the design stage)
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[Infrastructure as Code Patterns]]
-[[Skills Architecture Patterns]]
-[[Claude Code Best Practices]]
-[[Context-Aware Tool Loading]]
-[[Methodology Framework]]
-[[Never Synthesize from Descriptions Alone]]
+[[design-md-pattern|Design.md Pattern]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[methodology-framework|Methodology Framework]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]

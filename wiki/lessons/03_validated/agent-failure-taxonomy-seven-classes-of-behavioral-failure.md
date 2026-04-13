@@ -1,5 +1,7 @@
 ---
-title: "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
+title: Agent Failure Taxonomy — Seven Classes of Behavioral Failure
+aliases:
+  - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -15,11 +17,11 @@ sources:
   - id: openarms-e016
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms E016 critical review — 5 runs analyzed, 6 failure classes identified, 4/5 runs failed by 'did I have to manually fix' standard"
+    description: OpenArms E016 critical review — 5 runs analyzed, 6 failure classes identified, 4/5 runs failed by 'did I have to manually fix' standard
   - id: openarms-v10
     type: observation
     file: raw/articles/openarms-methodology-v10-v11.md
-    description: "OpenArms v10→v11 transition — infrastructure is solved, agent behavior is the remaining frontier"
+    description: OpenArms v10→v11 transition — infrastructure is solved, agent behavior is the remaining frontier
 tags: [agent-failure, taxonomy, behavioral, compliance, quality, quantified-evidence, openarms]
 ---
 
@@ -167,34 +169,34 @@ OpenArms is actively investigating each failure class. These are the proposed fi
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What enforcement prevents these?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] — infrastructure prevents process failures; these 7 are BEHAVIORAL, beyond infrastructure |
-> | **What structure reduces these?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] — consistent structure reduces parsing failures that cause behavioral drift |
-> | **What is the right level of mitigation?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] — mitigation depth matches identity profile |
-> | **What does the immune system detect?** | [[Three Lines of Defense — Immune System for Agent Quality]] — 5 named diseases overlap with these 7 classes |
-> | **Where is the real implementation data?** | [[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — 22 distilled lesson files, 3,001 lines |
-> | **What comparison shows solo vs fleet?** | [[OpenArms vs OpenFleet Enforcement Architecture]] — solo catches none of these automatically; fleet catches some via doctor |
+> | **What enforcement prevents these?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] — infrastructure prevents process failures; these 7 are BEHAVIORAL, beyond infrastructure |
+> | **What structure reduces these?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] — consistent structure reduces parsing failures that cause behavioral drift |
+> | **What is the right level of mitigation?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] — mitigation depth matches identity profile |
+> | **What does the immune system detect?** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] — 5 named diseases overlap with these 7 classes |
+> | **Where is the real implementation data?** | [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] — 22 distilled lesson files, 3,001 lines |
+> | **What comparison shows solo vs fleet?** | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] — solo catches none of these automatically; fleet catches some via doctor |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Quality and Failure Prevention]]
-- BUILDS ON: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- RELATES TO: [[Enforcement Hook Patterns]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- BUILDS ON: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Quality and Failure Prevention]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Context Compaction Is a Reset Event]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]

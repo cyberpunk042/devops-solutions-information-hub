@@ -1,5 +1,7 @@
 ---
-title: "devops-control-plane"
+title: devops-control-plane
+aliases:
+  - "devops-control-plane"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, control-plane, project-management, tech-detection, vault, encryption, audit, multi-interface, adapters, infrastructure]
 ---
@@ -84,29 +86,29 @@ Cross-referencing `Four-Project Ecosystem` and `Immune System Rules`: the `Four-
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- ENABLES: [[OpenFleet]]
-- RELATES TO: [[AICP]]
-- RELATES TO: [[Plane]]
-- RELATES TO: [[Claude Code]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[openfleet|OpenFleet]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[plane|Plane]]
+- RELATES TO: [[claude-code|Claude Code]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[AICP]]
-[[Plane]]
-[[Claude Code]]
-[[Wiki Ingestion Pipeline]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[OpenArms]]
-[[WSL2 Development Patterns]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[plane|Plane]]
+[[claude-code|Claude Code]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[immune-system-rules|Immune System Rules]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[openarms|OpenArms]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]

@@ -1,5 +1,8 @@
 ---
-title: "Model: Knowledge Evolution"
+title: Model — Knowledge Evolution
+aliases:
+  - "Model — Knowledge Evolution"
+  - "Model: Knowledge Evolution"
 type: concept
 domain: cross-domain
 layer: spine
@@ -7,21 +10,16 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
-  - id: src-llm-wiki-v2-agentmemory
-    type: documentation
-    file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 — Extending Karpathy's Pattern with Agentmemory Lessons"
+    title: Karpathy LLM Wiki Idea File
 tags: [model, spine, knowledge-evolution, maturity, progressive-distillation, wiki-lifecycle, scoring, evolution-pipeline, second-brain]
 ---
 
-# Model: Knowledge Evolution
-
+# Model — Knowledge Evolution
 ## Summary
 
 The Knowledge Evolution model describes how raw sources become lessons, patterns, and decisions through a structured, automated promotion pipeline. Raw files enter as seed-maturity pages; a deterministic scorer ranks them by six signals; the prompt builder assembles generation context from wiki relationships; an LLM backend generates evolved content; and a human review gate validates promotion. ==The pipeline is self-compounding: promoted pages add relationship edges that improve neighbor scores in subsequent runs.== The outer loop — ingest → evolve → gap-analyze → research → repeat — is the wiki's steady-state improvement mechanism.
@@ -52,7 +50,7 @@ The Knowledge Evolution model describes how raw sources become lessons, patterns
 > | 5 | Patterns | mature | Structural template generalizing across 2+ instances | Abstraction — reusable form |
 > | 6 | Decisions | canonical | Resolved choice with rationale and alternatives | Resolution — actionable guidance |
 
-The gap (no Layer 3) is intentional — the jump from concept to lesson is a qualitative shift, not just compression. A lesson is a validated principle with operational evidence, not a dense concept. See [[Progressive Distillation]].
+The gap (no Layer 3) is intentional — the jump from concept to lesson is a qualitative shift, not just compression. A lesson is a validated principle with operational evidence, not a dense concept. See [[progressive-distillation|Progressive Distillation]].
 
 ---
 
@@ -71,7 +69,7 @@ The gap (no Layer 3) is intentional — the jump from concept to lesson is a qua
 Full implementation: `tools/evolve.py` (1,321 lines). Run with `pipeline evolve --score --top 10 --json`.
 
 > [!tip] **Scorer tuning history**
-> Initial weights overvalued tag co-occurrence (0.25) — produced candidates that were just tag-pair matches. Rebalanced to emphasize cross-source convergence (0.30) and relationship hubs (0.20). Added `_GENERIC_TAGS` filter to exclude low-signal tags (model, concept, spine). Dedup checks source overlap with existing evolved pages. See the scorer tuning task in [[Model: Methodology]] Real Example section.
+> Initial weights overvalued tag co-occurrence (0.25) — produced candidates that were just tag-pair matches. Rebalanced to emphasize cross-source convergence (0.30) and relationship hubs (0.20). Added `_GENERIC_TAGS` filter to exclude low-signal tags (model, concept, spine). Dedup checks source overlap with existing evolved pages. See the scorer tuning task in [[model-methodology|Model — Methodology]] Real Example section.
 
 ---
 
@@ -90,7 +88,7 @@ Full implementation: `tools/evolve.py` (1,321 lines). Run with `pipeline evolve 
 > ```
 
 > [!warning] **The ASSEMBLE step is where quality is won or lost**
-> A candidate with 12 strong relationships to primary sources produces context that almost writes the lesson itself. A candidate with 3 thin relationships to other seed pages produces weak generation context. ==Ingestion quality directly determines evolution quality.== See [[Multi-Stage Ingestion Beats Single-Pass Processing]].
+> A candidate with 12 strong relationships to primary sources produces context that almost writes the lesson itself. A candidate with 3 thin relationships to other seed pages produces weak generation context. ==Ingestion quality directly determines evolution quality.== See [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]].
 
 ---
 
@@ -171,16 +169,16 @@ When a concept evolves into a lesson or pattern, the source page is PRESERVED, n
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Knowledge Evolution Pipeline]] | L2 | The pipeline concept — scorer, builder, backends, loop |
-| [[Progressive Distillation]] | L5 | The governing pattern — raw → synthesis → concept → lesson → pattern → decision |
-| [[Wiki Ingestion Pipeline]] | L2 | The input to evolution — ingestion quality determines evolution quality |
-| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | L4 | Lesson: each ingestion pass discovers what the previous missed |
-| [[LLM Knowledge Linting]] | L2 | Automated quality — detecting orphans, contradictions, staleness |
-| [[Decision: Wiki-First with LightRAG Upgrade Path]] | L6 | The scale decision — when graph-enhanced retrieval becomes necessary |
-| [[Decision: Local Model vs Cloud API for Routine Operations]] | L6 | Backend selection for routine evolution — local vs cloud trade-off |
-| [[Second Brain Architecture]] | L2 | PKM theory (PARA + Zettelkasten) that influenced the layer model |
-| [[Lesson: Schema Is the Real Product — Not the Content]] | L4 | Why the schema matters more than content — content is regenerable |
-| [[Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Why evolution fails when ingestion was shallow — garbage in, garbage out |
+| [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]] | L2 | The pipeline concept — scorer, builder, backends, loop |
+| [[progressive-distillation|Progressive Distillation]] | L5 | The governing pattern — raw → synthesis → concept → lesson → pattern → decision |
+| [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]] | L2 | The input to evolution — ingestion quality determines evolution quality |
+| [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]] | L4 | Lesson: each ingestion pass discovers what the previous missed |
+| [[llm-knowledge-linting|LLM Knowledge Linting]] | L2 | Automated quality — detecting orphans, contradictions, staleness |
+| [[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]] | L6 | The scale decision — when graph-enhanced retrieval becomes necessary |
+| [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]] | L6 | Backend selection for routine evolution — local vs cloud trade-off |
+| [[second-brain-architecture|Second Brain Architecture]] | L2 | PKM theory (PARA + Zettelkasten) that influenced the layer model |
+| [[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]] | L4 | Why the schema matters more than content — content is regenerable |
+| [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Why evolution fails when ingestion was shallow — garbage in, garbage out |
 
 ---
 
@@ -188,24 +186,52 @@ When a concept evolves into a lesson or pattern, the source page is PRESERVED, n
 
 | Lesson | What was learned |
 |--------|-----------------|
-| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | Each ingestion pass discovers what the previous missed. Evolution quality depends on ingestion quality. |
-| [[Shallow Ingestion Is Systemic, Not Isolated]] | One shallow page → thin evolution candidates → weak lessons. Quality compounds across layers. |
-| [[Lesson: Schema Is the Real Product — Not the Content]] | Content is regenerable from sources. The schema that constrains evolution encodes irreplaceable operational knowledge. |
-| [[Models Are Built in Layers, Not All at Once]] | Evolution itself follows SFIF — scaffold the pipeline, build the foundation (scorer), add infrastructure (backends), then features (review cadence). |
+| [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]] | Each ingestion pass discovers what the previous missed. Evolution quality depends on ingestion quality. |
+| [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | One shallow page → thin evolution candidates → weak lessons. Quality compounds across layers. |
+| [[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]] | Content is regenerable from sources. The schema that constrains evolution encodes irreplaceable operational knowledge. |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | Evolution itself follows SFIF — scaffold the pipeline, build the foundation (scorer), add infrastructure (backends), then features (review cadence). |
 
 ---
+
+### Principles Layer (L5+ — NEW)
+
+The knowledge evolution hierarchy now has a PRINCIPLES layer above validated lessons and patterns. Principles are distilled from ≥3 converging validated lessons — they represent the highest knowledge layer, governing behavior across all contexts.
+
+> [!info] Extended Knowledge Hierarchy
+>
+> | Layer | Type | Count | Promotion Criteria |
+> |-------|------|-------|-------------------|
+> | L0 | Raw sources | 99 files | Ingested into raw/ |
+> | L1 | Source syntheses | 28 | Synthesized from raw, ≥0.25 ratio |
+> | L2 | Concepts | ~110 | Extracted from syntheses, domain-placed |
+> | L3 | Comparisons | 6 | Cross-referenced from concepts |
+> | L4 | Lessons | 40 validated | ≥3 evidence items, self-check, 100+ lines |
+> | L5 | Patterns | 15 validated | ≥2 instances, When To + When Not To |
+> | L5+ | **Principles** | **3 hypothesis** | **≥3 validated lessons converge on same mechanism** |
+> | L6 | Decisions | 17 | Alternatives analyzed, rationale documented |
+
+The 3 current principles (all hypothesis, pending operator confirmation for promotion to validated):
+1. **Infrastructure Over Instructions** — HOW to enforce: quantified from 5 converging lessons
+2. **Structured Context Governs Behavior** — WHY it works: from 4 converging lessons
+3. **Right Process for Right Context (Goldilocks)** — WHEN to apply: from 5 converging lessons
+
+### Maturity Folder Structure (NEW)
+
+Evolved pages organize into maturity-based subfolders: `00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles`. This is the evolution pipeline's PHYSICAL manifestation — pages move through folders as they accumulate evidence. The scaffolder creates new pages in `00_inbox`. Promotion is based on evidence quality, not time.
 
 ### State of Knowledge
 
 > [!success] **Well-covered (built and operational)**
-> - 6-layer density architecture with promotion criteria per level
+> - 7-layer density architecture (L0-L6) with principles layer (L5+) added 2026-04-12
 > - Deterministic scorer with 6 signals, tuned weights, dedup logic (1,321-line implementation)
 > - 8-step generation loop with prompt builder
 > - Three LLM backends (claude-code, openai/LocalAI, aicp)
 > - Two failure modes documented with guards
 > - Weekly evolution cadence codified as pipeline chain
 > - Source page coexistence policy
-> - 10+ evolved pages generated (lessons, patterns, decisions)
+> - Maturity folder structure implemented (00_inbox→04_principles)
+> - 40 validated lessons + 15 validated patterns + 3 principles extracted
+> - 10+ evolved pages generated (lessons, patterns, decisions, principles)
 
 > [!warning] **Thin or unverified**
 > - LocalAI backend quality vs Claude — no systematic comparison exists
@@ -257,39 +283,39 @@ When a concept evolves into a lesson or pattern, the source page is PRESERVED, n
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Knowledge Evolution Pipeline]]
-- BUILDS ON: [[Progressive Distillation]]
-- BUILDS ON: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
-- RELATES TO: [[Model: LLM Wiki]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Model: Second Brain]]
-- RELATES TO: [[Model: Automation and Pipelines]]
-- ENABLES: [[Decision: Wiki-First with LightRAG Upgrade Path]]
-- ENABLES: [[Decision: Local Model vs Cloud API for Routine Operations]]
+- BUILDS ON: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- BUILDS ON: [[progressive-distillation|Progressive Distillation]]
+- BUILDS ON: [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+- RELATES TO: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[model-second-brain|Model — Second Brain]]
+- RELATES TO: [[model-automation-pipelines|Model — Automation and Pipelines]]
+- ENABLES: [[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+- ENABLES: [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 
 ## Backlinks
 
-[[Knowledge Evolution Pipeline]]
-[[Progressive Distillation]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Model: LLM Wiki]]
-[[Model: Methodology]]
-[[Model: Second Brain]]
-[[Model: Automation and Pipelines]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Decision Page Standards]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
-[[Lesson Page Standards]]
-[[Model: Ecosystem Architecture]]
-[[Model: NotebookLM]]
-[[Model: SFIF and Architecture]]
-[[Pattern Page Standards]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[progressive-distillation|Progressive Distillation]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[model-methodology|Model — Methodology]]
+[[model-second-brain|Model — Second Brain]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[decision-page-standards|Decision Page Standards]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[lesson-page-standards|Lesson Page Standards]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-notebooklm|Model — NotebookLM]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[pattern-page-standards|Pattern Page Standards]]

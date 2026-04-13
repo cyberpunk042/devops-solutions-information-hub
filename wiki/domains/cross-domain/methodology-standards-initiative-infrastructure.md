@@ -1,5 +1,7 @@
 ---
-title: "Methodology Standards Initiative — Infrastructure Analysis"
+title: Methodology Standards Initiative — Infrastructure Analysis
+aliases:
+  - "Methodology Standards Initiative — Infrastructure Analysis"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -207,37 +209,37 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- FEEDS INTO: [[Methodology Framework]]
-- FEEDS INTO: [[Model: Methodology]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- BUILDS ON: [[Task Type Artifact Matrix]]
-- BUILDS ON: [[Execution Modes and End Conditions]]
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- ENABLES: [[Model: Quality and Failure Prevention]]
+- FEEDS INTO: [[methodology-framework|Methodology Framework]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- BUILDS ON: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- BUILDS ON: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- ENABLES: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[Execution Modes and End Conditions]]
-[[Backlog Hierarchy Rules]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Plan Execute Review Cycle]]
-[[Model: Quality and Failure Prevention]]
-[[Agent Compliance Framework]]
-[[Artifact Type System]]
-[[E003 Artifact Type System — Design Document]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Portable Methodology Engine]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]

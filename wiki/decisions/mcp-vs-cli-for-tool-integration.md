@@ -1,5 +1,8 @@
 ---
-title: "Decision: MCP vs CLI for Tool Integration"
+title: Decision — MCP vs CLI for Tool Integration
+aliases:
+  - "Decision — MCP vs CLI for Tool Integration"
+  - "Decision: MCP vs CLI for Tool Integration"
 type: decision
 domain: tools-and-platforms
 layer: 6
@@ -17,21 +20,12 @@ updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
-  - id: src-claude-code-accuracy-tips
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
-  - id: src-playwright-cli-vs-mcp
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=nN5R9DFYsXY"
-    title: "Claude Code + Playwright CLI: Automate QA with Less Tokens"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
 tags: [mcp, cli, skills, tool-integration, token-efficiency, claude-code, integration-pattern, context-management]
 ---
 
-# Decision: MCP vs CLI for Tool Integration
-
+# Decision — MCP vs CLI for Tool Integration
 ## Summary
 
 When integrating tools into LLM-powered workflows, CLI+Skills is the default preferred approach for operational tasks because it loads tool instructions contextually rather than exhausting the context window at startup. MCP servers are preferred for external service integration and tool discovery scenarios where persistent availability across any conversation is needed. The two approaches are complementary and the choice depends on the integration scenario, not a global winner.
@@ -102,35 +96,35 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
-- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
-- DERIVED FROM: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-- DERIVED FROM: [[MCP Integration Architecture]]
-- DERIVED FROM: [[Claude Code]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+- DERIVED FROM: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- DERIVED FROM: [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- DERIVED FROM: [[mcp-integration-architecture|MCP Integration Architecture]]
+- DERIVED FROM: [[claude-code|Claude Code]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[MCP Integration Architecture]]
-[[Claude Code]]
-[[Claude Code Skills]]
-[[Claude Code Context Management]]
-[[Wiki Ingestion Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
-[[Model: Claude Code]]
-[[Model: MCP and CLI Integration]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[claude-code|Claude Code]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[model-claude-code|Model — Claude Code]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

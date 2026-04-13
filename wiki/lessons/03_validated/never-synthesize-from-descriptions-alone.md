@@ -1,5 +1,7 @@
 ---
-title: "Never Synthesize from Descriptions Alone"
+title: Never Synthesize from Descriptions Alone
+aliases:
+  - "Never Synthesize from Descriptions Alone"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,7 +17,7 @@ sources:
   - id: directive-never-stop-at-surface
     type: log
     file: wiki/log/2026-04-09-directive-never-stop-at-surface.md
-    title: "Never Stop at Surface — Depth Verification Rule"
+    title: Never Stop at Surface — Depth Verification Rule
     ingested: 2026-04-09
 tags: [failure-lesson, methodology, quality, depth-verification, ingestion, surface-level, layer-0, layer-1]
 ---
@@ -56,7 +58,7 @@ When challenged, the agent fetched an actual DESIGN.md (312 lines). It contained
 **The incident:** During ingestion of the awesome-design-md repository, the agent:
 1. Fetched the README from the awesome-design-md GitHub repository
 2. Read the list of 58 DESIGN.md links with their brief descriptions
-3. Synthesized [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]] and [[Design.md Pattern]]
+3. Synthesized [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]] and [[design-md-pattern|Design.md Pattern]]
 4. The synthesis described the format in general terms derived entirely from the README
 
 **The challenge:** The user said: "prove me... to me it just feels like you stayed on surface and you actually have no idea of what it truly is and its format..."
@@ -97,34 +99,34 @@ This lesson applies far beyond wiki ingestion:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Design.md Pattern]]
-- DERIVED FROM: [[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-- RELATES TO: [[Stage-Gate Methodology]] (depth gates prevent surface-level output)
-- RELATES TO: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
-- RELATES TO: [[Always Plan Before Executing]]
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[Immune System Rules]] (this lesson became a rule)
+- DERIVED FROM: [[design-md-pattern|Design.md Pattern]]
+- DERIVED FROM: [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]] (depth gates prevent surface-level output)
+- RELATES TO: [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[immune-system-rules|Immune System Rules]] (this lesson became a rule)
 
 ## Backlinks
 
-[[Design.md Pattern]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-[[Stage-Gate Methodology]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Always Plan Before Executing]]
-[[Wiki Ingestion Pipeline]]
-[[Immune System Rules]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Quality and Failure Prevention]]
-[[Never Present Speculation as Fact]]
-[[Never Stop at Surface — Depth Verification Rule]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
+[[design-md-pattern|Design.md Pattern]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[immune-system-rules|Immune System Rules]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[never-present-speculation-as-fact|Never Present Speculation as Fact]]
+[[2026-04-09-directive-never-stop-at-surface|Never Stop at Surface — Depth Verification Rule]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]

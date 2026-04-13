@@ -1,5 +1,7 @@
 ---
-title: "SDLC Rules and Structure — Customizable Project Lifecycle"
+title: SDLC Rules and Structure — Customizable Project Lifecycle
+aliases:
+  - "SDLC Rules and Structure — Customizable Project Lifecycle"
 type: epic
 domain: backlog
 status: draft
@@ -8,11 +10,11 @@ task_type: epic
 current_stage: document
 readiness: 10
 progress: 0
-stages_completed: []
+stages_completed:
 artifacts:
-  - wiki/domains/cross-domain/sdlc-customization-framework.md
-  - wiki/domains/cross-domain/readiness-vs-progress.md
-  - wiki/domains/cross-domain/three-pm-levels.md
+  - "wiki/domains/cross-domain/sdlc-customization-framework.md"
+  - "wiki/domains/cross-domain/readiness-vs-progress.md"
+  - "wiki/domains/cross-domain/three-pm-levels.md"
 confidence: high
 created: 2026-04-12
 updated: 2026-04-12
@@ -130,25 +132,26 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- BUILDS ON: [[Three PM Levels — Wiki to Fleet to Full Tool]]
-- RELATES TO: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- DEPENDS ON: [[Artifact Type System]]
+- IMPLEMENTS: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- BUILDS ON: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+- RELATES TO: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]]
 
 ## Backlinks
 
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Model: Methodology]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Backlog Hierarchy Rules]]
-[[Methodology Adoption Guide]]
-[[Artifact Type System]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[model-methodology|Model — Methodology]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]

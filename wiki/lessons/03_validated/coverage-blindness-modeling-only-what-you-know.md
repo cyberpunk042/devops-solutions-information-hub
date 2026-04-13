@@ -1,5 +1,7 @@
 ---
-title: "Coverage Blindness — Modeling Only What You Know"
+title: Coverage Blindness — Modeling Only What You Know
+aliases:
+  - "Coverage Blindness — Modeling Only What You Know"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -99,28 +101,28 @@ This lesson applies when:
 > | Direction | Go To |
 > |-----------|-------|
 > | **How do we discover what we don't know?** | Online research first. The 78-type artifact taxonomy was discovered AFTER researching 10 external sources. |
-> | **What is the full artifact spectrum?** | [[Methodology Artifact Taxonomy]] — 78 types across 11 categories. We were modeling 17 wiki page types = 20% coverage. |
-> | **How does the Goldilocks framework prevent blindness?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile forces you to declare phase, scale, domain — preventing assumption of one context. |
+> | **What is the full artifact spectrum?** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] — 78 types across 11 categories. We were modeling 17 wiki page types = 20% coverage. |
+> | **How does the Goldilocks framework prevent blindness?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile forces you to declare phase, scale, domain — preventing assumption of one context. |
 > | **What global standards expand our view?** | CMMI (5 maturity levels we mapped to), Lean Startup BML (phases we adopted), Agentic SDLC (agent lifecycle we integrated). External frameworks prevent model blindness. |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Artifact Taxonomy]]
-- DERIVED FROM: [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-- DERIVED FROM: [[Methodology Standards Initiative — Honest Assessment]]
-- RELATES TO: [[Systemic Incompleteness Is Invisible to Validation]]
-- RELATES TO: [[Model: Quality and Failure Prevention]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- DERIVED FROM: [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+- DERIVED FROM: [[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+- RELATES TO: [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+- RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Systemic Incompleteness Is Invisible to Validation]]
-[[Model: Quality and Failure Prevention]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[New Content Must Integrate Into Existing Pages]]
-[[Systemic Incompleteness — No Model Is Finished]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
+[[2026-04-09-directive-systemic-incompleteness|Systemic Incompleteness — No Model Is Finished]]

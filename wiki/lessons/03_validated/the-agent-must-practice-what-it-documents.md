@@ -1,5 +1,7 @@
 ---
-title: "The Agent Must Practice What It Documents"
+title: The Agent Must Practice What It Documents
+aliases:
+  - "The Agent Must Practice What It Documents"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,12 +17,12 @@ sources:
   - id: directive-follow-own-methodology
     type: log
     file: raw/notes/2026-04-09-user-directive-follow-own-methodology.md
-    title: "User Directive — Follow Your Own Methodology"
+    title: User Directive — Follow Your Own Methodology
     ingested: 2026-04-09
   - id: directive-stop-rushing
     type: log
     file: raw/notes/2026-04-09-user-directive-stop-rushing.md
-    title: "User Directive — STOP RUSHING"
+    title: User Directive — STOP RUSHING
     ingested: 2026-04-09
 tags: [failure-lesson, methodology, quality, self-enforcement, claude-md, practice-what-you-preach, rules, agent-behavior]
 ---
@@ -108,34 +110,34 @@ This lesson applies to any system that both produces and consumes its own method
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Framework]]
-- DERIVED FROM: [[Stage-Gate Methodology]]
-- RELATES TO: [[Never Skip Stages Even When Told to Continue]] (the same incident)
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Immune System Rules]] (this lesson IS the immune system principle)
-- BUILDS ON: [[Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)
+- DERIVED FROM: [[methodology-framework|Methodology Framework]]
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] (the same incident)
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[immune-system-rules|Immune System Rules]] (this lesson IS the immune system principle)
+- BUILDS ON: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]] (knowledge must evolve into enforcement)
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Always Plan Before Executing]]
-[[Immune System Rules]]
-[[Knowledge Evolution Pipeline]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Model: Quality and Failure Prevention]]
-[[Models Are Built in Layers, Not All at Once]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
-[[Standards Must Preach by Example]]
-[[Systemic Incompleteness Is Invisible to Validation]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[immune-system-rules|Immune System Rules]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

@@ -1,5 +1,7 @@
 ---
-title: "Quality Standards — What Good Failure Prevention Looks Like"
+title: Quality Standards — What Good Failure Prevention Looks Like
+aliases:
+  - "Quality Standards — What Good Failure Prevention Looks Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -11,12 +13,8 @@ updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
-  - id: src-openfleet-local
-    type: documentation
-    file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
 tags: [quality, standards, failure-prevention, gold-standard, anti-patterns, enforcement, stage-gates, depth-verification]
 ---
 
@@ -24,7 +22,7 @@ tags: [quality, standards, failure-prevention, gold-standard, anti-patterns, enf
 
 ## Summary
 
-This page defines the quality bar for FAILURE PREVENTION. Where [[Model: Quality and Failure Prevention]] defines the system (three-layer defense, six lessons, enforcement hierarchy), this page shows what GOOD quality enforcement looks like in practice — and what it looks like when it fails. ==Every gold standard on this page is a real incident from this ecosystem.== The failures are real. The fixes are real. The enforcement mechanisms are running in production.
+This page defines the quality bar for FAILURE PREVENTION. Where [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] defines the system (three-layer defense, six lessons, enforcement hierarchy), this page shows what GOOD quality enforcement looks like in practice — and what it looks like when it fails. ==Every gold standard on this page is a real incident from this ecosystem.== The failures are real. The fixes are real. The enforcement mechanisms are running in production.
 
 ## Key Insights
 
@@ -54,7 +52,7 @@ What a properly codified failure looks like — from incident to enforcement.
 > [!success] **Gold standard: "Never Synthesize from Descriptions Alone"**
 > 1. **Incident:** Agent ingested awesome-design-md (a curated list of 58 DESIGN.md files), synthesized a page about the DESIGN.md pattern, never opened a single actual DESIGN.md file. The user challenged: "prove me... to me it just feels like you stayed on surface."
 > 2. **Root cause:** The agent treated a CATALOG (Layer 0) as equivalent to the THING (Layer 1). Reading about DESIGN.md files ≠ reading a DESIGN.md file.
-> 3. **Lesson page:** [[Never Synthesize from Descriptions Alone]] — 95 lines with the Layer 0/1/2 model, the 0.25 ratio rule, and 3 enforcement mechanisms.
+> 3. **Lesson page:** [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] — 95 lines with the Layer 0/1/2 model, the 0.25 ratio rule, and 3 enforcement mechanisms.
 > 4. **Enforcement:** CLAUDE.md quality gates section now requires source provenance. Wiki-agent skill encodes depth verification. Memory carries the directive cross-session. CLAUDE.md Agent Methodology section says "ALWAYS verify depth."
 > 5. **Verification:** The context-mode source was later ingested correctly — 1,057 lines read in full, 254-line synthesis page produced (0.24 ratio). The first attempt had been 60 lines from the first chunk. The rule caught it.
 
@@ -206,27 +204,27 @@ What it looks like when a project migrates quality rules upward through the enfo
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[Claude Code Standards — What Good Agent Configuration Looks Like]]
-- RELATES TO: [[Wiki Design Standards — What Good Styling Looks Like]]
-- RELATES TO: [[Never Synthesize from Descriptions Alone]]
-- RELATES TO: [[The Agent Must Practice What It Documents]]
+- BUILDS ON: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+- RELATES TO: [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
+- RELATES TO: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
 
 ## Backlinks
 
-[[Model: Quality and Failure Prevention]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
-[[Never Synthesize from Descriptions Alone]]
-[[The Agent Must Practice What It Documents]]
-[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]

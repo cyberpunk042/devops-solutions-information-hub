@@ -1,5 +1,7 @@
 ---
-title: "OpenClaw"
+title: OpenClaw
+aliases:
+  - "OpenClaw"
 type: concept
 layer: 2
 maturity: growing
@@ -11,13 +13,13 @@ updated: 2026-04-10
 sources:
   - id: src-openclaw-docs
     type: documentation
-    url: "https://github.com/anthropics/claude-code"
-    title: "OpenClaw — Agent Framework Documentation"
+    url: https://github.com/anthropics/claude-code
+    title: OpenClaw — Agent Framework Documentation
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — OpenClaw Usage"
+    title: OpenFleet — OpenClaw Usage
     ingested: 2026-04-08
 tags: [openclaw, agent-framework, gateway, brain, memory, skills, heartbeat, mission-control, multi-agent, messaging]
 ---
@@ -95,33 +97,33 @@ Cross-referencing `Agent Orchestration Patterns` and `OpenFleet`: the OpenClaw a
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- USED BY: [[OpenFleet]]
-- ENABLES: [[Claude Code Skills]]
-- RELATES TO: [[AICP]]
-- RELATES TO: [[Obsidian Skills Ecosystem]]
-- RELATES TO: [[NotebookLM Skills]]
-- ENABLES: [[LLM Knowledge Linting]]
+- USED BY: [[openfleet|OpenFleet]]
+- ENABLES: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- RELATES TO: [[notebooklm-skills|NotebookLM Skills]]
+- ENABLES: [[llm-knowledge-linting|LLM Knowledge Linting]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[Claude Code Skills]]
-[[AICP]]
-[[Obsidian Skills Ecosystem]]
-[[NotebookLM Skills]]
-[[LLM Knowledge Linting]]
-[[AI-Driven Content Pipeline]]
-[[Claude Code]]
-[[Gateway-Centric Routing]]
-[[Local LLM Quantization]]
-[[Plane]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[openfleet|OpenFleet]]
+[[claude-code-skills|Claude Code Skills]]
+[[aicp|AICP]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[claude-code|Claude Code]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[plane|Plane]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]

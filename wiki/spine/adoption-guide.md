@@ -1,5 +1,7 @@
 ---
 title: "Adoption Guide — How to Use This Wiki's Standards"
+aliases:
+  - "Adoption Guide — How to Use This Wiki's Standards"
 type: deep-dive
 domain: cross-domain
 layer: spine
@@ -39,9 +41,9 @@ This guide explains how any project in the ecosystem (or outside it) picks up th
 
 Adopting this system gives your project a complete, composable methodology stack. Here is what transfers:
 
-**Methodology Framework** — A super-model that defines what a methodology model IS, how models are selected per-condition, how they compose (sequential, nested, conditional, parallel), and how they adapt per-instance. You do not hardcode a single process for your project. You define models in configuration and select them at runtime based on task type, project phase, domain, and scale. See: [[Methodology Framework]].
+**Methodology Framework** — A super-model that defines what a methodology model IS, how models are selected per-condition, how they compose (sequential, nested, conditional, parallel), and how they adapt per-instance. You do not hardcode a single process for your project. You define models in configuration and select them at runtime based on task type, project phase, domain, and scale. See: [[methodology-framework|Methodology Framework]].
 
-**Stage-Gate System** — Five stages with hard boundaries: Document, Design, Scaffold, Implement, Test. Each stage has required artifacts, permitted actions, prohibited actions, and exit criteria. Stages are not guidelines. They are structural constraints. An agent in the Document stage may not produce implementation code. Period. See: [[Stage-Gate Methodology]].
+**Stage-Gate System** — Five stages with hard boundaries: Document, Design, Scaffold, Implement, Test. Each stage has required artifacts, permitted actions, prohibited actions, and exit criteria. Stages are not guidelines. They are structural constraints. An agent in the Document stage may not produce implementation code. Period. See: [[stage-gate-methodology|Stage-Gate Methodology]].
 
 **8 Task Types with Per-Type Stage Requirements** — Not every task runs all 5 stages. The task type determines which stages are required:
 
@@ -311,24 +313,24 @@ The wiki proves that knowledge work and code work can share the same methodology
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Framework]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- BUILDS ON: [[Four-Project Ecosystem]]
-- RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[Execution Modes and End Conditions]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- BUILDS ON: [[four-project-ecosystem|Four-Project Ecosystem]]
+- RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- RELATES TO: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Four-Project Ecosystem]]
-[[Task Type Artifact Matrix]]
-[[Execution Modes and End Conditions]]
-[[Ecosystem Integration Interfaces]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]

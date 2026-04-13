@@ -1,5 +1,7 @@
 ---
-title: "Epic Page Standards"
+title: Epic Page Standards
+aliases:
+  - "Epic Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -56,7 +58,7 @@ Standards for epic pages — strategic containers that break into modules and ta
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Artifact Type System]] — 105 lines, all 5 stages complete
+> [!success] [[E003-artifact-type-system|Artifact Type System]] — 105 lines, all 5 stages complete
 >
 > - Goals are concrete: "Create templates for all 8 page types currently missing"
 > - Done When checkboxes verifiable with specific commands
@@ -64,19 +66,40 @@ Standards for epic pages — strategic containers that break into modules and ta
 > - Dependencies explicit: "None — this is the foundation epic"
 > - Traces to operator directive in sources field
 
+### Annotated Exemplar: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Operator Directives annotation:**
+> 4 verbatim quotes traced to specific directive files. Each quote names what the operator ACTUALLY SAID — not paraphrased, not interpreted. The directives ARE the authority: "when in doubt, re-read the directive."
+>
+> **Goals annotation:**
+> 8 specific goals, each a CAPABILITY: "Every model page reflects ALL knowledge," "Each model's Key Insights section is CURRENT." Not "improve models" — WHAT specifically improves and HOW you verify it.
+>
+> **Done When annotation:**
+> 14 checkboxes — each names a SPECIFIC FILE or OBSERVABLE BEHAVIOR: "Model: Methodology — updated with SDLC chains, Goldilocks, readiness/progress..." Not "models are updated" — WHICH models, WITH WHAT content. The last 2 items are validation steps (pipeline post + operator discoverability test).
+>
+> **Module Breakdown annotation:**
+> 4 modules (M1-M4), 18 tasks total. Each task row has: task ID, which model, what's needed, effort estimate (XS to L). A person reading ONLY the module breakdown can understand the full scope and start working.
+>
+> **Handoff Context annotation:**
+> `> [!info] For anyone picking this up in a fresh context:` — 5 paragraphs: what happened, what's partially done, what needs to happen, key files to read first. This is the CRITICAL section that makes the epic work across context boundaries. Anyone reading this in a fresh session can resume immediately.
+>
+> **Why this exemplar works:** It preaches what it teaches. The epic about updating models ITSELF demonstrates every standard it defines: specific goals, verifiable Done When, module breakdown with per-task details, dependencies both in and out, open questions, and a handoff context that serves PM/PO/any agent.
+
 ### Template
 
 `wiki/config/templates/epic.md` — scaffold via `python3 -m tools.pipeline scaffold epic "Title"`
 
 ## Relationships
 
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Backlog Hierarchy Rules]]
-[[Model: Methodology]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Initiation and Planning Artifacts — Standards and Guide]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[model-methodology|Model — Methodology]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]

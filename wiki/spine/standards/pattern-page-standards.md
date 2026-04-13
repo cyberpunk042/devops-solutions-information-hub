@@ -1,5 +1,7 @@
 ---
-title: "Pattern Page Standards"
+title: Pattern Page Standards
+aliases:
+  - "Pattern Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -95,7 +97,7 @@ Standards for pattern pages — recurring structural phenomena observed across �
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Plan Execute Review Cycle]] — 165 lines, 13 relationships
+> [!success] [[plan-execute-review-cycle|Plan Execute Review Cycle]] — 165 lines, 13 relationships
 >
 > **Why it's the standard:**
 > - 4 detailed instances (OpenFleet, Harness Engineering, Claude Code, Research Pipeline) each showing the pattern differently
@@ -106,7 +108,7 @@ Standards for pattern pages — recurring structural phenomena observed across �
 >
 > **The test:** After reading this page, could you recognize this pattern in a new system and decide whether to apply it? If yes, the pattern page succeeded.
 
-### Annotated Exemplar: [[Three Lines of Defense — Immune System for Agent Quality]]
+### Annotated Exemplar: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >
@@ -167,14 +169,14 @@ Standards for pattern pages — recurring structural phenomena observed across �
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Knowledge Evolution]]
-[[Model: Wiki Design]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

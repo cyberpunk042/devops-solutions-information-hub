@@ -1,5 +1,7 @@
 ---
-title: "Requirements and Design Artifacts — Standards and Guide"
+title: Requirements and Design Artifacts — Standards and Guide
+aliases:
+  - "Requirements and Design Artifacts — Standards and Guide"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -16,10 +18,10 @@ sources:
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
   - id: adr-github
     type: documentation
-    url: "https://adr.github.io/"
+    url: https://adr.github.io/
   - id: martin-fowler-adr
     type: article
-    url: "https://martinfowler.com/bliki/ArchitectureDecisionRecord.html"
+    url: https://martinfowler.com/bliki/ArchitectureDecisionRecord.html
 tags: [methodology, requirements, design, artifacts, adr, tech-spec, interface-spec, standards]
 ---
 
@@ -217,10 +219,10 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 ## Open Questions
 
 > [!question] ~~Should the Requirements Spec template have variant modes (BRD for epics, FRD for tasks, SRS for regulated)?~~
-> **RESOLVED:** One template with scale-aware guidance sections. See [[Decision: Artifact System Design Decisions]].
+> **RESOLVED:** One template with scale-aware guidance sections. See [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]].
 
 > [!question] ~~Should the Interface Spec be a separate document or always a section in the Tech Spec?~~
-> **RESOLVED:** Section in Tech Spec by default, separate when interface exceeds 100 lines. See [[Decision: Artifact System Design Decisions]].
+> **RESOLVED:** Section in Tech Spec by default, separate when interface exceeds 100 lines. See [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]].
 
 ### How This Connects — Navigate From Here
 
@@ -228,26 +230,26 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Decision Page Standards]]
-- RELATES TO: [[Reference Page Standards]]
-- FEEDS INTO: [[Artifact Chains by Methodology Model]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[decision-page-standards|Decision Page Standards]]
+- RELATES TO: [[reference-page-standards|Reference Page Standards]]
+- FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Stage-Gate Methodology]]
-[[Model: Methodology]]
-[[Decision Page Standards]]
-[[Reference Page Standards]]
-[[Artifact Chains by Methodology Model]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Decision: Artifact System Design Decisions]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology|Model — Methodology]]
+[[decision-page-standards|Decision Page Standards]]
+[[reference-page-standards|Reference Page Standards]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]

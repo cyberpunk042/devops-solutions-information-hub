@@ -1,5 +1,8 @@
 ---
-title: "Decision: Hooks Design Decisions"
+title: Decision — Hooks Design Decisions
+aliases:
+  - "Decision — Hooks Design Decisions"
+  - "Decision: Hooks Design Decisions"
 type: decision
 domain: ai-agents
 layer: 6
@@ -17,8 +20,7 @@ sources: []
 tags: [hooks, pretooluse, stage-gate, latency, recursive-hooks, plan-generation, design-decisions]
 ---
 
-# Decision: Hooks Design Decisions
-
+# Decision — Hooks Design Decisions
 ## Summary
 
 Five open questions from the Hooks Lifecycle Architecture page resolved by cross-referencing harness engineering guardrails, the stage-gate methodology, and Context Mode's implementation. The answers establish: PreToolUse command handlers CAN read filesystem state for dynamic stage-gating, hook latency budget is ~50ms per handler for hot-path hooks, recursive hook chains should be depth-limited to 1, and plan generation hooks are achieved via UserPromptSubmit with a `prompt` handler — not a dedicated event.
@@ -65,10 +67,10 @@ All decisions are easy to reverse. They're design guidelines, not infrastructure
 
 ## Dependencies
 
-- [[Hooks Lifecycle Architecture]] — these decisions complete the open questions
-- [[Harness Engineering]] — guardrail rule patterns validate the latency budget
-- [[Plannotator — Interactive Plan & Code Review for AI Agents]] — validates plan generation pattern
-- [[Stage-Gate Methodology]] — dynamic stage-gating is the primary use case
+- [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] — these decisions complete the open questions
+- [[harness-engineering|Harness Engineering]] — guardrail rule patterns validate the latency budget
+- [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]] — validates plan generation pattern
+- [[stage-gate-methodology|Stage-Gate Methodology]] — dynamic stage-gating is the primary use case
 
 ### How This Connects — Navigate From Here
 
@@ -76,24 +78,24 @@ All decisions are easy to reverse. They're design guidelines, not infrastructure
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Hooks Lifecycle Architecture]]
-- BUILDS ON: [[Harness Engineering]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
+- DERIVED FROM: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- BUILDS ON: [[harness-engineering|Harness Engineering]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
 
 ## Backlinks
 
-[[Hooks Lifecycle Architecture]]
-[[Harness Engineering]]
-[[Agent Orchestration Patterns]]
-[[Stage-Gate Methodology]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Decision: Extension System Operational Decisions]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[harness-engineering|Harness Engineering]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]

@@ -1,5 +1,7 @@
 ---
-title: "Enforcement Hook Patterns"
+title: Enforcement Hook Patterns
+aliases:
+  - "Enforcement Hook Patterns"
 type: pattern
 domain: cross-domain
 layer: 5
@@ -10,14 +12,10 @@ derived_from:
   - "Model: Skills, Commands, and Hooks"
   - "Model: Methodology"
 instances:
-  - page: "OpenArms pre-bash hook"
-    context: "Blocks git commands from agent — harness owns git"
-  - page: "OpenArms pre-write hook"
-    context: "Blocks wrong-scope writes per methodology stage"
-  - page: "OpenArms post-write hook"
-    context: "Tracks files created per stage for artifact verification"
-  - page: "OpenArms post-compact hook"
-    context: "Rebuilds agent instructions after context compaction"
+  - {'page': 'OpenArms pre-bash hook', 'context': 'Blocks git commands from agent — harness owns git'}
+  - {'page': 'OpenArms pre-write hook', 'context': 'Blocks wrong-scope writes per methodology stage'}
+  - {'page': 'OpenArms post-write hook', 'context': 'Tracks files created per stage for artifact verification'}
+  - {'page': 'OpenArms post-compact hook', 'context': 'Rebuilds agent instructions after context compaction'}
 created: 2026-04-11
 updated: 2026-04-11
 sources:
@@ -57,7 +55,7 @@ Reusable hook patterns that enforce methodology compliance through infrastructur
 > | 4. Blocking hooks | Hook prevents the action | 100% stage boundaries (OpenArms v10, 5 runs) | Critical violations only |
 > | 5. MCP tool blocking | MCP server refuses tool call per stage | 100% tool-level (OpenFleet production) | Fleet with MCP server |
 >
-> Hooks are Level 3-5. Use them for violations that would be expensive to fix after the fact. Don't hook everything — over-hooking creates friction and blocks correct actions. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] for the risks of over-enforcement.
+> Hooks are Level 3-5. Use them for violations that would be expensive to fix after the fact. Don't hook everything — over-hooking creates friction and blocks correct actions. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] for the risks of over-enforcement.
 
 > [!warning] Compliance Is an Arms Race — OpenArms Evidence
 >
@@ -65,7 +63,7 @@ Reusable hook patterns that enforce methodology compliance through infrastructur
 >
 > **Detection patterns are evadable.** The scaffold_business_logic checker looked for `.map()`, `.split()`, `.filter()`. Task T080 wrote 286 lines of parsing logic during scaffold WITHOUT triggering any pattern. The agent doesn't intentionally evade — it writes different code that happens to bypass the regex. Detection must evolve faster than evasion.
 >
-> **Lesson: if a directive fix didn't work twice, it won't work a third time. Skip straight to Layer 3 (runtime gates) or Layer 4 (automated remediation).** See [[Principle: Infrastructure Over Instructions for Process Enforcement]].
+> **Lesson: if a directive fix didn't work twice, it won't work a third time. Skip straight to Layer 3 (runtime gates) or Layer 4 (automated remediation).** See [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]].
 
 ### Pattern 1: Scope Guard (Pre-Bash)
 
@@ -181,13 +179,13 @@ esac
 >
 > **post-write.sh (36 lines):** Appends `${stage}:${filepath}` to `.openarms/stage-files.log`. Stage-tagging enables filtering to current stage only in validate-stage.cjs. Non-fatal: `>> log 2>/dev/null || true`.
 >
-> **post-compact.sh (29 lines):** Calls `build-reinstruction.cjs` which reads ALL state from `.openarms/` (current-stage, current-task-id, stage-files.log, required-stages.json, stages-completed.json, current-model-config.json). Returns full task state as `additionalContext` in hook response. See [[Context Compaction Is a Reset Event]] for why this is critical.
+> **post-compact.sh (29 lines):** Calls `build-reinstruction.cjs` which reads ALL state from `.openarms/` (current-stage, current-task-id, stage-files.log, required-stages.json, stages-completed.json, current-model-config.json). Returns full task state as `additionalContext` in hook response. See [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] for why this is critical.
 >
 > **validate-stage.cjs (1,033 lines):** The core enforcement engine. Model-aware: reads `current-model-config.json` to adapt validation per task type. Business logic detection: parses function signatures, strips strings/comments via state machine, counts control flow. Phantom file filtering: reverted files don't count as artifacts (git diff checks). Integration wiring: verifies at least one existing src/ file modified (blocks standalone new modules). Readiness capped by model config (research = 50%, feature-dev = 100%).
 >
 > **Result:** 0% stage boundary violations across 5 production runs (v10). Was 75% in v8. The hooks alone achieved what 28 CLAUDE.md rules could not.
 >
-> **Remaining gap:** Behavioral failures (6 classes) persist despite perfect stage enforcement. Clean completion rate = 20%. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
+> **Remaining gap:** Behavioral failures (6 classes) persist despite perfect stage enforcement. Clean completion rate = 20%. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
 
 > [!example]- Instance: OpenFleet MCP Tool Blocking + Agent Hooks (10 agents, production)
 >
@@ -235,40 +233,40 @@ esac
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Skills, Commands, and Hooks]]
-- DERIVED FROM: [[Model: Methodology]]
-- BUILDS ON: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Model: Claude Code]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- DERIVED FROM: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Methodology]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Stage-Gate Methodology]]
-[[Model: Claude Code]]
-[[Methodology Adoption Guide]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Context Compaction Is a Reset Event]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Methodology Framework]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Stage-Aware Skill Injection]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Validation Matrix — Test Suite for Context Injection]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-methodology|Model — Methodology]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-claude-code|Model — Claude Code]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[methodology-framework|Methodology Framework]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

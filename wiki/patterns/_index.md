@@ -6,12 +6,12 @@ Recurring structures validated across 2+ independent systems. Each pattern has c
 
 | Pattern | Instances | Underlying Constraint |
 |---------|-----------|----------------------|
-| [[Plan Execute Review Cycle]] | OpenFleet, Harness Engineering, wiki pipeline, superpowers | Bounded context + compound error cost |
-| [[Context-Aware Tool Loading]] | Skills vs MCP, Playwright CLI vs MCP, NotebookLM | Context window fills → accuracy degrades |
-| [[Progressive Distillation]] | Zettelkasten, PARA, wiki maturity, page sections | Signal degrades without explicit distillation |
-| [[Deterministic Shell, LLM Core]] | OpenFleet orchestrator, harness rules, wiki post-chain | LLM reasoning is probabilistic |
-| [[Gateway-Centric Routing]] | OpenArms gateway, OpenClaw, wiki MCP, OpenFleet orchestrator | N deployments drift without central control |
-| [[Scaffold → Foundation → Infrastructure → Features]] | Research Wiki, OpenFleet, AICP, Front-Middleware-Backend | Build lifecycle repeats at every scale |
+| [[plan-execute-review-cycle|Plan Execute Review Cycle]] | OpenFleet, Harness Engineering, wiki pipeline, superpowers | Bounded context + compound error cost |
+| [[context-aware-tool-loading|Context-Aware Tool Loading]] | Skills vs MCP, Playwright CLI vs MCP, NotebookLM | Context window fills → accuracy degrades |
+| [[progressive-distillation|Progressive Distillation]] | Zettelkasten, PARA, wiki maturity, page sections | Signal degrades without explicit distillation |
+| [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | OpenFleet orchestrator, harness rules, wiki post-chain | LLM reasoning is probabilistic |
+| [[gateway-centric-routing|Gateway-Centric Routing]] | OpenArms gateway, OpenClaw, wiki MCP, OpenFleet orchestrator | N deployments drift without central control |
+| [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] | Research Wiki, OpenFleet, AICP, Front-Middleware-Backend | Build lifecycle repeats at every scale |
 
 ## Skills Integration Patterns
 
@@ -23,7 +23,7 @@ Recurring structures validated across 2+ independent systems. Each pattern has c
 | [[Skills + NotebookLM]] | NotebookLM automation via skills |
 | [[Skills + Obsidian]] | Obsidian vault management via skills |
 
-See also: [[Cross-Domain Patterns]] for the meta-analysis of why these 6 patterns recur.
+See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis of why these 6 patterns recur.
 
 ## Pages
 

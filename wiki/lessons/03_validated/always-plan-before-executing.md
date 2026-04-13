@@ -1,5 +1,7 @@
 ---
-title: "Always Plan Before Executing"
+title: Always Plan Before Executing
+aliases:
+  - "Always Plan Before Executing"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -11,18 +13,18 @@ updated: 2026-04-10
 sources:
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
     ingested: 2026-04-08
   - id: src-harness-engineering-github
     type: documentation
-    url: "https://github.com/Chachamaru127/claude-code-harness"
-    title: "claude-code-harness GitHub"
+    url: https://github.com/Chachamaru127/claude-code-harness
+    title: claude-code-harness GitHub
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 derived_from:
   - "Harness Engineering"
@@ -110,46 +112,46 @@ Even at the individual agent level, Claude Code's best practices recommend using
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What methodology enforces planning?** | [[Model: Methodology]] — Document and Design stages come BEFORE Scaffold/Implement/Test. Stage gates prevent skipping. |
+> | **What methodology enforces planning?** | [[model-methodology|Model — Methodology]] — Document and Design stages come BEFORE Scaffold/Implement/Test. Stage gates prevent skipping. |
 > | **What is the cost of NOT planning?** | OpenArms evidence: planning costs 1x, rework costs 5.5x. 686 passing tests but 0 verified features because tests weren't planned against specs. |
-> | **How does contribution gating enforce planning?** | [[Contribution Gating — Cross-Agent Inputs Before Work]] — architect design + QA tests collected BEFORE work starts. Planning is STRUCTURAL, not optional. |
-> | **What readiness threshold gates execution?** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness (planning completeness) must cross threshold before progress (execution) begins |
-> | **What is the explicit method of work?** | [[Follow the Method of Work Not the Methodology Label]] — record requirements → research → synthesize → investigate → suggest solutions |
-> | **Goldilocks for planning depth** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] — POC: brief plan. Production: full requirements spec + design + tech spec |
+> | **How does contribution gating enforce planning?** | [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]] — architect design + QA tests collected BEFORE work starts. Planning is STRUCTURAL, not optional. |
+> | **What readiness threshold gates execution?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness (planning completeness) must cross threshold before progress (execution) begins |
+> | **What is the explicit method of work?** | [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]] — record requirements → research → synthesize → investigate → suggest solutions |
+> | **Goldilocks for planning depth** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] — POC: brief plan. Production: full requirements spec + design + tech spec |
 
 ## Relationships
 
-- DERIVED FROM: [[Harness Engineering]]
-- DERIVED FROM: [[OpenFleet]]
-- DERIVED FROM: [[Claude Code]]
-- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- ENABLES: [[Rework Prevention]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
+- DERIVED FROM: [[harness-engineering|Harness Engineering]]
+- DERIVED FROM: [[openfleet|OpenFleet]]
+- DERIVED FROM: [[claude-code|Claude Code]]
+- DERIVED FROM: [[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- ENABLES: [[rework-prevention|Rework Prevention]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[OpenFleet]]
-[[Claude Code]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Research Pipeline Orchestration]]
-[[Rework Prevention]]
-[[Agent Orchestration Patterns]]
-[[Agent Compliance Framework]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Follow the Method of Work Not the Methodology Label]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Immune System Rules]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Model: Claude Code]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Never Synthesize from Descriptions Alone]]
-[[New Content Must Integrate Into Existing Pages]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[The Agent Must Practice What It Documents]]
+[[harness-engineering|Harness Engineering]]
+[[openfleet|OpenFleet]]
+[[claude-code|Claude Code]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-skills|Claude Code Skills]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[rework-prevention|Rework Prevention]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[immune-system-rules|Immune System Rules]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[model-claude-code|Model — Claude Code]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]

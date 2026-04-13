@@ -1,5 +1,7 @@
 ---
-title: "Follow the Method of Work Not the Methodology Label"
+title: Follow the Method of Work Not the Methodology Label
+aliases:
+  - "Follow the Method of Work Not the Methodology Label"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,7 +17,7 @@ sources:
   - id: session-loop
     type: observation
     file: docs/SESSION-2026-04-12-handoff.md
-    description: "Agent looped between research and production because 'follow the methodology' was interpreted differently by operator and agent"
+    description: Agent looped between research and production because 'follow the methodology' was interpreted differently by operator and agent
   - id: operator-method
     type: directive
     file: raw/notes/2026-04-12-restart-from-scratch.md
@@ -94,7 +96,7 @@ This is different from a methodology stage gate. Stage gates define WHAT is allo
 >
 > **Connection to this lesson:** Step 4 of the method of work is "investigation of our code" — not "reasoning about our code." Grep takes seconds and produces facts. Assumptions take minutes and produce wrong answers. This is the epistemology of investigation: when to LOOK vs when to REASON. The answer: always look first.
 >
-> **Cross-reference:** Same lesson as [[Never Synthesize from Descriptions Alone]] — read the THING, not the description. And same as [[Coverage Blindness — Modeling Only What You Know]] — you miss what you don't investigate.
+> **Cross-reference:** Same lesson as [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] — read the THING, not the description. And same as [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]] — you miss what you don't investigate.
 
 ## Applicability
 
@@ -120,26 +122,26 @@ This is different from a methodology stage gate. Stage gates define WHAT is allo
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What IS the methodology?** | [[Model: Methodology]] — 9 models, stage gates, the governing framework |
+> | **What IS the methodology?** | [[model-methodology|Model — Methodology]] — 9 models, stage gates, the governing framework |
 > | **What is the explicit method of work?** | record requirements → research → synthesize → investigate code → suggest solutions (operator directive) |
 > | **How does OpenArms' "investigate before designing" lesson relate?** | Same principle: don't reason from assumptions, grep the codebase. 5 cognitive contexts missed because agent didn't investigate. |
-> | **How does the Goldilocks framework prevent this?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile makes the METHOD explicit, not just the LABEL |
+> | **How does the Goldilocks framework prevent this?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile makes the METHOD explicit, not just the LABEL |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Methodology]]
-- DERIVED FROM: [[Never Skip Stages Even When Told to Continue]]
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-- RELATES TO: [[Execution Modes and End Conditions]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[model-methodology|Model — Methodology]]
+- DERIVED FROM: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+- RELATES TO: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Always Plan Before Executing]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Execution Modes and End Conditions]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
+[[model-methodology|Model — Methodology]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]

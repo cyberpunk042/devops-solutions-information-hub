@@ -1,5 +1,7 @@
 ---
-title: "Validation Matrix — Test Suite for Context Injection"
+title: Validation Matrix — Test Suite for Context Injection
+aliases:
+  - "Validation Matrix — Test Suite for Context Injection"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -10,17 +12,15 @@ derived_from:
   - "Structured Context Is Proto-Programming for AI Agents"
   - "Three Lines of Defense — Immune System for Agent Quality"
 instances:
-  - page: "Structured Context Is Proto-Programming for AI Agents"
-    context: "29 validation scenarios demonstrate the structural consistency principle — same skeleton across all injection types"
-  - page: "Three Lines of Defense — Immune System for Agent Quality"
-    context: "Validation matrix verifies that the immune system's context modifications produce correct structured output"
+  - {'page': 'Structured Context Is Proto-Programming for AI Agents', 'context': '29 validation scenarios demonstrate the structural consistency principle — same skeleton across all injection types'}
+  - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': "Validation matrix verifies that the immune system's context modifications produce correct structured output"}
 created: 2026-04-12
 updated: 2026-04-12
 sources:
   - id: openfleet-matrix
     type: observation
     file: raw/articles/openfleet-validation-matrix-samples.md
-    description: "OpenFleet validation-matrix/ — 29 scenario files (2,444 lines) defining expected context injection per condition"
+    description: OpenFleet validation-matrix/ — 29 scenario files (2,444 lines) defining expected context injection per condition
 tags: [validation-matrix, testing, context-injection, quality-assurance, structured-context, openfleet]
 ---
 
@@ -96,7 +96,7 @@ The structural consistency principle: every scenario follows the SAME skeleton. 
 > - FL-01: Planning phase — fleet inactive, no dispatch
 > - FL-03: Crisis — fleet-ops emergency protocol
 >
-> **What it revealed:** The 29 scenarios share ~5 structural templates. The same metadata line, the same MUST/MUST NOT format, the same contribution section structure. The content varies but the skeleton is constant — confirming the [[Structured Context Is Proto-Programming for AI Agents]] principle.
+> **What it revealed:** The 29 scenarios share ~5 structural templates. The same metadata line, the same MUST/MUST NOT format, the same contribution section structure. The content varies but the skeleton is constant — confirming the [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] principle.
 
 > [!example]- Research Wiki: Implicit Validation (no formal matrix)
 >
@@ -129,28 +129,29 @@ The structural consistency principle: every scenario follows the SAME skeleton. 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What structured context looks like** | [[Structured Context Is Proto-Programming for AI Agents]] — markdown as programming language, consistent structure > content |
-> | **How are tiers tested?** | [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same scenario at different tiers produces different context |
-> | **What does OpenFleet's matrix look like?** | [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — 29 scenarios, 2,444 lines |
-> | **How does this connect to quality?** | [[Model: Quality and Failure Prevention]] — validation matrix is Line 1 prevention: correct context = correct behavior |
+> | **What structured context looks like** | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] — markdown as programming language, consistent structure > content |
+> | **How are tiers tested?** | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same scenario at different tiers produces different context |
+> | **What does OpenFleet's matrix look like?** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — 29 scenarios, 2,444 lines |
+> | **How does this connect to quality?** | [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] — validation matrix is Line 1 prevention: correct context = correct behavior |
 > | **Global standard parallel** | Like unit tests for code, but for CONTEXT. OpenAPI validates API contracts. Validation matrix validates context contracts. |
 
 ## Relationships
 
-- DERIVED FROM: [[Structured Context Is Proto-Programming for AI Agents]]
-- DERIVED FROM: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Enforcement Hook Patterns]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+- DERIVED FROM: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Enforcement Hook Patterns]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-context-engineering|Model — Context Engineering]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]

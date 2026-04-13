@@ -1,5 +1,7 @@
 ---
-title: "OpenFleet"
+title: OpenFleet
+aliases:
+  - "OpenFleet"
 type: concept
 layer: 2
 maturity: growing
@@ -12,7 +14,7 @@ sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [openfleet, ai-agents, fleet-management, orchestration, deterministic-brain, vibe-managing, mission-control, openclaw, lightrag, multi-agent]
 ---
@@ -119,60 +121,60 @@ Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orches
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[OpenClaw]]
-- USED BY: [[AI-Driven Content Pipeline]]
-- BUILDS ON: [[LightRAG]]
-- BUILDS ON: [[AICP]]
-- RELATES TO: [[Plane]]
+- IMPLEMENTS: [[openclaw|OpenClaw]]
+- USED BY: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- BUILDS ON: [[lightrag|LightRAG]]
+- BUILDS ON: [[aicp|AICP]]
+- RELATES TO: [[plane|Plane]]
 - RELATES TO: [[devops-control-plane]]
-- ENABLES: [[Claude Code Skills]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
+- ENABLES: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
 
 ## Backlinks
 
-[[OpenClaw]]
-[[AI-Driven Content Pipeline]]
-[[LightRAG]]
-[[AICP]]
-[[Plane]]
-[[devops-control-plane]]
-[[Claude Code Skills]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[Agent Orchestration Patterns]]
-[[Always Plan Before Executing]]
-[[Claude Code]]
-[[Claude Code Scheduling]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Deterministic Shell, LLM Core]]
-[[Ecosystem Integration Interfaces]]
-[[Four-Project Ecosystem]]
-[[Gateway-Centric Routing]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Harness Engineering]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Local LLM Quantization]]
-[[MCP Integration Architecture]]
-[[Model: Ecosystem Architecture]]
-[[Multi-Channel AI Agent Access]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[OpenArms]]
-[[Plan Execute Review Cycle]]
-[[Rework Prevention]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Spec-Driven Development]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw]]
-[[Task Lifecycle Stage-Gating]]
-[[Wiki Backlog Pattern]]
+[[openclaw|OpenClaw]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[lightrag|LightRAG]]
+[[aicp|AICP]]
+[[plane|Plane]]
+[[devops-control-plane|devops-control-plane]]
+[[claude-code-skills|Claude Code Skills]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[claude-code|Claude Code]]
+[[claude-code-scheduling|Claude Code Scheduling]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
+[[harness-engineering|Harness Engineering]]
+[[immune-system-rules|Immune System Rules]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[openarms|OpenArms]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[rework-prevention|Rework Prevention]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[spec-driven-development|Spec-Driven Development]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]

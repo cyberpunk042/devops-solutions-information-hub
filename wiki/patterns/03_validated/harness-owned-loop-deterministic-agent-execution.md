@@ -1,5 +1,7 @@
 ---
-title: "Harness-Owned Loop — Deterministic Agent Execution"
+title: Harness-Owned Loop — Deterministic Agent Execution
+aliases:
+  - "Harness-Owned Loop — Deterministic Agent Execution"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -10,21 +12,19 @@ derived_from:
   - "Model: Quality and Failure Prevention"
   - "Infrastructure Enforcement Proves Instructions Fail"
 instances:
-  - page: "Model: Quality and Failure Prevention"
-    context: "Three-layer defense model — harness owns the outer loop as the highest enforcement layer"
-  - page: "Three Lines of Defense — Immune System for Agent Quality"
-    context: "OpenFleet orchestrator is a harness-owned loop with 6-step deterministic cycle"
+  - {'page': 'Model: Quality and Failure Prevention', 'context': 'Three-layer defense model — harness owns the outer loop as the highest enforcement layer'}
+  - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': 'OpenFleet orchestrator is a harness-owned loop with 6-step deterministic cycle'}
 created: 2026-04-12
 updated: 2026-04-12
 sources:
   - id: openarms-harness
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms agent-run-harness.ts — harness dispatches one task at a time, agent never sees backlog"
+    description: OpenArms agent-run-harness.ts — harness dispatches one task at a time, agent never sees backlog
   - id: openfleet-orchestrator
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "OpenFleet orchestrator.py (2,246 lines) — 6-step deterministic cycle with storm response and budget sync"
+    description: OpenFleet orchestrator.py (2,246 lines) — 6-step deterministic cycle with storm response and budget sync
 tags: [harness, deterministic, orchestration, agent-execution, loop-ownership, pattern]
 ---
 
@@ -120,37 +120,37 @@ The pattern separates WHAT the agent does (produce artifacts, reason about code,
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Why does this converge independently?** | [[Harness Ownership Converges Independently Across Projects]] — 3 projects, same conclusion |
-> | **How do the implementations compare?** | [[OpenArms vs OpenFleet Enforcement Architecture]] — solo harness.ts vs fleet orchestrator.py |
+> | **Why does this converge independently?** | [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]] — 3 projects, same conclusion |
+> | **How do the implementations compare?** | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] — solo harness.ts vs fleet orchestrator.py |
 > | **What commands does the agent use?** | /stage-complete (validate + commit + advance), /task-done (verify Done When + recalculate epic), /concern (file issue) |
-> | **What is deterministic dispatch?** | [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — 6-step cycle, pure Python brain, no LLM in loop |
-> | **Goldilocks: do I need a harness?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — v1 (no harness), v2 (harness), v3 (full orchestrator). Match to PM level. |
+> | **What is deterministic dispatch?** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — 6-step cycle, pure Python brain, no LLM in loop |
+> | **Goldilocks: do I need a harness?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — v1 (no harness), v2 (harness), v3 (full orchestrator). Match to PM level. |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Quality and Failure Prevention]]
-- BUILDS ON: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Context Compaction Is a Reset Event]]
-- RELATES TO: [[Enforcement Hook Patterns]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- BUILDS ON: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+- RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Model: Quality and Failure Prevention]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Context Compaction Is a Reset Event]]
-[[Enforcement Hook Patterns]]
-[[Methodology Adoption Guide]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Validation Matrix — Test Suite for Context Injection]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

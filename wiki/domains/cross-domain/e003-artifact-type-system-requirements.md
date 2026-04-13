@@ -1,5 +1,7 @@
 ---
-title: "E003 Artifact Type System — Requirements Spec"
+title: E003 Artifact Type System — Requirements Spec
+aliases:
+  - "E003 Artifact Type System — Requirements Spec"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -265,29 +267,29 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Artifact Type System]] (E003)
-- BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
-- BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
-- RELATES TO: [[Methodology Framework]]
-- RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[LLM Wiki Standards — What Good Looks Like]]
+- IMPLEMENTS: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+- BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+- RELATES TO: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 
 ## Backlinks
 
-[[Artifact Type System]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Framework]]
-[[Task Type Artifact Matrix]]
-[[Stage-Gate Methodology]]
-[[Model: Methodology]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[E003 Artifact Type System — Design Document]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-framework|Methodology Framework]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology|Model — Methodology]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]]

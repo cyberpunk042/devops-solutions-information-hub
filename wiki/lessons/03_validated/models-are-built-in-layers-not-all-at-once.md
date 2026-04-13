@@ -1,5 +1,7 @@
 ---
-title: "Models Are Built in Layers, Not All at Once"
+title: Models Are Built in Layers, Not All at Once
+aliases:
+  - "Models Are Built in Layers, Not All at Once"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -39,7 +41,7 @@ The model-building process itself followed SFIF:
 
 3. **Infrastructure** (what we did then): rewrote all 14 model pages from reading lists into real system definitions (150-444 lines each). Changed `type: learning-path` to `type: concept`. Added Deep Analysis with multiple subsections. Each model now defines what the system IS, not what to read about it.
 
-4. **Features** (what we did last): created the Standards page ([[LLM Wiki Standards — What Good Looks Like]]) with gold-standard examples per type and anti-patterns. Created the model-builder skill. Updated the super-model registry.
+4. **Features** (what we did last): created the Standards page ([[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]) with gold-standard examples per type and anti-patterns. Created the model-builder skill. Updated the super-model registry.
 
 The critical insight: at step 1, we claimed "models are done" because entry points existed. The user caught this: "I don't even see 2% of it." At step 2, we claimed "foundation is done." The user caught this: "you lied again... nothing is ready." Only at step 4 did the models begin to actually BE what they claimed to define.
 
@@ -61,7 +63,7 @@ The critical insight: at step 1, we claimed "models are done" because entry poin
 
 > [!success] New Evidence: Enforcement Layering (2026-04-12)
 >
-> OpenArms enforcement followed the same pattern: v1-v8 (instructions only, scaffold level) → v9 (hooks added, infrastructure level) → v10 (model-aware validation, features level). Each layer had to be COMPLETE before the next mattered. v8 instructions without v9 hooks = 25% compliance. v10 features without v9 infrastructure would have been meaningless. See [[Infrastructure Enforcement Proves Instructions Fail]].
+> OpenArms enforcement followed the same pattern: v1-v8 (instructions only, scaffold level) → v9 (hooks added, infrastructure level) → v10 (model-aware validation, features level). Each layer had to be COMPLETE before the next mattered. v8 instructions without v9 hooks = 25% compliance. v10 features without v9 infrastructure would have been meaningless. See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]].
 
 ## Applicability
 
@@ -84,30 +86,30 @@ The critical insight: at step 1, we claimed "models are done" because entry poin
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Framework]]
-- DERIVED FROM: [[Scaffold → Foundation → Infrastructure → Features]]
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[The Agent Must Practice What It Documents]]
-- RELATES TO: [[Never Skip Stages Even When Told to Continue]]
+- DERIVED FROM: [[methodology-framework|Methodology Framework]]
+- DERIVED FROM: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- RELATES TO: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[The Agent Must Practice What It Documents]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Model: Quality and Failure Prevention]]
-[[Models Are Not Documents — They Must Be Usable Systems]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Stop Claiming Readiness Without Proof]]
-[[Systemic Incompleteness Is Invisible to Validation]]
+[[methodology-framework|Methodology Framework]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[2026-04-09-directive-stop-claiming-readiness|Stop Claiming Readiness Without Proof]]
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]

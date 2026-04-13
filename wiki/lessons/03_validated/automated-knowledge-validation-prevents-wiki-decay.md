@@ -1,5 +1,7 @@
 ---
-title: "Automated Knowledge Validation Prevents Silent Wiki Decay"
+title: Automated Knowledge Validation Prevents Silent Wiki Decay
+aliases:
+  - "Automated Knowledge Validation Prevents Silent Wiki Decay"
 type: lesson
 domain: knowledge-systems
 layer: 4
@@ -15,15 +17,7 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
-  - id: src-karpathy-llm-wiki-idea-file
-    type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
-    title: "Karpathy LLM Wiki Idea File"
-  - id: src-pipeline-tooling
-    type: documentation
-    file: tools/pipeline.py
-    title: "Wiki Pipeline Tool"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
 tags: [linting, validation, wiki-decay, knowledge-quality, post-chain, automation, maintenance]
 ---
 
@@ -87,28 +81,28 @@ This lesson applies to:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[LLM Knowledge Linting]]
-- DERIVED FROM: [[Knowledge Evolution Pipeline]]
-- BUILDS ON: [[LLM Wiki Pattern]]
-- ENABLES: [[Knowledge Evolution Pipeline]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[LLM Wiki vs RAG]]
-- RELATES TO: [[Research Pipeline Orchestration]]
+- DERIVED FROM: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- DERIVED FROM: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[LLM Knowledge Linting]]
-[[Knowledge Evolution Pipeline]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
-[[Research Pipeline Orchestration]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]

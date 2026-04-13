@@ -1,5 +1,7 @@
 ---
-title: "Stage-Aware Skill Injection"
+title: Stage-Aware Skill Injection
+aliases:
+  - "Stage-Aware Skill Injection"
 type: pattern
 domain: cross-domain
 layer: 5
@@ -10,10 +12,8 @@ derived_from:
   - "Model: Skills, Commands, and Hooks"
   - "Model: Methodology"
 instances:
-  - page: "OpenArms skill-stage-mapping.yaml"
-    context: "299-line mapping: 3 layers (generic, role, plugin) with per-stage recommendations and restrictions"
-  - page: "Research Wiki skills/"
-    context: "5 skills loaded globally with no stage-awareness"
+  - {'page': 'OpenArms skill-stage-mapping.yaml', 'context': '299-line mapping: 3 layers (generic, role, plugin) with per-stage recommendations and restrictions'}
+  - {'page': 'Research Wiki skills/', 'context': '5 skills loaded globally with no stage-awareness'}
 created: 2026-04-11
 updated: 2026-04-11
 sources:
@@ -160,29 +160,29 @@ Mandatory skills create soft quality gates — the agent should not advance with
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Model: Skills, Commands, and Hooks]]
-- DERIVED FROM: [[Model: Methodology]]
-- BUILDS ON: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- BUILDS ON: [[Enforcement Hook Patterns]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- DERIVED FROM: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- BUILDS ON: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Methodology]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Stage-Gate Methodology]]
-[[Methodology Adoption Guide]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-methodology|Model — Methodology]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]

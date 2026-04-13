@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC"
+title: Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC
+aliases:
+  - "Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC"
+  - "Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC"
 type: source-synthesis
 domain: cross-domain
 status: synthesized
@@ -10,41 +13,40 @@ updated: 2026-04-12
 sources:
   - id: cmmi-wikipedia
     type: article
-    url: "https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration"
-    description: "CMMI 5 maturity levels — from ad hoc to optimizing"
+    url: https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration
+    description: CMMI 5 maturity levels — from ad hoc to optimizing
   - id: epam-adlc
     type: article
-    url: "https://www.epam.com/insights/ai/blogs/agentic-development-lifecycle-explained"
+    url: https://www.epam.com/insights/ai/blogs/agentic-development-lifecycle-explained
     description: "EPAM: Agentic Development Lifecycle (ADLC) as new model beyond SDLC"
   - id: lean-startup-principles
     type: article
-    url: "https://theleanstartup.com/principles"
-    description: "Lean Startup Build-Measure-Learn cycle"
+    url: https://theleanstartup.com/principles
+    description: Lean Startup Build-Measure-Learn cycle
   - id: pwc-agentic-sdlc
     type: article
-    url: "https://www.pwc.com/m1/en/publications/2026/docs/future-of-solutions-dev-and-delivery-in-the-rise-of-gen-ai.pdf"
+    url: https://www.pwc.com/m1/en/publications/2026/docs/future-of-solutions-dev-and-delivery-in-the-rise-of-gen-ai.pdf
     description: "PwC 2026: Agentic SDLC in practice — autonomous delivery"
   - id: cio-agentic-2026
     type: article
-    url: "https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html"
+    url: https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
     description: "CIO: How agentic AI reshapes engineering workflows in 2026"
   - id: geeksforgeeks-sdlc
     type: article
-    url: "https://www.geeksforgeeks.org/software-engineering/sdlc-models-types-phases-use/"
+    url: https://www.geeksforgeeks.org/software-engineering/sdlc-models-types-phases-use/
     description: "GeeksforGeeks: Complete guide to SDLC models — when to use each"
   - id: neoteric-sdlc
     type: article
-    url: "https://neoteric.eu/blog/software-development-life-cycle-sdlc"
+    url: https://neoteric.eu/blog/software-development-life-cycle-sdlc
     description: "Neoteric: SDLC stages with Lean POC→Prototype→MVP→Product progression"
   - id: lean-poc-mvp
     type: article
-    url: "https://medium.com/@klappy/lean-expectations-poc-prototype-mvp-140749383fd4"
+    url: https://medium.com/@klappy/lean-expectations-poc-prototype-mvp-140749383fd4
     description: "Chris Klapp: Lean Expectations — PoC, Prototype, MVP distinctions"
 tags: [sdlc, cmmi, lean-startup, agentic-sdlc, research, maturity-model, project-phases, source-synthesis]
 ---
 
-# Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC
-
+# Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC
 ## Summary
 
 Online research across 8 sources reveals three converging perspectives that validate and extend the wiki's SDLC Customization Framework: CMMI's 5 maturity levels map to our 3 chains (simplified≈Level 2, default≈Level 3, full≈Level 4), the Lean Startup's Build-Measure-Learn cycle maps to our phase progression (POC=Build, MVP=Measure, Production=Learn+Scale), and the emerging Agentic SDLC (A-SDLC) validates that AI agents require different lifecycle models than traditional development — specifically infrastructure enforcement and stage-gated processes.
@@ -106,7 +108,7 @@ Online research across 8 sources reveals three converging perspectives that vali
 
 The Agentic SDLC literature validates two of our patterns:
 
-1. **Infrastructure enforcement is necessary, not optional.** If agents "reason, adapt, and act across environments engineers do not fully control" (EPAM), then instructions are insufficient and infrastructure enforcement is the minimum viable quality architecture. Our [[Infrastructure Enforcement Proves Instructions Fail]] is independently validated.
+1. **Infrastructure enforcement is necessary, not optional.** If agents "reason, adapt, and act across environments engineers do not fully control" (EPAM), then instructions are insufficient and infrastructure enforcement is the minimum viable quality architecture. Our [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] is independently validated.
 
 2. **Agent orchestration is the new engineering.** If the engineer orchestrates agents rather than writing code, the PM infrastructure becomes the primary tool — not the IDE. Our Three PM Levels model (L1→L2→L3) maps to the transition from manual coding → agent-assisted → agent-orchestrated.
 
@@ -125,23 +127,23 @@ The Agentic SDLC literature validates two of our patterns:
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- FEEDS INTO: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- FEEDS INTO: [[Three PM Levels — Wiki to Fleet to Full Tool]]
-- FEEDS INTO: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
+- FEEDS INTO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- FEEDS INTO: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+- FEEDS INTO: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 
 ## Backlinks
 
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Model: Methodology]]
-[[Methodology Adoption Guide]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[model-methodology|Model — Methodology]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]

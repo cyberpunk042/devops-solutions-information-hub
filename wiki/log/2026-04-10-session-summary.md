@@ -1,5 +1,7 @@
 ---
-title: "Session 2026-04-10 Summary"
+title: Session 2026-04-10 Summary
+aliases:
+  - "Session 2026-04-10 Summary"
 type: note
 domain: log
 note_type: session
@@ -21,7 +23,7 @@ Quality elevation session. All 15 model pages elevated with standard sections + 
 - Wiki Design Standards rewritten (192→454 lines, self-referential showcase)
 - Model: Methodology elevated (527→569, callout-styled stage boundaries + quality tiers)
 - Model-builder skill updated with styling standards section
-- Double-bracket bug root-cause fixed in tools/common.py (_split_targets respects [[wikilinks]])
+- Double-bracket bug root-cause fixed in tools/common.py (_split_targets respects `[[wikilinks]]`)
 - Model Registry created (wiki/spine/model-registry.md) + CLAUDE.md + wiki/index.md updated
 - All 15 model pages: standard sections (Key Pages, Lessons, State of Knowledge, How to Adopt) + callouts
 - 4 new standards pages: Methodology, Claude Code, Quality, Extension (Skills/Commands/Hooks)
@@ -42,8 +44,8 @@ Read docs/SESSION-2026-04-10.md for full context.
 
 ## Relationships
 
-- RELATES TO: [[Evolution: Methodology System]]
+- RELATES TO: [[methodology-evolution-history|Evolution — Methodology System]]
 
 ## Backlinks
 
-[[Evolution: Methodology System]]
+[[methodology-evolution-history|Evolution — Methodology System]]

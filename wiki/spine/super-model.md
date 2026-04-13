@@ -1,5 +1,8 @@
 ---
-title: "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
+title: Super-Model — Research Wiki as Ecosystem Intelligence Hub
+aliases:
+  - "Super-Model — Research Wiki as Ecosystem Intelligence Hub"
+  - "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
 type: reference
 domain: cross-domain
 layer: spine
@@ -12,8 +15,7 @@ sources: []
 tags: [super-model, second-brain, hub, ecosystem, adoption, models, standards, integration, quality]
 ---
 
-# Super-Model: Research Wiki as Ecosystem Intelligence Hub
-
+# Super-Model — Research Wiki as Ecosystem Intelligence Hub
 ## Summary
 
 This is the super-model — the packaging of all 15 models, 7 standards pages, and the full knowledge architecture into a consumable system that any project in the ecosystem can adopt. The research wiki is not just a documentation project. It is the central intelligence hub that defines HOW work is done (methodology), WHAT knowledge looks like (LLM Wiki), HOW quality is maintained (failure prevention), and HOW projects integrate with each other (ecosystem architecture). This page is the entry point for any project that wants to consume, adhere to, or contribute back to the hub.
@@ -22,12 +24,12 @@ This is the super-model — the packaging of all 15 models, 7 standards pages, a
 >
 > | Layer | What It Provides | Key Models |
 > |-------|-----------------|------------|
-> | **Knowledge Architecture** | How to build and maintain a structured wiki | [[Model: LLM Wiki]], [[Model: Second Brain]], [[Model: Knowledge Evolution]] |
-> | **Work Process** | How to execute tasks with stage gates and quality gates | [[Model: Methodology]], [[Model: SFIF and Architecture]] |
-> | **Agent Configuration** | How to configure Claude Code with skills, hooks, MCP | [[Model: Claude Code]], [[Model: Skills, Commands, and Hooks]], [[Model: Design.md and IaC]] |
-> | **Quality Systems** | How to prevent failures and maintain standards | [[Model: Quality and Failure Prevention]], [[Model: Wiki Design]] |
-> | **Ecosystem Integration** | How projects connect and share knowledge | [[Model: Ecosystem Architecture]], [[Model: MCP and CLI Integration]] |
-> | **Research Tooling** | How to use NotebookLM, Obsidian, local AI as complements | [[Model: NotebookLM]], [[Model: Local AI ($0 Target)]], [[Model: Automation and Pipelines]] |
+> | **Knowledge Architecture** | How to build and maintain a structured wiki | [[model-llm-wiki|Model — LLM Wiki]], [[model-second-brain|Model — Second Brain]], [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Work Process** | How to execute tasks with stage gates and quality gates | [[model-methodology|Model — Methodology]], [[model-sfif-architecture|Model — SFIF and Architecture]] |
+> | **Agent Configuration** | How to configure Claude Code with skills, hooks, MCP | [[model-claude-code|Model — Claude Code]], [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]], [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] |
+> | **Quality Systems** | How to prevent failures and maintain standards | [[model-quality-failure-prevention|Model — Quality and Failure Prevention]], [[model-wiki-design|Model — Wiki Design]] |
+> | **Ecosystem Integration** | How projects connect and share knowledge | [[model-ecosystem|Model — Ecosystem Architecture]], [[model-mcp-cli-integration|Model — MCP and CLI Integration]] |
+> | **Research Tooling** | How to use NotebookLM, Obsidian, local AI as complements | [[model-notebooklm|Model — NotebookLM]], [[model-local-ai|Model — Local AI ($0 Target)]], [[model-automation-pipelines|Model — Automation and Pipelines]] |
 
 ## Adoption Tiers
 
@@ -51,27 +53,27 @@ Models are not independent — they build on each other. Here is the adoption or
 > [!tip] Read and adopt in this order
 >
 > **Foundation (read first):**
-> 1. [[Model: LLM Wiki]] — WHAT a wiki IS (schema, operations, quality gates)
-> 2. [[Model: Methodology]] — HOW work proceeds (stage gates, task types, composability)
-> 3. [[Model: Wiki Design]] — HOW pages LOOK (callout vocabulary, styling standards)
+> 1. [[model-llm-wiki|Model — LLM Wiki]] — WHAT a wiki IS (schema, operations, quality gates)
+> 2. [[model-methodology|Model — Methodology]] — HOW work proceeds (stage gates, task types, composability)
+> 3. [[model-wiki-design|Model — Wiki Design]] — HOW pages LOOK (callout vocabulary, styling standards)
 >
 > **Execution (read after foundation):**
-> 4. [[Model: Claude Code]] — the agent runtime and extension system
-> 5. [[Model: Skills, Commands, and Hooks]] — how to extend the agent
-> 6. [[Model: Quality and Failure Prevention]] — three-layer defense, failure lessons
-> 7. [[Model: SFIF and Architecture]] — the build lifecycle at every scale
+> 4. [[model-claude-code|Model — Claude Code]] — the agent runtime and extension system
+> 5. [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] — how to extend the agent
+> 6. [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] — three-layer defense, failure lessons
+> 7. [[model-sfif-architecture|Model — SFIF and Architecture]] — the build lifecycle at every scale
 >
 > **Depth (read when ready):**
-> 8. [[Model: Knowledge Evolution]] — maturity lifecycle, scorer, promotion
-> 9. [[Model: MCP and CLI Integration]] — tool integration decisions
-> 10. [[Model: Design.md and IaC]] — markdown as AI configuration
-> 11. [[Model: Second Brain]] — PKM theory (PARA + Zettelkasten)
+> 8. [[model-knowledge-evolution|Model — Knowledge Evolution]] — maturity lifecycle, scorer, promotion
+> 9. [[model-mcp-cli-integration|Model — MCP and CLI Integration]] — tool integration decisions
+> 10. [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] — markdown as AI configuration
+> 11. [[model-second-brain|Model — Second Brain]] — PKM theory (PARA + Zettelkasten)
 >
 > **Ecosystem (read when integrating):**
-> 12. [[Model: Ecosystem Architecture]] — the 5-project topology
-> 13. [[Model: Automation and Pipelines]] — pipeline chains, event-driven automation
-> 14. [[Model: NotebookLM]] — grounded research complement
-> 15. [[Model: Local AI ($0 Target)]] — cost reduction via local inference
+> 12. [[model-ecosystem|Model — Ecosystem Architecture]] — the 5-project topology
+> 13. [[model-automation-pipelines|Model — Automation and Pipelines]] — pipeline chains, event-driven automation
+> 14. [[model-notebooklm|Model — NotebookLM]] — grounded research complement
+> 15. [[model-local-ai|Model — Local AI ($0 Target)]] — cost reduction via local inference
 
 ## Per-Project Adaptation
 
@@ -104,18 +106,18 @@ Each project adapts the super-model to its context:
 > - Feed operational learnings back to the wiki (incidents, methodology evolution, tool discoveries)
 > - Adopt at least Tier 1 (schema + templates + quality gates)
 
-## What "v1.3" Means
+## What "v2.0" Means
 
 Updated to reflect deep sister project scan, work management framework, and SDLC customization (2026-04-12):
 
-> [!abstract] v1.3 state assessment
+> [!abstract] v2.0 state assessment
 >
 > | Aspect | State | Evidence |
 > |--------|-------|---------|
 > | **Pages** | 258 total | +21 from continuation session (was 237 at start) |
-> | **Models** | 15 defined + 9 methodology models | [[Model Registry]] + [[Model: Methodology]] |
+> | **Models** | 15 defined + 9 methodology models | [[model-registry|Model Registry]] + [[model-methodology|Model — Methodology]] |
 > | **Standards** | 7 model standards + 15 per-type standards + 3 annotated exemplars | wiki/spine/standards/ — lesson, pattern, decision standards now have inline annotated walkthroughs |
-> | **Artifact taxonomy** | 78 types across 11 categories + milestone type | [[Methodology Artifact Taxonomy]] + milestone added to schema |
+> | **Artifact taxonomy** | 78 types across 11 categories + milestone type | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] + milestone added to schema |
 > | **Domain chains** | 4 domains | TypeScript, Python/Wiki, Infrastructure, Knowledge |
 > | **Decisions** | 17 resolved | +1: When to Use Milestone vs Epic vs Module vs Task |
 > | **Lessons** | 43 codified | +6 from sister projects: Infrastructure Enforcement, Agent Failure Taxonomy (6 classes), Context Compaction, Structured Context, Mindful Enforcement, Models Built in Layers (refreshed) |
@@ -131,7 +133,11 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 > | **Frontmatter reference** | Complete | Every field documented with meaning, requirements, valid values, automation enablement |
 > | **Epics scaffolded** | 2 | Gateway Tools (6 modules, 25-35 tasks), SDLC Rules (5 modules, 20-30 tasks) |
 >
-> **What v1.3 added over v1.2:**
+> **What v2.0 added over v1.3:**
+> - 5 sub-super-models: Goldilocks, Enforcement, Knowledge, Work Management, Integration — each a navigation hub
+> - Root super-model slimmed to dashboard + routing table
+>
+> **What v1.3 added (this session):**
 > - Deep OpenArms/OpenFleet scan: real enforcement data (25%→100% compliance), 6 behavioral failure classes, immune system architecture, contribution gating, tier progression, validation matrix
 > - Work management framework: milestones, 8 impediment types, readiness vs progress as independent dimensions, 3 PM levels (L1:Wiki → L2:Fleet → L3:Full PM), harness version progression
 > - SDLC customization: phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full), backed by CMMI, Lean Startup, and Agentic SDLC research
@@ -140,7 +146,7 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 > - 6 model pages updated with quantified enforcement evidence
 > - Learning path expanded to 24 pages in 6 parts (was 17 in 5 parts)
 >
-> **What v1.3 does NOT have:**
+> **What v2.0 does NOT have (remaining in Milestone v2.0):**
 > - Canonical maturity on any model (all growing — promotions gated by operator)
 > - Gateway tools implemented (epic scaffolded, needs design+build)
 > - SDLC chain configs (simplified/default/full YAML profiles — epic scaffolded)
@@ -153,18 +159,18 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 
 ### How to Use This Page — Start Here, Go Anywhere
 
-**First question to answer: WHO ARE YOU?** → [[Project Self-Identification Protocol — The Goldilocks Framework]]
+**First question to answer: WHO ARE YOU?** → [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 
 > [!abstract] Entry Points by Identity
 >
 > | If You Are... | Start With | Then |
 > |---------------|-----------|------|
 > | **The operator** | This page (dashboard) → v1.3 assessment | Decide maturity promotions, identify gaps, plan next session |
-> | **A solo agent on a project** | [[Methodology Adoption Guide]] → pick your tier | Read the model for your task type → follow stage sequence |
+> | **A solo agent on a project** | [[methodology-adoption-guide|Methodology Adoption Guide]] → pick your tier | Read the model for your task type → follow stage sequence |
 > | **A harness-managed agent** | Your stage skill (injected by harness) | The skill points to the right methodology model and artifacts |
-> | **An agent from another project connecting to the second brain** | [[How AI Agents Consume the Methodology Wiki]] → 4 entry paths | Query methodology, get standards, adapt to your domain |
-> | **A system designer** | [[Model: Methodology]] → [[Three PM Levels — Wiki to Fleet to Full Tool]] | Design the right PM infrastructure for your scale |
-> | **A human learning the system** | [[Learning Path: Methodology Fundamentals]] → 24 pages in 6 parts | Progressive learning from concepts to execution to enforcement |
+> | **An agent from another project connecting to the second brain** | [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]] → 4 entry paths | Query methodology, get standards, adapt to your domain |
+> | **A system designer** | [[model-methodology|Model — Methodology]] → [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] | Design the right PM infrastructure for your scale |
+> | **A human learning the system** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] → 24 pages in 6 parts | Progressive learning from concepts to execution to enforcement |
 
 > [!tip] The Weave — How Everything Connects
 >
@@ -184,22 +190,31 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 >
 > Every node connects to every other node. Enter from ANY point and navigate to what you need. The system is not linear — it's a web with the super-model at the center.
 
+## Sub-Super-Models — Navigate by Domain
+
+> [!abstract] The Root Routes to 5 Domain Hubs
+>
+> | Sub-Model | Domain | Enter When You Need |
+> |-----------|--------|-------------------|
+> | [[sub-model-goldilocks-protocol-identity-and-adaptation|Sub-Model — Goldilocks Protocol — Identity and Adaptation]] | Identity, chains, adaptation | "What am I? What process is right for me?" |
+> | [[sub-model-enforcement-hierarchy-from-instructions-to-immune-system|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]] | Enforcement, hooks, harness, compliance | "How do I make agents follow methodology?" |
+> | [[sub-model-knowledge-architecture-layers-maturity-and-evolution|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]] | Layers, types, evolution, standards | "How does knowledge grow? What quality bar applies?" |
+> | [[sub-model-work-management-hierarchy-tracking-and-pm-levels|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]] | Backlog, readiness/progress, PM levels | "How do I organize and track work?" |
+> | [[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]] | Ecosystem, gateway, dual-scope, feedback | "How do I connect to the second brain?" |
+
+Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, entry points (CLI + Obsidian + MCP), and how to navigate from there. Start at the sub-model that matches your question, then drill into specifics.
+
 ## Key Pages
 
 | Page | Role |
 |------|------|
-| [[Model Registry]] | All 15 models with status and standards links |
-| [[Methodology System Map]] | Complete lookup for every methodology component |
-| [[Methodology Artifact Taxonomy]] | 78 artifact types across 11 categories |
-| [[Methodology Adoption Guide]] | 4-tier adoption with per-domain quick starts |
-| [[How AI Agents Consume the Methodology Wiki]] | 4 entry paths, 3 consumption modes |
-| [[Methodology Framework]] | The meta-methodology that governs all models |
-| [[Frontmatter Field Reference — Complete Parameter Documentation]] | Every frontmatter field documented with automation enablement |
-| [[Backlog Hierarchy Rules]] | 4-level hierarchy with milestones, impediment types, readiness/progress |
-| [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Phase × scale × chain selection with CMMI + Lean Startup evidence |
-| [[Readiness vs Progress — Two-Dimensional Work Tracking]] | Two independent dimensions at every hierarchy level |
-| [[Three PM Levels — Wiki to Fleet to Full Tool]] | L1→L2→L3 PM infrastructure with harness version mapping |
-| [[Four-Project Ecosystem]] | The 5-project topology and knowledge flow |
+| [[model-registry|Model Registry]] | All 15 models with status and standards links |
+| [[methodology-system-map|Methodology System Map]] | Complete lookup for every methodology component |
+| [[methodology-adoption-guide|Methodology Adoption Guide]] | 4-tier adoption with per-domain quick starts |
+| [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]] | 17-step integration chain end-to-end |
+| [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] | 30-page learning path in 8 parts |
+| [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] | Every frontmatter field documented |
+| [[four-project-ecosystem|Four-Project Ecosystem]] | The 5-project topology and knowledge flow |
 
 ## Open Questions
 
@@ -214,26 +229,35 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 
 ## Relationships
 
-- CONTAINS: [[Model Registry]]
-- CONTAINS: [[Adoption Guide — How to Use This Wiki's Standards]]
-- BUILDS ON: [[Methodology Framework]]
-- BUILDS ON: [[Model: LLM Wiki]]
-- ENABLES: [[Four-Project Ecosystem]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
+- CONTAINS: [[model-registry|Model Registry]]
+- CONTAINS: [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- ENABLES: [[four-project-ecosystem|Four-Project Ecosystem]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
 
 ## Backlinks
 
-[[Model Registry]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Methodology Framework]]
-[[Model: LLM Wiki]]
-[[Four-Project Ecosystem]]
-[[Model: Ecosystem Architecture]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Evolution: Methodology System]]
-[[Learning Path: Methodology Fundamentals]]
-[[Methodology Adoption Guide]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[The Wiki Is a Hub, Not a Silo]]
+[[model-registry|Model Registry]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[methodology-framework|Methodology Framework]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[methodology-evolution-history|Evolution — Methodology System]]
+[[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[sub-model-enforcement-hierarchy-from-instructions-to-immune-system|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
+[[sub-model-goldilocks-protocol-identity-and-adaptation|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
+[[sub-model-integration-and-ecosystem-dual-perspective-and-feedback|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
+[[sub-model-knowledge-architecture-layers-maturity-and-evolution|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]]
+[[sub-model-work-management-hierarchy-tracking-and-pm-levels|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]

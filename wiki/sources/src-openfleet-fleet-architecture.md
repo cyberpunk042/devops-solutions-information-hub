@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers"
+title: Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers
+aliases:
+  - "Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers"
+  - "Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers"
 type: source-synthesis
 domain: ai-agents
 status: synthesized
@@ -11,32 +14,31 @@ sources:
   - id: openfleet-immune-system
     type: documentation
     file: raw/articles/openfleet-immune-system.md
-    description: "OpenFleet immune system design — 3 lines of defense (566 lines)"
+    description: OpenFleet immune system design — 3 lines of defense (566 lines)
   - id: openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "Full OpenFleet methodology scan (798 lines)"
+    description: Full OpenFleet methodology scan (798 lines)
   - id: openfleet-validation-matrix
     type: documentation
     file: raw/articles/openfleet-validation-matrix-samples.md
-    description: "5 representative validation matrix scenarios (649 lines)"
+    description: 5 representative validation matrix scenarios (649 lines)
   - id: openfleet-synergy-matrix
     type: documentation
     file: raw/articles/openfleet-synergy-matrix.yaml
-    description: "Cross-agent contribution requirements (115 lines)"
+    description: Cross-agent contribution requirements (115 lines)
   - id: openfleet-tier-profiles
     type: documentation
     file: raw/articles/openfleet-tier-profiles.yaml
-    description: "Tier-based context depth profiles (56 lines)"
+    description: Tier-based context depth profiles (56 lines)
   - id: openfleet-standing-orders
     type: documentation
     file: raw/articles/openfleet-standing-orders.yaml
-    description: "Per-role autonomous authority levels (161 lines)"
+    description: Per-role autonomous authority levels (161 lines)
 tags: [openfleet, fleet, immune-system, orchestrator, tiers, contributions, dispatch, standing-orders, source-synthesis]
 ---
 
-# Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers
-
+# Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers
 ## Summary
 
 OpenFleet implements five novel systems for multi-agent orchestration: a 3-line immune system (prevention→detection→correction) with 5 named diseases and a 30-second doctor cycle, deterministic dispatch via a 6-step orchestrator with storm graduation, tier-based context depth earned through measured approval rates, contribution gating requiring cross-agent inputs before work, and standing orders defining autonomous authority per role. The fleet has 10 specialized agents with role-specific hooks, producing the most evolved multi-agent enforcement architecture in the ecosystem.
@@ -118,31 +120,31 @@ Skip logic: subtask, blocker, concern, spike types skip contributions entirely.
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- FEEDS INTO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- FEEDS INTO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- FEEDS INTO: [[Contribution Gating — Cross-Agent Inputs Before Work]]
-- FEEDS INTO: [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-- FEEDS INTO: [[Validation Matrix — Test Suite for Context Injection]]
-- FEEDS INTO: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- FEEDS INTO: [[Structured Context Is Proto-Programming for AI Agents]]
-- RELATES TO: [[Model: Ecosystem Architecture]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- FEEDS INTO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- FEEDS INTO: [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+- FEEDS INTO: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+- FEEDS INTO: [[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]
+- FEEDS INTO: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- FEEDS INTO: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+- RELATES TO: [[model-ecosystem|Model — Ecosystem Architecture]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 
 ## Backlinks
 
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Validation Matrix — Test Suite for Context Injection]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Model: Ecosystem Architecture]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]

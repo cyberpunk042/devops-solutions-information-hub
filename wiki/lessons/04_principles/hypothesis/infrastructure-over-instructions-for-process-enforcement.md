@@ -1,5 +1,8 @@
 ---
-title: "Principle: Infrastructure Over Instructions for Process Enforcement"
+title: Principle — Infrastructure Over Instructions for Process Enforcement
+aliases:
+  - "Principle — Infrastructure Over Instructions for Process Enforcement"
+  - "Principle: Infrastructure Over Instructions for Process Enforcement"
 type: principle
 domain: cross-domain
 layer: 5
@@ -23,12 +26,11 @@ sources:
     file: raw/articles/openfleet-immune-system.md
   - id: harness-engineering
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
 tags: [principle, enforcement, infrastructure, instructions, validated, convergent]
 ---
 
-# Principle: Infrastructure Over Instructions for Process Enforcement
-
+# Principle — Infrastructure Over Instructions for Process Enforcement
 ## Summary
 
 For any process rule that can be checked at the tool-call level, infrastructure enforcement (hooks, commands, harness, immune system) achieves categorically higher compliance than instruction-based enforcement (CLAUDE.md rules, skill text, prompts). This is not a marginal improvement — it is a categorical shift proven independently across three systems with quantified data. Instructions degrade under context pressure. Infrastructure is physics.
@@ -45,11 +47,11 @@ For any process rule that can be checked at the tool-call level, infrastructure 
 >
 > | Lesson | What It Contributes |
 > |--------|-------------------|
-> | [[Infrastructure Enforcement Proves Instructions Fail]] | **The quantified proof.** OpenArms v4-v8: 28 CLAUDE.md rules, 75% violations. v9-v10: 4 hooks (215 lines), 0% violations. Same rules, different mechanism, categorical difference. |
-> | [[Harness Ownership Converges Independently Across Projects]] | **Independent convergence.** Three systems (OpenArms, OpenFleet, harness engineering article) discovered this principle independently through different failure modes. Convergence = structural, not preferential. |
-> | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | **The boundary.** Infrastructure solves PROCESS failures (stage violations). Behavioral failures (7 classes, 80% rate) persist. The principle has a scope: tool-call-level rules, not judgment-level quality. |
-> | [[Context Compaction Is a Reset Event]] | **Why instructions fail specifically.** After compaction, all instruction-based corrections are lost. Infrastructure survives because it reads state from files, not context. Post-compact hook rebuilds from authoritative files. |
-> | [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] | **The constraint.** Blind infrastructure enforcement creates its own failures (correct actions blocked). The principle requires mindful implementation: explain why, offer bypass, log overrides. |
+> | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] | **The quantified proof.** OpenArms v4-v8: 28 CLAUDE.md rules, 75% violations. v9-v10: 4 hooks (215 lines), 0% violations. Same rules, different mechanism, categorical difference. |
+> | [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]] | **Independent convergence.** Three systems (OpenArms, OpenFleet, harness engineering article) discovered this principle independently through different failure modes. Convergence = structural, not preferential. |
+> | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | **The boundary.** Infrastructure solves PROCESS failures (stage violations). Behavioral failures (7 classes, 80% rate) persist. The principle has a scope: tool-call-level rules, not judgment-level quality. |
+> | [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] | **Why instructions fail specifically.** After compaction, all instruction-based corrections are lost. Infrastructure survives because it reads state from files, not context. Post-compact hook rebuilds from authoritative files. |
+> | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] | **The constraint.** Blind infrastructure enforcement creates its own failures (correct actions blocked). The principle requires mindful implementation: explain why, offer bypass, log overrides. |
 
 ## Application
 
@@ -89,40 +91,40 @@ For any process rule that can be checked at the tool-call level, infrastructure 
 > | Direction | Go To |
 > |-----------|-------|
 > | **Lessons that prove this** | See Derived From table above — 5 validated lessons with quantified evidence |
-> | **Patterns that implement this** | [[Enforcement Hook Patterns]] (hooks), [[Harness-Owned Loop — Deterministic Agent Execution]] (harness), [[Three Lines of Defense — Immune System for Agent Quality]] (immune system) |
-> | **Models that embed this** | [[Model: Quality and Failure Prevention]] — three-layer defense. [[Model: Claude Code]] — extension system. [[Model: Skills, Commands, and Hooks]] — the tooling. |
-> | **How to adopt progressively** | [[Methodology Adoption Guide]] — Tier 1→4, each adding infrastructure. [[Three PM Levels — Wiki to Fleet to Full Tool]] — L1→L3 with harness v1→v3. |
-> | **The comparison** | [[OpenArms vs OpenFleet Enforcement Architecture]] — solo hooks vs fleet immune system, when to use which |
-> | **Goldilocks: how much enforcement?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity determines enforcement level. POC ≠ Production. |
+> | **Patterns that implement this** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] (hooks), [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] (harness), [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] (immune system) |
+> | **Models that embed this** | [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] — three-layer defense. [[model-claude-code|Model — Claude Code]] — extension system. [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] — the tooling. |
+> | **How to adopt progressively** | [[methodology-adoption-guide|Methodology Adoption Guide]] — Tier 1→4, each adding infrastructure. [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1→L3 with harness v1→v3. |
+> | **The comparison** | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] — solo hooks vs fleet immune system, when to use which |
+> | **Goldilocks: how much enforcement?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity determines enforcement level. POC ≠ Production. |
 > | **Global standards this follows** | Onion Architecture (invisible enforcement), Chain of Responsibility (escalation), SRP (one job per component), SFIF (build enforcement in stages) |
 
 ## Relationships
 
-- DERIVED FROM: [[Infrastructure Enforcement Proves Instructions Fail]]
-- DERIVED FROM: [[Harness Ownership Converges Independently Across Projects]]
-- DERIVED FROM: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- DERIVED FROM: [[Context Compaction Is a Reset Event]]
-- DERIVED FROM: [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-- BUILDS ON: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Enforcement Hook Patterns]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- FEEDS INTO: [[Project Self-Identification Protocol — The Goldilocks Framework]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- DERIVED FROM: [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+- DERIVED FROM: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- DERIVED FROM: [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+- DERIVED FROM: [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+- BUILDS ON: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- FEEDS INTO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Context Compaction Is a Reset Event]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Model: Quality and Failure Prevention]]
-[[Enforcement Hook Patterns]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Methodology Adoption Guide]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]

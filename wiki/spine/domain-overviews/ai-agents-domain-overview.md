@@ -1,5 +1,7 @@
 ---
-title: "AI Agents — Domain Overview"
+title: AI Agents — Domain Overview
+aliases:
+  - "AI Agents — Domain Overview"
 type: domain-overview
 domain: ai-agents
 layer: spine
@@ -23,8 +25,8 @@ The ai-agents domain covers the theory, patterns, and practice of building, oper
 > | Metric | Value |
 > |--------|-------|
 > | Concept pages | 15 |
-> | Related model pages | [[Model: Claude Code]], [[Model: Skills, Commands, and Hooks]], [[Model: Quality and Failure Prevention]] |
-> | Decision pages | [[Decision: Per-Role Command Design Decisions]], [[Decision: Hooks Design Decisions]], [[Decision: Extension System Operational Decisions]] |
+> | Related model pages | [[model-claude-code|Model — Claude Code]], [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]], [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] |
+> | Decision pages | [[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]], [[hooks-design-decisions|Decision — Hooks Design Decisions]], [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]] |
 > | Related lessons | 8+ (CLI Beats MCP, Always Plan, Practice What You Document, Never Skip Stages, etc.) |
 
 ## State of Knowledge
@@ -70,26 +72,26 @@ All pages assigned maturity. All styled with callout vocabulary. All have standa
 ## Key Pages
 
 Start with these in order:
-1. [[Agent Orchestration Patterns]] — the structural patterns every agent system converges on
-2. [[Claude Code]] — the agent runtime powering the entire ecosystem
-3. [[Harness Engineering]] — how to build guardrails around autonomous agents
-4. [[Task Lifecycle Stage-Gating]] — phase boundaries and enforcement mechanisms
-5. [[Claude Code Skills]] — the primary extension mechanism
+1. [[agent-orchestration-patterns|Agent Orchestration Patterns]] — the structural patterns every agent system converges on
+2. [[claude-code|Claude Code]] — the agent runtime powering the entire ecosystem
+3. [[harness-engineering|Harness Engineering]] — how to build guardrails around autonomous agents
+4. [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] — phase boundaries and enforcement mechanisms
+5. [[claude-code-skills|Claude Code Skills]] — the primary extension mechanism
 
 ## Relationships
 
-- FEEDS INTO: [[Knowledge Systems — Domain Overview]]
-- FEEDS INTO: [[Automation — Domain Overview]]
-- ENABLES: [[Tools And Platforms — Domain Overview]]
-- RELATES TO: [[Devops — Domain Overview]]
-- BUILDS ON: [[AI Models — Domain Overview]]
-- PARALLELS: [[Cross-Domain — Domain Overview]]
+- FEEDS INTO: [[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+- FEEDS INTO: [[automation-domain-overview|Automation — Domain Overview]]
+- ENABLES: [[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+- RELATES TO: [[devops-domain-overview|Devops — Domain Overview]]
+- BUILDS ON: [[ai-models-domain-overview|AI Models — Domain Overview]]
+- PARALLELS: [[cross-domain-domain-overview|Cross-Domain — Domain Overview]]
 
 ## Backlinks
 
-[[Knowledge Systems — Domain Overview]]
-[[Automation — Domain Overview]]
-[[Tools And Platforms — Domain Overview]]
-[[Devops — Domain Overview]]
-[[AI Models — Domain Overview]]
-[[Cross-Domain — Domain Overview]]
+[[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+[[automation-domain-overview|Automation — Domain Overview]]
+[[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+[[devops-domain-overview|Devops — Domain Overview]]
+[[ai-models-domain-overview|AI Models — Domain Overview]]
+[[cross-domain-domain-overview|Cross-Domain — Domain Overview]]

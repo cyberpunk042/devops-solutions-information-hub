@@ -1,5 +1,7 @@
 ---
-title: "Context-Aware Tool Loading"
+title: Context-Aware Tool Loading
+aliases:
+  - "Context-Aware Tool Loading"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -12,29 +14,25 @@ derived_from:
   - "CLI Tools Beat MCP for Token Efficiency"
   - "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
 instances:
-  - page: "Claude Code Skills"
-    context: "Skills load their instruction content into the context window only when invoked via slash command or agent decision. MCP servers load all registered tool schemas at session startup regardless of whether those tools are ever called. The result is up to 12x token cost difference between the two integration modes."
-  - page: "Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens"
-    context: "Playwright CLI writes full page accessibility data to a YAML file on disk and reads it into context only when Claude needs to locate a specific element. The MCP server dumps the full accessibility tree into context after every single navigation step. In a 10-step QA test, MCP injects 10 full trees; CLI loads 2-3 targeted snapshots on demand."
-  - page: "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
-    context: "All research, competitive analysis, and documentation lives in NotebookLM notebooks. Claude Code queries the external knowledge base via the notebooklm-py skill only when it needs a grounded answer, rather than loading all source documents into the context window at session start."
-  - page: "Context7"
-    context: "Fetches up-to-date, version-specific library documentation into context on demand as a fact-checking step after implementation. Docs are never pre-loaded; they enter the context window only when the user or agent explicitly invokes the Context7 skill for a specific library."
+  - {'page': 'Claude Code Skills', 'context': 'Skills load their instruction content into the context window only when invoked via slash command or agent decision. MCP servers load all registered tool schemas at session startup regardless of whether those tools are ever called. The result is up to 12x token cost difference between the two integration modes.'}
+  - {'page': 'Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens', 'context': 'Playwright CLI writes full page accessibility data to a YAML file on disk and reads it into context only when Claude needs to locate a specific element. The MCP server dumps the full accessibility tree into context after every single navigation step. In a 10-step QA test, MCP injects 10 full trees; CLI loads 2-3 targeted snapshots on demand.'}
+  - {'page': 'Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py', 'context': 'All research, competitive analysis, and documentation lives in NotebookLM notebooks. Claude Code queries the external knowledge base via the notebooklm-py skill only when it needs a grounded answer, rather than loading all source documents into the context window at session start.'}
+  - {'page': 'Context7', 'context': 'Fetches up-to-date, version-specific library documentation into context on demand as a fact-checking step after implementation. Docs are never pre-loaded; they enter the context window only when the user or agent explicitly invokes the Context7 skill for a specific library.'}
 created: 2026-04-08
 updated: 2026-04-12
 sources:
   - id: src-claude-code-accuracy-tips
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
+    url: https://www.youtube.com/watch?v=D5bRTv6GhXk
+    title: Claude Code Works Better When You Do This
   - id: src-playwright-cli-vs-mcp
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=nN5R9DFYsXY"
+    url: https://www.youtube.com/watch?v=nN5R9DFYsXY
     title: "Claude Code + Playwright CLI: Automate QA with Less Tokens"
   - id: src-notebooklm-claude-code-workflow
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=fV17ZkPBlAc"
-    title: "This NotebookLM + Claude Code Workflow Is Insane"
+    url: https://www.youtube.com/watch?v=fV17ZkPBlAc
+    title: This NotebookLM + Claude Code Workflow Is Insane
 tags: [context-management, token-efficiency, deferred-loading, skills, mcp, cli, tool-design, agent-architecture, accuracy, notebooklm, playwright, context7]
 ---
 
@@ -107,9 +105,9 @@ The pattern extends beyond tool schemas into agent context injection itself. Ope
 > | Capable | Core fields | Status only | MUST/MUST NOT only | 5 |
 > | Lightweight | Title + stage | Names only | Short rules | 0 |
 
-This is the same principle — deferred/adaptive loading — applied to the entire context injection, not just tool schemas. A lightweight heartbeat call costs ~500 tokens. The same call at expert tier costs ~5,000 tokens. For 10 agents heartbeating every 30 seconds, the tier difference is 10x cost reduction on routine calls. See [[Tier-Based Context Depth — Trust Earned Through Approval Rates]].
+This is the same principle — deferred/adaptive loading — applied to the entire context injection, not just tool schemas. A lightweight heartbeat call costs ~500 tokens. The same call at expert tier costs ~5,000 tokens. For 10 agents heartbeating every 30 seconds, the tier difference is 10x cost reduction on routine calls. See [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]].
 
-The structured context principle from [[Structured Context Is Proto-Programming for AI Agents]] complements this: consistent STRUCTURE across all tiers means the agent processes the same pattern regardless of depth. Content varies, structure is constant.
+The structured context principle from [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] complements this: consistent STRUCTURE across all tiers means the agent processes the same pattern regardless of depth. Content varies, structure is constant.
 
 ## When To Apply
 
@@ -134,43 +132,43 @@ The structured context principle from [[Structured Context Is Proto-Programming 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
-- DERIVED FROM: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-- DERIVED FROM: [[CLI Tools Beat MCP for Token Efficiency]]
-- DERIVED FROM: [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-- EXTENDS: [[CLI Tools Beat MCP for Token Efficiency]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- FEEDS INTO: [[Wiki Ingestion Pipeline]]
+- DERIVED FROM: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- DERIVED FROM: [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- DERIVED FROM: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- DERIVED FROM: [[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+- EXTENDS: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- FEEDS INTO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[LLM Wiki Pattern]]
-[[Research Pipeline Orchestration]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Best Practices]]
-[[Cross-Domain Patterns]]
-[[Hooks Lifecycle Architecture]]
-[[Model: Claude Code]]
-[[Model: Design.md and IaC]]
-[[Model: MCP and CLI Integration]]
-[[Model: Skills, Commands, and Hooks]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[model-claude-code|Model — Claude Code]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]

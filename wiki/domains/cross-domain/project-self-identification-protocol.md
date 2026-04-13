@@ -1,5 +1,7 @@
 ---
-title: "Project Self-Identification Protocol — The Goldilocks Framework"
+title: Project Self-Identification Protocol — The Goldilocks Framework
+aliases:
+  - "Project Self-Identification Protocol — The Goldilocks Framework"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -15,7 +17,7 @@ sources:
   - id: openarms-five-contexts
     type: observation
     file: raw/articles/openarms-all-distilled-lessons.md
-    description: "OpenArms discovered 5 cognitive contexts reading one CLAUDE.md — rules meant for one context mislead another"
+    description: OpenArms discovered 5 cognitive contexts reading one CLAUDE.md — rules meant for one context mislead another
   - id: openfleet-tiers
     type: observation
     file: raw/articles/openfleet-tier-profiles.yaml
@@ -37,15 +39,17 @@ Every agent session, every harness run, every tool invocation must be able to an
 
 > [!abstract] The Seven Questions
 >
-> | # | Question | Why It Matters | Where the Answer Comes From |
-> |---|---------|---------------|---------------------------|
-> | 1 | **What am I?** | Solo mode (human + Claude) / harness-managed agent / provisioned fleet agent / sub-agent | Execution context (who spawned me, what wraps me) |
-> | 2 | **What execution mode?** | solo (no harness) / harness v1 (basic loop) / harness v2 (enforced) / harness v3 (full SDLC) / full system (fleet+orchestrator) | What wraps the agent — solo has nothing, harness wraps one agent, system orchestrates many |
-> | 3 | **What domain?** | TypeScript / Python / Infrastructure / Knowledge / Mixed | Project tech stack, domain-profiles/*.yaml |
-> | 4 | **What project phase?** | POC / MVP / Staging / Production | Project metadata, operator declaration |
-> | 5 | **What scale?** | 10k / 100k / 1M / 5M / 15M lines | Codebase analysis, project metadata |
-> | 6 | **What PM level?** | L1 (Wiki only) / L2 (Fleet) / L3 (Full PM) | Available infrastructure, orchestrator presence |
-> | 7 | **What trust tier?** | Trainee / Standard / Expert | Approval rate data (if L2+), operator declaration (if L1) |
+> | # | Question | Values | Source | Auto-Detectable? |
+> |---|---------|--------|--------|-----------------|
+> | 1 | **What am I?** | Solo / harness-managed / fleet agent / sub-agent | The PROGRAM that launched you decides this | **No** — the harness/system tells you at runtime, or you're in solo mode (certain if no harness code exists) |
+> | 2 | **What execution mode?** | solo / harness v1 / harness v2 / harness v3 / full system | The harness decides its own version at launch based on its flags and capabilities | **No** — filesystem shows what CAPABILITIES exist, not what mode is RUNNING. Declare in CLAUDE.md or pass at runtime. |
+> | 3 | **What domain?** | TypeScript / Python / Infrastructure / Knowledge / Mixed | package.json, pyproject.toml, main.tf, wiki/config/ | **Yes** — detectable from project marker files |
+> | 4 | **What project phase?** | POC / MVP / Staging / Production | CI presence, test presence, Docker/deployment markers | **Partially** — heuristic from CI+tests+deploy markers. Operator should confirm. |
+> | 5 | **What scale?** | micro / small / medium / large / massive | Source file count (excluding vendored deps) | **Yes** — detectable by counting source files |
+> | 6 | **What PM level?** | L1 (Wiki only) / L2 (Fleet) / L3 (Full PM) | What infrastructure is available AND running | **No** — same problem as execution mode. Infrastructure may exist but not be active. |
+> | 7 | **What trust tier?** | Trainee / Standard / Expert | Approval rate data (fleet), operator declaration (solo) | **No** — requires operational data (approval rates) or explicit declaration |
+>
+> **Critical distinction:** Questions 3 and 5 are auto-detectable from the filesystem. Questions 1, 2, 6, 7 CANNOT be auto-detected — they depend on RUNTIME state or operational data that the project files don't contain. Question 4 is partially detectable (heuristic). When auto-detection can't determine the answer, the gateway says "unknown — declare in CLAUDE.md or pass at runtime" and warns the user.
 
 3. **The answers compose into a profile that selects everything downstream.** Identity → SDLC chain → methodology model → enforcement level → context depth → tool scope. Each step narrows based on the identity profile. An expert-tier agent on a v3 harness in a Production/1M TypeScript project gets FULL chain with FULL enforcement. A trainee-tier solo agent on v1 in a POC/10k Python project gets SIMPLIFIED chain with advisory rules only.
 
@@ -103,9 +107,9 @@ This profile determines:
 > |-------------|---------|---------|
 > | type + harness_version | Which rules apply to ME | Solo agent gets methodology hooks. Human operator gets investigation tools. Sub-agent gets trustless rules. |
 > | domain | Which domain profile and artifact chain | TypeScript: pnpm gates, src/ paths. Python: pipeline post, wiki/ paths. |
-> | project_phase + codebase_scale | SDLC chain | POC + micro = simplified. Production + large = full. See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | project_phase + codebase_scale | SDLC chain | POC + micro = simplified. Production + large = full. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
 > | pm_level | Available enforcement infrastructure | L1: CLAUDE.md only. L2: hooks + commands + dispatch. L3: + sprint planning + Plane sync. |
-> | trust_tier | Context depth and autonomy | Expert: full context, all stages. Trainee: minimal context, restricted stages. See [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] |
+> | trust_tier | Context depth and autonomy | Expert: full context, all stages. Trainee: minimal context, restricted stages. See [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] |
 > | second_brain | Tool scope | Connected: query second brain for methodology + standards. Local-only: use project's own wiki. None: CLAUDE.md rules only. |
 
 ### The Goldilocks Selection Matrix
@@ -126,11 +130,11 @@ The operator asked: "What makes this work? Where is all the magic? What is the i
 
 > [!tip] The Three Sources of Intelligence
 >
-> 1. **Structure** — YAML frontmatter, consistent markdown patterns, typed fields, stage protocols, MUST/MUST NOT blocks. Structure IS the programming language. See [[Structured Context Is Proto-Programming for AI Agents]].
+> 1. **Structure** — YAML frontmatter, consistent markdown patterns, typed fields, stage protocols, MUST/MUST NOT blocks. Structure IS the programming language. See [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]].
 >
-> 2. **Infrastructure** — Hooks block wrong actions. Commands own state transitions. Harness owns the loop. Immune system detects and corrects. Each layer is invisible to the layer below it (agents don't see the doctor). See [[Infrastructure Enforcement Proves Instructions Fail]], [[Three Lines of Defense — Immune System for Agent Quality]].
+> 2. **Infrastructure** — Hooks block wrong actions. Commands own state transitions. Harness owns the loop. Immune system detects and corrects. Each layer is invisible to the layer below it (agents don't see the doctor). See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]], [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]].
 >
-> 3. **Knowledge** — The second brain contains methodology, standards, lessons, patterns, decisions. Projects don't invent from scratch — they query the brain, adapt to their domain, and feed learnings back. The brain is always AHEAD of any individual project. See [[Ecosystem Feedback Loop — Wiki as Source of Truth]].
+> 3. **Knowledge** — The second brain contains methodology, standards, lessons, patterns, decisions. Projects don't invent from scratch — they query the brain, adapt to their domain, and feed learnings back. The brain is always AHEAD of any individual project. See [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]].
 >
 > The magic is in the COMPOSITION of all three: the right structure (Goldilocks profile → chain selection) + the right infrastructure (hooks/commands/harness appropriate to the PM level) + the right knowledge (second brain queried at the appropriate depth for the trust tier).
 
@@ -176,52 +180,57 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 >
 > | Identity Answer | Leads To |
 > |-----------------|----------|
-> | What am I? → system/harness/solo/sub-agent | [[Three PM Levels — Wiki to Fleet to Full Tool]] — determines enforcement infrastructure |
-> | What version? → v1/v2/v3 | [[Enforcement Hook Patterns]] (v2) → [[Three Lines of Defense — Immune System for Agent Quality]] (v2+) → [[Harness-Owned Loop — Deterministic Agent Execution]] (v2+) |
+> | What am I? → system/harness/solo/sub-agent | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — determines enforcement infrastructure |
+> | What version? → v1/v2/v3 | [[enforcement-hook-patterns|Enforcement Hook Patterns]] (v2) → [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] (v2+) → [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] (v2+) |
 > | What domain? | Domain profiles in `wiki/config/domain-profiles/` → artifact chains per domain |
-> | What phase? + What scale? | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] → chain selection matrix |
-> | What PM level? | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — tracking depth matches PM level |
-> | What trust tier? | [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] — context depth adapts per tier |
-> | All answers combined | [[Methodology Adoption Guide]] — selects tier + chain + domain + enforcement |
+> | What phase? + What scale? | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] → chain selection matrix |
+> | What PM level? | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — tracking depth matches PM level |
+> | What trust tier? | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — context depth adapts per tier |
+> | All answers combined | [[methodology-adoption-guide|Methodology Adoption Guide]] — selects tier + chain + domain + enforcement |
 
 ## Open Questions
 
-> [!question] Can the identity profile be auto-detected or must it be declared?
-> Some dimensions are detectable (domain from package.json, scale from loc count, harness version from available tools). Others require declaration (project phase, trust tier). Which should be auto-detected vs declared?
+> [!question] Can the identity profile be auto-detected or must it be declared? **RESOLVED**
+> **Both — different dimensions.** Domain and scale are auto-detectable from filesystem (package.json, file count). Execution mode, PM level, and trust tier CANNOT be auto-detected — they depend on RUNTIME state (the harness decides its own version at launch, not the project files). Phase is partially detectable (CI + tests + deploy markers = heuristic). Auto-detection reports what it CAN know and explicitly says "unknown — declare in CLAUDE.md" for what it cannot. The gateway does this correctly now.
 
-> [!question] Should the second brain tools accept an identity profile parameter?
-> When a project queries `gateway query --stage document --domain typescript`, should it also pass `--phase mvp --scale medium`? This would enable the gateway to return phase-appropriate artifacts.
+> [!question] Should the second brain tools accept an identity profile parameter? **PARTIALLY RESOLVED**
+> The gateway auto-detects domain (used for `--stage` queries). Other dimensions should be passable but NOT required — the gateway warns when it can't detect and suggests declaring. The `what-do-i-need` command shows detected + unknown dimensions together.
 
-> [!question] How do we prevent projects from over-declaring their trust tier?
-> A project claiming "expert" when it should be "trainee" gets inappropriate autonomy. OpenFleet solves this with data-driven tiers. Can the second brain verify claims?
+> [!question] How do we prevent projects from over-declaring their trust tier? **OPEN**
+> Trust tier is a runtime/operational property. A project in solo mode has no approval rate data — the operator declares it. A fleet has data. The second brain could theoretically verify claims by checking operational evidence, but this requires the project to SHARE its data. OpenFleet shares via Plane sync. Solo projects have no mechanism. This remains open.
 
 ## Relationships
 
-- BUILDS ON: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- BUILDS ON: [[Three PM Levels — Wiki to Fleet to Full Tool]]
-- BUILDS ON: [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-- RELATES TO: [[Structured Context Is Proto-Programming for AI Agents]]
-- RELATES TO: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- FEEDS INTO: [[Wiki Gateway Tools — Unified Knowledge Interface]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- BUILDS ON: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+- BUILDS ON: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+- RELATES TO: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+- RELATES TO: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- FEEDS INTO: [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
-[[Methodology Adoption Guide]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[The Wiki Is a Hub, Not a Silo]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
+[[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
+[[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]

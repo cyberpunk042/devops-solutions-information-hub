@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: pablo-mano/Obsidian-CLI-skill"
+title: Synthesis — pablo-mano-Obsidian-CLI-skill
+aliases:
+  - "Synthesis — pablo-mano-Obsidian-CLI-skill"
+  - "Synthesis: pablo-mano-Obsidian-CLI-skill"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
-    url: "https://github.com/pablo-mano/Obsidian-CLI-skill"
+    url: https://github.com/pablo-mano/Obsidian-CLI-skill
     file: raw/articles/pablo-manoobsidian-cli-skill.md
-    title: "pablo-mano/Obsidian-CLI-skill"
+    title: pablo-mano/Obsidian-CLI-skill
     ingested: 2026-04-08
 tags: [obsidian, cli, claude-code, skill, vault-management, cross-agent, cursor, copilot, cortex-code, windsurf, nanoclaw, openclaw, ipc, headless, troubleshooting, marketplace, plugin, skill-portability]
 ---
-
-# Synthesis: pablo-mano/Obsidian-CLI-skill
-
+# Synthesis — pablo-mano-Obsidian-CLI-skill
 ## Summary
 
 This repository provides a comprehensive Claude Code skill (and multi-agent compatible plugin) that enables AI agents to control Obsidian vaults through the official Obsidian CLI introduced in v1.12. It covers 130+ commands across all major vault operation areas: file CRUD, daily notes, full-text search, properties, tags, tasks, links, bookmarks, templates, plugins, sync, themes, snippets, commands, bases, history, workspace, diff, developer tools, and vault management. The skill supports installation on Claude Code (as a plugin marketplace listing, direct load, or settings.json), Cursor, Cortex Code, GitHub Copilot, Windsurf, Nanoclaw, and Openclaw — plus any agent with a system prompt field — making it the most broadly compatible Obsidian skill available. It requires Obsidian Desktop v1.12+ with CLI enabled and the desktop app running (CLI communicates over IPC). Available as skill v1.3.0.
@@ -105,21 +106,21 @@ Cross-referencing `Obsidian CLI` and `WSL2 Development Patterns`: the Obsidian C
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-pablo-mano-obsidian-cli-skill
-- FEEDS INTO: [[Obsidian Skills Ecosystem]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- COMPARES TO: src-kepano-obsidian-skills
+- DERIVED FROM: [[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
+- FEEDS INTO: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- COMPARES TO: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
 
 ## Backlinks
 
-[[src-pablo-mano-obsidian-cli-skill]]
-[[Obsidian Skills Ecosystem]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
-[[src-kepano-obsidian-skills]]
+[[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[claude-code-skills|Claude Code Skills]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]

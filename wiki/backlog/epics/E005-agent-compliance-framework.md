@@ -1,5 +1,7 @@
 ---
-title: "Agent Compliance Framework"
+title: Agent Compliance Framework
+aliases:
+  - "Agent Compliance Framework"
 type: epic
 domain: backlog
 status: in-progress
@@ -8,30 +10,34 @@ task_type: epic
 current_stage: document
 readiness: 55
 progress: 35
-stages_completed: [document, design]
+stages_completed:
+  - "document"
+  - "design"
 artifacts:
-  - wiki/patterns/claude-md-structural-patterns.md
-  - wiki/patterns/enforcement-hook-patterns.md
-  - wiki/patterns/stage-aware-skill-injection.md
-  - wiki/lessons/infrastructure-enforcement-proves-instructions-fail.md
-  - wiki/lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure.md
-  - wiki/lessons/context-compaction-is-a-reset-event.md
-  - wiki/lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md
-  - wiki/lessons/structured-context-is-proto-programming-for-ai-agents.md
-  - wiki/lessons/harness-ownership-converges-independently-across-projects.md
-  - wiki/patterns/three-lines-of-defense-immune-system-for-agent-quality.md
-  - wiki/patterns/harness-owned-loop-deterministic-agent-execution.md
-  - wiki/patterns/contribution-gating-cross-agent-inputs-before-work.md
-  - wiki/patterns/tier-based-context-depth-trust-earned-through-approval-rates.md
-  - wiki/patterns/validation-matrix-test-suite-for-context-injection.md
-  - wiki/comparisons/openarms-vs-openfleet-enforcement.md
-  - wiki/sources/src-openarms-v10-enforcement.md
-  - wiki/sources/src-openfleet-fleet-architecture.md
-  - CLAUDE.md
+  - "wiki/patterns/claude-md-structural-patterns.md"
+  - "wiki/patterns/enforcement-hook-patterns.md"
+  - "wiki/patterns/stage-aware-skill-injection.md"
+  - "wiki/lessons/infrastructure-enforcement-proves-instructions-fail.md"
+  - "wiki/lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure.md"
+  - "wiki/lessons/context-compaction-is-a-reset-event.md"
+  - "wiki/lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md"
+  - "wiki/lessons/structured-context-is-proto-programming-for-ai-agents.md"
+  - "wiki/lessons/harness-ownership-converges-independently-across-projects.md"
+  - "wiki/patterns/three-lines-of-defense-immune-system-for-agent-quality.md"
+  - "wiki/patterns/harness-owned-loop-deterministic-agent-execution.md"
+  - "wiki/patterns/contribution-gating-cross-agent-inputs-before-work.md"
+  - "wiki/patterns/tier-based-context-depth-trust-earned-through-approval-rates.md"
+  - "wiki/patterns/validation-matrix-test-suite-for-context-injection.md"
+  - "wiki/comparisons/openarms-vs-openfleet-enforcement.md"
+  - "wiki/sources/src-openarms-v10-enforcement.md"
+  - "wiki/sources/src-openfleet-fleet-architecture.md"
+  - "CLAUDE.md"
 confidence: high
 created: 2026-04-11
 updated: 2026-04-12
-depends_on: [E003, E004]
+depends_on:
+  - "E003"
+  - "E004"
 sources:
   - id: operator-directive
     type: file
@@ -78,32 +84,32 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DEPENDS ON: [[Artifact Type System]] (E003)
-- DEPENDS ON: [[Portable Methodology Engine]] (E004)
-- BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
-- BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
-- IMPLEMENTS: [[Model: Quality and Failure Prevention]]
-- IMPLEMENTS: [[Model: Skills, Commands, and Hooks]]
-- FEEDS INTO: [[Model: Claude Code]]
-- RELATES TO: [[Never Skip Stages Even When Told to Continue]]
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[Plan Execute Review Cycle]]
+- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- DEPENDS ON: [[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)
+- BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+- BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+- IMPLEMENTS: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- IMPLEMENTS: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- FEEDS INTO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
 
 ## Backlinks
 
-[[Artifact Type System]]
-[[Portable Methodology Engine]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Model: Quality and Failure Prevention]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Claude Code]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Always Plan Before Executing]]
-[[Plan Execute Review Cycle]]
-[[E003 Artifact Type System — Design Document]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-claude-code|Model — Claude Code]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]]

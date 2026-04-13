@@ -1,5 +1,7 @@
 ---
-title: "Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline"
+title: Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline
+aliases:
+  - "Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline"
 type: note
 domain: log
 note_type: directive
@@ -43,8 +45,8 @@ The methodology is a FRAMEWORK for defining work processes, not a single process
 
 ## Relationships
 
-- FEEDS INTO: [[Model: Methodology]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
 
 ## Backlinks
 
-[[Model: Methodology]]
+[[model-methodology|Model — Methodology]]

@@ -1,5 +1,7 @@
 ---
-title: "Validate Second Brain Readiness"
+title: Validate Second Brain Readiness
+aliases:
+  - "Validate Second Brain Readiness"
 type: note
 domain: log
 note_type: directive
@@ -31,8 +33,8 @@ This is a readiness audit. The user wants to know:
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

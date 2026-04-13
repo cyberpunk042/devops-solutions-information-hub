@@ -1,5 +1,7 @@
 ---
-title: "Skyscraper, Pyramid, Mountain"
+title: Skyscraper, Pyramid, Mountain
+aliases:
+  - "Skyscraper, Pyramid, Mountain"
 type: concept
 layer: 2
 domain: cross-domain
@@ -12,7 +14,7 @@ sources:
   - id: src-user-articulation-spm
     type: note
     file: raw/notes/skyscraper-pyramid-mountain.md
-    title: "User articulation of Skyscraper, Pyramid, Mountain architectural quality analogy"
+    title: User articulation of Skyscraper, Pyramid, Mountain architectural quality analogy
 tags: [architecture, quality, refactoring, legacy, technical-debt, skyscraper, pyramid, mountain, spaghetti-code, pragmatism, cross-domain, systems-course]
 ---
 
@@ -123,13 +125,13 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 ## Answered Open Questions
 
 > [!example]- What are the leading indicators that a Pyramid is sliding back toward Mountain?
-> Resolved in [[Decision: Quality Tier Operational Decisions]]. Four measurable signals: lint trend (increasing warnings over time), orphan growth (pages/components unreachable from indexes), stale accumulation (outdated artifacts not retired), and stage-gate skips (methodology steps bypassed under pressure).
+> Resolved in [[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]. Four measurable signals: lint trend (increasing warnings over time), orphan growth (pages/components unreachable from indexes), stale accumulation (outdated artifacts not retired), and stage-gate skips (methodology steps bypassed under pressure).
 
 > [!example]- Is there a Pyramid-stable equilibrium where a system can be maintained at Pyramid tier indefinitely?
-> Resolved in [[Decision: Quality Tier Operational Decisions]]. Yes, with continuous maintenance investment. Pyramid-stable is achievable but requires active effort — without ongoing investment, entropy pulls toward Mountain.
+> Resolved in [[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]. Yes, with continuous maintenance investment. Pyramid-stable is achievable but requires active effort — without ongoing investment, entropy pulls toward Mountain.
 
 > [!example]- How does this analogy apply to organizational architecture?
-> Resolved in [[Decision: Quality Tier Operational Decisions]]. Yes, the same three tiers apply to teams and processes. A Mountain organization has ad-hoc processes and no documented conventions; a Pyramid organization has functional but imperfect governance; a Skyscraper organization has clean role definitions and explicit governance.
+> Resolved in [[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]. Yes, the same three tiers apply to teams and processes. A Mountain organization has ad-hoc processes and no documented conventions; a Pyramid organization has functional but imperfect governance; a Skyscraper organization has clean role definitions and explicit governance.
 
 ### How This Connects — Navigate From Here
 
@@ -137,33 +139,33 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]
-- RELATES TO: [[Progressive Distillation]]
-- RELATES TO: [[Deterministic Shell, LLM Core]]
-- RELATES TO: [[Four-Project Ecosystem]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- FEEDS INTO: [[Infrastructure as Code Patterns]]
-- RELATES TO: [[Knowledge Evolution Pipeline]]
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+- RELATES TO: [[progressive-distillation|Progressive Distillation]]
+- RELATES TO: [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- FEEDS INTO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- RELATES TO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 
 ## Backlinks
 
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Progressive Distillation]]
-[[Deterministic Shell, LLM Core]]
-[[Four-Project Ecosystem]]
-[[Plan Execute Review Cycle]]
-[[Infrastructure as Code Patterns]]
-[[Knowledge Evolution Pipeline]]
-[[Decision: Methodology Framework Design Decisions]]
-[[Decision: Quality Tier Operational Decisions]]
-[[Methodology Framework]]
-[[Model: Methodology]]
-[[Model: Quality and Failure Prevention]]
-[[Model: SFIF and Architecture]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[progressive-distillation|Progressive Distillation]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+[[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]
+[[methodology-framework|Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]

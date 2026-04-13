@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Context Mode — MCP Sandbox for Context Saving"
+title: Synthesis — Context Mode — MCP Sandbox for Context Saving
+aliases:
+  - "Synthesis — Context Mode — MCP Sandbox for Context Saving"
+  - "Synthesis: Context Mode — MCP Sandbox for Context Saving"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-context-mode
     type: documentation
-    url: "https://github.com/mksglu/context-mode"
+    url: https://github.com/mksglu/context-mode
     file: raw/articles/mksglucontext-mode.md
-    title: "mksglu/context-mode"
+    title: mksglu/context-mode
     ingested: 2026-04-09
 tags: [context-mode, mcp, context-management, sandbox, session-continuity, fts5, bm25, rrf, hooks, think-in-code, claude-code-plugin, 12-platform]
 ---
-
-# Synthesis: Context Mode — MCP Sandbox for Context Saving
-
+# Synthesis — Context Mode — MCP Sandbox for Context Saving
 ## Summary
 
 Context Mode is an MCP server and multi-platform plugin that solves the context window problem from three angles simultaneously: sandbox tools that prevent raw data from ever entering context (315 KB → 5.4 KB over a full session, 98% reduction), a SQLite-backed session tracking system that survives context compaction with full state restoration, and a "Think in Code" paradigm that mandates the LLM write scripts rather than process data directly. It supports 12 platforms (Claude Code, Gemini CLI, VS Code Copilot, Cursor, OpenCode, KiloCode, OpenClaw, Codex CLI, Antigravity, Kiro, Zed, Pi) with varying hook support levels, extends usable session length from ~30 minutes to ~3 hours, and uses an FTS5 knowledge base with BM25 ranking, Reciprocal Rank Fusion, and proximity reranking for precision retrieval. This complements — rather than replaces — the CLI-over-MCP pattern: context-mode sandboxes MCP tool output at execution time, while CLI+Skills avoids MCP schema overhead at session initialization time.
@@ -238,31 +239,31 @@ All processing occurs in sandboxed subprocesses on the local machine. No telemet
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Context-Aware Tool Loading]]
-- COMPLEMENTS: [[CLI Tools Beat MCP for Token Efficiency]]
-- IMPLEMENTS: [[Context-Aware Tool Loading]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code]]
-- RELATES TO: [[OpenClaw]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- FEEDS INTO: [[Wiki Ingestion Pipeline]]
+- EXTENDS: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- COMPLEMENTS: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- IMPLEMENTS: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code|Claude Code]]
+- RELATES TO: [[openclaw|OpenClaw]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- FEEDS INTO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Context-Aware Tool Loading]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[MCP Integration Architecture]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[Claude Code]]
-[[OpenClaw]]
-[[Research Pipeline Orchestration]]
-[[Wiki Ingestion Pipeline]]
-[[Hooks Lifecycle Architecture]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code|Claude Code]]
+[[openclaw|OpenClaw]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]

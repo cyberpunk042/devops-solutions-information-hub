@@ -1,5 +1,7 @@
 ---
-title: "Readiness vs Progress — Two-Dimensional Work Tracking"
+title: Readiness vs Progress — Two-Dimensional Work Tracking
+aliases:
+  - "Readiness vs Progress — Two-Dimensional Work Tracking"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -171,17 +173,17 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **How do these track in the hierarchy?** | [[Backlog Hierarchy Rules]] — Rule 4: both fields flow upward. [[Frontmatter Field Reference — Complete Parameter Documentation]] — field definitions |
-> | **What gates on readiness?** | [[Contribution Gating — Cross-Agent Inputs Before Work]] — dispatch blocked until readiness threshold. OpenFleet gates at 99. |
-> | **Where is the real implementation?** | [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — task_readiness (0-99) + task_progress (0-100) as two fields |
+> | **How do these track in the hierarchy?** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — Rule 4: both fields flow upward. [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — field definitions |
+> | **What gates on readiness?** | [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]] — dispatch blocked until readiness threshold. OpenFleet gates at 99. |
+> | **Where is the real implementation?** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — task_readiness (0-99) + task_progress (0-100) as two fields |
 > | **How does this connect to stages?** | Readiness advances through document/design (left SDLC). Progress advances through scaffold/implement/test (right SDLC). |
-> | **What PM level tracks both?** | [[Three PM Levels — Wiki to Fleet to Full Tool]] — L1: frontmatter only. L2: real-time via fleet tools. L3: burndown+velocity |
-> | **Goldilocks connection** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — readiness gate threshold adapts per identity (POC: low gate, Production: 99) |
+> | **What PM level tracks both?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1: frontmatter only. L2: real-time via fleet tools. L3: burndown+velocity |
+> | **Goldilocks connection** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — readiness gate threshold adapts per identity (POC: low gate, Production: 99) |
 
 ## Open Questions
 
 > [!question] Should readiness and progress use the same 0-100 scale or different scales? **RESOLVED**
-> **Two separate fields, both 0-100.** OpenFleet evidence: `task_readiness` (0-99, gate at 99) + `task_progress` (0-100, 70=done claim, 90=reviewed, 100=delivered). The 99 gate on readiness is a HUMAN CONFIRMATION gate, not a numeric threshold — the PO confirms "this is ready" at 99. A single collapsed field hides whether the problem is definition (low readiness) or execution (low progress) — two fundamentally different problems requiring different responses. The wiki recommends: both fields on all work items (milestone, epic, module, task). See [[Frontmatter Field Reference — Complete Parameter Documentation]].
+> **Two separate fields, both 0-100.** OpenFleet evidence: `task_readiness` (0-99, gate at 99) + `task_progress` (0-100, 70=done claim, 90=reviewed, 100=delivered). The 99 gate on readiness is a HUMAN CONFIRMATION gate, not a numeric threshold — the PO confirms "this is ready" at 99. A single collapsed field hides whether the problem is definition (low readiness) or execution (low progress) — two fundamentally different problems requiring different responses. The wiki recommends: both fields on all work items (milestone, epic, module, task). See [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]].
 
 > [!question] How does readiness propagate for milestones? **PARTIALLY RESOLVED**
 > Milestone readiness = AVERAGE of child epic readiness (same rule as epic→task). Simple average, not weighted. The Goldilocks principle applies: for a Simplified chain milestone, all epics crossing 50% readiness may be sufficient to start work. For a Full chain milestone, all epics must cross 99%. The THRESHOLD adapts per chain, but the PROPAGATION is always average. Remaining: should any epic at 0% block the milestone regardless of average?
@@ -191,29 +193,29 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 
 ## Relationships
 
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- RELATES TO: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Contribution Gating — Cross-Agent Inputs Before Work]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
 
 ## Backlinks
 
-[[Backlog Hierarchy Rules]]
-[[Stage-Gate Methodology]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Contribution Gating — Cross-Agent Inputs Before Work]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Methodology Adoption Guide]]
-[[Model: Methodology]]
-[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
-[[Frontmatter Field Reference — Complete Parameter Documentation]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[SDLC Rules and Structure — Customizable Project Lifecycle]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology|Model — Methodology]]
+[[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
+[[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]

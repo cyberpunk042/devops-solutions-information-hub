@@ -1,5 +1,7 @@
 ---
-title: "NotebookLM as Grounded Research Engine Not Just Note Storage"
+title: NotebookLM as Grounded Research Engine Not Just Note Storage
+aliases:
+  - "NotebookLM as Grounded Research Engine Not Just Note Storage"
 type: lesson
 domain: knowledge-systems
 layer: 4
@@ -15,16 +17,8 @@ derived_from:
 sources:
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    url: "https://github.com/claude-world/notebooklm-skill"
-    title: "claude-world/notebooklm-skill"
-  - id: src-pleaseprompto-notebooklm-skill
-    type: documentation
-    url: "https://github.com/PleasePrompto/notebooklm-skill"
-    title: "PleasePrompto/notebooklm-skill"
-  - id: src-notebooklm-claude-code-workflow
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=fV17ZkPBlAc"
-    title: "This NotebookLM + Claude Code Workflow Is Insane"
+    url: https://github.com/claude-world/notebooklm-skill
+    title: claude-world/notebooklm-skill
 tags: [notebooklm, research-engine, grounded-qa, source-grounded, knowledge-management, convergence]
 ---
 
@@ -85,31 +79,31 @@ This lesson applies to:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: claude-world/notebooklm-skill]]
-- DERIVED FROM: [[NotebookLM Skills]]
-- DERIVED FROM: [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-- BUILDS ON: [[NotebookLM]]
-- RELATES TO: [[LLM Wiki vs RAG]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[AI-Driven Content Pipeline]]
-- COMPARES TO: [[Agentic Search vs Vector Search]]
+- DERIVED FROM: [[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+- DERIVED FROM: [[notebooklm-skills|NotebookLM Skills]]
+- DERIVED FROM: [[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+- BUILDS ON: [[notebooklm|NotebookLM]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- COMPARES TO: [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
 
 ## Backlinks
 
-[[Synthesis: claude-world/notebooklm-skill]]
-[[NotebookLM Skills]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[NotebookLM]]
-[[LLM Wiki vs RAG]]
-[[LLM Wiki Pattern]]
-[[AI-Driven Content Pipeline]]
-[[Agentic Search vs Vector Search]]
-[[Model: NotebookLM]]
+[[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[notebooklm|NotebookLM]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[model-notebooklm|Model — NotebookLM]]

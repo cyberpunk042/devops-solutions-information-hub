@@ -1,5 +1,7 @@
 ---
-title: "Construction and Testing Artifacts — Standards and Guide"
+title: Construction and Testing Artifacts — Standards and Guide
+aliases:
+  - "Construction and Testing Artifacts — Standards and Guide"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -16,7 +18,7 @@ sources:
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
   - id: nxcode-agentic
     type: article
-    url: "https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026"
+    url: https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026
 tags: [methodology, construction, testing, artifacts, scaffold, implement, test, domain-specific, standards]
 ---
 
@@ -141,7 +143,7 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > | TypeScript | Existing .ts file has new `import { X } from "./new-module"` |
 > | Python | Existing .py file has new `from tools.new_module import X` |
 > | Infrastructure | Existing .tf file has new `module "X" { source = "./modules/new" }` |
-> | Wiki | Existing wiki page has new `- RELATES TO: [[New Page]]` |
+> | Wiki | Existing wiki page has new `- RELATES TO: `[[New Page]]`` |
 
 ### Test Stage Artifacts — Per Domain
 
@@ -188,10 +190,10 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 ## Open Questions
 
 > [!question] ~~Should the bridge pattern be REQUIRED for integration tasks or RECOMMENDED?~~
-> **RESOLVED:** Recommended, not required. Required when interface mismatch detected. See [[Decision: Artifact System Design Decisions]].
+> **RESOLVED:** Recommended, not required. Required when interface mismatch detected. See [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]].
 
 > [!question] ~~Should there be a "Scaffold Checklist" that agents run BEFORE calling /stage-complete?~~
-> **RESOLVED:** Yes — advisory self-check before gate. Blocking when harness exists. See [[Decision: Artifact System Design Decisions]].
+> **RESOLVED:** Yes — advisory self-check before gate. Blocking when harness exists. See [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]].
 
 ### How This Connects — Navigate From Here
 
@@ -199,27 +201,27 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Enforcement Hook Patterns]]
-- FEEDS INTO: [[Artifact Chains by Methodology Model]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Stage-Gate Methodology]]
-[[Model: Methodology]]
-[[Enforcement Hook Patterns]]
-[[Artifact Chains by Methodology Model]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Decision: Artifact System Design Decisions]]
-[[Three Classes of Methodology Output]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology|Model — Methodology]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]

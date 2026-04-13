@@ -1,5 +1,7 @@
 ---
-title: "OpenArms vs OpenFleet Enforcement Architecture"
+title: OpenArms vs OpenFleet Enforcement Architecture
+aliases:
+  - "OpenArms vs OpenFleet Enforcement Architecture"
 type: comparison
 domain: ai-agents
 status: synthesized
@@ -11,11 +13,11 @@ sources:
   - id: openarms-synthesis
     type: wiki
     file: wiki/sources/src-openarms-v10-enforcement.md
-    description: "OpenArms v10 enforcement synthesis — hooks, validator, commands"
+    description: OpenArms v10 enforcement synthesis — hooks, validator, commands
   - id: openfleet-synthesis
     type: wiki
     file: wiki/sources/src-openfleet-fleet-architecture.md
-    description: "OpenFleet fleet architecture synthesis — immune system, dispatch, tiers"
+    description: OpenFleet fleet architecture synthesis — immune system, dispatch, tiers
 tags: [comparison, enforcement, openarms, openfleet, hooks, immune-system, architecture]
 ---
 
@@ -135,28 +137,28 @@ The convergent principle: both own the loop, both block git, both enforce stages
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- COMPARES TO: [[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]], [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-- BUILDS ON: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- RELATES TO: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Harness Ownership Converges Independently Across Projects]]
-- RELATES TO: [[Three PM Levels — Wiki to Fleet to Full Tool]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- COMPARES TO: [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]], [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+- BUILDS ON: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+- RELATES TO: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Methodology Adoption Guide]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]

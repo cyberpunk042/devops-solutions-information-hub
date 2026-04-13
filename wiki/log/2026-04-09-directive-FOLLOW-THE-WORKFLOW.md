@@ -1,5 +1,7 @@
 ---
-title: "FOLLOW THE WORKFLOW — Complete Failure to Practice Methodology"
+title: FOLLOW THE WORKFLOW — Complete Failure to Practice Methodology
+aliases:
+  - "FOLLOW THE WORKFLOW — Complete Failure to Practice Methodology"
 type: note
 domain: log
 note_type: directive
@@ -46,8 +48,8 @@ This is the lesson "The Agent Must Practice What It Documents" playing out in re
 
 ## Relationships
 
-- FEEDS INTO: [[Never Skip Stages Even When Told to Continue]]
+- FEEDS INTO: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
 
 ## Backlinks
 
-[[Never Skip Stages Even When Told to Continue]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]

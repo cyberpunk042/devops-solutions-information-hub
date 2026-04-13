@@ -1,5 +1,7 @@
 ---
-title: "Obsidian CLI"
+title: Obsidian CLI
+aliases:
+  - "Obsidian CLI"
 type: concept
 layer: 2
 maturity: growing
@@ -11,15 +13,15 @@ updated: 2026-04-10
 sources:
   - id: src-obsidian-cli-official
     type: documentation
-    url: "https://help.obsidian.md/cli"
+    url: https://help.obsidian.md/cli
     file: raw/articles/obsidian-cli-official-docs.md
-    title: "Obsidian CLI — Official Documentation"
+    title: Obsidian CLI — Official Documentation
     ingested: 2026-04-08
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
-    url: "https://github.com/pablo-mano/Obsidian-CLI-skill"
+    url: https://github.com/pablo-mano/Obsidian-CLI-skill
     file: raw/articles/pablo-manoobsidian-cli-skill.md
-    title: "pablo-mano/Obsidian-CLI-skill"
+    title: pablo-mano/Obsidian-CLI-skill
     ingested: 2026-04-08
 tags: [obsidian, cli, automation, scripting, tui, vault-management, pipeline-integration, agent-tools, second-brain]
 ---
@@ -121,32 +123,32 @@ Cross-referencing `Obsidian Skills Ecosystem` and `WSL2 Development Patterns`: t
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Obsidian Knowledge Vault]]
-- ENABLES: [[Wiki Event-Driven Automation]]
-- ENABLES: [[Obsidian Skills Ecosystem]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Claude Code Skills]]
-- USED BY: [[AI-Driven Content Pipeline]]
-- PARALLELS: [[notebooklm-py CLI]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
+- BUILDS ON: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- ENABLES: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- USED BY: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- PARALLELS: [[notebooklm-py-cli|notebooklm-py CLI]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Obsidian Knowledge Vault]]
-[[Wiki Event-Driven Automation]]
-[[Obsidian Skills Ecosystem]]
-[[LLM Wiki Pattern]]
-[[Claude Code Skills]]
-[[AI-Driven Content Pipeline]]
-[[notebooklm-py CLI]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code]]
-[[MCP Integration Architecture]]
-[[Research Pipeline Orchestration]]
-[[WSL2 Development Patterns]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[claude-code-skills|Claude Code Skills]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[notebooklm-py-cli|notebooklm-py CLI]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code|Claude Code]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]

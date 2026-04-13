@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Claude Code Best Practice (shanraisshan)"
+title: Synthesis — Claude Code Best Practice (shanraisshan)
+aliases:
+  - "Synthesis — Claude Code Best Practice (shanraisshan)"
+  - "Synthesis: Claude Code Best Practice (shanraisshan)"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
+    url: https://github.com/shanraisshan/claude-code-best-practice
     file: raw/articles/shanraisshanclaude-code-best-practice.md
-    title: "shanraisshan/claude-code-best-practice"
+    title: shanraisshan/claude-code-best-practice
     ingested: 2026-04-08
 tags: [claude-code, best-practices, subagents, commands, skills, hooks, orchestration, workflows, CLAUDE-md, tips, boris-cherny, context-engineering, git, debugging, planning, specs, hot-features, billion-dollar-questions, development-workflows]
 ---
-
-# Synthesis: Claude Code Best Practice (shanraisshan)
-
+# Synthesis — Claude Code Best Practice (shanraisshan)
 ## Summary
 
 A community-maintained GitHub repository (142k+ stars, trending #1 on GitHub) cataloging Claude Code best practices, tips, architectural patterns, and development workflows. It covers the full Claude Code feature surface — subagents, commands, skills, hooks, MCP servers, plugins, settings, memory (CLAUDE.md), checkpointing, and CLI flags — aggregating 69 tips from Boris Cherny (Claude Code's creator), Thariq, Cat Wu, and community contributors. It also catalogs 10 major open-source development workflow frameworks (Everything Claude Code, Superpowers, Spec Kit, gstack, Get Shit Done, BMAD-METHOD, OpenSpec, oh-my-claudecode, Compound Engineering, HumanLayer) and highlights newly released "hot" features (Ultraplan, Claude Code Web, Auto Mode, Agent Teams, No Flicker Mode, Computer Use, Voice Dictation). It includes an orchestration workflow demonstrating the Command-Agent-Skill architecture, a startups-displaced table, 9 companion reports, and 13 "billion-dollar questions" representing unsolved problems in AI-assisted development.
@@ -196,25 +197,25 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-shanraisshan-claude-code-best-practice
-- ENABLES: [[Claude Code Best Practices]]
-- ENABLES: [[Claude Code Context Management]]
-- BUILDS ON: [[Claude Code Skills]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Hooks Lifecycle Architecture]]
-- COMPARES TO: [[Spec-Driven Development]]
+- DERIVED FROM: [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+- ENABLES: [[claude-code-best-practices|Claude Code Best Practices]]
+- ENABLES: [[claude-code-context-management|Claude Code Context Management]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- COMPARES TO: [[spec-driven-development|Spec-Driven Development]]
 
 ## Backlinks
 
-[[src-shanraisshan-claude-code-best-practice]]
-[[Claude Code Best Practices]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[LLM Wiki Pattern]]
-[[Hooks Lifecycle Architecture]]
-[[Spec-Driven Development]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[spec-driven-development|Spec-Driven Development]]

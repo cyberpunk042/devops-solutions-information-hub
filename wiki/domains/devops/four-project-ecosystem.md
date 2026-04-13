@@ -1,5 +1,7 @@
 ---
-title: "Four-Project Ecosystem"
+title: Four-Project Ecosystem
+aliases:
+  - "Four-Project Ecosystem"
 type: concept
 layer: 2
 maturity: growing
@@ -12,22 +14,22 @@ sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
   - id: src-aicp-local
     type: documentation
     file: ../devops-expert-local-ai/CLAUDE.md
-    title: "AICP — Local Project Documentation"
+    title: AICP — Local Project Documentation
     ingested: 2026-04-08
   - id: src-openarms-local
     type: documentation
     file: raw/articles/openarms-readme.md
-    title: "OpenArms — Project Documentation"
+    title: OpenArms — Project Documentation
     ingested: 2026-04-08
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, ecosystem, openfleet, aicp, devops-control-plane, openarms, research-wiki, architecture, multi-project, integration]
 ---
@@ -197,48 +199,48 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- ENABLES: [[OpenFleet]]
-- ENABLES: [[AICP]]
-- ENABLES: [[OpenArms]]
+- ENABLES: [[openfleet|OpenFleet]]
+- ENABLES: [[aicp|AICP]]
+- ENABLES: [[openarms|OpenArms]]
 - RELATES TO: [[devops-control-plane]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Four-Project Ecosystem]]
-- RELATES TO: [[WSL2 Development Patterns]]
-- RELATES TO: [[Immune System Rules]]
-- RELATES TO: [[Infrastructure as Code Patterns]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
+- RELATES TO: [[wsl2-development-patterns|WSL2 Development Patterns]]
+- RELATES TO: [[immune-system-rules|Immune System Rules]]
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 
 ## Backlinks
 
-[[OpenFleet]]
-[[AICP]]
-[[OpenArms]]
-[[devops-control-plane]]
-[[Wiki Knowledge Graph]]
-[[MCP Integration Architecture]]
-[[Four-Project Ecosystem]]
-[[WSL2 Development Patterns]]
-[[Immune System Rules]]
-[[Infrastructure as Code Patterns]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Backlog Hierarchy Rules]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Ecosystem Integration Interfaces]]
-[[Execution Modes and End Conditions]]
-[[Methodology Adoption Guide]]
-[[Methodology Framework]]
-[[Model: Ecosystem Architecture]]
-[[Model: SFIF and Architecture]]
-[[Portable Methodology Engine]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Stage-Gate Methodology]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[Task Type Artifact Matrix]]
-[[The Wiki Is a Hub, Not a Silo]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]
+[[openarms|OpenArms]]
+[[devops-control-plane|devops-control-plane]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]
+[[immune-system-rules|Immune System Rules]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-framework|Methodology Framework]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]

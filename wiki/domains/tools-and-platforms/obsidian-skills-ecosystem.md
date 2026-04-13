@@ -1,5 +1,7 @@
 ---
-title: "Obsidian Skills Ecosystem"
+title: Obsidian Skills Ecosystem
+aliases:
+  - "Obsidian Skills Ecosystem"
 type: concept
 layer: 2
 maturity: growing
@@ -11,21 +13,21 @@ updated: 2026-04-10
 sources:
   - id: src-kepano-obsidian-skills
     type: documentation
-    url: "https://github.com/kepano/obsidian-skills"
+    url: https://github.com/kepano/obsidian-skills
     file: raw/articles/kepanoobsidian-skills.md
-    title: "kepano/obsidian-skills"
+    title: kepano/obsidian-skills
     ingested: 2026-04-08
   - id: src-axton-obsidian-visual-skills
     type: documentation
-    url: "https://github.com/axtonliu/axton-obsidian-visual-skills"
+    url: https://github.com/axtonliu/axton-obsidian-visual-skills
     file: raw/articles/axtonliuaxton-obsidian-visual-skills.md
-    title: "axtonliu/axton-obsidian-visual-skills"
+    title: axtonliu/axton-obsidian-visual-skills
     ingested: 2026-04-08
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
-    url: "https://github.com/pablo-mano/Obsidian-CLI-skill"
+    url: https://github.com/pablo-mano/Obsidian-CLI-skill
     file: raw/articles/pablo-manoobsidian-cli-skill.md
-    title: "pablo-mano/Obsidian-CLI-skill"
+    title: pablo-mano/Obsidian-CLI-skill
     ingested: 2026-04-08
 tags: [obsidian, skills, agent-skills, claude-code, visual-diagrams, cli, ecosystem]
 ---
@@ -118,35 +120,32 @@ The three-layer ecosystem pattern (official spec → visual generation → deep 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-kepano-obsidian-skills
-- DERIVED FROM: src-axton-obsidian-visual-skills
-- DERIVED FROM: src-pablo-mano-obsidian-cli-skill
-- EXTENDS: [[Claude Code Skills]]
-- BUILDS ON: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[NotebookLM Skills]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Skills Architecture Patterns]]
+- DERIVED FROM: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+- DERIVED FROM: [[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+- DERIVED FROM: [[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[notebooklm-skills|NotebookLM Skills]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
 
 ## Backlinks
 
-[[src-kepano-obsidian-skills]]
-[[src-axton-obsidian-visual-skills]]
-[[src-pablo-mano-obsidian-cli-skill]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
-[[NotebookLM Skills]]
-[[LLM Wiki Pattern]]
-[[Skills Architecture Patterns]]
-[[Obsidian CLI]]
-[[Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
-[[OpenClaw]]
-[[Skill Specification Is the Key to Ecosystem Interoperability]]
-[[Synthesis: axtonliu/axton-obsidian-visual-skills]]
-[[Synthesis: kepano/obsidian-skills]]
-[[Synthesis: pablo-mano/Obsidian-CLI-skill]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+[[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+[[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
+[[claude-code-skills|Claude Code Skills]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[obsidian-cli|Obsidian CLI]]
+[[obsidian-as-knowledge-infrastructure|Obsidian as Knowledge Infrastructure Not Just Note-Taking]]
+[[openclaw|OpenClaw]]
+[[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]

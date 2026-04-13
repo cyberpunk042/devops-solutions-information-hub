@@ -1,5 +1,7 @@
 ---
-title: "LLM Wiki vs RAG"
+title: LLM Wiki vs RAG
+aliases:
+  - "LLM Wiki vs RAG"
 type: comparison
 layer: 3
 maturity: growing
@@ -12,19 +14,19 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
     ingested: 2026-04-08
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
-    url: "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2"
+    url: https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2
     file: raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md
-    title: "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory"
+    title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
     ingested: 2026-04-08
 tags: [llm-wiki, rag, semantic-search, vector-database, comparison, knowledge-retrieval, hybrid-search, knowledge-graph]
 ---
@@ -101,50 +103,47 @@ The LLM Wiki v2 document proposes that the binary choice between wiki and RAG is
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-claude-code-10x
-- DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- DERIVED FROM: src-llm-wiki-v2-agentmemory
-- COMPARES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[NotebookLM]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[LightRAG]]
-- RELATES TO: [[Agentic Search vs Vector Search]]
+- DERIVED FROM: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+- COMPARES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[notebooklm|NotebookLM]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[lightrag|LightRAG]]
+- RELATES TO: [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
 
 ## Backlinks
 
-[[src-karpathy-claude-code-10x]]
-[[src-karpathy-llm-wiki-idea-file]]
-[[src-llm-wiki-v2-agentmemory]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Wiki Knowledge Graph]]
-[[NotebookLM]]
-[[Claude Code Best Practices]]
-[[LightRAG]]
-[[Agentic Search vs Vector Search]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
-[[Knowledge Evolution Pipeline]]
-[[LLM-Maintained Wikis Outperform Static Documentation]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Memory Lifecycle Management]]
-[[Model: NotebookLM]]
-[[Model: Second Brain]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Second Brain Architecture]]
-[[Synthesis: Karpathy LLM Wiki Method via Claude Code]]
-[[Synthesis: Karpathy's LLM Wiki Idea File]]
-[[Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
-[[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[notebooklm|NotebookLM]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[lightrag|LightRAG]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[graph-enhanced-retrieval-bridges-wiki-and-vector-search|Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[model-notebooklm|Model — NotebookLM]]
+[[model-second-brain|Model — Second Brain]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]

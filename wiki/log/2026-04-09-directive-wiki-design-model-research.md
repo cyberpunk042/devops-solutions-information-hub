@@ -1,5 +1,7 @@
 ---
-title: "Wiki Design Model — Research Sources"
+title: Wiki Design Model — Research Sources
+aliases:
+  - "Wiki Design Model — Research Sources"
 type: note
 domain: log
 note_type: directive
@@ -35,8 +37,8 @@ Operator directive to research the full markdown and Obsidian formatting capabil
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

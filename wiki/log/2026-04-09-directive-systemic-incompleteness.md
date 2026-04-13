@@ -1,5 +1,7 @@
 ---
-title: "Systemic Incompleteness — No Model Is Finished"
+title: Systemic Incompleteness — No Model Is Finished
+aliases:
+  - "Systemic Incompleteness — No Model Is Finished"
 type: note
 domain: log
 note_type: directive
@@ -48,8 +50,8 @@ Not "ingest more" — FINISH what's started. Complete each model before starting
 
 ## Relationships
 
-- FEEDS INTO: [[Coverage Blindness — Modeling Only What You Know]]
+- FEEDS INTO: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
 
 ## Backlinks
 
-[[Coverage Blindness — Modeling Only What You Know]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]

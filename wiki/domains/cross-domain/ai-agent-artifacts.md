@@ -1,5 +1,7 @@
 ---
-title: "AI Agent Artifacts — Standards and Guide"
+title: AI Agent Artifacts — Standards and Guide
+aliases:
+  - "AI Agent Artifacts — Standards and Guide"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -13,7 +15,7 @@ sources:
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
   - id: nxcode-agentic
     type: article
-    url: "https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026"
+    url: https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026
   - id: openarms-chain
     type: file
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
@@ -194,7 +196,7 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 ## Open Questions
 
 > [!question] Should the operator's .agent/ rule system be studied as a methodology model for the wiki?
-> **DEFERRED:** Needs operator brainstorm session about the "magic tricks." The rule system is captured as research material in [[raw/notes/2026-04-12-restart-directive.md]]. Represents a THIRD enforcement tier: per-prompt rule injection with mandatory processing.
+> **DEFERRED:** Needs operator brainstorm session about the "magic tricks." The rule system is captured as research material in `raw/notes/2026-04-12-restart-directive.md`. Represents a THIRD enforcement tier: per-prompt rule injection with mandatory processing.
 
 > [!question] Should agent persona templates be wiki page types or external config files?
 > **DEFERRED:** Needs operator input. Currently external (CLAUDE.md, skills/). The knowledge in them SHOULD be in the wiki for discoverability, but the configs must remain external for agent consumption. Likely answer: wiki pages DOCUMENT the persona, config files ARE the persona.
@@ -208,31 +210,31 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- BUILDS ON: [[Enforcement Hook Patterns]]
-- BUILDS ON: [[Stage-Aware Skill Injection]]
-- RELATES TO: [[Model: Claude Code]]
-- RELATES TO: [[Model: Skills, Commands, and Hooks]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Evolution Protocol]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- BUILDS ON: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- BUILDS ON: [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[methodology-evolution-protocol|Methodology Evolution Protocol]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Stage-Aware Skill Injection]]
-[[Model: Claude Code]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Methodology]]
-[[Methodology Evolution Protocol]]
-[[Methodology Adoption Guide]]
-[[How AI Agents Consume the Methodology Wiki]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-methodology|Model — Methodology]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]

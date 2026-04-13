@@ -1,5 +1,7 @@
 ---
-title: "Artifact Chains by Methodology Model"
+title: Artifact Chains by Methodology Model
+aliases:
+  - "Artifact Chains by Methodology Model"
 type: reference
 domain: cross-domain
 status: synthesized
@@ -208,38 +210,38 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Methodology Framework]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- BUILDS ON: [[Task Type Artifact Matrix]]
-- BUILDS ON: [[Model: Methodology]]
-- RELATES TO: [[Execution Modes and End Conditions]]
-- RELATES TO: [[Backlog Hierarchy Rules]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- IMPLEMENTS: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- BUILDS ON: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+- RELATES TO: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[Model: Methodology]]
-[[Execution Modes and End Conditions]]
-[[Backlog Hierarchy Rules]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[Initiation and Planning Artifacts — Standards and Guide]]
-[[Methodology Adoption Guide]]
-[[Methodology Artifact Taxonomy]]
-[[Model Composition Rules]]
-[[Requirements and Design Artifacts — Standards and Guide]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[model-methodology|Model — Methodology]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[model-composition-rules|Model Composition Rules]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]

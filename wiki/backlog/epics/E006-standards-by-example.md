@@ -1,5 +1,7 @@
 ---
-title: "Standards-by-Example"
+title: Standards-by-Example
+aliases:
+  - "Standards-by-Example"
 type: epic
 domain: backlog
 status: in-progress
@@ -8,34 +10,37 @@ task_type: epic
 current_stage: implement
 readiness: 70
 progress: 50
-stages_completed: [document, implement]
+stages_completed:
+  - "document"
+  - "implement"
 artifacts:
-  - wiki/spine/model-llm-wiki-standards.md
-  - wiki/spine/model-methodology-standards.md
-  - wiki/spine/standards/concept-page-standards.md
-  - wiki/spine/standards/lesson-page-standards.md
-  - wiki/spine/standards/pattern-page-standards.md
-  - wiki/spine/standards/decision-page-standards.md
-  - wiki/spine/standards/comparison-page-standards.md
-  - wiki/spine/standards/source-synthesis-page-standards.md
-  - wiki/spine/standards/reference-page-standards.md
-  - wiki/spine/standards/deep-dive-page-standards.md
-  - wiki/spine/standards/domain-overview-page-standards.md
-  - wiki/spine/standards/operations-plan-page-standards.md
-  - wiki/spine/standards/epic-page-standards.md
-  - wiki/spine/standards/task-page-standards.md
-  - wiki/spine/standards/note-page-standards.md
-  - wiki/spine/standards/evolution-page-standards.md
-  - wiki/spine/standards/learning-path-page-standards.md
-  - wiki/spine/learning-paths/methodology-fundamentals.md
-  - wiki/spine/evolution-log/methodology-evolution-history.md
-  - wiki/domains/cross-domain/wiki-post-ingestion-operations-plan.md
-  - tools/lint.py
-  - tools/validate.py
+  - "wiki/spine/model-llm-wiki-standards.md"
+  - "wiki/spine/model-methodology-standards.md"
+  - "wiki/spine/standards/concept-page-standards.md"
+  - "wiki/spine/standards/lesson-page-standards.md"
+  - "wiki/spine/standards/pattern-page-standards.md"
+  - "wiki/spine/standards/decision-page-standards.md"
+  - "wiki/spine/standards/comparison-page-standards.md"
+  - "wiki/spine/standards/source-synthesis-page-standards.md"
+  - "wiki/spine/standards/reference-page-standards.md"
+  - "wiki/spine/standards/deep-dive-page-standards.md"
+  - "wiki/spine/standards/domain-overview-page-standards.md"
+  - "wiki/spine/standards/operations-plan-page-standards.md"
+  - "wiki/spine/standards/epic-page-standards.md"
+  - "wiki/spine/standards/task-page-standards.md"
+  - "wiki/spine/standards/note-page-standards.md"
+  - "wiki/spine/standards/evolution-page-standards.md"
+  - "wiki/spine/standards/learning-path-page-standards.md"
+  - "wiki/spine/learning-paths/methodology-fundamentals.md"
+  - "wiki/spine/evolution-log/methodology-evolution-history.md"
+  - "wiki/domains/cross-domain/wiki-post-ingestion-operations-plan.md"
+  - "tools/lint.py"
+  - "tools/validate.py"
 confidence: high
 created: 2026-04-11
 updated: 2026-04-11
-depends_on: [E003]
+depends_on:
+  - "E003"
 sources:
   - id: operator-directive
     type: file
@@ -84,26 +89,26 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DEPENDS ON: [[Artifact Type System]] (E003)
-- BUILDS ON: [[Standards Must Preach by Example]]
-- BUILDS ON: [[Models Are Systems, Not Documents]]
-- IMPLEMENTS: [[LLM Wiki Standards — What Good Looks Like]]
-- IMPLEMENTS: [[Model: Quality and Failure Prevention]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[Model: Wiki Design]]
+- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- BUILDS ON: [[standards-must-preach-by-example|Standards Must Preach by Example]]
+- BUILDS ON: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+- IMPLEMENTS: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- IMPLEMENTS: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
 
 ## Backlinks
 
-[[Artifact Type System]]
-[[Standards Must Preach by Example]]
-[[Models Are Systems, Not Documents]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Quality and Failure Prevention]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Model: Wiki Design]]
-[[Methodology Standards Initiative — Honest Assessment]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-wiki-design|Model — Wiki Design]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]

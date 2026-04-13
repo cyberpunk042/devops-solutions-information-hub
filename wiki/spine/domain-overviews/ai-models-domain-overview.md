@@ -1,5 +1,7 @@
 ---
-title: "AI Models — Domain Overview"
+title: AI Models — Domain Overview
+aliases:
+  - "AI Models — Domain Overview"
 type: domain-overview
 domain: ai-models
 layer: spine
@@ -23,8 +25,8 @@ The ai-models domain covers LLMs, embeddings, quantization, fine-tuning, and mod
 > | Metric | Value |
 > |--------|-------|
 > | Concept pages | 1 |
-> | Related model pages | [[Model: Local AI]] |
-> | Decision pages | [[Decision: Local Model vs Cloud API for Routine Operations]] |
+> | Related model pages | [[model-local-ai|Model — Local AI ($0 Target)]] |
+> | Decision pages | [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]] |
 > | Related lessons | 1 (Graph-Enhanced Retrieval Bridges Wiki and Vector Search) |
 
 ## State of Knowledge
@@ -75,16 +77,16 @@ Page assigned maturity. Styled with callout vocabulary. Has standard sections.
 ## FAQ
 
 ### Q: What local LLM models are currently in use across the ecosystem?
-OpenFleet uses hermes-3b for agent inference and bge-m3 for embeddings. AICP runs 9 models including Qwen3, Gemma4 variants, and bge-reranker-v2-m3 for reranking. The Gemma 4 E4B model (9.6GB, 4-bit quantized) is the current recommended small model for agentic tool calling on consumer hardware. See [[Local LLM Quantization]].
+OpenFleet uses hermes-3b for agent inference and bge-m3 for embeddings. AICP runs 9 models including Qwen3, Gemma4 variants, and bge-reranker-v2-m3 for reranking. The Gemma 4 E4B model (9.6GB, 4-bit quantized) is the current recommended small model for agentic tool calling on consumer hardware. See [[local-llm-quantization|Local LLM Quantization]].
 
 ### Q: When does it make sense to run a 122B model locally vs using Claude API?
-TurboQuant-MLX enables 122B MoE models on a MacBook M4 Max at usable speeds. For tasks requiring strong reasoning (deep analysis, complex code generation), the quality gap vs Claude Sonnet/Opus may still favor the API. For routine tasks (summaries, format conversion, simple Q&A), local models at 4-bit quantization are adequate and effectively free. See [[Local LLM Quantization]].
+TurboQuant-MLX enables 122B MoE models on a MacBook M4 Max at usable speeds. For tasks requiring strong reasoning (deep analysis, complex code generation), the quality gap vs Claude Sonnet/Opus may still favor the API. For routine tasks (summaries, format conversion, simple Q&A), local models at 4-bit quantization are adequate and effectively free. See [[local-llm-quantization|Local LLM Quantization]].
 
 ### Q: What is the difference between Claude Haiku, Sonnet, and Opus for agent tasks?
-This is a documented gap in the wiki — no dedicated comparison page exists yet. AICP's complexity scoring routes simpler tasks to cheaper tiers, but the routing thresholds and quality tradeoffs for each tier have not been formally documented. See the [[AICP]] page for current routing logic.
+This is a documented gap in the wiki — no dedicated comparison page exists yet. AICP's complexity scoring routes simpler tasks to cheaper tiers, but the routing thresholds and quality tradeoffs for each tier have not been formally documented. See the [[aicp|AICP]] page for current routing logic.
 
 ### Q: What embedding model should I use for LightRAG or wiki indexing?
-bge-m3 is the current production choice in both AICP and OpenFleet. text-embedding-3-large (OpenAI) is the cloud alternative. A structured comparison of latency, quality, and hardware requirements for wiki-scale indexing does not yet exist in this wiki — it is a documented priority for this domain. See [[LightRAG]].
+bge-m3 is the current production choice in both AICP and OpenFleet. text-embedding-3-large (OpenAI) is the cloud alternative. A structured comparison of latency, quality, and hardware requirements for wiki-scale indexing does not yet exist in this wiki — it is a documented priority for this domain. See [[lightrag|LightRAG]].
 
 ## Relationships
 
@@ -96,9 +98,9 @@ bge-m3 is the current production choice in both AICP and OpenFleet. text-embeddi
 
 ## Backlinks
 
-[[AI Agents — Domain Overview]]
-[[Knowledge Systems — Domain Overview]]
-[[Tools And Platforms — Domain Overview]]
-[[Automation — Domain Overview]]
-[[Devops — Domain Overview]]
-[[Cross-Domain — Domain Overview]]
+[[ai-agents-domain-overview|AI Agents — Domain Overview]]
+[[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+[[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+[[automation-domain-overview|Automation — Domain Overview]]
+[[devops-domain-overview|Devops — Domain Overview]]
+[[cross-domain-domain-overview|Cross-Domain — Domain Overview]]

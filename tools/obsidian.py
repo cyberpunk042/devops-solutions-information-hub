@@ -69,18 +69,20 @@ def _resolve_target(target: str, lookup: Dict[str, Dict[str, str]]) -> str:
 
     # Direct title match
     if target in lookup:
-        return f"[[{target}]]"
+        slug = lookup[target].get("slug", "")
+        return f"[[{slug}|{target}]]" if slug else f"[[{target}]]"
 
     # Slug match
     for title, info in lookup.items():
         if info.get("slug") == target:
-            return f"[[{title}]]"
+            return f"[[{target}|{title}]]"
 
     # Source ID match
     if target.startswith("src-"):
         for title, info in lookup.items():
             if target in info.get("source_ids", []):
-                return f"[[{title}]]"
+                slug = info.get("slug", "")
+                return f"[[{slug}|{title}]]" if slug else f"[[{title}]]"
 
     # Unresolved
     return f"[[{target}]]"
@@ -130,7 +132,12 @@ def generate_backlinks(
     incoming_titles = _find_incoming_links(page_title, manifest)
     incoming_links: List[str] = []
     for title in sorted(incoming_titles):
-        wl = f"[[{title}]]"
+        # Use [[filename|title]] format for Obsidian resolution
+        if title in lookup:
+            slug = lookup[title].get("slug", "")
+            wl = f"[[{slug}|{title}]]" if slug else f"[[{title}]]"
+        else:
+            wl = f"[[{title}]]"
         if wl not in outgoing_links and wl not in incoming_links:
             incoming_links.append(wl)
 

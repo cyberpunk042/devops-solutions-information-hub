@@ -1,5 +1,8 @@
 ---
-title: "Decision: When to Use Milestone vs Epic vs Module vs Task"
+title: Decision — When to Use Milestone vs Epic vs Module vs Task
+aliases:
+  - "Decision — When to Use Milestone vs Epic vs Module vs Task"
+  - "Decision: When to Use Milestone vs Epic vs Module vs Task"
 type: decision
 domain: cross-domain
 layer: 6
@@ -29,8 +32,7 @@ sources:
 tags: [decision, hierarchy, milestone, epic, module, task, work-management, decomposition]
 ---
 
-# Decision: When to Use Milestone vs Epic vs Module vs Task
-
+# Decision — When to Use Milestone vs Epic vs Module vs Task
 ## Summary
 
 Use milestones for delivery coordination across epics, epics for strategic capabilities, modules for coherent subsystems, and tasks for atomic execution. The decision is based on three questions: how long will this take (duration), can it be independently reviewed (reviewability), and does it need its own design (design complexity). Wrong decomposition level causes either over-process (task treated as epic) or under-process (epic treated as task).
@@ -76,7 +78,7 @@ All work items at the same level — just a list of tasks.
 OpenArms current model — single `readiness` field tracking both definition and execution.
 
 > [!warning] Rejected: hides the failure mode
-> A single field can't distinguish "not defined" from "defined but not built." Both show as "50%" but require completely different responses. OpenFleet's two-field model (`task_readiness` + `task_progress`) enables correct diagnosis. See [[Readiness vs Progress — Two-Dimensional Work Tracking]].
+> A single field can't distinguish "not defined" from "defined but not built." Both show as "50%" but require completely different responses. OpenFleet's two-field model (`task_readiness` + `task_progress`) enables correct diagnosis. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]].
 
 ## Rationale
 
@@ -98,10 +100,10 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 
 ## Dependencies
 
-- [[Backlog Hierarchy Rules]] — defines the 4-level hierarchy and 8 rules governing propagation
-- [[Readiness vs Progress — Two-Dimensional Work Tracking]] — both fields tracked at every level
-- [[Three PM Levels — Wiki to Fleet to Full Tool]] — PM level determines how hierarchy is enforced
-- [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — SDLC chain affects how many artifacts per level
+- [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — defines the 4-level hierarchy and 8 rules governing propagation
+- [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — both fields tracked at every level
+- [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — PM level determines how hierarchy is enforced
+- [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — SDLC chain affects how many artifacts per level
 
 ### How This Connects — Navigate From Here
 
@@ -109,25 +111,25 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Backlog Hierarchy Rules]]
-- DERIVED FROM: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- DERIVED FROM: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- RELATES TO: [[Three PM Levels — Wiki to Fleet to Full Tool]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Model: Methodology]]
+- DERIVED FROM: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- DERIVED FROM: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- DERIVED FROM: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
 
 ## Backlinks
 
-[[Backlog Hierarchy Rules]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Methodology Adoption Guide]]
-[[Model: Methodology]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology|Model — Methodology]]

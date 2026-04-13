@@ -1,5 +1,7 @@
 ---
-title: "Domain Overview Page Standards"
+title: Domain Overview Page Standards
+aliases:
+  - "Domain Overview Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -47,12 +49,21 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Cross-Domain — Domain Overview]] — 126 lines
+> [!success] [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] — 126 lines
 >
 > - State of Knowledge with 3 tiers (Authoritative, Good, Thin)
 > - Maturity Map showing 29 lessons, 6 patterns, 13 decisions
 > - Specific gap analysis with actionable priorities
 > - Key Pages in recommended reading order
+
+### Annotated Exemplar: Check any domain overview in wiki/spine/domain-overviews/
+
+> [!example]- What makes a good domain overview
+>
+> **Maturity Map:** Groups pages by maturity (seed/growing/mature/canonical) — shows domain health at a glance.
+> **Coverage Assessment:** What's covered, what's thin, what's missing — specific named gaps.
+> **Key Pages:** Curated reading order, not alphabetical dump. Each page annotated with why it's key.
+> **Priorities:** Named next actions with estimated effort.
 
 ### Template
 
@@ -60,10 +71,10 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

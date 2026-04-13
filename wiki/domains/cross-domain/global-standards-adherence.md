@@ -1,5 +1,7 @@
 ---
-title: "Global Standards Adherence — Engineering Principles the Wiki Follows"
+title: Global Standards Adherence — Engineering Principles the Wiki Follows
+aliases:
+  - "Global Standards Adherence — Engineering Principles the Wiki Follows"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -75,7 +77,7 @@ The wiki is BOTH the framework AND an instance. It must adhere to the standards 
 >
 > | Standard | How the Wiki Follows It | Evidence |
 > |----------|------------------------|---------|
-> | CloudEvents | Frontmatter fields are typed, documented, machine-parseable | [[Frontmatter Field Reference — Complete Parameter Documentation]] — every field documented |
+> | CloudEvents | Frontmatter fields are typed, documented, machine-parseable | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — every field documented |
 > | DDD | 7 domains as bounded contexts, cross-domain as shared kernel | wiki/domains/ folder structure, _index.md per domain |
 > | Onion Architecture | Pipeline tools don't know about CLAUDE.md rules. CLAUDE.md doesn't know about pipeline internals. | tools/ and CLAUDE.md are independent layers |
 > | SFIF | Wiki built in stages: scaffold (templates) → foundation (schema) → infrastructure (tools) → features (content) | The wiki's own evolution history follows SFIF |
@@ -99,13 +101,13 @@ The wiki is BOTH the framework AND an instance. It must adhere to the standards 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **How does identity use structured attributes?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — 7 typed dimensions |
+> | **How does identity use structured attributes?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 typed dimensions |
 > | **Where is the DDD domain structure?** | wiki/domains/ — 7 bounded contexts |
-> | **Where is the Onion enforcement?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] — layers don't know about outer layers |
-> | **Where is the SFIF lifecycle?** | [[Model: SFIF and Architecture]] — 4-stage build with quality tiers |
-> | **Where is the SRP tool design?** | tools/ — each file has one job. [[Frontmatter Field Reference — Complete Parameter Documentation]] — fields enable specific automation |
+> | **Where is the Onion enforcement?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] — layers don't know about outer layers |
+> | **Where is the SFIF lifecycle?** | [[model-sfif-architecture|Model — SFIF and Architecture]] — 4-stage build with quality tiers |
+> | **Where is the SRP tool design?** | tools/ — each file has one job. [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — fields enable specific automation |
 > | **Where are the design patterns?** | Strategy (model selection), Template Method (validation matrix), Chain of Responsibility (enforcement), Observer (immune system), Factory (scaffolding) |
-> | **What's the gateway tools plan?** | [[Wiki Gateway Tools — Unified Knowledge Interface]] — should be OpenAPI-documented |
+> | **What's the gateway tools plan?** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — should be OpenAPI-documented |
 
 ## Open Questions
 
@@ -120,22 +122,23 @@ The wiki is BOTH the framework AND an instance. It must adhere to the standards 
 
 ## Relationships
 
-- BUILDS ON: [[Model: SFIF and Architecture]]
-- BUILDS ON: [[Model: LLM Wiki]]
-- RELATES TO: [[Project Self-Identification Protocol — The Goldilocks Framework]]
-- RELATES TO: [[Principle: Infrastructure Over Instructions for Process Enforcement]]
-- RELATES TO: [[Principle: Structured Context Governs Agent Behavior More Than Content]]
-- RELATES TO: [[Frontmatter Field Reference — Complete Parameter Documentation]]
-- FEEDS INTO: [[Wiki Gateway Tools — Unified Knowledge Interface]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[model-sfif-architecture|Model — SFIF and Architecture]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+- RELATES TO: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+- RELATES TO: [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+- RELATES TO: [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+- FEEDS INTO: [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Model: SFIF and Architecture]]
-[[Model: LLM Wiki]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Frontmatter Field Reference — Complete Parameter Documentation]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
-[[Methodology Adoption Guide]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]

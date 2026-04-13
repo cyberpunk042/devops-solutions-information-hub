@@ -1,5 +1,7 @@
 ---
-title: "Methodology Artifact Taxonomy"
+title: Methodology Artifact Taxonomy
+aliases:
+  - "Methodology Artifact Taxonomy"
 type: reference
 domain: cross-domain
 status: synthesized
@@ -16,7 +18,7 @@ sources:
     file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
   - id: sdlcforms
     type: article
-    url: "https://www.sdlcforms.com/UnderstandingSDLC.html"
+    url: https://www.sdlcforms.com/UnderstandingSDLC.html
 tags: [methodology, taxonomy, artifacts, documents, documentation, reference, framework]
 ---
 
@@ -32,7 +34,7 @@ tags: [methodology, taxonomy, artifacts, documents, documentation, reference, fr
 
 ## Summary
 
-The complete classification of every artifact, document, and documentation type produced during software development methodology execution. Organized into 11 categories with 78 types. This is the FRAMEWORK — it defines what each type IS, when it's produced, who the audience is, and what quality looks like. Projects select which types apply to their domain via domain profiles. Individual types are defined here; per-model chains are defined in [[Artifact Chains by Methodology Model]]; per-type standards are in `wiki/spine/standards/`.
+The complete classification of every artifact, document, and documentation type produced during software development methodology execution. Organized into 11 categories with 78 types. This is the FRAMEWORK — it defines what each type IS, when it's produced, who the audience is, and what quality looks like. Projects select which types apply to their domain via domain profiles. Individual types are defined here; per-model chains are defined in [[artifact-chains-by-model|Artifact Chains by Methodology Model]]; per-type standards are in `wiki/spine/standards/`.
 
 ## Reference Content
 
@@ -256,42 +258,42 @@ Before the taxonomy: understand that methodology produces three fundamentally di
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-- FEEDS INTO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Framework]]
-- FEEDS INTO: [[Artifact Chains by Methodology Model]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Task Type Artifact Matrix]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[methodology-framework|Methodology Framework]]
+- FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[Model: Methodology]]
-[[Methodology Framework]]
-[[Artifact Chains by Methodology Model]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Methodology Adoption Guide]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Decision: Artifact System Design Decisions]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[Initiation and Planning Artifacts — Standards and Guide]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Requirements and Design Artifacts — Standards and Guide]]
-[[Three Classes of Methodology Output]]
-[[Universal Stages, Domain-Specific Artifacts]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[model-methodology|Model — Methodology]]
+[[methodology-framework|Methodology Framework]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]

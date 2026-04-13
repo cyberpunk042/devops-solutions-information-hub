@@ -48,6 +48,12 @@ tags: []
      GOOD: "- [ ] `wiki/lessons/new-lesson.md` passes pipeline post with 0 errors"
      BAD: "- [ ] Task is complete" -->
 
+<!-- EXAMPLE Done When items (replace with your content):
+     - [ ] `wiki/lessons/03_validated/new-lesson.md` passes `pipeline post` with 0 errors
+     - [ ] `src/hooks/event-firing.ts` imports and calls workspace-coordinator
+     - [ ] `pnpm tsgo` passes with 0 type errors
+     Specific files and commands — never "it works" or "it's done" -->
+
 - [ ] {{specific_criterion_naming_a_file}}
 - [ ] {{specific_criterion_naming_a_command}}
 

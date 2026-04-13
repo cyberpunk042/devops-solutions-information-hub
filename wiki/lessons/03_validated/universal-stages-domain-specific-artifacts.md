@@ -1,5 +1,7 @@
 ---
-title: "Universal Stages, Domain-Specific Artifacts"
+title: Universal Stages, Domain-Specific Artifacts
+aliases:
+  - "Universal Stages, Domain-Specific Artifacts"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -95,32 +97,32 @@ This lesson applies when:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Artifact Taxonomy]]
-- DERIVED FROM: [[Artifact Chain: TypeScript/Node Domain]]
-- DERIVED FROM: [[Artifact Chain: Python/Wiki Domain]]
-- DERIVED FROM: [[Artifact Chain: Infrastructure/IaC Domain]]
-- DERIVED FROM: [[Artifact Chain: Knowledge/Evolution Domain]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- DERIVED FROM: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+- DERIVED FROM: [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+- DERIVED FROM: [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+- DERIVED FROM: [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Stage-Gate Methodology]]
-[[Model: Methodology]]
-[[Methodology Adoption Guide]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology|Model — Methodology]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

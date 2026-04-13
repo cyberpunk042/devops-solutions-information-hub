@@ -1,5 +1,8 @@
 ---
-title: "Model: Second Brain"
+title: Model — Second Brain
+aliases:
+  - "Model — Second Brain"
+  - "Model: Second Brain"
 type: concept
 domain: cross-domain
 layer: spine
@@ -7,13 +10,12 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-12
 sources: []
 tags: [model, concept, spine, second-brain, pkm, zettelkasten, para, obsidian, knowledge-management, progressive-distillation]
 ---
 
-# Model: Second Brain
-
+# Model — Second Brain
 ## Summary
 
 The Second Brain model describes the personal knowledge management (PKM) theoretical foundation that underlies this wiki's architecture. It synthesizes two dominant methodologies — PARA (Tiago Forte's action-oriented framework) and Zettelkasten (Niklas Luhmann's idea-density system) — into a hybrid that this wiki instantiates at scale. PARA organizes information around actionability (Projects, Areas, Resources, Archives); Zettelkasten organizes information around idea density and connection discovery (atomic notes, bidirectional links, permanent notes that compound over time). The wiki implements both simultaneously: `raw/` maps to the Capture step; `wiki/domains/` maps to Areas; progressive distillation through the maturity ladder (seed → growing → mature → canonical) maps to the Zettelkasten note lifecycle (fleeting → literature → permanent). What makes this wiki a second brain rather than a wiki is the property that distinguishes second brains from reference libraries: it compounds, evolves, and self-maintains — with LLM automation eliminating the maintenance problem that has historically killed every personal wiki attempt.
@@ -105,7 +107,7 @@ The test is: does the system surface insights you did not explicitly put in? A Z
 
 ### Obsidian as the Graph Interface
 
-[[Obsidian Knowledge Vault]] is infrastructure, not a note-taking app. The layers of value:
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]] is infrastructure, not a note-taking app. The layers of value:
 
 - **Markdown files on disk** — The store. Portable, version-controlled, tool-independent.
 - **Obsidian's graph view** — Visualizes the relationship network. Makes orphan nodes visible. Shows cluster density per domain.
@@ -139,13 +141,13 @@ The maturity ladder makes this compounding visible: a page starts as `seed` (thi
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Second Brain Architecture]] | concept | Core architecture definition |
-| [[PARA Methodology]] | concept | Action-oriented organization framework |
-| [[Zettelkasten Methodology]] | concept | Idea-density and connection framework |
-| [[Obsidian Knowledge Vault]] | concept | Graph interface for navigation at scale |
-| [[Progressive Distillation]] | pattern | The core value loop (raw → refined) |
-| [[LLM-Maintained Wikis Outperform Static Documentation]] | lesson | Why LLM automation changes the game |
-| [[The Wiki Maintenance Problem Is Solved by LLM Automation]] | lesson | The specific innovation enabling sustainability |
+| [[second-brain-architecture|Second Brain Architecture]] | concept | Core architecture definition |
+| [[para-methodology|PARA Methodology]] | concept | Action-oriented organization framework |
+| [[zettelkasten-methodology|Zettelkasten Methodology]] | concept | Idea-density and connection framework |
+| [[obsidian-knowledge-vault|Obsidian Knowledge Vault]] | concept | Graph interface for navigation at scale |
+| [[progressive-distillation|Progressive Distillation]] | pattern | The core value loop (raw → refined) |
+| [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] | lesson | Why LLM automation changes the game |
+| [[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]] | lesson | The specific innovation enabling sustainability |
 
 ### Lessons Learned
 
@@ -186,6 +188,10 @@ The maturity ladder makes this compounding visible: a page starts as `seed` (thi
 > - Obsidian graph view configuration varies by vault size and density
 > - Export profiles are project-specific (openfleet, AICP, DSPD each have different needs)
 
+### The Hub Principle
+
+The wiki IS a second brain — and a second brain is a HUB, not a silo. It aggregates from all ecosystem projects and feeds processed knowledge back. The [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]] pattern and the [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]] lesson document this. The dual-scope principle means tools work BOTH toward the brain (querying) AND toward project wikis (applying).
+
 ## Open Questions
 
 > [!question] Relationship density threshold
@@ -206,31 +212,31 @@ The maturity ladder makes this compounding visible: a page starts as `seed` (thi
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Second Brain Architecture]]
-- BUILDS ON: [[PARA Methodology]]
-- BUILDS ON: [[Zettelkasten Methodology]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Automation and Pipelines]]
-- RELATES TO: [[Model: NotebookLM]]
-- FEEDS INTO: [[Model: LLM Wiki]]
-- ENABLES: [[Progressive Distillation]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
+- BUILDS ON: [[second-brain-architecture|Second Brain Architecture]]
+- BUILDS ON: [[para-methodology|PARA Methodology]]
+- BUILDS ON: [[zettelkasten-methodology|Zettelkasten Methodology]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-automation-pipelines|Model — Automation and Pipelines]]
+- RELATES TO: [[model-notebooklm|Model — NotebookLM]]
+- FEEDS INTO: [[model-llm-wiki|Model — LLM Wiki]]
+- ENABLES: [[progressive-distillation|Progressive Distillation]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[PARA Methodology]]
-[[Zettelkasten Methodology]]
-[[Model: Knowledge Evolution]]
-[[Model: Automation and Pipelines]]
-[[Model: NotebookLM]]
-[[Model: LLM Wiki]]
-[[Progressive Distillation]]
-[[LLM Wiki vs RAG]]
-[[Model: Methodology]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[para-methodology|PARA Methodology]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[model-notebooklm|Model — NotebookLM]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[progressive-distillation|Progressive Distillation]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[model-methodology|Model — Methodology]]

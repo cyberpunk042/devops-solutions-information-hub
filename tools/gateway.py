@@ -100,36 +100,47 @@ def auto_detect_identity(root: Path) -> Dict[str, Any]:
         identity["scale"] = "massive"
     identity["source_files"] = min(file_count, 20000)
 
-    # Execution mode detection
-    # Solo: no harness program found. Human + Claude in conversation.
-    # Harness: a program that spawns+controls agent sessions in a loop.
-    # Full system: orchestrator that coordinates multiple agents.
+    # Execution mode: CANNOT be auto-detected from filesystem.
+    #
+    # The harness version is decided by THE HARNESS at runtime, not by project files.
+    # When `openarms agent run` launches, IT decides v1/v2/v3 based on its own flags.
+    # The project doesn't declare "I am harness v2" — the harness TELLS the project.
+    #
+    # What we CAN detect: does harness infrastructure EXIST in this project?
+    # What we CANNOT detect: is it running? in what mode? what version?
+    #
+    # So we report what we see, and mark execution_mode as "unknown — must be declared"
+    # unless it's clearly solo (no harness code exists at all).
 
-    # Full system markers (orchestrator + multi-agent infrastructure)
-    full_system_markers = [
-        "fleet/core/orchestrator.py",
-        "fleet/cli/orchestrator.py",
-    ]
-    # Harness markers (program that wraps ONE agent in a loop)
-    harness_markers = [
+    has_harness_code = any((root / m).exists() for m in [
         "src/commands/agent-run-harness.ts",
         "src/commands/agent-run.ts",
-    ]
-    # Harness v2 markers (enforcement infrastructure ON the harness)
-    enforcement_markers = [
+    ])
+    has_fleet_code = any((root / m).exists() for m in [
+        "fleet/core/orchestrator.py",
+        "fleet/cli/orchestrator.py",
+    ])
+    has_enforcement = any((root / m).exists() for m in [
         "scripts/methodology/validate-stage.cjs",
         "scripts/methodology/hooks/pre-bash.sh",
-    ]
+    ])
 
-    if any((root / m).exists() for m in full_system_markers):
-        identity["execution_mode"] = "full-system"
-    elif any((root / m).exists() for m in harness_markers):
-        if any((root / m).exists() for m in enforcement_markers):
-            identity["execution_mode"] = "harness-v2"
-        else:
-            identity["execution_mode"] = "harness-v1"
-    else:
+    if not has_harness_code and not has_fleet_code:
         identity["execution_mode"] = "solo"
+        identity["execution_mode_confidence"] = "certain"
+    else:
+        # Harness/fleet code EXISTS but we don't know if it's RUNNING or in what mode
+        capabilities = []
+        if has_fleet_code:
+            capabilities.append("fleet/orchestrator")
+        if has_harness_code:
+            capabilities.append("harness")
+        if has_enforcement:
+            capabilities.append("enforcement (hooks/validator)")
+
+        identity["execution_mode"] = "unknown — declare in CLAUDE.md or pass at runtime"
+        identity["execution_mode_confidence"] = "cannot detect — harness decides its own version at launch"
+        identity["harness_capabilities_detected"] = capabilities
 
     # Phase detection
     has_ci = any((root / p).exists() for p in [".github/workflows", ".gitlab-ci.yml", "Jenkinsfile"])
@@ -489,6 +500,138 @@ def query_config_section(paths: Dict[str, Path], section_path: str) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Operational queries: backlog, lessons, logs, page lookup
+# ---------------------------------------------------------------------------
+
+def query_backlog(paths: Dict[str, Path]) -> Dict[str, Any]:
+    """Show backlog status: epics with readiness/progress, impediments."""
+    wiki_dir = paths["wiki"]
+    epics_dir = wiki_dir / "backlog" / "epics"
+
+    if not epics_dir.exists():
+        return {"error": "No backlog/epics/ directory found", "epics": []}
+
+    epics = []
+    for f in sorted(epics_dir.glob("*.md")):
+        if f.name == "_index.md":
+            continue
+        text = f.read_text(encoding="utf-8")
+        fm, _ = parse_frontmatter(text)
+        if not fm:
+            continue
+        epics.append({
+            "title": fm.get("title", f.stem),
+            "status": fm.get("status", "?"),
+            "priority": fm.get("priority", "?"),
+            "readiness": fm.get("readiness", 0),
+            "progress": fm.get("progress", 0),
+            "current_stage": fm.get("current_stage", "?"),
+        })
+
+    # Check for impediments across all work items
+    impediments = []
+    for f in wiki_dir.rglob("*.md"):
+        if "config" in str(f) or "_index" in f.name:
+            continue
+        text = f.read_text(encoding="utf-8")
+        fm, _ = parse_frontmatter(text)
+        if fm and fm.get("impediment_type"):
+            impediments.append({
+                "title": fm.get("title", f.stem),
+                "type": fm.get("impediment_type"),
+                "blocked_by": fm.get("blocked_by", ""),
+                "blocked_since": fm.get("blocked_since", ""),
+            })
+
+    return {"epics": epics, "impediments": impediments}
+
+
+def query_lessons(paths: Dict[str, Path]) -> Dict[str, Any]:
+    """Show lessons grouped by maturity folder."""
+    wiki_dir = paths["wiki"]
+    lessons_dir = wiki_dir / "lessons"
+
+    if not lessons_dir.exists():
+        return {"error": "No lessons/ directory found"}
+
+    result = {}
+    for folder in ["00_inbox", "01_drafts", "02_synthesized", "03_validated", "04_principles"]:
+        folder_path = lessons_dir / folder
+        if not folder_path.exists():
+            result[folder] = []
+            continue
+
+        pages = []
+        for f in sorted(folder_path.rglob("*.md")):
+            if f.name == "_index.md":
+                continue
+            text = f.read_text(encoding="utf-8")
+            fm, _ = parse_frontmatter(text)
+            if fm:
+                pages.append({
+                    "title": fm.get("title", f.stem),
+                    "type": fm.get("type", "?"),
+                    "confidence": fm.get("confidence", "?"),
+                })
+        result[folder] = pages
+
+    return {"lessons": result, "total": sum(len(v) for v in result.values())}
+
+
+def query_logs(paths: Dict[str, Path], limit: int = 10) -> Dict[str, Any]:
+    """Show recent log entries."""
+    wiki_dir = paths["wiki"]
+    log_dir = wiki_dir / "log"
+
+    if not log_dir.exists():
+        return {"error": "No log/ directory found"}
+
+    entries = []
+    for f in sorted(log_dir.glob("*.md"), reverse=True):
+        if f.name == "_index.md":
+            continue
+        text = f.read_text(encoding="utf-8")
+        fm, _ = parse_frontmatter(text)
+        if fm:
+            entries.append({
+                "title": fm.get("title", f.stem),
+                "note_type": fm.get("note_type", "?"),
+                "created": fm.get("created", "?"),
+            })
+        if len(entries) >= limit:
+            break
+
+    return {"logs": entries, "total": len(entries)}
+
+
+def query_page(paths: Dict[str, Path], title: str) -> Dict[str, Any]:
+    """Look up a page by title — return metadata + summary + relationships."""
+    wiki_dir = paths["wiki"]
+    pages = find_wiki_pages(wiki_dir)
+
+    for p in pages:
+        text = p.read_text(encoding="utf-8")
+        fm, body = parse_frontmatter(text)
+        if fm and fm.get("title", "").lower() == title.lower():
+            sections = parse_sections(body)
+            rels = parse_relationships(text)
+            return {
+                "title": fm.get("title"),
+                "type": fm.get("type"),
+                "domain": fm.get("domain"),
+                "status": fm.get("status"),
+                "maturity": fm.get("maturity", "N/A"),
+                "confidence": fm.get("confidence"),
+                "path": str(p.relative_to(wiki_dir)),
+                "summary": sections.get("Summary", "")[:200],
+                "relationships": len(rels),
+                "lines": len(text.split("\n")),
+            }
+
+    return {"error": f"Page '{title}' not found"}
+
+
+# ---------------------------------------------------------------------------
 # Operations: move, archive, backup, contribute
 # ---------------------------------------------------------------------------
 
@@ -797,6 +940,10 @@ def main():
     q.add_argument("--chain", help="Query an SDLC chain (simplified, default, full)")
     q.add_argument("--chains", action="store_true", help="List all SDLC chains")
     q.add_argument("--mapping", nargs="?", const="__all__", help="Query location mapping (optionally for a specific title)")
+    q.add_argument("--backlog", action="store_true", help="Show backlog status (epics, readiness, impediments)")
+    q.add_argument("--lessons", action="store_true", help="Show lessons by maturity folder")
+    q.add_argument("--logs", action="store_true", help="Show recent log entries")
+    q.add_argument("--page", help="Look up a page by title (metadata + summary)")
 
     # Template command
     t = sub.add_parser("template", help="Get a page template")
@@ -872,6 +1019,14 @@ def main():
         elif args.mapping is not None:
             title = None if args.mapping == "__all__" else args.mapping
             result = query_location_mapping(paths, title)
+        elif args.backlog:
+            result = query_backlog(paths)
+        elif args.lessons:
+            result = query_lessons(paths)
+        elif args.logs:
+            result = query_logs(paths)
+        elif args.page:
+            result = query_page(paths, args.page)
         else:
             # No args to query → show navigate instead of argparse error
             print("No query specified. Try one of:")

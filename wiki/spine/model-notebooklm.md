@@ -1,5 +1,8 @@
 ---
-title: "Model: NotebookLM"
+title: Model — NotebookLM
+aliases:
+  - "Model — NotebookLM"
+  - "Model: NotebookLM"
 type: concept
 domain: cross-domain
 layer: spine
@@ -12,8 +15,7 @@ sources: []
 tags: [model, concept, spine, notebooklm, research, content-pipeline, notebooklm-py, grounded-research]
 ---
 
-# Model: NotebookLM
-
+# Model — NotebookLM
 ## Summary
 
 The NotebookLM model describes how Google's free, source-grounded AI research tool functions as a complementary research engine alongside Claude Code in the wiki ecosystem. NotebookLM constrains all outputs to user-uploaded sources — making it reliable for "what do these sources say" questions where Claude's training data would introduce noise or hallucination. The `notebooklm-py` Python package (9.5K stars) exposes the full NotebookLM API as a CLI, enabling programmatic notebook management, batch source ingestion, source-grounded Q&A, and generation of 10 artifact types (audio, slide decks, reports, mind maps, quizzes). The model positions NotebookLM as the grounded research and fact-checking layer, with the wiki as the long-term synthesis and compounding layer. The division of labor is precise: NotebookLM is the brain (grounded knowledge retrieval), Claude Code is the hands (execution and judgment).
@@ -39,7 +41,7 @@ The NotebookLM model describes how Google's free, source-grounded AI research to
 > [!warning] Common misconception
 > NotebookLM is not a knowledge store. Its notebooks are ephemeral research workspaces, not the persistent graph. The wiki is the persistent graph; NotebookLM is the research environment that feeds it.
 
-[[NotebookLM]] is not:
+[[notebooklm|NotebookLM]] is not:
 - A general-purpose chatbot (outputs are bounded to uploaded sources)
 - A note-storage tool (it is a research and generation engine)
 - A replacement for the wiki (its artifacts are inputs to the wiki, not the store itself)
@@ -90,7 +92,7 @@ Authentication uses browser-based Google OAuth — no API key required, no cost.
 
 ### The Division of Labor: Brain and Hands
 
-The [[Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py]] source describes this as the "brain + hands" model:
+The [[src-notebooklm-claude-code-workflow|Synthesis — NotebookLM + Claude Code Workflow via notebooklm-py]] source describes this as the "brain + hands" model:
 
 **NotebookLM (brain):**
 - Holds grounded knowledge of uploaded sources
@@ -146,12 +148,12 @@ The two tools occupy different positions in the knowledge lifecycle: NotebookLM 
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[NotebookLM]] | concept | Core tool definition and capabilities |
-| [[notebooklm-py CLI]] | concept | CLI integration layer enabling programmatic access |
-| [[AI-Driven Content Pipeline]] | concept | The automation pattern NotebookLM feeds into |
-| [[NotebookLM as Grounded Research Engine Not Just Note Storage]] | lesson | Why NotebookLM is research, not storage |
-| [[Pattern: Skills + Notebooklm]] | pattern | Recurring integration pattern with Claude Code |
-| [[Decision: Obsidian vs NotebookLM as Knowledge Interface]] | decision | Complementary roles, not competing tools |
+| [[notebooklm|NotebookLM]] | concept | Core tool definition and capabilities |
+| [[notebooklm-py-cli|notebooklm-py CLI]] | concept | CLI integration layer enabling programmatic access |
+| [[ai-driven-content-pipeline|AI-Driven Content Pipeline]] | concept | The automation pattern NotebookLM feeds into |
+| [[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]] | lesson | Why NotebookLM is research, not storage |
+| Pattern: Skills + Notebooklm | pattern | Recurring integration pattern with Claude Code |
+| [[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]] | decision | Complementary roles, not competing tools |
 
 ### Lessons Learned
 
@@ -211,29 +213,29 @@ The two tools occupy different positions in the knowledge lifecycle: NotebookLM 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[NotebookLM]]
-- BUILDS ON: [[notebooklm-py CLI]]
-- RELATES TO: [[Model: Automation and Pipelines]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Local AI ($0 Target)]]
-- FEEDS INTO: [[AI-Driven Content Pipeline]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- IMPLEMENTS: [[NotebookLM as Grounded Research Engine Not Just Note Storage]]
+- BUILDS ON: [[notebooklm|NotebookLM]]
+- BUILDS ON: [[notebooklm-py-cli|notebooklm-py CLI]]
+- RELATES TO: [[model-automation-pipelines|Model — Automation and Pipelines]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-local-ai|Model — Local AI ($0 Target)]]
+- FEEDS INTO: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- IMPLEMENTS: [[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
 
 ## Backlinks
 
-[[NotebookLM]]
-[[notebooklm-py CLI]]
-[[Model: Automation and Pipelines]]
-[[Model: Knowledge Evolution]]
-[[Model: Local AI ($0 Target)]]
-[[AI-Driven Content Pipeline]]
-[[LLM Wiki vs RAG]]
-[[NotebookLM as Grounded Research Engine Not Just Note Storage]]
-[[Model: Second Brain]]
+[[notebooklm|NotebookLM]]
+[[notebooklm-py-cli|notebooklm-py CLI]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-local-ai|Model — Local AI ($0 Target)]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]]
+[[model-second-brain|Model — Second Brain]]

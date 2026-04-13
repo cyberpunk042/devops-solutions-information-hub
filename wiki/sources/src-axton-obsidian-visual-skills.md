@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: axtonliu/axton-obsidian-visual-skills"
+title: Synthesis — axtonliu-axton-obsidian-visual-skills
+aliases:
+  - "Synthesis — axtonliu-axton-obsidian-visual-skills"
+  - "Synthesis: axtonliu-axton-obsidian-visual-skills"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-axton-obsidian-visual-skills
     type: documentation
-    url: "https://github.com/axtonliu/axton-obsidian-visual-skills"
+    url: https://github.com/axtonliu/axton-obsidian-visual-skills
     file: raw/articles/axtonliuaxton-obsidian-visual-skills.md
-    title: "axtonliu/axton-obsidian-visual-skills"
+    title: axtonliu/axton-obsidian-visual-skills
     ingested: 2026-04-08
 tags: [obsidian, excalidraw, mermaid, canvas, visual-diagrams, claude-code, skills]
 ---
-
-# Synthesis: axtonliu/axton-obsidian-visual-skills
-
+# Synthesis — axtonliu-axton-obsidian-visual-skills
 ## Summary
 
 This repository provides a Visual Skills Pack for Obsidian that enables Claude Code to generate Excalidraw diagrams, Mermaid charts, and Obsidian Canvas files from natural language text input. It contains three distinct skills: an Excalidraw Diagram Generator with three output modes (Obsidian, Standard, Animated) supporting 8 diagram types; a Mermaid Visualizer for 6 diagram types with built-in syntax error prevention; and an Obsidian Canvas Creator with MindMap and Freeform layout modes. The pack is experimental in status and focuses on visual knowledge representation, including full Chinese text support. Skills are prompt-based markdown files that Claude Code loads on demand rather than compiled code or MCP servers.
@@ -74,21 +75,21 @@ Cross-referencing `Design.md Pattern` and `Synthesis: Playwright MCP for Visual 
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-axton-obsidian-visual-skills
-- FEEDS INTO: [[Obsidian Skills Ecosystem]]
-- EXTENDS: [[Claude Code Skills]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- COMPARES TO: src-kepano-obsidian-skills
+- DERIVED FROM: [[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+- FEEDS INTO: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- EXTENDS: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- COMPARES TO: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
 
 ## Backlinks
 
-[[src-axton-obsidian-visual-skills]]
-[[Obsidian Skills Ecosystem]]
-[[Claude Code Skills]]
-[[Obsidian Knowledge Vault]]
-[[src-kepano-obsidian-skills]]
+[[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[claude-code-skills|Claude Code Skills]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]

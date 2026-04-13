@@ -1,5 +1,8 @@
 ---
-title: "Decision: Per-Role Command Design Decisions"
+title: Decision — Per-Role Command Design Decisions
+aliases:
+  - "Decision — Per-Role Command Design Decisions"
+  - "Decision: Per-Role Command Design Decisions"
 type: decision
 domain: ai-agents
 layer: 6
@@ -16,13 +19,12 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
-    title: "shanraisshan/claude-code-best-practice"
+    url: https://github.com/shanraisshan/claude-code-best-practice
+    title: shanraisshan/claude-code-best-practice
 tags: [commands, roles, slash-commands, skills, hooks, versioning, scope, design-decisions]
 ---
 
-# Decision: Per-Role Command Design Decisions
-
+# Decision — Per-Role Command Design Decisions
 ## Summary
 
 Five open questions from the Per-Role Command Architecture page resolved by cross-referencing Claude Code's scope mechanics, the skills architecture, and the hooks lifecycle. The answers establish: project scope overrides personal scope for same-named commands, commands should declare skill dependencies in frontmatter, role granularity should be flat with tags (not hierarchical), and mode-aware behavior is achieved via hooks reading session state — not separate command variants.
@@ -81,10 +83,10 @@ All decisions are easy to reverse:
 
 ## Dependencies
 
-- [[Per-Role Command Architecture]] — these decisions complete the open questions
-- [[Hooks Lifecycle Architecture]] — mode enforcement relies on PreToolUse mechanics
-- [[Claude Code Skills]] — command-to-skill dependency model
-- [[Claude Code Best Practices]] — scope hierarchy documentation
+- [[per-role-command-architecture|Per-Role Command Architecture]] — these decisions complete the open questions
+- [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] — mode enforcement relies on PreToolUse mechanics
+- [[claude-code-skills|Claude Code Skills]] — command-to-skill dependency model
+- [[claude-code-best-practices|Claude Code Best Practices]] — scope hierarchy documentation
 
 ### How This Connects — Navigate From Here
 
@@ -92,23 +94,23 @@ All decisions are easy to reverse:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Per-Role Command Architecture]]
-- BUILDS ON: [[Hooks Lifecycle Architecture]]
-- BUILDS ON: [[Claude Code Skills]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
+- DERIVED FROM: [[per-role-command-architecture|Per-Role Command Architecture]]
+- BUILDS ON: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
 
 ## Backlinks
 
-[[Per-Role Command Architecture]]
-[[Hooks Lifecycle Architecture]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]

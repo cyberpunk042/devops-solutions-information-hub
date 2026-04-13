@@ -1,5 +1,8 @@
 ---
-title: "Decision: Methodology Stage Extension Decisions"
+title: Decision — Methodology Stage Extension Decisions
+aliases:
+  - "Decision — Methodology Stage Extension Decisions"
+  - "Decision: Methodology Stage Extension Decisions"
 type: decision
 domain: cross-domain
 layer: 6
@@ -17,8 +20,7 @@ sources: []
 tags: [methodology, decision, stages, initiation, deployment, drift, status-report]
 ---
 
-# Decision: Methodology Stage Extension Decisions
-
+# Decision — Methodology Stage Extension Decisions
 ## Summary
 
 Resolves 4 questions about extending the methodology's stage system: whether to add an Initiation stage before Document, a Deploy stage after Test, a formal Status Report template, and how to handle infrastructure drift detection. Decision: fold initiation into Document at epic scale, add Deploy as a domain-specific optional stage for infrastructure, create a lightweight Status Report template, and model drift detection as a periodic monitoring task.
@@ -78,25 +80,25 @@ Moderate. All decisions are reversible:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Initiation and Planning Artifacts — Standards and Guide]]
-- DERIVED FROM: [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-- DERIVED FROM: [[Artifact Chain: Infrastructure/IaC Domain]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Methodology Evolution Protocol]]
+- DERIVED FROM: [[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+- DERIVED FROM: [[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+- DERIVED FROM: [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- FEEDS INTO: [[methodology-evolution-protocol|Methodology Evolution Protocol]]
 
 ## Backlinks
 
-[[Initiation and Planning Artifacts — Standards and Guide]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Model: Methodology]]
-[[Stage-Gate Methodology]]
-[[Methodology Evolution Protocol]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[model-methodology|Model — Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]

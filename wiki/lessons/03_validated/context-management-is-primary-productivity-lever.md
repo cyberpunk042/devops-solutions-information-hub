@@ -1,5 +1,7 @@
 ---
-title: "Context Management Is the Primary LLM Productivity Lever"
+title: Context Management Is the Primary LLM Productivity Lever
+aliases:
+  - "Context Management Is the Primary LLM Productivity Lever"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -11,20 +13,8 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
-    title: "shanraisshan/claude-code-best-practice"
-  - id: src-token-hacks-claude-code
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
-    title: "18 Claude Code Token Hacks in 18 Minutes"
-  - id: src-claude-code-accuracy-tips
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
-  - id: src-harness-engineering-article
-    type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://github.com/shanraisshan/claude-code-best-practice
+    title: shanraisshan/claude-code-best-practice
 tags: [context-management, claude-code, best-practices, productivity, CLAUDE.md, subagents, planning, accuracy]
 derived_from:
   - "Claude Code Best Practices"
@@ -92,34 +82,34 @@ From Claude Code Best Practices: "All workflows converge on one pattern: Ten maj
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Claude Code Best Practices]]
-- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
-- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
-- ENABLES: [[Claude Code Skills]]
-- ENABLES: [[Harness Engineering]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Always Plan Before Executing]]
-- RELATES TO: [[CLI Tools Beat MCP for Token Efficiency]]
-- FEEDS INTO: [[OpenFleet]]
-- FEEDS INTO: [[AICP]]
+- DERIVED FROM: [[claude-code-best-practices|Claude Code Best Practices]]
+- DERIVED FROM: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- DERIVED FROM: [[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+- ENABLES: [[claude-code-skills|Claude Code Skills]]
+- ENABLES: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- RELATES TO: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+- FEEDS INTO: [[openfleet|OpenFleet]]
+- FEEDS INTO: [[aicp|AICP]]
 
 ## Backlinks
 
-[[Claude Code Best Practices]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Claude Code Skills]]
-[[Harness Engineering]]
-[[Plan Execute Review Cycle]]
-[[Always Plan Before Executing]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[OpenFleet]]
-[[AICP]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[claude-code-skills|Claude Code Skills]]
+[[harness-engineering|Harness Engineering]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[openfleet|OpenFleet]]
+[[aicp|AICP]]

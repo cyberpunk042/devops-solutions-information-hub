@@ -1,5 +1,7 @@
 ---
-title: "Cross-Domain — Domain Overview"
+title: Cross-Domain — Domain Overview
+aliases:
+  - "Cross-Domain — Domain Overview"
 type: domain-overview
 domain: cross-domain
 layer: spine
@@ -93,19 +95,19 @@ All concept pages assigned maturity. All styled with callout vocabulary.
 ## FAQ
 
 ### Q: Should I use MCP or CLI+Skills for tool integration?
-Default to CLI+Skills for project-internal tooling — it is 12x cheaper in token cost and more accurate for known tasks. Use MCP for external service bridges and cross-conversation tool discovery. The decision is documented with full rationale. See [[Decision: MCP vs CLI for Tool Integration]].
+Default to CLI+Skills for project-internal tooling — it is 12x cheaper in token cost and more accurate for known tasks. Use MCP for external service bridges and cross-conversation tool discovery. The decision is documented with full rationale. See [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]].
 
 ### Q: What is the Plan-Execute-Review cycle and why does it appear across four independent projects?
-It is the pattern where agents plan before acting, execute from the plan, then review the output against the original intent. It emerged independently in OpenFleet's orchestrator, harness engineering, Claude Code best practices, and the research pipeline — four independent instances of the same loop. This convergence is strong evidence it reflects a real constraint in LLM agent reliability. See [[Plan Execute Review Cycle]].
+It is the pattern where agents plan before acting, execute from the plan, then review the output against the original intent. It emerged independently in OpenFleet's orchestrator, harness engineering, Claude Code best practices, and the research pipeline — four independent instances of the same loop. This convergence is strong evidence it reflects a real constraint in LLM agent reliability. See [[plan-execute-review-cycle|Plan Execute Review Cycle]].
 
 ### Q: What is the Deterministic Shell LLM Core pattern?
-Use a deterministic state machine (shell scripts, file reads, no LLM calls) for operational coordination — scheduling, routing, state tracking. Reserve LLM calls for actual reasoning work. This pattern appears in OpenFleet's 30s orchestrator, devops-control-plane's architecture, and harness engineering's enforcement hierarchy. See [[Deterministic Shell LLM Core]].
+Use a deterministic state machine (shell scripts, file reads, no LLM calls) for operational coordination — scheduling, routing, state tracking. Reserve LLM calls for actual reasoning work. This pattern appears in OpenFleet's 30s orchestrator, devops-control-plane's architecture, and harness engineering's enforcement hierarchy. See [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]].
 
 ### Q: What does "CLI tools beat MCP for token efficiency" mean in practice?
-MCP servers add tool definitions to every message in the conversation, costing tokens continuously. CLI tools are called only when needed and cost tokens only at invocation. The empirical finding from harness engineering sources: CLI+Skills is approximately 12x more token-efficient than MCP for the same task. See [[CLI Tools Beat MCP for Token Efficiency]].
+MCP servers add tool definitions to every message in the conversation, costing tokens continuously. CLI tools are called only when needed and cost tokens only at invocation. The empirical finding from harness engineering sources: CLI+Skills is approximately 12x more token-efficient than MCP for the same task. See [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]].
 
 ### Q: What is the "agentic search vs vector search" decision framework?
-The choice depends on three variables: scale (< 200 pages favors agentic navigation), content change rate (high change rate favors agentic search because embeddings go stale), and structural organization (well-structured content favors navigation; unstructured content favors vectors). See [[Agentic Search vs Vector Search]].
+The choice depends on three variables: scale (< 200 pages favors agentic navigation), content change rate (high change rate favors agentic search because embeddings go stale), and structural organization (well-structured content favors navigation; unstructured content favors vectors). See [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]].
 
 ## Relationships
 
@@ -118,9 +120,9 @@ The choice depends on three variables: scale (< 200 pages favors agentic navigat
 
 ## Backlinks
 
-[[AI Agents — Domain Overview]]
-[[Knowledge Systems — Domain Overview]]
-[[Tools And Platforms — Domain Overview]]
-[[Automation — Domain Overview]]
-[[Devops — Domain Overview]]
-[[AI Models — Domain Overview]]
+[[ai-agents-domain-overview|AI Agents — Domain Overview]]
+[[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+[[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+[[automation-domain-overview|Automation — Domain Overview]]
+[[devops-domain-overview|Devops — Domain Overview]]
+[[ai-models-domain-overview|AI Models — Domain Overview]]

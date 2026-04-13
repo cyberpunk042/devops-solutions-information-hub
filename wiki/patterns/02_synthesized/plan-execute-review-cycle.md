@@ -1,5 +1,7 @@
 ---
-title: "Plan Execute Review Cycle"
+title: Plan Execute Review Cycle
+aliases:
+  - "Plan Execute Review Cycle"
 type: pattern
 domain: cross-domain
 layer: 5
@@ -12,35 +14,30 @@ derived_from:
   - "Claude Code"
   - "Research Pipeline Orchestration"
 instances:
-  - page: "OpenFleet"
-    context: "Deterministic 9-step orchestrator cycle: storm monitor → security scan → doctor run → ensure review approvals → dispatch ready tasks → evaluate parents. Review is structurally enforced before task completion."
-  - page: "Harness Engineering"
-    context: "5-verb workflow: Setup → Plan → Work → Review → Release. Runtime guardrails (13 TypeScript rules R01-R13) enforce the cycle at execution time, not just as model instructions."
-  - page: "Claude Code"
-    context: "Superpowers plugin brainstorm → plan → execute → verify cycle. Plans and todos externalize state from context window, structuring the cycle explicitly across sessions."
-  - page: "Research Pipeline Orchestration"
-    context: "Wiki-agent 5-stage pipeline: EXTRACT → ANALYZE → SYNTHESIZE → WRITE → INTEGRATE, with 6-step post-chain that enforces validation and review after every write."
-  - page: "Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior"
-    context: "Observe-Fix-Verify (OFV) loop ran 10 times in first session: 7 methodology bugs + 3 compliance/observability. 20 min/iteration average. Cost dropped from $3.50 to $1.32/task. The loop IS the development methodology for methodology itself."
+  - {'page': 'OpenFleet', 'context': 'Deterministic 9-step orchestrator cycle: storm monitor → security scan → doctor run → ensure review approvals → dispatch ready tasks → evaluate parents. Review is structurally enforced before task completion.'}
+  - {'page': 'Harness Engineering', 'context': '5-verb workflow: Setup → Plan → Work → Review → Release. Runtime guardrails (13 TypeScript rules R01-R13) enforce the cycle at execution time, not just as model instructions.'}
+  - {'page': 'Claude Code', 'context': 'Superpowers plugin brainstorm → plan → execute → verify cycle. Plans and todos externalize state from context window, structuring the cycle explicitly across sessions.'}
+  - {'page': 'Research Pipeline Orchestration', 'context': 'Wiki-agent 5-stage pipeline: EXTRACT → ANALYZE → SYNTHESIZE → WRITE → INTEGRATE, with 6-step post-chain that enforces validation and review after every write.'}
+  - {'page': 'Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior', 'context': 'Observe-Fix-Verify (OFV) loop ran 10 times in first session: 7 methodology bugs + 3 compliance/observability. 20 min/iteration average. Cost dropped from $3.50 to $1.32/task. The loop IS the development methodology for methodology itself.'}
 created: 2026-04-08
 updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=7sInxhTDA7U"
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
+    url: https://www.youtube.com/watch?v=7sInxhTDA7U
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
   - id: src-user-directive-integration
     type: notes
     file: raw/notes/2026-04-08-user-directive-integration-vision.md
-    title: "User Directive — Integration Vision & Service Architecture"
+    title: User Directive — Integration Vision & Service Architecture
 tags: [plan-execute-review, orchestration, agent-workflow, feedback-loop, guardrails, deterministic, multi-pass, cross-domain, harness-engineering, openfleet]
 ---
 
@@ -128,55 +125,55 @@ Avoid or simplify this pattern when:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Harness Engineering]]
-- DERIVED FROM: [[OpenFleet]]
-- DERIVED FROM: [[Claude Code]]
-- DERIVED FROM: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[MCP Integration Architecture]]
-- ENABLES: [[Wiki Event-Driven Automation]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
+- DERIVED FROM: [[harness-engineering|Harness Engineering]]
+- DERIVED FROM: [[openfleet|OpenFleet]]
+- DERIVED FROM: [[claude-code|Claude Code]]
+- DERIVED FROM: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[OpenFleet]]
-[[Claude Code]]
-[[Research Pipeline Orchestration]]
-[[Wiki Ingestion Pipeline]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[MCP Integration Architecture]]
-[[Wiki Event-Driven Automation]]
-[[Agent Orchestration Patterns]]
-[[Agent Compliance Framework]]
-[[Backlog Hierarchy Rules]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Cross-Domain Patterns]]
-[[Deterministic Shell, LLM Core]]
-[[Execution Modes and End Conditions]]
-[[Immune System Rules]]
-[[Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
-[[Methodology Evolution Protocol]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Model: Automation and Pipelines]]
-[[Model: Claude Code]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Rework Prevention]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Spec-Driven Development]]
-[[Stage-Gate Methodology]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[Task Lifecycle Stage-Gating]]
+[[harness-engineering|Harness Engineering]]
+[[openfleet|OpenFleet]]
+[[claude-code|Claude Code]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-skills|Claude Code Skills]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[immune-system-rules|Immune System Rules]]
+[[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[model-claude-code|Model — Claude Code]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[rework-prevention|Rework Prevention]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[spec-driven-development|Spec-Driven Development]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]

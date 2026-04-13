@@ -1,5 +1,7 @@
 ---
 title: "Shallow Ingestion Is Systemic, Not Isolated"
+aliases:
+  - "Shallow Ingestion Is Systemic, Not Isolated"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -100,31 +102,31 @@ This lesson applies to any system where automated agents produce artifacts from 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Knowledge Evolution Pipeline]]
-- DERIVED FROM: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Multi-Stage Ingestion Beats Single-Pass Processing]]
-- RELATES TO: [[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-- RELATES TO: [[Stage-Gate Methodology]] (depth gates should catch truncation)
-- BUILDS ON: [[Never Synthesize from Descriptions Alone]] (same depth-verification principle)
-- ENABLES: [[Immune System Rules]] (this lesson became a rule)
+- DERIVED FROM: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- DERIVED FROM: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+- RELATES TO: [[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]] (depth gates should catch truncation)
+- BUILDS ON: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] (same depth-verification principle)
+- ENABLES: [[immune-system-rules|Immune System Rules]] (this lesson became a rule)
 
 ## Backlinks
 
-[[Knowledge Evolution Pipeline]]
-[[Wiki Ingestion Pipeline]]
-[[Multi-Stage Ingestion Beats Single-Pass Processing]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Stage-Gate Methodology]]
-[[Never Synthesize from Descriptions Alone]]
-[[Immune System Rules]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Quality and Failure Prevention]]
-[[Never Present Speculation as Fact]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[immune-system-rules|Immune System Rules]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[never-present-speculation-as-fact|Never Present Speculation as Fact]]

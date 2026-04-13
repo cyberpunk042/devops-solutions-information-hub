@@ -1,5 +1,7 @@
 ---
-title: "Models Are Not Documents — They Must Be Usable Systems"
+title: Models Are Not Documents — They Must Be Usable Systems
+aliases:
+  - "Models Are Not Documents — They Must Be Usable Systems"
 type: note
 domain: log
 note_type: directive
@@ -20,7 +22,7 @@ The 14 "model entry points" are mindless documents — lists of page paths that 
 ## Operator Directive (verbatim)
 
 > I see a lot of nonlink for things that should be link in obsidian.
-> e.g. "notebooklm-py CLI ([[notebooklm-py CLI]])"
+> e.g. "notebooklm-py CLI ([[notebooklm-py-cli|notebooklm-py CLI]])"
 > 
 > and the:
 > Relationships
@@ -32,7 +34,7 @@ The 14 "model entry points" are mindless documents — lists of page paths that 
 
 ## What Failed
 
-1. **No wikilinks** — pages reference other pages by file path (`wiki/domains/...`) instead of [[wikilinks]]. In Obsidian this means zero graph connectivity from the model entry points.
+1. **No wikilinks** — pages reference other pages by file path (`wiki/domains/...`) instead of `[[wikilinks]]`. In Obsidian this means zero graph connectivity from the model entry points.
 2. **Models are reading lists, not systems** — they list "read this page, then this page" but don't articulate the model itself. What IS the model? What are its principles? What are its standards? What schemas does it define? How do you APPLY it?
 3. **No trace of the user's directives** — the user asked for specific things in each model (e.g., methodology flexibility, composable sub-models, per-case artifact chains) and none of that appears in the model pages.
 4. **A model must be a usable system** — with its own standards, norms, schemas, entry points, and actionable guidance. Not a list of wiki pages.
@@ -50,8 +52,8 @@ A model is NOT a reading list. A model is:
 
 ## Relationships
 
-- FEEDS INTO: [[Models Are Built in Layers, Not All at Once]]
+- FEEDS INTO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 
 ## Backlinks
 
-[[Models Are Built in Layers, Not All at Once]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]

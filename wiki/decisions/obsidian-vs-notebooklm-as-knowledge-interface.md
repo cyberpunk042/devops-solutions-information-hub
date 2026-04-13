@@ -1,5 +1,8 @@
 ---
-title: "Decision: Obsidian vs NotebookLM as Knowledge Interface"
+title: Decision — Obsidian vs NotebookLM as Knowledge Interface
+aliases:
+  - "Decision — Obsidian vs NotebookLM as Knowledge Interface"
+  - "Decision: Obsidian vs NotebookLM as Knowledge Interface"
 type: decision
 domain: tools-and-platforms
 layer: 6
@@ -17,20 +20,11 @@ sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
     file: raw/transcripts/karpathy-claude-code-10x.txt
-    title: "Andrej Karpathy Just 10x'd Everyone's Claude Code"
-  - id: src-claude-notebooklm-content-team
-    type: youtube-transcript
-    file: raw/transcripts/claude-notebooklm-content-team.txt
-    title: "Claude + NotebookLM = Your 24/7 Content Team"
-  - id: src-obsidian-claude-code-second-brain
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=Y2rpFa43jTo"
-    title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
+    title: Andrej Karpathy Just 10x'd Everyone's Claude Code
 tags: [obsidian, notebooklm, knowledge-interface, second-brain, graph-view, grounded-qa, complementary-tools, wiki-frontend, research-interface]
 ---
 
-# Decision: Obsidian vs NotebookLM as Knowledge Interface
-
+# Decision — Obsidian vs NotebookLM as Knowledge Interface
 ## Summary
 
 Obsidian and NotebookLM serve complementary roles as knowledge interfaces and should both be maintained rather than choosing one exclusively. Obsidian is the structured graph browser and editor: it visualizes the wiki's relationship graph, supports direct page editing, and provides the human's canonical view of the wiki's organization. NotebookLM is the grounded Q&A and content generation engine: it answers questions against specific source sets and generates multi-format content artifacts. The wiki is the source of truth synced to both.
@@ -86,7 +80,7 @@ The custom RAG alternative (Subsystem 3) is the likely long-term successor to bo
 
 - **wiki-sync.service daemon**: Must remain running for Obsidian to reflect wiki edits. The decision to use Obsidian as the graph browser requires the sync daemon to be reliable.
 - **wiki_mirror_to_notebooklm MCP tool**: The on-demand NotebookLM sync tool (`mcp__research-wiki__wiki_mirror_to_notebooklm`) is the operationalization of the NotebookLM workflow. It should be invoked before any NotebookLM research session that requires current wiki state.
-- **tools/obsidian.py**: The Obsidian wikilink regeneration step (part of the post-chain) must keep [[wikilinks]] current so Obsidian's graph view reflects actual relationships. If obsidian.py is skipped, the Obsidian graph degrades over time.
+- **tools/obsidian.py**: The Obsidian wikilink regeneration step (part of the post-chain) must keep `[[wikilinks]]` current so Obsidian's graph view reflects actual relationships. If obsidian.py is skipped, the Obsidian graph degrades over time.
 - **Obsidian edits are low-trust**: Direct Obsidian edits (made in the Windows-side vault) must be synced back via `tools/sync.py --reverse` and then run through the post-chain for validation. They should not bypass `tools.validate`. This means Obsidian is "almost read-only" for the wiki's canonical content — it is safe for adding notes and annotations, but structural edits (frontmatter, relationship sections) should go through Claude Code.
 - **NotebookLM rate limits**: The NotebookLM page notes "heavy automated usage triggers Google's rate limits." On-demand sync (not continuous automated sync) avoids this issue. The `--retry` flag in notebooklm-py handles transient failures.
 - **300-source limit**: NotebookLM notebooks support up to 300 sources. As the wiki grows past 300 pages, the mirror strategy may need to split into topic-scoped notebooks rather than a full-wiki notebook. This is a known scaling boundary, not a current blocker.
@@ -97,31 +91,31 @@ The custom RAG alternative (Subsystem 3) is the likely long-term successor to bo
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Obsidian Knowledge Vault]]
-- DERIVED FROM: [[NotebookLM]]
-- DERIVED FROM: [[Second Brain Architecture]]
-- RELATES TO: [[WSL2 Development Patterns]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[MCP Integration Architecture]]
-- ENABLES: [[AI-Driven Content Pipeline]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[LLM Wiki vs RAG]]
+- DERIVED FROM: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- DERIVED FROM: [[notebooklm|NotebookLM]]
+- DERIVED FROM: [[second-brain-architecture|Second Brain Architecture]]
+- RELATES TO: [[wsl2-development-patterns|WSL2 Development Patterns]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- ENABLES: [[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Obsidian Knowledge Vault]]
-[[NotebookLM]]
-[[Second Brain Architecture]]
-[[WSL2 Development Patterns]]
-[[Wiki Ingestion Pipeline]]
-[[MCP Integration Architecture]]
-[[AI-Driven Content Pipeline]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[notebooklm|NotebookLM]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[wsl2-development-patterns|WSL2 Development Patterns]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[ai-driven-content-pipeline|AI-Driven Content Pipeline]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]

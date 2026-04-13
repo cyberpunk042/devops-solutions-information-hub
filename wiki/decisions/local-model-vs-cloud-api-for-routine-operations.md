@@ -1,5 +1,8 @@
 ---
-title: "Decision: Local Model vs Cloud API for Routine Operations"
+title: Decision — Local Model vs Cloud API for Routine Operations
+aliases:
+  - "Decision — Local Model vs Cloud API for Routine Operations"
+  - "Decision: Local Model vs Cloud API for Routine Operations"
 type: decision
 domain: ai-agents
 layer: 6
@@ -17,16 +20,11 @@ sources:
   - id: src-aicp-local
     type: documentation
     file: ../devops-expert-local-ai/CLAUDE.md
-    title: "AICP — Local Project Documentation"
-  - id: src-turboquant-122b-macbook
-    type: article
-    url: "https://medium.com/data-science-collective/how-i-run-122b-parameter-llms-on-a-macbook-outperforming-mxfp4-and-standard-quantization-on-apple-0552ee3da1f7"
-    title: "How I Run 122B Parameter LLMs on a MacBook"
+    title: AICP — Local Project Documentation
 tags: [aicp, localai, claude, routing, local-first, cost-optimization, backend-selection, complexity-scoring, wiki-pipeline]
 ---
 
-# Decision: Local Model vs Cloud API for Routine Operations
-
+# Decision — Local Model vs Cloud API for Routine Operations
 ## Summary
 
 For routine wiki and devops operations, use local models (LocalAI/AICP) for mechanical, deterministic, and output-validatable tasks; use Claude (cloud API) for reasoning-heavy synthesis, evolution, and cross-referencing tasks. AICP's complexity-scoring router is the production mechanism that operationalizes this split — it routes automatically based on task signals rather than requiring manual backend selection per invocation.
@@ -90,31 +88,31 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[AICP]]
-- DERIVED FROM: [[Local LLM Quantization]]
-- DERIVED FROM: [[Knowledge Evolution Pipeline]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- ENABLES: [[Knowledge Evolution Pipeline]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[Infrastructure as Code Patterns]]
+- DERIVED FROM: [[aicp|AICP]]
+- DERIVED FROM: [[local-llm-quantization|Local LLM Quantization]]
+- DERIVED FROM: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 
 ## Backlinks
 
-[[AICP]]
-[[Local LLM Quantization]]
-[[Knowledge Evolution Pipeline]]
-[[OpenFleet]]
-[[Research Pipeline Orchestration]]
-[[Wiki Knowledge Graph]]
-[[Infrastructure as Code Patterns]]
-[[Local Inference Engine (Subsystem 3)]]
-[[Model: Knowledge Evolution]]
-[[Model: Local AI ($0 Target)]]
+[[aicp|AICP]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[openfleet|OpenFleet]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-local-ai|Model — Local AI ($0 Target)]]

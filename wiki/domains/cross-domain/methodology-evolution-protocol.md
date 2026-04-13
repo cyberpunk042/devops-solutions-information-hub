@@ -1,5 +1,7 @@
 ---
-title: "Methodology Evolution Protocol"
+title: Methodology Evolution Protocol
+aliases:
+  - "Methodology Evolution Protocol"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -154,29 +156,29 @@ note_type: session
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Methodology Adoption Guide]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Methodology Adoption Guide]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Plan Execute Review Cycle]]
-[[Model: Ecosystem Architecture]]
-[[Model: Quality and Failure Prevention]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Decision: Methodology Stage Extension Decisions]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[Evolution: Methodology System]]
-[[Methodology Framework]]
+[[model-methodology|Model — Methodology]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[methodology-evolution-history|Evolution — Methodology System]]
+[[methodology-framework|Methodology Framework]]

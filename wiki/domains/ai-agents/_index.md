@@ -2,43 +2,43 @@
 
 Multi-agent systems, orchestration, fleet management, agent memory, and extension architecture.
 
-**Model:** [[Model: Claude Code]] | **Standards:** [[Claude Code Standards — What Good Agent Configuration Looks Like]]
+**Model:** [[model-claude-code|Model — Claude Code]] | **Standards:** [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
 
 ## Start Here
 
-1. [[Agent Orchestration Patterns]] — the structural patterns every agent system converges on
-2. [[Claude Code]] — the agent runtime powering the entire ecosystem
-3. [[Harness Engineering]] — how to build guardrails around autonomous agents
+1. [[agent-orchestration-patterns|Agent Orchestration Patterns]] — the structural patterns every agent system converges on
+2. [[claude-code|Claude Code]] — the agent runtime powering the entire ecosystem
+3. [[harness-engineering|Harness Engineering]] — how to build guardrails around autonomous agents
 
 ## The Agent Runtime
 
 | Page | What It Covers |
 |------|---------------|
-| [[Claude Code]] | The tool-use agent loop, extension system, context management |
-| [[Claude Code Skills]] | SKILL.md architecture, complexity spectrum, context economics |
-| [[Claude Code Context Management]] | Token budget, session lifecycle, compaction strategy |
-| [[Claude Code Best Practices]] | Planning discipline, extension architecture, compliance |
-| [[Hooks Lifecycle Architecture]] | 26 lifecycle events, PreToolUse enforcement, handler types |
-| [[Per-Role Command Architecture]] | Role-specific command sets, Plannotator pattern |
-| [[Design.md Pattern]] | Markdown-as-AI-config for visual design systems |
+| [[claude-code|Claude Code]] | The tool-use agent loop, extension system, context management |
+| [[claude-code-skills|Claude Code Skills]] | SKILL.md architecture, complexity spectrum, context economics |
+| [[claude-code-context-management|Claude Code Context Management]] | Token budget, session lifecycle, compaction strategy |
+| [[claude-code-best-practices|Claude Code Best Practices]] | Planning discipline, extension architecture, compliance |
+| [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] | 26 lifecycle events, PreToolUse enforcement, handler types |
+| [[per-role-command-architecture|Per-Role Command Architecture]] | Role-specific command sets, Plannotator pattern |
+| [[design-md-pattern|Design.md Pattern]] | Markdown-as-AI-config for visual design systems |
 
 ## Orchestration and Quality
 
 | Page | What It Covers |
 |------|---------------|
-| [[Agent Orchestration Patterns]] | Deterministic brain, sub-agent delegation, Plan-Execute-Review |
-| [[Harness Engineering]] | 13 guardrail rules (R01-R13), 5-verb workflow, enforcement levels |
-| [[Task Lifecycle Stage-Gating]] | Phase boundaries, OpenFleet vs OpenArms enforcement |
-| [[Spec-Driven Development]] | Spec-first workflow, 10 frameworks converging on same cycle |
-| [[Rework Prevention]] | Compound cost model, 4-layer prevention, diagnostic table |
-| [[LLM Knowledge Linting]] | Automated validation, self-healing lint, contradiction detection |
+| [[agent-orchestration-patterns|Agent Orchestration Patterns]] | Deterministic brain, sub-agent delegation, Plan-Execute-Review |
+| [[harness-engineering|Harness Engineering]] | 13 guardrail rules (R01-R13), 5-verb workflow, enforcement levels |
+| [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] | Phase boundaries, OpenFleet vs OpenArms enforcement |
+| [[spec-driven-development|Spec-Driven Development]] | Spec-first workflow, 10 frameworks converging on same cycle |
+| [[rework-prevention|Rework Prevention]] | Compound cost model, 4-layer prevention, diagnostic table |
+| [[llm-knowledge-linting|LLM Knowledge Linting]] | Automated validation, self-healing lint, contradiction detection |
 
 ## Ecosystem Projects
 
 | Page | What It Covers |
 |------|---------------|
-| [[OpenFleet]] | 10-agent fleet, 7-layer architecture, deterministic orchestrator |
-| [[OpenClaw]] | Open-source agent framework, gateway architecture |
+| [[openfleet|OpenFleet]] | 10-agent fleet, 7-layer architecture, deterministic orchestrator |
+| [[openclaw|OpenClaw]] | Open-source agent framework, gateway architecture |
 
 ## Pages
 

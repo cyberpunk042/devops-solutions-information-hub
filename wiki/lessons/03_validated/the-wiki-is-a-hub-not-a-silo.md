@@ -1,5 +1,7 @@
 ---
 title: "The Wiki Is a Hub, Not a Silo"
+aliases:
+  - "The Wiki Is a Hub, Not a Silo"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -125,31 +127,31 @@ The gateway tool embodies this: `--wiki-root` switches between perspectives. Sam
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **The pattern this lesson became** | [[Ecosystem Feedback Loop — Wiki as Source of Truth]] — bidirectional flow, framework over instance |
-> | **The tools that implement this** | [[Wiki Gateway Tools — Unified Knowledge Interface]] — dual-scope query + contribute |
-> | **The identity that enables this** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — projects declare context, wiki adapts |
-> | **The principle this supports** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] — right process requires knowing the context |
-> | **The ecosystem architecture** | [[Model: Ecosystem Architecture]] — 5 projects, defined integration points |
-> | **Global standards** | [[Global Standards Adherence — Engineering Principles the Wiki Follows]] — OpenAPI for gateway, DDD for domains |
+> | **The pattern this lesson became** | [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]] — bidirectional flow, framework over instance |
+> | **The tools that implement this** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — dual-scope query + contribute |
+> | **The identity that enables this** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — projects declare context, wiki adapts |
+> | **The principle this supports** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] — right process requires knowing the context |
+> | **The ecosystem architecture** | [[model-ecosystem|Model — Ecosystem Architecture]] — 5 projects, defined integration points |
+> | **Global standards** | [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]] — OpenAPI for gateway, DDD for domains |
 
 ## Relationships
 
-- DERIVED FROM: [[Four-Project Ecosystem]]
-- DERIVED FROM: [[Model: Ecosystem Architecture]]
-- BUILDS ON: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- RELATES TO: [[Wiki Gateway Tools — Unified Knowledge Interface]]
-- RELATES TO: [[Project Self-Identification Protocol — The Goldilocks Framework]]
-- RELATES TO: [[Knowledge Evolution Pipeline]]
-- FEEDS INTO: [[Research Pipeline Orchestration]]
-- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+- DERIVED FROM: [[four-project-ecosystem|Four-Project Ecosystem]]
+- DERIVED FROM: [[model-ecosystem|Model — Ecosystem Architecture]]
+- BUILDS ON: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- RELATES TO: [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
+- RELATES TO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+- RELATES TO: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
-[[Four-Project Ecosystem]]
-[[Model: Ecosystem Architecture]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Knowledge Evolution Pipeline]]
-[[Research Pipeline Orchestration]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]

@@ -1,5 +1,7 @@
 ---
-title: "Stop Guessing — False Claims in Models"
+title: Stop Guessing — False Claims in Models
+aliases:
+  - "Stop Guessing — False Claims in Models"
 type: note
 domain: log
 note_type: directive
@@ -42,8 +44,8 @@ The models contain fabricated claims presented as facts. The context degradation
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

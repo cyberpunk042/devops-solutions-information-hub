@@ -1,5 +1,7 @@
 ---
-title: "Wiki Gateway Tools — Unified Knowledge Interface"
+title: Wiki Gateway Tools — Unified Knowledge Interface
+aliases:
+  - "Wiki Gateway Tools — Unified Knowledge Interface"
 type: epic
 domain: backlog
 status: draft
@@ -7,8 +9,8 @@ priority: P0
 task_type: epic
 current_stage: document
 readiness: 5
-stages_completed: []
-artifacts: []
+stages_completed:
+artifacts:
 confidence: high
 created: 2026-04-12
 updated: 2026-04-12
@@ -124,26 +126,32 @@ Build a unified Python interface that serves humans, AI agents, and MCP connecti
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-- BUILDS ON: [[Model: LLM Wiki]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- RELATES TO: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-- RELATES TO: [[How AI Agents Consume the Methodology Wiki]]
-- DEPENDS ON: [[Artifact Type System]]
+- IMPLEMENTS: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]]
 
 ## Backlinks
 
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Model: LLM Wiki]]
-[[Methodology Adoption Guide]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Artifact Type System]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[The Wiki Is a Hub, Not a Silo]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
+[[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration|E015 — Gateway Tools Completion — All Requirements Implemented with MCP Integration]]
+[[gateway-tools-reference|Gateway Tools Reference — Complete Command Documentation]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
+[[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]

@@ -1,5 +1,7 @@
 ---
-title: "Knowledge Evolution Pipeline"
+title: Knowledge Evolution Pipeline
+aliases:
+  - "Knowledge Evolution Pipeline"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-pipeline-tooling
     type: documentation
     file: tools/pipeline.py
-    title: "Wiki Pipeline Tool — evolve command"
+    title: Wiki Pipeline Tool — evolve command
     ingested: 2026-04-08
   - id: src-claude-md
     type: documentation
     file: CLAUDE.md
-    title: "Wiki Project Instructions"
+    title: Wiki Project Instructions
     ingested: 2026-04-08
 tags: [evolution, knowledge-systems, pipeline, maturity, scoring, second-brain, llm-automation, seed, growing, mature, canonical, wiki-evolution]
 ---
@@ -130,52 +132,52 @@ The pipeline does not replace human judgment — it handles the bookkeeping that
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- ENABLES: [[Second Brain Architecture]]
-- IMPLEMENTS: [[Memory Lifecycle Management]]
-- BUILDS ON: [[Wiki Ingestion Pipeline]]
-- BUILDS ON: [[LLM Wiki Pattern]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- RELATES TO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[AICP]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
+- ENABLES: [[second-brain-architecture|Second Brain Architecture]]
+- IMPLEMENTS: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- BUILDS ON: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[aicp|AICP]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 
 ## Backlinks
 
-[[Second Brain Architecture]]
-[[Memory Lifecycle Management]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Wiki Pattern]]
-[[Wiki Knowledge Graph]]
-[[Research Pipeline Orchestration]]
-[[Obsidian Knowledge Vault]]
-[[AICP]]
-[[LLM Wiki vs RAG]]
-[[Automated Knowledge Validation Prevents Silent Wiki Decay]]
-[[Cross-Domain Patterns]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Decision: Wiki-First with LightRAG Upgrade Path]]
-[[Execution Modes and End Conditions]]
-[[Lesson: Automation Is the Bridge Between Knowledge and Action]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Local Inference Engine (Subsystem 3)]]
-[[Model: Knowledge Evolution]]
-[[Model: LLM Wiki]]
-[[Never Skip Stages Even When Told to Continue]]
-[[PARA Methodology]]
-[[Progressive Distillation]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Skyscraper, Pyramid, Mountain]]
-[[The Agent Must Practice What It Documents]]
-[[The Wiki Is a Hub, Not a Silo]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
-[[Wiki Backlog Pattern]]
-[[Zettelkasten Methodology]]
+[[second-brain-architecture|Second Brain Architecture]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[aicp|AICP]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[para-methodology|PARA Methodology]]
+[[progressive-distillation|Progressive Distillation]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]

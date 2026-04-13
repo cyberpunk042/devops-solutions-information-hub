@@ -1,5 +1,8 @@
 ---
-title: "Decision: Extension System Operational Decisions"
+title: Decision — Extension System Operational Decisions
+aliases:
+  - "Decision — Extension System Operational Decisions"
+  - "Decision: Extension System Operational Decisions"
 type: decision
 domain: ai-agents
 layer: 6
@@ -17,8 +20,7 @@ sources: []
 tags: [skills, hooks, versioning, composition, harness, python-hooks, design-decisions]
 ---
 
-# Decision: Extension System Operational Decisions
-
+# Decision — Extension System Operational Decisions
 ## Summary
 
 Four open questions about the Claude Code extension system — skill versioning, skill composition, and whether this ecosystem should implement harness-style Python hooks. Cross-referencing the Skills Architecture Patterns comparison, the Hooks Lifecycle Architecture, and the Harness Engineering guardrail rule catalog.
@@ -60,9 +62,9 @@ All easy. CHANGELOG sections are additive. CLI-based composition doesn't preclud
 
 ## Dependencies
 
-- [[Claude Code Skills]] — resolves 2 of its open questions
-- [[Harness Engineering]] — resolves 2 of its open questions
-- [[Claude Code Best Practices]] — resolves the compliance threshold question
+- [[claude-code-skills|Claude Code Skills]] — resolves 2 of its open questions
+- [[harness-engineering|Harness Engineering]] — resolves 2 of its open questions
+- [[claude-code-best-practices|Claude Code Best Practices]] — resolves the compliance threshold question
 
 ### How This Connects — Navigate From Here
 
@@ -70,25 +72,25 @@ All easy. CHANGELOG sections are additive. CLI-based composition doesn't preclud
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Claude Code Skills]]
-- DERIVED FROM: [[Harness Engineering]]
-- BUILDS ON: [[Hooks Lifecycle Architecture]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Skills Architecture Patterns]]
-- RELATES TO: [[Decision: Hooks Design Decisions]]
+- DERIVED FROM: [[claude-code-skills|Claude Code Skills]]
+- DERIVED FROM: [[harness-engineering|Harness Engineering]]
+- BUILDS ON: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
+- RELATES TO: [[hooks-design-decisions|Decision — Hooks Design Decisions]]
 
 ## Backlinks
 
-[[Claude Code Skills]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Claude Code Best Practices]]
-[[Skills Architecture Patterns]]
-[[Decision: Hooks Design Decisions]]
+[[claude-code-skills|Claude Code Skills]]
+[[harness-engineering|Harness Engineering]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[hooks-design-decisions|Decision — Hooks Design Decisions]]

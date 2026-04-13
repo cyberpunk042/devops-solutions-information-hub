@@ -1,5 +1,8 @@
 ---
-title: "Synthesis: Karpathy's LLM Wiki Idea File"
+title: "Synthesis — Karpathy's LLM Wiki Idea File"
+aliases:
+  - "Synthesis — Karpathy's LLM Wiki Idea File"
+  - "Synthesis: Karpathy's LLM Wiki Idea File"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -11,15 +14,13 @@ updated: 2026-04-10
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    url: "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f"
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
     file: raw/articles/karpathy-llm-wiki-idea-file.md
-    title: "Karpathy LLM Wiki Idea File"
+    title: Karpathy LLM Wiki Idea File
     ingested: 2026-04-08
 tags: [karpathy, llm-wiki, knowledge-base, memex, markdown, second-brain, architecture, primary-source]
 ---
-
-# Synthesis: Karpathy's LLM Wiki Idea File
-
+# Synthesis — Karpathy's LLM Wiki Idea File
 ## Summary
 
 This is Andrej Karpathy's original idea file for the LLM Wiki pattern, published as a GitHub Gist and designed to be copy-pasted into any LLM agent (Claude Code, OpenAI Codex, OpenCode/Pi, etc.) as a foundational prompt. Unlike the YouTube commentary that previously served as the wiki's primary source, this document is the authoritative first-party description of the pattern. It defines the core insight (stop re-deriving knowledge via RAG, start compiling it into a persistent wiki), the three-layer architecture (raw sources, wiki, schema), the three core operations (ingest, query, lint), the indexing and logging infrastructure, optional CLI tooling, and a rich set of practical tips. Karpathy explicitly connects the pattern to Vannevar Bush's 1945 Memex vision and frames the LLM as the missing piece that makes persistent personal knowledge bases viable by eliminating the maintenance burden that causes humans to abandon wikis.
@@ -94,26 +95,27 @@ Cross-referencing `LLM Wiki Pattern`: the LLM Wiki Pattern page documents the st
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-karpathy-llm-wiki-idea-file
-- ENABLES: [[LLM Wiki Pattern]]
-- ENABLES: [[Wiki Ingestion Pipeline]]
-- ENABLES: [[LLM Knowledge Linting]]
-- ENABLES: [[Obsidian Knowledge Vault]]
-- RELATES TO: [[LLM Wiki vs RAG]]
-- SUPERSEDES: src-karpathy-claude-code-10x
+- DERIVED FROM: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+- ENABLES: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- ENABLES: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- ENABLES: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- ENABLES: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- SUPERSEDES: [[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
 
 ## Backlinks
 
-[[src-karpathy-llm-wiki-idea-file]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Knowledge Linting]]
-[[Obsidian Knowledge Vault]]
-[[LLM Wiki vs RAG]]
-[[src-karpathy-claude-code-10x]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
+[[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[src-karpathy-claude-code-10x|Synthesis — Karpathy LLM Wiki Method via Claude Code]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]

@@ -1,5 +1,8 @@
 ---
-title: "Model: Wiki Design"
+title: Model — Wiki Design
+aliases:
+  - "Model — Wiki Design"
+  - "Model: Wiki Design"
 type: concept
 domain: cross-domain
 layer: spine
@@ -7,50 +10,48 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-12
 sources:
   - id: src-obsidian-basic-syntax
     type: documentation
-    url: "https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax"
+    url: https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax
     file: raw/articles/obsidian-basic-formatting-syntax.md
-    title: "Obsidian Basic Formatting Syntax"
+    title: Obsidian Basic Formatting Syntax
     ingested: 2026-04-09
   - id: src-obsidian-advanced-syntax
     type: documentation
-    url: "https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax"
+    url: https://help.obsidian.md/Editing+and+formatting/Advanced+formatting+syntax
     file: raw/articles/obsidian-advanced-formatting-syntax.md
-    title: "Obsidian Advanced Formatting Syntax"
+    title: Obsidian Advanced Formatting Syntax
     ingested: 2026-04-09
   - id: src-obsidian-callouts
     type: documentation
-    url: "https://help.obsidian.md/Editing+and+formatting/Callouts"
+    url: https://help.obsidian.md/Editing+and+formatting/Callouts
     file: raw/articles/obsidian-callouts-reference.md
-    title: "Obsidian Callouts Reference"
+    title: Obsidian Callouts Reference
     ingested: 2026-04-09
   - id: src-markdown-basic
     type: documentation
-    url: "https://www.markdownguide.org/basic-syntax/"
-    title: "Markdown Guide — Basic Syntax"
+    url: https://www.markdownguide.org/basic-syntax/
+    title: Markdown Guide — Basic Syntax
     ingested: 2026-04-09
   - id: src-markdown-extended
     type: documentation
-    url: "https://www.markdownguide.org/extended-syntax/"
-    title: "Markdown Guide — Extended Syntax"
+    url: https://www.markdownguide.org/extended-syntax/
+    title: Markdown Guide — Extended Syntax
     ingested: 2026-04-09
   - id: src-remarkjs
     type: documentation
-    url: "https://github.com/remarkjs/remark"
+    url: https://github.com/remarkjs/remark
     file: raw/articles/remarkjsremark.md
-    title: "remarkjs/remark — Markdown processor with plugins"
+    title: remarkjs/remark — Markdown processor with plugins
     ingested: 2026-04-09
 tags: [wiki-design, model, formatting, obsidian, markdown, callouts, styling, remark, visual-design, standards, emerging]
 ---
-
-# Model: Wiki Design
-
+# Model — Wiki Design
 ## Summary
 
-The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they contain. It is the third standard layer alongside [[Model: LLM Wiki]] (content structure via schema) and [[LLM Wiki Standards — What Good Looks Like]] (content quality via gold standards). This model covers: a semantic emphasis hierarchy (what bold vs italic vs highlight vs callout MEANS), a callout vocabulary mapping 8 types to semantic purposes, per-page-type layout patterns, and a clear separation between three formatting contexts (universal markdown for baseline, Obsidian extensions for the wiki, remark/Docusaurus for public docs). ==This model is an emerging standard — marked `maturity: seed`.== It evolves as the wiki applies the patterns and discovers what works.
+The Wiki Design model defines the VISUAL layer of the knowledge system — how pages look and feel, not just what they contain. It is the third standard layer alongside [[model-llm-wiki|Model — LLM Wiki]] (content structure via schema) and [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] (content quality via gold standards). This model covers: a semantic emphasis hierarchy (what bold vs italic vs highlight vs callout MEANS), a callout vocabulary mapping 8 types to semantic purposes, per-page-type layout patterns, and a clear separation between three formatting contexts (universal markdown for baseline, Obsidian extensions for the wiki, remark/Docusaurus for public docs). ==This model is an emerging standard — marked `maturity: seed`.== It evolves as the wiki applies the patterns and discovers what works.
 
 ## Key Insights
 
@@ -70,8 +71,8 @@ The Wiki Design model defines the VISUAL layer of the knowledge system — how p
 
 | Layer | What it defines | Where it lives | Example |
 |-------|----------------|----------------|---------|
-| **Content Structure** | Types, fields, sections, schema | `wiki/config/wiki-schema.yaml` + [[Model: LLM Wiki]] | "A lesson requires: Summary, Context, Insight, Evidence, Applicability, Relationships" |
-| **Content Quality** | What "good" looks like per type | [[LLM Wiki Standards — What Good Looks Like]] | "A lesson's Evidence section must have ≥3 independent data points" |
+| **Content Structure** | Types, fields, sections, schema | `wiki/config/wiki-schema.yaml` + [[model-llm-wiki|Model — LLM Wiki]] | "A lesson requires: Summary, Context, Insight, Evidence, Applicability, Relationships" |
+| **Content Quality** | What "good" looks like per type | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] | "A lesson's Evidence section must have ≥3 independent data points" |
 | **Visual Design** | How pages look in Obsidian | **This model** | "Use `> [!example]-` for real instances, always foldable" |
 
 Structure says WHAT sections exist. Quality says HOW GOOD the content is. Design says HOW IT LOOKS. They don't overlap — a page can have correct structure (passes validation), good quality (meets the gold standard), but ugly design (walls of raw text). This model fixes the third dimension.
@@ -121,13 +122,13 @@ Everything Obsidian adds. These render in Obsidian and Obsidian Publish; they de
 > [!info] **Wikilinks — our linking standard**
 > | Syntax | Purpose | When |
 > |--------|---------|------|
-> | `[[Page Title]]` | Link to wiki page | ALL relationship targets, all page references in body text |
+> | ``[[Page Title]]`` | Link to wiki page | ALL relationship targets, all page references in body text |
 > | `[[Page\|Display Text]]` | Aliased link | When the page title is too long for inline use |
-> | `[[Page#Heading]]` | Section link | Deep references to specific parts |
-> | `[[Page#^block-id]]` | Block link | Referencing one specific paragraph |
-> | `![[Page#Heading]]` | Embed section | When the reader NEEDS to see it inline |
+> | ``[[Page#Heading]]`` | Section link | Deep references to specific parts |
+> | ``[[Page#^block-id]]`` | Block link | Referencing one specific paragraph |
+> | `!`[[Page#Heading]]`` | Embed section | When the reader NEEDS to see it inline |
 >
-> **Rule:** NEVER use file paths (`wiki/path/file.md`) in body text. Always `[[Page Title]]`.
+> **Rule:** NEVER use file paths (`wiki/path/file.md`) in body text. Always ``[[Page Title]]``.
 
 > [!info] **Other Obsidian features we use**
 > | Feature | Syntax | When |
@@ -147,7 +148,7 @@ NOT for the wiki. For `docs/` content rendered via Docusaurus or similar static 
 |-----------------|------------------------|---------|
 | `> [!tip] Title` | `:::tip[Title]` | Admonition/callout |
 | `> [!warning]` | `:::danger` | Warning block |
-| `[[Page Title]]` | `[text](./path)` | Internal link |
+| ``[[Page Title]]`` | `[text](./path)` | Internal link |
 | Fenced code block | Same | Code |
 | N/A | `:::tabs` + `::tab[X]` | Tabbed content |
 | N/A | `::youtube{#id}` | Component injection |
@@ -207,7 +208,7 @@ NOT for the wiki. For `docs/` content rendered via Docusaurus or similar static 
 
 How each page type should be visually structured. These patterns use the callout vocabulary above:
 
-> [!example]- **Model catalog entry** (as used in [[Model: Methodology]])
+> [!example]- **Model catalog entry** (as used in [[model-methodology|Model — Methodology]])
 > 1. `> [!info]` — stage overview + purpose (blue header)
 > 2. Markdown table — stages with artifacts and gates (structured data)
 > 3. `> [!abstract]` — selection conditions (when this model runs)
@@ -222,7 +223,7 @@ How each page type should be visually structured. These patterns use the callout
 > 3. H2 Insight — plain prose, the core learning (depth here)
 > 4. H2 Evidence — each evidence item as **bold source label** + specific claim + `(source-id)`
 > 5. H2 Applicability — bullet list of domains where this applies + `> [!tip]` for "when NOT to apply"
-> 6. H2 Relationships — `[[wikilinks]]` with ALL_CAPS verbs
+> 6. H2 Relationships — ``[[wikilinks]]`` with ALL_CAPS verbs
 
 > [!example]- **Decision page**
 > 1. H2 Summary — the recommendation in 2-3 sentences
@@ -253,7 +254,7 @@ How each page type should be visually structured. These patterns use the callout
 > 1. H2 Summary — what the source IS and the headline finding
 > 2. H2 Key Insights — each insight as a **bold label** + prose. Group into subsections for deep sources.
 > 3. H2 Open Questions — each with `(Requires: ...)` tag
-> 4. H2 Relationships — `[[wikilinks]]`
+> 4. H2 Relationships — ``[[wikilinks]]``
 >
 > For deep sources (250+ lines): subsection headings within Key Insights, not just bullets.
 
@@ -298,7 +299,7 @@ How each page type should be visually structured. These patterns use the callout
 | `**bold**` | ✓ | ✓ | ✓ | `**visible**` |
 | `==highlight==` | Yellow bg | `==visible==` | `==visible==` | `==visible==` |
 | `> [!tip] Title` | Styled box | Blockquote | Blockquote | `>` prefix |
-| `[[Page]]` | Link | `[[visible]]` | `[[visible]]` | `[[visible]]` |
+| ``[[Page]]`` | Link | ``[[visible]]`` | ``[[visible]]`` | ``[[visible]]`` |
 | Mermaid | Diagram | Diagram | Code block | Code block |
 | `%% comment %%` | Hidden | Visible | Visible | Visible |
 
@@ -307,7 +308,7 @@ How each page type should be visually structured. These patterns use the callout
 
 ### Before/After: The Impact of Styling
 
-The [[Model: Methodology]] page demonstrates the difference. Its Model Catalog section went through three versions:
+The [[Model — Methodology]] page demonstrates the difference. Its Model Catalog section went through three versions:
 
 **Version 1 (raw):** Plain bold labels + prose paragraphs. A wall of text. 9 models listed as paragraphs with no visual structure. You had to read every word to find what you needed.
 
@@ -325,7 +326,7 @@ Features we USE in this wiki (core set):
 |---------|------------------|-------------|
 | Bold, italic, code, tables, lists | ✓ | Same everywhere |
 | Callouts `> [!type]` | Styled boxes | Blockquotes |
-| Wikilinks `[[Page]]` | Clickable links | Plain text |
+| Wikilinks ``[[Page]]`` | Clickable links | Plain text |
 | Highlights `==text==` | Yellow background | `==visible==` |
 | Mermaid diagrams | Rendered | Code block (GitHub renders) |
 | Comments `%% %%` | Hidden | Visible |
@@ -341,6 +342,10 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 | MDX/JSX | Docusaurus/React | Component injection in markdown |
 | Custom directives | Remark plugins | Arbitrary syntax extensions |
 
+### Maturity Folder Structure + New Page Types (NEW)
+
+Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox → 04_principles`. Two new page types added this session: `principle` (distilled from ≥3 validated lessons) and `milestone` (delivery target above epics). Callout vocabulary extended with self-check sections (`> [!warning] Self-Check`) and navigation weave (`> [!abstract] From This Page →`).
+
 ## Open Questions
 
 - Should we create custom callout types via CSS (e.g., `[!model]`, `[!stage]`) or keep to the 8 built-in types? (Requires: testing whether custom types add value or confusion)
@@ -354,31 +359,31 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki]]
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Design.md Pattern]]
-- RELATES TO: [[Infrastructure as Code Patterns]]
-- RELATES TO: [[Model: Methodology]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[design-md-pattern|Design.md Pattern]]
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
 
 ## Backlinks
 
-[[Model: LLM Wiki]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Design.md Pattern]]
-[[Infrastructure as Code Patterns]]
-[[Model: Methodology]]
-[[Comparison Page Standards]]
-[[Concept Page Standards]]
-[[Decision Page Standards]]
-[[Lesson Page Standards]]
-[[Model Registry]]
-[[Pattern Page Standards]]
-[[Source-Synthesis Page Standards]]
-[[Standards-by-Example]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[design-md-pattern|Design.md Pattern]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[model-methodology|Model — Methodology]]
+[[comparison-page-standards|Comparison Page Standards]]
+[[concept-page-standards|Concept Page Standards]]
+[[decision-page-standards|Decision Page Standards]]
+[[lesson-page-standards|Lesson Page Standards]]
+[[model-registry|Model Registry]]
+[[pattern-page-standards|Pattern Page Standards]]
+[[source-synthesis-page-standards|Source-Synthesis Page Standards]]
+[[E006-standards-by-example|Standards-by-Example]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

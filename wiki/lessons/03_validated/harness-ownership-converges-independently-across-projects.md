@@ -1,5 +1,7 @@
 ---
-title: "Harness Ownership Converges Independently Across Projects"
+title: Harness Ownership Converges Independently Across Projects
+aliases:
+  - "Harness Ownership Converges Independently Across Projects"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -16,14 +18,14 @@ sources:
   - id: openarms-harness
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
-    description: "OpenArms agent-run-harness.ts evolved independently from prompt-based to infrastructure-owned loop"
+    description: OpenArms agent-run-harness.ts evolved independently from prompt-based to infrastructure-owned loop
   - id: openfleet-orchestrator
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "OpenFleet orchestrator.py (2,246 lines) evolved independently into deterministic dispatch cycle"
+    description: OpenFleet orchestrator.py (2,246 lines) evolved independently into deterministic dispatch cycle
   - id: harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
     description: "External: harness engineering concept — 13 guardrail rules, 5-verb workflow"
 tags: [convergence, harness, loop-ownership, independent-evolution, cross-project, lesson-learned]
 ---
@@ -113,30 +115,30 @@ The harness breaks this by removing the optimization surface. The agent can't ru
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What does the harness pattern look like?** | [[Harness-Owned Loop — Deterministic Agent Execution]] — agent never controls loop, git, or backlog |
-> | **How do the two implementations compare?** | [[OpenArms vs OpenFleet Enforcement Architecture]] — solo vs fleet, hooks vs MCP blocking |
-> | **What PM level requires a harness?** | [[Three PM Levels — Wiki to Fleet to Full Tool]] — L2+ requires harness, L1 is advisory only |
-> | **What harness version do I need?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — v1 (standalone) vs v2 (enforced) vs v3 (full SDLC) |
+> | **What does the harness pattern look like?** | [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] — agent never controls loop, git, or backlog |
+> | **How do the two implementations compare?** | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] — solo vs fleet, hooks vs MCP blocking |
+> | **What PM level requires a harness?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L2+ requires harness, L1 is advisory only |
+> | **What harness version do I need?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — v1 (standalone) vs v2 (enforced) vs v3 (full SDLC) |
 > | **What global standard applies?** | Deterministic Shell, LLM Core pattern — the shell (harness) is deterministic, the core (agent) is probabilistic |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-- DERIVED FROM: [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-- BUILDS ON: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Three Lines of Defense — Immune System for Agent Quality]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+- DERIVED FROM: [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+- BUILDS ON: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Model: Quality and Failure Prevention]]
-[[Methodology Adoption Guide]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
+[[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]

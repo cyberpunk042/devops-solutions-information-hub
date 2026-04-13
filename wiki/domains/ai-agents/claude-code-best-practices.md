@@ -1,5 +1,7 @@
 ---
-title: "Claude Code Best Practices"
+title: Claude Code Best Practices
+aliases:
+  - "Claude Code Best Practices"
 type: concept
 layer: 2
 maturity: growing
@@ -11,15 +13,15 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
+    url: https://github.com/shanraisshan/claude-code-best-practice
     file: raw/articles/shanraisshanclaude-code-best-practice.md
-    title: "shanraisshan/claude-code-best-practice"
+    title: shanraisshan/claude-code-best-practice
     ingested: 2026-04-08
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
+    url: https://www.youtube.com/watch?v=49V-5Ock8LU
     file: raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt
-    title: "18 Claude Code Token Hacks in 18 Minutes"
+    title: 18 Claude Code Token Hacks in 18 Minutes
     ingested: 2026-04-08
 tags: [claude-code, best-practices, orchestration, plan-mode, subagents, skills, commands, hooks, workflows, prompting, git, debugging, development-workflow]
 ---
@@ -61,7 +63,7 @@ Claude Code best practices span the full development lifecycle: planning discipl
 
 ### Context Hygiene
 
-- **Deferred loading over eager loading.** Skills load on demand (zero baseline cost). MCP loads at startup (permanent overhead). CLI over MCP for operational tasks (12x measured differential). See [[Context-Aware Tool Loading]].
+- **Deferred loading over eager loading.** Skills load on demand (zero baseline cost). MCP loads at startup (permanent overhead). CLI over MCP for operational tasks (12x measured differential). See [[context-aware-tool-loading|Context-Aware Tool Loading]].
 
 - **Subagent isolation for heavy operations.** The Agent tool spawns workers with fresh context windows. Delegate research, bulk file operations, and exploratory analysis to subagents. The main conversation stays clean.
 
@@ -126,7 +128,7 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 ## Answered Open Questions
 
 > [!example]- Is there a measurable CLAUDE.md compliance threshold?
-> Resolved in [[Decision: Extension System Operational Decisions]]. Compliance is binary per rule, not a percentage threshold. Rules with consistently low compliance should graduate from CLAUDE.md instructions to hook-based enforcement.
+> Resolved in [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]. Compliance is binary per rule, not a percentage threshold. Rules with consistently low compliance should graduate from CLAUDE.md instructions to hook-based enforcement.
 
 ### How This Connects — Navigate From Here
 
@@ -134,61 +136,59 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-shanraisshan-claude-code-best-practice
-- DERIVED FROM: src-token-hacks-claude-code
-- BUILDS ON: [[Claude Code Skills]]
-- ENABLES: [[Claude Code Context Management]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[Context-Aware Tool Loading]]
-- RELATES TO: [[Plan Execute Review Cycle]]
-- EXTENDS: [[Claude Code]]
+- DERIVED FROM: [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+- DERIVED FROM: [[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- ENABLES: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- RELATES TO: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- EXTENDS: [[claude-code|Claude Code]]
 
 ## Backlinks
 
-[[src-shanraisshan-claude-code-best-practice]]
-[[src-token-hacks-claude-code]]
-[[Claude Code Skills]]
-[[Claude Code Context Management]]
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Harness Engineering]]
-[[Context-Aware Tool Loading]]
-[[Plan Execute Review Cycle]]
-[[Claude Code]]
-[[Agent Orchestration Patterns]]
-[[Agentic Search vs Vector Search]]
-[[Always Plan Before Executing]]
-[[Claude Code Slash Commands (artemgetmann)]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Decision: Extension System Operational Decisions]]
-[[Decision: Per-Role Command Design Decisions]]
-[[Design.md Pattern]]
-[[Deterministic Shell, LLM Core]]
-[[Hooks Lifecycle Architecture]]
-[[Infrastructure as Code Patterns]]
-[[LLM Wiki vs RAG]]
-[[Model: Claude Code]]
-[[Model: Design.md and IaC]]
-[[Model: Skills, Commands, and Hooks]]
-[[Per-Role Command Architecture]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Rework Prevention]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Skills Architecture Patterns]]
-[[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
-[[Synthesis: Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
-[[Wiki Event-Driven Automation]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[harness-engineering|Harness Engineering]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[claude-code|Claude Code]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[agentic-search-vs-vector-search|Agentic Search vs Vector Search]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[src-claude-slash-commands|Claude Code Slash Commands (artemgetmann)]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]
+[[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]
+[[design-md-pattern|Design.md Pattern]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[model-claude-code|Model — Claude Code]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[rework-prevention|Rework Prevention]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
+[[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]

@@ -1,5 +1,7 @@
 ---
 title: "Methodology Standards — What Good Execution Looks Like"
+aliases:
+  - "Methodology Standards — What Good Execution Looks Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -29,7 +31,7 @@ tags: [methodology, standards, quality, stage-gate, execution, gold-standard, an
 
 ## Summary
 
-This page defines the quality bar for METHODOLOGY EXECUTION. Where [[Model: Methodology]] defines the system (9 models, 5 condition dimensions, 4 composition modes, stage boundaries), this page shows what it looks like when that system is followed WELL — and what it looks like when it fails. ==Every gold standard on this page is a real instance from this wiki or the OpenArms ecosystem.== No hypotheticals. The methodology was hardened by real bugs; the standards are demonstrated by real successes.
+This page defines the quality bar for METHODOLOGY EXECUTION. Where [[model-methodology|Model — Methodology]] defines the system (9 models, 5 condition dimensions, 4 composition modes, stage boundaries), this page shows what it looks like when that system is followed WELL — and what it looks like when it fails. ==Every gold standard on this page is a real instance from this wiki or the OpenArms ecosystem.== No hypotheticals. The methodology was hardened by real bugs; the standards are demonstrated by real successes.
 
 ## Key Insights
 
@@ -54,7 +56,7 @@ What a properly run 5-stage sequence looks like end-to-end.
 > **What happened:** Read OpenArms methodology YAML (253 lines), OpenFleet methodology scan (798 lines), OpenArms integration sprint learnings. Created wiki pages mapping the gap between our wiki's flat task tracking and OpenArms' stage-gated backlog.
 >
 > **Artifacts produced:**
-> - Wiki pages: [[Methodology Framework]], [[Stage-Gate Methodology]], [[Task Type Artifact Matrix]]
+> - Wiki pages: [[methodology-framework|Methodology Framework]], [[stage-gate-methodology|Stage-Gate Methodology]], [[task-type-artifact-matrix|Task Type Artifact Matrix]]
 > - Gap analysis: wiki has no task types, no stage tracking, no readiness computation
 >
 > **Gate:** Pages exist with Summary + gaps identified. ✅ Passed.
@@ -167,7 +169,7 @@ The standard is HONEST selection, not always choosing Skyscraper.
 > - False readiness claim — "models are ready" without checking the quality gates
 > - The agent confused structure (pages exist) with substance (pages define systems)
 >
-> See [[Models Are Built in Layers, Not All at Once]] for the full failure analysis.
+> See [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] for the full failure analysis.
 
 > [!warning] **The diagnostic question**
 > "Did you CHOOSE this quality tier, or did it happen to you?" If you can't articulate WHY you're at Pyramid instead of Skyscraper, you're at Mountain.
@@ -250,21 +252,21 @@ Methodology failures from real operation, each traced to a specific lesson.
 >
 > **Root cause:** Bias toward perceived progress. Writing a spec FEELS like forward movement. Processing content into wiki pages feels like "still doing prep work."
 >
-> **The rule:** "Continue" = advance within current stage. "Get started" = begin current stage. Only "skip to X" authorizes stage-skipping. See [[Never Skip Stages Even When Told to Continue]].
+> **The rule:** "Continue" = advance within current stage. "Get started" = begin current stage. Only "skip to X" authorizes stage-skipping. See [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]].
 
 > [!bug]- **False readiness: "models are ready" at scaffold level**
 > 14 model pages existed as 80-110 line reading lists. The agent claimed they were complete. The user: "I dont even see 2% of it..."
 >
 > **Root cause:** Confusing structure (pages exist) with substance (pages define systems). The SFIF framework names this explicitly: scaffold ≠ foundation ≠ infrastructure ≠ features.
 >
-> **The rule:** Readiness is derived from stage completion, not from artifact count. 14 scaffolded pages = 14 × scaffold readiness (50%), not 14 × done (100%). See [[Models Are Built in Layers, Not All at Once]].
+> **The rule:** Readiness is derived from stage completion, not from artifact count. 14 scaffolded pages = 14 × scaffold readiness (50%), not 14 × done (100%). See [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]].
 
 > [!bug]- **Practice vs document gap: documenting rules you don't follow**
 > The wiki had pages about stage gates, brainstorm-before-spec, depth verification. The agent had written all of them. The agent violated all of them. The wiki described methodology perfectly while the agent ignored it.
 >
 > **Root cause:** Methodology existed in wiki pages (knowledge the agent produced) but not in CLAUDE.md (instructions the agent follows). The agent could describe the rules but didn't apply them.
 >
-> **The rule:** When the wiki evolves a methodology rule, that rule must be propagated to CLAUDE.md. Knowledge must become operational. See [[The Agent Must Practice What It Documents]].
+> **The rule:** When the wiki evolves a methodology rule, that rule must be propagated to CLAUDE.md. Knowledge must become operational. See [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]].
 
 > [!bug]- **Binary status: done/not-done without stage tracking**
 > OpenArms Bug 1. Tasks were either "active" or "done." The agent checked "Done When" boxes without verification and skipped stages.
@@ -302,7 +304,7 @@ What proper artifact production across a full epic looks like — using the arti
 > - The full chain is defined in `wiki/config/methodology.yaml` under `feature-development.chain`
 > - Domain profile (`python-wiki`) resolved gate commands to `pipeline post`
 
-**The bar:** Every methodology model has a defined artifact chain in `wiki/config/methodology.yaml`. Every stage in that chain specifies required, optional, and forbidden artifacts. Domain profiles in `wiki/config/domain-profiles/` resolve generic artifact types to concrete paths and gate commands. See [[Artifact Chains by Methodology Model]] for all 9 model chains.
+**The bar:** Every methodology model has a defined artifact chain in `wiki/config/methodology.yaml`. Every stage in that chain specifies required, optional, and forbidden artifacts. Domain profiles in `wiki/config/domain-profiles/` resolve generic artifact types to concrete paths and gate commands. See [[artifact-chains-by-model|Artifact Chains by Methodology Model]] for all 9 model chains.
 
 ---
 
@@ -323,7 +325,7 @@ What a methodology-compliant CLAUDE.md looks like — using the 8 structural pat
 > | Anchor phrases | "Continue means current stage" repeated in hard rules AND stage table |
 > | Concrete examples | Exact pipeline commands, exact scaffold syntax |
 
-**The bar:** A CLAUDE.md that uses ≥5 of the 8 patterns from [[CLAUDE.md Structural Patterns for Agent Compliance]]. At minimum: sacrosanct section, hard/soft separation, ALLOWED/FORBIDDEN per stage.
+**The bar:** A CLAUDE.md that uses ≥5 of the 8 patterns from [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]. At minimum: sacrosanct section, hard/soft separation, ALLOWED/FORBIDDEN per stage.
 
 ---
 
@@ -339,7 +341,7 @@ What the distinction looks like in practice — two fundamentally different docu
 > | Wiki type | `operations-plan` (new type) | `concept` (with methodology template) |
 > | Structure | Sequential steps with Action/Expected/Validation/Rollback | Decisions with rationale + rejected alternatives |
 > | Judgment | None — mechanical, delegatable to any agent | High — trade-offs, alternatives, evidence |
-> | Example | [[Operations Plan: Wiki Post-Ingestion Validation]] | [[E003 Artifact Type System — Design Document]] |
+> | Example | [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]] | [[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]] |
 
 **The bar:** If someone asks "what's the plan?", determine which kind first. Operations plan = "do these steps in order." Design plan = "here are the options, here's what we chose and why." Using one when the other is needed is a methodology failure.
 
@@ -349,7 +351,7 @@ What the distinction looks like in practice — two fundamentally different docu
 
 What a project with methodology enforcement looks like — from Tier 1 (read) to Tier 4 (full enforcement).
 
-> [!info] **Reference: [[Methodology Adoption Guide]] — 4 tiers of adoption**
+> [!info] **Reference: [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers of adoption**
 >
 > | Tier | What You Get | Evidence It Works |
 > |------|-------------|-------------------|
@@ -358,7 +360,7 @@ What a project with methodology enforcement looks like — from Tier 1 (read) to
 > | 3. Validate | artifact-types.yaml checked by validation pipeline | Post-hoc detection of violations |
 > | 4. Enforce | Hooks + harness + deterministic dispatch | ~90% compliance (OpenArms v9 evidence) |
 
-**The bar:** Know your tier. Document it. A project at Tier 2 that claims Tier 4 compliance is at Mountain quality tier. See [[Enforcement Hook Patterns]] for Tier 4 infrastructure and [[Stage-Aware Skill Injection]] for skill-level enforcement.
+**The bar:** Know your tier. Document it. A project at Tier 2 that claims Tier 4 compliance is at Mountain quality tier. See [[enforcement-hook-patterns|Enforcement Hook Patterns]] for Tier 4 infrastructure and [[stage-aware-skill-injection|Stage-Aware Skill Injection]] for skill-level enforcement.
 
 ---
 
@@ -379,7 +381,7 @@ The complete machine-readable system for methodology execution.
 >
 > **Resolution order:** methodology.yaml (models) → artifact-types.yaml (type detail) → domain profile (project-specific) → wiki-schema.yaml (structural validation)
 
-**The bar:** A project that has adopted the methodology should have: methodology.yaml (generic or project-override), a declared domain profile, and CLAUDE.md referencing both. See [[Methodology Evolution Protocol]] for how the wiki updates propagate to consumers.
+**The bar:** A project that has adopted the methodology should have: methodology.yaml (generic or project-override), a declared domain profile, and CLAUDE.md referencing both. See [[methodology-evolution-protocol|Methodology Evolution Protocol]] for how the wiki updates propagate to consumers.
 
 ---
 
@@ -391,18 +393,18 @@ Every page type produced during methodology execution has its own standards doc 
 >
 > | Produced During | Type | Standards Doc |
 > |----------------|------|--------------|
-> | Document stage | concept (for requirements, infra analysis, gap analysis) | [[Concept Page Standards]] |
-> | Document stage | source-synthesis (for ingested sources) | [[Source-Synthesis Page Standards]] |
-> | Design stage | decision (for ADRs) | [[Decision Page Standards]] |
-> | Design stage | reference (for tech specs, test plans) | [[Reference Page Standards]] |
-> | Implement stage | operations-plan (for sequential execution checklists) | [[Operations Plan Page Standards]] |
-> | Any stage | note (for directive logs, session logs) | [[Note Page Standards]] |
-> | Evolution | lesson, pattern, decision | [[Lesson Page Standards]], [[Pattern Page Standards]], [[Decision Page Standards]] |
-> | PM track | epic, task | [[Epic Page Standards]], [[Task Page Standards]] |
+> | Document stage | concept (for requirements, infra analysis, gap analysis) | [[concept-page-standards|Concept Page Standards]] |
+> | Document stage | source-synthesis (for ingested sources) | [[source-synthesis-page-standards|Source-Synthesis Page Standards]] |
+> | Design stage | decision (for ADRs) | [[decision-page-standards|Decision Page Standards]] |
+> | Design stage | reference (for tech specs, test plans) | [[reference-page-standards|Reference Page Standards]] |
+> | Implement stage | operations-plan (for sequential execution checklists) | [[operations-plan-page-standards|Operations Plan Page Standards]] |
+> | Any stage | note (for directive logs, session logs) | [[note-page-standards|Note Page Standards]] |
+> | Evolution | lesson, pattern, decision | [[lesson-page-standards|Lesson Page Standards]], [[pattern-page-standards|Pattern Page Standards]], [[decision-page-standards|Decision Page Standards]] |
+> | PM track | epic, task | [[epic-page-standards|Epic Page Standards]], [[task-page-standards|Task Page Standards]] |
 >
-> **Full list:** See [[LLM Wiki Standards — What Good Looks Like]] for all 15 types.
+> **Full list:** See [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] for all 15 types.
 
-**The bar:** Every artifact produced at every stage should meet its type's standards. An agent producing a requirements spec (concept type) during document stage should consult [[Concept Page Standards]] for the quality bar. A lesson being evolved should meet [[Lesson Page Standards]].
+**The bar:** Every artifact produced at every stage should meet its type's standards. An agent producing a requirements spec (concept type) during document stage should consult [[concept-page-standards|Concept Page Standards]] for the quality bar. A lesson being evolved should meet [[lesson-page-standards|Lesson Page Standards]].
 
 ### Beyond Wiki Pages — The Full Artifact Spectrum
 
@@ -412,14 +414,14 @@ The per-type standards above cover wiki page types. But methodology execution pr
 >
 > | Resource | What It Covers |
 > |----------|---------------|
-> | [[Methodology Artifact Taxonomy]] | All 78 types: initiation, planning, requirements, design, construction, testing, deployment, closure, monitoring, knowledge, AI agent |
-> | [[Initiation and Planning Artifacts — Standards and Guide]] | Charters, WBS, risk analysis — BEFORE methodology starts |
-> | [[Requirements and Design Artifacts — Standards and Guide]] | BRD/FRD/SRS, ADR variants, tech specs, interface specs, test plans |
-> | [[Construction and Testing Artifacts — Standards and Guide]] | Per-domain scaffold/implement/test with ALLOWED/FORBIDDEN |
-> | [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | Operations guides, lessons learned, compliance reports |
-> | [[AI Agent Artifacts — Standards and Guide]] | Personas, skills, hooks, stage skills, compliance reports |
+> | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] | All 78 types: initiation, planning, requirements, design, construction, testing, deployment, closure, monitoring, knowledge, AI agent |
+> | [[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]] | Charters, WBS, risk analysis — BEFORE methodology starts |
+> | [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]] | BRD/FRD/SRS, ADR variants, tech specs, interface specs, test plans |
+> | [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]] | Per-domain scaffold/implement/test with ALLOWED/FORBIDDEN |
+> | [[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | Operations guides, lessons learned, compliance reports |
+> | [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]] | Personas, skills, hooks, stage skills, compliance reports |
 >
-> Per-domain chains: [[Artifact Chain: TypeScript/Node Domain]], [[Artifact Chain: Python/Wiki Domain]], [[Artifact Chain: Infrastructure/IaC Domain]], [[Artifact Chain: Knowledge/Evolution Domain]]
+> Per-domain chains: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]], [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]], [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]], [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
 
 ---
 
@@ -459,68 +461,68 @@ The per-type standards above cover wiki page types. But methodology execution pr
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- BUILDS ON: [[Artifact Chains by Methodology Model]]
-- BUILDS ON: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- BUILDS ON: [[Enforcement Hook Patterns]]
-- BUILDS ON: [[Stage-Aware Skill Injection]]
-- RELATES TO: [[Methodology Adoption Guide]]
-- RELATES TO: [[Methodology Evolution Protocol]]
-- RELATES TO: [[Never Skip Stages Even When Told to Continue]]
-- RELATES TO: [[The Agent Must Practice What It Documents]]
-- RELATES TO: [[Models Are Built in Layers, Not All at Once]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- BUILDS ON: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- BUILDS ON: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- BUILDS ON: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- BUILDS ON: [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+- RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- RELATES TO: [[methodology-evolution-protocol|Methodology Evolution Protocol]]
+- RELATES TO: [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- RELATES TO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Artifact Chains by Methodology Model]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Stage-Aware Skill Injection]]
-[[Methodology Adoption Guide]]
-[[Methodology Evolution Protocol]]
-[[Never Skip Stages Even When Told to Continue]]
-[[The Agent Must Practice What It Documents]]
-[[Models Are Built in Layers, Not All at Once]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Comparison Page Standards]]
-[[Concept Page Standards]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Decision Page Standards]]
-[[Decision: Artifact System Design Decisions]]
-[[Deep-Dive Page Standards]]
-[[Domain Overview Page Standards]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Epic Page Standards]]
-[[Evolution Page Standards]]
-[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
-[[Evolution: Methodology System]]
-[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
-[[Follow the Method of Work Not the Methodology Label]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Learning Path Page Standards]]
-[[Lesson Page Standards]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology System Map]]
-[[Model Composition Rules]]
-[[Note Page Standards]]
-[[Operations Plan Page Standards]]
-[[Pattern Page Standards]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
-[[Reference Page Standards]]
-[[Source-Synthesis Page Standards]]
-[[Standards-by-Example]]
-[[Task Page Standards]]
-[[Three Classes of Methodology Output]]
-[[Universal Stages, Domain-Specific Artifacts]]
-[[Validation Matrix — Test Suite for Context Injection]]
+[[model-methodology|Model — Methodology]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[comparison-page-standards|Comparison Page Standards]]
+[[concept-page-standards|Concept Page Standards]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[decision-page-standards|Decision Page Standards]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
+[[deep-dive-page-standards|Deep-Dive Page Standards]]
+[[domain-overview-page-standards|Domain Overview Page Standards]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[epic-page-standards|Epic Page Standards]]
+[[evolution-page-standards|Evolution Page Standards]]
+[[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[methodology-evolution-history|Evolution — Methodology System]]
+[[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[learning-path-page-standards|Learning Path Page Standards]]
+[[lesson-page-standards|Lesson Page Standards]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-system-map|Methodology System Map]]
+[[model-composition-rules|Model Composition Rules]]
+[[note-page-standards|Note Page Standards]]
+[[operations-plan-page-standards|Operations Plan Page Standards]]
+[[pattern-page-standards|Pattern Page Standards]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[reference-page-standards|Reference Page Standards]]
+[[source-synthesis-page-standards|Source-Synthesis Page Standards]]
+[[E006-standards-by-example|Standards-by-Example]]
+[[task-page-standards|Task Page Standards]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

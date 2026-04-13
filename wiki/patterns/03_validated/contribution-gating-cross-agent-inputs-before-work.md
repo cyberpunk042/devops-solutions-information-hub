@@ -1,5 +1,7 @@
 ---
-title: "Contribution Gating — Cross-Agent Inputs Before Work"
+title: Contribution Gating — Cross-Agent Inputs Before Work
+aliases:
+  - "Contribution Gating — Cross-Agent Inputs Before Work"
 type: pattern
 domain: ai-agents
 layer: 5
@@ -10,17 +12,15 @@ derived_from:
   - "Three Lines of Defense — Immune System for Agent Quality"
   - "Model: Quality and Failure Prevention"
 instances:
-  - page: "Three Lines of Defense — Immune System for Agent Quality"
-    context: "Contribution requirements are Line 1 (structural prevention) — agents can't skip to work without cross-agent review"
-  - page: "Harness-Owned Loop — Deterministic Agent Execution"
-    context: "Orchestrator Step 2.5 checks contribution completeness before allowing dispatch to WORK stage"
+  - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': "Contribution requirements are Line 1 (structural prevention) — agents can't skip to work without cross-agent review"}
+  - {'page': 'Harness-Owned Loop — Deterministic Agent Execution', 'context': 'Orchestrator Step 2.5 checks contribution completeness before allowing dispatch to WORK stage'}
 created: 2026-04-12
 updated: 2026-04-12
 sources:
   - id: openfleet-contributions
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
-    description: "OpenFleet contribution system — synergy-matrix.yaml defines cross-role requirements, contributions.py gates WORK stage"
+    description: OpenFleet contribution system — synergy-matrix.yaml defines cross-role requirements, contributions.py gates WORK stage
   - id: openfleet-synergy
     type: observation
     file: raw/articles/openfleet-methodology-scan.md
@@ -126,28 +126,28 @@ The implementing agent receives contributions AS CONTEXT — architect's design,
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What is the synergy matrix?** | [[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — 115 lines YAML, required/recommended/conditional per role pair |
-> | **Why rework prevention matters** | [[Always Plan Before Executing]] — planning costs 1x, rework costs 5.5x |
-> | **How does this fit the immune system?** | [[Three Lines of Defense — Immune System for Agent Quality]] — contributions are Line 1 (structural prevention) |
+> | **What is the synergy matrix?** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] — 115 lines YAML, required/recommended/conditional per role pair |
+> | **Why rework prevention matters** | [[always-plan-before-executing|Always Plan Before Executing]] — planning costs 1x, rework costs 5.5x |
+> | **How does this fit the immune system?** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] — contributions are Line 1 (structural prevention) |
 > | **Solo agent approximation?** | Same principle: document stage produces inputs for later stages. Same entity does both — no cross-agent specialization. |
-> | **What readiness threshold gates work?** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness (definition) gates progress (execution). Contributions are part of readiness. |
+> | **What readiness threshold gates work?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness (definition) gates progress (execution). Contributions are part of readiness. |
 
 ## Relationships
 
-- DERIVED FROM: [[Three Lines of Defense — Immune System for Agent Quality]]
-- DERIVED FROM: [[Model: Quality and Failure Prevention]]
-- BUILDS ON: [[Harness-Owned Loop — Deterministic Agent Execution]]
-- RELATES TO: [[Infrastructure Enforcement Proves Instructions Fail]]
-- RELATES TO: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-- FEEDS INTO: [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
+- DERIVED FROM: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+- DERIVED FROM: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- BUILDS ON: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+- RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+- RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+- FEEDS INTO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 
 ## Backlinks
 
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Model: Quality and Failure Prevention]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]

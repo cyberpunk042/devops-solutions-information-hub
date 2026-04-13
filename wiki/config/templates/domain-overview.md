@@ -43,6 +43,30 @@ tags: []
 <!-- Quick-reference answers to the most common questions in this domain.
 Format: ### Q: Question?\nAnswer in 2-3 sentences. Link to deeper pages. -->
 
+
+     EXAMPLE structure (replace with your content): -->
+
+### Coverage Assessment
+
+> [!abstract] Domain Maturity Map
+>
+> | Page | Maturity | Status | Key Gap |
+> |------|----------|--------|---------|
+> | {{page_1}} | growing | Active | {{what's thin}} |
+> | {{page_2}} | seed | Needs depth | {{what's missing}} |
+
+### Key Pages (reading order)
+
+1. **[[{{most_important_page}}]]** — Start here. {{why it's the foundation}}
+2. **[[{{second_page}}]]** — {{what it adds}}
+
+### Gaps and Priorities
+
+> [!warning] Named Gaps
+>
+> - {{Gap 1}}: {{what's missing, why it matters, estimated effort to fill}}
+> - {{Gap 2}}: {{same structure}}
+
 ## Relationships
 
 - RELATES TO: {{related_domain_1}}

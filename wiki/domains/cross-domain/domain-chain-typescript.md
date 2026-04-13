@@ -1,5 +1,10 @@
 ---
-title: "Artifact Chain: TypeScript/Node Domain"
+title: Artifact Chain — TypeScript-Node Domain
+aliases:
+  - "Artifact Chain — TypeScript-Node Domain"
+  - "Artifact Chain — TypeScript/Node Domain"
+  - "Artifact Chain: TypeScript-Node Domain"
+  - "Artifact Chain: TypeScript/Node Domain"
 type: reference
 domain: cross-domain
 status: synthesized
@@ -20,8 +25,7 @@ sources:
 tags: [methodology, artifact-chain, typescript, node, domain-specific, openarms, openfleet]
 ---
 
-# Artifact Chain: TypeScript/Node Domain
-
+# Artifact Chain — TypeScript-Node Domain
 > [!tip] AI Quick Start — Working in a TypeScript/Node Project
 >
 > 1. **Gate commands:** `pnpm tsgo` (types compile), `pnpm check` (lint), `pnpm test -- path/to/test.ts` (tests pass)
@@ -208,28 +212,28 @@ Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, Op
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Artifact Taxonomy]]
-- BUILDS ON: [[Construction and Testing Artifacts — Standards and Guide]]
-- BUILDS ON: [[Requirements and Design Artifacts — Standards and Guide]]
-- RELATES TO: [[Artifact Chains by Methodology Model]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- BUILDS ON: [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+- BUILDS ON: [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+- RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Requirements and Design Artifacts — Standards and Guide]]
-[[Artifact Chains by Methodology Model]]
-[[Model: Methodology]]
-[[Methodology Adoption Guide]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Universal Stages, Domain-Specific Artifacts]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[model-methodology|Model — Methodology]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]

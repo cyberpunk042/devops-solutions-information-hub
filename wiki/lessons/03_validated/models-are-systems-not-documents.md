@@ -1,5 +1,7 @@
 ---
-title: "Models Are Systems, Not Documents"
+title: Models Are Systems, Not Documents
+aliases:
+  - "Models Are Systems, Not Documents"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -10,16 +12,15 @@ derived_from:
   - "Model Registry"
   - "Models Are Built in Layers, Not All at Once"
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: directive-models-not-documents
     type: log
     file: wiki/log/2026-04-09-directive-models-are-not-documents.md
-    title: "Models Are Not Documents — They Must Be Usable Systems"
+    title: Models Are Not Documents — They Must Be Usable Systems
     ingested: 2026-04-09
 tags: [models, quality, depth, systems-thinking, usability, standards, failure-lesson]
 ---
-
 # Models Are Systems, Not Documents
 
 ## Summary
@@ -42,7 +43,7 @@ This lesson applies whenever building or reviewing a named model in the wiki —
 > | Guidance | "Read this" | "When you encounter X, do Y" |
 > | Instances | None | Real examples from practice |
 > | Connection | Isolated | Linked to super-model, feeds sister models |
-> | Navigation | File paths | [[Wikilinks]] for graph connectivity |
+> | Navigation | File paths | `[[Wikilinks]]` for graph connectivity |
 
 The first 14 model pages failed every row of this table. They used file paths instead of wikilinks (zero Obsidian graph connectivity). They listed related pages without explaining the model's principles. They contained no trace of the operator's directives — the specific things asked for (methodology flexibility, composable sub-models, per-case artifact chains) were absent.
 
@@ -77,11 +78,11 @@ The first 14 model pages failed every row of this table. They used file paths in
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
@@ -94,15 +95,15 @@ The first 14 model pages failed every row of this table. They used file paths in
 > 3. **Does it have concrete examples?** Not "this is used in many projects" — WHICH projects, showing WHAT, with what RESULT?
 > 4. **Would the operator say "there is no trace of what I asked"?** The original 14 model pages were 80-110 line reading lists. The operator's response: "mindless document." Systems are 200+ lines with structure.
 
-- DERIVED FROM: [[Model Registry]]
-- RELATES TO: [[Models Are Built in Layers, Not All at Once]]
-- RELATES TO: [[The Agent Must Practice What It Documents]]
-- FEEDS INTO: [[Model: LLM Wiki]]
+- DERIVED FROM: [[model-registry|Model Registry]]
+- RELATES TO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+- RELATES TO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- FEEDS INTO: [[model-llm-wiki|Model — LLM Wiki]]
 
 ## Backlinks
 
-[[Methodology Is a Framework, Not a Fixed Pipeline]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Standards-by-Example]]
-[[Systemic Incompleteness Is Invisible to Validation]]
+[[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[E006-standards-by-example|Standards-by-Example]]
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]

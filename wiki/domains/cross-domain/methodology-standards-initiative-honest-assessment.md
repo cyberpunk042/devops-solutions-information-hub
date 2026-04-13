@@ -1,5 +1,7 @@
 ---
-title: "Methodology Standards Initiative — Honest Assessment"
+title: Methodology Standards Initiative — Honest Assessment
+aliases:
+  - "Methodology Standards Initiative — Honest Assessment"
 type: concept
 domain: cross-domain
 status: synthesized
@@ -126,27 +128,27 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Methodology Standards Initiative — Gap Analysis]]
-- BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]
-- RELATES TO: [[Standards Must Preach by Example]]
-- RELATES TO: [[Models Are Systems, Not Documents]]
-- FEEDS INTO: [[Artifact Type System]]
-- FEEDS INTO: [[Standards-by-Example]]
+- BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+- BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+- RELATES TO: [[standards-must-preach-by-example|Standards Must Preach by Example]]
+- RELATES TO: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+- FEEDS INTO: [[E003-artifact-type-system|Artifact Type System]]
+- FEEDS INTO: [[E006-standards-by-example|Standards-by-Example]]
 
 ## Backlinks
 
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Standards Must Preach by Example]]
-[[Models Are Systems, Not Documents]]
-[[Artifact Type System]]
-[[Standards-by-Example]]
-[[Coverage Blindness — Modeling Only What You Know]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[New Content Must Integrate Into Existing Pages]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[E006-standards-by-example|Standards-by-Example]]
+[[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]

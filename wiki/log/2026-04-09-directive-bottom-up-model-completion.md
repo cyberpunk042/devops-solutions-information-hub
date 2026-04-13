@@ -1,5 +1,7 @@
 ---
-title: "Bottom-Up Model Completion — 10+ Named Models Required"
+title: Bottom-Up Model Completion — 10+ Named Models Required
+aliases:
+  - "Bottom-Up Model Completion — 10+ Named Models Required"
 type: note
 domain: log
 note_type: directive
@@ -34,8 +36,8 @@ The user demands that all models be completed bottom-up (foundation first), with
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

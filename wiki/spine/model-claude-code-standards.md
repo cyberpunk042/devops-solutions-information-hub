@@ -1,5 +1,7 @@
 ---
-title: "Claude Code Standards — What Good Agent Configuration Looks Like"
+title: Claude Code Standards — What Good Agent Configuration Looks Like
+aliases:
+  - "Claude Code Standards — What Good Agent Configuration Looks Like"
 type: concept
 domain: cross-domain
 layer: spine
@@ -11,16 +13,8 @@ updated: 2026-04-09
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
-    title: "Claude Code Best Practices"
-  - id: src-harness-engineering-article
-    type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
-  - id: src-claude-code-accuracy-tips
-    type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
+    url: https://github.com/shanraisshan/claude-code-best-practice
+    title: Claude Code Best Practices
 tags: [claude-code, standards, quality, configuration, skills, hooks, context-management, harness, gold-standard, anti-patterns]
 ---
 
@@ -28,7 +22,7 @@ tags: [claude-code, standards, quality, configuration, skills, hooks, context-ma
 
 ## Summary
 
-This page defines the quality bar for CLAUDE CODE CONFIGURATION. Where [[Model: Claude Code]] defines the system (agent loop, extension levels, context discipline, harness engineering), this page shows what GOOD looks like at every level — and what it looks like when configuration is wrong. ==Every gold standard on this page is a real instance from this ecosystem.== The harness is only as good as its weakest level: a perfect CLAUDE.md with no skills wastes context on every message. Perfect skills with no hooks have ~60% compliance. The standard is the full stack working together.
+This page defines the quality bar for CLAUDE CODE CONFIGURATION. Where [[model-claude-code|Model — Claude Code]] defines the system (agent loop, extension levels, context discipline, harness engineering), this page shows what GOOD looks like at every level — and what it looks like when configuration is wrong. ==Every gold standard on this page is a real instance from this ecosystem.== The harness is only as good as its weakest level: a perfect CLAUDE.md with no skills wastes context on every message. Perfect skills with no hooks have ~60% compliance. The standard is the full stack working together.
 
 ## Key Insights
 
@@ -243,30 +237,30 @@ What all four levels working together looks like.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Claude Code]]
-- BUILDS ON: [[Claude Code Best Practices]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[Hooks Lifecycle Architecture]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Wiki Design Standards — What Good Styling Looks Like]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-claude-code|Model — Claude Code]]
+- BUILDS ON: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: Claude Code]]
-[[Claude Code Best Practices]]
-[[Harness Engineering]]
-[[Hooks Lifecycle Architecture]]
-[[Claude Code Skills]]
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
-[[Quality Standards — What Good Failure Prevention Looks Like]]
+[[model-claude-code|Model — Claude Code]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[harness-engineering|Harness Engineering]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[claude-code-skills|Claude Code Skills]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
+[[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]

@@ -1,5 +1,8 @@
 ---
-title: "Principle: Structured Context Governs Agent Behavior More Than Content"
+title: Principle — Structured Context Governs Agent Behavior More Than Content
+aliases:
+  - "Principle — Structured Context Governs Agent Behavior More Than Content"
+  - "Principle: Structured Context Governs Agent Behavior More Than Content"
 type: principle
 domain: cross-domain
 layer: 5
@@ -17,20 +20,19 @@ sources:
   - id: openarms-five-contexts
     type: observation
     file: raw/articles/openarms-all-distilled-lessons.md
-    description: "Five cognitive contexts reading one CLAUDE.md — structure determines which rules mislead vs help"
+    description: Five cognitive contexts reading one CLAUDE.md — structure determines which rules mislead vs help
   - id: openfleet-validation-matrix
     type: observation
     file: raw/articles/openfleet-validation-matrix-samples.md
-    description: "29 scenarios with identical structural skeleton — content varies, shape constant, behavior predictable"
+    description: 29 scenarios with identical structural skeleton — content varies, shape constant, behavior predictable
   - id: openarms-compliance-patterns
     type: observation
     file: raw/articles/openarms-methodology-scan.md
-    description: "8 CLAUDE.md structural patterns improved compliance from 25% to 60% — same content, different structure"
+    description: 8 CLAUDE.md structural patterns improved compliance from 25% to 60% — same content, different structure
 tags: [principle, structured-context, proto-programming, markdown, compliance, framework]
 ---
 
-# Principle: Structured Context Governs Agent Behavior More Than Content
-
+# Principle — Structured Context Governs Agent Behavior More Than Content
 ## Summary
 
 When instructing AI agents, the SHAPE of information (headers, tables, YAML blocks, callout types, MUST/MUST NOT lists) governs behavior more reliably than the CONTENT of that information (what the words say). Consistent structure across all injections creates patterns agents follow mechanically. Inconsistent structure forces parsing, which degrades under context pressure. Markdown is proto-programming: treat every injection point as code that programs agent behavior through form, not just meaning.
@@ -47,10 +49,10 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 >
 > | Lesson | What It Contributes |
 > |--------|-------------------|
-> | [[Structured Context Is Proto-Programming for AI Agents]] | **The core evidence.** 3-level taxonomy: prompt engineering (~25% compliance) vs context engineering (~60%) vs structural engineering (~90%+). OpenFleet validation matrix: 29 scenarios, same skeleton, content varies. OpenArms Five Cognitive Contexts: 5 contexts reading one file, structure determines which rules mislead. |
-> | [[CLAUDE.md Structural Patterns for Agent Compliance]] | **The quantified structural proof.** 8 specific patterns (sacrosanct section, numbered sequences, ALLOWED/FORBIDDEN tables, progressive disclosure, command checkpoints, dividers, anchor phrases, examples). Same content restructured from prose to tables: 25% → 60% compliance. |
-> | [[Context Compaction Is a Reset Event]] | **Why structure survives and content doesn't.** After compaction, prose corrections are lost. Structured state (YAML files, typed fields, stage declarations) can be rebuilt by post-compact hooks. Structure persists; content is ephemeral. |
-> | [[Hardcoded Instances Fail — Build Frameworks Not Solutions]] | **Structure IS framework.** A framework defines HOW TO DEFINE (extension points, composition rules). An instance has specific values. Structured context creates the framework; prose content creates instances. Agents that receive frameworks adapt; agents that receive instances copy. |
+> | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | **The core evidence.** 3-level taxonomy: prompt engineering (~25% compliance) vs context engineering (~60%) vs structural engineering (~90%+). OpenFleet validation matrix: 29 scenarios, same skeleton, content varies. OpenArms Five Cognitive Contexts: 5 contexts reading one file, structure determines which rules mislead. |
+> | [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] | **The quantified structural proof.** 8 specific patterns (sacrosanct section, numbered sequences, ALLOWED/FORBIDDEN tables, progressive disclosure, command checkpoints, dividers, anchor phrases, examples). Same content restructured from prose to tables: 25% → 60% compliance. |
+> | [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] | **Why structure survives and content doesn't.** After compaction, prose corrections are lost. Structured state (YAML files, typed fields, stage declarations) can be rebuilt by post-compact hooks. Structure persists; content is ephemeral. |
+> | [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]] | **Structure IS framework.** A framework defines HOW TO DEFINE (extension points, composition rules). An instance has specific values. Structured context creates the framework; prose content creates instances. Agents that receive frameworks adapt; agents that receive instances copy. |
 
 ## Application
 
@@ -90,36 +92,38 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 > | Direction | Go To |
 > |-----------|-------|
 > | **Lessons that prove this** | See Derived From table above — 4 lessons with quantified evidence |
-> | **Patterns that implement this** | [[Validation Matrix — Test Suite for Context Injection]] (structured testing), [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] (same structure, different depth), [[Enforcement Hook Patterns]] (structural enforcement) |
-> | **Models that embed this** | [[Model: Design.md and IaC]] (markdown as configuration), [[Model: Skills, Commands, and Hooks]] (structured extension system), [[Model: LLM Wiki]] (frontmatter as programmatic interface) |
-> | **The identity protocol** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity DECLARES which context, structure ADAPTS per declaration |
-> | **Frontmatter as programming** | [[Frontmatter Field Reference — Complete Parameter Documentation]] — every field, what it enables, what automation reads it |
-> | **Companion principle** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] — infrastructure IS structured enforcement. This principle explains WHY infrastructure works: the structure is what the agent processes. |
+> | **Patterns that implement this** | [[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]] (structured testing), [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] (same structure, different depth), [[enforcement-hook-patterns|Enforcement Hook Patterns]] (structural enforcement) |
+> | **Models that embed this** | [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] (markdown as configuration), [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] (structured extension system), [[model-llm-wiki|Model — LLM Wiki]] (frontmatter as programmatic interface) |
+> | **The identity protocol** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity DECLARES which context, structure ADAPTS per declaration |
+> | **Frontmatter as programming** | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — every field, what it enables, what automation reads it |
+> | **Companion principle** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] — infrastructure IS structured enforcement. This principle explains WHY infrastructure works: the structure is what the agent processes. |
 
 ## Relationships
 
-- DERIVED FROM: [[Structured Context Is Proto-Programming for AI Agents]]
-- DERIVED FROM: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- DERIVED FROM: [[Context Compaction Is a Reset Event]]
-- DERIVED FROM: [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-- BUILDS ON: [[Model: Design.md and IaC]]
-- RELATES TO: [[Validation Matrix — Test Suite for Context Injection]]
-- RELATES TO: [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-- RELATES TO: [[Principle: Infrastructure Over Instructions for Process Enforcement]]
-- FEEDS INTO: [[Project Self-Identification Protocol — The Goldilocks Framework]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- DERIVED FROM: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+- DERIVED FROM: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- DERIVED FROM: [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+- DERIVED FROM: [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+- BUILDS ON: [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+- RELATES TO: [[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]
+- RELATES TO: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+- RELATES TO: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+- FEEDS INTO: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Structured Context Is Proto-Programming for AI Agents]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Context Compaction Is a Reset Event]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Model: Design.md and IaC]]
-[[Validation Matrix — Test Suite for Context Injection]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Methodology Adoption Guide]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[model-context-engineering|Model — Context Engineering]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]

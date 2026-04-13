@@ -1,5 +1,7 @@
 ---
-title: "Skill Specification Is the Key to Ecosystem Interoperability"
+title: Skill Specification Is the Key to Ecosystem Interoperability
+aliases:
+  - "Skill Specification Is the Key to Ecosystem Interoperability"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -14,16 +16,8 @@ derived_from:
 sources:
   - id: src-kepano-obsidian-skills
     type: documentation
-    url: "https://github.com/kepano/obsidian-skills"
-    title: "kepano/obsidian-skills"
-  - id: src-axton-obsidian-visual-skills
-    type: documentation
-    url: "https://github.com/axtonliu/axton-obsidian-visual-skills"
-    title: "axtonliu/axton-obsidian-visual-skills"
-  - id: src-pablo-mano-obsidian-cli-skill
-    type: documentation
-    url: "https://github.com/pablo-mano/Obsidian-CLI-skill"
-    title: "pablo-mano/Obsidian-CLI-skill"
+    url: https://github.com/kepano/obsidian-skills
+    title: kepano/obsidian-skills
 tags: [skills, interoperability, specification, obsidian, agent-skills, portability, standards]
 ---
 
@@ -76,28 +70,28 @@ This lesson applies directly to:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: kepano/obsidian-skills]]
-- DERIVED FROM: [[Obsidian Skills Ecosystem]]
-- BUILDS ON: [[Skills Architecture Patterns]]
-- RELATES TO: [[Claude Code Skills]]
-- RELATES TO: [[NotebookLM Skills]]
-- ENABLES: [[Obsidian Skills Ecosystem]]
-- FEEDS INTO: [[LLM Wiki Pattern]]
+- DERIVED FROM: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+- DERIVED FROM: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- BUILDS ON: [[skills-architecture-patterns|Skills Architecture Patterns]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- RELATES TO: [[notebooklm-skills|NotebookLM Skills]]
+- ENABLES: [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+- FEEDS INTO: [[llm-wiki-pattern|LLM Wiki Pattern]]
 
 ## Backlinks
 
-[[Synthesis: kepano/obsidian-skills]]
-[[Obsidian Skills Ecosystem]]
-[[Skills Architecture Patterns]]
-[[Claude Code Skills]]
-[[NotebookLM Skills]]
-[[LLM Wiki Pattern]]
-[[Model: Skills, Commands, and Hooks]]
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+[[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[claude-code-skills|Claude Code Skills]]
+[[notebooklm-skills|NotebookLM Skills]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]

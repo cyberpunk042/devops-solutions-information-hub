@@ -1,5 +1,7 @@
 ---
-title: "Wiki Design Model Emerging — Obsidian Styling as Standard"
+title: Wiki Design Model Emerging — Obsidian Styling as Standard
+aliases:
+  - "Wiki Design Model Emerging — Obsidian Styling as Standard"
 type: note
 domain: log
 note_type: directive
@@ -39,8 +41,8 @@ This is a start that will grow into a wiki design model — potentially becoming
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
-[[Model Registry]]
+[[model-registry|Model Registry]]

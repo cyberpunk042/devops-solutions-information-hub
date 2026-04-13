@@ -1,5 +1,7 @@
 ---
-title: "CLI Tools Beat MCP for Token Efficiency"
+title: CLI Tools Beat MCP for Token Efficiency
+aliases:
+  - "CLI Tools Beat MCP for Token Efficiency"
 type: lesson
 domain: ai-agents
 layer: 4
@@ -16,15 +18,15 @@ updated: 2026-04-10
 sources:
   - id: src-claude-code-accuracy-tips
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=D5bRTv6GhXk"
-    title: "Claude Code Works Better When You Do This"
+    url: https://www.youtube.com/watch?v=D5bRTv6GhXk
+    title: Claude Code Works Better When You Do This
   - id: src-harness-engineering-article
     type: article
-    url: "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0"
-    title: "Building Claude Code with Harness Engineering"
+    url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
+    title: Building Claude Code with Harness Engineering
   - id: src-playwright-cli-vs-mcp
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=nN5R9DFYsXY"
+    url: https://www.youtube.com/watch?v=nN5R9DFYsXY
     title: "Claude Code + Playwright CLI: Automate QA with Less Tokens"
 tags: [cli, mcp, token-efficiency, skills, context-management, accuracy, tool-integration, agent-design]
 ---
@@ -112,37 +114,37 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What pattern generalizes this?** | [[Context-Aware Tool Loading]] — eager vs deferred vs external loading. CLI = deferred. MCP = eager. 12x measured differential. |
-> | **How does this connect to structured context?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] — MCP schemas are UNSTRUCTURED context pollution. CLI+Skills load STRUCTURED context on demand. |
-> | **How does tier-based depth apply?** | [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same principle: lightweight tier = less context loaded = less pollution |
-> | **What is the decision record?** | [[Decision: MCP vs CLI for Tool Integration]] — CLI for operational tasks, MCP for external service bridges and tool discovery |
+> | **What pattern generalizes this?** | [[context-aware-tool-loading|Context-Aware Tool Loading]] — eager vs deferred vs external loading. CLI = deferred. MCP = eager. 12x measured differential. |
+> | **How does this connect to structured context?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] — MCP schemas are UNSTRUCTURED context pollution. CLI+Skills load STRUCTURED context on demand. |
+> | **How does tier-based depth apply?** | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same principle: lightweight tier = less context loaded = less pollution |
+> | **What is the decision record?** | [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] — CLI for operational tasks, MCP for external service bridges and tool discovery |
 > | **How does this connect to the wiki's own tools?** | The wiki has 17 MCP tools AND CLI pipeline. MCP for discoverability. CLI for operational efficiency. Both exist because the tradeoff is real. |
 
 ## Relationships
 
-- DERIVED FROM: [[Synthesis: Claude Code Accuracy Tips]]
-- DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]
-- DERIVED FROM: [[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-- RELATES TO: [[Claude Code]]
-- RELATES TO: [[MCP Integration Architecture]]
-- RELATES TO: [[Claude Code Context Management]]
-- RELATES TO: [[Claude Code Skills]]
-- FEEDS INTO: [[MCP Integration Architecture]]
+- DERIVED FROM: [[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+- DERIVED FROM: [[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+- DERIVED FROM: [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+- RELATES TO: [[claude-code|Claude Code]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]]
+- RELATES TO: [[claude-code-skills|Claude Code Skills]]
+- FEEDS INTO: [[mcp-integration-architecture|MCP Integration Architecture]]
 
 ## Backlinks
 
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Harness Engineering]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Claude Code]]
-[[MCP Integration Architecture]]
-[[Claude Code Context Management]]
-[[Claude Code Skills]]
-[[Context Management Is the Primary LLM Productivity Lever]]
-[[Context-Aware Tool Loading]]
-[[Evolution Standards — What Good Knowledge Promotion Looks Like]]
-[[Model: Claude Code]]
-[[Model: MCP and CLI Integration]]
-[[Skills Architecture Is the Dominant LLM Extension Pattern]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[claude-code|Claude Code]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[claude-code-skills|Claude Code Skills]]
+[[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[model-claude-code|Model — Claude Code]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

@@ -1,5 +1,7 @@
 ---
 title: "Design.md Pattern"
+aliases:
+  - "Design.md Pattern"
 type: concept
 layer: 2
 maturity: growing
@@ -145,32 +147,32 @@ Cross-referencing `Infrastructure as Code Patterns` and `Agent Orchestration Pat
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Claude Code Best Practices]] (CLAUDE.md is the same pattern for coding)
-- RELATES TO: [[Skills Architecture Patterns]] (static vs dynamic AI context)
-- RELATES TO: [[Harness Engineering]] (project-root config as agent guardrails)
-- RELATES TO: [[Claude Code Context Management]] (context budget considerations)
-- ENABLES: [[MCP Integration Architecture]] (Design.md + MCP Stitch server)
-- RELATES TO: [[LLM Wiki Pattern]] (markdown as AI-native knowledge format)
+- EXTENDS: [[claude-code-best-practices|Claude Code Best Practices]] (CLAUDE.md is the same pattern for coding)
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]] (static vs dynamic AI context)
+- RELATES TO: [[harness-engineering|Harness Engineering]] (project-root config as agent guardrails)
+- RELATES TO: [[claude-code-context-management|Claude Code Context Management]] (context budget considerations)
+- ENABLES: [[mcp-integration-architecture|MCP Integration Architecture]] (Design.md + MCP Stitch server)
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]] (markdown as AI-native knowledge format)
 
 ## Backlinks
 
-[[Claude Code Best Practices]]
-[[Skills Architecture Patterns]]
-[[Harness Engineering]]
-[[Claude Code Context Management]]
-[[MCP Integration Architecture]]
-[[LLM Wiki Pattern]]
-[[Hooks Lifecycle Architecture]]
-[[Infrastructure as Code Patterns]]
-[[Model: Design.md and IaC]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Wiki Design]]
-[[Never Synthesize from Descriptions Alone]]
-[[Spec-Driven Development]]
-[[Synthesis: awesome-design-md — 58 Design Systems for AI Agents]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[harness-engineering|Harness Engineering]]
+[[claude-code-context-management|Claude Code Context Management]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-wiki-design|Model — Wiki Design]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[spec-driven-development|Spec-Driven Development]]
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]

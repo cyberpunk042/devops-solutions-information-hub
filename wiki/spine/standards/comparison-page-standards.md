@@ -1,5 +1,7 @@
 ---
-title: "Comparison Page Standards"
+title: Comparison Page Standards
+aliases:
+  - "Comparison Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -62,12 +64,28 @@ Standards for comparison pages — structured evaluations of alternatives across
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Cross-Domain Patterns]] — 195 lines, 10 relationships
+> [!success] [[cross-domain-patterns|Cross-Domain Patterns]] — 195 lines, 10 relationships
 >
 > - Pattern inventory table as core matrix (8 rows × 4 columns)
 > - Each matrix row expanded into a Deep Analysis subsection with instance-level comparison tables
 > - The comparison DISCOVERS: 6 patterns reduce to 3 underlying constraints (bounded context, probabilistic LLM, deployment drift)
 > - Rich callout usage: warning, example, abstract
+
+### Annotated Exemplar: [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Comparison Matrix annotation:**
+> 14-row table comparing OpenArms vs OpenFleet across: agent count, stage enforcement, validation engine, loop ownership, git control, behavioral detection, correction, context compaction, cross-agent coordination, trust management, readiness gating, clean completion rate, implementation effort, configuration model. Each row has a "Winner" column — the matrix DECIDES, not just lists.
+>
+> **Key Insights annotation:**
+> `> [!warning]` callout: "The Scale Transition Creates 6 New Requirements" — with table showing what's needed at solo vs fleet scale. This is the DISCOVERY the comparison produces — not just "they're different" but "HERE are the 6 specific things that change."
+>
+> **Per-Alternative Deep Analysis annotation:**
+> Each alternative gets its own subsection with: `> [!tip]` for "when to choose" and `> [!warning]` for "when this option fails." Strengths AND weaknesses listed. Ideal use case named.
+>
+> **Recommendation annotation:**
+> `> [!success]` callout with scenario → recommendation table. "Solo agent, interactive → OpenArms hooks." "4+ agents, autonomous → OpenFleet architecture." Clear, actionable, context-dependent.
 
 ### Common Failures
 
@@ -93,12 +111,12 @@ Standards for comparison pages — structured evaluations of alternatives across
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Wiki Design]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

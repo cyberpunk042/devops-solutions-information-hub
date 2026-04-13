@@ -1,5 +1,8 @@
 ---
-title: "Decision: Quality Tier Operational Decisions"
+title: Decision — Quality Tier Operational Decisions
+aliases:
+  - "Decision — Quality Tier Operational Decisions"
+  - "Decision: Quality Tier Operational Decisions"
 type: decision
 domain: cross-domain
 layer: 6
@@ -16,8 +19,7 @@ sources: []
 tags: [quality-tiers, skyscraper, pyramid, mountain, leading-indicators, equilibrium, organizational, design-decisions]
 ---
 
-# Decision: Quality Tier Operational Decisions
-
+# Decision — Quality Tier Operational Decisions
 ## Summary
 
 Three open questions from Skyscraper, Pyramid, Mountain resolved by cross-referencing the Methodology Framework, Immune System Rules, and operational experience from the ecosystem. The questions are about detecting Pyramid→Mountain regression, whether Pyramid is a stable equilibrium, and applying the analogy to organizational architecture.
@@ -64,8 +66,8 @@ All easy. These are interpretive frameworks, not infrastructure commitments.
 
 ## Dependencies
 
-- [[Skyscraper, Pyramid, Mountain]] — resolves all 3 open questions
-- [[Methodology Framework]] — quality dimension is a framework parameter
+- [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — resolves all 3 open questions
+- [[methodology-framework|Methodology Framework]] — quality dimension is a framework parameter
 
 ### How This Connects — Navigate From Here
 
@@ -73,21 +75,21 @@ All easy. These are interpretive frameworks, not infrastructure commitments.
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Skyscraper, Pyramid, Mountain]]
-- RELATES TO: [[Methodology Framework]]
-- RELATES TO: [[Immune System Rules]]
-- RELATES TO: [[Decision: Methodology Framework Design Decisions]]
+- DERIVED FROM: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+- RELATES TO: [[methodology-framework|Methodology Framework]]
+- RELATES TO: [[immune-system-rules|Immune System Rules]]
+- RELATES TO: [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
 
 ## Backlinks
 
-[[Skyscraper, Pyramid, Mountain]]
-[[Methodology Framework]]
-[[Immune System Rules]]
-[[Decision: Methodology Framework Design Decisions]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[methodology-framework|Methodology Framework]]
+[[immune-system-rules|Immune System Rules]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]

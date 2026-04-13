@@ -1,5 +1,7 @@
 ---
-title: "Frontmatter Field Reference — Complete Parameter Documentation"
+title: Frontmatter Field Reference — Complete Parameter Documentation
+aliases:
+  - "Frontmatter Field Reference — Complete Parameter Documentation"
 type: reference
 domain: cross-domain
 layer: spine
@@ -151,25 +153,25 @@ Complete reference for every YAML frontmatter field used in the wiki. Every fiel
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: LLM Wiki]]
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- RELATES TO: [[Readiness vs Progress — Two-Dimensional Work Tracking]]
-- RELATES TO: [[Three PM Levels — Wiki to Fleet to Full Tool]]
-- RELATES TO: [[Methodology System Map]]
-- FEEDS INTO: [[Methodology Adoption Guide]]
+- BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- RELATES TO: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+- RELATES TO: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+- RELATES TO: [[methodology-system-map|Methodology System Map]]
+- FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
 
-[[Model: LLM Wiki]]
-[[Backlog Hierarchy Rules]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Methodology System Map]]
-[[Methodology Adoption Guide]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[methodology-system-map|Methodology System Map]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]

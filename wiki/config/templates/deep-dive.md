@@ -43,6 +43,33 @@ tags: []
 
 <!-- Questions surfaced by the deep analysis that need further investigation. -->
 
+
+     EXAMPLE structure (replace with your content): -->
+
+### {{Subsection 1 — Core Mechanism}}
+
+> [!info] {{Reference data}}
+>
+> | {{Column}} | {{Column}} | {{Column}} |
+> |-----------|-----------|-----------|
+> | {{data}} | {{data}} | {{data}} |
+
+### {{Subsection 2 — Practical Application}}
+
+> [!abstract] {{How to apply this}}
+>
+> | Context | How It Applies |
+> |---------|---------------|
+> | {{context}} | {{application}} |
+
+### {{Subsection 3 — Evidence or Examples}}
+
+> [!example]- {{Worked example title}}
+>
+> **Setup:** {{what was the situation}}
+> **Action:** {{what was done}}
+> **Result:** {{what happened, with data}}
+
 ## Relationships
 
 - RELATES TO: {{related_page}}

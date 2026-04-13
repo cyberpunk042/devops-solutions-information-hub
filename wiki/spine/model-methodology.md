@@ -1,5 +1,8 @@
 ---
-title: "Model: Methodology"
+title: Model — Methodology
+aliases:
+  - "Model — Methodology"
+  - "Model: Methodology"
 type: concept
 domain: cross-domain
 layer: spine
@@ -12,39 +15,37 @@ sources:
   - id: src-openarms-methodology
     type: documentation
     file: raw/articles/openarms-methodology-yaml-full.md
-    title: "OpenArms Methodology YAML + Agent Directive"
+    title: OpenArms Methodology YAML + Agent Directive
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Deep Scan"
+    title: OpenFleet Methodology Deep Scan
     ingested: 2026-04-09
   - id: src-openarms-methodology-evolution
     type: documentation
     file: raw/articles/openarms-methodology-evolution-2026-04-09.md
-    title: "OpenArms Methodology Evolution — 7 Bugs, 6 Versions"
+    title: OpenArms Methodology Evolution — 7 Bugs, 6 Versions
     ingested: 2026-04-09
   - id: src-openarms-integration-sprint
     type: documentation
     file: raw/articles/openarms-integration-sprint-learnings.md
-    title: "OpenArms Integration Sprint Learnings"
+    title: OpenArms Integration Sprint Learnings
     ingested: 2026-04-09
 tags: [methodology, model, stage-gate, task-types, composable, backlog, execution-modes, framework, spine, flexible, multi-track, multi-model]
 ---
-
-# Model: Methodology
-
+# Model — Methodology
 > [!tip] AI Quick Start — What You Do With This Page
 >
 > 1. **Determine your task type** (epic, module, task, bug, spike, docs, refactor, hotfix, integration, evolve)
 > 2. **Find the model** in the Model Catalog section below — it tells you which stages apply
 > 3. **Check ALLOWED/FORBIDDEN** per stage in the Stage Boundaries section — know what you CAN and CANNOT produce
-> 4. **Check your domain chain** for concrete artifacts: [[Artifact Chain: TypeScript/Node Domain]], [[Artifact Chain: Python/Wiki Domain]], [[Artifact Chain: Infrastructure/IaC Domain]], or [[Artifact Chain: Knowledge/Evolution Domain]]
-> 5. **Before declaring done**: run the Methodology Execution Checklist in [[Methodology Standards — What Good Execution Looks Like]]
+> 4. **Check your domain chain** for concrete artifacts: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]], [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]], [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]], or [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+> 5. **Before declaring done**: run the Methodology Execution Checklist in [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Summary
 
-The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[Model: LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[Methodology Framework]]. The portable methodology engine lives in `wiki/config/methodology.yaml` (9 models with full artifact chains), `wiki/config/artifact-types.yaml` (17 page types with templates and thresholds), and `wiki/config/domain-profiles/` (TypeScript, Python/wiki, Infrastructure overrides). For the complete system map showing every component, see [[Methodology System Map]]. For adoption, see [[Methodology Adoption Guide]]. For execution quality standards, see [[Methodology Standards — What Good Execution Looks Like]].
+The Methodology model defines a flexible FRAMEWORK for defining, selecting, composing, and adapting work processes. It is NOT one fixed pipeline — it is a system that CONTAINS multiple named methodology models (Feature Development, Research, Knowledge Evolution, Hotfix, Documentation, and more), selects between them based on conditions (task type, project phase, domain, scale, urgency), composes them (sequentially, nested, conditionally, in parallel), and adapts them per-instance through overrides. Three parallel tracks run on every project simultaneously: execution (how things get built), PM (what gets tracked), and knowledge (what gets learned). Where the [[model-llm-wiki|Model — LLM Wiki]] defines WHAT the wiki IS, this model defines HOW all work proceeds. The canonical definition lives in [[methodology-framework|Methodology Framework]]. The portable methodology engine lives in `wiki/config/methodology.yaml` (9 models with full artifact chains), `wiki/config/artifact-types.yaml` (17 page types with templates and thresholds), and `wiki/config/domain-profiles/` (TypeScript, Python/wiki, Infrastructure overrides). For the complete system map showing every component, see [[methodology-system-map|Methodology System Map]]. For adoption, see [[methodology-adoption-guide|Methodology Adoption Guide]]. For execution quality standards, see [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]].
 
 ## Key Insights
 
@@ -58,7 +59,15 @@ The Methodology model defines a flexible FRAMEWORK for defining, selecting, comp
 
 - **The quality dimension is an explicit parameter.** Skyscraper (full process), Pyramid (deliberate compression), Mountain (accidental chaos). The choice is made per-situation, not accidentally.
 
-- **The methodology was hardened by 7 real bugs in one day of autonomous operation.** Every design decision traces to a failure that proved it necessary. This is not theory — it is battle-tested from OpenArms' first autonomous agent run.
+- **The methodology was hardened by 7 real bugs in one day of autonomous operation.** Every design decision traces to a failure that proved it necessary. Cost dropped from $3.50/task (v1) to $1.32/task (v7) through iterative fixes. This is not theory — it is battle-tested from OpenArms' first autonomous agent run.
+
+- **Enforcement must be infrastructure, not instructions.** Instructions achieve ~25% compliance for stage boundaries. Hooks achieve 100%. See [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]. But enforcement must be MINDFUL — every block needs a reason and a bypass. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+
+- **The Goldilocks principle governs methodology adoption.** Not every project needs every model, every stage, every artifact. The right process is a FUNCTION of identity (solo/harness/fleet), phase (POC→Production), scale (10k→15M), and PM level (L1→L3). See [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]].
+
+- **Readiness and progress are TWO independent dimensions.** Readiness = definition completeness (left side of SDLC). Progress = execution completeness (right side). They advance in parallel and converge. 99→100 is human-only on BOTH. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]].
+
+- **Three SDLC chains adapt the methodology to project context.** Simplified (POC, 2-3 stages, advisory enforcement), Default (MVP→Staging, all stages, hooks optional), Full (Production, all stages, full infrastructure enforcement). See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]].
 
 ## Deep Analysis
 
@@ -77,7 +86,7 @@ A methodology model is a named, first-class entity defined in configuration (not
 
 A model is DATA. It is defined in `methodology.yaml`, not embedded in code. This means models can be created, versioned, compared across projects, and selected at runtime.
 
-For the full structural definition, see [[Methodology Framework]].
+For the full structural definition, see [[methodology-framework|Methodology Framework]].
 
 ### The Model Catalog
 
@@ -124,7 +133,7 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 > task_type = `spike` or `research`. Investigation needed, no code output expected.
 
 > [!example]- **Real instance: Researching second brain / PKM methodologies**
-> 1. **Document** — Read Zettelkasten + PARA + hybrid approaches from web research. Created [[Second Brain Architecture]] with full mapping of PARA buckets and Zettelkasten principles to wiki structure.
+> 1. **Document** — Read Zettelkasten + PARA + hybrid approaches from web research. Created [[second-brain-architecture|Second Brain Architecture]] with full mapping of PARA buckets and Zettelkasten principles to wiki structure.
 > 2. **Design** — Proposed how wiki maps to both methodologies. Identified 5 gaps: FAQs per domain, comparison matrices, review cadence, personal annotations, task management integration.
 
 > [!tip] **Why it stops at design**
@@ -256,14 +265,14 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 > 4. **Evolve** — Not triggered this cycle (synthesis was the primary output).
 
 > [!warning] **Depth verification applies here**
-> During the synthesize stage, you MUST read the actual THING, not just the description. The first attempt at context-mode produced a 60-line shallow page from the first chunk. The rewrite (after depth verification) produced a 254-line deep synthesis. See [[Never Synthesize from Descriptions Alone]].
+> During the synthesize stage, you MUST read the actual THING, not just the description. The first attempt at context-mode produced a 60-line shallow page from the first chunk. The rewrite (after depth verification) produced a 254-line deep synthesis. See [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]].
 
 ---
 
 #### Project Lifecycle (SFIF)
 
 > [!info] **Stages:** scaffold → foundation → infrastructure → features
-> The project-level MACRO model. Other models run INSIDE its stages. See [[Scaffold → Foundation → Infrastructure → Features]].
+> The project-level MACRO model. Other models run INSIDE its stages. See [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]].
 
 | Stage | What you produce | Gate |
 |-------|-----------------|------|
@@ -282,7 +291,7 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 > 4. **Features** — Evolution pipeline, backlog system, model-building skill, 14 named models, standards documents
 
 > [!tip] **The recursive property**
-> Inside the Infrastructure stage, building the backlog system ran the Feature Development model. Inside that, individual tasks ran their subset models. Three levels of nesting, each with its own methodology model. This is [[Methodology Framework]]'s fractal property in practice.
+> Inside the Infrastructure stage, building the backlog system ran the Feature Development model. Inside that, individual tasks ran their subset models. Three levels of nesting, each with its own methodology model. This is [[methodology-framework|Methodology Framework]]'s fractal property in practice.
 
 ### Model Selection — How Conditions Pick a Model
 
@@ -452,11 +461,11 @@ Every model instance has a quality target. The choice is EXPLICIT — made per-s
 
 ==The failure mode is not choosing Pyramid — it is accidentally producing Mountain-tier work because quality level was never an explicit decision.==
 
-See [[Skyscraper, Pyramid, Mountain]].
+See [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]].
 
 ### How to Adopt
 
-**Full guide:** [[Methodology Adoption Guide]] — 4 tiers of adoption with per-domain quick starts.
+**Full guide:** [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers of adoption with per-domain quick starts.
 
 > [!abstract] Adoption Tiers
 >
@@ -465,7 +474,7 @@ See [[Skyscraper, Pyramid, Mountain]].
 > | **1. Read** | Read this page + standards pages, follow manually | Minutes |
 > | **2. Configure** | Copy `wiki/config/methodology.yaml` + domain profile, reference in CLAUDE.md | Hours |
 > | **3. Validate** | Add `wiki/config/artifact-types.yaml` checks to your validation pipeline | Days |
-> | **4. Enforce** | Add hooks, stage skills, deterministic dispatch (see [[Enforcement Hook Patterns]]) | Weeks |
+> | **4. Enforce** | Add hooks, stage skills, deterministic dispatch (see [[enforcement-hook-patterns|Enforcement Hook Patterns]]) | Weeks |
 
 > [!info] **The Methodology Engine — config stack**
 >
@@ -492,9 +501,9 @@ See [[Skyscraper, Pyramid, Mountain]].
 > - Per-stage artifact requirements (resolved by domain profile)
 > - Gate commands (pnpm tsgo for TypeScript, pipeline post for wiki, terraform validate for IaC)
 > - Execution mode defaults and end conditions
-> - Enforcement depth (Tier 1-4 per [[Methodology Adoption Guide]])
+> - Enforcement depth (Tier 1-4 per [[methodology-adoption-guide|Methodology Adoption Guide]])
 
-See also: [[Model Composition Rules]] for how models combine, [[Methodology Evolution Protocol]] for how the methodology evolves, [[Artifact Chains by Methodology Model]] for full per-model artifact chains.
+See also: [[model-composition-rules|Model Composition Rules]] for how models combine, [[methodology-evolution-protocol|Methodology Evolution Protocol]] for how the methodology evolves, [[artifact-chains-by-model|Artifact Chains by Methodology Model]] for full per-model artifact chains.
 
 > [!bug]- **What goes wrong if you skip this**
 > See the 7 bugs above. Every one was found within hours of starting autonomous agent operation. Without explicit methodology: binary status (Bug 1), unchecked epics (Bug 2), rogue tasks (Bug 3), lost files (Bug 4), stage violations (Bug 5), orphaned code (Bug 6), invisible work (Bug 7). The methodology exists because these failures HAPPENED.
@@ -507,24 +516,24 @@ Agents ignore methodology due to confusion, broadness, and poor instruction form
 >
 > | Level | Mechanism | Measured Compliance | Key Pages |
 > |-------|-----------|-------------------|-----------|
-> | 1. Instructions | CLAUDE.md prose rules | 25% (OpenArms v4-v8) | [[CLAUDE.md Structural Patterns for Agent Compliance]] |
+> | 1. Instructions | CLAUDE.md prose rules | 25% (OpenArms v4-v8) | [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] |
 > | 2. Structured instructions | ALLOWED/FORBIDDEN tables, numbered rules | ~60% | Same page — 8 patterns documented |
-> | 3. Hooks | PreToolUse/PostToolUse shell scripts | 100% stage boundaries (OpenArms v10) | [[Enforcement Hook Patterns]] |
-> | 4. Commands + harness | Agent calls /stage-complete, harness validates | 100% workflow (OpenArms v10) | [[Harness-Owned Loop — Deterministic Agent Execution]] |
-> | 5. Immune system | 3-line defense: prevent → detect → correct | Production-tested (OpenFleet) | [[Three Lines of Defense — Immune System for Agent Quality]] |
+> | 3. Hooks | PreToolUse/PostToolUse shell scripts | 100% stage boundaries (OpenArms v10) | [[enforcement-hook-patterns|Enforcement Hook Patterns]] |
+> | 4. Commands + harness | Agent calls /stage-complete, harness validates | 100% workflow (OpenArms v10) | [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] |
+> | 5. Immune system | 3-line defense: prevent → detect → correct | Production-tested (OpenFleet) | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
 
-**Critical insight:** Even with 100% stage boundary compliance (Level 3+), behavioral failures persist. Clean completion rate = 20% (4 of 5 OpenArms runs needed manual fixes). The remaining 6 failure classes are about JUDGMENT, not process: weakest-checker optimization, environment patching without escalation, fatigue cliff, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
+**Critical insight:** Even with 100% stage boundary compliance (Level 3+), behavioral failures persist. Clean completion rate = 20% (4 of 5 OpenArms runs needed manual fixes). The remaining 6 failure classes are about JUDGMENT, not process: weakest-checker optimization, environment patching without escalation, fatigue cliff, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
 
-**Mindful enforcement:** Every block must explain WHY and offer justified bypass. Blind enforcement creates its own failures — an agent's correct fix was reverted twice because it looked like scope creep. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+**Mindful enforcement:** Every block must explain WHY and offer justified bypass. Blind enforcement creates its own failures — an agent's correct fix was reverted twice because it looked like scope creep. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
-**Structured context as proto-programming:** Markdown IS the programming language of AI agents. Consistent structure across injections (frontmatter, MUST/MUST NOT, stage protocols) creates patterns agents follow mechanically. See [[Structured Context Is Proto-Programming for AI Agents]].
+**Structured context as proto-programming:** Markdown IS the programming language of AI agents. Consistent structure across injections (frontmatter, MUST/MUST NOT, stage protocols) creates patterns agents follow mechanically. See [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]].
 
 Supporting systems:
 
-- **[[Stage-Aware Skill Injection]]** — Which skills are recommended, mandatory, or blocked per stage. Prevents wrong-phase skill usage.
-- **[[Context Compaction Is a Reset Event]]** — All corrections lost after compaction. Post-compact hooks rebuild state.
-- **[[Contribution Gating — Cross-Agent Inputs Before Work]]** — Cross-agent inputs required before work starts. Prevents rework.
-- **[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]** — Trust earned through data. Context depth adapts per tier.
+- **[[stage-aware-skill-injection|Stage-Aware Skill Injection]]** — Which skills are recommended, mandatory, or blocked per stage. Prevents wrong-phase skill usage.
+- **[[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]** — All corrections lost after compaction. Post-compact hooks rebuild state.
+- **[[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]** — Cross-agent inputs required before work starts. Prevents rework.
+- **[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]** — Trust earned through data. Context depth adapts per tier.
 
 ### Artifact Taxonomy — The Full Spectrum
 
@@ -534,22 +543,22 @@ The real-world SDLC has 78+ distinct artifact types across 11 categories. Our me
 >
 > | Resource | What It Covers |
 > |----------|---------------|
-> | [[Methodology Artifact Taxonomy]] | All 78 types across 11 categories — the complete reference |
-> | [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]] | Online research behind the taxonomy (10 sources) |
-> | [[Initiation and Planning Artifacts — Standards and Guide]] | Pre-methodology: charters, WBS, risk, planning |
-> | [[Requirements and Design Artifacts — Standards and Guide]] | Document + Design stages: specs, ADRs, test plans |
-> | [[Construction and Testing Artifacts — Standards and Guide]] | Scaffold + Implement + Test: per-domain variations |
-> | [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | Post-implementation: operations, lessons, compliance |
-> | [[AI Agent Artifacts — Standards and Guide]] | Agent-specific: personas, skills, hooks, compliance |
+> | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] | All 78 types across 11 categories — the complete reference |
+> | [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]] | Online research behind the taxonomy (10 sources) |
+> | [[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]] | Pre-methodology: charters, WBS, risk, planning |
+> | [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]] | Document + Design stages: specs, ADRs, test plans |
+> | [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]] | Scaffold + Implement + Test: per-domain variations |
+> | [[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]] | Post-implementation: operations, lessons, compliance |
+> | [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]] | Agent-specific: personas, skills, hooks, compliance |
 
 > [!info] Per-Domain Artifact Chains
 >
 > | Domain | Chain Page |
 > |--------|-----------|
-> | TypeScript/Node | [[Artifact Chain: TypeScript/Node Domain]] — 24-artifact chain from OpenArms |
-> | Python/Wiki | [[Artifact Chain: Python/Wiki Domain]] — pipeline-based, config scaffolding |
-> | Infrastructure/IaC | [[Artifact Chain: Infrastructure/IaC Domain]] — Terraform stages, drift detection |
-> | Knowledge/Evolution | [[Artifact Chain: Knowledge/Evolution Domain]] — L0-L6 progressive distillation |
+> | TypeScript/Node | [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] — 24-artifact chain from OpenArms |
+> | Python/Wiki | [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] — pipeline-based, config scaffolding |
+> | Infrastructure/IaC | [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]] — Terraform stages, drift detection |
+> | Knowledge/Evolution | [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]] — L0-L6 progressive distillation |
 
 ### SDLC Customization — Phase × Scale × Chain
 
@@ -563,7 +572,7 @@ The methodology models define WHAT stages a task goes through. But HOW MUCH proc
 > | **Codebase scale** | 10k → 100k → 1M → 5M → 15M | 10k: one person holds context. 1M+: full SDLC governance. |
 > | **Chain type** | Simplified, Middle Ground (default), Full | Simplified: 2-3 stages. Full: all 5 stages + complete artifacts. |
 >
-> See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix with recommended chain by phase × scale.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix with recommended chain by phase × scale.
 
 ### Readiness vs Progress — Two-Dimensional Tracking
 
@@ -578,11 +587,11 @@ Work tracking requires TWO independent fields: `readiness` (is this DEFINED enou
 > | Module | Design done, tasks decomposed | Tasks completing | All children done → review |
 > | Task | Done When specific, contributions received | Stages completing, artifacts produced | 99→100 = human |
 >
-> See [[Readiness vs Progress — Two-Dimensional Work Tracking]] for full model with OpenFleet evidence.
+> See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] for full model with OpenFleet evidence.
 
 ### Three PM Levels
 
-The methodology operates within a PM infrastructure that may be L1 (wiki only), L2 (fleet/harness), or L3 (full PM tool). Each level wraps the previous and adds enforcement + observability. See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and harness version mapping (v1→v2→v3).
+The methodology operates within a PM infrastructure that may be L1 (wiki only), L2 (fleet/harness), or L3 (full PM tool). Each level wraps the previous and adds enforcement + observability. See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and harness version mapping (v1→v2→v3).
 
 ### Real Example: End-to-End Task Execution
 
@@ -642,7 +651,7 @@ Here's how a single task flows through the methodology, from selection to comple
 >
 > **Fix persistence:** Every fix held across ALL subsequent runs. Zero regressions. The methodology is stable not because it was well-designed initially, but because it was stress-tested by real operation.
 >
-> This validates Principle 1 ([[Principle: Infrastructure Over Instructions for Process Enforcement]]): each bug was first "fixed" with a directive rule. Only when the fix became infrastructure (schema enforcement, hooks, harness commands) did it HOLD.
+> This validates Principle 1 ([[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]): each bug was first "fixed" with a directive rule. Only when the fix became infrastructure (schema enforcement, hooks, harness commands) did it HOLD.
 
 ### Relationship to Other Models
 
@@ -651,10 +660,10 @@ Here's how a single task flows through the methodology, from selection to comple
 
 | Model | What it defines | How Methodology governs it |
 |-------|----------------|---------------------------|
-| [[Model: LLM Wiki]] | WHAT the wiki IS | HOW wiki work proceeds through stages |
-| [[Model: Claude Code]] | The agent's capabilities | How those capabilities are sequenced and gated |
-| [[Model: Skills, Commands, and Hooks]] | The tooling | WHEN each tool is permitted (per-stage protocols) |
-| [[Model: Ecosystem Architecture]] | The project topology | How work flows through that topology |
+| [[model-llm-wiki|Model — LLM Wiki]] | WHAT the wiki IS | HOW wiki work proceeds through stages |
+| [[model-claude-code|Model — Claude Code]] | The agent's capabilities | How those capabilities are sequenced and gated |
+| [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] | The tooling | WHEN each tool is permitted (per-stage protocols) |
+| [[model-ecosystem|Model — Ecosystem Architecture]] | The project topology | How work flows through that topology |
 
 ### How This All Weaves Together — Navigation from This Page
 
@@ -664,19 +673,19 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 >
 > | You Want To Know... | Go To |
 > |---------------------|-------|
-> | **"What am I? What level of process do I need?"** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — 7 identity questions that determine your chain, enforcement, and context depth |
-> | **"How much process is right for MY project?"** | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full) |
-> | **"How do I track readiness AND progress?"** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — definition completeness vs execution completeness, two independent dimensions |
-> | **"What PM infrastructure do I need?"** | [[Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (Wiki), L2 (Fleet/Harness), L3 (Full PM). Each wraps the previous. |
-> | **"How do I make agents ACTUALLY follow this?"** | [[Infrastructure Enforcement Proves Instructions Fail]] → [[Enforcement Hook Patterns]] → [[Three Lines of Defense — Immune System for Agent Quality]] |
-> | **"What fails even after enforcement works?"** | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — 7 behavioral failures that persist after 100% stage compliance |
-> | **"What does the full artifact chain look like?"** | [[Artifact Chains by Methodology Model]] + domain chains: [[Artifact Chain: TypeScript/Node Domain]], [[Artifact Chain: Python/Wiki Domain]], [[Artifact Chain: Infrastructure/IaC Domain]] |
-> | **"How do I organize my work?"** | [[Backlog Hierarchy Rules]] — Milestone → Epic → Module → Task, 8 impediment types, when to use what: [[Decision: When to Use Milestone vs Epic vs Module vs Task]] |
-> | **"What fields do my pages need?"** | [[Frontmatter Field Reference — Complete Parameter Documentation]] — every field, what it means, what automation it enables |
-> | **"Where does this project fit in the ecosystem?"** | [[Ecosystem Feedback Loop — Wiki as Source of Truth]] — bidirectional flow, framework over instance, constant evolution |
+> | **"What am I? What level of process do I need?"** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 identity questions that determine your chain, enforcement, and context depth |
+> | **"How much process is right for MY project?"** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full) |
+> | **"How do I track readiness AND progress?"** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — definition completeness vs execution completeness, two independent dimensions |
+> | **"What PM infrastructure do I need?"** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (Wiki), L2 (Fleet/Harness), L3 (Full PM). Each wraps the previous. |
+> | **"How do I make agents ACTUALLY follow this?"** | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] → [[enforcement-hook-patterns|Enforcement Hook Patterns]] → [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
+> | **"What fails even after enforcement works?"** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — 7 behavioral failures that persist after 100% stage compliance |
+> | **"What does the full artifact chain look like?"** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] + domain chains: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]], [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]], [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]] |
+> | **"How do I organize my work?"** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — Milestone → Epic → Module → Task, 8 impediment types, when to use what: [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]] |
+> | **"What fields do my pages need?"** | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — every field, what it means, what automation it enables |
+> | **"Where does this project fit in the ecosystem?"** | [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]] — bidirectional flow, framework over instance, constant evolution |
 > | **"What global standards should I follow?"** | CloudEvents for events, OpenAPI for APIs, SFIF for build lifecycle, DDD for domains, Onion for layer isolation, SRP for responsibilities |
-> | **"How do I adopt this for my project?"** | [[Methodology Adoption Guide]] — 4 tiers (Read→Configure→Validate→Enforce) + SDLC chain selection + per-domain quick starts |
-> | **"Show me the complete system map"** | [[Methodology System Map]] — every component, where it lives, what it does, how they connect |
+> | **"How do I adopt this for my project?"** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers (Read→Configure→Validate→Enforce) + SDLC chain selection + per-domain quick starts |
+> | **"Show me the complete system map"** | [[methodology-system-map|Methodology System Map]] — every component, where it lives, what it does, how they connect |
 
 > [!tip] The Core Weave
 >
@@ -684,100 +693,139 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 >
 > This is not a linear path — it's a LOOP. Every execution produces learnings that evolve the methodology that changes the selection criteria. The Goldilocks point shifts as the project matures. The framework adapts because it's designed to adapt.
 
+### Lessons Learned (from building and operating this model)
+
+| Lesson | What Was Learned | Evidence |
+|--------|-----------------|---------|
+| [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] | Instructions=25%, hooks=100% for stage boundaries | OpenArms v8 (75% violations) → v10 (0% violations) |
+| [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | 7 behavioral failures persist after 100% stage enforcement | 4/5 runs need manual fixes. 20% clean rate. |
+| [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] | Over-enforcement blocks correct work (T086 fnm fix reverted) | Every block needs WHY + bypass mechanism |
+| [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]] | 3 independent projects → same conclusion: agent must not own loop | OpenArms, OpenFleet, harness engineering article |
+| [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] | All behavioral corrections lost after compaction | Post-compact hook (29 lines) rebuilds from files |
+| [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]] | Copying values ≠ building framework. Phase 1: 37 files of "crap" | Portability test: can another project adopt without rewriting? |
+| [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]] | "Follow methodology" ≠ "enter Document stage" | Explicit 5-step method broke the research-produce loop |
+| [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Structure governs behavior more than content | Same rules: prose=25%, tables=60%. Structure > content. |
+| [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]] | The wiki aggregates from projects AND feeds back to them | 22 OpenArms lessons + OpenFleet architecture fed back this session |
+
+### State of Knowledge
+
+> [!success] **Well-covered (quantified evidence from multiple projects)**
+> - 9 named models with stage sequences, artifact chains, and template references (methodology.yaml, 517 lines)
+> - Stage boundaries hardened by 7 real bugs from OpenArms autonomous operation (v1→v7, $3.50→$1.32/task)
+> - Enforcement hierarchy quantified: instructions=25%, structured=60%, hooks=100% (OpenArms v10, 5 production runs)
+> - 7 behavioral failure classes persisting after infrastructure enforcement (20% clean completion rate)
+> - 3 SDLC chains defined as YAML configs (simplified, default, full) backed by CMMI + Lean Startup research
+> - Goldilocks identity protocol with 7 dimensions, auto-detection for 2 of them
+> - Readiness vs progress as two independent fields, OpenFleet implementation evidence
+> - 3 PM levels (solo, harness, full system) with corrected execution mode semantics
+> - Methodology battle-tested: 10 observe-fix-verify cycles in first session, fix persistence verified
+> - 3 principles distilled: Infrastructure Over Instructions, Structured Context, Goldilocks Imperative
+
+> [!warning] **Thin or unverified**
+> - Model composition in practice — documented but only 1 worked example (wiki's own methodology initiative)
+> - SDLC chain adoption — configs exist but no project has adopted from them yet (E016 will prove this)
+> - Context engineering — scattered across lessons, not formalized as its own model (E017)
+> - Formal model selection engine — Goldilocks protocol recommends but no automated selection tool
+> - Cross-project methodology comparison — OpenArms vs OpenFleet stage names differ, not formally reconciled
+> - Model evolution protocol — how models version when updated (methodology.yaml has no version field)
+
 ## Open Questions
 
 > [!question] **Should model selection be declarative or dynamic?**
 > **Partially resolved.** The Goldilocks protocol suggests declarative: identity profile → chain → model. OpenFleet implements this: `methodology.yaml` defines models, orchestrator selects based on task type + readiness + contributions. OpenArms is more implicit (task_type mapping in harness). The wiki should support BOTH: declarative config for known mappings, dynamic override for edge cases. (Remaining: test a formal selection engine that reads identity profiles)
 
 > [!question] **Can stage gates be fully automated?**
-> **Partially resolved.** OpenArms v10: 100% stage compliance via hooks. Stage GATES are fully automatable. Stage QUALITY is not — 7 behavioral failures persist at 80% rate. The boundary: anything checkable at the tool-call level (did you write to src/ during document?) = automate. Anything requiring judgment (is this requirements spec good enough?) = human gate. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] for the full boundary analysis.
+> **Partially resolved.** OpenArms v10: 100% stage compliance via hooks. Stage GATES are fully automatable. Stage QUALITY is not — 7 behavioral failures persist at 80% rate. The boundary: anything checkable at the tool-call level (did you write to src/ during document?) = automate. Anything requiring judgment (is this requirements spec good enough?) = human gate. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] for the full boundary analysis.
 
 > [!question] **What is the minimum viable methodology?**
-> **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified chain (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default chain (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full chain (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
+> **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified chain (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default chain (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full chain (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
 
 ## Relationships
 
-- GOVERNS: [[Model: LLM Wiki]], [[Model: Claude Code]], [[Model: Ecosystem Architecture]], [[Model: Skills, Commands, and Hooks]], [[Model: Second Brain]]
-- BUILDS ON: [[Methodology Framework]]
-- BUILDS ON: [[Stage-Gate Methodology]]
-- BUILDS ON: [[Task Type Artifact Matrix]]
-- BUILDS ON: [[Backlog Hierarchy Rules]]
-- BUILDS ON: [[Execution Modes and End Conditions]]
-- BUILDS ON: [[Skyscraper, Pyramid, Mountain]]
-- CONTAINS: [[Artifact Chains by Methodology Model]]
-- CONTAINS: [[Model Composition Rules]]
-- CONTAINS: [[Methodology Adoption Guide]]
-- CONTAINS: [[Methodology Evolution Protocol]]
-- CONTAINS: [[CLAUDE.md Structural Patterns for Agent Compliance]]
-- CONTAINS: [[Enforcement Hook Patterns]]
-- CONTAINS: [[Stage-Aware Skill Injection]]
-- RELATES TO: [[Spec-Driven Development]]
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
+- GOVERNS: [[model-llm-wiki|Model — LLM Wiki]], [[model-claude-code|Model — Claude Code]], [[model-ecosystem|Model — Ecosystem Architecture]], [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]], [[model-second-brain|Model — Second Brain]]
+- BUILDS ON: [[methodology-framework|Methodology Framework]]
+- BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
+- BUILDS ON: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+- BUILDS ON: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+- BUILDS ON: [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+- CONTAINS: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- CONTAINS: [[model-composition-rules|Model Composition Rules]]
+- CONTAINS: [[methodology-adoption-guide|Methodology Adoption Guide]]
+- CONTAINS: [[methodology-evolution-protocol|Methodology Evolution Protocol]]
+- CONTAINS: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- CONTAINS: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- CONTAINS: [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+- RELATES TO: [[spec-driven-development|Spec-Driven Development]]
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Model: LLM Wiki]]
-[[Model: Claude Code]]
-[[Model: Ecosystem Architecture]]
-[[Model: Skills, Commands, and Hooks]]
-[[Model: Second Brain]]
-[[Methodology Framework]]
-[[Stage-Gate Methodology]]
-[[Task Type Artifact Matrix]]
-[[Backlog Hierarchy Rules]]
-[[Execution Modes and End Conditions]]
-[[Skyscraper, Pyramid, Mountain]]
-[[Artifact Chains by Methodology Model]]
-[[Model Composition Rules]]
-[[Methodology Adoption Guide]]
-[[Methodology Evolution Protocol]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Enforcement Hook Patterns]]
-[[Stage-Aware Skill Injection]]
-[[Spec-Driven Development]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[Artifact Type System]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Decision: Artifact System Design Decisions]]
-[[Decision: Methodology Stage Extension Decisions]]
-[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Epic Page Standards]]
-[[Evolution: Methodology System]]
-[[Follow the Method of Work Not the Methodology Label]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Initiation and Planning Artifacts — Standards and Guide]]
-[[Learning Path: Methodology Fundamentals]]
-[[Methodology Artifact Taxonomy]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Methodology System Map]]
-[[Model Registry]]
-[[Model: Knowledge Evolution]]
-[[Model: Quality and Failure Prevention]]
-[[Model: SFIF and Architecture]]
-[[Model: Wiki Design]]
-[[Note Page Standards]]
-[[Portable Methodology Engine]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[Requirements and Design Artifacts — Standards and Guide]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[SDLC Rules and Structure — Customizable Project Lifecycle]]
-[[Standards Must Preach by Example]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
-[[Three Classes of Methodology Output]]
-[[Universal Stages, Domain-Specific Artifacts]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
+[[model-llm-wiki|Model — LLM Wiki]]
+[[model-claude-code|Model — Claude Code]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[model-second-brain|Model — Second Brain]]
+[[methodology-framework|Methodology Framework]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[model-composition-rules|Model Composition Rules]]
+[[methodology-adoption-guide|Methodology Adoption Guide]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[spec-driven-development|Spec-Driven Development]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[E003-artifact-type-system|Artifact Type System]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
+[[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]]
+[[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[epic-page-standards|Epic Page Standards]]
+[[methodology-evolution-history|Evolution — Methodology System]]
+[[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
+[[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+[[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[2026-04-09-directive-methodology-is-flexible-not-fixed|Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[methodology-system-map|Methodology System Map]]
+[[model-registry|Model Registry]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[model-wiki-design|Model — Wiki Design]]
+[[note-page-standards|Note Page Standards]]
+[[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[E004-portable-methodology-engine|Portable Methodology Engine]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

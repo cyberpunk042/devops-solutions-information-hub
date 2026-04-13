@@ -1,5 +1,7 @@
 ---
-title: "Tools And Platforms — Domain Overview"
+title: Tools And Platforms — Domain Overview
+aliases:
+  - "Tools And Platforms — Domain Overview"
 type: domain-overview
 domain: tools-and-platforms
 layer: spine
@@ -23,8 +25,8 @@ The tools-and-platforms domain covers the software tools, platforms, CLI utiliti
 > | Metric | Value |
 > |--------|-------|
 > | Concept pages | 10 |
-> | Related model pages | [[Model: MCP + CLI Integration]], [[Model: NotebookLM]], [[Model: Wiki Design]] |
-> | Decision pages | [[Decision: MCP vs CLI for Tool Integration]], [[Decision: Obsidian vs NotebookLM as Knowledge Interface]] |
+> | Related model pages | [[model-mcp-cli-integration|Model — MCP and CLI Integration]], [[model-notebooklm|Model — NotebookLM]], [[model-wiki-design|Model — Wiki Design]] |
+> | Decision pages | [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]], [[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]] |
 > | Related lessons | 4+ (Obsidian as Knowledge Infrastructure, NotebookLM as Grounded Research Engine, Skills Architecture Is Dominant Extension Pattern, etc.) |
 
 ## State of Knowledge
@@ -86,19 +88,19 @@ All pages assigned maturity. All styled with callout vocabulary. All have standa
 ## FAQ
 
 ### Q: What is AICP and why is it central to the ecosystem?
-AICP (AI Control Platform) is the backend routing layer that dispatches LLM requests to the right model — local inference for simple tasks, Claude API for complex ones. Its complexity scoring targets 80%+ token reduction from Claude API by offloading to local Ollama/LocalAI models. It's the cost-reduction engine for the entire fleet. See [[AICP]].
+AICP (AI Control Platform) is the backend routing layer that dispatches LLM requests to the right model — local inference for simple tasks, Claude API for complex ones. Its complexity scoring targets 80%+ token reduction from Claude API by offloading to local Ollama/LocalAI models. It's the cost-reduction engine for the entire fleet. See [[aicp|AICP]].
 
 ### Q: Should I use Obsidian or NotebookLM as the wiki frontend?
-They serve different purposes: Obsidian is the long-term structured knowledge vault (graph view, wikilinks, offline-first, git-backed). NotebookLM is the research validation layer (audio overviews, source-grounded Q&A, hallucination reduction). Use both: Obsidian for compounding knowledge, NotebookLM for cross-checking specific claims. See [[Obsidian Knowledge Vault]] and [[NotebookLM]].
+They serve different purposes: Obsidian is the long-term structured knowledge vault (graph view, wikilinks, offline-first, git-backed). NotebookLM is the research validation layer (audio overviews, source-grounded Q&A, hallucination reduction). Use both: Obsidian for compounding knowledge, NotebookLM for cross-checking specific claims. See [[obsidian-knowledge-vault|Obsidian Knowledge Vault]] and [[notebooklm|NotebookLM]].
 
 ### Q: What is the Obsidian Skills Ecosystem and how do the three layers fit together?
-Three independently developed skill sets compose into a complete Obsidian automation stack: kepano (format standards), axton (content generation in those formats), and pablo-mano (130+ CLI commands for programmatic vault control). Each layer builds on the one below. See [[Obsidian Skills Ecosystem]].
+Three independently developed skill sets compose into a complete Obsidian automation stack: kepano (format standards), axton (content generation in those formats), and pablo-mano (130+ CLI commands for programmatic vault control). Each layer builds on the one below. See [[obsidian-skills-ecosystem|Obsidian Skills Ecosystem]].
 
 ### Q: How does Plane connect to the AI agent ecosystem?
-Plane is the human-facing PM surface that syncs bidirectionally with OpenFleet's Mission Control. Agents write task status to BOARD.md; the orchestrator syncs that to Plane issues; humans update Plane; changes flow back to BOARD.md. It's the human↔agent task handoff layer. See the [[Plane]] page and [[OpenFleet]].
+Plane is the human-facing PM surface that syncs bidirectionally with OpenFleet's Mission Control. Agents write task status to BOARD.md; the orchestrator syncs that to Plane issues; humans update Plane; changes flow back to BOARD.md. It's the human↔agent task handoff layer. See the [[plane|Plane]] page and [[openfleet|OpenFleet]].
 
 ### Q: What is MCP vs CLI+Skills for tool integration, and which should I choose?
-CLI+Skills is 12x cheaper in token cost, more accurate for project-internal tooling, and simpler to debug. MCP is for external service bridges (cross-conversation tool discovery, ecosystem-wide integrations). Default to CLI+Skills; use MCP only when a tool needs to be available across unrelated conversations. See [[Decision: MCP vs CLI for Tool Integration]].
+CLI+Skills is 12x cheaper in token cost, more accurate for project-internal tooling, and simpler to debug. MCP is for external service bridges (cross-conversation tool discovery, ecosystem-wide integrations). Default to CLI+Skills; use MCP only when a tool needs to be available across unrelated conversations. See [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]].
 
 ## Relationships
 
@@ -111,9 +113,9 @@ CLI+Skills is 12x cheaper in token cost, more accurate for project-internal tool
 
 ## Backlinks
 
-[[AI Agents — Domain Overview]]
-[[Knowledge Systems — Domain Overview]]
-[[Automation — Domain Overview]]
-[[Devops — Domain Overview]]
-[[AI Models — Domain Overview]]
-[[Cross-Domain — Domain Overview]]
+[[ai-agents-domain-overview|AI Agents — Domain Overview]]
+[[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+[[automation-domain-overview|Automation — Domain Overview]]
+[[devops-domain-overview|Devops — Domain Overview]]
+[[ai-models-domain-overview|AI Models — Domain Overview]]
+[[cross-domain-domain-overview|Cross-Domain — Domain Overview]]

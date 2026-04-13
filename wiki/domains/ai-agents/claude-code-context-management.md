@@ -1,5 +1,7 @@
 ---
-title: "Claude Code Context Management"
+title: Claude Code Context Management
+aliases:
+  - "Claude Code Context Management"
 type: concept
 layer: 2
 maturity: growing
@@ -11,15 +13,15 @@ updated: 2026-04-10
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    url: "https://github.com/shanraisshan/claude-code-best-practice"
+    url: https://github.com/shanraisshan/claude-code-best-practice
     file: raw/articles/shanraisshanclaude-code-best-practice.md
-    title: "shanraisshan/claude-code-best-practice"
+    title: shanraisshan/claude-code-best-practice
     ingested: 2026-04-08
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=49V-5Ock8LU"
+    url: https://www.youtube.com/watch?v=49V-5Ock8LU
     file: raw/transcripts/18-claude-code-token-hacks-in-18-minutes.txt
-    title: "18 Claude Code Token Hacks in 18 Minutes"
+    title: 18 Claude Code Token Hacks in 18 Minutes
     ingested: 2026-04-08
 tags: [claude-code, context-window, token-management, CLAUDE-md, compact, prompt-caching, MCP-overhead, cost-optimization, memory, context-engineering]
 ---
@@ -155,48 +157,46 @@ The compaction lifecycle reveals something non-obvious: **context management is 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: src-shanraisshan-claude-code-best-practice
-- DERIVED FROM: src-token-hacks-claude-code
-- BUILDS ON: [[Claude Code Skills]]
-- BUILDS ON: [[Claude Code Best Practices]]
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Memory Lifecycle Management]]
-- RELATES TO: [[Wiki Knowledge Graph]]
-- CONSTRAINS: [[Wiki Ingestion Pipeline]]
-- CONSTRAINS: [[LLM Knowledge Linting]]
-- RELATES TO: [[Skills Architecture Patterns]]
-- EXTENDS: [[Claude Code]]
+- DERIVED FROM: [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+- DERIVED FROM: [[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+- BUILDS ON: [[claude-code-skills|Claude Code Skills]]
+- BUILDS ON: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- CONSTRAINS: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- CONSTRAINS: [[llm-knowledge-linting|LLM Knowledge Linting]]
+- RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]
+- EXTENDS: [[claude-code|Claude Code]]
 
 ## Backlinks
 
-[[src-shanraisshan-claude-code-best-practice]]
-[[src-token-hacks-claude-code]]
-[[Claude Code Skills]]
-[[Claude Code Best Practices]]
-[[LLM Wiki Pattern]]
-[[Memory Lifecycle Management]]
-[[Wiki Knowledge Graph]]
-[[Wiki Ingestion Pipeline]]
-[[LLM Knowledge Linting]]
-[[Skills Architecture Patterns]]
-[[Claude Code]]
-[[Agent Orchestration Patterns]]
-[[CLI Tools Beat MCP for Token Efficiency]]
-[[Context-Aware Tool Loading]]
-[[Decision: MCP vs CLI for Tool Integration]]
-[[Design.md Pattern]]
-[[Model: Claude Code]]
-[[Model: MCP and CLI Integration]]
-[[Never Present Speculation as Fact]]
-[[Synthesis: 18 Claude Code Token Hacks in 18 Minutes]]
-[[Synthesis: Claude Code Accuracy Tips]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Synthesis: Playwright CLI vs MCP — Automate QA with Less Tokens]]
-[[Synthesis: Playwright MCP for Visual Development Testing]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
+[[claude-code-skills|Claude Code Skills]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[llm-knowledge-linting|LLM Knowledge Linting]]
+[[skills-architecture-patterns|Skills Architecture Patterns]]
+[[claude-code|Claude Code]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
+[[design-md-pattern|Design.md Pattern]]
+[[model-claude-code|Model — Claude Code]]
+[[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[never-present-speculation-as-fact|Never Present Speculation as Fact]]
+[[src-claude-code-accuracy-tips|Synthesis — Claude Code Accuracy Tips]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]]
+[[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]

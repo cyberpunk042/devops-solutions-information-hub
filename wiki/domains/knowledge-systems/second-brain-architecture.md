@@ -1,5 +1,7 @@
 ---
-title: "Second Brain Architecture"
+title: Second Brain Architecture
+aliases:
+  - "Second Brain Architecture"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-second-brain-research
     type: article
     file: raw/articles/second-brain-pkm-research.md
-    title: "Second Brain / PKM Research"
+    title: Second Brain / PKM Research
     ingested: 2026-04-08
   - id: src-zettelkasten-basb
     type: article
-    url: "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/"
-    title: "Combining Zettelkasten and Building a Second Brain"
+    url: https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/
+    title: Combining Zettelkasten and Building a Second Brain
     ingested: 2026-04-08
 tags: [second-brain, pkm, zettelkasten, para, knowledge-management, obsidian, progressive-distillation, atomic-notes]
 ---
@@ -80,7 +82,7 @@ The practical workflow at project start: create a structure note in the Zettelka
 | PKM Principle | This Wiki's Implementation |
 |---|---|
 | Atomic notes (Zettelkasten) | One concept per page; `wiki/domains/` pages |
-| Bidirectional links (Zettelkasten) | `## Relationships` section with typed verbs; Obsidian `[[wikilinks]]` |
+| Bidirectional links (Zettelkasten) | `## Relationships` section with typed verbs; Obsidian ``[[wikilinks]]`` |
 | Heterarchical network (Zettelkasten) | Cross-domain relationships; no strict folder hierarchy inside domains |
 | Raw capture (PARA Capture) | `raw/` — all source material kept permanently for provenance |
 | Organize (PARA) | `wiki/sources/` for synthesis of individual sources |
@@ -137,41 +139,41 @@ This is not a marginal efficiency gain — it is a category change. It means the
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[LLM Wiki Pattern]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
-- RELATES TO: [[Obsidian Knowledge Vault]]
-- IMPLEMENTS: [[Memory Lifecycle Management]]
-- ENABLES: [[Knowledge Evolution Pipeline]]
-- BUILDS ON: [[Zettelkasten Methodology]]
-- BUILDS ON: [[PARA Methodology]]
-- FEEDS INTO: [[Wiki Knowledge Graph]]
-- COMPARES TO: [[LLM Wiki vs RAG]]
-- USED BY: [[Research Pipeline Orchestration]]
+- RELATES TO: [[llm-wiki-pattern|LLM Wiki Pattern]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+- RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+- IMPLEMENTS: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+- BUILDS ON: [[zettelkasten-methodology|Zettelkasten Methodology]]
+- BUILDS ON: [[para-methodology|PARA Methodology]]
+- FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- COMPARES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- USED BY: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 
 ## Backlinks
 
-[[LLM Wiki Pattern]]
-[[Wiki Ingestion Pipeline]]
-[[Obsidian Knowledge Vault]]
-[[Memory Lifecycle Management]]
-[[Knowledge Evolution Pipeline]]
-[[Zettelkasten Methodology]]
-[[PARA Methodology]]
-[[Wiki Knowledge Graph]]
-[[LLM Wiki vs RAG]]
-[[Research Pipeline Orchestration]]
-[[Cross-Domain Patterns]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
-[[Lesson: Schema Is the Real Product — Not the Content]]
-[[Methodology Framework]]
-[[Model: Second Brain]]
-[[Progressive Distillation]]
-[[The Wiki Maintenance Problem Is Solved by LLM Automation]]
-[[Wiki Backlog Pattern]]
+[[llm-wiki-pattern|LLM Wiki Pattern]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
+[[memory-lifecycle-management|Memory Lifecycle Management]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[zettelkasten-methodology|Zettelkasten Methodology]]
+[[para-methodology|PARA Methodology]]
+[[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[cross-domain-patterns|Cross-Domain Patterns]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[knowledge-systems-is-foundational-domain|Lesson — Knowledge Systems Is the Foundational Domain for the Entire Wiki]]
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+[[methodology-framework|Methodology Framework]]
+[[model-second-brain|Model — Second Brain]]
+[[progressive-distillation|Progressive Distillation]]
+[[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]

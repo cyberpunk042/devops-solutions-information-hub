@@ -1,5 +1,7 @@
 ---
-title: "Three Classes of Methodology Output"
+title: Three Classes of Methodology Output
+aliases:
+  - "Three Classes of Methodology Output"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -90,27 +92,27 @@ This lesson applies when:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[Methodology Artifact Taxonomy]]
-- DERIVED FROM: [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-- DERIVED FROM: [[Construction and Testing Artifacts — Standards and Guide]]
-- RELATES TO: [[Model: Methodology]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- DERIVED FROM: [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+- DERIVED FROM: [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+- DERIVED FROM: [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[Methodology Artifact Taxonomy]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
-[[Construction and Testing Artifacts — Standards and Guide]]
-[[Model: Methodology]]
-[[Stage-Gate Methodology]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
+[[model-methodology|Model — Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]

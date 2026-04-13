@@ -1,5 +1,7 @@
 ---
-title: "Hooks Lifecycle Architecture"
+title: Hooks Lifecycle Architecture
+aliases:
+  - "Hooks Lifecycle Architecture"
 type: concept
 domain: ai-agents
 status: synthesized
@@ -11,9 +13,9 @@ maturity: growing
 sources:
   - id: src-claude-code-hooks-reference
     type: documentation
-    url: "https://code.claude.com/docs/en/hooks"
+    url: https://code.claude.com/docs/en/hooks
     file: raw/articles/claude-code-hooks-reference.md
-    title: "Claude Code Hooks Reference — Full Research"
+    title: Claude Code Hooks Reference — Full Research
     ingested: 2026-04-09
 tags: [hooks, lifecycle, claude-code, pre-tool-use, post-tool-use, session-hooks, composition, stage-gating, context-injection, blocking-pattern, reverse-hook, subagent, compaction, harness-engineering]
 ---
@@ -131,19 +133,19 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 ## Answered Open Questions
 
 > [!example]- Can a PreToolUse hook read the current stage from an external state file for dynamic blocking decisions?
-> Resolved in [[Decision: Hooks Design Decisions]]. Yes -- command handlers have full filesystem access. Reading task frontmatter to check `current_stage` and blocking writes accordingly is within the documented pattern. Context Mode validates this exact approach.
+> Resolved in [[hooks-design-decisions|Decision — Hooks Design Decisions]]. Yes -- command handlers have full filesystem access. Reading task frontmatter to check `current_stage` and blocking writes accordingly is within the documented pattern. Context Mode validates this exact approach.
 
 > [!example]- How do hooks interact with `--dangerously-skip-permissions`?
-> Resolved in [[Decision: Hooks Design Decisions]]. Policy-scope hooks SHOULD survive the flag. If they don't, treat it as a platform bug to report. Policy hooks are organization-enforced and should not be bypassable.
+> Resolved in [[hooks-design-decisions|Decision — Hooks Design Decisions]]. Policy-scope hooks SHOULD survive the flag. If they don't, treat it as a platform bug to report. Policy hooks are organization-enforced and should not be bypassable.
 
 > [!example]- What is the hook invocation latency budget for command handlers?
-> Resolved in [[Decision: Hooks Design Decisions]]. Target <=50ms per handler on hot-path hooks (PreToolUse). For handlers exceeding this budget (database lookups, network calls), use `async: true` for fire-and-forget.
+> Resolved in [[hooks-design-decisions|Decision — Hooks Design Decisions]]. Target <=50ms per handler on hot-path hooks (PreToolUse). For handlers exceeding this budget (database lookups, network calls), use `async: true` for fire-and-forget.
 
 > [!example]- Can agent-type hook handlers trigger further hooks (recursive hook chains)?
-> Resolved in [[Decision: Hooks Design Decisions]]. Depth limit of 1. Agent handlers should execute in a context where hooks are suspended, or the runtime should enforce the limit. Prevents unbounded execution.
+> Resolved in [[hooks-design-decisions|Decision — Hooks Design Decisions]]. Depth limit of 1. Agent handlers should execute in a context where hooks are suspended, or the runtime should enforce the limit. Prevents unbounded execution.
 
 > [!example]- Is there a hook for plan generation specifically?
-> Resolved in [[Decision: Hooks Design Decisions]]. No dedicated PlanGenerated event. Use UserPromptSubmit with a `prompt` handler -- Plannotator validates this pattern. PostToolUse or Stop hooks can intercept plan output if needed.
+> Resolved in [[hooks-design-decisions|Decision — Hooks Design Decisions]]. No dedicated PlanGenerated event. Use UserPromptSubmit with a `prompt` handler -- Plannotator validates this pattern. PostToolUse or Stop hooks can intercept plan output if needed.
 
 ### How This Connects — Navigate From Here
 
@@ -151,39 +153,39 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- EXTENDS: [[Harness Engineering]]
-- IMPLEMENTS: [[Task Lifecycle Stage-Gating]]
-- ENABLES: [[Context-Aware Tool Loading]]
-- RELATES TO: [[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-- RELATES TO: [[Claude Code Best Practices]]
-- RELATES TO: [[Claude Code]]
-- RELATES TO: [[Plannotator — Interactive Plan & Code Review for AI Agents]]
-- FEEDS INTO: [[Per-Role Command Architecture]]
-- FEEDS INTO: [[Design.md Pattern]]
-- BUILDS ON: [[Agent Orchestration Patterns]]
+- EXTENDS: [[harness-engineering|Harness Engineering]]
+- IMPLEMENTS: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+- ENABLES: [[context-aware-tool-loading|Context-Aware Tool Loading]]
+- RELATES TO: [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]]
+- RELATES TO: [[claude-code|Claude Code]]
+- RELATES TO: [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+- FEEDS INTO: [[per-role-command-architecture|Per-Role Command Architecture]]
+- FEEDS INTO: [[design-md-pattern|Design.md Pattern]]
+- BUILDS ON: [[agent-orchestration-patterns|Agent Orchestration Patterns]]
 
 ## Backlinks
 
-[[Harness Engineering]]
-[[Task Lifecycle Stage-Gating]]
-[[Context-Aware Tool Loading]]
-[[Synthesis: Context Mode — MCP Sandbox for Context Saving]]
-[[Claude Code Best Practices]]
-[[Claude Code]]
-[[Plannotator — Interactive Plan & Code Review for AI Agents]]
-[[Per-Role Command Architecture]]
-[[Design.md Pattern]]
-[[Agent Orchestration Patterns]]
-[[Claude Code Standards — What Good Agent Configuration Looks Like]]
-[[Decision: Extension System Operational Decisions]]
-[[Decision: Hooks Design Decisions]]
-[[Decision: Per-Role Command Design Decisions]]
-[[Model: Claude Code]]
-[[Model: Skills, Commands, and Hooks]]
-[[Synthesis: Claude Code Best Practice (shanraisshan)]]
+[[harness-engineering|Harness Engineering]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code|Claude Code]]
+[[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[per-role-command-architecture|Per-Role Command Architecture]]
+[[design-md-pattern|Design.md Pattern]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
+[[extension-system-operational-decisions|Decision — Extension System Operational Decisions]]
+[[hooks-design-decisions|Decision — Hooks Design Decisions]]
+[[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]

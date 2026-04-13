@@ -1,5 +1,7 @@
 ---
-title: "Plannotator — Interactive Plan & Code Review for AI Agents"
+title: Plannotator — Interactive Plan & Code Review for AI Agents
+aliases:
+  - "Plannotator — Interactive Plan & Code Review for AI Agents"
 type: source-synthesis
 layer: 1
 maturity: growing
@@ -61,28 +63,28 @@ Plannotator is an open-source tool that injects a human-in-the-loop UI between a
 > | Direction | Go To |
 > |-----------|-------|
 > | **What principles derive from this?** | Check FEEDS INTO relationships above |
-> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit?** | [[Methodology System Map]] |
+> | **What is the Goldilocks framework?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Plan Execute Review Cycle]] (provides the tooling layer that makes plan-gate-review a concrete workflow)
-- EXTENDS: [[Agent Orchestration Patterns]] (adds structured human oversight as a first-class hook in multi-step agent flows)
-- RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]] (operationalizes the speculate → feedback → iterate loop with UI tooling)
-- RELATES TO: [[Claude Code Best Practices]] (plan-mode review is a best practice; Plannotator makes it frictionless)
-- RELATES TO: [[Claude Code Skills]] (integrates as a Claude Code plugin, complements slash-command patterns)
-- FEEDS INTO: [[Always Plan Before Executing]] (provides tooling that enforces the planning gate lesson)
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]] (provides the tooling layer that makes plan-gate-review a concrete workflow)
+- EXTENDS: [[agent-orchestration-patterns|Agent Orchestration Patterns]] (adds structured human oversight as a first-class hook in multi-step agent flows)
+- RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] (operationalizes the speculate → feedback → iterate loop with UI tooling)
+- RELATES TO: [[claude-code-best-practices|Claude Code Best Practices]] (plan-mode review is a best practice; Plannotator makes it frictionless)
+- RELATES TO: [[claude-code-skills|Claude Code Skills]] (integrates as a Claude Code plugin, complements slash-command patterns)
+- FEEDS INTO: [[always-plan-before-executing|Always Plan Before Executing]] (provides tooling that enforces the planning gate lesson)
 
 ## Backlinks
 
-[[Plan Execute Review Cycle]]
-[[Agent Orchestration Patterns]]
-[[Scaffold → Foundation → Infrastructure → Features]]
-[[Claude Code Best Practices]]
-[[Claude Code Skills]]
-[[Always Plan Before Executing]]
-[[Decision: Hooks Design Decisions]]
-[[Decision: Per-Role Command Design Decisions]]
-[[Hooks Lifecycle Architecture]]
-[[Model: Skills, Commands, and Hooks]]
-[[Per-Role Command Architecture]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[claude-code-best-practices|Claude Code Best Practices]]
+[[claude-code-skills|Claude Code Skills]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[hooks-design-decisions|Decision — Hooks Design Decisions]]
+[[per-role-command-design-decisions|Decision — Per-Role Command Design Decisions]]
+[[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[per-role-command-architecture|Per-Role Command Architecture]]

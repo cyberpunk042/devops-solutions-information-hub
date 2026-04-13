@@ -4,15 +4,15 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ### Start Here
 
-1. [[Methodology Framework]] — The meta-system for defining, selecting, and composing methodologies
-2. [[Skyscraper, Pyramid, Mountain]] — Architectural quality analogy for structural states
+1. [[methodology-framework|Methodology Framework]] — The meta-system for defining, selecting, and composing methodologies
+2. [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — Architectural quality analogy for structural states
 
 ### Pages by Theme
 
 | Page | What it covers |
 |------|---------------|
-| [[Methodology Framework]] | Meta-methodology: composable, recursive, transferable |
-| [[Skyscraper, Pyramid, Mountain]] | Three structural states of a codebase: fragile, solid, organic |
+| [[methodology-framework|Methodology Framework]] | Meta-methodology: composable, recursive, transferable |
+| [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] | Three structural states of a codebase: fragile, solid, organic |
 
 ## Pages
 
@@ -21,10 +21,10 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [Artifact Chains by Methodology Model](artifact-chains-by-model.md) — Complete artifact chain documentation for all 9 methodology models
 - [Construction and Testing Artifacts — Standards and Guide](construction-and-testing-artifacts.md) — Guide to the artifacts produced during the Scaffold, Implement, and Test stages — the stages where THINGS GET BUILT A...
 - [Deployment, Closure, and Monitoring Artifacts — Standards and Guide](deployment-closure-monitoring-artifacts.md) — Guide to the artifacts produced AFTER implementation — deployment (how to ship), closure (what was learned), and moni...
-- [Artifact Chain: Infrastructure/IaC Domain](domain-chain-infrastructure.md) — Artifact chain resolution for Infrastructure as Code projects (devops-control-plane, Terraform, Docker, CI/CD)
-- [Artifact Chain: Knowledge/Evolution Domain](domain-chain-knowledge.md) — Artifact chain resolution for knowledge work — source ingestion, synthesis, evolution, and domain curation
-- [Artifact Chain: Python/Wiki Domain](domain-chain-python-wiki.md) — Complete artifact chain resolution for Python tool projects and knowledge wikis (the research wiki itself)
-- [Artifact Chain: TypeScript/Node Domain](domain-chain-typescript.md) — Complete artifact chain resolution for TypeScript/Node
+- [Artifact Chain — Infrastructure-IaC Domain](domain-chain-infrastructure.md) — Artifact chain resolution for Infrastructure as Code projects (devops-control-plane, Terraform, Docker, CI/CD)
+- [Artifact Chain — Knowledge-Evolution Domain](domain-chain-knowledge.md) — Artifact chain resolution for knowledge work — source ingestion, synthesis, evolution, and domain curation
+- [Artifact Chain — Python-Wiki Domain](domain-chain-python-wiki.md) — Complete artifact chain resolution for Python tool projects and knowledge wikis (the research wiki itself)
+- [Artifact Chain — TypeScript-Node Domain](domain-chain-typescript.md) — Complete artifact chain resolution for TypeScript/Node
 - [E003 Artifact Type System — Design Document](e003-artifact-type-system-design.md) — Design decisions and architecture for the Artifact Type System
 - [E003 Artifact Type System — Requirements Spec](e003-artifact-type-system-requirements.md) — Formal requirements for the Artifact Type System — the foundation epic of the Methodology Standards Initiative
 - [Global Standards Adherence — Engineering Principles the Wiki Follows](global-standards-adherence.md) — The wiki and its methodology framework adhere to recognized engineering standards — not by copying them wholesale, bu...
@@ -41,10 +41,11 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [Readiness vs Progress — Two-Dimensional Work Tracking](readiness-vs-progress.md) — Work tracking requires TWO independent dimensions: READINESS (is this defined well enough to start?) and PROGRESS (ho...
 - [Requirements and Design Artifacts — Standards and Guide](requirements-and-design-artifacts.md) — Complete guide to the artifacts produced during the Document and Design stages — the specifications that CONSTRAIN al...
 - [SDLC Customization Framework — Phases, Scale, and Chain Selection](sdlc-customization-framework.md) — Projects don't all need the same SDLC rigor
+- [Second Brain Integration System — Full Chain Requirements](second-brain-integration-requirements.md) — Complete requirements spec for the second brain integration system — covering the FULL chain from project init throug...
 - [Skyscraper, Pyramid, Mountain](skyscraper-pyramid-mountain.md) — Skyscraper, Pyramid, Mountain is an architectural quality analogy that describes the three structural states a codeba...
 - [Three PM Levels — Wiki to Fleet to Full Tool](three-pm-levels.md) — Project management for AI-agent-driven work operates at three levels, each wrapping the previous: L1 (Wiki LLM — in-r...
-- [Operations Plan: Wiki Post-Ingestion Validation](wiki-post-ingestion-operations-plan.md) — Sequential operations plan for validating the wiki after any content change
+- [Operations Plan — Wiki Post-Ingestion Validation](wiki-post-ingestion-operations-plan.md) — Sequential operations plan for validating the wiki after any content change
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `framework`, `architecture`, `sdlc`, `ai-agents`, `second-brain`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`, `type-system`, `requirements`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `artifact-chain`, `framework`, `second-brain`, `architecture`, `requirements`, `sdlc`, `ai-agents`, `integration`, `models`, `reference`, `stage-gate`, `evolution`, `wiki`, `design`, `artifact-types`, `e003`

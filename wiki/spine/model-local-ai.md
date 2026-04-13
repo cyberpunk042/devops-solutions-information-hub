@@ -1,5 +1,8 @@
 ---
-title: "Model: Local AI ($0 Target)"
+title: Model — Local AI ($0 Target)
+aliases:
+  - "Model — Local AI ($0 Target)"
+  - "Model: Local AI ($0 Target)"
 type: concept
 domain: cross-domain
 layer: spine
@@ -12,11 +15,10 @@ sources: []
 tags: [model, concept, spine, local-ai, aicp, zero-cost, backend-routing, complexity-scoring, vram]
 ---
 
-# Model: Local AI ($0 Target)
-
+# Model — Local AI ($0 Target)
 ## Summary
 
-The Local AI model describes the ecosystem's strategy for reducing Claude API costs toward zero by routing routine operations to locally-run quantized models. [[AICP]] (AI Control Platform) is the orchestration layer: it scores task complexity, checks circuit breaker states, and routes deterministically-validatable tasks (status checks, index rebuilds, manifest regeneration, lint) to LocalAI, while reserving Claude for complex reasoning (architecture decisions, deep synthesis, security review). The current hardware baseline (8GB VRAM) supports Qwen3 and Gemma4 model families with Stages 1 and 2 of the 5-stage LocalAI independence roadmap complete. Stage 3 (progressive offload targeting 80%+ Claude token reduction) is blocked pending the 8GB → 19GB VRAM hardware upgrade, but the routing infrastructure is already operational.
+The Local AI model describes the ecosystem's strategy for reducing Claude API costs toward zero by routing routine operations to locally-run quantized models. [[aicp|AICP]] (AI Control Platform) is the orchestration layer: it scores task complexity, checks circuit breaker states, and routes deterministically-validatable tasks (status checks, index rebuilds, manifest regeneration, lint) to LocalAI, while reserving Claude for complex reasoning (architecture decisions, deep synthesis, security review). The current hardware baseline (8GB VRAM) supports Qwen3 and Gemma4 model families with Stages 1 and 2 of the 5-stage LocalAI independence roadmap complete. Stage 3 (progressive offload targeting 80%+ Claude token reduction) is blocked pending the 8GB → 19GB VRAM hardware upgrade, but the routing infrastructure is already operational.
 
 ## Key Insights
 
@@ -36,7 +38,7 @@ The Local AI model describes the ecosystem's strategy for reducing Claude API co
 
 ### The 5-Stage LocalAI Independence Roadmap
 
-[[AICP]] defines a concrete roadmap with current status:
+[[aicp|AICP]] defines a concrete roadmap with current status:
 
 > [!info] Roadmap status
 >
@@ -52,7 +54,7 @@ Stage 1 and 2 are done. Stage 3 is the hardware-blocked inflection point. Until 
 
 ### The Routing Decision Framework
 
-The [[Decision: Local Model vs Cloud API for Routine Operations]] formalizes the routing logic:
+The [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]] formalizes the routing logic:
 
 > [!tip] Route to LocalAI when:
 > - Output is deterministically validatable (e.g., `tools.validate` will catch errors)
@@ -124,11 +126,11 @@ The VRAM constraint is not an architectural flaw — it is a deliberate design c
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[AICP]] | concept | The orchestration and routing platform |
-| [[Local LLM Quantization]] | concept | How large models run on consumer hardware |
-| [[Decision: Local Model vs Cloud API for Routine Operations]] | decision | The formal routing decision framework |
-| [[Gateway-Centric Routing]] | pattern | Architectural pattern for traffic routing |
-| [[Deterministic Shell, LLM Core]] | pattern | Wrapper pattern keeping LLM inside deterministic orchestration |
+| [[aicp|AICP]] | concept | The orchestration and routing platform |
+| [[local-llm-quantization|Local LLM Quantization]] | concept | How large models run on consumer hardware |
+| [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]] | decision | The formal routing decision framework |
+| [[gateway-centric-routing|Gateway-Centric Routing]] | pattern | Architectural pattern for traffic routing |
+| [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | pattern | Wrapper pattern keeping LLM inside deterministic orchestration |
 
 ### Lessons Learned
 
@@ -188,27 +190,27 @@ The VRAM constraint is not an architectural flaw — it is a deliberate design c
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[AICP]]
-- BUILDS ON: [[Local LLM Quantization]]
-- FEEDS INTO: [[Model: Automation and Pipelines]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
-- RELATES TO: [[Model: SFIF and Architecture]]
-- IMPLEMENTS: [[Decision: Local Model vs Cloud API for Routine Operations]]
-- COMPARES TO: [[Gateway-Centric Routing]]
+- BUILDS ON: [[aicp|AICP]]
+- BUILDS ON: [[local-llm-quantization|Local LLM Quantization]]
+- FEEDS INTO: [[model-automation-pipelines|Model — Automation and Pipelines]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- RELATES TO: [[model-sfif-architecture|Model — SFIF and Architecture]]
+- IMPLEMENTS: [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+- COMPARES TO: [[gateway-centric-routing|Gateway-Centric Routing]]
 
 ## Backlinks
 
-[[AICP]]
-[[Local LLM Quantization]]
-[[Model: Automation and Pipelines]]
-[[Model: Quality and Failure Prevention]]
-[[Model: SFIF and Architecture]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Gateway-Centric Routing]]
-[[Model: NotebookLM]]
+[[aicp|AICP]]
+[[local-llm-quantization|Local LLM Quantization]]
+[[model-automation-pipelines|Model — Automation and Pipelines]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-sfif-architecture|Model — SFIF and Architecture]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[gateway-centric-routing|Gateway-Centric Routing]]
+[[model-notebooklm|Model — NotebookLM]]

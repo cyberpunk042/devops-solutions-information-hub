@@ -1,5 +1,7 @@
 ---
-title: "Backlog Hierarchy Rules"
+title: Backlog Hierarchy Rules
+aliases:
+  - "Backlog Hierarchy Rules"
 type: concept
 layer: 2
 domain: devops
@@ -15,12 +17,12 @@ sources:
   - id: src-openarms-methodology-yaml-full
     type: documentation
     file: raw/articles/openarms-methodology-yaml-full.md
-    title: "OpenArms Methodology YAML + Agent Directive — Full Reference"
+    title: OpenArms Methodology YAML + Agent Directive — Full Reference
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
 tags: [backlog, epic, module, task, hierarchy, readiness, status-propagation, wiki-backlog, openarms, openfleet, task-management, decomposition, upward-aggregation]
 ---
@@ -140,7 +142,7 @@ Tasks are the only items that can be automatically closed (status = `done`). Whe
 
 **Rule 4: READINESS and PROGRESS are TWO independent fields. Both flow UPWARD. Neither is set manually on containers.**
 
-Readiness = definition completeness (is it DEFINED enough?). Progress = execution completeness (how far is the WORK?). They are independent dimensions that advance in parallel and converge toward the end. See [[Readiness vs Progress — Two-Dimensional Work Tracking]] for the full model.
+Readiness = definition completeness (is it DEFINED enough?). Progress = execution completeness (how far is the WORK?). They are independent dimensions that advance in parallel and converge toward the end. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] for the full model.
 
 ```
 epic_readiness = mean(all_task_readiness_in_epic)     # Is the epic DEFINED?
@@ -404,16 +406,16 @@ MILESTONE (delivery target)
 ## Answered Open Questions
 
 > [!example]- Sub-module readiness calculation?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Use simple average of all descendant tasks. No intermediate sub-module averaging — flatten to leaf tasks.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Use simple average of all descendant tasks. No intermediate sub-module averaging — flatten to leaf tasks.
 
 > [!example]- Review trigger in solo-agent context?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. The agent sets the epic/module to `review` status, logs the transition, and stops. The human discovers pending reviews via `pipeline status` or backlog commands.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. The agent sets the epic/module to `review` status, logs the transition, and stops. The human discovers pending reviews via `pipeline status` or backlog commands.
 
 > [!example]- Should higher-complexity tasks be weighted in readiness?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. No weighting. If a task is too large relative to siblings, decompose it into smaller tasks instead of adding weight to the formula.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. No weighting. If a task is too large relative to siblings, decompose it into smaller tasks instead of adding weight to the formula.
 
 > [!example]- New gap task reduces parent readiness?
-> Resolved in [[Decision: Stage-Gate Operational Decisions]]. Yes, this is correct behavior. Adding a task with readiness 0 honestly lowers the parent's readiness. Honesty over inflation — the gap was always there, the readiness was previously overstated.
+> Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Yes, this is correct behavior. Adding a task with readiness 0 honestly lowers the parent's readiness. Honesty over inflation — the gap was always there, the readiness was previously overstated.
 
 ### How This Connects — Navigate From Here
 
@@ -421,43 +423,43 @@ MILESTONE (delivery target)
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Stage-Gate Methodology]] (the hierarchy enforces stage-gating at the container level)
-- BUILDS ON: [[Wiki Backlog Pattern]] (the file-based hierarchy IS the wiki backlog)
-- IMPLEMENTS: [[Plan Execute Review Cycle]] (the review ceiling for epics/modules IS the review phase)
-- USED BY: [[Task Type Artifact Matrix]] (epic and module types follow all 5 stages; the hierarchy rules define how they relate)
-- USED BY: [[Execution Modes and End Conditions]] (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)
-- RELATES TO: [[Four-Project Ecosystem]] (all four projects organize work in this hierarchy — Plane issues in OpenFleet, wiki backlog in OpenArms)
-- RELATES TO: [[Spec-Driven Development]] (epics/modules always have design docs; their stage requirements enforce spec-first)
-- FEEDS INTO: [[Immune System Rules]] (hierarchy violations — manual readiness, premature done status — are detectable anti-patterns)
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]] (the hierarchy enforces stage-gating at the container level)
+- BUILDS ON: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (the file-based hierarchy IS the wiki backlog)
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]] (the review ceiling for epics/modules IS the review phase)
+- USED BY: [[task-type-artifact-matrix|Task Type Artifact Matrix]] (epic and module types follow all 5 stages; the hierarchy rules define how they relate)
+- USED BY: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] (the work loop picks tasks from the hierarchy; end conditions reference backlog-empty)
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]] (all four projects organize work in this hierarchy — Plane issues in OpenFleet, wiki backlog in OpenArms)
+- RELATES TO: [[spec-driven-development|Spec-Driven Development]] (epics/modules always have design docs; their stage requirements enforce spec-first)
+- FEEDS INTO: [[immune-system-rules|Immune System Rules]] (hierarchy violations — manual readiness, premature done status — are detectable anti-patterns)
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Wiki Backlog Pattern]]
-[[Plan Execute Review Cycle]]
-[[Task Type Artifact Matrix]]
-[[Execution Modes and End Conditions]]
-[[Four-Project Ecosystem]]
-[[Spec-Driven Development]]
-[[Immune System Rules]]
-[[Artifact Chains by Methodology Model]]
-[[Decision: Execution Mode Edge Cases]]
-[[Decision: Stage-Gate Operational Decisions]]
-[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
-[[Epic Page Standards]]
-[[Frontmatter Field Reference — Complete Parameter Documentation]]
-[[Initiation and Planning Artifacts — Standards and Guide]]
-[[Methodology Framework]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Model Composition Rules]]
-[[Model: Methodology]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[SDLC Rules and Structure — Customizable Project Lifecycle]]
-[[Task Page Standards]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[spec-driven-development|Spec-Driven Development]]
+[[immune-system-rules|Immune System Rules]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
+[[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
+[[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
+[[epic-page-standards|Epic Page Standards]]
+[[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
+[[methodology-framework|Methodology Framework]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-composition-rules|Model Composition Rules]]
+[[model-methodology|Model — Methodology]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[task-page-standards|Task Page Standards]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]

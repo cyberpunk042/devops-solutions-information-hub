@@ -1,5 +1,7 @@
 ---
-title: "Immune System Rules"
+title: Immune System Rules
+aliases:
+  - "Immune System Rules"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
     file: ../openfleet/CLAUDE.md
-    title: "OpenFleet — Local Project Documentation"
+    title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, immune-system, post-mortem, doctor.py, operational-rules, behavioral-security, 3-strike, anomaly-detection, agent-safety, openfleet]
 ---
@@ -119,42 +121,42 @@ This is a model for how operational knowledge should flow in any multi-project e
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
 - DERIVED FROM: [[devops-control-plane]]
-- IMPLEMENTS: [[OpenFleet]]
-- RELATES TO: [[Harness Engineering]]
-- RELATES TO: [[AICP]]
-- ENABLES: [[Plan Execute Review Cycle]]
-- RELATES TO: [[Always Plan Before Executing]]
-- BUILDS ON: [[Rework Prevention]]
+- IMPLEMENTS: [[openfleet|OpenFleet]]
+- RELATES TO: [[harness-engineering|Harness Engineering]]
+- RELATES TO: [[aicp|AICP]]
+- ENABLES: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- RELATES TO: [[always-plan-before-executing|Always Plan Before Executing]]
+- BUILDS ON: [[rework-prevention|Rework Prevention]]
 
 ## Backlinks
 
-[[devops-control-plane]]
-[[OpenFleet]]
-[[Harness Engineering]]
-[[AICP]]
-[[Plan Execute Review Cycle]]
-[[Always Plan Before Executing]]
-[[Rework Prevention]]
-[[Backlog Hierarchy Rules]]
-[[Decision: Quality Tier Operational Decisions]]
-[[Deterministic Shell, LLM Core]]
-[[Execution Modes and End Conditions]]
-[[Four-Project Ecosystem]]
-[[Infrastructure Must Be Reproducible, Not Manual]]
-[[Infrastructure as Code Patterns]]
-[[Model: Ecosystem Architecture]]
-[[Model: Quality and Failure Prevention]]
-[[Never Skip Stages Even When Told to Continue]]
-[[Never Synthesize from Descriptions Alone]]
-[[Shallow Ingestion Is Systemic, Not Isolated]]
-[[Stage-Gate Methodology]]
-[[Task Lifecycle Stage-Gating]]
-[[Task Type Artifact Matrix]]
-[[The Agent Must Practice What It Documents]]
+[[devops-control-plane|devops-control-plane]]
+[[openfleet|OpenFleet]]
+[[harness-engineering|Harness Engineering]]
+[[aicp|AICP]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[always-plan-before-executing|Always Plan Before Executing]]
+[[rework-prevention|Rework Prevention]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[quality-tier-operational-decisions|Decision — Quality Tier Operational Decisions]]
+[[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]

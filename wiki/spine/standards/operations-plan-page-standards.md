@@ -1,5 +1,7 @@
 ---
-title: "Operations Plan Page Standards"
+title: Operations Plan Page Standards
+aliases:
+  - "Operations Plan Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -44,7 +46,7 @@ Standards for operations plan pages — sequential deterministic checklists that
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Operations Plan: Wiki Post-Ingestion Validation]] — 90 lines
+> [!success] [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]] — 90 lines
 >
 > - 6 sequential steps, each with all 4 components
 > - Prerequisites as checkboxes with verification commands
@@ -63,19 +65,28 @@ Standards for operations plan pages — sequential deterministic checklists that
 > | Template | `operations-plan.md` | `methodology/design-plan.md` |
 > | Wiki type | `operations-plan` | `concept` |
 
+### Annotated Exemplar: [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+
+> [!example]- What makes a good operations plan
+>
+> **17 steps in 7 phases:** Each step has: Action (what to do), Command (exact CLI), Expected output (what success looks like), Validation (how to verify). A "dumb agent" can follow these mechanically.
+> **Phases group related steps:** Discovery → Identity → Methodology → Standards → Work Loop → Feedback → Mode Selection. Reader can enter at their current phase.
+> **Prerequisites as checklist:** `- [ ] Second brain accessible` `- [ ] Python available` — verifiable before starting.
+> **Completion criteria:** Observable behaviors: "identity profile declared," "at least one contribution back." Not "plan followed."
+
 ### Template
 
 `wiki/config/templates/operations-plan.md` — scaffold via `python3 -m tools.pipeline scaffold operations-plan "Title"`
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Stage-Gate Methodology]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]

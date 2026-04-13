@@ -1,5 +1,7 @@
 ---
-title: "WSL2 Development Patterns"
+title: WSL2 Development Patterns
+aliases:
+  - "WSL2 Development Patterns"
 type: concept
 layer: 2
 maturity: growing
@@ -12,12 +14,12 @@ sources:
   - id: src-user-directive-ecosystem
     type: notes
     file: raw/notes/2026-04-08-user-directive-ecosystem-connections.md
-    title: "User Directive — Ecosystem Connections & Automation Vision"
+    title: User Directive — Ecosystem Connections & Automation Vision
     ingested: 2026-04-08
   - id: src-devops-control-plane-local
     type: documentation
     file: ../devops-control-plane/README.md
-    title: "devops-control-plane — Local Project Documentation"
+    title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, wsl2, windows-subsystem-linux, obsidian-sync, systemd, daemon, cross-platform, inotify, sync, filesystem]
 ---
@@ -141,27 +143,27 @@ Cross-referencing `Infrastructure as Code Patterns`: The `Infrastructure as Code
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[Research Pipeline Orchestration]]
-- RELATES TO: [[MCP Integration Architecture]]
+- RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
 - RELATES TO: [[devops-control-plane]]
-- ENABLES: [[Infrastructure as Code Patterns]]
-- RELATES TO: [[Obsidian CLI]]
-- RELATES TO: [[Wiki Ingestion Pipeline]]
+- ENABLES: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+- RELATES TO: [[obsidian-cli|Obsidian CLI]]
+- RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 
 ## Backlinks
 
-[[Research Pipeline Orchestration]]
-[[MCP Integration Architecture]]
-[[devops-control-plane]]
-[[Infrastructure as Code Patterns]]
-[[Obsidian CLI]]
-[[Wiki Ingestion Pipeline]]
-[[Decision: Obsidian vs NotebookLM as Knowledge Interface]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Four-Project Ecosystem]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[mcp-integration-architecture|MCP Integration Architecture]]
+[[devops-control-plane|devops-control-plane]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[obsidian-cli|Obsidian CLI]]
+[[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
+[[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[four-project-ecosystem|Four-Project Ecosystem]]

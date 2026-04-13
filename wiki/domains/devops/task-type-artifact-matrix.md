@@ -1,5 +1,7 @@
 ---
-title: "Task Type Artifact Matrix"
+title: Task Type Artifact Matrix
+aliases:
+  - "Task Type Artifact Matrix"
 type: concept
 layer: 2
 domain: devops
@@ -15,12 +17,12 @@ sources:
   - id: src-openarms-methodology-yaml-full
     type: documentation
     file: raw/articles/openarms-methodology-yaml-full.md
-    title: "OpenArms Methodology YAML + Agent Directive — Full Reference"
+    title: OpenArms Methodology YAML + Agent Directive — Full Reference
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
 tags: [task-types, artifact-matrix, epic, module, task, bug, spike, docs, refactor, stage-requirements, exit-criteria, methodology, openarms, per-type, complexity-scaling]
 ---
@@ -201,10 +203,10 @@ The Task Type Artifact Matrix defines the 7 distinct task types in the OpenArms 
 ## Answered Open Questions
 
 > [!example]- How should the type system handle tasks that start as one type and evolve mid-execution?
-> Resolved in [[Decision: Task Type Edge Cases]]. The spike completes first (Document + Design stages with artifacts), then a new `task` or `module` is created for implementation. Never merge phases or mutate type mid-execution -- it breaks the stage-gate audit trail.
+> Resolved in [[task-type-edge-cases|Decision — Task Type Edge Cases]]. The spike completes first (Document + Design stages with artifacts), then a new `task` or `module` is created for implementation. Never merge phases or mutate type mid-execution -- it breaks the stage-gate audit trail.
 
 > [!example]- Is there a case for a `spike+implement` compound type?
-> Resolved in [[Decision: Task Type Edge Cases]]. No. Spike produces knowledge; implementation is a separate deliverable. The constraint that spikes cannot produce code is the safety mechanism preventing "quick research" from sliding into unplanned implementation.
+> Resolved in [[task-type-edge-cases|Decision — Task Type Edge Cases]]. No. Spike produces knowledge; implementation is a separate deliverable. The constraint that spikes cannot produce code is the safety mechanism preventing "quick research" from sliding into unplanned implementation.
 
 ### How This Connects — Navigate From Here
 
@@ -212,40 +214,40 @@ The Task Type Artifact Matrix defines the 7 distinct task types in the OpenArms 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Stage-Gate Methodology]] (the type matrix selects stage subsets from the full 5-stage system)
-- BUILDS ON: [[Task Lifecycle Stage-Gating]] (per-type stage selection is the flexibility layer of stage gating)
-- USED BY: [[Backlog Hierarchy Rules]] (epics and modules follow the full 5-stage path; tasks use the 3-stage path)
-- USED BY: [[Execution Modes and End Conditions]] (execution modes interact with type requirements — e.g., full-autonomous behavior differs by type)
-- RELATES TO: [[Spec-Driven Development]] (spike type formalizes research-without-implementation; docs type formalizes documentation-as-work)
-- RELATES TO: [[Wiki Backlog Pattern]] (all 7 types appear in wiki backlog; type determines which stages are tracked in frontmatter)
-- RELATES TO: [[Four-Project Ecosystem]] (all four projects use task types — spike for research, docs for wiki, task/module/epic for features)
-- FEEDS INTO: [[Immune System Rules]] (type violations — e.g., code produced during a spike — are detectable diseases)
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]] (the type matrix selects stage subsets from the full 5-stage system)
+- BUILDS ON: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (per-type stage selection is the flexibility layer of stage gating)
+- USED BY: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] (epics and modules follow the full 5-stage path; tasks use the 3-stage path)
+- USED BY: [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] (execution modes interact with type requirements — e.g., full-autonomous behavior differs by type)
+- RELATES TO: [[spec-driven-development|Spec-Driven Development]] (spike type formalizes research-without-implementation; docs type formalizes documentation-as-work)
+- RELATES TO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (all 7 types appear in wiki backlog; type determines which stages are tracked in frontmatter)
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]] (all four projects use task types — spike for research, docs for wiki, task/module/epic for features)
+- FEEDS INTO: [[immune-system-rules|Immune System Rules]] (type violations — e.g., code produced during a spike — are detectable diseases)
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Task Lifecycle Stage-Gating]]
-[[Backlog Hierarchy Rules]]
-[[Execution Modes and End Conditions]]
-[[Spec-Driven Development]]
-[[Wiki Backlog Pattern]]
-[[Four-Project Ecosystem]]
-[[Immune System Rules]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Artifact Chains by Methodology Model]]
-[[Decision: Execution Mode Edge Cases]]
-[[Decision: Methodology Framework Design Decisions]]
-[[Decision: Task Type Edge Cases]]
-[[E003 Artifact Type System — Design Document]]
-[[E003 Artifact Type System — Requirements Spec]]
-[[Methodology Artifact Taxonomy]]
-[[Methodology Framework]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Model: Methodology]]
-[[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
+[[spec-driven-development|Spec-Driven Development]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[immune-system-rules|Immune System Rules]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
+[[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
+[[task-type-edge-cases|Decision — Task Type Edge Cases]]
+[[e003-artifact-type-system-design|E003 Artifact Type System — Design Document]]
+[[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-framework|Methodology Framework]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-methodology|Model — Methodology]]
+[[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]

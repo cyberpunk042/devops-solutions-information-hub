@@ -1,5 +1,7 @@
 ---
-title: "Local Inference Engine (Subsystem 3)"
+title: Local Inference Engine (Subsystem 3)
+aliases:
+  - "Local Inference Engine (Subsystem 3)"
 type: epic
 domain: backlog
 status: draft
@@ -7,12 +9,13 @@ priority: P1
 task_type: epic
 current_stage: document
 readiness: 10
-stages_completed: [document]
+stages_completed:
+  - "document"
 artifacts:
-  - [[AICP]]
-  - wiki/domains/ai-models/local-llm-quantization.md
-  - wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md
-  - docs/superpowers/specs/2026-04-08-knowledge-evolution-pipeline-design.md
+  - [['AICP']]
+  - "wiki/domains/ai-models/local-llm-quantization.md"
+  - "wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md"
+  - "docs/superpowers/specs/2026-04-08-knowledge-evolution-pipeline-design.md"
 confidence: high
 created: 2026-04-09
 updated: 2026-04-09
@@ -53,19 +56,19 @@ Waiting for 19GB VRAM hardware upgrade. Current 8GB limits model size to 8B para
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Goldilocks** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- IMPLEMENTS: [[Decision: Local Model vs Cloud API for Routine Operations]]
-- BUILDS ON: [[AICP]] (backend routing, circuit breaker)
-- ENABLES: [[Knowledge Evolution Pipeline]] ($0 evolution)
-- RELATES TO: [[Local LLM Quantization]]
+- IMPLEMENTS: [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+- BUILDS ON: [[aicp|AICP]] (backend routing, circuit breaker)
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]] ($0 evolution)
+- RELATES TO: [[local-llm-quantization|Local LLM Quantization]]
 
 ## Backlinks
 
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[AICP]]
-[[Knowledge Evolution Pipeline]]
-[[Local LLM Quantization]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[aicp|AICP]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[local-llm-quantization|Local LLM Quantization]]

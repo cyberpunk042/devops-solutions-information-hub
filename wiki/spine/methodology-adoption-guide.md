@@ -1,5 +1,7 @@
 ---
-title: "Methodology Adoption Guide"
+title: Methodology Adoption Guide
+aliases:
+  - "Methodology Adoption Guide"
 type: reference
 domain: cross-domain
 layer: spine
@@ -28,8 +30,8 @@ tags: [methodology, adoption, guide, onboarding, ecosystem]
 
 > [!tip] AI Quick Start — Setting Up Methodology for Your Project
 >
-> 1. **Identify yourself first**: [[Project Self-Identification Protocol — The Goldilocks Framework]] — answer the 7 questions (What am I? What version? What domain? What phase? What scale? What PM level? What trust tier?)
-> 2. **Pick your SDLC chain**: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — simplified (POC), default (MVP/Staging), or full (Production)
+> 1. **Identify yourself first**: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — answer the 7 questions (What am I? What version? What domain? What phase? What scale? What PM level? What trust tier?)
+> 2. **Pick your SDLC chain**: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — simplified (POC), default (MVP/Staging), or full (Production)
 > 3. **Pick your enforcement tier**: Tier 1 (read) → Tier 2 (configure) → Tier 3 (validate) → Tier 4 (enforce) — matched to your PM level
 > 4. **Pick your domain**: TypeScript, Python/Wiki, Infrastructure, or Knowledge — see per-domain quick starts below
 > 5. **Connect to the second brain**: query methodology + standards via gateway tools (or read wiki pages directly)
@@ -60,10 +62,10 @@ Step-by-step guide for any project to adopt the research wiki's methodology. Cov
 
 No configuration needed. Just read these wiki pages:
 
-1. **Start here:** [[Model: Methodology]] — the 9 named models and when to use each
-2. **Understand stages:** [[Stage-Gate Methodology]] — the 5 stages and their boundaries
-3. **Know the artifacts:** [[Artifact Chains by Methodology Model]] — what each stage produces
-4. **Quality tiers:** [[Skyscraper, Pyramid, and Mountain]] — choose your quality level explicitly
+1. **Start here:** [[model-methodology|Model — Methodology]] — the 9 named models and when to use each
+2. **Understand stages:** [[stage-gate-methodology|Stage-Gate Methodology]] — the 5 stages and their boundaries
+3. **Know the artifacts:** [[artifact-chains-by-model|Artifact Chains by Methodology Model]] — what each stage produces
+4. **Quality tiers:** [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — choose your quality level explicitly
 
 Then in your CLAUDE.md, add a reference:
 
@@ -185,7 +187,7 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 
 > [!warning] Tier 4 Requires a Harness
 >
-> Infrastructure enforcement means the agent doesn't control git, task selection, or stage advancement. A harness owns the loop. Quantified evidence: instructions alone = 25% compliance, hooks = 100% stage boundary compliance (OpenArms v10, 5 production runs). See [[Infrastructure Enforcement Proves Instructions Fail]].
+> Infrastructure enforcement means the agent doesn't control git, task selection, or stage advancement. A harness owns the loop. Quantified evidence: instructions alone = 25% compliance, hooks = 100% stage boundary compliance (OpenArms v10, 5 production runs). See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]].
 
 **Components needed:**
 
@@ -194,7 +196,7 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 | Pre-bash hook | Block git commands from agent | OpenArms: 48 lines, blocks `git add/commit/push/revert`, gates test commands to test stage |
 | Pre-write hook | Block wrong-scope writes per stage | OpenArms: 106 lines, 5 enforcement layers including frontmatter protection and test assertion counting |
 | Post-write hook | Track files created per stage | OpenArms: 36 lines, logs `stage:filepath` for artifact verification |
-| Post-compact hook | Rebuild context after compaction | OpenArms: 29 lines, rebuilds full task state from files. See [[Context Compaction Is a Reset Event]] |
+| Post-compact hook | Rebuild context after compaction | OpenArms: 29 lines, rebuilds full task state from files. See [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] |
 | Stage validation script | Check artifacts before advancing | OpenArms: 1,033 lines, model-aware, business logic detection, phantom file filtering |
 | Commands | /stage-complete, /task-done | Agent calls command → harness validates + commits + advances |
 | Stage skills | Per-stage instructions injected into context | OpenArms: 5 skills, dynamically populated from model config |
@@ -204,15 +206,15 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 > **OpenArms (v10)** — Solo agent, TypeScript:
 > - 14 enforcement scripts + 4 hooks (215 lines) + 3 commands + 5 stage skills
 > - Model-aware validation (reads current-model-config.json, adapts per task type)
-> - Result: 0% stage violations. But 80% of runs still need manual fixes (behavioral failures persist). See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+> - Result: 0% stage violations. But 80% of runs still need manual fixes (behavioral failures persist). See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 >
 > **OpenFleet** — 10-agent fleet, Python:
 > - MCP tool blocking per stage (enforcement at server level, stronger than hooks)
-> - 3-line immune system: prevention → detection (30s doctor cycle) → correction (TEACH/COMPACT/PRUNE/ESCALATE). See [[Three Lines of Defense — Immune System for Agent Quality]]
-> - Contribution gating: cross-agent inputs required BEFORE work stage. See [[Contribution Gating — Cross-Agent Inputs Before Work]]
-> - Tier-based context depth: trust earned through approval rates. See [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+> - 3-line immune system: prevention → detection (30s doctor cycle) → correction (TEACH/COMPACT/PRUNE/ESCALATE). See [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+> - Contribution gating: cross-agent inputs required BEFORE work stage. See [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+> - Tier-based context depth: trust earned through approval rates. See [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 >
-> **Key principle:** Every block must be mindful — explain WHY, offer justified bypass. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+> **Key principle:** Every block must be mindful — explain WHY, offer justified bypass. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 
 ### SDLC Chain Selection
 
@@ -226,7 +228,7 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 > | **Middle Ground** (default) | MVP→Staging, small→medium | 3-5 | Core + important | Tier 2-3 (config + validation) |
 > | **Full** | Production, medium→massive | All 5 | Complete chain | Tier 3-4 (validation + enforcement) |
 >
-> See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix.
 
 ### Per-Domain Quick Start
 
@@ -264,7 +266,7 @@ The adoption tier (what enforcement) and PM level (what infrastructure) are inde
 > | **L3: Full PM** | Plane/DSPD, SCRUM/agile | v3 (integrated) | Organizational — sprint scope | Burndown, velocity, time |
 >
 > Each level wraps the previous. L2 reads L1's data. L3 syncs with L2's state.
-> See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the full architecture.
+> See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the full architecture.
 
 ### Readiness vs Progress
 
@@ -275,7 +277,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 > - Readiness gates progress — don't start building until readiness crosses a threshold
 > - Both are derived for containers (epics, modules) — never set manually
 > - 99→100 = HUMAN ONLY on both dimensions — adversarial review required
-> - See [[Readiness vs Progress — Two-Dimensional Work Tracking]] for the full model
+> - See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] for the full model
 
 ### Invariants (All Tiers, All PM Levels)
 
@@ -287,7 +289,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 > 4. **Readiness AND progress are computed** — from stage completion and child propagation, never manually claimed
 > 5. **Done When items are specific** — name files, functions, endpoints. Generic boilerplate lets agents cheat.
 > 6. **99→100 is human-only** — no automated system marks work as complete. Review is adversarial.
-> 7. **Enforcement must be mindful** — every block explains WHY and offers justified bypass. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+> 7. **Enforcement must be mindful** — every block explains WHY and offers justified bypass. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
 ### How This Connects — Navigate From Here
 
@@ -295,66 +297,68 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Model: Methodology]]
-- BUILDS ON: [[Artifact Chains by Methodology Model]]
-- BUILDS ON: [[Model Composition Rules]]
-- RELATES TO: [[Methodology Standards — What Good Execution Looks Like]]
-- RELATES TO: [[Stage-Gate Methodology]]
-- RELATES TO: [[Four-Project Ecosystem]]
-- FEEDS INTO: [[Model: Ecosystem Architecture]]
-- FEEDS INTO: [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+- BUILDS ON: [[model-methodology|Model — Methodology]]
+- BUILDS ON: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+- BUILDS ON: [[model-composition-rules|Model Composition Rules]]
+- RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
+- FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
+- FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
 ## Backlinks
 
-[[Model: Methodology]]
-[[Artifact Chains by Methodology Model]]
-[[Model Composition Rules]]
-[[Methodology Standards — What Good Execution Looks Like]]
-[[Stage-Gate Methodology]]
-[[Four-Project Ecosystem]]
-[[Model: Ecosystem Architecture]]
-[[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
-[[AI Agent Artifacts — Standards and Guide]]
-[[Artifact Chain: Infrastructure/IaC Domain]]
-[[Artifact Chain: Knowledge/Evolution Domain]]
-[[Artifact Chain: Python/Wiki Domain]]
-[[Artifact Chain: TypeScript/Node Domain]]
-[[CLAUDE.md Structural Patterns for Agent Compliance]]
-[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
-[[Ecosystem Feedback Loop — Wiki as Source of Truth]]
-[[Enforcement Hook Patterns]]
-[[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
-[[Frontmatter Field Reference — Complete Parameter Documentation]]
-[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Harness Ownership Converges Independently Across Projects]]
-[[Harness-Owned Loop — Deterministic Agent Execution]]
-[[How AI Agents Consume the Methodology Wiki]]
-[[Infrastructure Enforcement Proves Instructions Fail]]
-[[Learning Path: Methodology Fundamentals]]
-[[Methodology Artifact Taxonomy]]
-[[Methodology Config Architecture — How the Pieces Fit Together]]
-[[Methodology Evolution Protocol]]
-[[Methodology Framework]]
-[[Methodology System Map]]
-[[OpenArms vs OpenFleet Enforcement Architecture]]
-[[Principle: Infrastructure Over Instructions for Process Enforcement]]
-[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
-[[Principle: Structured Context Governs Agent Behavior More Than Content]]
-[[Project Self-Identification Protocol — The Goldilocks Framework]]
-[[Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
-[[SDLC Rules and Structure — Customizable Project Lifecycle]]
-[[Stage-Aware Skill Injection]]
-[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
-[[Three Lines of Defense — Immune System for Agent Quality]]
-[[Three PM Levels — Wiki to Fleet to Full Tool]]
-[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
-[[Universal Stages, Domain-Specific Artifacts]]
-[[Wiki Gateway Tools — Unified Knowledge Interface]]
+[[model-methodology|Model — Methodology]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[model-composition-rules|Model Composition Rules]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[model-ecosystem|Model — Ecosystem Architecture]]
+[[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
+[[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
+[[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
+[[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
+[[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
+[[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
+[[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+[[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
+[[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[methodology-framework|Methodology Framework]]
+[[methodology-system-map|Methodology System Map]]
+[[model-context-engineering|Model — Context Engineering]]
+[[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
+[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
+[[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+[[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]
+[[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

@@ -1,5 +1,7 @@
 ---
-title: "Standards Must Preach by Example"
+title: Standards Must Preach by Example
+aliases:
+  - "Standards Must Preach by Example"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -15,7 +17,7 @@ sources:
   - id: directive-preach-by-example
     type: log
     file: wiki/log/2026-04-09-directive-record-process-skills-supermodel.md
-    title: "Record the Process — Skills, Super-Model, Preach by Example"
+    title: Record the Process — Skills, Super-Model, Preach by Example
     ingested: 2026-04-09
 tags: [lesson, standards, self-referential, quality, integrity, example]
 ---
@@ -83,26 +85,26 @@ A standard that exists only as text is an ASPIRATION. A standard that demonstrat
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
-> | **How does structure help?** | [[Principle: Structured Context Governs Agent Behavior More Than Content]] |
-> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **Where does this fit in the system?** | [[Methodology System Map]] — find any component |
+> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
+> | **How does structure help?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] |
+> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit in the system?** | [[methodology-system-map|Methodology System Map]] — find any component |
 
 ## Relationships
 
-- DERIVED FROM: [[The Agent Must Practice What It Documents]]
-- RELATES TO: [[Wiki Design Standards — What Good Styling Looks Like]]
-- RELATES TO: [[Model: Methodology]]
-- FEEDS INTO: [[Model: Quality and Failure Prevention]]
+- DERIVED FROM: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+- RELATES TO: [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- FEEDS INTO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 
 ## Backlinks
 
-[[The Agent Must Practice What It Documents]]
-[[Wiki Design Standards — What Good Styling Looks Like]]
-[[Model: Methodology]]
-[[Model: Quality and Failure Prevention]]
-[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
-[[Methodology Standards Initiative — Gap Analysis]]
-[[Methodology Standards Initiative — Honest Assessment]]
-[[Standards-by-Example]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
+[[model-methodology|Model — Methodology]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
+[[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[E006-standards-by-example|Standards-by-Example]]

@@ -1,5 +1,7 @@
 ---
-title: "Execution Modes and End Conditions"
+title: Execution Modes and End Conditions
+aliases:
+  - "Execution Modes and End Conditions"
 type: concept
 domain: devops
 status: synthesized
@@ -14,12 +16,12 @@ sources:
   - id: src-openarms-methodology-yaml-full
     type: documentation
     file: raw/articles/openarms-methodology-yaml-full.md
-    title: "OpenArms Methodology YAML + Agent Directive — Full Reference"
+    title: OpenArms Methodology YAML + Agent Directive — Full Reference
     ingested: 2026-04-09
   - id: src-openfleet-methodology-scan
     type: documentation
     file: raw/articles/openfleet-methodology-scan.md
-    title: "OpenFleet Methodology Scan — Deep Research Findings"
+    title: OpenFleet Methodology Scan — Deep Research Findings
     ingested: 2026-04-09
 tags: [execution-modes, end-conditions, autonomous, full-autonomous, semi-autonomous, work-loop, git-management, quality-gates, openarms, backlog-empty, stage-reached, cost-limit, time-limit]
 ---
@@ -433,19 +435,19 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 ## Answered Open Questions
 
 > [!example]- What is the correct behavior when a quality gate fails and max retries are exhausted?
-> Resolved in [[Decision: Execution Mode Edge Cases]]. Create a `bug` task describing the failure (gate name, error output, parent task ID, blocked stage). Set parent to `blocked` with `blocked_by: [T0XX]`. Makes the failure a trackable work item, not a silent dead end.
+> Resolved in [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]. Create a `bug` task describing the failure (gate name, error output, parent task ID, blocked stage). Set parent to `blocked` with `blocked_by: [T0XX]`. Makes the failure a trackable work item, not a silent dead end.
 
 > [!example]- How should cost-limit interact with a task that is mid-stage?
-> Resolved in [[Decision: Execution Mode Edge Cases]]. Complete the current stage and commit, then stop. Never abandon mid-stage -- partial commits corrupt the one-commit-per-stage audit trail. Cost limit is a soft boundary, not a hard kill.
+> Resolved in [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]. Complete the current stage and commit, then stop. Never abandon mid-stage -- partial commits corrupt the one-commit-per-stage audit trail. Cost limit is a soft boundary, not a hard kill.
 
 > [!example]- Is there a `conditional-document` mode that runs Document only when wiki coverage is missing?
-> Resolved in [[Decision: Execution Mode Edge Cases]]. No. Keep `full-autonomous` as-is. Document skip is per task type, not per topic. Adding an LLM judgment call introduces non-deterministic mode behavior. Use `autonomous` mode or promote to `module` if Document is needed.
+> Resolved in [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]. No. Keep `full-autonomous` as-is. Document skip is per task type, not per topic. Adding an LLM judgment call introduces non-deterministic mode behavior. Use `autonomous` mode or promote to `module` if Document is needed.
 
 > [!example]- How should the work loop handle tasks where stage gates don't apply (N/A)?
-> Resolved in [[Decision: Execution Mode Edge Cases]]. Task frontmatter can declare `skip_gates: [types_compile]` -- explicit, auditable, declared rather than silently assumed.
+> Resolved in [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]. Task frontmatter can declare `skip_gates: [types_compile]` -- explicit, auditable, declared rather than silently assumed.
 
 > [!example]- Should the completion log be structured (YAML) or unstructured (prose)?
-> Resolved in [[Decision: Execution Mode Edge Cases]]. Both: structured YAML frontmatter (queryable by tooling) with a prose body (readable by humans). A `note` type page with `note_type: completion` in frontmatter.
+> Resolved in [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]. Both: structured YAML frontmatter (queryable by tooling) with a prose body (readable by humans). A `note` type page with `note_type: completion` in frontmatter.
 
 ### How This Connects — Navigate From Here
 
@@ -453,40 +455,40 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- DERIVED FROM: [[Stage-Gate Methodology]] (execution modes control which stages run; quality gates are stage transition requirements)
-- DERIVED FROM: [[Task Lifecycle Stage-Gating]] (the work loop implements the stage-by-stage execution pattern)
-- BUILDS ON: [[Backlog Hierarchy Rules]] (the work loop reads the hierarchy to find the next task)
-- BUILDS ON: [[Task Type Artifact Matrix]] (type determines which stages the loop executes)
-- IMPLEMENTS: [[Plan Execute Review Cycle]] (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)
-- RELATES TO: [[Infrastructure as Code Patterns]] (git management rules as infrastructure — the commit convention IS the enforcement layer)
-- RELATES TO: [[Wiki Backlog Pattern]] (the work loop writes to the wiki backlog — step 6, 8, 11, 12)
-- RELATES TO: [[Four-Project Ecosystem]] (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)
-- FEEDS INTO: [[Immune System Rules]] (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)
-- ENABLES: [[Knowledge Evolution Pipeline]] (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)
+- DERIVED FROM: [[stage-gate-methodology|Stage-Gate Methodology]] (execution modes control which stages run; quality gates are stage transition requirements)
+- DERIVED FROM: [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] (the work loop implements the stage-by-stage execution pattern)
+- BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] (the work loop reads the hierarchy to find the next task)
+- BUILDS ON: [[task-type-artifact-matrix|Task Type Artifact Matrix]] (type determines which stages the loop executes)
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]] (semi-autonomous mode implements review as a first-class phase; autonomous mode implements continuous execute cycle)
+- RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] (git management rules as infrastructure — the commit convention IS the enforcement layer)
+- RELATES TO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (the work loop writes to the wiki backlog — step 6, 8, 11, 12)
+- RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]] (OpenFleet uses work_mode + budget monitor as the parallel system; OpenArms uses execution modes + end conditions)
+- FEEDS INTO: [[immune-system-rules|Immune System Rules]] (the work loop structure defines what "correct behavior" looks like; deviations are the diseases the immune system detects)
+- ENABLES: [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]] (autonomous + backlog-empty enables the self-sustaining loop that continuously improves the system)
 
 ## Backlinks
 
-[[Stage-Gate Methodology]]
-[[Task Lifecycle Stage-Gating]]
-[[Backlog Hierarchy Rules]]
-[[Task Type Artifact Matrix]]
-[[Plan Execute Review Cycle]]
-[[Infrastructure as Code Patterns]]
-[[Wiki Backlog Pattern]]
-[[Four-Project Ecosystem]]
-[[Immune System Rules]]
-[[Knowledge Evolution Pipeline]]
-[[Adoption Guide — How to Use This Wiki's Standards]]
-[[Artifact Chains by Methodology Model]]
-[[Decision: Execution Mode Edge Cases]]
-[[Follow the Method of Work Not the Methodology Label]]
-[[Methodology Framework]]
-[[Methodology Standards Initiative — Infrastructure Analysis]]
-[[Model Composition Rules]]
-[[Model: Methodology]]
+[[stage-gate-methodology|Stage-Gate Methodology]]
+[[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
+[[task-type-artifact-matrix|Task Type Artifact Matrix]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
+[[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[four-project-ecosystem|Four-Project Ecosystem]]
+[[immune-system-rules|Immune System Rules]]
+[[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
+[[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
+[[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
+[[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
+[[methodology-framework|Methodology Framework]]
+[[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
+[[model-composition-rules|Model Composition Rules]]
+[[model-methodology|Model — Methodology]]

@@ -1,5 +1,7 @@
 ---
-title: "Source-Synthesis Page Standards"
+title: Source-Synthesis Page Standards
+aliases:
+  - "Source-Synthesis Page Standards"
 type: concept
 domain: cross-domain
 layer: spine
@@ -65,13 +67,30 @@ Standards for source-synthesis pages — processed versions of raw sources (arti
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[Synthesis: Context Mode — MCP Sandbox for Context Saving]] — 254 lines from 1,057-line source
+> [!success] [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]] — 254 lines from 1,057-line source
 >
 > - 11 Key Insight subsections, each a distinct aspect
 > - Concrete data: "315 KB → 5.4 KB. 98% reduction."
 > - 12-platform comparison table (structured data, not prose)
 > - Actual instance examined — synthesis REWRITTEN after first version caught being surface-level
 > - Ratio: 254/1057 = 0.24 (borderline — deeper is better)
+
+### Annotated Exemplar: [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Source Reference Card annotation:**
+> `> [!info] Source Reference` table with 5 rows: Source (project codebase), Type (ecosystem project), Author, Date, Key claim ("Instructions fail 25%, hooks 100%, behavioral failures 80%"). The key claim is ONE sentence that lets a reader decide if this source matters to them — in seconds, not minutes.
+>
+> **Key Insights annotation (11 items):**
+> Each insight has SPECIFIC DATA: "4 hooks (215 lines)", "1,033 lines validator", "20% clean completion (1/5 runs)". Not "some hooks were added" but exact line counts and measured outcomes. Insight 7 lists ALL 6 failure classes by name. Insight 9 admits "operator errors matter too" — intellectual honesty.
+>
+> **Deep Analysis annotation:**
+> Two subsections with REAL CODE PATTERNS:
+> - Enforcement Implementation: exact hook wiring from settings.json, 5 pre-write enforcement layers described specifically
+> - Agent Behavior Failure Evidence: 5-row table (T083-T087) with model/verdict/key failure per run. Not summaries — specific task IDs with specific outcomes.
+>
+> **Why this exemplar works:** The reader doesn't need to read the raw sources (3 files, 1,200+ lines total). The synthesis captures: what the source teaches (11 insights), the mechanisms (hook code patterns, validator architecture), and the evidence (5-run comparison table). The 0.25 ratio rule: the synthesis is 120+ lines from 1,200+ raw lines = 10% ratio (above threshold).
 
 ### Common Failures
 
@@ -97,12 +116,12 @@ Standards for source-synthesis pages — processed versions of raw sources (arti
 
 ## Relationships
 
-- BUILDS ON: [[LLM Wiki Standards — What Good Looks Like]]
-- RELATES TO: [[Model: Wiki Design]]
-- FEEDS INTO: [[Methodology Standards — What Good Execution Looks Like]]
+- BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+- RELATES TO: [[model-wiki-design|Model — Wiki Design]]
+- FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
 
-[[LLM Wiki Standards — What Good Looks Like]]
-[[Model: Wiki Design]]
-[[Methodology Standards — What Good Execution Looks Like]]
+[[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
+[[model-wiki-design|Model — Wiki Design]]
+[[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]

@@ -1,5 +1,7 @@
 ---
-title: "Local LLM Quantization"
+title: Local LLM Quantization
+aliases:
+  - "Local LLM Quantization"
 type: concept
 layer: 2
 maturity: growing
@@ -11,15 +13,15 @@ updated: 2026-04-10
 sources:
   - id: src-turboquant-122b-macbook
     type: article
-    url: "https://medium.com/data-science-collective/how-i-run-122b-parameter-llms-on-a-macbook-outperforming-mxfp4-and-standard-quantization-on-apple-0552ee3da1f7"
+    url: https://medium.com/data-science-collective/how-i-run-122b-parameter-llms-on-a-macbook-outperforming-mxfp4-and-standard-quantization-on-apple-0552ee3da1f7
     file: raw/articles/turboquant-122b-llm-macbook-mlx.md
-    title: "How I Run 122B Parameter LLMs on a MacBook"
+    title: How I Run 122B Parameter LLMs on a MacBook
     ingested: 2026-04-08
   - id: src-gemma4-searxng-openclaw
     type: youtube-transcript
-    url: "https://www.youtube.com/watch?v=T0CKsU0hQx4"
+    url: https://www.youtube.com/watch?v=T0CKsU0hQx4
     file: raw/transcripts/gemma-4-searxng-100-free-amp-private-openclaw-full-setup.txt
-    title: "Gemma 4 + SearXNG for OpenClaw"
+    title: Gemma 4 + SearXNG for OpenClaw
     ingested: 2026-04-08
 tags: [quantization, local-llm, mlx, ollama, apple-silicon, moe, turboquant, gemma4, consumer-hardware, local-first]
 ---
@@ -80,25 +82,25 @@ Cross-referencing `AICP` and `OpenFleet`: the AICP page documents that 9 models 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- RELATES TO: [[AICP]]
-- RELATES TO: [[OpenFleet]]
-- RELATES TO: [[OpenClaw]]
-- ENABLES: [[LightRAG]]
-- RELATES TO: [[Claude Code]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[openfleet|OpenFleet]]
+- RELATES TO: [[openclaw|OpenClaw]]
+- ENABLES: [[lightrag|LightRAG]]
+- RELATES TO: [[claude-code|Claude Code]]
 
 ## Backlinks
 
-[[AICP]]
-[[OpenFleet]]
-[[OpenClaw]]
-[[LightRAG]]
-[[Claude Code]]
-[[Decision: Local Model vs Cloud API for Routine Operations]]
-[[Local Inference Engine (Subsystem 3)]]
-[[Model: Local AI ($0 Target)]]
+[[aicp|AICP]]
+[[openfleet|OpenFleet]]
+[[openclaw|OpenClaw]]
+[[lightrag|LightRAG]]
+[[claude-code|Claude Code]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
+[[model-local-ai|Model — Local AI ($0 Target)]]

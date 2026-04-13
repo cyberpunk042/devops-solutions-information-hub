@@ -1,5 +1,8 @@
 ---
-title: "Model: Automation and Pipelines"
+title: Model — Automation and Pipelines
+aliases:
+  - "Model — Automation and Pipelines"
+  - "Model: Automation and Pipelines"
 type: concept
 domain: cross-domain
 layer: spine
@@ -7,13 +10,12 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-12
 sources: []
 tags: [model, concept, spine, automation, pipelines, orchestration, event-driven, post-chain]
 ---
 
-# Model: Automation and Pipelines
-
+# Model — Automation and Pipelines
 ## Summary
 
 The Automation and Pipelines model describes how this wiki transforms knowledge work from manual operations into automated, composable pipelines. The central mechanism is `tools/pipeline.py` — a Python orchestrator that chains six deterministic steps after every change: rebuild indexes, regenerate manifest, validate, regenerate wikilinks, lint, and rebuild layer indexes. Beyond post-ingestion maintenance, the model extends to event-driven hooks that fire on file system changes, schedule-triggered research loops, and multi-pass ingestion with parallel subagents. The goal is to offload every repeatable task to tooling so human attention is reserved for judgment-level decisions.
@@ -39,7 +41,7 @@ The post-chain (`python3 -m tools.pipeline post`) runs six steps in sequence, ea
 1. **Rebuild `_index.md` files** — Scans all domain and layer folders, regenerates the index pages that make every page reachable from its domain root.
 2. **Regenerate `manifest.json`** — Rebuilds the full page inventory with layer/maturity stats, used by the gaps and crossref tools.
 3. **Validate all pages** — Schema validation against `config/schema.yaml`. Errors block completion; the chain halts on any schema violation.
-4. **Regenerate wikilinks** — Runs `tools/obsidian.py` to rewrite `[[wikilinks]]` across the vault, keeping the Obsidian graph accurate.
+4. **Regenerate wikilinks** — Runs `tools/obsidian.py` to rewrite ``[[wikilinks]]`` across the vault, keeping the Obsidian graph accurate.
 5. **Lint checks** — Runs `tools/lint.py` to catch structural problems: missing sections, thin summaries, broken relationships, orphan pages.
 6. **Rebuild layer indexes** — Regenerates the `lessons/`, `patterns/`, `decisions/`, and `spine/` layer indexes.
 
@@ -78,7 +80,7 @@ These three patterns are not just theoretical. They are implemented via `python3
 > | On memory write | Memory tool call | Contradiction check against existing pages |
 > | On schedule | systemd timer | Periodic lint + consolidation |
 
-The watcher daemon (`python -m tools.watcher --watch`) covers the filesystem-triggered hooks. It polls for changes (not inotify — see [[Decision: Polling vs Event-Driven Change Detection]] for the WSL2 portability rationale), detects new files in `raw/`, and fires the post-chain automatically.
+The watcher daemon (`python -m tools.watcher --watch`) covers the filesystem-triggered hooks. It polls for changes (not inotify — see [[Decision — Polling vs Event-Driven Change Detection]] for the WSL2 portability rationale), detects new files in `raw/`, and fires the post-chain automatically.
 
 > [!tip] Crystallization is the most powerful hook
 > A completed debugging session, research thread, or analysis becomes a structured wiki page automatically — capturing the reasoning before the session context evaporates.
@@ -119,12 +121,12 @@ It does NOT automate:
 
 | Page | Layer | Role in the model |
 |------|-------|-------------------|
-| [[Research Pipeline Orchestration]] | concept | The architectural vision for automated knowledge acquisition |
-| [[Wiki Event-Driven Automation]] | concept | Event hooks that extend the pipeline beyond manual invocation |
-| [[Plan Execute Review Cycle]] | pattern | The recurring 3-phase cycle the pipeline implements |
-| [[Decision: Polling vs Event-Driven Change Detection]] | decision | Why polling over inotify on WSL2 |
-| [[Multi-Stage Ingestion Beats Single-Pass Processing]] | lesson | Why multi-pass is architecturally fundamental |
-| [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | lesson | Why the post-chain is non-negotiable |
+| [[research-pipeline-orchestration|Research Pipeline Orchestration]] | concept | The architectural vision for automated knowledge acquisition |
+| [[wiki-event-driven-automation|Wiki Event-Driven Automation]] | concept | Event hooks that extend the pipeline beyond manual invocation |
+| [[plan-execute-review-cycle|Plan Execute Review Cycle]] | pattern | The recurring 3-phase cycle the pipeline implements |
+| [[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]] | decision | Why polling over inotify on WSL2 |
+| [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass Processing]] | lesson | Why multi-pass is architecturally fundamental |
+| [[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Silent Wiki Decay]] | lesson | Why the post-chain is non-negotiable |
 
 ### Lessons Learned
 
@@ -164,6 +166,10 @@ It does NOT automate:
 > - Watcher poll interval adjustable per environment (`--interval` flag)
 > - Event hook set can grow — on-deploy, on-merge, on-release are natural extensions for sister projects
 
+### Gateway as Pipeline Tool (NEW)
+
+The gateway (`tools/gateway.py`) is a new pipeline entry point — it provides structured queries, operations, and agent write-back through a unified interface. It works in dual-scope (second brain + project wiki). See [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]].
+
 ## Open Questions
 
 > [!question] Parallel post-chain
@@ -184,29 +190,29 @@ It does NOT automate:
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
-> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
-> | **System map** | [[Methodology System Map]] |
+> | **Principles** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] · [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] · [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 
-- BUILDS ON: [[Research Pipeline Orchestration]]
-- BUILDS ON: [[Wiki Event-Driven Automation]]
-- RELATES TO: [[Model: Knowledge Evolution]]
-- RELATES TO: [[Model: Quality and Failure Prevention]]
-- FEEDS INTO: [[Model: Local AI ($0 Target)]]
-- RELATES TO: [[Model: NotebookLM]]
-- IMPLEMENTS: [[Plan Execute Review Cycle]]
-- ENABLES: [[Decision: Polling vs Event-Driven Change Detection]]
+- BUILDS ON: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+- BUILDS ON: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[model-knowledge-evolution|Model — Knowledge Evolution]]
+- RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+- FEEDS INTO: [[model-local-ai|Model — Local AI ($0 Target)]]
+- RELATES TO: [[model-notebooklm|Model — NotebookLM]]
+- IMPLEMENTS: [[plan-execute-review-cycle|Plan Execute Review Cycle]]
+- ENABLES: [[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
 
 ## Backlinks
 
-[[Research Pipeline Orchestration]]
-[[Wiki Event-Driven Automation]]
-[[Model: Knowledge Evolution]]
-[[Model: Quality and Failure Prevention]]
-[[Model: Local AI ($0 Target)]]
-[[Model: NotebookLM]]
-[[Plan Execute Review Cycle]]
-[[Decision: Polling vs Event-Driven Change Detection]]
-[[Model: Second Brain]]
+[[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[model-knowledge-evolution|Model — Knowledge Evolution]]
+[[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[model-local-ai|Model — Local AI ($0 Target)]]
+[[model-notebooklm|Model — NotebookLM]]
+[[plan-execute-review-cycle|Plan Execute Review Cycle]]
+[[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
+[[model-second-brain|Model — Second Brain]]
