@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-13T16:22:47.131828+00:00",
+  "generated": "2026-04-13T16:26:06.759589+00:00",
   "stats": {
     "pages": 305,
     "domains": 9,
     "sources": 28,
     "comparisons": 6,
-    "relationships": 2068,
+    "relationships": 2069,
     "tags_unique": 848,
     "layers": {
       "3": 5,
@@ -12008,6 +12008,10 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 kepano-obsidian-skills"
+        },
+        {
+          "verb": "DERIVED FROM",
           "target": "Claude Code Skills"
         },
         {
@@ -20215,7 +20219,7 @@
     },
     "ai-agents": {
       "page_count": 51,
-      "relationship_count": 411
+      "relationship_count": 412
     },
     "tools-and-platforms": {
       "page_count": 24,

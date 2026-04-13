@@ -92,5 +92,6 @@ Cross-referencing `Skills Architecture Patterns` and `Harness Engineering`: the 
 [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]
 [[llm-wiki-pattern|LLM Wiki Pattern]]
 [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
 [[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]

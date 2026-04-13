@@ -86,6 +86,8 @@ The skills-beat-MCP finding is independently confirmed in the harness engineerin
 
 ## Relationships
 
+- DERIVED FROM: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
+
 - DERIVED FROM: [[claude-code-skills|Claude Code Skills]]
 - DERIVED FROM: [[claude-code-best-practices|Claude Code Best Practices]]
 - BUILDS ON: [[claude-code|Claude Code]]
@@ -98,6 +100,7 @@ The skills-beat-MCP finding is independently confirmed in the harness engineerin
 
 ## Backlinks
 
+[[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
 [[claude-code-skills|Claude Code Skills]]
 [[claude-code-best-practices|Claude Code Best Practices]]
 [[claude-code|Claude Code]]
