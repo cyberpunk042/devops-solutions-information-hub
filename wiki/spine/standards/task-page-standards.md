@@ -117,14 +117,21 @@ Standards for task pages — the atomic work unit. Tasks are SHORT. Summary + Do
 | Min Done When items | 1 |
 | Required frontmatter | priority, task_type, current_stage, readiness, epic |
 
-### Annotated Exemplar: Well-defined task standards
+### Annotated Exemplar: [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]
 
-> [!example]- What makes a good task page
+> [!example]- Full Walkthrough — Why Each Section Works
 >
-> **Short and focused:** Tasks are ATOMIC — 20-50 lines. If it needs design decisions, it's a module not a task.
-> **Done When names FILES:** "- [ ] `wiki/lessons/new-lesson.md` passes pipeline post" — not "lesson is written." The file name IS the verification.
-> **Frontmatter audit trail:** current_stage, readiness, progress, stages_completed, artifacts — the HISTORY of execution is in the frontmatter, not in prose.
-> **Specific Done When prevents cheating:** "src/hooks/event-firing.ts imports workspace-coordinator" tells the agent WHERE and WHAT. "Wired into runtime" lets the agent satisfy it cheaply under fatigue.
+> **1. Frontmatter** — `type: task`, `task_type: task`, `current_stage: document`, `readiness: 15`, `epic: E001`. Every task links back to its parent epic and tracks its own stage progression. ← The frontmatter IS the audit trail. When you see `stages_completed: ["document"]` and `current_stage: scaffold`, you know exactly where this task stands without reading the body.
+>
+> **2. Summary** — One sentence stating WHAT and WHY: "Test whether the OpenAI-compatible backend works with LocalAI for basic inference routing." ← Tasks summaries must be atomic — if the summary has an "and" joining two goals, it should be two tasks.
+>
+> **3. Done When** — Names specific FILES and COMMANDS: "- [ ] `tests/test_openai_backend.py` passes" — not "backend is tested." ← The file path IS the verification. An agent or human can check `git status` and `pytest tests/test_openai_backend.py` and know unambiguously whether the task is done.
+>
+> **4. Atomic scope** — 20-50 lines. If it needs design decisions, it's a module not a task. If it needs multiple sessions, it's too big. ← Tasks are single-session work units. The whole point of decomposition (Milestone → Epic → Module → Task) is that tasks are small enough to complete without losing context.
+>
+> **5. Specific Done When prevents cheating** — "src/hooks/event-firing.ts imports workspace-coordinator" tells the agent WHERE and WHAT. "Wired into runtime" lets the agent satisfy it cheaply under fatigue. ← Under context pressure (stage 4-5 of long runs), agents take shortcuts. Specific file-level criteria are fatigue-resistant; vague criteria are not.
+>
+> **What could still improve:** Estimated effort (XS/S/M/L), explicit impediment tracking, contribution list (what inputs this task needs from other tasks).
 
 ### Template
 

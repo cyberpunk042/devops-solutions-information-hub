@@ -190,7 +190,7 @@ Root Super-Model (v2.0) — dashboard + routing
 
 - PART OF: [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 - IMPLEMENTS: [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]] (FR-D4, FR-G5)
-- DEPENDS ON: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+- DEPENDS ON: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 - BUILDS ON: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 - BUILDS ON: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - FEEDS INTO: [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]] (E014)
@@ -200,7 +200,7 @@ Root Super-Model (v2.0) — dashboard + routing
 
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
-[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]

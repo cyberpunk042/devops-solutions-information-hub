@@ -32,8 +32,6 @@ This is the entry point for all named models in the wiki. A model is a coherent 
 
 ## Model Catalog
 
-| Model | Lines | Standards Page | Maturity | Domain |
-|-------|-------|---------------|----------|--------|
 | # | Model | Standards Page | Maturity | Domain |
 |---|-------|---------------|----------|--------|
 | 1 | [[model-llm-wiki|Model — LLM Wiki]] | [[model-llm-wiki-standards|LLM Wiki Standards]] | growing | Content structure |
@@ -96,7 +94,7 @@ The [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] 
 [[model-wiki-design|Model — Wiki Design]]
 [[2026-04-09-directive-bottom-up-model-completion|Bottom-Up Model Completion — 10+ Named Models Required]]
 [[2026-04-09-directive-docs-layers-old-models|Documentation Layers + Old Model Tolerance]]
-[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 [[2026-04-09-ingest-awesome-design-md|Ingest awesome-design-md repository]]
 [[2026-04-09-directive-model-quality-links-schema|Model Quality + Links + Schema Naming Issues]]
 [[models-are-systems-not-documents|Models Are Systems, Not Documents]]

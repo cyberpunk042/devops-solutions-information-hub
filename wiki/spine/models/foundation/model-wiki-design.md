@@ -334,6 +334,14 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 
 Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox → 04_principles`. Two new page types added the 2026-04-12 session: `principle` (distilled from ≥3 validated lessons) and `milestone` (delivery target above epics). Callout vocabulary extended with self-check sections (`> [!warning] Self-Check`) and navigation weave (`> [!abstract] From This Page →`).
 
+### Lessons Learned
+
+| Lesson | What was learned |
+|--------|-----------------|
+| [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Markdown structure (headers, callouts, tables) programs agent behavior more than prose content — the wiki's visual design IS its operational design. |
+| [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]] | Wiki design patterns evolved from documented domains only. Callout vocabulary, page layouts, and styling standards reflected knowledge-system pages well but left operational pages (tasks, notes, epics) structurally underserved. |
+| [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]] | Wiki design standards emerged iteratively: initial callout vocabulary → page layout patterns → maturity folders → new page types. Each layer built on the previous. Attempting a complete design system upfront would have been premature. |
+
 ### State of Knowledge
 
 > [!success] **Well-covered**

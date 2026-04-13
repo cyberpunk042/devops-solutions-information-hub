@@ -166,7 +166,7 @@ These are FUTURE — scoped after the first 12 epics prove the system works.
 
 ## Relationships
 
-- CONTAINS: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+- CONTAINS: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 - CONTAINS: [[e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e|E011 — Standards Exemplification — All 15 Per-Type Standards with Inline Annotated Exemplars]]
 - CONTAINS: [[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
 - CONTAINS: [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
@@ -183,7 +183,7 @@ These are FUTURE — scoped after the first 12 epics prove the system works.
 
 ## Backlinks
 
-[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 [[e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e|E011 — Standards Exemplification — All 15 Per-Type Standards with Inline Annotated Exemplars]]
 [[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]

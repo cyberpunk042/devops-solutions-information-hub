@@ -247,6 +247,20 @@ What makes it the standard:
 
 **The bar for an operations plan**: ≥3 sequential steps. Each step has Action + Expected output + Validation + Rollback. A different agent could follow this plan and get the same result. If judgment is required, it's a design plan, not an operations plan.
 
+### Annotated Exemplar: [[model-llm-wiki|Model — LLM Wiki]]
+
+> [!example]- Full Walkthrough — Why the LLM Wiki Model Exemplifies Its Own Standards
+>
+> **1. Schema as product** — The model defines 9 required frontmatter fields, 22 optional fields, and a typed page catalog. Every page in the wiki validates against this schema. ← The schema IS the standard. A wiki where frontmatter is optional decays into inconsistency. The model doesn't just describe the schema — it explains WHY each field narrows agent behavior.
+>
+> **2. Three core operations** — Ingest, Query, Lint are presented as a table with tooling per operation. Not "the wiki does many things" but three named operations with exact tools. ← Operations are the verbs of the system. Naming them constrains scope — anything that isn't ingest/query/lint is a feature request, not a core operation.
+>
+> **3. Knowledge layers** — L0 (raw) through L6 (decision) + Spine + Backlog + Log + Config, each with page types and examples. ← Progressive distillation is the model's core insight. Each layer is denser than the previous. The table makes the layer system concrete, not aspirational.
+>
+> **4. Honest State of Knowledge** — "Well-covered: schema validation, 3 core operations, maturity lifecycle." "Thin: multi-agent co-authoring untested, approaching 280-page scale ceiling." ← The model practices what it preaches: transparent about limitations. A model that claims completeness has stopped learning.
+>
+> **What could still improve:** The model has 566 lines — close to the threshold where it should consider splitting into a model page + a separate deep-dive on operations. The Key Insights section (4 bullets) is thin relative to the page's depth.
+
 ### Anti-Patterns — What Bad Looks Like
 
 | Anti-Pattern | What it looks like | Why it fails |

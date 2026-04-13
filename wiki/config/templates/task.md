@@ -52,7 +52,15 @@ tags: []
      - [ ] `wiki/lessons/03_validated/new-lesson.md` passes `pipeline post` with 0 errors
      - [ ] `src/hooks/event-firing.ts` imports and calls workspace-coordinator
      - [ ] `pnpm tsgo` passes with 0 type errors
-     Specific files and commands — never "it works" or "it's done" -->
+     Specific files and commands — never "it works" or "it's done"
+
+     WHY specific file paths matter:
+     - Generic: "- [ ] Lesson page is created and validated" — an agent can claim this done
+       by creating any file in any location with any content.
+     - Specific: "- [ ] `wiki/lessons/02_synthesized/lessons-from-batch-ingestion.md` passes
+       `python3 -m tools.pipeline post` with 0 errors" — there is exactly one way to satisfy
+       this criterion and it requires the right file in the right location passing real checks.
+     The Done When section is your protection against plausible-but-wrong completion. -->
 
 - [ ] {{specific_criterion_naming_a_file}}
 - [ ] {{specific_criterion_naming_a_command}}

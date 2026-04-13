@@ -593,6 +593,9 @@ Work tracking requires TWO independent fields: `readiness` (is this DEFINED enou
 
 The methodology operates within a PM infrastructure that may be L1 (wiki only), L2 (fleet/harness), or L3 (full PM tool). Each level wraps the previous and adds enforcement + observability. See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and harness version mapping (v1→v2→v3).
 
+> [!warning] Corrected Execution Mode Semantics
+> Execution mode (solo, harness-v1, harness-v2, harness-v3, full-system) is a RUNTIME property — the harness decides its own version at startup based on what infrastructure exists, not what the project declares. A project does not "have" harness v2; it has infrastructure that ENABLES harness v2. The version is discovered, not configured. This distinction prevents projects from claiming capabilities they haven't built.
+
 ### Real Example: End-to-End Task Execution
 
 Here's how a single task flows through the methodology, from selection to completion.

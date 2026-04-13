@@ -53,11 +53,21 @@ Standards for learning path pages — curated sequences that guide a reader thro
 
 ### Annotated Exemplar: [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
 
-> [!example]- What makes a good learning path
+> [!example]- Full Walkthrough — Why Each Section Works
 >
-> **30 pages in 8 parts:** Organized by learning mode (LEARN → DECIDE → EXECUTE → ENFORCE → LESSONS → PRINCIPLES → GOLDILOCKS). Each part has a PURPOSE, not just a topic.
-> **Per-page annotations:** "Start here. Defines what a methodology model IS" — not just a title link but WHY to read it NOW and what it enables for the NEXT page.
-> **Testable outcomes:** "After completing this path you should be able to: select the correct SDLC chain based on phase and scale" — verifiable, not vague.
+> **1. Frontmatter** — `type: learning-path`, `min_sequence_items: 3` from artifact-types.yaml. The frontmatter signals this is a CURATED sequence, not a collection. ← Learning paths are opinionated — they impose an ORDER on knowledge that exists in unordered pages elsewhere.
+>
+> **2. Summary** — "Guided sequence for understanding the research wiki's methodology system." States the SCOPE (methodology system) and the PROMISE (understanding). ← A reader decides in the summary whether this path matches their learning goal. Vague summaries waste the reader's time.
+>
+> **3. Prerequisites** — "Read the Model Registry first. Familiarity with stage-gate concepts helps but isn't required." Names specific starting pages and assumed knowledge. ← Without prerequisites, readers start mid-stream and misattribute confusion to the path rather than missing context.
+>
+> **4. Sequence** — 30 pages in 8 parts organized by learning mode (LEARN → DECIDE → EXECUTE → ENFORCE → LESSONS → PRINCIPLES → GOLDILOCKS). Each part has a PURPOSE, not just a topic. ← The 8-part structure mirrors cognitive progression: learn concepts first, then make decisions, then execute — not random page ordering.
+>
+> **5. Per-page annotations** — "Start here. Defines what a methodology model IS" — not just a `[[wikilink]]` but WHY to read this page NOW and what it enables for the NEXT page. ← Annotations create forward momentum. Each page annotation answers "why this before that?" — the sequencing rationale is explicit.
+>
+> **6. Testable outcomes** — "After completing this path you should be able to: select the correct SDLC chain based on phase and scale." Verifiable, not vague. ← The reader can self-assess completion. "Understand methodology" is untestable; "select the correct chain" is testable.
+>
+> **What could still improve:** Estimated time per part (not just page count), difficulty rating per section, "If you already know X, skip to part N" fast-track guidance.
 
 ### Template
 

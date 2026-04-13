@@ -254,7 +254,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[model-llm-wiki|Model — LLM Wiki]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
-[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[methodology-evolution-history|Evolution — Methodology System]]

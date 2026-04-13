@@ -55,13 +55,21 @@ Standards for note pages — log entries recording directives, session summaries
 > - Interpretation clearly separated from quotes
 > - Summary is actionable: states what needs to change
 
-### Annotated Exemplar: See directive notes in raw/notes/
+### Annotated Exemplar: [[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]]
 
-> [!example]- What makes a good note (directive type)
+> [!example]- Full Walkthrough — Why Each Section Works
 >
-> **Operator words verbatim:** Block quotes with EXACT words. Not paraphrased. Not interpreted. The verbatim section IS the authority.
-> **Interpretation separated:** After the verbatim quotes, clearly marked interpretation: "What the operator is actually saying." Keeps observation separate from analysis.
-> **Requirements extracted:** Numbered list of concrete requirements derived from the directive. Each is specific and actionable.
+> **1. Frontmatter** — `type: note`, `domain: log`. Notes live in the log domain, not a content domain. ← Notes are temporal artifacts (when something was said), not knowledge artifacts (what we know). The domain placement reflects this — notes are process evidence, not synthesized understanding.
+>
+> **2. Operator Directive (verbatim)** — Block quotes with EXACT words: `> "the models are not finished. they should be usable systems not just collections of pages."` Not paraphrased. Not interpreted. ← The verbatim section IS the authority. When a future session needs to understand operator intent, the exact words prevent drift. Paraphrasing is lossy.
+>
+> **3. Interpretation** — After the verbatim quotes, clearly marked: "What the operator is saying: models need entry points, standards, adoption paths, and key pages — not just a list of concepts." ← Keeps observation (what was said) separate from analysis (what it means). This separation lets a reader agree with the words but disagree with the interpretation.
+>
+> **4. Requirements extracted** — Numbered list of concrete requirements derived from the directive. "1. Every model must have a Key Pages table. 2. Every model must link to its companion standards page." ← Each requirement is specific and actionable. An agent reading this note can turn each requirement into a task without further clarification.
+>
+> **5. Action items** — What was done as a result: "Created model-registry.md. Updated 8 models with Key Pages tables." ← Closes the loop — the note is not just a record of what was said but a record of what HAPPENED as a result. Traceability from directive to action.
+>
+> **What could still improve:** Linking action items to specific commits (git provenance), tagging which epics/tasks the directive influenced, noting which requirements were DEFERRED vs addressed.
 
 ### Template
 

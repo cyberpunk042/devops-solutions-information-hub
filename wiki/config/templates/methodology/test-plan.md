@@ -32,6 +32,23 @@ tags: [methodology, test-plan, {{epic_tag}}]
      > |---------|-----------|-------|----------------|
 -->
 
+<!--
+EXAMPLE:
+
+> [!info] Unit Tests — ValidationEngine
+>
+> | Test ID | Description | Input | Expected Output | Layer | Priority |
+> |---------|-------------|-------|-----------------|-------|----------|
+> | TC-001 | Valid page passes validation | .md with all required fields, valid enums | `ValidationResult.ok == True`, `errors == []` | Unit | P0 |
+> | TC-002 | Missing `title` field fails | Frontmatter without `title` key | `ok == False`, errors contains FieldError(field="title", reason="required") | Unit | P0 |
+> | TC-003 | Invalid `type` enum rejected | `type: foobar` (not in schema enum list) | `ok == False`, errors contains FieldError(field="type") | Unit | P0 |
+> | TC-004 | Missing `confidence` field fails | Valid page minus `confidence` | `ok == False`, errors contains FieldError(field="confidence") | Unit | P1 |
+> | TC-005 | Lesson page missing `evidence_count` fails | lesson-type page without evidence_count | `ok == False` with type-specific error | Unit | P1 |
+> | TC-006 | All 267 existing pages pass | Full wiki/ directory scan | Zero errors on current corpus (regression gate) | Integration | P0 |
+> | TC-007 | Invalid page blocked from post-chain | Inject invalid page, run `pipeline post` | Exit code 1, error printed to stderr, manifest NOT updated | Integration | P0 |
+-->
+
+
 ### Integration Tests
 
 <!-- Cross-component test cases.

@@ -34,6 +34,25 @@ tags: [methodology, infrastructure-analysis, {{epic_tag}}]
      > |-----------|-------|----------|---------|
      Verify every referenced file/component actually exists. -->
 
+<!--
+EXAMPLE:
+
+> [!info] Post-Chain Components (verified 2026-04-13)
+>
+> | Component | File | Lines | Purpose | Dependencies |
+> |-----------|------|-------|---------|--------------|
+> | Post-chain runner | tools/pipeline.py | 142–198 | Orchestrates 6-step validation chain | tools/validate.py, tools/lint.py |
+> | Schema validator | tools/validate.py | 1–87 | Checks frontmatter fields exist and are non-empty | wiki/config/wiki-schema.yaml |
+> | Lint runner | tools/lint.py | 1–210 | 14 health checks across all pages | tools/manifest.py |
+> | Manifest builder | tools/manifest.py | 1–156 | Regenerates wiki/manifest.json from page frontmatter | All wiki/ .md files |
+> | Wiki schema | wiki/config/wiki-schema.yaml | 1–94 | Defines required fields, type enums, status enums | Read by tools/validate.py |
+> | Obsidian sync step | tools/pipeline.py | 201–218 | Writes Obsidian-compatible link index | tools/manifest.py |
+
+All 6 components exist and are callable. tools/validate.py is invoked independently
+but NOT wired into the post-chain at pipeline.py:142–198 — that call is missing (see Gap Analysis).
+-->
+
+
 ### How It Works Today
 
 <!-- Data flow, dependencies, integration points.

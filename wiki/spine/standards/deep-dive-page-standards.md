@@ -70,10 +70,19 @@ Standards for deep-dive pages — extended analysis that goes significantly deep
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >
-> **Progressive disclosure:** 4 adoption tiers presented in increasing complexity. Reader doesn't need to read all 4 — they pick their tier and read that section. Each tier has: what you get, effort, prerequisites.
-> **Concrete code examples:** YAML, bash, and markdown examples throughout — not "configure your project" but the ACTUAL config to paste.
-> **Per-domain quick starts:** 3 domain-specific callouts (TypeScript, Python/Wiki, Infrastructure) — reader picks their stack.
-> **Invariants section:** 7 rules that apply at EVERY tier. Clear boundary between what adapts and what never changes.
+> **1. Frontmatter** — `type: deep-dive`, `deep_analysis_min_words: 200` (from artifact-types.yaml — higher bar than concept). Deep-dives justify their length through DEPTH, not breadth. ← A concept page at 300+ lines should be a deep-dive. The type distinction tells the reader "this goes significantly deeper than a concept page on the same topic."
+>
+> **2. Summary** — "This guide explains how any project in the ecosystem picks up the methodology, stage-gate system, backlog hierarchy, and quality standards." States the scope AND the audience. ← Deep-dive summaries must set expectations for LENGTH and DEPTH. The reader commits to a longer read and needs to know it's worth it.
+>
+> **3. Progressive disclosure** — 4 adoption tiers presented in increasing complexity. Reader doesn't need to read all 4 — they pick their tier and read that section. Each tier has: what you get, effort, prerequisites. ← This is WHY deep-dives exist: they can structure information for multiple reader levels. A concept page serves one level; a deep-dive adapts to the reader.
+>
+> **4. Concrete code examples** — YAML, bash, and markdown examples throughout. Not "configure your project" but the ACTUAL config to paste. ← Deep-dives earn their length through specificity. Every abstraction is grounded in a real command or config block. Without concrete examples, a deep-dive is just a long concept page.
+>
+> **5. Per-domain quick starts** — 3 domain-specific callouts (TypeScript, Python/Wiki, Infrastructure). Reader picks their stack. ← Callouts are REQUIRED for deep-dives (per artifact-types.yaml). They break up the length, provide navigation handles, and let readers skip irrelevant sections.
+>
+> **6. Invariants section** — 7 rules that apply at EVERY tier. Clear boundary between what adapts (per-tier, per-domain) and what never changes (invariants). ← This structural separation is what makes the deep-dive a SYSTEM, not a list. The reader knows which rules to follow always vs which to adapt.
+>
+> **What could still improve:** Table of contents at the top (for pages >200 lines), estimated reading time per section, "If you only read one section" guidance.
 
 ### Template
 

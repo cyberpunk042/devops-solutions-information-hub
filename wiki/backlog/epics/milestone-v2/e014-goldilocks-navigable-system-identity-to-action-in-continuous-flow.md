@@ -149,7 +149,7 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM �
 
 - PART OF: [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 - IMPLEMENTS: [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]] (FR-C1 through FR-C4, FR-B8)
-- DEPENDS ON: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+- DEPENDS ON: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 - DEPENDS ON: [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
 - BUILDS ON: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - BUILDS ON: [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
@@ -160,7 +160,7 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM �
 
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
-[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]

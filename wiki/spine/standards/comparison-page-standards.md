@@ -75,17 +75,17 @@ Standards for comparison pages — structured evaluations of alternatives across
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >
-> **Comparison Matrix annotation:**
-> 14-row table comparing OpenArms vs OpenFleet across: agent count, stage enforcement, validation engine, loop ownership, git control, behavioral detection, correction, context compaction, cross-agent coordination, trust management, readiness gating, clean completion rate, implementation effort, configuration model. Each row has a "Winner" column — the matrix DECIDES, not just lists.
+> **1. Frontmatter** — `type: comparison`, `min_relationships: 2` (from artifact-types.yaml). A comparison must relate to AT LEAST the things being compared. ← The type signals to readers and tools that this page EVALUATES alternatives, not describes them. Comparisons produce decisions; concepts produce understanding.
 >
-> **Key Insights annotation:**
-> `> [!warning]` callout: "The Scale Transition Creates 6 New Requirements" — with table showing what's needed at solo vs fleet scale. This is the DISCOVERY the comparison produces — not just "they're different" but "HERE are the 6 specific things that change."
+> **2. Comparison Matrix** — 14-row table comparing OpenArms vs OpenFleet across: agent count, stage enforcement, validation engine, loop ownership, git control, behavioral detection, correction, context compaction, cross-agent coordination, trust management, readiness gating, clean completion rate, implementation effort, configuration model. Each row has a "Winner" column. ← The matrix DECIDES, not just lists. If you remove the Winner column, you have a feature table. With it, you have a decision tool.
 >
-> **Per-Alternative Deep Analysis annotation:**
-> Each alternative gets its own subsection with: `> [!tip]` for "when to choose" and `> [!warning]` for "when this option fails." Strengths AND weaknesses listed. Ideal use case named.
+> **3. Key Insights** — `> [!warning]` callout: "The Scale Transition Creates 6 New Requirements" — with table showing what's needed at solo vs fleet scale. ← This is the DISCOVERY the comparison produces. Not "they're different" but "HERE are the 6 specific things that change." A good comparison synthesizes patterns the individual pages couldn't show.
 >
-> **Recommendation annotation:**
-> `> [!success]` callout with scenario → recommendation table. "Solo agent, interactive → OpenArms hooks." "4+ agents, autonomous → OpenFleet architecture." Clear, actionable, context-dependent.
+> **4. Per-Alternative Deep Analysis** — Each alternative gets its own subsection with: `> [!tip]` for "when to choose" and `> [!warning]` for "when this option fails." Strengths AND weaknesses listed. ← Balanced treatment prevents the comparison from being advocacy. The reader sees BOTH sides and can weigh them against their own context.
+>
+> **5. Recommendation** — `> [!success]` callout with scenario → recommendation table. "Solo agent, interactive → OpenArms hooks." "4+ agents, autonomous → OpenFleet architecture." ← Context-dependent recommendations are more useful than absolute verdicts. The scenario column is what makes this actionable.
+>
+> **What could still improve:** Quantified cost comparison (not just "more effort" but token counts, development hours), reversibility assessment per alternative.
 
 ### Common Failures
 

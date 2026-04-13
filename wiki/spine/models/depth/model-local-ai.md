@@ -179,8 +179,9 @@ The general principle: build the routing infrastructure first, scale the hardwar
 
 | Lesson | What was learned |
 |--------|-----------------|
-| Build routing infrastructure before scaling hardware | AICP Stages 1-2 were built on 8GB VRAM intentionally — validate the model before investing in hardware |
-| The $0 target applies to maintenance, not creation | Knowledge creation remains Claude's domain; routine wiki operations become free |
+| [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | Build routing infrastructure before scaling hardware. AICP Stages 1-2 were built on 8GB VRAM intentionally — validate the routing model before investing in hardware. |
+| [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]] | The $0 target applies to maintenance, not creation. The routing framework (complexity scoring → threshold → local/cloud) is the reusable pattern; AICP is one instance. |
+| [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]] | Circuit breakers, fallback chains, and health checks must be automated — manual intervention for local inference failures defeats the $0 target. |
 
 ### State of Knowledge
 
@@ -212,6 +213,10 @@ The general principle: build the routing infrastructure first, scale the hardwar
 > - Profile thresholds vary by risk tolerance (`fleet-light` at 0.3 vs `code-review` at 0.8)
 > - Model selection depends on available VRAM and task mix
 > - The "what remains cloud-only" list may shrink as local models improve
+
+### Context Depth and Routing Tier Connection (NEW)
+
+AICP's complexity scoring tiers (simple → moderate → complex → cloud-only) parallel the context engineering tier system (lightweight → capable → expert). The connection: a task routed to a local model should also receive LESS context (lightweight tier) because local models have smaller context windows and lower comprehension. A task routed to Claude (cloud) can receive full expert-tier context. This means routing decisions inform context injection depth — the two tier systems are complementary, not independent. See [[model-context-engineering|Model — Context Engineering]] for the tier definitions and [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth]] for trust-earned depth.
 
 ## Open Questions
 

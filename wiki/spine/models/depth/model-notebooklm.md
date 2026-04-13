@@ -11,7 +11,11 @@ confidence: high
 maturity: growing
 created: 2026-04-09
 updated: 2026-04-13
-sources: []
+sources:
+  - id: notebooklm-workflow
+    type: wiki
+    file: wiki/sources/src-notebooklm-claude-code-workflow.md
+    description: NotebookLM + Claude Code workflow synthesis
 tags: [model, concept, spine, notebooklm, research, content-pipeline, notebooklm-py, grounded-research]
 ---
 
@@ -191,9 +195,9 @@ The two tools occupy different positions in the knowledge lifecycle: NotebookLM 
 
 | Lesson | What was learned |
 |--------|-----------------|
-| Source grounding eliminates hallucination for verification tasks | When you need "what do these sources say" (not "what do you think"), NotebookLM bounded to uploaded sources outperforms any general LLM |
-| The 300-source limit must be a first-pass architectural decision | Hitting the limit mid-project forces notebook restructuring under pressure — plan multi-notebook splits before ingesting |
-| Ephemeral notebooks, permanent wiki | NotebookLM notebooks are research workspaces, not the knowledge store — artifacts flow one-way into the wiki |
+| [[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]] | Source grounding eliminates hallucination for verification tasks. When you need "what do these sources say" (not "what do you think"), NotebookLM bounded to uploaded sources outperforms any general LLM. |
+| [[multi-stage-ingestion-beats-single-pass-processing|Multi-Stage Ingestion Beats Single-Pass Processing]] | The 300-source limit must be a first-pass architectural decision. Hitting the limit mid-project forces notebook restructuring — plan multi-notebook splits before ingesting. |
+| [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]] | Ephemeral notebooks, permanent wiki. NotebookLM notebooks are research workspaces, not the knowledge store — artifacts flow one-way into the wiki. |
 
 ### State of Knowledge
 

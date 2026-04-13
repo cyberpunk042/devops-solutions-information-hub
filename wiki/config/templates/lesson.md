@@ -34,13 +34,40 @@ tags: []
 
 <!-- Specific examples from derived_from pages. Quote or reference directly.
      STYLING: Use > [!bug]- foldable for failure incidents with verbatim quotes.
-     Use > [!success] for validated approaches. -->
+     Use > [!success] for validated approaches.
+
+     EXAMPLE evidence items (replace with your content):
+
+     > [!bug]- Batch ingestion produced 37 thin pages in one sprint (2026-03-15)
+     >
+     > **What happened:** AI processed 12 URLs and scaffolded 37 pages in a single session.
+     > **What the operator said:** "Volume is not quality. 37 files in one sprint = Mountain tier."
+     > **Root cause:** No quality gate between scaffold and content generation.
+     > **Impact:** 2 hours rework to audit and delete 19 pages that duplicated existing content.
+
+     > [!success] E012 template enrichment using inline HTML comments
+     >
+     > **What changed:** Added <!-- EXAMPLE: --> blocks inside template guidance comments.
+     > **Result:** AI-generated pages improved from ~60% to ~90% structural compliance on first pass.
+     > **Why it worked:** Examples make the implicit standard explicit — the AI sees a real target,
+     > not just a description of what the target should be. -->
 
 ## Applicability
 
 <!-- Which domains, projects, situations benefit from this lesson?
      STYLING: If listing multiple domains, use a table (domain | how it applies).
-     If there is an enforcement hierarchy, use > [!abstract] with a table. -->
+     If there is an enforcement hierarchy, use > [!abstract] with a table.
+
+     EXAMPLE table (replace with your content):
+
+     | Domain | How this lesson applies |
+     |--------|------------------------|
+     | TypeScript | Scaffold empty modules before writing business logic; prevents type-coupling creep |
+     | Python/Wiki | Run pipeline post before claiming a wiki change is done; catches broken refs immediately |
+     | Knowledge | Never promote a source synthesis to L3 without reading a real instance of the concept |
+     | Infrastructure | Don't write systemd unit files manually; always encode them in reproducible tooling |
+
+     The table forces precision: "applies everywhere" is not applicability — it's abdication. -->
 
 
      EXAMPLE Insight (replace with your content): -->

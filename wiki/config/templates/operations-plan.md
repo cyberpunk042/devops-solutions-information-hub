@@ -39,7 +39,21 @@ tags: [operations-plan]
 - **Rollback:** What to do if this step fails
 
 ### Step 2: ...
--->
+
+     EXAMPLE step showing all four fields in use (replace with your content):
+
+### Step 2: Regenerate the wiki manifest
+
+- **Action:** Run `python3 -m tools.pipeline post` from the wiki root
+- **Expected output:** "6/6 steps passed" with 0 validation errors printed to stdout
+- **Validation:** Check that `wiki/manifest.json` updated timestamp matches current time:
+  `python3 -c "import json; d=json.load(open('wiki/manifest.json')); print(d['updated'])"`
+- **Rollback:** Restore previous manifest from git: `git checkout wiki/manifest.json`
+
+     Notice: every field is specific. "Run the pipeline" is NOT an action — it doesn't say
+     which pipeline or from where. "It works" is NOT validation — it doesn't say what to check.
+     The Rollback field prevents a failed step from leaving the system in a broken state. -->
+
 
 ## Rollback
 

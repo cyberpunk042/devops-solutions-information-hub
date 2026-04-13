@@ -53,11 +53,19 @@ Standards for evolution pages — historical narratives tracking how a concept, 
 
 ### Annotated Exemplar: [[methodology-evolution-history|Evolution — Methodology System]]
 
-> [!example]- What makes a good evolution page
+> [!example]- Full Walkthrough — Why Each Section Works
 >
-> **Timeline with significance:** Every entry has a date AND why it mattered. "2026-04-08 — Infrastructure enforcement deployed (violations: 75%→0%)" — not just "hooks added."
-> **Key Shifts:** ≥2 turning points with Before/Evidence/After structure. Shows the DIRECTION change, not just events.
-> **Current State:** Honest table with aspect/state/evidence. Numbers where possible.
+> **1. Frontmatter** — `type: evolution`, `domain: cross-domain`. Evolution pages are navigation-layer — they organize history, not add content. The `sources` field traces which real events and sessions produced each timeline entry. ← Provenance is critical: readers must know WHERE the history came from, not just WHAT happened.
+>
+> **2. Summary** — "How the methodology system evolved from prose instructions to infrastructure-enforced stage gates." One sentence, two endpoints (before → after). ← The summary IS the evolution compressed. If you can't state the trajectory in one sentence, the narrative is unfocused.
+>
+> **3. Timeline with significance** — 9 dated entries. Each has a date AND why it mattered: "2026-04-08 — Infrastructure enforcement deployed (violations: 75%→0%)" — not just "hooks added." ← Dates enable chronological reasoning. Significance prevents the timeline from being a changelog — it's a NARRATIVE of inflection points.
+>
+> **4. Key Shifts** — ≥2 turning points with Before/Evidence/After structure. "Before: prose instructions, 25% compliance. Evidence: OpenArms v8-v10 comparison. After: hooks, 100% compliance." ← Shows DIRECTION change, not just events. Before/After makes the shift measurable and the reader can verify the claim.
+>
+> **5. Current State** — Honest table with aspect/state/evidence. "Stage enforcement: 100% via hooks (5 production runs)." Numbers where possible. ← Grounds the narrative in present reality. A reader who only reads Current State gets the snapshot; the timeline gives them the journey.
+>
+> **What could still improve:** Explicitly marking which shifts are REVERSIBLE (methodology changes can be reverted) vs IRREVERSIBLE (infrastructure changes that broke backward compatibility). This helps readers assess the stability of the current state.
 
 ### Template
 

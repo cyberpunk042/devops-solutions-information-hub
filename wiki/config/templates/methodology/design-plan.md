@@ -43,6 +43,42 @@ tags: [methodology, design, {{epic_tag}}]
 
      Reversibility assessment for each decision. -->
 
+<!--
+EXAMPLE:
+
+### Decision 1: Configuration Format for Validation Rules
+
+> [!success] Decision: Define validation rules in YAML (wiki-schema.yaml), not in code
+> | Scenario | Action |
+> |----------|--------|
+> | New field added to schema | Add entry to wiki-schema.yaml — no code change required |
+> | Field type constraint changes | Update yaml — validator auto-reads on next run |
+> | New page type introduced | Add type entry + required fields — deploy is a file copy |
+
+**Rationale:** Validation rules change with wiki structure, not with tool releases.
+Keeping them in YAML lets operators extend the schema without touching Python.
+Evidence: existing `wiki-schema.yaml` already defines type enums; extending it is
+lower friction than adding a new code branch per field.
+
+> [!warning] Rejected Alternative: Hardcode validation in tools/validate.py
+> Why rejected: Every schema change requires a code edit, review, and redeploy.
+> Schema evolves weekly; coupling it to code creates unnecessary release pressure.
+
+> [!warning] Rejected Alternative: JSON Schema
+> Why rejected: YAML is already the project standard for config; JSON Schema adds a
+> second format without meaningfully improving expressiveness for this use case.
+
+**Reversibility:** LOW risk — YAML can be replaced with code later if performance
+becomes a concern. The interface (validate_page → ValidationResult) stays the same.
+
+| Alternative | Pros | Cons | Decision |
+|-------------|------|------|----------|
+| YAML config | Machine-readable, validatable, operator-editable | Verbose, harder to author ad-hoc | CHOSEN — validation outweighs authoring cost |
+| Hardcoded rules | Simple, fast to write | Couples schema to releases, brittle | REJECTED |
+| JSON Schema | Industry standard, tooling support | Second format, no benefit here | REJECTED |
+-->
+
+
 ### Module Plan
 
 <!-- Refined module/task breakdown with implementation order.

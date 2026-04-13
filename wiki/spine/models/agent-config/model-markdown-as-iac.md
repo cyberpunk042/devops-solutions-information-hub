@@ -218,6 +218,10 @@ Maps to [[context-aware-tool-loading|Context-Aware Tool Loading]]:
 
 The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUDE.md structures program agent behavior through form (tables, numbered lists, callouts), not just content. The [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] formalizes this. Five cognitive contexts reading one CLAUDE.md means the structure must DECLARE which context it addresses.
 
+### CLAUDE.md as Identity Declaration — The Goldilocks Connection (NEW)
+
+The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-IaC in the ecosystem. Each project declares 7 dimensions (type, execution mode, domain, phase, scale, PM level, trust tier) as a YAML-style table in CLAUDE.md. This table is not documentation — it is a programmatic declaration that determines SDLC chain selection, methodology depth, and artifact requirements. The wiki's own identity profile (`wiki/ecosystem/project_profiles/research-wiki/identity-profile.md`) serves as the worked example. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for how identity drives the entire decision chain.
+
 ## Open Questions
 
 > [!question] ~~****When does the companion file ecosystem tip into context overhead?****~~

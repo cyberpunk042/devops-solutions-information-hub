@@ -53,6 +53,18 @@ tags: []
      Format: | Task ID | Title | Readiness | Progress | Status |
      Track both dimensions for each child. -->
 
+<!-- EXAMPLE Tasks table (replace with your content):
+
+     | Task | Title | Readiness | Progress | Status |
+     |------|-------|-----------|----------|--------|
+     | T-042 | Enrich pattern.md template with examples | 100% | 100% | done |
+     | T-043 | Enrich concept.md template with examples | 75% | 25% | in-progress |
+
+     Readiness = is this task DEFINED enough to start (requirements, acceptance criteria set)?
+     Progress = how much WORK is done (scaffold→implement→test)?
+     A task at 100% readiness / 0% progress is fully specified but not started — normal and healthy.
+     A task at 0% readiness / 50% progress is being built without a clear definition — a red flag. -->
+
 | Task | Title | Readiness | Progress | Status |
 |------|-------|-----------|----------|--------|
 | {{task_id}} | {{task_title}} | 0% | 0% | draft |

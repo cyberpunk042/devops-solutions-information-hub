@@ -187,9 +187,9 @@ The maturity ladder makes this compounding visible: a page starts as `seed` (thi
 
 | Lesson | What was learned |
 |--------|-----------------|
-| PARA + Zettelkasten are complementary, not competing | PARA solves retrieval ("where is it?"), Zettelkasten solves generation ("what connects?") — implement both |
-| Automation eliminates the maintenance death spiral | Every previous wiki died from super-linear maintenance cost; the post-chain and watcher daemon reduce that cost to near-zero |
-| Connection density is the value metric, not page count | A wiki with 500 pages and weak links is a file cabinet; 100 pages with dense relationships is a research engine |
+| [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] | PARA solves retrieval ("where is it?"), Zettelkasten solves generation ("what connects?") — implement both. Automation eliminates the maintenance death spiral. |
+| [[wiki-maintenance-problem-solved-by-llm-automation|Wiki Maintenance Problem Solved by LLM Automation]] | Every previous wiki died from super-linear maintenance cost; the post-chain and watcher daemon reduce that cost to near-zero. |
+| [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]] | Connection density is the value metric, not page count. A wiki with 500 pages and weak links is a file cabinet; 100 pages with dense relationships is a research engine. |
 
 ### State of Knowledge
 

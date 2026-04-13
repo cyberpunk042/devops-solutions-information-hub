@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T20:01:46.505311+00:00",
+  "generated": "2026-04-13T22:55:55.095968+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -24,10 +24,10 @@
     {
       "path": "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge.md",
       "slug": "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge",
-      "title": "E010 \u2014 Model Updates \u2014 All 15 Models Reflect Current Knowledge",
+      "title": "E010 \u2014 Model Updates \u2014 All 16 Models Reflect Current Knowledge",
       "type": "epic",
       "domain": "backlog",
-      "status": "draft",
+      "status": "active",
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
@@ -96,7 +96,7 @@
       "title": "E011 \u2014 Standards Exemplification \u2014 All 15 Per-Type Standards with Inline Annotated Exemplars",
       "type": "epic",
       "domain": "backlog",
-      "status": "draft",
+      "status": "active",
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
@@ -139,7 +139,7 @@
         },
         {
           "verb": "DEPENDS ON",
-          "target": "E010 \u2014 Model Updates \u2014 All 15 Models Reflect Current Knowledge"
+          "target": "E010 \u2014 Model Updates \u2014 All 16 Models Reflect Current Knowledge"
         },
         {
           "verb": "BUILDS ON",
@@ -270,7 +270,7 @@
         },
         {
           "verb": "DEPENDS ON",
-          "target": "E010 \u2014 Model Updates \u2014 All 15 Models Reflect Current Knowledge"
+          "target": "E010 \u2014 Model Updates \u2014 All 16 Models Reflect Current Knowledge"
         },
         {
           "verb": "BUILDS ON",
@@ -336,7 +336,7 @@
         },
         {
           "verb": "DEPENDS ON",
-          "target": "E010 \u2014 Model Updates \u2014 All 15 Models Reflect Current Knowledge"
+          "target": "E010 \u2014 Model Updates \u2014 All 16 Models Reflect Current Knowledge"
         },
         {
           "verb": "DEPENDS ON",
@@ -1162,7 +1162,7 @@
       "relationships": [
         {
           "verb": "CONTAINS",
-          "target": "E010 \u2014 Model Updates \u2014 All 15 Models Reflect Current Knowledge"
+          "target": "E010 \u2014 Model Updates \u2014 All 16 Models Reflect Current Knowledge"
         },
         {
           "verb": "CONTAINS",
@@ -16948,7 +16948,14 @@
         "notebooklm-py",
         "grounded-research"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "id": "notebooklm-workflow",
+          "type": "wiki",
+          "file": "wiki/sources/src-notebooklm-claude-code-workflow.md",
+          "description": "NotebookLM + Claude Code workflow synthesis"
+        }
+      ],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],

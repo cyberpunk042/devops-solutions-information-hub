@@ -198,7 +198,7 @@ Complete requirements spec for the second brain integration system — covering 
 [[model-llm-wiki|Model — LLM Wiki]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
-[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+[[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 [[e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e|E011 — Standards Exemplification — All 15 Per-Type Standards with Inline Annotated Exemplars]]
 [[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]

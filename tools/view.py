@@ -88,7 +88,7 @@ def _get_targets(rel: Dict) -> List[str]:
 def cmd_tree(manifest: Dict, root: Path):
     """The full tree — understand the wiki in 10 seconds."""
     pages = manifest["pages"]
-    models = [p for p in pages if p.get("title", "").startswith("Model:")]
+    models = [p for p in pages if p.get("title", "").startswith(("Model —", "Model:"))]
     standards = [p for p in pages if "Standards" in p.get("title", "") and "What Good" in p.get("title", "")]
     decisions = [p for p in pages if p.get("type") == "decision"]
     lessons = [p for p in pages if p.get("type") == "lesson"]
@@ -119,7 +119,7 @@ RESEARCH WIKI ({total} pages, {rels} relationships)
 
     print(f"│   ├── MODELS ({len(models)}) + STANDARDS ({len(standards)})")
     for m in sorted(models, key=lambda x: x.get("title", "")):
-        name = m["title"].replace("Model: ", "")
+        name = m["title"].replace("Model — ", "").replace("Model: ", "")
         mat = m.get("maturity", "")
         std = None
         first_word = name.split()[0]
@@ -170,7 +170,7 @@ def cmd_spine(manifest: Dict, root: Path):
     """Spine detail: super-model, models, standards."""
     pages = manifest["pages"]
     models = sorted(
-        [p for p in pages if p.get("title", "").startswith("Model:")],
+        [p for p in pages if p.get("title", "").startswith(("Model —", "Model:"))],
         key=lambda x: x.get("title", ""),
     )
     standards_list = [p for p in pages if "Standards" in p.get("title", "") and "What Good" in p.get("title", "")]
@@ -202,7 +202,7 @@ def cmd_spine(manifest: Dict, root: Path):
     keys = []
     for m in models:
         title = m["title"]
-        name = title.replace("Model: ", "")
+        name = title.replace("Model — ", "").replace("Model: ", "")
         mat = m.get("maturity", "")
         path = "wiki/" + m.get("path", "")
         std = None
@@ -241,7 +241,7 @@ def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
     for p in pages:
         t = p.get("title", "")
         if model_name.lower() in t.lower() and (
-            t.startswith("Model:") or ("Super-Model" in t and p.get("path", "").startswith("spine/"))
+            t.startswith(("Model —", "Model:")) or ("Super-Model" in t and p.get("path", "").startswith("spine/"))
         ):
             model = p
             break
@@ -250,7 +250,7 @@ def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
         print(f"Model not found: '{model_name}'")
         print("\nAvailable:")
         for p in sorted(pages, key=lambda x: x.get("title", "")):
-            if p.get("title", "").startswith("Model:"):
+            if p.get("title", "").startswith(("Model —", "Model:")):
                 print(f"  {p['title']}")
         return
 
@@ -435,7 +435,7 @@ def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
         for t, typ, fpath in sorted(set(inbound)):
             print(f"    [{typ}] {t}  [{fpath}]")
 
-    key = title.replace("Model: ", "").replace("Super-Model: ", "").split()[0].lower()
+    key = title.replace("Model — ", "").replace("Model: ", "").replace("Super-Model — ", "").replace("Super-Model: ", "").split()[0].lower()
     print(f"\n  Full page:  python3 wiki.py model {key} --full")
 
 

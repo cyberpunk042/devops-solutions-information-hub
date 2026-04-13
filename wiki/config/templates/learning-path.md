@@ -45,7 +45,13 @@ tags: [learning-path]
 
 <!-- EXAMPLE entries (replace with your content):
      1. **[[Model: Methodology]]** — Start here. Defines the 9 models and when to use each. Foundation for everything.
-     2. **[[Stage-Gate Methodology]]** — The 5 stages with ALLOWED/FORBIDDEN. Requires: knowing models exist (from page 1). -->
+     2. **[[Stage-Gate Methodology]]** — The 5 stages with ALLOWED/FORBIDDEN. Requires: knowing models exist (from page 1).
+
+     Notice what the annotation does:
+     - It states WHAT the page teaches ("Defines the 9 models")
+     - It states WHY it comes FIRST ("Foundation for everything")
+     - It calls out dependencies explicitly ("Requires: knowing models exist (from page 1)")
+     The annotation is NOT a summary of the page — it's a navigation instruction. -->
 
 1. **[[{{page_1}}]]** — Start here. {{why this page first — what foundation it provides}}.
 

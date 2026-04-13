@@ -66,7 +66,7 @@ Standards for epic pages — strategic containers that break into modules and ta
 > - Dependencies explicit: "None — this is the foundation epic"
 > - Traces to operator directive in sources field
 
-### Annotated Exemplar: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]]
+### Annotated Exemplar: [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 16 Models Reflect Current Knowledge]]
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >

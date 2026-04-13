@@ -5,12 +5,12 @@ aliases:
   - "E012 — Template Enrichment: Rich Proto-Programming Examples"
 type: epic
 domain: backlog
-status: draft
+status: active
 priority: P0
 task_type: epic
-current_stage: document
-readiness: 70
-progress: 75
+current_stage: implement
+readiness: 90
+progress: 85
 stages_completed:
 artifacts:
   - "raw/notes/2026-04-12-documentation-standards-directive.md"

@@ -36,6 +36,42 @@ tags: [methodology, tech-spec, {{epic_tag}}]
      > | Consumers | ... |
 -->
 
+<!--
+EXAMPLE:
+
+### Component: ValidationEngine
+
+> [!info] ValidationEngine
+>
+> | Attribute | Value |
+> |-----------|-------|
+> | Responsibility | Validate a single wiki page's frontmatter against wiki-schema.yaml; return structured result |
+> | Location | tools/validate.py — class ValidationEngine (new), extracted from existing validate_page() function |
+> | Dependencies | wiki/config/wiki-schema.yaml (read once at init), PyYAML |
+> | Consumers | tools/pipeline.py post-chain (step 3), tools/lint.py (quality checks), CLI `python3 -m tools.validate` |
+
+**API:**
+
+> [!info] API Reference — ValidationEngine
+>
+> | Method | Input | Output | Side Effects |
+> |--------|-------|--------|--------------|
+> | `__init__(schema_path)` | Path to wiki-schema.yaml | ValidationEngine instance | Loads and parses YAML schema once |
+> | `validate_page(path)` | Path to .md file | `ValidationResult` | None (pure — no writes, no network) |
+> | `validate_all(wiki_root)` | Path to wiki/ directory | `list[ValidationResult]` | None (pure) |
+
+**ValidationResult contract:**
+```python
+@dataclass
+class ValidationResult:
+    path: Path
+    ok: bool                     # True = no errors
+    errors: list[FieldError]     # Empty list when ok=True
+    warnings: list[FieldError]   # Non-blocking issues (deprecated fields, etc.)
+```
+-->
+
+
 ### API
 
 <!-- Function/method reference table.

@@ -56,14 +56,23 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 > - Specific gap analysis with actionable priorities
 > - Key Pages in recommended reading order
 
-### Annotated Exemplar: Check any domain overview in wiki/spine/domain-overviews/
+### Annotated Exemplar: [[cross-domain-domain-overview|Cross-Domain — Domain Overview]]
 
-> [!example]- What makes a good domain overview
+> [!example]- Full Walkthrough — Why Each Section Works
 >
-> **Maturity Map:** Groups pages by maturity (seed/growing/mature/canonical) — shows domain health at a glance.
-> **Coverage Assessment:** What's covered, what's thin, what's missing — specific named gaps.
-> **Key Pages:** Curated reading order, not alphabetical dump. Each page annotated with why it's key.
-> **Priorities:** Named next actions with estimated effort.
+> **1. Frontmatter** — `type: domain-overview`, `domain: cross-domain`, `maturity: growing`. The `maturity` field on a domain overview reflects the domain's AGGREGATE health, not just this page. ← This is WHY domain overviews are curator pages, not content pages.
+>
+> **2. Summary** — "The cross-domain area is not a subject-matter domain but a structural layer." Immediately tells the reader what this domain IS and how it differs from content domains. ← Orientation in seconds — the reader knows whether this is the right domain before scrolling.
+>
+> **3. Maturity Map** — Groups 29 lessons by maturity (seed/growing/mature/canonical) as a table with counts. ← Shows domain health at a glance. A reader sees "3 canonical, 12 growing, 14 seed" and knows WHERE the domain is strong vs thin.
+>
+> **4. Coverage Assessment** — "What's covered: methodology framework, artifact taxonomy, agent compliance. What's thin: SDLC customization, formal context grammar." Named gaps with specificity. ← Not "some areas need work" — exact named gaps that become backlog candidates.
+>
+> **5. Key Pages** — Curated reading order, not alphabetical dump. Each page annotated with WHY it's key: "Methodology Framework — entry point, defines the 9 models." ← A new reader follows this order and builds understanding progressively.
+>
+> **6. Priorities** — "P1: Deepen SDLC chain configs (3 YAMLs are drafts). P2: Add context engineering standards page." Named next actions with estimated effort. ← Actionable, not aspirational. An agent or human can pick up work directly from these priorities.
+>
+> **What could still improve:** Backlink density analysis per page (which pages are referenced most but have the thinnest content?), automated maturity scoring from pipeline metrics.
 
 ### Template
 

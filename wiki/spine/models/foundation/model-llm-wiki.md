@@ -47,6 +47,8 @@ This is one of 14+ named models that a wiki can contain. The [[methodology-frame
 - The schema is the real product — content is regenerable from raw sources; the schema that constrains content encodes irreplaceable operational knowledge.
 - Knowledge compounds through density layers — each layer denser and more actionable than the previous.
 - A wiki hosts multiple named MODELS. Each model is a coherent system with entry point, pages, and standards. The wiki is the container; models are the organized knowledge within it.
+- **Dual-scope operation** — the wiki serves both as a project's local knowledge base (`--wiki-root`) AND as a shared second brain (`--brain`). The gateway unifies both scopes through a single CLI/MCP interface.
+- **Progressive distillation reaches principles** — knowledge evolves L0 (raw) → L1 (synthesis) → L2 (concept) → L3 (comparison) → L4 (lesson) → L5 (pattern) → L6 (decision) → Principle. Maturity-based folders (`00_inbox` → `04_principles`) make this physical.
 
 ## Deep Analysis
 

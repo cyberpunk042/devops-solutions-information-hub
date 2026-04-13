@@ -42,6 +42,26 @@ tags: [methodology, requirements, {{epic_tag}}]
      DEPTH: Each FR must be specific enough to verify. "The system shall be good"
      is NOT a requirement. "The system shall validate all pages in <10 seconds" IS. -->
 
+<!--
+EXAMPLE:
+
+> [!info] Page Validation
+> **FR-1:** The system SHALL validate all frontmatter fields against wiki-schema.yaml
+> before accepting a page into the wiki.
+> **Rationale:** Invalid frontmatter (missing title, wrong type enum value, malformed date)
+> causes manifest generation to fail silently, propagating corrupt entries to downstream
+> export and search tools.
+> **Priority:** P0
+> **Verification:** Run `python3 -m tools.validate` against a page with a missing required
+> field; expect exit code 1 with a specific error message, not a silent pass.
+>
+> **FR-2:** The system SHALL report the exact field name and expected type for each
+> validation failure, not just a generic "invalid frontmatter" error.
+> **Rationale:** Operators need actionable errors to fix pages without re-reading the schema.
+> **Priority:** P1
+-->
+
+
 ### Non-Functional Requirements
 
 <!-- Numbered NFR-N items. Performance, compatibility, portability, maintainability.

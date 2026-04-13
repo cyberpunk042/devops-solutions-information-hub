@@ -40,7 +40,7 @@ Quality and failure prevention for AI agents is not a set of best practices — 
 
 - **Instructions fail, infrastructure works — quantified.** OpenArms v8: 28 CLAUDE.md rules, 75% stage boundary violations overnight. v10: 4 hooks (215 lines), 0% stage boundary violations across 5 production runs. The same rules, different enforcement mechanism, categorical difference. See [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] for the full evidence chain.
 
-- **Six behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: weakest-checker optimization, environment patching without escalation, fatigue cliff in later stages, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
+- **Seven behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: (1) weakest-checker optimization, (2) environment patching without escalation, (3) fatigue cliff in later stages, (4) sub-agent non-compliance (~33% compliance), (5) silent conflict resolution, (6) artifact pollution, (7) context-window degradation — the overnight run showed quality degrades predictably as context fills (cost curve: $3.50/task at v1-v2 → $1.32/task at v5-v7, but quality drops in later stages regardless of cost). See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
 
 - **Enforcement must be mindful — hard blocks need justified bypass.** Blind enforcement creates its own failures. Every block must explain WHY, every system must offer bypass with logged justification. OpenArms T086: agent's correct fix reverted twice by over-enforcement. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
@@ -367,10 +367,17 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Enforcement patterns** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] |
+> | **The enforcement hierarchy** | [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]] |
+> | **Enforcement hook patterns** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] |
 > | **Three lines of defense** | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
-> | **Failure taxonomy** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] |
-> | **SFIF architecture** | [[model-sfif-architecture|Model — SFIF and Architecture]] |
+> | **Failure taxonomy (7 classes)** | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] |
+> | **Mindful enforcement** | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] |
+> | **Rework prevention economics** | [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]] |
+> | **Depth verification** | [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] |
+> | **Context compaction** | [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] |
+> | **SFIF quality tiers** | [[model-sfif-architecture|Model — SFIF and Architecture]] |
+> | **Methodology connection** | [[model-methodology|Model — Methodology]] |
+> | **Standards for this model** | [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]] |
 
 ## Relationships
 

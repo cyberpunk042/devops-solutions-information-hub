@@ -67,12 +67,21 @@ Standards for operations plan pages — sequential deterministic checklists that
 
 ### Annotated Exemplar: [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
 
-> [!example]- What makes a good operations plan
+> [!example]- Full Walkthrough — Why Each Section Works
 >
-> **17 steps in 7 phases:** Each step has: Action (what to do), Command (exact CLI), Expected output (what success looks like), Validation (how to verify). A "dumb agent" can follow these mechanically.
-> **Phases group related steps:** Discovery → Identity → Methodology → Standards → Work Loop → Feedback → Mode Selection. Reader can enter at their current phase.
-> **Prerequisites as checklist:** `- [ ] Second brain accessible` `- [ ] Python available` — verifiable before starting.
-> **Completion criteria:** Observable behaviors: "identity profile declared," "at least one contribution back." Not "plan followed."
+> **1. Frontmatter** — `type: operations-plan`, `artifact_class: document` (from artifact-types.yaml). Operations plans are BINDING — they constrain execution, not suggest it. ← The document class means an agent treats this as instructions, not reference. This is WHY operations plans exist as a separate type from concept pages.
+>
+> **2. Summary** — "Complete step-by-step chain for integrating ANY project with the second brain." States the scope (any project) and the format (step-by-step). ← The summary tells the reader immediately: this is a SEQUENTIAL checklist, not a discussion. If you're looking for reasoning, read the design doc instead.
+>
+> **3. Prerequisites as checklist** — `- [ ] Second brain accessible` `- [ ] Python available` — verifiable BEFORE starting. ← Without prerequisites, step 1 may fail due to missing setup. Checkboxes make this verifiable — an agent can programmatically check each condition before beginning.
+>
+> **4. Steps with 4-field structure** — Each of 17 steps has: Action (what to do), Command (exact CLI), Expected output (what success looks like), Validation (how to verify). ← A "dumb agent" can follow these mechanically. The 4-field structure prevents the common failure where steps say WHAT but not HOW TO VERIFY. The validation field is what makes this deterministic rather than suggestive.
+>
+> **5. Phases group related steps** — Discovery → Identity → Methodology → Standards → Work Loop → Feedback → Mode Selection. Reader can enter at their current phase. ← Phases create entry points for partially-completed integrations. A project that already has an identity profile starts at Phase 3.
+>
+> **6. Completion criteria** — Observable behaviors: "identity profile declared," "at least one contribution back." Not "plan followed." ← Outcome-based, not process-based. The plan succeeds when the behaviors exist, not when every step was executed in order.
+>
+> **What could still improve:** Error handling guidance per step (what to do when a step fails), estimated time per phase, dependency markers between steps.
 
 ### Template
 

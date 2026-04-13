@@ -30,7 +30,19 @@ tags: []
      STYLING: If an insight contains a comparison or taxonomy, use a table.
      If an insight is a critical constraint, wrap in > [!warning].
      
-     EXAMPLE insights (replace with your content): -->
+     EXAMPLE insights (replace with your content):
+
+     EXAMPLE of a self-contained insight (notice: bold claim + specific mechanism + implication):
+     "1. **Readiness and progress are orthogonal dimensions, not a single scale.**
+     A task at 100% readiness / 0% progress is fully specified but unstarted — healthy.
+     A task at 0% readiness / 50% progress is being built without a clear definition — a red flag.
+     The two dimensions must be tracked separately because readiness gates progress: you should
+     not start building (advance progress) until the task is defined (readiness ≥ threshold)."
+
+     WHAT MAKES THIS GOOD: It's self-contained (no prior context needed), it has a specific
+     mechanism (orthogonal dimensions, gating relationship), and it has a concrete implication
+     (don't build without definition). Compare to BAD: "Readiness and progress are different
+     things and both matter." True but not actionable — adds zero transferable knowledge. -->
 
 1. **{{First insight as bold statement.}}** Explanation with specific data or mechanism. Not vague — name numbers, sources, or concrete examples.
 
@@ -60,7 +72,25 @@ tags: []
 ### {{First Subsection — Name the Mechanism}}
 
 <!-- Explain ONE specific mechanism, dimension, or component.
-     Use tables for structured data. Use callouts for typed information. -->
+     Use tables for structured data. Use callouts for typed information.
+
+     EXAMPLE subsection (replace with your content):
+
+### The Three-Chain Model: Simplified, Default, Full
+
+<!-- This subsection explains the taxonomy — three things to compare.
+     The table makes the comparison scannable; the prose below explains the selection logic. -->
+
+> [!info] SDLC Chain Comparison
+>
+> | Chain | Stages | Enforced gates | Best for |
+> |-------|--------|----------------|---------|
+> | simplified | document → implement → test | 2 (doc→impl, impl→test) | POC, solo, fast iteration |
+> | default | document → design → scaffold → implement → test | 4 | Most projects, production-bound work |
+> | full | adds milestone, review, and sign-off gates | 6+ | Regulated, team, high-risk |
+>
+> Selection criterion: use the simplest chain that catches the failure modes you've actually
+> experienced. Defaulting to "full" adds ceremony without adding safety for small projects. -->
 
 > [!info] {{Reference data title}}
 >
@@ -71,7 +101,11 @@ tags: []
 ### {{Second Subsection — Another Dimension}}
 
 <!-- Each subsection should be independently valuable — a reader can
-     jump to any subsection and understand it without reading the others. -->
+     jump to any subsection and understand it without reading the others.
+
+     EXAMPLE: if your first subsection explained WHAT the mechanism is,
+     the second subsection should explain HOW to select or apply it (decision logic),
+     and the third should explain WHERE it fails (edge cases, constraints). -->
 
 ## Open Questions
 
