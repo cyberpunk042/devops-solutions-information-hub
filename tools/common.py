@@ -405,6 +405,30 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
 
 """ if milestones else ""
 
+    # --- Collect loose reference pages at backlog root ---
+    loose_pages = []
+    for md_file in sorted(backlog_dir.glob("*.md")):
+        if md_file.name == "_index.md":
+            continue
+        text = md_file.read_text(encoding="utf-8")
+        meta, _ = parse_frontmatter(text)
+        if meta and meta.get("title"):
+            loose_pages.append({
+                "title": meta["title"],
+                "file": md_file.name,
+            })
+
+    loose_section = ""
+    if loose_pages:
+        loose_rows = "\n".join(
+            f"- [{p['title']}]({p['file']})" for p in loose_pages
+        )
+        loose_section = f"""## References
+
+{loose_rows}
+
+"""
+
     backlog_index_content = f"""---
 title: "Backlog"
 type: index
@@ -427,7 +451,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 |----|------|----------|--------|-----------|
 {epic_rows}
 
-## Modules
+{loose_section}## Modules
 
 See [modules/](modules/)
 

@@ -45,6 +45,11 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | SDLC | [SDLC Rules and Structure — Customizable Project Lifecycle](epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md) | P0 | draft | 10 |
 | WIKI | [Wiki Gateway Tools — Unified Knowledge Interface](epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface.md) | P0 | draft | 5 |
 
+## References
+
+- [Operator Decision Queue](operator-decision-queue.md)
+- [Research Gaps — Empirical Questions Requiring Data](research-gaps.md)
+
 ## Modules
 
 See [modules/](modules/)

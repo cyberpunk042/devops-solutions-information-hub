@@ -107,19 +107,19 @@ methodology knowledge available. USE IT before producing anything.
 
 ## Before Starting ANY Work
 
-1. Check `wiki/spine/model-methodology.md` — understand which model applies
-2. Check `wiki/spine/methodology-system-map.md` — find any component you need
+1. Check `wiki/spine/models/foundation/model-methodology.md` — understand which model applies
+2. Check `wiki/spine/references/methodology-system-map.md` — find any component you need
 3. Check the per-type standards in `wiki/spine/standards/` — know what GOOD looks like BEFORE writing
 
 ## Before Producing ANY Artifact
 
 1. Identify the artifact class: is it a DOCUMENT (constraining), ARTIFACT (by-product), or DOCUMENTATION (explaining)?
-2. Check `wiki/domains/cross-domain/methodology-artifact-taxonomy.md` — 78 types across 11 categories
+2. Check `wiki/domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy.md` — 78 types across 11 categories
 3. Check the domain chain for your domain — what specific artifacts does this stage produce HERE?
-   - TypeScript: `wiki/domains/cross-domain/domain-chain-typescript.md`
-   - Python/Wiki: `wiki/domains/cross-domain/domain-chain-python-wiki.md`
-   - Infrastructure: `wiki/domains/cross-domain/domain-chain-infrastructure.md`
-   - Knowledge: `wiki/domains/cross-domain/domain-chain-knowledge.md`
+   - TypeScript: `wiki/domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript.md`
+   - Python/Wiki: `wiki/domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki.md`
+   - Infrastructure: `wiki/domains/cross-domain/methodology-artifacts/chains/domain-chain-infrastructure.md`
+   - Knowledge: `wiki/domains/cross-domain/methodology-artifacts/chains/domain-chain-knowledge.md`
 4. Check `wiki/spine/standards/{type}-page-standards.md` — section-by-section quality bar
 
 ## When You Don't Know Something
@@ -150,7 +150,7 @@ This wiki grows through progressive distillation:
 - `wiki/config/` — Wiki schema, domain registry, export profiles, quality standards, methodology engine, artifact types, domain profiles, templates
 - `docs/` — Project documentation and specs
 
-**Start here:** `wiki/spine/model-registry.md` — lists all 15 named models with their
+**Start here:** `wiki/spine/references/model-registry.md` — lists all 16 named models with their
 companion standards pages. Models are the primary knowledge containers.
 
 ## Page Schema

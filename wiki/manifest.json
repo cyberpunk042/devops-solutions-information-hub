@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T18:28:23.903314+00:00",
+  "generated": "2026-04-13T18:32:56.292991+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -1275,7 +1275,7 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "E021 \u2014 New Source Ingestion"
+          "target": "E021 \u2014 New Source Ingestion \u2014 10-15 Sources Through Full Pipeline"
         },
         {
           "verb": "RELATES TO",
@@ -23419,12 +23419,6 @@
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
-      ]
-    },
-    {
-      "target": "E021 \u2014 New Source Ingestion",
-      "referenced_by": [
-        "Research Gaps \u2014 Empirical Questions Requiring Data"
       ]
     },
     {

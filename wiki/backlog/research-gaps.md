@@ -84,12 +84,12 @@ When a gap is answered, update the source page's `[!question]` callout with RESO
 
 ## Relationships
 
-- RELATES TO: [[e021-new-source-ingestion-10-15-sources-through-full-pipeline\|E021 — New Source Ingestion]]
-- RELATES TO: [[model-methodology\|Model — Methodology]]
-- RELATES TO: [[operator-decision-queue\|Operator Decision Queue]]
+- RELATES TO: [[e021-new-source-ingestion-10-15-sources-through-full-pipeline|E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline]]
+- RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[operator-decision-queue|Operator Decision Queue]]
 
 ## Backlinks
 
-[[E021 — New Source Ingestion]]
+[[e021-new-source-ingestion-10-15-sources-through-full-pipeline|E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline]]
 [[model-methodology|Model — Methodology]]
 [[operator-decision-queue|Operator Decision Queue]]

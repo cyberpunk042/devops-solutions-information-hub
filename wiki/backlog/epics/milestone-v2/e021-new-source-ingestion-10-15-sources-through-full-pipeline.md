@@ -79,3 +79,4 @@ Ingest 10-15 new sources the operator has ready. Each source goes through the FU
 
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[research-gaps|Research Gaps — Empirical Questions Requiring Data]]
