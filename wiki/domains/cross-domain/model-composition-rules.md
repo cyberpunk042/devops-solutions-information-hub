@@ -147,6 +147,16 @@ Multiple models run simultaneously on independent tracks. They don't share stage
 
 > [!question] Should composition rules be machine-readable in methodology.yaml (they currently are for nested only via `composition_model`), or is wiki documentation sufficient for sequential/conditional/parallel? (Recommendation: document first, formalize in config when enforcement needs it)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Framework]]

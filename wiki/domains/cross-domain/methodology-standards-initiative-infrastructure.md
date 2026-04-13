@@ -201,6 +201,16 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 
 > [!question] How does the artifact chain handle composition — when a Feature Development task is nested inside an SFIF project lifecycle stage? (Requires: recursive composition analysis)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - FEEDS INTO: [[Methodology Framework]]

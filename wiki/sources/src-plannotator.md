@@ -54,6 +54,16 @@ Plannotator is an open-source tool that injects a human-in-the-loop UI between a
 - Does the annotation schema map to a standard format (e.g., GitHub review comments, RFC diff formats) or is it proprietary?
 - How does the SFIF (Speculate-Feedback-Iterate-Finalize) pattern map to Plannotator's annotation → feedback → re-plan loop?
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[Plan Execute Review Cycle]] (provides the tooling layer that makes plan-gate-review a concrete workflow)

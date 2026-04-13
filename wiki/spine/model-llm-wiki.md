@@ -7,7 +7,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
@@ -406,6 +406,16 @@ This research wiki is the reference implementation. Project-specific details (Py
 
 See [[LLM Wiki Standards — What Good Looks Like]] for the gold-standard example of each page type, what makes each one good, and the anti-patterns to avoid. The standards page is the companion to this model — the model defines structure, the standards define quality.
 
+### Frontmatter as Programmatic Interface
+
+Every YAML frontmatter field is not just metadata — it is the interface through which tools, agents, MCP servers, and enforcement systems read and act on page state. A complete reference of every field, what it enables, and what automation reads it is at [[Frontmatter Field Reference — Complete Parameter Documentation]].
+
+Key fields for work management: `readiness` (definition completeness) and `progress` (execution completeness) are TWO independent dimensions tracked at every hierarchy level. See [[Readiness vs Progress — Two-Dimensional Work Tracking]].
+
+### Gateway Vision
+
+The wiki is evolving toward a unified gateway interface (Python CLI + MCP + programmatic API) that serves humans, AI agents, and external tools through one engine. Operations include: query by stage/domain/chain, archive/move with reference updates, agent write-back (remarks, lessons, corrections), config visualization, and template access. See [[Wiki Gateway Tools — Unified Knowledge Interface]] for the epic.
+
 ### Lessons Learned
 
 From building with this model — validated experience:
@@ -418,6 +428,9 @@ From building with this model — validated experience:
 | [[Never Synthesize from Descriptions Alone]] | Read the THING, not the description (Layer 0 → Layer 1) |
 | [[Shallow Ingestion Is Systemic, Not Isolated]] | One defect = audit ALL similar artifacts |
 | [[Automated Knowledge Validation Prevents Silent Wiki Decay]] | Without linting, wikis decay silently |
+| [[New Content Must Integrate Into Existing Pages]] | If entry points don't link to it, it doesn't exist |
+| [[Hardcoded Instances Fail — Build Frameworks Not Solutions]] | Copy values ≠ build framework. Portability test. |
+| [[Structured Context Is Proto-Programming for AI Agents]] | Markdown IS the programming language for AI. Consistent structure > content. |
 
 ## Open Questions
 
@@ -425,6 +438,24 @@ From building with this model — validated experience:
 - How do multiple agents co-author a wiki without conflicts? The current model assumes one agent + one operator. With OpenFleet's 10-agent architecture, merge conflicts on frontmatter, competing relationship claims, and simultaneous page creation need resolution. (Requires: multi-agent testing)
 - Optimal starting schema complexity? A new adopter could start with 5 types (concept, source-synthesis, lesson, decision, note) and grow to 16 — or start comprehensive. Which leads to better adoption? (Requires: 2+ adoption experiences)
 - Can the LLM Wiki coexist with Confluence/Notion in an organization? Possible boundary: LLM Wiki for AI-maintained synthesized knowledge, Confluence for human-authored team docs. The wiki ingests FROM Confluence but doesn't replace it. (Requires: enterprise context testing)
+
+### How This All Weaves Together — Navigation from This Page
+
+> [!abstract] From LLM Wiki → Everywhere
+>
+> | You Want To Know... | Go To |
+> |---------------------|-------|
+> | **"How does methodology govern wiki work?"** | [[Model: Methodology]] — 9 models, stage gates, the super-model that governs ALL work |
+> | **"What level of wiki do I need?"** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile determines wiki scope: second brain vs project wiki vs both |
+> | **"What fields does every page need?"** | [[Frontmatter Field Reference — Complete Parameter Documentation]] — 9 required, 20+ optional, each enables specific automation |
+> | **"How do I track work in the wiki?"** | [[Backlog Hierarchy Rules]] — Milestone→Epic→Module→Task, [[Readiness vs Progress — Two-Dimensional Work Tracking]] |
+> | **"How do agents consume the wiki?"** | [[How AI Agents Consume the Methodology Wiki]] — 4 entry paths, 3 consumption modes |
+> | **"What does 'good' look like per page type?"** | [[LLM Wiki Standards — What Good Looks Like]] — gold-standard exemplar per type |
+> | **"How do I adopt this for my project?"** | [[Methodology Adoption Guide]] — 4 tiers, per-domain quick starts |
+> | **"What tools exist for wiki operations?"** | [[Wiki Gateway Tools — Unified Knowledge Interface]] — planned unified interface for humans, agents, and MCP |
+> | **"Where does memory vs wiki content go?"** | Memory = ephemeral per-session. Wiki = shared project knowledge. Default to wiki. See OpenArms lesson on memory/wiki conflation (7th failure class). |
+>
+> **Dual-scope principle:** Wiki tools work on BOTH the second brain (information hub) AND project-internal wikis. One toolset, two contexts. A project queries the second brain for standards, then applies them to its own wiki.
 
 ## Relationships
 
@@ -449,9 +480,12 @@ From building with this model — validated experience:
 [[Model: Knowledge Evolution]]
 [[Artifact Chain: Knowledge/Evolution Domain]]
 [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[Frontmatter Field Reference — Complete Parameter Documentation]]
+[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Model Registry]]
 [[Model: Wiki Design]]
 [[New Content Must Integrate Into Existing Pages]]
 [[Operations Plan: Wiki Post-Ingestion Validation]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+[[Wiki Gateway Tools — Unified Knowledge Interface]]

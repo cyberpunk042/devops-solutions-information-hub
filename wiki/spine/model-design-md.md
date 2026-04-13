@@ -205,6 +205,16 @@ Maps to [[Context-Aware Tool Loading]]:
 > [!question] **Does DESIGN.md value decrease as LLMs improve at visual design?**
 > If models get better at generating consistent UI without constraints, does DESIGN.md become unnecessary? Or does the "design reasoning capture" (WHY columns) remain durable? (Requires: longitudinal comparison)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Design.md Pattern]]
@@ -226,4 +236,5 @@ Maps to [[Context-Aware Tool Loading]]:
 [[Model: SFIF and Architecture]]
 [[Model: Quality and Failure Prevention]]
 [[Claude Code Best Practices]]
+[[Principle: Structured Context Governs Agent Behavior More Than Content]]
 [[Structured Context Is Proto-Programming for AI Agents]]

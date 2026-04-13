@@ -184,6 +184,16 @@ A per-role extension to frontmatter that doesn't exist yet: `roles: [researcher,
 > [!example]- What is the right granularity for a "role"?
 > Resolved in [[Decision: Per-Role Command Design Decisions]]. Flat tags `roles: [developer, frontend]` rather than hierarchical role trees. Simplest model, revisit if insufficient.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Claude Code Skills]]

@@ -193,6 +193,16 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > [!question] ~~Should there be a "Scaffold Checklist" that agents run BEFORE calling /stage-complete?~~
 > **RESOLVED:** Yes — advisory self-check before gate. Blocking when harness exists. See [[Decision: Artifact System Design Decisions]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

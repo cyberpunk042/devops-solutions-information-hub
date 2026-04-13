@@ -205,6 +205,16 @@ The two tools occupy different positions in the knowledge lifecycle: NotebookLM 
 > [!question] Artifact quality variation
 > NotebookLM's generated reports vary in quality with source density and diversity. What is the minimum source count for a reliable report?
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[NotebookLM]]

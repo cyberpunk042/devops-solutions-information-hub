@@ -22,9 +22,14 @@ tags: [methodology, system-map, reference, navigation, framework]
 
 > [!tip] AI Quick Start — This Is Your Navigation Hub
 >
+> - **"Who am I? What do I need?"** → [[Project Self-Identification Protocol — The Goldilocks Framework]]
+> - **"How much process is right?"** → [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 > - **Need to understand methodology?** → Knowledge Layer tables below
+> - **Need enforcement patterns?** → Agent Compliance section below (13 pages from solo hooks to fleet immune system)
+> - **Need work management?** → Work Management section below (hierarchy, readiness/progress, PM levels)
 > - **Need a config file?** → Configuration Layer table
 > - **Need to know what tool validates what?** → Tooling Layer table
+> - **Need all frontmatter fields?** → [[Frontmatter Field Reference — Complete Parameter Documentation]]
 > - **Need to add something new?** → "How to Extend the System" section at the bottom
 > - **Need a specific page?** → Ctrl+F / search this page — every methodology page is listed here
 
@@ -100,9 +105,34 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | Page | What It Explains |
 > |------|-----------------|
-> | [[CLAUDE.md Structural Patterns for Agent Compliance]] | 8 formatting patterns that improve compliance |
-> | [[Enforcement Hook Patterns]] | 4 hook types: scope guard, write guard, artifact tracker, context rebuilder |
+> | [[CLAUDE.md Structural Patterns for Agent Compliance]] | 8 formatting patterns that improve compliance (25%→60%) |
+> | [[Enforcement Hook Patterns]] | 5-level enforcement hierarchy with OpenArms v10 + OpenFleet real implementation data |
 > | [[Stage-Aware Skill Injection]] | Per-stage skill recommendations, mandatory, blocked |
+> | [[Infrastructure Enforcement Proves Instructions Fail]] | Quantified: instructions=25%, hooks=100%. 215 lines > 28 rules. |
+> | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | 6 behavioral classes that persist after infrastructure (20% clean rate) |
+> | [[Three Lines of Defense — Immune System for Agent Quality]] | Prevention → Detection → Correction. OpenFleet 3-line immune system. |
+> | [[Harness-Owned Loop — Deterministic Agent Execution]] | Agent never controls loop, git, or backlog. OpenArms + OpenFleet instances. |
+> | [[Contribution Gating — Cross-Agent Inputs Before Work]] | Cross-agent inputs collected BEFORE work — prevents rework |
+> | [[Tier-Based Context Depth — Trust Earned Through Approval Rates]] | Trust earned through data, not configured. Controls context depth per tier. |
+> | [[Validation Matrix — Test Suite for Context Injection]] | 29 scenarios testing structured context — unit testing for prompt engineering |
+> | [[Context Compaction Is a Reset Event]] | All corrections lost after compaction — must rebuild via hooks |
+> | [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] | Every block needs a reason and a bypass mechanism |
+> | [[Structured Context Is Proto-Programming for AI Agents]] | Markdown is the programming language of AI. Structure > content for compliance. |
+
+> [!abstract] Principles (distilled from validated lessons — highest knowledge layer)
+>
+> | Principle | What It Governs |
+> |-----------|----------------|
+> | [[Principle: Infrastructure Over Instructions for Process Enforcement]] | HOW to enforce: infrastructure > instructions. Quantified from 5 converging lessons. |
+> | [[Principle: Structured Context Governs Agent Behavior More Than Content]] | WHY it works: structure > content. Form programs behavior; prose requires parsing. |
+> | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] | WHEN to apply: right process = f(identity, phase, scale, PM level). Adaptation, not dogma. |
+
+> [!abstract] SDLC Framework
+>
+> | Page | What It Explains |
+> |------|-----------------|
+> | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Three dimensions: project phase (POC→Production), codebase scale (10k→15M), chain type (simplified/default/full) |
+> | [[Project Self-Identification Protocol — The Goldilocks Framework]] | 7 identity questions that determine chain, enforcement, and context depth |
 
 > [!abstract] Per-Type Standards (15 docs in wiki/spine/standards/)
 >
@@ -149,12 +179,23 @@ Complete map of the methodology system — every component, where it lives, what
 > | [[Coverage Blindness — Modeling Only What You Know]] | 100% of 20% = invisible incompleteness. Research outside your system. |
 > | [[Universal Stages, Domain-Specific Artifacts]] | Doc/design = universal. Scaffold/implement/test = domain-specific. |
 
+> [!abstract] Work Management & Hierarchy
+>
+> | Page | What It Explains |
+> |------|-----------------|
+> | [[Backlog Hierarchy Rules]] | 4-level hierarchy: Milestone → Epic → Module → Task. 8 impediment types. When to choose what. |
+> | [[Readiness vs Progress — Two-Dimensional Work Tracking]] | Readiness (is it defined?) vs Progress (is it built?). Two independent dimensions. 99→100 = human only. |
+> | [[Three PM Levels — Wiki to Fleet to Full Tool]] | L1: Wiki LLM. L2: Fleet/Harness. L3: Plane/DSPD. Each wraps the previous. |
+> | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Three dimensions: project phase (POC→Production), scale (10k→15M), chain (simplified/default/full) |
+> | [[Task Type Artifact Matrix]] | Task type → methodology model mapping |
+> | [[Execution Modes and End Conditions]] | 8 modes, 5 end conditions, 14-step work loop |
+
 > [!abstract] History & Learning
 >
 > | Page | What It Explains |
 > |------|-----------------|
 > | [[Evolution: Methodology System]] | How the system evolved from v1 to current |
-> | [[Learning Path: Methodology Fundamentals]] | 8-page guided sequence for learning methodology |
+> | [[Learning Path: Methodology Fundamentals]] | 24-page guided sequence in 6 parts for learning methodology |
 > | [[Methodology Standards Initiative — Honest Assessment]] | Gap analysis of what's built vs what was asked for |
 
 ### Configuration Layer — Config Files
@@ -164,7 +205,7 @@ Complete map of the methodology system — every component, where it lives, what
 > | File | Lines | What It Defines | Read By |
 > |------|-------|----------------|---------|
 > | `wiki/config/methodology.yaml` | ~520 | 9 models with artifact chains + template hints, stages, modes, end conditions, quality tiers | Skills, agents, documentation |
-> | `wiki/config/artifact-types.yaml` | ~390 | 17 page types + 3 artifact classes + categories, content thresholds, styling, verification | validate.py, lint.py |
+> | `wiki/config/artifact-types.yaml` | ~400 | 18 page types + 3 artifact classes + categories, content thresholds, styling, verification | validate.py, lint.py |
 > | `wiki/config/domain-profiles/typescript.yaml` | ~60 | TypeScript/Node overrides: pnpm gates, src/ paths, test patterns | Projects adopting methodology |
 > | `wiki/config/domain-profiles/python-wiki.yaml` | ~135 | Python/wiki overrides: pipeline post gates, wiki/ paths, knowledge operations, real example | This wiki |
 > | `wiki/config/domain-profiles/infrastructure.yaml` | ~60 | IaC overrides: terraform gates, .tf paths | Infra projects |
@@ -221,6 +262,16 @@ Complete map of the methodology system — every component, where it lives, what
 > 3. Add to Methodology Adoption Guide per-domain quick start
 > 4. Add to Domain Profile Resolution table in Artifact Chains page
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Methodology]]
@@ -236,5 +287,6 @@ Complete map of the methodology system — every component, where it lives, what
 [[Methodology Adoption Guide]]
 [[LLM Wiki Standards — What Good Looks Like]]
 [[Methodology Standards — What Good Execution Looks Like]]
+[[Frontmatter Field Reference — Complete Parameter Documentation]]
 [[How AI Agents Consume the Methodology Wiki]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]

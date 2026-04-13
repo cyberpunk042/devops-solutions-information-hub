@@ -237,6 +237,16 @@ What all four levels working together looks like.
 > [!question] **How do you test hooks without breaking things?**
 > Hook testing requires triggering the blocked operation and verifying the block. But the blocked operation IS the dangerous thing. Dry-run mode for hooks? Test harness that simulates tool calls? (Requires: hook testing infrastructure design)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Claude Code]]

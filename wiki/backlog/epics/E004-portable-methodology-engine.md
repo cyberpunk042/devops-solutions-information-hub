@@ -62,6 +62,15 @@ Create a generic, parameterizable methodology configuration system that the wiki
 
 - E003 (Artifact Type System) — needs artifact type definitions to specify per-model artifact chains
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Epic → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DEPENDS ON: [[Artifact Type System]] (E003)

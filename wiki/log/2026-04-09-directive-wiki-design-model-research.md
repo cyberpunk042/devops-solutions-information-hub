@@ -32,3 +32,11 @@ Operator directive to research the full markdown and Obsidian formatting capabil
 2. Markdown basic syntax: https://www.markdownguide.org/basic-syntax/
 3. Markdown extended syntax: https://www.markdownguide.org/extended-syntax/
 4. Remark ecosystem: https://github.com/remarkjs/remark
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

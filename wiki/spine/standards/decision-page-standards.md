@@ -108,6 +108,25 @@ Standards for decision pages — the highest-layer evolved page type (Layer 6). 
 >
 > Also strong: [[Methodology Framework Design Decisions]] — resolves 7 open questions with nuanced mid-execution model change reasoning.
 
+### Annotated Exemplar: [[Decision: When to Use Milestone vs Epic vs Module vs Task]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Decision section annotation:**
+> `> [!success]` callout with a 7-row scenario-action table. Each row: "You have X" → duration → design needed? → review scope → "Use Y." The reader can find their situation in the table and get the answer WITHOUT reading the rest of the page. This is the hallmark of a good decision page — the decision is IMMEDIATELY actionable.
+>
+> **Critical decomposition test annotation:**
+> `> [!warning]` callout with two specific tests: "If a task needs both design AND implementation, it's a MODULE" and "If an epic has no modules and >5 tasks, decompose." These are the FAILURE MODE detectors — not just "how to choose" but "how to know you chose wrong."
+>
+> **Alternatives annotation:**
+> 3 alternatives, each with `> [!warning] Rejected:` explaining the specific reason. Not "we didn't like it" but "flat lists lose coordination," "7 levels is over-process for current scale," "single field hides the failure mode." Evidence-backed rejection.
+>
+> **Rationale annotation:**
+> 4 numbered points, one per hierarchy level, each explaining the DESIGN BOUNDARY that justifies that level's existence. Milestones = delivery coordination. Epics = acceptance criteria. Modules = design decisions. Tasks = execution. The rationale explains the MECHANISM, not just the preference.
+>
+> **Reversibility annotation:**
+> Honest — "easy to reverse" because it's organizational, not structural. Changing levels = frontmatter change + reorganization, not code changes. This honesty is critical — see the "dishonest reversibility" anti-pattern below.
+
 ### Common Failures
 
 | Failure | What It Looks Like | The Fix |

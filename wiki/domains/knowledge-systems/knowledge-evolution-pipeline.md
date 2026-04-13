@@ -124,6 +124,16 @@ The pipeline does not replace human judgment — it handles the bookkeeping that
 > [!example]- How are contradictions between canonical pages resolved?
 > Link conflicting pages with `CONTRADICTS` (bidirectional). The linting pipeline surfaces the conflict with a recommended resolution based on source recency, authority, and supporting observation count. The `--review` human gate approves or overrides. The losing page is not deleted — it retains its `CONTRADICTS` backlink so contradiction history is preserved. This follows Zettelkasten's principle: preserve contradictions, link them explicitly.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLES: [[Second Brain Architecture]]

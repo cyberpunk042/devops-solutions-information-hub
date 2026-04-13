@@ -131,6 +131,16 @@ Mountain → Pyramid → Skyscraper is the forward direction. The improvement pa
 > [!example]- How does this analogy apply to organizational architecture?
 > Resolved in [[Decision: Quality Tier Operational Decisions]]. Yes, the same three tiers apply to teams and processes. A Mountain organization has ad-hoc processes and no documented conventions; a Pyramid organization has functional but imperfect governance; a Skyscraper organization has clean role definitions and explicit governance.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[Scaffold → Foundation → Infrastructure → Features]]

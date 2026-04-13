@@ -88,6 +88,16 @@ Cross-referencing `WSL2 Development Patterns`: the WSL2 page documents a known c
 
 Cross-referencing `Wiki Event-Driven Automation`: that page explicitly resolves this: "On-schedule hooks map to Claude Code Scheduling (local cron or remote tasks)." The six hooks map to scheduling modes as follows: (1) **On new source** — triggered by file drop or CLI command, not by schedule; no scheduling mode required. (2) **On session start** — triggered by conversation start, not by schedule. (3) **On session end** — triggered by session close, not by schedule. (4) **On query** — triggered by query quality evaluation, not by schedule. (5) **On memory write** — triggered by wiki page writes, not by schedule. (6) **On schedule** (periodic lint, consolidation, retention decay) — this is the one hook that maps directly to scheduling. The on-schedule hook requires **always-on availability** because retention decay and consolidation are time-sensitive: a memory that should decay at day 30 produces incorrect confidence scores if the decay job only runs when the machine happens to be on. **Remote tasks** are therefore the correct mode for the on-schedule wiki automation hook. Local cron is acceptable for workflows (like the cybersecurity research pipeline) where missing a single daily run is tolerable.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team

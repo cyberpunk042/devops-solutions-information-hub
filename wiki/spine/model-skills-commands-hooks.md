@@ -319,6 +319,16 @@ Commands (user trigger)
 > [!question] **Is there a convergence path between SKILL.md and MCP tool registration?**
 > Both describe agent capabilities in incompatible formats. Should they merge? Or is the distinction (deferred vs eager loading) fundamental? (Requires: analysis of whether MCP tooling could adopt deferred loading)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Claude Code Skills]]

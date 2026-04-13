@@ -52,6 +52,16 @@ This video presents 18 token management techniques for Claude Code, organized in
 
 - **CLAUDE.md as evolving constitution**: The CLAUDE.md should contain stable decisions, architecture rules, and progress summaries that make every prompt shorter. Add an "applied learning" section where Claude logs one-line bullets (under 15 words each) about recurring failures and workarounds, but check it frequently to prevent bloat.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-token-hacks-claude-code

@@ -167,6 +167,16 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 > [!question] ~~How does drift detection fit into the methodology?~~
 > **RESOLVED:** Model as periodic monitoring task using bug-fix model. Not a new methodology model. See [[Decision: Methodology Stage Extension Decisions]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

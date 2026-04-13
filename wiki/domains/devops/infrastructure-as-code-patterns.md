@@ -117,6 +117,16 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 > [!success] **YAML for rule metadata + thresholds, Python for evaluation logic**
 > Cross-referencing `Immune System Rules` and `devops-control-plane`: the `Immune System Rules` page establishes the core requirement: "doctor.py runs with zero LLM calls. Rules are pure Python: state comparisons, threshold checks, counter increments. This makes the immune system fast (microseconds per check), cheap (no token cost), and auditable." The `devops-control-plane` page documents that the control-plane already uses YAML for stack policy definitions (`stacks/*.yml`): "each file specifies detection rules, health checks, and integration guidance. The engine reads these at runtime to auto-detect project capabilities." This is precisely the precedent for YAML rule files. A YAML format for immune system rules would make them: (1) shareable across OpenFleet and AICP without Python import dependencies, (2) human-reviewable without reading Python logic, (3) modifiable without code changes or deployments. The counter-argument from the `Immune System Rules` page: Python rules have full expressiveness for complex state comparisons that YAML cannot easily capture. The optimal design mirrors the control-plane's pattern: define rule metadata and thresholds in YAML (the "what"), implement the evaluation logic in Python (the "how"), and load YAML at runtime. This gives shareability and editability without sacrificing evaluation power.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Design.md Pattern]]

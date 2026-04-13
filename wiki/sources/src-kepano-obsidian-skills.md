@@ -65,6 +65,16 @@ Cross-referencing `Obsidian Skills Ecosystem` and `Skills Architecture Patterns`
 
 Cross-referencing `Skills Architecture Patterns` and `Harness Engineering`: the Skills Architecture Patterns page identifies this as a tension — "official vs. community quality: kepano's official Obsidian skills follow the agentskills.io spec but are thinner than community skills... quality variance in community skills creates reliability uncertainty." The page also notes that the agentskills.io specification itself is "still emerging." No wiki page documents a testing or validation framework for agentskills.io-compliant skills. The closest analogy in existing wiki knowledge is the harness engineering approach from the Harness Engineering page: runtime guardrails (hooks, TypeScript rules R01-R13) that enforce behavior at execution time — applying this to skill testing would mean writing test cases that invoke each skill with known inputs and validate outputs. The Skills Architecture Patterns page notes that "composition (skills referencing skills) remains largely unsolved across all ecosystems" — a validation framework faces the same unsolved problem: skills are compressed instructions that LLMs expand at runtime, making deterministic testing difficult. The current state per wiki knowledge: no standardized testing framework exists; informal testing via manual invocation and output review is the norm.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-kepano-obsidian-skills

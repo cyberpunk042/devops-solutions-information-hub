@@ -113,6 +113,16 @@ Cross-referencing `Harness Engineering` and `Immune System Rules`: yes, and the 
 
 Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orchestrator is designed to degrade gracefully because LLM calls are excluded from the control loop by design. The `Immune System Rules` page lists "LLM backend circuit breaker open (AICP pattern applied at fleet level)" as a Resource Rule in the immune system — this means the doctor detects backend failure and quarantines tasks that would require LLM inference before they are dispatched. The `Four-Project Ecosystem` page documents: "AICP implements a circuit breaker (CLOSED → OPEN → HALF_OPEN) per backend" — when LocalAI is down, the circuit opens and AICP falls back to Claude for critical tasks. When LightRAG is down, the Navigator (fleet/core/navigator.py) loses graph-based context assembly but the orchestrator's 12 deterministic steps continue unaffected because they make zero LLM calls. The failure mode is degraded-but-functional: tasks are dispatched with reduced context quality (no LightRAG graph traversal for agent context), and any task requiring LLM inference for execution is queued until LocalAI or Claude becomes available. The fleet does not halt.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[OpenClaw]]

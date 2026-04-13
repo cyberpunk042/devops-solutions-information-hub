@@ -48,6 +48,16 @@ A small open-source collection of reusable Claude Code slash commands installabl
 - What's the versioning story for commands distributed this way — no lockfile or pinning mechanism shown.
 - Does the `allowed-tools` restriction compose with Claude Code's global tool allowlist, or does it override it?
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Claude Code Skills]] (adds concrete command examples to the skills architecture)

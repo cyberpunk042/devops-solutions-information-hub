@@ -159,6 +159,16 @@ A reasoning document examining how the wiki's config files, the methodology syst
 
 > [!question] Should methodology.yaml chain entries include template_hint to guide which template to use? (Recommendation: yes — reduces agent guessing about which template fits the stage.)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

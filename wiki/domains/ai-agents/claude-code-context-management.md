@@ -149,6 +149,16 @@ The compaction lifecycle reveals something non-obvious: **context management is 
 > [!example]- Optimal batch sizes for wiki ingestion?
 > Not a fixed number — it is the number of sources processable before reaching the 60% compaction threshold. Given ~51K baseline overhead (varies by setup) and ~15K per complex source synthesis: roughly 3–5 complex transcripts or 8–12 shorter articles per session before compacting or transitioning. Sub-agents receive fresh context per task, making them the correct architecture for batch processing. The wiki's `pipeline chain ingest` sequences rather than loading all sources into one session.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice

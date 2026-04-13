@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources:
   - id: src-openfleet-local
     type: documentation
@@ -232,6 +232,24 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 > - Deployment model (single-machine WSL2 is this ecosystem's; cloud or multi-machine may be yours)
 > - Agent count and specialization (10 agents is OpenFleet's; start with 1-3)
 
+### Three PM Levels Across the Ecosystem
+
+The ecosystem projects operate at different PM levels, creating a layered management infrastructure:
+
+> [!info] PM Level per Project (current state, 2026-04-12)
+>
+> | Project | PM Level | Harness | What It Uses |
+> |---------|---------|---------|-------------|
+> | **Research wiki** | L1 | v1 (standalone) | Wiki LLM backlog, CLAUDE.md directives, pipeline tools |
+> | **OpenArms** | L1→L2 | v2 (enforced) | Wiki LLM + 4 hooks + 3 commands + harness loop + 1033-line validator |
+> | **OpenFleet** | L2→L3 | v2+ | Mission Control + orchestrator + immune system + Plane integration |
+> | **AICP** | L1 | v1 | Wiki LLM + CLAUDE.md, Python stack |
+> | **devops-control-plane** | L1 | v1 | Wiki LLM foundation only |
+
+Each level wraps the previous. L2 (OpenArms/OpenFleet) reads L1's Wiki LLM data. L3 (OpenFleet→Plane) syncs with L2's orchestrator state. The research wiki feeds ALL levels as the knowledge source of truth.
+
+See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and [[Readiness vs Progress — Two-Dimensional Work Tracking]] for the two-dimensional tracking model that operates at every level.
+
 ## Open Questions
 
 > [!question] **Will `kb_sync.py` scale beyond 200 pages?**
@@ -242,6 +260,19 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 
 > [!question] **Should AICP ↔ OpenFleet have a formal integration contract?**
 > Currently informal. As both mature, is an explicit contract (API spec, version compatibility) worth the coupling cost? (Requires: assessing integration friction)
+
+> [!question] **When does OpenArms upgrade from v2 to v3 harness?**
+> v2 has infrastructure enforcement. v3 adds full SDLC + Plane integration. Trigger: when OpenArms has enough tasks to warrant sprint planning? When compliance requirements appear?
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
 
 ## Relationships
 
@@ -277,4 +308,6 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 [[Methodology Evolution Protocol]]
 [[Portable Methodology Engine]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+[[Synthesis: OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
 [[The Wiki Is a Hub, Not a Silo]]
+[[Three PM Levels — Wiki to Fleet to Full Tool]]

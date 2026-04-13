@@ -202,6 +202,16 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 >
 > A project declares its domain profile. The methodology engine resolves artifact specs: generic chain + domain overrides = concrete paths and gates.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[Methodology Framework]]

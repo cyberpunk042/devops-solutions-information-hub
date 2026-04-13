@@ -433,6 +433,16 @@ If any type were missing, the page would fail its own standard. ==This page demo
 > [!question] **Should before/after examples include Obsidian screenshots?**
 > Markdown source shows what you TYPE. Screenshots show what you SEE. Both are valuable, but screenshot tooling in WSL to Windows adds workflow friction. (Requires: screenshot pipeline or accepting the manual overhead)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Wiki Design]]

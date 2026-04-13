@@ -164,6 +164,16 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 > [!question] ~~Should Completion Logs be REQUIRED or RECOMMENDED?~~
 > **RESOLVED:** Required for epic/module, advisory for tasks. See [[Decision: Artifact System Design Decisions]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

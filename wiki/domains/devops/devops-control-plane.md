@@ -78,6 +78,16 @@ Cross-referencing `Four-Project Ecosystem` and `Infrastructure as Code Patterns`
 
 Cross-referencing `Four-Project Ecosystem` and `Immune System Rules`: the `Four-Project Ecosystem` page documents the vault as "Potential centralized credential store for all ecosystem projects — API keys for NotebookLM, Claude, LocalAI, GitHub, Plane" and notes this is "not yet implemented." The page's own Answered Open Questions section establishes: "the vault's technical characteristics make it a suitable centralized store, but the integration requires that all five projects be updated to read credentials via the control-plane's vault API rather than `.env` files — a non-trivial migration." The `Immune System Rules` page notes that AICP's guardrails include path protection against `.env` and `*.key` files, confirming credentials are currently per-project in `.env` files. Exposing the vault as an MCP server is technically feasible: the vault already exposes a Python API (used by the CLI and web interfaces), and the MCP pattern (as documented in the wiki's own 15-tool MCP server) wraps existing functionality as named tools. The specific MCP tools would map to vault operations: `vault_get_secret`, `vault_set_secret`, `vault_list`, `vault_unlock`. The blocker is not technical but operational: the vault requires a master password (PBKDF2-SHA256, 100,000 KDF iterations, auto-lock), and an MCP server exposing vault operations would need a secure unlock mechanism for automated access — a non-trivial security design decision not yet addressed in any existing wiki page.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLES: [[OpenFleet]]

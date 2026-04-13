@@ -106,6 +106,41 @@ Standards for pattern pages — recurring structural phenomena observed across �
 >
 > **The test:** After reading this page, could you recognize this pattern in a new system and decide whether to apply it? If yes, the pattern page succeeded.
 
+### Annotated Exemplar: [[Three Lines of Defense — Immune System for Agent Quality]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Frontmatter annotations:**
+> ```yaml
+> instances:                           # ← REQUIRED for patterns — structural proof
+>   - page: "Model: Quality and Failure Prevention"
+>     context: "Three-layer defense model defined..."   # ← context explains HOW the instance shows the pattern
+>   - page: "Infrastructure Enforcement Proves Instructions Fail"
+>     context: "Structural prevention (Line 1) proven..." # ← each instance is a DIFFERENT manifestation
+>   - page: "Agent Failure Taxonomy..."
+>     context: "6 behavioral failure classes..."          # ← 3 instances > minimum 2
+> ```
+> 3 instances with specific context annotations. Each instance shows a DIFFERENT aspect of the pattern.
+>
+> **Summary annotation:**
+> "AI agents are 'sick by default'..." — Contains the provocative frame (diseases), the 3-line structure (prevention/detection/correction), AND the key design principle (hidden from agents). All in 2 sentences.
+>
+> **Reference Card annotation:**
+> `> [!info] Pattern Reference Card` — 5-column table mapping each component to its role, mechanism, and when it fires. A reader can USE the pattern from this table alone without reading further.
+>
+> **Pattern Description annotations:**
+> - `> [!abstract] The Five Named Diseases` — TAXONOMY table. Each disease has: symptom + detection method. This is the MECHANISM — not "things go wrong" but "here are the 5 specific ways things go wrong and how you detect each."
+> - Three Lines described with SPECIFIC mechanisms: Line 1 = tool blocking + contribution gates + verbatim anchoring. Line 2 = 4 detection functions every 30s. Line 3 = 4 graduated corrections (TEACH → COMPACT → PRUNE → ESCALATE).
+> - `> [!warning]` for the correction ladder — communicates that this is a RISK AREA (corrections can be too aggressive).
+>
+> **Instance annotations:**
+> - OpenFleet instance: `> [!example]-` foldable with FULL implementation details (746 lines, 3 files, doctor cycle, hidden from agents)
+> - OpenArms instance: `> [!example]-` foldable showing a PARTIAL implementation (Line 1 only, no Lines 2-3) — contrasts with OpenFleet to show the SPECTRUM of pattern adoption
+>
+> **When To / When Not To annotations:**
+> - When To: 5 specific conditions (not "when you need quality" but "multiple agents OR autonomous OR recurring failures")
+> - When Not To: 4 specific conditions including "Solo human-supervised agent — the human IS the immune system" — shows the pattern has BOUNDARIES, not universal applicability
+
 ### Common Failures
 
 | Failure | What It Looks Like | The Fix |

@@ -138,6 +138,16 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 > [!example]- How does performance degrade as skill files grow?
 > Degradation follows the context saturation curve directly. Each additional preset/option/example increases token load every time the skill is active. Resolution: instead of growing a single skill file, refactor into separate named skills (each loaded on demand) or use progressive disclosure — SKILL.md references detailed option files in references/ subdirectories loaded only when selected.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team

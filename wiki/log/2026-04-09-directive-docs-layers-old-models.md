@@ -45,3 +45,11 @@ When the second brain attaches to a project that predates the new model:
 - **Align incrementally** — introduce wiki/, config/, templates as additions, not replacements
 - **Cleaning/refactoring** is valid — move scattered docs into proper structure over time
 - The old model is not wrong — it's just not the current standard. Coexistence is fine during transition.
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

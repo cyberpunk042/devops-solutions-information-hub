@@ -127,6 +127,16 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 > [!example]- Minimum viable spec for small tasks?
 > Resolved in [[Decision: Stage-Gate Operational Decisions]]. Task type determines spec scope: `docs` = Document stage only, `spike` = Document + Design, `task` = Scaffold + Implement + Test. The tiered approach matches spec overhead to task complexity.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Design.md Pattern]] (spec artifacts as first-class project documents)

@@ -97,6 +97,16 @@ Cross-referencing `LightRAG` and `Wiki Knowledge Graph`: the LightRAG page docum
 
 Cross-referencing `LLM Wiki vs RAG` and `Wiki Knowledge Graph`: the LightRAG page documents that LightRAG's indexing pipeline extracts entities and relationships from document chunks via LLM — but critically, the OpenFleet integration bypasses this entirely via `kb_sync.py`, which "extracts relationships from the KB's explicit `## Relationships` sections and inserts directly via REST API." This bypass was adopted precisely because LLM-based extraction "produced inconsistent results (32/0, 15/7, 21/21 entities/relations across runs)." For wiki pages, which are already structured with sections and explicit relationship declarations, the answer is: chunking is largely irrelevant when using the `kb_sync.py` direct-insert approach. Each wiki page becomes one entity, and its `## Relationships` section provides the edges — no chunking or LLM extraction step is needed. If using LightRAG's native LLM extraction path (not recommended for structured wiki pages), the optimal chunk size would align with section boundaries (one section per chunk), preserving the `## Summary`, `## Key Insights`, and `## Deep Analysis` sections as coherent semantic units rather than splitting mid-section.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - USED BY: [[OpenFleet]]

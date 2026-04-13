@@ -6,7 +6,8 @@ status: in-progress
 priority: P1
 task_type: epic
 current_stage: implement
-readiness: 60
+readiness: 70
+progress: 50
 stages_completed: [document, implement]
 artifacts:
   - wiki/spine/model-llm-wiki-standards.md
@@ -76,6 +77,15 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 - E003 (Artifact Type System) — needs complete type definitions to know what needs exemplars
 - Partially E004 (Methodology Engine) — methodology.yaml exemplar requires the engine design
 - Partially E005 (Compliance Framework) — enforcement patterns can serve as exemplars
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Epic → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
 
 ## Relationships
 

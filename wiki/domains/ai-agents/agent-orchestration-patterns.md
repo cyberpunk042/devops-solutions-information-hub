@@ -124,6 +124,16 @@ Cross-referencing the `OpenFleet` and `Rework Prevention` pages: yes, and OpenFl
 
 Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` pages: the `Harness Engineering` page documents a 5-level hierarchy, and the minimal viable orchestration level for a 2-agent system is Level 2 (workflow orchestration via skills/pipeline.py) — not Level 4 (deterministic orchestration). The `Plan Execute Review Cycle` page's "When Not To" section directly addresses this: "in high-frequency, low-stakes loops, mandatory human review at each cycle is counterproductive. OpenFleet's solution is automated review (deterministic checks), not skipped review." For a 2-agent system, the minimal harness is: (1) explicit scope boundary per agent (what each agent receives and must not touch), (2) fresh context initialization per task, (3) one hard gate — the post-chain's validate step (exit code 1 blocks completion). The `Harness Engineering` page's Level 2 implementation is this project's own pipeline chains: `python3 -m tools.pipeline chain ingest` sequences extract → write → post-chain without the full 12-step cycle. The three-element minimal harness (scope boundary + fresh context + one hard gate) provides the load-bearing structure of Plan→Execute→Review without the OpenFleet overhead designed for 10 agents and 30-second cycles.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[OpenFleet]]

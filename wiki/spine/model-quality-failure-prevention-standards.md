@@ -200,6 +200,16 @@ What it looks like when a project migrates quality rules upward through the enfo
 > [!question] **Can enforcement migration be automated?**
 > When a rule is violated N times at Level 0, automatically suggest migrating to Level 1 (skill) or Level 2 (hook). This closes the loop between violation detection and enforcement improvement. (Requires: violation tracking infrastructure)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Quality and Failure Prevention]]

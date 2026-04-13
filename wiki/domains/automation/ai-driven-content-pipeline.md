@@ -81,6 +81,16 @@ Cross-referencing `Research Pipeline Orchestration`: the orchestration page docu
 
 Cross-referencing `Knowledge Evolution Pipeline` and `Research Pipeline Orchestration`: yes, the structural parallel is real and the unification is architecturally feasible. The Knowledge Evolution Pipeline documents the outer loop as "ingest → synthesize → evolve → gap-analyze → research → repeat." The AI-Driven Content Pipeline's loop is "research → load sources → generate artifacts → distribute." These share the research and source-loading phases. The Research Pipeline Orchestration vision explicitly models a "DEEPENING" pipeline type that follows the same pattern as content generation: identify gaps → research → enrich → validate. A unified "ingest-then-publish" pattern would: (1) fetch sources via standard pipeline, (2) write wiki pages from those sources, (3) simultaneously push the same sources to NotebookLM, (4) trigger artifact generation for selected topics. The `notebooklm-py CLI` page documents this integration point explicitly: "Sources ingested via tools/ingest.py can be simultaneously pushed to NotebookLM notebooks via notebooklm source add." The unification is a pipeline configuration change, not a new architecture.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team

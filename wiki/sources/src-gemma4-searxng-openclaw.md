@@ -42,6 +42,16 @@ A practical tutorial on running OpenClaw 100% free and 100% private using Google
 
 - **Claude Code as setup assistant**: Presenter suggests using Claude Code to configure OpenClaw and Docker: "read my configuration, install this, configure it, test it." Meta-pattern: using the AI agent to set up the AI agent infrastructure.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-gemma4-searxng-openclaw

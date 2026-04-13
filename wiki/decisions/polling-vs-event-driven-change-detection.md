@@ -92,6 +92,17 @@ The current polling implementation can run indefinitely without degradation — 
 - **CI/CD pipelines**: If the wiki is ever deployed in a cloud CI context (GitHub Actions, etc.), the change detection mechanism must be adapted — polling is fine for CI batch runs, inotify is not available in most cloud CI environments. The post-chain (`python3 -m tools.pipeline post`) can be invoked directly without a watcher daemon in CI contexts.
 - **Cross-platform tooling**: `tools/setup.py --services wiki-watcher` deploys the watcher as a systemd service. On macOS, a launchd plist would be the equivalent. The cross-platform Python tooling in the ecosystem handles OS detection, so the service deployment path is already abstracted.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[WSL2 Development Patterns]]

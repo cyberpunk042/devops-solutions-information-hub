@@ -140,6 +140,16 @@ Cross-referencing `Wiki Knowledge Graph` and `Second Brain Architecture`: they a
 
 Cross-referencing `Wiki Knowledge Graph` and `AICP`: the scale threshold is approximately 200+ pages with 500+ typed relationships, at which point LightRAG graph traversal begins surfacing non-obvious cross-domain connections. The `Wiki Knowledge Graph` page documents that OpenFleet's LightRAG instance already operates at this scale: "1,545 entities and 2,295 relationships stored in a dedicated graph backend." The `Wiki Knowledge Graph` scale threshold cross-reference: "Karpathy's index.md approach works to ~100-200 pages. The knowledge graph, combined with hybrid search, extends the pattern's viability to much larger wikis." The Zettelkasten emergence property requires crossing the density threshold where traversal paths through unplanned connections become discoverable. Below ~200 wiki pages with ~3 relationships per page (~600 edges), the graph is small enough that all connections are visible at a glance — emergence adds little. Above this threshold, the graph has enough topology that traversal discovers paths the author did not plan. The `AICP` page documents "memory relevance scoring" as the signal that approximates LRU-weighted recency in the emergence loop. The practical answer: LightRAG graph traversal begins approximating Zettelkasten emergence at ~200 pages, and `pipeline crossref` is the current tool that triggers this discovery before LightRAG integration is active for the research wiki itself.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Second Brain Architecture]]

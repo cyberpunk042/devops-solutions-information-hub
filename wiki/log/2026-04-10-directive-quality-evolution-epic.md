@@ -41,3 +41,11 @@ Operator directive establishing the quality evolution epic: level up the entire 
 5. **The quality bar is "smart content" — not just formatted content.** Styling a page with callouts doesn't make it good. The CONTENT must demonstrate reasoning, clear thinking, the right balance of specificity and flexibility. Depth, not just structure.
 
 6. **Iterative evolution, not batch completion.** Each file gets individual attention. Each improvement is reviewed. The process is continuous, not a sprint to "done."
+
+## Relationships
+
+- FEEDS INTO: [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+
+## Backlinks
+
+[[Hardcoded Instances Fail — Build Frameworks Not Solutions]]

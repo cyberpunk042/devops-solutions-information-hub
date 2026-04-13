@@ -68,6 +68,16 @@ The [[Model: Methodology]] is the super-model — it GOVERNS how all work procee
 3. Every model needs: Key Pages table, Lessons Learned, State of Knowledge, How to Adopt (invariant vs per-project).
 4. After the model is complete, create the companion standards page.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[Model: Methodology]] (the super-model)
@@ -79,5 +89,16 @@ The [[Model: Methodology]] is the super-model — it GOVERNS how all work procee
 [[Model: Methodology]]
 [[Model: LLM Wiki]]
 [[Model: Wiki Design]]
+[[Bottom-Up Model Completion — 10+ Named Models Required]]
+[[Documentation Layers + Old Model Tolerance]]
+[[Ingest awesome-design-md repository]]
+[[Model Quality + Links + Schema Naming Issues]]
+[[Quality Models — Hub Mindset — OpenArms Methodology Learnings]]
+[[Record the Process — Skills, Super-Model, Preach by Example]]
+[[Stop Guessing — False Claims in Models]]
+[[Styling — Make It Look Good in Obsidian]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
 [[Systemic Incompleteness Is Invisible to Validation]]
+[[Validate Second Brain Readiness]]
+[[Wiki Design Model Emerging — Obsidian Styling as Standard]]
+[[Wiki Design Model — Research Sources]]

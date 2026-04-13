@@ -447,6 +447,16 @@ The key architectural difference: OpenFleet's work_mode is a fleet-level control
 > [!example]- Should the completion log be structured (YAML) or unstructured (prose)?
 > Resolved in [[Decision: Execution Mode Edge Cases]]. Both: structured YAML frontmatter (queryable by tooling) with a prose body (readable by humans). A `note` type page with `note_type: completion` in frontmatter.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Stage-Gate Methodology]] (execution modes control which stages run; quality gates are stage transition requirements)

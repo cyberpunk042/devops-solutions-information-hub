@@ -47,6 +47,15 @@ Full AICP integration for the wiki evolution pipeline. Route evolution tasks thr
 
 Waiting for 19GB VRAM hardware upgrade. Current 8GB limits model size to 8B parameters.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Epic → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[Decision: Local Model vs Cloud API for Routine Operations]]

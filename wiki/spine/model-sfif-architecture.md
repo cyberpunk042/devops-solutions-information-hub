@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 sources: []
 tags: [model, spine, sfif, architecture, quality-tiers, build-lifecycle, skyscraper, pyramid, mountain, recursive, cross-domain]
 ---
@@ -185,6 +185,25 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 > - Granularity of recursive application (project + feature level is usually sufficient)
 > - The specific exit criteria per stage (domain-specific artifacts)
 
+### Connection to SDLC Customization
+
+SFIF and the SDLC Customization Framework are complementary:
+- **SFIF** describes the BUILD lifecycle (what order to construct things)
+- **SDLC chain** describes the PROCESS lifecycle (how much rigor wraps the build)
+- **Quality tiers** (Skyscraper/Pyramid/Mountain) map to SDLC chains (Full/Default/Simplified)
+
+> [!info] SFIF × SDLC Chain
+>
+> | Quality Tier | SDLC Chain | CMMI Level | What It Means |
+> |-------------|-----------|-----------|---------------|
+> | Skyscraper | Full | 4 (Quantitative) | Every SFIF stage gets full artifacts + gates + review |
+> | Pyramid | Middle Ground | 3 (Defined) | Deliberate compression — SFIF stages with selected artifacts |
+> | Mountain | Simplified or None | 1-2 (Initial/Managed) | POC decisions never revisited. Acceptable for POC phase only. |
+>
+> See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] for phase × scale decision matrix.
+
+The phase progression (POC → MVP → Staging → Production) also maps to SFIF: POC is the Scaffold of the product lifecycle. MVP is Foundation. Staging is Infrastructure. Production is Features at scale. The pattern IS recursive — SFIF at the product level mirrors SFIF at the code level.
+
 ## Open Questions
 
 > [!question] **Can SFIF be detected automatically?**
@@ -192,6 +211,19 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 
 > [!question] **Where is the Pyramid → Skyscraper boundary?**
 > Is it a discrete architectural decision (refactor sprint) or continuous improvement? Can a system cross the boundary without anyone noticing? (Requires: observing the transition in a real project)
+
+> [!question] **Does SFIF × SDLC Chain produce a formal upgrade path?**
+> If a project is Mountain/Simplified (POC), is the upgrade path: Mountain→Pyramid (quality) THEN Simplified→Default (process)? Or do quality and process upgrade together? (Requires: empirical data from at least 2 project upgrades)
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
 
 ## Relationships
 
@@ -214,4 +246,5 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 [[Model: Knowledge Evolution]]
 [[Model: Methodology]]
 [[Four-Project Ecosystem]]
+[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[Model: Local AI ($0 Target)]]

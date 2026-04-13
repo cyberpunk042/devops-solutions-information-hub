@@ -459,6 +459,16 @@ Validated experience from operating Claude Code in this ecosystem.
 > [!question] **How does the extension model evolve with 1M+ context?**
 > As context windows grow, the degradation curve argument for CLI-over-MCP weakens. At 1M tokens, MCP schema overhead (~2K tokens) is 0.2% of context — negligible. Does MCP-first become correct at that scale? (Requires: testing MCP performance at 1M context utilization)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Claude Code]]

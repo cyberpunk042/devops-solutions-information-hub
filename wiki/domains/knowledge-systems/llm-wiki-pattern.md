@@ -146,6 +146,16 @@ A practical advantage is radical simplicity. No databases, no embedding models, 
 > [!example]- Is the human-AI boundary independently derived?
 > Three sources converge: (1) Karpathy's "librarian vs curator", (2) Harness Engineering's Plan-before-Work approval, (3) Knowledge Evolution's `--review` flag at growing → mature. All independently place the human at the same point: direction-setting and critical transition validation. The LLM handles all maintenance and bookkeeping. Convergence across independent sources strengthens reliability.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-claude-code-10x

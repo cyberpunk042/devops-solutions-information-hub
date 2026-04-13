@@ -88,6 +88,16 @@ A practical user might reasonably install both: PleasePrompto for daily coding a
 - Will Google release an official NotebookLM API that would make browser automation unnecessary? (Requires: external announcement from Google; no existing wiki page covers this timeline)
 - How do the browser automation approaches compare in reliability over weeks of use? (Requires: empirical longitudinal data from production deployments; no existing wiki page covers this)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-world-notebooklm-skill

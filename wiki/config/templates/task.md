@@ -6,11 +6,13 @@ status: draft
 priority: {{priority}}
 task_type: {{task_type}}
 current_stage: document
-readiness: 0
+readiness: 0               # 0-100: definition completeness. Is this READY to work on?
+progress: 0                 # 0-100: execution completeness. How far is the WORK?
 stages_completed: []
 artifacts: []
 estimate: {{estimate}}
 epic: "{{epic_id}}"
+module: "{{module_id}}"
 depends_on: []
 confidence: high
 created: {{date}}
@@ -21,10 +23,18 @@ tags: []
 
 # {{title}}
 
+<!-- READINESS vs PROGRESS:
+     - readiness: advances through document/design stages (requirements defined, plan confirmed)
+     - progress: advances through scaffold/implement/test stages (work done, tests passing)
+     - readiness gates progress: don't start building until readiness ≥ threshold
+     - 99→100 on EITHER dimension = human review required
+     See: wiki/domains/cross-domain/readiness-vs-progress.md -->
+
 ## Summary
 
 <!-- 1-2 sentences: what this task produces.
-     A task is the atomic work unit — it goes through stages. -->
+     A task is the atomic work unit — it goes through stages.
+     Reference the parent module/epic for context. -->
 
 ## Done When
 
@@ -33,7 +43,13 @@ tags: []
      CRITICAL: At least one item must name a specific file or output.
      For code tasks: name the runtime file that imports new code.
      For wiki tasks: name the wiki page that must pass validation.
-     Generic boilerplate lets agents cheat — be specific. -->
+     Generic boilerplate lets agents cheat — be specific.
+     
+     GOOD: "- [ ] `wiki/lessons/new-lesson.md` passes pipeline post with 0 errors"
+     BAD: "- [ ] Task is complete" -->
+
+- [ ] {{specific_criterion_naming_a_file}}
+- [ ] {{specific_criterion_naming_a_command}}
 
 ## Relationships
 

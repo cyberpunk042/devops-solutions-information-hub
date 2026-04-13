@@ -73,6 +73,17 @@ All easy. Frontmatter conventions, mode behavior, and log format can all be chan
 - [[Rework Prevention]] — compound cost model drives the "finish the stage" decision
 - [[Backlog Hierarchy Rules]] — blocked_by pattern drives the bug task creation
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Execution Modes and End Conditions]]

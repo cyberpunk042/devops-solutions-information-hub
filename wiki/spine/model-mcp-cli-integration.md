@@ -239,6 +239,16 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 > [!question] **Does the decision flip at 1M context?**
 > At 1M tokens, MCP overhead (~2K) is 0.2% — negligible. But does the degradation curve also flatten? Or does it remain proportional, just shifted? (Requires: testing MCP performance at 1M utilization)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[CLI Tools Beat MCP for Token Efficiency]]

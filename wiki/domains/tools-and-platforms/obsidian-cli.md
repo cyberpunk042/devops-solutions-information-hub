@@ -115,6 +115,16 @@ Cross-referencing `WSL2 Development Patterns`: the WSL2 page documents this cons
 
 Cross-referencing `Obsidian Skills Ecosystem` and `WSL2 Development Patterns`: the Obsidian Skills Ecosystem page documents `base:query`, `base:views`, and `base:create` as part of pablo-mano's comprehensive CLI skill, which covers "structured data" operations via Obsidian's Bases feature. `tools/manifest.py` generates `wiki/manifest.json` by parsing markdown frontmatter directly — it runs on the Linux-side wiki files with no Obsidian dependency. `base:query` requires the Obsidian app to be running (IPC-based), making it unavailable in headless CI/CD or automated pipeline contexts on WSL2 without a display server. The two tools target different contexts: `tools/manifest.py` is the correct tool for automated pipeline queries (no UI dependency, runs during post-chain); `base:query` would be appropriate for interactive queries in a Windows-side Obsidian session. `base:query` cannot replace `tools/manifest.py` for pipeline use, but it can augment it for interactive exploration, especially for queries involving Bases (structured database views) that go beyond what the manifest JSON provides.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Obsidian Knowledge Vault]]

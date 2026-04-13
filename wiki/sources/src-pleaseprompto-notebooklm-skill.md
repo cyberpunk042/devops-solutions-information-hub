@@ -95,6 +95,16 @@ Cross-referencing `NotebookLM Skills` and `notebooklm-py CLI`: the `NotebookLM S
 
 Cross-referencing `NotebookLM Skills`: the `NotebookLM Skills` page addresses this directly in its Answered section: "For PleasePrompto's library routing, the practical limit is not determined by source count... but by the number of distinct notebooks in the library index. Reliability degrades when the metadata tags are ambiguous — when two notebooks have overlapping topic coverage and Claude must select between them." The page further documents the mitigation: "The `notebooklm profile create/switch` commands support multi-profile isolation, which is the recommended architectural response to notebook sprawl." The `notebooklm-py CLI` page confirms that NotebookLM has a 300-source limit per notebook, and large-scale research requires multi-notebook architectures. The `NotebookLM Skills` page notes that "the `src-notebooklm-claude-code-workflow` synthesis recommends configuring NotebookLM's response format... to reduce per-query token cost, which also helps library routing by keeping notebook descriptions compact and differentiable." Practical guidance from wiki cross-references: the routing degrades at the point where notebook topic descriptions overlap significantly — the solution is to make descriptions as distinct as possible and use profile isolation to partition sprawl by domain.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-pleaseprompto-notebooklm-skill

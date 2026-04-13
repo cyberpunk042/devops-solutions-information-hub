@@ -75,6 +75,16 @@ Cross-referencing `Decision: MCP vs CLI for Tool Integration` and `Context-Aware
 
 Cross-referencing `Decision: MCP vs CLI for Tool Integration` and `Context-Aware Tool Loading`: the Decision page cites the 12x differential as drawn from the accuracy tips source (src-claude-code-accuracy-tips), not from Playwright specifically. The Context-Aware Tool Loading pattern describes the mechanism: "The token differential cited across sources is 12x." The Decision page clarifies the scenario: "Playwright MCP injects 10 full accessibility trees in a 10-step QA test; CLI loads 2-3 targeted YAML snapshots." The 12x is a session-level observed differential for the specific 10-step QA demo scenario, not a theoretical maximum. It represents the cumulative effect of MCP loading full trees at every step vs. CLI loading sparse snapshots on demand. In simpler 1-3 step tests, the differential would be smaller (closer to 3-5x). In very long tests (20+ steps), the differential could exceed 12x because MCP's overhead compounds with each step while CLI's overhead scales with the number of elements queried, not the number of steps taken. The 12x figure is best interpreted as a representative mid-range observed value for a medium-length QA session, not a bound in either direction.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-playwright-cli-vs-mcp

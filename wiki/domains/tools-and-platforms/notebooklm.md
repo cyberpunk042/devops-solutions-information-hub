@@ -72,6 +72,16 @@ Cross-referencing `LLM Wiki vs RAG` and `Agentic Search vs Vector Search`: Noteb
 
 Cross-referencing `AI-Driven Content Pipeline` and `Agentic Search vs Vector Search`: yes — this bridging is both architecturally sound and practically documented. The `AI-Driven Content Pipeline` page confirms: "Sources ingested via tools/ingest.py can be simultaneously pushed to NotebookLM notebooks via `notebooklm source add`." The reverse direction (NotebookLM → wiki) is equally feasible: NotebookLM can generate markdown reports and structured JSON artifacts via `notebooklm generate report`, and those artifacts can be fed into the wiki ingestion pipeline as synthesized source material. The `Agentic Search vs Vector Search` page proposes precisely this complementary architecture: "the LLM Wiki as the long-term memory (compounding, structured, agent-navigated) and NotebookLM as the fact-checking layer (grounded, retrieval-based, used for verification rather than accumulation)." The flow: ingest sources into NotebookLM for grounded synthesis → download the generated report → ingest report into the wiki as a `source-synthesis` page. The wiki compiles knowledge; NotebookLM verifies specific claims against raw sources.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team

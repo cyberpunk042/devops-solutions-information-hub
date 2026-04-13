@@ -7,6 +7,7 @@ confidence: medium
 maturity: seed
 created: 2026-04-12
 updated: 2026-04-12
+confidence: high
 sources:
   - id: operator-sdlc-vision
     type: directive
@@ -16,7 +17,23 @@ sources:
     type: file
     file: wiki/config/methodology.yaml
     description: "Current 9-model methodology system — foundation for SDLC customization"
-tags: [sdlc, customization, framework, phases, scale, chain-selection, methodology, project-lifecycle]
+  - id: epam-adlc
+    type: article
+    url: "https://www.epam.com/insights/ai/blogs/agentic-development-lifecycle-explained"
+    description: "EPAM: Agentic Development Lifecycle (ADLC) — new model for AI systems beyond traditional SDLC"
+  - id: cmmi-levels
+    type: article
+    url: "https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration"
+    description: "CMMI: 5 maturity levels — Initial, Managed, Defined, Quantitatively Managed, Optimizing"
+  - id: lean-startup-bml
+    type: article
+    url: "https://theleanstartup.com/principles"
+    description: "Lean Startup Build-Measure-Learn cycle — validated learning, POC→MVP→production progression"
+  - id: pwc-agentic-sdlc
+    type: article
+    url: "https://www.pwc.com/m1/en/publications/2026/docs/future-of-solutions-dev-and-delivery-in-the-rise-of-gen-ai.pdf"
+    description: "PwC 2026: Agentic SDLC in practice — autonomous software delivery"
+tags: [sdlc, customization, framework, phases, scale, chain-selection, methodology, project-lifecycle, cmmi, lean-startup, agentic-sdlc]
 ---
 
 # SDLC Customization Framework — Phases, Scale, and Chain Selection
@@ -103,19 +120,69 @@ The models and chains are ORTHOGONAL dimensions. Every model × chain combinatio
 >
 > Transitions: use Simplified until it hurts, upgrade to Middle when agent violations or manual fixes become frequent, upgrade to Full when compliance, traceability, or team scale demand it.
 
+### External Research: How Industry Handles Scale and Phase
+
+> [!abstract] CMMI Maturity Levels — Process Rigor Scaling
+>
+> | CMMI Level | Name | Process State | Analogous Chain |
+> |-----------|------|---------------|----------------|
+> | 1 | Initial | Ad hoc, chaotic. Success depends on heroics. | No chain (chaos) |
+> | 2 | Managed | Projects planned, performed, measured at project level. | Simplified |
+> | 3 | Defined | Processes described rigorously, managed proactively with detailed measures. | Middle Ground |
+> | 4 | Quantitatively Managed | Statistical process control, quantitative quality objectives. | Full |
+> | 5 | Optimizing | Continuous improvement, built to pivot and respond. | Full + automation |
+>
+> CMMI validates our 3-chain model: there IS a recognized industry progression from ad-hoc (Level 1) through managed (Level 2) to defined (Level 3) to quantitative (Level 4). Our simplified/default/full maps to Levels 2/3/4. Level 1 is what happens without ANY chain. Level 5 is what the research wiki's constant evolution aspires to.
+
+> [!abstract] Lean Startup: Build-Measure-Learn as Phase Progression
+>
+> The Lean Startup's Build-Measure-Learn cycle maps to our phase model:
+> - **POC phase** = Build (create simplest possible version to test assumptions)
+> - **MVP phase** = Measure (release to real users, gather feedback, validate demand)
+> - **Production phase** = Learn + Scale (refine based on data, then grow)
+>
+> Key Lean principle: "Limit the scope of change as the product matures." This IS our phase progression — POC allows drastic changes, Production requires stability. The SDLC chain naturally tightens as the product matures.
+>
+> Distinction matters: POC is internal (feasibility test, not customer-facing). MVP is external (real users, real feedback). Production is committed (SLAs, compliance). Each transition changes what process is appropriate.
+
+> [!abstract] Agentic SDLC (A-SDLC) — The AI Agent Dimension
+>
+> The industry is recognizing that AI agents require a DIFFERENT lifecycle model:
+> - **EPAM's ADLC:** "Traditional SDLCs assume behavior is fully specified at build time. Agentic systems violate that assumption because they reason, adapt, and act across environments engineers do not fully control."
+> - **PwC 2026:** "Agentic SDLC in practice — the rise of autonomous software delivery"
+> - **GitHub Spec Kit (2025):** Placing specifications at the center of the engineering process
+>
+> This validates our approach: methodology models (stage-gated, artifact-producing) PLUS enforcement infrastructure (hooks, harness, immune system) PLUS the SDLC chain selection (how much process wraps the models). Traditional SDLC doesn't account for agents. Our framework does.
+>
+> The engineer of 2026 "will spend less time writing foundational code and more time orchestrating a dynamic portfolio of AI agents" — which is exactly why the Three PM Levels and harness version progression matter.
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From SDLC Framework → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What identity determines my chain?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — 7 questions → chain selection |
+> | **What enforcement matches each chain?** | Simplified → L1 advisory. Default → L2 hooks+commands. Full → L3 immune system+fleet. See [[Three PM Levels — Wiki to Fleet to Full Tool]] |
+> | **How does readiness/progress work per chain?** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — both dimensions at every level, gates tighter on full chain |
+> | **What global standards validate this?** | CMMI Levels 1-5 map to our chains. Lean Startup BML maps to our phases. See [[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]] |
+> | **How does SFIF relate?** | [[Model: SFIF and Architecture]] — Skyscraper≈Full, Pyramid≈Default, Mountain≈Simplified. SFIF at product level: POC=Scaffold, MVP=Foundation, Staging=Infrastructure, Production=Features |
+> | **What methodology models work per chain?** | [[Model: Methodology]] — all 9 models work in all chains, but chain determines artifact depth per model |
+> | **Where is the backlog hierarchy?** | [[Backlog Hierarchy Rules]] — Milestone→Epic→Module→Task. Full chain uses all 4 levels. Simplified may skip milestones+modules. |
+
 ## Open Questions
 
-> [!question] Should chain selection be per-project or per-task?
-> A production project doing a hotfix might use Simplified chain for that specific task while the project overall is Full chain. Can chains be task-scoped within a project-level default?
+> [!question] Should chain selection be per-project or per-task? **PARTIALLY RESOLVED**
+> Yes — per-task within a project default. A production project (Full chain default) doing a hotfix uses Hotfix model (2 stages, minimal process) — this IS simplified chain applied to one task. The methodology model already handles this. The project chain sets the DEFAULT; the model can override downward (never upward). Remaining: formalize the override rules in methodology.yaml.
 
-> [!question] How do chains map to the wiki's 4-tier adoption guide?
-> Tier 1 (Read) ≈ awareness of chains. Tier 2 (Configure) ≈ select chain in methodology.yaml. Tier 3 (Validate) ≈ enforce chain rules. Tier 4 (Enforce) ≈ full harness with chain-aware validation. Are these the same dimension or orthogonal?
+> [!question] How do chains map to the wiki's 4-tier adoption guide? **RESOLVED**
+> They're PARALLEL dimensions. Tiers = enforcement depth (read→configure→validate→enforce). Chains = process weight (simplified→default→full). Recommended pairings: Simplified+Tier1-2, Default+Tier2-3, Full+Tier3-4. See [[Methodology Adoption Guide]].
 
-> [!question] What triggers a phase transition?
-> Going from MVP to Staging: first paying customer? First SLA? First compliance requirement? The trigger should be explicit and measurable, not a feeling.
+> [!question] What triggers a phase transition? **PARTIALLY RESOLVED**
+> POC→MVP: hypothesis validated, first external user. MVP→Staging: product-market fit, first SLA. Staging→Production: compliance met, rollback tested. See [[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]. Remaining: define measurable triggers specific to this ecosystem.
 
-> [!question] How does the research wiki itself select its chain?
-> The wiki is a knowledge system, not a product. It's "in production" (used daily) but at medium scale (~250 pages). Does it use Middle or Full?
+> [!question] How does the research wiki itself select its chain? **RESOLVED**
+> Identity: type=system, domain=knowledge, phase=production, scale=medium (267 pages), pm_level=L1. Chain: Default. NOT Full (no sprint planning needed). NOT Simplified (267 pages need real quality standards). See [[Project Self-Identification Protocol — The Goldilocks Framework]].
 
 ## Relationships
 
@@ -134,3 +201,11 @@ The models and chains are ORTHOGONAL dimensions. Every model × chain combinatio
 [[Methodology Adoption Guide]]
 [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
+[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
+[[Project Self-Identification Protocol — The Goldilocks Framework]]
+[[Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[Three PM Levels — Wiki to Fleet to Full Tool]]
+[[Wiki Gateway Tools — Unified Knowledge Interface]]

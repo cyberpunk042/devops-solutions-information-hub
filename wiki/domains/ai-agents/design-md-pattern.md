@@ -139,6 +139,16 @@ Cross-referencing `Context-Aware Tool Loading` and `CLI Tools Beat MCP for Token
 
 Cross-referencing `Infrastructure as Code Patterns` and `Agent Orchestration Patterns`: the `Infrastructure as Code Patterns` page documents that CLAUDE.md's constraint is that "every token in CLAUDE.md costs context budget... This creates an implicit pressure to keep it concise — verbosity has a real cost." The same constraint applies to Design.md with local models, but more severely: the `Agent Orchestration Patterns` page documents OpenFleet's model tiering — "indexing uses Claude (quality), querying uses LocalAI hermes-3b (cheap)" — suggesting smaller local models are used for tasks with bounded context requirements, not tasks that require loading large design system specifications. A 2,000-token Design.md may represent 5-10% of a smaller local model's effective context window (typically 4K-8K tokens for hermes-3b class models), significantly degrading performance on the actual generation task. The practical guidance from existing wiki knowledge: use Design.md with larger models (Claude, GPT-4 class) for design-intensive generation, and provide a compressed design summary (key hex values, font choices only) when routing through AICP to smaller local models.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Claude Code Best Practices]] (CLAUDE.md is the same pattern for coding)

@@ -6,7 +6,8 @@ status: draft
 priority: {{priority}}
 task_type: epic
 current_stage: document
-readiness: 0
+readiness: 0               # 0-100: derived from children. Are the requirements, design, plan DEFINED?
+progress: 0                 # 0-100: derived from children. How far is the WORK across all modules/tasks?
 stages_completed: []
 artifacts: []
 confidence: high

@@ -92,6 +92,16 @@ Cross-referencing `Four-Project Ecosystem` and `OpenFleet`: the two systems have
 
 Cross-referencing `OpenFleet` and the DSPD fleet integration documented in this page: Plane tracks velocity at the work item level via story points (1/2/3/5/8/13 Fibonacci scale) and burns down against cycles (sprints). The `OpenFleet` page documents the bidirectional sync: "PM agent reads Plane via MCP tools, creates OCMC tasks" (dispatch) and "PM detects OCMC completion, updates Plane + adds PR link" (close). The labels system (`agent:<name>`, `project:<name>`) enables per-agent work item tagging, meaning Plane can show analytics filtered by `agent:software-engineer` or `agent:qa-engineer` by querying the labels dimension. The `OpenFleet` page documents 10 specialized agents each with defined roles — each agent's dispatched work is labeled with its identifier. Plane's analytics dashboards can therefore show per-agent velocity (story points completed per sprint per agent label) and burn-down, provided the PM agent consistently applies `agent:<name>` labels when creating or updating work items. The DSPD integration's `plane_sync.py` is the component responsible for ensuring this labeling consistency. The one gap: Plane's native analytics treat work items equally regardless of whether they were executed by a human or an agent — the "agent as contributor" model requires the label convention to distinguish agent-executed from human-executed work in the analytics view.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - USED BY: [[OpenFleet]]

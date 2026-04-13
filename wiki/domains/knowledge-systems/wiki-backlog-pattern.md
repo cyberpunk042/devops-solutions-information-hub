@@ -220,6 +220,16 @@ The OpenArms implementation (`/home/jfortin/openarms/wiki/`) is the direct refer
 > [!example]- What is the wiki-native solution for asynchronous human gating?
 > Resolved in [[Decision: Task Type Edge Cases]]. Semi-autonomous mode + session artifacts. Agent writes its question to `wiki/log/`, sets task to `blocked` with `blocked_by` describing needed input, and stops. Human provides input as a new log entry or task edit. Next session picks up the unblocked task.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[LLM Wiki Pattern]] (extends Karpathy's wiki pattern with project management types and an auto-loop)

@@ -178,6 +178,16 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 
 > [!question] Should the MCP server expose a "methodology guide" tool that returns the right pages based on what the agent is about to do? (e.g., `wiki_methodology_guide --task-type bug --stage document` returns the relevant chain + standards + lessons)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Methodology]]
@@ -201,3 +211,4 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[Structured Context Is Proto-Programming for AI Agents]]
+[[Wiki Gateway Tools — Unified Knowledge Interface]]

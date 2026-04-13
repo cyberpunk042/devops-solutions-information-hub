@@ -129,6 +129,64 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 >
 > **The test:** After reading this lesson, could you decide between CLI and MCP for your next tool integration? If yes, the lesson succeeded. If you'd need to read the sources yourself, it failed.
 
+### Annotated Exemplar: [[Infrastructure Enforcement Proves Instructions Fail]]
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **Frontmatter annotations:**
+> ```yaml
+> type: lesson              # ← correct evolved type
+> domain: ai-agents         # ← specific domain, not cross-domain (lesson is about agent enforcement)
+> confidence: authoritative  # ← justified: quantified data from 5 production runs
+> maturity: growing          # ← not seed: multiple evidence sources, not just one observation
+> derived_from:              # ← REQUIRED: traces to source pages
+>   - "CLAUDE.md Structural Patterns for Agent Compliance"
+>   - "Enforcement Hook Patterns"
+>   - "Model: Quality and Failure Prevention"
+> sources:                   # ← each source has file: reference (not just description)
+>   - id: openarms-v8-overnight
+>     file: raw/articles/openarms-methodology-scan.md
+> ```
+>
+> **Summary annotation:**
+> "Instruction-based agent enforcement achieves 25% compliance for stage boundaries. Infrastructure enforcement achieves 100% compliance for the same rules."
+> ← ONE actionable sentence. Contains the specific numbers. After reading ONLY this line, you know what to do (switch from instructions to infrastructure).
+>
+> **Context annotation:**
+> 4 specific trigger conditions — each is a concrete scenario, not a vague category:
+> - "You are configuring an AI agent to follow a process" ← specific
+> - "You are writing rules in CLAUDE.md and expecting compliance" ← specific
+> - "You are running agents autonomously" ← specific
+> - "You have experienced agents ignoring directives" ← specific trigger
+>
+> **Insight annotation:**
+> Uses `> [!tip]` callout (success-oriented lesson). Contains a 5-row TABLE inside `> [!abstract]` showing the enforcement hierarchy with measured compliance per level. This is the MECHANISM — not "hooks work" but "hooks work because they operate at the tool-call level where the agent physically cannot bypass them."
+>
+> **Evidence annotation:**
+> 3 evidence items from independent instances:
+> - `> [!bug]-` foldable: OpenArms v8 overnight (quantified: 75% violations)
+> - `> [!bug]-` foldable: Fatigue cliff pattern (different failure mode, same root cause)
+> - `> [!success]`: OpenArms v10 hooks (quantified: 0% violations, 215 lines)
+> - `> [!success]`: OpenFleet MCP tool blocking (independent instance, different mechanism)
+>
+> Each evidence item has: bold label, specific claim with DATA, source reference.
+>
+> **Applicability annotation:**
+> Uses `> [!abstract]` table mapping 4 enforcement tiers to when/what. Includes "When to upgrade" guidance. Self-Check section with 4 numbered questions — each question is testable and specific.
+>
+> **Relationships annotation:**
+> 7 relationships using 4 different verbs (DERIVED FROM, BUILDS ON, RELATES TO, FEEDS INTO). Not all RELATES TO — verb choice carries meaning.
+
+### Second Exemplar Reference: [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+
+> [!success] Why this exemplar works
+>
+> - **Taxonomy in the insight:** 6-row table with columns: class name, what happens, root cause, infrastructure fix? ← each class is a complete unit
+> - **Evidence per class:** Separate `> [!bug]-` foldable for each failure class with file:line-level specifics
+> - **Quantified assertion:** "Clean completion rate: 20%" — not "sometimes fails" but a measured percentage
+> - **Connects to prior art:** BUILDS ON [[Infrastructure Enforcement Proves Instructions Fail]] — explicitly says "even with 0% stage violations, these 6 classes persist"
+> - **Mitigation table in applicability:** Each class → how to detect + how to mitigate
+
 ### Common Failures
 
 | Failure | What It Looks Like | The Fix |

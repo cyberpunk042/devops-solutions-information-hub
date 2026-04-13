@@ -37,3 +37,11 @@ The agent ran a "readiness validation" that counted files and printed checkmarks
 - Clear entry points per model
 - Tested transfer (at least one project has adopted)
 - Maturity on ALL pages, not just evolved ones
+
+## Relationships
+
+- FEEDS INTO: [[Models Are Built in Layers, Not All at Once]]
+
+## Backlinks
+
+[[Models Are Built in Layers, Not All at Once]]

@@ -96,6 +96,17 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 - **Context7 integration**: Context7 is available as both MCP server and CLI+Skills. Per this decision, prefer the skill form unless cross-conversation discoverability is required.
 - **Future 1M context window**: As context windows expand, the token overhead argument weakens. This decision should be revisited when 1M context becomes standard — at that point, MCP-first may become the correct default due to consistency and discoverability advantages.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Synthesis: Claude Code Harness Engineering]]

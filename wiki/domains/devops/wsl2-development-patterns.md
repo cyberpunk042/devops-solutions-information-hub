@@ -135,6 +135,16 @@ Cross-referencing `Infrastructure as Code Patterns` and `Research Pipeline Orche
 
 Cross-referencing `Infrastructure as Code Patterns`: The `Infrastructure as Code Patterns` page documents the service deployment pattern: "Writing the service file to ~/.config/systemd/user/ and running `systemctl enable` is reproducible infrastructure deployment." The `systemctl enable` command configures a service to start automatically at login — in systemd terminology, this is `WantedBy=default.target` for user services. When a WSL2 instance is shut down (`wsl --shutdown`) and restarted, systemd initializes the user session fresh, which activates all `enabled` user services. The WSL2 page itself states these services get "restart on failure, start on login" lifecycle management. The practical answer: yes, enabled systemd user services (`wiki-sync.service`, `wiki-watcher.service`) auto-restart when the WSL2 instance starts, because WSL2 restart = new systemd user session = all `enabled` services are activated. No manual `systemctl --user start` is required after a WSL2 reboot, provided systemd is enabled in `/etc/wsl.conf`.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[Research Pipeline Orchestration]]

@@ -189,6 +189,16 @@ Agent SDK vs CLI System Prompts, Browser Automation MCP, Global vs Project Setti
 - How does the settings.json enforcement model interact with inherited CLAUDE.md rules when both configure the same behavior (e.g., model selection)? (Requires: external testing of precedence rules)
 - What is the practical performance ceiling for Agent Teams with tmux+git worktrees on large monorepos? (Requires: empirical benchmarking at scale)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice

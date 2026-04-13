@@ -87,6 +87,16 @@ The pipeline never modifies page content — it only regenerates indexes, manife
 - [ ] No new lint issues introduced (compare before/after lint count)
 - [ ] manifest.json page count matches expected total
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[Model: LLM Wiki]]

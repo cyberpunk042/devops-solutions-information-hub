@@ -118,6 +118,16 @@ Cross-referencing `OpenArms` and `OpenFleet`: OpenArms skills are SKILL.md markd
 
 Cross-referencing `OpenFleet`: OpenArms's `sessions_send` is a synchronous within-gateway cross-session message: one agent session sends a message to another session over the same WebSocket gateway. This is primarily used for agent-to-agent coordination within a single OpenArms deployment. OpenFleet's messaging patterns are asynchronous and infrastructure-level: agents communicate via IRC channels (#fleet, #alerts, #reviews) on miniircd (port 6667), and the orchestrator dispatches tasks via the Mission Control API on a 30-second cycle. The key difference: `sessions_send` is ephemeral and session-scoped (no persistent task queue), while OpenFleet's IRC+orchestrator pattern is persistent (tasks survive agent restarts) and auditable (all channel messages are logged). For triggering fleet tasks from OpenArms, the correct approach is the Mission Control API (HTTP POST), not `sessions_send` — `sessions_send` is for coordinating within the OpenArms gateway, not for crossing into the OpenFleet boundary.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[AICP]]

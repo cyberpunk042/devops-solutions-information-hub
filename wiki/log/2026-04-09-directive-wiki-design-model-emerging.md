@@ -36,3 +36,11 @@ This third layer is NEW and needs its own model/standard document. It will defin
 - How the styling degrades gracefully in non-Obsidian renderers
 
 This is a start that will grow into a wiki design model — potentially becoming the 15th named model.
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

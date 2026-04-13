@@ -88,6 +88,16 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Research Pipeline Orchestr
 
 Cross-referencing `Knowledge Evolution Pipeline` and `WSL2 Development Patterns`: yes — this is explicitly described in the LLM Wiki v2 source as "event-driven auto-ingestion" and the infrastructure to implement it already exists. The `Wiki Ingestion Pipeline` Key Insights section (from v2) states: "Rather than requiring the user to manually trigger ingestion, a 'new source' event hook should auto-ingest, extract entities, update the graph, and update the index. The human remains in the loop for curation but is freed from remembering to trigger processing." The `WSL2 Development Patterns` page documents `tools/watcher.py` which already watches the `wiki/` folder for changes and triggers the post-chain. Extending `watcher.py` to also watch `raw/` for new files (which land on the Linux filesystem where inotify is reliable) and trigger `pipeline run` in `auto` or `smart` mode is a direct implementation of the v2 vision. The `Research Pipeline Orchestration` page calls this the `ONLINE RESEARCH` pipeline triggered by "new source" events. The technical components exist; the missing piece is extending the watcher's watched paths from `wiki/` to also include `raw/`.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-claude-code-10x

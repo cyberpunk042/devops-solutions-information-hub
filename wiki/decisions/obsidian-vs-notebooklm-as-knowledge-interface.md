@@ -91,6 +91,17 @@ The custom RAG alternative (Subsystem 3) is the likely long-term successor to bo
 - **NotebookLM rate limits**: The NotebookLM page notes "heavy automated usage triggers Google's rate limits." On-demand sync (not continuous automated sync) avoids this issue. The `--retry` flag in notebooklm-py handles transient failures.
 - **300-source limit**: NotebookLM notebooks support up to 300 sources. As the wiki grows past 300 pages, the mirror strategy may need to split into topic-scoped notebooks rather than a full-wiki notebook. This is a known scaling boundary, not a current blocker.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Obsidian Knowledge Vault]]

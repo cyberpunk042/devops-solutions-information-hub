@@ -96,6 +96,16 @@ Cross-referencing `Plan Execute Review Cycle` and `Agent Orchestration Patterns`
 
 Cross-referencing `Agent Orchestration Patterns` and `Plan Execute Review Cycle`: the Agent Orchestration Patterns page documents OpenFleet's deterministic 12-step orchestrator cycle with "zero LLM calls on its cycle — pure Python state evaluation handles routing, gating, dispatch, and anomaly detection." Superpowers uses an LLM-guided orchestrator (the executing-plans skill) that reviews between tasks and dispatches sub-agents based on the plan document. The structural comparison: OpenFleet is a **deterministic brain** model (orchestration logic is Python, LLM only executes within bounded task slots, max 2 dispatches per 30-second cycle, immune system for anomaly detection); Superpowers is an **LLM orchestrator** model (the plan file constrains execution, but the orchestrator itself is an LLM that reviews and dispatches based on the spec). OpenFleet's approach provides stronger safety guarantees (Python-enforced gates cannot be hallucinated around) but requires more infrastructure. Superpowers is lower-overhead for a single-developer workflow (no fleet infrastructure, no IRC channels, no Plane boards) and handles one feature at a time rather than parallel fleet agents. The Plan Execute Review Cycle page confirms they share the same structural pattern (Plan→Execute→Review) but enforce it at different levels of the harness hierarchy: "Level 2 (workflow orchestration via skills/pipeline.py) vs. Level 4 (deterministic orchestration)." Superpowers is the correct choice for individual feature development; OpenFleet is the correct choice for fleet-scale parallel task execution.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-superpowers-end-of-vibe-coding

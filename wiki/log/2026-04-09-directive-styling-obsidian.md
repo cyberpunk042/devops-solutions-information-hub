@@ -29,3 +29,11 @@ The pages are structurally correct but visually raw in Obsidian. The user wants:
 2. Possibly using skills/plugins we already have for visual styling
 3. A solution that ripples through — not per-page but a systemic approach
 4. This needs serious thought — "solve this really hard"
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

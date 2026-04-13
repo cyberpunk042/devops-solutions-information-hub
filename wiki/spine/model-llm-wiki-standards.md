@@ -264,6 +264,16 @@ What makes it the standard:
 - Should there be a formal review process for promoting pages from growing to mature? Currently it's ad-hoc. (Requires: testing with a formal review workflow)
 - What's the minimum Evidence count for a lesson to be credible? Currently suggested ≥3 independent sources. Is that right? (Requires: analysis of existing lesson quality vs evidence count)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: LLM Wiki]]

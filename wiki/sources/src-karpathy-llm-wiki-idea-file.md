@@ -87,6 +87,16 @@ Cross-referencing `LLM Wiki vs RAG` and `LLM Wiki Pattern`: both pages document 
 
 Cross-referencing `LLM Wiki Pattern`: the LLM Wiki Pattern page documents the state of this question: "The v2 document proposes mesh sync with last-write-wins, but details are sparse. Requires: external research or implementation experience." The LLM Wiki Pattern page also notes that Karpathy mentions "multiple vaults for different purposes" but frames these as separate rather than merged. The `Knowledge Evolution Pipeline` page's scored evolution mechanism provides a partial answer for the internal case: pages from different source wikis could be ingested as raw sources, then the evolution pipeline would synthesize canonical cross-source pages through the seed → growing → mature → canonical promotion path. This treats merging as a re-ingestion problem rather than a file merge problem. For true bidirectional team merges with concurrent edits, the wiki pages do not document a canonical approach — the existing architecture assumes WSL2 as a single source of truth with the `--reverse` flag for one-off reverse syncs.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-llm-wiki-idea-file

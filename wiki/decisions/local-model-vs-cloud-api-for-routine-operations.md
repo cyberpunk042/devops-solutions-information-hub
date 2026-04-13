@@ -84,6 +84,17 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 - **Cost tracking**: AICP's telemetry tracks API costs per backend. Monitoring the actual token cost reduction at Stage 2 vs Stage 1 would validate whether the routing is functioning as designed (target: 80%+ reduction from pre-routing baseline).
 - **Hardware dependency**: The local model routing assumes LocalAI is running with adequate VRAM. The hardware upgrade (8GB→19GB VRAM) documented in the project memory directly expands which models can be routed locally. This decision should be revisited as hardware changes.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[AICP]]

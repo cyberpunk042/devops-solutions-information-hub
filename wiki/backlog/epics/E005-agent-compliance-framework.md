@@ -6,16 +6,31 @@ status: in-progress
 priority: P0
 task_type: epic
 current_stage: document
-readiness: 30
-stages_completed: [document]
+readiness: 55
+progress: 35
+stages_completed: [document, design]
 artifacts:
   - wiki/patterns/claude-md-structural-patterns.md
   - wiki/patterns/enforcement-hook-patterns.md
   - wiki/patterns/stage-aware-skill-injection.md
+  - wiki/lessons/infrastructure-enforcement-proves-instructions-fail.md
+  - wiki/lessons/agent-failure-taxonomy-six-classes-of-behavioral-failure.md
+  - wiki/lessons/context-compaction-is-a-reset-event.md
+  - wiki/lessons/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md
+  - wiki/lessons/structured-context-is-proto-programming-for-ai-agents.md
+  - wiki/lessons/harness-ownership-converges-independently-across-projects.md
+  - wiki/patterns/three-lines-of-defense-immune-system-for-agent-quality.md
+  - wiki/patterns/harness-owned-loop-deterministic-agent-execution.md
+  - wiki/patterns/contribution-gating-cross-agent-inputs-before-work.md
+  - wiki/patterns/tier-based-context-depth-trust-earned-through-approval-rates.md
+  - wiki/patterns/validation-matrix-test-suite-for-context-injection.md
+  - wiki/comparisons/openarms-vs-openfleet-enforcement.md
+  - wiki/sources/src-openarms-v10-enforcement.md
+  - wiki/sources/src-openfleet-fleet-architecture.md
   - CLAUDE.md
 confidence: high
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-12
 depends_on: [E003, E004]
 sources:
   - id: operator-directive
@@ -56,6 +71,15 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 
 - E003 (Artifact Type System) — needs artifact type definitions for validation
 - E004 (Portable Methodology Engine) — needs methodology engine for model selection validation
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Epic → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
 
 ## Relationships
 

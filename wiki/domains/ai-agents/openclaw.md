@@ -89,6 +89,16 @@ Cross-referencing `OpenArms` and `Four-Project Ecosystem`: yes, and the integrat
 
 Cross-referencing `Agent Orchestration Patterns` and `OpenFleet`: the OpenClaw architecture's 10-stage agent loop includes "step 5: Serialized execution per session" — meaning each session processes one message at a time, with subsequent messages queued. The `Agent Orchestration Patterns` page documents OpenFleet's explicit throttling: "Dispatch ready tasks (max 2/cycle, unblocked inbox tasks)" — the orchestrator caps dispatches at 2 per 30-second cycle precisely to avoid overwhelming the gateway's serialized session model. This is not a workaround for OpenClaw's serialization; it is the designed interaction: the deterministic orchestrator's dispatch throttle is calibrated to OpenClaw's per-session serialization model. The `Agent Orchestration Patterns` page's Sub-Agent Dispatch Model also documents: "Bounded parallelism: dispatch multiple sub-agents for independent tasks, but cap concurrency." When the orchestrator dispatches 2 tasks in one cycle to different agents (different sessions), they execute in parallel across sessions (each session serializes its own queue). If 2 tasks go to the same agent session, they are queued within that session and processed sequentially. The burst dispatch behavior is therefore: up to 2 concurrent tasks across different agent sessions per cycle, each serialized within its own session. The 30-second cycle duration provides natural spacing — by the time the next cycle fires, most short tasks have completed, keeping the per-session queue depth at 1 in typical operation.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - USED BY: [[OpenFleet]]

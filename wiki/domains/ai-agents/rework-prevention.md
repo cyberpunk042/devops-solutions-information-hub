@@ -146,6 +146,16 @@ The Harness Engineering insight quantifies this: 5.5x planning overhead at the s
 > [!example]- Can spec compliance review be automated for wiki pages?
 > Partial automation is feasible. The post-chain validates schema compliance (frontmatter) but not content compliance (does the page reflect the source?). Content-level compliance requires comparing generated `## Summary` and `## Key Insights` against the source in `raw/`. Extending the linter with a "summary faithfulness check" would automate this — but requires LLM inference at lint time. The wiki's guided mode implements manual spec compliance review; automation would use the same inputs (source text + generated page) with an LLM judge.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLED BY: [[Always Plan Before Executing]]

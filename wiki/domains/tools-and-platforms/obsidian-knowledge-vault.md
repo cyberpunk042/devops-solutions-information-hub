@@ -83,6 +83,16 @@ Cross-referencing `WSL2 Development Patterns`: the WSL2 development patterns pag
 
 Cross-referencing `Obsidian Skills Ecosystem`: yes, and the ecosystem is documented across three repositories at different capability layers. The `Obsidian Skills Ecosystem` page identifies three repositories that collectively form an AI agent skill layer for Obsidian: `kepano/obsidian-skills` (official, 5 capability areas including CLI, Bases, JSON Canvas, web extraction via Defuddle), `axtonliu/axton-obsidian-visual-skills` (visual generation: Excalidraw, Mermaid, Canvas from natural language), and `pablo-mano/Obsidian-CLI-skill` (130+ CLI commands covering all vault operations). For the LLM Wiki workflow specifically: `kepano`'s Defuddle skill "extracts clean markdown from web pages, reducing token waste" — directly supporting web-clip ingestion. The pablo-mano skill's 130+ CLI commands enable programmatic vault management from Claude Code. The `Obsidian Skills Ecosystem` page concludes that "the ecosystem will likely consolidate and improve significantly as these foundations mature," and that the dependency on Obsidian's desktop app for CLI operations "limits use in CI/CD pipelines and cloud-based agent deployments." The three-layer skill stack (specification + visual generation + deep CLI) is already the closest thing to LLM-wiki-specific Obsidian tooling, though none was explicitly designed for the Karpathy LLM Wiki pattern in particular.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-claude-code-10x

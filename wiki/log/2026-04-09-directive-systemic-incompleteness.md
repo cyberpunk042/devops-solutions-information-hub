@@ -45,3 +45,11 @@ A model (e.g., "Claude Code", "LLM Wiki", "Methodology") is complete when:
 ## What Needs to Happen
 
 Not "ingest more" — FINISH what's started. Complete each model before starting new ones. Apply the test: "If I gave this to another project, could they understand and use this model?"
+
+## Relationships
+
+- FEEDS INTO: [[Coverage Blindness — Modeling Only What You Know]]
+
+## Backlinks
+
+[[Coverage Blindness — Modeling Only What You Know]]

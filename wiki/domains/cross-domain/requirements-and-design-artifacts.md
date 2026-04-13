@@ -222,6 +222,16 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > [!question] ~~Should the Interface Spec be a separate document or always a section in the Tech Spec?~~
 > **RESOLVED:** Section in Tech Spec by default, separate when interface exceeds 100 lines. See [[Decision: Artifact System Design Decisions]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

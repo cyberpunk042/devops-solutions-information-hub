@@ -98,6 +98,16 @@ Cross-referencing `Obsidian CLI` and `Obsidian Skills Ecosystem`: the Obsidian C
 
 Cross-referencing `Obsidian CLI` and `WSL2 Development Patterns`: the Obsidian CLI page lists concurrent access as an open question: "How does the CLI handle concurrent access — can multiple scripts issue commands simultaneously without conflicts? (Requires: external testing or Obsidian documentation on IPC concurrency; no existing wiki page covers this)" — confirming no wiki page documents concurrent IPC behavior. The WSL2 Development Patterns page provides useful architectural context: the current project design avoids concurrent Obsidian access by using a two-daemon architecture where the wiki-watcher daemon detects changes and triggers the post-chain sequentially, and the wiki-sync daemon separately copies results to Windows. This sequential architecture sidesteps IPC concurrency concerns by design. For multi-agent scenarios where concurrent CLI access would be required, the WSL2 page notes the CLI must run on the same OS as the app, adding a coordination constraint. The wiki's current recommendation from these pages: design agent workflows to avoid concurrent Obsidian CLI calls; if concurrency is required, implement a command queue at the orchestration layer rather than relying on IPC to handle simultaneous requests safely.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-pablo-mano-obsidian-cli-skill

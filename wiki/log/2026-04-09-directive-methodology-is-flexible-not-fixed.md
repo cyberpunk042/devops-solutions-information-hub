@@ -40,3 +40,11 @@ The methodology is a FRAMEWORK for defining work processes, not a single process
 - Conditions that select which sequence applies (task_type is ONE condition, but also: project phase, domain, scale, urgency)
 - Ability to compose sequences (run A then B, nest B inside A's stage, branch conditionally)
 - The 5-stage sequence is ONE INSTANCE, not the whole framework
+
+## Relationships
+
+- FEEDS INTO: [[Model: Methodology]]
+
+## Backlinks
+
+[[Model: Methodology]]

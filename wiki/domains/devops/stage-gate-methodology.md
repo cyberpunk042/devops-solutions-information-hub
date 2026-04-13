@@ -227,6 +227,16 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 > [!example]- How does readiness interact with partial stage completion?
 > Resolved in [[Decision: Stage-Gate Operational Decisions]]. Task remains at the previous stage threshold until the current stage is fully complete. Incomplete Design = still at 25% (Document ceiling), not 26%.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Task Lifecycle Stage-Gating]] (this page operationalizes the stage-gating concept for the devops domain)
@@ -279,6 +289,7 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 [[Never Synthesize from Descriptions Alone]]
 [[Operations Plan Page Standards]]
 [[Operations Plan: Wiki Post-Ingestion Validation]]
+[[Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[Requirements and Design Artifacts — Standards and Guide]]
 [[Shallow Ingestion Is Systemic, Not Isolated]]
 [[Stage-Aware Skill Injection]]

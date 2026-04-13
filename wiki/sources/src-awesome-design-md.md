@@ -97,6 +97,16 @@ Developer Tools (14) and AI/ML (12) dominate — these communities are building 
 - Does the 312-line average hold across the collection, or do simpler sites (e.g., Ollama's "terminal-first, monochrome simplicity") produce significantly shorter files? (Requires: sampling additional DESIGN.md files from the collection)
 - Could DESIGN.md be extended with animation/motion specifications? Section 4 covers static component states but not transitions. (Requires: external research on motion design in AI-generated UI)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Design.md Pattern]] (this is the empirical evidence for that concept)

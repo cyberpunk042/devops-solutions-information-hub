@@ -70,6 +70,17 @@ All decisions are easy to reverse. They're design guidelines, not infrastructure
 - [[Plannotator — Interactive Plan & Code Review for AI Agents]] — validates plan generation pattern
 - [[Stage-Gate Methodology]] — dynamic stage-gating is the primary use case
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Hooks Lifecycle Architecture]]

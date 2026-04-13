@@ -168,6 +168,17 @@ Certain structural patterns recur independently across multiple domains in this 
 > [!example]- Which patterns are domain-specific vs genuinely universal?
 > **Universal (3+ domains):** Plan-Execute-Review (4 domains), Progressive Distillation (3+), Atomic Units + Typed Links (3+), Context-Aware Tool Loading (any shared-resource system). **More domain-specific:** Gateway-Centric Routing (strong in distributed systems, weak in knowledge-systems), Deterministic Shell + LLM Core (most native to ai-agents/automation; wiki post-chain is the closest knowledge-systems analog).
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[Plan Execute Review Cycle]]

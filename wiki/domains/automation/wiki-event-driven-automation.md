@@ -78,6 +78,16 @@ Cross-referencing `Agent Orchestration Patterns`: the correct failure response i
 
 The hooks architecture for wiki event automation maps directly to Claude Code's PostToolUse, PreToolUse, and Stop hooks. The six wiki event hooks can be implemented as native Claude Code hooks without additional infrastructure: (1) "on new source" → PostToolUse hook fires after any file write to raw/; (2) "on session start" → CLAUDE.md pre-loads session context; (3) "on session end" → Stop hook triggers crystallization; (4) "on query" → PostToolUse hook on any query tool call evaluates quality score; (5) "on memory write" → PostToolUse hook on wiki page writes triggers contradiction check; (6) "on schedule" → Claude Code Scheduling's two modes (local cron via systemd timer as documented in `WSL2 Development Patterns`, or remote tasks). This creates a direct bridge between the ai-agents and automation domains — the wiki's event-driven maintenance is implementable as standard Claude Code harness configuration.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory

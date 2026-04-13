@@ -3,6 +3,20 @@
 A research-grade knowledge synthesis system and second brain. Central intelligence
 spine for the devops ecosystem (openfleet, AICP, DSPD, devops-control-plane).
 
+## Identity Profile (Goldilocks)
+
+| Dimension | Value |
+|-----------|-------|
+| **Type** | system (framework + instance + second brain) |
+| **Execution Mode** | solo — human + Claude in conversation, no harness, no loop |
+| **Domain** | knowledge (Python/wiki tools) |
+| **Phase** | production (used daily, 267+ pages) |
+| **Scale** | medium (267 pages, growing) |
+| **PM Level** | L1 (wiki backlog, CLAUDE.md directives, pipeline tools) |
+| **Trust Tier** | operator-supervised |
+| **SDLC Chain** | Default (stage-gated with selected artifacts) |
+| **Second Brain** | IS the second brain (self-referential) |
+
 # ---------------------------------------------------------------------------
 # SACROSANCT OPERATOR DIRECTIVES
 # These override everything. Never paraphrase. Never reinterpret.
@@ -70,14 +84,17 @@ spine for the devops ecosystem (openfleet, AICP, DSPD, devops-control-plane).
 Full model definitions with artifact chains: `wiki/config/methodology.yaml`
 Artifact type details: `wiki/config/artifact-types.yaml`
 
-## Per-Scale Artifact Requirements
+## Work Hierarchy — Milestone → Epic → Module → Task
 
-| Scale | Required Artifacts |
-|-------|-------------------|
-| Epic | Directive log → research → infrastructure analysis → gap analysis → requirements spec → design → plan → per-module breakdown |
-| Module | Design (or section of epic design) → plan → per-task breakdown |
-| Task | Task description (from plan) → implement → verify |
-| Hotfix | Nothing — fix, test, commit |
+| Level | When to Use | Required Artifacts |
+|-------|-------------|-------------------|
+| Milestone | Multiple epics that must ship together (release, phase gate) | Target date, epic list, acceptance criteria |
+| Epic | Strategic capability (weeks of work) | Directive log → research → gap analysis → requirements → design → plan → modules |
+| Module | Coherent subsystem (days of work) | Design (or section of epic design) → plan → tasks |
+| Task | Single-session atomic work | Task description (from plan) → implement → verify |
+| Hotfix | Known fix, emergency | Nothing — fix, test, commit |
+
+Impediment types: technical, dependency, decision, environment, clarification, scope, external, quality
 
 Templates for ALL artifacts: `wiki/config/templates/` (wiki types) and `wiki/config/templates/methodology/` (stage documents)
 
@@ -143,11 +160,17 @@ Every wiki page uses YAML frontmatter with these required fields:
     title, type, domain, status, confidence, created, updated, sources, tags
 
 Page types: concept, source-synthesis, comparison, reference, deep-dive, index,
-  lesson, pattern, decision, domain-overview, learning-path, evolution,
-  operations-plan, epic, module, task, note
+  lesson, pattern, decision, principle, domain-overview, learning-path, evolution,
+  operations-plan, milestone, epic, module, task, note
 
 Every type has a template in `wiki/config/templates/`. Scaffold via:
 `python3 -m tools.pipeline scaffold <type> <title>`
+
+Evolved knowledge types use maturity-based folders:
+- lessons/ → 00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles
+- patterns/ → 00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles
+- decisions/ → 00_inbox → 01_drafts → 02_validated → 03_principles
+New scaffolds go to 00_inbox. Promote as evidence accumulates. >10 items in a folder = sub-structure.
 
 ## Page Structure
 
@@ -218,6 +241,28 @@ Validation: `python3 -m tools.pipeline post` (runs all 6 steps)
 - `evolve` — Score, scaffold, generate, review maturity, detect staleness
 - `continue` — Resume mission: diagnostics → state → options
 - `model-builder` — Build, review, or evolve a wiki model
+
+## Gateway (unified knowledge interface — humans, agents, MCP)
+
+Queries:
+- `python3 -m tools.gateway query --identity` — Show project Goldilocks identity profile
+- `python3 -m tools.gateway query --models` — List all 9 methodology models
+- `python3 -m tools.gateway query --model feature-development --full-chain` — Full artifact chain
+- `python3 -m tools.gateway query --stage document --domain typescript` — Stage artifacts + domain overrides
+- `python3 -m tools.gateway query --chains` — List SDLC chains (simplified/default/full)
+- `python3 -m tools.gateway query --chain default` — Chain details (stages, models, readiness gate, enforcement)
+- `python3 -m tools.gateway query --field readiness` — Explain a frontmatter field
+- `python3 -m tools.gateway query --mapping` — Location mapping (where archived/moved pages went)
+
+Operations:
+- `python3 -m tools.gateway template <type>` — Get page template
+- `python3 -m tools.gateway config methodology.models` — Render config section as markdown
+- `python3 -m tools.gateway move "Title" --to domains/new/` — Move page, update refs
+- `python3 -m tools.gateway archive "Title"` — Archive page with location mapping
+- `python3 -m tools.gateway backup --target /path/` — Full wiki backup
+- `python3 -m tools.gateway contribute --type lesson --title "..." --content "..."` — Agent write-back
+
+Dual-scope: `--wiki-root /path/to/other/project` targets another wiki instead of the second brain.
 
 ## MCP Server
 

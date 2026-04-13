@@ -77,6 +77,16 @@ Cross-referencing the `Second Brain Architecture` page: PARA's Archive bucket is
 
 Cross-referencing the `WSL2 Development Patterns` page: the page directly addresses this class of problem. The wiki solves it by making WSL2 the source of truth for all writes: "The workflow assumes WSL2 is the source of truth for wiki writes." The watcher daemon (wiki-watcher) detects changes, runs the post-chain, and then the sync daemon (wiki-sync) copies the clean validated state to Windows. The Obsidian Git auto-commit operates on the Windows-side copy — which receives fully processed files, not mid-edit intermediates. Merge conflicts arise when Obsidian makes changes on the Windows side (e.g., manual note editing) simultaneously with Claude Code writing on the WSL2 side. The `WSL2 Development Patterns` page documents the workaround: `sync.py --reverse` with `--update` (rsync's newer-file wins) for syncing Windows changes back to WSL2. The practical risk mitigation is: schedule Obsidian auto-commits to run at a different cadence than Claude Code sessions (e.g., auto-commit only when no WSL2 changes are active), and treat the `--reverse` sync as a manual step run between sessions rather than a concurrent daemon. True bidirectional atomic merge is outside the scope of the current implementation (noted as a potential Syncthing integration in WSL2 Development Patterns open questions).
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-obsidian-claude-code-second-brain

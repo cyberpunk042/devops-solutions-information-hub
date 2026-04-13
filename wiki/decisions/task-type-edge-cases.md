@@ -70,6 +70,17 @@ All easy. Adding a spike+implement type later is additive. Migrating from parall
 - [[Stage-Gate Methodology]] — stage-gate integrity drives the spike decision
 - [[Decision: Methodology Framework Design Decisions]] — mid-execution type change already resolved there
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Task Type Artifact Matrix]]

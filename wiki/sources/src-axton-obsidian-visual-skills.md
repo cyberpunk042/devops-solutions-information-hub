@@ -67,6 +67,16 @@ Cross-referencing `Design.md Pattern` and `Obsidian Skills Ecosystem`: the Desig
 
 Cross-referencing `Design.md Pattern` and `Synthesis: Playwright MCP for Visual Development Testing`: the Design.md Pattern page answers this directly by analogy — "preview.html artifacts allow human verification before code generation — an analogous 'preview before commit' step for visual skill output would catch variability before it reaches the vault." The Playwright MCP page documents a concrete validation mechanism: after Claude Code generates visual output, a Playwright-based design review agent captures screenshots and validates against design principles, creating a "fix-verify loop" that "removes the human from the visual verification cycle entirely for routine issues." Applying this to Excalidraw/Mermaid/Canvas output: a post-generation step that opens the file in a headless browser (for Mermaid SVG rendering) or uses the Obsidian CLI's `dev:screenshot` command would catch syntax errors and layout failures before the user sees them. The Obsidian Skills Ecosystem page confirms this would address the core variability: "the path to production quality is the same mechanism — encode precise visual constraints... rather than leaving visual decisions to the model's judgment." Validation steps are not just improvement — they are the standard mechanism for making experimental visual skills production-reliable.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-axton-obsidian-visual-skills

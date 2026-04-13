@@ -64,6 +64,17 @@ All easy. CHANGELOG sections are additive. CLI-based composition doesn't preclud
 - [[Harness Engineering]] — resolves 2 of its open questions
 - [[Claude Code Best Practices]] — resolves the compliance threshold question
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Claude Code Skills]]

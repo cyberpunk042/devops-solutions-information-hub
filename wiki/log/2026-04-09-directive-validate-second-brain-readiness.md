@@ -28,3 +28,11 @@ This is a readiness audit. The user wants to know:
 2. Are the methodology models (super + sub) clear and documented enough for transfer?
 3. Can another project pick up this wiki and adapt the standards?
 4. What's missing before we can claim readiness?
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

@@ -127,6 +127,16 @@ Cross-referencing `OpenArms`: the session model documents two behavioral signals
 
 Cross-referencing `OpenArms` and `OpenFleet`: both pages document the relevant integration points. OpenArms provides `sessions_send` for cross-session messaging and the gateway WebSocket control plane (`ws://127.0.0.1:18789`). OpenFleet provides the Mission Control API (port 8000, FastAPI) as its external interface and IRC channels (#fleet, #alerts) for agent communication. The architectural path for a Telegram message triggering a fleet task: (1) Telegram message arrives at the OpenArms gateway → (2) OpenArms agent processes the message → (3) agent calls an OpenArms skill that invokes the Mission Control API (via HTTP POST to port 8000) or sends a message to OpenFleet's IRC #fleet channel → (4) OpenFleet orchestrator picks up the task on its 30-second cycle. The `OpenArms` page notes that mcporter bridges MCP tool exposure to OpenArms agents — and OpenFleet's Mission Control exposes tools via its own API. A wiki MCP server or direct HTTP skill could bridge the two. This is architecturally feasible within the documented system; no new protocol is required.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLES: [[OpenArms]]

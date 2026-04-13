@@ -47,6 +47,16 @@ Harness engineering is the practice of building structured control systems aroun
 
 - **Plan→Work→Review is becoming default**: The harness makes the orchestrated workflow the default operating model, not an optional add-on. This parallels superpowers' brainstorm → plan → execute → verify and OpenFleet's deterministic orchestrator cycle.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-harness-engineering-article

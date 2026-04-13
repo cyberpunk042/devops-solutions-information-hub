@@ -140,6 +140,16 @@ Tools:
 > [!example]- Service daemon lifecycle on WSL2?
 > Deploy as systemd user services via `python -m tools.setup --services wiki-sync` (or `wiki-watcher`). Writes to `~/.config/systemd/user/`, runs `systemctl enable`. Requires `[boot] systemd=true` in `/etc/wsl.conf` + `wsl --shutdown` restart. No manual systemctl commands — only reproducible setup scripts (IaC pattern).
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Wiki Ingestion Pipeline]]

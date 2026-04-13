@@ -136,6 +136,17 @@ Cross-referencing the LLM Wiki Pattern and Knowledge Evolution Pipeline pages: t
 > [!example]- Migration path to hybrid search at 200+ pages?
 > Additive, not disruptive. markdown files remain unchanged; LightRAG added as query layer. manifest.json + `## Relationships` provide all inputs. Trigger: when domain sub-indexes become too large for single-context navigation (~200+ per domain or 500+ total). `LightRAG --storage-type json` enables zero-database-dependency first deployment.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - COMPARES TO: [[LLM Wiki Pattern]]

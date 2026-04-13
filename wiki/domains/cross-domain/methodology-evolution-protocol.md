@@ -148,6 +148,16 @@ note_type: session
 
 > [!question] Should the wiki auto-detect methodology changes and generate a diff report for consumers? (Recommendation: yes — extend manifest.json to include methodology version, and the export tool generates a changelog.)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Methodology]]

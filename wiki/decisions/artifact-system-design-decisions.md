@@ -92,6 +92,17 @@ No decision creates a one-way door.
 - Decisions 4-6 depend on tooling work (pipeline extensions, compliance checker, harness integration)
 - Decisions 1-3 can be implemented immediately with template/CLAUDE.md changes only
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Methodology Artifact Taxonomy]]

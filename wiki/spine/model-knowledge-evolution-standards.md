@@ -134,6 +134,16 @@ What good scorer output looks like — diverse candidates, not tag-pair noise.
 > [!question] **What's the minimum evidence bar for a lesson?**
 > Currently suggested: ≥3 independent sources. Is this right? A lesson from 2 strong sources might be more valid than one from 4 weak sources. Should evidence quality be weighted, not just counted? (Requires: analyzing existing lesson quality vs evidence count)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Knowledge Evolution]]

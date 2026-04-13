@@ -31,3 +31,11 @@ The user demands that all models be completed bottom-up (foundation first), with
 3. Every ingested angle must map to a model
 4. Each model is complete when it has: entry point, schema if needed, specs if needed, coherent navigation, maturity on all pages
 5. Don't pick one model — they're interconnected. Build the foundation that all models sit on, then complete them together.
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

@@ -67,6 +67,17 @@ All easy. These are interpretive frameworks, not infrastructure commitments.
 - [[Skyscraper, Pyramid, Mountain]] — resolves all 3 open questions
 - [[Methodology Framework]] — quality dimension is a framework parameter
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Skyscraper, Pyramid, Mountain]]

@@ -1,0 +1,115 @@
+# SDLC Chain: Default (Middle Ground)
+#
+# For: MVP through Staging projects, small to medium codebases
+# Phase: MVP, Staging, early Production
+# Scale: small (10k-100k) to medium (100k-1M)
+# PM Level: L1-L2 (Wiki LLM + optional hooks/commands)
+# Harness: none to v2
+#
+# Principle: stage-gated with selected artifacts. Not everything, but enough
+# to prevent the common failures (stage skipping, orphaned code, unverified work).
+# The Goldilocks default — right for most projects most of the time.
+#
+# See: wiki/domains/cross-domain/sdlc-customization-framework.md
+
+chain: default
+description: "Stage-gated process with selected artifacts — the Goldilocks default"
+
+stages:
+  document:
+    required: true
+    readiness_range: [0, 25]
+    artifacts:
+      - type: wiki-page
+        count: "1+"
+        purpose: "Requirements or research synthesis"
+        templates: ["methodology/requirements-spec"]
+    gate_commands: []
+    allowed_outputs: ["wiki-page", "raw-note"]
+    forbidden_outputs: ["code-file", "test-file"]
+
+  design:
+    required: true  # Required for feature-development; skippable for bug-fix, hotfix
+    readiness_range: [25, 50]
+    artifacts:
+      - type: wiki-page
+        count: "1+"
+        purpose: "Design decisions, tech spec, or architecture"
+        templates: ["methodology/design-plan", "decision"]
+    gate_commands: []
+    allowed_outputs: ["wiki-page", "decision-page"]
+    forbidden_outputs: ["code-file", "test-file"]
+
+  scaffold:
+    required: true  # Required for feature-development, refactor; skippable for bug-fix
+    readiness_range: [50, 80]
+    artifacts:
+      - type: type-definition
+        count: "1+"
+        purpose: "Types, interfaces, stubs — no business logic"
+    gate_commands: []  # Project-specific
+    allowed_outputs: ["type-definition", "config-file", "template-file"]
+    forbidden_outputs: ["business-logic", "test-assertions"]
+
+  implement:
+    required: true
+    readiness_range: [80, 95]
+    artifacts:
+      - type: code-file
+        count: "1+"
+        purpose: "Business logic, wired into runtime"
+      - type: src-modification
+        count: "1+"
+        purpose: "Must modify at least one existing file (integration)"
+        required: true
+    gate_commands: []  # Project-specific (pnpm tsgo, pipeline post, etc.)
+    allowed_outputs: ["code-file", "config-file", "wiki-page"]
+    forbidden_outputs: ["test-file"]
+
+  test:
+    required: true
+    readiness_range: [95, 100]
+    artifacts:
+      - type: test-file
+        count: "1+"
+        purpose: "Real assertions, not stubs"
+    gate_commands: []  # Project-specific (pnpm test, pipeline post, etc.)
+    allowed_outputs: ["test-file"]
+    forbidden_outputs: ["new-feature", "scope-change"]
+
+# Models available in default chain
+models:
+  - feature-development  # All 5 stages
+  - research             # document + design only (readiness cap 50%)
+  - knowledge-evolution  # document + implement
+  - documentation        # document only
+  - bug-fix              # document + implement + test
+  - refactor             # document + scaffold + implement + test
+  - hotfix               # implement + test
+  - integration          # scaffold + implement + test
+
+# What's different from simplified/full
+differences:
+  design_stage: true              # Design stage exists (simplified doesn't have it)
+  scaffold_stage: true            # Scaffold stage exists
+  contribution_gating: false      # No cross-agent inputs (full chain has this)
+  milestone_tracking: optional    # Milestones available but not required
+  readiness_gate: 80              # Higher than simplified (30), lower than full (99)
+  progress_tracking: frontmatter  # Frontmatter fields + pipeline status
+  review_gate: operator           # Operator reviews (full chain has fleet-ops)
+  enforcement: hooks_optional     # Hooks recommended but not required
+  immune_system: false            # No automated disease detection
+
+# When to upgrade to full chain
+upgrade_triggers:
+  - "First paying customer or SLA commitment"
+  - "Codebase exceeds 1M lines"
+  - "Multiple agents need coordination (fleet)"
+  - "Compliance requirements appear (SOC2, HIPAA, ISO)"
+  - "Overnight autonomous runs produce >20% rework"
+
+# When to downgrade to simplified chain
+downgrade_triggers:
+  - "Project enters experimental branch (POC within production project)"
+  - "Solo operator on a feature spike — time-boxed, will be reviewed"
+  - "Explicitly documented: Decision page justifying simplified chain for this scope"

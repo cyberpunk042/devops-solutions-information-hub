@@ -131,6 +131,16 @@ This is not a marginal efficiency gain — it is a category change. It means the
 > [!example]- Is a comparisons/ matrix template needed?
 > The template already exists at the schema level — `comparison` type requires `## Comparison Matrix`. The gap is content, not schema: the `comparisons/` directory exists but few comparison pages have been created. For any `COMPARES TO` linked concepts, consider whether a dedicated comparison page adds value beyond prose in individual pages.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[LLM Wiki Pattern]]

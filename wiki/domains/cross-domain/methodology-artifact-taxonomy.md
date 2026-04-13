@@ -250,6 +250,16 @@ Before the taxonomy: understand that methodology produces three fundamentally di
 > 4. If it's a non-wiki artifact: add to the methodology model's chain as a tracked artifact
 > 5. Add to the relevant domain profiles with path patterns and gate commands
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]

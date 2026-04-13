@@ -91,6 +91,16 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Agent Orchestration Patter
 
 Cross-referencing `Wiki Knowledge Graph` and `Knowledge Evolution Pipeline`: this is already partially implemented. The `pipeline post` command runs validate + lint after every ingestion as step 5 of the 6-step post-chain. This is lint-on-ingest for the pages created in that ingestion run. The remaining gap is cross-page linting: a single ingestion creates new pages that may contradict or under-link to existing pages, but the post-chain lint only checks structural validity (schema compliance, wikilinks), not semantic consistency with the rest of the wiki. Full lint-on-ingest — scanning all existing pages for interactions with newly ingested content — would require the incremental approach described above: identify pages that reference the same concepts as the new pages, then run a targeted consistency check on that subset. The `Knowledge Evolution Pipeline`'s "loop compounds" insight is relevant: every ingestion changes the relationship landscape, and a lightweight incremental lint pass after each ingestion would catch cross-page issues before they accumulate into the kind of quality debt that requires a full-wiki lint pass.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-claude-code-10x

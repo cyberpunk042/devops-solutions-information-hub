@@ -47,6 +47,16 @@ This video demonstrates how to connect Claude Code to Google's NotebookLM to cre
 
 - **Practical use case — daily podcast summaries**: One highlighted use case is having Claude automatically generate NotebookLM podcast summaries each morning on topics of interest, providing fresh knowledge during a commute or walk.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-notebooklm-content-team

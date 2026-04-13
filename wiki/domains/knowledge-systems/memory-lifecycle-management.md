@@ -83,6 +83,16 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Second Brain Architecture`
 
 Cross-referencing `Claude Code Context Management`: that page documents the lost-in-the-middle phenomenon explicitly: "models attend most strongly to the beginning and end of the context window, with reduced attention to content in the middle." The practical implication for memory lifecycle management page layout: high-confidence facts and recently-confirmed claims should be placed in `## Summary` and `## Key Insights` sections (which occupy the beginning of the page, receiving full attention), while low-confidence or less-accessed content belongs in `## Deep Analysis` or subsections (which may be in the "middle" of a long context). This wiki's section order (Summary → Key Insights → Deep Analysis → Open Questions → Relationships) already implements this principle correctly for high-value content: Summary and Key Insights are always at the top. The lifecycle metadata enhancement would be: when the evolution pipeline generates higher-maturity pages, it should also reorder content within sections to front-load the highest-confidence claims. A `confidence: high` bullet within Key Insights should appear before a `confidence: medium` bullet, even within the same section.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory

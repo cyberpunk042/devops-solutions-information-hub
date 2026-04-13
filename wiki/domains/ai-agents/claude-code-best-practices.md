@@ -128,6 +128,16 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 > [!example]- Is there a measurable CLAUDE.md compliance threshold?
 > Resolved in [[Decision: Extension System Operational Decisions]]. Compliance is binary per rule, not a percentage threshold. Rules with consistently low compliance should graduate from CLAUDE.md instructions to hook-based enforcement.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-shanraisshan-claude-code-best-practice

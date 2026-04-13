@@ -146,6 +146,16 @@ Unlike code domains where artifacts flow through stages linearly (document → d
 >
 > This self-referential property means the wiki validates its own methodology by producing methodology pages that follow the methodology. If a methodology page fails its own quality gates, the methodology has a self-consistency problem. This is the "Standards Must Preach by Example" lesson in action.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

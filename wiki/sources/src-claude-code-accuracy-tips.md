@@ -44,6 +44,16 @@ A practitioner's guide to 7 techniques for improving Claude Code accuracy, prese
 > [!info] Playwright CLI vs MCP — 12x cost differential confirmed
 > A dedicated side-by-side Playwright CLI vs. MCP comparison video (src-playwright-cli-vs-mcp) provides the concrete mechanism: MCP dumps the full accessibility tree into context after every single navigation step, while CLI saves page data to a YAML file on disk and only loads it when Claude needs to find a specific element. In a 10-step test, MCP loads 10 full accessibility trees; CLI may load 2-3 targeted YAML snapshots. The accuracy tips source references a "12x cost differential" for CLI over MCP and higher accuracy on known-page tests. Google Trends data in the same source shows CLI search interest overtaking MCP. Microsoft (Playwright's creator) officially recommends CLI over MCP for AI agent use — it also has 3x more features than the MCP version, making the tradeoff asymmetric: CLI wins on both cost and capability for structured testing workflows.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-claude-code-accuracy-tips

@@ -47,3 +47,11 @@ A model is NOT a reading list. A model is:
 - Examples from practice (instances, case studies)
 - Clear connection to the super-model (methodology framework)
 - Wikilinks throughout for Obsidian graph navigation
+
+## Relationships
+
+- FEEDS INTO: [[Models Are Built in Layers, Not All at Once]]
+
+## Backlinks
+
+[[Models Are Built in Layers, Not All at Once]]

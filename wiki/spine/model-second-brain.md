@@ -200,6 +200,16 @@ The maturity ladder makes this compounding visible: a page starts as `seed` (thi
 > [!question] Zettelkasten emergence at scale
 > Luhmann needed 90,000 notes before his Zettelkasten became a genuine conversation partner. At what page count does this wiki's connection graph start generating non-obvious insights reliably?
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Second Brain Architecture]]

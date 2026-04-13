@@ -206,6 +206,16 @@ The Task Type Artifact Matrix defines the 7 distinct task types in the OpenArms 
 > [!example]- Is there a case for a `spike+implement` compound type?
 > Resolved in [[Decision: Task Type Edge Cases]]. No. Spike produces knowledge; implementation is a separate deliverable. The constraint that spikes cannot produce code is the safety mechanism preventing "quick research" from sliding into unplanned implementation.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Stage-Gate Methodology]] (the type matrix selects stage subsets from the full 5-stage system)

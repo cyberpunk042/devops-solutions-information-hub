@@ -7,7 +7,7 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-12
 sources:
   - id: methodology-config
     type: file
@@ -28,11 +28,12 @@ tags: [methodology, adoption, guide, onboarding, ecosystem]
 
 > [!tip] AI Quick Start — Setting Up Methodology for Your Project
 >
-> 1. **Pick your tier**: Tier 1 (just read) → Tier 2 (configure) → Tier 3 (validate) → Tier 4 (enforce)
-> 2. **Pick your domain**: TypeScript, Python/Wiki, or Infrastructure — see per-domain quick starts below
-> 3. **Copy the right files**: `wiki/config/methodology.yaml` + your domain profile from `wiki/config/domain-profiles/`
-> 4. **Update your CLAUDE.md**: add the stage gate table and hard rules from this wiki's CLAUDE.md
-> 5. **Invariants that NEVER change**: stage boundaries are hard, readiness is computed, one commit per stage
+> 1. **Identify yourself first**: [[Project Self-Identification Protocol — The Goldilocks Framework]] — answer the 7 questions (What am I? What version? What domain? What phase? What scale? What PM level? What trust tier?)
+> 2. **Pick your SDLC chain**: [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — simplified (POC), default (MVP/Staging), or full (Production)
+> 3. **Pick your enforcement tier**: Tier 1 (read) → Tier 2 (configure) → Tier 3 (validate) → Tier 4 (enforce) — matched to your PM level
+> 4. **Pick your domain**: TypeScript, Python/Wiki, Infrastructure, or Knowledge — see per-domain quick starts below
+> 5. **Connect to the second brain**: query methodology + standards via gateway tools (or read wiki pages directly)
+> 6. **Invariants that NEVER change**: stage boundaries are hard, readiness AND progress are computed, 99→100 is human-only
 
 ## Summary
 
@@ -184,28 +185,48 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 
 > [!warning] Tier 4 Requires a Harness
 >
-> Infrastructure enforcement means the agent doesn't control git, task selection, or stage advancement. A harness (like OpenArms's agent-run.ts) owns the loop. This is the most effective tier (75% violation reduction) but requires the most investment.
+> Infrastructure enforcement means the agent doesn't control git, task selection, or stage advancement. A harness owns the loop. Quantified evidence: instructions alone = 25% compliance, hooks = 100% stage boundary compliance (OpenArms v10, 5 production runs). See [[Infrastructure Enforcement Proves Instructions Fail]].
 
 **Components needed:**
 
-| Component | Purpose | Example |
-|-----------|---------|---------|
-| Pre-bash hook | Block git commands from agent | `scripts/hooks/pre-bash.sh` |
-| Pre-write hook | Block wrong-scope writes per stage | `scripts/hooks/pre-write.sh` |
-| Post-write hook | Track files created per stage | `scripts/hooks/post-write.sh` |
-| Stage validation script | Check artifacts before advancing | `scripts/validate-stage.cjs` |
-| Task selection script | Deterministic task dispatch | `scripts/select-task.cjs` |
-| Stage skills | Per-stage instructions injected into context | `.claude/skills/methodology-{stage}/` |
+| Component | Purpose | Real Implementation |
+|-----------|---------|---------------------|
+| Pre-bash hook | Block git commands from agent | OpenArms: 48 lines, blocks `git add/commit/push/revert`, gates test commands to test stage |
+| Pre-write hook | Block wrong-scope writes per stage | OpenArms: 106 lines, 5 enforcement layers including frontmatter protection and test assertion counting |
+| Post-write hook | Track files created per stage | OpenArms: 36 lines, logs `stage:filepath` for artifact verification |
+| Post-compact hook | Rebuild context after compaction | OpenArms: 29 lines, rebuilds full task state from files. See [[Context Compaction Is a Reset Event]] |
+| Stage validation script | Check artifacts before advancing | OpenArms: 1,033 lines, model-aware, business logic detection, phantom file filtering |
+| Commands | /stage-complete, /task-done | Agent calls command → harness validates + commits + advances |
+| Stage skills | Per-stage instructions injected into context | OpenArms: 5 skills, dynamically populated from model config |
 
-> [!tip] OpenArms as Reference Implementation
+> [!tip] Reference Implementations (updated 2026-04-12)
 >
-> OpenArms (v9) is the most evolved Tier 4 implementation:
-> - 14 enforcement scripts in `scripts/methodology/`
-> - 4 hooks in `scripts/methodology/hooks/`
-> - 5 stage skills in `.claude/skills/`
-> - Harness manages loop, commits, frontmatter updates
+> **OpenArms (v10)** — Solo agent, TypeScript:
+> - 14 enforcement scripts + 4 hooks (215 lines) + 3 commands + 5 stage skills
+> - Model-aware validation (reads current-model-config.json, adapts per task type)
+> - Result: 0% stage violations. But 80% of runs still need manual fixes (behavioral failures persist). See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 >
-> Study its `wiki/config/methodology.yaml` and `AGENTS.md` for the enforcement patterns.
+> **OpenFleet** — 10-agent fleet, Python:
+> - MCP tool blocking per stage (enforcement at server level, stronger than hooks)
+> - 3-line immune system: prevention → detection (30s doctor cycle) → correction (TEACH/COMPACT/PRUNE/ESCALATE). See [[Three Lines of Defense — Immune System for Agent Quality]]
+> - Contribution gating: cross-agent inputs required BEFORE work stage. See [[Contribution Gating — Cross-Agent Inputs Before Work]]
+> - Tier-based context depth: trust earned through approval rates. See [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
+>
+> **Key principle:** Every block must be mindful — explain WHY, offer justified bypass. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+
+### SDLC Chain Selection
+
+> [!info] Choose Your Process Weight
+>
+> Not every project needs full Tier 4 enforcement. Process weight depends on project phase and codebase scale:
+>
+> | Chain | When | Stages | Artifacts | Enforcement |
+> |-------|------|--------|-----------|-------------|
+> | **Simplified** | POC, micro/small scale | 2-3 | Minimal | Tier 1-2 (instructions + config) |
+> | **Middle Ground** (default) | MVP→Staging, small→medium | 3-5 | Core + important | Tier 2-3 (config + validation) |
+> | **Full** | Production, medium→massive | All 5 | Complete chain | Tier 3-4 (validation + enforcement) |
+>
+> See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix.
 
 ### Per-Domain Quick Start
 
@@ -230,15 +251,53 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 > 3. Hooks (optional): pre-write blocks `*.tf` during document/design stages
 > 4. Verify: agent documents current infrastructure before making changes
 
-### Invariants (All Tiers)
+### PM Level Selection
 
-> [!warning] These Rules Apply at Every Tier
+The adoption tier (what enforcement) and PM level (what infrastructure) are independent choices:
+
+> [!info] PM Level → Harness Version → Capabilities
+>
+> | PM Level | System | Harness | Readiness Enforcement | Progress Tracking |
+> |----------|--------|---------|----------------------|-------------------|
+> | **L1: Wiki LLM** | In-repo backlog, CLAUDE.md | v1 (standalone) | Advisory — agent may ignore | Frontmatter only |
+> | **L2: Fleet** | Orchestrator, hooks, immune system | v2 (enforced) | Structural — dispatch gated | Real-time via fleet tools |
+> | **L3: Full PM** | Plane/DSPD, SCRUM/agile | v3 (integrated) | Organizational — sprint scope | Burndown, velocity, time |
+>
+> Each level wraps the previous. L2 reads L1's data. L3 syncs with L2's state.
+> See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the full architecture.
+
+### Readiness vs Progress
+
+Track BOTH dimensions independently. Readiness = is it defined? Progress = is it built?
+
+> [!warning] Key Rules
+>
+> - Readiness gates progress — don't start building until readiness crosses a threshold
+> - Both are derived for containers (epics, modules) — never set manually
+> - 99→100 = HUMAN ONLY on both dimensions — adversarial review required
+> - See [[Readiness vs Progress — Two-Dimensional Work Tracking]] for the full model
+
+### Invariants (All Tiers, All PM Levels)
+
+> [!warning] These Rules Apply Everywhere
 >
 > 1. **Never skip stages** — "continue" means advance within current stage, not skip ahead
 > 2. **Quality tier is explicit** — choose Skyscraper, Pyramid, or Mountain deliberately. Mountain is the anti-pattern.
 > 3. **Artifacts are evidence** — stages produce verifiable deliverables, not claims
-> 4. **Readiness is computed** — from stage completion, not manually claimed
+> 4. **Readiness AND progress are computed** — from stage completion and child propagation, never manually claimed
 > 5. **Done When items are specific** — name files, functions, endpoints. Generic boilerplate lets agents cheat.
+> 6. **99→100 is human-only** — no automated system marks work as complete. Review is adversarial.
+> 7. **Enforcement must be mindful** — every block explains WHY and offers justified bypass. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
 
 ## Relationships
 
@@ -267,10 +326,14 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 [[Artifact Chain: Python/Wiki Domain]]
 [[Artifact Chain: TypeScript/Node Domain]]
 [[CLAUDE.md Structural Patterns for Agent Compliance]]
+[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
 [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[Enforcement Hook Patterns]]
 [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[Frontmatter Field Reference — Complete Parameter Documentation]]
+[[Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[Harness Ownership Converges Independently Across Projects]]
 [[Harness-Owned Loop — Deterministic Agent Execution]]
 [[How AI Agents Consume the Methodology Wiki]]
 [[Infrastructure Enforcement Proves Instructions Fail]]
@@ -280,8 +343,18 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 [[Methodology Evolution Protocol]]
 [[Methodology Framework]]
 [[Methodology System Map]]
+[[OpenArms vs OpenFleet Enforcement Architecture]]
+[[Principle: Infrastructure Over Instructions for Process Enforcement]]
+[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
+[[Principle: Structured Context Governs Agent Behavior More Than Content]]
+[[Project Self-Identification Protocol — The Goldilocks Framework]]
+[[Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[Stage-Aware Skill Injection]]
+[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
 [[Three Lines of Defense — Immune System for Agent Quality]]
+[[Three PM Levels — Wiki to Fleet to Full Tool]]
 [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 [[Universal Stages, Domain-Specific Artifacts]]
+[[Wiki Gateway Tools — Unified Knowledge Interface]]

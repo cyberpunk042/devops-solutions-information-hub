@@ -139,6 +139,16 @@ The web UI only shows artifacts inline. notebooklm-py enables downloading quizze
 > [!example]- Can notebook metadata sync bidirectionally with manifest.json?
 > Architecturally feasible via async API. Diff manifest.json source URLs against `notebooklm source list`; call `source add` for missing items in either direction. Requires a mapping table (notebook ID → wiki domain) since structures may differ.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[NotebookLM]]

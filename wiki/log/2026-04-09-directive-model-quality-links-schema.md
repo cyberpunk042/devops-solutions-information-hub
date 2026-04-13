@@ -32,3 +32,11 @@ Three quality issues identified during model review: (1) broken backlinks format
 1. **Broken backlinks**: Obsidian.py generates `[[double-bracketed]]` backlinks when Relationship targets already have `[[]]`. Also some targets missing brackets entirely.
 2. **Model conflates project with universal**: Pipeline Commands, interface tables, /commands — these are THIS project's implementation, not the universal LLM Wiki model. A model is transferable. Project-specific tooling is an instance.
 3. **schema.yaml naming**: Calling it `config/schema.yaml` will collide with any other schema in a project. Needs a wiki-specific name like `wiki-schema.yaml` or `wiki/config/schema.yaml`.
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

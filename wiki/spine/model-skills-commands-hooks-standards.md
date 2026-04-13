@@ -205,6 +205,16 @@ What good command → skill → hook composition looks like.
 > [!question] **What's the optimal hook count per project?**
 > claude-code-harness has 13 rules. Is that the sweet spot? At what count does hook overhead (latency, maintenance) exceed the value of enforcement? (Requires: tracking hook maintenance cost vs violations prevented)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Skills, Commands, and Hooks]]

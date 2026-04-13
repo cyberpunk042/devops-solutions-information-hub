@@ -87,6 +87,16 @@ Cross-referencing the `LLM Wiki vs RAG` and `LLM Wiki Pattern` pages, plus the `
 
 Partially answerable from existing wiki knowledge: structural conflicts (two agents editing the same page) are handled by the post-chain's validation step — `python3 -m tools.validate` runs after every write and returns exit code 1 on schema errors, blocking malformed pages. The `Knowledge Evolution Pipeline` documents that `CONTRADICTS` typed relationships plus the lint pipeline's contradiction resolution step handle semantic conflicts: conflicting claims are linked bidirectionally with `CONTRADICTS`, the lint pass surfaces them with a recommended resolution (favoring higher source recency and authority), and the `--review` human gate is the final arbiter. The LLM Wiki v2's "last-write-wins for most cases, timestamp-based resolution for conflicts" proposal maps to git's merge semantics already built into this wiki (it is a git repo). Full mesh sync between multiple live agents simultaneously writing to the same markdown file still requires: external research on distributed wiki merge strategies; the existing wiki pages only document single-writer operation.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory

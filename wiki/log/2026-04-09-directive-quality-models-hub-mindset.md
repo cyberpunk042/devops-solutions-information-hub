@@ -41,3 +41,11 @@ Models are low quality. Must redo them one at a time starting with Methodology. 
 5. **OpenArms → OpenClaw** — OpenArms has evolved beyond OpenClaw (its upstream fork). The wiki should understand and document how OpenArms innovations can be filtered as patches back to OpenClaw, minus project-specific details like renaming.
 
 6. **One at a time, with depth** — no batch processing. Each model gets full attention, fresh research from ecosystem projects, and the rigor that the LLM Wiki model received.
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

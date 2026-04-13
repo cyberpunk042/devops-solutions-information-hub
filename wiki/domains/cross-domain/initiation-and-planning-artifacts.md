@@ -172,6 +172,16 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > [!question] Should the wiki have a formal Business Case template for investment decisions?
 > **DEFERRED:** Needs operator input — relevant when fleet agents propose work autonomously.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

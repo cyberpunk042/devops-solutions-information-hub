@@ -38,6 +38,16 @@ TurboQuant, originally Google's quantization technique, has been adapted for App
 
 - **Implications for AICP**: If MacBooks can run 122B models at 44 tok/s, the AICP LocalAI independence roadmap (80%+ Claude token reduction) becomes more feasible. Complex reasoning tasks that currently require Claude could potentially be handled by local MoE models with appropriate quantization.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-turboquant-122b-macbook

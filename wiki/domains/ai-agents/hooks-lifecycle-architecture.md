@@ -145,6 +145,16 @@ The 5-layer scope hierarchy (user → project → local → plugins → policies
 > [!example]- Is there a hook for plan generation specifically?
 > Resolved in [[Decision: Hooks Design Decisions]]. No dedicated PlanGenerated event. Use UserPromptSubmit with a `prompt` handler -- Plannotator validates this pattern. PostToolUse or Stop hooks can intercept plan output if needed.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Harness Engineering]]

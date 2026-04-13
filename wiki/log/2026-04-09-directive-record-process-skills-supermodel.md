@@ -36,3 +36,11 @@ Multiple requirements:
 5. **The layers before the models** — before we could build models, we needed: foundation (maturity + layer on all pages), then entry points, then model definitions, then standards. This SFIF-like progression should be documented as a lesson or pattern.
 
 6. **Natural evolution** — the second brain should have built-in mechanisms to grow new models, evolve existing ones, and keep the super-model current. Not manual — natural.
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

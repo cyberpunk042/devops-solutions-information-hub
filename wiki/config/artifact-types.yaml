@@ -31,8 +31,8 @@ categories:
     types: [domain-overview, evolution, learning-path, index]
 
   backlog-pages:
-    description: "Pages tracking planned work — epics, tasks, notes"
-    types: [epic, module, task, note]
+    description: "Pages tracking planned work — milestones, epics, tasks, notes"
+    types: [milestone, epic, module, task, note]
 
   methodology-documents:
     description: "Documents produced during stage-gated methodology execution"
@@ -232,8 +232,23 @@ types:
 
   # === Backlog Pages ===
 
+  milestone:
+    category: backlog-pages
+    artifact_class: document
+    template: config/templates/milestone.md
+    required_frontmatter:
+      - priority
+      - target_date
+      - epics
+      - acceptance_criteria
+    content_thresholds:
+      summary_min_words: 30
+    verification:
+      gate: pipeline-post
+
   epic:
     category: backlog-pages
+    artifact_class: document
     template: config/templates/epic.md
     required_frontmatter:
       - priority

@@ -45,3 +45,11 @@ Examples:
 - Ingesting a methodology → read the actual config/artifacts, not just the docs about them
 
 This is the same principle as "read the full file" but at a higher level: read the actual THING, not just the description of the thing.
+
+## Relationships
+
+- FEEDS INTO: [[Never Synthesize from Descriptions Alone]]
+
+## Backlinks
+
+[[Never Synthesize from Descriptions Alone]]

@@ -853,13 +853,15 @@ def scaffold_page(page_type: str, title: str, project_root: Path,
 
     # Determine output directory
     type_dirs = {
-        "lesson": "wiki/lessons",
-        "pattern": "wiki/patterns",
-        "decision": "wiki/decisions",
+        "lesson": "wiki/lessons/00_inbox",
+        "pattern": "wiki/patterns/00_inbox",
+        "decision": "wiki/decisions/00_inbox",
+        "principle": "wiki/lessons/04_principles/hypothesis",
         "domain-overview": "wiki/spine/domain-overviews",
         "learning-path": "wiki/spine/learning-paths",
         "evolution": "wiki/spine/evolution-log",
         "operations-plan": "wiki/domains",
+        "milestone": "wiki/backlog/milestones",
         "epic": "wiki/backlog/epics",
         "module": "wiki/backlog/modules",
         "task": "wiki/backlog/tasks",

@@ -133,6 +133,17 @@ Cross-referencing `LLM Wiki vs RAG`: the comparison page addresses this directly
 
 Cross-referencing `Wiki Knowledge Graph` and `LightRAG`: yes, they converge substantially. The `LightRAG` page documents: "Unlike traditional vector-only RAG that treats documents as isolated chunks, LightRAG extracts entities and relationships to build a knowledge graph, then retrieves via graph traversal." LightRAG's four query modes (naive, local, global, hybrid/mix) with hybrid combining entity-centric and relationship-centric retrieval maps directly onto the LLM Wiki v2 three-stream hybrid (BM25 + vector + graph). The `Wiki Knowledge Graph` page confirms the convergence: "the wiki's relationship format (- VERB: Target Name) is directly compatible with kb_sync.py's regex parser" — meaning the LLM Wiki v2 approach can be implemented via LightRAG by exporting the wiki's typed relationships into LightRAG's graph backend. GraphRAG and LLM Wiki v2 arrive at the same architecture from opposite starting points: GraphRAG builds structure from unstructured documents; LLM Wiki v2 starts from structured markdown and adds retrieval infrastructure. LightRAG is the implementation bridge between them.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - SYNTHESIZES: [[LLM Wiki vs RAG]]

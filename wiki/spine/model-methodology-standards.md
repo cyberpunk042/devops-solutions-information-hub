@@ -453,6 +453,16 @@ The per-type standards above cover wiki page types. But methodology execution pr
 > [!question] **Should there be a "methodology health" score per project?**
 > A composite metric: % of tasks with proper stage tracking, % of commits with stage labels, % of epics with computed readiness, # of FORBIDDEN violations. Would this be useful or bureaucratic? (Requires: implementing the metric and testing whether it drives behavior)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: Methodology]]
@@ -480,7 +490,7 @@ The per-type standards above cover wiki page types. But methodology execution pr
 [[Never Skip Stages Even When Told to Continue]]
 [[The Agent Must Practice What It Documents]]
 [[Models Are Built in Layers, Not All at Once]]
-[[Agent Failure Taxonomy — Six Classes of Behavioral Failure]]
+[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[Comparison Page Standards]]
 [[Concept Page Standards]]

@@ -499,15 +499,32 @@ See also: [[Model Composition Rules]] for how models combine, [[Methodology Evol
 > [!bug]- **What goes wrong if you skip this**
 > See the 7 bugs above. Every one was found within hours of starting autonomous agent operation. Without explicit methodology: binary status (Bug 1), unchecked epics (Bug 2), rogue tasks (Bug 3), lost files (Bug 4), stage violations (Bug 5), orphaned code (Bug 6), invisible work (Bug 7). The methodology exists because these failures HAPPENED.
 
-### Agent Compliance
+### Agent Compliance — The Enforcement Hierarchy
 
-Agents ignore methodology due to confusion, broadness, and poor instruction formatting. Three pattern systems address this:
+Agents ignore methodology due to confusion, broadness, and poor instruction formatting. Five levels of enforcement address this, each with measured compliance data:
 
-1. **[[CLAUDE.md Structural Patterns for Agent Compliance]]** — 8 patterns that improve compliance: sacrosanct section, hard/soft rule separation, ALLOWED/FORBIDDEN lists, progressive disclosure, command checkpoints, section dividers, anchor phrases, concrete examples. Evidence: OpenArms went from 25% to ~90% stage boundary compliance using these patterns.
+> [!abstract] Enforcement Hierarchy (quantified)
+>
+> | Level | Mechanism | Measured Compliance | Key Pages |
+> |-------|-----------|-------------------|-----------|
+> | 1. Instructions | CLAUDE.md prose rules | 25% (OpenArms v4-v8) | [[CLAUDE.md Structural Patterns for Agent Compliance]] |
+> | 2. Structured instructions | ALLOWED/FORBIDDEN tables, numbered rules | ~60% | Same page — 8 patterns documented |
+> | 3. Hooks | PreToolUse/PostToolUse shell scripts | 100% stage boundaries (OpenArms v10) | [[Enforcement Hook Patterns]] |
+> | 4. Commands + harness | Agent calls /stage-complete, harness validates | 100% workflow (OpenArms v10) | [[Harness-Owned Loop — Deterministic Agent Execution]] |
+> | 5. Immune system | 3-line defense: prevent → detect → correct | Production-tested (OpenFleet) | [[Three Lines of Defense — Immune System for Agent Quality]] |
 
-2. **[[Enforcement Hook Patterns]]** — 4 hook types (scope guard, write guard, artifact tracker, context rebuilder) that prevent violations at the tool level. Hooks are Tier 4 adoption — the most effective enforcement (blocks wrong actions before they happen).
+**Critical insight:** Even with 100% stage boundary compliance (Level 3+), behavioral failures persist. Clean completion rate = 20% (4 of 5 OpenArms runs needed manual fixes). The remaining 6 failure classes are about JUDGMENT, not process: weakest-checker optimization, environment patching without escalation, fatigue cliff, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
 
-3. **[[Stage-Aware Skill Injection]]** — Which skills are recommended, mandatory, or blocked per stage. Prevents wrong-phase skill usage (brainstorming during test, TDD during document).
+**Mindful enforcement:** Every block must explain WHY and offer justified bypass. Blind enforcement creates its own failures — an agent's correct fix was reverted twice because it looked like scope creep. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
+
+**Structured context as proto-programming:** Markdown IS the programming language of AI agents. Consistent structure across injections (frontmatter, MUST/MUST NOT, stage protocols) creates patterns agents follow mechanically. See [[Structured Context Is Proto-Programming for AI Agents]].
+
+Supporting systems:
+
+- **[[Stage-Aware Skill Injection]]** — Which skills are recommended, mandatory, or blocked per stage. Prevents wrong-phase skill usage.
+- **[[Context Compaction Is a Reset Event]]** — All corrections lost after compaction. Post-compact hooks rebuild state.
+- **[[Contribution Gating — Cross-Agent Inputs Before Work]]** — Cross-agent inputs required before work starts. Prevents rework.
+- **[[Tier-Based Context Depth — Trust Earned Through Approval Rates]]** — Trust earned through data. Context depth adapts per tier.
 
 ### Artifact Taxonomy — The Full Spectrum
 
@@ -533,6 +550,39 @@ The real-world SDLC has 78+ distinct artifact types across 11 categories. Our me
 > | Python/Wiki | [[Artifact Chain: Python/Wiki Domain]] — pipeline-based, config scaffolding |
 > | Infrastructure/IaC | [[Artifact Chain: Infrastructure/IaC Domain]] — Terraform stages, drift detection |
 > | Knowledge/Evolution | [[Artifact Chain: Knowledge/Evolution Domain]] — L0-L6 progressive distillation |
+
+### SDLC Customization — Phase × Scale × Chain
+
+The methodology models define WHAT stages a task goes through. But HOW MUCH process wraps around those stages depends on the project's phase and scale:
+
+> [!info] Process Weight Selection
+>
+> | Dimension | Values | Impact |
+> |-----------|--------|--------|
+> | **Project phase** | POC → MVP → Staging → Production | POC: short loops, minimal docs. Production: full traceability. |
+> | **Codebase scale** | 10k → 100k → 1M → 5M → 15M | 10k: one person holds context. 1M+: full SDLC governance. |
+> | **Chain type** | Simplified, Middle Ground (default), Full | Simplified: 2-3 stages. Full: all 5 stages + complete artifacts. |
+>
+> See [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix with recommended chain by phase × scale.
+
+### Readiness vs Progress — Two-Dimensional Tracking
+
+Work tracking requires TWO independent fields: `readiness` (is this DEFINED enough to start?) and `progress` (how far is the EXECUTION?). These are the left and right sides of the SDLC.
+
+> [!info] Two Dimensions at Every Level
+>
+> | Level | Readiness = | Progress = | Gate |
+> |-------|------------|-----------|------|
+> | Milestone | All epics defined, scope clear | All epics progressing | Target date |
+> | Epic | Requirements + design complete | Modules/tasks completing | Acceptance criteria |
+> | Module | Design done, tasks decomposed | Tasks completing | All children done → review |
+> | Task | Done When specific, contributions received | Stages completing, artifacts produced | 99→100 = human |
+>
+> See [[Readiness vs Progress — Two-Dimensional Work Tracking]] for full model with OpenFleet evidence.
+
+### Three PM Levels
+
+The methodology operates within a PM infrastructure that may be L1 (wiki only), L2 (fleet/harness), or L3 (full PM tool). Each level wraps the previous and adds enforcement + observability. See [[Three PM Levels — Wiki to Fleet to Full Tool]] for the architecture and harness version mapping (v1→v2→v3).
 
 ### Real Example: End-to-End Task Execution
 
@@ -570,6 +620,30 @@ Here's how a single task flows through the methodology, from selection to comple
 > [!success] **Completion**
 > `stages_completed=[scaffold, implement, test]`, `readiness=100`, `status=done`. Parent epic readiness recalculated from children.
 
+### Battle-Tested Through Operation — Not Theory
+
+> [!success] OpenArms Methodology Evolution: 7 Bugs, 7 Versions, 1 Day
+>
+> The first autonomous agent session (2026-04-09) found 7 systemic bugs and evolved the methodology through v1→v7 in 10 hours:
+>
+> | Bug | Version Fixed | Discovery | Impact |
+> |-----|--------------|-----------|--------|
+> | No stage tracking | v2 | Tasks "done" after 1 stage | Agent skipped stages |
+> | Epic readiness not computed | v3 | All epics stuck on "draft" | Dashboard lies |
+> | Agent creates rogue tasks | v3 | Colliding IDs (T026-T029) | Backlog corruption |
+> | Files lost to git revert | v3 | Files disappeared between creation and commit | Silent data loss |
+> | Stage boundaries violated | v4 | Scaffold produced 135 lines of business logic | Wrong artifacts per stage |
+> | Code orphaned from runtime | v5 | 2,073 lines not imported by anything | Wasted effort, false completion |
+> | Logs unreadable | v5 | Raw JSON stream | No observability |
+>
+> **Cost efficiency improved with each version:** v1-v2: $3.50/task. v5-v7: $1.32/task. The 62% cost reduction came from methodology fixes, not code optimizations.
+>
+> **Self-hosting feedback loop:** run agent → observe behavior → fix methodology → run again. 20 minutes per iteration average. 10 cycles in one session. Compressed months of theoretical methodology development into hours of operational testing.
+>
+> **Fix persistence:** Every fix held across ALL subsequent runs. Zero regressions. The methodology is stable not because it was well-designed initially, but because it was stress-tested by real operation.
+>
+> This validates Principle 1 ([[Principle: Infrastructure Over Instructions for Process Enforcement]]): each bug was first "fixed" with a directive rule. Only when the fix became infrastructure (schema enforcement, hooks, harness commands) did it HOLD.
+
 ### Relationship to Other Models
 
 > [!abstract] **Governance, not peer relationship**
@@ -582,16 +656,44 @@ Here's how a single task flows through the methodology, from selection to comple
 | [[Model: Skills, Commands, and Hooks]] | The tooling | WHEN each tool is permitted (per-stage protocols) |
 | [[Model: Ecosystem Architecture]] | The project topology | How work flows through that topology |
 
+### How This All Weaves Together — Navigation from This Page
+
+This page is ONE thread in a woven system. Here's how to navigate from here to ANY part of the framework:
+
+> [!abstract] From Methodology → Everywhere
+>
+> | You Want To Know... | Go To |
+> |---------------------|-------|
+> | **"What am I? What level of process do I need?"** | [[Project Self-Identification Protocol — The Goldilocks Framework]] — 7 identity questions that determine your chain, enforcement, and context depth |
+> | **"How much process is right for MY project?"** | [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] — phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full) |
+> | **"How do I track readiness AND progress?"** | [[Readiness vs Progress — Two-Dimensional Work Tracking]] — definition completeness vs execution completeness, two independent dimensions |
+> | **"What PM infrastructure do I need?"** | [[Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (Wiki), L2 (Fleet/Harness), L3 (Full PM). Each wraps the previous. |
+> | **"How do I make agents ACTUALLY follow this?"** | [[Infrastructure Enforcement Proves Instructions Fail]] → [[Enforcement Hook Patterns]] → [[Three Lines of Defense — Immune System for Agent Quality]] |
+> | **"What fails even after enforcement works?"** | [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] — 7 behavioral failures that persist after 100% stage compliance |
+> | **"What does the full artifact chain look like?"** | [[Artifact Chains by Methodology Model]] + domain chains: [[Artifact Chain: TypeScript/Node Domain]], [[Artifact Chain: Python/Wiki Domain]], [[Artifact Chain: Infrastructure/IaC Domain]] |
+> | **"How do I organize my work?"** | [[Backlog Hierarchy Rules]] — Milestone → Epic → Module → Task, 8 impediment types, when to use what: [[Decision: When to Use Milestone vs Epic vs Module vs Task]] |
+> | **"What fields do my pages need?"** | [[Frontmatter Field Reference — Complete Parameter Documentation]] — every field, what it means, what automation it enables |
+> | **"Where does this project fit in the ecosystem?"** | [[Ecosystem Feedback Loop — Wiki as Source of Truth]] — bidirectional flow, framework over instance, constant evolution |
+> | **"What global standards should I follow?"** | CloudEvents for events, OpenAPI for APIs, SFIF for build lifecycle, DDD for domains, Onion for layer isolation, SRP for responsibilities |
+> | **"How do I adopt this for my project?"** | [[Methodology Adoption Guide]] — 4 tiers (Read→Configure→Validate→Enforce) + SDLC chain selection + per-domain quick starts |
+> | **"Show me the complete system map"** | [[Methodology System Map]] — every component, where it lives, what it does, how they connect |
+
+> [!tip] The Core Weave
+>
+> **Identity** (who am I?) → **Selection** (what methodology/chain/enforcement?) → **Execution** (stages, artifacts, gates) → **Tracking** (readiness + progress, hierarchy, impediments) → **Enforcement** (hooks, harness, immune system) → **Evolution** (lessons feed back, patterns emerge, decisions refine) → **Identity** (evolved understanding feeds the next cycle).
+>
+> This is not a linear path — it's a LOOP. Every execution produces learnings that evolve the methodology that changes the selection criteria. The Goldilocks point shifts as the project matures. The framework adapts because it's designed to adapt.
+
 ## Open Questions
 
 > [!question] **Should model selection be declarative or dynamic?**
-> Currently selection is implicit in task_type mapping. Could it be encoded as a declarative config (condition → model lookup table)? Or does the multi-dimensional evaluation require dynamic logic? (Requires: testing a formal selection engine)
+> **Partially resolved.** The Goldilocks protocol suggests declarative: identity profile → chain → model. OpenFleet implements this: `methodology.yaml` defines models, orchestrator selects based on task type + readiness + contributions. OpenArms is more implicit (task_type mapping in harness). The wiki should support BOTH: declarative config for known mappings, dynamic override for edge cases. (Remaining: test a formal selection engine that reads identity profiles)
 
 > [!question] **Can stage gates be fully automated?**
-> OpenArms' autonomous agent run suggests yes for routine tasks but no for architectural decisions. Where is the boundary between human-gated and auto-gated stages? (Requires: more autonomous operation data)
+> **Partially resolved.** OpenArms v10: 100% stage compliance via hooks. Stage GATES are fully automatable. Stage QUALITY is not — 7 behavioral failures persist at 80% rate. The boundary: anything checkable at the tool-call level (did you write to src/ during document?) = automate. Anything requiring judgment (is this requirements spec good enough?) = human gate. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] for the full boundary analysis.
 
 > [!question] **What is the minimum viable methodology?**
-> A project that just wants stage tracking without the full framework — what subset works? `methodology.yaml` with 2 models (Feature Dev + Hotfix), `agent-directive.md` with the work loop, and done? (Requires: a minimal adoption test)
+> **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified chain (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default chain (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full chain (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
 
 ## Relationships
 
@@ -645,6 +747,7 @@ Here's how a single task flows through the methodology, from selection to comple
 [[Construction and Testing Artifacts — Standards and Guide]]
 [[Decision: Artifact System Design Decisions]]
 [[Decision: Methodology Stage Extension Decisions]]
+[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
 [[Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
 [[E003 Artifact Type System — Requirements Spec]]
 [[Ecosystem Feedback Loop — Wiki as Source of Truth]]
@@ -657,6 +760,7 @@ Here's how a single task flows through the methodology, from selection to comple
 [[Learning Path: Methodology Fundamentals]]
 [[Methodology Artifact Taxonomy]]
 [[Methodology Config Architecture — How the Pieces Fit Together]]
+[[Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline]]
 [[Methodology Standards Initiative — Gap Analysis]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Methodology System Map]]
@@ -667,10 +771,13 @@ Here's how a single task flows through the methodology, from selection to comple
 [[Model: Wiki Design]]
 [[Note Page Standards]]
 [[Portable Methodology Engine]]
+[[Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[Requirements and Design Artifacts — Standards and Guide]]
 [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[Standards Must Preach by Example]]
 [[Synthesis: Methodology Artifact Taxonomy — Full Spectrum Research]]
+[[Synthesis: SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
 [[Three Classes of Methodology Output]]
 [[Universal Stages, Domain-Specific Artifacts]]
 [[Wiki Design Standards — What Good Styling Looks Like]]

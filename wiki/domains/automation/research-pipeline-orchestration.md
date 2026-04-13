@@ -119,6 +119,16 @@ The gap between current state and the vision:
 > [!example]- Can subagents do parallel page synthesis?
 > Yes, with explicit scope boundaries. Each subagent receives one raw source file, produces one wiki page — well-bounded. Parent validates each page via `tools/validate.py` before integration. Use CLI tools (not MCP) in subagents — fresh context windows don't need MCP schema overhead.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Wiki Ingestion Pipeline]]

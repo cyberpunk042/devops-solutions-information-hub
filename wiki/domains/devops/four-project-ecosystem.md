@@ -191,6 +191,16 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 > [!example]- Can the wiki's MCP server serve as knowledge layer for OpenArms via mcporter?
 > Yes — both OpenArms and MCP Integration Architecture confirm this as an intended path. The wiki MCP server (17 tools) is the natural knowledge query layer. "mcporter enables MCP tool exposure, including the research-wiki MCP server, to OpenArms agents." Integration is technically straightforward via mcporter — the implementation work is connecting `.mcp.json` to the mcporter bridge registration.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLES: [[OpenFleet]]

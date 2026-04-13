@@ -38,6 +38,16 @@ This video breaks down Andrej Karpathy's viral post about using LLMs to build pe
 - **Prompt-driven setup**: Karpathy intentionally left the setup prompt vague so users can customize the structure to their specific project needs. You literally paste the idea into Claude Code and it builds the system.
 - **Obsidian as optional frontend**: Obsidian provides a graph view for visualizing relationships and a web clipper for ingesting articles, but it is not required — the system is just markdown files.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-claude-code-10x

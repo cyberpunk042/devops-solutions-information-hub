@@ -348,6 +348,16 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 - Should model pages include Mermaid diagrams for selection flows? (Requires: testing readability in Obsidian)
 - How should the callout vocabulary evolve as we apply it to more pages? (Requires: more pages styled → patterns emerge)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Model: LLM Wiki]]

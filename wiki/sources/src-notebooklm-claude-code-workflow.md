@@ -75,6 +75,16 @@ Cross-referencing `notebooklm-py CLI` and `Context-Aware Tool Loading`: the note
 
 Cross-referencing `notebooklm-py CLI` and `Decision: MCP vs CLI for Tool Integration`: the notebooklm-py CLI page explicitly confirms: "The PleasePrompto project has a companion MCP server (notebooklm-mcp, TypeScript) for cases where cross-context discoverability matters, demonstrating that MCP wrapping is possible." So yes, an MCP wrapper exists. The Decision: MCP vs CLI page and the notebooklm-py CLI page both give the architectural verdict: "The integration uses notebooklm-py as a CLI tool with a corresponding Claude Code skill — not a NotebookLM MCP server. This is consistent with the CLI-over-MCP pattern for known-workflow integrations. The skill is loaded when needed, not registered as a persistent context overhead." The MCP version (PleasePrompto's notebooklm-mcp) is appropriate when "cross-context discoverability matters" — i.e., when the user needs NotebookLM tools to be discoverable from any conversation without explicit skill loading. The CLI+Skill approach is preferred when NotebookLM is one of several tools in a defined research workflow, as in the competitive analysis use case. The Decision: MCP vs CLI page also notes that "MCP loads all tool schemas into context at startup regardless of whether the tools are used" — for the 11 CLI + 13 MCP tools in the claude-world skill, MCP-first would add schema overhead to every session. The wiki's recommendation from existing pages: CLI+Skill for structured research workflows, MCP wrapper for conversational discovery scenarios.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-notebooklm-claude-code-workflow

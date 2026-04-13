@@ -43,3 +43,11 @@ The workflow that should have been followed:
 What actually happened: Skip to step 4 repeatedly, produce garbage, get caught, patch, produce more garbage, get caught again.
 
 This is the lesson "The Agent Must Practice What It Documents" playing out in real time. Again.
+
+## Relationships
+
+- FEEDS INTO: [[Never Skip Stages Even When Told to Continue]]
+
+## Backlinks
+
+[[Never Skip Stages Even When Told to Continue]]

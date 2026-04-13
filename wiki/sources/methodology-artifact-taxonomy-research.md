@@ -288,6 +288,16 @@ Based on the research, the methodology artifact system needs:
 
 > [!question] Should ADR variants (Nygard, MADR, Y-Statement) be separate templates or one template with variant guidance? (Requires: design decision)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - FEEDS INTO: [[Model: Methodology]]

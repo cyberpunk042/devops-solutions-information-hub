@@ -305,6 +305,16 @@ This wiki is both the definition and an instance. It defines the framework (the 
 
 The wiki proves that knowledge work and code work can share the same methodology vocabulary. The stages have different artifacts (wiki pages vs source files), different gate commands (validate vs compile), and different evolution mechanisms (layer promotion vs version releases) — but the structural principles are identical.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Framework]]

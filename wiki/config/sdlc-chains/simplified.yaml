@@ -1,0 +1,69 @@
+# SDLC Chain: Simplified
+#
+# For: POC projects, micro/small codebases, solo agents without harness
+# Phase: POC, early MVP
+# Scale: micro (<10k) to small (10k-100k)
+# PM Level: L1 (Wiki LLM only, no harness)
+# Harness: none
+#
+# Principle: minimum viable process. Short loops. Fast iteration.
+# The operator IS the enforcement — no infrastructure gates.
+#
+# See: wiki/domains/cross-domain/sdlc-customization-framework.md
+
+chain: simplified
+description: "Minimum viable process for exploration and rapid iteration"
+
+# Only 2-3 stages active. Document is optional for trivial tasks.
+stages:
+  document:
+    required: false  # Skip for hotfixes and trivial changes
+    readiness_range: [0, 30]
+    artifacts:
+      - type: wiki-page
+        count: "0-1"
+        purpose: "Brief requirements or notes (optional)"
+    gate_commands: []  # No gates — operator reviews directly
+
+  implement:
+    required: true
+    readiness_range: [30, 90]
+    artifacts:
+      - type: code-file
+        count: "1+"
+        purpose: "Implementation"
+    gate_commands: []  # Project-specific (pnpm tsgo, terraform validate, etc.)
+
+  test:
+    required: true
+    readiness_range: [90, 100]
+    artifacts:
+      - type: test-file
+        count: "1+"
+        purpose: "Basic verification"
+    gate_commands: []  # Project-specific
+
+# Models available in simplified chain
+models:
+  - feature-development  # Compressed to implement + test
+  - hotfix               # implement + test (same as full)
+  - documentation        # document only
+  - bug-fix              # implement + test
+
+# What's different from default/full
+differences:
+  no_design_stage: true         # Design decisions are implicit or in conversation
+  no_scaffold_stage: true       # Scaffold and implement are merged
+  no_contribution_gating: true  # Solo agent, no cross-agent inputs
+  no_milestone_tracking: true   # Epics and tasks only, no milestones
+  readiness_gate: 30            # Much lower than full (99). Operator judgment.
+  progress_tracking: basic      # Frontmatter only, no real-time
+  review_gate: operator         # Operator reviews, no fleet-ops
+  enforcement: advisory         # CLAUDE.md rules only, no hooks
+
+# When to upgrade to default chain
+upgrade_triggers:
+  - "Agent violates stage boundaries more than once despite CLAUDE.md rules"
+  - "Codebase exceeds 100k lines"
+  - "Project moves from POC to MVP with real users"
+  - "Multiple agents need to coordinate"

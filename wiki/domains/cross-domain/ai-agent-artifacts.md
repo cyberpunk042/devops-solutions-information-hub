@@ -202,6 +202,16 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 > [!question] How do multi-agent handoff artifacts work?
 > **DEFERRED:** Needs deeper research into multi-agent orchestration patterns. The agentic engineering research (nxcode.io) describes the pipeline (Feature Author → Test Generator → Code Reviewer) but doesn't specify the handoff artifact format.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

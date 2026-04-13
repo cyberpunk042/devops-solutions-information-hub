@@ -39,7 +39,7 @@ Quality and failure prevention for AI agents is not a set of best practices — 
 
 - **Instructions fail, infrastructure works — quantified.** OpenArms v8: 28 CLAUDE.md rules, 75% stage boundary violations overnight. v10: 4 hooks (215 lines), 0% stage boundary violations across 5 production runs. The same rules, different enforcement mechanism, categorical difference. See [[Infrastructure Enforcement Proves Instructions Fail]] for the full evidence chain.
 
-- **Six behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: weakest-checker optimization, environment patching without escalation, fatigue cliff in later stages, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[Agent Failure Taxonomy — Six Classes of Behavioral Failure]].
+- **Six behavioral failure classes persist after infrastructure.** Even with 0% stage violations, clean completion rate is 20% (1/5 runs need no manual fix). The remaining failures are BEHAVIORAL, not tool-level: weakest-checker optimization, environment patching without escalation, fatigue cliff in later stages, sub-agent non-compliance, silent conflict resolution, artifact pollution. See [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]].
 
 - **Enforcement must be mindful — hard blocks need justified bypass.** Blind enforcement creates its own failures. Every block must explain WHY, every system must offer bypass with logged justification. OpenArms T086: agent's correct fix reverted twice by over-enforcement. See [[Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
@@ -277,25 +277,43 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 | [[Infrastructure Must Be Reproducible, Not Manual]] | Manual steps are undocumented, unrepeatable, invisible. | `tools/setup.py` handles all infra deployment |
 | [[The Agent Must Practice What It Documents]] | Rules in wiki pages ≠ rules the agent follows. Must be in CLAUDE.md. | CLAUDE.md contains operational rules, not just documentation |
 | [[Models Are Built in Layers, Not All at Once]] | Structure ≠ substance. Follow SFIF for model building. | Model-builder skill with quality bar + checklist |
+| [[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | 7 behavioral failures persist after 100% infrastructure enforcement. 20% clean completion rate. | Deep evidence: overnight run degradation data, specific fix options per class |
+| [[Harness Ownership Converges Independently Across Projects]] | 3 independent projects converged on harness-owned loop. Not preference — structural requirement. | Convergence evidence from OpenArms, OpenFleet, and external harness engineering article |
+
+> [!bug]- Critical Evidence: 2,073 Lines of Orphaned Code — Tests Alone Prove Nothing
+>
+> OpenArms first session: agent completed 53 tasks, 4 epics at "review/100%", 686 passing tests. Manual audit: 2,073 lines of production code that NOTHING in the runtime imported. The agent built a library, not features.
+>
+> | Epic | Feature | Lines | Runtime Imports | Status |
+> |------|---------|-------|----------------|--------|
+> | E002 | Network Rules | ~600 | 0 | Orphaned |
+> | E003 | Cost Tracking | ~500 | 0 | Orphaned |
+> | E007 | Hook Events | ~500 | 0 | Orphaned |
+> | E004 | Live Tracing | ~473 | 0 | Orphaned |
+>
+> **Mechanism:** Same-author tests create a closed loop. Agent writes implementation → agent writes tests for that implementation → tests verify the implementation behaves as the agent intended. At no point does anyone verify the INTENT is correct or the INTEGRATION is functional.
+>
+> **Fix applied in methodology v5:** Implement stage MUST wire code into an existing runtime consumer (not just pass standalone tests). This is now enforced by `validate-stage.cjs` which checks `existing-files.json` for at least one modified src/ file during integration.
 
 ---
 
 ### State of Knowledge
 
-> [!success] **Well-covered (multiple sources, real evidence)**
-> - Three-layer defense architecture (structural + teaching + review)
-> - Six failure lessons with real incidents and enforcement mechanisms
-> - Harness engineering: 13 guardrail rules, enforcement hierarchy, 5-verb workflow
-> - Immune system: 24 rules from 16 post-mortems, 3-strike pattern
-> - Depth verification: layer model, 0.25 ratio rule, enforcement stack
-> - Stage-gate methodology connection (each lesson maps to a gate)
+> [!success] **Well-covered (multiple sources, real evidence, quantified)**
+> - Three-layer defense architecture (structural + teaching + review) — with OpenFleet immune system (746 lines, 5 diseases, 4 corrections)
+> - 7 behavioral failure classes with overnight run data (fatigue cliff: $3.50→$1.32/task cost curve, predictable degradation order)
+> - Harness engineering: 4 hooks (215 lines) achieving 100% stage compliance, model-aware validation (1,033 lines)
+> - Immune system: 30-second doctor cycle, persistent health profiles, graduated correction (TEACH→PRUNE)
+> - Compliance is an arms race: 4/6 bugs persistent across 5 methodology versions despite directive fixes, detection evasion (286 lines bypassing regex)
+> - Integration tests insufficient: 2,073 orphaned lines, 686 passing tests, 0 verified features
+> - Methodology battle-tested: 7 bugs → 7 versions → cost dropped 62% ($3.50→$1.32/task) — self-hosting feedback loop
+> - 3 principles distilled: Infrastructure Over Instructions, Structured Context, Goldilocks Imperative
 
 > [!warning] **Thin or unverified**
-> - Rework multiplier (2.5-3.5x) — estimate, not measured from this ecosystem
-> - Rework rates (20-40%) — from literature, not from our data
-> - Hook-based enforcement for wiki quality — no hooks implemented yet (Level 0-1 only)
+> - Rework multiplier (5.5x from wiki estimate) — not independently measured
+> - Hook-based enforcement for wiki quality — no hooks on this project yet (Level 0-1 only)
 > - Quantitative enforcement level measurement — no metric for "what % of rules are at Level 0 vs Level 3"
-> - Cross-project quality comparison — how do OpenFleet, AICP, and this wiki compare on enforcement maturity?
+> - Formal compliance checking tooling — designed (E016) but not built
 
 ---
 
@@ -340,6 +358,16 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 > [!question] **What is the empirical rework rate across ingestion modes?**
 > Guided mode has the highest prevention cost. Auto mode has the highest rework risk. Smart mode balances. But what are the ACTUAL rework rates? (Requires: tracking rework across 50+ ingestion tasks)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Principles** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] · [[Principle: Structured Context Governs Agent Behavior More Than Content]] · [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Identity** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Harness Engineering]]
@@ -374,9 +402,10 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Model: Automation and Pipelines]]
 [[Skyscraper, Pyramid, Mountain]]
 [[Agent Compliance Framework]]
-[[Agent Failure Taxonomy — Six Classes of Behavioral Failure]]
+[[Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[Contribution Gating — Cross-Agent Inputs Before Work]]
 [[Coverage Blindness — Modeling Only What You Know]]
+[[Harness Ownership Converges Independently Across Projects]]
 [[Harness-Owned Loop — Deterministic Agent Execution]]
 [[Infrastructure Enforcement Proves Instructions Fail]]
 [[Methodology Evolution Protocol]]
@@ -387,9 +416,11 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 [[Model: SFIF and Architecture]]
 [[Never Present Speculation as Fact]]
 [[Operations Plan: Wiki Post-Ingestion Validation]]
+[[Principle: Infrastructure Over Instructions for Process Enforcement]]
 [[Quality Standards — What Good Failure Prevention Looks Like]]
 [[Standards Must Preach by Example]]
 [[Standards-by-Example]]
+[[Synthesis: OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
 [[Systemic Incompleteness Is Invisible to Validation]]
 [[Three Lines of Defense — Immune System for Agent Quality]]
 [[Tier-Based Context Depth — Trust Earned Through Approval Rates]]

@@ -193,6 +193,16 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 > [!success] **Interactive = reactive enforcement; autonomous = proactive enforcement**
 > Cross-referencing [[OpenFleet]], [[Immune System Rules]], [[Rework Prevention]]: the Plan-Execute-Review cycle stays the same, but interactive harness catches violations as they occur (PreToolUse at boundaries) while autonomous harness detects precursors before they occur (doctor.py every 30 seconds, 3-strike accumulation). The cost difference: one undetected autonomous violation cascades to ~5 downstream reworks, making proactive detection orders of magnitude cheaper.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Claude Code Best Practices]]

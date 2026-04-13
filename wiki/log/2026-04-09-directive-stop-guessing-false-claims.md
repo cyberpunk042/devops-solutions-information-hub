@@ -39,3 +39,11 @@ The models contain fabricated claims presented as facts. The context degradation
 - If the information is not verified, say "this is unverified" or "this needs research"
 - Quality of information > quantity of pages
 - We clearly LACK quality information — the solution is MORE RESEARCH, not more guessing
+
+## Relationships
+
+- RELATES TO: [[Model Registry]]
+
+## Backlinks
+
+[[Model Registry]]

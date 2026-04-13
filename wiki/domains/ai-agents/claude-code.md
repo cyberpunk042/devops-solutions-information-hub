@@ -109,6 +109,16 @@ Cross-referencing `Claude Code Skills` and `Claude Code Best Practices`: skill v
 
 Cross-referencing `Claude Code Best Practices` and `Context-Aware Tool Loading`: the split is determined by frequency of use and scope. The `Claude Code Best Practices` page states the rule explicitly: "CLAUDE.md is an index, not an encyclopedia. Keep it under 200 lines. Treat it as a routing table that tells Claude where to find detailed information, not as the detailed information itself. Every message re-reads the entire CLAUDE.md, so bloat compounds across every interaction." The `Context-Aware Tool Loading` pattern page provides the decision rule: "any information source used on fewer than ~80% of turns in a session should be deferred." Applied to the CLAUDE.md vs skill split: global conventions used on every turn belong in CLAUDE.md (schema, commands, quality gates); task-specific procedures used only when performing that task (ingestion, export, evolution) belong in skill files loaded on demand. The research wiki's current implementation follows this: CLAUDE.md defines schema and commands; `wiki-agent`, `evolve`, and `continue` skills contain the detailed operational procedures. This matches the `Claude Code Best Practices` rule that CLAUDE.md "acts as a routing table" to skills.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLES: [[OpenFleet]]

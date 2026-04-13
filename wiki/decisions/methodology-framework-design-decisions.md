@@ -83,6 +83,17 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 - [[Skyscraper, Pyramid, Mountain]] — quality tier sufficiency assessment
 - [[Scaffold → Foundation → Infrastructure → Features]] — SFIF phase boundaries drive the sync decision
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[Methodology Framework]]

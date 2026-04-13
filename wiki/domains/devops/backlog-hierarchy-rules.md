@@ -6,7 +6,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-12
 maturity: growing
 derived_from:
   - "Stage-Gate Methodology"
@@ -29,12 +29,13 @@ tags: [backlog, epic, module, task, hierarchy, readiness, status-propagation, wi
 
 ## Summary
 
-The Backlog Hierarchy Rules define the three-level EPIC → MODULE → TASK structure used by the OpenArms project and mirrored in OpenFleet's Plane board. Eight rules govern how work is organized, how readiness propagates upward, how status flows upward, and when containers are considered done. The key operational principle: you work on TASKS, not epics or modules. To advance an epic, pick a task and complete its next stage. Epics are never manually marked done — they can reach a maximum of `review` status, requiring human confirmation before closure.
+The Backlog Hierarchy Rules define the four-level MILESTONE → EPIC → MODULE → TASK structure used by the OpenArms project and mirrored in OpenFleet's Plane board. Eight rules govern how work is organized, how readiness propagates upward, how status flows upward, and when containers are considered done. The key operational principle: you work on TASKS, not epics or modules. To advance an epic, pick a task and complete its next stage. Epics are never manually marked done — they can reach a maximum of `review` status, requiring human confirmation before closure.
 
-> [!info] Three-level hierarchy
+> [!info] Four-level hierarchy
 >
 > | Level | Role | Readiness | Status Ceiling |
 > |-------|------|-----------|---------------|
+> | **Milestone** | Delivery target — groups epics that ship together | AVERAGE of child epics (derived) | `review` (human confirmation) |
 > | **Epic** | Strategic container — acceptance criteria, scope boundary | AVERAGE of all descendant tasks (derived, never manual) | `review` (human confirmation for `done`) |
 > | **Module** | Scoped subsystem within an epic | AVERAGE of child tasks | `review` (human confirmation for `done`) |
 > | **Task** | Atomic execution unit — stages, frontmatter, commits | Derived from stages_completed | `done` (automatic when all stages pass) |
@@ -137,19 +138,29 @@ Modules follow the same closure rule as epics. A module is never automatically m
 
 Tasks are the only items that can be automatically closed (status = `done`). When all required stages are in `stages_completed`, all Done When items are verified, and readiness = 100, the task can be marked `done` without human review. This is appropriate because tasks are scoped to be independently verifiable.
 
-**Rule 4: READINESS flows UPWARD. Epic readiness = AVERAGE of children's readiness. Never set manually.**
+**Rule 4: READINESS and PROGRESS are TWO independent fields. Both flow UPWARD. Neither is set manually on containers.**
 
-This rule eliminates the "feel" from progress reporting. An epic's readiness is computed, not declared. The calculation:
+Readiness = definition completeness (is it DEFINED enough?). Progress = execution completeness (how far is the WORK?). They are independent dimensions that advance in parallel and converge toward the end. See [[Readiness vs Progress — Two-Dimensional Work Tracking]] for the full model.
 
 ```
-epic_readiness = mean(all_task_readiness_in_epic)
+epic_readiness = mean(all_task_readiness_in_epic)     # Is the epic DEFINED?
+epic_progress  = mean(all_task_progress_in_epic)      # Is the epic BUILT?
 ```
 
-Example: Epic E007 has 8 tasks with readiness [100, 100, 80, 50, 0, 0, 0, 0].
-- Epic readiness = (100 + 100 + 80 + 50 + 0 + 0 + 0 + 0) / 8 = 41.25%
-- Rounded to 41%
+Example: Epic E007 has 8 tasks:
 
-This forces honest reporting. If 4 tasks are done but 4 haven't started, the epic is 41% done — not "half done."
+| Task | Readiness | Progress |
+|------|-----------|----------|
+| T001 | 100 | 100 |
+| T002 | 100 | 100 |
+| T003 | 80 | 50 |
+| T004 | 60 | 0 |
+| T005-T008 | 0 | 0 |
+
+- Epic readiness = 42% (some tasks well-defined, some not started)
+- Epic progress = 31% (only 2 tasks fully built)
+
+This tells you TWO things: the epic is moderately defined (42%) but barely built (31%). A single "41% complete" hides whether the problem is definition or execution.
 
 **Rule 5: STATUS flows UPWARD — any child in-progress → parent in-progress. ALL children done → parent moves to review (not done).**
 
@@ -264,6 +275,128 @@ Signal: The status propagation logic failed to fire, or the agent forgot to upda
 **Anti-pattern: Closing an epic because all tasks are done, without checking acceptance criteria**
 Signal: The acceptance criteria (documented in the epic's design stage) were never verified. Stage completion is necessary but not sufficient — the acceptance criteria are the final gate.
 
+### Level 0: MILESTONE — Delivery Target Above Epics
+
+A milestone is a delivery target that groups multiple epics into a meaningful release or checkpoint.
+
+> [!info] Milestone Characteristics
+>
+> | Property | Value |
+> |----------|-------|
+> | **Contains** | Epics (and their full hierarchies) |
+> | **Purpose** | Time-boxed or feature-boxed delivery target — "what ships together" |
+> | **Readiness** | AVERAGE of child epic readiness (derived, never manual) |
+> | **Status ceiling** | `review` (same as epics — human confirms the milestone is met) |
+> | **When to use** | When multiple epics must coordinate toward a single delivery event |
+
+**When to use milestones vs just epics:**
+
+> [!abstract] Milestone vs Epic Decision
+>
+> | Situation | Use |
+> |-----------|-----|
+> | Single deliverable, one team, one sprint | Epic (no milestone needed) |
+> | Multiple epics that ship independently | Epics (no milestone — they're independent) |
+> | Multiple epics that MUST ship together | Milestone grouping the coordinated epics |
+> | Version release (v1.0, v2.0) | Milestone = the release, epics = the features |
+> | Phase transition (POC→MVP, MVP→Staging) | Milestone = the phase gate, epics = the work |
+> | Quarterly/sprint planning boundary | Milestone = the timebox, epics = what's committed |
+
+**Milestone frontmatter:**
+
+```yaml
+---
+title: "Milestone: v1.2 — Agent Compliance Framework"
+type: milestone
+domain: backlog
+status: active
+priority: P0
+target_date: 2026-05-01
+readiness: 0           # derived from child epics
+epics:
+  - E003               # Artifact Type System
+  - E005               # Agent Compliance Framework
+  - E007               # Gateway Tools (partial — M1 + M3 only)
+acceptance_criteria:
+  - "Agent stage violations < 5% across 10 autonomous runs"
+  - "All 15 per-type standards have annotated exemplars"
+  - "Gateway query API returns correct artifacts for any stage/domain combo"
+created: 2026-04-12
+updated: 2026-04-12
+tags: [milestone, release, delivery-target]
+---
+```
+
+**Examples:**
+- **Milestone: v1.0 — Wiki Foundation** → grouped the original wiki structure epics
+- **Milestone: v1.2 — Agent Compliance** → groups E003 + E005 + gateway tools
+- **Milestone: Fleet Elevation Batch 2** → groups OpenFleet's second wave of improvements
+
+---
+
+### Impediment Types — Structured Categories for What Blocks Work
+
+Not all blockers are the same. An impediment has a TYPE that determines the correct response:
+
+> [!abstract] Impediment Type Taxonomy
+>
+> | Type | What It Means | Response | Example |
+> |------|--------------|----------|---------|
+> | **technical** | Code/infrastructure problem prevents progress | Fix the technical issue (tooling, not manual) | Node 18 incompatibility blocking test gate |
+> | **dependency** | Waiting on another task, module, or epic to complete first | Sequence work correctly, or parallelize if possible | E005 needs E003's artifact definitions |
+> | **decision** | A design question must be resolved before proceeding | Create a decision page, brainstorm with operator | Should templates be self-contained or reference-based? |
+> | **environment** | Infrastructure, access, or setup issue | Fix with tooling (setup scripts, IaC) — never manual | Missing API key, broken CI, wrong Node version |
+> | **clarification** | Requirements are ambiguous, operator input needed | File a concern/question, pause until answered | "Does 'simplified chain' mean 2 stages or 3?" |
+> | **scope** | Work is larger than estimated, needs re-decomposition | Create new tasks/modules to cover the gap | Module estimated at 3 tasks actually needs 8 |
+> | **external** | Waiting on something outside the project | Track and check periodically, work on other items | Hardware upgrade (19GB VRAM), third-party API availability |
+> | **quality** | Prior work doesn't meet the quality bar, needs rework | Rework task using rework methodology model | Standards page is "crap" — needs restart |
+
+**Impediment frontmatter fields:**
+
+```yaml
+impediment_type: technical | dependency | decision | environment | clarification | scope | external | quality
+blocked_by: "T045"           # specific task/issue that blocks
+blocked_since: 2026-04-12
+escalated: false              # has this been raised to operator?
+resolution: ""                # how it was resolved (filled when unblocked)
+```
+
+**Why typed impediments matter:**
+- **Agents can self-diagnose:** "I'm blocked by a `technical` impediment → I should try to fix it with tooling, not hand it to the operator." vs "I'm blocked by a `decision` impediment → I need to file a concern and wait."
+- **Patterns emerge:** If 60% of impediments are `environment` type, the setup tooling needs work. If 40% are `decision` type, requirements need to be clearer upfront.
+- **Immune system can detect:** "Agent has been blocked by the same `technical` impediment for 3 retries → ESCALATE." Different types have different escalation thresholds.
+
+---
+
+### Complete Hierarchy with Milestones
+
+```
+MILESTONE (delivery target)
+  ├── EPIC (strategic container)
+  │     ├── MODULE (scoped deliverable)
+  │     │     ├── TASK (atomic execution)
+  │     │     ├── TASK
+  │     │     └── TASK
+  │     └── MODULE
+  │           ├── TASK
+  │           └── TASK
+  └── EPIC
+        └── TASK (small epics can have tasks directly)
+```
+
+> [!info] When to Choose What
+>
+> | You Have... | Create... | Because... |
+> |-------------|-----------|-----------|
+> | A release date or delivery event | **Milestone** | Groups epics that must coordinate |
+> | A strategic capability (weeks of work) | **Epic** | Container with acceptance criteria, not directly executable |
+> | A coherent subsystem (days of work) | **Module** | Independently reviewable, has its own design |
+> | A single-session piece of work | **Task** | Atomic, has stages, produces artifacts |
+> | A bug report | **Task** (bug-fix model) | 3 stages: document → implement → test |
+> | A research question | **Task** (research model) | 2 stages: document → design, caps at 50% |
+> | A known fix | **Task** (hotfix model) | 2 stages: implement → test |
+> | A blocker that stops work | **Impediment** (on the blocked task) | Typed, tracked, escalatable |
+
 ## Open Questions
 
 (All resolved — see Answered Open Questions below.)
@@ -281,6 +414,16 @@ Signal: The acceptance criteria (documented in the epic's design stage) were nev
 
 > [!example]- New gap task reduces parent readiness?
 > Resolved in [[Decision: Stage-Gate Operational Decisions]]. Yes, this is correct behavior. Adding a task with readiness 0 honestly lowers the parent's readiness. Honesty over inflation — the gap was always there, the readiness was previously overstated.
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
 
 ## Relationships
 
@@ -306,10 +449,15 @@ Signal: The acceptance criteria (documented in the epic's design stage) were nev
 [[Artifact Chains by Methodology Model]]
 [[Decision: Execution Mode Edge Cases]]
 [[Decision: Stage-Gate Operational Decisions]]
+[[Decision: When to Use Milestone vs Epic vs Module vs Task]]
 [[Epic Page Standards]]
+[[Frontmatter Field Reference — Complete Parameter Documentation]]
 [[Initiation and Planning Artifacts — Standards and Guide]]
 [[Methodology Framework]]
 [[Methodology Standards Initiative — Infrastructure Analysis]]
 [[Model Composition Rules]]
 [[Model: Methodology]]
+[[Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[Task Page Standards]]
+[[Three PM Levels — Wiki to Fleet to Full Tool]]

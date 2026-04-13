@@ -104,52 +104,85 @@ Each project adapts the super-model to its context:
 > - Feed operational learnings back to the wiki (incidents, methodology evolution, tool discoveries)
 > - Adopt at least Tier 1 (schema + templates + quality gates)
 
-## What "v1.2" Means
+## What "v1.3" Means
 
-Updated to reflect structural cleanup and artifact extraction (2026-04-12):
+Updated to reflect deep sister project scan, work management framework, and SDLC customization (2026-04-12):
 
-> [!abstract] v1.2 state assessment
+> [!abstract] v1.3 state assessment
 >
 > | Aspect | State | Evidence |
 > |--------|-------|---------|
-> | **Pages** | 237 total | Clean count after structural cleanup (removed ghost files, config excluded from page count) |
+> | **Pages** | 258 total | +21 from continuation session (was 237 at start) |
 > | **Models** | 15 defined + 9 methodology models | [[Model Registry]] + [[Model: Methodology]] |
-> | **Standards** | 7 model standards + 15 per-type standards | wiki/spine/standards/ — one per page type |
-> | **Artifact taxonomy** | 78 types across 11 categories | [[Methodology Artifact Taxonomy]] — researched from 10 online sources |
-> | **Domain chains** | 4 domains | TypeScript, Python/Wiki, Infrastructure, Knowledge — concrete paths + gates |
-> | **Decisions** | 15 resolved | 61 open questions answered including 10 from taxonomy research |
-> | **Lessons** | 37 codified | +3 new: Hardcoded Instances, Integrate Into Existing Pages, Method of Work vs Methodology Label |
-> | **Patterns** | 11 documented | +1 new: Ecosystem Feedback Loop (the vision codified) |
-> | **AI elevation** | 16 Quick Starts + 7 Self-Checks | Every methodology page has actionable AI guidance |
-> | **Maturity** | ~156 growing, ~53 seed | 22 pages promoted from seed during methodology initiative |
-> | **Config stack** | 6 layers in wiki/config/ | methodology.yaml (517L) + artifact-types.yaml (389L) + 3 domain profiles + schema + quality + templates |
-> | **Relationships** | 1,559+ | Rich knowledge graph |
+> | **Standards** | 7 model standards + 15 per-type standards + 3 annotated exemplars | wiki/spine/standards/ — lesson, pattern, decision standards now have inline annotated walkthroughs |
+> | **Artifact taxonomy** | 78 types across 11 categories + milestone type | [[Methodology Artifact Taxonomy]] + milestone added to schema |
+> | **Domain chains** | 4 domains | TypeScript, Python/Wiki, Infrastructure, Knowledge |
+> | **Decisions** | 17 resolved | +1: When to Use Milestone vs Epic vs Module vs Task |
+> | **Lessons** | 43 codified | +6 from sister projects: Infrastructure Enforcement, Agent Failure Taxonomy (6 classes), Context Compaction, Structured Context, Mindful Enforcement, Models Built in Layers (refreshed) |
+> | **Patterns** | 17 documented | +6: Three Lines of Defense, Harness-Owned Loop, Contribution Gating, Tier-Based Context, Validation Matrix, Ecosystem Feedback Loop |
+> | **Concepts** | 3 new | SDLC Customization Framework, Readiness vs Progress, Three PM Levels |
+> | **Work management** | Complete framework | 4-level hierarchy (Milestone→Epic→Module→Task), 8 impediment types, readiness vs progress (two-dimensional), 3 PM levels, harness v1→v2→v3 |
+> | **Templates** | 5 created/upgraded + milestone new | note, epic, learning-path, evolution upgraded; milestone created |
+> | **Config** | Extended | milestone type, progress field, impediment_type enum, 6 new optional fields |
+> | **Relationships** | 1,698 | +139 from session |
 > | **Validation** | 0 errors | All pages pass pipeline post |
-> | **Structure** | Clean separation | Root = project infra. wiki/ = all content + config. No ghost files. |
+> | **External research** | SDLC frameworks | CMMI maturity levels, Lean Startup BML, EPAM ADLC, PwC Agentic SDLC |
+> | **Sister project scan** | Deep | OpenArms v10 (1033-line validator, 4 hooks, 6 failure classes), OpenFleet (immune system, tiers, contributions, dispatch) |
+> | **Frontmatter reference** | Complete | Every field documented with meaning, requirements, valid values, automation enablement |
+> | **Epics scaffolded** | 2 | Gateway Tools (6 modules, 25-35 tasks), SDLC Rules (5 modules, 20-30 tasks) |
 >
-> **What v1.2 added over v1.1:**
-> - Structural cleanup: moved all wiki config from root config/ to wiki/config/, removed 84 ghost files from root, updated all tool path references
-> - 3 new lessons extracted from session failures (hardcoded instances, integration, method of work)
-> - 1 new pattern: Ecosystem Feedback Loop — the operator's vision codified as a wiki pattern with instances, applicability, and anti-patterns
-> - All tools updated to reference wiki/config/ (pipeline, validate, lint, export, evolve, MCP server)
-> - Config exclusion from page scanning (templates and configs no longer counted as wiki pages)
+> **What v1.3 added over v1.2:**
+> - Deep OpenArms/OpenFleet scan: real enforcement data (25%→100% compliance), 6 behavioral failure classes, immune system architecture, contribution gating, tier progression, validation matrix
+> - Work management framework: milestones, 8 impediment types, readiness vs progress as independent dimensions, 3 PM levels (L1:Wiki → L2:Fleet → L3:Full PM), harness version progression
+> - SDLC customization: phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full), backed by CMMI, Lean Startup, and Agentic SDLC research
+> - Annotated exemplars: lesson, pattern, and decision standards now have full inline walkthroughs showing WHY each part of the exemplar is good
+> - Frontmatter field reference: complete parameter documentation with automation enablement column
+> - 6 model pages updated with quantified enforcement evidence
+> - Learning path expanded to 24 pages in 6 parts (was 17 in 5 parts)
 >
-> **What v1.2 does NOT have:**
+> **What v1.3 does NOT have:**
 > - Canonical maturity on any model (all growing — promotions gated by operator)
-> - Automated compliance checking (identified as gap, not yet built)
-> - "Magic tricks" deep dive (operator's .agent/ rule system captured as research, not yet analyzed)
-> - Multi-agent handoff artifact format (needs research)
-> - Annotated exemplars (standards reference exemplars but don't annotate them inline)
-> - OpenArms/OpenFleet knowledge refresh (planned for next phase)
+> - Gateway tools implemented (epic scaffolded, needs design+build)
+> - SDLC chain configs (simplified/default/full YAML profiles — epic scaffolded)
+> - Automated compliance checking tooling (evidence-backed now, not yet built)
+> - "Magic tricks" formalized (structured context principle captured, grammar not yet defined)
+> - Multi-agent handoff artifact format (contribution gating documented but handoff format TBD)
 > - 10-15 new source ingestions (operator has material ready)
 
 ## How to Use This Page
 
-**If you're the operator:** This is your dashboard for the wiki's state as a consumable system. Review the v1.0 assessment. Decide which models are ready for the next maturity promotion. Identify gaps that need fresh research.
+### How to Use This Page — Start Here, Go Anywhere
 
-**If you're an agent from another project:** Start with the Adoption Tiers table. Determine your project's current tier. Follow the model dependency graph in order. Read each model + its standards page. Adapt per the Per-Project Adaptation table.
+**First question to answer: WHO ARE YOU?** → [[Project Self-Identification Protocol — The Goldilocks Framework]]
 
-**If you're building this wiki further:** The quality contract defines what must be maintained. The v1.0 assessment shows where the gaps are. The evolution pipeline (`pipeline evolve --score`) identifies the next improvement candidates.
+> [!abstract] Entry Points by Identity
+>
+> | If You Are... | Start With | Then |
+> |---------------|-----------|------|
+> | **The operator** | This page (dashboard) → v1.3 assessment | Decide maturity promotions, identify gaps, plan next session |
+> | **A solo agent on a project** | [[Methodology Adoption Guide]] → pick your tier | Read the model for your task type → follow stage sequence |
+> | **A harness-managed agent** | Your stage skill (injected by harness) | The skill points to the right methodology model and artifacts |
+> | **An agent from another project connecting to the second brain** | [[How AI Agents Consume the Methodology Wiki]] → 4 entry paths | Query methodology, get standards, adapt to your domain |
+> | **A system designer** | [[Model: Methodology]] → [[Three PM Levels — Wiki to Fleet to Full Tool]] | Design the right PM infrastructure for your scale |
+> | **A human learning the system** | [[Learning Path: Methodology Fundamentals]] → 24 pages in 6 parts | Progressive learning from concepts to execution to enforcement |
+
+> [!tip] The Weave — How Everything Connects
+>
+> ```
+> IDENTITY (who am I?) ←→ GOLDILOCKS (what's "just right"?)
+>     ↓                          ↓
+> SDLC CHAIN (simplified/default/full) ←→ PROJECT PHASE (POC→Production)
+>     ↓                                        ↓
+> METHODOLOGY MODEL (which stages?) ←→ DOMAIN PROFILE (which artifacts?)
+>     ↓                                    ↓
+> ENFORCEMENT (hooks/harness/immune) ←→ PM LEVEL (L1/L2/L3)
+>     ↓                                    ↓
+> EXECUTION (stages, gates, artifacts) ←→ TRACKING (readiness + progress)
+>     ↓                                    ↓
+> LEARNING (lessons, patterns, decisions) → feeds back to IDENTITY + METHODOLOGY
+> ```
+>
+> Every node connects to every other node. Enter from ANY point and navigate to what you need. The system is not linear — it's a web with the super-model at the center.
 
 ## Key Pages
 
@@ -161,6 +194,11 @@ Updated to reflect structural cleanup and artifact extraction (2026-04-12):
 | [[Methodology Adoption Guide]] | 4-tier adoption with per-domain quick starts |
 | [[How AI Agents Consume the Methodology Wiki]] | 4 entry paths, 3 consumption modes |
 | [[Methodology Framework]] | The meta-methodology that governs all models |
+| [[Frontmatter Field Reference — Complete Parameter Documentation]] | Every frontmatter field documented with automation enablement |
+| [[Backlog Hierarchy Rules]] | 4-level hierarchy with milestones, impediment types, readiness/progress |
+| [[SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Phase × scale × chain selection with CMMI + Lean Startup evidence |
+| [[Readiness vs Progress — Two-Dimensional Work Tracking]] | Two independent dimensions at every hierarchy level |
+| [[Three PM Levels — Wiki to Fleet to Full Tool]] | L1→L2→L3 PM infrastructure with harness version mapping |
 | [[Four-Project Ecosystem]] | The 5-project topology and knowledge flow |
 
 ## Open Questions
@@ -195,4 +233,7 @@ Updated to reflect structural cleanup and artifact extraction (2026-04-12):
 [[Evolution: Methodology System]]
 [[Learning Path: Methodology Fundamentals]]
 [[Methodology Adoption Guide]]
+[[Principle: Right Process for Right Context — The Goldilocks Imperative]]
+[[Project Self-Identification Protocol — The Goldilocks Framework]]
 [[SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[The Wiki Is a Hub, Not a Silo]]

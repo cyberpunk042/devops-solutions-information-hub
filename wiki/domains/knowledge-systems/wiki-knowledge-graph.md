@@ -82,6 +82,16 @@ Cross-referencing `LightRAG` and `Zettelkasten Methodology`: the gap between thi
 
 Cross-referencing `Context-Aware Tool Loading` and `CLI Tools Beat MCP for Token Efficiency`: the Context-Aware Tool Loading pattern page addresses this directly — the pattern's "When To Apply" section specifies "any information source used on fewer than ~80% of turns in a session: pre-loading the minority case penalizes every turn for the majority case." A skills graph would enable the agent to make this decision structurally: given the current task, traverse ENABLES and EXTENDS edges from the task's concept nodes to identify relevant skills, then load only those skills. This is the deferred loading principle applied to skill selection. The CLI Tools Beat MCP lesson confirms: "Skills (SKILL.md files) contain no schema overhead at rest. They only enter the context window when explicitly invoked." A typed skills graph (EXTENDS, OVERLAPS, COMPLEMENTS edges between skill pages) would replace the current manual skill selection (user runs slash command) with graph-traversal-guided automatic selection — identifying the minimal set of skills relevant to the current task type.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-llm-wiki-v2-agentmemory

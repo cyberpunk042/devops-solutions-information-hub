@@ -145,6 +145,16 @@ The recommended hybrid: PARA manages what lives outside the Zettelkasten (active
 > [!example]- Progressive summarization: page sections or domain-level FAQs?
 > Both needed, different audiences. Page-level sections (Summary → Key Insights → Deep Analysis) implement per-concept progressive summarization. `domain-overview` pages (Summary, State of Knowledge, Maturity Map, Gaps, Priorities) implement domain-level executive summaries. Domain-overview pages are the more urgently missing layer.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Second Brain Architecture]]

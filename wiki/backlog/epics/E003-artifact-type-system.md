@@ -6,7 +6,8 @@ status: active
 priority: P0
 task_type: epic
 current_stage: document
-readiness: 40
+readiness: 55
+progress: 40
 stages_completed: [document, design, scaffold]
 artifacts:
   - wiki/domains/cross-domain/methodology-standards-initiative-infrastructure.md
@@ -35,10 +36,18 @@ artifacts:
   - wiki/config/domain-profiles/python-wiki.yaml
   - wiki/config/domain-profiles/infrastructure.yaml
   - wiki/domains/cross-domain/artifact-chains-by-model.md
+  - wiki/config/templates/milestone.md
+  - wiki/config/templates/evolution.md
+  - wiki/config/templates/learning-path.md
+  - wiki/spine/frontmatter-field-reference.md
+  - wiki/domains/cross-domain/sdlc-customization-framework.md
+  - wiki/domains/cross-domain/readiness-vs-progress.md
+  - wiki/domains/cross-domain/three-pm-levels.md
+  - wiki/decisions/when-to-use-milestone-vs-epic-vs-module-vs-task.md
   - raw/notes/2026-04-11-methodology-standards-directive.md
 confidence: high
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-12
 sources:
   - id: operator-directive
     type: file
@@ -82,6 +91,15 @@ None — this is the foundation epic.
 
 Nothing. Can start immediately.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Epic → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - ENABLES: [[Portable Methodology Engine]] (E004)
@@ -106,3 +124,5 @@ Nothing. Can start immediately.
 [[E003 Artifact Type System — Design Document]]
 [[E003 Artifact Type System — Requirements Spec]]
 [[Methodology Standards Initiative — Honest Assessment]]
+[[SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[Wiki Gateway Tools — Unified Knowledge Interface]]

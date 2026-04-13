@@ -220,6 +220,16 @@ The SFIF (Scaffold → Foundation → Infrastructure → Features) pattern from 
 > [!example]- How should stage-gating handle discovery tasks?
 > Resolved in [[Decision: Stage-Gate Operational Decisions]]. Return to Design stage with updated understanding from the discovery. Maximum 2 retries before escalating.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Rework Prevention]] (stage gates prevent the root causes of rework)

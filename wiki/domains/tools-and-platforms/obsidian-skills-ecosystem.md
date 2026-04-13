@@ -112,6 +112,16 @@ Cross-referencing `Design.md Pattern`: the Design.md pattern provides the answer
 
 The three-layer ecosystem pattern (official spec → visual generation → deep CLI) parallels the Command-Agent-Skill hierarchy documented in Claude Code Best Practices. In both cases, different abstraction levels serve different purposes and compose rather than compete: the specification layer (kepano / Commands) defines the authoritative format and interface contract; the generation layer (axton / Agents) produces content in those formats using coordinated execution; the control layer (pablo-mano / Skills) provides programmatic depth for operational workflows. This parallel is confirmed by `Skills Architecture Patterns`, which documents the same stratification independently: "Three-layer stratification emerges independently: specification layer, generation layer, control layer." The general principle — agent extensibility systems naturally stratify into these three layers — appears to be a structural invariant rather than a design choice.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-kepano-obsidian-skills

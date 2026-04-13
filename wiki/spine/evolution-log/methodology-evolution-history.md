@@ -90,3 +90,5 @@ The methodology system is at v1.0 — first complete version with:
 [[Methodology Evolution Protocol]]
 [[Methodology Standards — What Good Execution Looks Like]]
 [[Super-Model: Research Wiki as Ecosystem Intelligence Hub]]
+[[Session 2026-04-09 Summary]]
+[[Session 2026-04-10 Summary]]

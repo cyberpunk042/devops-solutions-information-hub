@@ -282,6 +282,16 @@ Systematic identification of gaps between what the methodology standards initiat
 
 > [!question] How do we handle methodology evolution — when the wiki updates its methodology, how do consumer projects get notified and updated? (Requires: design decision during Epic B — relates to export/sync)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Standards Initiative — Infrastructure Analysis]]

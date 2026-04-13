@@ -167,6 +167,17 @@ The connection to context management is the critical constraint that shapes all 
 > [!example]- Should frequently-used skills be promoted to procedural memory?
 > Skills ARE procedural memory — they encode "how to act." If invoked in many sessions, the compressed summary should appear at session start (working memory). CLAUDE.md or a session-start skill can reference high-frequency skills directly, reducing the invocation step. Lower-frequency skills remain deferred (explicit slash command). The "invoked on nearly every turn" threshold from Context-Aware Tool Loading determines which model applies.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle governs this?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **How does enforcement apply?** | [[Principle: Infrastructure Over Instructions for Process Enforcement]] |
+> | **What is my identity profile?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - SYNTHESIZES: [[Claude Code Skills]]

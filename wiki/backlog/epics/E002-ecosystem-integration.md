@@ -40,6 +40,15 @@ Make the wiki's knowledge and methodology consumable by each sister project thro
 - [ ] At least 1 sister project consuming wiki knowledge via MCP or export
 - [ ] Integration documented as wiki pages
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Epic → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Goldilocks** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Four-Project Ecosystem]]

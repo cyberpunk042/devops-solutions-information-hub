@@ -74,6 +74,16 @@ Cross-referencing `AICP` and `OpenFleet`: the question can be partially answered
 
 Cross-referencing `AICP` and `OpenFleet`: the AICP page documents that 9 models are currently loaded simultaneously on LocalAI v4.0.0 with GPU acceleration. The model roster is segmented by function: Qwen3 family (8B, 4B, 30B MoE, fast variant) for reasoning/chat; Gemma4 family (e2b, e4b, 26B MoE) for reasoning; legacy models (hermes, codellama); and specialized models (whisper for transcription, piper for TTS, nomic-embed and bge-m3 for embeddings, bge-reranker for reranking, stablediffusion for image generation). The `OpenFleet` page confirms the current fleet inference stack uses hermes-3b for queries, bge-m3 for embeddings, and bge-reranker for reranking simultaneously. The memory profile is implicit in the hardware context: all 9 models run on a GPU-accelerated LocalAI instance. The `Local LLM Quantization` page (this page) documents that a 26B model requires 18GB of GPU memory at standard quantization — which means simultaneous loading of multiple large models requires either sufficient VRAM, offloading to CPU RAM, or sequential loading with model swapping. AICP's 9-model configuration suggests model swapping is in use: specialized models (whisper, stablediffusion) are unlikely to be hot-loaded simultaneously with reasoning models. The ecosystem's hardware upgrade note (8GB→19GB VRAM) in the memory context confirms that VRAM growth directly unlocks simultaneous loading of larger model combinations. Full performance profiling of all 9 models loaded concurrently (Requires: empirical measurement on the specific GPU hardware; not documented in existing wiki pages).
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - RELATES TO: [[AICP]]

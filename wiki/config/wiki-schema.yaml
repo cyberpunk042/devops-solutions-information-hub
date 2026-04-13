@@ -25,7 +25,8 @@ optional_fields:
   - priority
   - task_type
   - current_stage
-  - readiness
+  - readiness             # 0-100: definition completeness (is this READY to work on?)
+  - progress              # 0-100: execution completeness (how far is the WORK?)
   - stages_completed
   - artifacts
   - estimate
@@ -33,6 +34,14 @@ optional_fields:
   - module
   - depends_on
   - note_type
+  - impediment_type
+  - blocked_by
+  - blocked_since
+  - escalated
+  - resolution            # how an impediment was resolved
+  - target_date
+  - epics
+  - acceptance_criteria
 
 enums:
   type:
@@ -53,6 +62,8 @@ enums:
     - task
     - note
     - operations-plan
+    - milestone
+    - principle
   status:
     - raw
     - processing
@@ -116,6 +127,15 @@ enums:
     - directive
     - session
     - completion
+  impediment_type:
+    - technical
+    - dependency
+    - decision
+    - environment
+    - clarification
+    - scope
+    - external
+    - quality
   source_type:
     - article
     - youtube-transcript
@@ -214,6 +234,19 @@ required_sections:
     - Steps
     - Rollback
     - Completion Criteria
+    - Relationships
+  milestone:
+    - Summary
+    - Delivery Target
+    - Epic Composition
+    - Acceptance Criteria
+    - Relationships
+  principle:
+    - Summary
+    - Statement
+    - Derived From
+    - Application
+    - Boundaries
     - Relationships
 
 relationship_verbs:

@@ -173,6 +173,16 @@ Complete artifact chain resolution for Python tool projects and knowledge wikis 
 > | **Bug Fix** | Bug analysis | — | — | Tool fix + pipeline fix | pipeline post |
 > | **Refactor** | Current→target map | — | New config schema | Restructured tools/config | pipeline post |
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - BUILDS ON: [[Methodology Artifact Taxonomy]]

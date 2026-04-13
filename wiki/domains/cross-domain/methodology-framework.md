@@ -356,6 +356,16 @@ Quality standard: [[LLM Wiki Standards — What Good Looks Like]]
 
 When adding a new model: create the page via the model-builder skill (`/build-model`), then add it to this registry.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - CONTAINS: [[Stage-Gate Methodology]] (the 5-stage model is an instance within this framework)

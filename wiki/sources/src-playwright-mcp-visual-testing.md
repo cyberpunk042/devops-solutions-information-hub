@@ -84,6 +84,16 @@ Cross-referencing `Synthesis: Playwright CLI vs MCP` and `Decision: MCP vs CLI f
 
 Cross-referencing `Design.md Pattern` and `Harness Engineering`: the Design.md Pattern page provides the direct answer: "DESIGN.md (how it should look) complements CLAUDE.md (how the agent should behave) and AGENTS.md (how to build). Together they give an AI agent complete project context without stuffing everything into a single file." The pattern is explicitly a separate file (DESIGN.md) at the project root, not embedded in CLAUDE.md. The Design.md Pattern page also notes the companion files ecosystem: "Each Design.md comes with preview.html and preview-dark.html files that render the design system visually" — confirming the convention is a separate tracked file. For version control in team environments, the Harness Engineering page's IaC principle applies: all agent context files (CLAUDE.md, DESIGN.md, AGENTS.md) are checked into the repository as first-class configuration, versioned with the code they govern. The Design.md Pattern page notes the file is "version-controllable with Git" as a key property. Team conflicts on design principles are resolved the same way as CLAUDE.md conflicts: through standard Git merge/PR review processes, with the design file serving as the single source of truth for the visual specification.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-playwright-mcp-visual-testing

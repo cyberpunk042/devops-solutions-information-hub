@@ -95,6 +95,16 @@ The LLM Wiki v2 document proposes that the binary choice between wiki and RAG is
 - Cross-source tension: Claude Code Best Practices reports that Claude Code "tried and discarded vector databases internally because code drifts out of sync." Yet LLM Wiki v2 recommends vector search as one of three hybrid search streams. The resolution may be domain-dependent: vector search is unhelpful for fast-changing codebases but valuable for slower-changing knowledge wikis. This distinction deserves empirical validation.
 - Cross-source insight: Karpathy explicitly names NotebookLM as an example of the "retrieve-and-forget" RAG pattern. PleasePrompto's NotebookLM skill positions NotebookLM as "superior to local RAG" for reducing hallucinations. These are different claims about RAG-style tools -- Karpathy critiques the lack of compounding, while PleasePrompto values the grounded accuracy. Both can be simultaneously true.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: src-karpathy-claude-code-10x

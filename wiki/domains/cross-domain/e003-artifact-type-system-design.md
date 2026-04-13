@@ -780,6 +780,16 @@ The validator already works. We don't rewrite it. We add layers:
 
 > [!question] Should methodology templates (wiki/config/templates/methodology/) be accessible via the scaffolder, and if so, with what syntax? Recommendation: `pipeline scaffold methodology/requirements-spec "Title"` — the `/` in the type triggers the methodology subdirectory lookup. (Decision: yes, implement during M5.)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[Artifact Type System]] (E003)

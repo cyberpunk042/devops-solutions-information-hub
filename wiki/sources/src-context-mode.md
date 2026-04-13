@@ -231,6 +231,16 @@ All processing occurs in sandboxed subprocesses on the local machine. No telemet
 - The `ctx_batch_execute` tool combines multiple commands + searches into a single call (986 KB → 62 KB). For the wiki's post-ingestion chain (6 sequential pipeline steps), would batching them via `ctx_batch_execute` materially reduce the context footprint of post-processing runs?
 - What is the behavior when `ctx_execute` is called from within a subagent? The hook architecture captures subagent invocations as P3 events — but does the subagent's sandbox inherit the parent session's permission rules and credential passthrough?
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Source → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principles derive from this?** | Check FEEDS INTO relationships above |
+> | **What is the Goldilocks framework?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **Where does this fit?** | [[Methodology System Map]] |
+
 ## Relationships
 
 - EXTENDS: [[Context-Aware Tool Loading]]

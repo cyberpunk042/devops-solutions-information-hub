@@ -226,7 +226,7 @@ def rebuild_domain_index(domain_dir: Path, domain_name: str, description: str) -
     pages_info = []
     all_tags: list = []
 
-    for md_file in sorted(domain_dir.glob("*.md")):
+    for md_file in sorted(domain_dir.rglob("*.md")):
         if md_file.name == "_index.md":
             continue
         text = md_file.read_text(encoding="utf-8")
@@ -238,7 +238,8 @@ def rebuild_domain_index(domain_dir: Path, domain_name: str, description: str) -
         summary = sections.get("Summary", "").split(".")[0].strip()
         if len(summary) > 120:
             summary = summary[:117] + "..."
-        pages_info.append({"file": md_file.name, "title": title, "summary": summary})
+        rel_path = md_file.relative_to(domain_dir)
+        pages_info.append({"file": str(rel_path), "title": title, "summary": summary})
         for tag in meta.get("tags", []):
             all_tags.append(tag)
 

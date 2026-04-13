@@ -113,6 +113,16 @@ This is a model for how operational knowledge should flow in any multi-project e
 > [!success] **Static human maintenance, not ML evolution — determinism is the point**
 > Cross-referencing `devops-control-plane` and `Agent Orchestration Patterns`: the `Immune System Rules` page's own analysis provides the core answer: "Post-mortem-derived rules codified in Python provide: (1) Infrastructure-level enforcement — cannot be bypassed by any model; (2) Session-level tracking — counters persist across the entire task lifecycle; (3) Full audit trail — every rule check writes to the append-only ledger." The `devops-control-plane` page confirms the append-only audit ledger as the definitive record. Automatic ML evolution would make the rules non-deterministic — exactly the property the immune system was designed to avoid. The `Agent Orchestration Patterns` page reinforces: "A deterministic security scan cannot be social-engineered via a crafted task description. An LLM-based security layer can be prompted around." Applying this principle to rule evolution: ML-driven rule mutation introduces the same reliability risks as LLM-based enforcement. The answer from existing wiki knowledge: rules should remain statically maintained via human post-mortem review. The human review gate in the knowledge evolution pipeline (`--review` flag) is the same principle applied to wiki pages — automation handles bookkeeping, humans handle high-stakes decisions. ML could assist by surfacing anomaly candidates for human review, but should not auto-modify rule thresholds.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **What principle applies?** | [[Principle: Right Process for Right Context — The Goldilocks Imperative]] |
+> | **What is my identity?** | [[Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **System map** | [[Methodology System Map]] |
+
 ## Relationships
 
 - DERIVED FROM: [[devops-control-plane]]

@@ -1,0 +1,171 @@
+# SDLC Chain: Full
+#
+# For: Production systems, medium to massive codebases, fleet operations
+# Phase: Staging, Production
+# Scale: medium (100k-1M) to massive (5M+)
+# PM Level: L2-L3 (Fleet/Harness + optional Plane/DSPD)
+# Harness: v2-v3
+#
+# Principle: complete artifact chain, all stages, formal reviews, compliance.
+# Every artifact is traceable. Every stage is gated. Every review is adversarial.
+# 99→100 is ALWAYS human-only.
+#
+# See: wiki/domains/cross-domain/sdlc-customization-framework.md
+
+chain: full
+description: "Complete process with all stages, artifacts, gates, and formal reviews"
+
+stages:
+  document:
+    required: true
+    readiness_range: [0, 25]
+    artifacts:
+      - type: wiki-page
+        count: "3+"
+        purpose: "Requirements spec + infrastructure analysis + gap analysis"
+        templates:
+          - "methodology/requirements-spec"
+          - "methodology/infrastructure-analysis"
+          - "methodology/gap-analysis"
+    gate_commands: ["pipeline post"]
+    allowed_outputs: ["wiki-page", "raw-note", "research-synthesis"]
+    forbidden_outputs: ["code-file", "test-file", "config-change"]
+
+  design:
+    required: true
+    readiness_range: [25, 50]
+    artifacts:
+      - type: wiki-page
+        count: "2+"
+        purpose: "Design plan + tech spec + decisions"
+        templates:
+          - "methodology/design-plan"
+          - "methodology/tech-spec"
+          - "decision"
+      - type: wiki-page
+        count: "1+"
+        purpose: "Test plan"
+        templates: ["methodology/test-plan"]
+    gate_commands: ["pipeline post"]
+    allowed_outputs: ["wiki-page", "decision-page", "test-plan"]
+    forbidden_outputs: ["code-file", "test-file"]
+    contribution_required:
+      - architect_design: true     # Required before advancing
+      - qa_test_definition: true   # Required before advancing
+
+  scaffold:
+    required: true
+    readiness_range: [50, 80]
+    artifacts:
+      - type: type-definition
+        count: "1+"
+        purpose: "Types, interfaces, stubs — no business logic (≤3 lines per function body)"
+      - type: config-file
+        count: "0+"
+        purpose: "Schema updates, config changes"
+    gate_commands: []  # Project-specific (pnpm tsgo, terraform validate)
+    allowed_outputs: ["type-definition", "config-file", "template-file", "stub-file"]
+    forbidden_outputs: ["business-logic", "test-assertions"]
+    business_logic_detection: true  # Validate that function bodies ≤3 lines
+
+  implement:
+    required: true
+    readiness_range: [80, 95]
+    artifacts:
+      - type: code-file
+        count: "1+"
+        purpose: "Business logic"
+      - type: src-modification
+        count: "1+"
+        purpose: "Must modify at least one existing runtime file (integration requirement)"
+        required: true
+    gate_commands: []  # Project-specific (pnpm tsgo + pnpm check — BOTH always)
+    allowed_outputs: ["code-file", "config-file", "wiki-page"]
+    forbidden_outputs: ["test-file"]
+    integration_requirement: true  # Must wire into existing runtime
+
+  test:
+    required: true
+    readiness_range: [95, 100]
+    artifacts:
+      - type: test-file
+        count: "1+"
+        purpose: "Real assertions against spec, not implementation"
+    gate_commands: []  # Project-specific (pnpm tsgo + pnpm check + pnpm test — ALL always)
+    allowed_outputs: ["test-file"]
+    forbidden_outputs: ["new-feature", "scope-change"]
+    strict_verification: true  # Strictest checker is mandatory gate (tsgo, not just test)
+
+# Models available in full chain
+models:
+  - feature-development    # All 5 stages, full artifact chain
+  - research               # document + design (readiness cap 50%)
+  - knowledge-evolution    # document + implement
+  - documentation          # document only
+  - bug-fix                # document + implement + test
+  - refactor               # document + scaffold + implement + test
+  - hotfix                 # implement + test (emergency override)
+  - integration            # scaffold + implement + test
+  - project-lifecycle      # SFIF at project level
+
+# Full chain enforcement
+enforcement:
+  hooks:
+    pre_bash: true          # Block git ops, scope test commands to test stage
+    pre_write: true         # Block wrong-scope writes, protect frontmatter/infrastructure
+    post_write: true        # Track artifacts per stage
+    post_compact: true      # Rebuild context from authoritative files
+  commands:
+    stage_complete: true    # /stage-complete validates + commits + advances
+    task_done: true         # /task-done verifies Done When + recalculates epic
+    concern: true           # /concern files structured issue
+  harness:
+    loop_owned: true        # Agent never controls its own loop
+    task_dispatch: deterministic  # Harness picks tasks, not agent
+    git_owned: true         # Agent never touches git directly
+    budget_cap: true        # Kill if token budget exceeded per task
+    retry_cap: 3            # Max retries per stage, auto-escalate on 4th
+  immune_system:
+    doctor_cycle: 30        # Seconds between detection cycles (fleet only)
+    diseases: ["deviation", "laziness", "protocol_violation", "confident_but_wrong", "scope_creep"]
+    corrections: ["teach", "compact", "prune", "escalate"]
+
+# Readiness and progress
+tracking:
+  readiness_gate: 99          # Dispatch blocked until readiness 99 (PO confirms)
+  progress_tracking: realtime  # Via fleet_task_progress or harness updates
+  review_gate: adversarial     # Fleet-ops or human reviews every completion
+  human_gate: 99_to_100       # 99→100 ALWAYS requires human confirmation
+
+# Contribution requirements (fleet only)
+contributions:
+  required: true
+  synergy_matrix: true        # Cross-agent contributions per role
+  gate_before_work: true      # Dispatch blocked until required contributions received
+
+# Milestone and hierarchy
+hierarchy:
+  milestones: required        # Group epics into delivery targets
+  epics: required             # Strategic containers with acceptance criteria
+  modules: required           # Scoped deliverables with own design
+  tasks: required             # Atomic execution with stages
+
+# What's different from default/simplified
+differences:
+  all_stages_mandatory: true          # Every stage runs (except model-specific skips)
+  contribution_gating: true           # Cross-agent inputs required before work
+  milestone_tracking: required        # Milestones are mandatory, not optional
+  readiness_gate: 99                  # Highest gate — PO must confirm
+  enforcement: full_infrastructure    # Hooks + commands + harness + immune system
+  immune_system: true                 # Automated disease detection and correction
+  strict_verification: true           # Strictest checker is the mandatory gate
+  adversarial_review: true            # Every completion is adversarially reviewed
+  budget_cap: true                    # Token budget per task
+  retry_cap: true                     # Stage retry limit with auto-escalation
+
+# When to downgrade to default chain
+downgrade_triggers:
+  - "Experimental branch within production project (time-boxed, documented)"
+  - "Team agrees to skip formal review for a specific low-risk batch"
+  - "Decision page documents: why, what risks accepted, who approved"
+  # NEVER downgrade silently. Always a documented decision.
