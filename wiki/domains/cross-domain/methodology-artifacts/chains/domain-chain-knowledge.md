@@ -40,18 +40,19 @@ Artifact chain resolution for knowledge work — source ingestion, synthesis, ev
 
 ## Reference Content
 
-### Toolchain
+### Common Knowledge Toolchain Options
 
-> [!info] Knowledge Domain Stack
+> [!info] Toolchain varies by knowledge system — these are options, not requirements
 >
-> | Tool | Purpose | Gate Command |
-> |------|---------|-------------|
-> | tools/pipeline.py | Orchestration, ingestion, validation | `python3 -m tools.pipeline post` |
-> | tools/validate.py | Schema + artifact-type validation | `python3 -m tools.validate` |
-> | tools/lint.py | Health checks (orphans, dead rels, thin pages) | `python3 -m tools.lint` |
-> | tools/evolve.py | Evolution scoring, scaffolding, maturity review | `python3 -m tools.pipeline evolve --score` |
-> | Obsidian | Vault rendering, graph visualization | Manual review |
-> | NotebookLM | Grounded research verification | External tool |
+> | Concern | Options | Notes |
+> |---------|---------|-------|
+> | Vault / editor | Obsidian, Logseq, Notion, Dendron, plain markdown | Obsidian: local-first, graph view, plugins |
+> | Validation | Custom pipeline, schema validators, linters | Project-specific quality gates |
+> | Search | Built-in vault search, LightRAG, vector embeddings | LightRAG for semantic, keyword for exact |
+> | Research complement | NotebookLM, Perplexity, manual search | Grounded verification of AI-generated content |
+> | Evolution tracking | Custom scoring, manual review, staleness detection | Automated signals identify candidates |
+> | Export | Markdown copy, API, MCP tools, LightRAG sync | Multi-channel for different consumers |
+> | Graph visualization | Obsidian graph, custom tools, Neo4j | Obsidian native is sufficient for most |
 
 ### Knowledge Lifecycle — The Progressive Distillation Chain
 
@@ -150,14 +151,25 @@ Unlike code domains where artifacts flow through stages linearly (document → d
 >
 > This self-referential property means the wiki validates its own methodology by producing methodology pages that follow the methodology. If a methodology page fails its own quality gates, the methodology has a self-consistency problem. This is the "Standards Must Preach by Example" lesson in action.
 
+### Ecosystem Examples
+
+> [!example] Validated Implementations
+>
+> | Project | SDLC Level | Focus | Details |
+> |---------|-----------|-------|---------|
+> | **Research Wiki** | Default | 300-page knowledge system | [[identity-profile\|Research Wiki — Identity Profile]] — progressive distillation L0→L6, custom pipeline, self-referential methodology |
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
+> | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

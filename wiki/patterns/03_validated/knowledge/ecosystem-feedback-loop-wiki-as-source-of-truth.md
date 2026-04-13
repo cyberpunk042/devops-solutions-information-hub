@@ -165,6 +165,7 @@ The pattern has three properties that distinguish it from simple documentation:
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[identity-profile|Research Wiki — Identity Profile]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]

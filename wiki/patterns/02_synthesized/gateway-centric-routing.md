@@ -144,5 +144,6 @@ Avoid Gateway-Centric Routing when:
 [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 [[aicp|AICP]]
 [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[identity-profile|AICP — Identity Profile]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-local-ai|Model — Local AI ($0 Target)]]

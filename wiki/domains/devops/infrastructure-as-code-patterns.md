@@ -161,3 +161,4 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
 [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
 [[wsl2-development-patterns|WSL2 Development Patterns]]
+[[identity-profile|devops-control-plane — Identity Profile]]

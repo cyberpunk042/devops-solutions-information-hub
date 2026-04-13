@@ -112,3 +112,4 @@ Cross-referencing `Four-Project Ecosystem` and `Immune System Rules`: the `Four-
 [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 [[openarms|OpenArms]]
 [[wsl2-development-patterns|WSL2 Development Patterns]]
+[[identity-profile|devops-control-plane — Identity Profile]]

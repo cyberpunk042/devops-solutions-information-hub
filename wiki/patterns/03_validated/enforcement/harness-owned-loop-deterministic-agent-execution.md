@@ -147,6 +147,7 @@ The pattern separates WHAT the agent does (produce artifacts, reason about code,
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[identity-profile|OpenFleet — Identity Profile]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]

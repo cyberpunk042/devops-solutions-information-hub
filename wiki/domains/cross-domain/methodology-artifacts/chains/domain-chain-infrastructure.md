@@ -19,17 +19,17 @@ sources:
   - id: terraform-docs
     type: documentation
     url: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code
-tags: [methodology, artifact-chain, infrastructure, terraform, iac, domain-specific, devops-control-plane]
+tags: [methodology, artifact-chain, infrastructure, terraform, iac, domain-specific, flexible]
 ---
 
 # Artifact Chain — Infrastructure-IaC Domain
 > [!tip] AI Quick Start — Working on Infrastructure as Code
 >
-> 1. **Gate commands:** `terraform validate` (syntax), `terraform plan` (changes correct), `terraform apply` (staging only)
-> 2. **Scaffold:** `variable` and `output` blocks + module interfaces. NO `resource` blocks. NO `data` sources.
-> 3. **Implement:** `resource` blocks + module implementations + existing environment configs reference new modules
-> 4. **Test:** `terraform plan` shows expected changes (no surprise destroys) + `terraform apply` succeeds in staging
-> 5. **Unique to infra:** Deploy stage (optional, production apply), drift detection (use bug-fix model), state management
+> 1. **Identify your context** — Cloud provisioning (Terraform/Pulumi)? Container orchestration (Docker/K8s)? CI/CD pipelines? Config management (Ansible)? Each has different artifacts.
+> 2. **Pick your SDLC level** — Simplified: quick provisioning scripts. Default: stage-gated with plan verification. Full: compliance, drift detection, runbooks, monitoring.
+> 3. **Scaffold = structure** — Variable/output definitions, module interfaces. NO resource blocks, NO data sources.
+> 4. **Implement = resources** — Actual infrastructure definitions + environment wiring.
+> 5. **Unique to infra:** Optional deploy stage (production apply), drift detection, state management, cost estimation.
 
 ## Summary
 
@@ -37,17 +37,20 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 
 ## Reference Content
 
-### Toolchain
+### Common Infrastructure Toolchain Options
 
-> [!info] Infrastructure Domain Stack
+> [!info] Toolchain varies by project — these are options, not requirements
 >
-> | Tool | Purpose | Gate Command |
-> |------|---------|-------------|
-> | Terraform | Infrastructure provisioning | `terraform validate`, `terraform plan`, `terraform apply` |
-> | Docker / docker-compose | Container orchestration | `docker build`, `docker-compose up` |
-> | Ansible / Shell scripts | Configuration management | `ansible-playbook --check` |
-> | CI/CD (GitHub Actions, etc.) | Deployment pipeline | Pipeline passes |
-> | Remote state (S3/GCS) | State management | `terraform init` succeeds |
+> | Concern | Options | Notes |
+> |---------|---------|-------|
+> | Provisioning | Terraform, Pulumi, CloudFormation, CDK | Terraform most common, Pulumi for code-first |
+> | Containers | Docker, Podman, containerd | Docker dominant, Podman for rootless |
+> | Orchestration | Kubernetes, Docker Compose, ECS, Nomad | K8s for production, Compose for dev |
+> | Config management | Ansible, Chef, Salt, Shell scripts | Ansible most popular for IaC |
+> | CI/CD | GitHub Actions, GitLab CI, Jenkins, ArgoCD | GitOps patterns gaining dominance |
+> | State management | S3/GCS backend, Terraform Cloud, local | Remote state required for teams |
+> | Cost estimation | Infracost, AWS Calculator, `terraform plan` | Infracost for automated PR cost checks |
+> | Drift detection | Terraform plan (periodic), Driftctl, custom | Bug-fix model when drift detected |
 
 ### Feature Development — Infrastructure Chain
 
@@ -152,6 +155,19 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 > | **Rollback Plan** | How to undo if apply fails | Part of deployment plan |
 > | **Monitoring Config** | Alerts, dashboards, health checks | Before production |
 
+### SDLC Level Variation
+
+> [!abstract] Artifact Count Varies by SDLC Level
+>
+> | Stage | Simplified (POC) | Default (Staging) | Full (Production) |
+> |-------|-----------------|-------------------|-------------------|
+> | **Document** | Informal notes | Req spec + current state + gap analysis | + compliance mapping, security review |
+> | **Design** | Quick decisions | ADR + resource spec + module spec + deploy plan | + disaster recovery, capacity plan, cost model |
+> | **Scaffold** | Variable stubs | Variables + outputs + module interfaces + backend | + mock environments, test fixtures |
+> | **Implement** | Working resources | Resources + modules + environment wiring | + monitoring config, alerting rules |
+> | **Test** | Manual plan check | Plan verification + staging apply + health checks | + compliance scan, security audit, load test |
+> | **Deploy** | Direct apply | Staging → production with runbook | + blue/green, canary, rollback verification |
+
 ### Other Models — Infrastructure Subsets
 
 > [!abstract] Model → Infrastructure Artifacts
@@ -162,6 +178,14 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 > | **Bug Fix** | Document (identify misconfiguration) → Implement (fix resource/variable) → Test (plan + apply staging) |
 > | **Hotfix** | Direct fix → plan + apply (emergency, known issue) |
 > | **Refactor** | Document (current→target state) → Scaffold (new module structure) → Implement (move resources) → Test (no destroyed resources) |
+
+### Ecosystem Examples
+
+> [!example] Validated Implementations
+>
+> | Project | SDLC Level | Focus | Details |
+> |---------|-----------|-------|---------|
+> | **devops-control-plane** | Simplified → Default | TUI/CLI/Web + Terraform | [[identity-profile\|devops-control-plane — Identity Profile]] — 24 immune system rules, vault security |
 
 ## Open Questions
 
@@ -177,8 +201,11 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
+> | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
@@ -187,6 +214,7 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 - BUILDS ON: [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
 - RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 - RELATES TO: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
 - RELATES TO: [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
@@ -197,6 +225,7 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[model-methodology|Model — Methodology]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
 [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]

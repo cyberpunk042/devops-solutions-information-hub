@@ -162,3 +162,5 @@ The convergent principle: both own the loop, both block git, both enforce stages
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[identity-profile|OpenArms — Identity Profile]]
+[[identity-profile|OpenFleet — Identity Profile]]

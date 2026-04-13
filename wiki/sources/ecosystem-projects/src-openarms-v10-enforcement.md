@@ -154,3 +154,4 @@ OpenArms has distilled 18 lesson files + 4 findings docs in `wiki/domains/learni
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[identity-profile|OpenArms — Identity Profile]]

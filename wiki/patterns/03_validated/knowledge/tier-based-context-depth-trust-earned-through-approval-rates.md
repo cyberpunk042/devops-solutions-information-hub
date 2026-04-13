@@ -144,6 +144,7 @@ The mechanism: an AI model's approval rate is tracked per task type across rolli
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering|Model — Context Engineering]]
+[[identity-profile|OpenFleet — Identity Profile]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]

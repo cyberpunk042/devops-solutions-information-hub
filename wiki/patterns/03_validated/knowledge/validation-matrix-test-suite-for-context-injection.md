@@ -153,5 +153,6 @@ The structural consistency principle: every scenario follows the SAME skeleton. 
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[model-context-engineering|Model — Context Engineering]]
+[[identity-profile|OpenFleet — Identity Profile]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]

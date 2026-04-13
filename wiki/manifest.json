@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-13T04:53:48.902546+00:00",
+  "generated": "2026-04-13T05:30:54.369726+00:00",
   "stats": {
-    "pages": 300,
+    "pages": 305,
     "domains": 9,
     "sources": 28,
     "comparisons": 6,
-    "relationships": 2003,
-    "tags_unique": 847,
+    "relationships": 2046,
+    "tags_unique": 848,
     "layers": {
       "3": 5,
       "6": 16,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 184,
-      "seed": 73
+      "seed": 78
     }
   },
   "pages": [
@@ -5178,7 +5178,7 @@
         "terraform",
         "iac",
         "domain-specific",
-        "devops-control-plane"
+        "flexible"
       ],
       "sources": [
         {
@@ -5211,6 +5211,10 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
         },
         {
           "verb": "RELATES TO",
@@ -5320,7 +5324,7 @@
         "python",
         "wiki",
         "domain-specific",
-        "research-wiki"
+        "flexible"
       ],
       "sources": [
         {
@@ -5364,6 +5368,10 @@
           "target": "Artifact Chain \u2014 TypeScript-Node Domain"
         },
         {
+          "verb": "RELATES TO",
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+        },
+        {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
         }
@@ -5378,31 +5386,26 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "artifact-chain",
         "typescript",
         "node",
         "domain-specific",
-        "openarms",
-        "openfleet"
+        "flexible"
       ],
       "sources": [
-        {
-          "id": "openarms-chain",
-          "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
-        },
-        {
-          "id": "openarms-methodology",
-          "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
-        },
         {
           "id": "taxonomy",
           "type": "wiki",
           "file": "wiki/domains/cross-domain/methodology-artifact-taxonomy.md"
+        },
+        {
+          "id": "openarms-profile",
+          "type": "wiki",
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms as one validated example of this domain"
         }
       ],
       "layer": "",
@@ -5428,6 +5431,10 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
         },
         {
           "verb": "FEEDS INTO",
@@ -8952,6 +8959,363 @@
         {
           "verb": "ENABLES",
           "target": "Claude Code Scheduling"
+        }
+      ]
+    },
+    {
+      "path": "ecosystem/project_profiles/aicp/identity-profile.md",
+      "slug": "ecosystem/project_profiles/aicp/identity-profile",
+      "title": "AICP \u2014 Identity Profile",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "ecosystem",
+        "project-profile",
+        "aicp",
+        "identity",
+        "goldilocks"
+      ],
+      "sources": [
+        {
+          "id": "aicp-concept",
+          "type": "wiki",
+          "file": "wiki/domains/tools-and-platforms/aicp.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Skills Architecture Is the Dominant LLM Extension Pattern"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Gateway-Centric Routing"
+        }
+      ]
+    },
+    {
+      "path": "ecosystem/project_profiles/devops-control-plane/identity-profile.md",
+      "slug": "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "title": "devops-control-plane \u2014 Identity Profile",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "ecosystem",
+        "project-profile",
+        "devops-control-plane",
+        "identity",
+        "goldilocks"
+      ],
+      "sources": [
+        {
+          "id": "dcp-concept",
+          "type": "wiki",
+          "file": "wiki/domains/devops/devops-control-plane.md"
+        },
+        {
+          "id": "dcp-claude",
+          "type": "file",
+          "file": "raw/articles/devops-control-plane-claude.md"
+        },
+        {
+          "id": "dcp-architecture",
+          "type": "file",
+          "file": "raw/articles/devops-control-plane-docs-architecture.md"
+        },
+        {
+          "id": "dcp-readme",
+          "type": "file",
+          "file": "raw/articles/devops-control-plane-readme.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "devops-control-plane"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Immune System Rules"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        }
+      ]
+    },
+    {
+      "path": "ecosystem/project_profiles/openarms/identity-profile.md",
+      "slug": "ecosystem/project_profiles/openarms/identity-profile",
+      "title": "OpenArms \u2014 Identity Profile",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "ecosystem",
+        "project-profile",
+        "openarms",
+        "identity",
+        "goldilocks"
+      ],
+      "sources": [
+        {
+          "id": "openarms-claude",
+          "type": "file",
+          "file": "raw/articles/openarms-claude.md"
+        },
+        {
+          "id": "openarms-v10",
+          "type": "wiki",
+          "file": "wiki/sources/ecosystem-projects/src-openarms-v10-enforcement.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 OpenArms v10 \u2014 Infrastructure Enforcement and Agent Behavior"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenArms vs OpenFleet Enforcement Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        }
+      ]
+    },
+    {
+      "path": "ecosystem/project_profiles/openfleet/identity-profile.md",
+      "slug": "ecosystem/project_profiles/openfleet/identity-profile",
+      "title": "OpenFleet \u2014 Identity Profile",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "ecosystem",
+        "project-profile",
+        "openfleet",
+        "identity",
+        "goldilocks"
+      ],
+      "sources": [
+        {
+          "id": "openfleet-fleet-architecture",
+          "type": "wiki",
+          "file": "wiki/sources/ecosystem-projects/src-openfleet-fleet-architecture.md"
+        },
+        {
+          "id": "openfleet-concept",
+          "type": "wiki",
+          "file": "wiki/domains/ai-agents/orchestration/openfleet.md"
+        },
+        {
+          "id": "openfleet-immune-system",
+          "type": "file",
+          "file": "raw/articles/openfleet-immune-system.md"
+        },
+        {
+          "id": "openfleet-methodology-scan",
+          "type": "file",
+          "file": "raw/articles/openfleet-methodology-scan.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 OpenFleet Fleet Architecture \u2014 Immune System, Dispatch, and Tiers"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenArms vs OpenFleet Enforcement Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Immune System Rules"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Contribution Gating \u2014 Cross-Agent Inputs Before Work"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Validation Matrix \u2014 Test Suite for Context Injection"
+        }
+      ]
+    },
+    {
+      "path": "ecosystem/project_profiles/research-wiki/identity-profile.md",
+      "slug": "ecosystem/project_profiles/research-wiki/identity-profile",
+      "title": "Research Wiki \u2014 Identity Profile",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "ecosystem",
+        "project-profile",
+        "research-wiki",
+        "identity",
+        "goldilocks",
+        "self-referential"
+      ],
+      "sources": [
+        {
+          "id": "wiki-claude-md",
+          "type": "file",
+          "file": "CLAUDE.md"
+        },
+        {
+          "id": "wiki-stats",
+          "type": "file",
+          "file": "wiki/manifest.json",
+          "description": "Wiki statistics: 300 pages, 2003 relationships (from tools.view)"
+        },
+        {
+          "id": "domain-chain-python-wiki",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Second Brain"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology System Map"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chains by Methodology Model"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Artifact Chain \u2014 Python-Wiki Domain"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
         }
       ]
     },
@@ -19689,8 +20053,8 @@
       "relationship_count": 126
     },
     "cross-domain": {
-      "page_count": 134,
-      "relationship_count": 901
+      "page_count": 139,
+      "relationship_count": 944
     },
     "ai-agents": {
       "page_count": 51,
@@ -19930,6 +20294,11 @@
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
       "domains/cross-domain/integration/second-brain-integration-requirements",
       "domains/cross-domain/methodology-framework/project-self-identification-protocol",
+      "ecosystem/project_profiles/aicp/identity-profile",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "ecosystem/project_profiles/openarms/identity-profile",
+      "ecosystem/project_profiles/openfleet/identity-profile",
+      "ecosystem/project_profiles/research-wiki/identity-profile",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
       "spine/goldilocks-flow"
     ],
@@ -19941,6 +20310,11 @@
     ],
     "identity": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
+      "ecosystem/project_profiles/aicp/identity-profile",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "ecosystem/project_profiles/openarms/identity-profile",
+      "ecosystem/project_profiles/openfleet/identity-profile",
+      "ecosystem/project_profiles/research-wiki/identity-profile",
       "spine/goldilocks-flow"
     ],
     "routing": [
@@ -20021,7 +20395,6 @@
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
-      "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/execution-modes-and-end-conditions",
       "domains/devops/four-project-ecosystem",
@@ -20030,6 +20403,7 @@
       "domains/knowledge-systems/wiki-core/wiki-backlog-pattern",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
+      "ecosystem/project_profiles/openarms/identity-profile",
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
@@ -20051,6 +20425,7 @@
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
+      "ecosystem/project_profiles/aicp/identity-profile",
       "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "spine/models/depth/model-local-ai",
@@ -20073,6 +20448,11 @@
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "ecosystem/project_profiles/aicp/identity-profile",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "ecosystem/project_profiles/openarms/identity-profile",
+      "ecosystem/project_profiles/openfleet/identity-profile",
+      "ecosystem/project_profiles/research-wiki/identity-profile",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "spine/models/ecosystem/model-ecosystem",
@@ -20088,13 +20468,13 @@
       "domains/ai-agents/patterns/rework-prevention",
       "domains/ai-agents/patterns/spec-driven-development",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
-      "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/four-project-ecosystem",
       "domains/devops/immune-system-rules",
       "domains/devops/stage-gate-methodology",
       "domains/knowledge-systems/wiki-core/lightrag",
       "domains/knowledge-systems/wiki-core/wiki-backlog-pattern",
+      "ecosystem/project_profiles/openfleet/identity-profile",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "patterns/02_synthesized/deterministic-shell-llm-core",
@@ -21781,10 +22161,11 @@
       "domains/devops/infrastructure-as-code-patterns",
       "spine/models/agent-config/model-markdown-as-iac"
     ],
-    "devops-control-plane": [
+    "flexible": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-infrastructure",
-      "domains/devops/four-project-ecosystem",
-      "spine/models/ecosystem/model-ecosystem"
+      "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
+      "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript",
+      "spine/models/foundation/model-methodology"
     ],
     "knowledge": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-knowledge"
@@ -21801,10 +22182,6 @@
       "domains/tools-and-platforms/notebooklm-py-cli",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
-    ],
-    "research-wiki": [
-      "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
-      "domains/devops/four-project-ecosystem"
     ],
     "node": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript"
@@ -22040,6 +22417,15 @@
     ],
     "time-limit": [
       "domains/devops/execution-modes-and-end-conditions"
+    ],
+    "devops-control-plane": [
+      "domains/devops/four-project-ecosystem",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "spine/models/ecosystem/model-ecosystem"
+    ],
+    "research-wiki": [
+      "domains/devops/four-project-ecosystem",
+      "ecosystem/project_profiles/research-wiki/identity-profile"
     ],
     "multi-project": [
       "domains/devops/four-project-ecosystem",
@@ -22493,6 +22879,18 @@
     "pm-agent": [
       "domains/tools-and-platforms/plane"
     ],
+    "project-profile": [
+      "ecosystem/project_profiles/aicp/identity-profile",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "ecosystem/project_profiles/openarms/identity-profile",
+      "ecosystem/project_profiles/openfleet/identity-profile",
+      "ecosystem/project_profiles/research-wiki/identity-profile"
+    ],
+    "self-referential": [
+      "ecosystem/project_profiles/research-wiki/identity-profile",
+      "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
+      "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
+    ],
     "context-compaction": [
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event"
     ],
@@ -22658,10 +23056,6 @@
     ],
     "foundational": [
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain"
-    ],
-    "self-referential": [
-      "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
-      "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "static-docs": [
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation"
@@ -23563,9 +23957,6 @@
     "knowledge-system": [
       "spine/models/foundation/model-llm-wiki"
     ],
-    "flexible": [
-      "spine/models/foundation/model-methodology"
-    ],
     "multi-model": [
       "spine/models/foundation/model-methodology"
     ],
@@ -23705,8 +24096,15 @@
     {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
+        "AICP \u2014 Identity Profile",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
+      ]
+    },
+    {
+      "target": "Research Wiki as Ecosystem Intelligence Hub",
+      "referenced_by": [
+        "Research Wiki \u2014 Identity Profile"
       ]
     },
     {

@@ -28,8 +28,8 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [Artifact Chains by Methodology Model](methodology-artifacts/chains/artifact-chains-by-model.md) — Complete artifact chain documentation for all 9 methodology models
 - [Artifact Chain — Infrastructure-IaC Domain](methodology-artifacts/chains/domain-chain-infrastructure.md) — Artifact chain resolution for Infrastructure as Code projects (devops-control-plane, Terraform, Docker, CI/CD)
 - [Artifact Chain — Knowledge-Evolution Domain](methodology-artifacts/chains/domain-chain-knowledge.md) — Artifact chain resolution for knowledge work — source ingestion, synthesis, evolution, and domain curation
-- [Artifact Chain — Python-Wiki Domain](methodology-artifacts/chains/domain-chain-python-wiki.md) — Complete artifact chain resolution for Python tool projects and knowledge wikis (the research wiki itself)
-- [Artifact Chain — TypeScript-Node Domain](methodology-artifacts/chains/domain-chain-typescript.md) — Complete artifact chain resolution for TypeScript/Node
+- [Artifact Chain — Python-Wiki Domain](methodology-artifacts/chains/domain-chain-python-wiki.md) — Artifact chain framework for Python-based tool projects and knowledge wikis
+- [Artifact Chain — TypeScript-Node Domain](methodology-artifacts/chains/domain-chain-typescript.md) — Artifact chain framework for TypeScript/Node
 - [Methodology Evolution Protocol](methodology-evolution-protocol.md) — How the methodology evolves based on evidence, not theory
 - [Global Standards Adherence — Engineering Principles the Wiki Follows](methodology-framework/global-standards-adherence.md) — The wiki and its methodology framework adhere to recognized engineering standards — not by copying them wholesale, bu...
 - [Methodology Config Architecture — How the Pieces Fit Together](methodology-framework/methodology-config-architecture.md) — A reasoning document examining how the wiki's config files, the methodology system, and the LLM wiki knowledge layer ...
@@ -48,4 +48,4 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `domain-specific`, `framework`, `artifact-chain`, `second-brain`, `requirements`, `architecture`, `sdlc`, `ai-agents`, `integration`, `goldilocks`, `skyscraper`, `reference`, `design`, `models`, `stage-gate`, `evolution`, `wiki`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `framework`, `artifact-chain`, `second-brain`, `requirements`, `architecture`, `flexible`, `sdlc`, `ai-agents`, `integration`, `goldilocks`, `skyscraper`, `reference`, `design`, `models`, `stage-gate`, `evolution`

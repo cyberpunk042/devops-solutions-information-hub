@@ -126,6 +126,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[claude-code-skills|Claude Code Skills]]
 [[wiki-knowledge-graph|Wiki Knowledge Graph]]
 [[devops-control-plane|devops-control-plane]]
+[[identity-profile|AICP — Identity Profile]]
 [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]

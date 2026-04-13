@@ -213,4 +213,5 @@ The VRAM constraint is not an architectural flaw — it is a deliberate design c
 [[model-sfif-architecture|Model — SFIF and Architecture]]
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[gateway-centric-routing|Gateway-Centric Routing]]
+[[identity-profile|AICP — Identity Profile]]
 [[model-notebooklm|Model — NotebookLM]]

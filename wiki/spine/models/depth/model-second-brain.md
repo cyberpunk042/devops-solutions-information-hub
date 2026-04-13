@@ -240,3 +240,4 @@ The wiki IS a second brain — and a second brain is a HUB, not a silo. It aggre
 [[progressive-distillation|Progressive Distillation]]
 [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 [[model-methodology|Model — Methodology]]
+[[identity-profile|Research Wiki — Identity Profile]]

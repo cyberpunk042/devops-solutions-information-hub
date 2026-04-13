@@ -148,3 +148,4 @@ Skip logic: subtask, blocker, concern, spike types skip contributions entirely.
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
+[[identity-profile|OpenFleet — Identity Profile]]

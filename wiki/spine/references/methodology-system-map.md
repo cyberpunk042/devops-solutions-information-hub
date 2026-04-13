@@ -293,6 +293,7 @@ Complete map of the methodology system — every component, where it lives, what
 [[gateway-tools-reference|Gateway Tools Reference — Complete Command Documentation]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
+[[identity-profile|Research Wiki — Identity Profile]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
 [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]

@@ -149,5 +149,6 @@ The implementing agent receives contributions AS CONTEXT — architect's design,
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[identity-profile|OpenFleet — Identity Profile]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]

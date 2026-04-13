@@ -172,7 +172,7 @@ The research wiki's primary export to the ecosystem is the methodology framework
 - IMPLEMENTS: [[model-methodology|Model — Methodology]]
 - RELATES TO: [[model-ecosystem|Model — Ecosystem Architecture]]
 - RELATES TO: [[model-second-brain|Model — Second Brain]]
-- RELATES TO: [[super-model|Research Wiki as Ecosystem Intelligence Hub]]
+- RELATES TO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 - RELATES TO: [[methodology-system-map|Methodology System Map]]
 - FEEDS INTO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - FEEDS INTO: [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
