@@ -22,7 +22,7 @@ Guided sequence for understanding the research wiki's methodology system — fro
 
 ## Prerequisites
 
-- Read wiki/spine/model-registry.md to understand the model system
+- Read wiki/spine/references/model-registry.md to understand the model system
 - Basic familiarity with YAML and markdown
 - Access to the research wiki (this repo)
 

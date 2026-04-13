@@ -173,7 +173,7 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 >
 > **Key files to read first:**
 > - Any of the 3 existing annotated standards (lesson, pattern, decision) for the format
-> - `wiki/spine/model-llm-wiki-standards.md` — the meta-standard that defines what ALL standards should have
+> - `wiki/spine/standards/model-standards/model-llm-wiki-standards.md` — the meta-standard that defines what ALL standards should have
 > - `raw/notes/2026-04-12-documentation-standards-directive.md` — operator quality expectations
 
 ## Relationships

@@ -19,7 +19,7 @@ artifacts:
   - "wiki/config/artifact-types.yaml"
   - "wiki/config/export-profiles.yaml"
   - "wiki/domains/cross-domain/model-composition-rules.md"
-  - "wiki/spine/methodology-adoption-guide.md"
+  - "wiki/spine/references/methodology-adoption-guide.md"
   - "wiki/domains/cross-domain/methodology-evolution-protocol.md"
 confidence: high
 created: 2026-04-11

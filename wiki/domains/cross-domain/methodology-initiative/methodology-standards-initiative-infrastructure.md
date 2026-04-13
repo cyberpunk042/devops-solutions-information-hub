@@ -56,8 +56,8 @@ Complete mapping of the methodology and artifact infrastructure across the resea
 > | Component | Count | Location | Quality |
 > |-----------|-------|----------|---------|
 > | Methodology concept pages | 7 | wiki/domains/devops/, cross-domain/ | Growing maturity, authoritative |
-> | Spine models | 15 | wiki/spine/model-*.md | Growing-to-mature |
-> | Standards pages | 7 | wiki/spine/model-*-standards.md | Seed-to-growing |
+> | Spine models | 15 | wiki/spine/models/*/model-*.md | Growing-to-mature |
+> | Standards pages | 7 | wiki/spine/standards/model-standards/model-*-standards.md | Seed-to-growing |
 > | Page templates | 6 | wiki/config/templates/ | Skeleton only, no exemplars |
 > | Schema definition | 1 | wiki/config/wiki-schema.yaml | Complete for structure |
 > | Quality standards | 1 | wiki/config/quality-standards.yaml | Thresholds only |

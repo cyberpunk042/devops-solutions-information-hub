@@ -13,7 +13,7 @@ readiness: 70
 progress: 70
 stages_completed:
 artifacts:
-  - "wiki/spine/second-brain-integration-chain.md"
+  - "wiki/spine/references/second-brain-integration-chain.md"
 confidence: high
 created: 2026-04-12
 updated: 2026-04-13
@@ -86,7 +86,7 @@ PROVE the complete integration chain works by walking OpenArms through every ste
 > [!info] For fresh context:
 >
 > **What:** Run the integration chain on OpenArms, capture proof.
-> **Pre-existing:** `wiki/spine/second-brain-integration-chain.md` (17 steps), `tools/gateway.py` (gateway), OpenArms project (target project).
+> **Pre-existing:** `wiki/spine/references/second-brain-integration-chain.md` (17 steps), `tools/gateway.py` (gateway), OpenArms project (target project).
 > **Depends on:** E010-E015 completing first.
 
 ## Relationships

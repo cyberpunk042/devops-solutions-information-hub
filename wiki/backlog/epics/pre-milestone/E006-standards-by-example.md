@@ -14,8 +14,8 @@ stages_completed:
   - "document"
   - "implement"
 artifacts:
-  - "wiki/spine/model-llm-wiki-standards.md"
-  - "wiki/spine/model-methodology-standards.md"
+  - "wiki/spine/standards/model-standards/model-llm-wiki-standards.md"
+  - "wiki/spine/standards/model-standards/model-methodology-standards.md"
   - "wiki/spine/standards/concept-page-standards.md"
   - "wiki/spine/standards/lesson-page-standards.md"
   - "wiki/spine/standards/pattern-page-standards.md"

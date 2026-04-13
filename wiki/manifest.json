@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T18:55:07.578959+00:00",
+  "generated": "2026-04-13T19:00:09.444612+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -4523,12 +4523,12 @@
         {
           "id": "methodology-model",
           "type": "wiki",
-          "file": "wiki/spine/model-methodology.md"
+          "file": "wiki/spine/models/foundation/model-methodology.md"
         },
         {
           "id": "adoption-guide",
           "type": "wiki",
-          "file": "wiki/spine/methodology-adoption-guide.md"
+          "file": "wiki/spine/references/methodology-adoption-guide.md"
         },
         {
           "id": "agent-artifacts",

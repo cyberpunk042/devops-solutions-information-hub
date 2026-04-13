@@ -24,7 +24,7 @@ Quality elevation session. All 15 model pages elevated with standard sections + 
 - Model: Methodology elevated (527→569, callout-styled stage boundaries + quality tiers)
 - Model-builder skill updated with styling standards section
 - Double-bracket bug root-cause fixed in tools/common.py (_split_targets respects `[[wikilinks]]`)
-- Model Registry created (wiki/spine/model-registry.md) + CLAUDE.md + wiki/index.md updated
+- Model Registry created (wiki/spine/references/model-registry.md) + CLAUDE.md + wiki/index.md updated
 - All 15 model pages: standard sections (Key Pages, Lessons, State of Knowledge, How to Adopt) + callouts
 - 4 new standards pages: Methodology, Claude Code, Quality, Extension (Skills/Commands/Hooks)
 - 1 new standards page: Knowledge Evolution

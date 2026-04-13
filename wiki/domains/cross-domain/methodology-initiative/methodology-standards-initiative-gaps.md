@@ -121,7 +121,7 @@ Systematic identification of gaps between what the methodology standards initiat
 
 | Aspect | Details |
 |--------|---------|
-| **Current state** | wiki/spine/adoption-guide.md exists but covers wiki adoption, not methodology adoption. No guide for "how to configure your project to use this methodology." |
+| **Current state** | wiki/spine/references/adoption-guide.md exists but covers wiki adoption, not methodology adoption. No guide for "how to configure your project to use this methodology." |
 | **Required state** | Step-by-step guide: (1) declare your domain profile, (2) select applicable models, (3) configure stage gates for your stack, (4) install enforcement hooks, (5) set execution mode. With examples for TypeScript, Python, infrastructure, wiki projects. |
 | **Impact** | Projects can't adopt the methodology without deep familiarity with both the wiki AND OpenArms internals. Adoption barrier is too high. |
 | **Affected scope** | wiki/spine/ (new or updated adoption guide), example configurations per project type |
@@ -230,7 +230,7 @@ Systematic identification of gaps between what the methodology standards initiat
 | **Current state** | model-methodology-standards.md is at "seed" maturity — the weakest of all standards pages. It has execution examples and checklists but lacks: recovery procedures, failure rate data, compliance metrics, annotated methodology.yaml example. |
 | **Required state** | Mature standards page with: gold-standard execution examples for every model (not just feature-development), recovery procedures when gates fail, per-model compliance checklist, annotated methodology.yaml showing what good configuration looks like. |
 | **Impact** | The methodology model's own standards page doesn't meet the quality bar of other standards pages. This undermines credibility. |
-| **Affected scope** | wiki/spine/model-methodology-standards.md |
+| **Affected scope** | wiki/spine/standards/model-standards/model-methodology-standards.md |
 | **Complexity** | M — content exists across wiki pages and OpenArms learnings, needs consolidation |
 
 #### Gap D4: No Self-Validation Loop

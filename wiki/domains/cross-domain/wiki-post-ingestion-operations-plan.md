@@ -56,7 +56,7 @@ Sequential operations plan for validating the wiki after any content change. Thi
 
 - **Action:** Convert ``[[Page Title]]`` wikilinks to Obsidian-compatible format for graph view
 - **Expected output:** Wikilinks updated in all pages. Backlinks sections regenerated.
-- **Validation:** Spot-check one page: `grep "## Backlinks" wiki/spine/model-methodology.md` — section exists
+- **Validation:** Spot-check one page: `grep "## Backlinks" wiki/spine/models/foundation/model-methodology.md` — section exists
 - **Rollback:** Re-run — wikilinks are regenerated from relationship sections
 
 ### Step 5: Run Lint Checks

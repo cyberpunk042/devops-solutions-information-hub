@@ -143,7 +143,7 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM �
 > - `wiki/domains/cross-domain/project-self-identification-protocol.md` — current concept page
 > - `tools/gateway.py` — current gateway with auto_detect_identity function
 > - `wiki/config/sdlc-chains/` — 3 chain configs
-> - `wiki/spine/second-brain-integration-chain.md` — 17-step chain (flow should enhance or replace)
+> - `wiki/spine/references/second-brain-integration-chain.md` — 17-step chain (flow should enhance or replace)
 
 ## Relationships
 

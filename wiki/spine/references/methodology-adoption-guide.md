@@ -74,7 +74,7 @@ Then in your CLAUDE.md, add a reference:
 ## Methodology
 
 This project follows the methodology defined in the devops-solutions-research-wiki.
-See: wiki/spine/model-methodology.md for models, wiki/spine/model-methodology-standards.md for quality bar.
+See: wiki/spine/models/foundation/model-methodology.md for models, wiki/spine/standards/model-standards/model-methodology-standards.md for quality bar.
 
 Stage gates: Document → Design → Scaffold → Implement → Test
 Never skip stages. "Continue" means advance within the current stage, not skip ahead.

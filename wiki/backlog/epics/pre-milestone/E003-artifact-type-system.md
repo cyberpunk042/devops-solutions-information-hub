@@ -44,7 +44,7 @@ artifacts:
   - "wiki/config/templates/milestone.md"
   - "wiki/config/templates/evolution.md"
   - "wiki/config/templates/learning-path.md"
-  - "wiki/spine/frontmatter-field-reference.md"
+  - "wiki/spine/references/frontmatter-field-reference.md"
   - "wiki/domains/cross-domain/sdlc-customization-framework.md"
   - "wiki/domains/cross-domain/readiness-vs-progress.md"
   - "wiki/domains/cross-domain/three-pm-levels.md"

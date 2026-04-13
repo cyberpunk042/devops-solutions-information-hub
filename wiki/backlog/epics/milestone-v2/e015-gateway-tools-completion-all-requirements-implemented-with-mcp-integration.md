@@ -63,7 +63,7 @@ Complete ALL 44 functional requirements for the gateway tools — the unified Py
 - [ ] `gateway factory-reset --target dir/` — resets a wiki to clean template state (with confirmation prompt)
 - [ ] MCP server exposes: `wiki_gateway_query`, `wiki_gateway_template`, `wiki_gateway_contribute`, `wiki_gateway_status`
 - [ ] Every auto-detection includes warning: "Auto-detected: X. Override with --Y if wrong."
-- [ ] `wiki/spine/gateway-tools-reference.md` — complete documentation page in wiki (reference type)
+- [ ] `wiki/spine/references/gateway-tools-reference.md` — complete documentation page in wiki (reference type)
 - [ ] `--brain` auto-detects second brain location from sibling directories
 - [ ] `gateway --help` shows the guided entry (common paths), not raw argparse
 - [ ] All 44 FR requirements from the requirements spec have status=done or documented-deferral
@@ -115,7 +115,7 @@ Complete ALL 44 functional requirements for the gateway tools — the unified Py
 
 | Task | What |
 |------|------|
-| T-E015-15 | Create `wiki/spine/gateway-tools-reference.md` — complete reference page for all gateway commands |
+| T-E015-15 | Create `wiki/spine/references/gateway-tools-reference.md` — complete reference page for all gateway commands |
 | T-E015-16 | Update CLAUDE.md gateway section with all new commands |
 | T-E015-17 | Update methodology system map with gateway tools section |
 

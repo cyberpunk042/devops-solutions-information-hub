@@ -178,7 +178,7 @@ None. This is the foundation epic. Start immediately.
 > - `wiki/backlog/milestones/second-brain-complete-system-v2-0.md` — the milestone this epic belongs to
 > - `wiki/domains/cross-domain/second-brain-integration-requirements.md` — 44 requirements, status per requirement
 > - `wiki/spine/super-model.md` — v1.3 state assessment
-> - `wiki/spine/methodology-system-map.md` — complete lookup for every component
+> - `wiki/spine/references/methodology-system-map.md` — complete lookup for every component
 > - `raw/notes/2026-04-12-documentation-standards-directive.md` — documentation quality standards
 
 ## Relationships

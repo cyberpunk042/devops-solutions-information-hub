@@ -12,10 +12,10 @@ updated: 2026-04-13
 sources:
   - id: methodology-model
     type: wiki
-    file: wiki/spine/model-methodology.md
+    file: wiki/spine/models/foundation/model-methodology.md
   - id: adoption-guide
     type: wiki
-    file: wiki/spine/methodology-adoption-guide.md
+    file: wiki/spine/references/methodology-adoption-guide.md
   - id: agent-artifacts
     type: wiki
     file: wiki/domains/cross-domain/ai-agent-artifacts.md
