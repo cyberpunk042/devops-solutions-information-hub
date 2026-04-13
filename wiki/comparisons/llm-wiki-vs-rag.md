@@ -138,6 +138,16 @@ Cross-referencing the LLM Wiki Pattern and Knowledge Evolution Pipeline pages: t
 > [!example]- Migration path to hybrid search at 200+ pages?
 > Additive, not disruptive. markdown files remain unchanged; LightRAG added as query layer. manifest.json + `## Relationships` provide all inputs. Trigger: when domain sub-indexes become too large for single-context navigation (~200+ per domain or 500+ total). `LightRAG --storage-type json` enables zero-database-dependency first deployment.
 
+### Verdict
+
+> [!success] Recommendation
+>
+> **Default choice:** LLM Wiki for any actively curated knowledge base under 200 pages. Zero infrastructure, zero setup friction, and it compounds — every session starts from accumulated synthesis height, not zero.
+>
+> **Choose LLM Wiki when:** Knowledge base is under 200 pages and actively curated by an LLM, multi-hop reasoning across typed relationships is needed, content changes frequently (re-embedding costs are prohibitive), infrastructure budget is zero, or the team can maintain structured markdown.
+> **Choose Traditional RAG when:** Document collection is in the millions and cannot be curated manually, users are non-technical and cannot maintain a structured wiki, queries are primarily single-hop factual lookups, or an existing enterprise embedding pipeline is already in place.
+> **Combine both when:** The wiki is approaching 200 pages or domain sub-indexes are becoming too large for single-context navigation. The migration path is additive: [[wiki-first-with-lightrag-upgrade-path|add LightRAG as a query layer]] without touching markdown files. `manifest.json` and the `## Relationships` sections already provide all graph inputs. Trigger the upgrade when total pages exceed ~500 or any single domain exceeds ~200 pages.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

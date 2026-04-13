@@ -135,6 +135,16 @@ Cross-referencing `LLM Wiki vs RAG`: the comparison page addresses this directly
 
 Cross-referencing `Wiki Knowledge Graph` and `LightRAG`: yes, they converge substantially. The `LightRAG` page documents: "Unlike traditional vector-only RAG that treats documents as isolated chunks, LightRAG extracts entities and relationships to build a knowledge graph, then retrieves via graph traversal." LightRAG's four query modes (naive, local, global, hybrid/mix) with hybrid combining entity-centric and relationship-centric retrieval maps directly onto the LLM Wiki v2 three-stream hybrid (BM25 + vector + graph). The `Wiki Knowledge Graph` page confirms the convergence: "the wiki's relationship format (- VERB: Target Name) is directly compatible with kb_sync.py's regex parser" — meaning the LLM Wiki v2 approach can be implemented via LightRAG by exporting the wiki's typed relationships into LightRAG's graph backend. GraphRAG and LLM Wiki v2 arrive at the same architecture from opposite starting points: GraphRAG builds structure from unstructured documents; LLM Wiki v2 starts from structured markdown and adds retrieval infrastructure. LightRAG is the implementation bridge between them.
 
+### Verdict
+
+> [!success] Recommendation
+>
+> **Default choice:** Agentic search (glob/grep/index navigation) for any well-structured, actively maintained knowledge base under 200 pages.
+>
+> **Choose agentic search when:** The knowledge base is well-organized with explicit indexes and typed links, content changes frequently (code, active wikis), multi-hop reasoning across related concepts is needed, infrastructure budget is zero, or the use case is code navigation where embeddings go stale faster than the code changes.
+> **Choose vector search when:** The document collection exceeds what any index can hold in a single context window, content is loosely structured or unstructured, queries are primarily single-hop factual retrieval, or an existing embedding infrastructure is already in place.
+> **Combine both when:** The wiki is approaching or exceeding 200 pages, or query frequency is high enough that RAG infrastructure cost amortizes. The practical bridge is [[agentic-search-vs-vector-search|LightRAG]]: export typed wiki relationships into its graph backend, use BM25/vector as the first-pass filter, and follow explicit page links as the graph traversal pass. This is the LLM Wiki v2 three-stream hybrid, and it is additive — markdown files stay unchanged.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

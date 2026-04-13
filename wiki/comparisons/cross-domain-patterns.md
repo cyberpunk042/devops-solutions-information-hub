@@ -170,6 +170,18 @@ Certain structural patterns recur independently across multiple domains in this 
 > [!example]- Which patterns are domain-specific vs genuinely universal?
 > **Universal (3+ domains):** Plan-Execute-Review (4 domains), Progressive Distillation (3+), Atomic Units + Typed Links (3+), Context-Aware Tool Loading (any shared-resource system). **More domain-specific:** Gateway-Centric Routing (strong in distributed systems, weak in knowledge-systems), Deterministic Shell + LLM Core (most native to ai-agents/automation; wiki post-chain is the closest knowledge-systems analog).
 
+### Key Takeaway
+
+> [!success] Applying These Patterns
+>
+> This page is a survey, not a two-sided comparison — the six patterns are complementary, not competing. The takeaway is how to apply them in combination.
+>
+> **Adopt all six by default when building LLM-augmented systems.** They address distinct root constraints and do not conflict. A system missing any one of them will exhibit the failure mode that pattern prevents: missing Plan-Execute-Review produces silent failures; missing Deterministic Shell produces unreliable quality gates; missing Context-Aware Tool Loading degrades accuracy as context fills; missing Progressive Distillation lets raw knowledge accumulate without becoming usable; missing Atomic Units + Typed Links prevents precise querying; missing Gateway-Centric Routing produces N-way behavioral drift.
+>
+> **Priority order when starting from scratch:** (1) [[plan-execute-review-cycle|Plan-Execute-Review]] — prevents compounding errors in any agent workflow. (2) [[context-aware-tool-loading|Context-Aware Tool Loading]] — protects accuracy from context saturation on every session. (3) Deterministic Shell + LLM Core — separates quality enforcement from content generation. The remaining three apply as the system matures.
+>
+> **When a pattern is impractical:** Gateway-Centric Routing is most relevant in distributed multi-channel systems; a single-agent personal tool can defer it. Progressive Distillation requires a maturity model to enforce — without structural enforcement (file system layers, frontmatter fields), it collapses to optional and gets skipped. If you can only enforce one pattern structurally, make it this one.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

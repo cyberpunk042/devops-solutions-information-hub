@@ -169,6 +169,17 @@ The connection to context management is the critical constraint that shapes all 
 > [!example]- Should frequently-used skills be promoted to procedural memory?
 > Skills ARE procedural memory — they encode "how to act." If invoked in many sessions, the compressed summary should appear at session start (working memory). CLAUDE.md or a session-start skill can reference high-frequency skills directly, reducing the invocation step. Lower-frequency skills remain deferred (explicit slash command). The "invoked on nearly every turn" threshold from Context-Aware Tool Loading determines which model applies.
 
+### Verdict
+
+> [!success] Recommendation
+>
+> **Default choice:** Start with a single SKILL.md file. Graduate to a folder structure only when the skill needs to coordinate multiple scripts or reference artifacts. The single-file form is not a limitation — it is the correct form for most skills.
+>
+> **Choose Claude Code core skill patterns when:** Building coding, DevOps, or multi-step automation workflows; the skill needs to orchestrate sub-agents or coordinate across long task chains; or the workflow benefits from the Command-Agent-Skill hierarchy for isolation. Use `context: fork` for any skill that runs longer pipelines to prevent context bleed.
+> **Choose Obsidian-style layered skills when:** The domain has clear capability layers that build on each other (format → generate → control). Install the full layer stack rather than one monolithic skill — layered composition provides better coverage and easier maintenance than a single oversized skill.
+> **Choose NotebookLM-style complementary skills when:** Two distinct use cases exist on the same platform with no overlap — one for batch pipeline work, one for ad-hoc queries. Do not merge them into one skill; the token cost difference is significant and the composition pattern handles the split correctly.
+> **Combine skill types when:** A workflow spans platforms (e.g., research in NotebookLM → synthesis in wiki → publish via Claude Code). Wire complementary skills together through shared CLI interfaces, not by merging them into a single SKILL.md. Composition through shared CLIs is the de facto standard until formal skill-referencing-skill spec exists.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
