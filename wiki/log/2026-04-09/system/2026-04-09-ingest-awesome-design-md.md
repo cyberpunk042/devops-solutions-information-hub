@@ -32,8 +32,11 @@ New source to ingest: VoltAgent/awesome-design-md — the curated collection of 
 
 ## Relationships
 
+- FEEDS INTO: [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
 [[model-registry|Model Registry]]

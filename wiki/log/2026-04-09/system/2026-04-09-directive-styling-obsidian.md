@@ -34,8 +34,11 @@ The pages are structurally correct but visually raw in Obsidian. The user wants:
 
 ## Relationships
 
+- FEEDS INTO: [[model-wiki-design|Model — Wiki Design]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[model-wiki-design|Model — Wiki Design]]
 [[model-registry|Model Registry]]

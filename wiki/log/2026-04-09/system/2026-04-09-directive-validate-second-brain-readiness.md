@@ -33,8 +33,11 @@ This is a readiness audit. The user wants to know:
 
 ## Relationships
 
+- FEEDS INTO: [[model-second-brain|Model — Second Brain]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[model-second-brain|Model — Second Brain]]
 [[model-registry|Model Registry]]

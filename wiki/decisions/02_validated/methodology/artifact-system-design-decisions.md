@@ -94,15 +94,22 @@ No decision creates a one-way door.
 - Decisions 4-6 depend on tooling work (pipeline extensions, compliance checker, harness integration)
 - Decisions 1-3 can be implemented immediately with template/CLAUDE.md changes only
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a solo operator with 2-3 active epics and no harness enforcement. At different chain levels:
+> - **Simplified chain:** Decisions 4-6 (self-check, compliance, completion logs) are irrelevant — a simplified chain has no automated gates or compliance reporting. Only decisions 1-3 (templates, spec separation, bridge pattern) apply.
+> - **Full chain:** All 6 decisions shift toward REQUIRED: separate templates per formality level, always-separate interface specs, mandatory bridge pattern, blocking self-checks, automated compliance reports, and required completion logs at every level.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What taxonomy defines the artifacts?** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] |
+> | **What model does this inform?** | [[model-methodology|Model — Methodology]] |
+> | **What standards does this feed?** | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
+> | **Related decision: stage extensions** | [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

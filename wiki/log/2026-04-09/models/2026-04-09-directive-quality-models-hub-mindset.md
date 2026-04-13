@@ -46,8 +46,11 @@ Models are low quality. Must redo them one at a time starting with Methodology. 
 
 ## Relationships
 
+- FEEDS INTO: [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
 [[model-registry|Model Registry]]

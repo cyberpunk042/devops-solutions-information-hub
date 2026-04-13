@@ -66,15 +66,22 @@ All easy. CHANGELOG sections are additive. CLI-based composition doesn't preclud
 - [[harness-engineering|Harness Engineering]] — resolves 2 of its open questions
 - [[claude-code-best-practices|Claude Code Best Practices]] — resolves the compliance threshold question
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a 4-project ecosystem with ~10 skills and no formal skill registry. At different chain levels:
+> - **Simplified chain:** Skills and hooks are unnecessary — the operator runs commands directly. CLAUDE.md compliance is the only enforcement layer, and versioning is not a concern with a single project.
+> - **Full chain:** Skill versioning needs semver with automated compatibility checks across 20+ projects. Skill composition needs formal dependency graphs. All R01-R13 guardrail rules should be Python hooks with blocking enforcement, not just R01 and R04.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What skills architecture does this reference?** | [[claude-code-skills|Claude Code Skills]] |
+> | **What hooks architecture does this build on?** | [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] |
+> | **Related decision: hooks design** | [[hooks-design-decisions|Decision — Hooks Design Decisions]] |
+> | **What guardrail rules apply?** | [[harness-engineering|Harness Engineering]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

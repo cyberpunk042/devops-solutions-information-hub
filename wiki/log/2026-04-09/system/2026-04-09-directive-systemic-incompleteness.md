@@ -50,8 +50,11 @@ Not "ingest more" — FINISH what's started. Complete each model before starting
 
 ## Relationships
 
+- FEEDS INTO: [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+
 - FEEDS INTO: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
 
 ## Backlinks
 
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
 [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]

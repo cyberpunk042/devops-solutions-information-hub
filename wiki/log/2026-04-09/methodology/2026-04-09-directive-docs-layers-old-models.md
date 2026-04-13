@@ -50,8 +50,11 @@ When the second brain attaches to a project that predates the new model:
 
 ## Relationships
 
+- FEEDS INTO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 [[model-registry|Model Registry]]

@@ -157,3 +157,4 @@ The gateway tool embodies this: `--wiki-root` switches between perspectives. Sam
 [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[2026-04-09-directive-quality-models-hub-mindset|Quality Models — Hub Mindset — OpenArms Methodology Learnings]]

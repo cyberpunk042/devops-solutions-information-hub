@@ -72,15 +72,22 @@ All easy. Adding a spike+implement type later is additive. Migrating from parall
 - [[stage-gate-methodology|Stage-Gate Methodology]] — stage-gate integrity drives the spike decision
 - [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]] — mid-execution type change already resolved there
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a solo operator managing spikes and tasks via wiki backlog. At different chain levels:
+> - **Simplified chain:** Task type evolution is rare — most work is tasks or hotfixes, and spikes are informal conversations rather than tracked work items with stage artifacts.
+> - **Full chain:** Spike-to-module promotion becomes a harness-managed workflow with automated task creation. Board sync between Plane and wiki backlog is enforced by integration tooling, not manual discipline. Async gating uses a dedicated MCP request-input tool instead of session logs.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What defines the task type matrix?** | [[task-type-artifact-matrix|Task Type Artifact Matrix]] |
+> | **What backlog pattern does this reference?** | [[wiki-backlog-pattern|Wiki Backlog Pattern]] |
+> | **Related decision: framework design** | [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]] |
+> | **What prevents rework from type confusion?** | [[rework-prevention|Rework Prevention]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

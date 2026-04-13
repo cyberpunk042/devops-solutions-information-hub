@@ -111,9 +111,10 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What defines the hierarchy rules?** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] |
+> | **What tracking model applies?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] |
+> | **What SDLC chain affects artifact count per level?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | **What PM level determines enforcement?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

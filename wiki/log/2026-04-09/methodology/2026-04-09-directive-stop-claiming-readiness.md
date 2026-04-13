@@ -42,8 +42,11 @@ The agent ran a "readiness validation" that counted files and printed checkmarks
 
 ## Relationships
 
+- FEEDS INTO: [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+
 - FEEDS INTO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 
 ## Backlinks
 
+[[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]

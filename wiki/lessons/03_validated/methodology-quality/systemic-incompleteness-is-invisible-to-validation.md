@@ -109,3 +109,5 @@ The agent's error was treating validation as a quality signal rather than a form
 [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
+[[2026-04-09-directive-stop-claiming-readiness|Stop Claiming Readiness Without Proof]]
+[[2026-04-09-directive-systemic-incompleteness|Systemic Incompleteness — No Model Is Finished]]

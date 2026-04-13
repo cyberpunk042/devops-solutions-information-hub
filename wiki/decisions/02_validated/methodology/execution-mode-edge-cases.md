@@ -75,15 +75,22 @@ All easy. Frontmatter conventions, mode behavior, and log format can all be chan
 - [[rework-prevention|Rework Prevention]] — compound cost model drives the "finish the stage" decision
 - [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — blocked_by pattern drives the bug task creation
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for solo/semi-autonomous execution without a harness. At different chain levels:
+> - **Simplified chain:** Most edge cases (cost limits, N/A gates, completion logs) don't arise — work is fully human-guided and stages are implicit. Only the bug-task-on-failure pattern applies universally.
+> - **Full chain:** All five decisions become harness-enforced: failed gates auto-create bug tasks via API, cost limits are hard-kill with state checkpointing, gate skips require explicit harness approval, and completion logs are mandatory structured artifacts.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What defines the execution modes?** | [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] |
+> | **What stage model drives this?** | [[stage-gate-methodology|Stage-Gate Methodology]] |
+> | **Related decision: stage-gate operations** | [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]] |
+> | **What prevents rework from bad edge cases?** | [[rework-prevention|Rework Prevention]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

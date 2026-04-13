@@ -107,4 +107,5 @@ A standard that exists only as text is an ASPIRATION. A standard that demonstrat
 [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
 [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 [[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]]
+[[2026-04-10-directive-quality-evolution-epic|Quality Evolution Epic — Level Up Everything, One File at a Time]]
 [[E006-standards-by-example|Standards-by-Example]]

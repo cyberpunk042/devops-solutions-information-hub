@@ -41,8 +41,11 @@ This is a start that will grow into a wiki design model — potentially becoming
 
 ## Relationships
 
+- FEEDS INTO: [[model-wiki-design|Model — Wiki Design]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[model-wiki-design|Model — Wiki Design]]
 [[model-registry|Model Registry]]

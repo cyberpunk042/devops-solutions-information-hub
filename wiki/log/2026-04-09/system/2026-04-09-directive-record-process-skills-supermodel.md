@@ -41,8 +41,11 @@ Multiple requirements:
 
 ## Relationships
 
+- FEEDS INTO: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
 [[model-registry|Model Registry]]

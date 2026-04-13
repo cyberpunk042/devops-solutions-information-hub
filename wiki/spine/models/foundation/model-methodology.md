@@ -841,6 +841,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[2026-04-09-session-summary|Session 2026-04-09 Summary]]
+[[2026-04-10-session-summary|Session 2026-04-10 Summary]]
 [[standards-must-preach-by-example|Standards Must Preach by Example]]
 [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
 [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]

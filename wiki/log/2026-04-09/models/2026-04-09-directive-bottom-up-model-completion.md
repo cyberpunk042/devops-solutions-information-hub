@@ -36,8 +36,11 @@ The user demands that all models be completed bottom-up (foundation first), with
 
 ## Relationships
 
+- FEEDS INTO: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[model-registry|Model Registry]]

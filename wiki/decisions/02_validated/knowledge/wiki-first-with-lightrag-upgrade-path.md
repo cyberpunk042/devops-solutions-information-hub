@@ -70,15 +70,22 @@ Moderate. Activating LightRAG is additive — it does not change wiki files, so 
 - **OpenFleet LightRAG service**: The production LightRAG instance in OpenFleet (port 9621) could serve as a shared backend when this wiki activates integration, avoiding duplicate service deployment. This introduces a runtime dependency on OpenFleet's availability.
 - **Hardware requirements**: LightRAG's indexing pipeline (if using LLM-based extraction rather than kb_sync bypass) requires minimum 32B parameter model with 32KB context. JSON storage backend (`--storage-type json`) avoids the Neo4j/PostgreSQL database dependency, enabling zero-database-dependency deployment.
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a medium-scale wiki (~267 pages) with hierarchical domain indexes. At different chain levels:
+> - **Simplified chain:** A small project wiki (<50 pages) may never hit the LightRAG trigger — pure index navigation with a flat structure is sufficient indefinitely.
+> - **Full chain:** A fleet-wide knowledge base spanning multiple projects would hit the 200-page ceiling immediately; LightRAG or equivalent graph query becomes a day-one requirement, not a deferred upgrade.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What comparison drives this?** | [[llm-wiki-vs-rag|LLM Wiki vs RAG]] |
+> | **What model does this feed?** | [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Related decision: knowledge interface** | [[obsidian-vs-notebooklm-as-knowledge-interface|Decision — Obsidian vs NotebookLM as Knowledge Interface]] |
+> | **What pattern does this extend?** | [[llm-wiki-pattern|LLM Wiki Pattern]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

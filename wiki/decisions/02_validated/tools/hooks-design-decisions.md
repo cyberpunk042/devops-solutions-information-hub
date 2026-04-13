@@ -72,15 +72,22 @@ All decisions are easy to reverse. They're design guidelines, not infrastructure
 - [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]] — validates plan generation pattern
 - [[stage-gate-methodology|Stage-Gate Methodology]] — dynamic stage-gating is the primary use case
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for Claude Code hooks in a solo operator environment with no harness. At different chain levels:
+> - **Simplified chain:** Hooks are not needed — the operator is the gate. PreToolUse dynamic stage-gating, latency budgets, and recursive depth limits are irrelevant without automated execution.
+> - **Full chain:** The 50ms latency budget tightens (500+ tool calls per session in fleet operations). Recursive depth limit becomes a platform requirement, not a convention. Dynamic stage-gating via filesystem read becomes the primary enforcement mechanism, replacing CLAUDE.md-based protocol.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What lifecycle architecture does this resolve?** | [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] |
+> | **What stage model drives dynamic gating?** | [[stage-gate-methodology|Stage-Gate Methodology]] |
+> | **Related decision: extension system** | [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]] |
+> | **What plan generation tool validates this?** | [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

@@ -101,3 +101,4 @@ The practical test: this wiki's `config/schema.yaml` defines valid page types, r
 [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+[[2026-04-09-directive-model-quality-links-schema|Model Quality + Links + Schema Naming Issues]]

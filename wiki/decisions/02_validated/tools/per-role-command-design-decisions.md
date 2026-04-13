@@ -88,15 +88,22 @@ All decisions are easy to reverse:
 - [[claude-code-skills|Claude Code Skills]] — command-to-skill dependency model
 - [[claude-code-best-practices|Claude Code Best Practices]] — scope hierarchy documentation
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a small ecosystem (4 projects, 3-4 practitioner types) with flat role tags. At different chain levels:
+> - **Simplified chain:** Per-role commands are unnecessary — one operator, one role. Commands don't need scope collision rules, role filtering, or mode-aware behavior.
+> - **Full chain:** Flat tags may need to evolve into hierarchical roles when 10+ practitioner types span 20+ projects. Mode-aware enforcement via hooks becomes mandatory rather than optional. Command-to-skill dependencies need runtime enforcement, not just frontmatter conventions.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What architecture does this resolve?** | [[per-role-command-architecture|Per-Role Command Architecture]] |
+> | **What hooks enforce mode constraints?** | [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]] |
+> | **Related decision: extension system** | [[extension-system-operational-decisions|Decision — Extension System Operational Decisions]] |
+> | **What Plannotator pattern validates this?** | [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

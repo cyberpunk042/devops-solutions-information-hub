@@ -37,8 +37,11 @@ Operator directive to research the full markdown and Obsidian formatting capabil
 
 ## Relationships
 
+- FEEDS INTO: [[model-wiki-design|Model — Wiki Design]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[model-wiki-design|Model — Wiki Design]]
 [[model-registry|Model Registry]]

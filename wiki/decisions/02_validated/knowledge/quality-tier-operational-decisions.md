@@ -69,15 +69,22 @@ All easy. These are interpretive frameworks, not infrastructure commitments.
 - [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — resolves all 3 open questions
 - [[methodology-framework|Methodology Framework]] — quality dimension is a framework parameter
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a solo operator monitoring quality with wiki tooling. At different chain levels:
+> - **Simplified chain:** Regression signals may be limited to a single lint pass — fewer leading indicators available, so manual review matters more.
+> - **Full chain:** At fleet level, quality tiers need automated assessment — an agent dashboard tracking lint trends, orphan counts, and staleness per project replaces manual observation.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
+> | **What model does this refine?** | [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] |
+> | **Related framework decision** | [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]] |
+> | **What enforces the maintenance loop?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
 > | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

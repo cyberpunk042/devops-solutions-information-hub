@@ -45,8 +45,11 @@ The methodology is a FRAMEWORK for defining work processes, not a single process
 
 ## Relationships
 
+- FEEDS INTO: [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
+
 - FEEDS INTO: [[model-methodology|Model — Methodology]]
 
 ## Backlinks
 
+[[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
 [[model-methodology|Model — Methodology]]

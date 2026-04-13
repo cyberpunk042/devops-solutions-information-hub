@@ -46,8 +46,11 @@ Operator directive establishing the quality evolution epic: level up the entire 
 
 ## Relationships
 
+- FEEDS INTO: [[standards-must-preach-by-example|Standards Must Preach by Example]]
+
 - FEEDS INTO: [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
 
 ## Backlinks
 
+[[standards-must-preach-by-example|Standards Must Preach by Example]]
 [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]

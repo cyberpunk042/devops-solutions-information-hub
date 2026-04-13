@@ -48,8 +48,11 @@ Read docs/SESSION-2026-04-09.md for full context.
 
 ## Relationships
 
+- FEEDS INTO: [[model-methodology|Model — Methodology]]
+
 - RELATES TO: [[methodology-evolution-history|Evolution — Methodology System]]
 
 ## Backlinks
 
+[[model-methodology|Model — Methodology]]
 [[methodology-evolution-history|Evolution — Methodology System]]

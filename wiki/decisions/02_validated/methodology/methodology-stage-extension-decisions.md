@@ -74,15 +74,22 @@ Moderate. All decisions are reversible:
 - Decision 3 (Status Report) requires creating the template
 - Decision 4 (Drift) requires no changes — uses existing bug-fix model
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for a 5-stage model used across 4 projects with mixed domains. At different chain levels:
+> - **Simplified chain:** Stage extensions are irrelevant — simplified chains use 2-3 stages maximum, so adding Initiation or Deploy is over-engineering. Status Reports are verbal, not templated.
+> - **Full chain:** Initiation becomes a formal stage with project charter artifacts. Deploy becomes universal (not infrastructure-only) with automated rollback verification. Status Reports become mandatory per-sprint structured artifacts feeding a PM dashboard.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What stage model does this extend?** | [[stage-gate-methodology|Stage-Gate Methodology]] |
+> | **What infrastructure domain triggers Deploy?** | [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]] |
+> | **Related decision: artifact system** | [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]] |
+> | **What evolution protocol governs changes?** | [[methodology-evolution-protocol|Methodology Evolution Protocol]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

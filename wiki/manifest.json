@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-13T15:31:19.131781+00:00",
+  "generated": "2026-04-13T16:22:47.131828+00:00",
   "stats": {
     "pages": 305,
     "domains": 9,
     "sources": 28,
     "comparisons": 6,
-    "relationships": 2050,
+    "relationships": 2068,
     "tags_unique": 848,
     "layers": {
       "3": 5,
@@ -12378,6 +12378,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "Models Are Built in Layers, Not All at Once"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12406,6 +12410,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Is a Framework, Not a Fixed Pipeline"
+        },
         {
           "verb": "FEEDS INTO",
           "target": "Model \u2014 Methodology"
@@ -12464,6 +12472,10 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
+          "target": "Systemic Incompleteness Is Invisible to Validation"
+        },
+        {
+          "verb": "FEEDS INTO",
           "target": "Models Are Built in Layers, Not All at Once"
         }
       ]
@@ -12491,6 +12503,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Never Present Speculation as Fact"
+        },
         {
           "verb": "RELATES TO",
           "target": "Model Registry"
@@ -12521,6 +12537,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "Models Are Systems, Not Documents"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12550,6 +12570,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 Schema Is the Real Product \u2014 Not the Content"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12578,6 +12602,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Models Are Systems, Not Documents"
+        },
         {
           "verb": "FEEDS INTO",
           "target": "Models Are Built in Layers, Not All at Once"
@@ -12610,6 +12638,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "The Wiki Is a Hub, Not a Silo"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12640,6 +12672,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Wiki Design"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12669,6 +12705,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Wiki Design"
+        },
         {
           "verb": "RELATES TO",
           "target": "Model Registry"
@@ -12701,6 +12741,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12729,6 +12773,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Wiki Design"
+        },
         {
           "verb": "RELATES TO",
           "target": "Model Registry"
@@ -12760,6 +12808,10 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
+          "target": "Systemic Incompleteness Is Invisible to Validation"
+        },
+        {
+          "verb": "FEEDS INTO",
           "target": "Coverage Blindness \u2014 Modeling Only What You Know"
         }
       ]
@@ -12786,6 +12838,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Second Brain"
+        },
         {
           "verb": "RELATES TO",
           "target": "Model Registry"
@@ -12814,6 +12870,10 @@
       "derived_from": [],
       "relationships": [
         {
+          "verb": "FEEDS INTO",
+          "target": "Synthesis \u2014 awesome-design-md \u2014 58 Design Systems for AI Agents"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Model Registry"
         }
@@ -12840,6 +12900,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Methodology"
+        },
         {
           "verb": "RELATES TO",
           "target": "Evolution \u2014 Methodology System"
@@ -12873,6 +12937,10 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
+          "target": "Standards Must Preach by Example"
+        },
+        {
+          "verb": "FEEDS INTO",
           "target": "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
         }
       ]
@@ -12898,6 +12966,10 @@
       "maturity": "",
       "derived_from": [],
       "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Methodology"
+        },
         {
           "verb": "RELATES TO",
           "target": "Evolution \u2014 Methodology System"
@@ -20167,7 +20239,7 @@
     },
     "log": {
       "page_count": 20,
-      "relationship_count": 20
+      "relationship_count": 38
     }
   },
   "tags": {

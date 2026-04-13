@@ -420,4 +420,7 @@ Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox �
 [[pattern-page-standards|Pattern Page Standards]]
 [[source-synthesis-page-standards|Source-Synthesis Page Standards]]
 [[E006-standards-by-example|Standards-by-Example]]
+[[2026-04-09-directive-styling-obsidian|Styling — Make It Look Good in Obsidian]]
+[[2026-04-09-directive-wiki-design-model-emerging|Wiki Design Model Emerging — Obsidian Styling as Standard]]
+[[2026-04-09-directive-wiki-design-model-research|Wiki Design Model — Research Sources]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

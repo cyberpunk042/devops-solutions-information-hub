@@ -88,9 +88,10 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What routing system operationalizes this?** | [[aicp|AICP]] |
+> | **What model does this feed?** | [[model-local-ai|Model — Local AI ($0 Target)]] |
+> | **What evolution pipeline depends on this?** | [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]] |
+> | **What quantization research informs quality thresholds?** | [[local-llm-quantization|Local LLM Quantization]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

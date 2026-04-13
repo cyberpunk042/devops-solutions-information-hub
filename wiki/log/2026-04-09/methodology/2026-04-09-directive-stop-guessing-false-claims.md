@@ -44,8 +44,11 @@ The models contain fabricated claims presented as facts. The context degradation
 
 ## Relationships
 
+- FEEDS INTO: [[never-present-speculation-as-fact|Never Present Speculation as Fact]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[never-present-speculation-as-fact|Never Present Speculation as Fact]]
 [[model-registry|Model Registry]]

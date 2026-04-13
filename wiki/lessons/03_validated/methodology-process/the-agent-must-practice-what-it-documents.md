@@ -141,6 +141,7 @@ This lesson applies to any system that both produces and consumes its own method
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[2026-04-09-directive-record-process-skills-supermodel|Record the Process — Skills, Super-Model, Preach by Example]]
 [[standards-must-preach-by-example|Standards Must Preach by Example]]
 [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

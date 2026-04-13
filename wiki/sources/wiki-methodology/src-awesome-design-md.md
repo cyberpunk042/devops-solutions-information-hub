@@ -125,4 +125,5 @@ Developer Tools (14) and AI/ML (12) dominate — these communities are building 
 [[claude-code-best-practices|Claude Code Best Practices]]
 [[context-aware-tool-loading|Context-Aware Tool Loading]]
 [[methodology-framework|Methodology Framework]]
+[[2026-04-09-ingest-awesome-design-md|Ingest awesome-design-md repository]]
 [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]

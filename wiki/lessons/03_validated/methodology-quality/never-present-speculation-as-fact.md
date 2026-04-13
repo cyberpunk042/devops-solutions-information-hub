@@ -102,3 +102,4 @@ The deeper failure: the agent didn't read what the operator pointed to. The oper
 [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
 [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[2026-04-09-directive-stop-guessing-false-claims|Stop Guessing — False Claims in Models]]

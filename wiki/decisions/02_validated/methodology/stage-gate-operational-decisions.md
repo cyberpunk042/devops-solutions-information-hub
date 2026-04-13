@@ -83,15 +83,22 @@ All easy. These are interpretive guidelines for an existing system. None require
 - [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — resolves 4 of its open questions
 - [[spec-driven-development|Spec-Driven Development]] — resolves 2 of its open questions
 
+> [!info] SDLC Chain Context
+> This decision was calibrated for solo execution with no harness — gates are advisory, enforced by CLAUDE.md protocol and one-commit-per-stage convention. At different chain levels:
+> - **Simplified chain:** Most operational questions vanish — there are no automated gates, no readiness computation, and no retroactive staging. The operator IS the gate.
+> - **Full chain:** Gates become automated and blocking (not advisory). Readiness is computed by the harness via filesystem artifact checks. Discovery tasks auto-split via the backlog API. Retroactive staging is rejected by the compliance checker.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle governs this?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
-> | **How does enforcement apply?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] |
-> | **What is my identity profile?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What defines the stage-gate system?** | [[stage-gate-methodology|Stage-Gate Methodology]] |
+> | **What drives readiness computation?** | [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] |
+> | **Related decision: execution mode edges** | [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]] |
+> | **What spec rules does this reference?** | [[spec-driven-development|Spec-Driven Development]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

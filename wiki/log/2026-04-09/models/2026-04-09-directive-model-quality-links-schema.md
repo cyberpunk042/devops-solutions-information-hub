@@ -37,8 +37,11 @@ Three quality issues identified during model review: (1) broken backlinks format
 
 ## Relationships
 
+- FEEDS INTO: [[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
+
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]]
 [[model-registry|Model Registry]]

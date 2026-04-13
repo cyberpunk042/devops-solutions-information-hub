@@ -52,8 +52,11 @@ A model is NOT a reading list. A model is:
 
 ## Relationships
 
+- FEEDS INTO: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
+
 - FEEDS INTO: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 
 ## Backlinks
 
+[[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
