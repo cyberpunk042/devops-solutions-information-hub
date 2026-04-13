@@ -148,7 +148,8 @@ Multiple models run simultaneously on independent tracks. They don't share stage
 
 ## Open Questions
 
-> [!question] Should composition rules be machine-readable in methodology.yaml (they currently are for nested only via `composition_model`), or is wiki documentation sufficient for sequential/conditional/parallel? (Recommendation: document first, formalize in config when enforcement needs it)
+> [!question] ~~Should composition rules be machine-readable in methodology.yaml (they currently are for nested only via `composition_model`), or is wiki documentation sufficient for sequential/conditional/parallel?~~
+> **RESOLVED:** Common patterns (nested) are already in YAML via `composition_model`. Complex composition (sequential, conditional, parallel) is wiki-documented. Formalize in config only when tooling needs enforcement — document first, encode when the pain of informal is felt.
 
 ### How This Connects — Navigate From Here
 

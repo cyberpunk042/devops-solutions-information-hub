@@ -283,7 +283,8 @@ Based on the research, the methodology artifact system needs:
 
 ## Open Questions
 
-> [!question] How many of the 78 artifact types should be wiki page types vs tracked-but-not-pages? (Requires: design decision — probably 25-30 page types, rest tracked in frontmatter)
+> [!question] ~~How many of the 78 artifact types should be wiki page types vs tracked-but-not-pages?~~
+> **RESOLVED:** ~18-20 as wiki page types: the current 18 schema types plus `principle` and `milestone` (recently added). The remaining ~60 artifact types (source code, test results, git commits, binaries, configs, deployment packages) are tracked-but-not-pages — referenced in methodology chains and frontmatter but not given their own wiki page schema. Knowledge artifacts are 100% wiki pages; construction/testing/deployment artifacts are not.
 
 > [!question] ~~Should the taxonomy distinguish between mandatory and optional artifacts per model? (Yes — OpenArms does this with required/optional in meth~~
 > **RESOLVED:** Already implemented. methodology.yaml has required: true/false per artifact in each model definition.odology.yaml. Needs generalization.)

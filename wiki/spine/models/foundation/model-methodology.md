@@ -841,6 +841,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[E004-portable-methodology-engine|Portable Methodology Engine]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[research-gaps|Research Gaps — Empirical Questions Requiring Data]]
 [[identity-profile|Research Wiki — Identity Profile]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]

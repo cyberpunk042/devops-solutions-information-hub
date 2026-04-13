@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-13T18:21:48.910934+00:00",
+  "generated": "2026-04-13T18:28:23.903314+00:00",
   "stats": {
-    "pages": 296,
+    "pages": 297,
     "domains": 9,
     "sources": 28,
     "comparisons": 5,
-    "relationships": 1979,
-    "tags_unique": 850,
+    "relationships": 1982,
+    "tags_unique": 854,
     "layers": {
       "3": 4,
       "6": 16,
@@ -17,7 +17,7 @@
       "spine": 61
     },
     "maturity": {
-      "growing": 253
+      "growing": 254
     }
   },
   "pages": [
@@ -1247,6 +1247,43 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Methodology"
+        }
+      ]
+    },
+    {
+      "path": "backlog/research-gaps.md",
+      "slug": "backlog/research-gaps",
+      "title": "Research Gaps \u2014 Empirical Questions Requiring Data",
+      "type": "reference",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "backlog",
+        "research",
+        "gaps",
+        "empirical",
+        "measurement",
+        "open-questions"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "E021 \u2014 New Source Ingestion"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Operator Decision Queue"
         }
       ]
     },
@@ -19407,8 +19444,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 23,
-      "relationship_count": 128
+      "page_count": 24,
+      "relationship_count": 131
     },
     "cross-domain": {
       "page_count": 134,
@@ -20132,6 +20169,7 @@
     ],
     "backlog": [
       "backlog/operator-decision-queue",
+      "backlog/research-gaps",
       "domains/devops/backlog-hierarchy-rules",
       "spine/models/foundation/model-methodology",
       "spine/standards/epic-page-standards",
@@ -20148,6 +20186,27 @@
     ],
     "queue": [
       "backlog/operator-decision-queue"
+    ],
+    "research": [
+      "backlog/research-gaps",
+      "domains/tools-and-platforms/notebooklm",
+      "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
+      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
+      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
+      "sources/wiki-methodology/src-sdlc-frameworks-research",
+      "spine/models/depth/model-notebooklm"
+    ],
+    "gaps": [
+      "backlog/research-gaps"
+    ],
+    "empirical": [
+      "backlog/research-gaps"
+    ],
+    "measurement": [
+      "backlog/research-gaps"
+    ],
+    "open-questions": [
+      "backlog/research-gaps"
     ],
     "openai-backend": [
       "backlog/tasks/T001-test-openai-backend"
@@ -22106,14 +22165,6 @@
       "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
     ],
-    "research": [
-      "domains/tools-and-platforms/notebooklm",
-      "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
-      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
-      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
-      "sources/wiki-methodology/src-sdlc-frameworks-research",
-      "spine/models/depth/model-notebooklm"
-    ],
     "free-tools": [
       "domains/tools-and-platforms/notebooklm"
     ],
@@ -23368,6 +23419,12 @@
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
+      ]
+    },
+    {
+      "target": "E021 \u2014 New Source Ingestion",
+      "referenced_by": [
+        "Research Gaps \u2014 Empirical Questions Requiring Data"
       ]
     },
     {

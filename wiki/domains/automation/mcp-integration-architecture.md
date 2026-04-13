@@ -122,7 +122,7 @@ Tools:
 > 2. **rsync daemon** — `tools/sync.py` with `--watch` mode, systemd service via `tools/setup`
 > 3. **Wiki watcher** — `tools/watcher.py` with change detection + auto post-chain
 
-> [!question] Remaining
+> [!info] Remaining MCP Integrations
 > 4. **NotebookLM MCP** (unlocks: source mirroring, cross-validation via notebooklm-py)
 > 5. **Obsidian MCP** (unlocks: bidirectional vault management via Obsidian CLI)
 
