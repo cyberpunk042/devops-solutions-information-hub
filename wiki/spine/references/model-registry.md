@@ -34,27 +34,30 @@ This is the entry point for all named models in the wiki. A model is a coherent 
 
 | Model | Lines | Standards Page | Maturity | Domain |
 |-------|-------|---------------|----------|--------|
-| [[model-llm-wiki|Model — LLM Wiki]] | 444 | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] | growing | Content structure |
-| [[model-methodology|Model — Methodology]] | 568 | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] | growing | Work processes |
-| [[model-wiki-design|Model — Wiki Design]] | 368 | [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]] | seed | Visual design |
-| [[model-claude-code|Model — Claude Code]] | 494 | [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]] | growing | Agent runtime |
-| [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] | 370 | [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]] | growing | Operational quality |
-| [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] | 349 | [[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]] | growing | Extension system |
-| [[model-knowledge-evolution|Model — Knowledge Evolution]] | 279 | [[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]] | growing | Evolution pipeline |
-| [[model-mcp-cli-integration|Model — MCP and CLI Integration]] | 283 | — | growing | Tool integration |
-| [[model-ecosystem|Model — Ecosystem Architecture]] | 293 | — | growing | Project topology |
-| [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] | 261 | — | growing | Agent config patterns |
-| [[model-notebooklm|Model — NotebookLM]] | 229 | — | growing | Research tooling |
-| [[model-sfif-architecture|Model — SFIF and Architecture]] | 217 | — | growing | Build lifecycle |
-| [[model-second-brain|Model — Second Brain]] | 226 | — | growing | PKM theory |
-| [[model-local-ai|Model — Local AI ($0 Target)]] | 204 | — | growing | Cost reduction |
-| [[model-automation-pipelines|Model — Automation and Pipelines]] | 202 | — | growing | Pipeline orchestration |
+| # | Model | Standards Page | Maturity | Domain |
+|---|-------|---------------|----------|--------|
+| 1 | [[model-llm-wiki|Model — LLM Wiki]] | [[model-llm-wiki-standards|LLM Wiki Standards]] | growing | Content structure |
+| 2 | [[model-methodology|Model — Methodology]] | [[model-methodology-standards|Methodology Standards]] | growing | Work processes |
+| 3 | [[model-wiki-design|Model — Wiki Design]] | [[model-wiki-design-standards|Wiki Design Standards]] | growing | Visual design |
+| 4 | [[model-claude-code|Model — Claude Code]] | [[model-claude-code-standards|Claude Code Standards]] | growing | Agent runtime |
+| 5 | [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] | [[model-skills-commands-hooks-standards|Extension Standards]] | growing | Extension system |
+| 6 | [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] | [[model-quality-failure-prevention-standards|Quality Standards]] | growing | Operational quality |
+| 7 | [[model-sfif-architecture|Model — SFIF and Architecture]] | — | growing | Build lifecycle |
+| 8 | [[model-knowledge-evolution|Model — Knowledge Evolution]] | [[model-knowledge-evolution-standards|Evolution Standards]] | growing | Evolution pipeline |
+| 9 | [[model-mcp-cli-integration|Model — MCP and CLI Integration]] | — | growing | Tool integration |
+| 10 | [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] | — | growing | Agent config patterns |
+| 11 | [[model-second-brain|Model — Second Brain]] | — | growing | PKM theory |
+| 12 | [[model-context-engineering|Model — Context Engineering]] | — | growing | Structured context |
+| 13 | [[model-ecosystem|Model — Ecosystem Architecture]] | — | growing | Project topology |
+| 14 | [[model-automation-pipelines|Model — Automation and Pipelines]] | — | growing | Pipeline orchestration |
+| 15 | [[model-notebooklm|Model — NotebookLM]] | — | growing | Research tooling |
+| 16 | [[model-local-ai|Model — Local AI ($0 Target)]] | — | growing | Cost reduction |
 
-**Status:** 13 of 15 models elevated with standard sections (Key Pages, Lessons Learned, State of Knowledge, How to Adopt, callout styling). 2 models (Methodology, Wiki Design) use their own structure as super-model and design model respectively.
+**Status:** All 16 models have standard sections (Key Pages, Lessons Learned, State of Knowledge, How to Adopt). 7 have companion standards pages with annotated exemplars. All at growing maturity — promotions gated by operator.
 
 ## The Super-Model
 
-The [[model-methodology|Model — Methodology]] is the super-model — it GOVERNS how all work proceeds. Every other model operates WITHIN its framework. When starting with this wiki, read Methodology first.
+The [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] packages all 16 models into a consumable system with 5 sub-super-models for navigation. [[model-methodology|Model — Methodology]] governs how work proceeds. [[model-llm-wiki|Model — LLM Wiki]] defines what the wiki IS. Start with either based on your need.
 
 ## How to Use This Registry
 

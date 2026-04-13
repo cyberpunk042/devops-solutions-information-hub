@@ -59,7 +59,8 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | Page | Lines | What It Explains |
 > |------|-------|-----------------|
-> | [[model-methodology|Model — Methodology]] | 600+ | The 9 models, stage gates, composition, quality tiers, adoption, compliance |
+> | [[model-methodology|Model — Methodology]] | 850+ | The 9 models, stage gates, composition, quality tiers, adoption, compliance |
+> | [[model-registry|Model Registry]] | 100+ | All 16 named models with status, standards, and maturity |
 > | [[methodology-framework|Methodology Framework]] | 400+ | The META — what a model IS, selection, composition, adaptation, recursion |
 > | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] | 440+ | Gold standards for execution with real examples and anti-patterns |
 
