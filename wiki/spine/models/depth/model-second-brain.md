@@ -71,7 +71,7 @@ The permanent note is the unit of the Zettelkasten. It contains one idea, expres
 
 Where PARA is a language of action (what do I need right now?), Zettelkasten is a language of knowledge (what do I know and how does it connect?).
 
-### How This Wiki Maps to Both
+### Instance — How This Wiki Maps to Both
 
 The mapping is deliberate, not coincidental:
 
@@ -114,6 +114,30 @@ A wiki is a structured reference system. A second brain is a generative knowledg
 - Value is proportional to relationship density, not page count
 
 The test is: does the system surface insights you did not explicitly put in? A Zettelkasten where two notes about "circuit breakers" and "wiki validation" suddenly link and generate the insight "validation as a circuit breaker for knowledge decay" has passed the test. This wiki is designed to pass that test — through wikilinks, the crossref tool, and the evolution pipeline's pattern detection.
+
+### Second Brain at Different Scales
+
+> [!abstract] The model adapts to context — not every second brain looks the same
+>
+> | Scale | Characteristics | Tools | Maintenance |
+> |-------|----------------|-------|-------------|
+> | **Solo researcher** | 50-200 pages, one person, personal knowledge | Obsidian/Logseq, manual cross-ref | Manual with light automation |
+> | **Small team (2-5)** | 200-500 pages, shared knowledge base | Obsidian + git, basic validation | Post-chain automation recommended |
+> | **Project team (5-15)** | 500-2000 pages, multi-domain, formal process | Full pipeline + watcher + evolution | Automation required — manual breaks down |
+> | **Organization (15+)** | 2000+ pages, federated wikis, governance | Fleet management, MCP integration | Full automation + review governance |
+>
+> **The invariants that hold at every scale:**
+> - Connection density matters more than page count
+> - Progressive distillation (raw → refined) is the value loop
+> - Every page needs relationships — isolated pages are dead weight
+>
+> **What changes with scale:**
+> - Governance (who can edit what, review process)
+> - Automation level (manual → post-chain → watcher → full pipeline)
+> - Tool complexity (single vault → multi-vault → federated)
+> - Maintenance cost curve (linear at <100 pages, super-linear beyond without automation)
+
+### Instance — This Wiki
 
 ### Obsidian as the Graph Interface
 

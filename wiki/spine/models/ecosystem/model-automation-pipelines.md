@@ -42,6 +42,33 @@ The Automation and Pipelines model describes how this wiki transforms knowledge 
 
 ## Deep Analysis
 
+### Generic Knowledge Automation Patterns
+
+The automation principles apply to ANY knowledge system, not just this wiki's specific tooling.
+
+> [!abstract] Automation Patterns by Knowledge System Type
+>
+> | Pattern | What It Automates | Tools (examples) | When to Use |
+> |---------|------------------|-------------------|-------------|
+> | **Post-change validation** | Schema check, link integrity, structure | Custom scripts, GitHub Actions, pre-commit hooks | Every system with >50 pages |
+> | **Index regeneration** | Navigation pages, manifests, search indexes | Static site generators, custom scripts, MkDocs | Systems with organized sections |
+> | **Change detection + sync** | File watching, cross-system propagation | inotify, fswatch, rsync, Obsidian sync | Multi-tool setups (WSL↔Windows, vault↔CI) |
+> | **Evolution scoring** | Candidate identification for knowledge promotion | Custom scorers, graph analysis, staleness detection | Mature systems (>200 pages) |
+> | **Content generation** | Template scaffolding, prompt-driven content | LLM APIs, template engines | Systems using AI-assisted authoring |
+> | **Quality reporting** | Gap analysis, orphan detection, coverage metrics | Custom lint tools, graph queries | Any system tracking quality |
+
+> [!info] Automation Maturity Levels
+>
+> | Level | What's Automated | Human Role | Typical Scale |
+> |-------|-----------------|-----------|---------------|
+> | **0 — Manual** | Nothing | Everything | <50 pages |
+> | **1 — Validation** | Schema + link checks | Run manually after changes | 50-100 pages |
+> | **2 — Post-chain** | Full validation + index rebuild | Run one command after changes | 100-300 pages |
+> | **3 — Event-driven** | Post-chain fires on filesystem changes | Review reports, make decisions | 300+ pages |
+> | **4 — Scheduled** | Periodic health checks, evolution scoring, research | Approve promotions, judge quality | 500+ pages |
+
+### Instance — This Wiki's Pipeline
+
 ### The Post-Chain: Six Non-Negotiable Steps
 
 The post-chain (`python3 -m tools.pipeline post`) runs six steps in sequence, each producing input for the next:
@@ -174,9 +201,9 @@ It does NOT automate:
 > - Watcher poll interval adjustable per environment (`--interval` flag)
 > - Event hook set can grow — on-deploy, on-merge, on-release are natural extensions for sister projects
 
-### Gateway as Pipeline Tool (NEW)
+### Gateway as Pipeline Tool
 
-The gateway (`tools/gateway.py`) is a new pipeline entry point — it provides structured queries, operations, and agent write-back through a unified interface. It works in dual-scope (second brain + project wiki). See [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]].
+The gateway (`tools/gateway.py`) is a pipeline entry point that provides structured queries, operations, and agent write-back through a unified interface. It works in dual-scope (second brain + project wiki), enabling both human operators and automated agents to interact with the knowledge system through the same API. See [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]].
 
 ## Open Questions
 
