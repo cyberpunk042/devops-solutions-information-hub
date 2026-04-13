@@ -114,6 +114,18 @@ Standards for source-synthesis pages — processed versions of raw sources (arti
 
 `wiki/config/templates/source-synthesis.md` — scaffold via `python3 -m tools.pipeline scaffold source-synthesis "Title"`
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model these standards serve** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Global wiki standards** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Template for this type** | `wiki/config/templates/source-synthesis.md` |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]

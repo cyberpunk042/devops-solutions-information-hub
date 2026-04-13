@@ -116,6 +116,19 @@ After completing this path you should be able to:
 - Configure a project to adopt the methodology at any of the 4 tiers
 - Recognize and prevent the most common methodology failures
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **Foundation: wiki model** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Foundation: methodology model** | [[model-methodology|Model — Methodology]] |
+> | **System map (find anything)** | [[methodology-system-map|Methodology System Map]] |
+> | **Adoption guide (get started)** | [[methodology-adoption-guide|Methodology Adoption Guide]] |
+> | **All models listed** | [[model-registry|Model Registry]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-methodology|Model — Methodology]]

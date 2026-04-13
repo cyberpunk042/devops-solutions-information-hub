@@ -96,6 +96,18 @@ The vision is chain/group/tree operation modes for multi-pass automated ingestio
 ### Q: How does OpenFleet's orchestrator model apply to the wiki's pipeline?
 OpenFleet's deterministic 30-second orchestrator is the most mature automation pattern in the ecosystem: a state-machine loop with zero LLM calls for coordination, deterministic task dispatch, and LLM calls only for actual reasoning work. The wiki's pipeline should adopt the same pattern — deterministic shell for scheduling, LLM only for ingestion and synthesis. See [[research-pipeline-orchestration|Research Pipeline Orchestration]] and [[openfleet|OpenFleet]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model covering this domain** | [[model-automation-pipelines|Model — Automation and Pipelines]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - IMPLEMENTS: Knowledge Systems — Domain Overview

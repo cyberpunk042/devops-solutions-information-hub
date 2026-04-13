@@ -210,6 +210,19 @@ When blocked:
 > | Explore enforcement options | — | Sub-Model: Enforcement Hierarchy |
 > | Understand knowledge layers | — | Sub-Model: Knowledge Architecture |
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Identity protocol (the questions)** | [[project-self-identification-protocol|Project Self-Identification Protocol]] |
+> | **SDLC framework (phase x scale)** | [[sdlc-customization-framework|SDLC Customization Framework]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Integration chain (full walkthrough)** | [[second-brain-integration-chain|Second Brain Integration Chain]] |
+> | **Gateway tools reference** | [[gateway-tools-reference|Gateway Tools Reference]] |
+
 ## Relationships
 
 - PART OF: [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]

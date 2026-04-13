@@ -99,6 +99,18 @@ openfleet (agent fleet), AICP (AI Control Platform), DSPD (the research wiki), a
 ### Q: What WSL2-specific devops constraints should I know about?
 WSL2 affects service startup (no systemd by default), networking (bridged vs NAT), inotify watch limits (relevant for the wiki watcher daemon), and daemon lifecycle management. Standard Linux devops documentation often does not account for these constraints. See [[wsl2-development-patterns|WSL2 Development Patterns]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Models covering this domain** | [[model-methodology|Model — Methodology]], [[model-ecosystem|Model — Ecosystem Architecture]], [[model-sfif-architecture|Model — SFIF and Architecture]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - ENABLES: AI Agents — Domain Overview

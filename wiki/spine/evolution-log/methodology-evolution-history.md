@@ -77,6 +77,18 @@ The methodology system is at v1.0 — first complete version with:
 - Consumer project validation (OpenArms consuming the generic base)
 - Additional domain profiles as new project types emerge
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Methodology model (current state)** | [[model-methodology|Model — Methodology]] |
+> | **Methodology standards** | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
+> | **Evolution protocol (how changes happen)** | [[methodology-evolution-protocol|Methodology Evolution Protocol]] |
+> | **Key decisions from this evolution** | [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]] |
+> | **Super-model** | [[super-model|Super-Model]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-methodology|Model — Methodology]]

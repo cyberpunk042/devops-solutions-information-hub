@@ -109,6 +109,18 @@ MCP servers add tool definitions to every message in the conversation, costing t
 ### Q: What is the "agentic search vs vector search" decision framework?
 The choice depends on three variables: scale (< 200 pages favors agentic navigation), content change rate (high change rate favors agentic search because embeddings go stale), and structural organization (well-structured content favors navigation; unstructured content favors vectors). See [[agentic-search-vs-vector-search|Agentic Search vs Vector Search]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Models covering this domain** | [[model-methodology|Model — Methodology]], [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - SYNTHESIZES FROM: AI Agents — Domain Overview

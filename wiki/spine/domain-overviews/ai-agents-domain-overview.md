@@ -78,6 +78,18 @@ Start with these in order:
 4. [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]] — phase boundaries and enforcement mechanisms
 5. [[claude-code-skills|Claude Code Skills]] — the primary extension mechanism
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Models covering this domain** | [[model-claude-code|Model — Claude Code]], [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]], [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - FEEDS INTO: [[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]

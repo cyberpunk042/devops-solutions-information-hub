@@ -227,6 +227,20 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 > [!question] Should there be a super-model compliance checker?
 > A tool that reads a project's CLAUDE.md and methodology.yaml and reports which models are adopted, at what tier, and what's missing. This would make adoption measurable.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **All 15 models listed** | [[model-registry|Model Registry]] |
+> | **Foundation model: wiki** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Foundation model: methodology** | [[model-methodology|Model — Methodology]] |
+> | **System map (find anything)** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path (read in order)** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+> | **Adoption guide (get started)** | [[methodology-adoption-guide|Methodology Adoption Guide]] |
+> | **Identity protocol** | [[project-self-identification-protocol|Project Self-Identification Protocol]] |
+
 ## Relationships
 
 - CONTAINS: [[model-registry|Model Registry]]

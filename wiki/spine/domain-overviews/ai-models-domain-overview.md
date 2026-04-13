@@ -88,6 +88,18 @@ This is a documented gap in the wiki — no dedicated comparison page exists yet
 ### Q: What embedding model should I use for LightRAG or wiki indexing?
 bge-m3 is the current production choice in both AICP and OpenFleet. text-embedding-3-large (OpenAI) is the cloud alternative. A structured comparison of latency, quality, and hardware requirements for wiki-scale indexing does not yet exist in this wiki — it is a documented priority for this domain. See [[lightrag|LightRAG]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model covering this domain** | [[model-local-ai|Model — Local AI ($0 Target)]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - ENABLES: AI Agents — Domain Overview

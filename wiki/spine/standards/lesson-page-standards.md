@@ -218,6 +218,18 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 
 > [!question] Should lessons with <3 evidence items be automatically flagged for demotion to "observation" status? (Requires: design decision on observation vs lesson threshold)
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model these standards serve** | [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Global wiki standards** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Template for this type** | `wiki/config/templates/lesson.md` |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]

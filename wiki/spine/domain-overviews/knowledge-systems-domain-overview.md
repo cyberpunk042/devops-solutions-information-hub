@@ -105,6 +105,18 @@ Memory lifecycle uses confidence scoring and status fields (raw → synthesized 
 ### Q: What is the ingestion pipeline's three-phase model?
 Phase 1 is extraction (source → summary + key insights), Phase 2 is cross-referencing (new page → existing pages → relationship mapping), Phase 3 is deepening (gap analysis → follow-up questions → next ingestion targets). The pipeline is multi-pass, not one-shot. See [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Models covering this domain** | [[model-llm-wiki|Model — LLM Wiki]], [[model-second-brain|Model — Second Brain]], [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - FEEDS INTO: AI Agents — Domain Overview

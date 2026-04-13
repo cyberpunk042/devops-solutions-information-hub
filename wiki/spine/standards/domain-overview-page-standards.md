@@ -69,6 +69,18 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 
 `wiki/config/templates/domain-overview.md` — scaffold via `python3 -m tools.pipeline scaffold domain-overview "Title"`
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model these standards serve** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Global wiki standards** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Template for this type** | `wiki/config/templates/domain-overview.md` |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]

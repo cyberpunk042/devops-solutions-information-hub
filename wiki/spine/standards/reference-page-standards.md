@@ -93,6 +93,18 @@ Standards for reference pages — LOOKUP material that readers consult for speci
 
 `wiki/config/templates/reference.md` — scaffold via `python3 -m tools.pipeline scaffold reference "Title"`
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model these standards serve** | [[model-llm-wiki|Model — LLM Wiki]] |
+> | **Global wiki standards** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Template for this type** | `wiki/config/templates/reference.md` |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]

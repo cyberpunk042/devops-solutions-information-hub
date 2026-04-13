@@ -67,6 +67,18 @@ Standards for note pages — log entries recording directives, session summaries
 
 `wiki/config/templates/note.md` — scaffold via `python3 -m tools.pipeline scaffold note "Title"`
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model these standards serve** | [[model-methodology|Model — Methodology]] |
+> | **Methodology standards** | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
+> | **Template for this type** | `wiki/config/templates/note.md` |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - RELATES TO: [[model-methodology|Model — Methodology]]

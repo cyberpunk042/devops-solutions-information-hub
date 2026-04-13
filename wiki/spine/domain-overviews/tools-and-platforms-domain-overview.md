@@ -102,6 +102,18 @@ Plane is the human-facing PM surface that syncs bidirectionally with OpenFleet's
 ### Q: What is MCP vs CLI+Skills for tool integration, and which should I choose?
 CLI+Skills is 12x cheaper in token cost, more accurate for project-internal tooling, and simpler to debug. MCP is for external service bridges (cross-conversation tool discovery, ecosystem-wide integrations). Default to CLI+Skills; use MCP only when a tool needs to be available across unrelated conversations. See [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]].
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Models covering this domain** | [[model-mcp-cli-integration|Model — MCP and CLI Integration]], [[model-notebooklm|Model — NotebookLM]], [[model-wiki-design|Model — Wiki Design]] |
+> | **Standards for this page type** | [[domain-overview-page-standards|Domain Overview Page Standards]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - USED BY: AI Agents — Domain Overview

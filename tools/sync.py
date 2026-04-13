@@ -117,7 +117,11 @@ def get_sync_config(project_root: Path, target_override: str = None) -> Dict[str
 
 def sync_rsync(source: str, target: str, reverse: bool = False,
                delete: bool = False, verbose: bool = True) -> Dict[str, Any]:
-    """Sync using rsync. Uses --update (newer wins) by default, not --delete."""
+    """Sync using rsync.
+
+    Forward (source→target): no --update, WSL is source of truth, always overwrites.
+    Reverse (target→source): --update, only pick up files newer in Obsidian.
+    """
     if reverse:
         source, target = target, source
 
@@ -125,7 +129,10 @@ def sync_rsync(source: str, target: str, reverse: bool = False,
     src = source.rstrip("/") + "/"
     dst = target.rstrip("/") + "/"
 
-    cmd = ["rsync", "-a", "--checksum"]
+    cmd = ["rsync", "-a"]
+    if reverse:
+        # Reverse: only copy files newer on target (Obsidian edits)
+        cmd.append("--update")
     if verbose:
         cmd.append("-v")
     if delete:
@@ -310,14 +317,10 @@ def watch_sync(config: Dict[str, Any], interval: int = 15,
             print(f"  [{ts}] Reverse synced ({result.get('files_changed', '?')} files)")
 
     last_source_fp = dir_fingerprint(source)
-    last_target_fp = dir_fingerprint(target) if Path(target).exists() else None
 
     try:
         while True:
             source_fp = dir_fingerprint(source)
-            target_fp = dir_fingerprint(target) if Path(target).exists() else None
-
-            synced = False
 
             # Source changed → sync to target
             if source_fp != last_source_fp:
@@ -328,21 +331,7 @@ def watch_sync(config: Dict[str, Any], interval: int = 15,
                     print(f"  [{ts}] Synced ({result.get('files_changed', '?')} files)")
                 else:
                     print(f"  [{ts}] Sync failed: {result.get('error', 'unknown')}")
-                synced = True
                 last_source_fp = source_fp
-
-            # Target changed → sync back to source (bidirectional)
-            if target_fp and target_fp != last_target_fp and not synced:
-                ts = datetime.now().strftime("%H:%M:%S")
-                print(f"  [{ts}] Target changed — syncing back to source...")
-                result = run_sync(config, reverse=True, verbose=False)
-                if result["ok"]:
-                    print(f"  [{ts}] Reverse synced ({result.get('files_changed', '?')} files)")
-                else:
-                    print(f"  [{ts}] Reverse sync failed: {result.get('error', 'unknown')}")
-                last_target_fp = target_fp
-            elif target_fp:
-                last_target_fp = target_fp
 
             time.sleep(interval)
 

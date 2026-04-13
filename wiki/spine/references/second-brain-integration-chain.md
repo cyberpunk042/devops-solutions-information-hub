@@ -216,6 +216,19 @@ Each step is independent. To undo:
 - [ ] At least one contribution back to the second brain
 - [ ] `gateway what-do-i-need` shows your declared identity (not "unknown")
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Requirements this implements** | [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]] |
+> | **Gateway tools (CLI commands)** | [[gateway-tools-reference|Gateway Tools Reference]] |
+> | **Ecosystem architecture** | [[model-ecosystem|Model — Ecosystem Architecture]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **Identity protocol** | [[project-self-identification-protocol|Project Self-Identification Protocol]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+
 ## Relationships
 
 - IMPLEMENTS: [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]

@@ -740,6 +740,20 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > [!question] **What is the minimum viable methodology?**
 > **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified chain (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default chain (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full chain (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Quality standards for methodology** | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map (find anything)** | [[methodology-system-map|Methodology System Map]] |
+> | **SDLC chain selection** | [[sdlc-customization-framework|SDLC Customization Framework]] |
+> | **Domain chains** | [[domain-chain-typescript|TypeScript]], [[domain-chain-python-wiki|Python-Wiki]], [[domain-chain-infrastructure|Infrastructure]], [[domain-chain-knowledge|Knowledge]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+> | **Adoption guide** | [[methodology-adoption-guide|Methodology Adoption Guide]] |
+
 ## Relationships
 
 - GOVERNS: [[model-llm-wiki|Model — LLM Wiki]], [[model-claude-code|Model — Claude Code]], [[model-ecosystem|Model — Ecosystem Architecture]], [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]], [[model-second-brain|Model — Second Brain]]

@@ -167,6 +167,18 @@ Standards for pattern pages — recurring structural phenomena observed across �
 
 `wiki/config/templates/pattern.md` — scaffold via `python3 -m tools.pipeline scaffold pattern "Title"`
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Model these standards serve** | [[model-knowledge-evolution|Model — Knowledge Evolution]] |
+> | **Global wiki standards** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Template for this type** | `wiki/config/templates/pattern.md` |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - BUILDS ON: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]

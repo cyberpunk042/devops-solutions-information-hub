@@ -514,6 +514,20 @@ From building with this model — validated experience:
 >
 > **Dual-scope principle:** Wiki tools work on BOTH the second brain (information hub) AND project-internal wikis. One toolset, two contexts. A project queries the second brain for standards, then applies them to its own wiki.
 
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Page → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **Quality standards for wiki pages** | [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]] |
+> | **Per-type standards** | `wiki/spine/standards/{type}-page-standards.md` |
+> | **Methodology model (how work proceeds)** | [[model-methodology|Model — Methodology]] |
+> | **Super-model (all models)** | [[super-model|Super-Model]] |
+> | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Domain chains** | [[domain-chain-typescript|TypeScript]], [[domain-chain-python-wiki|Python-Wiki]], [[domain-chain-infrastructure|Infrastructure]], [[domain-chain-knowledge|Knowledge]] |
+> | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
+
 ## Relationships
 
 - FEEDS INTO: [[model-second-brain|Model — Second Brain]]
