@@ -51,8 +51,8 @@ Transform every per-type standards page from "rules with a reference to an exemp
 - Every per-type standards page has at least ONE inline annotated exemplar walkthrough
 - Each annotation explains WHY the exemplar element is good — not just WHAT it is
 - Annotations reference the specific quality bar from the standards page (closes the loop)
-- Where possible, use exemplars from THIS session's new pages (they demonstrate current best practices)
-- Each standards page's "Common Failures" table is updated with failures observed this session
+- Where possible, use exemplars from the 2026-04-12 session's new pages (they demonstrate current best practices)
+- Each standards page's "Common Failures" table is updated with failures observed the 2026-04-12 session
 - Standards pages are self-validating: the page itself passes the quality bar it defines
 
 ## Done When
@@ -102,7 +102,7 @@ Transform every per-type standards page from "rules with a reference to an exemp
 
 ### M1: Verify Existing Annotations (3 tasks)
 
-The 3 standards with existing inline annotations need verification — are they still current after this session's changes?
+The 3 standards with existing inline annotations need verification — are they still current after the 2026-04-12 session changes?
 
 | Task | Standards Page | Current Exemplar | Check |
 |------|--------------|-----------------|-------|
@@ -125,9 +125,9 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 | T-E011-10 | Evolution Standards | [[methodology-evolution-history|Evolution — Methodology System]] | Timeline with significance, key shifts, current state |
 | T-E011-11 | Learning Path Standards | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] | 30 pages in 8 parts, testable outcomes |
 | T-E011-12 | Operations Plan Standards | [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]] | 17 steps, each with action/expected/validation |
-| T-E011-13 | Epic Standards | [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]] | THIS session's product — demonstrates strong scaffold with handoff context |
+| T-E011-13 | Epic Standards | [[e010-model-updates-all-15-models-reflect-current-knowledge|E010 — Model Updates — All 15 Models Reflect Current Knowledge]] | the 2026-04-12 session product — demonstrates strong scaffold with handoff context |
 | T-E011-14 | Task Standards | Pick a well-defined task from backlog | Short, focused, verifiable Done When |
-| T-E011-15 | Note Standards | Pick a directive note from this session | Verbatim quotes, interpretation, action items |
+| T-E011-15 | Note Standards | Pick a directive note from the 2026-04-12 session | Verbatim quotes, interpretation, action items |
 
 ### M3: Integration (2 tasks)
 
@@ -150,7 +150,7 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 > Best = aspirational ("this is the gold standard"). Typical = achievable ("this is what good normally looks like"). Recommendation: best — standards should RAISE the bar, not describe the average.
 
 > [!question] What about the new `principle` and `milestone` types?
-> These were added this session. They don't have standards pages yet. Should E011 create them? Recommendation: yes — add 2 more standards pages (principle-page-standards.md, milestone-page-standards.md) as tasks T-E011-18 and T-E011-19.
+> These were added the 2026-04-12 session. They don't have standards pages yet. Should E011 create them? Recommendation: yes — add 2 more standards pages (principle-page-standards.md, milestone-page-standards.md) as tasks T-E011-18 and T-E011-19.
 
 ## Handoff Context
 
@@ -158,7 +158,7 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 >
 > **What this epic does:** Takes 15 per-type standards pages and adds inline annotated exemplar walkthroughs to each. The walkthrough shows a REAL page of that type with annotations explaining WHY each part is good.
 >
-> **What's already done:** 3 of 15 have annotations (lesson, pattern, decision). These were created during the 2026-04-12 session using pages from this session as exemplars.
+> **What's already done:** 3 of 15 have annotations (lesson, pattern, decision). These were created during the 2026-04-12 session using pages from the 2026-04-12 session as exemplars.
 >
 > **What the annotations look like:** See `wiki/spine/standards/lesson-page-standards.md` → "### Annotated Exemplar: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]" section. It walks through frontmatter, summary, context, insight, evidence, applicability, and relationships — annotating WHY each works.
 >

@@ -26,7 +26,7 @@ Models are low quality. Must redo them one at a time starting with Methodology. 
 > Lets take the time to do them one at the time starting with methodology
 > And consididering:
 > we could be looking into the recent openarms insight about methodologies and AI assistant executions and enforcing rules:
-> /home/jfortin/openarms/wiki/log/2026-04-09-methodology-evolution.md + whatever relevant related.
+> OpenArms methodology evolution log (2026-04-09) + whatever relevant related.
 >
 > we are also going to explain how to adhere to the second brain and how set it up into a new project. one piece at the time, that it be the LLM wiki or the methodologies or whatever else, we are going to need to the best ways to starts acting like this project is really the hub and aggregate the learner from everywhere, like we will do now and you will deepen as we go like you clear lack of understanding of which extent reach openarms and how we can use it to generate filtered patch to openclaw to bring it to the same level without some details like the renaming.
 

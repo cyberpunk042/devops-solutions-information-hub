@@ -19,7 +19,8 @@ updated: 2026-04-11
 sources:
   - id: openarms-mapping
     type: file
-    file: /home/jfortin/openarms/wiki/config/skill-stage-mapping.yaml
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms project reference"
 tags: [skills, stage-gate, injection, agent-compliance, methodology]
 ---
 

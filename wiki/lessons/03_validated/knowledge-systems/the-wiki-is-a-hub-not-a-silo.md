@@ -54,11 +54,11 @@ The research wiki is not a standalone documentation project — it is the centra
 
 > [!tip] Hub Mindset: Aggregate In, Process, Feed Back Out
 >
-> | Direction | What Flows | Mechanism | Evidence from This Session |
+> | Direction | What Flows | Mechanism | Evidence from the 2026-04-12 session |
 > |-----------|-----------|-----------|--------------------------|
 > | **Projects → Wiki** | Operational learnings, methodology evolution, failure post-mortems | `pipeline scan`, manual ingestion, gateway contribute | OpenArms: 22 lessons (3,001 lines) fed back. OpenFleet: immune system + tiers + contributions. |
 > | **Wiki → Projects** | Synthesized models, standards, patterns, decisions, principles | `gateway query`, `pipeline export`, MCP tools | 3 principles, SDLC chains, Goldilocks protocol — all consumable by any project. |
-> | **Wiki → Wiki** | Evolution pipeline promotes seed → growing → mature → canonical | `pipeline evolve`, cross-referencing, gap analysis | 39 validated lessons, 15 validated patterns, 3 principles extracted this session. |
+> | **Wiki → Wiki** | Evolution pipeline promotes seed → growing → mature → canonical | `pipeline evolve`, cross-referencing, gap analysis | 39 validated lessons, 15 validated patterns, 3 principles extracted the 2026-04-12 session. |
 > | **Projects → Projects** (via wiki) | One project's learning enriches another | Wiki captures as general pattern, both projects consume | OpenArms enforcement evidence → wiki lesson → OpenFleet can adopt hooks without rediscovering. |
 
 The hub's value scales with the number of projects feeding it. Each project's experience enriches every other project's models. OpenArms's 7 methodology bugs → wiki captures as lessons → OpenFleet doesn't repeat them. OpenFleet's immune system → wiki captures as pattern → OpenArms can adopt without inventing.
@@ -71,7 +71,7 @@ The gateway tool embodies this: `--wiki-root` switches between perspectives. Sam
 
 ## Evidence
 
-> [!success] This Session Proved the Hub Works (2026-04-12)
+> [!success] the 2026-04-12 session Proved the Hub Works (2026-04-12)
 >
 > **Inbound:** Scanned OpenArms (22 distilled lessons, 4 findings docs with option analysis, v10 enforcement data) and OpenFleet (immune system, tiers, contributions, validation matrix, standing orders). 3,001+ lines of operational knowledge ingested.
 >

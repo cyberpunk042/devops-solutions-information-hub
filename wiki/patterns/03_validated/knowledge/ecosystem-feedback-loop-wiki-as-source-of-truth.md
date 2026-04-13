@@ -135,7 +135,7 @@ The pattern has three properties that distinguish it from simple documentation:
 > |-----------|-------|
 > | **What is the source of truth?** | [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] — v1.3 state, 264 pages, all models |
 > | **How do projects adopt from the wiki?** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers, per-domain quick starts, SDLC chain selection |
-> | **What does the feedback look like?** | This session: OpenArms fed back 22 distilled lessons → wiki captured 7+ new mechanisms. OpenFleet fed back immune system + tiers + contributions. |
+> | **What does the feedback look like?** | the 2026-04-12 session: OpenArms fed back 22 distilled lessons → wiki captured 7+ new mechanisms. OpenFleet fed back immune system + tiers + contributions. |
 > | **What PM level enables feedback?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (manual feedback), L2 (structured via fleet tools), L3 (automated via Plane sync) |
 > | **How do gateway tools enable this?** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — agents write back remarks, lessons, corrections via structured gateway |
 > | **What is the Goldilocks for feedback?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — POC projects read only. Production projects feed back actively. |

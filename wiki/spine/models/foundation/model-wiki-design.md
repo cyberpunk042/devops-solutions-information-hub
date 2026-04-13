@@ -344,7 +344,7 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 
 ### Maturity Folder Structure + New Page Types (NEW)
 
-Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox → 04_principles`. Two new page types added this session: `principle` (distilled from ≥3 validated lessons) and `milestone` (delivery target above epics). Callout vocabulary extended with self-check sections (`> [!warning] Self-Check`) and navigation weave (`> [!abstract] From This Page →`).
+Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox → 04_principles`. Two new page types added the 2026-04-12 session: `principle` (distilled from ≥3 validated lessons) and `milestone` (delivery target above epics). Callout vocabulary extended with self-check sections (`> [!warning] Self-Check`) and navigation weave (`> [!abstract] From This Page →`).
 
 ## Open Questions
 

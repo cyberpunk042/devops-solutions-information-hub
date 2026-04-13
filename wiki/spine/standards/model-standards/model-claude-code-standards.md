@@ -155,7 +155,7 @@ What disciplined context usage looks like in practice.
 > [!bug]- **Anti-pattern: pre-loaded everything**
 > 3 MCP servers connected (wiki, NotebookLM, Obsidian), all tool schemas loaded at startup. 5 skills pre-loaded in instructions. Full methodology.yaml inlined in CLAUDE.md. The conversation starts with 20,000 tokens of context before the user says anything.
 >
-> **The fix:** Connect only the MCP servers needed for this session. Load skills on demand. CLAUDE.md routes to files. Start lean, load as needed.
+> **The fix:** Connect only the MCP servers needed for the 2026-04-12 session. Load skills on demand. CLAUDE.md routes to files. Start lean, load as needed.
 
 ---
 

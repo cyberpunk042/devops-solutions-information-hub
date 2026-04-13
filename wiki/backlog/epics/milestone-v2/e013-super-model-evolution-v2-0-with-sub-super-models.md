@@ -169,7 +169,7 @@ Root Super-Model (v2.0) — dashboard + routing
 >
 > **Why:** The operator said "goldilock is not model and model is not standard" — each concept needs its own navigable home. A single super-model page can't serve as the entry point for Goldilocks AND enforcement AND knowledge architecture AND work management. Sub-super-models give each domain its own hub.
 >
-> **Current state:** The super-model (v1.3) has: adoption tiers table, model dependency graph (15 models in reading order), per-project adaptation table, quality contract, version assessment (v1.3), key pages table, open questions. The v1.3 assessment was updated multiple times this session.
+> **Current state:** The super-model (v1.3) has: adoption tiers table, model dependency graph (15 models in reading order), per-project adaptation table, quality contract, version assessment (v1.3), key pages table, open questions. The v1.3 assessment was updated multiple times the 2026-04-12 session.
 >
 > **What needs to happen:**
 > 1. Design which sub-super-models (proposed: 5 — Goldilocks, Enforcement, Knowledge, Work Management, Integration)

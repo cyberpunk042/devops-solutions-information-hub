@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T14:28:10.092768+00:00",
+  "generated": "2026-04-13T14:37:47.101641+00:00",
   "stats": {
     "pages": 305,
     "domains": 9,
@@ -5468,7 +5468,8 @@
         {
           "id": "openarms-evolution",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         },
         {
           "id": "methodology-config",
@@ -6137,12 +6138,14 @@
         {
           "id": "openarms-artifact-spec",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-artifact-spec.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "openarms-methodology",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         },
         {
           "id": "wiki-schema",
@@ -6216,12 +6219,14 @@
         {
           "id": "openarms-methodology",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         },
         {
           "id": "openarms-artifact-spec",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-artifact-spec.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "wiki-schema",
@@ -6413,12 +6418,14 @@
         {
           "id": "openarms-methodology",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         },
         {
           "id": "openarms-agents",
           "type": "file",
-          "file": "/home/jfortin/openarms/AGENTS.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "wiki-schema",
@@ -6504,7 +6511,8 @@
         {
           "id": "openarms-methodology",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         }
       ],
       "layer": "",
@@ -12917,12 +12925,14 @@
         {
           "id": "openarms-agents",
           "type": "file",
-          "file": "/home/jfortin/openarms/AGENTS.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "openarms-directive",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/agent-directive.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms agent directive"
         }
       ],
       "layer": 5,
@@ -13168,12 +13178,14 @@
         {
           "id": "openarms-hooks",
           "type": "file",
-          "file": "/home/jfortin/openarms/scripts/methodology/hooks/"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "openarms-agents",
           "type": "file",
-          "file": "/home/jfortin/openarms/AGENTS.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         }
       ],
       "layer": 5,
@@ -13595,7 +13607,8 @@
         {
           "id": "openarms-mapping",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/skill-stage-mapping.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         }
       ],
       "layer": 5,
@@ -14164,12 +14177,14 @@
         {
           "id": "openarms-hooks",
           "type": "file",
-          "file": "/home/jfortin/openarms/scripts/methodology/hooks/"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "openarms-agents",
           "type": "file",
-          "file": "/home/jfortin/openarms/AGENTS.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         }
       ],
       "layer": 5,
@@ -14295,7 +14310,8 @@
         {
           "id": "openarms-mapping",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/skill-stage-mapping.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         }
       ],
       "layer": 5,
@@ -14427,12 +14443,14 @@
         {
           "id": "openarms-agents",
           "type": "file",
-          "file": "/home/jfortin/openarms/AGENTS.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms project reference"
         },
         {
           "id": "openarms-directive",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/agent-directive.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms agent directive"
         }
       ],
       "layer": 5,
@@ -16171,7 +16189,8 @@
         {
           "id": "openarms-document-chain",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology document chain"
         },
         {
           "id": "atlassian-scrum",
@@ -16982,7 +17001,8 @@
         {
           "id": "openarms-evolution",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         },
         {
           "id": "wiki-methodology",
@@ -18604,7 +18624,8 @@
         {
           "id": "openarms-evidence",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/methodology.yaml"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms methodology.yaml configuration"
         }
       ],
       "layer": "spine",

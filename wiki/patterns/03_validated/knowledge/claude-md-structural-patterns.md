@@ -22,10 +22,12 @@ updated: 2026-04-11
 sources:
   - id: openarms-agents
     type: file
-    file: /home/jfortin/openarms/AGENTS.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms project reference"
   - id: openarms-directive
     type: file
-    file: /home/jfortin/openarms/wiki/config/agent-directive.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms agent directive"
 tags: [claude-md, agent-compliance, structural-patterns, formatting, enforcement]
 ---
 

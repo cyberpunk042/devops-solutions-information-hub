@@ -15,10 +15,12 @@ sources:
     file: wiki/domains/cross-domain/e003-artifact-type-system-requirements.md
   - id: openarms-artifact-spec
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-artifact-spec.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms project reference"
   - id: openarms-methodology
     type: file
-    file: /home/jfortin/openarms/wiki/config/methodology.yaml
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms methodology.yaml configuration"
   - id: wiki-schema
     type: file
     file: wiki/config/wiki-schema.yaml

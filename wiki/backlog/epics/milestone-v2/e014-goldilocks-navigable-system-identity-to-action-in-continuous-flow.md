@@ -108,7 +108,7 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM â€
 
 - **E010 (Model Updates):** Flow routes TO models. Models must be current or routing is misleading.
 - **E013 (Sub-Super-Models):** Flow routes INTO sub-super-models. They must exist as destinations.
-- **Gateway (tools/gateway.py):** Already built this session (649+ lines). This epic ENHANCES it, doesn't rebuild it.
+- **Gateway (tools/gateway.py):** Already built the 2026-04-12 session (649+ lines). This epic ENHANCES it, doesn't rebuild it.
 
 ## Open Questions
 

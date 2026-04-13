@@ -469,7 +469,7 @@ From building with this model — validated experience:
 ### State of Knowledge
 
 > [!success] **Well-covered**
-> - Complete page type catalog (19 types including milestone + principle added this session)
+> - Complete page type catalog (19 types including milestone + principle added the 2026-04-12 session)
 > - Maturity-based folder structure (00_inbox→04_principles) implemented and populated
 > - 3 core operations (ingest, query, lint) with real tooling (pipeline, gateway, MCP server)
 > - Evolution pipeline running (scores, promotes, detects staleness)

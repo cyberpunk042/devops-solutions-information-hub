@@ -113,7 +113,7 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 > | Stage hooks | Adopted (4 hooks) |
 > | Wiki structure | Adopted (wiki/ folder with frontmatter) |
 > | Export from second brain | Pending (E016 proved the chain) |
-> | Feed-back TO second brain | Active (22 lesson files ingested this session) |
+> | Feed-back TO second brain | Active (22 lesson files ingested the 2026-04-12 session) |
 
 ### How This Connects — Navigate From Here
 

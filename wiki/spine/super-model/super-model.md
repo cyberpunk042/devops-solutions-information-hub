@@ -137,7 +137,7 @@ Updated to reflect deep sister project scan, work management framework, and SDLC
 > - 5 sub-super-models: Goldilocks, Enforcement, Knowledge, Work Management, Integration — each a navigation hub
 > - Root super-model slimmed to dashboard + routing table
 >
-> **What v1.3 added (this session):**
+> **What v1.3 added (the 2026-04-12 session):**
 > - Deep OpenArms/OpenFleet scan: real enforcement data (25%→100% compliance), 6 behavioral failure classes, immune system architecture, contribution gating, tier progression, validation matrix
 > - Work management framework: milestones, 8 impediment types, readiness vs progress as independent dimensions, 3 PM levels (L1:Wiki → L2:Fleet → L3:Full PM), harness version progression
 > - SDLC customization: phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full), backed by CMMI, Lean Startup, and Agentic SDLC research

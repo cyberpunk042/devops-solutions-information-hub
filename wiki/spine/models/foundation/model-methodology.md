@@ -705,7 +705,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 | [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]] | Copying values ≠ building framework. Phase 1: 37 files of "crap" | Portability test: can another project adopt without rewriting? |
 | [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]] | "Follow methodology" ≠ "enter Document stage" | Explicit 5-step method broke the research-produce loop |
 | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Structure governs behavior more than content | Same rules: prose=25%, tables=60%. Structure > content. |
-| [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]] | The wiki aggregates from projects AND feeds back to them | 22 OpenArms lessons + OpenFleet architecture fed back this session |
+| [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]] | The wiki aggregates from projects AND feeds back to them | 22 OpenArms lessons + OpenFleet architecture fed back the 2026-04-12 session |
 
 ### State of Knowledge
 

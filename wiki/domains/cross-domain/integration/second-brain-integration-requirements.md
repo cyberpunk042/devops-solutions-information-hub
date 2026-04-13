@@ -32,7 +32,7 @@ tags: [requirements, second-brain, integration, full-chain, goldilocks, methodol
 
 ## Summary
 
-Complete requirements spec for the second brain integration system — covering the FULL chain from project init through brain integration, methodology adoption, standards adherence, work loop execution, and feedback. 44 distinct requirements extracted from 9 operator directives in this session. This document is the AUTHORITY for what needs to be built, updated, and proven.
+Complete requirements spec for the second brain integration system — covering the FULL chain from project init through brain integration, methodology adoption, standards adherence, work loop execution, and feedback. 44 distinct requirements extracted from 9 operator directives from the 2026-04-12 session. This document is the AUTHORITY for what needs to be built, updated, and proven.
 
 ## Key Insights
 
@@ -111,21 +111,21 @@ Complete requirements spec for the second brain integration system — covering 
 > |----|------------|--------|------------|---------------|
 > | FR-F1 | Dual-scope tools | **Done** | Gateway has --wiki-root and --brain. Auto-detects second brain location. | --brain auto-detection needs more fallback paths. |
 > | FR-F2 | Projects query brain then apply locally | **Partial** | Gateway queries work from external project. | No "apply to my project" command. Query returns data but doesn't WRITE to the project's config. |
-> | FR-F3 | Brain = source of truth | **Done** | Ecosystem Feedback Loop pattern. Super-model as hub. | Working in practice this session (OpenArms/OpenFleet fed back knowledge). |
+> | FR-F3 | Brain = source of truth | **Done** | Ecosystem Feedback Loop pattern. Super-model as hub. | Working in practice the 2026-04-12 session (OpenArms/OpenFleet fed back knowledge). |
 > | FR-F4 | Sister project integration | **Done** | 22 OpenArms lessons + OpenFleet architecture deeply integrated. | Need to return regularly, not one-time scan. |
 > | FR-F5 | New sources pipeline | **Documented** | Pipeline has fetch/ingest/post chain. | 10-15 sources from operator not yet provided. |
-> | FR-F6 | Every layer addressed per source | **Documented** | Ingestion methodology defined (extract → cross-ref → gaps → deepen). | Not yet proven with new sources this session. |
+> | FR-F6 | Every layer addressed per source | **Documented** | Ingestion methodology defined (extract → cross-ref → gaps → deepen). | Not yet proven with new sources the 2026-04-12 session. |
 
 > [!abstract] G. Knowledge & Iteration (8 requirements)
 >
 > | ID | Requirement | Status | What's Done | What's Missing |
 > |----|------------|--------|------------|---------------|
-> | FR-G1 | Continuous improvement | **Active** | Multiple iteration passes this session. | Needs to be ongoing, not session-bounded. |
+> | FR-G1 | Continuous improvement | **Active** | Multiple iteration passes the 2026-04-12 session. | Needs to be ongoing, not session-bounded. |
 > | FR-G2 | Human confirmation at each level | **Documented** | 99→100 rule. Principles need operator promotion. | No tooling blocks promotion without confirmation. |
 > | FR-G3 | Constant evolution | **Active** | Evolution pipeline running. 3 principles extracted. | Needs regular evolution sweeps, not just session-driven. |
-> | FR-G4 | Iterate existing pages | **Done this session** | 13 OpenArms lessons integrated. 8 model pages deepened. All lessons promoted to validated. | One pass. Operator says "multiple times." |
+> | FR-G4 | Iterate existing pages | **Done the 2026-04-12 session** | 13 OpenArms lessons integrated. 8 model pages deepened. All lessons promoted to validated. | One pass. Operator says "multiple times." |
 > | FR-G5 | Strongest vision | **Partial** | Super-model v1.3. 3 principles. Goldilocks protocol. | Vision is scattered across pages. Needs ONE cohesive document showing the complete picture. |
-> | FR-G6 | Practice own methodology | **Partial** | CLAUDE.md has identity profile. Followed methodology for this session. | Not all work this session followed proper stages. Some was reactive. |
+> | FR-G6 | Practice own methodology | **Partial** | CLAUDE.md has identity profile. Followed methodology for the 2026-04-12 session. | Not all work the 2026-04-12 session followed proper stages. Some was reactive. |
 > | FR-G7 | Consistent structures across injections | **Partial** | Structured Context principle. Five Cognitive Contexts. Validation matrix. | Not yet applied to THIS wiki's own injections (CLAUDE.md, skills, templates). |
 > | FR-G8 | Proto-programming mindset | **Documented** | Lesson + principle. Evidence from OpenArms/OpenFleet. | Not yet the DEFAULT approach. Templates don't demonstrate proto-programming. |
 
@@ -156,7 +156,7 @@ Complete requirements spec for the second brain integration system — covering 
 
 ## Open Questions
 
-> [!question] Should the requirements spec itself follow this session's methodology? (Document → Design → Scaffold → Implement → Test)
+> [!question] Should the requirements spec itself follow the 2026-04-12 session methodology? (Document → Design → Scaffold → Implement → Test)
 > This document is the Document stage. Design stage = architecture decisions on how to meet each requirement. Scaffold = stubs. Implement = build. Test = prove the chain works.
 
 > [!question] Which requirements need operator confirmation before building?

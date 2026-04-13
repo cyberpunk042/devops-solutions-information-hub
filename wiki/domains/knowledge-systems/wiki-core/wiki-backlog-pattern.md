@@ -190,7 +190,7 @@ This research wiki (`devops-solutions-research-wiki`) currently implements the *
 | Task stage-gating | Not implemented | readiness + stages_completed in frontmatter |
 | Operator directive chain | MEMORY.md (external) | wiki/log/ as primary source of truth |
 
-The OpenArms implementation (`/home/jfortin/openarms/wiki/`) is the direct reference for this adoption. The wiki/config/schema.yaml, wiki/config/methodology.yaml, and wiki/config/agent-directive.md files are the templates.
+The OpenArms implementation (see [[identity-profile|OpenArms — Identity Profile]]) is the direct reference for this adoption. The wiki/config/schema.yaml, wiki/config/methodology.yaml, and wiki/config/agent-directive.md files are the templates.
 
 ### Relationship to PM Tools
 

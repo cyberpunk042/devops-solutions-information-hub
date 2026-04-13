@@ -128,7 +128,7 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 > type: concept              # ← correct type
 > domain: cross-domain       # ← cross-domain because it applies to ALL projects
 > confidence: high           # ← justified: backed by CMMI, Lean Startup, EPAM ADLC research
-> maturity: seed             # ← honest: concept is new this session, needs operator review
+> maturity: seed             # ← honest: concept is new the 2026-04-12 session, needs operator review
 > sources:                   # ← 7 sources with mix of directives, files, and external URLs
 >   - id: cmmi-levels
 >     type: article

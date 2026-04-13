@@ -111,7 +111,7 @@ This is different from a methodology stage gate. Stage gates define WHAT is allo
 
 > [!warning] Self-Check — Am I In a Loop?
 >
-> 1. Have I alternated between research and production more than once this session?
+> 1. Have I alternated between research and production more than once the 2026-04-12 session?
 > 2. Has the operator said both "research more" and "produce already" in different cycles?
 > 3. Do I have a NUMBERED, SEQUENTIAL procedure I'm following, or just a stage label?
 > 4. Could I tell someone exactly which step I'm on and what the next step is?

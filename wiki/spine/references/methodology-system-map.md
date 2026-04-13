@@ -173,7 +173,7 @@ Complete map of the methodology system — every component, where it lives, what
 > | [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]] | 6 decisions: templates, interface spec, bridge pattern, scaffold checks, compliance, completion logs |
 > | [[methodology-stage-extension-decisions|Decision — Methodology Stage Extension Decisions]] | 4 decisions: initiation stage, deploy stage, status reports, drift detection |
 
-> [!abstract] Lessons Evolved This Session
+> [!abstract] Lessons Evolved the 2026-04-12 session
 >
 > | Page | What It Teaches |
 > |------|----------------|

@@ -86,7 +86,7 @@ PROVE the complete integration chain works by walking OpenArms through every ste
 > [!info] For fresh context:
 >
 > **What:** Run the integration chain on OpenArms, capture proof.
-> **Pre-existing:** `wiki/spine/second-brain-integration-chain.md` (17 steps), `tools/gateway.py` (gateway), `/home/jfortin/openarms/` (target project).
+> **Pre-existing:** `wiki/spine/second-brain-integration-chain.md` (17 steps), `tools/gateway.py` (gateway), OpenArms project (target project).
 > **Depends on:** E010-E015 completing first.
 
 ## Relationships

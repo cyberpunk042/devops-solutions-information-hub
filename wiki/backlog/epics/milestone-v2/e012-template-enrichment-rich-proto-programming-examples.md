@@ -120,15 +120,15 @@ Transform every page template from a structural skeleton with placeholder commen
 | T-E012-07 | pattern.md | Rich, 59L | VERIFY — already has instances table format. Improve if needed. |
 | T-E012-08 | decision.md | Rich, 52L | VERIFY — already has scenario-action table. Improve if needed. |
 | T-E012-09 | domain-overview.md | Moderate, 48L | Example Maturity Map row, example Key Pages with reading order |
-| T-E012-10 | evolution.md | Upgraded this session, 75L | VERIFY — already has timeline format + key shift structure. |
-| T-E012-11 | learning-path.md | Upgraded this session, 65L | VERIFY — already has part structure + annotations. |
-| T-E012-12 | epic.md | Upgraded this session, 107L | VERIFY — already has Stage Artifacts + Module Breakdown + Handoff Context sections. |
-| T-E012-13 | module.md | Upgraded this session, 60L | Example Tasks table with 2 rows filled (readiness/progress columns) |
-| T-E012-14 | task.md | Upgraded this session, 44L | Example Done When with 2 specific items naming files |
-| T-E012-15 | note.md | Upgraded this session, 75L | VERIFY — already has per-type structure (directive/session/completion). |
+| T-E012-10 | evolution.md | Upgraded the 2026-04-12 session, 75L | VERIFY — already has timeline format + key shift structure. |
+| T-E012-11 | learning-path.md | Upgraded the 2026-04-12 session, 65L | VERIFY — already has part structure + annotations. |
+| T-E012-12 | epic.md | Upgraded the 2026-04-12 session, 107L | VERIFY — already has Stage Artifacts + Module Breakdown + Handoff Context sections. |
+| T-E012-13 | module.md | Upgraded the 2026-04-12 session, 60L | Example Tasks table with 2 rows filled (readiness/progress columns) |
+| T-E012-14 | task.md | Upgraded the 2026-04-12 session, 44L | Example Done When with 2 specific items naming files |
+| T-E012-15 | note.md | Upgraded the 2026-04-12 session, 75L | VERIFY — already has per-type structure (directive/session/completion). |
 | T-E012-16 | operations-plan.md | Rich, 56L | VERIFY — already has Action/Expected/Validation/Rollback per step. |
-| T-E012-17 | milestone.md | Created this session, 83L | Example Epic Composition table with 2 rows filled |
-| T-E012-18 | principle.md | Created this session, 85L | Example Derived From table with 1 row filled |
+| T-E012-17 | milestone.md | Created the 2026-04-12 session, 83L | Example Epic Composition table with 2 rows filled |
+| T-E012-18 | principle.md | Created the 2026-04-12 session, 85L | Example Derived From table with 1 row filled |
 
 ### M2: Methodology Templates (6 templates)
 
@@ -150,7 +150,7 @@ Transform every page template from a structural skeleton with placeholder commen
 ## Dependencies
 
 - **E011 (Standards):** Templates must demonstrate what standards define. If a standard says "Evidence section must have ≥3 items," the lesson template should show 3 example evidence items. E011 should complete (or at least M1 verify pass) before templates are enriched.
-- **Current template upgrades:** 6 templates were upgraded this session (note, epic, learning-path, evolution, milestone, principle). These need VERIFY tasks, not full rewrites.
+- **Current template upgrades:** 6 templates were upgraded the 2026-04-12 session (note, epic, learning-path, evolution, milestone, principle). These need VERIFY tasks, not full rewrites.
 
 ## Open Questions
 
@@ -166,7 +166,7 @@ Transform every page template from a structural skeleton with placeholder commen
 >
 > **What this epic does:** Takes 24 page templates and enriches each with inline example content so the template TEACHES by example, not just by comments.
 >
-> **What's already done:** 6 templates upgraded this session with richer guidance (note, epic, learning-path, evolution, milestone, principle). 6 templates were already rich before (lesson, pattern, decision, operations-plan, source-synthesis, comparison). The remaining 12 need enrichment.
+> **What's already done:** 6 templates upgraded the 2026-04-12 session with richer guidance (note, epic, learning-path, evolution, milestone, principle). 6 templates were already rich before (lesson, pattern, decision, operations-plan, source-synthesis, comparison). The remaining 12 need enrichment.
 >
 > **The proto-programming principle:** The template's STRUCTURE programs agent behavior. An agent filling a template with example content will produce output that mimics the example's quality. An agent filling a template with empty placeholders will produce minimal output.
 >

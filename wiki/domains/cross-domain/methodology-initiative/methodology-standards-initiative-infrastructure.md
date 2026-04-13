@@ -12,10 +12,12 @@ updated: 2026-04-11
 sources:
   - id: openarms-methodology
     type: file
-    file: /home/jfortin/openarms/wiki/config/methodology.yaml
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms methodology.yaml configuration"
   - id: openarms-agents
     type: file
-    file: /home/jfortin/openarms/AGENTS.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms project reference"
   - id: wiki-schema
     type: file
     file: wiki/config/wiki-schema.yaml

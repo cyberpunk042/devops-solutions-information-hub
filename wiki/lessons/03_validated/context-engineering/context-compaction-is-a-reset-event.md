@@ -48,7 +48,7 @@ When an LLM agent's context is compacted (summarized to reduce token count), all
 > |----------|------|
 > | CLAUDE.md (loaded fresh) | In-session corrections |
 > | Hook configurations | Behavioral adjustments from feedback |
-> | Files on disk | Mental model of "what I learned this session" |
+> | Files on disk | Mental model of "what I learned the 2026-04-12 session" |
 > | Memories (.claude/memory) | Accumulated context about task progress |
 > | Infrastructure enforcement | Soft compliance improvements |
 >
@@ -98,7 +98,7 @@ OpenFleet solves it differently — the immune system's PRUNE response kills the
 >
 > 1. Does my agent store task state ONLY in conversation context, or also in files?
 > 2. Do I have a post-compact hook that rebuilds state?
-> 3. If the agent has been corrected 3 times this session, will those corrections survive compaction?
+> 3. If the agent has been corrected 3 times the 2026-04-12 session, will those corrections survive compaction?
 > 4. What is my compaction threshold, and do I know when it fires?
 
 ### How This Connects — Navigate From Here

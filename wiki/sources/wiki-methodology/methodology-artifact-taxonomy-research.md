@@ -28,7 +28,8 @@ sources:
     url: https://en.wikipedia.org/wiki/Artifact_(software_development)
   - id: openarms-document-chain
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms methodology document chain"
   - id: atlassian-scrum
     type: article
     url: https://www.atlassian.com/agile/scrum/artifacts

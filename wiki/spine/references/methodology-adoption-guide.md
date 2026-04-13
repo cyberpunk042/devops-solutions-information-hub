@@ -22,7 +22,8 @@ sources:
     file: wiki/config/artifact-types.yaml
   - id: openarms-evidence
     type: file
-    file: /home/jfortin/openarms/wiki/config/methodology.yaml
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms methodology.yaml configuration"
 tags: [methodology, adoption, guide, onboarding, ecosystem]
 ---
 

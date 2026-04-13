@@ -43,7 +43,7 @@ Three open questions from Skyscraper, Pyramid, Mountain resolved by cross-refere
 > | Stale pages accumulating | `updated` dates falling behind, no evolution activity | `pipeline evolve --review` |
 > | Stage gates being skipped | Commits without stage names, tasks at 100% without all stages | Git log audit |
 >
-> These are observable TODAY using the wiki's own tooling. The lint-to-zero effort this session was itself a Mountain→Pyramid recovery operation — lint 103→1 is the metric.
+> These are observable TODAY using the wiki's own tooling. The lint-to-zero effort the 2026-04-12 session was itself a Mountain→Pyramid recovery operation — lint 103→1 is the metric.
 
 **Pyramid IS a stable equilibrium — with continuous investment.** A Pyramid that receives regular maintenance (weekly `pipeline chain review`, periodic `evolve --score`, lint monitoring) remains Pyramid indefinitely. Decay happens when maintenance stops — not from some inherent instability. This matches the LLM Wiki Pattern's maintenance economics: "LLMs don't get bored." With automated maintenance (post-chain, watcher daemon, evolution pipeline), the cost of sustaining Pyramid is near-zero. Without automation, it requires human discipline — which historically fails.
 

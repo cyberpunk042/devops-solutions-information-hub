@@ -21,10 +21,12 @@ updated: 2026-04-11
 sources:
   - id: openarms-hooks
     type: file
-    file: /home/jfortin/openarms/scripts/methodology/hooks/
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms project reference"
   - id: openarms-agents
     type: file
-    file: /home/jfortin/openarms/AGENTS.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms project reference"
 tags: [hooks, enforcement, agent-compliance, infrastructure, claude-code]
 ---
 

@@ -18,7 +18,8 @@ sources:
     file: wiki/config/methodology.yaml
   - id: openarms-methodology
     type: file
-    file: /home/jfortin/openarms/wiki/config/methodology.yaml
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms methodology.yaml configuration"
 tags: [methodology, composition, models, recursive, multi-track]
 ---
 

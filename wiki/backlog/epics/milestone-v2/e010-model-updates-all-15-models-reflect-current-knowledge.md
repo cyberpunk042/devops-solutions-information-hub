@@ -54,7 +54,7 @@ Update EVERY one of the 15 named models in the wiki so each fully reflects the c
 - Every model page reflects ALL knowledge from the 2026-04-12 session and sister project scans
 - Each model's Key Insights section is CURRENT — no outdated claims, no missing evidence
 - Each model's Deep Analysis has subsections for NEW concepts (enforcement hierarchy, Goldilocks, readiness/progress, PM levels, SDLC chains) where they apply to that model
-- Each model's Lessons Learned table includes the 13 new lessons from this session where relevant
+- Each model's Lessons Learned table includes the 13 new lessons from the 2026-04-12 session where relevant
 - Each model's State of Knowledge section is honest — what's well-covered vs thin vs unverified
 - Each model's Open Questions section has resolved answers where evidence now exists
 - Each model's "How This Connects" navigation weave points to the new framework pages
@@ -117,7 +117,7 @@ These 3 models are referenced by everything else. They MUST be current before ot
 |------|-------|-------------------|-------------|
 | T-E010-04 | **Model: Claude Code** | Five cognitive contexts (from OpenArms), context compaction hooks, structured context proto-programming, enforcement hierarchy quantified (25%→100%). Partially updated — needs Deep Analysis sections on new patterns. | L |
 | T-E010-05 | **Model: Skills, Commands, and Hooks** | Real OpenArms v10 implementations (hook code, skill-stage-mapping 3 layers, dynamic injection). Partially updated — needs Deep Analysis on real implementation patterns. | M |
-| T-E010-06 | **Model: Ecosystem Architecture** | PM level per project table added. Needs: updated project table (OpenArms=harness-v2, OpenFleet=full-system), ecosystem feedback loop evidence from this session. | M |
+| T-E010-06 | **Model: Ecosystem Architecture** | PM level per project table added. Needs: updated project table (OpenArms=harness-v2, OpenFleet=full-system), ecosystem feedback loop evidence from the 2026-04-12 session. | M |
 | T-E010-07 | **Model: SFIF and Architecture** | SFIF × SDLC chain connection added. Needs review: is the mapping (Skyscraper≈Full, Pyramid≈Default, Mountain≈Simplified) accurate? | S |
 
 ### M3: Depth Models (specialized domains)

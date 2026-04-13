@@ -201,7 +201,7 @@ What proper ALLOWED/FORBIDDEN adherence looks like.
 What real multi-model composition looks like when it runs well.
 
 > [!info] **Three-track parallel composition on this wiki**
-> | Track | Running model | Current state | Artifacts this session |
+> | Track | Running model | Current state | Artifacts the 2026-04-12 session |
 > |-------|--------------|---------------|----------------------|
 > | **Execution** | Brainstorm → Spec → Plan → Implement | Active — building models, applying styling | Specs, model pages, standards pages, skills |
 > | **PM** | Epics → Modules → Tasks | Active — 2 epics, backlog system operational | Backlog entries, readiness scores |

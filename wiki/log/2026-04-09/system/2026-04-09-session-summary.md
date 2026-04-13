@@ -32,7 +32,7 @@ Massive session. Built evolution pipeline, answered ~169 open questions, created
 - All fabricated data removed/attributed (context thresholds, rework multiplier)
 - model-builder skill + /build-model command
 
-## Key Failures This Session
+## Key Failures the 2026-04-12 session
 1. Fabricated context degradation thresholds presented as facts (fixed)
 2. Repeatedly skipped stages (document → jumped to implement)
 3. Declared readiness multiple times when models were incomplete
@@ -41,7 +41,7 @@ Massive session. Built evolution pipeline, answered ~169 open questions, created
 6. Double-bracket backlink bug keeps recurring despite fix
 
 ## Commits
-56+ commits this session (branch ahead of origin by 56+).
+56+ commits the 2026-04-12 session (branch ahead of origin by 56+).
 
 ## Next Session Entry Point
 Read docs/SESSION-2026-04-09.md for full context.
