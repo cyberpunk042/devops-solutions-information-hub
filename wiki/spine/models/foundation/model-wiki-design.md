@@ -133,7 +133,7 @@ Everything Obsidian adds. These render in Obsidian and Obsidian Publish; they de
 > | Syntax | Purpose | When |
 > |--------|---------|------|
 > | ``[[Page Title]]`` | Link to wiki page | ALL relationship targets, all page references in body text |
-> | `[[Page\|Display Text]]` | Aliased link | When the page title is too long for inline use |
+> | `[[Page|Display Text]]` | Aliased link | When the page title is too long for inline use |
 > | ``[[Page#Heading]]`` | Section link | Deep references to specific parts |
 > | ``[[Page#^block-id]]`` | Block link | Referencing one specific paragraph |
 > | `!`[[Page#Heading]]`` | Embed section | When the reader NEEDS to see it inline |

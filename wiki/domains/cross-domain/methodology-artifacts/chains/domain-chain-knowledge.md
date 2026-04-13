@@ -157,7 +157,7 @@ Unlike code domains where artifacts flow through stages linearly (document → d
 >
 > | Project | SDLC Level | Focus | Details |
 > |---------|-----------|-------|---------|
-> | **Research Wiki** | Default | 300-page knowledge system | [[identity-profile\|Research Wiki — Identity Profile]] — progressive distillation L0→L6, custom pipeline, self-referential methodology |
+> | **Research Wiki** | Default | 300-page knowledge system | [[identity-profile|Research Wiki — Identity Profile]] — progressive distillation L0→L6, custom pipeline, self-referential methodology |
 
 ### How This Connects — Navigate From Here
 

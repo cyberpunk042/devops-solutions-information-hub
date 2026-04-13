@@ -69,23 +69,23 @@ These are cross-referenced to the wiki's lesson and pattern pages — the brain'
 >
 > | Lesson | What OpenFleet Proved |
 > |--------|---------------------|
-> | [[harness-ownership-converges-independently-across-projects\|Harness Ownership Converges Independently]] | OpenFleet and OpenArms independently evolved harness-owns-loop — convergent evolution confirms the pattern |
-> | [[infrastructure-enforcement-proves-instructions-fail\|Infrastructure Enforcement Proves Instructions Fail]] | MCP tool blocking at server level is stronger than hooks — tool call refused before reaching any handler |
-> | [[never-skip-stages-even-when-told-to-continue\|Never Skip Stages Even When Told to Continue]] | 6-stage model with per-stage tool blocking enforces this structurally |
-> | [[context-management-is-primary-productivity-lever\|Context Management Is the Primary LLM Productivity Lever]] | 10x cost difference between expert (full context) and lightweight (title+stage only) |
-> | [[structured-context-is-proto-programming-for-ai-agents\|Structured Context Is Proto-Programming for AI Agents]] | Validation matrix: 29 scenarios, same structural skeleton, content varies — shape constant |
+> | [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently]] | OpenFleet and OpenArms independently evolved harness-owns-loop — convergent evolution confirms the pattern |
+> | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] | MCP tool blocking at server level is stronger than hooks — tool call refused before reaching any handler |
+> | [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]] | 6-stage model with per-stage tool blocking enforces this structurally |
+> | [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]] | 10x cost difference between expert (full context) and lightweight (title+stage only) |
+> | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Validation matrix: 29 scenarios, same structural skeleton, content varies — shape constant |
 
 > [!tip] Key Patterns Observed
 >
 > | Pattern | How OpenFleet Implements It |
 > |---------|--------------------------|
-> | [[three-lines-of-defense-immune-system-for-agent-quality\|Three Lines of Defense]] | Prevention (tool blocking + contribution gates) → Detection (30s doctor: 5 diseases) → Correction (TEACH→COMPACT→PRUNE→ESCALATE) |
-> | [[harness-owned-loop-deterministic-agent-execution\|Harness-Owned Loop]] | Orchestrator dispatches, agents execute. Zero LLM calls in control loop. Storm graduation limits dispatch. |
-> | [[contribution-gating-cross-agent-inputs-before-work\|Contribution Gating]] | Synergy matrix (115 lines YAML): required/recommended/conditional per role pair. Task blocked until all required contributions received. |
-> | [[tier-based-context-depth-trust-earned-through-approval-rates\|Tier-Based Context Depth]] | Trainee→Standard (85%+)→Expert. Per-task-type overrides. Rolling 20-record windows. PO confirms, data recommends. |
-> | [[validation-matrix-test-suite-for-context-injection\|Validation Matrix]] | 29 scenarios (TK-*, HB-*, FL-*) testing context injection. Each: exact expected context + expected behavior. |
-> | [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] | Brain is pure Python; LLM calls happen only inside agent execution, never in orchestration |
-> | [[enforcement-hook-patterns\|Enforcement Hook Patterns]] | MCP tool blocking per stage in methodology.yaml — stronger than hooks, refused at server level |
+> | [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense]] | Prevention (tool blocking + contribution gates) → Detection (30s doctor: 5 diseases) → Correction (TEACH→COMPACT→PRUNE→ESCALATE) |
+> | [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] | Orchestrator dispatches, agents execute. Zero LLM calls in control loop. Storm graduation limits dispatch. |
+> | [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating]] | Synergy matrix (115 lines YAML): required/recommended/conditional per role pair. Task blocked until all required contributions received. |
+> | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth]] | Trainee→Standard (85%+)→Expert. Per-task-type overrides. Rolling 20-record windows. PO confirms, data recommends. |
+> | [[validation-matrix-test-suite-for-context-injection|Validation Matrix]] | 29 scenarios (TK-*, HB-*, FL-*) testing context injection. Each: exact expected context + expected behavior. |
+> | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | Brain is pure Python; LLM calls happen only inside agent execution, never in orchestration |
+> | [[enforcement-hook-patterns|Enforcement Hook Patterns]] | MCP tool blocking per stage in methodology.yaml — stronger than hooks, refused at server level |
 
 ## Unique Discoveries
 
@@ -94,7 +94,7 @@ Patterns that the brain learned ONLY from OpenFleet — not observed in other ec
 - **5 named diseases with detection functions**: Deviation, Laziness, Protocol violation, Confident-but-wrong (3+ corrections), Scope creep. Each has a specific detection function in doctor.py.
 - **Storm graduation**: CRITICAL→full stop, STORM→no dispatch, WARNING→limit to 1. Orchestrator responds proportionally to severity.
 - **Standing orders**: Per-role autonomous authority levels (conservative/standard/autonomous). Escalation: 2 autonomous actions without feedback → PO alert.
-- **Readiness vs progress as two fields**: `task_readiness` (0-99, pre-dispatch, PO sets) vs `task_progress` (0-100, post-dispatch, agent reports). Readiness gates at 99. See [[readiness-vs-progress\|Readiness vs Progress — Two-Dimensional Work Tracking]].
+- **Readiness vs progress as two fields**: `task_readiness` (0-99, pre-dispatch, PO sets) vs `task_progress` (0-100, post-dispatch, agent reports). Readiness gates at 99. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]].
 - **5 cognitive contexts**: OpenArms discovered this (5 contexts reading one CLAUDE.md), but OpenFleet's agent diversity (10 agents, each with different SOUL.md) makes the problem structural. Each agent needs context shaped for its role.
 
 ## Artifact Chain (Project-Specific)
@@ -113,7 +113,7 @@ OpenFleet uses a TypeScript/Node domain chain for agent code and a Python chain 
 
 **Toolchain:** pnpm, TypeScript, OpenClaw + Mission Control, FastAPI, Next.js, LightRAG, LocalAI, PostgreSQL, Redis, IRC
 
-See [[domain-chain-typescript\|Artifact Chain — TypeScript-Node Domain]] for the generic TS chain and [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] for the framework.
+See [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] for the generic TS chain and [[artifact-chains-by-model|Artifact Chains by Methodology Model]] for the framework.
 
 ## Methodology Adaptations
 
@@ -148,14 +148,14 @@ See [[domain-chain-typescript\|Artifact Chain — TypeScript-Node Domain]] for t
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Ecosystem overview** | [[four-project-ecosystem\|Four-Project Ecosystem]] |
-> | **Enforcement comparison** | [[openarms-vs-openfleet-enforcement\|OpenArms vs OpenFleet Enforcement Architecture]] |
-> | **Full synthesis source** | [[src-openfleet-fleet-architecture\|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] |
-> | **Immune system rules** | [[immune-system-rules\|Immune System Rules]] |
-> | **Generic artifact framework** | [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] |
-> | **OpenArms comparison** | [[identity-profile\|OpenArms — Identity Profile]] |
-> | **Methodology model** | [[model-methodology\|Model — Methodology]] |
-> | **Ecosystem model** | [[model-ecosystem\|Model — Ecosystem Architecture]] |
+> | **Ecosystem overview** | [[four-project-ecosystem|Four-Project Ecosystem]] |
+> | **Enforcement comparison** | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] |
+> | **Full synthesis source** | [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]] |
+> | **Immune system rules** | [[immune-system-rules|Immune System Rules]] |
+> | **Generic artifact framework** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **OpenArms comparison** | [[identity-profile|OpenArms — Identity Profile]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Ecosystem model** | [[model-ecosystem|Model — Ecosystem Architecture]] |
 
 ## Relationships
 

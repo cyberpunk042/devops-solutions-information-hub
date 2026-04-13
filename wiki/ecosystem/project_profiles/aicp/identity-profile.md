@@ -47,16 +47,16 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 >
 > | Lesson | What AICP Proved |
 > |--------|-----------------|
-> | [[skills-architecture-is-dominant-extension-pattern\|Skills Architecture Is the Dominant LLM Extension Pattern]] | 78 skills in .claude/skills/ — the largest skill collection in the ecosystem. 18 referenced in fleet's agent-tooling.yaml. |
-> | [[cli-tools-beat-mcp-for-token-efficiency\|CLI Tools Beat MCP for Token Efficiency]] | AICP exposes 11 MCP tools AND a CLI — the routing decision itself is an MCP tool (`route`), proving MCP can wrap complex decisions |
-> | [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] | Router's complexity scoring + circuit breaker + profile thresholds are deterministic; only the final inference call is LLM |
+> | [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | 78 skills in .claude/skills/ — the largest skill collection in the ecosystem. 18 referenced in fleet's agent-tooling.yaml. |
+> | [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | AICP exposes 11 MCP tools AND a CLI — the routing decision itself is an MCP tool (`route`), proving MCP can wrap complex decisions |
+> | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | Router's complexity scoring + circuit breaker + profile thresholds are deterministic; only the final inference call is LLM |
 
 > [!tip] Key Patterns Observed
 >
 > | Pattern | How AICP Implements It |
 > |---------|----------------------|
-> | [[gateway-centric-routing\|Gateway-Centric Routing]] | Auto mode: score complexity → check circuit breaker → apply profile thresholds → select backend → failover chain |
-> | [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] | Router is pure logic; LLM calls happen after routing decision |
+> | [[gateway-centric-routing|Gateway-Centric Routing]] | Auto mode: score complexity → check circuit breaker → apply profile thresholds → select backend → failover chain |
+> | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | Router is pure logic; LLM calls happen after routing decision |
 
 ## Artifact Chain (Project-Specific)
 
@@ -74,7 +74,7 @@ The brain has limited visibility into AICP's artifact chain. Known artifacts:
 
 **Toolchain:** Python, LocalAI (9 models), circuit breaker, YAML profiles, MCP server
 
-The generic Python domain chain at [[domain-chain-python-wiki\|Artifact Chain — Python-Wiki Domain]] applies here, though AICP's chain has not been specifically resolved to AICP's own artifact patterns.
+The generic Python domain chain at [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] applies here, though AICP's chain has not been specifically resolved to AICP's own artifact patterns.
 
 ## Methodology Adaptations
 
@@ -118,12 +118,12 @@ The generic Python domain chain at [[domain-chain-python-wiki\|Artifact Chain �
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Ecosystem overview** | [[four-project-ecosystem\|Four-Project Ecosystem]] |
-> | **Concept page** | [[aicp\|AICP]] |
-> | **Generic artifact framework** | [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] |
-> | **Methodology model** | [[model-methodology\|Model — Methodology]] |
-> | **Ecosystem model** | [[model-ecosystem\|Model — Ecosystem Architecture]] |
-> | **Local AI model** | [[model-local-ai\|Model — Local AI ($0 Target)]] |
+> | **Ecosystem overview** | [[four-project-ecosystem|Four-Project Ecosystem]] |
+> | **Concept page** | [[aicp|AICP]] |
+> | **Generic artifact framework** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Ecosystem model** | [[model-ecosystem|Model — Ecosystem Architecture]] |
+> | **Local AI model** | [[model-local-ai|Model — Local AI ($0 Target)]] |
 
 ## Relationships
 

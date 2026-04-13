@@ -68,22 +68,22 @@ The second brain's understanding of devops-control-plane as an ecosystem member.
 >
 > | Lesson | What devops-control-plane Proved |
 > |--------|-------------------------------|
-> | [[infrastructure-enforcement-proves-instructions-fail\|Infrastructure Enforcement Proves Instructions Fail]] | 24 rules from 16 post-mortems — each rule exists because an instruction-only approach failed |
-> | [[infrastructure-must-be-reproducible-not-manual\|Infrastructure Must Be Reproducible Not Manual]] | Three-Layer Touch Rule: a feature touching 3+ layers = wrong design. Adapter architecture enables swapping without core changes. |
-> | [[always-plan-before-executing\|Always Plan Before Executing]] | Engine cycle: load → detect → plan → execute → persist → audit. Planning is a structural step, not a suggestion. |
+> | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] | 24 rules from 16 post-mortems — each rule exists because an instruction-only approach failed |
+> | [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible Not Manual]] | Three-Layer Touch Rule: a feature touching 3+ layers = wrong design. Adapter architecture enables swapping without core changes. |
+> | [[always-plan-before-executing|Always Plan Before Executing]] | Engine cycle: load → detect → plan → execute → persist → audit. Planning is a structural step, not a suggestion. |
 
 > [!tip] Key Patterns Observed
 >
 > | Pattern | How devops-control-plane Implements It |
 > |---------|-------------------------------------|
-> | [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] | Engine is pure Python logic: detect stacks, plan operations, execute via adapters. No LLM calls in core loop. |
-> | [[scaffold-foundation-infrastructure-features\|Scaffold, Foundation, Infrastructure, Features]] | 5-layer architecture: Interfaces → Core Domain → Policy → Adapters → Invariant Infrastructure |
-> | [[enforcement-hook-patterns\|Enforcement Hook Patterns]] | Workflow routing checklists (.agent/workflows/) serve as pre-action gates |
+> | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | Engine is pure Python logic: detect stacks, plan operations, execute via adapters. No LLM calls in core loop. |
+> | [[scaffold-foundation-infrastructure-features|Scaffold, Foundation, Infrastructure, Features]] | 5-layer architecture: Interfaces → Core Domain → Policy → Adapters → Invariant Infrastructure |
+> | [[enforcement-hook-patterns|Enforcement Hook Patterns]] | Workflow routing checklists (.agent/workflows/) serve as pre-action gates |
 
 ## Unique Contributions
 
 - **Vault security as a shared service potential**: AES-256-GCM encrypted vaults (PBKDF2-SHA256, 100,000 KDF iterations, auto-lock) could serve as centralized credential store for all ecosystem projects. Not yet implemented as a shared service.
-- **24 immune system rules**: These rules are the primary operational DNA exported to OpenFleet's doctor.py. The 3-strike rule, behavioral security, and anomaly detection patterns all originated here. See [[immune-system-rules\|Immune System Rules]].
+- **24 immune system rules**: These rules are the primary operational DNA exported to OpenFleet's doctor.py. The 3-strike rule, behavioral security, and anomaly detection patterns all originated here. See [[immune-system-rules|Immune System Rules]].
 - **Tech auto-detection for project identity**: 20 technology stack definitions with detection rules — auto-scans project directories and reports capabilities. This is a rudimentary form of the Goldilocks self-identification pattern: detecting WHAT a project is before deciding how to manage it.
 - **16 post-mortems as knowledge source**: `.agent/workflows/failures/AI-POSTMORTEM-IMPORTANT-*.md` — each post-mortem generated operational rules. This provenance chain (failure → post-mortem → rule → codified in doctor.py) is the most complete failure-to-governance pipeline in the ecosystem.
 
@@ -136,13 +136,13 @@ The control plane does not use the wiki's methodology.yaml / stage-gate system. 
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Ecosystem overview** | [[four-project-ecosystem\|Four-Project Ecosystem]] |
-> | **Concept page** | [[devops-control-plane\|devops-control-plane]] |
-> | **Immune system rules** | [[immune-system-rules\|Immune System Rules]] |
-> | **Generic artifact framework** | [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] |
-> | **Methodology model** | [[model-methodology\|Model — Methodology]] |
-> | **Ecosystem model** | [[model-ecosystem\|Model — Ecosystem Architecture]] |
-> | **Infrastructure patterns** | [[infrastructure-as-code-patterns\|Infrastructure as Code Patterns]] |
+> | **Ecosystem overview** | [[four-project-ecosystem|Four-Project Ecosystem]] |
+> | **Concept page** | [[devops-control-plane|devops-control-plane]] |
+> | **Immune system rules** | [[immune-system-rules|Immune System Rules]] |
+> | **Generic artifact framework** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Ecosystem model** | [[model-ecosystem|Model — Ecosystem Architecture]] |
+> | **Infrastructure patterns** | [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]] |
 
 ## Relationships
 

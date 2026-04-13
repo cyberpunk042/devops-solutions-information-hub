@@ -122,7 +122,7 @@ These patterns apply across TypeScript projects regardless of specific toolchain
 >
 > | Project | SDLC Level | Artifacts | Details |
 > |---------|-----------|-----------|---------|
-> | **OpenArms** | Default | 24-artifact chain | [[identity-profile\|OpenArms — Identity Profile]] — 93 tasks, 9 methodology versions, harness v2 |
+> | **OpenArms** | Default | 24-artifact chain | [[identity-profile|OpenArms — Identity Profile]] — 93 tasks, 9 methodology versions, harness v2 |
 > | **OpenFleet** | Full | Estimated 40+ (orchestrator + 10 agents) | Multi-agent dispatch adds contribution gating, tier-based context, standing orders |
 >
 > These are EXAMPLES at specific SDLC levels. Your project will have its own artifact count based on its identity.

@@ -60,28 +60,28 @@ The brain is both the map AND a territory on that map. When it describes "how to
 >
 > | Lesson | What the Wiki Proved |
 > |--------|---------------------|
-> | [[schema-is-the-real-product\|Schema Is the Real Product]] | YAML frontmatter + validation pipeline + manifest.json = the actual system. Pages are instances of the schema. |
-> | [[models-are-systems-not-documents\|Models Are Systems Not Documents]] | A model is a wiki page + standards page + companion pages + domain overviews + real evidence. Not a single document. |
-> | [[standards-must-preach-by-example\|Standards Must Preach By Example]] | A standards page that doesn't show a REAL instance of what "good" looks like teaches nothing. |
-> | [[automated-knowledge-validation-prevents-wiki-decay\|Automated Knowledge Validation Prevents Wiki Decay]] | pipeline post runs 6 steps: index → manifest → validate → obsidian → lint. Without automation, quality drifts. |
-> | [[llm-maintained-wikis-outperform-static-documentation\|LLM-Maintained Wikis Outperform Static Documentation]] | Cross-referencing, gap detection, evolution scoring — LLM capabilities that static docs can never have. |
-> | [[multi-stage-ingestion-beats-single-pass\|Multi-Stage Ingestion Beats Single-Pass]] | extract → cross-ref → gaps → deepen. Single-pass produces thin pages with missed connections. |
-> | [[shallow-ingestion-is-systemic-not-isolated\|Shallow Ingestion Is Systemic Not Isolated]] | When one page is thin, ALL pages from that session are thin. Fix the process, not the page. |
-> | [[new-content-must-integrate-into-existing-pages\|New Content Must Integrate Into Existing Pages]] | A new page with 0 inbound links is an orphan. Integration = relationships + backlinks + domain index. |
-> | [[hardcoded-instances-fail-build-frameworks-not-solutions\|Hardcoded Instances Fail — Build Frameworks]] | Config with specific values is not a framework. Teach the meta-level. |
-> | [[methodology-is-a-framework-not-a-fixed-pipeline\|Methodology Is a Framework Not a Fixed Pipeline]] | 9 models, 3 SDLC chains, domain-specific artifact overrides. Not one-size-fits-all. |
-> | [[three-classes-of-methodology-output\|Three Classes of Methodology Output]] | Documents (constraining) vs Artifacts (by-products) vs Documentation (explaining). Each class has different quality bars. |
-> | [[universal-stages-domain-specific-artifacts\|Universal Stages, Domain-Specific Artifacts]] | Stages are the same everywhere. Artifacts differ by domain: TypeScript produces .ts types, Python produces YAML configs. |
+> | [[schema-is-the-real-product|Schema Is the Real Product]] | YAML frontmatter + validation pipeline + manifest.json = the actual system. Pages are instances of the schema. |
+> | [[models-are-systems-not-documents|Models Are Systems Not Documents]] | A model is a wiki page + standards page + companion pages + domain overviews + real evidence. Not a single document. |
+> | [[standards-must-preach-by-example|Standards Must Preach By Example]] | A standards page that doesn't show a REAL instance of what "good" looks like teaches nothing. |
+> | [[automated-knowledge-validation-prevents-wiki-decay|Automated Knowledge Validation Prevents Wiki Decay]] | pipeline post runs 6 steps: index → manifest → validate → obsidian → lint. Without automation, quality drifts. |
+> | [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] | Cross-referencing, gap detection, evolution scoring — LLM capabilities that static docs can never have. |
+> | [[multi-stage-ingestion-beats-single-pass|Multi-Stage Ingestion Beats Single-Pass]] | extract → cross-ref → gaps → deepen. Single-pass produces thin pages with missed connections. |
+> | [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic Not Isolated]] | When one page is thin, ALL pages from that session are thin. Fix the process, not the page. |
+> | [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]] | A new page with 0 inbound links is an orphan. Integration = relationships + backlinks + domain index. |
+> | [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks]] | Config with specific values is not a framework. Teach the meta-level. |
+> | [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework Not a Fixed Pipeline]] | 9 models, 3 SDLC chains, domain-specific artifact overrides. Not one-size-fits-all. |
+> | [[three-classes-of-methodology-output|Three Classes of Methodology Output]] | Documents (constraining) vs Artifacts (by-products) vs Documentation (explaining). Each class has different quality bars. |
+> | [[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]] | Stages are the same everywhere. Artifacts differ by domain: TypeScript produces .ts types, Python produces YAML configs. |
 
 > [!tip] Key Patterns — Self-Generated
 >
 > | Pattern | How the Wiki Implements It |
 > |---------|--------------------------|
-> | [[progressive-distillation\|Progressive Distillation]] | L0 raw → L1 synthesis → L2 concept → L3 comparison → L4 lesson → L5 pattern → L6 decision. 6 layers. |
-> | [[claude-md-structural-patterns\|CLAUDE.md Structural Patterns]] | This wiki's own CLAUDE.md is the most evolved instance: identity profile, hard rules, methodology models, tooling, quality gates |
-> | [[ecosystem-feedback-loop-wiki-as-source-of-truth\|Ecosystem Feedback Loop]] | Wiki learns from projects → distills to patterns → exports to projects → projects produce evidence → wiki learns |
-> | [[plan-execute-review-cycle\|Plan Execute Review Cycle]] | Every wiki change: understand → plan → execute → validate (pipeline post) → review |
-> | [[context-aware-tool-loading\|Context-Aware Tool Loading]] | Gateway queries adapt output based on --full, --domain, --chain flags |
+> | [[progressive-distillation|Progressive Distillation]] | L0 raw → L1 synthesis → L2 concept → L3 comparison → L4 lesson → L5 pattern → L6 decision. 6 layers. |
+> | [[claude-md-structural-patterns|CLAUDE.md Structural Patterns]] | This wiki's own CLAUDE.md is the most evolved instance: identity profile, hard rules, methodology models, tooling, quality gates |
+> | [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop]] | Wiki learns from projects → distills to patterns → exports to projects → projects produce evidence → wiki learns |
+> | [[plan-execute-review-cycle|Plan Execute Review Cycle]] | Every wiki change: understand → plan → execute → validate (pipeline post) → review |
+> | [[context-aware-tool-loading|Context-Aware Tool Loading]] | Gateway queries adapt output based on --full, --domain, --chain flags |
 
 ## Artifact Chain (Project-Specific)
 
@@ -101,9 +101,9 @@ The wiki uses a 20-artifact Python/Wiki chain for Feature Development at the Def
 
 > [!warning] Chain Needs Refactoring
 >
-> The [[domain-chain-python-wiki\|Artifact Chain — Python-Wiki Domain]] currently describes this chain but is tightly coupled to the research wiki's specific tooling. It needs refactoring to be generic enough for ANY Python/wiki project, with the research wiki as one specific instance. This is acknowledged technical debt.
+> The [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] currently describes this chain but is tightly coupled to the research wiki's specific tooling. It needs refactoring to be generic enough for ANY Python/wiki project, with the research wiki as one specific instance. This is acknowledged technical debt.
 
-See [[domain-chain-python-wiki\|Artifact Chain — Python-Wiki Domain]] for the full chain and [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] for the generic framework.
+See [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] for the full chain and [[artifact-chains-by-model|Artifact Chains by Methodology Model]] for the generic framework.
 
 ## Methodology Adaptations
 
@@ -156,15 +156,15 @@ The research wiki's primary export to the ecosystem is the methodology framework
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Ecosystem overview** | [[four-project-ecosystem\|Four-Project Ecosystem]] |
-> | **Super-model (brain overview)** | [[super-model\|Research Wiki as Ecosystem Intelligence Hub]] |
-> | **Model registry (all 16 models)** | [[model-registry\|Model Registry]] |
-> | **Methodology model** | [[model-methodology\|Model — Methodology]] |
-> | **Second brain model** | [[model-second-brain\|Model — Second Brain]] |
-> | **Ecosystem model** | [[model-ecosystem\|Model — Ecosystem Architecture]] |
-> | **Python/Wiki artifact chain** | [[domain-chain-python-wiki\|Artifact Chain — Python-Wiki Domain]] |
-> | **Generic artifact framework** | [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] |
-> | **Methodology system map** | [[methodology-system-map\|Methodology System Map]] |
+> | **Ecosystem overview** | [[four-project-ecosystem|Four-Project Ecosystem]] |
+> | **Super-model (brain overview)** | [[super-model|Research Wiki as Ecosystem Intelligence Hub]] |
+> | **Model registry (all 16 models)** | [[model-registry|Model Registry]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
+> | **Second brain model** | [[model-second-brain|Model — Second Brain]] |
+> | **Ecosystem model** | [[model-ecosystem|Model — Ecosystem Architecture]] |
+> | **Python/Wiki artifact chain** | [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] |
+> | **Generic artifact framework** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **Methodology system map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
 

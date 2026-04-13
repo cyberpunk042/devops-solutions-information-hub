@@ -185,7 +185,7 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 >
 > | Project | SDLC Level | Focus | Details |
 > |---------|-----------|-------|---------|
-> | **devops-control-plane** | Simplified → Default | TUI/CLI/Web + Terraform | [[identity-profile\|devops-control-plane — Identity Profile]] — 24 immune system rules, vault security |
+> | **devops-control-plane** | Simplified → Default | TUI/CLI/Web + Terraform | [[identity-profile|devops-control-plane — Identity Profile]] — 24 immune system rules, vault security |
 
 ## Open Questions
 

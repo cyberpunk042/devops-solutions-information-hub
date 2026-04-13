@@ -59,23 +59,23 @@ These are cross-referenced to the wiki's lesson and pattern pages — the brain'
 >
 > | Lesson | What OpenArms Proved |
 > |--------|---------------------|
-> | [[infrastructure-enforcement-proves-instructions-fail\|Infrastructure Enforcement Proves Instructions Fail]] | Instructions: 25% compliance → Hooks: 100% compliance |
-> | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure\|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | Even at 100% infrastructure enforcement, 6 behavioral failure classes persist (20% clean rate) |
-> | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass\|Enforcement Must Be Mindful]] | T086: agent's correct fnm fix was blocked as "scope creep" — blind enforcement fails too |
-> | [[harness-ownership-converges-independently-across-projects\|Harness Ownership Converges Independently]] | OpenArms and OpenFleet independently evolved harness-owns-loop pattern |
-> | [[context-compaction-is-a-reset-event\|Context Compaction Is a Reset Event]] | After compaction, prose corrections lost — structured state rebuilds from files |
+> | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] | Instructions: 25% compliance → Hooks: 100% compliance |
+> | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | Even at 100% infrastructure enforcement, 6 behavioral failure classes persist (20% clean rate) |
+> | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful]] | T086: agent's correct fnm fix was blocked as "scope creep" — blind enforcement fails too |
+> | [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently]] | OpenArms and OpenFleet independently evolved harness-owns-loop pattern |
+> | [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] | After compaction, prose corrections lost — structured state rebuilds from files |
 
 > [!tip] Key Patterns Observed
 >
 > | Pattern | How OpenArms Implements It |
 > |---------|--------------------------|
-> | [[enforcement-hook-patterns\|Enforcement Hook Patterns]] | 4 hooks: pre-commit (conventional), pre-tool-use (stage blocking), pre-edit (path guard), post-session (state save) |
-> | [[stage-aware-skill-injection\|Stage-Aware Skill Injection]] | Stage skills injected at each methodology stage with MUST/MUST NOT constraints |
-> | [[harness-owned-loop-deterministic-agent-execution\|Harness-Owned Loop]] | `agent run` wraps Claude in dispatch→execute→validate→advance loop |
+> | [[enforcement-hook-patterns|Enforcement Hook Patterns]] | 4 hooks: pre-commit (conventional), pre-tool-use (stage blocking), pre-edit (path guard), post-session (state save) |
+> | [[stage-aware-skill-injection|Stage-Aware Skill Injection]] | Stage skills injected at each methodology stage with MUST/MUST NOT constraints |
+> | [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] | `agent run` wraps Claude in dispatch→execute→validate→advance loop |
 
 ## Artifact Chain (Project-Specific)
 
-OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC level. This is ONE instance of what could be 100+ artifacts at the Full level. See [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] for the generic framework.
+OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC level. This is ONE instance of what could be 100+ artifacts at the Full level. See [[artifact-chains-by-model|Artifact Chains by Methodology Model]] for the generic framework.
 
 > [!abstract] OpenArms Feature Development Chain (24 artifacts, Default SDLC)
 >
@@ -121,11 +121,11 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **Ecosystem overview** | [[four-project-ecosystem\|Four-Project Ecosystem]] |
-> | **Enforcement comparison** | [[openarms-vs-openfleet-enforcement\|OpenArms vs OpenFleet Enforcement Architecture]] |
-> | **Full synthesis source** | [[src-openarms-v10-enforcement\|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] |
-> | **Generic artifact framework** | [[artifact-chains-by-model\|Artifact Chains by Methodology Model]] |
-> | **Methodology model** | [[model-methodology\|Model — Methodology]] |
+> | **Ecosystem overview** | [[four-project-ecosystem|Four-Project Ecosystem]] |
+> | **Enforcement comparison** | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] |
+> | **Full synthesis source** | [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] |
+> | **Generic artifact framework** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] |
 
 ## Relationships
 
