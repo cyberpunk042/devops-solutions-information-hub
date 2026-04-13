@@ -11,16 +11,22 @@ confidence: authoritative
 maturity: growing
 created: 2026-04-10
 updated: 2026-04-12
-sources: []
+sources:
+  - id: operator-vision
+    type: directive
+    file: raw/notes/2026-04-12-mega-vision-directive.md
+  - id: session-handoff
+    type: wiki
+    file: docs/SESSION-2026-04-12-handoff-v2.md
 tags: [super-model, second-brain, hub, ecosystem, adoption, models, standards, integration, quality]
 ---
 
 # Super-Model — Research Wiki as Ecosystem Intelligence Hub
 ## Summary
 
-This is the super-model — the packaging of all 15 models, 7 standards pages, and the full knowledge architecture into a consumable system that any project in the ecosystem can adopt. The research wiki is not just a documentation project. It is the central intelligence hub that defines HOW work is done (methodology), WHAT knowledge looks like (LLM Wiki), HOW quality is maintained (failure prevention), and HOW projects integrate with each other (ecosystem architecture). This page is the entry point for any project that wants to consume, adhere to, or contribute back to the hub.
+This is the super-model — the packaging of all 16 models, 22 standards pages, and the full knowledge architecture into a consumable system that any project can adopt. The research wiki is not just a documentation project. It is a central intelligence hub that defines HOW work is done (methodology), WHAT knowledge looks like (LLM Wiki), HOW quality is maintained (failure prevention), and HOW projects integrate (ecosystem architecture). This page is the entry point — whether you are an operator, a solo agent, a harness-managed agent, or a client project adopting the system for the first time.
 
-> [!info] What the hub offers — v1.0
+> [!info] What the hub offers — v2.0
 >
 > | Layer | What It Provides | Key Models |
 > |-------|-----------------|------------|
@@ -46,7 +52,7 @@ Not every project needs everything. Adopt in tiers — each tier builds on the p
 
 **Tier 1 is mandatory. Tiers 2-4 are progressive.** A project at Tier 1 has a structured wiki. At Tier 2 it has disciplined execution. At Tier 3 it generates its own lessons and patterns. At Tier 4 it participates as a full hub member feeding knowledge back to the ecosystem.
 
-## The 15 Models — Dependency Graph
+## The 16 Models — Dependency Graph
 
 Models are not independent — they build on each other. Here is the adoption order:
 
@@ -69,25 +75,28 @@ Models are not independent — they build on each other. Here is the adoption or
 > 10. [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] — markdown as AI configuration
 > 11. [[model-second-brain|Model — Second Brain]] — PKM theory (PARA + Zettelkasten)
 >
+> **Depth (continued):**
+> 12. [[model-context-engineering|Model — Context Engineering]] — structured context as proto-programming, tier budgets, autocomplete chain
+>
 > **Ecosystem (read when integrating):**
-> 12. [[model-ecosystem|Model — Ecosystem Architecture]] — the 5-project topology
-> 13. [[model-automation-pipelines|Model — Automation and Pipelines]] — pipeline chains, event-driven automation
-> 14. [[model-notebooklm|Model — NotebookLM]] — grounded research complement
-> 15. [[model-local-ai|Model — Local AI ($0 Target)]] — cost reduction via local inference
+> 13. [[model-ecosystem|Model — Ecosystem Architecture]] — project topology patterns (hub-spoke, federated, etc.)
+> 14. [[model-automation-pipelines|Model — Automation and Pipelines]] — pipeline chains, event-driven automation
+> 15. [[model-notebooklm|Model — NotebookLM]] — external research tools (NotebookLM, Perplexity, RAG)
+> 16. [[model-local-ai|Model — Local AI ($0 Target)]] — cost reduction via local inference routing
 
 ## Per-Project Adaptation
 
-Each project adapts the super-model to its context:
+Each project adapts the super-model to its context. The brain maintains an identity profile for each project — see [[identity-profile|ecosystem project profiles]] for the full details.
 
-> [!info] How ecosystem projects instantiate the super-model
+> [!info] Ecosystem projects at a glance
 >
-> | Project | Tier | Key Adaptations |
-> |---------|------|----------------|
-> | **OpenArms** | 4 (full) | TypeScript stack, methodology.yaml with 7 task types, 8 execution modes, OpenClaw gateway integration |
-> | **OpenFleet** | 4 (full) | MCP tool blocking for stage enforcement, 10-agent fleet, deterministic orchestrator, LightRAG integration |
-> | **AICP** | 2 (process) | Python stack, backend routing profiles, circuit breaker patterns, 78 skills |
-> | **devops-control-plane** | 1 (foundation) | TUI/CLI/Web interfaces, tech auto-detection, vault security, 24 immune system rules |
-> | **Research Wiki** | 4 (full, reference) | The reference implementation — all models, all standards, all tooling |
+> | Project | Tier | Execution Mode | Profile |
+> |---------|------|---------------|---------|
+> | **OpenArms** | 4 (full) | Harness v2 (enforced) | [[identity-profile|OpenArms — Identity Profile]] |
+> | **OpenFleet** | 4 (full) | Full System (fleet) | [[identity-profile|OpenFleet — Identity Profile]] |
+> | **AICP** | 2 (process) | Solo | [[identity-profile|AICP — Identity Profile]] |
+> | **devops-control-plane** | 1 (foundation) | Solo | [[identity-profile|devops-control-plane — Identity Profile]] |
+> | **Research Wiki** | 4 (reference) | Solo | [[identity-profile|Research Wiki — Identity Profile]] |
 
 ## Quality Contract
 
@@ -106,58 +115,42 @@ Each project adapts the super-model to its context:
 > - Feed operational learnings back to the wiki (incidents, methodology evolution, tool discoveries)
 > - Adopt at least Tier 1 (schema + templates + quality gates)
 
-## What "v2.0" Means
+## Current State — v2.0
 
-Updated to reflect deep sister project scan, work management framework, and SDLC customization (2026-04-12):
-
-> [!abstract] v2.0 state assessment
+> [!abstract] System metrics (updated 2026-04-13)
 >
-> | Aspect | State | Evidence |
-> |--------|-------|---------|
-> | **Pages** | 258 total | +21 from continuation session (was 237 at start) |
-> | **Models** | 15 defined + 9 methodology models | [[model-registry|Model Registry]] + [[model-methodology|Model — Methodology]] |
-> | **Standards** | 7 model standards + 15 per-type standards + 3 annotated exemplars | wiki/spine/standards/ — lesson, pattern, decision standards now have inline annotated walkthroughs |
-> | **Artifact taxonomy** | 78 types across 11 categories + milestone type | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] + milestone added to schema |
-> | **Domain chains** | 4 domains | TypeScript, Python/Wiki, Infrastructure, Knowledge |
-> | **Decisions** | 17 resolved | +1: When to Use Milestone vs Epic vs Module vs Task |
-> | **Lessons** | 43 codified | +6 from sister projects: Infrastructure Enforcement, Agent Failure Taxonomy (6 classes), Context Compaction, Structured Context, Mindful Enforcement, Models Built in Layers (refreshed) |
-> | **Patterns** | 17 documented | +6: Three Lines of Defense, Harness-Owned Loop, Contribution Gating, Tier-Based Context, Validation Matrix, Ecosystem Feedback Loop |
-> | **Concepts** | 3 new | SDLC Customization Framework, Readiness vs Progress, Three PM Levels |
-> | **Work management** | Complete framework | 4-level hierarchy (Milestone→Epic→Module→Task), 8 impediment types, readiness vs progress (two-dimensional), 3 PM levels, harness v1→v2→v3 |
-> | **Templates** | 5 created/upgraded + milestone new | note, epic, learning-path, evolution upgraded; milestone created |
-> | **Config** | Extended | milestone type, progress field, impediment_type enum, 6 new optional fields |
-> | **Relationships** | 1,698 | +139 from session |
-> | **Validation** | 0 errors | All pages pass pipeline post |
-> | **External research** | SDLC frameworks | CMMI maturity levels, Lean Startup BML, EPAM ADLC, PwC Agentic SDLC |
-> | **Sister project scan** | Deep | OpenArms v10 (1033-line validator, 4 hooks, 6 failure classes), OpenFleet (immune system, tiers, contributions, dispatch) |
-> | **Frontmatter reference** | Complete | Every field documented with meaning, requirements, valid values, automation enablement |
-> | **Epics scaffolded** | 2 | Gateway Tools (6 modules, 25-35 tasks), SDLC Rules (5 modules, 20-30 tasks) |
+> | Metric | Value |
+> |--------|-------|
+> | **Pages** | 297 |
+> | **Relationships** | 1,982 |
+> | **Models** | 16 (+ 9 methodology models in methodology.yaml) |
+> | **Standards** | 22 (15 per-type + 7 model standards, all with annotated exemplars) |
+> | **Lessons** | 40 validated (all with Self-Check sections) |
+> | **Patterns** | 15 validated |
+> | **Principles** | 3 (Infrastructure, Structured Context, Goldilocks) |
+> | **Decisions** | 16 validated |
+> | **Comparisons** | 5 |
+> | **Source syntheses** | 28 |
+> | **Ecosystem profiles** | 5 (OpenArms, OpenFleet, AICP, devops-control-plane, Research Wiki) |
+> | **Validation errors** | 0 |
+> | **Lint issues** | 0 |
 >
-> **What v2.0 added over v1.3:**
-> - 5 sub-super-models: Goldilocks, Enforcement, Knowledge, Work Management, Integration — each a navigation hub
-> - Root super-model slimmed to dashboard + routing table
+> **v2.0 architecture:**
+> - 5 sub-super-models as navigation hubs (Goldilocks, Enforcement, Knowledge, Work Management, Integration)
+> - 4 domain chains genericized (options by SDLC level, project profiles for specific instances)
+> - 3 SDLC chain configs as POLICY (simplified/default/full — draft status)
+> - Ecosystem project profiles separating brain knowledge from project-specific knowledge
+> - [[filename|title]] wikilinks + frontmatter aliases for Obsidian resolution
 >
-> **What v1.3 added (the 2026-04-12 session):**
-> - Deep OpenArms/OpenFleet scan: real enforcement data (25%→100% compliance), 6 behavioral failure classes, immune system architecture, contribution gating, tier progression, validation matrix
-> - Work management framework: milestones, 8 impediment types, readiness vs progress as independent dimensions, 3 PM levels (L1:Wiki → L2:Fleet → L3:Full PM), harness version progression
-> - SDLC customization: phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full), backed by CMMI, Lean Startup, and Agentic SDLC research
-> - Annotated exemplars: lesson, pattern, and decision standards now have full inline walkthroughs showing WHY each part of the exemplar is good
-> - Frontmatter field reference: complete parameter documentation with automation enablement column
-> - 6 model pages updated with quantified enforcement evidence
-> - Learning path expanded to 24 pages in 6 parts (was 17 in 5 parts)
->
-> **What v2.0 does NOT have (remaining in Milestone v2.0):**
+> **What v2.0 does NOT have:**
 > - Canonical maturity on any model (all growing — promotions gated by operator)
-> - Gateway tools implemented (epic scaffolded, needs design+build)
-> - SDLC chain configs (simplified/default/full YAML profiles — epic scaffolded)
-> - Automated compliance checking tooling (evidence-backed now, not yet built)
-> - "Magic tricks" formalized (structured context principle captured, grammar not yet defined)
-> - Multi-agent handoff artifact format (contribution gating documented but handoff format TBD)
-> - 10-15 new source ingestions (operator has material ready)
+> - Multi-agent handoff artifact format (contribution gating documented but handoff TBD)
+> - Formal structured context grammar (principle captured, grammar needs research)
+> - New source ingestions (operator has 10-15 sources ready)
+>
+> For detailed version history, see [[methodology-evolution-history|Evolution — Methodology System]].
 
-## How to Use This Page
-
-### How to Use This Page — Start Here, Go Anywhere
+## Start Here, Go Anywhere
 
 **First question to answer: WHO ARE YOU?** → [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 
@@ -208,11 +201,11 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 
 | Page | Role |
 |------|------|
-| [[model-registry|Model Registry]] | All 15 models with status and standards links |
+| [[model-registry|Model Registry]] | All 16 models with status and standards links |
 | [[methodology-system-map|Methodology System Map]] | Complete lookup for every methodology component |
 | [[methodology-adoption-guide|Methodology Adoption Guide]] | 4-tier adoption with per-domain quick starts |
 | [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]] | 17-step integration chain end-to-end |
-| [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] | 30-page learning path in 8 parts |
+| [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] | 30-page learning path in 8 parts — from concepts to execution to enforcement |
 | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] | Every frontmatter field documented |
 | [[four-project-ecosystem|Four-Project Ecosystem]] | The 5-project topology and knowledge flow |
 

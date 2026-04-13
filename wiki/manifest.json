@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T18:32:56.292991+00:00",
+  "generated": "2026-04-13T18:41:22.823744+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -19380,7 +19380,18 @@
         "integration",
         "quality"
       ],
-      "sources": [],
+      "sources": [
+        {
+          "id": "operator-vision",
+          "type": "directive",
+          "file": "raw/notes/2026-04-12-mega-vision-directive.md"
+        },
+        {
+          "id": "session-handoff",
+          "type": "wiki",
+          "file": "docs/SESSION-2026-04-12-handoff-v2.md"
+        }
+      ],
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
