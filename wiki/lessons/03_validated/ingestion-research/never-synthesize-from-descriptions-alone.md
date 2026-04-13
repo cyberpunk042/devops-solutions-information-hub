@@ -12,7 +12,7 @@ derived_from:
   - "Design.md Pattern"
   - "Synthesis: awesome-design-md — 58 Design Systems for AI Agents"
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: directive-never-stop-at-surface
     type: log

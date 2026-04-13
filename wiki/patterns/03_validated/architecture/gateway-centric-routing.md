@@ -18,7 +18,7 @@ instances:
   - {'page': 'Research Pipeline Orchestration', 'context': 'Wiki MCP server (tools/mcp_server.py, 15 tools) acts as a gateway: any Claude Code conversation or OpenArms agent connects once to the MCP server and gains access to all wiki operations. Tools are discoverable through the gateway without per-tool configuration.'}
   - {'page': 'OpenFleet', 'context': "OpenFleet's deterministic orchestrator acts as the task routing gateway: all PO directives enter via the orchestrator, which evaluates readiness, security, budget, and agent availability before dispatching to the appropriate agent. No agent receives work except through the gateway."}
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-openarms-local
     type: documentation

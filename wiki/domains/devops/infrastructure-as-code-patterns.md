@@ -9,7 +9,7 @@ domain: devops
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-13
 sources:
   - id: src-devops-control-plane-local
     type: documentation

@@ -14,7 +14,7 @@ derived_from:
   - "Second Brain Architecture"
   - "Knowledge Evolution Pipeline"
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation

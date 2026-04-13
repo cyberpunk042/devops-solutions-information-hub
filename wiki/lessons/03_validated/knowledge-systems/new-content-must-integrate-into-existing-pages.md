@@ -12,7 +12,7 @@ derived_from:
   - "Methodology Standards Initiative — Honest Assessment"
   - "Model: LLM Wiki"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: phase1-disconnect
     type: observation

@@ -15,7 +15,7 @@ derived_from:
   - "Knowledge Evolution Pipeline"
 reversibility: moderate
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation

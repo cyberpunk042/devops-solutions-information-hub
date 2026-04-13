@@ -10,7 +10,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript

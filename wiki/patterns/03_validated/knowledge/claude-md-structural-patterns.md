@@ -18,7 +18,7 @@ instances:
   - {'page': 'Research Wiki CLAUDE.md', 'context': '170 lines, restructured 2026-04-11 with tables, dividers, ALLOWED/FORBIDDEN — intermediate compliance'}
   - {'page': 'OpenArms stage skills (5 files)', 'context': '29-43 lines each, MUST/MUST NOT lists, runtime state injection, stage-specific narrowing — highest per-stage compliance'}
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-13
 sources:
   - id: openarms-agents
     type: file

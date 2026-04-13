@@ -8,7 +8,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-sdlc-vision
     type: directive

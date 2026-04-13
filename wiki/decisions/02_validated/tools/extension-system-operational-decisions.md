@@ -15,7 +15,7 @@ derived_from:
   - "Harness Engineering"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [skills, hooks, versioning, composition, harness, python-hooks, design-decisions]
 ---

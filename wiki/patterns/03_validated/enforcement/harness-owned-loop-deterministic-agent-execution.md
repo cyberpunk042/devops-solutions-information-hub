@@ -15,7 +15,7 @@ instances:
   - {'page': 'Model: Quality and Failure Prevention', 'context': 'Three-layer defense model — harness owns the outer loop as the highest enforcement layer'}
   - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': 'OpenFleet orchestrator is a harness-owned loop with 6-step deterministic cycle'}
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openarms-harness
     type: observation

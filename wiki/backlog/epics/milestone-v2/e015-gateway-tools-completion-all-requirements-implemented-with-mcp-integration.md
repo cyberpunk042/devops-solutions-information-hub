@@ -18,7 +18,7 @@ artifacts:
   - "wiki/backlog/epics/wiki-gateway-tools-unified-knowledge-interface.md"
 confidence: high
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: milestone
     type: file

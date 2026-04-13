@@ -15,7 +15,7 @@ derived_from:
   - "Harness Engineering"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [hooks, pretooluse, stage-gate, latency, recursive-hooks, plan-generation, design-decisions]
 ---

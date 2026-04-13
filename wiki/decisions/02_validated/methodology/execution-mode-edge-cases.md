@@ -15,7 +15,7 @@ derived_from:
   - "Task Type Artifact Matrix"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [execution-modes, quality-gates, cost-limit, stage-failure, completion-log, edge-cases, design-decisions]
 ---

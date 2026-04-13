@@ -9,7 +9,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [models, registry, index, navigation, spine, entry-point]
 ---

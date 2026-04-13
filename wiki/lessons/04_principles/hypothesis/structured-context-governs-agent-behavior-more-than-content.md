@@ -15,7 +15,7 @@ derived_from:
   - "Context Compaction Is a Reset Event"
   - "Hardcoded Instances Fail — Build Frameworks Not Solutions"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openarms-five-contexts
     type: observation

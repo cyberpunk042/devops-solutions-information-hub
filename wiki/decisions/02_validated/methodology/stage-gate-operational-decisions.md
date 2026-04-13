@@ -15,7 +15,7 @@ derived_from:
   - "Backlog Hierarchy Rules"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-12
+updated: 2026-04-13
 sources: []
 tags: [stage-gate, readiness, discovery, minimum-viable, retroactive, design-decisions]
 ---

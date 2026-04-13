@@ -15,7 +15,7 @@ instances:
   - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': 'Tier profiles control what the doctor shows vs hides from agents at different trust levels'}
   - {'page': 'Harness-Owned Loop — Deterministic Agent Execution', 'context': 'Orchestrator uses tier to determine context depth for dispatch — lightweight agents get minimal context'}
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openfleet-tiers
     type: observation

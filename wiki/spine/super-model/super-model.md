@@ -10,7 +10,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-10
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-vision
     type: directive

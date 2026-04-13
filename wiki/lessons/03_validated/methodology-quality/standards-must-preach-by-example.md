@@ -12,7 +12,7 @@ derived_from:
   - "The Agent Must Practice What It Documents"
   - "Wiki Design Standards — What Good Styling Looks Like"
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: directive-preach-by-example
     type: log

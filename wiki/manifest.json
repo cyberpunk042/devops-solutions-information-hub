@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T18:41:22.823744+00:00",
+  "generated": "2026-04-13T18:45:04.164736+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -30,7 +30,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "models",
@@ -99,7 +99,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "standards",
@@ -164,7 +164,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "templates",
@@ -234,7 +234,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "super-model",
@@ -299,7 +299,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "goldilocks",
@@ -369,7 +369,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "gateway",
@@ -430,7 +430,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "proof",
@@ -628,7 +628,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "epic",
         "v2",
@@ -1014,7 +1014,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sdlc",
         "customization",
@@ -1081,7 +1081,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "gateway",
         "tools",
@@ -1137,7 +1137,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "milestone",
         "v2",
@@ -1583,7 +1583,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "comparison",
         "enforcement",
@@ -1802,7 +1802,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "obsidian",
         "notebooklm",
@@ -1877,7 +1877,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "quality-tiers",
         "skyscraper",
@@ -1923,7 +1923,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "decision",
         "rag",
@@ -1989,7 +1989,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "decision",
@@ -2048,7 +2048,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "execution-modes",
         "quality-gates",
@@ -2098,7 +2098,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "framework",
@@ -2150,7 +2150,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "decision",
@@ -2204,7 +2204,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "stage-gate",
         "readiness",
@@ -2253,7 +2253,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "task-types",
         "spike",
@@ -2301,7 +2301,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "decision",
         "hierarchy",
@@ -2375,7 +2375,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "skills",
         "hooks",
@@ -2429,7 +2429,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "hooks",
         "pretooluse",
@@ -2479,7 +2479,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "aicp",
         "localai",
@@ -2550,7 +2550,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "mcp",
         "cli",
@@ -2625,7 +2625,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "commands",
         "roles",
@@ -2683,7 +2683,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "polling",
         "inotify",
@@ -2755,7 +2755,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "claude-code",
         "best-practices",
@@ -2844,7 +2844,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "claude-code",
         "context-window",
@@ -3817,7 +3817,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "rework-prevention",
         "planning",
@@ -4269,7 +4269,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "mcp",
         "model-context-protocol",
@@ -4510,7 +4510,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "ai-agents",
         "methodology",
@@ -4588,7 +4588,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "requirements",
         "second-brain",
@@ -4733,7 +4733,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "ai-agents",
@@ -4825,7 +4825,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "construction",
@@ -4890,7 +4890,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "deployment",
@@ -4960,7 +4960,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "initiation",
@@ -5028,7 +5028,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "taxonomy",
@@ -5103,7 +5103,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "requirements",
@@ -5176,7 +5176,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "artifact-chains",
@@ -5244,7 +5244,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "artifact-chain",
@@ -5313,7 +5313,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "artifact-chain",
@@ -5391,7 +5391,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "artifact-chain",
@@ -5525,7 +5525,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "evolution",
@@ -5585,7 +5585,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "global-norms",
@@ -5653,7 +5653,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "config",
@@ -5860,7 +5860,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "goldilocks",
         "self-identification",
@@ -5944,7 +5944,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "readiness",
         "progress",
@@ -6015,7 +6015,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sdlc",
         "customization",
@@ -6106,7 +6106,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "project-management",
         "pm-levels",
@@ -6189,7 +6189,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "design",
@@ -6265,7 +6265,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "requirements",
@@ -6350,7 +6350,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "gap-analysis",
@@ -6421,7 +6421,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "assessment",
@@ -6475,7 +6475,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "infrastructure-analysis",
@@ -6558,7 +6558,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "composition",
@@ -6627,7 +6627,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "operations-plan",
         "post-ingestion",
@@ -6750,7 +6750,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "devops",
         "control-plane",
@@ -6897,7 +6897,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "devops",
         "ecosystem",
@@ -6995,7 +6995,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-13",
       "tags": [
         "devops",
         "immune-system",
@@ -7067,7 +7067,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-08",
+      "updated": "2026-04-13",
       "tags": [
         "devops",
         "iac",
@@ -7616,7 +7616,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "second-brain",
         "pkm",
@@ -7966,7 +7966,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "wiki-backlog",
         "frontmatter-state-machine",
@@ -8229,7 +8229,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "aicp",
         "localai",
@@ -9336,7 +9336,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "context-compaction",
         "reset",
@@ -9397,7 +9397,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "context-management",
         "claude-code",
@@ -9475,7 +9475,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "proto-programming",
         "structured-context",
@@ -9919,7 +9919,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -9985,7 +9985,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "notebooklm",
         "research-engine",
@@ -10120,7 +10120,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "orchestration",
         "ai-agents",
@@ -10190,7 +10190,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "linting",
         "validation",
@@ -10254,7 +10254,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "lightrag",
         "graph-retrieval",
@@ -10324,7 +10324,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "knowledge-systems",
         "hub-domain",
@@ -10397,7 +10397,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "llm-wiki",
         "knowledge-management",
@@ -10481,7 +10481,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "wiki",
         "discoverability",
@@ -10546,7 +10546,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "obsidian",
         "knowledge-infrastructure",
@@ -10611,7 +10611,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "schema",
         "karpathy",
@@ -10676,7 +10676,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "lesson",
         "hub",
@@ -10765,7 +10765,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "llm-wiki",
         "maintenance",
@@ -10882,7 +10882,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "agent-failure",
@@ -10947,7 +10947,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -11057,7 +11057,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -11384,7 +11384,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "lesson",
         "failure-lesson",
@@ -11434,7 +11434,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "models",
         "quality",
@@ -11487,7 +11487,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "failure-lesson",
         "quality",
@@ -11539,7 +11539,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "lesson",
         "standards",
@@ -11591,7 +11591,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "failure-lesson",
         "quality",
@@ -11648,7 +11648,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "planning",
         "agent-behavior",
@@ -11959,7 +11959,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "skills",
         "llm-extension",
@@ -12035,7 +12035,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "principle",
         "enforcement",
@@ -12126,7 +12126,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "principle",
         "goldilocks",
@@ -12224,7 +12224,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "principle",
         "structured-context",
@@ -12342,7 +12342,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12378,7 +12378,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12439,7 +12439,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12471,7 +12471,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12504,7 +12504,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12537,7 +12537,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12570,7 +12570,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12603,7 +12603,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12638,7 +12638,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12672,7 +12672,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12706,7 +12706,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12741,7 +12741,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12774,7 +12774,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12807,7 +12807,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12839,7 +12839,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12870,7 +12870,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "session",
@@ -12901,7 +12901,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "directive",
@@ -12936,7 +12936,7 @@
       "status": "active",
       "confidence": "high",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "log",
         "session",
@@ -13048,7 +13048,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "gateway",
         "routing",
@@ -13409,7 +13409,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "contribution-gating",
         "cross-agent",
@@ -13475,7 +13475,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "hooks",
         "enforcement",
@@ -13543,7 +13543,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "harness",
         "deterministic",
@@ -13608,7 +13608,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "skills",
         "stage-gate",
@@ -13670,7 +13670,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "immune-system",
         "three-lines-defense",
@@ -13741,7 +13741,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "claude-md",
         "agent-compliance",
@@ -13913,7 +13913,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "ecosystem",
         "feedback-loop",
@@ -13993,7 +13993,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "tier-progression",
         "context-depth",
@@ -14053,7 +14053,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "validation-matrix",
         "testing",
@@ -14185,7 +14185,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "claude-code",
         "slash-commands",
@@ -14506,7 +14506,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "openarms",
         "enforcement",
@@ -14579,7 +14579,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "openfleet",
         "fleet",
@@ -14735,7 +14735,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "claude-code",
         "notebooklm",
@@ -14853,7 +14853,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "obsidian",
         "skills",
@@ -15221,7 +15221,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "gemma4",
         "openclaw",
@@ -15410,7 +15410,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "quantization",
         "turboquant",
@@ -15458,7 +15458,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "artifacts",
@@ -15562,7 +15562,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "design-md",
         "design-system",
@@ -15711,7 +15711,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "karpathy",
         "llm-wiki",
@@ -15892,7 +15892,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sdlc",
         "cmmi",
@@ -15992,7 +15992,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "ai-agents"
@@ -16037,7 +16037,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "ai-models"
@@ -16078,7 +16078,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "automation"
@@ -16123,7 +16123,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "cross-domain"
@@ -16168,7 +16168,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "devops"
@@ -16209,7 +16209,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "knowledge-systems"
@@ -16254,7 +16254,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "domain-overview",
         "tools-and-platforms"
@@ -16299,7 +16299,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "evolution",
         "methodology",
@@ -16355,7 +16355,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "goldilocks",
         "flow",
@@ -16415,7 +16415,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "learning-path",
         "methodology",
@@ -16713,7 +16713,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "spine",
@@ -16798,7 +16798,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "spine",
@@ -16869,7 +16869,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "concept",
@@ -16937,7 +16937,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "concept",
@@ -16996,7 +16996,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "concept",
@@ -17078,7 +17078,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "concept",
@@ -17150,7 +17150,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "ecosystem",
         "model",
@@ -17234,7 +17234,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "mcp",
         "cli",
@@ -17306,7 +17306,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "llm-wiki",
         "model",
@@ -17380,7 +17380,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "model",
@@ -17524,7 +17524,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "wiki-design",
         "model",
@@ -17621,7 +17621,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "spine",
@@ -17728,7 +17728,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "model",
         "spine",
@@ -17835,7 +17835,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "frontmatter",
         "fields",
@@ -17902,7 +17902,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "reference",
         "gateway",
@@ -17949,7 +17949,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "adoption",
@@ -18027,7 +18027,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "system-map",
@@ -18082,7 +18082,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "models",
         "registry",
@@ -18119,7 +18119,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "operations-plan",
         "integration",
@@ -18173,7 +18173,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "comparison",
@@ -18220,7 +18220,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "concept",
@@ -18276,7 +18276,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "decision",
@@ -18328,7 +18328,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "deep-dive",
@@ -18366,7 +18366,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "domain-overview",
@@ -18404,7 +18404,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "epic",
@@ -18447,7 +18447,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "evolution",
@@ -18485,7 +18485,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "learning-path",
@@ -18523,7 +18523,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "lesson",
@@ -18580,7 +18580,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "claude-code",
         "standards",
@@ -18648,7 +18648,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "knowledge-evolution",
         "standards",
@@ -18747,7 +18747,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "methodology",
         "standards",
@@ -18825,7 +18825,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "quality",
         "standards",
@@ -18887,7 +18887,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-10",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "skills",
         "commands",
@@ -18941,7 +18941,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-09",
+      "updated": "2026-04-13",
       "tags": [
         "wiki-design",
         "standards",
@@ -18996,7 +18996,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "note",
@@ -19035,7 +19035,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "operations-plan",
@@ -19077,7 +19077,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "pattern",
@@ -19129,7 +19129,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "reference",
@@ -19167,7 +19167,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "source-synthesis",
@@ -19209,7 +19209,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-11",
+      "updated": "2026-04-13",
       "tags": [
         "standards",
         "task",
@@ -19248,7 +19248,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sub-model",
         "navigation-hub",
@@ -19278,7 +19278,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sub-model",
         "navigation-hub",
@@ -19308,7 +19308,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sub-model",
         "navigation-hub",
@@ -19338,7 +19338,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sub-model",
         "navigation-hub",
@@ -19368,7 +19368,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-10",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "super-model",
         "second-brain",
@@ -19431,7 +19431,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "sub-model",
         "navigation-hub",

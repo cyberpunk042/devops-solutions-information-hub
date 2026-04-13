@@ -16,7 +16,7 @@ derived_from:
   - "New Content Must Integrate Into Existing Pages"
   - "Models Are Built in Layers, Not All at Once"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-goldilocks
     type: directive

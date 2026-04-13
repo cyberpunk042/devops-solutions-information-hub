@@ -12,7 +12,7 @@ derived_from:
   - "Methodology Framework"
   - "Stage-Gate Methodology"
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: directive-methodology-flexible
     type: log

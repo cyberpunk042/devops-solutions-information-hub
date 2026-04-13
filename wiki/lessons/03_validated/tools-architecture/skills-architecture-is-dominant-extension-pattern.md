@@ -9,7 +9,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript

@@ -14,7 +14,7 @@ derived_from:
   - "Methodology Framework"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [quality-tiers, skyscraper, pyramid, mountain, leading-indicators, equilibrium, organizational, design-decisions]
 ---

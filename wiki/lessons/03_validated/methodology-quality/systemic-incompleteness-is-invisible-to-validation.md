@@ -13,7 +13,7 @@ derived_from:
   - "Models Are Built in Layers, Not All at Once"
   - "Models Are Systems, Not Documents"
 created: 2026-04-10
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: directive-systemic-incompleteness
     type: log

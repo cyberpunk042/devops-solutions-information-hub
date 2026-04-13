@@ -16,7 +16,7 @@ derived_from:
   - "Construction and Testing Artifacts — Standards and Guide"
   - "Deployment, Closure, and Monitoring Artifacts — Standards and Guide"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources: []
 tags: [methodology, decision, artifacts, templates, bridge-pattern, compliance, design]
 ---

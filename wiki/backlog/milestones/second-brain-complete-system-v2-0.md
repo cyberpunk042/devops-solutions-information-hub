@@ -33,7 +33,7 @@ acceptance_criteria:
   - "Templates demonstrate rich usage and proto-programming"
 confidence: high
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-milestone-directive
     type: file

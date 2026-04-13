@@ -18,7 +18,7 @@ instances:
   - {'page': 'Methodology Adoption Guide', 'context': '4-tier adoption enables any project to consume from the wiki at appropriate depth'}
   - {'page': 'Model: Claude Code', 'context': 'Claude Code best practices synthesized from multiple projects, fed back as a single model consumed by all'}
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-vision
     type: directive

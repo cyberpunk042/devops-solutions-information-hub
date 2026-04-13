@@ -15,7 +15,7 @@ instances:
   - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': "Contribution requirements are Line 1 (structural prevention) — agents can't skip to work without cross-agent review"}
   - {'page': 'Harness-Owned Loop — Deterministic Agent Execution', 'context': 'Orchestrator Step 2.5 checks contribution completeness before allowing dispatch to WORK stage'}
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openfleet-contributions
     type: observation

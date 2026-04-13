@@ -17,7 +17,7 @@ instances:
   - {'page': 'OpenArms post-write hook', 'context': 'Tracks files created per stage for artifact verification'}
   - {'page': 'OpenArms post-compact hook', 'context': 'Rebuilds agent instructions after context compaction'}
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-13
 sources:
   - id: openarms-hooks
     type: file

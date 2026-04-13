@@ -13,7 +13,7 @@ derived_from:
   - "Model: Markdown as IaC — Design.md and Agent Configuration"
   - "Model: Skills, Commands, and Hooks"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-insight
     type: directive

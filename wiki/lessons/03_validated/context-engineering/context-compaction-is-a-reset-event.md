@@ -12,7 +12,7 @@ derived_from:
   - "Infrastructure Enforcement Proves Instructions Fail"
   - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openarms-compaction
     type: observation

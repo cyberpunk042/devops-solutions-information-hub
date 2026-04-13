@@ -12,7 +12,7 @@ derived_from:
   - "Model Registry"
   - "Models Are Built in Layers, Not All at Once"
 created: 2026-04-10
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: directive-models-not-documents
     type: log

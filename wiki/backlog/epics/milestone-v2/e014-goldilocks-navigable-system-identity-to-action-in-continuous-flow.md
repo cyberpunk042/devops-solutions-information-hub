@@ -16,7 +16,7 @@ artifacts:
   - "wiki/domains/cross-domain/project-self-identification-protocol.md"
 confidence: high
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: milestone
     type: file

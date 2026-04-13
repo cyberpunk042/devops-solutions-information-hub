@@ -15,7 +15,7 @@ derived_from:
   - "Hooks Lifecycle Architecture"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation

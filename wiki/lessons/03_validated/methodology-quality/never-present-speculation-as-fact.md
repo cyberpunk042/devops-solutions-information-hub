@@ -12,7 +12,7 @@ derived_from:
   - "Claude Code Context Management"
   - "Never Synthesize from Descriptions Alone"
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: directive-stop-guessing
     type: log

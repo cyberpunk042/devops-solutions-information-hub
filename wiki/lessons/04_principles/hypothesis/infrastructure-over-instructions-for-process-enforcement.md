@@ -16,7 +16,7 @@ derived_from:
   - "Context Compaction Is a Reset Event"
   - "Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openarms-v10
     type: observation

@@ -13,7 +13,7 @@ derived_from:
   - "Model: Ecosystem Architecture"
   - "Ecosystem Feedback Loop — Wiki as Source of Truth"
 created: 2026-04-10
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: directive-hub-mindset
     type: log

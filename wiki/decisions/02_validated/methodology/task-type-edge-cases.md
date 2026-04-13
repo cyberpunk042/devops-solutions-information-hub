@@ -15,7 +15,7 @@ derived_from:
   - "Methodology Framework"
 reversibility: easy
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [task-types, spike, type-evolution, mid-execution, design-decisions]
 ---

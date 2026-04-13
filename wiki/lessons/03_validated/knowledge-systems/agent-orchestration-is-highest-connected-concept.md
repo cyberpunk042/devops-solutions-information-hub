@@ -14,7 +14,7 @@ derived_from:
   - "Plan Execute Review Cycle"
   - "Deterministic Shell, LLM Core"
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-openfleet-local
     type: documentation

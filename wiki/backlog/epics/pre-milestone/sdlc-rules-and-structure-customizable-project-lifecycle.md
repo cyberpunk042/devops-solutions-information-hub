@@ -17,7 +17,7 @@ artifacts:
   - "wiki/domains/cross-domain/three-pm-levels.md"
 confidence: high
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: operator-sdlc-directive
     type: file

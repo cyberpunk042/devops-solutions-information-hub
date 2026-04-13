@@ -10,7 +10,7 @@ domain: ai-models
 status: synthesized
 confidence: medium
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-turboquant-122b-macbook
     type: article

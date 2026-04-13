@@ -16,7 +16,7 @@ instances:
   - {'page': 'Infrastructure Enforcement Proves Instructions Fail', 'context': 'Structural prevention (Line 1) proven by OpenArms hooks — 75% → 0% stage violations'}
   - {'page': 'Agent Failure Taxonomy — Seven Classes of Behavioral Failure', 'context': '6 behavioral failure classes that Line 2 (detection) and Line 3 (correction) address'}
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openfleet-immune
     type: observation

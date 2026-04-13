@@ -15,7 +15,7 @@ instances:
   - {'page': 'OpenArms skill-stage-mapping.yaml', 'context': '299-line mapping: 3 layers (generic, role, plugin) with per-stage recommendations and restrictions'}
   - {'page': 'Research Wiki skills/', 'context': '5 skills loaded globally with no stage-awareness'}
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-13
 sources:
   - id: openarms-mapping
     type: file

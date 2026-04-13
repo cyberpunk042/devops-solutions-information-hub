@@ -8,7 +8,7 @@ note_type: directive
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-04-09
+updated: 2026-04-13
 sources: []
 tags: [log, directive, documentation, layers, code-docs, wiki, public-docs, old-models, alignment]
 ---

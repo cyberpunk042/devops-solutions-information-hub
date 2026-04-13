@@ -16,7 +16,7 @@ derived_from:
   - "Skyscraper, Pyramid, Mountain"
 reversibility: moderate
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-13
 sources: []
 tags: [methodology, framework, model-selection, composition, versioning, quality-tiers, meta-methodology, design-decisions]
 ---

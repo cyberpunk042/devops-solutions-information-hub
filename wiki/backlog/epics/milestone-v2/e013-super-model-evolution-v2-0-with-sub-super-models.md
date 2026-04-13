@@ -16,7 +16,7 @@ artifacts:
   - "wiki/spine/super-model.md"
 confidence: high
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: milestone
     type: file

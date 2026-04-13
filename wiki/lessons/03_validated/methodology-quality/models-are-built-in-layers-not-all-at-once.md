@@ -13,7 +13,7 @@ derived_from:
   - "Scaffold → Foundation → Infrastructure → Features"
   - "LLM Wiki Standards — What Good Looks Like"
 created: 2026-04-09
-updated: 2026-04-12
+updated: 2026-04-13
 sources: []
 tags: [lesson, failure-lesson, models, process, sfif, layers, methodology]
 ---

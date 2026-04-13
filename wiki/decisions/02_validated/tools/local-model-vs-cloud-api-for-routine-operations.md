@@ -15,7 +15,7 @@ derived_from:
   - "Knowledge Evolution Pipeline"
 reversibility: easy
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-aicp-local
     type: documentation

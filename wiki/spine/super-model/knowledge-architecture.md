@@ -10,7 +10,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources: []
 tags: [sub-model, navigation-hub, spine]
 ---
@@ -36,17 +36,32 @@ Navigation hub for the knowledge system — how knowledge flows from raw sources
 > | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Markdown as programming language. Structure > content. |
 > | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] | The governing PRINCIPLE: form programs behavior. |
 
+### Domain Overviews
+
+Each knowledge domain has an overview page summarizing its state, maturity, and gaps:
+
+> [!info] Domain landscape
+>
+> | Domain | Overview |
+> |--------|----------|
+> | [[ai-agents-domain-overview|AI Agents]] | Agent runtimes, orchestration, skills, hooks |
+> | [[ai-models-domain-overview|AI Models]] | Local inference, quantization, routing |
+> | [[automation-domain-overview|Automation]] | Pipelines, event-driven, scheduling |
+> | [[devops-domain-overview|DevOps]] | Infrastructure, ecosystem, deployment |
+> | [[knowledge-systems-domain-overview|Knowledge Systems]] | Wiki patterns, PKM theory, graphs |
+> | [[tools-and-platforms-domain-overview|Tools and Platforms]] | Obsidian, Plane, AICP, MCP |
+
 ### Entry Points
 
 > [!tip] How to enter this domain
 >
 > **CLI/Gateway:** `gateway query --field <name> | gateway template <type> | pipeline evolve --score`
-> **Obsidian:** Follow wikilinks from any member page above
+> **Obsidian:** Follow wikilinks from any member page above or any domain overview
 > **MCP:** Use the corresponding wiki_gateway tools
 
 ### Standards
 
-15 per-type standards, each with annotated exemplar. Templates teach through inline examples.
+15 per-type standards + 7 model standards, each with annotated exemplar. Templates teach through inline examples.
 
 ### How This Connects — Navigate From Here
 

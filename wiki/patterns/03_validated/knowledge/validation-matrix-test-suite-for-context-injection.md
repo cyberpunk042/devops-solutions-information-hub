@@ -15,7 +15,7 @@ instances:
   - {'page': 'Structured Context Is Proto-Programming for AI Agents', 'context': '29 validation scenarios demonstrate the structural consistency principle — same skeleton across all injection types'}
   - {'page': 'Three Lines of Defense — Immune System for Agent Quality', 'context': "Validation matrix verifies that the immune system's context modifications produce correct structured output"}
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
   - id: openfleet-matrix
     type: observation
