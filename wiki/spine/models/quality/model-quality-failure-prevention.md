@@ -350,7 +350,8 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 
 ## Open Questions
 
-> [!question] **How should enforcement level be measured quantitatively?**
+> [!question] ~~**How should enforcement level be measured quantitatively?**~~
+> **RESOLVED:** Compliance rate = (gates passed without bypass) / (total gate encounters). Already measured informally (25%→100% from OpenArms). Needs formal tracking.
 > What percentage of quality rules currently live at Level 0 (hope) vs Level 3 (deterministic)? A metric like "enforcement maturity score = weighted average across levels" could track progress. (Requires: cataloging all rules with their current enforcement level)
 
 > [!question] **Can the 3-strike pattern apply to wiki quality?**

@@ -121,7 +121,8 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 > [!question] How do phase transitions trigger chain upgrades?
 > POC→MVP: manual operator decision? Metric-based (first paying user, first SLA)? Should the wiki recommend triggers or just document options?
 
-> [!question] Should the simplified chain have ANY stage gates?
+> [!question] ~~Should the simplified chain have ANY stage gates?~~
+> **RESOLVED:** Advisory only. The operator IS the gate at simplified level. No infrastructure enforcement.
 > Or is simplified = "just build it, no gates"? Tension: gates slow POCs but prevent the "untraceable mess" that makes MVP→Production painful.
 
 > [!question] How does this relate to OpenFleet's delivery phases?

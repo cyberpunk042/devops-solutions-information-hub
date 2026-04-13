@@ -153,10 +153,12 @@ None. This is the foundation epic. Start immediately.
 
 ## Open Questions
 
-> [!question] Should model updates be one commit per model or batched?
+> [!question] ~~Should model updates be one commit per model or batched?~~
+> **RESOLVED:** Batched per session. One commit per model creates noise. Batch by logical unit of work.
 > One commit per model = cleaner git history, easier to review. Batched = faster. Recommendation: one commit per module (M1, M2, M3, M4) — 4 commits total.
 
-> [!question] How deep should "depth models" (M3) updates be?
+> [!question] ~~How deep should "depth models" (M3) updates be?~~
+> **RESOLVED:** Proportional to new knowledge. If significant new evidence exists, full update. If minor, add to State of Knowledge only.
 > Some models (NotebookLM, Local AI) may not need significant session-specific updates. A brief review confirming "no changes needed" is acceptable — but it must be CONFIRMED, not assumed.
 
 > [!question] ~~Should the filename `model-design-md.md` be renamed in this epic or in E019 (Obsidian)?~~

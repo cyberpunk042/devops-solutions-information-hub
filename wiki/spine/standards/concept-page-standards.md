@@ -186,7 +186,8 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 
 ## Open Questions
 
-> [!question] Should concept pages above 300 lines be split into a concept + deep-dive pair? (Requires: analysis of current long concept pages to see if splitting improves navigation)
+> [!question] ~~Should concept pages above 300 lines be split into a concept + deep-dive pair?~~
+> **RESOLVED:** Judgment call per page, no fixed threshold. Some concepts need depth in one place. Split when sub-topics can stand alone. (Requires: analysis of current long concept pages to see if splitting improves navigation)
 
 ### How This Connects — Navigate From Here
 

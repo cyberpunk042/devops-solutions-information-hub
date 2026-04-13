@@ -201,7 +201,8 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 
 > [!question] What is the minimum viable enforcement infrastructure a new project needs? (Requires: analysis of OpenArms enforcement components — which are essential vs nice-to-have)
 
-> [!question] Should operations plans be a new page type in the schema, or a subtype of an existing type? (Requires: design decision after analyzing usage patterns)
+> [!question] ~~Should operations plans be a new page type in the schema, or a subtype of an existing type?~~
+> **RESOLVED:** Already a page type. operations-plan exists in wiki-schema.yaml with required_sections. (Requires: design decision after analyzing usage patterns)
 
 > [!question] How does the artifact chain handle composition — when a Feature Development task is nested inside an SFIF project lifecycle stage? (Requires: recursive composition analysis)
 

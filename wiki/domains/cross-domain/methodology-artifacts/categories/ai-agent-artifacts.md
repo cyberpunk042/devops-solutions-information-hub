@@ -209,13 +209,16 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 
 ## Open Questions
 
-> [!question] Should the operator's .agent/ rule system be studied as a methodology model for the wiki?
+> [!question] ~~Should the operator's .agent/ rule system be studied as a methodology model for the wiki?~~
+> **RESOLVED:** Document as a PATTERN (structured rule enforcement), not a methodology model (no stages). Sits between CLAUDE.md and hooks.
 > **DEFERRED:** Needs operator brainstorm session about the "magic tricks." The rule system is captured as research material in `raw/notes/2026-04-12-restart-directive.md`. Represents a THIRD enforcement tier: per-prompt rule injection with mandatory processing.
 
-> [!question] Should agent persona templates be wiki page types or external config files?
+> [!question] ~~Should agent persona templates be wiki page types or external config files?~~
+> **RESOLVED:** External config files in the project (IDENTITY.md, SOUL.md). Wiki documents the PATTERN, project has the INSTANCE.
 > **DEFERRED:** Needs operator input. Currently external (CLAUDE.md, skills/). The knowledge in them SHOULD be in the wiki for discoverability, but the configs must remain external for agent consumption. Likely answer: wiki pages DOCUMENT the persona, config files ARE the persona.
 
-> [!question] How do multi-agent handoff artifacts work?
+> [!question] ~~How do multi-agent handoff artifacts work?~~
+> **RESOLVED:** DEFERRED to E027. No source defines a handoff format yet. Future work.
 > **DEFERRED:** Needs deeper research into multi-agent orchestration patterns. The agentic engineering research (nxcode.io) describes the pipeline (Feature Author → Test Generator → Code Reviewer) but doesn't specify the handoff artifact format.
 
 ### How This Connects — Navigate From Here

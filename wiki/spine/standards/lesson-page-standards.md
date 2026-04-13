@@ -216,7 +216,8 @@ Standards for lesson pages — actionable learnings distilled from convergent ev
 
 ## Open Questions
 
-> [!question] Should lessons with <3 evidence items be automatically flagged for demotion to "observation" status? (Requires: design decision on observation vs lesson threshold)
+> [!question] ~~Should lessons with <3 evidence items be automatically flagged for demotion to "observation" status?~~
+> **RESOLVED:** No automatic demotion. Flag for review. 2 strong evidence items > 3 weak ones. Threshold is a guideline, not a gate. (Requires: design decision on observation vs lesson threshold)
 
 ### How This Connects — Navigate From Here
 

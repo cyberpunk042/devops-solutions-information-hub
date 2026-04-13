@@ -193,7 +193,8 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 > [!question] ~~Can the identity profile be auto-detected or must it be declared?~~
 > **RESOLVED:** Both — different dimensions. Domain and scale are auto-detectable from filesystem (package.json, file count). Execution mode, PM level, and trust tier cannot be auto-detected — they depend on runtime state. Phase is partially detectable (CI + tests + deploy markers). The gateway reports what it can detect and says "unknown — declare in CLAUDE.md" for the rest. See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]].
 
-> [!question] Should the second brain tools accept an identity profile parameter? **PARTIALLY RESOLVED**
+> [!question] ~~Should the second brain tools accept an identity profile parameter?~~
+> **RESOLVED:** Yes. Gateway already has --wiki-root for dual-scope. Add --identity to pass a profile. PARTIALLY RESOLVED — gateway supports it conceptually. **PARTIALLY RESOLVED**
 > The gateway auto-detects domain (used for `--stage` queries). Other dimensions should be passable but NOT required — the gateway warns when it can't detect and suggests declaring. The `what-do-i-need` command shows detected + unknown dimensions together.
 
 > [!question] How do we prevent projects from over-declaring their trust tier? **OPEN**

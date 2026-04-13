@@ -289,7 +289,8 @@ See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the a
 > [!question] **How does OpenArms routing evolve with specialized agent pools?**
 > Currently routes to a single runtime. If OpenFleet scales to domain-specific pools, OpenArms needs routing intelligence. (Requires: multi-pool architecture design)
 
-> [!question] **Should AICP ↔ OpenFleet have a formal integration contract?**
+> [!question] ~~**Should AICP ↔ OpenFleet have a formal integration contract?**~~
+> **RESOLVED:** Yes eventually. Currently file-based coupling. When services communicate, need interface spec. DEFERRED to ecosystem evolution.
 > Currently informal. As both mature, is an explicit contract (API spec, version compatibility) worth the coupling cost? (Requires: assessing integration friction)
 
 > [!question] **When does OpenArms upgrade from v2 to v3 harness?**

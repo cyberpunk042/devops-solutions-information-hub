@@ -194,10 +194,12 @@ What good command → skill → hook composition looks like.
 
 ## Open Questions
 
-> [!question] **Should skills have a validation schema?**
+> [!question] ~~**Should skills have a validation schema?**~~
+> **RESOLVED:** Same as above — yes eventually, not now.
 > Like wiki pages have `wiki-schema.yaml`, should skills have a schema checking for trigger phrases, operations, quality bar, and gotchas? (Requires: enough skills to see the pattern — 5 in this wiki, 50+ in OpenArms)
 
-> [!question] **Can command selection be automated based on role context?**
+> [!question] ~~**Can command selection be automated based on role context?**~~
+> **RESOLVED:** Yes — the harness knows the agent role and can filter available commands. Already how OpenFleet dispatch works.
 > Instead of manually installing role-appropriate command sets, can the system detect the user's role (developer, researcher, PM) and surface the right commands? (Requires: role detection mechanism)
 
 > [!question] **What's the optimal hook count per project?**

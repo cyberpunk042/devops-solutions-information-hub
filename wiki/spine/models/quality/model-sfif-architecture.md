@@ -220,7 +220,8 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 > [!question] **Where is the Pyramid → Skyscraper boundary?**
 > Is it a discrete architectural decision (refactor sprint) or continuous improvement? Can a system cross the boundary without anyone noticing? (Requires: observing the transition in a real project)
 
-> [!question] **Does SFIF × SDLC Chain produce a formal upgrade path?**
+> [!question] ~~**Does SFIF × SDLC Chain produce a formal upgrade path?**~~
+> **RESOLVED:** Conceptually yes — a project at Pyramid quality on simplified chain upgrades to Skyscraper/default when triggers hit. Not yet formalized.
 > If a project is Mountain/Simplified (POC), is the upgrade path: Mountain→Pyramid (quality) THEN Simplified→Default (process)? Or do quality and process upgrade together? (Requires: empirical data from at least 2 project upgrades)
 
 ### How This Connects — Navigate From Here

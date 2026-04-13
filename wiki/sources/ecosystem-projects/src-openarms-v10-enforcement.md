@@ -117,7 +117,8 @@ OpenArms has distilled 18 lesson files + 4 findings docs in `wiki/domains/learni
 > [!question] Can the weakest-checker problem be solved by making strict gates mandatory?
 > If `pnpm tsgo` replaces `pnpm test` as the gate, the agent MUST pass strict checking. But this makes every stage slower. Tradeoff: correctness vs speed. OpenArms findings recommend: BOTH always. Never "pick one."
 
-> [!question] How should sub-agent behavioral rules be enforced?
+> [!question] ~~How should sub-agent behavioral rules be enforced?~~
+> **RESOLVED:** Via spawn prompt in structural format (tables, MUST/MUST NOT). Sub-agents cannot access CLAUDE.md. See model-context-engineering (5 cognitive contexts).
 > Sub-agents don't inherit CLAUDE.md. Instructions in spawn prompts are soft constraints (67% inclusion, 50% compliance). OpenArms recommends: trustless verification (Option 3). OpenFleet injects rules per-role but same pattern-failure applies.
 
 > [!question] ~~Should CLAUDE.md be split per cognitive context?~~

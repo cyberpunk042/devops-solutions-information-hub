@@ -731,7 +731,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 
 ## Open Questions
 
-> [!question] **Should model selection be declarative or dynamic?**
+> [!question] ~~**Should model selection be declarative or dynamic?**~~
+> **RESOLVED:** Declarative in frontmatter (task_type field), with the methodology engine selecting the model. Dynamic selection by the agent would bypass the methodology.
 > **Partially resolved.** The Goldilocks protocol suggests declarative: identity profile → chain → model. OpenFleet implements this: `methodology.yaml` defines models, orchestrator selects based on task type + readiness + contributions. OpenArms is more implicit (task_type mapping in harness). The wiki should support BOTH: declarative config for known mappings, dynamic override for edge cases. (Remaining: test a formal selection engine that reads identity profiles)
 
 > [!question] **Can stage gates be fully automated?**

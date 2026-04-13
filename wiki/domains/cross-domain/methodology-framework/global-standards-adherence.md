@@ -111,13 +111,16 @@ The wiki is BOTH the framework AND an instance. It must adhere to the standards 
 
 ## Open Questions
 
-> [!question] Should the gateway tools produce an actual OpenAPI spec?
+> [!question] ~~Should the gateway tools produce an actual OpenAPI spec?~~
+> **RESOLVED:** When gateway becomes HTTP API, not before. Currently a CLI tool — premature spec.
 > If the gateway is meant to serve humans, agents, AND MCP connections, an OpenAPI spec would make it self-documenting for machine consumers. Cost: spec maintenance. Benefit: any tool can discover and use the API.
 
-> [!question] Should hook responses follow CloudEvents format?
+> [!question] ~~Should hook responses follow CloudEvents format?~~
+> **RESOLVED:** Not now. Hooks are local shell scripts, not distributed events. CloudEvents applies when hooks emit to external systems.
 > Pre/PostToolUse hooks return JSON. If that JSON followed CloudEvents (type, source, time, data), hooks from different projects would be interoperable. Worth the overhead?
 
-> [!question] Which custom patterns are candidates for formal standardization?
+> [!question] ~~Which custom patterns are candidates for formal standardization?~~
+> **RESOLVED:** Goldilocks identity protocol, SDLC chain selection, stage-gate enforcement. These are the most reused patterns across the ecosystem.
 > The Goldilocks identity protocol, the three-chain SDLC model, the readiness/progress two-field tracking — these are custom to this ecosystem but may generalize. Should we propose them as standards?
 
 ## Relationships

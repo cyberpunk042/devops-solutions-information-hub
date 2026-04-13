@@ -130,7 +130,8 @@ What good scorer output looks like — diverse candidates, not tag-pair noise.
 
 ## Open Questions
 
-> [!question] **Should evolution candidates be diversified automatically?**
+> [!question] ~~**Should evolution candidates be diversified automatically?**~~
+> **RESOLVED:** No. Evolution scoring already uses multiple signals (convergence, relationship density, staleness). Diversity is emergent from signal variety.
 > If the top 10 are all from the same domain, should the scorer inject diversity (e.g., max 3 per domain in top 10)? Or should the human reviewer handle diversity? (Requires: testing with both approaches)
 
 > [!question] **What's the minimum evidence bar for a lesson?**

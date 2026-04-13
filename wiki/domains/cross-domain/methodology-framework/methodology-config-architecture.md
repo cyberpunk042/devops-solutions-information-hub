@@ -157,9 +157,11 @@ A reasoning document examining how the wiki's config files, the methodology syst
 
 ## Open Questions
 
-> [!question] Should artifact_class (document/artifact/documentation) be added to artifact-types.yaml? This would enable class-specific validation rules. (Recommendation: yes — small change, high value.)
+> [!question] ~~Should artifact_class (document/artifact/documentation) be added to artifact-types.yaml?~~
+> **RESOLVED:** Yes — enables class-specific validation rules. Add a class field to each type definition. Low effort, high value. This would enable class-specific validation rules. (Recommendation: yes — small change, high value.)
 
-> [!question] Should methodology.yaml chain entries include template_hint to guide which template to use? (Recommendation: yes — reduces agent guessing about which template fits the stage.)
+> [!question] ~~Should methodology.yaml chain entries include template_hint to guide which template to use?~~
+> **RESOLVED:** Yes — reduces agent guessing. Each model's artifact entry can include template path. Low effort. (Recommendation: yes — reduces agent guessing about which template fits the stage.)
 
 ### How This Connects — Navigate From Here
 

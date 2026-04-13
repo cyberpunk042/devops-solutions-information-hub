@@ -225,7 +225,8 @@ What all four levels working together looks like.
 > [!question] **What is the ideal CLAUDE.md structure?**
 > Should CLAUDE.md have a standardized section order across all projects? (Project Structure → Schema → Commands → Quality Gates → Methodology → Conventions?) Or should each project adapt freely? (Requires: comparing CLAUDE.md across 5+ projects)
 
-> [!question] **Should skills have a quality schema?**
+> [!question] ~~**Should skills have a quality schema?**~~
+> **RESOLVED:** Yes eventually — validate skill.md structure (name, description, trigger, content). Not urgent until skill count grows beyond ~20.
 > Like wiki pages have `wiki-schema.yaml`, should skills have a validation schema checking for trigger phrases, operations, quality bar, and gotchas? (Requires: enough skills to see the pattern — currently 5 in this wiki, 50+ in OpenArms)
 
 > [!question] **How do you test hooks without breaking things?**

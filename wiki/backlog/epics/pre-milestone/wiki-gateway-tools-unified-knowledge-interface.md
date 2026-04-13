@@ -119,7 +119,8 @@ Build a unified Python interface that serves humans, AI agents, and MCP connecti
 > **RESOLVED:** Trust-tier-gated per Goldilocks. Lightweight: auto-merge to raw/notes/. Capable: auto-merge with validation. Expert: auto-merge anywhere. Details TBD.
 > Options: auto-merge to raw/notes/ (low risk), require operator approval for wiki/ pages (higher quality gate), or tiered — remarks auto-merge, lessons need review.
 
-> [!question] How do we handle factory reset for projects that aren't the research wiki?
+> [!question] ~~How do we handle factory reset for projects that aren't the research wiki?~~
+> **RESOLVED:** Re-scaffold from brain templates. Delete custom config, re-copy from wiki/config/templates/, re-run pipeline post.
 > The operator said "tools for every project, not necessarily the second-brain." The gateway needs to work on any wiki-structured project, not just this one. Config path must be parameterizable.
 
 ### How This Connects — Navigate From Here

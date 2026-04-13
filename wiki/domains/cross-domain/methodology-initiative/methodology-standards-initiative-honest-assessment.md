@@ -120,7 +120,8 @@ The "magic tricks" — structural formatting that improves agent compliance — 
 
 > [!question] How many of the 17 artifact types need their own dedicated standards doc? All 17, or can some be grouped? (e.g., epic/module/task are all backlog types with similar standards)
 
-> [!question] What are the "magic tricks" the operator referenced? This needs a dedicated brainstorming session.
+> [!question] ~~What are the "magic tricks" the operator referenced? This needs a dedicated brainstorming session.~~
+> **RESOLVED:** Structured context engineering. Operator stated: "The magic trick is structural engineering." Already documented in model-context-engineering.md.
 
 ### How This Connects — Navigate From Here
 

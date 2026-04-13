@@ -154,10 +154,12 @@ Transform every page template from a structural skeleton with placeholder commen
 
 ## Open Questions
 
-> [!question] Should example content use `<!-- EXAMPLE: ... -->` comments or actual pre-filled sections?
+> [!question] ~~Should example content use `<!-- EXAMPLE: ... -->` comments or actual pre-filled sections?~~
+> **RESOLVED:** HTML comments. Pre-filled sections risk being left in final pages. Comments are clearly not-real-content.
 > Comments: agent sees the example but knows to replace. Pre-filled: agent sees real content and adapts. Recommendation: pre-filled sections with `<!-- Replace this example with your content -->` marker. The pre-filled content IS the teaching.
 
-> [!question] Should templates have TWO sections — structure + example?
+> [!question] ~~Should templates have TWO sections — structure + example?~~
+> **RESOLVED:** Yes. Already implemented — 24 templates enriched with inline examples. Structure + example is the standard.
 > Or should the example BE the structure? Recommendation: the structure IS the example. One section, rich content. The `{{placeholder}}` markers indicate what to replace. Everything else is example content that teaches through format.
 
 ## Handoff Context

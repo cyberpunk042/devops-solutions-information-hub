@@ -221,10 +221,12 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 > [!question] What is the minimum viable super-model for a project that only needs knowledge architecture (no methodology)?
 > A project that wants structured wiki pages but not stage gates. Tier 1 covers this — but the current Tier 1 bundles schema + methodology. Should there be a Tier 0: "just the wiki, no process"?
 
-> [!question] How should the super-model version when models evolve independently?
+> [!question] ~~How should the super-model version when models evolve independently?~~
+> **RESOLVED:** Super-model version reflects system-level changes (new sub-models, structural reorganization). Individual model updates don't bump super-model version.
 > Model: LLM Wiki might reach mature while Model: Claude Code is still growing. Does the super-model version reflect the lowest common denominator, or the overall system state?
 
-> [!question] Should there be a super-model compliance checker?
+> [!question] ~~Should there be a super-model compliance checker?~~
+> **RESOLVED:** Yes — a gateway command that reads CLAUDE.md + methodology.yaml and reports adoption tier + gaps. Future work.
 > A tool that reads a project's CLAUDE.md and methodology.yaml and reports which models are adopted, at what tier, and what's missing. This would make adoption measurable.
 
 ### How This Connects — Navigate From Here

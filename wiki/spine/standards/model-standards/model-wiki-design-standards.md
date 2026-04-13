@@ -426,13 +426,15 @@ If any type were missing, the page would fail its own standard. ==This page demo
 
 ## Open Questions
 
-> [!question] **Should there be a formal "styling review" gate?**
+> [!question] ~~**Should there be a formal "styling review" gate?**~~
+> **RESOLVED:** No gate. Styling is a quality dimension handled during operator knowledge sweep, not a pipeline gate.
 > Before pages are marked `growing`, should styling be checked against this standard? Currently quality reviews focus on content (evidence, specificity, relationships). Adding a visual quality dimension would catch raw pages earlier but adds process overhead. (Requires: testing with a review workflow on 5+ pages)
 
 > [!question] **When do we create CSS snippets?**
 > Custom CSS could define new callout types — `[!model]`, `[!stage]` — with unique colors and Lucide icons. But the 8 built-in types need to stabilize across 20+ styled pages first. Premature CSS is premature optimization. (Requires: callout vocabulary stability across 20+ styled pages)
 
-> [!question] **Should before/after examples include Obsidian screenshots?**
+> [!question] ~~**Should before/after examples include Obsidian screenshots?**~~
+> **RESOLVED:** Not now. Screenshots break version control and add maintenance burden. Text examples with callouts suffice.
 > Markdown source shows what you TYPE. Screenshots show what you SEE. Both are valuable, but screenshot tooling in WSL to Windows adds workflow friction. (Requires: screenshot pipeline or accepting the manual overhead)
 
 ### Annotated Exemplar

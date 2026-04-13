@@ -452,7 +452,8 @@ The per-type standards above cover wiki page types. But methodology execution pr
 > [!question] **What's the failure rate of stage-gate enforcement in practice?**
 > OpenArms found 7 bugs in one day. This wiki had 3+ methodology violations in one session. Is this the expected learning curve, or does it indicate the enforcement mechanisms are insufficient? (Requires: tracking violations over multiple sessions)
 
-> [!question] **Should there be a "methodology health" score per project?**
+> [!question] ~~**Should there be a "methodology health" score per project?**~~
+> **RESOLVED:** Yes — derived from pipeline post results + lint + gaps. The data exists, needs a dashboard command. Future gateway feature.
 > A composite metric: % of tasks with proper stage tracking, % of commits with stage labels, % of epics with computed readiness, # of FORBIDDEN violations. Would this be useful or bureaucratic? (Requires: implementing the metric and testing whether it drives behavior)
 
 ### Annotated Exemplar

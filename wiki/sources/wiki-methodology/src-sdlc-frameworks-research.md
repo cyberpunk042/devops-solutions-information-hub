@@ -117,7 +117,8 @@ The Agentic SDLC literature validates two of our patterns:
 > [!question] Does CMMI Level 5 map to anything we've built?
 > Level 5 (Optimizing) = continuous improvement built into the process. Our evolution pipeline (evolve --score → scaffold → generate → validate) is the closest, but it's manual. Full Level 5 would require automated detection of improvement opportunities and automatic application.
 
-> [!question] Should we adopt Lean Startup terminology alongside our own?
+> [!question] ~~Should we adopt Lean Startup terminology alongside our own?~~
+> **RESOLVED:** Reference but don't adopt. Use our terminology (POC/MVP/Staging/Production) with Lean Startup as source evidence. Dual terminology confuses.
 > Using "Build-Measure-Learn" as synonyms for our phases could help adoption by teams familiar with Lean. Risk: terminology overload. Benefit: instant recognition.
 
 ### How This Connects — Navigate From Here

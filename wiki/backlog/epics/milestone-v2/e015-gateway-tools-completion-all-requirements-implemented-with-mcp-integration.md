@@ -127,10 +127,12 @@ Complete ALL 44 functional requirements for the gateway tools — the unified Py
 
 ## Open Questions
 
-> [!question] Should `factory-reset` be dangerous or safe?
+> [!question] ~~Should `factory-reset` be dangerous or safe?~~
+> **RESOLVED:** Dangerous with explicit --confirm flag. Prints what will be deleted before acting.
 > Dangerous: deletes all content immediately. Safe: requires `--confirm "I understand"` flag + creates backup first. Recommendation: safe — backup first, require confirmation, log the reset.
 
-> [!question] Should MCP tools be 1:1 with CLI commands or aggregated?
+> [!question] ~~Should MCP tools be 1:1 with CLI commands or aggregated?~~
+> **RESOLVED:** Aggregated by task. MCP tools are task-oriented (wiki_search, wiki_status). Already implemented with 17 tools.
 > 1:1: each CLI command = one MCP tool (many tools). Aggregated: one `wiki_gateway` tool with action parameter (fewer tools, more complex schema). Recommendation: aggregated — one MCP tool per category (query, operate, contribute).
 
 ## Handoff Context

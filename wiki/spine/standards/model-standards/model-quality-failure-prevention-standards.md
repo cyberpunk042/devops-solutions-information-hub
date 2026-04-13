@@ -189,13 +189,15 @@ What it looks like when a project migrates quality rules upward through the enfo
 
 ## Open Questions
 
-> [!question] **Should there be a "quality health score" per project?**
+> [!question] ~~**Should there be a "quality health score" per project?**~~
+> **RESOLVED:** Same as methodology health — derived from existing pipeline data. One score, not two separate ones.
 > A composite metric: % of rules at Level 2+, % of failures with codified lessons, ratio check pass rate, stage gate violation rate. Would this drive improvement or become a vanity metric? (Requires: implementing and tracking across 3+ projects)
 
 > [!question] **What's the minimum three-layer defense for a small project?**
 > A solo developer with a 10-page wiki doesn't need 24 immune system rules. What's the minimum: CLAUDE.md + `pipeline post` + one human review gate? (Requires: testing with a minimal setup)
 
-> [!question] **Can enforcement migration be automated?**
+> [!question] ~~**Can enforcement migration be automated?**~~
+> **RESOLVED:** Partially. Hook installation can be scripted. Rule content requires human judgment. The gateway could scaffold hooks from templates.
 > When a rule is violated N times at Level 0, automatically suggest migrating to Level 1 (skill) or Level 2 (hook). This closes the loop between violation detection and enforcement improvement. (Requires: violation tracking infrastructure)
 
 ### Annotated Exemplar
