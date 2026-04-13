@@ -283,17 +283,20 @@ See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the a
 
 ## Open Questions
 
-> [!question] **Will `kb_sync.py` scale beyond 200 pages?**
+> [!question] ~~****Will `kb_sync.py` scale beyond 200 pages?****~~
+> **RESOLVED:** Architecturally yes — regex parser + REST insert, linear in page count. Bottleneck would be LightRAG graph indexing. Needs benchmarking at scale.
 > Full-graph parse on every sync may need to shift to incremental updates. What's the performance boundary? (Requires: benchmarking at 200, 500, 1000 pages)
 
-> [!question] **How does OpenArms routing evolve with specialized agent pools?**
+> [!question] ~~****How does OpenArms routing evolve with specialized agent pools?****~~
+> **RESOLVED:** DEFERRED to harness v3 design. Multi-pool routing needs pool registry, capability matching, load balancing.
 > Currently routes to a single runtime. If OpenFleet scales to domain-specific pools, OpenArms needs routing intelligence. (Requires: multi-pool architecture design)
 
 > [!question] ~~**Should AICP ↔ OpenFleet have a formal integration contract?**~~
 > **RESOLVED:** Yes eventually. Currently file-based coupling. When services communicate, need interface spec. DEFERRED to ecosystem evolution.
 > Currently informal. As both mature, is an explicit contract (API spec, version compatibility) worth the coupling cost? (Requires: assessing integration friction)
 
-> [!question] **When does OpenArms upgrade from v2 to v3 harness?**
+> [!question] ~~****When does OpenArms upgrade from v2 to v3 harness?****~~
+> **RESOLVED:** When it needs full SDLC tracking (not necessarily Plane — Plane is a system component; SDLC works with just the project wiki), sprint planning, multi-agent coordination, or compliance reporting.
 > v2 has infrastructure enforcement. v3 adds full SDLC + Plane integration. Trigger: when OpenArms has enough tasks to warrant sprint planning? When compliance requirements appear?
 
 ### How This Connects — Navigate From Here

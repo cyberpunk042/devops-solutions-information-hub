@@ -231,10 +231,12 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 > [!question] **At what MCP server count does schema overhead measurably degrade accuracy?**
 > The 12x figure is task-specific. A general benchmark — 1 server, 3 servers, 5 servers × short/medium/long sessions × simple/complex tasks — would make the decision framework empirical. (Requires: controlled testing)
 
-> [!question] **Does MCP selective tool exposure change the equation?**
+> [!question] ~~****Does MCP selective tool exposure change the equation?****~~
+> **RESOLVED:** Yes — selective exposure reduces schema overhead proportionally. Goldilocks applied to tool loading. Not yet widely implemented.
 > If MCP servers can expose only tools relevant to a conversation (not all registered tools), the eager-load cost drops. Does this make MCP-first viable? (Requires: testing selective exposure when available)
 
-> [!question] **Does the decision flip at 1M context?**
+> [!question] ~~****Does the decision flip at 1M context?****~~
+> **RESOLVED:** Shifts from CLI-always to CLI-for-automation + MCP-for-exploration. MCP overhead matters less at 1M but CLI latency/determinism advantages remain.
 > At 1M tokens, MCP overhead (~2K) is 0.2% — negligible. But does the degradation curve also flatten? Or does it remain proportional, just shifted? (Requires: testing MCP performance at 1M utilization)
 
 ### How This Connects — Navigate From Here

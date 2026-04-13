@@ -151,7 +151,8 @@ This is why OpenArms's 8 CLAUDE.md structural patterns improved compliance from 
 
 ## Open Questions
 
-> [!question] Can we formalize the structural grammar?
+> [!question] ~~Can we formalize the structural grammar?~~
+> **RESOLVED:** Partially. Informal grammar documented in model-context-engineering (headers=scope, tables=decisions, callouts=priority, YAML=parameters). Formal BNF-style grammar needs research into LLM markdown parsing.
 > If markdown is proto-programming, what are its "language constructs"? Headers = scope. Callouts = typed blocks. Tables = decision matrices. YAML = typed parameters. Code fences = literal content. Can we define a formal grammar that generates all valid context injections?
 
 > [!question] What is the optimal block size for agent processing?

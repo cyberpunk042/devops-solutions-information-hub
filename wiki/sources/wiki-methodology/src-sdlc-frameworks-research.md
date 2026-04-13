@@ -114,7 +114,8 @@ The Agentic SDLC literature validates two of our patterns:
 
 ## Open Questions
 
-> [!question] Does CMMI Level 5 map to anything we've built?
+> [!question] ~~Does CMMI Level 5 map to anything we've built?~~
+> **RESOLVED:** Between CMMI L4-L5. Evolution pipeline = continuous improvement (L5). Measured compliance across 9 methodology versions = quantitative management (L4). Not yet statistically managed.
 > Level 5 (Optimizing) = continuous improvement built into the process. Our evolution pipeline (evolve --score → scaffold → generate → validate) is the closest, but it's manual. Full Level 5 would require automated detection of improvement opportunities and automatic application.
 
 > [!question] ~~Should we adopt Lean Startup terminology alongside our own?~~

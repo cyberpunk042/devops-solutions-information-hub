@@ -114,7 +114,8 @@ OpenArms has distilled 18 lesson files + 4 findings docs in `wiki/domains/learni
 
 ## Open Questions
 
-> [!question] Can the weakest-checker problem be solved by making strict gates mandatory?
+> [!question] ~~Can the weakest-checker problem be solved by making strict gates mandatory?~~
+> **RESOLVED:** No. Making gates mandatory doesn't help if gates vary in strictness. Solution: the STRICTEST checker is the mandatory gate (e.g. tsgo not just test). OpenArms v10 validated this approach.
 > If `pnpm tsgo` replaces `pnpm test` as the gate, the agent MUST pass strict checking. But this makes every stage slower. Tradeoff: correctness vs speed. OpenArms findings recommend: BOTH always. Never "pick one."
 
 > [!question] ~~How should sub-agent behavioral rules be enforced?~~

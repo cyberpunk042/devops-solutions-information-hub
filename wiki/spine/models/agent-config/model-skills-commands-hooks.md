@@ -292,7 +292,8 @@ Commands (user trigger)
 
 ## Open Questions
 
-> [!question] **Can skills dynamically register hooks at runtime?**
+> [!question] ~~****Can skills dynamically register hooks at runtime?****~~
+> **RESOLVED:** Not in current Claude Code. Skills loaded on invocation, hooks at session start. Workaround: skill writes hook file, restart session.
 > Static on-demand hooks are declared in the skill folder. Dynamic registration would let skills adapt enforcement based on task state. (Requires: testing hook lifecycle API)
 
 > [!question] **What is the practical limit on hook chain depth?**

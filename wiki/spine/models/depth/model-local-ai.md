@@ -218,7 +218,8 @@ The general principle: build the routing infrastructure first, scale the hardwar
 > [!question] Empirical routing split after Stage 3
 > The 80% target is an estimate. Actual measurement requires Stage 3 to be operational.
 
-> [!question] Can the post-chain run entirely on local models?
+> [!question] ~~Can the post-chain run entirely on local models?~~
+> **RESOLVED:** Post-chain is already pure Python — no LLM needed, already $0. Evolution pipeline can route to local models via AICP.
 > Stage 3 targets this, but validation of complex relationship synthesis may still require Claude.
 
 > [!question] Context window as a hidden routing constraint

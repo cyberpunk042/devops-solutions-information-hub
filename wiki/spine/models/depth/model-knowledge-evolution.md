@@ -271,7 +271,8 @@ Evolved pages organize into maturity-based subfolders: `00_inbox → 01_drafts �
 > [!question] **What graph density metric triggers the need for LightRAG?**
 > The 200-page threshold was set empirically. Is there a specific relationship-to-page ratio, average path length, or clustering coefficient that predicts when index navigation breaks down? (Requires: measuring navigation accuracy at different wiki sizes)
 
-> [!question] **Does manual cross-linking inflate scores?**
+> [!question] ~~****Does manual cross-linking inflate scores?****~~
+> **RESOLVED:** Yes, but multi-signal scoring mitigates. relationship_hub is one signal alongside cross_source_convergence and staleness — can't game all three.
 > Pages cross-linked during ingestion start with higher relationship counts than organically connected pages. Should the scorer distinguish manually-seeded connections from organic ones? (Requires: comparing scorer output on manually-linked vs organically-linked candidate sets)
 
 > [!question] **What is the quality delta between LocalAI and Claude-generated evolution?**

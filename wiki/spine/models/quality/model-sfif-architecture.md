@@ -214,7 +214,8 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 
 ## Open Questions
 
-> [!question] **Can SFIF be detected automatically?**
+> [!question] ~~****Can SFIF be detected automatically?****~~
+> **RESOLVED:** Detection automatable (AST for scaffold, coverage for foundation, import graph for infrastructure). Advancement decision remains human.
 > Could `tools/validate` or a static analysis tool detect "infrastructure in features" (auth in controllers, retry in handlers)? (Requires: defining detectable anti-patterns per stage)
 
 > [!question] **Where is the Pyramid → Skyscraper boundary?**

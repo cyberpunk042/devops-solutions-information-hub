@@ -112,7 +112,8 @@ Build a unified Python interface that serves humans, AI agents, and MCP connecti
 > **RESOLVED:** Separate. Already implemented as tools/gateway.py (1,200+ lines). Different concern from pipeline orchestration.
 > pipeline.py is already 800+ lines. A separate tools/gateway.py (or tools/gateway/ package) keeps concerns clean. But it needs access to the same utilities (common.py, manifest, etc.).
 
-> [!question] How does location mapping memory work across git?
+> [!question] ~~How does location mapping memory work across git?~~
+> **RESOLVED:** Gateway archive/move writes location mappings to JSON file tracked by git. Persists across history. Any consumer looks up where a page went.
 > When a page moves, the mapping needs to persist. Options: JSON file in wiki/config/, git-tracked. Or: redirect pages (like HTTP 301). Or: both — mapping for programmatic access, redirect page for human/agent navigation.
 
 > [!question] ~~Should write-back (agent contributions) require approval or auto-merge?~~

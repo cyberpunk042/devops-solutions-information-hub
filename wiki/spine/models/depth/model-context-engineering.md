@@ -145,7 +145,8 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 
 ## Open Questions
 
-> [!question] Can we define a formal grammar for structured context?
+> [!question] ~~Can we define a formal grammar for structured context?~~
+> **RESOLVED:** Partially. Informal grammar in model-context-engineering. Formal grammar needs research into LLM markdown parsing behavior.
 > Headers = scope. Callouts = typed blocks. Tables = decision matrices. YAML = typed parameters. Can we formalize this into a grammar that GENERATES valid context injections? (Requires: analysis of all validation matrix scenarios for common constructs.)
 
 > [!question] What is the optimal context budget per tier?

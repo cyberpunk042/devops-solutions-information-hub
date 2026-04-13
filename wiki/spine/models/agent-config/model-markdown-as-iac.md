@@ -220,13 +220,15 @@ The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUD
 
 ## Open Questions
 
-> [!question] **When does the companion file ecosystem tip into context overhead?**
+> [!question] ~~****When does the companion file ecosystem tip into context overhead?****~~
+> **RESOLVED:** When total injected context exceeds ~10% of context window for routine tasks. ~5+ simultaneous companion files or >20k tokens of config.
 > Four files at ~750 lines total = ~4,000 tokens. At what point does this overhead measurably degrade accuracy? Is there a project-specific threshold? (Requires: measuring accuracy with and without companion files loaded)
 
 > [!question] **Is there a DESIGN.md equivalent for interaction behavior?**
 > Animations, state transitions, loading patterns, micro-interactions — the current 9-section structure doesn't capture these. Should it be a 10th section or a separate INTERACTIONS.md? (Requires: surveying how AI agents handle interaction specs)
 
-> [!question] **Does DESIGN.md value decrease as LLMs improve at visual design?**
+> [!question] ~~****Does DESIGN.md value decrease as LLMs improve at visual design?****~~
+> **RESOLVED:** No. DESIGN.md is system architecture (components, data flow, invariants), not visual design. Better models need BETTER architectural constraints.
 > If models get better at generating consistent UI without constraints, does DESIGN.md become unnecessary? Or does the "design reasoning capture" (WHY columns) remain durable? (Requires: longitudinal comparison)
 
 ### How This Connects — Navigate From Here

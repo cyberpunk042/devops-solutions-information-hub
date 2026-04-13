@@ -119,7 +119,8 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 
 ## Open Questions
 
-> [!question] **Can the Plan-Execute-Review cycle be further compressed?**
+> [!question] ~~****Can the Plan-Execute-Review cycle be further compressed?****~~
+> **RESOLVED:** Only for hotfixes (plan=0, execute+review merged). Feature-dev cycle is the minimum — compression = skipping planning = the documented failure mode.
 > Is the 5-verb cycle already at minimum viable complexity, or can it be optimized for specific task types? (Requires: comparative analysis of framework performance across task categories)
 
 > [!question] **How do best practices change as models improve?**

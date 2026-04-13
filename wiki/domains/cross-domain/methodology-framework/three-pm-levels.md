@@ -176,10 +176,12 @@ L2 comes in two forms depending on whether a harness or a full system provides e
 
 ## Open Questions
 
-> [!question] Can a project use L3 without L2?
+> [!question] ~~Can a project use L3 without L2?~~
+> **RESOLVED:** No. Each PM level wraps the previous. L3 (full PM tool) wraps L2 (harness/fleet) wraps L1 (wiki). Can't manage tasks in Plane without a harness executing them.
 > Skip the fleet system and connect Plane directly to the Wiki LLM? This loses real-time enforcement but gains organizational tracking. Useful for human-only teams that don't use AI agents.
 
-> [!question] How does the second brain relate to PM levels?
+> [!question] ~~How does the second brain relate to PM levels?~~
+> **RESOLVED:** The second brain IS L1. It's the foundation all PM levels build on. L2 = harness reads the wiki. L3 = PM tool syncs with the wiki. The brain feeds every level.
 > The research wiki (this project) is the second brain. L1 projects reference it for methodology and standards. L2 projects consume it via MCP tools. L3 projects may integrate it into sprint planning. Is the second brain a cross-level service or an L1 component?
 
 > [!question] What determines when to upgrade harness versions?

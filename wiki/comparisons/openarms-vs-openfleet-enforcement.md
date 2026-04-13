@@ -125,10 +125,12 @@ The convergent principle: both own the loop, both block git, both enforce stages
 
 ## Open Questions
 
-> [!question] Can OpenArms add detection without becoming OpenFleet?
+> [!question] ~~Can OpenArms add detection without becoming OpenFleet?~~
+> **RESOLVED:** Yes. Detection (report issues) without correction (auto-fix). Immune system with auto-correction is fleet-level. OpenArms can add lint-like detection at v2.
 > A lightweight doctor (checks stage-files.log for anomalies, flags repeated retries) could add Line 2 detection to the solo harness without the full orchestrator. Worth prototyping.
 
-> [!question] Can the validation engines merge?
+> [!question] ~~Can the validation engines merge?~~
+> **RESOLVED:** No — share PATTERNS (3-strike, compliance rate) not ENGINES. OpenArms validates methodology compliance, OpenFleet validates fleet health. Different concerns.
 > OpenArms's business logic detection + OpenFleet's disease detection could combine into a single validation layer. The function body parsing is useful for fleet agents too.
 
 ### How This Connects — Navigate From Here

@@ -204,7 +204,8 @@ The artifact chain is NOT a flat list. It is a **directed acyclic graph** where:
 > [!question] ~~Should operations plans be a new page type in the schema, or a subtype of an existing type?~~
 > **RESOLVED:** Already a page type. operations-plan exists in wiki-schema.yaml with required_sections. (Requires: design decision after analyzing usage patterns)
 
-> [!question] How does the artifact chain handle composition — when a Feature Development task is nested inside an SFIF project lifecycle stage? (Requires: recursive composition analysis)
+> [!question] ~~How does the artifact chain handle composition — when a Feature Development task is nested inside an SFIF project lifecycle stage? (Requires~~
+> **RESOLVED:** Preserve nesting as tree structure. Outer stage's artifacts include inner task's artifacts. Don't flatten.: recursive composition analysis)
 
 ### How This Connects — Navigate From Here
 

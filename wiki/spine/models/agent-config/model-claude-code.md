@@ -449,10 +449,12 @@ Validated experience from operating Claude Code in this ecosystem.
 > [!question] **What is the optimal subagent concurrency?**
 > At what point does filesystem contention from parallel subagents degrade throughput? The wiki uses subagents for parallel ingestion, but empirical benchmarks on concurrent file operations don't exist yet. (Requires: benchmarking with 2, 4, 8 parallel subagents on real tasks)
 
-> [!question] **When does harness complexity become net negative?**
+> [!question] ~~****When does harness complexity become net negative?****~~
+> **RESOLVED:** When harness bugs/latency/configuration overhead exceeds failures prevented. OpenArms v10: 100% stage compliance, 20% clean — harness isn't the bottleneck yet.
 > Hooks + skills + commands + methodology.yaml + agent-directive.md is significant infrastructure. At what point does maintaining the harness cost more than the rework it prevents? (Requires: tracking rework hours saved vs harness maintenance hours)
 
-> [!question] **How does the extension model evolve with 1M+ context?**
+> [!question] ~~****How does the extension model evolve with 1M+ context?****~~
+> **RESOLVED:** Skills shift from context-loading to workflow-structuring. Larger window = less need to load context, more need for structured workflows. Hooks unchanged — they're enforcement.
 > As context windows grow, the degradation curve argument for CLI-over-MCP weakens. At 1M tokens, MCP schema overhead (~2K tokens) is 0.2% of context — negligible. Does MCP-first become correct at that scale? (Requires: testing MCP performance at 1M context utilization)
 
 ### How This Connects — Navigate From Here

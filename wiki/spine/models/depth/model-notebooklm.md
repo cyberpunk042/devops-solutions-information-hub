@@ -227,7 +227,8 @@ The two tools occupy different positions in the knowledge lifecycle: NotebookLM 
 
 ## Open Questions
 
-> [!question] Can `add-research` deep mode be invoked programmatically without supervision?
+> [!question] ~~Can `add-research` deep mode be invoked programmatically without supervision?~~
+> **RESOLVED:** Good candidate for automation. NotebookLM has free tier with source limits. Strategy: trigger programmatically, cleanup and rotate notebooks when source limit hit. Depends on notebooklm-py API support.
 > The autonomous source discovery mode is powerful but potentially runaway — what is the right bound?
 
 > [!question] Notebook lifecycle management

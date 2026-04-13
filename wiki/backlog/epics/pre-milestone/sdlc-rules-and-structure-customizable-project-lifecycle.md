@@ -125,7 +125,8 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 > **RESOLVED:** Advisory only. The operator IS the gate at simplified level. No infrastructure enforcement.
 > Or is simplified = "just build it, no gates"? Tension: gates slow POCs but prevent the "untraceable mess" that makes MVP→Production painful.
 
-> [!question] How does this relate to OpenFleet's delivery phases?
+> [!question] ~~How does this relate to OpenFleet's delivery phases?~~
+> **RESOLVED:** OpenFleet phases (conversation→analysis→investigation→building→verification→delivery) are an INSTANCE of the generic stage sequence (document→design→scaffold→implement→test). Different names, same structure.
 > OpenFleet has delivery_phase: mvp | staging | production which controls test depth, docs requirements, security checks. Is this the same concept or a parallel dimension?
 
 ### How This Connects — Navigate From Here

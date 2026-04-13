@@ -125,7 +125,8 @@ The compaction lifecycle reveals something non-obvious: **context management is 
 
 ## Open Questions
 
-> [!question] Can the prompt cache TTL be extended or configured?
+> [!question] ~~Can the prompt cache TTL be extended or configured?~~
+> **RESOLVED:** No — Anthropic API parameter, not user-configurable. Current TTL is 5 minutes. Design around it.
 > Requires: Anthropic API documentation or official Claude Code settings documentation. The 5-minute TTL is reported by one practitioner source, unverified by Anthropic.
 
 > [!question] How do economics change across subscription plans?

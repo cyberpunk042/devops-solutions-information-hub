@@ -354,7 +354,8 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 > **RESOLVED:** Compliance rate = (gates passed without bypass) / (total gate encounters). Already measured informally (25%→100% from OpenArms). Needs formal tracking.
 > What percentage of quality rules currently live at Level 0 (hope) vs Level 3 (deterministic)? A metric like "enforcement maturity score = weighted average across levels" could track progress. (Requires: cataloging all rules with their current enforcement level)
 
-> [!question] **Can the 3-strike pattern apply to wiki quality?**
+> [!question] ~~****Can the 3-strike pattern apply to wiki quality?****~~
+> **RESOLVED:** Yes. Strike 1: lint warning. Strike 2: flag for review. Strike 3: demote to draft. For thin summaries, broken relationships, stale content.
 > Three thin pages in a row → mandatory depth review. Three validation failures → auto-escalate to guided mode. Would this reduce systemic quality decay or add bureaucratic overhead? (Requires: implementing and testing on a real ingestion batch)
 
 > [!question] **What is the empirical rework rate across ingestion modes?**

@@ -108,7 +108,8 @@ The mechanism: an AI model's approval rate is tracked per task type across rolli
 
 ## Open Questions
 
-> [!question] Can tier progression be automated safely?
+> [!question] ~~Can tier progression be automated safely?~~
+> **RESOLVED:** Yes with guardrails. Auto-measure approval rate over N tasks. >90% over 10+ tasks = auto-promote candidate. Tier DOWN = instant on critical failure. Automation measures, human confirms.
 > Currently PO decides promotions. Could the system auto-promote at 95%+ approval across 50+ records? Risk: one bad auto-promotion on security-critical tasks.
 
 > [!question] Should context depth be continuous rather than discrete tiers?

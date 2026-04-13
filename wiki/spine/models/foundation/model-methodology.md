@@ -735,7 +735,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > **RESOLVED:** Declarative in frontmatter (task_type field), with the methodology engine selecting the model. Dynamic selection by the agent would bypass the methodology.
 > **Partially resolved.** The Goldilocks protocol suggests declarative: identity profile → chain → model. OpenFleet implements this: `methodology.yaml` defines models, orchestrator selects based on task type + readiness + contributions. OpenArms is more implicit (task_type mapping in harness). The wiki should support BOTH: declarative config for known mappings, dynamic override for edge cases. (Remaining: test a formal selection engine that reads identity profiles)
 
-> [!question] **Can stage gates be fully automated?**
+> [!question] ~~****Can stage gates be fully automated?****~~
+> **RESOLVED:** Mechanical gates yes (schema, type checking, tests). Judgment gates no (design quality, requirement completeness). Full enforcement = both.
 > **Partially resolved.** OpenArms v10: 100% stage compliance via hooks. Stage GATES are fully automatable. Stage QUALITY is not — 7 behavioral failures persist at 80% rate. The boundary: anything checkable at the tool-call level (did you write to src/ during document?) = automate. Anything requiring judgment (is this requirements spec good enough?) = human gate. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] for the full boundary analysis.
 
 > [!question] **What is the minimum viable methodology?**

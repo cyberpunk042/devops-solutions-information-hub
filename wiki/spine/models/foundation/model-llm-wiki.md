@@ -493,7 +493,8 @@ From building with this model — validated experience:
 > [!question] How do multiple agents co-author a wiki without conflicts?
 > OpenFleet has 10 agents but they don't write to the wiki simultaneously. The contribution system gates inputs. Real multi-agent co-authoring remains untested. (Requires: multi-agent testing)
 
-> [!question] When does LightRAG become necessary?
+> [!question] ~~When does LightRAG become necessary?~~
+> **RESOLVED:** When keyword search + relationship traversal can't find cross-domain answers. ~200+ pages with dense relationships. Wiki at 296 pages — approaching threshold.
 > The wiki is at ~280 pages — above the ~200 index-navigation ceiling. LightRAG integration is designed but not deployed. (Requires: benchmarking search accuracy with current page count)
 
 ### How This All Weaves Together — Navigation from This Page
