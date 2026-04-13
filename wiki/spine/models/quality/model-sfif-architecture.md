@@ -109,17 +109,23 @@ See [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] for the full t
 
 ---
 
-### Relationship to the Knowledge Layer
+### Knowledge SFIF — The Wiki Analog
 
-The SFIF pattern has a direct analog in the wiki's 6-layer knowledge architecture:
+The SFIF stages map directly to wiki knowledge work:
 
-> [!info] **Knowledge SFIF**
-> | Knowledge stage | SFIF analog | Exit criterion |
-> |----------------|-------------|---------------|
-> | Raw notes | Scaffold | Direction captured |
-> | Source synthesis | Foundation | Single-source grounded understanding |
-> | Concepts | Infrastructure | Multi-source synthesis others can depend on |
-> | Lessons/Patterns/Decisions | Features | Specialized value on the stable conceptual base |
+> [!abstract] SFIF Applied to Knowledge Systems
+>
+> | SFIF Stage | Code Equivalent | Wiki Equivalent | Gate |
+> |-----------|----------------|-----------------|------|
+> | **Scaffold** | Empty types + stubs | Frontmatter + section headings (from template) | Page exists, schema valid |
+> | **Foundation** | Core logic working | Summary + Key Insights filled with real content | ≥30 word summary, ≥1 insight |
+> | **Infrastructure** | Integrated into system | Relationships wired, navigation weave, domain index | ≥1 relationship, reachable from index |
+> | **Features** | Full functionality | Deep Analysis, State of Knowledge, Open Questions, examples | Per-type thresholds met |
+>
+> **The quality tiers also apply:**
+> - **Pyramid** (POC knowledge): Quick capture, minimal structure. raw/notes/ files.
+> - **Skyscraper** (Production knowledge): Full structure, validated content, evidence-backed. Validated lessons, patterns.
+> - **Mountain** (Reference knowledge): Comprehensive, self-validating, exemplary. Model pages, standards with annotated exemplars.
 
 A wiki page that skips Foundation (jumping from raw notes to a pattern) produces the knowledge equivalent of a Mountain: pattern-typed content that is a single-source restatement with no cross-linking. See [[progressive-distillation|Progressive Distillation]].
 

@@ -46,6 +46,20 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 
 - **SDLC chains adapt Claude Code configuration.** A POC project needs a lean CLAUDE.md with 2-3 methodology models. A production fleet needs full methodology.yaml + domain profiles + hooks + commands. The identity profile determines which level of Claude Code configuration is appropriate. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]].
 
+### Agent Runtime Landscape
+
+> [!info] Claude Code is one agent runtime — the patterns transfer
+>
+> | Runtime | Configuration | Extension | Key Difference |
+> |---------|--------------|-----------|----------------|
+> | **Claude Code** | CLAUDE.md + settings.json | Skills, hooks, MCP tools | This model's reference implementation |
+> | **Cursor** | .cursorrules | Custom rules, @commands | IDE-integrated, visual-first |
+> | **Windsurf** | .windsurfrules | Cascade flows | Continuous context, flow-based |
+> | **GitHub Copilot** | .github/copilot-instructions.md | Extensions | IDE-embedded, completion-focused |
+> | **Codex CLI** | AGENTS.md | Tool use | Sandboxed execution |
+>
+> The principles in this model (structured context, extension hierarchy, configuration-as-code) apply across runtimes. The specific mechanisms (CLAUDE.md format, hook system, skill injection) are Claude Code's implementation. When this wiki says "configure the agent," the PATTERN is universal — the FILE NAMES are Claude Code-specific.
+
 ## Deep Analysis
 
 ### The Agent Architecture

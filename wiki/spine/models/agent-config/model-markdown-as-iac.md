@@ -23,7 +23,7 @@ tags: [model, spine, design-md, iac, markdown-config, claude-md, agents-md, soul
 # Model — Markdown as IaC — Design.md and Agent Configuration
 ## Summary
 
-The Design.md and IaC model describes the convergence of Infrastructure as Code with AI agent configuration: markdown files at the project root serve as binding specifications that AI agents read and execute. ==This pattern generalizes from traditional IaC (Terraform, Ansible) into the AI domain== — producing a companion file ecosystem: CLAUDE.md (behavioral constraints), DESIGN.md (visual design system), AGENTS.md (architecture), and SOUL.md (agent identity). The 9-section DESIGN.md standard, documented in 58+ production implementations including Claude (Anthropic)'s 312-line specification, is the most complete instance.
+The Design.md and IaC model describes the convergence of Infrastructure as Code with AI agent configuration: markdown files at the project root serve as binding specifications that AI agents read and execute. ==This pattern generalizes from traditional IaC (Terraform, Ansible) into the AI domain== — producing a companion file ecosystem: CLAUDE.md (behavioral constraints), DESIGN.md (visual design system), AGENTS.md (architecture), and SOUL.md (agent identity). The 9-section DESIGN.md standard, documented in 58+ production implementations including Claude (Anthropic)'s 312-line specification, is the most complete instance. While DESIGN.md is the deepest example, the IaC principle applies to every markdown file an agent reads — CLAUDE.md, .cursorrules, README.md, and more.
 
 ## Key Insights
 
@@ -82,9 +82,27 @@ The Do's reinforce explicit choices. The Don'ts prohibit the defaults that fill 
 
 ---
 
-### The Broader IaC Spectrum
+### The Broader IaC Spectrum — Beyond DESIGN.md
 
-> [!info] **Companion files sit on a continuous spectrum with traditional IaC**
+Markdown as IaC is not limited to one file format. Every markdown file that an AI agent reads and uses to change behavior IS infrastructure-as-code:
+
+> [!abstract] Markdown IaC Files Across Agent Runtimes
+>
+> | File | What It Configures | Runtime |
+> |------|-------------------|---------|
+> | CLAUDE.md | Project rules, methodology, tools | Claude Code |
+> | AGENTS.md | Multi-agent configuration | Claude Code, Codex |
+> | .cursorrules | Coding patterns, project context | Cursor |
+> | .windsurfrules | Flow rules, context management | Windsurf |
+> | DESIGN.md | System architecture, decisions | Any (proposed standard) |
+> | SOUL.md | Agent personality, communication style | OpenArms personas |
+> | IDENTITY.md | Agent role, capabilities, boundaries | OpenArms personas |
+> | .github/copilot-instructions.md | Copilot behavior rules | GitHub Copilot |
+> | README.md | Project context (read by all agents) | Universal |
+>
+> **The principle:** Any structured markdown file that changes AI agent behavior is infrastructure. The FILE NAME doesn't matter — the STRUCTURE and CONSISTENCY matter. Headers = scope. Tables = decisions. Lists = constraints. Callouts = priority.
+
+> [!info] **Companion files also sit on a continuous spectrum with traditional IaC**
 > | Spec file | Executor | Domain |
 > |-----------|----------|--------|
 > | `main.tf` | Terraform | Cloud infrastructure |

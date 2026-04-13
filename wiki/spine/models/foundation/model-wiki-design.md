@@ -67,6 +67,16 @@ The Wiki Design model defines the VISUAL layer of the knowledge system — how p
 
 ## Deep Analysis
 
+### Design Across Rendering Contexts
+
+| Context | What Works | What Doesn't | Adaptation |
+|---------|-----------|--------------|-----------|
+| Obsidian | Full callout vocabulary, graph view, CSS classes | Custom callout types need CSS | Reference implementation |
+| GitHub/GitLab | Standard markdown, no callouts render | Callouts show as blockquotes | Use blockquote-compatible patterns |
+| Docusaurus/MkDocs | Admonitions work (similar syntax) | Different callout names | Map Obsidian callouts to framework equivalents |
+| VS Code preview | Standard markdown only | No callouts, no graph | Content must be readable without styling |
+| AI agent (raw text) | Structure (headers, tables, lists) | Visual formatting invisible | Structure IS the design for agents |
+
 ### The Three Standard Layers (where this model fits)
 
 | Layer | What it defines | Where it lives | Example |
@@ -346,6 +356,20 @@ Features we're AWARE OF but don't use in the wiki (docs context):
 
 Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox → 04_principles`. Two new page types added the 2026-04-12 session: `principle` (distilled from ≥3 validated lessons) and `milestone` (delivery target above epics). Callout vocabulary extended with self-check sections (`> [!warning] Self-Check`) and navigation weave (`> [!abstract] From This Page →`).
 
+### State of Knowledge
+
+> [!success] **Well-covered**
+> - Semantic hierarchy (headers define scope, callouts define importance)
+> - Obsidian callout vocabulary (8 types standardized)
+> - Three formatting contexts (Obsidian, GitHub, Docusaurus)
+> - Page layout patterns (frontmatter → Quick Start → Summary → Deep Analysis → Navigation → Relationships)
+
+> [!warning] **Thin or unverified**
+> - Non-Obsidian rendering adaptation (documented but not tested)
+> - CSS customization (aspirational, not implemented)
+> - Accessibility of callout-heavy design (screen readers, color blindness)
+> - Mobile rendering (Obsidian mobile vs desktop differences)
+
 ## Open Questions
 
 - Should we create custom callout types via CSS (e.g., `[!model]`, `[!stage]`) or keep to the 8 built-in types? (Requires: testing whether custom types add value or confusion)
@@ -364,6 +388,14 @@ Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox �
 > | **Callout vocabulary in action** | [[model-methodology|Model — Methodology]] |
 > | **Obsidian as graph interface** | [[obsidian-knowledge-vault|Obsidian Knowledge Vault]] |
 > | **Templates directory** | `wiki/config/templates/` |
+
+### How to Adopt
+
+> [!tip] Adopt wiki design in 3 steps
+>
+> 1. **Use the semantic hierarchy** — # for page title, ## for major sections, ### for subsections. This is INVARIANT across all rendering contexts.
+> 2. **Pick your callout vocabulary** — Obsidian users: adopt the 8-type standard. Non-Obsidian: use blockquotes with bold labels (> **Warning:** ...).
+> 3. **Test in your rendering context** — Verify your pages look correct in YOUR tool. The design model is about STRUCTURE, not about one tool's features.
 
 ## Relationships
 
