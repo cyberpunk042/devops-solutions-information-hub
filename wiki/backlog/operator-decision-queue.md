@@ -15,7 +15,9 @@ tags: [backlog, decisions, operator, review, queue]
 
 # Operator Decision Queue
 
-73 open questions across the wiki that need operator input. Organized by theme for batch review. Each question links to its source page.
+## Summary
+
+73 open questions across the wiki that need operator input, organized into 5 priority tiers for batch review. P1 architecture decisions unblock the most downstream work. Each question links to its source page where the full context and any existing recommendations live.
 
 ## Priority 1 — Architecture Decisions (affects multiple epics)
 
