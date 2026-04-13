@@ -91,7 +91,7 @@ def get_sync_config(project_root: Path, target_override: str = None) -> Dict[str
     elif is_wsl():
         win_user = get_win_user()
         if win_user:
-            config["target"] = f"/mnt/c/Users/{win_user}/Documents/research-wiki-vault"
+            config["target"] = f"/mnt/c/Users/{win_user}/research-wiki-vault"
         else:
             config["target"] = None
     elif is_windows():
