@@ -50,6 +50,8 @@ Any multi-project ecosystem can be classified by its topology. Choose based on t
 
 ### Ecosystem at Different Scales
 
+> [!warning] This table is a synthesized framework based on this ecosystem's experience. The specific scale breakpoints and tooling assignments are inferences, not externally validated thresholds.
+
 | Scale | Topology | Integration | PM Level |
 |-------|----------|-------------|----------|
 | 2 projects | Simple hub-and-spoke | Shared CLAUDE.md + methodology.yaml | L1 (Wiki) |

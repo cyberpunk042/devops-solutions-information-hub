@@ -61,7 +61,7 @@ The core question is: how do you split work between free local models and paid c
 | Ollama | Simple setup, broad model support | 8GB+ VRAM |
 | llama.cpp / MLX | Maximum performance, fine-tuning | Technical expertise |
 | LocalAI | OpenAI-compatible API, drop-in replacement | Docker or bare metal |
-| vLLM | Production-grade serving, batching | 24GB+ VRAM |
+| vLLM | Production-grade serving, batching | Varies by model, optimized for multi-GPU |
 | LM Studio | GUI, easy model management | Desktop, not server |
 
 ### Universal Routing Invariants

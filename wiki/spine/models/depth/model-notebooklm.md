@@ -38,6 +38,8 @@ This model addresses a fundamental question for any knowledge wiki: how external
 
 ### External Research Tool Options
 
+> [!warning] This comparison is based on general knowledge of these tools, not a formal evaluation. Capabilities change frequently. Verify current features before adopting.
+
 The model-level question is: which external research tool complements your wiki? The answer depends on your constraints:
 
 | Tool | Strength | Limitation | Best For |

@@ -54,7 +54,7 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 > |---------|--------------|-----------|----------------|
 > | **Claude Code** | CLAUDE.md + settings.json | Skills, hooks, MCP tools | This model's reference implementation |
 > | **Cursor** | .cursorrules | Custom rules, @commands | IDE-integrated, visual-first |
-> | **Windsurf** | .windsurfrules | Cascade flows | Continuous context, flow-based |
+> | **Windsurf** | .windsurf/rules/*.md | Cascade flows | Directory-based rules, 12k char limit per file |
 > | **GitHub Copilot** | .github/copilot-instructions.md | Extensions | IDE-embedded, completion-focused |
 > | **Codex CLI** | AGENTS.md | Tool use | Sandboxed execution |
 >

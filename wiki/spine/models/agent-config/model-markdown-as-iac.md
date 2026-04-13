@@ -93,7 +93,7 @@ Markdown as IaC is not limited to one file format. Every markdown file that an A
 > | CLAUDE.md | Project rules, methodology, tools | Claude Code |
 > | AGENTS.md | Multi-agent configuration | Claude Code, Codex |
 > | .cursorrules | Coding patterns, project context | Cursor |
-> | .windsurfrules | Flow rules, context management | Windsurf |
+> | .windsurf/rules/*.md | Flow rules, context management (12k char/file) | Windsurf |
 > | DESIGN.md | System architecture, decisions | Any (proposed standard) |
 > | SOUL.md | Agent personality, communication style | OpenArms personas |
 > | IDENTITY.md | Agent role, capabilities, boundaries | OpenArms personas |
