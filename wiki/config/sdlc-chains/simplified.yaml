@@ -1,69 +1,67 @@
 # SDLC Chain: Simplified
 #
-# For: POC projects, micro/small codebases, solo agents without harness
-# Phase: POC, early MVP
-# Scale: micro (<10k) to small (10k-100k)
-# PM Level: L1 (Wiki LLM only, no harness)
-# Harness: none
+# The SDLC chain defines PROJECT-LEVEL POLICY — not task execution.
+# Task execution (stages, artifacts, gates) is defined in methodology.yaml.
+# The SDLC chain determines HOW MUCH methodology a project needs.
 #
-# Principle: minimum viable process. Short loops. Fast iteration.
-# The operator IS the enforcement — no infrastructure gates.
-#
-# See: wiki/domains/cross-domain/sdlc-customization-framework.md
+# See: wiki/domains/cross-domain/methodology-framework/sdlc-customization-framework.md
 
 chain: simplified
 description: "Minimum viable process for exploration and rapid iteration"
 
-# Only 2-3 stages active. Document is optional for trivial tasks.
-stages:
-  document:
-    required: false  # Skip for hotfixes and trivial changes
-    readiness_range: [0, 30]
-    artifacts:
-      - type: wiki-page
-        count: "0-1"
-        purpose: "Brief requirements or notes (optional)"
-    gate_commands: []  # No gates — operator reviews directly
+# ─── WHEN THIS CHAIN APPLIES ───────────────────────────────────────
+applicability:
+  phases: [poc, early-mvp]
+  scale: [micro, small]          # <10k to ~100k lines
+  typical_projects:
+    - "New idea being validated"
+    - "Solo developer exploring a concept"
+    - "Spike or time-boxed experiment within a larger project"
 
-  implement:
-    required: true
-    readiness_range: [30, 90]
-    artifacts:
-      - type: code-file
-        count: "1+"
-        purpose: "Implementation"
-    gate_commands: []  # Project-specific (pnpm tsgo, terraform validate, etc.)
+# ─── EXECUTION MODE ────────────────────────────────────────────────
+execution:
+  mode: solo                      # Human + agent in conversation, no wrapping
+  harness: none                   # No harness — human IS the loop
+  pm_level: L1                    # Wiki backlog only, no fleet/tool
 
-  test:
-    required: true
-    readiness_range: [90, 100]
-    artifacts:
-      - type: test-file
-        count: "1+"
-        purpose: "Basic verification"
-    gate_commands: []  # Project-specific
+# ─── ENFORCEMENT POLICY ────────────────────────────────────────────
+enforcement:
+  level: advisory                 # CLAUDE.md rules only, no hooks
+  stage_gates: advisory           # Stages recommended, not blocked
+  hooks: none                     # No pre-commit, pre-write, etc.
+  compliance_target: best-effort  # No measured compliance threshold
 
-# Models available in simplified chain
-models:
-  - feature-development  # Compressed to implement + test
-  - hotfix               # implement + test (same as full)
-  - documentation        # document only
-  - bug-fix              # implement + test
+# ─── METHODOLOGY POLICY ────────────────────────────────────────────
+# What methodology features are ACTIVE at this chain level.
+# The models themselves are defined in methodology.yaml — this just
+# says which ones are available and how strictly they're applied.
+methodology:
+  available_models:
+    - hotfix                      # implement + test
+    - bug-fix                     # document + implement + test
+    - documentation               # document only
+    - feature-development         # Compressed: design + scaffold may merge
+  stage_policy:
+    document: optional            # Can skip for trivial changes
+    design: skip                  # Design is implicit or in conversation
+    scaffold: skip                # Merged with implement
+    implement: required
+    test: required
+  artifact_depth: minimal         # Fewer artifacts per stage, lighter templates
 
-# What's different from default/full
-differences:
-  no_design_stage: true         # Design decisions are implicit or in conversation
-  no_scaffold_stage: true       # Scaffold and implement are merged
-  no_contribution_gating: true  # Solo agent, no cross-agent inputs
-  no_milestone_tracking: true   # Epics and tasks only, no milestones
-  readiness_gate: 30            # Much lower than full (99). Operator judgment.
-  progress_tracking: basic      # Frontmatter only, no real-time
-  review_gate: operator         # Operator reviews, no fleet-ops
-  enforcement: advisory         # CLAUDE.md rules only, no hooks
+# ─── TRACKING POLICY ───────────────────────────────────────────────
+tracking:
+  readiness_gate: 30              # Low bar — operator judgment is the real gate
+  progress_tracking: frontmatter  # Basic frontmatter fields only
+  review_gate: operator           # Human reviews, no fleet-ops
+  milestone_tracking: none        # No milestones — epics and tasks only
+  human_final_gate: true          # 99→100 still requires human (universal)
 
-# When to upgrade to default chain
-upgrade_triggers:
-  - "Agent violates stage boundaries more than once despite CLAUDE.md rules"
-  - "Codebase exceeds 100k lines"
-  - "Project moves from POC to MVP with real users"
-  - "Multiple agents need to coordinate"
+# ─── UPGRADE TRIGGERS ──────────────────────────────────────────────
+# When this chain is no longer sufficient
+upgrade_to_default:
+  - "Agent violates stage boundaries despite CLAUDE.md rules"
+  - "Project moves from POC to MVP with real users or stakeholders"
+  - "Codebase exceeds ~100k lines"
+  - "Multiple agents need to coordinate on the same codebase"
+  - "Operator finds themselves manually catching errors the pipeline should catch"
