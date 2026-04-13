@@ -177,7 +177,6 @@ This temporal split explains why Boris's "prototype over PRD" advice doesn't con
 [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
 [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
 [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
-[[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 [[model-claude-code|Model — Claude Code]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]

@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-13T16:36:14.141695+00:00",
+  "generated": "2026-04-13T16:40:28.580646+00:00",
   "stats": {
-    "pages": 305,
+    "pages": 295,
     "domains": 9,
     "sources": 28,
-    "comparisons": 6,
-    "relationships": 2069,
-    "tags_unique": 848,
+    "comparisons": 5,
+    "relationships": 1977,
+    "tags_unique": 846,
     "layers": {
-      "3": 5,
+      "3": 4,
       "6": 16,
       "2": 51,
       "4": 40,
-      "5": 27,
+      "5": 18,
       "1": 24,
       "spine": 61
     },
     "maturity": {
-      "growing": 262
+      "growing": 252
     }
   },
   "pages": [
@@ -7889,97 +7889,6 @@
       ]
     },
     {
-      "path": "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag.md",
-      "slug": "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag",
-      "title": "LLM Wiki vs RAG",
-      "type": "comparison",
-      "domain": "knowledge-systems",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-08",
-      "updated": "2026-04-10",
-      "tags": [
-        "llm-wiki",
-        "rag",
-        "semantic-search",
-        "vector-database",
-        "comparison",
-        "knowledge-retrieval",
-        "hybrid-search",
-        "knowledge-graph"
-      ],
-      "sources": [
-        {
-          "id": "src-karpathy-claude-code-10x",
-          "type": "youtube-transcript",
-          "file": "raw/transcripts/karpathy-claude-code-10x.txt",
-          "title": "Andrej Karpathy Just 10x'd Everyone's Claude Code",
-          "ingested": "2026-04-08"
-        },
-        {
-          "id": "src-karpathy-llm-wiki-idea-file",
-          "type": "documentation",
-          "url": "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f",
-          "file": "raw/articles/karpathy-llm-wiki-idea-file.md",
-          "title": "Karpathy LLM Wiki Idea File",
-          "ingested": "2026-04-08"
-        },
-        {
-          "id": "src-llm-wiki-v2-agentmemory",
-          "type": "documentation",
-          "url": "https://gist.github.com/rohitg00/2067ab416f7bbe447c1977edaaa681e2",
-          "file": "raw/articles/llm-wiki-v2-extending-karpathys-llm-wiki-pattern-with-lessons-from-building-agen.md",
-          "title": "LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory",
-          "ingested": "2026-04-08"
-        }
-      ],
-      "layer": 3,
-      "maturity": "growing",
-      "derived_from": [],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 Karpathy LLM Wiki Method via Claude Code"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 Karpathy's LLM Wiki Idea File"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
-        },
-        {
-          "verb": "COMPARES TO",
-          "target": "LLM Wiki Pattern"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Wiki Ingestion Pipeline"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Wiki Knowledge Graph"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "NotebookLM"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Claude Code Best Practices"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "LightRAG"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Agentic Search vs Vector Search"
-        }
-      ]
-    },
-    {
       "path": "domains/knowledge-systems/wiki-core/wiki-backlog-pattern.md",
       "slug": "domains/knowledge-systems/wiki-core/wiki-backlog-pattern",
       "title": "Wiki Backlog Pattern",
@@ -12977,750 +12886,6 @@
         {
           "verb": "RELATES TO",
           "target": "Evolution \u2014 Methodology System"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/claude-md-structural-patterns.md",
-      "slug": "patterns/02_synthesized/claude-md-structural-patterns",
-      "title": "CLAUDE.md Structural Patterns for Agent Compliance",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-11",
-      "updated": "2026-04-11",
-      "tags": [
-        "claude-md",
-        "agent-compliance",
-        "structural-patterns",
-        "formatting",
-        "enforcement"
-      ],
-      "sources": [
-        {
-          "id": "openarms-agents",
-          "type": "file",
-          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
-          "description": "OpenArms project reference"
-        },
-        {
-          "id": "openarms-directive",
-          "type": "file",
-          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
-          "description": "OpenArms agent directive"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Model: Methodology",
-        "Never Skip Stages Even When Told to Continue",
-        "Always Plan Before Executing"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Model \u2014 Methodology"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Never Skip Stages Even When Told to Continue"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Always Plan Before Executing"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Model \u2014 Claude Code"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Model \u2014 Skills, Commands, and Hooks"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Plan Execute Review Cycle"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Adoption Guide"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/context-aware-tool-loading.md",
-      "slug": "patterns/02_synthesized/context-aware-tool-loading",
-      "title": "Context-Aware Tool Loading",
-      "type": "pattern",
-      "domain": "ai-agents",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-08",
-      "updated": "2026-04-12",
-      "tags": [
-        "context-management",
-        "token-efficiency",
-        "deferred-loading",
-        "skills",
-        "mcp",
-        "cli",
-        "tool-design",
-        "agent-architecture",
-        "accuracy",
-        "notebooklm",
-        "playwright",
-        "context7"
-      ],
-      "sources": [
-        {
-          "id": "src-claude-code-accuracy-tips",
-          "type": "youtube-transcript",
-          "url": "https://www.youtube.com/watch?v=D5bRTv6GhXk",
-          "title": "Claude Code Works Better When You Do This"
-        },
-        {
-          "id": "src-playwright-cli-vs-mcp",
-          "type": "youtube-transcript",
-          "url": "https://www.youtube.com/watch?v=nN5R9DFYsXY",
-          "title": "Claude Code + Playwright CLI: Automate QA with Less Tokens"
-        },
-        {
-          "id": "src-notebooklm-claude-code-workflow",
-          "type": "youtube-transcript",
-          "url": "https://www.youtube.com/watch?v=fV17ZkPBlAc",
-          "title": "This NotebookLM + Claude Code Workflow Is Insane"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Synthesis: Claude Code Accuracy Tips",
-        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
-        "CLI Tools Beat MCP for Token Efficiency",
-        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 Claude Code Accuracy Tips"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "CLI Tools Beat MCP for Token Efficiency"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 NotebookLM + Claude Code Workflow via notebooklm-py"
-        },
-        {
-          "verb": "EXTENDS",
-          "target": "CLI Tools Beat MCP for Token Efficiency"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Claude Code Context Management"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Claude Code Skills"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "MCP Integration Architecture"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "LLM Wiki Pattern"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Research Pipeline Orchestration"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Wiki Ingestion Pipeline"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/deterministic-shell-llm-core.md",
-      "slug": "patterns/02_synthesized/deterministic-shell-llm-core",
-      "title": "Deterministic Shell, LLM Core",
-      "type": "pattern",
-      "domain": "ai-agents",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-08",
-      "updated": "2026-04-10",
-      "tags": [
-        "deterministic",
-        "orchestration",
-        "llm-core",
-        "shell-pattern",
-        "guardrails",
-        "harness",
-        "openfleet",
-        "aicp",
-        "reliability",
-        "separation-of-concerns",
-        "agent-architecture"
-      ],
-      "sources": [
-        {
-          "id": "src-openfleet-local",
-          "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
-          "title": "OpenFleet \u2014 Local Project Documentation"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "OpenFleet",
-        "Harness Engineering",
-        "AICP"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "OpenFleet"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Harness Engineering"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "AICP"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Plan Execute Review Cycle"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Immune System Rules"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Research Pipeline Orchestration"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Infrastructure as Code Patterns"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Agent Orchestration Patterns"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Claude Code Best Practices"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Gateway-Centric Routing"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/enforcement-hook-patterns.md",
-      "slug": "patterns/02_synthesized/enforcement-hook-patterns",
-      "title": "Enforcement Hook Patterns",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-11",
-      "updated": "2026-04-11",
-      "tags": [
-        "hooks",
-        "enforcement",
-        "agent-compliance",
-        "infrastructure",
-        "claude-code"
-      ],
-      "sources": [
-        {
-          "id": "openarms-hooks",
-          "type": "file",
-          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
-          "description": "OpenArms project reference"
-        },
-        {
-          "id": "openarms-agents",
-          "type": "file",
-          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
-          "description": "OpenArms project reference"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Model: Skills, Commands, and Hooks",
-        "Model: Methodology"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Model \u2014 Skills, Commands, and Hooks"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Model \u2014 Methodology"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Stage-Gate Methodology"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model \u2014 Claude Code"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Adoption Guide"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/gateway-centric-routing.md",
-      "slug": "patterns/02_synthesized/gateway-centric-routing",
-      "title": "Gateway-Centric Routing",
-      "type": "pattern",
-      "domain": "tools-and-platforms",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-08",
-      "updated": "2026-04-10",
-      "tags": [
-        "gateway",
-        "routing",
-        "single-control-plane",
-        "multi-channel",
-        "orchestration",
-        "openarms",
-        "openclaw",
-        "openfleet",
-        "mcp",
-        "websocket",
-        "agent-dispatch"
-      ],
-      "sources": [
-        {
-          "id": "src-openarms-local",
-          "type": "documentation",
-          "file": "raw/articles/openarms-readme.md",
-          "title": "OpenArms \u2014 Project Documentation"
-        },
-        {
-          "id": "src-openfleet-local",
-          "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
-          "title": "OpenFleet \u2014 Local Project Documentation"
-        },
-        {
-          "id": "src-openclaw-docs",
-          "type": "documentation",
-          "url": "https://github.com/anthropics/claude-code",
-          "title": "OpenClaw \u2014 Agent Framework Documentation"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "OpenArms",
-        "OpenClaw",
-        "OpenFleet"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "OpenArms"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "OpenClaw"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "OpenFleet"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "MCP Integration Architecture"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Multi-Channel AI Agent Access"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Deterministic Shell, LLM Core"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Multi-Channel AI Agent Access"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Infrastructure as Code Patterns"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "AICP"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Research Pipeline Orchestration"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/plan-execute-review-cycle.md",
-      "slug": "patterns/02_synthesized/plan-execute-review-cycle",
-      "title": "Plan Execute Review Cycle",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-08",
-      "updated": "2026-04-10",
-      "tags": [
-        "plan-execute-review",
-        "orchestration",
-        "agent-workflow",
-        "feedback-loop",
-        "guardrails",
-        "deterministic",
-        "multi-pass",
-        "cross-domain",
-        "harness-engineering",
-        "openfleet"
-      ],
-      "sources": [
-        {
-          "id": "src-openfleet-local",
-          "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
-          "title": "OpenFleet \u2014 Local Project Documentation"
-        },
-        {
-          "id": "src-harness-engineering-article",
-          "type": "article",
-          "url": "https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0",
-          "title": "Building Claude Code with Harness Engineering"
-        },
-        {
-          "id": "src-karpathy-claude-code-10x",
-          "type": "youtube-transcript",
-          "url": "https://www.youtube.com/watch?v=7sInxhTDA7U",
-          "title": "Andrej Karpathy Just 10x'd Everyone's Claude Code"
-        },
-        {
-          "id": "src-user-directive-integration",
-          "type": "notes",
-          "file": "raw/notes/2026-04-08-user-directive-integration-vision.md",
-          "title": "User Directive \u2014 Integration Vision & Service Architecture"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Harness Engineering",
-        "OpenFleet",
-        "Claude Code",
-        "Research Pipeline Orchestration"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Harness Engineering"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "OpenFleet"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Claude Code"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Research Pipeline Orchestration"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Wiki Ingestion Pipeline"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Claude Code Best Practices"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Claude Code Skills"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "MCP Integration Architecture"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Wiki Event-Driven Automation"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Agent Orchestration Patterns"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/progressive-distillation.md",
-      "slug": "patterns/02_synthesized/progressive-distillation",
-      "title": "Progressive Distillation",
-      "type": "pattern",
-      "domain": "knowledge-systems",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-08",
-      "updated": "2026-04-10",
-      "tags": [
-        "progressive-distillation",
-        "knowledge-systems",
-        "maturity",
-        "zettelkasten",
-        "para",
-        "synthesis",
-        "second-brain",
-        "evolution",
-        "density",
-        "distillation"
-      ],
-      "sources": [
-        {
-          "id": "src-second-brain-research",
-          "type": "article",
-          "file": "raw/articles/second-brain-pkm-research.md",
-          "title": "Second Brain / PKM Research"
-        },
-        {
-          "id": "src-zettelkasten-basb",
-          "type": "article",
-          "url": "https://zettelkasten.de/posts/building-a-second-brain-and-zettelkasten/",
-          "title": "Combining Zettelkasten and Building a Second Brain"
-        },
-        {
-          "id": "src-pipeline-tooling",
-          "type": "documentation",
-          "file": "tools/pipeline.py",
-          "title": "Wiki Pipeline Tool \u2014 evolve command"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Second Brain Architecture",
-        "Knowledge Evolution Pipeline"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Second Brain Architecture"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Knowledge Evolution Pipeline"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "Memory Lifecycle Management"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "PARA Methodology"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Zettelkasten Methodology"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Knowledge Evolution Pipeline"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "LLM Wiki Pattern"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Wiki Knowledge Graph"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "NotebookLM"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Multi-Stage Ingestion Beats Single-Pass Processing"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/scaffold-foundation-infrastructure-features.md",
-      "slug": "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
-      "title": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "authoritative",
-      "created": "2026-04-09",
-      "updated": "2026-04-10",
-      "tags": [
-        "scaffold",
-        "foundation",
-        "infrastructure",
-        "features",
-        "build-lifecycle",
-        "architecture",
-        "cross-domain",
-        "sfif",
-        "recursive",
-        "poc",
-        "mvp",
-        "project-structure",
-        "design-lifecycle"
-      ],
-      "sources": [
-        {
-          "id": "src-four-project-ecosystem",
-          "type": "documentation",
-          "file": "wiki/domains/devops/four-project-ecosystem.md",
-          "title": "Four-Project Ecosystem"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Four-Project Ecosystem",
-        "Progressive Distillation"
-      ],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Skyscraper, Pyramid, Mountain"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Progressive Distillation"
-        },
-        {
-          "verb": "IMPLEMENTED BY",
-          "target": "OpenFleet"
-        },
-        {
-          "verb": "IMPLEMENTED BY",
-          "target": "AICP"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Four-Project Ecosystem"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Deterministic Shell, LLM Core"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Plan Execute Review Cycle"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Knowledge Evolution Pipeline"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Infrastructure as Code Patterns"
-        }
-      ]
-    },
-    {
-      "path": "patterns/02_synthesized/stage-aware-skill-injection.md",
-      "slug": "patterns/02_synthesized/stage-aware-skill-injection",
-      "title": "Stage-Aware Skill Injection",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-11",
-      "updated": "2026-04-11",
-      "tags": [
-        "skills",
-        "stage-gate",
-        "injection",
-        "agent-compliance",
-        "methodology"
-      ],
-      "sources": [
-        {
-          "id": "openarms-mapping",
-          "type": "file",
-          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
-          "description": "OpenArms project reference"
-        }
-      ],
-      "layer": 5,
-      "maturity": "growing",
-      "derived_from": [
-        "Model: Skills, Commands, and Hooks",
-        "Model: Methodology"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Model \u2014 Skills, Commands, and Hooks"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Model \u2014 Methodology"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Enforcement Hook Patterns"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Stage-Gate Methodology"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Adoption Guide"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
     },
@@ -20214,16 +19379,16 @@
       "relationship_count": 126
     },
     "cross-domain": {
-      "page_count": 139,
-      "relationship_count": 948
+      "page_count": 134,
+      "relationship_count": 907
     },
     "ai-agents": {
-      "page_count": 51,
-      "relationship_count": 412
+      "page_count": 49,
+      "relationship_count": 391
     },
     "tools-and-platforms": {
-      "page_count": 24,
-      "relationship_count": 169
+      "page_count": 23,
+      "relationship_count": 159
     },
     "devops": {
       "page_count": 14,
@@ -20238,8 +19403,8 @@
       "relationship_count": 55
     },
     "knowledge-systems": {
-      "page_count": 24,
-      "relationship_count": 209
+      "page_count": 22,
+      "relationship_count": 189
     },
     "log": {
       "page_count": 20,
@@ -20441,7 +19606,6 @@
       "domains/cross-domain/methodology-evolution-protocol",
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/evolution-log/methodology-evolution-history",
       "spine/models/foundation/model-llm-wiki",
@@ -20481,7 +19645,6 @@
     "routing": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "spine/goldilocks-flow"
     ],
@@ -20495,7 +19658,6 @@
       "domains/ai-agents/orchestration/openclaw",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "spine/references/gateway-tools-reference"
     ],
@@ -20514,8 +19676,6 @@
       "domains/tools-and-platforms/notebooklm-skills",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/02_synthesized/context-aware-tool-loading",
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
@@ -20568,7 +19728,6 @@
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "spine/models/ecosystem/model-ecosystem"
@@ -20587,7 +19746,6 @@
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
       "ecosystem/project_profiles/aicp/identity-profile",
-      "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem"
@@ -20638,9 +19796,6 @@
       "ecosystem/project_profiles/openfleet/identity-profile",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "patterns/02_synthesized/deterministic-shell-llm-core",
-      "patterns/02_synthesized/gateway-centric-routing",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
@@ -20706,7 +19861,6 @@
       "log/2026-04-09/methodology/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
-      "patterns/02_synthesized/stage-aware-skill-injection",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "spine/evolution-log/methodology-evolution-history",
@@ -20731,7 +19885,6 @@
     "foundation": [
       "backlog/epics/pre-milestone/E003-artifact-type-system",
       "log/2026-04-09/models/2026-04-09-directive-bottom-up-model-completion",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "methodology-engine": [
@@ -20749,9 +19902,6 @@
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-gaps",
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-infrastructure",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
-      "patterns/02_synthesized/claude-md-structural-patterns",
-      "patterns/02_synthesized/enforcement-hook-patterns",
-      "patterns/02_synthesized/stage-aware-skill-injection",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
       "patterns/03_validated/knowledge/claude-md-structural-patterns"
@@ -20764,8 +19914,6 @@
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
-      "patterns/02_synthesized/claude-md-structural-patterns",
-      "patterns/02_synthesized/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
@@ -20787,7 +19935,6 @@
       "domains/automation/wiki-event-driven-automation",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
-      "patterns/02_synthesized/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
@@ -20802,7 +19949,6 @@
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
-      "patterns/02_synthesized/claude-md-structural-patterns",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "spine/models/agent-config/model-markdown-as-iac"
@@ -20825,8 +19971,6 @@
       "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
       "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
-      "patterns/02_synthesized/context-aware-tool-loading",
-      "patterns/02_synthesized/stage-aware-skill-injection",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
@@ -20886,7 +20030,6 @@
       "decisions/02_validated/tools/extension-system-operational-decisions",
       "domains/cross-domain/methodology-framework/three-pm-levels",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "spine/models/quality/model-quality-failure-prevention",
@@ -20934,7 +20077,6 @@
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
@@ -20982,27 +20124,23 @@
       "comparisons/llm-wiki-vs-rag",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/knowledge-systems/wiki-core/lightrag",
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag",
       "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
     ],
     "hybrid-search": [
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-core/lightrag",
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-core/wiki-knowledge-graph",
       "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
     ],
     "knowledge-retrieval": [
       "comparisons/agentic-search-vs-vector-search",
-      "comparisons/llm-wiki-vs-rag",
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag"
+      "comparisons/llm-wiki-vs-rag"
     ],
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/llm-wiki-vs-rag",
       "comparisons/openarms-vs-openfleet-enforcement",
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag",
       "spine/standards/comparison-page-standards"
     ],
     "glob-grep": [
@@ -21019,8 +20157,6 @@
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
-      "patterns/02_synthesized/plan-execute-review-cycle",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "spine/domain-overviews/cross-domain-domain-overview",
@@ -21037,20 +20173,17 @@
     "plan-execute-review": [
       "comparisons/cross-domain-patterns",
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/plan-execute-review-cycle"
     ],
     "progressive-distillation": [
       "comparisons/cross-domain-patterns",
       "domains/knowledge-systems/pkm-theory/second-brain-architecture",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/models/depth/model-knowledge-evolution",
       "spine/models/depth/model-second-brain"
     ],
     "deferred-loading": [
       "comparisons/cross-domain-patterns",
-      "patterns/02_synthesized/context-aware-tool-loading",
       "patterns/03_validated/knowledge/context-aware-tool-loading"
     ],
     "context-aware": [
@@ -21067,9 +20200,6 @@
       "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "patterns/02_synthesized/deterministic-shell-llm-core",
-      "patterns/02_synthesized/gateway-centric-routing",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
@@ -21083,7 +20213,6 @@
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/domain-overviews/knowledge-systems-domain-overview"
     ],
@@ -21103,7 +20232,6 @@
       "comparisons/llm-wiki-vs-rag",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-core/wiki-backlog-pattern",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation",
@@ -21139,7 +20267,6 @@
       "domains/cross-domain/methodology-framework/methodology-config-architecture",
       "domains/cross-domain/methodology-initiative/e003-artifact-type-system-design",
       "domains/devops/four-project-ecosystem",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "sources/wiki-methodology/src-karpathy-llm-wiki-idea-file",
       "spine/models/ecosystem/model-ecosystem",
@@ -21162,7 +20289,6 @@
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
-      "patterns/02_synthesized/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/claude-code/src-claude-slash-commands",
@@ -21212,7 +20338,6 @@
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/notebooklm",
       "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
-      "patterns/02_synthesized/context-aware-tool-loading",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/obsidian-notebooklm/src-claude-notebooklm-content-team",
@@ -21314,8 +20439,6 @@
       "domains/devops/devops-control-plane",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
-      "patterns/02_synthesized/enforcement-hook-patterns",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
@@ -21426,7 +20549,6 @@
       "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
       "domains/cross-domain/methodology-framework/methodology-framework",
       "domains/devops/stage-gate-methodology",
-      "patterns/02_synthesized/stage-aware-skill-injection",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
       "spine/evolution-log/methodology-evolution-history",
       "spine/models/foundation/model-methodology",
@@ -21525,7 +20647,6 @@
       "domains/tools-and-platforms/obsidian-cli",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/02_synthesized/context-aware-tool-loading",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-claude-slash-commands",
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
@@ -21542,7 +20663,6 @@
     "token-efficiency": [
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/02_synthesized/context-aware-tool-loading",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/ecosystem/model-mcp-cli-integration"
@@ -21557,7 +20677,6 @@
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
       "log/2026-04-09/methodology/2026-04-09-directive-stop-guessing-false-claims",
-      "patterns/02_synthesized/context-aware-tool-loading",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
@@ -21803,7 +20922,6 @@
       "domains/ai-agents/patterns/rework-prevention",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-harness-engineering",
       "spine/models/agent-config/model-claude-code",
@@ -21812,8 +20930,6 @@
     "guardrails": [
       "domains/ai-agents/orchestration/harness-engineering",
       "domains/tools-and-platforms/aicp",
-      "patterns/02_synthesized/deterministic-shell-llm-core",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-harness-engineering"
@@ -21844,7 +20960,6 @@
       "domains/ai-agents/orchestration/openclaw",
       "domains/ai-agents/orchestration/openfleet",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
       "sources/tools-integration/src-gemma4-searxng-openclaw"
@@ -22052,7 +21167,6 @@
       "domains/cross-domain/methodology-framework/global-standards-adherence",
       "domains/cross-domain/methodology-framework/methodology-framework",
       "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "spine/models/quality/model-sfif-architecture"
     ],
@@ -22176,7 +21290,6 @@
     "multi-pass": [
       "domains/automation/research-pipeline-orchestration",
       "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/plan-execute-review-cycle"
     ],
     "auto-ingest": [
@@ -22231,7 +21344,6 @@
     "scaffold": [
       "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts",
       "domains/devops/stage-gate-methodology",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "implement": [
@@ -22353,7 +21465,6 @@
     ],
     "feedback-loop": [
       "domains/cross-domain/methodology-evolution-protocol",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth"
     ],
@@ -22401,7 +21512,6 @@
     "recursive": [
       "domains/cross-domain/methodology-framework/methodology-framework",
       "domains/cross-domain/model-composition-rules",
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "spine/models/quality/model-sfif-architecture"
     ],
@@ -22679,7 +21789,6 @@
     ],
     "maturity": [
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/models/depth/model-knowledge-evolution",
       "spine/standards/model-standards/model-knowledge-evolution-standards"
@@ -22733,7 +21842,6 @@
     "para": [
       "domains/knowledge-systems/pkm-theory/para-methodology",
       "domains/knowledge-systems/pkm-theory/second-brain-architecture",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/models/depth/model-second-brain"
     ],
@@ -22770,7 +21878,6 @@
     "zettelkasten": [
       "domains/knowledge-systems/pkm-theory/second-brain-architecture",
       "domains/knowledge-systems/pkm-theory/zettelkasten-methodology",
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/models/depth/model-second-brain"
     ],
@@ -22798,7 +21905,6 @@
     ],
     "knowledge-graph": [
       "domains/knowledge-systems/wiki-core/lightrag",
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-core/wiki-knowledge-graph",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
@@ -22846,12 +21952,6 @@
       "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation",
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation"
-    ],
-    "semantic-search": [
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag"
-    ],
-    "vector-database": [
-      "domains/knowledge-systems/wiki-core/llm-wiki-vs-rag"
     ],
     "frontmatter-state-machine": [
       "domains/knowledge-systems/wiki-core/wiki-backlog-pattern"
@@ -22906,7 +22006,6 @@
     "multi-channel": [
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing"
     ],
     "ai-assistant": [
@@ -23070,7 +22169,6 @@
     "accuracy": [
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/02_synthesized/context-aware-tool-loading",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-claude-code-accuracy-tips"
     ],
@@ -23532,117 +22630,67 @@
     "gated": [
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
     ],
-    "structural-patterns": [
-      "patterns/02_synthesized/claude-md-structural-patterns",
-      "patterns/03_validated/knowledge/claude-md-structural-patterns"
-    ],
-    "formatting": [
-      "patterns/02_synthesized/claude-md-structural-patterns",
-      "patterns/03_validated/knowledge/claude-md-structural-patterns",
-      "spine/models/foundation/model-wiki-design"
-    ],
-    "tool-design": [
-      "patterns/02_synthesized/context-aware-tool-loading",
-      "patterns/03_validated/knowledge/context-aware-tool-loading"
-    ],
-    "agent-architecture": [
-      "patterns/02_synthesized/context-aware-tool-loading",
-      "patterns/02_synthesized/deterministic-shell-llm-core",
-      "patterns/03_validated/architecture/deterministic-shell-llm-core",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "spine/models/agent-config/model-claude-code"
-    ],
-    "playwright": [
-      "patterns/02_synthesized/context-aware-tool-loading",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "sources/tools-integration/src-playwright-cli-vs-mcp",
-      "sources/tools-integration/src-playwright-mcp-visual-testing",
-      "spine/models/ecosystem/model-mcp-cli-integration"
-    ],
-    "context7": [
-      "patterns/02_synthesized/context-aware-tool-loading",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "sources/claude-code/src-claude-code-accuracy-tips"
-    ],
     "deterministic": [
-      "patterns/02_synthesized/deterministic-shell-llm-core",
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
     ],
     "llm-core": [
-      "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
     "shell-pattern": [
-      "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
     "reliability": [
-      "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
     "separation-of-concerns": [
-      "patterns/02_synthesized/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
+    "agent-architecture": [
+      "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "spine/models/agent-config/model-claude-code"
+    ],
     "single-control-plane": [
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing"
     ],
     "websocket": [
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing"
     ],
     "agent-dispatch": [
-      "patterns/02_synthesized/gateway-centric-routing",
       "patterns/03_validated/architecture/gateway-centric-routing"
     ],
     "agent-workflow": [
-      "patterns/02_synthesized/plan-execute-review-cycle",
       "patterns/03_validated/architecture/plan-execute-review-cycle"
     ],
     "synthesis": [
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation"
     ],
     "density": [
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation"
     ],
     "distillation": [
-      "patterns/02_synthesized/progressive-distillation",
       "patterns/03_validated/architecture/progressive-distillation"
     ],
     "features": [
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "build-lifecycle": [
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "spine/models/quality/model-sfif-architecture"
     ],
     "poc": [
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "mvp": [
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "project-structure": [
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "design-lifecycle": [
-      "patterns/02_synthesized/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
-    ],
-    "injection": [
-      "patterns/02_synthesized/stage-aware-skill-injection",
-      "patterns/03_validated/enforcement/stage-aware-skill-injection"
     ],
     "contribution-gating": [
       "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work"
@@ -23662,6 +22710,9 @@
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/standards/pattern-page-standards"
     ],
+    "injection": [
+      "patterns/03_validated/enforcement/stage-aware-skill-injection"
+    ],
     "three-lines-defense": [
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
@@ -23673,6 +22724,26 @@
     ],
     "agent-fleet": [
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
+    ],
+    "structural-patterns": [
+      "patterns/03_validated/knowledge/claude-md-structural-patterns"
+    ],
+    "formatting": [
+      "patterns/03_validated/knowledge/claude-md-structural-patterns",
+      "spine/models/foundation/model-wiki-design"
+    ],
+    "tool-design": [
+      "patterns/03_validated/knowledge/context-aware-tool-loading"
+    ],
+    "playwright": [
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "sources/tools-integration/src-playwright-mcp-visual-testing",
+      "spine/models/ecosystem/model-mcp-cli-integration"
+    ],
+    "context7": [
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/claude-code/src-claude-code-accuracy-tips"
     ],
     "source-of-truth": [
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth"
