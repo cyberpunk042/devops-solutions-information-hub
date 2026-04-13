@@ -53,7 +53,7 @@ Markdown is the programming language of AI agents. Consistent structure across a
 > |-------|-----------------|-----------|-----------|
 > | **Prompt engineering** | What the agent is TOLD to do | Word choice, emphasis, instruction phrasing | ~25% (degrades under context pressure) |
 > | **Context engineering** | What information the agent RECEIVES | Selection, ordering, filtering of context | ~60% (right info helps, but format matters) |
-> | **Structural engineering** | What SHAPE the information takes | Consistent blocks, typed sections, extractable fields | ~90%+ (agent processes structure before content) |
+> | **Structural engineering** | What SHAPE the information takes | Consistent blocks, typed sections, extractable fields | ~90%+ (estimated from OpenArms enforcement data — not independently measured) |
 
 > [!tip] The Core Insight
 >
@@ -61,7 +61,7 @@ Markdown is the programming language of AI agents. Consistent structure across a
 >
 > The YAML frontmatter block is not just metadata — it is a structured data injection that the AI processes BEFORE reading the content. Every `type:`, `domain:`, `stage:`, `readiness:` field narrows the AI's behavior space. This is proto-programming: using markdown's natural structure (headers, callouts, tables, YAML blocks, code fences) as a programming language for AI behavior.
 
-The mechanism works because LLMs process structure before semantics. When an agent sees:
+The mechanism appears to work because LLMs respond more consistently to structured patterns than to prose instructions. This is an observed behavior, not a validated cognitive claim — no formal study has confirmed HOW LLMs process structure vs semantics internally. What we observe empirically: when an agent sees:
 
 ```
 # YOUR STAGE: work

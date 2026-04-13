@@ -86,7 +86,7 @@ The solution: design the framework FIRST (what are the extension points, what va
 
 > [!success] Phase 2 Recovery: Research-First Framework Design
 >
-> After the restart, online research discovered 78 artifact types across 11 categories (not just 17 wiki page types). This revealed the FRAMEWORK question: how do 78 types compose into chains for different models and domains?
+> After the restart, online research discovered 78 artifact types across 11 categories from 10+ sources including sdlcforms.com, CMMI documentation, and IEEE standards (see [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]). This was far more than the 17 wiki page types we had been modeling. It revealed the FRAMEWORK question: how do 78 types compose into chains for different models and domains?
 >
 > The solution: methodology.yaml defines models with GENERIC artifact categories. domain-profiles/*.yaml resolve these to CONCRETE paths and gate commands. The universal layer transfers without modification. The domain layer is project-specific by design.
 

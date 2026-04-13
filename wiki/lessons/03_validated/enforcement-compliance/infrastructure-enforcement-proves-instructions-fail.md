@@ -88,6 +88,8 @@ This doesn't mean instructions are useless. Instructions handle the 80% of behav
 > **Result:** Across all 5 reviewed runs, zero stage boundary violations. "The agent did not bleed stages. Document produced wiki docs. Design produced wiki designs. Scaffold produced types. Implement produced logic. Test produced assertions."
 >
 > **Cost:** 215 lines of shell scripts. Infinite improvement over 28 CLAUDE.md rules that achieved 25% compliance.
+>
+> **Caveat:** 5 reviewed runs is a small sample. The 100% stage compliance claim is directional, not statistically rigorous. The Fatigue Cliff evidence above shows that even at 100% stage compliance, behavioral quality still degrades (20% clean completion rate). Infrastructure enforces BOUNDARIES; it does not guarantee QUALITY within those boundaries.
 
 > [!success] OpenFleet: MCP Tool Blocking + 3-Line Immune System
 >
