@@ -15,7 +15,8 @@ sources:
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
   - id: openarms-chain
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms artifact chain (24 artifacts at Default SDLC level)"
   - id: nxcode-agentic
     type: article
     url: https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026
@@ -57,6 +58,18 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > | **Scaffold** | Structure: types, schemas, stubs, config wiring — ZERO behavior | Business logic, real implementations, real test assertions | Structure compiles/validates, no behavior in diff |
 > | **Implement** | Behavior: logic filling stubs, wired into existing runtime | Test modifications, orphaned code nobody imports | Compiles, lints, ≥1 existing file imports new code |
 > | **Test** | Proof: real assertions replacing placeholders, 0 failures | New features, scope changes | All tests pass, no placeholder assertions remaining |
+
+### SDLC Chain Level — What Applies Where
+
+> [!abstract] Not all chains require all artifacts
+>
+> | Chain Level | What's Required | What's Optional | What's Skipped |
+> |-------------|----------------|-----------------|----------------|
+> | **Simplified** (POC, 2-3 stages) | Implement + manual test | — | Scaffold stage entirely, automated tests, bridge/adapter |
+> | **Default** (MVP-Prod, 5 stages) | Scaffold + implement + automated tests | Bridge/adapter pattern, coverage evidence | E2E tests, compliance validation |
+> | **Full** (Production fleet, all stages) | Scaffold + implement + unit + integration + e2e + compliance | — | — |
+>
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
 
 ### Scaffold Stage Artifacts — Per Domain
 
@@ -106,6 +119,21 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > - `data` sources that query real infrastructure
 > - `provisioner` blocks
 
+#### Knowledge Domain
+
+> [!info] Knowledge Scaffold Artifacts
+>
+> | Artifact | Content | Gate |
+> |----------|---------|------|
+> | **Page template** | Frontmatter + section structure from `wiki/config/templates/{type}.md` | Scaffolder creates valid structure |
+> | **Schema update** | New type/field in `wiki/config/wiki-schema.yaml` | YAML parses, pipeline post passes |
+> | **Config update** | New entries in methodology.yaml or artifact-types.yaml | Config loads without errors |
+
+> [!warning] FORBIDDEN in Knowledge scaffold
+> - Real content in wiki pages (just frontmatter and section headings)
+> - Business logic in tool files (parsing, validation, transformation)
+> - Modifying existing tool behavior
+
 ### Implement Stage Artifacts — Per Domain
 
 > [!info] Behavior filling the scaffold — MUST wire into existing runtime
@@ -133,6 +161,17 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 | Resource Definitions | `resource` blocks creating actual infrastructure | `terraform plan` succeeds |
 | Module Implementation | Real module logic with resource + data + local blocks | `terraform validate` |
 | Environment Wiring | Existing environment configs reference new modules | `terraform plan` shows expected changes |
+
+#### Knowledge Domain
+
+> [!info] Knowledge Implement Artifacts
+>
+> | Artifact | Content | Gate |
+> |----------|---------|------|
+> | **Wiki page content** | Real content filling every section, ≥30 word summary | Pipeline post 0 errors |
+> | **Tool logic** | Python functions with real processing logic | Import succeeds, function runs |
+> | **Pipeline integration** | New command/chain wired into pipeline.py | Command callable from CLI |
+> | **Relationships** | Forward relationships to related pages | ≥1 relationship, backlinks generated |
 
 > [!warning] The Integration Requirement — Universal Across All Domains
 >
@@ -204,6 +243,11 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **TypeScript chain** | [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] — concrete file paths and gates |
+> | **Python/Wiki chain** | [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] — wiki-specific scaffold/implement |
+> | **Infrastructure chain** | [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]] — Terraform scaffold/implement |
+> | **Knowledge chain** | [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]] — knowledge artifact lifecycle |
+> | **Enforcement hooks** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] — how stage boundaries are enforced |
 
 ## Relationships
 

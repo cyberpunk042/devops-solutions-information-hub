@@ -18,10 +18,12 @@ sources:
     url: https://www.nxcode.io/resources/news/agentic-engineering-complete-guide-vibe-coding-ai-agents-2026
   - id: openarms-chain
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms artifact chain (24 artifacts at Default SDLC level)"
   - id: openarms-directive
     type: file
-    file: /home/jfortin/openarms/wiki/config/agent-directive-v1.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms agent directive configuration"
   - id: operator-rules
     type: file
     file: raw/notes/2026-04-12-restart-directive.md
@@ -40,7 +42,7 @@ tags: [methodology, ai-agents, artifacts, persona, skills, hooks, enforcement, c
 
 ## Summary
 
-Guide to artifacts specific to AI agent workflows — document types that don't exist in traditional SDLC because they govern HOW AGENTS WORK, not what they build. These include agent persona templates, skill definitions, stage skills for context injection, hook configurations for enforcement, prompt queues for batch execution, and compliance reports for monitoring. This category is the NEWEST in the taxonomy — emerging from 2025-2026 agentic engineering practice. The operator's own `.agent/` rule system (pasted during this session) is a real-world instance of production-grade AI agent methodology artifacts.
+Guide to artifacts specific to AI agent workflows — document types that don't exist in traditional SDLC because they govern HOW AGENTS WORK, not what they build. These include agent persona templates, skill definitions, stage skills for context injection, hook configurations for enforcement, prompt queues for batch execution, and compliance reports for monitoring. This category is the NEWEST in the taxonomy — emerging from 2025-2026 agentic engineering practice. The operator's own `.agent/` rule system (documented in the operator directive log) is a real-world instance of production-grade AI agent methodology artifacts.
 
 ## Key Insights
 
@@ -51,6 +53,18 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 3. **Multi-agent orchestration creates NEW artifact types.** From the agentic engineering research (2026): Feature Author → Test Generator → Code Reviewer → Architecture Guardian → Security Scanner → Documentation Writer → Release Manager. Each agent in the pipeline needs: a persona (who am I), skills (what can I do), constraints (what can't I do), and handoff artifacts (what I pass to the next agent).
 
 4. **Agent enforcement exists at 4 levels.** From our CLAUDE.md structural patterns research: (1) Instruction-level (prose rules — 25% compliance), (2) Structured instruction-level (tables, ALLOWED/FORBIDDEN — 50-60%), (3) Advisory hooks (warn but don't block — 70%), (4) Blocking hooks (prevent the action — 90%+). Each level produces different artifacts.
+
+### SDLC Chain Level — What Applies Where
+
+> [!abstract] Not all chains require all artifacts
+>
+> | Chain Level | What's Required | What's Optional | What's Skipped |
+> |-------------|----------------|-----------------|----------------|
+> | **Simplified** (POC, 2-3 stages) | CLAUDE.md + persona only | — | Stage skills, hooks, rule files, compliance validation, prompt queues |
+> | **Default** (MVP-Prod, 5 stages) | CLAUDE.md + persona + stage skills + selected hooks | Prompt queues, compliance reports | Full rule system, multi-agent handoff artifacts |
+> | **Full** (Production fleet, all stages) | All hooks + rule files + compliance validation + prompt queues | Multi-agent orchestration artifacts | — |
+>
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
 
 ## Deep Analysis
 
@@ -123,7 +137,7 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 
 > [!warning] This is research material captured from the operator's own agent management system
 >
-> The operator pasted their complete `.agent/` rule system during this session. It represents a THIRD enforcement approach beyond instruction-level and hook-level: **rule-file injection** with mandatory processing.
+> The operator's complete `.agent/` rule system (captured in raw/notes/2026-04-12-restart-directive.md) represents a THIRD enforcement approach beyond instruction-level and hook-level: **rule-file injection** with mandatory processing.
 >
 > | Rule | What It Prevents | Post-Mortem Origin |
 > |------|-----------------|-------------------|
@@ -213,6 +227,9 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Claude Code model** | [[model-claude-code|Model — Claude Code]] — how CLAUDE.md structures agent behavior |
+> | **Skills and hooks** | [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] — skill/hook architecture |
+> | **Enforcement patterns** | [[enforcement-hook-patterns|Enforcement Hook Patterns]] — hook implementation patterns |
 
 ## Relationships
 

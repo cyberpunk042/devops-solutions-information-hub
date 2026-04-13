@@ -70,6 +70,18 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 | **Task** | — | — |
 | **Infrastructure changes** | ALWAYS: Runbook + Rollback Plan | Installation Guide if new system |
 
+### SDLC Chain Level — What Applies Where
+
+> [!abstract] Not all chains require all artifacts
+>
+> | Chain Level | What's Required | What's Optional | What's Skipped |
+> |-------------|----------------|-----------------|----------------|
+> | **Simplified** (POC, 2-3 stages) | Git commit + informal notes | — | Operations guide, runbook, lessons learned, compliance report |
+> | **Default** (MVP-Prod, 5 stages) | Completion log + session summary | Lessons learned (epic-level), release notes | Formal operations guide, compliance report, retirement plan |
+> | **Full** (Production fleet, all stages) | Operations guide + runbook + lessons learned + monitoring config | Compliance report, knowledge transfer report | — |
+>
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+
 ### Closure Artifacts (5 types)
 
 > [!abstract] What was LEARNED — produced when work completes
@@ -175,6 +187,9 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Operations plan standards** | [[operations-plan-page-standards|Operations Plan Page Standards]] — quality bar for runbooks and deployment docs |
+> | **Lesson standards** | [[lesson-page-standards|Lesson Page Standards]] — how to write closure lessons |
+> | **Knowledge evolution** | [[model-knowledge-evolution|Model — Knowledge Evolution]] — how closure feeds back into the wiki |
 
 ## Relationships
 

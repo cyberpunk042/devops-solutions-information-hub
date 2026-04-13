@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T14:14:04.935132+00:00",
+  "generated": "2026-04-13T14:28:10.092768+00:00",
   "stats": {
     "pages": 305,
     "domains": 9,
@@ -4690,12 +4690,14 @@
         {
           "id": "openarms-chain",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms artifact chain (24 artifacts at Default SDLC level)"
         },
         {
           "id": "openarms-directive",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/config/agent-directive-v1.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms agent directive configuration"
         },
         {
           "id": "operator-rules",
@@ -4775,7 +4777,8 @@
         {
           "id": "openarms-chain",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms artifact chain (24 artifacts at Default SDLC level)"
         },
         {
           "id": "nxcode-agentic",
@@ -4913,7 +4916,8 @@
         {
           "id": "openarms-chain",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms artifact chain (24 artifacts at Default SDLC level)"
         }
       ],
       "layer": "",
@@ -4974,7 +4978,8 @@
         {
           "id": "openarms-chain",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms artifact chain (24 artifacts at Default SDLC level)"
         },
         {
           "id": "sdlcforms",
@@ -5049,7 +5054,8 @@
         {
           "id": "openarms-chain",
           "type": "file",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md"
+          "file": "wiki/ecosystem/project_profiles/openarms/identity-profile.md",
+          "description": "OpenArms artifact chain (24 artifacts at Default SDLC level)"
         },
         {
           "id": "adr-github",

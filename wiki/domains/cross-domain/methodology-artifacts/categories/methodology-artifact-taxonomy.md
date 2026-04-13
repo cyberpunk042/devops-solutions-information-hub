@@ -15,7 +15,8 @@ sources:
     file: wiki/sources/methodology-artifact-taxonomy-research.md
   - id: openarms-chain
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms artifact chain (24 artifacts at Default SDLC level)"
   - id: sdlcforms
     type: article
     url: https://www.sdlcforms.com/UnderstandingSDLC.html

@@ -15,7 +15,8 @@ sources:
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
   - id: openarms-chain
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms artifact chain (24 artifacts at Default SDLC level)"
   - id: adr-github
     type: documentation
     url: https://adr.github.io/
@@ -37,7 +38,7 @@ tags: [methodology, requirements, design, artifacts, adr, tech-spec, interface-s
 
 ## Summary
 
-Complete guide to the artifacts produced during the Document and Design stages — the specifications that CONSTRAIN all subsequent work. Requirements define WHAT must be built. Design defines HOW it will be built. Together they are the blueprints — without them, scaffold/implement/test stages have nothing to build from. OpenArms proved this: "The documents ARE the gates. You CANNOT skip documents. The scaffold stage won't pass validation if there's no interface spec to scaffold FROM." This page covers 17 artifact types across requirements (7) and design (10), with quality standards, templates, domain variations, and the critical chain dependencies between them.
+Complete guide to the artifacts produced during the Document and Design stages — the specifications that CONSTRAIN all subsequent work. Requirements define WHAT must be built. Design defines HOW it will be built. Together they are the blueprints — without them, scaffold/implement/test stages have nothing to build from. Production evidence shows: "The documents ARE the gates. You CANNOT skip documents. The scaffold stage won't pass validation if there's no interface spec to scaffold FROM." This page covers 17 artifact types across requirements (7) and design (10), with quality standards, templates, domain variations, and the critical chain dependencies between them.
 
 ## Key Insights
 
@@ -214,6 +215,18 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > | Config Spec | Full | Full | Section if needed | Inherits | None |
 > | Test Plan | Full | Full | Section | Inherits | None |
 >
+### SDLC Chain Level — What Applies Where
+
+> [!abstract] Not all chains require all artifacts
+>
+> | Chain Level | What's Required | What's Optional | What's Skipped |
+> |-------------|----------------|-----------------|----------------|
+> | **Simplified** (POC, 2-3 stages) | Informal requirements only, NO design stage | — | ADR, tech spec, interface spec, config spec, test plan, gap analysis, infrastructure analysis |
+> | **Default** (MVP-Prod, 5 stages) | Requirements spec + ADR + tech spec | Gap analysis, infrastructure analysis, test plan | Interface spec, config spec (folded into tech spec) |
+> | **Full** (Production fleet, all stages) | All 8 document types required | — | — |
+>
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+
 > **"Inherits"** means the task uses the epic/module's documents as its blueprints. A task doesn't write its own ADR — it follows the epic's ADR. This is why the OpenArms integration model (task_type: integration) starts at scaffold, not document — the design docs already exist at the epic level.
 
 ## Open Questions
@@ -233,6 +246,9 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Domain chains** | [[domain-chain-typescript|TypeScript Domain Chain]], [[domain-chain-python-wiki|Python-Wiki Domain Chain]], [[domain-chain-infrastructure|Infrastructure Domain Chain]], [[domain-chain-knowledge|Knowledge Domain Chain]] |
+> | **Decision standards** | [[decision-page-standards|Decision Page Standards]] — ADR quality bar for the wiki |
+> | **ADR template** | `wiki/config/templates/decision.md` — our decision type IS an ADR |
 
 ## Relationships
 

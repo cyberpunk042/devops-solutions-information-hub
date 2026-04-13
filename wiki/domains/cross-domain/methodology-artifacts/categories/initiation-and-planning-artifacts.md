@@ -18,7 +18,8 @@ sources:
     url: https://www.sdlcforms.com/UnderstandingSDLC.html
   - id: openarms-chain
     type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms artifact chain (24 artifacts at Default SDLC level)"
 tags: [methodology, initiation, planning, artifacts, project-charter, wbs, risk, standards]
 ---
 
@@ -58,6 +59,18 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **Epic** | Operator Directive (our equivalent of Project Charter), Goals, Done When | Business Case (if investment decision), Risk Assessment | Feasibility Study, CONOPS |
 > | **Module** | — (inherits from epic) | Scope clarification if module boundaries are unclear | All initiation artifacts |
 > | **Task** | — (inherits from epic/module) | — | All initiation artifacts |
+
+### SDLC Chain Level — What Applies Where
+
+> [!abstract] Not all chains require all artifacts
+>
+> | Chain Level | What's Required | What's Optional | What's Skipped |
+> |-------------|----------------|-----------------|----------------|
+> | **Simplified** (POC, 2-3 stages) | Informal notes only | — | Charter, business case, WBS, risk register |
+> | **Default** (MVP-Prod, 5 stages) | Operator directive + WBS (epic breakdown) | Risk/gap analysis, stakeholder list | Formal charter, business case, feasibility study |
+> | **Full** (Production fleet, all stages) | Formal charter + business case + stakeholder list + full WBS + risk register | Feasibility study, CONOPS, resource plan | — |
+>
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
 
 ### Initiation Artifact Standards
 
@@ -123,7 +136,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **In our methodology** | The epic's module/task breakdown in the backlog. Epic → Module → Task hierarchy per [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]. |
 > | **OpenArms example** | E014 broke into 14 tasks (T089-T102), each with task_type, estimate, depends_on. Readiness computed from children. |
 >
-> **The 8 rules from Backlog Hierarchy Rules apply here:**
+> **Key rules from Backlog Hierarchy Rules:**
 > 1. Work on TASKS, not epics
 > 2. Epics are NEVER done by themselves
 > 3. Readiness flows UP (computed from children)
@@ -183,6 +196,9 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
+> | **Epic template** | [[epic-page-standards|Epic Page Standards]] — the epic template IS the initiation artifact container |
+> | **Backlog hierarchy** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — WBS rules for epic/module/task breakdown |
+> | **Methodology model** | [[model-methodology|Model — Methodology]] — which model applies to this work |
 
 ## Relationships
 
