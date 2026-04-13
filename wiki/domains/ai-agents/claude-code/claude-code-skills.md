@@ -9,7 +9,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
@@ -108,7 +108,9 @@ The self-editing meta-capability has implications beyond convenience. When an ag
 
 The composition pattern (higher-level skills orchestrating lower-level skills) suggests an emerging architecture where skills form a capability graph — similar to how this wiki's models reference building block concepts. Formal skill-to-skill composition remains unsolved in the ecosystem, but the practical pattern of "skill A invokes CLI operations that skill B also uses" achieves de facto composition through shared tooling rather than direct references.
 
-> [!example]- This wiki's skill instances
+> [!example]- This wiki's skill and tool instances (as of 2026-04-13)
+>
+> **4 Claude Code Skills:**
 >
 > | Skill | Tier | What It Does |
 > |-------|------|-------------|
@@ -117,7 +119,13 @@ The composition pattern (higher-level skills orchestrating lower-level skills) s
 > | evolve | Medium | Score candidates, scaffold, generate, review maturity |
 > | continue | Simple | Resume mission: diagnostics → state → options |
 >
-> All four use the progressive disclosure pattern: SKILL.md routes to tool documentation that Claude reads on demand rather than loading everything upfront.
+> **17 MCP Tools** via `tools/mcp_server.py` — registered in `.mcp.json`, auto-discovered by Claude Code. Covers wiki_search, wiki_read_page, wiki_post, wiki_fetch, wiki_status, wiki_evolve, wiki_gaps, wiki_crossref, wiki_backlog, wiki_continue, wiki_log, wiki_scan_project, wiki_fetch_topic, wiki_list_pages, wiki_integrations, wiki_mirror_to_notebooklm, wiki_sync.
+>
+> **Gateway CLI** with 17 commands — unified knowledge interface for humans, agents, and MCP. Covers query (identity, models, stages, chains, fields, mappings) and operations (template, config, move, archive, backup, contribute).
+>
+> **Superpowers plugin** — meta-skill orchestration for brainstorming, plan writing/execution, verification, debugging, code review, parallel dispatch, and git worktree management.
+>
+> All four skills use the progressive disclosure pattern: SKILL.md routes to tool documentation that Claude reads on demand rather than loading everything upfront. The MCP server and gateway provide always-on discoverability for cross-conversation and external agent access.
 
 ## Open Questions
 

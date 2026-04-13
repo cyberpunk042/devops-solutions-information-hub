@@ -8,7 +8,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-13
 maturity: growing
 derived_from:
   - "Task Lifecycle Stage-Gating"
@@ -200,14 +200,16 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 
 > [!info] Defense in depth across implementations
 >
-> | Mechanism | OpenArms | OpenFleet | Strength |
-> |-----------|----------|-----------|---------|
-> | Protocol instructions (CLAUDE.md) | Primary | Supplementary | Works immediately; can degrade with context |
-> | MCP tool blocking | N/A | Primary for CONVERSATION/WORK | Structural — impossible to violate |
-> | One-commit-per-stage | Core convention | Not used | Creates auditable git ledger |
-> | Immune system detection | N/A | 4/11 diseases implemented | Self-correcting after violation |
-> | Readiness range enforcement | Core protocol | Readiness score drives gates | Observable in task frontmatter |
-> | Quality gates per stage | Verified post-stage | plan_quality.py at accept | Prevents advancement without evidence |
+> | Mechanism | OpenArms | OpenFleet | Research Wiki | Strength |
+> |-----------|----------|-----------|---------------|---------|
+> | Protocol instructions (CLAUDE.md) | Primary | Supplementary | Primary | Works immediately; can degrade with context |
+> | MCP tool blocking | N/A | Primary for CONVERSATION/WORK | 17-tool MCP server (stage-aware queries) | Structural — impossible to violate |
+> | One-commit-per-stage | Core convention | Not used | Encouraged but not enforced | Creates auditable git ledger |
+> | Immune system detection | N/A | 4/11 diseases implemented | N/A | Self-correcting after violation |
+> | Readiness range enforcement | Core protocol | Readiness score drives gates | Core protocol | Observable in task frontmatter |
+> | Quality gates per stage | Verified post-stage | plan_quality.py at accept | `pipeline post` 6-step chain | Prevents advancement without evidence |
+>
+> The three SDLC chains (simplified/default/full) determine enforcement level per project — see [[sdlc-customization-framework|SDLC Customization Framework]]. Simplified chains skip scaffold/test for knowledge-only work; full chains add review gates and compliance artifacts.
 >
 > **Practical recommendation:** Start with protocol enforcement (CLAUDE.md MUST/MUST NOT) and one-commit-per-stage. Add MCP tool blocking when infrastructure investment is justified. The combination provides defense in depth.
 

@@ -9,7 +9,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -111,19 +111,19 @@ A practical advantage is radical simplicity. No databases, no embedding models, 
 
 ### This Wiki as Practitioner Instance
 
-> [!example]- How this wiki implements the LLM Wiki Pattern
+> [!example]- How this wiki implements the LLM Wiki Pattern (as of 2026-04-13)
 >
 > | Pattern Component | This Wiki's Implementation |
 > |-------------------|---------------------------|
-> | Raw sources | `raw/` with articles, transcripts, notes, dumps (70 files) |
-> | Structured pages | `wiki/` with 175 pages across 10 domains |
+> | Raw sources | `raw/` with articles, transcripts, notes, dumps (114 files) |
+> | Structured pages | `wiki/` with 297 pages across 10+ domains, 1,982 relationships |
 > | Index navigation | Hierarchical: `wiki/index.md` + per-domain `_index.md` |
-> | Schema co-evolution | CLAUDE.md at ~230 lines, evolved from simple instructions to full routing table |
-> | Three operations | `pipeline post` (ingest chain), MCP wiki_search (query), `tools/lint.py` (lint) |
+> | Schema co-evolution | CLAUDE.md at ~300 lines, evolved from simple instructions to full methodology engine with 16 models, 22 standards pages |
+> | Three operations | `pipeline post` (6-step ingest chain), MCP wiki_search (query), `tools/lint.py` (lint) |
 > | Compounding queries | Answered Open Questions filed back as page content |
-> | v2 extensions | Maturity lifecycle (seed→canonical), typed relationships (15 verbs), event-driven pipeline chains, self-healing obsidian.py |
-> | Git as infrastructure | Full version history, ~95 commits, branching for features |
-> | Scale approach | 175 pages (well within index-only range), LightRAG upgrade path documented |
+> | v2 extensions | Maturity lifecycle (seed→canonical), typed relationships (15 verbs), event-driven pipeline chains, self-healing obsidian.py, ecosystem project profiles |
+> | Git as infrastructure | Full version history, branching for features |
+> | Scale approach | 297 pages (approaching index-only ceiling), LightRAG upgrade path documented |
 
 ## Open Questions
 

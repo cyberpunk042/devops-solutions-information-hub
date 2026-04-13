@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T19:19:04.326891+00:00",
+  "generated": "2026-04-13T19:26:12.510974+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -2934,7 +2934,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "claude-code",
         "skills",
@@ -6668,7 +6668,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-13",
       "tags": [
         "backlog",
         "epic",
@@ -7147,7 +7147,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "stage-gate",
         "methodology",
@@ -7846,7 +7846,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "llm-wiki",
         "knowledge-base",
@@ -8055,7 +8055,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-08",
-      "updated": "2026-04-10",
+      "updated": "2026-04-13",
       "tags": [
         "ingestion",
         "pipeline",

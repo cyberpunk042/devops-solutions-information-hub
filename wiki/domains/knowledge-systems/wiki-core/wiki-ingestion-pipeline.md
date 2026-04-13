@@ -9,7 +9,7 @@ domain: knowledge-systems
 status: synthesized
 confidence: high
 created: 2026-04-08
-updated: 2026-04-10
+updated: 2026-04-13
 sources:
   - id: src-karpathy-claude-code-10x
     type: youtube-transcript
@@ -57,6 +57,16 @@ The wiki ingestion pipeline is the workflow by which raw source documents are tr
 **v2 extensions.** Entity extraction during ingestion (structured entities, not just prose). Event-driven auto-ingestion (hooks on new raw files). Privacy filtering (strip API keys, PII before wiki). All additive to the current pipeline.
 
 ## Deep Analysis
+
+> [!info] Pipeline Commands for Ingestion
+>
+> | Command | What It Does |
+> |---------|-------------|
+> | `pipeline fetch URL` | Fetch a URL into raw/ |
+> | `pipeline run URL` | Fetch + full post-chain |
+> | `pipeline post` | 6-step validation chain (indexes → manifest → validate → wikilinks → lint → layer indexes) |
+> | `pipeline scaffold <type> "Title"` | Create page from template |
+> | `pipeline chain ingest` | Full ingestion chain |
 
 The ingestion pipeline is the core engine of the LLM Wiki pattern. Its effectiveness comes from treating document processing not as a chunking problem (as in RAG) but as a comprehension and organization problem. Claude Code reads the full source, understands it holistically, and then makes editorial decisions about how to decompose it into wiki pages.
 

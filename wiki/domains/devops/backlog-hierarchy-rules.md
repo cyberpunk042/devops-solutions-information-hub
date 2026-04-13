@@ -8,7 +8,7 @@ domain: devops
 status: synthesized
 confidence: authoritative
 created: 2026-04-09
-updated: 2026-04-12
+updated: 2026-04-13
 maturity: growing
 derived_from:
   - "Stage-Gate Methodology"
@@ -416,6 +416,19 @@ MILESTONE (delivery target)
 
 > [!example]- New gap task reduces parent readiness?
 > Resolved in [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]. Yes, this is correct behavior. Adding a task with readiness 0 honestly lowers the parent's readiness. Honesty over inflation — the gap was always there, the readiness was previously overstated.
+
+### Ecosystem Usage
+
+> [!info] How projects in the ecosystem use this hierarchy
+>
+> | Project | PM Level | Hierarchy Depth | Tracking Tool |
+> |---------|----------|----------------|---------------|
+> | OpenArms | L2 (Harness) | Epic → Module → Task | Wiki backlog + harness frontmatter |
+> | OpenFleet | L2-L3 (Fleet) | Milestone → Epic → Module → Task | Wiki backlog + fleet dispatch |
+> | Research Wiki | L1 (Wiki) | Milestone → Epic → Task | Wiki backlog only |
+> | AICP / devops-control-plane | L1 (Wiki) | Epic → Task | Wiki backlog (lightweight) |
+>
+> The SDLC chain level determines how strictly the hierarchy is enforced — see [[sdlc-customization-framework|SDLC Customization Framework]].
 
 ### How This Connects — Navigate From Here
 
