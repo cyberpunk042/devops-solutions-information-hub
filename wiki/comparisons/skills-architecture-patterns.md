@@ -13,39 +13,39 @@ updated: 2026-04-10
 sources:
   - id: src-claude-notebooklm-content-team
     type: youtube-transcript
-    file: [['Synthesis — Claude + NotebookLM Content Automation']]
+    file: [[src-claude-notebooklm-content-team|Synthesis — Claude + NotebookLM Content Automation]]
     title: Claude + NotebookLM = Your 24/7 Content Team
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    file: [['Synthesis — Claude Code Best Practice (shanraisshan)']]
+    file: [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
     title: shanraisshan/claude-code-best-practice
   - id: src-obsidian-claude-code-second-brain
     type: youtube-transcript
-    file: [['Synthesis — Obsidian + Claude Code Second Brain Setup']]
+    file: [[src-obsidian-claude-code-second-brain|Synthesis — Obsidian + Claude Code Second Brain Setup]]
     title: "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
   - id: src-kepano-obsidian-skills
     type: documentation
-    file: [['Synthesis — kepano-obsidian-skills']]
+    file: [[src-kepano-obsidian-skills|Synthesis — kepano-obsidian-skills]]
     title: kepano/obsidian-skills
   - id: src-axton-obsidian-visual-skills
     type: documentation
-    file: [['Synthesis — axtonliu-axton-obsidian-visual-skills']]
+    file: [[src-axton-obsidian-visual-skills|Synthesis — axtonliu-axton-obsidian-visual-skills]]
     title: axtonliu/axton-obsidian-visual-skills
   - id: src-pablo-mano-obsidian-cli-skill
     type: documentation
-    file: [['Synthesis — pablo-mano-Obsidian-CLI-skill']]
+    file: [[src-pablo-mano-obsidian-cli-skill|Synthesis — pablo-mano-Obsidian-CLI-skill]]
     title: pablo-mano/Obsidian-CLI-skill
   - id: src-claude-world-notebooklm-skill
     type: documentation
-    file: [['Synthesis — claude-world-notebooklm-skill']]
+    file: [[src-claude-world-notebooklm-skill|Synthesis — claude-world-notebooklm-skill]]
     title: claude-world/notebooklm-skill
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    file: [['Synthesis — PleasePrompto-notebooklm-skill']]
+    file: [[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
     title: PleasePrompto/notebooklm-skill
   - id: src-token-hacks-claude-code
     type: youtube-transcript
-    file: [['Synthesis — 18 Claude Code Token Hacks in 18 Minutes']]
+    file: [[src-token-hacks-claude-code|Synthesis — 18 Claude Code Token Hacks in 18 Minutes]]
     title: 18 Claude Code Token Hacks in 18 Minutes
 tags: [skills, architecture, patterns, cross-domain, claude-code, obsidian, notebooklm, SKILL-md, agent-extensibility, composition]
 ---

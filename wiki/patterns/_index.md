@@ -17,11 +17,11 @@ Recurring structures validated across 2+ independent systems. Each pattern has c
 
 | Pattern | What It Maps |
 |---------|-------------|
-| [[Skills + Claude Code]] | How skills extend the Claude Code agent |
-| [[Skills + CLI]] | CLI tools paired with SKILL.md files |
-| [[Skills + MCP]] | MCP servers as skill infrastructure |
-| [[Skills + NotebookLM]] | NotebookLM automation via skills |
-| [[Skills + Obsidian]] | Obsidian vault management via skills |
+| `[[Skills + Claude Code]]` | How skills extend the Claude Code agent |
+| `[[Skills + CLI]]` | CLI tools paired with SKILL.md files |
+| `[[Skills + MCP]]` | MCP servers as skill infrastructure |
+| `[[Skills + NotebookLM]]` | NotebookLM automation via skills |
+| `[[Skills + Obsidian]]` | Obsidian vault management via skills |
 
 See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis of why these 6 patterns recur.
 

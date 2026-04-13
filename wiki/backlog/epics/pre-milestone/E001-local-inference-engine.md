@@ -12,7 +12,7 @@ readiness: 10
 stages_completed:
   - "document"
 artifacts:
-  - [['AICP']]
+  - [[aicp|AICP]]
   - "wiki/domains/ai-models/local-llm-quantization.md"
   - "wiki/decisions/local-model-vs-cloud-api-for-routine-operations.md"
   - "docs/superpowers/specs/2026-04-08-knowledge-evolution-pipeline-design.md"

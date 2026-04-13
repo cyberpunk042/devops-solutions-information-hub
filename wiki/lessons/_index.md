@@ -8,7 +8,7 @@ Structured failure analysis and convergence insights synthesized from real incid
 
 1. [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] — The root failure lesson
 2. [[llm-maintained-wikis-outperform-static-documentation|LLM-Maintained Wikis Outperform Static Documentation]] — The root convergence lesson
-3. [[Agent Orchestration Is the Highest-Connected Concept in the Wiki]] — The most connected hub
+3. [[agent-orchestration-is-highest-connected-concept|Agent Orchestration Is the Highest-Connected Concept in the Wiki]] — The most connected hub
 
 ### Failure Lessons
 
@@ -48,7 +48,7 @@ Independent sources arriving at the same conclusion.
 | [[notebooklm-as-grounded-research-engine|NotebookLM as Grounded Research Engine Not Just Note Storage]] | NotebookLM is a grounded research engine, not just note storage |
 | [[wiki-maintenance-problem-solved-by-llm-automation|The Wiki Maintenance Problem Is Solved by LLM Automation]] | LLMs solve the maintenance burden that killed every previous wiki attempt |
 | [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]] | Open specification roots make skills portable across platforms |
-| [[Schema Is the Real Product — Not the Content]] | The schema file is the real product; content is generated from it |
+| [[schema-is-the-real-product|Schema Is the Real Product — Not the Content]] | The schema file is the real product; content is generated from it |
 
 ### Domain Hubs
 
@@ -56,9 +56,9 @@ Lessons that synthesize an entire domain's structural position.
 
 | Lesson | Domain |
 |--------|--------|
-| [[Agent Orchestration Is the Highest-Connected Concept in the Wiki]] | ai-agents |
-| [[Automation Is the Bridge Between Knowledge and Action]] | automation |
-| [[Knowledge Systems Is the Foundational Domain for the Entire Wiki]] | knowledge-systems |
+| [[agent-orchestration-is-highest-connected-concept|Agent Orchestration Is the Highest-Connected Concept in the Wiki]] | ai-agents |
+| [[automation-is-bridge-between-knowledge-and-action|Automation Is the Bridge Between Knowledge and Action]] | automation |
+| [[knowledge-systems-is-foundational-domain|Knowledge Systems Is the Foundational Domain for the Entire Wiki]] | knowledge-systems |
 
 ## Pages
 

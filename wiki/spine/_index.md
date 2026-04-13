@@ -31,7 +31,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 | reference | [[reference-page-standards|Reference Page Standards]] | [[methodology-adoption-guide|Methodology Adoption Guide]] |
 | deep-dive | [[deep-dive-page-standards|Deep-Dive Page Standards]] | [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]] |
 | lesson | [[lesson-page-standards|Lesson Page Standards]] | [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] |
-| pattern | [[pattern-page-standards|Pattern Page Standards]] | [[Plan-Execute-Review Cycle]] |
+| pattern | [[pattern-page-standards|Pattern Page Standards]] | [[plan-execute-review-cycle|Plan Execute Review Cycle]] |
 | decision | [[decision-page-standards|Decision Page Standards]] | [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]] |
 | domain-overview | [[domain-overview-page-standards|Domain Overview Page Standards]] | [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] |
 | evolution | [[evolution-page-standards|Evolution Page Standards]] | [[methodology-evolution-history|Evolution — Methodology System]] |

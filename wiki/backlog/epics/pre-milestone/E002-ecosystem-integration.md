@@ -13,7 +13,7 @@ stages_completed:
   - "document"
 artifacts:
   - "wiki/domains/devops/four-project-ecosystem.md"
-  - [["Adoption Guide — How to Use This Wiki's Standards"]]
+  - [[adoption-guide|Adoption Guide — How to Use This Wiki's Standards]]
 confidence: high
 created: 2026-04-09
 updated: 2026-04-09

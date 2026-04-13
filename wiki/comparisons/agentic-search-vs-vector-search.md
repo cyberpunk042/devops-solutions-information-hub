@@ -17,7 +17,7 @@ sources:
     title: Andrej Karpathy Just 10x'd Everyone's Claude Code
   - id: src-karpathy-llm-wiki-idea-file
     type: documentation
-    file: [["Synthesis — Karpathy's LLM Wiki Idea File"]]
+    file: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
     title: Karpathy LLM Wiki Idea File
   - id: src-llm-wiki-v2-agentmemory
     type: documentation
@@ -25,11 +25,11 @@ sources:
     title: LLM Wiki v2 -- Extending Karpathy's LLM Wiki Pattern with Lessons from Building Agentmemory
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
-    file: [['Synthesis — Claude Code Best Practice (shanraisshan)']]
+    file: [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
     title: shanraisshan/claude-code-best-practice
   - id: src-pleaseprompto-notebooklm-skill
     type: documentation
-    file: [['Synthesis — PleasePrompto-notebooklm-skill']]
+    file: [[src-pleaseprompto-notebooklm-skill|Synthesis — PleasePrompto-notebooklm-skill]]
     title: PleasePrompto/notebooklm-skill
 tags: [agentic-search, vector-search, rag, hybrid-search, knowledge-retrieval, comparison, glob-grep, index-navigation]
 ---

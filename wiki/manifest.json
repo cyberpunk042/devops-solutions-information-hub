@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-13T19:56:17.019836+00:00",
+  "generated": "2026-04-13T20:01:46.505311+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -1341,7 +1341,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 Karpathy's LLM Wiki Idea File"
+              "src-karpathy-llm-wiki-idea-file|Synthesis \u2014 Karpathy's LLM Wiki Idea File"
             ]
           ],
           "title": "Karpathy LLM Wiki Idea File"
@@ -1357,7 +1357,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
+              "src-shanraisshan-claude-code-best-practice|Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
             ]
           ],
           "title": "shanraisshan/claude-code-best-practice"
@@ -1367,7 +1367,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 PleasePrompto-notebooklm-skill"
+              "src-pleaseprompto-notebooklm-skill|Synthesis \u2014 PleasePrompto-notebooklm-skill"
             ]
           ],
           "title": "PleasePrompto/notebooklm-skill"
@@ -1673,7 +1673,7 @@
           "type": "youtube-transcript",
           "file": [
             [
-              "Synthesis \u2014 Claude + NotebookLM Content Automation"
+              "src-claude-notebooklm-content-team|Synthesis \u2014 Claude + NotebookLM Content Automation"
             ]
           ],
           "title": "Claude + NotebookLM = Your 24/7 Content Team"
@@ -1683,7 +1683,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
+              "src-shanraisshan-claude-code-best-practice|Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
             ]
           ],
           "title": "shanraisshan/claude-code-best-practice"
@@ -1693,7 +1693,7 @@
           "type": "youtube-transcript",
           "file": [
             [
-              "Synthesis \u2014 Obsidian + Claude Code Second Brain Setup"
+              "src-obsidian-claude-code-second-brain|Synthesis \u2014 Obsidian + Claude Code Second Brain Setup"
             ]
           ],
           "title": "Obsidian + Claude Code: The Second Brain Setup That Actually Works"
@@ -1703,7 +1703,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 kepano-obsidian-skills"
+              "src-kepano-obsidian-skills|Synthesis \u2014 kepano-obsidian-skills"
             ]
           ],
           "title": "kepano/obsidian-skills"
@@ -1713,7 +1713,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 axtonliu-axton-obsidian-visual-skills"
+              "src-axton-obsidian-visual-skills|Synthesis \u2014 axtonliu-axton-obsidian-visual-skills"
             ]
           ],
           "title": "axtonliu/axton-obsidian-visual-skills"
@@ -1723,7 +1723,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 pablo-mano-Obsidian-CLI-skill"
+              "src-pablo-mano-obsidian-cli-skill|Synthesis \u2014 pablo-mano-Obsidian-CLI-skill"
             ]
           ],
           "title": "pablo-mano/Obsidian-CLI-skill"
@@ -1733,7 +1733,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 claude-world-notebooklm-skill"
+              "src-claude-world-notebooklm-skill|Synthesis \u2014 claude-world-notebooklm-skill"
             ]
           ],
           "title": "claude-world/notebooklm-skill"
@@ -1743,7 +1743,7 @@
           "type": "documentation",
           "file": [
             [
-              "Synthesis \u2014 PleasePrompto-notebooklm-skill"
+              "src-pleaseprompto-notebooklm-skill|Synthesis \u2014 PleasePrompto-notebooklm-skill"
             ]
           ],
           "title": "PleasePrompto/notebooklm-skill"
@@ -1753,7 +1753,7 @@
           "type": "youtube-transcript",
           "file": [
             [
-              "Synthesis \u2014 18 Claude Code Token Hacks in 18 Minutes"
+              "src-token-hacks-claude-code|Synthesis \u2014 18 Claude Code Token Hacks in 18 Minutes"
             ]
           ],
           "title": "18 Claude Code Token Hacks in 18 Minutes"
