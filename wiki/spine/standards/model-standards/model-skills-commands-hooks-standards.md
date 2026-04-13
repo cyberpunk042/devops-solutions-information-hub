@@ -203,6 +203,19 @@ What good command → skill → hook composition looks like.
 > [!question] **What's the optimal hook count per project?**
 > claude-code-harness has 13 rules. Is that the sweet spot? At what count does hook overhead (latency, maintenance) exceed the value of enforcement? (Requires: tracking hook maintenance cost vs violations prevented)
 
+### Annotated Exemplar
+
+> [!example] Real example: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **Four-level hierarchy with cost profiles** — The page structures the entire extension system as four levels (Level 0: config files, Level 1: skills, Level 2: hooks, Level 3: commands), each with a dedicated section showing when it loads, context cost, enforcement strength, and best-for use cases. The Context-Aware Loading Principle section ties all four levels into a single table that makes the cost gradient visually obvious — permanent (L0) to one-time (L3). The measured 12x cost differential between MCP eager loading and skill deferred loading anchors this in evidence, not opinion.
+> 2. **26-event hook taxonomy organized by category** — The hooks section presents all 26 lifecycle events across 7 categories (Session, Tool, Permission, Subagent, Task, System, Compaction) in a structured table, plus meta-control events (Stop, TeammateIdle). Three critical hook patterns are named and explained: blocking (PreToolUse with block/allow/ask/defer responses), reverse hook (Stop fires to PREVENT completion), and context injection (5 events that accept additionalContext). Four handler types (command, http, prompt, agent) are compared by speed, power, and use case. This is a complete reference, not a feature list.
+> 3. **Per-role command segmentation** — The commands section includes a table mapping 5 roles (Generic, Developer, Researcher, PM/Lead, Operator) to specific commands with scope. This addresses a real usability problem: "a developer doesn't see `/evolve`; a researcher doesn't see `/deploy`." The command palette becomes a role-appropriate workflow guide rather than a flat list of everything available.
+> 4. **Compliance quantification across enforcement levels** — The page presents measured compliance data: ~25% for instruction files (OpenArms v4-v8 overnight), ~60% for structured instructions (ALLOWED/FORBIDDEN tables), 100% for hooks (OpenArms v10, 5 production runs), 100% for MCP tool blocking (OpenFleet production). This is the most compelling argument for hooks over instructions — not that hooks are "better" but that the compliance gap is quantified from real production data. The INVARIANT section encodes this: "Hooks enforce at execution time — the ~98% vs ~60% compliance gap is real and structural."
+>
+> **What could still improve:** The on-demand hooks pattern (skills declaring hooks that activate only during skill execution) is mentioned but marked as untested in this ecosystem. The hook chain latency question (what happens at 5-hook composition depth?) is raised but unanswered. The AGENTS.md and SOUL.md conventions are covered briefly but lack the depth of the CLAUDE.md and SKILL.md sections.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

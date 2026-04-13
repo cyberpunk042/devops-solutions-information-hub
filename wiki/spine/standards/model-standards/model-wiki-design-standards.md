@@ -435,6 +435,19 @@ If any type were missing, the page would fail its own standard. ==This page demo
 > [!question] **Should before/after examples include Obsidian screenshots?**
 > Markdown source shows what you TYPE. Screenshots show what you SEE. Both are valuable, but screenshot tooling in WSL to Windows adds workflow friction. (Requires: screenshot pipeline or accepting the manual overhead)
 
+### Annotated Exemplar
+
+> [!example] Real example: [[model-wiki-design|Model — Wiki Design]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **Three formatting contexts with rendering context adaptation table** — The page opens its Deep Analysis with a 5-row table mapping formatting contexts (Obsidian, GitHub/GitLab, Docusaurus/MkDocs, VS Code preview, AI agent) against what works, what doesn't, and the required adaptation. This is not "use Obsidian" — it acknowledges that the same wiki content is consumed in 5+ rendering contexts and designs for ALL of them. The remark/Docusaurus section includes a mapping table showing how Obsidian callouts translate to framework equivalents (`> [!tip] Title` becomes `:::tip[Title]`).
+> 2. **Callout vocabulary with semantic purpose definitions** — The 8-callout vocabulary section defines each type (info, abstract, tip, warning, example, success, bug, question) with its color, icon, semantic purpose ("Here is information to absorb" vs "Be careful here" vs "This went wrong"), and specific pages where it is used. The anti-patterns section names 7 callout misuses (using `[!info]` for everything, non-foldable 20+ line examples, nesting 3+ deep). This transforms callouts from a formatting feature into an information architecture tool.
+> 3. **Graceful degradation as a hard constraint** — The degradation table shows how each Obsidian feature (bold, highlight, callouts, wikilinks, Mermaid, comments, foldable callouts) renders across 4 contexts (Obsidian, GitHub, VS Code, plain text). The `[!warning] Hard constraint` callout states: "Never put critical content ONLY in a callout title, an embed, or a highlight. The INFORMATION must survive in plain text." This elevates degradation from a nice-to-have to a design principle — styling enhances but must never be required for comprehension.
+> 4. **Semantic hierarchy principle with 6 emphasis levels** — The emphasis hierarchy table ranks 6 levels from highest (==highlight==, rare and critical) to lowest (plain text), with semantic meaning and use-for guidance at each level. The anti-pattern "emphasis soup" is called out: "When everything is emphasized, nothing is. Bold should appear on ~5-10% of terms." This gives writers a decision framework for every formatting choice, not just "use bold for important things."
+>
+> **What could still improve:** The CSS Customization section is explicitly marked `[!warning] Status: aspirational` — no CSS snippets have been created yet. The page layout patterns section provides 8 type-specific patterns but some (like backlog task) are very brief compared to others (like model catalog entry). Mobile rendering and accessibility concerns for callout-heavy design are listed as thin/unverified.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

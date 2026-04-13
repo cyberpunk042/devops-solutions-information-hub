@@ -231,6 +231,35 @@ What all four levels working together looks like.
 > [!question] **How do you test hooks without breaking things?**
 > Hook testing requires triggering the blocked operation and verifying the block. But the blocked operation IS the dangerous thing. Dry-run mode for hooks? Test harness that simulates tool calls? (Requires: hook testing infrastructure design)
 
+### Annotated Exemplar
+
+> [!example] Real example: [[model-claude-code|Model — Claude Code]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **Four-level extension hierarchy with cost profiles** — The page defines each extension level (CLAUDE.md, Skills, Hooks, Commands) with a structured table showing loaded-when, context cost, enforcement %, and scope. This is not a feature list — it is a cost-enforcement trade-off framework that lets the reader make placement decisions. The summary table at the end (`==The correct architecture uses all four levels together==`) drives home that the levels compose, not compete.
+>
+> 2. **Agent runtime landscape table** — The page places Claude Code within a 5-runtime landscape (Cursor, Windsurf, GitHub Copilot, Codex CLI) with columns for configuration, extension, and key difference. This demonstrates the standard's requirement that a model page define a SYSTEM, not just describe a tool — by showing that the principles (structured context, extension hierarchy) transfer across runtimes while the mechanisms are Claude Code-specific.
+>
+> 3. **INVARIANT vs PER-PROJECT adoption sections** — The How to Adopt section explicitly separates what must never change (e.g., "CLAUDE.md under 200 lines," "hooks enforce at execution time") from what must always be adapted per project (e.g., "which skills exist," "which hooks to enable"). This is the gold standard for adoption guidance — it tells the reader exactly where the hard boundaries are and where they have design freedom.
+>
+> 4. **State of Knowledge honesty** — The page has a `[!success]` block listing 6 well-covered areas with specific evidence AND a `[!warning]` block listing 6 thin/unverified areas (e.g., "Hooks in real production use — the 26-event taxonomy is documented but we have no ecosystem project using hooks for stage-gate enforcement yet"). This is what honest knowledge reporting looks like — claiming coverage only where evidence exists, flagging gaps explicitly.
+>
+> **What could still improve:** The page is over 400 lines, which makes it harder to scan than some other model pages. The context management section relies on one practitioner's degradation thresholds that are explicitly marked unverified — converting these to verified data would strengthen the model's authority.
+
+### Annotated Exemplar
+
+> [!example] Real example: [[model-claude-code|Model — Claude Code]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **Four-level extension hierarchy with cost profiles** — The page defines each extension level (CLAUDE.md, Skills, Hooks, Commands) in a structured table showing loaded-when, context-cost, enforcement-%, and scope. This is not a feature list — it is a cost-enforcement trade-off analysis that directly informs architectural decisions. The summary table with `==The correct architecture uses all four levels together==` drives the point home.
+> 2. **Agent runtime landscape table** — The page places Claude Code alongside Cursor, Windsurf, GitHub Copilot, and Codex CLI in a comparison table showing configuration, extension, and key differences. This prevents the model from being parochial — readers understand that the PRINCIPLES (structured context, extension hierarchy) transfer across runtimes while the MECHANISMS (CLAUDE.md, hooks) are Claude Code-specific.
+> 3. **INVARIANT vs PER-PROJECT adoption guidance** — The How to Adopt section separates what must never change (scorer determinism, human review gates, source preservation) from what should always be adapted (scorer weights, backend selection, evolution cadence). This is the Goldilocks principle operationalized — the reader knows exactly what to copy verbatim and what to tune for their context.
+> 4. **State of Knowledge honesty** — The `[!success]` block lists what is well-covered with specific evidence (12x measured cost differential, 13 guardrail rules, 5-verb workflow convergence). The `[!warning]` block admits what is thin or unverified (hooks untested for stage-gate enforcement, subagent concurrency limits unknown, context degradation curve unverified). This two-block pattern prevents false authority — the reader trusts the verified claims because the page is transparent about what it does NOT know.
+>
+> **What could still improve:** The page is over 400 lines — longer than the 200-line CLAUDE.md ceiling it advocates. The context management section could be shortened by routing to [[claude-code-context-management|Claude Code Context Management]] instead of repeating verified vs unverified claims inline. The six documentation layers section duplicates content that could live in a dedicated page.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

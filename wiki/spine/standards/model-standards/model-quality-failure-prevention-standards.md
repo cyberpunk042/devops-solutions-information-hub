@@ -198,6 +198,19 @@ What it looks like when a project migrates quality rules upward through the enfo
 > [!question] **Can enforcement migration be automated?**
 > When a rule is violated N times at Level 0, automatically suggest migrating to Level 1 (skill) or Level 2 (hook). This closes the loop between violation detection and enforcement improvement. (Requires: violation tracking infrastructure)
 
+### Annotated Exemplar
+
+> [!example] Real example: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **Three-layer defense with quantified evidence** — The page defines three enforcement layers (structural prevention at ~98%, teaching at ~60%, review at 100% when engaged) in a structured table, then explains HOW the layers interact: "Teaching reduces the violation rate... Structural prevention catches what teaching misses (~40%)... Review handles the irreducibly subjective." The interaction model section explicitly names the failure mode of relying on ONE layer — each combination (hooks without teaching, teaching without hooks, review without either) produces a specific, named degradation pattern.
+> 2. **Six failure lessons from real incidents with enforcement mappings** — Each of the six lessons (Never Synthesize from Descriptions Alone, Never Skip Stages, Shallow Ingestion Is Systemic, Infrastructure Must Be Reproducible, Practice What You Document, Models Built in Layers) is presented as a `[!bug]-` foldable with three parts: the failure, the principle, and the enforcement mechanism. The enforcement column is specific — "CLAUDE.md + wiki-agent skill + 0.25 ratio rule" not "add better instructions." The critical evidence callout (2,073 lines of orphaned code, 686 passing tests, 0 verified features) demonstrates with hard numbers that tests alone prove nothing.
+> 3. **Depth verification system with the Layer 0/1/2 model** — The page defines three source depth layers (description, instance, multiple instances compared) and sets a measurable minimum bar: Layer 1, with a 0.25 ratio threshold. The context-mode ingestion example provides before/after evidence: 60-line shallow page (0.06 ratio) vs 254-line deep synthesis (0.24 ratio) from the same 1,057-line source.
+> 4. **Immune system architecture from OpenFleet** — The page includes 24 rules from 16 post-mortems organized into 5 categories (liveness, loop detection, state integrity, behavioral security, resource exhaustion), plus the 3-strike pattern for graduated response. This is not theoretical — it references doctor.py running at step 6 of the 12-step orchestrator cycle with specific rule examples. The enforcement level hierarchy (Level 0 hope through Level 3 deterministic) gives a concrete migration path.
+>
+> **What could still improve:** The rework prevention economics section acknowledges its numbers are unverified estimates ("2.5-3.5x multiplier, not independently measured"). The page would be stronger with measured rework data from the wiki's own operations. The immune system section covers OpenFleet extensively but does not show how those patterns translate to simpler projects like this wiki.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

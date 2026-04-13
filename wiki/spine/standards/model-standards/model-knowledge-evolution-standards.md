@@ -136,6 +136,19 @@ What good scorer output looks like — diverse candidates, not tag-pair noise.
 > [!question] **What's the minimum evidence bar for a lesson?**
 > Currently suggested: ≥3 independent sources. Is this right? A lesson from 2 strong sources might be more valid than one from 4 weak sources. Should evidence quality be weighted, not just counted? (Requires: analyzing existing lesson quality vs evidence count)
 
+### Annotated Exemplar
+
+> [!example] Real example: [[model-knowledge-evolution|Model — Knowledge Evolution]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **7-layer density architecture with promotion criteria** — The page defines layers L0 through L6 (plus L5+ Principles) in a structured table showing type, maturity, what it contains, and the transformation at each layer. The gap at Layer 3 is explicitly explained ("the jump from concept to lesson is a qualitative shift, not just compression") — this demonstrates intellectual honesty about the architecture rather than forcing a neat sequence.
+> 2. **Scoring signals with explicit weights** — Six signals are listed with their exact weights (cross-source convergence at 0.30, relationship hub at 0.20, down to tag co-occurrence at 0.10). The tuning history is documented in a `[!tip]` callout: initial weights overvalued tag co-occurrence (0.25), which produced candidates that were just tag-pair matches. This is a model page that shows its EVOLUTION, not just its current state.
+> 3. **8-step generation loop with the critical step identified** — The generation pipeline is listed as 8 numbered steps (SCORE through LOOP), and a `[!warning]` callout explicitly calls out ASSEMBLE as "where quality is won or lost." This identifies the leverage point — the step where intervention has the highest impact — rather than treating all steps as equal.
+> 4. **Honest State of Knowledge with quantified coverage** — The `[!success]` block lists specific counts (40 validated lessons, 15 validated patterns, 3 principles, 1,321-line scorer implementation). The `[!warning]` block names 6 specific gaps including "scorer gaming — manual cross-linking could inflate scores artificially." The page does not pretend the pipeline is complete.
+>
+> **What could still improve:** The Three LLM Backends section is thin — it lists the backends in a table but provides no quality comparison data between them, which the Open Questions section acknowledges. The weekly evolution cadence section shows the pipeline commands but lacks evidence of how many candidates the cadence actually surfaces in practice.
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

@@ -455,6 +455,19 @@ The per-type standards above cover wiki page types. But methodology execution pr
 > [!question] **Should there be a "methodology health" score per project?**
 > A composite metric: % of tasks with proper stage tracking, % of commits with stage labels, % of epics with computed readiness, # of FORBIDDEN violations. Would this be useful or bureaucratic? (Requires: implementing the metric and testing whether it drives behavior)
 
+### Annotated Exemplar
+
+> [!example] Real example: [[model-methodology|Model — Methodology]] — why this page is exemplary
+>
+> **What makes this page meet the standard:**
+>
+> 1. **9 named models with concrete stages and ALLOWED/FORBIDDEN lists** — Each model (Feature Development, Research, Knowledge Evolution, Documentation, Bug Fix, Refactor, Hotfix, Ingestion Pipeline, Project Lifecycle) is defined with its own stage sequence, per-stage artifact table, selection conditions in a `[!abstract]` callout, and a foldable `[!example]-` real instance. The ALLOWED/FORBIDDEN section for scaffold, implement, and test stages uses `[!success]`, `[!warning]`, and `[!tip] REQUIRED` callouts to make boundaries unambiguous. This is a FRAMEWORK, not a description.
+> 2. **Model composition modes with real parallel tracks** — The page defines four composition modes (sequential, nested, conditional, parallel) and demonstrates parallel composition with a three-track table showing execution, PM, and knowledge tracks running simultaneously on this wiki. The nested composition example traces three levels of nesting (SFIF at project level, Feature Dev at epic level, task subsets at atomic level) — showing the fractal property in practice, not just naming it.
+> 3. **Battle-tested evidence with quantified costs** — The 7 bugs section uses `[!bug]-` foldable callouts, each naming the bug, the design input it produced, and the methodology version bump it triggered. The methodology version history (v1 through v6 in one day) shows the system hardening under real pressure. Cost data ($3.50/task at v1 to $1.32/task at v7) provides economic evidence that the methodology WORKS, not just that it EXISTS.
+> 4. **AI Quick Start block at the top** — The `[!tip] AI Quick Start` callout gives an agent 5 numbered steps to USE this page immediately: determine task type, find the model, check ALLOWED/FORBIDDEN, check domain chain, run the execution checklist. This transforms a 600-line reference page into an operational tool — the agent reads 5 lines and knows what to do, then dives deeper only as needed.
+>
+> **What could still improve:** The page exceeds 600 lines, which makes it harder to maintain and increases the chance of internal inconsistencies. The Model Adaptation section (overrides per instance) is shorter than it should be given the complexity of real override scenarios. The enforcement hierarchy section partially duplicates content from [[model-quality-failure-prevention|Model — Quality and Failure Prevention]].
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
