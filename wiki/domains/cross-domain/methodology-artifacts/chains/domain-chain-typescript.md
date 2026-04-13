@@ -11,200 +11,121 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-13
 sources:
-  - id: openarms-chain
-    type: file
-    file: /home/jfortin/openarms/wiki/domains/architecture/methodology-document-chain.md
-  - id: openarms-methodology
-    type: file
-    file: /home/jfortin/openarms/wiki/config/methodology.yaml
   - id: taxonomy
     type: wiki
     file: wiki/domains/cross-domain/methodology-artifact-taxonomy.md
-tags: [methodology, artifact-chain, typescript, node, domain-specific, openarms, openfleet]
+  - id: openarms-profile
+    type: wiki
+    file: wiki/ecosystem/project_profiles/openarms/identity-profile.md
+    description: "OpenArms as one validated example of this domain"
+tags: [methodology, artifact-chain, typescript, node, domain-specific, flexible]
 ---
 
 # Artifact Chain — TypeScript-Node Domain
+
 > [!tip] AI Quick Start — Working in a TypeScript/Node Project
 >
-> 1. **Gate commands:** `pnpm tsgo` (types compile), `pnpm check` (lint), `pnpm test -- path/to/test.ts` (tests pass)
-> 2. **Scaffold:** `.ts` type exports + `.test.ts` stubs with placeholders. NO function bodies > 3 lines. NO if/for/while.
-> 3. **Implement:** Business logic + bridge module if needed + EXISTING file modified with `import` of your new code
-> 4. **Test:** Real assertions replacing every placeholder. `pnpm test -- file.ts` shows 0 failures.
-> 5. **Full 24-artifact chain table** below — this is the most detailed chain in the ecosystem (from OpenArms).
+> 1. **Identify your context first** — What kind of project? (CLI tool, API backend, agent platform, frontend SPA, library). The artifact chain adapts.
+> 2. **Pick your SDLC level** — Simplified (POC): 2-3 stages, minimal artifacts. Default (MVP-Production): 5 stages, standard artifacts. Full (Production fleet): all stages, full artifact chain.
+> 3. **Common gates:** Type checking (`tsc` or equivalent), linting, test suite. Specific tools vary by project.
+> 4. **Scaffold first, implement second** — Type definitions + test stubs before business logic. This is universal across TypeScript projects.
 
 ## Summary
 
-Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, OpenFleet). Maps every methodology model's stages to concrete TypeScript artifacts — file paths, export patterns, gate commands, and real examples from the OpenArms codebase. This is the most evolved domain chain in the ecosystem, validated through 93 completed tasks and 9 methodology versions. The document/design stages use universal artifacts (same as all domains). The scaffold/implement/test stages use TypeScript-specific artifacts.
+Artifact chain framework for TypeScript/Node.js projects. This is NOT a single fixed pipeline — it defines the OPTIONS available at each stage, the common patterns across TypeScript projects, and how the chain adapts based on project type, SDLC level, and execution mode. Projects choose their subset based on their [[goldilocks-flow|Goldilocks identity]]. For a validated example of a full 24-artifact chain at the Default SDLC level, see [[identity-profile|OpenArms — Identity Profile]].
 
 ## Reference Content
 
-### Toolchain
+### Common TypeScript Toolchain Options
 
-> [!info] TypeScript Domain Stack
+> [!info] Toolchain varies by project — these are common options, not requirements
 >
-> | Tool | Purpose | Gate Command |
-> |------|---------|-------------|
-> | pnpm | Package management | `pnpm install` |
-> | TypeScript (tsgo) | Type checking | `pnpm tsgo` |
-> | oxlint/oxfmt | Linting + formatting | `pnpm check` |
-> | vitest | Testing | `pnpm test -- path/to/test.ts` |
-> | Zod | Runtime validation schemas | Part of tsgo check |
-> | ESM | Module system | Native ES modules |
+> | Concern | Options | Notes |
+> |---------|---------|-------|
+> | Package manager | npm, pnpm, yarn, bun | pnpm common for monorepos, bun for performance |
+> | Type checking | tsc, tsgo, swc | tsgo = experimental fast checker |
+> | Linting | eslint, oxlint, biome | oxlint is faster, biome combines lint+format |
+> | Formatting | prettier, oxfmt, biome | Often bundled with linter |
+> | Testing | vitest, jest, node:test | vitest gaining dominance, native test runner for minimal deps |
+> | Runtime validation | zod, valibot, typebox | Zod most popular, valibot smaller bundle |
+> | Module system | ESM, CJS | ESM preferred for new projects |
+> | Build | esbuild, tsup, unbuild | Often not needed for Node.js (direct TS execution via tsx) |
 
-### Feature Development — Full 24-Artifact Chain
+### Feature Development — Generic Artifact Chain
 
-> [!abstract] The Complete Chain (from OpenArms methodology-document-chain.md)
->
-> | # | Stage | Artifact | File Pattern | Gate |
-> |---|-------|----------|-------------|------|
-> | 1 | document | Requirements Spec | `wiki/domains/{domain}/{slug}-requirements.md` | FR items have Input/Output/Constraint |
-> | 2 | document | Infrastructure Analysis | `wiki/domains/{domain}/{slug}-infrastructure.md` | Every file verified to exist |
-> | 3 | document | Gap Analysis | `wiki/domains/{domain}/{slug}-gaps.md` | Gaps reference existing files |
-> | 4 | design | ADR | `wiki/domains/architecture/{slug}-adr.md` | ≥1 alternative with rejection reason |
-> | 5 | design | Tech Spec | `wiki/domains/architecture/{slug}-tech-spec.md` | Every function has API entry |
-> | 6 | design | Interface Spec | `wiki/domains/architecture/{slug}-interface-spec.md` | All types COMPLETE, ready to copy to src/ |
-> | 7 | design | Config Spec | `wiki/domains/architecture/{slug}-config-spec.md` | Concrete YAML, every env var has default |
-> | 8 | design | Test Plan | `wiki/domains/architecture/{slug}-test-plan.md` | ≥5 unit, ≥2 integration, ≥1 e2e tests defined |
-> | 9 | scaffold | Type Definitions | `src/{module}/{slug}.ts` | `pnpm tsgo` passes, no control flow in bodies |
-> | 10 | scaffold | Zod Schemas | `src/{module}/{slug}.schema.ts` | Schemas match types, no `.transform()` logic |
-> | 11 | scaffold | Test Stubs | `src/{module}/{slug}.test.ts` | ≥3 `it()` blocks, 0 real assertions |
-> | 12 | scaffold | Config Wiring | existing config types modified | `import type` only, field optional |
-> | 13 | scaffold | Env Example | `.env.example` | Entries match Config Spec |
-> | 14 | implement | Implementation | `src/{module}/{slug}.ts` | `pnpm tsgo` + `pnpm check`, functions match Tech Spec |
-> | 15 | implement | Env Reader | `src/{module}/{slug}-env.ts` | Reads env vars from Config Spec |
-> | 16 | implement | Bridge Module | `src/{location}/{slug}-bridge.ts` | <80 LOC, adapter only |
-> | 17 | implement | Integration Wiring | existing runtime file modified | Diff shows added import + call |
-> | 18 | test | Test Implementation | `src/{module}/{slug}.test.ts` | 0 placeholders, ≥3 real assertions |
-> | 19 | test | Test Results | gate output | `pnpm test -- path/to/test.ts` shows 0 failures |
-> | 20 | harness | Task Frontmatter | task .md file | stages_completed updated |
-> | 21 | harness | Git Commits | git log | One per stage, conventional format |
-> | 22 | harness | Epic Readiness | epic .md file | Recalculated from children |
-> | 23 | harness | Completion Log | `wiki/log/{date}-{task-id}-completion.md` | Stages, artifacts, concerns recorded |
-> | 24 | harness | Compliance Check | validate-stage.cjs output | All gates passed |
+The stages are universal. The specific artifacts at each stage depend on SDLC level and project type.
 
-### Scaffold Stage — TypeScript Specifics
+> [!abstract] Artifact Chain by Stage and SDLC Level
+>
+> | Stage | Simplified (POC) | Default (MVP-Prod) | Full (Production Fleet) |
+> |-------|------------------|--------------------|------------------------|
+> | **Document** | Informal requirements notes | Requirements spec + infrastructure analysis + gap analysis (3 docs) | + stakeholder analysis, risk register, compliance mapping |
+> | **Design** | Quick ADR or none | ADR + tech spec + interface spec + config spec + test plan (5 docs) | + API contract (OpenAPI), security spec, performance spec, deployment spec |
+> | **Scaffold** | Type stubs | Type definitions + validation schemas + test stubs + config wiring (4-5 artifacts) | + mock implementations, contract tests stubs, monitoring stubs |
+> | **Implement** | Working code | Implementation + integration wiring + bridge modules (3-4 artifacts) | + observability instrumentation, feature flags, migration scripts |
+> | **Test** | Manual verification | Unit + integration tests passing (2 gates) | + e2e tests, load tests, contract tests, security scan |
+> | **Harness** | Git commit | Task frontmatter + conventional commits + completion log (3-4 artifacts) | + compliance check, deployment verification, rollback plan |
 
-> [!warning] What's ALLOWED vs FORBIDDEN
->
-> **ALLOWED:**
-> ```typescript
-> // Type definitions
-> export type StageValidationResult = {
->   passed: boolean;
->   stage: string;
->   errors: StageValidationError[];
-> };
->
-> // Static data constants
-> export const SCOPE_MAP: Record<string, ScopeConfig> = {
->   docker: { allowPublic: false, allowPrivate: true },
->   host: { allowPublic: true, allowPrivate: true },
-> };
->
-> // Zod schemas
-> export const NetworkRulesSchema = z.object({
->   scope: z.enum(["docker", "host", "custom"]),
->   rules: z.array(NetworkRuleSchema),
-> });
->
-> // Stub functions
-> export function resolveScope(scope: string): ScopeConfig {
->   throw new Error("not implemented");
-> }
->
-> // Empty test
-> it("should resolve docker scope", () => {
->   expect(true).toBe(true);
-> });
-> ```
->
-> **FORBIDDEN:**
-> ```typescript
-> // Business logic (control flow)
-> export function resolveScope(scope: string): ScopeConfig {
->   if (scope === "docker") return { allowPublic: false };  // ← FORBIDDEN
->   return SCOPE_MAP[scope] ?? defaultConfig;                // ← FORBIDDEN
-> }
->
-> // Env reader with parsing
-> export function readNetworkEnv(): NetworkConfig {
->   const raw = process.env.NETWORK_RULES;                   // ← FORBIDDEN
->   return raw ? JSON.parse(raw) : defaults;                 // ← FORBIDDEN
-> }
->
-> // Real test assertion
-> it("should resolve docker scope", () => {
->   expect(resolveScope("docker").allowPublic).toBe(false); // ← FORBIDDEN
-> });
-> ```
+### Scaffold Stage — TypeScript Patterns
 
-### Implement Stage — TypeScript Specifics
+These patterns apply across TypeScript projects regardless of specific toolchain:
 
-> [!tip] The Integration Wiring Requirement
+> [!warning] Universal Scaffold Rules
 >
-> Every implement stage MUST modify at least one EXISTING runtime file to import and call the new code. This is verified by checking `git diff` against `.openarms/existing-files.json`.
+> **ALLOWED in scaffold:**
+> - Type definitions (`type`, `interface`, `enum`)
+> - Static data constants (`const X: Record<...> = {...}`)
+> - Validation schemas (Zod, Valibot, etc.)
+> - Stub functions that `throw new Error("not implemented")`
+> - Test blocks with placeholder assertions (`expect(true).toBe(true)`)
 >
-> **Good integration:**
-> ```typescript
-> // In src/commands/agent-run.ts (EXISTING file):
-> import { evaluateHostAccess } from "../infra/net/network-rules-bridge.js";
-> // ... later in the function:
-> const access = evaluateHostAccess(hostname, config.networkRules);
-> ```
+> **FORBIDDEN in scaffold:**
+> - Business logic (if/for/while with real conditions)
+> - I/O operations (file reads, env parsing, API calls)
+> - Real test assertions (testing actual behavior)
 >
-> **Bad (orphaned code):**
-> ```typescript
-> // New file exists: src/config/network-rules-resolver.ts
-> // New file exists: src/config/network-rules-resolver.test.ts
-> // But NOTHING in the runtime imports it
-> // This is OpenArms Bug 6 — 2,073 lines nobody imported
-> ```
+> **Why:** Scaffold establishes the TYPE CONTRACT. Implementation fills the logic. This separation catches design errors before implementation begins.
 
-### Other Models — TypeScript Chain Subsets
+### Implement Stage — Integration Requirement
 
-> [!abstract] Each model uses a SUBSET of the full chain
+> [!tip] The Integration Principle
 >
-> | Model | Artifacts Used (by #) | What's Different |
-> |-------|----------------------|-----------------|
-> | **Research** | #1-3 (requirements) + #4-5 (ADR + findings) | No code artifacts. Findings doc instead of full tech spec. |
-> | **Bug Fix** | #1 (as bug analysis) + #14, #17 (fix + wiring) + #18-19 (regression test) | No design docs. No scaffold. Fix in existing files. |
-> | **Integration** | #9-11 (bridge types + stubs) + #14, #16-17 (bridge + wiring) + #18-19 (tests) | No document/design — uses epic's design docs. Bridge pattern required. |
-> | **Hotfix** | #14, #17 (direct fix) + #18-19 (regression test) | Minimal. Problem and solution already known. |
-> | **Refactor** | #1 (as refactor plan) + #9 (new types) + #14, #17 (restructure) + #18-19 (behavior unchanged) | No design. Document maps current→target structure. |
-> | **Documentation** | Wiki page only | No code artifacts at all. |
-> | **Knowledge Evolution** | Wiki page only | Source inventory + distilled page. No code. |
+> Every implementation should modify at least one EXISTING file to import and use the new code. This prevents orphaned code — modules that exist but nothing calls them. The specific mechanism varies:
+>
+> | Project Type | How Integration Manifests |
+> |-------------|-------------------------|
+> | **CLI tool** | Command registry imports new command |
+> | **API backend** | Router imports new handler |
+> | **Agent platform** | Dispatch/execution loop calls new capability |
+> | **Library** | Index/barrel file re-exports new module |
+> | **Frontend** | Component tree renders new component |
 
-### Real Examples from OpenArms
+### Other Models — Chain Subsets
 
-> [!example]- T039: Network Rules Evaluation (Integration, 3 stages)
+> [!abstract] Each methodology model uses a SUBSET of the full chain
 >
-> **Scaffold:**
-> - `src/config/types.network-rules.ts` — NetworkScope, NetworkRule, SsrfPolicy types
-> - `src/config/types.network-rules.test.ts` — 5 it() blocks with placeholders
->
-> **Implement:**
-> - `src/config/network-rules-resolver.ts` — evaluateHostAccess(), matchHostname() logic
-> - `src/infra/net/network-rules-bridge.ts` — thin adapter (<80 LOC)
-> - `src/infra/net/fetch-guard.ts` — EXISTING file, added import + call
->
-> **Test:**
-> - `src/config/types.network-rules.test.ts` — real assertions for scope resolution, hostname matching
-> - Gate: `pnpm test -- src/config/types.network-rules.test.ts` → 0 failures
+> | Model | What's Used | What's Skipped |
+> |-------|------------|----------------|
+> | **Feature Dev** | Full chain (all stages) | Nothing — this IS the full chain |
+> | **Research** | Document + Design only | No code artifacts |
+> | **Bug Fix** | Document (as bug analysis) + Implement + Test | No design, no scaffold |
+> | **Integration** | Scaffold + Implement + Test | No document/design (uses epic's design) |
+> | **Hotfix** | Implement + Test only | Everything else — problem and solution known |
+> | **Refactor** | Document (current→target map) + Scaffold + Implement + Test | No design docs |
+> | **Documentation** | Document only (wiki page) | No code |
 
-> [!example]- T008: Methodology Zod Schema (Task, 3 stages)
+### Ecosystem Examples
+
+> [!example] Validated Implementations
 >
-> **Scaffold:**
-> - `src/config/zod-schema.methodology.ts` — MethodologySchema, StageSchema, ModeSchema Zod objects
+> | Project | SDLC Level | Artifacts | Details |
+> |---------|-----------|-----------|---------|
+> | **OpenArms** | Default | 24-artifact chain | [[identity-profile\|OpenArms — Identity Profile]] — 93 tasks, 9 methodology versions, harness v2 |
+> | **OpenFleet** | Full | Estimated 40+ (orchestrator + 10 agents) | Multi-agent dispatch adds contribution gating, tier-based context, standing orders |
 >
-> **Implement:**
-> - `src/config/zod-schema.methodology.ts` — filled with real validation logic
-> - Config loader modified to use the schema
->
-> **Test:**
-> - Schema validation tests with valid and invalid configs
-> - Gate: 0 failures
+> These are EXAMPLES at specific SDLC levels. Your project will have its own artifact count based on its identity.
 
 ### How This Connects — Navigate From Here
 
@@ -212,8 +133,11 @@ Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, Op
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **What is my identity?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
+> | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
+> | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
+> | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
@@ -223,6 +147,7 @@ Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, Op
 - BUILDS ON: [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
 - RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
@@ -232,6 +157,7 @@ Complete artifact chain resolution for TypeScript/Node.js projects (OpenArms, Op
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[model-methodology|Model — Methodology]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
 [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]

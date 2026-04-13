@@ -243,5 +243,8 @@ The most complex model. 5 stages, multiple artifacts per stage, rich dependency 
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
 [[model-composition-rules|Model Composition Rules]]
+[[identity-profile|OpenArms — Identity Profile]]
+[[identity-profile|OpenFleet — Identity Profile]]
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[identity-profile|Research Wiki — Identity Profile]]
 [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
