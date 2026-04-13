@@ -276,11 +276,13 @@ Systematic identification of gaps between what the methodology standards initiat
 
 ## Open Questions
 
-> [!question] Should domain profiles be defined in the wiki (authoritative) or in each consumer project (local)? (Requires: design decision during Epic B)
+> [!question] ~~Should domain profiles be defined in the wiki (authoritative) or in each consumer project (local)?~~
+> **RESOLVED:** Wiki is authoritative, projects override. wiki/config/domain-profiles/ defines generics, projects extend with their own. (Requires: design decision during Epic B)
 
 > [!question] What is the minimum enforcement infrastructure for a project that doesn't have a harness like OpenArms? (Requires: analysis during Epic C — hooks + CLAUDE.md may be sufficient without scripts)
 
-> [!question] Should annotated exemplars be inline in the exemplar page or in a separate companion document? (Requires: design decision during Epic D)
+> [!question] ~~Should annotated exemplars be inline in the exemplar page or in a separate companion document?~~
+> **RESOLVED:** Inline. Already implemented across all 22 standards pages. The exemplar section lives within the standards page. (Requires: design decision during Epic D)
 
 > [!question] How do we handle methodology evolution — when the wiki updates its methodology, how do consumer projects get notified and updated? (Requires: design decision during Epic B — relates to export/sync)
 

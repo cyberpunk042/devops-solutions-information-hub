@@ -120,7 +120,8 @@ OpenArms has distilled 18 lesson files + 4 findings docs in `wiki/domains/learni
 > [!question] How should sub-agent behavioral rules be enforced?
 > Sub-agents don't inherit CLAUDE.md. Instructions in spawn prompts are soft constraints (67% inclusion, 50% compliance). OpenArms recommends: trustless verification (Option 3). OpenFleet injects rules per-role but same pattern-failure applies.
 
-> [!question] Should CLAUDE.md be split per cognitive context?
+> [!question] ~~Should CLAUDE.md be split per cognitive context?~~
+> **RESOLVED:** No split — mark sections. 5 contexts read one file. Splitting creates 5 files to maintain. Mark with comments instead. See model-context-engineering.
 > Five contexts reading one file creates misleading rules. Fix: shared rules in CLAUDE.md, context-specific rules in skills/commands. Needs design work — which rules are shared vs context-specific?
 
 ### How This Connects — Navigate From Here

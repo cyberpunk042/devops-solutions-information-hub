@@ -176,7 +176,8 @@ When an AI agent in OpenArms, OpenFleet, or AICP needs methodology guidance:
 
 ## Open Questions
 
-> [!question] Should key methodology pages have a standardized "AI Quick Start" callout block at the top? (5-10 lines telling the AI: what this page is for, when to read it, what to do after reading it)
+> [!question] ~~Should key methodology pages have a standardized "AI Quick Start" callout block at the top?~~
+> **RESOLVED:** Yes. Already implemented on model-methodology.md and domain chain pages. Format: > [!tip] AI Quick Start with 4-5 actionable steps. (5-10 lines telling the AI: what this page is for, when to read it, what to do after reading it)
 
 > [!question] Should the MCP server expose a "methodology guide" tool that returns the right pages based on what the agent is about to do? (e.g., `wiki_methodology_guide --task-type bug --stage document` returns the relevant chain + standards + lessons)
 

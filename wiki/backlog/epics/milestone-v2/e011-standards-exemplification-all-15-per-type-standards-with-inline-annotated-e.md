@@ -143,10 +143,12 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 
 ## Open Questions
 
-> [!question] Should the annotation format be standardized?
+> [!question] ~~Should the annotation format be standardized?~~
+> **RESOLVED:** Yes. Format: > [!example] callout with numbered quality aspects + improvement note. Already consistent across 22 pages.
 > Current format: `> [!example]- Full Walkthrough — Why Each Section Works` with nested annotation points. Should all 15 use this exact format, or adapt per type? Recommendation: same structural format, content adapts per type.
 
-> [!question] Should exemplars be the BEST page of that type, or a TYPICAL good page?
+> [!question] ~~Should exemplars be the BEST page of that type, or a TYPICAL good page?~~
+> **RESOLVED:** Best available page. The exemplar demonstrates the standard at its highest, with honest "What could still improve" notes.
 > Best = aspirational ("this is the gold standard"). Typical = achievable ("this is what good normally looks like"). Recommendation: best — standards should RAISE the bar, not describe the average.
 
 > [!question] What about the new `principle` and `milestone` types?

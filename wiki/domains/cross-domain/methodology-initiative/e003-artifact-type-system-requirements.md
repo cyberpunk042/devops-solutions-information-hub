@@ -255,11 +255,13 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 
 ## Open Questions
 
-> [!question] Should methodology document types (requirements spec, ADR, operations plan) be new wiki page types or a new category outside the wiki schema? (Requires: design decision — are these wiki-managed or project-local?)
+> [!question] ~~Should methodology document types (requirements spec, ADR, operations plan) be new wiki page types or a new category outside the wiki schema?~~
+> **RESOLVED:** Use existing wiki types (concept, reference, decision, operations-plan) with methodology templates from wiki/config/templates/methodology/. No schema bloat. (Requires: design decision — are these wiki-managed or project-local?)
 
 > [!question] How granular should domain profile overrides be? Per-artifact-type? Per-stage? Per-model? (Requires: design — balance expressiveness vs complexity)
 
-> [!question] Should the artifact chain config be inside methodology.yaml or a separate artifact-chains.yaml? (Requires: design — single file vs modular config)
+> [!question] ~~Should the artifact chain config be inside methodology.yaml or a separate artifact-chains.yaml?~~
+> **RESOLVED:** Inside methodology.yaml. Artifact chains are per-model — each model defines its stages and artifacts. Separating creates sync problems. (Requires: design — single file vs modular config)
 
 > [!question] How do we handle artifact chains for composed models (SFIF nesting Feature Development)? Flatten or preserve nesting? (Requires: design with examples)
 

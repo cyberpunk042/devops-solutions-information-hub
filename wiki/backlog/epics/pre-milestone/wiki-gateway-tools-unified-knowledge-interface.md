@@ -108,13 +108,15 @@ Build a unified Python interface that serves humans, AI agents, and MCP connecti
 
 ## Open Questions
 
-> [!question] Should the gateway be a separate Python module or extend pipeline.py?
+> [!question] ~~Should the gateway be a separate Python module or extend pipeline.py?~~
+> **RESOLVED:** Separate. Already implemented as tools/gateway.py (1,200+ lines). Different concern from pipeline orchestration.
 > pipeline.py is already 800+ lines. A separate tools/gateway.py (or tools/gateway/ package) keeps concerns clean. But it needs access to the same utilities (common.py, manifest, etc.).
 
 > [!question] How does location mapping memory work across git?
 > When a page moves, the mapping needs to persist. Options: JSON file in wiki/config/, git-tracked. Or: redirect pages (like HTTP 301). Or: both — mapping for programmatic access, redirect page for human/agent navigation.
 
-> [!question] Should write-back (agent contributions) require approval or auto-merge?
+> [!question] ~~Should write-back (agent contributions) require approval or auto-merge?~~
+> **RESOLVED:** Trust-tier-gated per Goldilocks. Lightweight: auto-merge to raw/notes/. Capable: auto-merge with validation. Expert: auto-merge anywhere. Details TBD.
 > Options: auto-merge to raw/notes/ (low risk), require operator approval for wiki/ pages (higher quality gate), or tiered — remarks auto-merge, lessons need review.
 
 > [!question] How do we handle factory reset for projects that aren't the research wiki?

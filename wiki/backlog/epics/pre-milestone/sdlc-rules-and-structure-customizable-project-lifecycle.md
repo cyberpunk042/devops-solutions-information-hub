@@ -114,7 +114,8 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 
 ## Open Questions
 
-> [!question] Should SDLC chains be YAML configs or wiki pages?
+> [!question] ~~Should SDLC chains be YAML configs or wiki pages?~~
+> **RESOLVED:** Both. Already implemented. YAML for policy config, wiki page for explanation.
 > YAML = machine-readable, composable, validatable. Wiki pages = human-readable, discoverable. Both? Config for machines, wiki page explaining the config for humans?
 
 > [!question] How do phase transitions trigger chain upgrades?
