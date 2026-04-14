@@ -323,6 +323,7 @@ Examples:
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
+[[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]

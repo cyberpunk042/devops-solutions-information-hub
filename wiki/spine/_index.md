@@ -98,6 +98,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Learning Path Page Standards](standards/learning-path-page-standards.md) — Standards for learning path pages — curated sequences that guide a reader through a topic in a specific order
 - [Lesson Page Standards](standards/lesson-page-standards.md) — Standards for lesson pages — actionable learnings distilled from convergent evidence across multiple sources
 - [Claude Code Standards — What Good Agent Configuration Looks Like](standards/model-standards/model-claude-code-standards.md) — This page defines the quality bar for CLAUDE CODE CONFIGURATION
+- [Context Engineering Standards — What Good Structured Context Looks Like](standards/model-standards/model-context-engineering-standards.md) — This page defines the quality bar for CONTEXT ENGINEERING — the discipline of designing what information reaches an A...
 - [Evolution Standards — What Good Knowledge Promotion Looks Like](standards/model-standards/model-knowledge-evolution-standards.md) — This page defines the quality bar for KNOWLEDGE EVOLUTION
 - [LLM Wiki Standards — What Good Looks Like](standards/model-standards/model-llm-wiki-standards.md) — This page defines the quality bar for every page type in the LLM Wiki model
 - [Methodology Standards — What Good Execution Looks Like](standards/model-standards/model-methodology-standards.md) — This page defines the quality bar for METHODOLOGY EXECUTION

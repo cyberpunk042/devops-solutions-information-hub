@@ -45,13 +45,13 @@ This is the entry point for all named models in the wiki. A model is a coherent 
 | 9 | [[model-mcp-cli-integration|Model — MCP and CLI Integration]] | — | growing | Tool integration |
 | 10 | [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]] | — | growing | Agent config patterns |
 | 11 | [[model-second-brain|Model — Second Brain]] | — | growing | PKM theory |
-| 12 | [[model-context-engineering|Model — Context Engineering]] | — | growing | Structured context |
+| 12 | [[model-context-engineering|Model — Context Engineering]] | [[model-context-engineering-standards|Context Engineering Standards]] | growing | Structured context |
 | 13 | [[model-ecosystem|Model — Ecosystem Architecture]] | — | growing | Project topology |
 | 14 | [[model-automation-pipelines|Model — Automation and Pipelines]] | — | growing | Pipeline orchestration |
 | 15 | [[model-notebooklm|Model — NotebookLM]] | — | growing | Research tooling |
 | 16 | [[model-local-ai|Model — Local AI ($0 Target)]] | — | growing | Cost reduction |
 
-**Status:** All 16 models have standard sections (Key Pages, Lessons Learned, State of Knowledge, How to Adopt). 7 have companion standards pages with annotated exemplars. All at growing maturity — promotions gated by operator.
+**Status:** All 16 models have standard sections (Key Pages, Lessons Learned, State of Knowledge, How to Adopt). 8 have companion standards pages with annotated exemplars. All at growing maturity — promotions gated by operator.
 
 ## The Super-Model
 

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-14T00:20:56.715634+00:00",
+  "generated": "2026-04-14T00:26:46.890018+00:00",
   "stats": {
-    "pages": 297,
+    "pages": 298,
     "domains": 9,
     "sources": 28,
     "comparisons": 5,
-    "relationships": 1982,
+    "relationships": 1988,
     "tags_unique": 854,
     "layers": {
       "3": 4,
@@ -14,10 +14,10 @@
       "4": 40,
       "5": 18,
       "1": 24,
-      "spine": 61
+      "spine": 62
     },
     "maturity": {
-      "growing": 254
+      "growing": 255
     }
   },
   "pages": [
@@ -366,7 +366,7 @@
       "title": "E015 \u2014 Gateway Tools Completion \u2014 All Requirements Implemented with MCP Integration",
       "type": "epic",
       "domain": "backlog",
-      "status": "draft",
+      "status": "active",
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
@@ -18647,6 +18647,73 @@
       ]
     },
     {
+      "path": "spine/standards/model-standards/model-context-engineering-standards.md",
+      "slug": "spine/standards/model-standards/model-context-engineering-standards",
+      "title": "Context Engineering Standards \u2014 What Good Structured Context Looks Like",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-13",
+      "updated": "2026-04-13",
+      "tags": [
+        "standards",
+        "context-engineering",
+        "proto-programming",
+        "structured-context",
+        "quality",
+        "gold-standard",
+        "anti-patterns"
+      ],
+      "sources": [
+        {
+          "id": "context-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-context-engineering.md"
+        },
+        {
+          "id": "proto-programming-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/structured-context-is-proto-programming-for-ai-agents.md"
+        },
+        {
+          "id": "validation-matrix",
+          "type": "observation",
+          "file": "raw/articles/openfleet-validation-matrix-samples.md",
+          "description": "29 structured context scenarios (2,444 lines)"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Claude Code Standards \u2014 What Good Agent Configuration Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
       "path": "spine/standards/model-standards/model-knowledge-evolution-standards.md",
       "slug": "spine/standards/model-standards/model-knowledge-evolution-standards",
       "title": "Evolution Standards \u2014 What Good Knowledge Promotion Looks Like",
@@ -19466,8 +19533,8 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 134,
-      "relationship_count": 907
+      "page_count": 135,
+      "relationship_count": 913
     },
     "ai-agents": {
       "page_count": 49,
@@ -19593,6 +19660,7 @@
       "spine/standards/learning-path-page-standards",
       "spine/standards/lesson-page-standards",
       "spine/standards/model-standards/model-claude-code-standards",
+      "spine/standards/model-standards/model-context-engineering-standards",
       "spine/standards/model-standards/model-knowledge-evolution-standards",
       "spine/standards/model-standards/model-llm-wiki-standards",
       "spine/standards/model-standards/model-methodology-standards",
@@ -19648,6 +19716,7 @@
       "spine/standards/learning-path-page-standards",
       "spine/standards/lesson-page-standards",
       "spine/standards/model-standards/model-claude-code-standards",
+      "spine/standards/model-standards/model-context-engineering-standards",
       "spine/standards/model-standards/model-llm-wiki-standards",
       "spine/standards/model-standards/model-methodology-standards",
       "spine/standards/model-standards/model-quality-failure-prevention-standards",
@@ -19670,7 +19739,8 @@
       "backlog/epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
-      "spine/models/depth/model-context-engineering"
+      "spine/models/depth/model-context-engineering",
+      "spine/standards/model-standards/model-context-engineering-standards"
     ],
     "enrichment": [
       "backlog/epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples"
@@ -20949,7 +21019,8 @@
       "domains/ai-agents/claude-code/claude-code-context-management",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
-      "spine/models/depth/model-context-engineering"
+      "spine/models/depth/model-context-engineering",
+      "spine/standards/model-standards/model-context-engineering-standards"
     ],
     "markdown": [
       "domains/ai-agents/claude-code/claude-code-skills",
@@ -22289,7 +22360,8 @@
     "structured-context": [
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
-      "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection"
+      "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
+      "spine/standards/model-standards/model-context-engineering-standards"
     ],
     "magic-tricks": [
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents"
@@ -23393,6 +23465,7 @@
     ],
     "gold-standard": [
       "spine/standards/model-standards/model-claude-code-standards",
+      "spine/standards/model-standards/model-context-engineering-standards",
       "spine/standards/model-standards/model-knowledge-evolution-standards",
       "spine/standards/model-standards/model-llm-wiki-standards",
       "spine/standards/model-standards/model-methodology-standards",
@@ -23402,6 +23475,7 @@
     ],
     "anti-patterns": [
       "spine/standards/model-standards/model-claude-code-standards",
+      "spine/standards/model-standards/model-context-engineering-standards",
       "spine/standards/model-standards/model-knowledge-evolution-standards",
       "spine/standards/model-standards/model-methodology-standards",
       "spine/standards/model-standards/model-quality-failure-prevention-standards",

@@ -281,5 +281,6 @@ What all four levels working together looks like.
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]

@@ -5,12 +5,12 @@ aliases:
   - "E017 — Context Engineering Framework: Formalized as Model with Standards"
 type: epic
 domain: backlog
-status: draft
+status: active
 priority: P1
 task_type: epic
-current_stage: document
-readiness: 60
-progress: 55
+current_stage: implement
+readiness: 90
+progress: 85
 stages_completed:
 artifacts:
 confidence: high

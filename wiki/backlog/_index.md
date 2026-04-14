@@ -29,7 +29,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E012 | [E012 — Template Enrichment — Rich Proto-Programming Examples](epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples.md) | P0 | active | 90 |
 | E013 | [E013 — Super-Model Evolution — v2.0 with Sub-Super-Models](epics/milestone-v2/e013-super-model-evolution-v2-0-with-sub-super-models.md) | P0 | draft | 70 |
 | E014 | [E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow](epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow.md) | P0 | active | 85 |
-| E015 | [E015 — Gateway Tools Completion — All Requirements Implemented with MCP Integration](epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration.md) | P1 | draft | 65 |
+| E015 | [E015 — Gateway Tools Completion — All Requirements Implemented with MCP Integration](epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration.md) | P1 | active | 85 |
 | E016 | [E016 — Integration Chain Proof — End to End with OpenArms](epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms.md) | P1 | draft | 70 |
 | E017 | [E017 — Context Engineering Framework — Formalized as Model with Standards](epics/milestone-v2/e017-context-engineering-framework-formalized-as-model-with-standards.md) | P1 | draft | 60 |
 | E018 | [E018 — Global Standards Implementation — Actual Adherence Not Just Reference](epics/milestone-v2/e018-global-standards-implementation-actual-adherence-not-just-reference.md) | P2 | draft | 5 |

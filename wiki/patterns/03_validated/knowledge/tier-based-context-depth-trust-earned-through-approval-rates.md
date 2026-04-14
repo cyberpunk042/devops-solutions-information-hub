@@ -145,6 +145,7 @@ The mechanism: an AI model's approval rate is tracked per task type across rolli
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[model-context-engineering|Model — Context Engineering]]
 [[identity-profile|OpenFleet — Identity Profile]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]

@@ -153,6 +153,69 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth]] | pattern | Expert/capable/lightweight tier system |
 | [[validation-matrix-test-suite-for-context-injection|Validation Matrix]] | pattern | 29-scenario test suite for context injection |
 | [[model-markdown-as-iac|Model — Markdown as IaC]] | model | How markdown files configure agent behavior |
+| [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]] | standards | What good injections look like — gold standards + anti-patterns |
+
+### Worked Examples — Context Engineering in Practice
+
+> [!example]- Example 1: CLAUDE.md Identity Profile — Three Levels in Action
+>
+> **Prompt engineering (Level 1):** "This project uses TypeScript and should follow stage gates."
+> → Agent knows the words but compliance is ~25%. "Should" is an escape hatch.
+>
+> **Context engineering (Level 2):** The Identity Profile table is placed BEFORE the rules section, so the agent processes identity before constraints. The domain field is listed first (most specific), execution mode last (requires inference).
+> → Right information in right order improves compliance to ~60%.
+>
+> **Structural engineering (Level 3):**
+> ```
+> | Dimension | Value |
+> |-----------|-------|
+> | **Domain** | typescript |
+> | **Phase** | production |
+> ```
+> → Table format. Bold dimension names. Each row narrows one behavioral axis. Agent processes the STRUCTURE (table = parameters, bold = field name, value = constraint) before the content. Compliance ~90%+.
+>
+> **The insight:** Same information, three delivery formats, 4x compliance difference. The structure IS the engineering.
+
+> [!example]- Example 2: Stage Skill Injection — Per-Stage Context
+>
+> **What gets injected at the DOCUMENT stage:**
+> ```markdown
+> ### DOCUMENT STAGE — Rules for This Stage
+>
+> **MUST:**
+> - Read all existing wiki pages in the domain before creating new ones
+> - Log operator directives verbatim in raw/notes/
+> - Run `pipeline post` after every wiki change
+>
+> **MUST NOT:**
+> - Write implementation code
+> - Modify tool files
+> - Skip to scaffold without completing research
+>
+> **RECOMMENDED TOOLS:** wiki_search, wiki_read_page, wiki_status
+> **BLOCKED TOOLS:** (none at document stage)
+> **EXIT GATE:** `pipeline post` returns 0 errors
+> ```
+>
+> **Why this works:** MUST/MUST NOT format is binary — no interpretation. Tool recommendations guide without restricting. The exit gate is a concrete command that returns a concrete result. The agent doesn't decide when the stage is done; the gate command does.
+>
+> **What changes per tier:** Expert gets the full block above. Lightweight gets: "Stage: document. MUST: research before writing. EXIT: pipeline post." Same structure, 10x less content.
+
+> [!example]- Example 3: Post-Compact Hook — Surviving Context Reset
+>
+> **The problem:** After compaction, the agent loses: which stage it's in, what corrections were made, which files were produced, what the confirmed plan was. All prose context is gone.
+>
+> **The hook (PostCompact event):**
+> ```
+> 1. Read task frontmatter → rebuild: current_stage, readiness, progress, artifacts
+> 2. Read stage-files.log → rebuild: prior stage artifacts (file paths)
+> 3. Read confirmed-plan.md → rebuild: what was approved
+> 4. Inject via additionalContext → agent receives full state
+> ```
+>
+> **Why this works:** Every piece of state has a FILE SOURCE. The hook reads files (which survive compaction) and reconstructs the context that prose couldn't preserve. This is structural engineering at its purest — designing state to be reconstructable from persistent storage.
+>
+> **The invariant:** If a piece of context can't be rebuilt from files, it will be lost after compaction. Design accordingly: write state to files, not to conversation.
 
 ### How to Adopt
 
@@ -217,3 +280,4 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
