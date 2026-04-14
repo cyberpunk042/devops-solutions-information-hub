@@ -432,7 +432,7 @@ When adding a new model: create the page via the model-builder skill (`/build-mo
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 [[never-skip-stages-even-when-told-to-continue|Never Skip Stages Even When Told to Continue]]
 [[E004-portable-methodology-engine|Portable Methodology Engine]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
 [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]

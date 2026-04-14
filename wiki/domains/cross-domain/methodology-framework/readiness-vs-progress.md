@@ -186,17 +186,17 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 > **RESOLVED:** Two separate fields, both 0-100. OpenFleet evidence: `task_readiness` (0-99, gate at 99) + `task_progress` (0-100, 70=done claim, 90=reviewed, 100=delivered). The 99 gate is a human confirmation gate, not a numeric threshold. A single collapsed field hides whether the problem is definition (low readiness) or execution (low progress). See [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]].
 
 > [!question] How does readiness propagate for milestones? **PARTIALLY RESOLVED**
-> Milestone readiness = AVERAGE of child epic readiness (same rule as epic→task). Simple average, not weighted. The Goldilocks principle applies: for a Simplified chain milestone, all epics crossing 50% readiness may be sufficient to start work. For a Full chain milestone, all epics must cross 99%. The THRESHOLD adapts per chain, but the PROPAGATION is always average. Remaining: should any epic at 0% block the milestone regardless of average?
+> Milestone readiness = AVERAGE of child epic readiness (same rule as epic→task). Simple average, not weighted. The Goldilocks principle applies: for a Simplified profile milestone, all epics crossing 50% readiness may be sufficient to start work. For a Full profile milestone, all epics must cross 99%. The THRESHOLD adapts per profile, but the PROPAGATION is always average. Remaining: should any epic at 0% block the milestone regardless of average?
 
 > [!question] ~~What is the minimum readiness threshold for dispatch?~~
-> **RESOLVED:** Per chain level. Simplified: 30 (operator judgment). Default: 80. Full: 99 (PO confirms). Defined in SDLC chain configs.
-> OpenFleet gates at 99. Is that too high for simplified chain projects? Should the gate be configurable per SDLC chain? (Requires: data from different project types.)
+> **RESOLVED:** Per profile level. Simplified: 30 (operator judgment). Default: 80. Full: 99 (PO confirms). Defined in SDLC profile configs.
+> OpenFleet gates at 99. Is that too high for simplified profile projects? Should the gate be configurable per SDLC profile? (Requires: data from different project types.)
 
 ## Relationships
 
 - BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 - BUILDS ON: [[stage-gate-methodology|Stage-Gate Methodology]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 - RELATES TO: [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
 - RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
@@ -207,7 +207,7 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 
 [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[stage-gate-methodology|Stage-Gate Methodology]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]

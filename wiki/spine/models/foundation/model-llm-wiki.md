@@ -487,7 +487,7 @@ From building with this model — validated experience:
 ## Open Questions
 
 > [!question] ~~What is the minimum viable wiki?~~
-> **RESOLVED:** Depends on identity profile. Solo + POC + micro: raw/ + wiki/domains/ + 1 template is enough. The simplified SDLC chain defines the minimal process. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for the full identity-to-chain routing. (Remaining: test empirically on a fresh project — E016)
+> **RESOLVED:** Depends on identity profile. Solo + POC + micro: raw/ + wiki/domains/ + 1 template is enough. The simplified SDLC profile defines the minimal process. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for the full identity-to-profile routing. (Remaining: test empirically on a fresh project — E016)
 
 > [!question] ~~How do multiple agents co-author a wiki without conflicts?~~
 > **RESOLVED:** File-level partitioning + git merge + harness-resolved conflicts. Each agent works different files. OpenFleet contribution gating prevents overlap.

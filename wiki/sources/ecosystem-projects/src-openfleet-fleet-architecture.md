@@ -114,7 +114,7 @@ Skip logic: subtask, blocker, concern, spike types skip contributions entirely.
 
 > [!question] ~~Should wiki offer OpenFleet stage names as alternative configuration?~~
 > **RESOLVED:** No. Wiki defines GENERIC stage names. OpenFleet names are their instance. Projects choose their own labels. Methodology defines stages, not labels.
-> conversation/analysis/investigation/reasoning/work vs document/design/scaffold/implement/test. Both valid. Configurable per SDLC chain?
+> conversation/analysis/investigation/reasoning/work vs document/design/scaffold/implement/test. Both valid. Configurable per SDLC profile?
 
 ### How This Connects — Navigate From Here
 

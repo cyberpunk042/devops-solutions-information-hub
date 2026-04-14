@@ -60,7 +60,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **Module** | — (inherits from epic) | Scope clarification if module boundaries are unclear | All initiation artifacts |
 > | **Task** | — (inherits from epic/module) | — | All initiation artifacts |
 
-### SDLC Chain Level — What Applies Where
+### SDLC Profile Level — What Applies Where
 
 > [!abstract] Not all chains require all artifacts
 >
@@ -70,7 +70,7 @@ Complete guide to the artifacts produced BEFORE methodology execution begins —
 > | **Default** (MVP-Prod, 5 stages) | Operator directive + WBS (epic breakdown) | Risk/gap analysis, stakeholder list | Formal charter, business case, feasibility study |
 > | **Full** (Production fleet, all stages) | Formal charter + business case + stakeholder list + full WBS + risk register | Feasibility study, CONOPS, resource plan | — |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for profile details.
 
 ### Initiation Artifact Standards
 

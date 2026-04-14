@@ -44,7 +44,7 @@ The second brain's understanding of devops-control-plane as an ecosystem member.
 > | **Scale** | Medium-Large (29 service packages, 19 CLI domain packages) | Broad surface area: vault, content, pages, git, backup, secrets, audit, k8s, terraform, docker |
 > | **PM Level** | L1 (CLAUDE.md directives + rules) | 24 mandatory rules in .agent/rules/, workflow routing checklists |
 > | **Trust Tier** | Operator-supervised | Solo execution with heavy rule enforcement |
-> | **SDLC Chain** | Simplified | Lighter process — workflow checklists over stage gates |
+> | **SDLC Profile** | Simplified | Lighter process — workflow checklists over stage gates |
 
 ## Execution Mode Detail
 

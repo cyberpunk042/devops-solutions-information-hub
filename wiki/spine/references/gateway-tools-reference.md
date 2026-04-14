@@ -46,8 +46,8 @@ Complete reference for the wiki gateway — the unified Python interface serving
 > | `query --models` | Query | List all 9 methodology models with stages |
 > | `query --model X --full-chain` | Query | Full artifact chain for a model |
 > | `query --stage X [--domain Y]` | Query | Stage requirements + domain overrides. Auto-detects domain. |
-> | `query --chains` | Query | List all SDLC chains (simplified/default/full) |
-> | `query --chain X` | Query | Chain details: stages, models, readiness gate, enforcement |
+> | `query --profiles` | Query | List all SDLC profiles (simplified/default/full) |
+> | `query --profile X` | Query | Profile details: stages, models, readiness gate, enforcement |
 > | `query --field X` | Query | Explain a frontmatter field (meaning, valid values, automation) |
 > | `query --backlog` | Query | Backlog status: epics with readiness/progress, impediments |
 > | `query --lessons` | Query | Lessons grouped by maturity folder (inbox through principles) |

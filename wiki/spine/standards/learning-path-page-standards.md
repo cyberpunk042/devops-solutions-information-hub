@@ -65,7 +65,7 @@ Standards for learning path pages — curated sequences that guide a reader thro
 >
 > **5. Per-page annotations** — "Start here. Defines what a methodology model IS" — not just a `[[wikilink]]` but WHY to read this page NOW and what it enables for the NEXT page. ← Annotations create forward momentum. Each page annotation answers "why this before that?" — the sequencing rationale is explicit.
 >
-> **6. Testable outcomes** — "After completing this path you should be able to: select the correct SDLC chain based on phase and scale." Verifiable, not vague. ← The reader can self-assess completion. "Understand methodology" is untestable; "select the correct chain" is testable.
+> **6. Testable outcomes** — "After completing this path you should be able to: select the correct SDLC profile based on phase and scale." Verifiable, not vague. ← The reader can self-assess completion. "Understand methodology" is untestable; "select the correct profile" is testable.
 >
 > **What could still improve:** Estimated time per part (not just page count), difficulty rating per section, "If you already know X, skip to part N" fast-track guidance.
 

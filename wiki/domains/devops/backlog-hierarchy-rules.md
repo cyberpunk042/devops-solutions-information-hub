@@ -348,7 +348,7 @@ Not all blockers are the same. An impediment has a TYPE that determines the corr
 > | **dependency** | Waiting on another task, module, or epic to complete first | Sequence work correctly, or parallelize if possible | E005 needs E003's artifact definitions |
 > | **decision** | A design question must be resolved before proceeding | Create a decision page, brainstorm with operator | Should templates be self-contained or reference-based? |
 > | **environment** | Infrastructure, access, or setup issue | Fix with tooling (setup scripts, IaC) — never manual | Missing API key, broken CI, wrong Node version |
-> | **clarification** | Requirements are ambiguous, operator input needed | File a concern/question, pause until answered | "Does 'simplified chain' mean 2 stages or 3?" |
+> | **clarification** | Requirements are ambiguous, operator input needed | File a concern/question, pause until answered | "Does 'simplified profile' mean 2 stages or 3?" |
 > | **scope** | Work is larger than estimated, needs re-decomposition | Create new tasks/modules to cover the gap | Module estimated at 3 tasks actually needs 8 |
 > | **external** | Waiting on something outside the project | Track and check periodically, work on other items | Hardware upgrade (19GB VRAM), third-party API availability |
 > | **quality** | Prior work doesn't meet the quality bar, needs rework | Rework task using rework methodology model | Standards page is "crap" — needs restart |
@@ -428,7 +428,7 @@ MILESTONE (delivery target)
 > | Research Wiki | L1 (Wiki) | Milestone → Epic → Task | Wiki backlog only |
 > | AICP / devops-control-plane | L1 (Wiki) | Epic → Task | Wiki backlog (lightweight) |
 >
-> The SDLC chain level determines how strictly the hierarchy is enforced — see [[sdlc-customization-framework|SDLC Customization Framework]].
+> The SDLC profile level determines how strictly the hierarchy is enforced — see [[sdlc-customization-framework|SDLC Customization Framework]].
 
 ### How This Connects — Navigate From Here
 

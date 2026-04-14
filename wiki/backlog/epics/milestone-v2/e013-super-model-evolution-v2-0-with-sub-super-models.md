@@ -46,21 +46,21 @@ Evolve the super-model from a single dashboard page (currently v1.3) into a syst
 
 - Root super-model (v2.0) is a clean DASHBOARD — shows the system, links to sub-super-models, provides adoption tiers. Not a 200-line monolith.
 - Each sub-super-model GOVERNS its domain: defines what's in it, what the standards are, how to navigate within it, what models compose it.
-- The Goldilocks Protocol is a sub-super-model (not just a concept page) — it governs identity, chain selection, and adaptation.
+- The Goldilocks Protocol is a sub-super-model (not just a concept page) — it governs identity, SDLC profile selection, and adaptation.
 - The Enforcement Hierarchy is a sub-super-model — governs infrastructure, hooks, harness, immune system, compliance.
 - The Knowledge Architecture is a sub-super-model — governs layers (L0-L6), maturity folders, evolution pipeline, principles.
 - The Work Management system is a sub-super-model — governs hierarchy (milestone→task), readiness/progress, PM levels, impediments.
-- The SDLC Framework is a sub-super-model — governs chains, phases, scale, global standards.
+- The SDLC Framework is a sub-super-model — governs profiles, phases, scale, global standards.
 - Each sub-super-model has its own: member models, member standards, member lessons/patterns, navigation guide.
 - The root super-model links to ALL sub-super-models with a "start here" routing table.
 
 ## Done When
 
 - [ ] Root super-model v2.0 — clean dashboard, routes to sub-super-models, substantial depth (≥150 lines)
-- [ ] Sub-Super-Model: Goldilocks Protocol — identity, chain selection, adaptation, flexibility
+- [ ] Sub-Super-Model: Goldilocks Protocol — identity, SDLC profile selection, adaptation, flexibility
 - [ ] Sub-Super-Model: Enforcement Hierarchy — hooks, harness, immune system, compliance, principles
 - [ ] Sub-Super-Model: Knowledge Architecture — layers, maturity, evolution, principles, lessons→patterns→decisions flow
-- [ ] Sub-Super-Model: Work Management — hierarchy, readiness/progress, PM levels, impediments, SDLC chains
+- [ ] Sub-Super-Model: Work Management — hierarchy, readiness/progress, PM levels, impediments, SDLC profiles
 - [ ] Sub-Super-Model: Integration & Ecosystem — dual-perspective, feedback loop, sister projects, gateway
 - [ ] Each sub-super-model has: member models table, member standards, navigation to related knowledge
 - [ ] Root super-model routing table: "I want to..." → go to sub-super-model X
@@ -122,7 +122,7 @@ Root Super-Model (v2.0) — dashboard + routing
 ├── Sub-SM: Work Management
 │   ├── Members: Backlog Hierarchy, Readiness/Progress, PM Levels, Impediments
 │   ├── Hierarchy: Milestone → Epic → Module → Task
-│   ├── SDLC Chains: simplified / default / full
+│   ├── SDLC Profiles: simplified / default / full
 │   └── Standards: Frontmatter Field Reference
 │
 └── Sub-SM: Integration & Ecosystem

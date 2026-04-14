@@ -138,7 +138,7 @@ Build a unified Python interface that serves humans, AI agents, and MCP connecti
 - IMPLEMENTS: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 - BUILDS ON: [[model-llm-wiki|Model — LLM Wiki]]
 - RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 - DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]]
 
@@ -147,7 +147,7 @@ Build a unified Python interface that serves humans, AI agents, and MCP connecti
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[model-llm-wiki|Model — LLM Wiki]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[E003-artifact-type-system|Artifact Type System]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]

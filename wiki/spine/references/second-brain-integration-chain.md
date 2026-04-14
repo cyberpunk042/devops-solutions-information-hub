@@ -21,7 +21,7 @@ tags: [operations-plan, integration, chain, second-brain, walkthrough]
 # Operations Plan — Second Brain Integration Chain — Complete Walkthrough
 ## Summary
 
-Complete step-by-step chain for integrating ANY project with the second brain. Covers: discovery → identity → chain selection → methodology adoption → standards integration → template usage → work loop → feedback. Each step has a command, expected output, and validation. A project following this chain goes from "I know nothing about the second brain" to "I'm fully integrated and feeding knowledge back."
+Complete step-by-step chain for integrating ANY project with the second brain. Covers: discovery → identity → SDLC profile selection → methodology adoption → standards integration → template usage → work loop → feedback. Each step has a command, expected output, and validation. A project following this chain goes from "I know nothing about the second brain" to "I'm fully integrated and feeding knowledge back."
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ Complete step-by-step chain for integrating ANY project with the second brain. C
 
 - **Action:** See the full structure of what's available
 - **Command:** `python3 -m tools.gateway navigate`
-- **Expected output:** Tree showing: Identity → SDLC Chains → Methodology Models → Stages → Enforcement → Principles → Tracking → Hierarchy → PM Levels → Tools
+- **Expected output:** Tree showing: Identity → SDLC Profiles → Methodology Models → Stages → Enforcement → Principles → Tracking → Hierarchy → PM Levels → Tools
 - **Validation:** Every branch shows a command to drill deeper
 
 ---
@@ -76,18 +76,18 @@ Complete step-by-step chain for integrating ANY project with the second brain. C
 | **Scale** | {{micro / small / medium / large / massive}} |
 | **PM Level** | {{L1 / L2 / L3}} |
 | **Trust Tier** | {{operator-supervised / trainee / standard / expert}} |
-| **SDLC Chain** | {{simplified / default / full}} |
+| **SDLC Profile** | {{simplified / default / full}} |
 | **Second Brain** | {{self / connected / none}} |
 ```
 - **Validation:** `python3 -m tools.gateway query --identity` shows your declared profile
 - **Guidance:** See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] for what each dimension means and how to choose
 
-### Step 5: Select Your SDLC Chain
+### Step 5: Select Your SDLC Profile
 
-- **Action:** Review chains and pick the right one
-- **Command:** `python3 -m tools.gateway query --chains` then `python3 -m tools.gateway query --chain default`
-- **Expected output:** Chain details: stages, models, readiness gate, enforcement level, upgrade triggers
-- **Validation:** Your declared chain in CLAUDE.md matches your phase × scale
+- **Action:** Review profiles and pick the right one
+- **Command:** `python3 -m tools.gateway query --profiles` then `python3 -m tools.gateway query --profile default`
+- **Expected output:** Profile details: stages, models, readiness gate, enforcement level, upgrade triggers
+- **Validation:** Your declared profile in CLAUDE.md matches your phase × scale
 - **Decision guide:**
   - POC + micro/small → simplified
   - MVP→Staging + small→medium → default (most projects)
@@ -211,7 +211,7 @@ Each step is independent. To undo:
 ## Completion Criteria
 
 - [ ] Identity profile declared in CLAUDE.md
-- [ ] SDLC chain selected and understood
+- [ ] SDLC profile selected and understood
 - [ ] At least one task completed following the stage sequence
 - [ ] At least one contribution back to the second brain
 - [ ] `gateway what-do-i-need` shows your declared identity (not "unknown")
@@ -235,7 +235,7 @@ Each step is independent. To undo:
 - BUILDS ON: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 - BUILDS ON: [[methodology-adoption-guide|Methodology Adoption Guide]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
 
 ## Backlinks
@@ -244,7 +244,7 @@ Each step is independent. To undo:
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-methodology|Model — Methodology]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
 [[e016-integration-chain-proof-end-to-end-with-openarms|E016 — Integration Chain Proof — End to End with OpenArms]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]

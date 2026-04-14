@@ -90,11 +90,11 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 - **Context7 integration**: Context7 is available as both MCP server and CLI+Skills. Per this decision, prefer the skill form unless cross-conversation discoverability is required.
 - **Future 1M context window**: As context windows expand, the token overhead argument weakens. This decision should be revisited when 1M context becomes standard — at that point, MCP-first may become the correct default due to consistency and discoverability advantages.
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a single-operator workflow where context window efficiency is the primary concern. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for a single-operator workflow where context window efficiency is the primary concern. At different profile levels:
 > - **Simplified chain:** CLI-only is sufficient — no MCP server needed when one person runs commands in a single project. Skills are optional overhead.
 > - **Full chain:** MCP becomes more attractive at fleet scale — agents across many projects benefit from always-available tool discovery without per-session skill loading. The context window overhead argument weakens as 1M+ context becomes standard.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

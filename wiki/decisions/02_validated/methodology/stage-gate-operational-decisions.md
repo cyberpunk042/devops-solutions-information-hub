@@ -83,11 +83,11 @@ All easy. These are interpretive guidelines for an existing system. None require
 - [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — resolves 4 of its open questions
 - [[spec-driven-development|Spec-Driven Development]] — resolves 2 of its open questions
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for solo execution with no harness — gates are advisory, enforced by CLAUDE.md protocol and one-commit-per-stage convention. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for solo execution with no harness — gates are advisory, enforced by CLAUDE.md protocol and one-commit-per-stage convention. At different profile levels:
 > - **Simplified chain:** Most operational questions vanish — there are no automated gates, no readiness computation, and no retroactive staging. The operator IS the gate.
 > - **Full chain:** Gates become automated and blocking (not advisory). Readiness is computed by the harness via filesystem artifact checks. Discovery tasks auto-split via the backlog API. Retroactive staging is rejected by the compliance checker.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

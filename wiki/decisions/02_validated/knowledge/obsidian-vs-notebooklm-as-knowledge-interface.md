@@ -85,11 +85,11 @@ The custom RAG alternative (Subsystem 3) is the likely long-term successor to bo
 - **NotebookLM rate limits**: The NotebookLM page notes "heavy automated usage triggers Google's rate limits." On-demand sync (not continuous automated sync) avoids this issue. The `--retry` flag in notebooklm-py handles transient failures.
 - **300-source limit**: NotebookLM notebooks support up to 300 sources. As the wiki grows past 300 pages, the mirror strategy may need to split into topic-scoped notebooks rather than a full-wiki notebook. This is a known scaling boundary, not a current blocker.
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a solo operator with a personal wiki (~297 pages) on WSL2. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for a solo operator with a personal wiki (~297 pages) on WSL2. At different profile levels:
 > - **Simplified chain:** Both tools may be overkill — a single Obsidian vault with no sync daemon may suffice for a small project.
 > - **Full chain:** Fleet agents would need programmatic interfaces (MCP/API) rather than GUI tools; NotebookLM's 300-source cap becomes a hard blocker, accelerating the custom RAG (Subsystem 3) timeline.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

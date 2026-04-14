@@ -9,7 +9,7 @@ This is the COMPREHENSIVE handoff for the longest and most productive session on
 The research wiki / second brain / information hub is becoming a COMPLETE SYSTEM that:
 
 1. **Knows what it is** — Goldilocks identity protocol. Every consumer answers 7 questions.
-2. **Adapts to context** — 3 SDLC chains (simplified/default/full). Right process for right context.
+2. **Adapts to context** — 3 SDLC profiles (simplified/default/full). Right process for right context.
 3. **Navigates from anywhere** — enter from Obsidian, CLI, MCP, any page. Reach any destination in ≤3 clicks.
 4. **Teaches by example** — models define systems. Standards show what good looks like with annotated exemplars. Templates ARE examples of rich usage.
 5. **Enforces when needed** — instructions (25%) → hooks (100%) → harness → immune system. Mindful enforcement with justified bypass.
@@ -86,7 +86,7 @@ These are SEPARATE things at SEPARATE layers. Do NOT conflate:
 | Models | 15 | 16 | +1 (Context Engineering) |
 | Sub-Super-Models (NEW) | 0 | 5 | +5 |
 | Gateway commands (NEW) | 0 | 17 | +17 |
-| SDLC chain configs (NEW) | 0 | 3 | +3 |
+| SDLC profile configs (NEW) | 0 | 3 | +3 |
 | Templates enriched | 0 | 24 | ALL |
 | Standards with exemplars | 3 | 15 | ALL |
 | Epics scaffolded | 0 | 12 | +12 |
@@ -131,7 +131,7 @@ These are SEPARATE things at SEPARATE layers. Do NOT conflate:
 - 4 concept pages (SDLC Framework, Readiness/Progress, Three PM Levels, Global Standards, Self-Identification)
 
 ### Configs & Tools
-- `wiki/config/sdlc-chains/simplified.yaml`, `default.yaml`, `full.yaml`
+- `wiki/config/sdlc-profiles/simplified.yaml`, `default.yaml`, `full.yaml`
 - `wiki/config/templates/milestone.md`, `principle.md` (NEW types)
 - `wiki/config/wiki-schema.yaml` — extended with milestone, principle, progress, impediment fields
 - `tools/gateway.py` — 1,200+ lines, 17 commands, auto-detection, dual-scope
@@ -235,7 +235,7 @@ devops-solutions-research-wiki/
 │   │   ├── methodology.yaml     ← 517 lines, 9 models
 │   │   ├── artifact-types.yaml  ← ~400 lines, 18 types + 3 classes
 │   │   ├── wiki-schema.yaml     ← Extended with milestone, principle, progress, impediment fields
-│   │   ├── sdlc-chains/         ← NEW: simplified.yaml, default.yaml, full.yaml
+│   │   ├── sdlc-profiles/       ← NEW: simplified.yaml, default.yaml, full.yaml
 │   │   ├── domain-profiles/     ← 3 profiles (typescript, python-wiki, infrastructure)
 │   │   └── templates/           ← 24 templates (all enriched with inline examples)
 │   ├── decisions/               ← 17 decisions
@@ -263,7 +263,7 @@ devops-solutions-research-wiki/
 │       ├── second-brain-integration-chain.md  ← 17-step operations plan
 │       ├── frontmatter-field-reference.md     ← Complete field documentation
 │       ├── methodology-system-map.md          ← Complete component lookup
-│       ├── methodology-adoption-guide.md      ← 4 tiers + SDLC chain selection
+│       ├── methodology-adoption-guide.md      ← 4 tiers + SDLC profile selection
 │       ├── model-methodology.md               ← 829 lines, the governing model
 │       ├── model-llm-wiki.md                  ← 548 lines, wiki architecture
 │       ├── model-context-engineering.md        ← 176 lines, NEW 16th model

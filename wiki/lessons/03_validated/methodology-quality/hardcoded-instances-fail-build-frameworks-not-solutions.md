@@ -117,9 +117,9 @@ The solution: design the framework FIRST (what are the extension points, what va
 > | Direction | Go To |
 > |-----------|-------|
 > | **How to build frameworks instead?** | [[methodology-framework|Methodology Framework]] — the META that defines how to define models |
-> | **What does the SDLC framework look like?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — three chains, not one hardcoded pipeline |
+> | **What does the SDLC framework look like?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] — three profiles, not one hardcoded pipeline |
 > | **How do global standards help?** | OpenAPI (define the interface, not the instance), DDD (bounded contexts as extension points), Strategy pattern (select at runtime, not compile-time) |
-> | **What is the Goldilocks approach?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile selects chain, chain selects process. Framework adapts; instances don't. |
+> | **What is the Goldilocks approach?** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — identity profile selects SDLC profile, profile selects process. Framework adapts; instances don't. |
 
 ## Relationships
 

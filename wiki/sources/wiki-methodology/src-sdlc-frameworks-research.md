@@ -58,17 +58,17 @@ Online research across 8 sources reveals three converging perspectives that vali
 > | Source | 8 articles: CMMI (Wikipedia, TutorialsPoint), EPAM ADLC, PwC Agentic SDLC, Lean Startup, CIO, GfG, Neoteric, Medium |
 > | Type | Online research synthesis |
 > | Date | 2026-04-12 |
-> | Key claim | Industry frameworks validate 3-chain model AND agentic AI requires process beyond traditional SDLC |
+> | Key claim | Industry frameworks validate 3-profile model AND agentic AI requires process beyond traditional SDLC |
 
 ## Key Insights
 
-1. **CMMI 5 levels map to our 3 chains.** Level 1 (Initial/ad hoc) = no chain. Level 2 (Managed/project-level) ≈ simplified chain. Level 3 (Defined/rigorous processes) ≈ middle-ground chain. Level 4 (Quantitatively Managed/statistical control) ≈ full chain. Level 5 (Optimizing/continuous improvement) = full + automation (the wiki's aspiration).
+1. **CMMI 5 levels map to our 3 profiles.** Level 1 (Initial/ad hoc) = no profile. Level 2 (Managed/project-level) ≈ simplified profile. Level 3 (Defined/rigorous processes) ≈ middle-ground profile. Level 4 (Quantitatively Managed/statistical control) ≈ full profile. Level 5 (Optimizing/continuous improvement) = full + automation (the wiki's aspiration).
 
-2. **CMMI maturity progression takes 12-18 months per level.** A first-time Level 3 appraisal requires documenting 18 process areas. This validates that chain upgrades are significant efforts — you don't jump from simplified to full in a sprint.
+2. **CMMI maturity progression takes 12-18 months per level.** A first-time Level 3 appraisal requires documenting 18 process areas. This validates that profile upgrades are significant efforts — you don't jump from simplified to full in a sprint.
 
 3. **Lean Startup's BML cycle IS our phase model.** POC = Build (simplest version to test assumptions). MVP = Measure (real users, real feedback). Production = Learn (refine based on data, then scale). The Lean principle "limit scope of change as product matures" IS the wiki's phase progression.
 
-4. **POC is internal, MVP is external.** Critical distinction: POC tests feasibility (not customer-facing). MVP tests market demand (real users). Production commits to SLAs. Each transition changes what process is appropriate — this maps directly to our chain selection.
+4. **POC is internal, MVP is external.** Critical distinction: POC tests feasibility (not customer-facing). MVP tests market demand (real users). Production commits to SLAs. Each transition changes what process is appropriate — this maps directly to our SDLC profile selection.
 
 5. **Traditional SDLC assumes behavior is specified at build time.** EPAM's ADLC paper: "Agentic systems violate that assumption because they reason, adapt, and act across environments engineers do not fully control." This validates our infrastructure enforcement approach — you can't just specify agent behavior in a spec, you must enforce it at runtime.
 
@@ -134,7 +134,7 @@ The Agentic SDLC literature validates two of our patterns:
 
 ## Relationships
 
-- FEEDS INTO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- FEEDS INTO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - FEEDS INTO: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 - FEEDS INTO: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
@@ -143,7 +143,7 @@ The Agentic SDLC literature validates two of our patterns:
 
 ## Backlinks
 
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[model-methodology|Model — Methodology]]

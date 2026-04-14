@@ -30,7 +30,7 @@ tags: [epic, proof, chain, integration, openarms, end-to-end, v2, milestone-v2]
 # E016 — Integration Chain Proof — End to End with OpenArms
 ## Summary
 
-PROVE the complete integration chain works by walking OpenArms through every step — discovery, identity, chain selection, methodology, standards, work loop, feedback. Run every command, capture every output. If a step breaks, fix it and re-prove. The proof document IS the acceptance test.
+PROVE the complete integration chain works by walking OpenArms through every step — discovery, identity, SDLC profile selection, methodology, standards, work loop, feedback. Run every command, capture every output. If a step breaks, fix it and re-prove. The proof document IS the acceptance test.
 
 ## Operator Directive
 

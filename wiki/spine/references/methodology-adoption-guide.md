@@ -32,7 +32,7 @@ tags: [methodology, adoption, guide, onboarding, ecosystem]
 > [!tip] AI Quick Start — Setting Up Methodology for Your Project
 >
 > 1. **Identify yourself first**: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — answer the 7 questions (What am I? What version? What domain? What phase? What scale? What PM level? What trust tier?)
-> 2. **Pick your SDLC chain**: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — simplified (POC), default (MVP/Staging), or full (Production)
+> 2. **Pick your SDLC profile**: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] — simplified (POC), default (MVP/Staging), or full (Production)
 > 3. **Pick your enforcement tier**: Tier 1 (read) → Tier 2 (configure) → Tier 3 (validate) → Tier 4 (enforce) — matched to your PM level
 > 4. **Pick your domain**: TypeScript, Python/Wiki, Infrastructure, or Knowledge — see per-domain quick starts below
 > 5. **Connect to the second brain**: query methodology + standards via gateway tools (or read wiki pages directly)
@@ -217,19 +217,19 @@ Full infrastructure enforcement — hooks, stage skills, deterministic dispatch.
 >
 > **Key principle:** Every block must be mindful — explain WHY, offer justified bypass. See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 
-### SDLC Chain Selection
+### SDLC Profile Selection
 
 > [!info] Choose Your Process Weight
 >
 > Not every project needs full Tier 4 enforcement. Process weight depends on project phase and codebase scale:
 >
-> | Chain | When | Stages | Artifacts | Enforcement |
-> |-------|------|--------|-----------|-------------|
+> | Profile | When | Stages | Artifacts | Enforcement |
+> |---------|------|--------|-----------|-------------|
 > | **Simplified** | POC, micro/small scale | 2-3 | Minimal | Tier 1-2 (instructions + config) |
 > | **Middle Ground** (default) | MVP→Staging, small→medium | 3-5 | Core + important | Tier 2-3 (config + validation) |
-> | **Full** | Production, medium→massive | All 5 | Complete chain | Tier 3-4 (validation + enforcement) |
+> | **Full** | Production, medium→massive | All 5 | Complete artifact chain | Tier 3-4 (validation + enforcement) |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for the full decision matrix.
 
 ### Per-Domain Quick Start
 
@@ -354,7 +354,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]

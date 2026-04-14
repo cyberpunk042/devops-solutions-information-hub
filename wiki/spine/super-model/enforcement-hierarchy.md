@@ -42,7 +42,7 @@ Navigation hub for enforcement — how to make agents actually follow methodolog
 
 > [!tip] How to enter this domain
 >
-> **CLI/Gateway:** `gateway query --chain full (shows enforcement level) | Enforcement Hook Patterns page`
+> **CLI/Gateway:** `gateway query --profile full (shows enforcement level) | Enforcement Hook Patterns page`
 > **Obsidian:** Follow wikilinks from any member page above
 > **MCP:** Use the corresponding wiki_gateway tools
 

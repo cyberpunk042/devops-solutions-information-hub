@@ -90,11 +90,11 @@ The current polling implementation can run indefinitely without degradation — 
 - **CI/CD pipelines**: If the wiki is ever deployed in a cloud CI context (GitHub Actions, etc.), the change detection mechanism must be adapted — polling is fine for CI batch runs, inotify is not available in most cloud CI environments. The post-chain (`python3 -m tools.pipeline post`) can be invoked directly without a watcher daemon in CI contexts.
 - **Cross-platform tooling**: `tools/setup.py --services wiki-watcher` deploys the watcher as a systemd service. On macOS, a launchd plist would be the equivalent. The cross-platform Python tooling in the ecosystem handles OS detection, so the service deployment path is already abstracted.
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for WSL2 with a personal wiki and two-daemon architecture (watcher + sync). At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for WSL2 with a personal wiki and two-daemon architecture (watcher + sync). At different profile levels:
 > - **Simplified chain:** No daemon needed — the operator runs `pipeline post` manually after edits. Change detection is human-driven, not automated.
 > - **Full chain:** On native Linux or CI/CD, inotify is the correct choice — instant event delivery, no polling overhead. In a cloud deployment, change detection is handled by webhook triggers or git post-push hooks, not filesystem watchers at all.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

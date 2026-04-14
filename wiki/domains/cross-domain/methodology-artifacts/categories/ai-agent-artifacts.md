@@ -54,7 +54,7 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 
 4. **Agent enforcement exists at 4 levels.** From our CLAUDE.md structural patterns research: (1) Instruction-level (prose rules — 25% compliance), (2) Structured instruction-level (tables, ALLOWED/FORBIDDEN — 50-60%), (3) Advisory hooks (warn but don't block — 70%), (4) Blocking hooks (prevent the action — 90%+). Each level produces different artifacts.
 
-### SDLC Chain Level — What Applies Where
+### SDLC Profile Level — What Applies Where
 
 > [!abstract] Not all chains require all artifacts
 >
@@ -64,7 +64,7 @@ Guide to artifacts specific to AI agent workflows — document types that don't 
 > | **Default** (MVP-Prod, 5 stages) | CLAUDE.md + persona + stage skills + selected hooks | Prompt queues, compliance reports | Full rule system, multi-agent handoff artifacts |
 > | **Full** (Production fleet, all stages) | All hooks + rule files + compliance validation + prompt queues | Multi-agent orchestration artifacts | — |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for profile details.
 
 ## Deep Analysis
 

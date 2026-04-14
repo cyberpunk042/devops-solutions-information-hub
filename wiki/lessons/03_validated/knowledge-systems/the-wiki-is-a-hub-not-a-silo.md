@@ -57,7 +57,7 @@ The research wiki is not a standalone documentation project — it is the centra
 > | Direction | What Flows | Mechanism | Evidence from the 2026-04-12 session |
 > |-----------|-----------|-----------|--------------------------|
 > | **Projects → Wiki** | Operational learnings, methodology evolution, failure post-mortems | `pipeline scan`, manual ingestion, gateway contribute | OpenArms: 22 lessons (3,001 lines) fed back. OpenFleet: immune system + tiers + contributions. |
-> | **Wiki → Projects** | Synthesized models, standards, patterns, decisions, principles | `gateway query`, `pipeline export`, MCP tools | 3 principles, SDLC chains, Goldilocks protocol — all consumable by any project. |
+> | **Wiki → Projects** | Synthesized models, standards, patterns, decisions, principles | `gateway query`, `pipeline export`, MCP tools | 3 principles, SDLC profiles, Goldilocks protocol — all consumable by any project. |
 > | **Wiki → Wiki** | Evolution pipeline promotes seed → growing → mature → canonical | `pipeline evolve`, cross-referencing, gap analysis | 39 validated lessons, 15 validated patterns, 3 principles extracted the 2026-04-12 session. |
 > | **Projects → Projects** (via wiki) | One project's learning enriches another | Wiki captures as general pattern, both projects consume | OpenArms enforcement evidence → wiki lesson → OpenFleet can adopt hooks without rediscovering. |
 
@@ -77,7 +77,7 @@ The gateway tool embodies this: `--wiki-root` switches between perspectives. Sam
 >
 > **Processing:** Integrated into existing wiki pages — not as surface summaries but as specific data (cost curves, degradation orders, detection evasion evidence, option comparisons with recommendations).
 >
-> **Outbound:** Produced 3 principles, 3 SDLC chain configs, gateway tools with dual-scope, Goldilocks identity protocol. Any project can now query: `gateway query --chain default`, `gateway query --model feature-development --full-chain`, `gateway query --identity`.
+> **Outbound:** Produced 3 principles, 3 SDLC profile configs, gateway tools with dual-scope, Goldilocks identity protocol. Any project can now query: `gateway query --profile default`, `gateway query --chain feature-development`, `gateway query --identity`.
 >
 > **Cross-pollination:** OpenArms's harness convergence + OpenFleet's orchestrator convergence → wiki lesson: "Harness Ownership Converges Independently Across Projects." Both projects contributed independent evidence to the same general principle.
 
@@ -92,7 +92,7 @@ The gateway tool embodies this: `--wiki-root` switches between perspectives. Sam
 > ```bash
 > # From another project, query the second brain
 > python3 -m tools.gateway query --identity --wiki-root ~/devops-solutions-research-wiki
-> python3 -m tools.gateway query --chain default --wiki-root ~/devops-solutions-research-wiki
+> python3 -m tools.gateway query --profile default --wiki-root ~/devops-solutions-research-wiki
 > python3 -m tools.gateway template lesson --wiki-root ~/devops-solutions-research-wiki
 >
 > # On your own project wiki

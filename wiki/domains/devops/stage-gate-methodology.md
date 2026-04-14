@@ -209,7 +209,7 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 > | Readiness range enforcement | Core protocol | Readiness score drives gates | Core protocol | Observable in task frontmatter |
 > | Quality gates per stage | Verified post-stage | plan_quality.py at accept | `pipeline post` 6-step chain | Prevents advancement without evidence |
 >
-> The three SDLC chains (simplified/default/full) determine enforcement level per project — see [[sdlc-customization-framework|SDLC Customization Framework]]. Simplified chains skip scaffold/test for knowledge-only work; full chains add review gates and compliance artifacts.
+> The three SDLC profiles (simplified/default/full) determine enforcement level per project — see [[sdlc-customization-framework|SDLC Customization Framework]]. Simplified profiles skip scaffold/test for knowledge-only work; full profiles add review gates and compliance artifacts.
 >
 > **Practical recommendation:** Start with protocol enforcement (CLAUDE.md MUST/MUST NOT) and one-commit-per-stage. Add MCP tool blocking when infrastructure investment is justified. The combination provides defense in depth.
 

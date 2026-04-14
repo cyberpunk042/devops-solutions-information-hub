@@ -137,7 +137,7 @@ These patterns apply across TypeScript projects regardless of specific toolchain
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
 > | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
-> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
@@ -147,7 +147,7 @@ These patterns apply across TypeScript projects regardless of specific toolchain
 - BUILDS ON: [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
 - RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
@@ -157,7 +157,7 @@ These patterns apply across TypeScript projects regardless of specific toolchain
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[model-methodology|Model — Methodology]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
 [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]

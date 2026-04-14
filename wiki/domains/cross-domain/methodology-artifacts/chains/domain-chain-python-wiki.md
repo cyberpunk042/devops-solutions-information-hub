@@ -133,7 +133,7 @@ Knowledge wiki projects have unique artifacts that don't exist in pure code proj
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
 > | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
-> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
@@ -143,7 +143,7 @@ Knowledge wiki projects have unique artifacts that don't exist in pure code proj
 - RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
 - RELATES TO: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 
 ## Backlinks
@@ -153,7 +153,7 @@ Knowledge wiki projects have unique artifacts that don't exist in pure code proj
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[model-methodology|Model — Methodology]]
 [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
 [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]

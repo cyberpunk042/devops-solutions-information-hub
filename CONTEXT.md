@@ -12,7 +12,7 @@
 
 > [!info] Goldilocks: Right Scale × Right Phase × Right Trust
 >
-> These 9 dimensions determine which methodology chain applies, how strict enforcement
+> These 9 dimensions determine which SDLC profile applies, how strict enforcement
 > should be, and how much autonomy is delegated to AI. They are not aspirational —
 > they reflect the actual operational reality of this project today.
 
@@ -25,10 +25,10 @@
 | **Scale** | medium (316+ pages, growing) | Dense enough for LightRAG; too large for manual maintenance |
 | **PM Level** | L1 (wiki backlog + CLAUDE.md directives) | Operator drives priorities; AI executes within stage gates |
 | **Trust Tier** | operator-supervised | AI has high autonomy within stages; 99→100% transitions require human review |
-| **SDLC Chain** | Default (stage-gated with selected artifacts) | Not simplified (no POC shortcuts); not full (no fleet immune system yet) |
+| **SDLC Profile** | Default (stage-gated with selected artifacts) | Not simplified (no POC shortcuts); not full (no fleet immune system yet) |
 | **Second Brain** | IS the second brain (self-referential) | The wiki documents its own methodology; AI consults it before acting |
 
-SDLC chain full definition: `wiki/config/sdlc-chains/default.yaml`
+SDLC profile full definition: `wiki/config/sdlc-profiles/default.yaml`
 Identity protocol: `wiki/domains/cross-domain/project-self-identification-protocol.md`
 
 ---
@@ -60,7 +60,7 @@ These govern all agent behavior and wiki design. Derived from ≥3 independent e
 
 1. **Infrastructure Over Instructions** — hooks and validators achieve ~100% compliance; CLAUDE.md rules alone achieve ~25%. Enforce through tooling.
 2. **Structured Context Governs Agent Behavior More Than Content** — markdown structure (tables, headers, callouts, YAML) programs agent behavior 2-3× more effectively than equivalent prose.
-3. **Right Process for Right Context (Goldilocks)** — methodology depth must adapt to phase × scale × trust. POC + micro = simplified chain. Production + large + fleet = full chain with immune system.
+3. **Right Process for Right Context (Goldilocks)** — methodology depth must adapt to phase × scale × trust. POC + micro = simplified profile. Production + large + fleet = full profile with immune system.
 
 Principles folder: `wiki/lessons/04_principles/`
 

@@ -1,15 +1,15 @@
-# SDLC Chain: Full
+# SDLC Profile: Full
 #
-# The SDLC chain defines PROJECT-LEVEL POLICY — not task execution.
+# The SDLC profile defines PROJECT-LEVEL POLICY — not task execution.
 # Task execution (stages, artifacts, gates) is defined in methodology.yaml.
-# The SDLC chain determines HOW MUCH methodology a project needs.
+# The SDLC profile determines HOW MUCH methodology a project needs.
 #
 # See: wiki/domains/cross-domain/methodology-framework/sdlc-customization-framework.md
 
-chain: full
+profile: full
 description: "Complete process for production systems with full enforcement and traceability"
 
-# ─── WHEN THIS CHAIN APPLIES ───────────────────────────────────────
+# ─── WHEN THIS PROFILE APPLIES ───────────────────────────────────────
 applicability:
   phases: [staging, production, maintenance]
   scale: [medium, large, massive]   # ~100k to 15M+ lines

@@ -67,7 +67,7 @@ The Methodology model defines a flexible FRAMEWORK for defining, selecting, comp
 
 - **Readiness and progress are TWO independent dimensions.** Readiness = definition completeness (left side of SDLC). Progress = execution completeness (right side). They advance in parallel and converge. 99→100 is human-only on BOTH. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]].
 
-- **Three SDLC chains adapt the methodology to project context.** Simplified (POC, 2-3 stages, advisory enforcement), Default (MVP→Staging, all stages, hooks optional), Full (Production, all stages, full infrastructure enforcement). See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]].
+- **Three SDLC profiles adapt the methodology to project context.** Simplified (POC, 2-3 stages, advisory enforcement), Default (MVP→Staging, all stages, hooks optional), Full (Production, all stages, full infrastructure enforcement). See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]].
 
 ## Deep Analysis
 
@@ -570,9 +570,9 @@ The methodology models define WHAT stages a task goes through. But HOW MUCH proc
 > |-----------|--------|--------|
 > | **Project phase** | POC → MVP → Staging → Production | POC: short loops, minimal docs. Production: full traceability. |
 > | **Codebase scale** | 10k → 100k → 1M → 5M → 15M | 10k: one person holds context. 1M+: full SDLC governance. |
-> | **Chain type** | Simplified, Middle Ground (default), Full | Simplified: 2-3 stages. Full: all 5 stages + complete artifacts. |
+> | **SDLC profile** | Simplified, Middle Ground (default), Full | Simplified: 2-3 stages. Full: all 5 stages + complete artifacts. |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for the full decision matrix with recommended chain by phase × scale.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for the full decision matrix with recommended profile by phase × scale.
 
 ### Readiness vs Progress — Two-Dimensional Tracking
 
@@ -676,8 +676,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 >
 > | You Want To Know... | Go To |
 > |---------------------|-------|
-> | **"What am I? What level of process do I need?"** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 identity questions that determine your chain, enforcement, and context depth |
-> | **"How much process is right for MY project?"** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — phase (POC→Production) × scale (10k→15M) × chain (simplified/default/full) |
+> | **"What am I? What level of process do I need?"** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 identity questions that determine your profile, enforcement, and context depth |
+> | **"How much process is right for MY project?"** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] — phase (POC→Production) × scale (10k→15M) × profile (simplified/default/full) |
 > | **"How do I track readiness AND progress?"** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — definition completeness vs execution completeness, two independent dimensions |
 > | **"What PM infrastructure do I need?"** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (Wiki), L2 (Fleet/Harness), L3 (Full PM). Each wraps the previous. |
 > | **"How do I make agents ACTUALLY follow this?"** | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] → [[enforcement-hook-patterns|Enforcement Hook Patterns]] → [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
@@ -687,12 +687,12 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > | **"What fields do my pages need?"** | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] — every field, what it means, what automation it enables |
 > | **"Where does this project fit in the ecosystem?"** | [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]] — bidirectional flow, framework over instance, constant evolution |
 > | **"What global standards should I follow?"** | CloudEvents for events, OpenAPI for APIs, SFIF for build lifecycle, DDD for domains, Onion for layer isolation, SRP for responsibilities |
-> | **"How do I adopt this for my project?"** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers (Read→Configure→Validate→Enforce) + SDLC chain selection + per-domain quick starts |
+> | **"How do I adopt this for my project?"** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers (Read→Configure→Validate→Enforce) + SDLC profile selection + per-domain quick starts |
 > | **"Show me the complete system map"** | [[methodology-system-map|Methodology System Map]] — every component, where it lives, what it does, how they connect |
 
 > [!tip] The Core Weave
 >
-> **Identity** (who am I?) → **Selection** (what methodology/chain/enforcement?) → **Execution** (stages, artifacts, gates) → **Tracking** (readiness + progress, hierarchy, impediments) → **Enforcement** (hooks, harness, immune system) → **Evolution** (lessons feed back, patterns emerge, decisions refine) → **Identity** (evolved understanding feeds the next cycle).
+> **Identity** (who am I?) → **Selection** (what methodology/profile/enforcement?) → **Execution** (stages, artifacts, gates) → **Tracking** (readiness + progress, hierarchy, impediments) → **Enforcement** (hooks, harness, immune system) → **Evolution** (lessons feed back, patterns emerge, decisions refine) → **Identity** (evolved understanding feeds the next cycle).
 >
 > This is not a linear path — it's a LOOP. Every execution produces learnings that evolve the methodology that changes the selection criteria. The Goldilocks point shifts as the project matures. The framework adapts because it's designed to adapt.
 
@@ -717,7 +717,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > - Stage boundaries hardened by 7 real bugs from OpenArms autonomous operation (v1→v7, $3.50→$1.32/task)
 > - Enforcement hierarchy quantified: instructions=25%, structured=60%, hooks=100% (OpenArms v10, 5 production runs)
 > - 7 behavioral failure classes persisting after infrastructure enforcement (20% clean completion rate)
-> - 3 SDLC chains defined as YAML configs (simplified, default, full) backed by CMMI + Lean Startup research
+> - 3 SDLC profiles defined as YAML configs (simplified, default, full) backed by CMMI + Lean Startup research
 > - Goldilocks identity protocol with 7 dimensions, auto-detection for 2 of them
 > - Readiness vs progress as two independent fields, OpenFleet implementation evidence
 > - 3 PM levels (solo, harness, full system) with corrected execution mode semantics
@@ -726,7 +726,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 
 > [!warning] **Thin or unverified**
 > - Model composition in practice — documented but only 1 worked example (wiki's own methodology initiative)
-> - SDLC chain adoption — configs exist but no project has adopted from them yet (E016 will prove this)
+> - SDLC profile adoption — configs exist but no project has adopted from them yet (E016 will prove this)
 > - Context engineering — scattered across lessons, not formalized as its own model (E017)
 > - Formal model selection engine — Goldilocks protocol recommends but no automated selection tool
 > - Cross-project methodology comparison — OpenArms vs OpenFleet stage names differ, not formally reconciled
@@ -736,15 +736,15 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 
 > [!question] ~~**Should model selection be declarative or dynamic?**~~
 > **RESOLVED:** Declarative in frontmatter (task_type field), with the methodology engine selecting the model. Dynamic selection by the agent would bypass the methodology.
-> **Partially resolved.** The Goldilocks protocol suggests declarative: identity profile → chain → model. OpenFleet implements this: `methodology.yaml` defines models, orchestrator selects based on task type + readiness + contributions. OpenArms is more implicit (task_type mapping in harness). The wiki should support BOTH: declarative config for known mappings, dynamic override for edge cases. (Remaining: test a formal selection engine that reads identity profiles)
+> **Partially resolved.** The Goldilocks protocol suggests declarative: identity profile → SDLC profile → model. OpenFleet implements this: `methodology.yaml` defines models, orchestrator selects based on task type + readiness + contributions. OpenArms is more implicit (task_type mapping in harness). The wiki should support BOTH: declarative config for known mappings, dynamic override for edge cases. (Remaining: test a formal selection engine that reads identity profiles)
 
 > [!question] ~~****Can stage gates be fully automated?****~~
 > **RESOLVED:** Mechanical gates yes (schema, type checking, tests). Judgment gates no (design quality, requirement completeness). Full enforcement = both.
 > **Partially resolved.** OpenArms v10: 100% stage compliance via hooks. Stage GATES are fully automatable. Stage QUALITY is not — 7 behavioral failures persist at 80% rate. The boundary: anything checkable at the tool-call level (did you write to src/ during document?) = automate. Anything requiring judgment (is this requirements spec good enough?) = human gate. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] for the full boundary analysis.
 
 > [!question] ~~****What is the minimum viable methodology?****~~
-> **RESOLVED:** The simplified chain. One gate (pipeline post), advisory stages, operator as reviewer. Everything else is progressive addition.
-> **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified chain (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default chain (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full chain (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
+> **RESOLVED:** The simplified profile. One gate (pipeline post), advisory stages, operator as reviewer. Everything else is progressive addition.
+> **Resolved via Goldilocks.** Depends on identity profile: Solo + POC + micro = simplified profile (2 models: Feature Dev + Hotfix, CLAUDE.md rules only, 2-3 stages). Solo + MVP + medium = default profile (5 models, hooks + commands, 3-5 stages). Fleet + Production + large = full profile (all 9 models, harness + immune system, all 5 stages + all artifacts). See [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] for the complete selection matrix.
 
 ### How This Connects — Navigate From Here
 
@@ -755,7 +755,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > | **Quality standards for methodology** | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] |
 > | **Super-model (all models)** | [[super-model|Super-Model]] |
 > | **System map (find anything)** | [[methodology-system-map|Methodology System Map]] |
-> | **SDLC chain selection** | [[sdlc-customization-framework|SDLC Customization Framework]] |
+> | **SDLC profile selection** | [[sdlc-customization-framework|SDLC Customization Framework]] |
 > | **Domain chains** | [[domain-chain-typescript|TypeScript]], [[domain-chain-python-wiki|Python-Wiki]], [[domain-chain-infrastructure|Infrastructure]], [[domain-chain-knowledge|Knowledge]] |
 > | **Learning path** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] |
 > | **Adoption guide** | [[methodology-adoption-guide|Methodology Adoption Guide]] |
@@ -846,7 +846,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
 [[research-gaps|Research Gaps — Empirical Questions Requiring Data]]
 [[identity-profile|Research Wiki — Identity Profile]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[2026-04-09-session-summary|Session 2026-04-09 Summary]]

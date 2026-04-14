@@ -134,7 +134,7 @@ The pattern has three properties that distinguish it from simple documentation:
 > | Direction | Go To |
 > |-----------|-------|
 > | **What is the source of truth?** | [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] — v1.3 state, 264 pages, all models |
-> | **How do projects adopt from the wiki?** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers, per-domain quick starts, SDLC chain selection |
+> | **How do projects adopt from the wiki?** | [[methodology-adoption-guide|Methodology Adoption Guide]] — 4 tiers, per-domain quick starts, SDLC profile selection |
 > | **What does the feedback look like?** | the 2026-04-12 session: OpenArms fed back 22 distilled lessons → wiki captured 7+ new mechanisms. OpenFleet fed back immune system + tiers + contributions. |
 > | **What PM level enables feedback?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1 (manual feedback), L2 (structured via fleet tools), L3 (automated via Plane sync) |
 > | **How do gateway tools enable this?** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — agents write back remarks, lessons, corrections via structured gateway |
@@ -166,7 +166,7 @@ The pattern has three properties that distinguish it from simple documentation:
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[identity-profile|Research Wiki — Identity Profile]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]

@@ -268,8 +268,8 @@ python3 -m tools.gateway query --identity                             # project 
 python3 -m tools.gateway query --models                               # all methodology models with stages
 python3 -m tools.gateway query --model feature-development            # one model
 python3 -m tools.gateway query --model feature-development --full-chain  # model + full artifact chain
-python3 -m tools.gateway query --chains                               # all SDLC chains
-python3 -m tools.gateway query --chain default                        # chain detail: stages, gates, enforcement
+python3 -m tools.gateway query --profiles                             # all SDLC profiles
+python3 -m tools.gateway query --profile default                        # chain detail: stages, gates, enforcement
 python3 -m tools.gateway query --stage document                       # stage requirements
 python3 -m tools.gateway query --stage scaffold --domain typescript   # stage + domain overrides
 python3 -m tools.gateway query --field readiness                      # explain a frontmatter field
@@ -509,7 +509,7 @@ Manual start (debugging only):
 |-----------|----------------|---------|
 | `identity` | No | Project identity profile |
 | `models` | No | All methodology models |
-| `chains` | No | All SDLC chains |
+| `profiles` | No | All SDLC profiles |
 | `model` | Yes (model name) | Model detail |
 | `chain` | Yes (chain name) | Chain detail |
 | `stage` | Yes (stage name) | Stage requirements |

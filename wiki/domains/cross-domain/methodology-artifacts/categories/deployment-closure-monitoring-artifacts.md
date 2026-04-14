@@ -70,7 +70,7 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 | **Task** | — | — |
 | **Infrastructure changes** | ALWAYS: Runbook + Rollback Plan | Installation Guide if new system |
 
-### SDLC Chain Level — What Applies Where
+### SDLC Profile Level — What Applies Where
 
 > [!abstract] Not all chains require all artifacts
 >
@@ -80,7 +80,7 @@ Guide to the artifacts produced AFTER implementation — deployment (how to ship
 > | **Default** (MVP-Prod, 5 stages) | Completion log + session summary | Lessons learned (epic-level), release notes | Formal operations guide, compliance report, retirement plan |
 > | **Full** (Production fleet, all stages) | Operations guide + runbook + lessons learned + monitoring config | Compliance report, knowledge transfer report | — |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for profile details.
 
 ### Closure Artifacts (5 types)
 

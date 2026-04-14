@@ -205,9 +205,9 @@ It does NOT automate:
 
 The gateway (`tools/gateway.py`) is a pipeline entry point that provides structured queries, operations, and agent write-back through a unified interface. It works in dual-scope (second brain + project wiki), enabling both human operators and automated agents to interact with the knowledge system through the same API. See [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]].
 
-### SDLC Chain Configs as Automation Targets (NEW)
+### SDLC Profile Configs as Automation Targets (NEW)
 
-The three SDLC chains (`wiki/config/sdlc-chains/simplified.yaml`, `default.yaml`, `full.yaml`) are policy configs that define enforcement level, available methodology models, and stage policy per project phase and scale. These configs are automation targets — a harness reads the chain config to determine which gates to enforce, which artifact checks to run, and whether to block or advise on stage transitions. The gateway's `--chain` and `--model` parameters route through these configs. See [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]].
+The three SDLC profiles (`wiki/config/sdlc-profiles/simplified.yaml`, `default.yaml`, `full.yaml`) are policy configs that define enforcement level, available methodology models, and stage policy per project phase and scale. These configs are automation targets — a harness reads the profile config to determine which gates to enforce, which artifact checks to run, and whether to block or advise on stage transitions. The gateway's `--profile` parameter targets these configs; `--chain` targets methodology artifact chains per model. See [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]].
 
 ## Open Questions
 

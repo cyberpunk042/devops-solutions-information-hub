@@ -169,7 +169,7 @@ Unlike code domains where artifacts flow through stages linearly (document → d
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
 > | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
-> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships

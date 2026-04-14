@@ -1,15 +1,15 @@
-# SDLC Chain: Default (Middle Ground)
+# SDLC Profile: Default (Middle Ground)
 #
-# The SDLC chain defines PROJECT-LEVEL POLICY — not task execution.
+# The SDLC profile defines PROJECT-LEVEL POLICY — not task execution.
 # Task execution (stages, artifacts, gates) is defined in methodology.yaml.
-# The SDLC chain determines HOW MUCH methodology a project needs.
+# The SDLC profile determines HOW MUCH methodology a project needs.
 #
 # See: wiki/domains/cross-domain/methodology-framework/sdlc-customization-framework.md
 
-chain: default
+profile: default
 description: "Stage-gated process with selected artifacts — the Goldilocks default"
 
-# ─── WHEN THIS CHAIN APPLIES ───────────────────────────────────────
+# ─── WHEN THIS PROFILE APPLIES ───────────────────────────────────────
 applicability:
   phases: [mvp, staging, early-production]
   scale: [small, medium]          # ~10k to ~1M lines

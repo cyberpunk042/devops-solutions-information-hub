@@ -25,7 +25,7 @@ These shape how the system works. Deciding these unblocks downstream work.
 
 | # | Question | Source Page | Impact |
 |---|----------|------------|--------|
-| 1 | Should SDLC chains be YAML configs or wiki pages? | [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules Epic]] | Determines where chain definitions live |
+| 1 | Should SDLC profiles be YAML configs or wiki pages? (renamed from chains — chains belong to methodology layer) | [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules Epic]] | Determines where profile definitions live |
 | 2 | Should the gateway be a separate Python module or extend pipeline.py? | [[wiki-gateway-tools-unified-knowledge-interface|Gateway Epic]] | Tool architecture |
 | 3 | Should artifact chain config be inside methodology.yaml or separate? | [[e003-artifact-type-system-requirements|E003 Requirements]] | Config architecture |
 | 4 | Should domain profiles be in the wiki (authoritative) or per-project (local)? | [[methodology-standards-initiative-gaps|Standards Initiative Gaps]] | Ownership model |
@@ -101,9 +101,9 @@ Granular methodology decisions. Can be batched.
 | 46 | How many of 17 artifact types need their own standards doc? | [[methodology-standards-initiative-honest-assessment|Honest Assessment]] |
 | 47 | Should existing configs be kept as-is or rewritten as framework instances? | [[methodology-standards-initiative-honest-assessment|Honest Assessment]] |
 | 48 | How does methodology evolution notify consumer projects? | [[methodology-standards-initiative-gaps|Standards Initiative Gaps]] |
-| 49 | Should the simplified chain have ANY stage gates? | [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules Epic]] |
+| 49 | Should the simplified profile have ANY stage gates? | [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules Epic]] |
 | 50 | Should model selection be declarative or dynamic? | [[model-methodology|Model — Methodology]] |
-| 51 | Should chain selection be per-project or per-task? | [[sdlc-customization-framework|SDLC Customization]] |
+| 51 | Should SDLC profile selection be per-project or per-task? | [[sdlc-customization-framework|SDLC Customization]] |
 
 ## Deferred — Research Required (not operator decisions, need investigation)
 
@@ -115,7 +115,7 @@ These need external research or empirical data, not operator judgment.
 | 53 | Optimal context budget per tier? | [[model-context-engineering|Model — Context Engineering]] | Empirical measurement |
 | 54 | When does LightRAG become necessary? | [[model-llm-wiki|Model — LLM Wiki]] | Scale testing |
 | 55 | Does CMMI Level 5 map to anything we've built? | [[src-sdlc-frameworks-research|SDLC Research]] | CMMI deep dive |
-| 56 | SFIF × SDLC Chain formal upgrade path? | [[model-sfif-architecture|Model — SFIF]] | Design work |
+| 56 | SFIF × SDLC Profile formal upgrade path? | [[model-sfif-architecture|Model — SFIF]] | Design work |
 | 57 | Empirical rework rate across ingestion modes? | [[model-quality-failure-prevention|Model — Quality]] | Measurement |
 | 58 | Can post-chain steps be parallelized? | [[model-automation-pipelines|Model — Automation]] | Technical analysis |
 | 59 | What quality score triggers auto-filing from session hooks? | [[model-automation-pipelines|Model — Automation]] | Threshold design |

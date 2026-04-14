@@ -38,7 +38,7 @@ tags: [principle]
      
      EXAMPLE: "No single methodology fits all projects — the right process depends on
      the project's identity (type, scale, phase, domain, execution mode). A POC with
-     one developer needs a different SDLC chain than a production fleet with 12 agents.
+     one developer needs a different SDLC profile than a production fleet with 12 agents.
      The Goldilocks Framework provides the selection mechanism." -->
 
 ## Statement
@@ -71,8 +71,8 @@ tags: [principle]
      >
      > **The right methodology for a project is determined by its identity profile
      > (type, scale, phase, domain, execution mode), not by a one-size-fits-all
-     > prescription.** A solo-developer POC uses a simplified chain with 3 stages.
-     > A production fleet uses the full chain with 5 stages, enforcement hooks, and
+     > prescription.** A solo-developer POC uses a simplified profile with 3 stages.
+     > A production fleet uses the full profile with 5 stages, enforcement hooks, and
      > immune system. The mechanism: under-process creates chaos; over-process
      > creates paralysis. The Goldilocks Framework finds the zone between them. -->
 
@@ -105,7 +105,7 @@ tags: [principle]
 
 <!-- How to apply this principle in practice.
      STYLING: Table mapping contexts to application.
-     Include: which identity profiles benefit, which SDLC chains, which PM levels. -->
+     Include: which identity profiles benefit, which SDLC profiles, which PM levels. -->
 
 > [!abstract] Application by Context
 >

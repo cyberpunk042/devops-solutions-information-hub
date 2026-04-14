@@ -40,7 +40,7 @@ The wiki and its methodology framework adhere to recognized engineering standard
 > | **Maturity folders** | Progressive maturity / CMMI levels | 00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles. Each level has specific promotion criteria. |
 > | **Build lifecycle** | SFIF (Scaffold→Foundation→Infrastructure→Features) | Projects build enforcement in stages. Product lifecycle maps: POC=Scaffold, MVP=Foundation, Staging=Infrastructure, Production=Features. |
 > | **Component design** | SRP (Single Responsibility Principle) | Validators validate. Hooks block. Commands transition state. Each tool does ONE thing. |
-> | **Methodology selection** | Strategy Pattern (OOP) | Identity profile → chain selection → model selection. Same interface, different implementations based on runtime context. |
+> | **Methodology selection** | Strategy Pattern (OOP) | Identity profile → SDLC profile selection → model selection. Same interface, different implementations based on runtime context. |
 > | **Context injection** | Template Method Pattern (OOP) | Same structural skeleton, different content. Validation matrix: 29 scenarios, one template, content varies per condition. |
 > | **Enforcement escalation** | Chain of Responsibility (OOP) | Instructions → hooks → commands → harness → immune system → human. Each level handles what it can, passes to the next. |
 > | **Immune system correction** | Observer Pattern (OOP) | Doctor observes agent behavior every 30s. Agents don't know they're observed. Detection triggers correction. |
@@ -120,8 +120,8 @@ The wiki is BOTH the framework AND an instance. It must adhere to the standards 
 > Pre/PostToolUse hooks return JSON. If that JSON followed CloudEvents (type, source, time, data), hooks from different projects would be interoperable. Worth the overhead?
 
 > [!question] ~~Which custom patterns are candidates for formal standardization?~~
-> **RESOLVED:** Goldilocks identity protocol, SDLC chain selection, stage-gate enforcement. These are the most reused patterns across the ecosystem.
-> The Goldilocks identity protocol, the three-chain SDLC model, the readiness/progress two-field tracking — these are custom to this ecosystem but may generalize. Should we propose them as standards?
+> **RESOLVED:** Goldilocks identity protocol, SDLC profile selection, stage-gate enforcement. These are the most reused patterns across the ecosystem.
+> The Goldilocks identity protocol, the three-profile SDLC model, the readiness/progress two-field tracking — these are custom to this ecosystem but may generalize. Should we propose them as standards?
 
 ## Relationships
 

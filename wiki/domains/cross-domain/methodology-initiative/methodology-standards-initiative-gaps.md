@@ -280,7 +280,7 @@ Systematic identification of gaps between what the methodology standards initiat
 > **RESOLVED:** Wiki is authoritative, projects override. wiki/config/domain-profiles/ defines generics, projects extend with their own. (Requires: design decision during Epic B)
 
 > [!question] ~~What is the minimum enforcement infrastructure for a project that doesn't have a harness like OpenArms? (Requires: analysis during Epic C — ~~
-> **RESOLVED:** CLAUDE.md + pipeline post. The simplified chain IS the answer. No harness needed at L1.hooks + CLAUDE.md may be sufficient without scripts)
+> **RESOLVED:** CLAUDE.md + pipeline post. The simplified profile IS the answer. No harness needed at L1.hooks + CLAUDE.md may be sufficient without scripts)
 
 > [!question] ~~Should annotated exemplars be inline in the exemplar page or in a separate companion document?~~
 > **RESOLVED:** Inline. Already implemented across all 22 standards pages. The exemplar section lives within the standards page. (Requires: design decision during Epic D)

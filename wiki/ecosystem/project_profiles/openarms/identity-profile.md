@@ -38,7 +38,7 @@ The second brain's understanding of OpenArms as an ecosystem member. OpenArms is
 > | **Scale** | Medium-Large (~50k LOC estimated) | Growing codebase with 8 execution modes |
 > | **PM Level** | L2 (Harness) | methodology.yaml + agent-directive + task frontmatter + hooks |
 > | **Trust Tier** | Capable (earned through 93 tasks, 9 methodology versions) | Auto-approval on routine operations |
-> | **SDLC Chain** | Default → trending Full | Stage-gated with artifact requirements, hooks enforcing boundaries |
+> | **SDLC Profile** | Default → trending Full | Stage-gated with artifact requirements, hooks enforcing boundaries |
 
 ## Execution Mode History
 
@@ -98,7 +98,7 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 > |--------|----------|------------------|
 > | Task types | 9 models | 7 models (no evolve, no documentation as standalone) |
 > | Execution modes | 8 defined | agent-run, agent-provision, agent-heartbeat, agent-dispatch, interactive, plan, review, migrate |
-> | Stage enforcement | Advisory (default chain) | Enforced (hooks block wrong-stage artifacts) |
+> | Stage enforcement | Advisory (default profile) | Enforced (hooks block wrong-stage artifacts) |
 > | Integration requirement | Not enforced | Every implement MUST modify an existing runtime file (Bug 6 prevention) |
 > | Scaffold rules | No control flow | Strict: no if/for/while, max 3-line function bodies |
 

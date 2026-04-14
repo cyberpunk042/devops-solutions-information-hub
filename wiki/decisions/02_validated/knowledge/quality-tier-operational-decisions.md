@@ -69,11 +69,11 @@ All easy. These are interpretive frameworks, not infrastructure commitments.
 - [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — resolves all 3 open questions
 - [[methodology-framework|Methodology Framework]] — quality dimension is a framework parameter
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a solo operator monitoring quality with wiki tooling. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for a solo operator monitoring quality with wiki tooling. At different profile levels:
 > - **Simplified chain:** Regression signals may be limited to a single lint pass — fewer leading indicators available, so manual review matters more.
 > - **Full chain:** At fleet level, quality tiers need automated assessment — an agent dashboard tracking lint trends, orphan counts, and staleness per project replaces manual observation.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

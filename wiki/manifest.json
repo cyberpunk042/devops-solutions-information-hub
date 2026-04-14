@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T20:52:23.372257+00:00",
+  "generated": "2026-04-14T21:47:32.068091+00:00",
   "stats": {
     "pages": 317,
     "domains": 9,
@@ -1045,7 +1045,7 @@
       "relationships": [
         {
           "verb": "IMPLEMENTS",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "BUILDS ON",
@@ -1117,7 +1117,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -2338,7 +2338,7 @@
       "derived_from": [
         "Backlog Hierarchy Rules",
         "Readiness vs Progress \u2014 Two-Dimensional Work Tracking",
-        "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+        "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
       ],
       "relationships": [
         {
@@ -2351,7 +2351,7 @@
         },
         {
           "verb": "DERIVED FROM",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -5303,7 +5303,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -5458,7 +5458,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "FEEDS INTO",
@@ -5523,7 +5523,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "FEEDS INTO",
@@ -5910,7 +5910,7 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "BUILDS ON",
@@ -5997,7 +5997,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -6024,7 +6024,7 @@
     {
       "path": "domains/cross-domain/methodology-framework/sdlc-customization-framework.md",
       "slug": "domains/cross-domain/methodology-framework/sdlc-customization-framework",
-      "title": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection",
+      "title": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection",
       "type": "concept",
       "domain": "cross-domain",
       "status": "synthesized",
@@ -6037,7 +6037,7 @@
         "framework",
         "phases",
         "scale",
-        "chain-selection",
+        "profile-selection",
         "methodology",
         "project-lifecycle",
         "cmmi",
@@ -6049,7 +6049,7 @@
           "id": "operator-sdlc-vision",
           "type": "directive",
           "file": "raw/notes/2026-04-12-mega-vision-directive.md",
-          "description": "Operator vision for SDLC customization \u2014 project phases, scale tiers, three chain types"
+          "description": "Operator vision for SDLC customization \u2014 project phases, scale tiers, three SDLC profile types"
         },
         {
           "id": "methodology-model",
@@ -6167,7 +6167,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -12362,7 +12362,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "BUILDS ON",
@@ -17003,7 +17003,7 @@
       "relationships": [
         {
           "verb": "FEEDS INTO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "FEEDS INTO",
@@ -17434,7 +17434,7 @@
         },
         {
           "verb": "BUILDS ON",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -19352,7 +19352,7 @@
         },
         {
           "verb": "RELATES TO",
-          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Chain Selection"
+          "target": "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
         },
         {
           "verb": "RELATES TO",
@@ -23010,7 +23010,7 @@
     "two-dimensional": [
       "domains/cross-domain/methodology-framework/readiness-vs-progress"
     ],
-    "chain-selection": [
+    "profile-selection": [
       "domains/cross-domain/methodology-framework/sdlc-customization-framework"
     ],
     "project-lifecycle": [

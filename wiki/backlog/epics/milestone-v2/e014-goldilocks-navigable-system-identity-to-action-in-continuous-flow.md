@@ -30,7 +30,7 @@ tags: [epic, goldilocks, navigation, identity, routing, flow, v2, milestone-v2]
 # E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow
 ## Summary
 
-Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM — a continuous flow from identity declaration through chain selection, model selection, stage routing, artifact production, and feedback. Currently you READ the protocol. After this epic, you FOLLOW it — from any entry point (Obsidian browse, CLI gateway, MCP tool) the flow guides you to the right action for your context. At every decision point: what was selected, why, what alternatives exist, how to override, how to adapt. The flow IS the Goldilocks principle in action.
+Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM — a continuous flow from identity declaration through SDLC profile selection, model selection, stage routing, artifact production, and feedback. Currently you READ the protocol. After this epic, you FOLLOW it — from any entry point (Obsidian browse, CLI gateway, MCP tool) the flow guides you to the right action for your context. At every decision point: what was selected, why, what alternatives exist, how to override, how to adapt. The flow IS the Goldilocks principle in action.
 
 ## Operator Directive
 
@@ -119,9 +119,9 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM �
 > **RESOLVED:** Gateway what-do-i-need. Auto-detects what it can (domain, scale), says "unknown — declare in CLAUDE.md" for what it can't.
 > Can't auto-detect (harness decides at runtime). Recommendation: show capabilities detected, ask user to choose. "We detected harness code. Are you running in harness mode?"
 
-> [!question] ~~How to handle chain upgrades mid-project?~~
-> **RESOLVED:** Decision page documenting why. Apply new chain to new tasks. In-progress tasks finish under old chain. No retroactive rework.
-> POC→MVP transitions change the recommended chain. The flow should advisory: "Your tests + CI suggest MVP. Consider upgrading to default chain."
+> [!question] ~~How to handle profile upgrades mid-project?~~
+> **RESOLVED:** Decision page documenting why. Apply new profile to new tasks. In-progress tasks finish under old profile. No retroactive rework.
+> POC→MVP transitions change the recommended profile. The flow should advisory: "Your tests + CI suggest MVP. Consider upgrading to default profile."
 
 ## Handoff Context
 
@@ -142,7 +142,7 @@ Transform the Goldilocks Protocol from a concept page into a NAVIGABLE SYSTEM �
 > **Key files:**
 > - `wiki/domains/cross-domain/project-self-identification-protocol.md` — current concept page
 > - `tools/gateway.py` — current gateway with auto_detect_identity function
-> - `wiki/config/sdlc-chains/` — 3 chain configs
+> - `wiki/config/sdlc-profiles/` — 3 SDLC profile configs
 > - `wiki/spine/references/second-brain-integration-chain.md` — 17-step chain (flow should enhance or replace)
 
 ## Relationships

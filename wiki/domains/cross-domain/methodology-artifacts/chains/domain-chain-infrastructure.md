@@ -205,7 +205,7 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 > | **What principle applies?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] |
 > | **Full artifact taxonomy** | [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]] (78 types across 11 categories) |
 > | **Generic chains by model** | [[artifact-chains-by-model|Artifact Chains by Methodology Model]] |
-> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | **SDLC levels** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
 ## Relationships
@@ -214,7 +214,7 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 - BUILDS ON: [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
 - RELATES TO: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
 - RELATES TO: [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
@@ -225,7 +225,7 @@ Artifact chain resolution for Infrastructure as Code projects (devops-control-pl
 [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[model-methodology|Model — Methodology]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
 [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]

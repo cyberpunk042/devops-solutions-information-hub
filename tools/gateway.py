@@ -6,7 +6,8 @@ plus operational commands (move, archive, backup). Works on BOTH the second brai
 
 Usage:
     python3 -m tools.gateway query --stage document --domain typescript
-    python3 -m tools.gateway query --chain default --artifacts
+    python3 -m tools.gateway query --profile default
+    python3 -m tools.gateway query --chain feature-development
     python3 -m tools.gateway query --model feature-development --full-chain
     python3 -m tools.gateway query --field readiness --explain
     python3 -m tools.gateway query --identity               # show current project identity
@@ -257,23 +258,23 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
         declared_chain = ""
         declared_phase = ""
 
-    # Recommend chain based on identity (declared overrides detected)
+    # Recommend SDLC profile based on identity (declared overrides detected)
     mode = identity.get("execution_mode", "solo")
     phase = declared_phase if declared_phase else identity.get("phase", "poc")
     scale = identity.get("scale", "micro")
 
     if "default" in declared_chain:
-        recommended_chain = "default"
+        recommended_profile = "default"
     elif "full" in declared_chain:
-        recommended_chain = "full"
+        recommended_profile = "full"
     elif "simplified" in declared_chain:
-        recommended_chain = "simplified"
+        recommended_profile = "simplified"
     elif mode == "full-system" or (phase == "production" and scale in ("large", "massive")):
-        recommended_chain = "full"
+        recommended_profile = "full"
     elif phase in ("staging", "production") or scale in ("medium", "large"):
-        recommended_chain = "default"
+        recommended_profile = "default"
     else:
-        recommended_chain = "simplified"
+        recommended_profile = "simplified"
 
     lines = []
     lines.append("WHAT DO YOU NEED? — Auto-detected recommendations")
@@ -304,12 +305,17 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     lines.append("")
 
     # Recommendation
-    lines.append(f"RECOMMENDED CHAIN: {recommended_chain}")
-    chain_data = query_chain(paths, recommended_chain)
-    if "error" not in chain_data:
-        lines.append(f"  {chain_data.get('description', '')}")
-        lines.append(f"  Stages: {' → '.join(chain_data.get('stages', []))}")
-        lines.append(f"  Readiness gate: {chain_data.get('readiness_gate', '?')}")
+    lines.append(f"RECOMMENDED SDLC PROFILE: {recommended_profile}")
+    profile_data = query_profile(paths, recommended_profile)
+    if "error" not in profile_data:
+        lines.append(f"  {profile_data.get('description', '')}")
+        methodology = profile_data.get("methodology", {})
+        available = methodology.get("available_models", [])
+        if available:
+            lines.append(f"  Available models: {', '.join(available[:5])}" + (" ..." if len(available) > 5 else ""))
+        enforcement = profile_data.get("enforcement", {})
+        if enforcement:
+            lines.append(f"  Enforcement: {enforcement.get('level', '?')}; stage gates: {enforcement.get('stage_gates', '?')}")
     lines.append("")
 
     # First steps
@@ -327,12 +333,13 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
         lines.append(f"  {'3' if not declared else '2'}. Query what your current stage needs: gateway query --stage <your-stage> --domain {domain}")
     else:
         lines.append(f"  {'2' if not declared else '1'}. Full system detected. Your orchestrator handles dispatch and enforcement.")
-        lines.append(f"  {'3' if not declared else '2'}. Query chain details: gateway query --chain {recommended_chain}")
+        lines.append(f"  {'3' if not declared else '2'}. Query profile details: gateway query --profile {recommended_profile}")
 
     lines.append("")
     lines.append("EXPLORE MORE:")
     lines.append("  gateway navigate              → full knowledge tree")
-    lines.append("  gateway query --chains         → compare all SDLC chains")
+    lines.append("  gateway query --profiles        → compare all SDLC policy profiles")
+    lines.append("  gateway query --chains          → all methodology models with their chains")
     lines.append("  gateway query --models          → all methodology models")
 
     return "\n".join(lines)
@@ -361,11 +368,11 @@ def cmd_flow(paths: Dict[str, Path], step: int = None) -> str:
             "output": "7 dimensions declared: type, execution mode, domain, phase, scale, PM level, trust tier.",
         },
         {
-            "num": 3, "name": "SELECT CHAIN",
-            "desc": "Choose simplified/default/full based on phase × scale",
-            "cmd": "python3 -m tools.gateway query --chains",
-            "wiki": "wiki/config/sdlc-chains/ (3 YAML configs)",
-            "output": "One SDLC chain selected. Determines enforcement level and readiness gate.",
+            "num": 3, "name": "SELECT PROFILE",
+            "desc": "Choose SDLC profile: simplified/default/full based on phase × scale",
+            "cmd": "python3 -m tools.gateway query --profiles",
+            "wiki": "wiki/config/sdlc-profiles/ (3 YAML configs)",
+            "output": "One SDLC profile selected. Determines enforcement level, available models, readiness gate.",
         },
         {
             "num": 4, "name": "SELECT MODEL",
@@ -1141,43 +1148,131 @@ def op_factory_reset(paths: Dict[str, Path], confirm: bool = False) -> Dict[str,
     return result
 
 
-def query_chain(paths: Dict[str, Path], chain_name: str) -> Dict[str, Any]:
-    """Query an SDLC chain config (simplified, default, full)."""
-    chain_path = paths["config"] / "sdlc-chains" / f"{chain_name}.yaml"
-    data = load_config(chain_path)
+def query_chain(paths: Dict[str, Path], model_name: str) -> Dict[str, Any]:
+    """Query the methodology CHAIN for a model.
+
+    A methodology chain is the artifact sequence per stage within a model
+    (e.g. feature-development has stages document→design→scaffold→implement→test,
+    each with required/forbidden artifacts and gate checks).
+
+    For SDLC-level POLICY (simplified/default/full), use query_profile instead.
+    """
+    methodology_path = paths["config"] / "methodology.yaml"
+    data = load_config(methodology_path)
     if not data:
-        available = [f.stem for f in (paths["config"] / "sdlc-chains").glob("*.yaml")]
-        return {"error": f"Chain '{chain_name}' not found", "available": available}
+        return {"error": "methodology.yaml not found"}
+
+    models = data.get("models", {})
+    if model_name not in models:
+        return {
+            "error": f"Methodology model '{model_name}' not found",
+            "available": list(models.keys()),
+        }
+
+    model = models[model_name]
+    chain = model.get("chain", {})
+    if not chain:
+        return {
+            "model": model_name,
+            "description": model.get("description", ""),
+            "stages": model.get("stages", []),
+            "error": "No artifact chain defined for this model",
+        }
+
+    # Summarize chain per stage
+    chain_summary = {}
+    for stage, stage_def in chain.items():
+        required = stage_def.get("required", [])
+        required_summary = [
+            f"{r.get('count', '?')}× {r.get('artifact', 'unknown')}"
+            for r in (required if isinstance(required, list) else [])
+        ]
+        chain_summary[stage] = {
+            "required": required_summary,
+            "forbidden": stage_def.get("forbidden", []),
+            "gate_checks": stage_def.get("gate", {}).get("checks", []),
+        }
 
     return {
-        "chain": data.get("chain"),
-        "description": data.get("description"),
-        "stages": list(data.get("stages", {}).keys()),
-        "models": data.get("models", []),
-        "readiness_gate": data.get("tracking", data.get("differences", {})).get("readiness_gate",
-                          data.get("differences", {}).get("readiness_gate", "N/A")),
-        "enforcement": data.get("differences", {}).get("enforcement", "N/A"),
-        "upgrade_triggers": data.get("upgrade_triggers", []),
+        "model": model_name,
+        "description": model.get("description", ""),
+        "stages": model.get("stages", []),
+        "readiness_cap": model.get("readiness_cap", 100),
+        "chain": chain_summary,
     }
 
 
 def query_chains_list(paths: Dict[str, Path]) -> Dict[str, Any]:
-    """List all available SDLC chains."""
-    chains_dir = paths["config"] / "sdlc-chains"
-    if not chains_dir.exists():
-        return {"error": "No sdlc-chains directory found", "chains": []}
+    """List all methodology models with their chains."""
+    methodology_path = paths["config"] / "methodology.yaml"
+    data = load_config(methodology_path)
+    if not data:
+        return {"error": "methodology.yaml not found"}
+
+    models = data.get("models", {})
+    result = []
+    for name, model in models.items():
+        chain = model.get("chain", {})
+        result.append({
+            "model": name,
+            "description": model.get("description", ""),
+            "stages": model.get("stages", []),
+            "has_chain": bool(chain),
+            "stage_count": len(chain),
+        })
+    return {
+        "chains": result,
+        "note": "Methodology chains. For SDLC policy profiles (simplified/default/full), use --profiles.",
+    }
+
+
+def query_profile(paths: Dict[str, Path], profile_name: str) -> Dict[str, Any]:
+    """Query an SDLC profile (simplified, default, full).
+
+    An SDLC profile is a POLICY wrapper that determines which methodology
+    models are available to a project and how strictly stages are enforced.
+    The profile does not itself define a chain — it references methodology
+    models (each of which has its own chain).
+    """
+    profile_path = paths["config"] / "sdlc-profiles" / f"{profile_name}.yaml"
+    data = load_config(profile_path)
+    if not data:
+        available = [f.stem for f in (paths["config"] / "sdlc-profiles").glob("*.yaml")]
+        return {"error": f"SDLC profile '{profile_name}' not found", "available": available}
+
+    return {
+        "profile": data.get("profile", data.get("chain", profile_name)),
+        "description": data.get("description"),
+        "applicability": data.get("applicability", {}),
+        "execution": data.get("execution", {}),
+        "enforcement": data.get("enforcement", {}),
+        "methodology": data.get("methodology", {}),
+        "tracking": data.get("tracking", {}),
+        "upgrade_triggers": data.get("upgrade_triggers", []),
+    }
+
+
+def query_profiles_list(paths: Dict[str, Path]) -> Dict[str, Any]:
+    """List all available SDLC profiles."""
+    profiles_dir = paths["config"] / "sdlc-profiles"
+    if not profiles_dir.exists():
+        return {"error": "No sdlc-profiles directory found", "profiles": []}
 
     result = []
-    for f in sorted(chains_dir.glob("*.yaml")):
+    for f in sorted(profiles_dir.glob("*.yaml")):
         data = load_config(f)
         if data:
             result.append({
-                "name": data.get("chain", f.stem),
+                "name": data.get("profile", data.get("chain", f.stem)),
                 "description": data.get("description", ""),
-                "stages": len(data.get("stages", {})),
-                "models": len(data.get("models", [])),
+                "phases": data.get("applicability", {}).get("phases", []),
+                "scale": data.get("applicability", {}).get("scale", []),
+                "available_models": data.get("methodology", {}).get("available_models", []),
             })
-    return {"chains": result}
+    return {
+        "profiles": result,
+        "note": "SDLC policy profiles. For methodology chains per model, use --chains.",
+    }
 
 
 def query_location_mapping(paths: Dict[str, Path], title: Optional[str] = None) -> Dict[str, Any]:
@@ -1225,8 +1320,10 @@ def main():
     q.add_argument("--models", action="store_true", help="List all models")
     q.add_argument("--field", help="Explain a frontmatter field")
     q.add_argument("--identity", action="store_true", help="Show project identity profile")
-    q.add_argument("--chain", help="Query an SDLC chain (simplified, default, full)")
-    q.add_argument("--chains", action="store_true", help="List all SDLC chains")
+    q.add_argument("--chain", help="Query the methodology chain for a model (artifact sequence per stage)")
+    q.add_argument("--chains", action="store_true", help="List all methodology models with their chains")
+    q.add_argument("--profile", help="Query an SDLC policy profile (simplified, default, full)")
+    q.add_argument("--profiles", action="store_true", help="List all SDLC policy profiles")
     q.add_argument("--mapping", nargs="?", const="__all__", help="Query location mapping (optionally for a specific title)")
     q.add_argument("--backlog", action="store_true", help="Show backlog status (epics, readiness, impediments)")
     q.add_argument("--lessons", action="store_true", help="Show lessons by maturity folder")
@@ -1312,6 +1409,10 @@ def main():
             result = query_models_list(paths)
         elif args.chain:
             result = query_chain(paths, args.chain)
+        elif args.profile:
+            result = query_profile(paths, args.profile)
+        elif args.profiles:
+            result = query_profiles_list(paths)
         elif args.chains:
             result = query_chains_list(paths)
         elif args.field:
@@ -1334,10 +1435,13 @@ def main():
             # No args to query → show navigate instead of argparse error
             print("No query specified. Try one of:")
             print("  gateway query --identity        → who am I?")
-            print("  gateway query --models           → what models exist?")
-            print("  gateway query --chains           → what SDLC chains exist?")
+            print("  gateway query --models           → what methodology models exist?")
+            print("  gateway query --chains           → all methodology chains (artifact sequences)")
+            print("  gateway query --chain <model>    → artifact chain for ONE methodology model")
+            print("  gateway query --profiles         → all SDLC policy profiles (simplified/default/full)")
+            print("  gateway query --profile <name>   → details on ONE SDLC profile")
             print("  gateway query --stage <name>    → what does a stage need?")
-            print("  gateway query --model <name>    → model details")
+            print("  gateway query --model <name>    → model details (includes chain)")
             print("  gateway query --field <name>    → explain a field")
             print("  gateway query --docs             → list root-level docs (README, AGENTS, CLAUDE, etc.)")
             print("  gateway query --docs <name>      → details on one root doc")
@@ -1407,15 +1511,20 @@ def main():
             print("  See: wiki/domains/cross-domain/project-self-identification-protocol.md")
         print()
 
-        # Chain
-        chain_name = (id_data.get("sdlc chain", "").split("(")[0].strip().lower()
-                      if id_data else "default")
-        chain_data = query_chain(paths, chain_name) if chain_name else {}
-        if "error" not in chain_data:
-            print(f"SDLC CHAIN: {chain_data.get('chain', '?')} — {chain_data.get('description', '')}")
-            print(f"  Stages: {' → '.join(chain_data.get('stages', []))}")
-            print(f"  Readiness gate: {chain_data.get('readiness_gate', '?')}")
-            print(f"  Enforcement: {chain_data.get('enforcement', '?')}")
+        # SDLC Profile
+        profile_name = (id_data.get("sdlc chain", id_data.get("sdlc profile", "")).split("(")[0].strip().lower()
+                        if id_data else "default")
+        profile_data = query_profile(paths, profile_name) if profile_name else {}
+        if "error" not in profile_data:
+            print(f"SDLC PROFILE: {profile_data.get('profile', '?')} — {profile_data.get('description', '')}")
+            methodology = profile_data.get("methodology", {})
+            available = methodology.get("available_models", [])
+            if available:
+                print(f"  Available models: {', '.join(available[:5])}" + (" ..." if len(available) > 5 else ""))
+            enforcement = profile_data.get("enforcement", {})
+            if enforcement:
+                print(f"  Enforcement level: {enforcement.get('level', '?')}")
+                print(f"  Stage gates: {enforcement.get('stage_gates', '?')}")
         print()
 
         # Models
@@ -1430,8 +1539,11 @@ def main():
         print("NAVIGATE FROM HERE")
         print("  gateway query --stage <name>              → what does a stage need?")
         print("  gateway query --stage <name> --domain <d> → stage + domain overrides")
-        print("  gateway query --model <name> --full-chain → full artifact chain")
-        print("  gateway query --chain <name>              → SDLC chain details")
+        print("  gateway query --model <name> --full-chain → full artifact chain for model")
+        print("  gateway query --chain <model-name>        → methodology chain (artifact sequence per stage)")
+        print("  gateway query --chains                    → all methodology chains")
+        print("  gateway query --profile <name>            → SDLC policy profile details")
+        print("  gateway query --profiles                  → all SDLC profiles (simplified/default/full)")
         print("  gateway query --field <name>              → explain a frontmatter field")
         print("  gateway template <type>                   → get a page template")
         print("  gateway config methodology.models         → render config as markdown")
@@ -1453,10 +1565,14 @@ def main():
             print("├── IDENTITY → gateway query --identity")
             print("│   └── Goldilocks Protocol: wiki/domains/cross-domain/project-self-identification-protocol.md")
             print("│")
-            print("├── SDLC CHAINS → gateway query --chains")
+            print("├── SDLC PROFILES → gateway query --profiles")
             print("│   ├── simplified (POC, micro/small)")
             print("│   ├── default (MVP→Staging, small→medium) ← most projects")
             print("│   └── full (Production, medium→massive)")
+            print("│")
+            print("├── METHODOLOGY CHAINS → gateway query --chains")
+            print("│   ├── One chain per methodology model (feature-development, bug-fix, ...)")
+            print("│   └── Each chain = artifact sequence per stage")
             print("│")
             print("├── METHODOLOGY MODELS → gateway query --models")
 
@@ -1505,7 +1621,7 @@ def main():
         print("Wiki Gateway — unified knowledge interface")
         print()
         print("Start here:")
-        print("  gateway status                → see your project identity + SDLC chain + models")
+        print("  gateway status                → see your project identity + SDLC profile + models")
         print("  gateway navigate              → browse the full knowledge tree")
         print("  gateway query --help          → all query options")
         print()

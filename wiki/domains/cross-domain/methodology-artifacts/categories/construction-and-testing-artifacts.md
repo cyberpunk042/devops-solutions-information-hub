@@ -59,7 +59,7 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > | **Implement** | Behavior: logic filling stubs, wired into existing runtime | Test modifications, orphaned code nobody imports | Compiles, lints, ≥1 existing file imports new code |
 > | **Test** | Proof: real assertions replacing placeholders, 0 failures | New features, scope changes | All tests pass, no placeholder assertions remaining |
 
-### SDLC Chain Level — What Applies Where
+### SDLC Profile Level — What Applies Where
 
 > [!abstract] Not all chains require all artifacts
 >
@@ -69,7 +69,7 @@ Guide to the artifacts produced during the Scaffold, Implement, and Test stages 
 > | **Default** (MVP-Prod, 5 stages) | Scaffold + implement + automated tests | Bridge/adapter pattern, coverage evidence | E2E tests, compliance validation |
 > | **Full** (Production fleet, all stages) | Scaffold + implement + unit + integration + e2e + compliance | — | — |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for profile details.
 
 ### Scaffold Stage Artifacts — Per Domain
 

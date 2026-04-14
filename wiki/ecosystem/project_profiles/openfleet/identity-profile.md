@@ -44,7 +44,7 @@ The second brain's understanding of OpenFleet as an ecosystem member. OpenFleet 
 > | **Scale** | Large (~3,815 .md files, 2,246-line orchestrator) | 10 agents, 219+ KB entries, 42+ IaC scripts |
 > | **PM Level** | L3 (Orchestrator) | Deterministic brain decides dispatch, priority, gating; PO sets direction through boards |
 > | **Trust Tier** | Tier-progressive (Trainee→Standard→Expert per agent per task type) | Rolling 20-record approval windows, PO confirms tier changes |
-> | **SDLC Chain** | Full | 6 stages (conversation→analysis→investigation→reasoning→work→review), MCP tool blocking per stage |
+> | **SDLC Profile** | Full | 6 stages (conversation→analysis→investigation→reasoning→work→review), MCP tool blocking per stage |
 
 ## Execution Mode Detail
 
@@ -123,7 +123,7 @@ See [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] for th
 > |--------|-----------------|-------------------|
 > | Stage names | document→design→scaffold→implement→test | conversation→analysis→investigation→reasoning→work→review |
 > | Stage count | 5 | 6 (adds review as explicit stage) |
-> | Enforcement level | Advisory (default chain) | Enforced (MCP tool blocking per stage) |
+> | Enforcement level | Advisory (default profile) | Enforced (MCP tool blocking per stage) |
 > | PM level | L1 or L2 | L3 (orchestrator makes dispatch decisions, PO sets strategy through boards) |
 > | Trust model | Static or per-session | Dynamic per-agent per-task-type, data-driven with PO confirmation |
 > | Immune system | N/A at methodology level | 3 lines of defense, hidden from agents, 30s doctor cycle |

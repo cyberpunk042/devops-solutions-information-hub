@@ -1,15 +1,15 @@
-# SDLC Chain: Simplified
+# SDLC Profile: Simplified
 #
-# The SDLC chain defines PROJECT-LEVEL POLICY — not task execution.
+# The SDLC profile defines PROJECT-LEVEL POLICY — not task execution.
 # Task execution (stages, artifacts, gates) is defined in methodology.yaml.
-# The SDLC chain determines HOW MUCH methodology a project needs.
+# The SDLC profile determines HOW MUCH methodology a project needs.
 #
 # See: wiki/domains/cross-domain/methodology-framework/sdlc-customization-framework.md
 
-chain: simplified
+profile: simplified
 description: "Minimum viable process for exploration and rapid iteration"
 
-# ─── WHEN THIS CHAIN APPLIES ───────────────────────────────────────
+# ─── WHEN THIS PROFILE APPLIES ───────────────────────────────────────
 applicability:
   phases: [poc, early-mvp]
   scale: [micro, small]          # <10k to ~100k lines

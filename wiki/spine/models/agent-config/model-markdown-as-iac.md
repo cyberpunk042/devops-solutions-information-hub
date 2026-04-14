@@ -220,7 +220,7 @@ The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUD
 
 ### CLAUDE.md as Identity Declaration — The Goldilocks Connection (NEW)
 
-The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-IaC in the ecosystem. Each project declares 7 dimensions (type, execution mode, domain, phase, scale, PM level, trust tier) as a YAML-style table in CLAUDE.md. This table is not documentation — it is a programmatic declaration that determines SDLC chain selection, methodology depth, and artifact requirements. The wiki's own identity profile (`wiki/ecosystem/project_profiles/research-wiki/identity-profile.md`) serves as the worked example. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for how identity drives the entire decision chain.
+The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-IaC in the ecosystem. Each project declares 7 dimensions (type, execution mode, domain, phase, scale, PM level, trust tier) as a YAML-style table in CLAUDE.md. This table is not documentation — it is a programmatic declaration that determines SDLC profile selection, methodology depth, and artifact requirements. The wiki's own identity profile (`wiki/ecosystem/project_profiles/research-wiki/identity-profile.md`) serves as the worked example. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for how identity drives the entire decision chain.
 
 ## Open Questions
 

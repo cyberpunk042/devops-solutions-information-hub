@@ -76,7 +76,7 @@ The wiki operates on three principles distilled from convergent evidence:
 
 1. **Infrastructure Over Instructions** — hooks and validators achieve 100% compliance; CLAUDE.md rules alone achieve ~25%. Enforce through tooling, not prose.
 2. **Structured Context Governs Agent Behavior More Than Content** — markdown structure (headers, tables, callouts, YAML) programs agent behavior. Same rules as tables: ~60% compliance. As prose: ~25%.
-3. **Right Process for Right Context (Goldilocks)** — methodology depth adapts to phase × scale × trust. POC + micro = simplified chain. Production + large + fleet = full chain with immune system.
+3. **Right Process for Right Context (Goldilocks)** — methodology depth adapts to phase × scale × trust. POC + micro = simplified profile. Production + large + fleet = full profile with immune system.
 
 ## Key Features
 

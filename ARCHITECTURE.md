@@ -65,7 +65,7 @@ devops-solutions-research-wiki/
 │   │   ├── domains.yaml        # Domain registry with descriptions
 │   │   ├── quality-standards.yaml # Content quality thresholds
 │   │   ├── export-profiles.yaml   # Export configs (openfleet/LightRAG, aicp)
-│   │   ├── sdlc-chains/        # simplified.yaml, default.yaml, full.yaml
+│   │   ├── sdlc-profiles/      # simplified.yaml, default.yaml, full.yaml
 │   │   ├── templates/          # Per-type page templates (19 types)
 │   │   │   └── methodology/    # Stage document templates (gap-analysis, tech-spec, etc.)
 │   │   │       └── project_profiles/ # Per-ecosystem-project profiles
@@ -210,7 +210,7 @@ devops-solutions-research-wiki/
 
 ### `tools/pipeline.py` — The Orchestrator (1,512 lines)
 
-The primary entry point. Chains all other tools into automated pipelines. Supports three execution modes: `chain` (sequential), `group` (parallel with `ThreadPoolExecutor`), and `tree` (branch/merge). Named chains are defined in `wiki/config/sdlc-chains/`.
+The primary entry point. Chains all other tools into automated pipelines. Supports three execution modes: `chain` (sequential), `group` (parallel with `ThreadPoolExecutor`), and `tree` (branch/merge). Named chains are defined in `wiki/config/`. SDLC profiles live in `wiki/config/sdlc-profiles/`.
 
 Key commands:
 - `post` — 6-step validation chain (always run after wiki changes)
@@ -218,7 +218,7 @@ Key commands:
 - `scaffold` — creates typed pages from `wiki/config/templates/`
 - `evolve` — delegates to `evolve.py` (score, scaffold, review)
 - `gaps`, `crossref` — analysis pipelines
-- `chain <name>` — runs a named chain from `sdlc-chains/`
+- `chain <name>` — runs a named pipeline chain (continue, review, health, evolve, full)
 
 ### `tools/gateway.py` — Unified Interface (1,451 lines)
 
@@ -459,9 +459,9 @@ Creates `wiki/lessons/00_inbox/<slug>.md` — enters the maturity pipeline. The 
 |------|---------|
 | `wiki/config/methodology.yaml` | 9 methodology models (feature-development, bug-fix, research, docs, refactor, hotfix, integration, knowledge-evolution) + stage definitions + artifact chains |
 | `wiki/config/artifact-types.yaml` | 78 artifact types across 11 categories with content thresholds, required sections, and per-type quality standards |
-| `wiki/config/sdlc-chains/simplified.yaml` | Simplified chain (POC, micro-scale, low trust) |
-| `wiki/config/sdlc-chains/default.yaml` | Default chain (production, medium scale, operator-supervised) — THIS PROJECT |
-| `wiki/config/sdlc-chains/full.yaml` | Full chain (fleet, large scale, high stakes) |
+| `wiki/config/sdlc-profiles/simplified.yaml` | Simplified SDLC profile (POC, micro-scale, low trust) |
+| `wiki/config/sdlc-profiles/default.yaml` | Default SDLC profile (production, medium scale, operator-supervised) — THIS PROJECT |
+| `wiki/config/sdlc-profiles/full.yaml` | Full SDLC profile (fleet, large scale, high stakes) |
 | `wiki/config/wiki-schema.yaml` | Page frontmatter schema (required fields, enums, constraints) |
 | `wiki/config/quality-standards.yaml` | Minimum content thresholds by page type |
 

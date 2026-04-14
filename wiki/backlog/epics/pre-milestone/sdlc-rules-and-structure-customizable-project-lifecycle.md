@@ -32,7 +32,7 @@ tags: [sdlc, customization, lifecycle, phases, scale, harness, pm-levels, readin
 
 ## Summary
 
-Build a customizable SDLC framework that adapts to project phase (POC→MVP→Staging→Production), codebase scale (10k→15M lines), and organizational needs (solo→team→fleet). Projects configure their entire lifecycle — not just methodology models but the full SDLC chain, PM infrastructure level, harness version, readiness/progress gates, and traceability requirements. The wiki provides three pre-built chains (simplified, default, full) plus the framework for defining custom chains. This enables companies, teams, and individual developers to adopt at their own pace and scale.
+Build a customizable SDLC framework that adapts to project phase (POC→MVP→Staging→Production), codebase scale (10k→15M lines), and organizational needs (solo→team→fleet). Projects configure their entire lifecycle — not just methodology models but the full SDLC profile, PM infrastructure level, harness version, readiness/progress gates, and traceability requirements. The wiki provides three pre-built profiles (simplified, default, full) plus the framework for defining custom profiles. This enables companies, teams, and individual developers to adopt at their own pace and scale.
 
 ## Operator Directive
 
@@ -48,29 +48,29 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 
 ## Goals
 
-- Three pre-built SDLC chains (simplified, middle ground, full) defined as config profiles
+- Three pre-built SDLC profiles (simplified, middle ground, full) defined as config files
 - Phase-aware methodology adaptation (POC gets short loops, Production gets full traceability)
 - Scale-aware process selection (10k = minimal process, 1M+ = full governance)
 - Readiness vs progress as two independent tracked dimensions at every hierarchy level
 - Three PM levels (L1: Wiki, L2: Fleet, L3: Full PM) formally defined with capabilities per level
 - Harness version progression (v1→v2→v3) mapped to PM levels and SDLC integration
 - Frontmatter field reference documenting every field, what it means, when required, what it enables
-- SDLC chain selection wizard or decision tree for new projects
-- Migration guide between chains (simplified→default→full) as projects grow
+- SDLC profile selection wizard or decision tree for new projects
+- Migration guide between profiles (simplified→default→full) as projects grow
 
 ## Done When
 
-- [ ] `wiki/config/sdlc-chains/simplified.yaml` defines the simplified chain with stages, artifacts, gates
-- [ ] `wiki/config/sdlc-chains/default.yaml` defines the middle-ground chain
-- [ ] `wiki/config/sdlc-chains/full.yaml` defines the full chain
-- [ ] Decision page: When to use which chain (with worked examples per phase × scale)
+- [ ] `wiki/config/sdlc-profiles/simplified.yaml` defines the simplified profile with stages, artifacts, gates
+- [ ] `wiki/config/sdlc-profiles/default.yaml` defines the middle-ground profile
+- [ ] `wiki/config/sdlc-profiles/full.yaml` defines the full profile
+- [ ] Decision page: When to use which profile (with worked examples per phase × scale)
 - [ ] Frontmatter field reference page: every field documented with meaning, requirement level, and what it enables
 - [ ] PM level reference page: L1→L2→L3 capabilities, prerequisites, migration triggers
 - [ ] Harness version guide: v1→v2→v3 what changes, when to upgrade, what it unblocks
 - [ ] Readiness vs progress model validated against OpenFleet implementation
-- [ ] At least one external project can adopt the simplified chain from the wiki's documentation alone
+- [ ] At least one external project can adopt the simplified profile from the wiki's documentation alone
 - [ ] Pipeline post returns 0 errors
-- [ ] Operator confirms: "I can pick the right chain for any project in under 2 minutes"
+- [ ] Operator confirms: "I can pick the right SDLC profile for any project in under 2 minutes"
 
 ## Scale and Model
 
@@ -91,8 +91,8 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 > | Stage | Required Artifacts | Template |
 > |-------|--------------------|----------|
 > | Document | Online research (SDLC frameworks, maturity models), gap analysis vs current system | wiki/config/templates/methodology/gap-analysis.md |
-> | Design | SDLC chain specifications, field reference design, PM level architecture | wiki/config/templates/methodology/requirements-spec.md |
-> | Scaffold | YAML chain profiles, field definitions in wiki-schema.yaml | N/A |
+> | Design | SDLC profile specifications, field reference design, PM level architecture | wiki/config/templates/methodology/requirements-spec.md |
+> | Scaffold | YAML profile configs, field definitions in wiki-schema.yaml | N/A |
 > | Implement | Chain configs, wiki reference pages, selection wizard, migration guide | N/A |
 > | Test | External project adoption test, pipeline validation | N/A |
 
@@ -100,29 +100,29 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 
 | Module | Delivers | Est. Tasks |
 |--------|----------|-----------|
-| M1: Three SDLC Chains | simplified.yaml, default.yaml, full.yaml config profiles | 4-5 |
+| M1: Three SDLC Profiles | simplified.yaml, default.yaml, full.yaml config files | 4-5 |
 | M2: Phase and Scale Model | Decision trees, worked examples, phase transition triggers | 4-5 |
 | M3: Frontmatter Field Reference | Complete field documentation with requirement levels and automation enablement | 3-4 |
 | M4: PM Level and Harness Guide | L1→L2→L3 capabilities, v1→v2→v3 migration, prerequisites | 4-5 |
-| M5: Selection and Migration | Chain selection wizard, migration paths, external adoption guide | 4-5 |
+| M5: Selection and Migration | Profile selection wizard, migration paths, external adoption guide | 4-5 |
 
 ## Dependencies
 
-- **E003 (Artifact Type System):** Chain configs reference artifact types. Current state: 40%.
+- **E003 (Artifact Type System):** Profile configs reference artifact types. Current state: 40%.
 - **Gateway Tools epic:** Selection wizard ideally uses gateway query API. Can work without it (static wiki pages).
 - **OpenFleet scan data:** Readiness vs progress model validated against real OpenFleet data (in raw/).
 
 ## Open Questions
 
-> [!question] ~~Should SDLC chains be YAML configs or wiki pages?~~
+> [!question] ~~Should SDLC profiles be YAML configs or wiki pages?~~
 > **RESOLVED:** Both. Already implemented. YAML for policy config, wiki page for explanation.
 > YAML = machine-readable, composable, validatable. Wiki pages = human-readable, discoverable. Both? Config for machines, wiki page explaining the config for humans?
 
-> [!question] ~~How do phase transitions trigger chain upgrades?~~
-> **RESOLVED:** SDLC chain upgrade_triggers are signals. When triggers are met, operator decides. Not automatic.
+> [!question] ~~How do phase transitions trigger profile upgrades?~~
+> **RESOLVED:** SDLC profile upgrade_triggers are signals. When triggers are met, operator decides. Not automatic.
 > POC→MVP: manual operator decision? Metric-based (first paying user, first SLA)? Should the wiki recommend triggers or just document options?
 
-> [!question] ~~Should the simplified chain have ANY stage gates?~~
+> [!question] ~~Should the simplified profile have ANY stage gates?~~
 > **RESOLVED:** Advisory only. The operator IS the gate at simplified level. No infrastructure enforcement.
 > Or is simplified = "just build it, no gates"? Tension: gates slow POCs but prevent the "untraceable mess" that makes MVP→Production painful.
 
@@ -141,7 +141,7 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 
 ## Relationships
 
-- IMPLEMENTS: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- IMPLEMENTS: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - BUILDS ON: [[model-methodology|Model — Methodology]]
 - BUILDS ON: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 - BUILDS ON: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
@@ -151,7 +151,7 @@ Build a customizable SDLC framework that adapts to project phase (POC→MVP→St
 
 ## Backlinks
 
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[model-methodology|Model — Methodology]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]

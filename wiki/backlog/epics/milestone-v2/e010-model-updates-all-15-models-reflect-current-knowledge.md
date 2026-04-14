@@ -53,7 +53,7 @@ Update EVERY one of the 15 named models in the wiki so each fully reflects the c
 
 - Every model page reflects ALL knowledge from the 2026-04-12 session and sister project scans
 - Each model's Key Insights section is CURRENT — no outdated claims, no missing evidence
-- Each model's Deep Analysis has subsections for NEW concepts (enforcement hierarchy, Goldilocks, readiness/progress, PM levels, SDLC chains) where they apply to that model
+- Each model's Deep Analysis has subsections for NEW concepts (enforcement hierarchy, Goldilocks, readiness/progress, PM levels, SDLC profiles) where they apply to that model
 - Each model's Lessons Learned table includes the 13 new lessons from the 2026-04-12 session where relevant
 - Each model's State of Knowledge section is honest — what's well-covered vs thin vs unverified
 - Each model's Open Questions section has resolved answers where evidence now exists
@@ -62,13 +62,13 @@ Update EVERY one of the 15 named models in the wiki so each fully reflects the c
 
 ## Done When
 
-- [ ] Model: Methodology — updated with SDLC chains, Goldilocks, readiness/progress, PM levels, corrected execution mode semantics, battle-tested evidence ($3.50→$1.32 cost curve)
+- [ ] Model: Methodology — updated with SDLC profiles, Goldilocks, readiness/progress, PM levels, corrected execution mode semantics, battle-tested evidence ($3.50→$1.32 cost curve)
 - [ ] Model: LLM Wiki — updated with gateway tools, dual-scope, frontmatter reference, maturity folder structure, knowledge hierarchy (principles layer)
 - [ ] Model: Claude Code — updated with enforcement hierarchy (quantified), five cognitive contexts, context compaction, structured context proto-programming
 - [ ] Model: Quality and Failure Prevention — updated with 7 failure classes (deepened with overnight run data), three lines of defense, harness convergence
 - [ ] Model: Skills, Commands, and Hooks — updated with real OpenArms v10 hook implementations (48+106+36+29 lines), skill-stage-mapping (3 layers), dynamic injection
 - [ ] Model: Ecosystem Architecture — updated with PM level per project, ecosystem feedback loop evidence, dual-perspective principle
-- [ ] Model: SFIF and Architecture — updated with SFIF × SDLC chain connection, product lifecycle mapping (POC=Scaffold, MVP=Foundation)
+- [ ] Model: SFIF and Architecture — updated with SFIF × SDLC profile connection, product lifecycle mapping (POC=Scaffold, MVP=Foundation)
 - [ ] Model: Wiki Design — updated with maturity folder structure, callout vocabulary for new types (principle, milestone)
 - [ ] Model: Knowledge Evolution — updated with principles layer (L5+), maturity-based promotion criteria, 00_inbox→04_principles pipeline
 - [ ] Remaining 6 models (Automation, Design.md, Local AI, MCP/CLI, NotebookLM, Second Brain) — reviewed and updated where session knowledge applies
@@ -107,7 +107,7 @@ These 3 models are referenced by everything else. They MUST be current before ot
 
 | Task | Model | Key Updates Needed | Est. Effort |
 |------|-------|-------------------|-------------|
-| T-E010-01 | **Model: Methodology** | SDLC chains, Goldilocks, readiness/progress, PM levels, corrected execution mode, battle-tested evidence, "How This Weaves Together" already added but needs review | L |
+| T-E010-01 | **Model: Methodology** | SDLC profiles, Goldilocks, readiness/progress, PM levels, corrected execution mode, battle-tested evidence, "How This Weaves Together" already added but needs review | L |
 | T-E010-02 | **Model: LLM Wiki** | Gateway tools, dual-scope, frontmatter reference, maturity folders, principles layer, "How This Weaves Together" added but needs review | L |
 | T-E010-03 | **Model: Quality and Failure Prevention** | 7 failure classes deepened (done partially), three lines of defense, harness convergence, compliance arms race, integration tests evidence (2,073 orphaned lines). Key Insights already updated — needs State of Knowledge review. | M |
 
@@ -118,7 +118,7 @@ These 3 models are referenced by everything else. They MUST be current before ot
 | T-E010-04 | **Model: Claude Code** | Five cognitive contexts (from OpenArms), context compaction hooks, structured context proto-programming, enforcement hierarchy quantified (25%→100%). Partially updated — needs Deep Analysis sections on new patterns. | L |
 | T-E010-05 | **Model: Skills, Commands, and Hooks** | Real OpenArms v10 implementations (hook code, skill-stage-mapping 3 layers, dynamic injection). Partially updated — needs Deep Analysis on real implementation patterns. | M |
 | T-E010-06 | **Model: Ecosystem Architecture** | PM level per project table added. Needs: updated project table (OpenArms=harness-v2, OpenFleet=full-system), ecosystem feedback loop evidence from the 2026-04-12 session. | M |
-| T-E010-07 | **Model: SFIF and Architecture** | SFIF × SDLC chain connection added. Needs review: is the mapping (Skyscraper≈Full, Pyramid≈Default, Mountain≈Simplified) accurate? | S |
+| T-E010-07 | **Model: SFIF and Architecture** | SFIF × SDLC profile connection added. Needs review: is the mapping (Skyscraper≈Full, Pyramid≈Default, Mountain≈Simplified) accurate? | S |
 
 ### M3: Depth Models (specialized domains)
 
@@ -129,7 +129,7 @@ These 3 models are referenced by everything else. They MUST be current before ot
 | T-E010-10 | **Model: Markdown as IaC — Design.md and Agent Configuration** | Structured context as proto-programming, CLAUDE.md as IaC updated with identity profile | S |
 | T-E010-11 | **Model: MCP and CLI Integration** | Gateway tools as new integration point, dual-scope principle | S |
 | T-E010-12 | **Model: Second Brain** | The wiki IS the second brain — update with all session concepts (hub lesson, dual-perspective, ecosystem feedback) | M |
-| T-E010-13 | **Model: Automation and Pipelines** | Gateway as new pipeline tool, SDLC chain configs as automation targets | S |
+| T-E010-13 | **Model: Automation and Pipelines** | Gateway as new pipeline tool, SDLC profile configs as automation targets | S |
 | T-E010-14 | **Model: NotebookLM** | Review — may not need session-specific updates. Confirm or update. | XS |
 | T-E010-15 | **Model: Local AI ($0 Target)** | Review — may not need session-specific updates. Confirm tier-based context depth connection. | XS |
 

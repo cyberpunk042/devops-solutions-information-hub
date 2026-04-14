@@ -75,11 +75,11 @@ All easy. Frontmatter conventions, mode behavior, and log format can all be chan
 - [[rework-prevention|Rework Prevention]] — compound cost model drives the "finish the stage" decision
 - [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — blocked_by pattern drives the bug task creation
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for solo/semi-autonomous execution without a harness. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for solo/semi-autonomous execution without a harness. At different profile levels:
 > - **Simplified chain:** Most edge cases (cost limits, N/A gates, completion logs) don't arise — work is fully human-guided and stages are implicit. Only the bug-task-on-failure pattern applies universally.
 > - **Full chain:** All five decisions become harness-enforced: failed gates auto-create bug tasks via API, cost limits are hard-kill with state checkpointing, gate skips require explicit harness approval, and completion logs are mandatory structured artifacts.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

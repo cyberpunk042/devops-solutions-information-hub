@@ -42,7 +42,7 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 
 > [!tip] The Principle
 >
-> **Every process decision (SDLC chain, enforcement level, methodology model, artifact depth, tracking granularity) MUST be parameterized by the consumer's identity profile, not fixed to one configuration.** The mechanism: process that is too heavy for the context creates friction that agents and humans route around (defeating the process). Process that is too light creates gaps that compound into failures (defeating quality). The Goldilocks point shifts as the project matures — what was right for POC is wrong for Production, and vice versa. The framework must ADAPT, and adaptation requires the consumer to DECLARE its context.
+> **Every process decision (SDLC profile, enforcement level, methodology model, artifact depth, tracking granularity) MUST be parameterized by the consumer's identity profile, not fixed to one configuration.** The mechanism: process that is too heavy for the context creates friction that agents and humans route around (defeating the process). Process that is too light creates gaps that compound into failures (defeating quality). The Goldilocks point shifts as the project matures — what was right for POC is wrong for Production, and vice versa. The framework must ADAPT, and adaptation requires the consumer to DECLARE its context.
 
 ## Derived From
 
@@ -92,8 +92,8 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 >
 > | Direction | Go To |
 > |-----------|-------|
-> | **The identity protocol that makes this work** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 questions → chain selection |
-> | **The SDLC chains to choose from** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — simplified/default/full with CMMI mapping |
+> | **The identity protocol that makes this work** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] — 7 questions → profile selection |
+> | **The SDLC profiles to choose from** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] — simplified/default/full with CMMI mapping |
 > | **The PM infrastructure levels** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — L1→L2→L3, harness v1→v3 |
 > | **The tracking that adapts per context** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — gate threshold adapts per identity |
 > | **The enforcement that adapts** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] — enforcement level follows PM level |
@@ -108,7 +108,7 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 - DERIVED FROM: [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
 - DERIVED FROM: [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
 - DERIVED FROM: [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
-- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - BUILDS ON: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 - RELATES TO: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 - RELATES TO: [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
@@ -123,7 +123,7 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
 [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]

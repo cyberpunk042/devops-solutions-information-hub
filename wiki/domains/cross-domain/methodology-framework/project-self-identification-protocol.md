@@ -33,7 +33,7 @@ Every agent session, every harness run, every tool invocation must be able to an
 
 ## Key Insights
 
-1. **Self-identification is prerequisite to methodology selection.** Before an agent or system can choose a methodology model, SDLC chain, or enforcement level, it must know WHAT it is. OpenArms discovered this the hard way: 5 cognitive contexts reading one CLAUDE.md, each needing different rules, none marked.
+1. **Self-identification is prerequisite to methodology selection.** Before an agent or system can choose a methodology model, SDLC profile, or enforcement level, it must know WHAT it is. OpenArms discovered this the hard way: 5 cognitive contexts reading one CLAUDE.md, each needing different rules, none marked.
 
 2. **Seven identity dimensions determine "just right."**
 
@@ -51,7 +51,7 @@ Every agent session, every harness run, every tool invocation must be able to an
 >
 > **Critical distinction:** Questions 3 and 5 are auto-detectable from the filesystem. Questions 1, 2, 6, 7 CANNOT be auto-detected — they depend on RUNTIME state or operational data that the project files don't contain. Question 4 is partially detectable (heuristic). When auto-detection can't determine the answer, the gateway says "unknown — declare in CLAUDE.md or pass at runtime" and warns the user.
 
-3. **The answers compose into a profile that selects everything downstream.** Identity → SDLC chain → methodology model → enforcement level → context depth → tool scope. Each step narrows based on the identity profile. An expert-tier agent on a v3 harness in a Production/1M TypeScript project gets FULL chain with FULL enforcement. A trainee-tier solo agent on v1 in a POC/10k Python project gets SIMPLIFIED chain with advisory rules only.
+3. **The answers compose into a profile that selects everything downstream.** Identity → SDLC profile → methodology model → enforcement level → context depth → tool scope. Each step narrows based on the identity profile. An expert-tier agent on a v3 harness in a Production/1M TypeScript project gets FULL profile with FULL enforcement. A trainee-tier solo agent on v1 in a POC/10k Python project gets SIMPLIFIED profile with advisory rules only.
 
 4. **Dual-scope tools must know the identity of BOTH the caller and the target.** When a project calls the second brain tools, the tools need to know: am I operating on the second brain itself, or on the project's internal wiki? The same query ("what artifacts does Document stage need?") returns different answers based on the target project's domain profile.
 
@@ -107,7 +107,7 @@ This profile determines:
 > |-------------|---------|---------|
 > | type + harness_version | Which rules apply to ME | Solo agent gets methodology hooks. Human operator gets investigation tools. Sub-agent gets trustless rules. |
 > | domain | Which domain profile and artifact chain | TypeScript: pnpm gates, src/ paths. Python: pipeline post, wiki/ paths. |
-> | project_phase + codebase_scale | SDLC chain | POC + micro = simplified. Production + large = full. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | project_phase + codebase_scale | SDLC profile | POC + micro = simplified. Production + large = full. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] |
 > | pm_level | Available enforcement infrastructure | L1: CLAUDE.md only. L2: hooks + commands + dispatch. L3: + sprint planning + Plane sync. |
 > | trust_tier | Context depth and autonomy | Expert: full context, all stages. Trainee: minimal context, restricted stages. See [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] |
 > | second_brain | Tool scope | Connected: query second brain for methodology + standards. Local-only: use project's own wiki. None: CLAUDE.md rules only. |
@@ -136,7 +136,7 @@ The operator asked: "What makes this work? Where is all the magic? What is the i
 >
 > 3. **Knowledge** — The second brain contains methodology, standards, lessons, patterns, decisions. Projects don't invent from scratch — they query the brain, adapt to their domain, and feed learnings back. The brain is always AHEAD of any individual project. See [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]].
 >
-> The magic is in the COMPOSITION of all three: the right structure (Goldilocks profile → chain selection) + the right infrastructure (hooks/commands/harness appropriate to the PM level) + the right knowledge (second brain queried at the appropriate depth for the trust tier).
+> The magic is in the COMPOSITION of all three: the right structure (Goldilocks profile → SDLC profile selection) + the right infrastructure (hooks/commands/harness appropriate to the PM level) + the right knowledge (second brain queried at the appropriate depth for the trust tier).
 
 ### Connection to Global Standards
 
@@ -183,10 +183,10 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 > | What am I? → system/harness/solo/sub-agent | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — determines enforcement infrastructure |
 > | What version? → v1/v2/v3 | [[enforcement-hook-patterns|Enforcement Hook Patterns]] (v2) → [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] (v2+) → [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] (v2+) |
 > | What domain? | Domain profiles in `wiki/config/domain-profiles/` → artifact chains per domain |
-> | What phase? + What scale? | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] → chain selection matrix |
+> | What phase? + What scale? | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] → profile selection matrix |
 > | What PM level? | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — tracking depth matches PM level |
 > | What trust tier? | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — context depth adapts per tier |
-> | All answers combined | [[methodology-adoption-guide|Methodology Adoption Guide]] — selects tier + chain + domain + enforcement |
+> | All answers combined | [[methodology-adoption-guide|Methodology Adoption Guide]] — selects tier + profile + domain + enforcement |
 
 ## Open Questions
 
@@ -203,7 +203,7 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 
 ## Relationships
 
-- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - BUILDS ON: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 - BUILDS ON: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 - RELATES TO: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
@@ -216,7 +216,7 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 
 ## Backlinks
 
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

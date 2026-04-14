@@ -65,9 +65,9 @@ Complete requirements spec for the second brain integration system — covering 
 >
 > | ID | Requirement | Status | What's Done | What's Missing |
 > |----|------------|--------|------------|---------------|
-> | FR-B1 | SDLC customization framework | **Done** | Concept page with phase × scale × chain. CMMI + Lean Startup research. | Needs more real examples per combination. |
-> | FR-B2 | Scale-aware rigor | **Done** | Scale tiers defined (micro→massive). Mapped to chains. | Not yet enforced — advisory only. |
-> | FR-B3 | Three SDLC chains as configs | **Done** | simplified.yaml, default.yaml, full.yaml in wiki/config/sdlc-chains/. | Chain configs not yet consumed by any tool (gateway queries them but pipeline doesn't). |
+> | FR-B1 | SDLC customization framework | **Done** | Concept page with phase × scale × profile. CMMI + Lean Startup research. | Needs more real examples per combination. |
+> | FR-B2 | Scale-aware rigor | **Done** | Scale tiers defined (micro→massive). Mapped to profiles. | Not yet enforced — advisory only. |
+> | FR-B3 | Three SDLC profiles as configs | **Done** | simplified.yaml, default.yaml, full.yaml in wiki/config/sdlc-profiles/. | Profile configs not yet consumed by any tool (gateway queries them but pipeline doesn't). |
 > | FR-B4 | Readiness vs Progress dual tracking | **Done** | Concept page. Both fields in schema + all templates. OpenFleet evidence. | Not implemented in any validation tool. Frontmatter only. |
 > | FR-B5 | 99→100 = human only | **Documented** | In readiness page, adoption guide, principles. | No tooling enforces it. |
 > | FR-B6 | Milestone hierarchy | **Done** | Type added to schema. Template created. Scaffolder support. | No milestones actually created yet. |

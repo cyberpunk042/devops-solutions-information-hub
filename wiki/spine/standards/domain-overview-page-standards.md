@@ -70,7 +70,7 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 >
 > **5. Key Pages** — Curated reading order, not alphabetical dump. Each page annotated with WHY it's key: "Methodology Framework — entry point, defines the 9 models." ← A new reader follows this order and builds understanding progressively.
 >
-> **6. Priorities** — "P1: Deepen SDLC chain configs (3 YAMLs are drafts). P2: Add context engineering standards page." Named next actions with estimated effort. ← Actionable, not aspirational. An agent or human can pick up work directly from these priorities.
+> **6. Priorities** — "P1: Deepen SDLC profile configs (3 YAMLs are drafts). P2: Add context engineering standards page." Named next actions with estimated effort. ← Actionable, not aspirational. An agent or human can pick up work directly from these priorities.
 >
 > **What could still improve:** Backlink density analysis per page (which pages are referenced most but have the thinnest content?), automated maturity scoring from pipeline metrics.
 

@@ -12,7 +12,7 @@ maturity: growing
 derived_from:
   - "Backlog Hierarchy Rules"
   - "Readiness vs Progress — Two-Dimensional Work Tracking"
-  - "SDLC Customization Framework — Phases, Scale, and Chain Selection"
+  - "SDLC Customization Framework — Phases, Scale, and Profile Selection"
 reversibility: easy
 created: 2026-04-12
 updated: 2026-04-13
@@ -103,7 +103,7 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 - [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — defines the 4-level hierarchy and 8 rules governing propagation
 - [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — both fields tracked at every level
 - [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] — PM level determines how hierarchy is enforced
-- [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — SDLC chain affects how many artifacts per level
+- [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] — SDLC profile affects how many artifacts per level
 
 ### How This Connects — Navigate From Here
 
@@ -113,7 +113,7 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 > |-----------|-------|
 > | **What defines the hierarchy rules?** | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] |
 > | **What tracking model applies?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] |
-> | **What SDLC chain affects artifact count per level?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] |
+> | **What SDLC profile affects artifact count per level?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] |
 > | **What PM level determines enforcement?** | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] |
 > | **Where does this fit?** | [[methodology-system-map|Methodology System Map]] |
 
@@ -121,7 +121,7 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 
 - DERIVED FROM: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 - DERIVED FROM: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
-- DERIVED FROM: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- DERIVED FROM: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 - RELATES TO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 - FEEDS INTO: [[model-methodology|Model — Methodology]]
@@ -130,7 +130,7 @@ Easy to reverse. Promoting a task to a module or demoting an epic to a task is a
 
 [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-methodology|Model — Methodology]]

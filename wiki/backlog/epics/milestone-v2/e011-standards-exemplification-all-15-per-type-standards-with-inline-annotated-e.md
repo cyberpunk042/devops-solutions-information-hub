@@ -116,7 +116,7 @@ Each task: read the exemplar page FULLY, write the annotated walkthrough section
 
 | Task | Standards Page | Recommended Exemplar | Why This Exemplar |
 |------|--------------|---------------------|-------------------|
-| T-E011-04 | Concept Page Standards | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] or [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] | Both are session products demonstrating current best practices |
+| T-E011-04 | Concept Page Standards | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] or [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] | Both are session products demonstrating current best practices |
 | T-E011-05 | Source-Synthesis Standards | [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]] | Real source synthesis with 11 key insights, deep analysis, specific data |
 | T-E011-06 | Comparison Standards | [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]] | Session product with comparison matrix, per-alternative analysis, recommendation |
 | T-E011-07 | Reference Standards | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] | Complete reference with lookup tables, automation enablement column |

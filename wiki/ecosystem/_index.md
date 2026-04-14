@@ -16,7 +16,7 @@ The second brain's understanding of each project in the ecosystem. These are NOT
 
 ## Project Profiles
 
-| Project | Type | Execution Mode | SDLC Chain | Key Contribution |
+| Project | Type | Execution Mode | SDLC Profile | Key Contribution |
 |---------|------|---------------|------------|-----------------|
 | [OpenArms](project_profiles/openarms/identity-profile.md) | Agent platform (TS/Node) | Harness v2 (enforced) | Default → Full | Enforcement lessons, 24-artifact chain, failure taxonomy |
 | [OpenFleet](project_profiles/openfleet/identity-profile.md) | Fleet orchestrator (TS/Node) | Full System | Full | Immune system, tier progression, contribution gating |

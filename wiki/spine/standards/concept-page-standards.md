@@ -119,7 +119,7 @@ Standards for concept pages — the most common page type in the wiki (74 pages)
 >
 > **The test:** After reading this page, could you CREATE a new methodology model from scratch? If yes, the concept page succeeded. If you'd need to read 5 other pages, it's a reference list, not a concept.
 
-### Annotated Exemplar: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+### Annotated Exemplar: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 
 > [!example]- Full Walkthrough — Why Each Section Works
 >

@@ -168,7 +168,7 @@ L2 comes in two forms depending on whether a harness or a full system provides e
 > | Direction | Go To |
 > |-----------|-------|
 > | **What enforcement exists at each level?** | L1: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]. L2: [[enforcement-hook-patterns|Enforcement Hook Patterns]] + [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]. L3: + [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]] |
-> | **What SDLC chain matches each level?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] — L1=simplified, L2=default, L3=full |
+> | **What SDLC profile matches each level?** | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] — L1=simplified, L2=default, L3=full |
 > | **How does the wiki serve all levels?** | L1: agent reads wiki pages. L2: harness queries wiki config. L3: Plane syncs with wiki state. All read from [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]] |
 > | **What tools serve each level?** | [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]] — same gateway, adapted per PM level |
 > | **What harness version maps here?** | v1→L1, v2→L2, v3→L3. See harness version table in this page. |
@@ -185,14 +185,14 @@ L2 comes in two forms depending on whether a harness or a full system provides e
 > The research wiki (this project) is the second brain. L1 projects reference it for methodology and standards. L2 projects consume it via MCP tools. L3 projects may integrate it into sprint planning. Is the second brain a cross-level service or an L1 component?
 
 > [!question] ~~What determines when to upgrade harness versions?~~
-> **RESOLVED:** SDLC chain upgrade triggers. v1→v2: when agents violate rules. v2→v3: when full SDLC tracking needed. Defined in chain configs.
+> **RESOLVED:** SDLC profile upgrade triggers. v1→v2: when agents violate rules. v2→v3: when full SDLC tracking needed. Defined in profile configs.
 > v1→v2: "when agents violate rules" is clear. v2→v3: "when you need organizational tracking" is vague. Can we define specific triggers (team size, compliance requirements, multi-project threshold)?
 
 ## Relationships
 
 - BUILDS ON: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 - BUILDS ON: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
-- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- RELATES TO: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 - RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 - RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
@@ -204,7 +204,7 @@ L2 comes in two forms depending on whether a harness or a full system provides e
 
 [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]

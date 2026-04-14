@@ -10,7 +10,7 @@ Executed on: 2026-04-12, from the research wiki targeting OpenArms as test subje
 |------|---------|--------|---------|
 | 1. DETECT | `gateway --wiki-root ~/openarms what-do-i-need` | Auto-detected: typescript, production, large (9,414 files). Execution mode: "unknown — declare" (correct). Recommended: full chain. | **PASS** |
 | 2. IDENTITY | `gateway --wiki-root ~/openarms query --identity` | `null` — OpenArms doesn't have Identity Profile in CLAUDE.md. Expected. | **PASS** (correct behavior) |
-| 3. CHAIN | `gateway query --chain full` | Full chain: 5 stages, 9 models, readiness gate 99, full_infrastructure enforcement. | **PASS** |
+| 3. CHAIN | `gateway query --profile full` | Full chain: 5 stages, 9 models, readiness gate 99, full_infrastructure enforcement. | **PASS** |
 | 4. MODEL | `gateway query --model feature-development` | 5 stages: document → design → scaffold → implement → test. | **PASS** |
 | 5. CHAIN DETAIL | `gateway query --model feature-development --full-chain` | Document: wiki-page (3 templates). Design: design-document (3 templates). Scaffold: type-definition + test-stub. Implement: implementation + integration-wiring. Test: test-implementation + test-results. | **PASS** |
 | 6. STAGE + DOMAIN | `gateway --wiki-root ~/openarms query --stage document` | Auto-detected domain: typescript. Domain overrides: forbidden_zones=[src/, *.ts, *.test.ts], path_patterns for wiki-page. | **PASS** |

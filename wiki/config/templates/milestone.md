@@ -43,7 +43,7 @@ tags: [milestone]
      
      EXAMPLE: "Ship the first external-facing integration: OpenArms consuming the
      methodology engine from the second brain. Proves the full chain end-to-end:
-     identity detection, chain selection, stage routing, artifact validation,
+     identity detection, SDLC profile selection, stage routing, artifact validation,
      enforcement hook deployment. 4 epics must coordinate because the integration
      touches methodology, gateway, hooks, and validation." -->
 

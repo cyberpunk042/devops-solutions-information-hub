@@ -101,7 +101,7 @@ This lesson applies to any system with sequential stages and a decision-making a
 > | **How are stage boundaries enforced?** | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] — hooks enforce boundaries at tool-call level |
 > | **What happens when boundaries are violated?** | OpenArms v8 overnight: 75% violations. Stage 3→5 skips produced orphaned code (2,073 lines nobody imported). |
 > | **What methodology models define stages?** | [[model-methodology|Model — Methodology]] — 9 models with different stage sequences. Research=2, Feature-dev=5, Hotfix=2. |
-> | **What is the Goldilocks for stages?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] — POC may use simplified chain (2-3 stages). Production uses full (5 stages). |
+> | **What is the Goldilocks for stages?** | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] — POC may use simplified profile (2-3 stages). Production uses full (5 stages). |
 > | **How does readiness track stage progress?** | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — readiness advances through definition stages, progress through execution stages |
 
 ## Relationships

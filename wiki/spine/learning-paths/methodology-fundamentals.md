@@ -92,14 +92,14 @@ Guided sequence for understanding the research wiki's methodology system — fro
 ### Part 8: The Goldilocks Protocol (putting it all together)
 
 28. **[[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]** — Answer the 7 questions. Get your identity profile. Select your chain, enforcement, and depth.
-29. **[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]** — Phase × scale → chain. Simplified, default, or full.
+29. **[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]** — Phase × scale → chain. Simplified, default, or full.
 30. **[[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]** — L1→L2→L3. Harness v1→v3. Each wraps the previous.
 
 ## Outcomes
 
 After completing this path you should be able to:
 - Answer the 7 Goldilocks identity questions for any project
-- Select the correct SDLC chain (simplified/default/full) based on phase and scale
+- Select the correct SDLC profile (simplified/default/full) based on phase and scale
 - Select the correct methodology model for any task type and scale
 - Identify the 3 classes of output and apply the right quality rules per class
 - Follow the stage sequence and produce correct artifacts at each stage

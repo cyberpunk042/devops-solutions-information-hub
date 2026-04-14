@@ -139,7 +139,7 @@ Each project adapts the super-model to its context. The brain maintains an ident
 > **v2.0 architecture:**
 > - 5 sub-super-models as navigation hubs (Goldilocks, Enforcement, Knowledge, Work Management, Integration)
 > - 4 domain chains genericized (options by SDLC level, project profiles for specific instances)
-> - 3 SDLC chain configs as POLICY (simplified/default/full — draft status)
+> - 3 SDLC profile configs as POLICY (simplified/default/full — draft status)
 > - Ecosystem project profiles separating brain knowledge from project-specific knowledge
 > - [[filename|title]] wikilinks + frontmatter aliases for Obsidian resolution
 > - 8 root-level docs implementing three-layer agent context architecture (README + AGENTS + CLAUDE + CONTEXT + ARCHITECTURE + DESIGN + TOOLS + SKILLS) — see [[root-documentation-map|Root Documentation Map]]
@@ -173,7 +173,7 @@ Each project adapts the super-model to its context. The brain maintains an ident
 > ```
 > IDENTITY (who am I?) ←→ GOLDILOCKS (what's "just right"?)
 >     ↓                          ↓
-> SDLC CHAIN (simplified/default/full) ←→ PROJECT PHASE (POC→Production)
+> SDLC PROFILE (simplified/default/full) ←→ PROJECT PHASE (POC→Production)
 >     ↓                                        ↓
 > METHODOLOGY MODEL (which stages?) ←→ DOMAIN PROFILE (which artifacts?)
 >     ↓                                    ↓
@@ -269,7 +269,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[identity-profile|Research Wiki — Identity Profile]]
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
 [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]

@@ -197,18 +197,18 @@ A wiki page that skips Foundation (jumping from raw notes to a pattern) produces
 
 SFIF and the SDLC Customization Framework are complementary:
 - **SFIF** describes the BUILD lifecycle (what order to construct things)
-- **SDLC chain** describes the PROCESS lifecycle (how much rigor wraps the build)
-- **Quality tiers** (Skyscraper/Pyramid/Mountain) map to SDLC chains (Full/Default/Simplified)
+- **SDLC profile** describes the PROCESS lifecycle (how much rigor wraps the build)
+- **Quality tiers** (Skyscraper/Pyramid/Mountain) map to SDLC profiles (Full/Default/Simplified)
 
-> [!info] SFIF × SDLC Chain
+> [!info] SFIF × SDLC Profile
 >
-> | Quality Tier | SDLC Chain | CMMI Level | What It Means |
+> | Quality Tier | SDLC Profile | CMMI Level | What It Means |
 > |-------------|-----------|-----------|---------------|
 > | Skyscraper | Full | 4 (Quantitative) | Every SFIF stage gets full artifacts + gates + review |
 > | Pyramid | Middle Ground | 3 (Defined) | Deliberate compression — SFIF stages with selected artifacts |
 > | Mountain | Simplified or None | 1-2 (Initial/Managed) | POC decisions never revisited. Acceptable for POC phase only. |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for phase × scale decision matrix.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for phase × scale decision matrix.
 
 The phase progression (POC → MVP → Staging → Production) also maps to SFIF: POC is the Scaffold of the product lifecycle. MVP is Foundation. Staging is Infrastructure. Production is Features at scale. The pattern IS recursive — SFIF at the product level mirrors SFIF at the code level.
 
@@ -222,8 +222,8 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 > **RESOLVED:** POC→MVP phase transition. Same trigger as simplified→default chain upgrade. When real users depend on the output.
 > Is it a discrete architectural decision (refactor sprint) or continuous improvement? Can a system cross the boundary without anyone noticing? (Requires: observing the transition in a real project)
 
-> [!question] ~~**Does SFIF × SDLC Chain produce a formal upgrade path?**~~
-> **RESOLVED:** Conceptually yes — a project at Pyramid quality on simplified chain upgrades to Skyscraper/default when triggers hit. Not yet formalized.
+> [!question] ~~**Does SFIF × SDLC Profile produce a formal upgrade path?**~~
+> **RESOLVED:** Conceptually yes — a project at Pyramid quality on simplified profile upgrades to Skyscraper/default when triggers hit. Not yet formalized.
 > If a project is Mountain/Simplified (POC), is the upgrade path: Mountain→Pyramid (quality) THEN Simplified→Default (process)? Or do quality and process upgrade together? (Requires: empirical data from at least 2 project upgrades)
 
 ### How This Connects — Navigate From Here

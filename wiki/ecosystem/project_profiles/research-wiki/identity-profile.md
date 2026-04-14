@@ -42,7 +42,7 @@ The second brain's understanding of ITSELF as an ecosystem member. This profile 
 > | **Scale** | Medium (300 pages, growing) | 7 domains, 15 named models, 78 artifact types, 6-layer knowledge evolution |
 > | **PM Level** | L1 (wiki backlog, CLAUDE.md directives, pipeline tools) | Backlog of epics, CLAUDE.md as routing table, pipeline post as gate |
 > | **Trust Tier** | Operator-supervised | Human reviews all produced content |
-> | **SDLC Chain** | Default (stage-gated with selected artifacts) | 5 stages, artifact chains, pipeline post validation |
+> | **SDLC Profile** | Default (stage-gated with selected artifacts) | 5 stages, artifact chains, pipeline post validation |
 
 ## What Makes This Profile Unique
 
@@ -69,7 +69,7 @@ The brain is both the map AND a territory on that map. When it describes "how to
 > | [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic Not Isolated]] | When one page is thin, ALL pages from that session are thin. Fix the process, not the page. |
 > | [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]] | A new page with 0 inbound links is an orphan. Integration = relationships + backlinks + domain index. |
 > | [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks]] | Config with specific values is not a framework. Teach the meta-level. |
-> | [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework Not a Fixed Pipeline]] | 9 models, 3 SDLC chains, domain-specific artifact overrides. Not one-size-fits-all. |
+> | [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework Not a Fixed Pipeline]] | 9 models, 3 SDLC profiles, domain-specific artifact overrides. Not one-size-fits-all. |
 > | [[three-classes-of-methodology-output|Three Classes of Methodology Output]] | Documents (constraining) vs Artifacts (by-products) vs Documentation (explaining). Each class has different quality bars. |
 > | [[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]] | Stages are the same everywhere. Artifacts differ by domain: TypeScript produces .ts types, Python produces YAML configs. |
 
@@ -116,7 +116,7 @@ See [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]] for the f
 > | Evolved knowledge | Optional | Core feature: lessons/, patterns/, decisions/ with maturity folders (00_inbox → 04_principles) |
 > | Knowledge layers | N/A | L0-L6 progressive distillation — unique to knowledge domain |
 > | Models | 9 methodology models | All 9 defined here, plus 6 non-methodology models (15 total) |
-> | SDLC chains | 3 (Simplified/Default/Full) | Operates at Default, defines all 3 |
+> | SDLC profiles | 3 (Simplified/Default/Full) | Operates at Default, defines all 3 |
 > | Ingestion modes | N/A | auto/guided/smart — unique to knowledge operations |
 
 ## The Methodology Framework — What the Wiki Exports
@@ -129,13 +129,13 @@ The research wiki's primary export to the ecosystem is the methodology framework
 > |-----------|----------|-----------------|
 > | 9 methodology models | wiki/config/methodology.yaml | Stage sequences, artifact chains, gates per task type |
 > | 78 artifact types | wiki/config/artifact-types.yaml | Type definitions across 11 categories |
-> | 3 SDLC chains | wiki/config/methodology.yaml | Simplified/Default/Full with readiness thresholds |
+> | 3 SDLC profiles | wiki/config/sdlc-profiles/ | Simplified/Default/Full with readiness thresholds |
 > | Page schema | wiki/config/wiki-schema.yaml | Frontmatter fields, valid values, validation rules |
 > | Templates | wiki/config/templates/ | Per-type page scaffolds |
 > | Domain chains | wiki/domains/cross-domain/methodology-artifacts/chains/ | Per-domain artifact resolution (TypeScript, Python/Wiki, Infrastructure, Knowledge) |
 > | Standards | wiki/spine/standards/ | Per-type quality bars with section-by-section requirements |
 > | 15 named models | wiki/spine/models/ | Research synthesis organized as navigable knowledge systems |
-> | Gateway | tools/gateway.py | Unified query interface: identity, models, stages, chains, fields, mappings |
+> | Gateway | tools/gateway.py | Unified query interface: identity, models, stages, profiles, fields, mappings |
 
 ## Integration with Second Brain
 

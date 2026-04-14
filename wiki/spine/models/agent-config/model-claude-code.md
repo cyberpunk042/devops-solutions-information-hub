@@ -44,7 +44,7 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 
 - **Five cognitive contexts read one CLAUDE.md.** OpenArms discovered that interactive operator (A), solo agent (B), sub-agents (C), persona templates (D), and provisioned live agents (E) all read the SAME directive file. Rules meant for one context actively mislead another. Example: "After compaction, re-read ALL memories" — Context A has persistent memory, Context B does not. Fix: move per-context rules to skills, keep CLAUDE.md for shared rules clearly marked per-context.
 
-- **SDLC chains adapt Claude Code configuration.** A POC project needs a lean CLAUDE.md with 2-3 methodology models. A production fleet needs full methodology.yaml + domain profiles + hooks + commands. The identity profile determines which level of Claude Code configuration is appropriate. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]].
+- **SDLC profiles adapt Claude Code configuration.** A POC project needs a lean CLAUDE.md with 2-3 methodology models. A production fleet needs full methodology.yaml + domain profiles + hooks + commands. The identity profile determines which level of Claude Code configuration is appropriate. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]].
 
 ### Agent Runtime Landscape
 

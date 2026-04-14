@@ -77,7 +77,7 @@ Standards for epic pages — strategic containers that break into modules and ta
 > 8 specific goals, each a CAPABILITY: "Every model page reflects ALL knowledge," "Each model's Key Insights section is CURRENT." Not "improve models" — WHAT specifically improves and HOW you verify it.
 >
 > **Done When annotation:**
-> 14 checkboxes — each names a SPECIFIC FILE or OBSERVABLE BEHAVIOR: "Model: Methodology — updated with SDLC chains, Goldilocks, readiness/progress..." Not "models are updated" — WHICH models, WITH WHAT content. The last 2 items are validation steps (pipeline post + operator discoverability test).
+> 14 checkboxes — each names a SPECIFIC FILE or OBSERVABLE BEHAVIOR: "Model: Methodology — updated with SDLC profiles, Goldilocks, readiness/progress..." Not "models are updated" — WHICH models, WITH WHAT content. The last 2 items are validation steps (pipeline post + operator discoverability test).
 >
 > **Module Breakdown annotation:**
 > 4 modules (M1-M4), 18 tasks total. Each task row has: task ID, which model, what's needed, effort estimate (XS to L). A person reading ONLY the module breakdown can understand the full scope and start working.

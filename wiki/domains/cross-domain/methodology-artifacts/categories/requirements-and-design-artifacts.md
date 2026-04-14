@@ -215,7 +215,7 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > | Config Spec | Full | Full | Section if needed | Inherits | None |
 > | Test Plan | Full | Full | Section | Inherits | None |
 >
-### SDLC Chain Level — What Applies Where
+### SDLC Profile Level — What Applies Where
 
 > [!abstract] Not all chains require all artifacts
 >
@@ -225,7 +225,7 @@ These are produced during the Design stage (25-50% readiness). They answer: HOW 
 > | **Default** (MVP-Prod, 5 stages) | Requirements spec + ADR + tech spec | Gap analysis, infrastructure analysis, test plan | Interface spec, config spec (folded into tech spec) |
 > | **Full** (Production fleet, all stages) | All 8 document types required | — | — |
 >
-> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] for profile details.
 
 > **"Inherits"** means the task uses the epic/module's documents as its blueprints. A task doesn't write its own ADR — it follows the epic's ADR. This is why the OpenArms integration model (task_type: integration) starts at scaffold, not document — the design docs already exist at the epic level.
 

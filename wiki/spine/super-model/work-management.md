@@ -18,7 +18,7 @@ tags: [sub-model, navigation-hub, spine]
 # Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels
 ## Summary
 
-Navigation hub for work management — how work is organized, tracked, and enforced. Covers: Milestone→Epic→Module→Task hierarchy, readiness vs progress, 8 impediment types, backlog rules, SDLC chain configs, and PM infrastructure levels. Enter here when you need to answer: 'How do I organize work? How do I track it?'
+Navigation hub for work management — how work is organized, tracked, and enforced. Covers: Milestone→Epic→Module→Task hierarchy, readiness vs progress, 8 impediment types, backlog rules, SDLC profile configs, and PM infrastructure levels. Enter here when you need to answer: 'How do I organize work? How do I track it?'
 
 ## Reference Content
 
@@ -31,7 +31,7 @@ Navigation hub for work management — how work is organized, tracked, and enfor
 > | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] | 4-level hierarchy. 8 impediment types. When to choose what. |
 > | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] | Two independent dimensions. Readiness gates progress. 99→100 = human. |
 > | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] | Solo → harness → full system. Each wraps the previous. |
-> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Phase × scale → chain. 3 chain configs in wiki/config/sdlc-chains/. |
+> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] | Phase × scale → profile. 3 profile configs in wiki/config/sdlc-profiles/. |
 > | [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]] | Hierarchy selection criteria. |
 > | [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]] | Backlog fields: readiness, progress, impediment_type, etc. |
 

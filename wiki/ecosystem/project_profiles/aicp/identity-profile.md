@@ -35,7 +35,7 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 > | **Scale** | Medium (~60 modules) | Growing, but less documented in the brain than OpenFleet/OpenArms |
 > | **PM Level** | L1 (CLAUDE.md directives) | No harness or orchestrator — skill-based extension |
 > | **Trust Tier** | Operator-supervised | Solo execution, human decides |
-> | **SDLC Chain** | Simplified | Lighter process — fewer artifacts per stage |
+> | **SDLC Profile** | Simplified | Lighter process — fewer artifacts per stage |
 
 ## What the Brain Learned FROM AICP
 
@@ -82,7 +82,7 @@ The generic Python domain chain at [[domain-chain-python-wiki|Artifact Chain —
 >
 > | Aspect | Standard (Wiki) | AICP Approach |
 > |--------|-----------------|---------------|
-> | SDLC chain | Default (5-stage, gated) | Simplified (lighter gates, fewer mandatory artifacts) |
+> | SDLC profile | Default (5-stage, gated) | Simplified (lighter gates, fewer mandatory artifacts) |
 > | Skill authoring | Template-based | 78 skills suggest a mature internal authoring pattern — not yet documented in the brain |
 > | Testing | pipeline post | pytest with 1,631 tests — high coverage culture |
 > | Profile system | N/A | 9 profiles controlling backend selection — a methodology-adjacent routing concern |

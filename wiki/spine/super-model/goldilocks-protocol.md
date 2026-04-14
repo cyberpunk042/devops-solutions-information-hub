@@ -18,7 +18,7 @@ tags: [sub-model, navigation-hub, spine]
 # Sub-Model — Goldilocks Protocol — Identity and Adaptation
 ## Summary
 
-Navigation hub for the Goldilocks system — identity declaration, chain selection, methodology adaptation, and the principle of right process for right context. Enter here when you need to answer: 'What am I? What process is right for me? How do I adapt?'
+Navigation hub for the Goldilocks system — identity declaration, SDLC profile selection, methodology adaptation, and the principle of right process for right context. Enter here when you need to answer: 'What am I? What process is right for me? How do I adapt?'
 
 ## Reference Content
 
@@ -29,7 +29,7 @@ Navigation hub for the Goldilocks system — identity declaration, chain selecti
 > | Page | What It Covers |
 > |------|---------------|
 > | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] | The 7 identity dimensions. Auto-detection. YAML profile schema. |
-> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Phase × scale → chain. Simplified, default, full. CMMI + Lean Startup evidence. |
+> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] | Phase × scale → profile. Simplified, default, full. CMMI + Lean Startup evidence. |
 > | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] | Solo → harness → full system. Each wraps the previous. |
 > | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] | Definition completeness vs execution completeness. 99→100 = human. |
 > | [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]] | Hierarchy level selection by duration, design need, review scope. |

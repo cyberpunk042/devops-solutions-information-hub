@@ -72,11 +72,11 @@ All easy. Adding a spike+implement type later is additive. Migrating from parall
 - [[stage-gate-methodology|Stage-Gate Methodology]] — stage-gate integrity drives the spike decision
 - [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]] — mid-execution type change already resolved there
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a solo operator managing spikes and tasks via wiki backlog. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for a solo operator managing spikes and tasks via wiki backlog. At different profile levels:
 > - **Simplified chain:** Task type evolution is rare — most work is tasks or hotfixes, and spikes are informal conversations rather than tracked work items with stage artifacts.
 > - **Full chain:** Spike-to-module promotion becomes a harness-managed workflow with automated task creation. Board sync between Plane and wiki backlog is enforced by integration tooling, not manual discipline. Async gating uses a dedicated MCP request-input tool instead of session logs.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

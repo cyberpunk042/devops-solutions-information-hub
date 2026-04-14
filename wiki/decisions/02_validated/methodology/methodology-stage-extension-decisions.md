@@ -74,11 +74,11 @@ Moderate. All decisions are reversible:
 - Decision 3 (Status Report) requires creating the template
 - Decision 4 (Drift) requires no changes — uses existing bug-fix model
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a 5-stage model used across 4 projects with mixed domains. At different chain levels:
-> - **Simplified chain:** Stage extensions are irrelevant — simplified chains use 2-3 stages maximum, so adding Initiation or Deploy is over-engineering. Status Reports are verbal, not templated.
-> - **Full chain:** Initiation becomes a formal stage with project charter artifacts. Deploy becomes universal (not infrastructure-only) with automated rollback verification. Status Reports become mandatory per-sprint structured artifacts feeding a PM dashboard.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> [!info] SDLC Profile Context
+> This decision was calibrated for a 5-stage model used across 4 projects with mixed domains. At different profile levels:
+> - **Simplified profile:** Stage extensions are irrelevant — simplified profiles use 2-3 stages maximum, so adding Initiation or Deploy is over-engineering. Status Reports are verbal, not templated.
+> - **Full profile:** Initiation becomes a formal stage with project charter artifacts. Deploy becomes universal (not infrastructure-only) with automated rollback verification. Status Reports become mandatory per-sprint structured artifacts feeding a PM dashboard.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

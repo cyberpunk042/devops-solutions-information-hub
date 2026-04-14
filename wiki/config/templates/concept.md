@@ -81,15 +81,15 @@ tags: []
 <!-- This subsection explains the taxonomy — three things to compare.
      The table makes the comparison scannable; the prose below explains the selection logic. -->
 
-> [!info] SDLC Chain Comparison
+> [!info] SDLC Profile Comparison
 >
-> | Chain | Stages | Enforced gates | Best for |
-> |-------|--------|----------------|---------|
+> | Profile | Stages | Enforced gates | Best for |
+> |---------|--------|----------------|---------|
 > | simplified | document → implement → test | 2 (doc→impl, impl→test) | POC, solo, fast iteration |
 > | default | document → design → scaffold → implement → test | 4 | Most projects, production-bound work |
 > | full | adds milestone, review, and sign-off gates | 6+ | Regulated, team, high-risk |
 >
-> Selection criterion: use the simplest chain that catches the failure modes you've actually
+> Selection criterion: use the simplest profile that catches the failure modes you've actually
 > experienced. Defaulting to "full" adds ceremony without adding safety for small projects. -->
 
 > [!info] {{Reference data title}}

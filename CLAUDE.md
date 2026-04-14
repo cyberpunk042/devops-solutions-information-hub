@@ -13,7 +13,7 @@
 | **Scale** | medium (316 pages, growing) |
 | **PM Level** | L1 (wiki backlog, CLAUDE.md directives, pipeline tools) |
 | **Trust Tier** | operator-supervised |
-| **SDLC Chain** | Default (stage-gated with selected artifacts) |
+| **SDLC Profile** | Default (stage-gated with selected artifacts) |
 | **Second Brain** | IS the second brain (self-referential) |
 
 See [CONTEXT.md](CONTEXT.md) for the full identity profile with current milestone status.

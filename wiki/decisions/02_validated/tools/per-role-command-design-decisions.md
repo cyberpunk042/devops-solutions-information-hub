@@ -88,11 +88,11 @@ All decisions are easy to reverse:
 - [[claude-code-skills|Claude Code Skills]] — command-to-skill dependency model
 - [[claude-code-best-practices|Claude Code Best Practices]] — scope hierarchy documentation
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a small ecosystem (4 projects, 3-4 practitioner types) with flat role tags. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for a small ecosystem (4 projects, 3-4 practitioner types) with flat role tags. At different profile levels:
 > - **Simplified chain:** Per-role commands are unnecessary — one operator, one role. Commands don't need scope collision rules, role filtering, or mode-aware behavior.
 > - **Full chain:** Flat tags may need to evolve into hierarchical roles when 10+ practitioner types span 20+ projects. Mode-aware enforcement via hooks becomes mandatory rather than optional. Command-to-skill dependencies need runtime enforcement, not just frontmatter conventions.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

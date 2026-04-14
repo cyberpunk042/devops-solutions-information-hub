@@ -79,7 +79,7 @@ Transform the second brain from a collection of 279 knowledge pages into a compl
 > | **E011: Standards Exemplification** | Inline annotated exemplars for ALL 15 per-type standards | Every standard shows WHAT good looks like with WHY annotations | E010 (models inform what "good" means) |
 > | **E012: Template Enrichment** | Templates as rich examples of proto-programming | Every template teaches through structure, not just placeholders | E011 (standards define what templates must demonstrate) |
 > | **E013: Super-Model Evolution** | Update super-model to v2.0 + create sub-super-models | Goldilocks super-model, Enforcement super-model, Knowledge super-model | E010 (models must be current first) |
-> | **E014: Goldilocks Navigable System** | Goldilocks as browsable system, not just concept page | Identity protocol → chain selection → model selection → stage routing — all navigable | E010, E013 |
+> | **E014: Goldilocks Navigable System** | Goldilocks as browsable system, not just concept page | Identity protocol → SDLC profile selection → model selection → stage routing — all navigable | E010, E013 |
 > | **E015: Gateway Tools Completion** | Complete all gateway operations + MCP integration | All 44 requirements from FR spec implemented, MCP server extended | E014 (gateway implements Goldilocks routing) |
 > | **E016: Integration Chain Proof** | Prove the full chain end-to-end with OpenArms | Walk OpenArms through every step, show it works, document the proof | E010-E015 (chain needs complete system to prove) |
 > | **E017: Context Engineering Framework** | Formalize context engineering, prompt engineering, tiers, autocomplete chains | Context engineering as its own model with standards and examples | E010, E012 |

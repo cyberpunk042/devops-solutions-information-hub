@@ -25,7 +25,7 @@ tags: [methodology, system-map, reference, navigation, framework]
 > [!tip] AI Quick Start — This Is Your Navigation Hub
 >
 > - **"Who am I? What do I need?"** → [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
-> - **"How much process is right?"** → [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+> - **"How much process is right?"** → [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 > - **Need to understand methodology?** → Knowledge Layer tables below
 > - **Need enforcement patterns?** → Agent Compliance section below (13 pages from solo hooks to fleet immune system)
 > - **Need work management?** → Work Management section below (hierarchy, readiness/progress, PM levels)
@@ -153,7 +153,7 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | Page | What It Explains |
 > |------|-----------------|
-> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Three dimensions: project phase (POC→Production), codebase scale (10k→15M), chain type (simplified/default/full) |
+> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] | Three dimensions: project phase (POC→Production), codebase scale (10k→15M), chain type (simplified/default/full) |
 > | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] | 7 identity questions that determine chain, enforcement, and context depth |
 
 > [!abstract] Per-Type Standards (15 docs in wiki/spine/standards/)
@@ -208,7 +208,7 @@ Complete map of the methodology system — every component, where it lives, what
 > | [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] | 4-level hierarchy: Milestone → Epic → Module → Task. 8 impediment types. When to choose what. |
 > | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] | Readiness (is it defined?) vs Progress (is it built?). Two independent dimensions. 99→100 = human only. |
 > | [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] | L1: Wiki LLM. L2: Fleet/Harness. L3: Plane/DSPD. Each wraps the previous. |
-> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]] | Three dimensions: project phase (POC→Production), scale (10k→15M), chain (simplified/default/full) |
+> | [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]] | Three dimensions: project phase (POC→Production), scale (10k→15M), chain (simplified/default/full) |
 > | [[task-type-artifact-matrix|Task Type Artifact Matrix]] | Task type → methodology model mapping |
 > | [[execution-modes-and-end-conditions|Execution Modes and End Conditions]] | 8 modes, 5 end conditions, 14-step work loop |
 

@@ -85,11 +85,11 @@ Moderate. The selection engine, composition strategy, and versioning approach ar
 - [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — quality tier sufficiency assessment
 - [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] — SFIF phase boundaries drive the sync decision
 
-> [!info] SDLC Chain Context
-> This decision was calibrated for a 4-project ecosystem with 1 operator and lookup-table model selection. At different chain levels:
+> [!info] SDLC Profile Context
+> This decision was calibrated for a 4-project ecosystem with 1 operator and lookup-table model selection. At different profile levels:
 > - **Simplified chain:** Selection engine is unnecessary — the operator picks the model directly. Three quality tiers collapse to one (Pyramid). Versioning is irrelevant with a single project.
 > - **Full chain:** The lookup table should upgrade to a scoring engine with telemetry-trained thresholds. Hard sync between tracks replaces soft sync. Automated version compatibility checks become mandatory across 10+ projects.
-> See [[sdlc-customization-framework|SDLC Customization Framework]] for chain details.
+> See [[sdlc-customization-framework|SDLC Customization Framework]] for profile details.
 
 ### How This Connects — Navigate From Here
 

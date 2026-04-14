@@ -75,7 +75,7 @@ Add to your CLAUDE.md:
 | **Scale** | {{auto-detected or declared}} |
 | **PM Level** | {{L1 / L2 / L3}} |
 | **Trust Tier** | {{operator-supervised / trainee / standard / expert}} |
-| **SDLC Chain** | {{determined in Step 3}} |
+| **SDLC Profile** | {{determined in Step 3}} |
 | **Second Brain** | {{self / connected / none}} |
 ```
 
@@ -85,11 +85,11 @@ Add to your CLAUDE.md:
 
 ---
 
-### Step 3: SELECT CHAIN — How Much Process?
+### Step 3: SELECT PROFILE — How Much Process?
 
-> [!abstract] Chain Selection Matrix
+> [!abstract] SDLC Profile Selection Matrix
 >
-> | Your Phase + Scale | Recommended Chain | Readiness Gate | Enforcement |
+> | Your Phase + Scale | Recommended Profile | Readiness Gate | Enforcement |
 > |-------------------|-------------------|---------------|-------------|
 > | POC + micro/small | **Simplified** | 30 | Advisory (CLAUDE.md only) |
 > | MVP + small/medium | **Default** | 80 | Hooks optional |
@@ -98,10 +98,10 @@ Add to your CLAUDE.md:
 > | Production + massive | **Full** | 99 | Full + immune system |
 > | Any + fleet | **Full** | 99 | Full system |
 
-**CLI:** `python3 -m tools.gateway query --chains` → list all three | `query --chain default` → details
+**CLI:** `python3 -m tools.gateway query --profiles` → list all three | `query --profile default` → details
 
-**Override:** You can use a lighter chain than recommended if you document why (Decision page).
-**Upgrade triggers:** See the chain config for when to upgrade (`wiki/config/sdlc-chains/`).
+**Override:** You can use a lighter profile than recommended if you document why (Decision page).
+**Upgrade triggers:** See the profile config for when to upgrade (`wiki/config/sdlc-profiles/`).
 
 **Next:** → Step 4
 
@@ -269,9 +269,9 @@ These are not hypothetical — each profile exists in the ecosystem. Follow alon
 >
 > Fleet-level identity is in the orchestrator config, not per-agent CLAUDE.md. The orchestrator declares system identity; agents inherit with overrides.
 >
-> **Step 3 — SELECT CHAIN:** Production + large + fleet → **Full** chain. All 5 stages. Readiness gate = 99. Full immune system: doctor.py (24 rules), MCP tool blocking (1033-line validator), heartbeat enforcement, budget limits.
+> **Step 3 — SELECT PROFILE:** Production + large + fleet → **Full** profile. All 5 stages. Readiness gate = 99. Full immune system: doctor.py (24 rules), MCP tool blocking (1033-line validator), heartbeat enforcement, budget limits.
 >
-> **Flexibility:** Fleet agents cannot downgrade their chain — the orchestrator enforces Full for all dispatched work. An agent CAN receive a `hotfix` model (implement→test only) but the chain wrapper is always Full.
+> **Flexibility:** Fleet agents cannot downgrade their profile — the orchestrator enforces Full for all dispatched work. An agent CAN receive a `hotfix` model (implement→test only) but the profile wrapper is always Full.
 >
 > **Step 4 — SELECT MODEL:** Orchestrator selects model based on task metadata dispatched from Plane (PM tool). `task_type` is set in Plane, synced to the fleet. Agent receives the model as part of task context — it doesn't choose.
 >
@@ -302,7 +302,7 @@ These are not hypothetical — each profile exists in the ecosystem. Follow alon
 
 - PART OF: [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 - BUILDS ON: [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
-- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+- BUILDS ON: [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 - RELATES TO: [[model-methodology|Model — Methodology]]
 - RELATES TO: [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
 - FEEDS INTO: [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
@@ -311,7 +311,7 @@ These are not hypothetical — each profile exists in the ecosystem. Follow alon
 
 [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
-[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
+[[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[model-methodology|Model — Methodology]]
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
