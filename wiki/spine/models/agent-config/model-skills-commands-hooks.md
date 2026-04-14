@@ -10,8 +10,20 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-12
+updated: 2026-04-14
 sources:
+  - id: src-claude-agent-sdk-and-managed-agents
+    type: wiki
+    file: wiki/sources/tools-integration/src-claude-agent-sdk-and-managed-agents.md
+    title: Synthesis — Claude Agent SDK and Managed Agents
+  - id: src-skillmd-claudemd-agentsmd-three-layer-context
+    type: wiki
+    file: wiki/sources/tools-integration/src-skillmd-claudemd-agentsmd-three-layer-context.md
+    title: Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md Three-Layer Context
+  - id: src-7-levels-claude-code-rag
+    type: wiki
+    file: wiki/sources/tools-integration/src-7-levels-claude-code-rag.md
+    title: Source — The 7 Levels of Claude Code and RAG
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
     url: https://github.com/shanraisshan/claude-code-best-practice
@@ -289,6 +301,44 @@ Commands (user trigger)
 > - **Hooks but no skills** → correct enforcement but no teaching. The agent is blocked from bad actions but doesn't know WHY or what to do instead.
 > - **No commands** → skills must be invoked by name or auto-detected. Users don't know what's available. The extension system is invisible.
 > - **No CLAUDE.md** → no static foundation. Every session starts from zero. Skills have no conventions to reference.
+
+### Ecosystem Context — SDK, Standards, and Progression (NEW 2026-04-14)
+
+Four 2026 sources situate this model inside a larger ecosystem: the SDK layer our patterns compose on, the built-in toolset that defines the execution surface, a cross-tool file architecture standard, and a progression framework that places this wiki's skill system in a specific maturity tier.
+
+**[[src-claude-agent-sdk-and-managed-agents|Agent SDK + Managed Agents]]: The SDK Layer Under Our Patterns**
+
+The Claude Agent SDK (Python, 2026) provides two client modes that map directly to our extension architecture. `query()` is stateless — one request, one response, no session state. `ClaudeSDKClient` is stateful — maintains session ID, accumulates conversation history, supports multi-turn operation. This distinction matters for hook design: a stateless `query()` invocation cannot rely on session-bound context; all state must be in the prompt. A stateful session is the model under which our hooks operate (PreToolUse, PostCompact, etc. require a live session). The SDK also formalizes `AgentDefinition` — a structured specification of named agents with their system prompts, tools, and behavioral constraints — which is the programmatic equivalent of our CLAUDE.md + Skills configuration. The 10 hook events exposed at SDK level (a subset of Claude Code's 26) form the minimal viable hook surface for any SDK-based agent. Our skill system composes ON TOP of the SDK: skills inject context into stateful sessions; hooks enforce at SDK event boundaries.
+
+**Managed Agents Built-In Toolset: Identical Surface to Claude Code**
+
+The Managed Agents subsystem exposes 8 built-in tools: `bash`, `read`, `write`, `edit`, `glob`, `grep`, `web_fetch`, `web_search`. This is the same tool surface as Claude Code's internal tools — not coincidental, by design. Any skill written for Claude Code that uses only these 8 tools runs without modification in a Managed Agent context. This is the portability guarantee that makes agentskills.io-format skills cross-platform. For the extension system, this means: skills that reference `bash` for shell operations, `glob`/`grep` for search, and `read`/`write`/`edit` for file operations are already portable to the SDK. Skills that depend on additional MCP tools are not portable without the MCP server running in the target context. **Design implication:** prefer the 8 built-in tools for all skill implementations; treat MCP tools as optional enhancements.
+
+**[[src-skillmd-claudemd-agentsmd-three-layer-context|Three-Layer Context Architecture]]: Cross-Tool Standard with AGENTS.md**
+
+The community convergence on a three-layer file architecture (AGENTS.md + CLAUDE.md + Skills) has implications for our extension system's output. Currently, the system emits CLAUDE.md as the agent configuration artifact. But AGENTS.md is emerging as the *universal* context layer — read by Claude Code, Codex CLI, Cursor, and other platforms — while CLAUDE.md is increasingly Claude Code-specific. For maximum interoperability, our extension system should emit AGENTS.md (universal, <100 lines, behavioral foundation) alongside CLAUDE.md (Claude Code-specific config, <20 lines). Skills remain the portable knowledge layer. The three-layer architecture also resolves the CLAUDE.md bloat problem: CLAUDE.md becomes minimal because universal rules move to AGENTS.md; skill-specific rules move to skill files. The ETH Zurich finding (AI-generated context hurts by 3%) applies here too: AGENTS.md must be human-authored or carefully reviewed, not auto-generated.
+
+**[[src-7-levels-claude-code-rag|7 Levels of Claude Code]]: Progression Framework and This Wiki's Position**
+
+The "7 Levels of Claude Code" framework describes a maturity progression for AI knowledge augmentation:
+
+> [!info] **The 7 Levels and this wiki's position**
+>
+> | Level | Capability | This Wiki |
+> |-------|-----------|-----------|
+> | 1 | Auto-memory (Claude's built-in memory) | Base capability |
+> | 2 | CLAUDE.md (project instructions file) | In production |
+> | 3 | State files (structured YAML/JSON state) | In production (frontmatter, manifest) |
+> | 4 | Obsidian vault (linked knowledge graph) | **This wiki is Level 4** — 267+ pages with wikilinks |
+> | 5 | Naive RAG (semantic search over files) | `python3 -m tools.view search` covers this |
+> | 6 | Graph RAG (relationship-aware retrieval) | Partially — wikilink graph exists; graph-aware retrieval not implemented |
+> | 7 | Agentic multimodal RAG (autonomous multi-source synthesis) | Target state for AICP integration |
+>
+> The wiki currently operates at Level 4 with Level 5 capabilities partially implemented. Level 6 (graph RAG) requires implementing retrieval that traverses wikilink relationships — the manifest.json graph structure exists; the retrieval layer does not. Level 7 requires AICP integration for autonomous ingestion and synthesis. This progression places our skill system in context: the skills (wiki-agent, evolve, continue, model-builder) are Level 3-4 tooling — they work with structured state and linked knowledge, but not yet with relationship-traversing retrieval.
+
+The 7-level framework also validates the architectural choice to use a wiki + wikilinks rather than flat file RAG: levels 4-6 are meaningfully more capable than levels 1-3, and the jump from Level 3 to Level 4 (adding a link graph) is what enables relationship-aware queries. The extension system's next evolution target is Level 6: making the skill/hook system graph-aware so that retrieval during skill execution traverses the wikilink graph, not just keyword searches.
+
+---
 
 ## Open Questions
 

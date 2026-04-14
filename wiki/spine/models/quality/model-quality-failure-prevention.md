@@ -10,8 +10,20 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-13
+updated: 2026-04-14
 sources:
+  - id: src-autobe-compiler-verified-backend-generation
+    type: wiki
+    file: wiki/sources/tools-integration/src-autobe-compiler-verified-backend-generation.md
+    title: "Synthesis — AutoBE: Compiler-Verified Backend Generation"
+  - id: src-code-review-graph-automated-review
+    type: wiki
+    file: wiki/sources/tools-integration/src-code-review-graph-automated-review.md
+    title: "Source — code-review-graph: Graph-Based Automated Code Review"
+  - id: src-claude-code-prompt-patch-rebalancing
+    type: wiki
+    file: wiki/sources/tools-integration/src-claude-code-prompt-patch-rebalancing.md
+    title: "Synthesis — Claude Code Prompt Patch: Rebalancing Agent Behavior"
   - id: src-harness-engineering-article
     type: article
     url: https://levelup.gitconnected.com/building-claude-code-with-harness-engineering-d2e8c0da85f0
@@ -347,6 +359,36 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 > - **No review** → agent makes subjective quality decisions unchecked. Confident-but-wrong artifacts accumulate.
 > - **No depth verification** → hollow synthesis passes validation (format correct, substance missing). Evolution pipeline starves.
 > - **No stage gates** → work skips stages. Artifacts produced out of order. False readiness claims.
+
+### External Validation — Industry Evidence for Our Principles (NEW 2026-04-14)
+
+Three independent 2026 sources provide external validation for this model's core architecture — the three-layer defense, the 7-class failure taxonomy, and the deterministic shell pattern — without having been designed to do so.
+
+**[[src-autobe-compiler-verified-backend-generation|AutoBE]]: "If You Can Verify, You Converge"**
+
+AutoBE's compiler-verified backend generation system encodes the deterministic-shell principle in production at scale: wrap an LLM generation step in a structural verifier (the TypeScript/Go compiler), retry on failure, converge on success. Quality is independent of model choice when verification is in place. This is the same pattern as our `pipeline post` chain — deterministic validators (schema check, manifest, lint) are the quality guarantee, not the LLM's judgment. The AutoBE finding that model differences affect *retry count not final quality* is the strongest empirical validation of Layer 1 (structural prevention) in this model: deterministic verification catches errors that better prompting cannot. The pattern also generalizes: anywhere an output is machine-verifiable (compilation, schema validation, test execution), a retry loop gives weaker models parity with stronger ones.
+
+**[[src-code-review-graph-automated-review|code-review-graph]]: Graph-Level Review Catches What Line Review Misses**
+
+The code-review-graph project demonstrates that entity-relationship extraction from code improves relational accuracy from 31.6% to 68.4% — a 2.16x improvement in catching relational errors. Standard line-level review (which is what agents do by default) misses blast-radius issues: a change in one file whose impact propagates through call graphs and dependency chains. This is the structural equivalent of our shallow-ingestion failure lesson applied to code: reading a change in isolation (Layer 0) versus reading it in its dependency context (Layer 1+). The graph-based approach implements Layer 2 (multiple instances compared) for code review: it models how a change interacts with the full entity graph, not just the diff. For our quality system, this validates the design of doctor.py's state integrity rules — checking impossible state combinations requires modeling relationships, not just individual states.
+
+**[[src-claude-code-prompt-patch-rebalancing|Claude Code prompt patch]]: Community Documented 11 Agent Corner-Cutting Behaviors**
+
+The community prompt patch project catalogued 11 specific Claude Code behaviors that required explicit override prompts to correct: overconfidence, scope creep, assumption-making, hedging, confirmatory bias, and 6 others. This independently validates our 7-class agent failure taxonomy from the bottom up — the community reached similar conclusions from production Claude Code experience without access to our OpenArms/OpenFleet data. Notable overlaps:
+
+> [!info] **Taxonomy cross-validation**
+>
+> | Our 7-class taxonomy | Community patch finding | Match |
+> |---------------------|------------------------|-------|
+> | Weakest-checker optimization | Overconfidence / selective tool use | Class 1 |
+> | Silent conflict resolution | Assumption-making without flagging | Class 5 |
+> | Artifact pollution | Scope creep beyond task boundaries | Class 6 |
+> | Context-window degradation | Behavioral drift in long sessions | Class 7 |
+> | Sub-agent non-compliance | — (not covered; sub-agent behavior differs) | — |
+>
+> The fact that 11 community patches were needed for basic agent quality validates the central thesis: quality enforcement must live in code (Layer 1 hooks), not in instructions (Layer 2 teaching) alone. The community's workaround was Layer 2 (better prompts). Our architecture adds Layer 1 (structural blocking) on top.
+
+---
 
 ## Open Questions
 

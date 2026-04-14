@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T16:54:29.220034+00:00",
+  "generated": "2026-04-14T17:18:26.277772+00:00",
   "stats": {
     "pages": 313,
     "domains": 9,
@@ -17438,7 +17438,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-14",
       "tags": [
         "skills",
         "commands",
@@ -17454,6 +17454,24 @@
         "spine"
       ],
       "sources": [
+        {
+          "id": "src-claude-agent-sdk-and-managed-agents",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-claude-agent-sdk-and-managed-agents.md",
+          "title": "Synthesis \u2014 Claude Agent SDK and Managed Agents"
+        },
+        {
+          "id": "src-skillmd-claudemd-agentsmd-three-layer-context",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-skillmd-claudemd-agentsmd-three-layer-context.md",
+          "title": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md Three-Layer Context"
+        },
+        {
+          "id": "src-7-levels-claude-code-rag",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-7-levels-claude-code-rag.md",
+          "title": "Source \u2014 The 7 Levels of Claude Code and RAG"
+        },
         {
           "id": "src-shanraisshan-claude-code-best-practice",
           "type": "documentation",
@@ -17524,7 +17542,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-13",
+      "updated": "2026-04-14",
       "tags": [
         "model",
         "spine",
@@ -17535,6 +17553,30 @@
         "tiers"
       ],
       "sources": [
+        {
+          "id": "src-openspec-spec-driven-development-framework",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-openspec-spec-driven-development-framework.md",
+          "title": "Synthesis \u2014 OpenSpec Spec-Driven Development Framework"
+        },
+        {
+          "id": "src-github-spec-kit-specification-driven-development",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-github-spec-kit-specification-driven-development.md",
+          "title": "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development"
+        },
+        {
+          "id": "src-bmad-method-agile-ai-development-framework",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-bmad-method-agile-ai-development-framework.md",
+          "title": "Synthesis \u2014 BMAD-METHOD Agile AI-Driven Development Framework"
+        },
+        {
+          "id": "src-skillmd-claudemd-agentsmd-three-layer-context",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-skillmd-claudemd-agentsmd-three-layer-context.md",
+          "title": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md Three-Layer Context"
+        },
         {
           "id": "proto-programming-lesson",
           "type": "wiki",
@@ -17680,7 +17722,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-13",
+      "updated": "2026-04-14",
       "tags": [
         "model",
         "concept",
@@ -17703,6 +17745,24 @@
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-turboquant-122b-macbook.md",
           "title": "Synthesis \u2014 TurboQuant 122B on MacBook"
+        },
+        {
+          "id": "src-autobe-compiler-verified-backend-generation",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-autobe-compiler-verified-backend-generation.md",
+          "title": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation"
+        },
+        {
+          "id": "src-hrm-trm-tiny-recursion-models",
+          "type": "wiki",
+          "file": "wiki/sources/models-architectures/src-hrm-trm-tiny-recursion-models.md",
+          "title": "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+        },
+        {
+          "id": "src-llm-architecture-gallery-raschka",
+          "type": "wiki",
+          "file": "wiki/sources/models-architectures/src-llm-architecture-gallery-raschka.md",
+          "title": "Synthesis \u2014 LLM Architecture Gallery (Raschka)"
         }
       ],
       "layer": "spine",
@@ -18439,7 +18499,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-13",
+      "updated": "2026-04-14",
       "tags": [
         "model",
         "spine",
@@ -18453,6 +18513,24 @@
         "methodology"
       ],
       "sources": [
+        {
+          "id": "src-autobe-compiler-verified-backend-generation",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-autobe-compiler-verified-backend-generation.md",
+          "title": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation"
+        },
+        {
+          "id": "src-code-review-graph-automated-review",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-code-review-graph-automated-review.md",
+          "title": "Source \u2014 code-review-graph: Graph-Based Automated Code Review"
+        },
+        {
+          "id": "src-claude-code-prompt-patch-rebalancing",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-claude-code-prompt-patch-rebalancing.md",
+          "title": "Synthesis \u2014 Claude Code Prompt Patch: Rebalancing Agent Behavior"
+        },
         {
           "id": "src-harness-engineering-article",
           "type": "article",

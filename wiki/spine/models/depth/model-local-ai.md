@@ -10,7 +10,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-13
+updated: 2026-04-14
 sources:
   - id: src-aicp-identity-profile
     type: wiki
@@ -19,6 +19,18 @@ sources:
     type: wiki
     file: wiki/sources/tools-integration/src-turboquant-122b-macbook.md
     title: Synthesis — TurboQuant 122B on MacBook
+  - id: src-autobe-compiler-verified-backend-generation
+    type: wiki
+    file: wiki/sources/tools-integration/src-autobe-compiler-verified-backend-generation.md
+    title: "Synthesis — AutoBE: Compiler-Verified Backend Generation"
+  - id: src-hrm-trm-tiny-recursion-models
+    type: wiki
+    file: wiki/sources/models-architectures/src-hrm-trm-tiny-recursion-models.md
+    title: "Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+  - id: src-llm-architecture-gallery-raschka
+    type: wiki
+    file: wiki/sources/models-architectures/src-llm-architecture-gallery-raschka.md
+    title: Synthesis — LLM Architecture Gallery (Raschka)
 tags: [model, concept, spine, local-ai, aicp, zero-cost, backend-routing, complexity-scoring, vram]
 ---
 
@@ -213,6 +225,33 @@ The general principle: build the routing infrastructure first, scale the hardwar
 > - Profile thresholds vary by risk tolerance (`fleet-light` at 0.3 vs `code-review` at 0.8)
 > - Model selection depends on available VRAM and task mix
 > - The "what remains cloud-only" list may shrink as local models improve
+
+### Breakthrough Evidence — Small Models Can Win (NEW 2026-04-14)
+
+Three 2026 sources collectively overturn the assumption that $0 local AI requires accepting lower output quality — they demonstrate that small, targeted models can match or exceed frontier models on specific task classes.
+
+**[[src-autobe-compiler-verified-backend-generation|AutoBE]]: Cost, Not Quality, Is Model-Dependent**
+
+AutoBE's compiler-verified backend generator ran Qwen 3.5-27B at 25x lower cost than Claude Opus 4.6, achieving 100% compilation across generated backends. The critical finding: model capability differences in this system affected *retry count*, not *final output quality*. A weaker model simply retried more times before converging — but it converged. This empirically validates the routing model's core claim: for tasks with deterministic validators (compilers, linters, schema validators), local models are not a quality compromise, they are a cost optimization. The structural guarantee lives in the verification loop, not the model. See [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] for the pattern.
+
+**[[src-hrm-trm-tiny-recursion-models|HRM/TRM]]: Recursion Beats Scale for Reasoning Tasks**
+
+Hierarchical Recurrent Models (27M parameters) and Token Recurrent Models (7M parameters) beat GPT-5 and Claude 4 Opus on ARC-AGI tasks by applying multi-step recursive computation at inference time rather than relying on parameter mass. This directly challenges the premise that Stage 3 requires the 26B Gemma4 MoE — for structured reasoning tasks with defined problem spaces, sub-gigabyte models with recursive inference may match much larger models at a fraction of VRAM cost. The implication for the routing model: the VRAM constraint on Stage 3 may be a false ceiling for certain task categories.
+
+**[[src-llm-architecture-gallery-raschka|LLM Architecture Gallery]]: MLA+MoE Convergence Normalizes Local-Cloud Parity**
+
+Raschka's 2026 gallery documents that top model architectures have converged around Multi-head Latent Attention (MLA) + Mixture-of-Experts (MoE) — DeepSeek V3 and Mistral Large 3 use near-identical templates. Active parameter fractions of 3-10% are the norm: a 30B MoE model activates only 3B parameters per token. This means the quality gap between a local 30B MoE (e.g., Qwen3-30B MoE, already loaded) and a cloud 200B+ dense model is smaller than raw parameter counts suggest. For routing decisions, the relevant comparison is not total parameters — it is activated parameters per inference pass.
+
+> [!info] **Synthesis: What this means for the routing model**
+>
+> | Prior assumption | Updated by evidence |
+> |-----------------|-------------------|
+> | Local models produce lower quality | Quality equals cloud when a verifier exists (AutoBE: 100% compilation) |
+> | Stage 3 requires 26B VRAM-heavy models | Recursive 7-27M models may cover structured reasoning (HRM/TRM) |
+> | 30B local << 200B+ cloud | MoE active fraction narrows the gap; 30B MoE ≈ 3B active params (Architecture Gallery) |
+> | Cost reduction requires quality tradeoff | Cost reduction = more retries, same output — tradeoff is latency not quality |
+>
+> The routing model's VRAM-gated roadmap remains valid for current deployed models, but the theoretical ceiling for local quality is higher than Stage 3's assumptions. The $0 target applies to MORE operations than originally scoped.
 
 ### Context Depth and Routing Tier Connection (NEW)
 

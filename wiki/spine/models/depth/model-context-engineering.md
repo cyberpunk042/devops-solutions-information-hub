@@ -10,8 +10,24 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-12
-updated: 2026-04-13
+updated: 2026-04-14
 sources:
+  - id: src-openspec-spec-driven-development-framework
+    type: wiki
+    file: wiki/sources/tools-integration/src-openspec-spec-driven-development-framework.md
+    title: Synthesis — OpenSpec Spec-Driven Development Framework
+  - id: src-github-spec-kit-specification-driven-development
+    type: wiki
+    file: wiki/sources/tools-integration/src-github-spec-kit-specification-driven-development.md
+    title: "Synthesis — GitHub Spec Kit: Specification-Driven Development"
+  - id: src-bmad-method-agile-ai-development-framework
+    type: wiki
+    file: wiki/sources/tools-integration/src-bmad-method-agile-ai-development-framework.md
+    title: Synthesis — BMAD-METHOD Agile AI-Driven Development Framework
+  - id: src-skillmd-claudemd-agentsmd-three-layer-context
+    type: wiki
+    file: wiki/sources/tools-integration/src-skillmd-claudemd-agentsmd-three-layer-context.md
+    title: Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md Three-Layer Context
   - id: proto-programming-lesson
     type: wiki
     file: wiki/lessons/03_validated/structured-context-is-proto-programming-for-ai-agents.md
@@ -233,6 +249,39 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 > - Tier system (expert/capable/lightweight) adapts to your trust levels
 > - Context budget depends on your typical task complexity and context window size
 > - Structural patterns can be customized but the CONSISTENCY matters more than the specific patterns
+
+### Industry Frameworks — Structured Context in Production (NEW 2026-04-14)
+
+Four production frameworks from 2026 independently converge on the same structural context principles this model defines — validating that context engineering is a domain-level pattern, not an ecosystem-specific practice.
+
+**[[src-openspec-spec-driven-development-framework|OpenSpec]]: Fluid vs Phase-Locked Context + Delta Specs**
+
+OpenSpec is a spec-driven development framework with 25+ AI tools in production. It introduces two context modes that directly map to our tier system: *fluid actions* (context adapts continuously as implementation reveals information) versus *phase-locked actions* (context frozen at phase boundaries, preventing retroactive scope expansion). The delta spec mechanism — structuring changes as ADDED/MODIFIED/REMOVED blocks — is a structural pattern for communicating context *differences* rather than full state, solving the compaction problem: a delta spec survives context resets because it describes what changed, not the full prior state. The OPSX command system provides a unified vocabulary for agent interaction — the same design goal as our per-role command segmentation. OpenSpec demonstrates that structural context engineering at 25+ tool scale requires vocabulary discipline: consistent verbs, consistent section headers, consistent change notation.
+
+**[[src-github-spec-kit-specification-driven-development|spec-kit]]: Specs Generate Code, Not Guide It**
+
+The spec-kit project formalizes the SDD (Specification-Driven Development) philosophy: a specification is the primary artifact, and code is a derived output. The kit provides 6 structural mechanisms — abstraction enforcement (verifies spec maps to code), uncertainty markers (`?:` prefix flags unresolved decisions inline), section checklists (completeness gates embedded in the spec itself), constitutional compliance (AI behavior constraints in the spec), plus standard template and example library. The key structural insight: *uncertainty markers in a spec are the equivalent of our `> [!warning]` callouts* — they tell the agent which decisions require escalation versus auto-resolution. Checklists embedded in specs are the equivalent of our MUST/MUST NOT lists in stage skills. This validates the claim that structural context engineering converges on similar patterns across different tools and domains.
+
+**[[src-bmad-method-agile-ai-development-framework|BMAD]]: Scale-Adaptive Context Ceremony**
+
+BMAD-METHOD implements Scale-Domain-Adaptive context: the amount of structured ceremony (formal specs, approvals, documentation) adapts based on project scale and domain. For a solo project, a single markdown spec file is sufficient; for a 12-agent coordinated workflow, each persona requires a dedicated context specification. BMAD's 12+ specialized agent personas each carry a context specification calibrated to that persona's role — the same per-context injection design as our Five Contexts section (A through E). The 60+ brainstorming techniques in BMAD are all *structured prompts* — not free-form questions but context engineering artifacts that program how the agent explores a problem space. BMAD demonstrates at scale (active community, 12+ personas) that structured context engineering is not overhead — it is what makes multi-agent coordination tractable.
+
+**[[src-skillmd-claudemd-agentsmd-three-layer-context|Three-Layer Context Architecture]]: ETH Zurich Feb 2026 Finding**
+
+The cross-tool analysis of SKILL.md vs CLAUDE.md vs AGENTS.md documents the emergence of a three-layer context standard: AGENTS.md (universal cross-tool, <100 lines, always loaded) + CLAUDE.md (tool-specific minimal config, <20 lines) + Skills (conditional, <500 lines, on-demand). This is precisely the context-aware loading principle expressed as a file architecture standard. The critical empirical finding: ETH Zurich (Feb 2026) measured that AI-generated context files *hurt success by 3%* compared to human-written context files. The mechanism: AI-generated context files include LLM-optimized phrases ("As an AI assistant...") that consume tokens without improving behavior — they are structurally correct but content-bloated. This is quantitative evidence that *content discipline matters as much as structural discipline* in context engineering. The principle: every line in a context file must earn its place, not just conform to format.
+
+> [!info] **Four-framework convergence summary**
+>
+> | Framework | Key structural mechanism | Maps to our model |
+> |-----------|------------------------|-------------------|
+> | OpenSpec | Delta specs (ADDED/MODIFIED/REMOVED) | Compaction-survival design |
+> | spec-kit | Uncertainty markers + constitutional compliance | `> [!warning]` callouts + MUST NOT lists |
+> | BMAD | Scale-adaptive ceremony, persona-specific specs | Tier system + per-context injection |
+> | Three-layer | AGENTS.md (<100L) + CLAUDE.md (<20L) + Skills (<500L) | Context-aware loading principle |
+>
+> Convergence across 4 independent frameworks on structured context, tiered depth, and per-context injection validates that these are domain-level patterns — not preferences or ecosystem quirks.
+
+---
 
 ## Open Questions
 
