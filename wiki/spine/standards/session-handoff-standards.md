@@ -267,29 +267,59 @@ A template handoff skeleton lives at [docs/SESSION-HANDOFF-TEMPLATE.md](docs/SES
 
 ## Examples from the Corpus
 
+> [!info] Why this page uses a span of exemplars, not a single best
+>
+> Per the [[model-llm-wiki-standards|LLM Wiki Standards]] Exemplar Policy: standards pages default to a SINGLE BEST exemplar. Session-handoff is an explicit exception — the "good" shape varies structurally by session shape. A directive-heavy correction session has a different optimal structure than a productive multi-phase session. Showing ONE "best" handoff would mis-teach by implying all sessions should produce that shape. The span (minimum viable → directive-driven → mature phase+decisions → meta-learning) teaches the reader to match shape to context.
+
+### Primary Annotated Exemplar — Mature Phase+Decisions Format
+
+Reference: [SESSION-2026-04-14-handoff.md](docs/SESSION-2026-04-14-handoff.md) — 554 lines, produced alongside this standard
+
+> [!example]- Full Walkthrough — Why Each Section Works
+>
+> **1. Header + Disclaimer.** The three-line header block declares (a) the date in the title, (b) the purpose in one sentence, (c) the non-wiki status. ← The disclaimer is not ceremonial — an auto-ingest pipeline reading `docs/*.md` needs this line to skip the file. The single-sentence "How to read" bullet orients the three audiences (future-self, next agent, operator) in one line.
+>
+> **2. Executive Summary is one screen.** One paragraph of prose + metrics snapshot (319 pages, 2089 relationships, 0 errors, 0 lint). ← Metrics are from a fresh `pipeline post`, not remembered. A reader who reads ONLY this section knows what the session produced and whether the system is healthy.
+>
+> **3. Session Context and Trajectory has three subsections** — Where We Started, The Arc, The Operator's Voice. ← The Arc captures the narrative shape (7 phases) so future-self can reconstruct the mental journey. The Operator's Voice section contains 7 verbatim quotes, each prefixed with what the quote corrected. These quotes are searchable by future sessions — paraphrased versions would not be.
+>
+> **4. What Was Done uses phase-by-phase structure** — 7 phases, each with Input / Infrastructure-fix-needed / Outputs. ← The session produced multiple parallel workstreams; flat lists would conflate them. Phases also map naturally to commits (each phase closed with a commit) so a reader can correlate narrative to git log.
+>
+> **5. Architecture Decisions Made is a TABLE** — 8 rows, one per P1 decision, with "Decision → Resolution → Commit" columns. ← Decisions are discrete items; prose would lose the atomicity. The commit column makes each resolution independently auditable.
+>
+> **6. Ready for Human Review and What's Blocked are explicit sections** — 8 items and 4 items respectively. ← Without these, operator review is implicit and items fall through cracks. Declaring "blocked on operator" externalizes the dependency instead of leaving it in the agent's head.
+>
+> **7. How to Resume is a numbered checklist, not prose** — 6 actionable steps, each either reading a specific file or running a specific command. ← A fresh agent can follow top-to-bottom without judgment. Narrative "resume" instructions become skimmed prose; checklists get executed.
+>
+> **8. Reflection section is retrospective, not self-congratulatory** — What Worked / What Could Improve as parallel bullet lists. ← Honest retrospection distinguishes "the session succeeded" from "everything went smoothly." The Could Improve notes seed future sessions.
+>
+> **What could still improve:** The handoff's 554 lines is approaching the upper bound where a reader may skim rather than read. The "Key Files and References" section (with 3 sub-tables totaling ~40 file references) could itself be extracted into a companion artifact-index. The Architecture Decisions table has no "confidence level" column — some decisions were more settled than others, and that nuance is lost.
+
+### Secondary Exemplars — Other Valid Shapes
+
 > [!example]- Minimum viable — good for a quiet session (Apr 10 final, ~4KB)
 >
 > Structure: Executive Summary → Final State (metrics) → What Was Done (flat list) → What's Next → How to Resume. No directives section because the session had no directives. No mistakes section because the session had no mistakes. Length matches content.
 >
 > See: [SESSION-2026-04-10-final.md](docs/SESSION-2026-04-10-final.md)
+>
+> **What could still improve:** Missing explicit "What's Blocked" subsection — quiet sessions rarely have blockers but declaring "none" explicitly is more honest than omitting.
 
 > [!example]- Directive-driven — good for correction-heavy session (Apr 12, ~47KB)
 >
 > Structure: The Vision → Directive 1 → Directive 2 → ... → Directive 13 → Wiki Statistics. 13 sections each capturing a specific operator correction with verbatim quotes. The CORRECTIVE scope dominates because the session arc WAS the corrections.
 >
 > See: [SESSION-2026-04-12-handoff.md](docs/SESSION-2026-04-12-handoff.md)
-
-> [!example]- Mature phase+decisions — good for multi-phase productive session (Apr 14, ~41KB)
 >
-> Structure: Executive Summary → Session Context and Trajectory → What Was Done (7 phases) → Architecture Decisions Made (table) → Current State → Ready for Human Review → What's Blocked → What's Next → How to Resume → Key Files → Reflection. All three temporal scopes covered. Decisions are explicit with before/after. Review gates are declared.
->
-> See: [SESSION-2026-04-14-handoff.md](docs/SESSION-2026-04-14-handoff.md) (this standard was created alongside it; it is the canonical example of the mature format)
+> **What could still improve:** The 13 directives are presented without weighting. Some were course-corrections; some were ongoing refinements. A "significance" column or per-directive duration ("took 30% of session to resolve") would help future sessions distinguish critical vs minor corrections.
 
 > [!example]- Meta-learning — good for sessions where mistakes happened (Apr 12 v2, ~24KB)
 >
 > Adds a Mistakes section with 5 numbered meta-failures, each with a verbatim operator quote. This section is what makes the handoff valuable for the next session — it encodes "what the agent did wrong this time so it doesn't happen again."
 >
 > See: [SESSION-2026-04-12-handoff-v2.md](docs/SESSION-2026-04-12-handoff-v2.md) — Mistake 1 through Mistake 5
+>
+> **What could still improve:** The Mistakes section doesn't connect to the wiki's lesson-promotion pipeline. A mistake that recurs across 3+ handoffs should trigger a lesson/principle evolution. Currently this connection is manual; it could be a scorer signal.
 
 ## How to Extend This Standard
 

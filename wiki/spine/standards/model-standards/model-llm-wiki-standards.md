@@ -66,6 +66,26 @@ The summaries below are quick reference. For full quality bars, common failures,
 
 ---
 
+### Exemplar Policy
+
+> [!info] How exemplars are chosen and presented — policy governing all 15+ per-type standards pages
+>
+> This is the cross-cutting policy every per-type standards page follows. Resolves operator decision queue **Q9 (BEST vs TYPICAL)**, **Q10 (annotation format)**, and **Q17 (inline vs companion)**. If you are creating a new standards page, follow this policy.
+>
+> | Dimension | Policy | Rationale |
+> |-----------|--------|-----------|
+> | **Selection** | **Best available page, not typical.** Standards should RAISE the bar, not describe the average. The exemplar is aspirational: "this is what good looks like at its best right now." | A typical-good exemplar freezes mediocrity as the target. An aspirational exemplar creates upward pull. |
+> | **Placement** | **Inline in the standards page, not companion.** The standards page and the annotated exemplar live together — the reader sees rule + demonstration in one place. | Companion documents break the teach-by-example loop. The reader shouldn't have to click to another page to see the standard demonstrated. |
+> | **Format** | **Foldable `> [!example]- Full Walkthrough — Why Each Section Works`** with numbered annotation points per structural element (frontmatter, summary, key sections, evidence/analysis, relationships). Minimum 5 annotation points per exemplar. | Standardized format across 15+ standards pages makes every annotation scannable and comparable. Foldable so the standards page stays navigable; readers expand when they want depth. |
+> | **Annotation content** | **Explain WHY, not WHAT.** An annotation "has 8 evidence items" is useless — the reader can count. "Each evidence item has bold source + specific data + source reference, which is what makes the convergence claim credible" teaches. | Annotations that restate the visible content are noise. The teaching happens when the annotation reveals the rule behind the choice. |
+> | **Honest improvement notes** | **Every exemplar MUST end with "What could still improve"** — honest assessment of what the exemplar still lacks, even though it is the best available. | Prevents exemplars from becoming sacred, frozen, unquestionable. Documents the improvement direction. Aligns with operator's "none of this is static" stance. |
+> | **Single-best vs span of exemplars** | **Default: single best exemplar.** Use a span of exemplars ONLY when the page type's "good" shape varies structurally by instance (e.g., session-handoff varies by session shape; not all handoffs should look the same). Document WHY if using span. | Most page types have one optimal shape (lesson, pattern, decision, concept, reference). Shape-dependent types need to show the range to teach correctly. |
+> | **Self-validation** | **The standards page itself MUST pass the quality bar it defines.** If a standard says "≥3 evidence items," the standards page's own Evidence/Insights sections must demonstrate that. | Preach by example. A standards page that violates its own rules is worse than no standards page. |
+>
+> **When to update an exemplar:** when a new page of that type clearly surpasses the current exemplar on multiple dimensions, OR when the current exemplar has been refactored in ways that invalidate the annotation. Replacing an exemplar is a decision that should be logged in the `updated:` frontmatter field of the standards page.
+
+---
+
 ### Gold Standard: Concept Page
 
 **Reference**: [[methodology-framework|Methodology Framework]] — 347 lines, 17 relationships
