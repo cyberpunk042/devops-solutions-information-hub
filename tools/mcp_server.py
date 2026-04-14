@@ -350,6 +350,92 @@ def wiki_log(title: str, content: str, note_type: str = "directive") -> str:
 
 
 # ---------------------------------------------------------------------------
+# Gateway tools (unified interface for methodology, identity, flow)
+# ---------------------------------------------------------------------------
+
+@server.tool()
+def wiki_gateway_query(query_type: str, value: str = None) -> str:
+    """Query the wiki gateway for methodology, identity, models, chains, stages, or fields.
+
+    Args:
+        query_type: One of: identity, models, chains, model, chain, stage, field, backlog, lessons, logs, page
+        value: Required for: model (name), chain (name), stage (name), field (name), page (title). Optional otherwise.
+    """
+    from tools.gateway import (resolve_paths, query_identity, query_models_list,
+                                query_chains_list, query_model, query_chain,
+                                query_stage, query_field, query_backlog,
+                                query_lessons, query_logs, query_page)
+
+    paths = resolve_paths()
+    handlers = {
+        "identity": lambda: query_identity(paths),
+        "models": lambda: query_models_list(paths),
+        "chains": lambda: query_chains_list(paths),
+        "model": lambda: query_model(paths, value or "", False),
+        "chain": lambda: query_chain(paths, value or "default"),
+        "stage": lambda: query_stage(paths, value or "document", None),
+        "field": lambda: query_field(paths, value or "readiness"),
+        "backlog": lambda: query_backlog(paths),
+        "lessons": lambda: query_lessons(paths),
+        "logs": lambda: query_logs(paths),
+        "page": lambda: query_page(paths, value or ""),
+    }
+    handler = handlers.get(query_type)
+    if not handler:
+        return json.dumps({"error": f"Unknown query_type: {query_type}", "available": list(handlers.keys())})
+    result = handler()
+    if isinstance(result, str):
+        return result
+    return json.dumps(result, indent=2, default=str)
+
+
+@server.tool()
+def wiki_gateway_template(page_type: str) -> str:
+    """Get a wiki page template by type.
+
+    Args:
+        page_type: Page type (concept, lesson, pattern, decision, epic, task, etc.) or methodology/type for methodology templates.
+    """
+    from tools.gateway import resolve_paths, query_template
+    paths = resolve_paths()
+    result = query_template(paths, page_type)
+    if isinstance(result, dict):
+        return json.dumps(result, indent=2)
+    return result
+
+
+@server.tool()
+def wiki_gateway_contribute(contrib_type: str, title: str, content: str, domain: str = "cross-domain") -> str:
+    """Write back to the wiki — create a lesson, remark, or correction.
+
+    Args:
+        contrib_type: One of: lesson, remark, correction
+        title: Title for the contribution
+        content: Body content
+        domain: Target domain (default: cross-domain)
+    """
+    from tools.gateway import resolve_paths, op_contribute
+    paths = resolve_paths()
+    result = op_contribute(paths, contrib_type, title, content, domain)
+    return json.dumps(result, indent=2, default=str)
+
+
+@server.tool()
+def wiki_gateway_flow(step: int = None) -> str:
+    """Goldilocks flow — step-by-step routing from identity to action.
+
+    Shows the 8-step Goldilocks protocol with commands for each step.
+    Pass a step number (1-8) to see details for that step.
+
+    Args:
+        step: Optional step number (1-8) for detailed view. Omit for overview.
+    """
+    from tools.gateway import resolve_paths, cmd_flow
+    paths = resolve_paths()
+    return cmd_flow(paths, step=step)
+
+
+# ---------------------------------------------------------------------------
 # Entrypoint
 # ---------------------------------------------------------------------------
 

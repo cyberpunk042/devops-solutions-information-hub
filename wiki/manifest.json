@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-14T00:12:56.823956+00:00",
+  "generated": "2026-04-14T00:20:56.715634+00:00",
   "stats": {
     "pages": 297,
     "domains": 9,
@@ -296,7 +296,7 @@
       "title": "E014 \u2014 Goldilocks Navigable System \u2014 Identity to Action in Continuous Flow",
       "type": "epic",
       "domain": "backlog",
-      "status": "draft",
+      "status": "active",
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",

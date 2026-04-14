@@ -5,12 +5,12 @@ aliases:
   - "E015 — Gateway Tools Completion: All Requirements Implemented with MCP Integration"
 type: epic
 domain: backlog
-status: draft
+status: active
 priority: P1
 task_type: epic
-current_stage: document
-readiness: 65
-progress: 60
+current_stage: implement
+readiness: 85
+progress: 80
 stages_completed:
   - "scaffold"
 artifacts:

@@ -56,9 +56,13 @@ Complete reference for the wiki gateway — the unified Python interface serving
 > | `query --mapping` | Query | Location mapping for archived/moved pages |
 > | `template X` | Operation | Get a page template by type |
 > | `config X.Y` | Operation | Render a config section as markdown (e.g., methodology.models) |
-> | `move "Title" --to dir/` | Operation | Move page (basic — full ref update in E015) |
+> | `flow` | Navigation | Goldilocks flow — 8-step routing from identity to action |
+> | `flow --step N` | Navigation | Detailed view of one Goldilocks step (1-8) |
+> | `move "Title" --to dir/` | Operation | Move page + update ALL wikilink references across wiki |
 > | `archive "Title"` | Operation | Archive page with location mapping |
 > | `backup --target /path/` | Operation | Full wiki backup (timestamped) |
+> | `factory-reset` | Operation | Reset wiki to clean template state (DRY RUN by default) |
+> | `factory-reset --confirm` | Operation | Actually execute factory reset (creates backup first) |
 > | `contribute --type X --title Y --content Z` | Operation | Agent write-back: lesson, remark, or correction |
 
 ### Global Flags
@@ -100,6 +104,40 @@ The gateway auto-detects what it CAN from the filesystem:
 The `--wiki-root` flag determines which wiki's pages you browse/modify.
 The `--brain` flag determines where methodology configs, chains, templates come from.
 When running ON the second brain, both are the same (auto-detected).
+
+### MCP Server Integration
+
+The gateway is also accessible via MCP tools registered in `.mcp.json`. These are task-oriented aggregations of CLI commands.
+
+> [!info] Gateway MCP Tools
+>
+> | MCP Tool | What It Does | CLI Equivalent |
+> |----------|-------------|---------------|
+> | `wiki_gateway_query` | Query methodology, models, chains, stages, fields, backlog, lessons, logs, pages | `gateway query --{type} [value]` |
+> | `wiki_gateway_template` | Get a page template by type | `gateway template <type>` |
+> | `wiki_gateway_contribute` | Write back to the wiki (lesson, remark, correction) | `gateway contribute --type X ...` |
+> | `wiki_gateway_flow` | Goldilocks flow step-by-step routing | `gateway flow [--step N]` |
+>
+> **Parameters for `wiki_gateway_query`:**
+> - `query_type`: identity, models, chains, model, chain, stage, field, backlog, lessons, logs, page
+> - `value`: required for model, chain, stage, field, page; optional otherwise
+>
+> These complement the 17 existing MCP tools (wiki_status, wiki_search, wiki_read_page, etc.) that cover pipeline operations. The gateway tools cover methodology and navigation.
+
+### Auto-Detect Warnings
+
+Every auto-detected value now includes a warning so agents and humans know what might be wrong:
+
+```
+DETECTED IDENTITY:
+  domain:         knowledge  ⚠ Auto-detected. Override with --domain if wrong.
+  phase:          mvp  ⚠ Auto-detected from CI/tests/Docker. Override in CLAUDE.md.
+  scale:          micro (26 files)  ⚠ Auto-detected from file count.
+  execution mode: solo
+                  (no harness code found → solo is certain)
+```
+
+Auto-detection is a STARTING POINT, not an authority. The declared identity in CLAUDE.md always takes precedence. The warnings ensure agents don't silently use wrong defaults.
 
 ### How This Connects — Navigate From Here
 

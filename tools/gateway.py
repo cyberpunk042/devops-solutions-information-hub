@@ -762,6 +762,23 @@ def query_page(paths: Dict[str, Path], title: str) -> Dict[str, Any]:
 # Operations: move, archive, backup, contribute
 # ---------------------------------------------------------------------------
 
+def _infer_domain_from_path(page_path: Path, wiki_dir: Path) -> str:
+    """Infer domain from page's directory path."""
+    rel = page_path.relative_to(wiki_dir)
+    parts = rel.parts
+    if len(parts) >= 2 and parts[0] == "domains":
+        return parts[1]
+    if parts[0] == "spine":
+        return "cross-domain"
+    if parts[0] == "backlog":
+        return "backlog"
+    if parts[0] == "log":
+        return "log"
+    if parts[0] in ("sources", "comparisons", "lessons", "patterns", "decisions"):
+        return "cross-domain"
+    return ""
+
+
 def op_move(paths: Dict[str, Path], title: str, target_dir: str, dry_run: bool = False) -> Dict[str, Any]:
     """Move a page to a new directory, updating all references."""
     wiki_dir = paths["wiki"]
@@ -792,13 +809,35 @@ def op_move(paths: Dict[str, Path], title: str, target_dir: str, dry_run: bool =
 
     # Move the file
     target.parent.mkdir(parents=True, exist_ok=True)
+    old_stem = source.stem
+    new_stem = target.stem
     source.rename(target)
 
-    # Update domain field in frontmatter if domain changed
+    # Update domain field in frontmatter based on new path
     text = target.read_text(encoding="utf-8")
-    # TODO: update domain field based on new path
+    new_domain = _infer_domain_from_path(target, wiki_dir)
+    if new_domain:
+        import re
+        text = re.sub(r'^(domain:\s*).*$', f'\\1{new_domain}', text, count=1, flags=re.MULTILINE)
+        target.write_text(text, encoding="utf-8")
+
+    # Update wikilink references across all wiki pages
+    refs_updated = 0
+    if old_stem != new_stem:
+        for p in pages:
+            if p == source or not p.exists():
+                continue
+            page_text = p.read_text(encoding="utf-8")
+            if f"[[{old_stem}" in page_text:
+                updated = page_text.replace(f"[[{old_stem}|", f"[[{new_stem}|")
+                updated = updated.replace(f"[[{old_stem}]]", f"[[{new_stem}]]")
+                if updated != page_text:
+                    p.write_text(updated, encoding="utf-8")
+                    refs_updated += 1
 
     result["moved"] = True
+    result["references_updated"] = refs_updated
+    result["domain_updated"] = new_domain or "(unchanged)"
     return result
 
 
@@ -980,6 +1019,63 @@ def op_backup(paths: Dict[str, Path], target_dir: str) -> Dict[str, Any]:
         return {"error": str(e)}
 
 
+def op_factory_reset(paths: Dict[str, Path], confirm: bool = False) -> Dict[str, Any]:
+    """Reset a wiki to clean template state. DANGEROUS — deletes all content pages.
+
+    Preserves: config/, templates, _index.md files, schema files.
+    Deletes: all content .md files in domains/, sources/, comparisons/, lessons/,
+             patterns/, decisions/, spine/ (except templates), backlog/, log/.
+    Always creates backup first.
+    """
+    wiki_dir = paths["wiki"]
+
+    # Inventory what would be deleted
+    preserve_dirs = {"config"}
+    preserve_files = {"_index.md", "manifest.json", "index.md"}
+    to_delete = []
+    for f in wiki_dir.rglob("*.md"):
+        rel = f.relative_to(wiki_dir)
+        if rel.parts[0] in preserve_dirs:
+            continue
+        if f.name in preserve_files:
+            continue
+        to_delete.append(f)
+
+    result = {
+        "files_to_delete": len(to_delete),
+        "preserved_dirs": list(preserve_dirs),
+        "preserved_files": list(preserve_files),
+    }
+
+    if not confirm:
+        result["status"] = "DRY RUN — pass --confirm to execute"
+        result["warning"] = f"This will DELETE {len(to_delete)} wiki pages. A backup will be created first."
+        result["sample_deletions"] = [str(f.relative_to(wiki_dir)) for f in to_delete[:10]]
+        return result
+
+    # Create backup first
+    backup_result = op_backup(paths, str(wiki_dir.parent / "factory-reset-backups"))
+    result["backup"] = backup_result.get("backup", "FAILED")
+    if "error" in backup_result:
+        result["error"] = f"Backup failed: {backup_result['error']}. Aborting reset."
+        return result
+
+    # Delete content files
+    deleted = 0
+    for f in to_delete:
+        f.unlink()
+        deleted += 1
+
+    # Clean empty directories
+    for d in sorted(wiki_dir.rglob("*"), reverse=True):
+        if d.is_dir() and not any(d.iterdir()):
+            d.rmdir()
+
+    result["status"] = "RESET COMPLETE"
+    result["files_deleted"] = deleted
+    return result
+
+
 def query_chain(paths: Dict[str, Path], chain_name: str) -> Dict[str, Any]:
     """Query an SDLC chain config (simplified, default, full)."""
     chain_path = paths["config"] / "sdlc-chains" / f"{chain_name}.yaml"
@@ -1109,6 +1205,10 @@ def main():
     b = sub.add_parser("backup", help="Backup the wiki")
     b.add_argument("--target", required=True, help="Target directory for backup")
 
+    # Factory reset command
+    fr = sub.add_parser("factory-reset", help="Reset wiki to clean template state (DANGEROUS)")
+    fr.add_argument("--confirm", action="store_true", help="Required to actually execute reset")
+
     # Contribute command
     ct = sub.add_parser("contribute", help="Write back to the wiki")
     ct.add_argument("--type", required=True, choices=["lesson", "remark", "correction"])
@@ -1204,6 +1304,10 @@ def main():
 
     elif args.command == "backup":
         result = op_backup(paths, args.target)
+        print(json.dumps(result, indent=2, default=str))
+
+    elif args.command == "factory-reset":
+        result = op_factory_reset(paths, confirm=args.confirm)
         print(json.dumps(result, indent=2, default=str))
 
     elif args.command == "contribute":
