@@ -148,8 +148,8 @@ Multiple models run simultaneously on independent tracks. They don't share stage
 
 ## Open Questions
 
-> [!question] ~~Should composition rules be machine-readable in methodology.yaml (they currently are for nested only via `composition_model`), or is wiki documentation sufficient for sequential/conditional/parallel?~~
-> **RESOLVED:** Common patterns (nested) are already in YAML via `composition_model`. Complex composition (sequential, conditional, parallel) is wiki-documented. Formalize in config only when tooling needs enforcement — document first, encode when the pain of informal is felt.
+> [!question] ~~Should composition rules be machine-readable in methodology.yaml?~~
+> **RESOLVED 2026-04-14:** Yes — each pattern at its natural config layer. The `composition_rules:` section in `wiki/config/methodology.yaml` now declares all 4 patterns explicitly. **Nested** and **conditional (initial selection)** are fully encoded in methodology.yaml. **Conditional (runtime promotion)** has its valid_promotions graph encoded there + task frontmatter fields (`promoted_from`, `promoted_to`, `promotion_reason`, `promoted_at`) in wiki-schema.yaml. **Sequential** lives at task instance level via frontmatter fields (`depends_on`, `followed_by`) — methodology.yaml doesn't know about specific tasks. **Parallel** is NOT encoded in methodology.yaml because it's an ORCHESTRATION concern (harness/fleet config layer), not a methodology concern.
 
 ### How This Connects — Navigate From Here
 

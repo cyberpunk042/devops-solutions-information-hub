@@ -9,6 +9,10 @@
 # Design: wiki/domains/cross-domain/e003-artifact-type-system-design.md
 # Epic: E003 Artifact Type System
 # Version: 1.0 (2026-04-11)
+#
+# Composition rules (how models combine): see the `composition_rules:` section
+# below, and wiki/domains/cross-domain/model-composition-rules.md for full
+# explanation of each pattern with examples.
 
 # ---------------------------------------------------------------------------
 # Stages — the universal stage vocabulary
@@ -426,6 +430,103 @@ model_selection:
       model: feature-development
     - condition: "task_type == refactor AND scope == cross-project"
       model: feature-development  # promote to full model for cross-project refactors
+
+# ---------------------------------------------------------------------------
+# Composition Rules — how models combine when work is multi-layered
+#
+# Four composition patterns exist. Not all are encoded here — each lives at
+# its natural config layer. This section declares what IS encodable here and
+# what belongs elsewhere (task frontmatter, orchestrator config).
+#
+# See wiki/domains/cross-domain/model-composition-rules.md for full explanation
+# of each pattern with examples.
+# ---------------------------------------------------------------------------
+composition_rules:
+
+  # -------------------------------------------------------------------------
+  # NESTED — inner model runs inside outer model's stage
+  # Encoded: YES (via model.composition: nested + chain.<stage>.composition_model)
+  # Example: project-lifecycle.chain.infrastructure.composition_model: feature-development
+  # -------------------------------------------------------------------------
+  nested:
+    description: "Inner model runs inside outer model's stage. Outer defines scope; inner defines process."
+    implementation_location: "methodology.yaml — model.composition + model.chain.<stage>.composition_model"
+    rules:
+      - "Outer model's stage defines WHAT kind of work belongs"
+      - "Inner model defines HOW that work is executed"
+      - "Inner model runs its FULL artifact chain — nesting doesn't skip inner stages"
+      - "Readiness propagation: inner task readiness feeds into outer stage readiness (weighted average)"
+      - "Outer stage is complete when ALL inner tasks are complete"
+      - "Inner model artifacts live within the outer stage's scope directory/domain"
+
+  # -------------------------------------------------------------------------
+  # CONDITIONAL (initial selection) — model picked at task creation time
+  # Encoded: YES (via model_selection section above)
+  # -------------------------------------------------------------------------
+  conditional_initial:
+    description: "Model chosen at task creation based on task_type + overrides."
+    implementation_location: "methodology.yaml — model_selection section"
+    rules:
+      - "Primary selector: task_type (epic/module/task/bug/research/docs/refactor/hotfix/integration/evolve)"
+      - "Override conditions checked in order, first match wins"
+      - "Scale and scope can promote a task to a different model"
+
+  # -------------------------------------------------------------------------
+  # CONDITIONAL (runtime promotion) — model changes mid-execution
+  # Encoded: PARTIAL — promotion graph declared here; actual promotion is agent logic
+  # -------------------------------------------------------------------------
+  conditional_runtime:
+    description: "Task's model changes mid-execution when conditions shift (e.g., a docs task reveals real implementation needed)."
+    implementation_location: "This section (valid_promotions) + task frontmatter (promoted_from, promoted_to, promotion_reason)"
+    valid_promotions:
+      documentation: [research, feature-development]    # docs can escalate to research or build
+      research: [feature-development, refactor]         # research leads to build or restructure
+      bug-fix: []                                       # terminal — don't escalate bug-fixes
+      hotfix: []                                        # terminal — hotfixes are emergency scope
+      refactor: [feature-development]                   # refactor can expand to full feature work
+      feature-development: []                           # terminal — already the most complete
+      integration: []                                   # terminal — wiring-focused
+      knowledge-evolution: []                           # terminal — distillation work
+    promotion_rules:
+      - "Completed stages are preserved (not re-run)"
+      - "New model's remaining stages are appended"
+      - "Readiness is recalculated for new model's stage count"
+      - "Promotion must be logged in task frontmatter (promoted_from, promoted_to, promotion_reason, promoted_at)"
+      - "Promotion is one-way: once promoted, can't demote within same task"
+
+  # -------------------------------------------------------------------------
+  # SEQUENTIAL — Model A completes before Model B starts
+  # Encoded: NO (lives on task instances, not model definitions)
+  # -------------------------------------------------------------------------
+  sequential:
+    description: "Model A completes fully before Model B starts. Phased work with clear handoff."
+    implementation_location: "Task/epic frontmatter — depends_on, followed_by"
+    methodology_guidance:
+      - "Model A must reach readiness_cap before Model B starts"
+      - "Model B reads A's outputs but doesn't depend on A's internal artifacts"
+      - "Transition point must be explicit in task frontmatter"
+      - "Example: Research task completes → creates Feature Development epic"
+    note: |
+      Not encoded in methodology.yaml because sequencing is a property of
+      TASK INSTANCES, not model definitions. methodology.yaml doesn't know
+      about specific tasks. Schema support: wiki-schema.yaml defines
+      followed_by and depends_on as optional frontmatter fields for tasks/epics.
+
+  # -------------------------------------------------------------------------
+  # PARALLEL — multiple models run simultaneously on independent tracks
+  # Encoded: NO (belongs in orchestrator/harness config, not methodology)
+  # -------------------------------------------------------------------------
+  parallel:
+    description: "Multiple models run simultaneously on independent tracks. Not composition — orchestration."
+    implementation_location: "Orchestrator / harness config (OpenFleet-style), NOT methodology.yaml"
+    methodology_guidance:
+      - "Tracks coordinate through shared state (backlog, wiki, completion logs)"
+      - "No artifact or stage dependencies cross tracks"
+      - "Example: execution track + PM track + knowledge track running in parallel"
+    note: |
+      Not encoded in methodology.yaml because parallel execution is a property
+      of the SYSTEM LAYER (how multiple agents coordinate), not the methodology
+      layer (how one agent executes stages). Belongs in harness/fleet config.
 
 # ---------------------------------------------------------------------------
 # Execution Modes — controls where the agent stops
