@@ -561,5 +561,6 @@ From building with this model — validated experience:
 [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
 [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

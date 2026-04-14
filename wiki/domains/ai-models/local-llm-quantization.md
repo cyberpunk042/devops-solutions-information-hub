@@ -104,3 +104,5 @@ Cross-referencing `AICP` and `OpenFleet`: the AICP page documents that 9 models 
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
+[[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]
+[[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]

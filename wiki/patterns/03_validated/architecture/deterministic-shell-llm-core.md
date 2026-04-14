@@ -140,3 +140,5 @@ Avoid or over-engineering Deterministic Shell, LLM Core when:
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]]
+[[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
+[[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]

@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-14T13:44:22.205828+00:00",
+  "generated": "2026-04-14T16:54:29.220034+00:00",
   "stats": {
-    "pages": 301,
+    "pages": 313,
     "domains": 9,
-    "sources": 31,
+    "sources": 43,
     "comparisons": 5,
-    "relationships": 2007,
-    "tags_unique": 866,
+    "relationships": 2051,
+    "tags_unique": 948,
     "layers": {
       "3": 4,
       "6": 16,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 257,
-      "seed": 1
+      "seed": 13
     }
   },
   "pages": [
@@ -14286,11 +14286,11 @@
       "relationships": [
         {
           "verb": "DERIVED FROM",
-          "target": "src-harness-engineering-article"
+          "target": "Cross-Domain Patterns"
         },
         {
           "verb": "DERIVED FROM",
-          "target": "src-harness-engineering-github"
+          "target": "Harness Engineering"
         },
         {
           "verb": "EXTENDS",
@@ -15172,6 +15172,166 @@
       ]
     },
     {
+      "path": "sources/src-27-questions-llm-selection.md",
+      "slug": "sources/src-27-questions-llm-selection",
+      "title": "Source \u2014 27 Questions to Ask Before Choosing an LLM",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "llm-selection",
+        "evaluation-framework",
+        "ai-models",
+        "decision-criteria",
+        "local-ai",
+        "compliance",
+        "cost-optimization",
+        "performance"
+      ],
+      "sources": [
+        {
+          "id": "infoworld-27-questions-llm-2024",
+          "type": "article",
+          "url": "https://www.infoworld.com/article/4152738/27-questions-to-ask-before-choosing-an-llm.html",
+          "author": "Peter Wayner",
+          "outlet": "InfoWorld"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/src-7-levels-claude-code-rag.md",
+      "slug": "sources/src-7-levels-claude-code-rag",
+      "title": "Source \u2014 The 7 Levels of Claude Code & RAG",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "claude-code",
+        "rag",
+        "memory",
+        "context-management",
+        "obsidian",
+        "graph-rag",
+        "vector-database",
+        "embeddings",
+        "context-engineering",
+        "knowledge-base",
+        "token-efficiency"
+      ],
+      "sources": [
+        {
+          "id": "7-levels-claude-code-rag-youtube",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=kQu5pWKS8GA"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "VALIDATES",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-autobe-compiler-verified-backend-generation.md",
+      "slug": "sources/src-autobe-compiler-verified-backend-generation",
+      "title": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "ai-agents",
+        "autobe",
+        "deterministic-shell",
+        "llm-core",
+        "compiler-verification",
+        "backend-generation",
+        "ast",
+        "local-llm",
+        "cost-reduction",
+        "convergence",
+        "qwen",
+        "structured-outputs",
+        "retry-convergence"
+      ],
+      "sources": [
+        {
+          "id": "autobe-dev-to-article",
+          "type": "article",
+          "url": "https://dev.to/samchon/autobe-qwen-35-27b-just-built-complete-backends-from-scratch-100-compilation-25x-cheaper-lmd"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "VALIDATES",
+          "target": "Deterministic Shell, LLM Core"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Pydantic AI: Typed Agent Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Spec-Driven Development"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Orchestration Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness Engineering"
+        }
+      ]
+    },
+    {
       "path": "sources/src-bmad-method-agile-ai-development-framework.md",
       "slug": "sources/src-bmad-method-agile-ai-development-framework",
       "title": "Synthesis: BMAD-METHOD \u2014 Agile AI-Driven Development Framework",
@@ -15226,6 +15386,122 @@
         {
           "verb": "BUILDS ON",
           "target": "Model \u2014 Context Engineering"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-claude-agent-sdk-and-managed-agents.md",
+      "slug": "sources/src-claude-agent-sdk-and-managed-agents",
+      "title": "Synthesis \u2014 Claude Agent SDK and Managed Agents",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "ai-agents",
+        "claude-agent-sdk",
+        "managed-agents",
+        "orchestration",
+        "tool-use",
+        "permissions",
+        "hooks",
+        "mcp",
+        "agent-definition",
+        "harness-engineering"
+      ],
+      "sources": [
+        {
+          "id": "agent-sdk-python-reference",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/agent-sdk/python"
+        },
+        {
+          "id": "managed-agents-tools-reference",
+          "type": "documentation",
+          "url": "https://platform.claude.com/docs/en/managed-agents/tools"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/src-claude-code-prompt-patch-rebalancing.md",
+      "slug": "sources/src-claude-code-prompt-patch-rebalancing",
+      "title": "Source \u2014 Claude Code Prompt Patch: Rebalancing System Prompt Instructions",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "claude-code",
+        "system-prompt",
+        "behavioral-patching",
+        "corner-cutting",
+        "ai-agents",
+        "workaround",
+        "prompt-engineering",
+        "quality-enforcement"
+      ],
+      "sources": [
+        {
+          "id": "roman01la-claude-code-patch-gist-2025",
+          "type": "documentation",
+          "url": "https://gist.github.com/roman01la/483d1db15043018096ac3babf5688881",
+          "author": "roman01la",
+          "note": "Unofficial community tool \u2014 not Anthropic-authored"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
+      "path": "sources/src-code-review-graph-automated-review.md",
+      "slug": "sources/src-code-review-graph-automated-review",
+      "title": "Source \u2014 code-review-graph: Graph-Based Automated Code Review",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "code-review",
+        "graph-analysis",
+        "tree-sitter",
+        "mcp",
+        "token-efficiency",
+        "blast-radius",
+        "ai-agents",
+        "static-analysis",
+        "sqlite",
+        "quality-gates"
+      ],
+      "sources": [
+        {
+          "id": "code-review-graph-github",
+          "type": "repository",
+          "url": "https://github.com/tirth8205/code-review-graph"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
         }
       ]
     },
@@ -15286,6 +15562,177 @@
         {
           "verb": "COMPARES TO",
           "target": "Model \u2014 Methodology"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-hrm-trm-tiny-recursion-models.md",
+      "slug": "sources/src-hrm-trm-tiny-recursion-models",
+      "title": "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "ai-models",
+        "small-models",
+        "recursive-reasoning",
+        "arc-agi",
+        "hrm",
+        "trm",
+        "hierarchical-reasoning",
+        "tiny-recursion",
+        "model-efficiency",
+        "overfitting",
+        "mlp-vs-attention",
+        "parameter-count",
+        "logical-reasoning",
+        "benchmark",
+        "scaling-hypothesis"
+      ],
+      "sources": [
+        {
+          "id": "hrm-trm-youtube-transcript",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=ZgwHaI2C-9s"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Deterministic Shell, LLM Core"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LLM Architecture Gallery"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AutoBE"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Local LLM Quantization"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-llm-architecture-gallery-raschka.md",
+      "slug": "sources/src-llm-architecture-gallery-raschka",
+      "title": "Synthesis \u2014 LLM Architecture Gallery (Raschka)",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "ai-models",
+        "llm-architecture",
+        "mixture-of-experts",
+        "attention-mechanisms",
+        "kv-cache",
+        "context-window",
+        "moe",
+        "mla",
+        "linear-attention",
+        "architecture-trends",
+        "model-selection",
+        "raschka",
+        "dense-transformer",
+        "hybrid-models"
+      ],
+      "sources": [
+        {
+          "id": "raschka-llm-gallery",
+          "type": "article",
+          "url": "https://sebastianraschka.com/llm-architecture-gallery/"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Claude Code"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-openclaw-billing-proxy.md",
+      "slug": "sources/src-openclaw-billing-proxy",
+      "title": "Source \u2014 openclaw-billing-proxy: Billing Proxy for OpenClaw via Claude Subscription",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "openclaw",
+        "billing",
+        "proxy",
+        "anthropic",
+        "oauth",
+        "claude-max",
+        "fingerprint-detection",
+        "reverse-proxy",
+        "openfleet",
+        "billing-architecture",
+        "http-middleware"
+      ],
+      "sources": [
+        {
+          "id": "openclaw-billing-proxy-github",
+          "type": "repository",
+          "url": "https://github.com/zacdcook/openclaw-billing-proxy"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
         }
       ]
     },
@@ -15403,6 +15850,176 @@
         {
           "verb": "FEEDS INTO",
           "target": "Always Plan Before Executing"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-pydantic-ai-typed-agent-framework.md",
+      "slug": "sources/src-pydantic-ai-typed-agent-framework",
+      "title": "Synthesis \u2014 Pydantic AI: Typed Agent Framework",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "ai-agents",
+        "pydantic",
+        "type-safety",
+        "structured-outputs",
+        "dependency-injection",
+        "tool-decoration",
+        "model-agnostic",
+        "python",
+        "agent-framework",
+        "production-grade"
+      ],
+      "sources": [
+        {
+          "id": "pydantic-ai-overview-docs",
+          "type": "documentation",
+          "url": "https://pydantic.dev/docs/ai/overview/"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness Engineering"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Claude Agent SDK and Managed Agents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Spec-Driven Development"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Orchestration Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-skillmd-claudemd-agentsmd-three-layer-context.md",
+      "slug": "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "title": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md \u2014 Three-Layer Agent Context Architecture",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "agents-md",
+        "claude-md",
+        "skill-md",
+        "three-layer-architecture",
+        "context-engineering",
+        "cross-tool",
+        "agent-config",
+        "ai-agents",
+        "eth-zurich-research",
+        "linux-foundation",
+        "context-loading",
+        "source-synthesis"
+      ],
+      "sources": [
+        {
+          "id": "src-skillmd-claudemd-agentsmd-termdock",
+          "type": "article",
+          "url": "https://www.termdock.com/blog/skill-md-vs-claude-md-vs-agents-md",
+          "title": "SKILL.md vs CLAUDE.md vs AGENTS.md \u2014 Compared (Termdock)"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
+        },
+        {
+          "verb": "VALIDATES",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-vercel-opensrc-toolkit.md",
+      "slug": "sources/src-vercel-opensrc-toolkit",
+      "title": "Source \u2014 vercel-labs/opensrc: Source Code Access Toolkit for AI Agents",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "vercel",
+        "open-source",
+        "cli",
+        "rust",
+        "ai-agents",
+        "source-code-access",
+        "package-registry",
+        "npm",
+        "pypi",
+        "crates",
+        "agent-context",
+        "opensrc"
+      ],
+      "sources": [
+        {
+          "id": "vercel-opensrc-github",
+          "type": "repository",
+          "url": "https://github.com/vercel-labs/opensrc"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "OpenFleet"
         }
       ]
     },
@@ -19727,24 +20344,24 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 138,
-      "relationship_count": 931
+      "page_count": 139,
+      "relationship_count": 933
     },
     "ai-agents": {
-      "page_count": 49,
-      "relationship_count": 392
+      "page_count": 56,
+      "relationship_count": 420
     },
     "tools-and-platforms": {
-      "page_count": 23,
-      "relationship_count": 159
+      "page_count": 24,
+      "relationship_count": 161
     },
     "devops": {
       "page_count": 14,
       "relationship_count": 99
     },
     "ai-models": {
-      "page_count": 3,
-      "relationship_count": 13
+      "page_count": 6,
+      "relationship_count": 25
     },
     "automation": {
       "page_count": 7,
@@ -20031,6 +20648,8 @@
       "patterns/03_validated/architecture/gateway-centric-routing",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
+      "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-context-mode",
@@ -20155,6 +20774,7 @@
       "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates",
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "sources/src-openclaw-billing-proxy",
       "spine/models/ecosystem/model-ecosystem"
     ],
     "export": [
@@ -20293,6 +20913,7 @@
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
+      "sources/src-claude-agent-sdk-and-managed-agents",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -20305,6 +20926,7 @@
       "domains/devops/infrastructure-as-code-patterns",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "spine/models/agent-config/model-markdown-as-iac"
     ],
@@ -20521,7 +21143,8 @@
       "comparisons/llm-wiki-vs-rag",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/knowledge-systems/wiki-core/lightrag",
-      "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
+      "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
+      "sources/src-7-levels-claude-code-rag"
     ],
     "hybrid-search": [
       "comparisons/agentic-search-vs-vector-search",
@@ -20603,6 +21226,7 @@
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-claude-agent-sdk-and-managed-agents",
       "spine/models/ecosystem/model-automation-pipelines"
     ],
     "knowledge-systems": [
@@ -20622,9 +21246,16 @@
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "sources/src-autobe-compiler-verified-backend-generation",
       "sources/src-bmad-method-agile-ai-development-framework",
+      "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/src-code-review-graph-automated-review",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/src-openspec-spec-driven-development-framework",
+      "sources/src-pydantic-ai-typed-agent-framework",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/src-vercel-opensrc-toolkit",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "sources/wiki-methodology/src-awesome-design-md",
       "spine/domain-overviews/ai-agents-domain-overview"
@@ -20705,6 +21336,8 @@
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/src-7-levels-claude-code-rag",
+      "sources/src-claude-code-prompt-patch-rebalancing",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
@@ -20728,6 +21361,7 @@
       "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/src-7-levels-claude-code-rag",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
       "spine/models/depth/model-second-brain",
       "spine/models/foundation/model-wiki-design"
@@ -20868,7 +21502,8 @@
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
-      "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content"
+      "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
+      "sources/src-27-questions-llm-selection"
     ],
     "design": [
       "decisions/02_validated/methodology/artifact-system-design-decisions",
@@ -20888,7 +21523,8 @@
       "domains/ai-agents/patterns/rework-prevention",
       "domains/devops/execution-modes-and-end-conditions",
       "domains/devops/stage-gate-methodology",
-      "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation"
+      "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation",
+      "sources/src-code-review-graph-automated-review"
     ],
     "cost-limit": [
       "decisions/02_validated/methodology/execution-mode-edge-cases",
@@ -20916,7 +21552,8 @@
       "spine/references/methodology-system-map"
     ],
     "model-selection": [
-      "decisions/02_validated/methodology/methodology-framework-design-decisions"
+      "decisions/02_validated/methodology/methodology-framework-design-decisions",
+      "sources/src-llm-architecture-gallery-raschka"
     ],
     "versioning": [
       "decisions/02_validated/methodology/methodology-framework-design-decisions",
@@ -21032,7 +21669,8 @@
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "domains/ai-agents/claude-code/claude-code-context-management",
       "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates",
-      "sources/claude-code/src-token-hacks-claude-code"
+      "sources/claude-code/src-token-hacks-claude-code",
+      "sources/src-27-questions-llm-selection"
     ],
     "backend-selection": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
@@ -21054,6 +21692,7 @@
       "sources/claude-code/src-claude-slash-commands",
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/src-vercel-opensrc-toolkit",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/ecosystem/model-mcp-cli-integration",
       "spine/references/gateway-tools-reference"
@@ -21067,6 +21706,8 @@
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/src-7-levels-claude-code-rag",
+      "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/ecosystem/model-mcp-cli-integration"
     ],
@@ -21082,6 +21723,7 @@
       "log/2026-04-09/methodology/2026-04-09-directive-stop-guessing-false-claims",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/claude-code/src-claude-code-accuracy-tips",
+      "sources/src-7-levels-claude-code-rag",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
@@ -21197,7 +21839,8 @@
     ],
     "context-window": [
       "domains/ai-agents/claude-code/claude-code-context-management",
-      "sources/claude-code/src-token-hacks-claude-code"
+      "sources/claude-code/src-token-hacks-claude-code",
+      "sources/src-llm-architecture-gallery-raschka"
     ],
     "token-management": [
       "domains/ai-agents/claude-code/claude-code-context-management",
@@ -21221,13 +21864,16 @@
     ],
     "memory": [
       "domains/ai-agents/claude-code/claude-code-context-management",
-      "domains/ai-agents/orchestration/openclaw"
+      "domains/ai-agents/orchestration/openclaw",
+      "sources/src-7-levels-claude-code-rag"
     ],
     "context-engineering": [
       "domains/ai-agents/claude-code/claude-code-context-management",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-7-levels-claude-code-rag",
       "sources/src-bmad-method-agile-ai-development-framework",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "spine/models/depth/model-context-engineering",
       "spine/standards/model-standards/model-context-engineering-standards"
     ],
@@ -21279,7 +21925,8 @@
       "domains/ai-agents/claude-code/claude-code"
     ],
     "anthropic": [
-      "domains/ai-agents/claude-code/claude-code"
+      "domains/ai-agents/claude-code/claude-code",
+      "sources/src-openclaw-billing-proxy"
     ],
     "automation": [
       "domains/ai-agents/claude-code/claude-code",
@@ -21333,6 +21980,7 @@
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-harness-engineering",
+      "sources/src-claude-agent-sdk-and-managed-agents",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks"
     ],
@@ -21371,10 +22019,12 @@
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/src-openclaw-billing-proxy",
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "agent-framework": [
-      "domains/ai-agents/orchestration/openclaw"
+      "domains/ai-agents/orchestration/openclaw",
+      "sources/src-pydantic-ai-typed-agent-framework"
     ],
     "brain": [
       "domains/ai-agents/orchestration/openclaw"
@@ -21421,7 +22071,8 @@
       "sources/wiki-methodology/src-awesome-design-md"
     ],
     "agent-context": [
-      "domains/ai-agents/patterns/design-md-pattern"
+      "domains/ai-agents/patterns/design-md-pattern",
+      "sources/src-vercel-opensrc-toolkit"
     ],
     "pre-tool-use": [
       "domains/ai-agents/patterns/hooks-lifecycle-architecture"
@@ -21612,6 +22263,7 @@
     ],
     "local-llm": [
       "domains/ai-models/local-llm-quantization",
+      "sources/src-autobe-compiler-verified-backend-generation",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "mlx": [
@@ -21628,6 +22280,7 @@
     ],
     "moe": [
       "domains/ai-models/local-llm-quantization",
+      "sources/src-llm-architecture-gallery-raschka",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "turboquant": [
@@ -21875,7 +22528,8 @@
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
       "domains/tools-and-platforms/notebooklm-py-cli",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
-      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
+      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/src-pydantic-ai-typed-agent-framework"
     ],
     "node": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript"
@@ -22338,6 +22992,7 @@
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
       "domains/knowledge-systems/wiki-core/wiki-backlog-pattern",
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
+      "sources/src-7-levels-claude-code-rag",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
       "sources/wiki-methodology/src-karpathy-llm-wiki-idea-file"
     ],
@@ -22627,7 +23282,8 @@
     ],
     "convergence": [
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine"
+      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
+      "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "loop-ownership": [
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
@@ -22793,7 +23449,8 @@
       "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline"
     ],
     "overfitting": [
-      "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline"
+      "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline",
+      "sources/src-hrm-trm-tiny-recursion-models"
     ],
     "stage-gates": [
       "lessons/03_validated/methodology-process/never-skip-stages-even-when-told-to-continue",
@@ -23044,7 +23701,8 @@
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
     ],
     "llm-core": [
-      "patterns/03_validated/architecture/deterministic-shell-llm-core"
+      "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "shell-pattern": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
@@ -23232,6 +23890,7 @@
     "source-synthesis": [
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "sources/wiki-methodology/src-sdlc-frameworks-research",
       "spine/standards/source-synthesis-page-standards"
     ],
@@ -23293,7 +23952,8 @@
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill"
     ],
     "pypi": [
-      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill"
+      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
+      "sources/src-vercel-opensrc-toolkit"
     ],
     "codex-cli": [
       "sources/obsidian-notebooklm/src-kepano-obsidian-skills"
@@ -23365,6 +24025,65 @@
     "mcp-alternative": [
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
     ],
+    "llm-selection": [
+      "sources/src-27-questions-llm-selection"
+    ],
+    "evaluation-framework": [
+      "sources/src-27-questions-llm-selection"
+    ],
+    "ai-models": [
+      "sources/src-27-questions-llm-selection",
+      "sources/src-hrm-trm-tiny-recursion-models",
+      "sources/src-llm-architecture-gallery-raschka",
+      "spine/domain-overviews/ai-models-domain-overview"
+    ],
+    "decision-criteria": [
+      "sources/src-27-questions-llm-selection"
+    ],
+    "local-ai": [
+      "sources/src-27-questions-llm-selection",
+      "spine/models/depth/model-local-ai"
+    ],
+    "performance": [
+      "sources/src-27-questions-llm-selection"
+    ],
+    "graph-rag": [
+      "sources/src-7-levels-claude-code-rag"
+    ],
+    "vector-database": [
+      "sources/src-7-levels-claude-code-rag"
+    ],
+    "embeddings": [
+      "sources/src-7-levels-claude-code-rag"
+    ],
+    "autobe": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "deterministic-shell": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "compiler-verification": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "backend-generation": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "ast": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "cost-reduction": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "qwen": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "structured-outputs": [
+      "sources/src-autobe-compiler-verified-backend-generation",
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "retry-convergence": [
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
     "agile": [
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research"
@@ -23381,6 +24100,59 @@
     "scale-adaptive": [
       "sources/src-bmad-method-agile-ai-development-framework"
     ],
+    "claude-agent-sdk": [
+      "sources/src-claude-agent-sdk-and-managed-agents"
+    ],
+    "managed-agents": [
+      "sources/src-claude-agent-sdk-and-managed-agents"
+    ],
+    "tool-use": [
+      "sources/src-claude-agent-sdk-and-managed-agents"
+    ],
+    "permissions": [
+      "sources/src-claude-agent-sdk-and-managed-agents"
+    ],
+    "agent-definition": [
+      "sources/src-claude-agent-sdk-and-managed-agents"
+    ],
+    "system-prompt": [
+      "sources/src-claude-code-prompt-patch-rebalancing"
+    ],
+    "behavioral-patching": [
+      "sources/src-claude-code-prompt-patch-rebalancing"
+    ],
+    "corner-cutting": [
+      "sources/src-claude-code-prompt-patch-rebalancing"
+    ],
+    "workaround": [
+      "sources/src-claude-code-prompt-patch-rebalancing"
+    ],
+    "prompt-engineering": [
+      "sources/src-claude-code-prompt-patch-rebalancing",
+      "spine/models/depth/model-context-engineering"
+    ],
+    "quality-enforcement": [
+      "sources/src-claude-code-prompt-patch-rebalancing"
+    ],
+    "code-review": [
+      "sources/src-code-review-graph-automated-review",
+      "sources/src-plannotator"
+    ],
+    "graph-analysis": [
+      "sources/src-code-review-graph-automated-review"
+    ],
+    "tree-sitter": [
+      "sources/src-code-review-graph-automated-review"
+    ],
+    "blast-radius": [
+      "sources/src-code-review-graph-automated-review"
+    ],
+    "static-analysis": [
+      "sources/src-code-review-graph-automated-review"
+    ],
+    "sqlite": [
+      "sources/src-code-review-graph-automated-review"
+    ],
     "sdd": [
       "sources/src-github-spec-kit-specification-driven-development"
     ],
@@ -23396,10 +24168,100 @@
     "presets": [
       "sources/src-github-spec-kit-specification-driven-development"
     ],
-    "plan-annotation": [
-      "sources/src-plannotator"
+    "small-models": [
+      "sources/src-hrm-trm-tiny-recursion-models"
     ],
-    "code-review": [
+    "recursive-reasoning": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "arc-agi": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "hrm": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "trm": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "hierarchical-reasoning": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "tiny-recursion": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "model-efficiency": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "mlp-vs-attention": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "parameter-count": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "logical-reasoning": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "benchmark": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "scaling-hypothesis": [
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "llm-architecture": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "mixture-of-experts": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "attention-mechanisms": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "kv-cache": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "mla": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "linear-attention": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "architecture-trends": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "raschka": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "dense-transformer": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "hybrid-models": [
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "billing": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "proxy": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "oauth": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "claude-max": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "fingerprint-detection": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "reverse-proxy": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "billing-architecture": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "http-middleware": [
+      "sources/src-openclaw-billing-proxy"
+    ],
+    "plan-annotation": [
       "sources/src-plannotator"
     ],
     "implementation-plans": [
@@ -23411,6 +24273,74 @@
     ],
     "pm": [
       "sources/src-plannotator"
+    ],
+    "pydantic": [
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "type-safety": [
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "dependency-injection": [
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "tool-decoration": [
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "model-agnostic": [
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "production-grade": [
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "agents-md": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "skill-md": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "three-layer-architecture": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "cross-tool": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "agent-config": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "eth-zurich-research": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "linux-foundation": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "context-loading": [
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "spine/models/agent-config/model-skills-commands-hooks"
+    ],
+    "vercel": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "open-source": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "rust": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "source-code-access": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "package-registry": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "npm": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "crates": [
+      "sources/src-vercel-opensrc-toolkit"
+    ],
+    "opensrc": [
+      "sources/src-vercel-opensrc-toolkit"
     ],
     "searxng": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
@@ -23506,9 +24436,6 @@
       "spine/domain-overviews/tools-and-platforms-domain-overview",
       "spine/standards/domain-overview-page-standards"
     ],
-    "ai-models": [
-      "spine/domain-overviews/ai-models-domain-overview"
-    ],
     "tools-and-platforms": [
       "spine/domain-overviews/tools-and-platforms-domain-overview"
     ],
@@ -23572,9 +24499,6 @@
       "spine/models/quality/model-quality-failure-prevention",
       "spine/models/quality/model-sfif-architecture"
     ],
-    "agents-md": [
-      "spine/models/agent-config/model-markdown-as-iac"
-    ],
     "soul-md": [
       "spine/models/agent-config/model-markdown-as-iac"
     ],
@@ -23583,12 +24507,6 @@
     ],
     "ai-agent-extension": [
       "spine/models/agent-config/model-skills-commands-hooks"
-    ],
-    "context-loading": [
-      "spine/models/agent-config/model-skills-commands-hooks"
-    ],
-    "prompt-engineering": [
-      "spine/models/depth/model-context-engineering"
     ],
     "structure": [
       "spine/models/depth/model-context-engineering"
@@ -23609,9 +24527,6 @@
       "spine/models/depth/model-second-brain",
       "spine/models/ecosystem/model-automation-pipelines",
       "spine/standards/concept-page-standards"
-    ],
-    "local-ai": [
-      "spine/models/depth/model-local-ai"
     ],
     "vram": [
       "spine/models/depth/model-local-ai"
@@ -23758,15 +24673,31 @@
   },
   "orphaned_refs": [
     {
+      "target": "AutoBE",
+      "referenced_by": [
+        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+      ]
+    },
+    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
       ]
     },
     {
+      "target": "LLM Architecture Gallery",
+      "referenced_by": [
+        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+      ]
+    },
+    {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
         "AICP \u2014 Identity Profile",
+        "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
+        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
+        "Synthesis \u2014 LLM Architecture Gallery (Raschka)",
+        "Synthesis \u2014 Pydantic AI: Typed Agent Framework",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
       ]
@@ -23784,18 +24715,6 @@
       "target": "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding",
       "referenced_by": [
         "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)"
-      ]
-    },
-    {
-      "target": "src-harness-engineering-article",
-      "referenced_by": [
-        "Synthesis \u2014 Claude Code Harness Engineering"
-      ]
-    },
-    {
-      "target": "src-harness-engineering-github",
-      "referenced_by": [
-        "Synthesis \u2014 Claude Code Harness Engineering"
       ]
     }
   ]

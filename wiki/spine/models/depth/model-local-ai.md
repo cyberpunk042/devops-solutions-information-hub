@@ -265,3 +265,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[gateway-centric-routing|Gateway-Centric Routing]]
 [[identity-profile|AICP — Identity Profile]]
 [[model-notebooklm|Model — NotebookLM]]
+[[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
+[[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]
+[[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
+[[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]

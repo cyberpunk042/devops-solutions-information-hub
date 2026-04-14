@@ -230,5 +230,7 @@ The heuristic: "use the lightest level that still makes the change verifiable." 
 [[methodology-framework|Methodology Framework]]
 [[model-methodology|Model — Methodology]]
 [[stage-gate-methodology|Stage-Gate Methodology]]
+[[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
 [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
+[[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[task-type-artifact-matrix|Task Type Artifact Matrix]]

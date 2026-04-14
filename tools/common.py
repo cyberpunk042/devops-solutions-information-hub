@@ -84,6 +84,14 @@ def parse_relationships(text: str) -> List[Dict[str, Any]]:
         if match:
             verb = match.group(1).strip()
             targets_raw = match.group(2).strip()
+            # Strip trailing comments that appear AFTER a wikilink close.
+            # Commas inside explanatory comments would otherwise create fake targets.
+            # We must only strip AFTER ]] — em-dashes INSIDE wikilink titles are valid
+            # (e.g. "Model — Methodology" is a real title).
+            for sep in ["]] — ", "]] – ", "]] - "]:
+                if sep in targets_raw:
+                    targets_raw = targets_raw.split(sep, 1)[0].strip() + "]]"
+                    break
             targets = _split_targets(targets_raw)
             rels.append({
                 "verb": verb,

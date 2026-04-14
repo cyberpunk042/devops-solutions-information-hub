@@ -61,14 +61,38 @@ def _collect_page_titles(pages: List[Path]) -> Set[str]:
 
 
 def _strip_context(target: str) -> str:
-    """Strip parenthetical context from a relationship target.
+    """Extract the canonical page reference from a relationship target.
 
-    e.g. 'Serverless Patterns (different trade-offs)' -> 'Serverless Patterns'
+    Handles:
+    - Parenthetical context: 'Serverless Patterns (different trade-offs)' -> 'Serverless Patterns'
+    - Em-dash comments: '[[slug|Title]] — explanation' -> '[[slug|Title]]'
+    - Hyphen comments: '[[slug|Title]] - explanation' -> '[[slug|Title]]'
+    - Wikilink display titles: '[[slug|Title]]' -> 'Title' (for title lookup)
+    - Bare wikilinks: '[[Title]]' -> 'Title'
     """
+    target = target.strip()
+
+    # Strip em-dash or hyphen trailing comment (after wikilink ends or plain text)
+    # Look for ] ] followed by space-dash-space or space-emdash-space
+    for sep in [" — ", " - ", " – "]:
+        if sep in target:
+            target = target.split(sep, 1)[0].strip()
+            break
+
+    # Strip parenthetical context
     paren_idx = target.find("(")
     if paren_idx > 0:
-        return target[:paren_idx].strip()
-    return target.strip()
+        target = target[:paren_idx].strip()
+
+    # Extract title/slug from wikilink [[slug|title]] or [[title]]
+    if target.startswith("[[") and target.endswith("]]"):
+        inner = target[2:-2]
+        # If [[slug|title]], return the TITLE side for title lookup
+        if "|" in inner:
+            return inner.split("|", 1)[1].strip()
+        return inner.strip()
+
+    return target
 
 
 def _check_dead_relationships(
@@ -89,19 +113,37 @@ def _check_dead_relationships(
                 continue
             rels = parse_relationships(rel_text)
             for rel in rels:
+                # Extract slugs from the raw line's wikilinks — _split_targets strips them
+                raw_line = rel.get("raw", "")
+                raw_slugs = set()
+                for wl_match in re.finditer(r'\[\[([^\]]+?)\]\]', raw_line):
+                    inner = wl_match.group(1)
+                    if "|" in inner:
+                        raw_slugs.add(inner.split("|", 1)[0].strip())
+
                 for target in rel["targets"]:
-                    # Try full target first (handles titles with parens like "Model: Local AI ($0 Target)")
                     full_target = target.strip()
                     clean_target = _strip_context(target)
-                    # Skip source IDs (start with src-)
+
+                    # If any wikilink slug on this line resolves, consider the target valid
+                    if any(s in known_titles for s in raw_slugs):
+                        # Only skip if the line has ONE target or all targets resolve
+                        # Simple heuristic: if slugs resolve and this target's clean form is a display title, skip
+                        if clean_target in [t.split("|")[1].strip() if "|" in t else t for t in [inner for wl in re.finditer(r'\[\[([^\]]+?)\]\]', raw_line) for inner in [wl.group(1)]]]:
+                            continue
+
+                    # Match if any form resolves
+                    if full_target in known_titles or clean_target in known_titles:
+                        continue
+                    # Skip bare source IDs (not in wikilink format)
                     if clean_target.startswith("src-") or full_target.startswith("src-"):
                         continue
-                    if full_target not in known_titles and clean_target not in known_titles:
-                        dead.append({
-                            "source": source_title,
-                            "verb": rel["verb"],
-                            "target": clean_target,
-                        })
+
+                    dead.append({
+                        "source": source_title,
+                        "verb": rel["verb"],
+                        "target": clean_target,
+                    })
         except Exception:
             pass
     return dead

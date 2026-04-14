@@ -274,3 +274,4 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[harness-engineering|Harness Engineering]]
 [[claude-code-context-management|Claude Code Context Management]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
+[[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]

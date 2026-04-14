@@ -173,6 +173,8 @@ Cross-referencing `Immune System Rules` and `Four-Project Ecosystem`: the orches
 [[rework-prevention|Rework Prevention]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-openclaw-billing-proxy|Source — openclaw-billing-proxy: Billing Proxy for OpenClaw via Claude Subscription]]
+[[src-vercel-opensrc-toolkit|Source — vercel-labs/opensrc: Source Code Access Toolkit for AI Agents]]
 [[spec-driven-development|Spec-Driven Development]]
 [[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
 [[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]

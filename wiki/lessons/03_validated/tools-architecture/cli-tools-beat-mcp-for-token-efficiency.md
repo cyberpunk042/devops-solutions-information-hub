@@ -146,5 +146,6 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

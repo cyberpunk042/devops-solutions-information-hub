@@ -281,5 +281,7 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
+[[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
+[[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]

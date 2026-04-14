@@ -170,4 +170,6 @@ Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` page
 [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
 [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
 [[spec-driven-development|Spec-Driven Development]]
+[[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
+[[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
