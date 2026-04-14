@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-14T21:57:59.454910+00:00",
+  "generated": "2026-04-14T22:23:08.319352+00:00",
   "stats": {
-    "pages": 317,
+    "pages": 318,
     "domains": 9,
     "sources": 43,
     "comparisons": 5,
     "relationships": 2080,
-    "tags_unique": 960,
+    "tags_unique": 964,
     "layers": {
       "3": 4,
       "6": 16,
@@ -13134,6 +13134,35 @@
       ]
     },
     {
+      "path": "log/archived/agent-directive-original.md",
+      "slug": "log/archived/agent-directive-original",
+      "title": "Research Wiki Agent Directive (ARCHIVED 2026-04-14)",
+      "type": "note",
+      "domain": "log",
+      "status": "stale",
+      "confidence": "high",
+      "created": "2026-04-12",
+      "updated": "2026-04-14",
+      "tags": [
+        "archived",
+        "agent-directive",
+        "superseded",
+        "historical"
+      ],
+      "sources": [
+        {
+          "id": "original-location",
+          "type": "file",
+          "file": "wiki/config/agent-directive.md",
+          "description": "Original location before 2026-04-14 archive"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "relationships": []
+    },
+    {
       "path": "patterns/01_drafts/three-layer-agent-context-architecture.md",
       "slug": "patterns/01_drafts/three-layer-agent-context-architecture",
       "title": "Three-Layer Agent Context Architecture",
@@ -20750,7 +20779,7 @@
       "relationship_count": 189
     },
     "log": {
-      "page_count": 20,
+      "page_count": 21,
       "relationship_count": 38
     }
   },
@@ -24128,6 +24157,18 @@
     ],
     "gated": [
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
+    ],
+    "archived": [
+      "log/archived/agent-directive-original"
+    ],
+    "agent-directive": [
+      "log/archived/agent-directive-original"
+    ],
+    "superseded": [
+      "log/archived/agent-directive-original"
+    ],
+    "historical": [
+      "log/archived/agent-directive-original"
     ],
     "agent-config": [
       "patterns/01_drafts/three-layer-agent-context-architecture",

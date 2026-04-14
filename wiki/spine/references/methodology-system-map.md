@@ -222,20 +222,42 @@ Complete map of the methodology system — every component, where it lives, what
 
 ### Configuration Layer — Config Files
 
+See [[wiki/config/README.md]] for the definitive thorough reference. Summary below.
+
+> [!info] The 4 Config Layers (composition order)
+>
+> | Layer | Files | What It Does |
+> |-------|-------|-------------|
+> | **0 — Schema/Catalog** | wiki-schema.yaml, artifact-types.yaml, domains.yaml, quality-standards.yaml | Defines the UNIVERSE: valid page types, artifacts, domains, quality bars |
+> | **1 — Methodology Definitions** | methodology.yaml | The 9 methodology models with stages + artifact chains (universal, base layer) |
+> | **2 — Methodology Profiles** (NEW) | methodology-profiles/stage-gated.yaml, spec-driven.yaml, agile-ai.yaml, test-driven.yaml | Methodology STYLE overrides (emphasis, artifact preferences, signature practices). Where BMAD/SDD/TDD live. |
+> | **3 — Domain Profiles** | domain-profiles/typescript.yaml, python-wiki.yaml, infrastructure.yaml, knowledge.yaml | Resolve generic artifacts to concrete paths + gate commands per domain |
+> | **4 — SDLC Profiles** | sdlc-profiles/simplified.yaml, default.yaml, full.yaml | Project-level POLICY: which methodology profiles allowed, how strict |
+
 > [!info] Config File Stack
 >
 > | File | Lines | What It Defines | Read By |
 > |------|-------|----------------|---------|
-> | `wiki/config/methodology.yaml` | ~520 | 9 models with artifact chains + template hints, stages, modes, end conditions, quality tiers | Skills, agents, documentation |
-> | `wiki/config/artifact-types.yaml` | ~400 | 18 page types + 3 artifact classes + categories, content thresholds, styling, verification | validate.py, lint.py |
-> | `wiki/config/domain-profiles/typescript.yaml` | ~60 | TypeScript/Node overrides: pnpm gates, src/ paths, test patterns | Projects adopting methodology |
-> | `wiki/config/domain-profiles/python-wiki.yaml` | ~135 | Python/wiki overrides: pipeline post gates, wiki/ paths, knowledge operations, real example | This wiki |
+> | `wiki/config/README.md` | ~830 | Thorough documentation of every config file + composition | Humans, agents starting fresh |
+> | `wiki/config/methodology.yaml` | ~520 | 9 models with artifact chains + template hints, stages, modes, end conditions, quality tiers | Skills, agents, gateway, validators |
+> | `wiki/config/methodology-profiles/stage-gated.yaml` | ~110 | Current default style (explicit) | Layer 2 runtime overlay |
+> | `wiki/config/methodology-profiles/spec-driven.yaml` | ~130 | SDD/spec-kit style — specs as source of truth | Layer 2 runtime overlay |
+> | `wiki/config/methodology-profiles/agile-ai.yaml` | ~155 | BMAD style — personas, party mode, brainstorming-first | Layer 2 runtime overlay |
+> | `wiki/config/methodology-profiles/test-driven.yaml` | ~145 | TDD style — tests precede implementation | Layer 2 runtime overlay |
+> | `wiki/config/artifact-types.yaml` | ~400 | 18 page types + 3 artifact classes, content thresholds, verification | validate.py, lint.py |
+> | `wiki/config/domain-profiles/typescript.yaml` | ~60 | TypeScript/Node overrides: pnpm gates, src/ paths | Projects with TS codebases |
+> | `wiki/config/domain-profiles/python-wiki.yaml` | ~135 | Python/wiki overrides: pipeline post gates, wiki/ paths | This wiki + similar |
 > | `wiki/config/domain-profiles/infrastructure.yaml` | ~60 | IaC overrides: terraform gates, .tf paths | Infra projects |
-> | `wiki/config/wiki-schema.yaml` | ~240 | Frontmatter fields, enums, required sections per type, relationship verbs | validate.py, pipeline.py |
+> | `wiki/config/domain-profiles/knowledge.yaml` | ~100 | Pure knowledge projects (no code, only markdown) | Doc-only repos |
+> | `wiki/config/sdlc-profiles/simplified.yaml` | ~75 | POC/micro policy — light enforcement | Policy layer |
+> | `wiki/config/sdlc-profiles/default.yaml` | ~95 | MVP→Staging policy — stage gates enforced | Policy layer |
+> | `wiki/config/sdlc-profiles/full.yaml` | ~110 | Production policy — full enforcement + immune system | Policy layer |
+> | `wiki/config/wiki-schema.yaml` | ~240 | Frontmatter fields, enums, required sections, relationship verbs | validate.py, pipeline.py |
 > | `wiki/config/quality-standards.yaml` | ~20 | Linting thresholds, export readiness, duplicate detection | lint.py |
 > | `wiki/config/export-profiles.yaml` | ~90 | Export transforms for openfleet, AICP, methodology bundle | export.py |
+> | `wiki/config/domains.yaml` | ~30 | Domain registry (names, folder paths) | All tools |
 >
-> **Resolution order:** methodology.yaml → artifact-types.yaml → domain profile → wiki-schema.yaml
+> **Composition order:** schema → methodology.yaml → methodology profile → domain profile → sdlc profile → project-local CLAUDE.md (highest precedence)
 
 > [!info] Template Files (22 total)
 >

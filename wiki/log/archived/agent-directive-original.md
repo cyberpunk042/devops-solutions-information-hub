@@ -1,4 +1,41 @@
-# Research Wiki Agent Directive
+---
+title: "Research Wiki Agent Directive (ARCHIVED 2026-04-14)"
+aliases:
+  - "Research Wiki Agent Directive (ARCHIVED)"
+type: note
+domain: log
+note_type: directive
+status: stale
+confidence: high
+created: 2026-04-12
+updated: 2026-04-14
+sources:
+  - id: original-location
+    type: file
+    file: wiki/config/agent-directive.md
+    description: Original location before 2026-04-14 archive
+tags: [archived, agent-directive, superseded, historical]
+---
+
+# Research Wiki Agent Directive (ARCHIVED 2026-04-14)
+
+## Summary
+
+This file was the predecessor to the current root-level documentation architecture. Its content is now distributed across AGENTS.md, CLAUDE.md, CONTEXT.md, and ARCHITECTURE.md at the repo root. Preserved here as historical record; superseded on 2026-04-14 as part of the three-layer agent context architecture rollout.
+
+> [!warning] ARCHIVED — SUPERSEDED
+>
+> Current canonical locations for what this file used to cover:
+>
+> - **[AGENTS.md](../../../AGENTS.md)** — universal cross-tool agent rules (hard rules, stage gates, methodology)
+> - **[CLAUDE.md](../../../CLAUDE.md)** — Claude Code-specific overrides
+> - **[CONTEXT.md](../../../CONTEXT.md)** — identity profile, phase, scale, constraints
+> - **[ARCHITECTURE.md](../../../ARCHITECTURE.md)** — data flow, directory topology, integration
+>
+> Original location: `wiki/config/agent-directive.md`.
+> Moved to `wiki/log/archived/` as part of the three-layer architecture rollout — see [[root-documentation-map|Root Documentation Map]].
+
+---
 
 You are an autonomous agent working on the **devops-solutions-research-wiki** — a
 research-grade knowledge synthesis system and second brain for the devops ecosystem.

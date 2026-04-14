@@ -58,18 +58,27 @@ devops-solutions-research-wiki/
 │   │   ├── epics/              # Epic pages (milestone-v2/, older/)
 │   │   └── tasks/              # Atomic task pages
 │   ├── log/                    # Session logs, evolution logs
-│   ├── config/                 # Wiki schema, methodology engine, templates
-│   │   ├── wiki-schema.yaml    # Frontmatter schema (required + optional fields, enums)
-│   │   ├── methodology.yaml    # 9 methodology models + stage definitions
-│   │   ├── artifact-types.yaml # 78 artifact types with content thresholds
-│   │   ├── domains.yaml        # Domain registry with descriptions
-│   │   ├── quality-standards.yaml # Content quality thresholds
-│   │   ├── export-profiles.yaml   # Export configs (openfleet/LightRAG, aicp)
-│   │   ├── sdlc-profiles/      # simplified.yaml, default.yaml, full.yaml
-│   │   ├── templates/          # Per-type page templates (19 types)
-│   │   │   └── methodology/    # Stage document templates (gap-analysis, tech-spec, etc.)
-│   │   │       └── project_profiles/ # Per-ecosystem-project profiles
-│   │   └── domain-profiles/    # Per-domain artifact chain overrides
+│   ├── config/                 # Wiki schema, methodology engine, profiles, templates
+│   │   ├── README.md           # THOROUGH reference documenting every config
+│   │   ├── wiki-schema.yaml    # Layer 0: frontmatter schema
+│   │   ├── artifact-types.yaml # Layer 0: 78 artifact types with content thresholds
+│   │   ├── domains.yaml        # Layer 0: domain registry
+│   │   ├── quality-standards.yaml # Layer 0: quality thresholds
+│   │   ├── export-profiles.yaml   # Layer 0: export configs (openfleet, aicp)
+│   │   ├── methodology.yaml    # Layer 1: 9 methodology models + chains (DEFINITIONS)
+│   │   ├── methodology-profiles/  # Layer 2: methodology STYLES (4 profiles)
+│   │   │   ├── stage-gated.yaml   # Current default style
+│   │   │   ├── spec-driven.yaml   # SDD/spec-kit-inspired
+│   │   │   ├── agile-ai.yaml      # BMAD-inspired
+│   │   │   └── test-driven.yaml   # TDD
+│   │   ├── domain-profiles/    # Layer 3: concrete resolution (paths + gate commands)
+│   │   │   ├── typescript.yaml
+│   │   │   ├── python-wiki.yaml
+│   │   │   ├── infrastructure.yaml
+│   │   │   └── knowledge.yaml  # Pure knowledge projects (no code)
+│   │   ├── sdlc-profiles/      # Layer 4: project POLICY (simplified/default/full)
+│   │   └── templates/          # Per-type page templates (19 types)
+│   │       └── methodology/    # Stage document templates (gap-analysis, tech-spec, etc.)
 │   ├── manifest.json           # Machine-readable page catalog (auto-generated)
 │   └── index.md                # Master wiki index (auto-generated)
 │
