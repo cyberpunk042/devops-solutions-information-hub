@@ -398,6 +398,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[E005-agent-compliance-framework|Agent Compliance Framework]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
 [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]

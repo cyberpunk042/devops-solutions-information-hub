@@ -201,6 +201,7 @@ The following wiki pages link to or reference these root-level docs:
 | [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] | SKILLS.md is the skill catalog entry |
 | [[adoption-guide|Adoption Guide]] | References these files as the entry point |
 | [[super-model|Super-Model]] | References this file as the root-docs map |
+| [[context-file-taxonomy|Context File Taxonomy]] | Formalizes the 8 dimensions every context file varies along; catalogs all sources in the ecosystem |
 
 ### How This Connects — Navigate From Here
 

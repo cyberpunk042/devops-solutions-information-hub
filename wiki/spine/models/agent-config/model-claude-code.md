@@ -506,6 +506,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
 [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
+[[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[model-context-engineering|Model — Context Engineering]]

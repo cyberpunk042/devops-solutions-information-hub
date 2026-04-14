@@ -330,6 +330,7 @@ The cross-tool analysis of SKILL.md vs CLAUDE.md vs AGENTS.md documents the emer
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
+[[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]

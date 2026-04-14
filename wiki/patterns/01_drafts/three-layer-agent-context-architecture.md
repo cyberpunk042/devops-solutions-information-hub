@@ -170,6 +170,7 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 - BUILDS ON: [[model-claude-code|Model — Claude Code]]
 - BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 - RELATES TO: [[model-context-engineering|Model — Context Engineering]]
+- RELATES TO: [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 - RELATES TO: [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 - RELATES TO: [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
 
@@ -180,6 +181,7 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[model-context-engineering|Model — Context Engineering]]
+[[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]

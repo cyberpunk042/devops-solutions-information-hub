@@ -34,6 +34,7 @@ tags: [methodology, system-map, reference, navigation, framework]
 > - **Need all frontmatter fields?** → [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
 > - **Need to add something new?** → "How to Extend the System" section at the bottom
 > - **Need a specific page?** → Ctrl+F / search this page — every methodology page is listed here
+> - **Need to understand how context files compose across agent types?** → [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 
 ## Summary
 

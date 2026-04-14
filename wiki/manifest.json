@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-14T22:29:49.318266+00:00",
+  "generated": "2026-04-14T22:51:12.768861+00:00",
   "stats": {
-    "pages": 318,
+    "pages": 319,
     "domains": 9,
     "sources": 43,
     "comparisons": 5,
-    "relationships": 2080,
-    "tags_unique": 964,
+    "relationships": 2089,
+    "tags_unique": 966,
     "layers": {
       "3": 4,
       "6": 16,
@@ -14,10 +14,10 @@
       "4": 42,
       "5": 19,
       "1": 25,
-      "spine": 63
+      "spine": 64
     },
     "maturity": {
-      "growing": 261,
+      "growing": 262,
       "seed": 13
     }
   },
@@ -13227,6 +13227,10 @@
         },
         {
           "verb": "RELATES TO",
+          "target": "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
+        },
+        {
+          "verb": "RELATES TO",
           "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
         },
         {
@@ -18985,6 +18989,89 @@
       ]
     },
     {
+      "path": "spine/references/context-file-taxonomy.md",
+      "slug": "spine/references/context-file-taxonomy",
+      "title": "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "reference",
+        "context",
+        "taxonomy",
+        "agents",
+        "configuration",
+        "cognitive-contexts",
+        "agent-config",
+        "multi-dimensional",
+        "flexibility"
+      ],
+      "sources": [
+        {
+          "id": "three-layer-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/three-layer-agent-context-architecture.md"
+        },
+        {
+          "id": "three-layer-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/src-skillmd-claudemd-agentsmd-three-layer-context.md"
+        },
+        {
+          "id": "openarms-v10",
+          "type": "wiki",
+          "file": "wiki/sources/ecosystem-projects/src-openarms-v10-enforcement.md",
+          "description": "Source of the original \"five cognitive contexts\" framing"
+        },
+        {
+          "id": "openfleet",
+          "type": "wiki",
+          "file": "wiki/sources/ecosystem-projects/src-openfleet-fleet-architecture.md",
+          "description": "Source of the workspace-expansion pattern (tasks/heartbeat/feed folders)"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Three-Layer Agent Context Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Root Documentation Map"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "EXTENDS",
+          "target": "OpenArms v10 \u2014 Five Cognitive Contexts"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "OpenFleet Fleet Architecture"
+        },
+        {
+          "verb": "PART OF",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
       "path": "spine/references/frontmatter-field-reference.md",
       "slug": "spine/references/frontmatter-field-reference",
       "title": "Frontmatter Field Reference \u2014 Complete Parameter Documentation",
@@ -20751,8 +20838,8 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 143,
-      "relationship_count": 962
+      "page_count": 144,
+      "relationship_count": 971
     },
     "ai-agents": {
       "page_count": 56,
@@ -21279,6 +21366,7 @@
     ],
     "configuration": [
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
+      "spine/references/context-file-taxonomy",
       "spine/standards/model-standards/model-claude-code-standards"
     ],
     "agent-compliance": [
@@ -22882,7 +22970,8 @@
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "sources/wiki-methodology/methodology-artifact-taxonomy-research"
+      "sources/wiki-methodology/methodology-artifact-taxonomy-research",
+      "spine/references/context-file-taxonomy"
     ],
     "documents": [
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
@@ -22900,6 +22989,7 @@
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
       "spine/goldilocks-flow",
+      "spine/references/context-file-taxonomy",
       "spine/references/frontmatter-field-reference",
       "spine/references/gateway-tools-reference",
       "spine/references/methodology-system-map",
@@ -23909,7 +23999,8 @@
     ],
     "flexibility": [
       "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline",
-      "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed"
+      "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed",
+      "spine/references/context-file-taxonomy"
     ],
     "composability": [
       "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline"
@@ -24172,7 +24263,8 @@
     ],
     "agent-config": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "spine/references/context-file-taxonomy"
     ],
     "three-layer-architecture": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
@@ -25035,6 +25127,20 @@
       "spine/references/methodology-adoption-guide",
       "spine/super-model/super-model"
     ],
+    "context": [
+      "spine/references/context-file-taxonomy",
+      "spine/references/root-documentation-map"
+    ],
+    "agents": [
+      "spine/references/context-file-taxonomy",
+      "spine/references/root-documentation-map"
+    ],
+    "cognitive-contexts": [
+      "spine/references/context-file-taxonomy"
+    ],
+    "multi-dimensional": [
+      "spine/references/context-file-taxonomy"
+    ],
     "fields": [
       "spine/references/frontmatter-field-reference"
     ],
@@ -25060,12 +25166,6 @@
       "spine/references/root-documentation-map"
     ],
     "readme": [
-      "spine/references/root-documentation-map"
-    ],
-    "agents": [
-      "spine/references/root-documentation-map"
-    ],
-    "context": [
       "spine/references/root-documentation-map"
     ],
     "walkthrough": [
@@ -25192,6 +25292,24 @@
         "Synthesis \u2014 Pydantic AI: Typed Agent Framework",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
+      ]
+    },
+    {
+      "target": "OpenArms v10 \u2014 Five Cognitive Contexts",
+      "referenced_by": [
+        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
+      ]
+    },
+    {
+      "target": "OpenFleet Fleet Architecture",
+      "referenced_by": [
+        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
+      ]
+    },
+    {
+      "target": "Root Documentation Map",
+      "referenced_by": [
+        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
       ]
     },
     {
