@@ -511,6 +511,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[model-context-engineering|Model — Context Engineering]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
+[[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]

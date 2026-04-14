@@ -16,8 +16,8 @@ instances:
     context: "Canonical three-layer architecture: AGENTS.md (universal, <100 lines) + CLAUDE.md (tool-specific delta, <20 lines) + skills (on-demand, <500 lines each)"
   - page: "src-bmad-method-agile-ai-development-framework"
     context: "project-context.md (cross-agent living constitution) + agent personas (tool-specific roles) + workflow skills (on-demand task scoping)"
-  - page: "CLAUDE.md (this wiki)"
-    context: "CLAUDE.md at ~400 lines (gap: should be split); skills in .claude/skills/; AGENTS.md absent (identified gap)"
+  - page: "Research Wiki (this project, post 2026-04-14 refactor)"
+    context: "AGENTS.md (159L) + CLAUDE.md (107L, slimmed from 315L) + .claude/skills/ + 5 thematic root files (CONTEXT/ARCHITECTURE/DESIGN/TOOLS/SKILLS) for separation of concerns. See [[root-documentation-map|Root Documentation Map]]."
 created: 2026-04-14
 updated: 2026-04-14
 sources:
@@ -81,7 +81,7 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 > 2. **Tool lock-in**: the content is Claude-specific and can't be reused by other AI tools
 > 3. **Performance degradation**: measured 3% success rate drop vs. no file at all (ETH Zurich)
 >
-> This wiki's current CLAUDE.md (~400 lines) is a live example of this failure mode. The fix is mechanical: extract project-universal content to AGENTS.md, reduce CLAUDE.md to a delta, and push task workflows to skills.
+> This wiki's CLAUDE.md was previously ~315 lines (a live example of this failure mode). On 2026-04-14, the fix was applied mechanically: extracted project-universal content to AGENTS.md, reduced CLAUDE.md to a 107-line delta, and added 5 thematic root files (CONTEXT/ARCHITECTURE/DESIGN/TOOLS/SKILLS) for separation of concerns. See [[root-documentation-map|Root Documentation Map]] for the full implementation.
 
 ## Instances
 
@@ -89,7 +89,7 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 |----------|--------|---------|---------|---------|
 | Claude Code ecosystem | ai-agents | AGENTS.md (<100 lines, cross-tool) | CLAUDE.md (<20 lines, Claude delta) | `.claude/skills/*.md` (<500 lines each) |
 | BMAD-METHOD | methodology | `project-context.md` (living constitution, auto-loaded by all agents) | Per-agent persona files (PM, Architect, Developer, etc.) | Task workflow skills (brainstorming, quick-dev, code-review, etc.) |
-| This wiki | knowledge | (gap — should be created) | `CLAUDE.md` (~400 lines, currently monolith) | `.claude/skills/` (evolve, ingest, continue, etc.) |
+| This wiki (post-refactor 2026-04-14) | knowledge | AGENTS.md (159 lines) | CLAUDE.md (107 lines, slimmed from 315) | `.claude/skills/` + 5 thematic root docs |
 
 > [!example]- Instance 1: Claude Code Ecosystem (canonical source)
 >
@@ -115,16 +115,26 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 >
 > **Structural confirmation:** BMAD didn't adopt the three-layer architecture by copying Claude Code — it evolved the same structure independently from first principles of AI-driven agile development. The convergent emergence across two independent ecosystems confirms the pattern reflects a genuine constraint in AI agent context architecture, not tool-specific convention.
 
-> [!example]- Instance 3: This wiki (live gap analysis)
+> [!example]- Instance 3: This wiki (post-refactor implementation, 2026-04-14)
 >
-> **Current state:**
-> - Layer 1: Absent. No AGENTS.md. All cross-tool context lives in CLAUDE.md.
-> - Layer 2: CLAUDE.md at ~400 lines. Currently a monolith doing all three jobs.
-> - Layer 3: `.claude/skills/` with evolve, ingest, continue, build-model, and others. Layer 3 is correctly implemented.
+> **Pre-refactor state (problem):**
+> - Layer 1: Absent. No AGENTS.md. All cross-tool context lived in CLAUDE.md.
+> - Layer 2: CLAUDE.md at 315 lines — a monolith doing all three jobs.
+> - Layer 3: `.claude/skills/` correctly implemented with evolve, ingest, continue, build-model.
 >
-> **Gap:** Layers 1 and 2 are collapsed into a single overweight Layer 2 file. This creates tool lock-in (CLAUDE.md is Claude-specific; no AGENTS.md means zero portability to other AI tools) and likely context load inefficiency.
+> **Post-refactor state (applied):**
+> - **Layer 1 — AGENTS.md (159 lines)**: Universal cross-tool context. Sacrosanct directives, hard rules, stage gates, methodology models, page schema, quality gates. Read by any AI tool (Claude Code, Codex CLI, Copilot, Gemini, Cursor).
+> - **Layer 2 — CLAUDE.md (107 lines, down from 315)**: Claude Code-specific overrides only. Identity profile, Claude-specific behaviors (skills, MCP, TodoWrite, plan mode), essential commands, flow per mode, 5 Claude-specific hard rules that extend AGENTS.md.
+> - **Layer 3 — `.claude/skills/`**: Unchanged. Skills load on-demand per task.
 >
-> **Remediation path:** Extract project-universal content from CLAUDE.md into a new AGENTS.md (<100 lines); reduce CLAUDE.md to a 15-line delta pointer; keep existing skills as Layer 3. This would bring this wiki into full pattern compliance while improving portability and (per ETH Zurich) likely improving task success rates.
+> **Plus 5 thematic root files for separation of concerns:**
+> - **CONTEXT.md** (227L) — identity profile, current state, active epics, constraints
+> - **ARCHITECTURE.md** (585L) — data flow, tool topology, page schema, integration points
+> - **DESIGN.md** (355L) — visual design principles, callout vocabulary, page layouts
+> - **TOOLS.md** (806L) — complete CLI reference (pipeline, gateway, view, sync, MCP)
+> - **SKILLS.md** (275L) — skills directory guide, format, extension hierarchy
+>
+> **Result:** 2,714 lines across 8 files vs 315 lines crammed into one. Each file has ONE responsibility. AGENTS.md slightly over the 100-line target (pragmatic — this is a complex system with many sacrosanct rules), CLAUDE.md slightly over 100 (107) but well below the 300-line ETH Zurich harm threshold. See [[root-documentation-map|Root Documentation Map]] for the full implementation map.
 
 ## When To Apply
 
@@ -172,3 +182,4 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 [[model-context-engineering|Model — Context Engineering]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
+[[root-documentation-map|Root Documentation Map — Repository-Level Files]]

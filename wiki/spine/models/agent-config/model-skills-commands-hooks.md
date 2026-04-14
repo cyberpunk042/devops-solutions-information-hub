@@ -403,6 +403,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]

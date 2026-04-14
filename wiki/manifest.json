@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-14T17:39:46.408402+00:00",
+  "generated": "2026-04-14T19:19:56.117806+00:00",
   "stats": {
-    "pages": 316,
+    "pages": 317,
     "domains": 9,
     "sources": 43,
     "comparisons": 5,
-    "relationships": 2074,
-    "tags_unique": 956,
+    "relationships": 2080,
+    "tags_unique": 960,
     "layers": {
       "3": 4,
       "6": 16,
@@ -14,10 +14,10 @@
       "4": 42,
       "5": 19,
       "1": 25,
-      "spine": 62
+      "spine": 63
     },
     "maturity": {
-      "growing": 260,
+      "growing": 261,
       "seed": 13
     }
   },
@@ -19240,6 +19240,73 @@
       ]
     },
     {
+      "path": "spine/references/root-documentation-map.md",
+      "slug": "spine/references/root-documentation-map",
+      "title": "Root Documentation Map \u2014 Repository-Level Files",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "reference",
+        "documentation",
+        "root",
+        "readme",
+        "agents",
+        "claude",
+        "architecture",
+        "design",
+        "tools",
+        "skills",
+        "context"
+      ],
+      "sources": [
+        {
+          "id": "three-layer-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/three-layer-agent-context-architecture.md",
+          "description": "The three-layer agent context architecture pattern"
+        },
+        {
+          "id": "three-layer-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/src-skillmd-claudemd-agentsmd-three-layer-context.md",
+          "description": "ETH Zurich research + three-layer architecture evidence"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Three-Layer Agent Context Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "PART OF",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
       "path": "spine/references/second-brain-integration-chain.md",
       "slug": "spine/references/second-brain-integration-chain",
       "title": "Operations Plan \u2014 Second Brain Integration Chain \u2014 Complete Walkthrough",
@@ -20655,8 +20722,8 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 142,
-      "relationship_count": 956
+      "page_count": 143,
+      "relationship_count": 962
     },
     "ai-agents": {
       "page_count": 56,
@@ -20944,7 +21011,8 @@
     "tools": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
-      "spine/references/gateway-tools-reference"
+      "spine/references/gateway-tools-reference",
+      "spine/references/root-documentation-map"
     ],
     "mcp": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
@@ -21272,6 +21340,7 @@
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
+      "spine/references/root-documentation-map",
       "spine/standards/model-standards/model-claude-code-standards",
       "spine/standards/model-standards/model-skills-commands-hooks-standards"
     ],
@@ -21618,7 +21687,8 @@
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "sources/wiki-methodology/src-karpathy-llm-wiki-idea-file",
       "spine/models/ecosystem/model-ecosystem",
-      "spine/models/quality/model-sfif-architecture"
+      "spine/models/quality/model-sfif-architecture",
+      "spine/references/root-documentation-map"
     ],
     "claude-code": [
       "comparisons/skills-architecture-patterns",
@@ -21827,7 +21897,8 @@
       "domains/cross-domain/methodology-artifacts/categories/requirements-and-design-artifacts",
       "domains/cross-domain/methodology-initiative/e003-artifact-type-system-design",
       "domains/devops/stage-gate-methodology",
-      "log/2026-04-09/system/2026-04-09-directive-styling-obsidian"
+      "log/2026-04-09/system/2026-04-09-directive-styling-obsidian",
+      "spine/references/root-documentation-map"
     ],
     "execution-modes": [
       "decisions/02_validated/methodology/execution-mode-edge-cases",
@@ -21975,7 +22046,8 @@
       "decisions/02_validated/tools/hooks-design-decisions"
     ],
     "claude": [
-      "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
+      "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "spine/references/root-documentation-map"
     ],
     "local-first": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
@@ -22792,7 +22864,8 @@
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
       "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
       "spine/references/frontmatter-field-reference",
-      "spine/references/gateway-tools-reference"
+      "spine/references/gateway-tools-reference",
+      "spine/references/root-documentation-map"
     ],
     "reference": [
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
@@ -22801,6 +22874,7 @@
       "spine/references/frontmatter-field-reference",
       "spine/references/gateway-tools-reference",
       "spine/references/methodology-system-map",
+      "spine/references/root-documentation-map",
       "spine/standards/reference-page-standards"
     ],
     "adr": [
@@ -24941,6 +25015,18 @@
     "entry-point": [
       "spine/references/model-registry"
     ],
+    "root": [
+      "spine/references/root-documentation-map"
+    ],
+    "readme": [
+      "spine/references/root-documentation-map"
+    ],
+    "agents": [
+      "spine/references/root-documentation-map"
+    ],
+    "context": [
+      "spine/references/root-documentation-map"
+    ],
     "walkthrough": [
       "spine/references/second-brain-integration-chain"
     ],
@@ -25079,7 +25165,8 @@
     {
       "target": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md",
       "referenced_by": [
-        "Three-Layer Agent Context Architecture"
+        "Three-Layer Agent Context Architecture",
+        "Root Documentation Map \u2014 Repository-Level Files"
       ]
     },
     {

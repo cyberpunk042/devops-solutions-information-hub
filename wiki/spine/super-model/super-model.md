@@ -117,21 +117,22 @@ Each project adapts the super-model to its context. The brain maintains an ident
 
 ## Current State — v2.0
 
-> [!abstract] System metrics (updated 2026-04-13)
+> [!abstract] System metrics (updated 2026-04-14)
 >
 > | Metric | Value |
 > |--------|-------|
-> | **Pages** | 297 |
-> | **Relationships** | 1,982 |
+> | **Pages** | 317 |
+> | **Relationships** | 2,074+ |
 > | **Models** | 16 (+ 9 methodology models in methodology.yaml) |
 > | **Standards** | 22 (15 per-type + 7 model standards, all with annotated exemplars) |
-> | **Lessons** | 40 validated (all with Self-Check sections) |
-> | **Patterns** | 15 validated |
+> | **Lessons** | 42+ validated (all with Self-Check sections) |
+> | **Patterns** | 16+ validated |
 > | **Principles** | 3 (Infrastructure, Structured Context, Goldilocks) |
 > | **Decisions** | 16 validated |
 > | **Comparisons** | 5 |
-> | **Source syntheses** | 28 |
+> | **Source syntheses** | 44+ (16 added 2026-04-14 batch) |
 > | **Ecosystem profiles** | 5 (OpenArms, OpenFleet, AICP, devops-control-plane, Research Wiki) |
+> | **Root-level docs** | 8 (README + AGENTS + CLAUDE + 5 thematic) |
 > | **Validation errors** | 0 |
 > | **Lint issues** | 0 |
 >
@@ -141,12 +142,14 @@ Each project adapts the super-model to its context. The brain maintains an ident
 > - 3 SDLC chain configs as POLICY (simplified/default/full — draft status)
 > - Ecosystem project profiles separating brain knowledge from project-specific knowledge
 > - [[filename|title]] wikilinks + frontmatter aliases for Obsidian resolution
+> - 8 root-level docs implementing three-layer agent context architecture (README + AGENTS + CLAUDE + CONTEXT + ARCHITECTURE + DESIGN + TOOLS + SKILLS) — see [[root-documentation-map|Root Documentation Map]]
+> - 16 source syntheses + 3 evolved pages from 2026-04-14 batch ingestion (OpenSpec, spec-kit, BMAD, Agent SDK, Pydantic AI, AutoBE, HRM/TRM, etc.)
 >
 > **What v2.0 does NOT have:**
 > - Canonical maturity on any model (all growing — promotions gated by operator)
 > - Multi-agent handoff artifact format (contribution gating documented but handoff TBD)
 > - Formal structured context grammar (principle captured, grammar needs research)
-> - New source ingestions (operator has 10-15 sources ready)
+> - LightRAG integration for Level 6 (we have the graph; need LightRAG layer)
 >
 > For detailed version history, see [[methodology-evolution-history|Evolution — Methodology System]].
 
@@ -202,6 +205,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 | Page | Role |
 |------|------|
 | [[model-registry|Model Registry]] | All 16 models with status and standards links |
+| [[root-documentation-map|Root Documentation Map]] | Repository-level docs: README, AGENTS, CLAUDE, CONTEXT, ARCHITECTURE, DESIGN, TOOLS, SKILLS |
 | [[methodology-system-map|Methodology System Map]] | Complete lookup for every methodology component |
 | [[methodology-adoption-guide|Methodology Adoption Guide]] | 4-tier adoption with per-domain quick starts |
 | [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]] | 17-step integration chain end-to-end |
@@ -264,6 +268,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[identity-profile|Research Wiki — Identity Profile]]
+[[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Chain Selection]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]

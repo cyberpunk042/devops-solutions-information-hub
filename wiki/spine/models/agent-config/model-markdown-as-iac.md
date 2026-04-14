@@ -271,6 +271,7 @@ The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-Ia
 [[claude-code-best-practices|Claude Code Best Practices]]
 [[model-context-engineering|Model — Context Engineering]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Traditional Hierarchy]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]

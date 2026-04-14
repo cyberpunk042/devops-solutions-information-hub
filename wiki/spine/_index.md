@@ -87,6 +87,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Methodology Adoption Guide](references/methodology-adoption-guide.md) — Step-by-step guide for any project to adopt the research wiki's methodology
 - [Methodology System Map](references/methodology-system-map.md) — Complete map of the methodology system — every component, where it lives, what it does, and how they connect
 - [Model Registry](references/model-registry.md) — This is the entry point for all named models in the wiki
+- [Root Documentation Map — Repository-Level Files](references/root-documentation-map.md) — The repository root contains 8 documentation files (2,714 total lines) that serve as the entry point for humans, AI t...
 - [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](references/second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
 - [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (74 pages)
@@ -120,4 +121,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `page-type`, `exemplar`, `model`, `domain-overview`, `methodology`, `gold-standard`, `anti-patterns`, `reference`, `concept`, `sub-model`, `navigation-hub`, `skills`, `hooks`, `second-brain`, `ecosystem`, `integration`, `evolution`
+`standards`, `quality`, `spine`, `page-type`, `exemplar`, `model`, `domain-overview`, `methodology`, `gold-standard`, `anti-patterns`, `reference`, `skills`, `concept`, `sub-model`, `navigation-hub`, `hooks`, `second-brain`, `ecosystem`, `integration`, `evolution`

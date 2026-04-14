@@ -759,6 +759,71 @@ def query_page(paths: Dict[str, Path], title: str) -> Dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------
+# Root documentation (README, AGENTS, CLAUDE, CONTEXT, ARCHITECTURE, DESIGN, TOOLS, SKILLS)
+# ---------------------------------------------------------------------------
+
+ROOT_DOCS = {
+    "readme": ("README.md", "First visitor entry point — what this project IS"),
+    "agents": ("AGENTS.md", "Universal cross-tool agent context (Claude, Codex, Copilot, Gemini, Cursor)"),
+    "claude": ("CLAUDE.md", "Claude Code-specific overrides; references AGENTS.md"),
+    "context": ("CONTEXT.md", "Identity profile, current state, active epics, constraints"),
+    "architecture": ("ARCHITECTURE.md", "Data flow, tool topology, page schema, integration points"),
+    "design": ("DESIGN.md", "Visual design principles, callout vocabulary, page layouts"),
+    "tools": ("TOOLS.md", "Complete CLI reference (pipeline, gateway, view, sync, MCP)"),
+    "skills": ("SKILLS.md", "Skills directory, SKILL.md format, extension hierarchy"),
+}
+
+
+def query_docs(paths: Dict[str, Path], doc_name: str = None) -> Dict[str, Any]:
+    """Query root-level documentation files.
+
+    No arg → list all root docs with descriptions.
+    With name → return path + description + preview.
+    """
+    root = paths["root"]
+
+    if doc_name is None:
+        result = {"root_docs": []}
+        for key, (filename, description) in ROOT_DOCS.items():
+            file_path = root / filename
+            entry = {
+                "name": key,
+                "file": filename,
+                "description": description,
+                "exists": file_path.exists(),
+            }
+            if file_path.exists():
+                entry["lines"] = len(file_path.read_text(encoding="utf-8").split("\n"))
+            result["root_docs"].append(entry)
+        result["see_also"] = "wiki/spine/references/root-documentation-map.md"
+        return result
+
+    key = doc_name.lower().strip().replace(".md", "")
+    if key not in ROOT_DOCS:
+        return {
+            "error": f"Unknown root doc '{doc_name}'",
+            "available": list(ROOT_DOCS.keys()),
+        }
+
+    filename, description = ROOT_DOCS[key]
+    file_path = root / filename
+    if not file_path.exists():
+        return {"error": f"{filename} not found at {root}"}
+
+    text = file_path.read_text(encoding="utf-8")
+    return {
+        "name": key,
+        "file": filename,
+        "description": description,
+        "path": str(file_path),
+        "lines": len(text.split("\n")),
+        "size_bytes": file_path.stat().st_size,
+        "preview": text[:500],
+        "instruction": "Read the full file for complete content.",
+    }
+
+
+# ---------------------------------------------------------------------------
 # Operations: move, archive, backup, contribute
 # ---------------------------------------------------------------------------
 
@@ -1167,6 +1232,7 @@ def main():
     q.add_argument("--lessons", action="store_true", help="Show lessons by maturity folder")
     q.add_argument("--logs", action="store_true", help="Show recent log entries")
     q.add_argument("--page", help="Look up a page by title (metadata + summary)")
+    q.add_argument("--docs", nargs="?", const="__list__", help="List root-level documentation files (or pass a name like 'README', 'AGENTS', 'CLAUDE', 'TOOLS')")
 
     # Flow command — step-by-step Goldilocks routing
     f = sub.add_parser("flow", help="Goldilocks flow — step-by-step routing from identity to action")
@@ -1261,6 +1327,9 @@ def main():
             result = query_logs(paths)
         elif args.page:
             result = query_page(paths, args.page)
+        elif args.docs is not None:
+            doc_arg = None if args.docs == "__list__" else args.docs
+            result = query_docs(paths, doc_arg)
         else:
             # No args to query → show navigate instead of argparse error
             print("No query specified. Try one of:")
@@ -1270,6 +1339,8 @@ def main():
             print("  gateway query --stage <name>    → what does a stage need?")
             print("  gateway query --model <name>    → model details")
             print("  gateway query --field <name>    → explain a field")
+            print("  gateway query --docs             → list root-level docs (README, AGENTS, CLAUDE, etc.)")
+            print("  gateway query --docs <name>      → details on one root doc")
             print()
             print("Or try: gateway what-do-i-need    → auto-detect and recommend")
             return
