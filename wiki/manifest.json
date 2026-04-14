@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-14T23:19:05.126470+00:00",
+  "generated": "2026-04-14T23:45:38.751263+00:00",
   "stats": {
-    "pages": 319,
+    "pages": 320,
     "domains": 9,
     "sources": 43,
     "comparisons": 5,
-    "relationships": 2089,
-    "tags_unique": 966,
+    "relationships": 2095,
+    "tags_unique": 971,
     "layers": {
       "3": 4,
       "6": 16,
@@ -14,10 +14,10 @@
       "4": 42,
       "5": 19,
       "1": 25,
-      "spine": 64
+      "spine": 65
     },
     "maturity": {
-      "growing": 262,
+      "growing": 263,
       "seed": 13
     }
   },
@@ -20538,6 +20538,92 @@
       ]
     },
     {
+      "path": "spine/standards/session-handoff-standards.md",
+      "slug": "spine/standards/session-handoff-standards",
+      "title": "Session Handoff Standards",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "standards",
+        "session-handoff",
+        "continuity",
+        "meta-documentation",
+        "non-wiki-genre",
+        "context-recovery"
+      ],
+      "sources": [
+        {
+          "id": "handoff-corpus-2026-04-08",
+          "type": "file",
+          "file": "docs/SESSION-2026-04-08.md",
+          "description": "First handoff \u2014 primitive, task enumeration style"
+        },
+        {
+          "id": "handoff-corpus-2026-04-10-final",
+          "type": "file",
+          "file": "docs/SESSION-2026-04-10-final.md",
+          "description": "Same-day supersession pattern (part \u2192 part2 \u2192 final)"
+        },
+        {
+          "id": "handoff-corpus-2026-04-12",
+          "type": "file",
+          "file": "docs/SESSION-2026-04-12-handoff.md",
+          "description": "Directive-driven format (13 operator directives sections)"
+        },
+        {
+          "id": "handoff-corpus-2026-04-12-v2",
+          "type": "file",
+          "file": "docs/SESSION-2026-04-12-handoff-v2.md",
+          "description": "Comprehensive format with Mistakes section (meta-learning)"
+        },
+        {
+          "id": "handoff-corpus-2026-04-14",
+          "type": "file",
+          "file": "docs/SESSION-2026-04-14-handoff.md",
+          "description": "Mature format \u2014 phase-by-phase + decisions table + review gates"
+        },
+        {
+          "id": "operator-directive-q17a",
+          "type": "directive",
+          "file": "docs/SESSION-2026-04-14-handoff.md",
+          "description": "Operator: 'Maybe we should have standards for those too, we fast put that on that list' \u2014 2026-04-14"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Model \u2014 Wiki Design"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Root Documentation Map"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context File Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology System Map"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Reference Page Standards"
+        }
+      ]
+    },
+    {
       "path": "spine/standards/source-synthesis-page-standards.md",
       "slug": "spine/standards/source-synthesis-page-standards",
       "title": "Source-Synthesis Page Standards",
@@ -20838,8 +20924,8 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 144,
-      "relationship_count": 971
+      "page_count": 145,
+      "relationship_count": 977
     },
     "ai-agents": {
       "page_count": 56,
@@ -20976,6 +21062,7 @@
       "spine/standards/operations-plan-page-standards",
       "spine/standards/pattern-page-standards",
       "spine/standards/reference-page-standards",
+      "spine/standards/session-handoff-standards",
       "spine/standards/source-synthesis-page-standards",
       "spine/standards/task-page-standards",
       "spine/super-model/super-model"
@@ -25241,6 +25328,21 @@
     "note": [
       "spine/standards/note-page-standards"
     ],
+    "session-handoff": [
+      "spine/standards/session-handoff-standards"
+    ],
+    "continuity": [
+      "spine/standards/session-handoff-standards"
+    ],
+    "meta-documentation": [
+      "spine/standards/session-handoff-standards"
+    ],
+    "non-wiki-genre": [
+      "spine/standards/session-handoff-standards"
+    ],
+    "context-recovery": [
+      "spine/standards/session-handoff-standards"
+    ],
     "sub-model": [
       "spine/super-model/enforcement-hierarchy",
       "spine/super-model/goldilocks-protocol",
@@ -25267,6 +25369,12 @@
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
+      ]
+    },
+    {
+      "target": "Context File Taxonomy",
+      "referenced_by": [
+        "Session Handoff Standards"
       ]
     },
     {
@@ -25309,7 +25417,8 @@
     {
       "target": "Root Documentation Map",
       "referenced_by": [
-        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
+        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context",
+        "Session Handoff Standards"
       ]
     },
     {

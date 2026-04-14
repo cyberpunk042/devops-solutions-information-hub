@@ -404,6 +404,7 @@ Evolved knowledge pages now organize into maturity-based subfolders: `00_inbox â
 [[lesson-page-standards|Lesson Page Standards]]
 [[model-registry|Model Registry]]
 [[pattern-page-standards|Pattern Page Standards]]
+[[session-handoff-standards|Session Handoff Standards]]
 [[source-synthesis-page-standards|Source-Synthesis Page Standards]]
 [[E006-standards-by-example|Standards-by-Example]]
 [[2026-04-09-directive-styling-obsidian|Styling â€” Make It Look Good in Obsidian]]

@@ -49,7 +49,7 @@ These define what "good" looks like. Affect all future content.
 | 15 | Should there be a formal "styling review" gate? | [[model-wiki-design-standards|Wiki Design Standards]] |
 | 16 | Should before/after examples include Obsidian screenshots? | [[model-wiki-design-standards|Wiki Design Standards]] |
 | 17 | Should annotated exemplars be inline or in companion documents? | [[methodology-standards-initiative-gaps|Standards Initiative Gaps]] |
-| 17a | **Should we have a standards page for session handoff documents?** (docs/SESSION-*.md pattern already in use, but no formal quality bar — added 2026-04-14) | (no source yet — new entry) |
+| ~~17a~~ | ~~Should we have a standards page for session handoff documents?~~ **RESOLVED 2026-04-14:** Yes — [[session-handoff-standards\|Session Handoff Standards]] created at `wiki/spine/standards/session-handoff-standards.md` (420 lines). Framework-first: 6 invariant sections (Header + Executive Summary + What Was Done + Current State + What's Next + How to Resume), 6 extended sections (Context/Trajectory, Operator Voice, Architecture Decisions, Mistakes, Reflection, Key Files) used conditionally based on session shape. Quality bar covers verbatim operator directives, pipeline-fresh metrics, file path references, resume as checklist-not-narrative, honest Mistakes inclusion. Anti-patterns catalogued from 9-handoff corpus (duplicate sections, estimated metrics, paraphrased speech, false "done" claims). Filename convention frozen: `SESSION-YYYY-MM-DD[-suffix].md` with suffixes reserved for within-day supersession. Template scaffold lives at `docs/SESSION-HANDOFF-TEMPLATE.md`. | [[session-handoff-standards\|Session Handoff Standards]] |
 
 ## Priority 3 — Tooling & Enforcement
 

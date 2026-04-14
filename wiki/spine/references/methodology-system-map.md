@@ -176,6 +176,7 @@ Complete map of the methodology system — every component, where it lives, what
 > | epic | [[epic-page-standards|Epic Page Standards]] |
 > | task | [[task-page-standards|Task Page Standards]] |
 > | note | [[note-page-standards|Note Page Standards]] |
+> | session-handoff (non-wiki genre) | [[session-handoff-standards|Session Handoff Standards]] |
 
 > [!abstract] AI Agent Consumption & Elevation
 >
@@ -337,6 +338,7 @@ See [[wiki/config/README.md]] for the definitive thorough reference. Summary bel
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
 [[identity-profile|Research Wiki — Identity Profile]]
+[[session-handoff-standards|Session Handoff Standards]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
 [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]

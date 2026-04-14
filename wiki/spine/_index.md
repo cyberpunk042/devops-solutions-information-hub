@@ -111,6 +111,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Operations Plan Page Standards](standards/operations-plan-page-standards.md) — Standards for operations plan pages — sequential deterministic checklists that any agent can follow mechanically
 - [Pattern Page Standards](standards/pattern-page-standards.md) — Standards for pattern pages — recurring structural phenomena observed across ≥2 independent instances
 - [Reference Page Standards](standards/reference-page-standards.md) — Standards for reference pages — LOOKUP material that readers consult for specific answers, not read linearly
+- [Session Handoff Standards](standards/session-handoff-standards.md) — Standards for session handoff documents — the non-wiki genre that lives in `docs/SESSION-*
 - [Source-Synthesis Page Standards](standards/source-synthesis-page-standards.md) — Standards for source-synthesis pages — processed versions of raw sources (articles, videos, papers, repos)
 - [Task Page Standards](standards/task-page-standards.md) — Standards for task pages — the atomic work unit
 - [Sub-Model — Enforcement Hierarchy — From Instructions to Immune System](super-model/enforcement-hierarchy.md) — Navigation hub for enforcement — how to make agents actually follow methodology

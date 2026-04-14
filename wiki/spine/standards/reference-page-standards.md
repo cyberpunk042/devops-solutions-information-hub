@@ -115,3 +115,4 @@ Standards for reference pages — LOOKUP material that readers consult for speci
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[requirements-and-design-artifacts|Requirements and Design Artifacts — Standards and Guide]]
+[[session-handoff-standards|Session Handoff Standards]]
