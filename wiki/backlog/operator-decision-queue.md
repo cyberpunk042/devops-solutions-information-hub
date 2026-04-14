@@ -49,6 +49,7 @@ These define what "good" looks like. Affect all future content.
 | 15 | Should there be a formal "styling review" gate? | [[model-wiki-design-standards|Wiki Design Standards]] |
 | 16 | Should before/after examples include Obsidian screenshots? | [[model-wiki-design-standards|Wiki Design Standards]] |
 | 17 | Should annotated exemplars be inline or in companion documents? | [[methodology-standards-initiative-gaps|Standards Initiative Gaps]] |
+| 17a | **Should we have a standards page for session handoff documents?** (docs/SESSION-*.md pattern already in use, but no formal quality bar — added 2026-04-14) | (no source yet — new entry) |
 
 ## Priority 3 — Tooling & Enforcement
 
