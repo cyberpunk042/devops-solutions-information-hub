@@ -5,9 +5,34 @@ wiki system. Config here is not documentation (that lives in `wiki/`), and it is
 (that lives in `tools/`). It is the **schema, methodology, domain overrides, and policy
 definitions** that both agents and tools read at runtime.
 
-Every tool in `tools/`, every skill in `skills/`, and every agent directive in
-`wiki/config/agent-directive.md` derives its behavior from files in this directory.
-Changing a value here changes the system's behavior everywhere that file is consumed.
+Every tool in `tools/`, every skill in `.claude/skills/`, and every agent in the ecosystem
+derives its behavior from files in this directory. Changing a value here changes the
+system's behavior everywhere that file is consumed.
+
+---
+
+## The Flexibility Principle — Everything Is Adaptable
+
+> [!tip] Nothing in `wiki/config/` is mandatory for a consuming project.
+>
+> The wiki provides **authoritative reference definitions**. Projects choose how to use them:
+>
+> - **Take as-is** — import the wiki's domain profile, SDLC profile, methodology profile
+>   verbatim. Inherit its defaults. Get validation "for free".
+> - **Take and adapt** — copy a config, override specific fields in your project-local
+>   file (CLAUDE.md, AGENTS.md, or a local YAML). Compose your version from the wiki's.
+> - **Take part of it** — adopt the methodology models but write your own domain profile.
+>   Adopt the schema but use a different SDLC profile. Mix and match.
+> - **Ignore entirely** — don't adopt the wiki at all. The wiki doesn't break your project
+>   by existing; it only helps if you reach for it.
+>
+> This is [[right-process-for-right-context-the-goldilocks-imperative|the Goldilocks principle]]
+> applied to configuration. POC projects take the simplified SDLC profile and nothing else;
+> production fleets take the full stack; a documentation-only repo might take only the
+> wiki-schema and ignore methodology entirely. **All valid**. The wiki is a menu, not a law.
+>
+> The ONLY mandatory layer is **project-local overrides** (CLAUDE.md, AGENTS.md) — those
+> always take precedence. Wiki configs are defaults to compose from, not rules to obey.
 
 ---
 
