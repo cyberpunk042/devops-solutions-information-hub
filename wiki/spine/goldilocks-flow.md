@@ -210,6 +210,81 @@ When blocked:
 > | Explore enforcement options | — | Sub-Model: Enforcement Hierarchy |
 > | Understand knowledge layers | — | Sub-Model: Knowledge Architecture |
 
+---
+
+## Worked Walkthroughs — Three Real Profiles
+
+These are not hypothetical — each profile exists in the ecosystem. Follow along to see how the flow adapts.
+
+> [!example]- Walkthrough A: Solo Agent on This Wiki (Research Wiki)
+>
+> **Step 1 — DETECT:** Gateway auto-detects: `domain=knowledge` (wiki/config/ found), `scale=medium` (297 pages), `phase=production` (CI + tests + daily use). Second brain = `self` (this IS the second brain).
+>
+> **Step 2 — DECLARE:** CLAUDE.md already has the identity profile:
+> `Type=system, Execution Mode=solo, Domain=knowledge, Phase=production, Scale=medium, PM Level=L1, Trust Tier=operator-supervised`
+>
+> **Step 3 — SELECT CHAIN:** Production + medium → **Default** chain. Stage-gated with selected artifacts. Readiness gate = 80. Hooks optional (solo mode, operator present).
+>
+> **Flexibility:** This wiki could use Simplified (operator is always present, low risk). Default was chosen because the wiki IS the methodology — it should practice what it preaches.
+>
+> **Step 4 — SELECT MODEL:** Depends on the task. Research about a new topic → `research` model. New wiki page → `documentation` model. New tool feature → `feature-development` model. Evolving lessons → `knowledge-evolution` model. Most work here is `documentation` or `knowledge-evolution`.
+>
+> **Step 5 — ENTER STAGE:** For a `documentation` model task: Document stage only. For `feature-development`: all 5 stages. Stage rules are in CLAUDE.md's ALLOWED/FORBIDDEN table.
+>
+> **Step 6 — PRODUCE:** For wiki pages: scaffold from template (`pipeline scaffold concept "Title"`), fill content, run `pipeline post`, verify 0 errors. Artifact chain from `domain-chain-knowledge.md`.
+>
+> **Step 7 — TRACK:** This wiki uses L1 PM (wiki backlog + CLAUDE.md directives). Readiness/progress tracked in epic frontmatter. No fleet, no harness — operator reviews everything.
+>
+> **Step 8 — FEEDBACK:** This wiki IS the second brain, so feedback is self-referential. Lessons go directly into `wiki/lessons/00_inbox/`. The evolution pipeline scores and promotes them.
+
+> [!example]- Walkthrough B: Harness v2 Agent on OpenArms (TypeScript)
+>
+> **Step 1 — DETECT:** Gateway auto-detects: `domain=typescript` (package.json found), `scale=medium` (src/ + tests/ + hooks/), `phase=production` (CI + Docker + systemd). Second brain = `connected` (sibling directory found).
+>
+> **Step 2 — DECLARE:** OpenArms CLAUDE.md declares:
+> `Type=project, Execution Mode=harness v2, Domain=typescript, Phase=production, Scale=medium, PM Level=L2, Trust Tier=standard`
+>
+> Note: Execution mode is `harness v2` because the harness code EXISTS and is ACTIVE — hooks enforce stage gates, skill-stage-mapping controls injection, post-compact hooks restore state. The harness DISCOVERED its own version from available infrastructure.
+>
+> **Step 3 — SELECT CHAIN:** Production + medium + harness → **Full** chain. All 5 stages required for feature-dev. Readiness gate = 99. Full infrastructure enforcement (4 hooks, 215 lines).
+>
+> **Flexibility:** OpenArms COULD use Default (hooks exist but could be advisory). Full was chosen because overnight autonomous runs need enforcement — an unattended agent WILL skip stages without hooks.
+>
+> **Step 4 — SELECT MODEL:** Harness dispatches based on `task_type` frontmatter. `feature-development` for new features, `bug-fix` for defects, `hotfix` for emergencies. The harness selects the model, not the agent.
+>
+> **Step 5 — ENTER STAGE:** Stage skills injected by harness via `skill-stage-mapping.yaml` (299 lines, 3 layers). Each stage skill contains MUST/MUST NOT lists, recommended tools, artifact requirements. Agent receives stage-specific context — not the whole methodology.
+>
+> **Step 6 — PRODUCE:** TypeScript artifact chain: types → stubs → implementation → wiring → tests. Each artifact validated by domain-specific gate commands (`pnpm tsgo`, `pnpm vitest`). Contribution gating: harness checks that previous-stage artifacts exist before allowing next stage.
+>
+> **Step 7 — TRACK:** L2 PM — harness owns the backlog loop. Readiness/progress updated by harness after each stage gate. 99→100 escalates to operator for review. Fleet logs to `stage-files.log`.
+>
+> **Step 8 — FEEDBACK:** Harness runs `gateway contribute` for lessons discovered during execution. Contributions enter `wiki/lessons/00_inbox/` in the second brain. Post-run: harness generates a completion note in `raw/notes/`.
+
+> [!example]- Walkthrough C: Full System — OpenFleet (10-Agent Fleet)
+>
+> **Step 1 — DETECT:** Gateway auto-detects per-agent: `domain=typescript`, `scale=large` (10 concurrent agents, 50k+ LOC across workspaces). `phase=production`. Second brain = `connected` via `kb_sync.py` + LightRAG.
+>
+> **Step 2 — DECLARE:** Each agent workspace has AGENTS.md:
+> `Type=fleet-agent, Execution Mode=full system, Domain=typescript, Phase=production, Scale=large, PM Level=L3, Trust Tier=standard/expert (per agent approval rates)`
+>
+> Fleet-level identity is in the orchestrator config, not per-agent CLAUDE.md. The orchestrator declares system identity; agents inherit with overrides.
+>
+> **Step 3 — SELECT CHAIN:** Production + large + fleet → **Full** chain. All 5 stages. Readiness gate = 99. Full immune system: doctor.py (24 rules), MCP tool blocking (1033-line validator), heartbeat enforcement, budget limits.
+>
+> **Flexibility:** Fleet agents cannot downgrade their chain — the orchestrator enforces Full for all dispatched work. An agent CAN receive a `hotfix` model (implement→test only) but the chain wrapper is always Full.
+>
+> **Step 4 — SELECT MODEL:** Orchestrator selects model based on task metadata dispatched from Plane (PM tool). `task_type` is set in Plane, synced to the fleet. Agent receives the model as part of task context — it doesn't choose.
+>
+> **Step 5 — ENTER STAGE:** Per-stage skills injected by orchestrator with tier-based depth. Expert-tier agents get full protocol (5k-10k tokens). Standard-tier get capable (2k-5k). Lightweight-tier get minimal (500-1k). Same structure at every tier — content varies.
+>
+> **Step 6 — PRODUCE:** Same artifact chain as OpenArms but with cross-agent contributions. Agent A's design doc becomes Agent B's input. Contribution gating: orchestrator validates that contributions are received BEFORE dispatching dependent tasks.
+>
+> **Step 7 — TRACK:** L3 PM — Plane integration. Readiness/progress synced bidirectionally: Plane → orchestrator → agent → orchestrator → Plane. Dashboards show fleet-wide progress. Anomaly detection flags stuck or regressing agents.
+>
+> **Step 8 — FEEDBACK:** Fleet generates operational data continuously. `kb_sync.py` aggregates lessons into LightRAG. The wiki's evolution pipeline scores fleet-generated content alongside human-generated content. Immune system rules (doctor.py) update from post-mortem lessons.
+
+---
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge

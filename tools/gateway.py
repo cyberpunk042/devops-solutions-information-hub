@@ -279,15 +279,28 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     lines.append("WHAT DO YOU NEED? — Auto-detected recommendations")
     lines.append("")
 
-    # Identity
+    # Identity with auto-detect WARNINGS
     lines.append(f"DETECTED IDENTITY:")
-    lines.append(f"  execution mode: {identity.get('execution_mode', '?')}")
-    lines.append(f"  domain: {identity.get('domain', '?')}")
-    lines.append(f"  phase: {identity.get('phase', '?')}")
-    lines.append(f"  scale: {identity.get('scale', '?')} ({identity.get('source_files', '?')} source files)")
-    lines.append(f"  second brain: {identity.get('second_brain', '?')}")
+    domain_val = identity.get("domain", "?")
+    phase_val = identity.get("phase", "?")
+    scale_val = identity.get("scale", "?")
+    exec_val = identity.get("execution_mode", "?")
+
+    lines.append(f"  domain:         {domain_val}  ⚠ Auto-detected. Override with --domain if wrong.")
+    lines.append(f"  phase:          {phase_val}  ⚠ Auto-detected from CI/tests/Docker. Override in CLAUDE.md.")
+    lines.append(f"  scale:          {scale_val} ({identity.get('source_files', '?')} files)  ⚠ Auto-detected from file count.")
+    lines.append(f"  execution mode: {exec_val}")
+    if identity.get("execution_mode_confidence") == "certain":
+        lines.append(f"                  (no harness code found → solo is certain)")
+    else:
+        caps = identity.get("harness_capabilities_detected", [])
+        lines.append(f"                  ⚠ CANNOT auto-detect. Harness decides at runtime.")
+        if caps:
+            lines.append(f"                  Capabilities found: {', '.join(caps)}")
+        lines.append(f"                  Declare in CLAUDE.md or pass --execution-mode.")
+    lines.append(f"  second brain:   {identity.get('second_brain', '?')}")
     if declared:
-        lines.append(f"  (identity also declared in CLAUDE.md — declared values take precedence)")
+        lines.append(f"  ✓ Identity also declared in CLAUDE.md — declared values take precedence.")
     lines.append("")
 
     # Recommendation
@@ -321,6 +334,120 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     lines.append("  gateway navigate              → full knowledge tree")
     lines.append("  gateway query --chains         → compare all SDLC chains")
     lines.append("  gateway query --models          → all methodology models")
+
+    return "\n".join(lines)
+
+
+def cmd_flow(paths: Dict[str, Path], step: int = None) -> str:
+    """Goldilocks flow — step-by-step routing from identity to action.
+
+    Walks through all 8 steps of the Goldilocks protocol, showing what each
+    step does, what commands to run, and what to read in the wiki.
+    Use --step N to jump to a specific step.
+    """
+    steps = [
+        {
+            "num": 1, "name": "DETECT",
+            "desc": "Auto-detect what can be seen from your project",
+            "cmd": "python3 -m tools.gateway what-do-i-need",
+            "wiki": "wiki/spine/goldilocks-flow.md → Step 1",
+            "output": "Domain, scale, phase, second brain status. Execution mode if deterministic.",
+        },
+        {
+            "num": 2, "name": "DECLARE",
+            "desc": "Complete your Identity Profile in CLAUDE.md",
+            "cmd": "python3 -m tools.gateway query --identity",
+            "wiki": "wiki/spine/goldilocks-flow.md → Step 2",
+            "output": "7 dimensions declared: type, execution mode, domain, phase, scale, PM level, trust tier.",
+        },
+        {
+            "num": 3, "name": "SELECT CHAIN",
+            "desc": "Choose simplified/default/full based on phase × scale",
+            "cmd": "python3 -m tools.gateway query --chains",
+            "wiki": "wiki/config/sdlc-chains/ (3 YAML configs)",
+            "output": "One SDLC chain selected. Determines enforcement level and readiness gate.",
+        },
+        {
+            "num": 4, "name": "SELECT MODEL",
+            "desc": "Pick the right methodology model for your task type",
+            "cmd": "python3 -m tools.gateway query --models",
+            "wiki": "wiki/spine/references/model-registry.md",
+            "output": "One of 9 models selected. Determines which stages your task goes through.",
+        },
+        {
+            "num": 5, "name": "ENTER STAGE",
+            "desc": "Know what this stage allows, forbids, and requires",
+            "cmd": "python3 -m tools.gateway query --stage document",
+            "wiki": "CLAUDE.md ALLOWED/FORBIDDEN table",
+            "output": "Stage rules: what you can produce, what's forbidden, gate command.",
+        },
+        {
+            "num": 6, "name": "PRODUCE",
+            "desc": "Follow the artifact chain for your model + stage + domain",
+            "cmd": "python3 -m tools.gateway query --model feature-development --full-chain",
+            "wiki": "wiki/domains/cross-domain/methodology-artifacts/chains/",
+            "output": "Artifacts produced. Templates filled. Validated with pipeline post.",
+        },
+        {
+            "num": 7, "name": "TRACK",
+            "desc": "Update readiness (definition) and progress (execution)",
+            "cmd": "python3 -m tools.gateway query --field readiness",
+            "wiki": "wiki/domains/cross-domain/readiness-vs-progress.md",
+            "output": "Frontmatter updated. 99→100 = human review only.",
+        },
+        {
+            "num": 8, "name": "FEEDBACK",
+            "desc": "Contribute learnings back to the second brain",
+            "cmd": "python3 -m tools.gateway contribute --type lesson --title '...' --content '...'",
+            "wiki": "wiki/lessons/00_inbox/ (maturity pipeline entry)",
+            "output": "Lesson/remark filed. Evolution pipeline scores and promotes.",
+        },
+    ]
+
+    lines = []
+    lines.append("GOLDILOCKS FLOW — From Identity to Action")
+    lines.append("=" * 50)
+    lines.append("")
+
+    if step:
+        # Show one step in detail
+        matching = [s for s in steps if s["num"] == step]
+        if not matching:
+            return f"Invalid step {step}. Valid: 1-8."
+        s = matching[0]
+        lines.append(f"STEP {s['num']}: {s['name']}")
+        lines.append(f"  {s['desc']}")
+        lines.append("")
+        lines.append(f"  Run:   {s['cmd']}")
+        lines.append(f"  Read:  {s['wiki']}")
+        lines.append(f"  Output: {s['output']}")
+        lines.append("")
+        if step < 8:
+            lines.append(f"  Next: gateway flow --step {step + 1}")
+        else:
+            lines.append("  Done! Return to any step when context changes.")
+        lines.append("")
+        lines.append("Full flow: gateway flow")
+    else:
+        # Show all 8 steps as overview
+        lines.append("8 steps from 'who am I?' to 'what do I do next?'")
+        lines.append("Jump to any step: gateway flow --step N")
+        lines.append("")
+        for s in steps:
+            lines.append(f"  Step {s['num']}: {s['name']:14s} — {s['desc']}")
+            lines.append(f"         cmd:  {s['cmd']}")
+            lines.append("")
+
+        # Auto-detect current context
+        detected = auto_detect_identity(paths["root"])
+        lines.append("YOUR CONTEXT (auto-detected):")
+        lines.append(f"  domain: {detected.get('domain', '?')}  |  "
+                      f"phase: {detected.get('phase', '?')}  |  "
+                      f"scale: {detected.get('scale', '?')}  |  "
+                      f"mode: {detected.get('execution_mode', '?')}")
+        lines.append("")
+        lines.append("Start: gateway flow --step 1")
+        lines.append("Wiki:  wiki/spine/goldilocks-flow.md")
 
     return "\n".join(lines)
 
@@ -945,6 +1072,10 @@ def main():
     q.add_argument("--logs", action="store_true", help="Show recent log entries")
     q.add_argument("--page", help="Look up a page by title (metadata + summary)")
 
+    # Flow command — step-by-step Goldilocks routing
+    f = sub.add_parser("flow", help="Goldilocks flow — step-by-step routing from identity to action")
+    f.add_argument("--step", type=int, help="Jump to a specific step (1-8)")
+
     # Template command
     t = sub.add_parser("template", help="Get a page template")
     t.add_argument("type", help="Page type (lesson, pattern, decision, principle, etc.)")
@@ -993,6 +1124,9 @@ def main():
 
     if args.command == "what-do-i-need":
         print(query_what_do_i_need(paths))
+
+    elif args.command == "flow":
+        print(cmd_flow(paths, step=getattr(args, "step", None)))
 
     elif args.command == "query":
         if args.identity:

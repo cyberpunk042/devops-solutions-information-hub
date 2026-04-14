@@ -56,7 +56,7 @@ Evolve the super-model from a single dashboard page (currently v1.3) into a syst
 
 ## Done When
 
-- [ ] Root super-model v2.0 — clean dashboard, <150 lines, routes to sub-super-models
+- [ ] Root super-model v2.0 — clean dashboard, routes to sub-super-models, substantial depth (≥150 lines)
 - [ ] Sub-Super-Model: Goldilocks Protocol — identity, chain selection, adaptation, flexibility
 - [ ] Sub-Super-Model: Enforcement Hierarchy — hooks, harness, immune system, compliance, principles
 - [ ] Sub-Super-Model: Knowledge Architecture — layers, maturity, evolution, principles, lessons→patterns→decisions flow
