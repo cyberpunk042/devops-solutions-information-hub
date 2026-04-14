@@ -9,8 +9,8 @@ status: active
 priority: P0
 task_type: epic
 current_stage: implement
-readiness: 90
-progress: 90
+readiness: 80
+progress: 80
 stages_completed:
 artifacts:
   - "raw/notes/2026-04-12-documentation-standards-directive.md"

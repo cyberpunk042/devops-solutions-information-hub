@@ -9,8 +9,8 @@ status: draft
 priority: P1
 task_type: epic
 current_stage: document
-readiness: 70
-progress: 70
+readiness: 35
+progress: 20
 stages_completed:
 artifacts:
   - "wiki/spine/references/second-brain-integration-chain.md"

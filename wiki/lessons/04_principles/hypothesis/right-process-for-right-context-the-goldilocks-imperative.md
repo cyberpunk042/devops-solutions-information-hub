@@ -131,3 +131,4 @@ Process must adapt to context. Too much process kills POC velocity. Too little p
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
+[[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]

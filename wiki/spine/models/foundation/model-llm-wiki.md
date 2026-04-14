@@ -253,9 +253,6 @@ Relationships are explicit, typed, bidirectional via auto-generated backlinks:
 ```markdown
 ## Relationships
 
-- BUILDS ON: `[[Page Title]]`
-- ENABLES: `[[Another Page]]`
-- CONTRADICTS: `[[Some Assumption]]`
 ```
 
 **17 relationship verbs:**

@@ -247,5 +247,7 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 [[per-role-command-architecture|Per-Role Command Architecture]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[spec-driven-development|Spec-Driven Development]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]
 [[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]]
 [[src-superpowers-end-of-vibe-coding|Synthesis — Superpowers Plugin — End of Vibe Coding (Full Tutorial)]]
+[[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]

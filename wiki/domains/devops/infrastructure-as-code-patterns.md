@@ -132,7 +132,7 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 ## Relationships
 
 - EXTENDS: [[design-md-pattern|Design.md Pattern]]
-- RELATES TO: [[devops-control-plane]]
+- RELATES TO: [[devops-control-plane|devops-control-plane]]
 - RELATES TO: [[openfleet|OpenFleet]]
 - RELATES TO: [[harness-engineering|Harness Engineering]]
 - RELATES TO: [[skills-architecture-patterns|Skills Architecture Patterns]]

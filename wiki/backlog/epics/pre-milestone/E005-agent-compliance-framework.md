@@ -89,8 +89,8 @@ Turn methodology theory into agent enforcement. Document and productize the stru
 
 ## Relationships
 
-- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]] (E003)
-- DEPENDS ON: [[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)
+- DEPENDS ON: [[[[E003-artifact-type-system|Artifact Type System]] (E003)]]
+- DEPENDS ON: [[[[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)]]
 - BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

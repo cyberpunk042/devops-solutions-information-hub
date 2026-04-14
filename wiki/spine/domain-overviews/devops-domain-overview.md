@@ -113,11 +113,11 @@ WSL2 affects service startup (no systemd by default), networking (bridged vs NAT
 
 ## Relationships
 
-- ENABLES: AI Agents — Domain Overview
-- ENABLES: Tools And Platforms — Domain Overview
-- ENABLES: Automation — Domain Overview
-- RELATES TO: Knowledge Systems — Domain Overview
-- UNDERPINS: AI Models — Domain Overview
+- ENABLES: [[ai-agents-domain-overview|AI Agents — Domain Overview]]
+- ENABLES: [[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+- ENABLES: [[automation-domain-overview|Automation — Domain Overview]]
+- RELATES TO: [[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+- UNDERPINS: [[ai-models-domain-overview|AI Models — Domain Overview]]
 
 ## Backlinks
 

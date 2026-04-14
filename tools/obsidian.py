@@ -164,6 +164,104 @@ def _strip_backlinks(text: str) -> str:
     return pattern.sub("", text)
 
 
+def fix_relationships(text: str, lookup: Dict[str, Dict[str, str]]) -> str:
+    """Fix the ## Relationships section to use proper [[slug|title]] wikilinks.
+
+    Resolves bare titles, display-only titles, and bare slugs to
+    the canonical [[filename|Full Title]] format. Removes lines
+    whose targets are prose descriptions (not real pages).
+    """
+    sections = parse_sections(text.split("---", 2)[-1] if text.startswith("---") else text)
+    rel_text = sections.get("Relationships", "")
+    if not rel_text:
+        return text
+
+    # Find the relationships section boundaries in the original text
+    rel_marker = "## Relationships"
+    rel_start = text.find(rel_marker)
+    if rel_start == -1:
+        return text
+
+    # Find where the section ends (next ## or ## Backlinks or EOF)
+    after_rel = text[rel_start + len(rel_marker):]
+    next_section = re.search(r"\n## ", after_rel)
+    if next_section:
+        rel_end = rel_start + len(rel_marker) + next_section.start()
+    else:
+        rel_end = len(text)
+
+    rel_body = text[rel_start + len(rel_marker):rel_end]
+
+    # Process each relationship line
+    new_lines = []
+    for line in rel_body.split("\n"):
+        stripped = line.strip()
+        if not stripped or not stripped.startswith("- "):
+            new_lines.append(line)
+            continue
+
+        # Parse: "- VERB: target" or "- VERB: [[slug|title]]"
+        match = re.match(r"^- ([A-Z ]+):\s*(.+)$", stripped)
+        if not match:
+            new_lines.append(line)
+            continue
+
+        verb = match.group(1).strip()
+        target_raw = match.group(2).strip()
+
+        # Already a proper [[slug|title]] wikilink? Keep it.
+        if re.match(r"^\[\[[a-z0-9-]+\|.+\]\]", target_raw):
+            new_lines.append(line)
+            continue
+
+        # Strip existing [[ ]] if bare [[title]]
+        target_clean = target_raw
+        if target_clean.startswith("[[") and target_clean.endswith("]]"):
+            target_clean = target_clean[2:-2]
+            # If it has a pipe, check if slug part is valid
+            if "|" in target_clean:
+                slug_part = target_clean.split("|")[0]
+                if slug_part in lookup or any(
+                    info.get("slug") == slug_part for info in lookup.values()
+                ):
+                    new_lines.append(line)
+                    continue
+
+        # Try to resolve the bare target
+        resolved = _resolve_target(target_clean, lookup)
+        if resolved.startswith("[[") and "|" in resolved:
+            # Successfully resolved to [[slug|title]]
+            new_lines.append(f"- {verb}: {resolved}")
+        else:
+            # Check if it looks like prose (>60 chars, has spaces, lowercase start)
+            if len(target_clean) > 60 or (
+                not target_clean[0].isupper() and not target_clean.startswith("[[")
+            ):
+                # Prose description, not a page — skip it
+                continue
+            # Keep unresolved but leave as-is (lint will catch it)
+            new_lines.append(line)
+
+    new_rel_body = "\n".join(new_lines)
+    return text[:rel_start + len(rel_marker)] + new_rel_body + text[rel_end:]
+
+
+def fix_all_relationships(wiki_dir: Path) -> Dict[str, Any]:
+    """Fix relationships in all wiki pages. Returns report."""
+    manifest = build_manifest(wiki_dir)
+    lookup = build_title_lookup(manifest)
+
+    fixed: List[str] = []
+    for md_file in find_wiki_pages(wiki_dir):
+        text = md_file.read_text(encoding="utf-8")
+        new_text = fix_relationships(text, lookup)
+        if new_text != text:
+            md_file.write_text(new_text, encoding="utf-8")
+            fixed.append(str(md_file.relative_to(wiki_dir)))
+
+    return {"fixed": len(fixed), "files": fixed}
+
+
 def clean_backlinks(wiki_dir: Path) -> int:
     """Remove ## Backlinks from all wiki pages. Returns count of modified files."""
     count = 0

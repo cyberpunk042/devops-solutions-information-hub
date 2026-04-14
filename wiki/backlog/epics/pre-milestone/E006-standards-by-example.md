@@ -94,7 +94,7 @@ Every standard the wiki defines must ship with a gold-standard exemplar that pas
 
 ## Relationships
 
-- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- DEPENDS ON: [[[[E003-artifact-type-system|Artifact Type System]] (E003)]]
 - BUILDS ON: [[standards-must-preach-by-example|Standards Must Preach by Example]]
 - BUILDS ON: [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 - IMPLEMENTS: [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]

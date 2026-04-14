@@ -115,7 +115,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 - RELATES TO: [[openclaw|OpenClaw]]
 - ENABLES: [[claude-code-skills|Claude Code Skills]]
 - FEEDS INTO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
-- RELATES TO: [[devops-control-plane]]
+- RELATES TO: [[devops-control-plane|devops-control-plane]]
 
 ## Backlinks
 

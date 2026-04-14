@@ -279,7 +279,7 @@ Generic artifact (from taxonomy) + Domain profile overrides = Resolved artifact 
 
 ## Relationships
 
-- IMPLEMENTS: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- IMPLEMENTS: [[[[E003-artifact-type-system|Artifact Type System]] (E003)]]
 - BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 - RELATES TO: [[methodology-framework|Methodology Framework]]

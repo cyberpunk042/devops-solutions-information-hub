@@ -149,3 +149,4 @@ The Agentic SDLC literature validates two of our patterns:
 [[model-methodology|Model — Methodology]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]

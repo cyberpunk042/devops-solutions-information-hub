@@ -60,8 +60,8 @@ Harness engineering is the practice of building structured control systems aroun
 
 ## Relationships
 
-- DERIVED FROM: src-harness-engineering-article
-- DERIVED FROM: src-harness-engineering-github
+- DERIVED FROM: [[cross-domain-patterns|Cross-Domain Patterns]]
+- DERIVED FROM: [[harness-engineering|Harness Engineering]]
 - EXTENDS: [[claude-code-best-practices|Claude Code Best Practices]]
 - EXTENDS: [[claude-code-skills|Claude Code Skills]]
 - RELATES TO: [[claude-code|Claude Code]]

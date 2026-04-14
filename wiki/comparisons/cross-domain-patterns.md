@@ -218,3 +218,4 @@ Certain structural patterns recur independently across multiple domains in this 
 [[wiki-knowledge-graph|Wiki Knowledge Graph]]
 [[second-brain-architecture|Second Brain Architecture]]
 [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[src-harness-engineering|Synthesis — Claude Code Harness Engineering]]

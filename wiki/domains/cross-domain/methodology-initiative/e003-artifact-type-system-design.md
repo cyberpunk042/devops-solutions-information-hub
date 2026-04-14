@@ -798,13 +798,13 @@ The validator already works. We don't rewrite it. We add layers:
 
 ## Relationships
 
-- IMPLEMENTS: [[E003-artifact-type-system|Artifact Type System]] (E003)
+- IMPLEMENTS: [[[[E003-artifact-type-system|Artifact Type System]] (E003)]]
 - BUILDS ON: [[e003-artifact-type-system-requirements|E003 Artifact Type System — Requirements Spec]]
 - BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
 - RELATES TO: [[methodology-framework|Methodology Framework]]
 - RELATES TO: [[task-type-artifact-matrix|Task Type Artifact Matrix]]
-- FEEDS INTO: [[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)
-- FEEDS INTO: [[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)
+- FEEDS INTO: [[[[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)]]
+- FEEDS INTO: [[[[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)]]
 
 ## Backlinks
 

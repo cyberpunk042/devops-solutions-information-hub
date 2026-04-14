@@ -123,12 +123,12 @@ The choice depends on three variables: scale (< 200 pages favors agentic navigat
 
 ## Relationships
 
-- SYNTHESIZES FROM: AI Agents — Domain Overview
-- SYNTHESIZES FROM: Knowledge Systems — Domain Overview
-- SYNTHESIZES FROM: Tools And Platforms — Domain Overview
-- SYNTHESIZES FROM: Automation — Domain Overview
-- SYNTHESIZES FROM: Devops — Domain Overview
-- SYNTHESIZES FROM: AI Models — Domain Overview
+- SYNTHESIZES FROM: [[ai-agents-domain-overview|AI Agents — Domain Overview]]
+- SYNTHESIZES FROM: [[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+- SYNTHESIZES FROM: [[tools-and-platforms-domain-overview|Tools And Platforms — Domain Overview]]
+- SYNTHESIZES FROM: [[automation-domain-overview|Automation — Domain Overview]]
+- SYNTHESIZES FROM: [[devops-domain-overview|Devops — Domain Overview]]
+- SYNTHESIZES FROM: [[ai-models-domain-overview|AI Models — Domain Overview]]
 
 ## Backlinks
 

@@ -107,9 +107,9 @@ Nothing. Can start immediately.
 
 ## Relationships
 
-- ENABLES: [[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)
-- ENABLES: [[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)
-- ENABLES: [[E006-standards-by-example|Standards-by-Example]] (E006)
+- ENABLES: [[[[E004-portable-methodology-engine|Portable Methodology Engine]] (E004)]]
+- ENABLES: [[[[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)]]
+- ENABLES: [[[[E006-standards-by-example|Standards-by-Example]] (E006)]]
 - BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[methodology-framework|Methodology Framework]]

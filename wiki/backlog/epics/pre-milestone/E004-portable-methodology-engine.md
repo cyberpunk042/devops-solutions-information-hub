@@ -77,8 +77,8 @@ Create a generic, parameterizable methodology configuration system that the wiki
 
 ## Relationships
 
-- DEPENDS ON: [[E003-artifact-type-system|Artifact Type System]] (E003)
-- ENABLES: [[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)
+- DEPENDS ON: [[[[E003-artifact-type-system|Artifact Type System]] (E003)]]
+- ENABLES: [[[[E005-agent-compliance-framework|Agent Compliance Framework]] (E005)]]
 - BUILDS ON: [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]
 - BUILDS ON: [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 - IMPLEMENTS: [[methodology-framework|Methodology Framework]]

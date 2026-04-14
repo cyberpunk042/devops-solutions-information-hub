@@ -1,23 +1,24 @@
 {
-  "generated": "2026-04-14T00:26:46.890018+00:00",
+  "generated": "2026-04-14T13:44:22.205828+00:00",
   "stats": {
-    "pages": 298,
+    "pages": 301,
     "domains": 9,
-    "sources": 28,
+    "sources": 31,
     "comparisons": 5,
-    "relationships": 1988,
-    "tags_unique": 854,
+    "relationships": 2007,
+    "tags_unique": 866,
     "layers": {
       "3": 4,
       "6": 16,
       "2": 51,
       "4": 40,
       "5": 18,
-      "1": 24,
+      "1": 25,
       "spine": 62
     },
     "maturity": {
-      "growing": 255
+      "growing": 257,
+      "seed": 1
     }
   },
   "pages": [
@@ -481,7 +482,7 @@
       "title": "E017 \u2014 Context Engineering Framework \u2014 Formalized as Model with Standards",
       "type": "epic",
       "domain": "backlog",
-      "status": "draft",
+      "status": "active",
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-12",
@@ -625,7 +626,7 @@
       "title": "E021 \u2014 New Source Ingestion \u2014 10-15 Sources Through Full Pipeline",
       "type": "epic",
       "domain": "backlog",
-      "status": "draft",
+      "status": "active",
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
@@ -3893,7 +3894,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-14",
       "tags": [
         "spec-driven-development",
         "bmad",
@@ -3907,7 +3908,10 @@
         "sdlc",
         "design-before-code",
         "spec-to-code",
-        "phase-gating"
+        "phase-gating",
+        "brownfield",
+        "delta-specs",
+        "openspec"
       ],
       "sources": [
         {
@@ -3937,6 +3941,13 @@
           "file": "raw/articles/shanraisshan-claude-code-best-practice.md",
           "title": "shanraisshan/claude-code-best-practice",
           "ingested": "2026-04-08"
+        },
+        {
+          "id": "openspec-github",
+          "type": "repo",
+          "url": "https://github.com/Fission-AI/OpenSpec",
+          "title": "Fission-AI/OpenSpec \u2014 Spec-Driven Development Framework",
+          "ingested": "2026-04-14"
         }
       ],
       "layer": 2,
@@ -3974,6 +3985,10 @@
         {
           "verb": "FEEDS INTO",
           "target": "Wiki Backlog Pattern"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis: OpenSpec \u2014 Spec-Driven Development Framework"
         }
       ]
     },
@@ -15157,6 +15172,185 @@
       ]
     },
     {
+      "path": "sources/src-bmad-method-agile-ai-development-framework.md",
+      "slug": "sources/src-bmad-method-agile-ai-development-framework",
+      "title": "Synthesis: BMAD-METHOD \u2014 Agile AI-Driven Development Framework",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "ai-agents",
+        "methodology",
+        "agile",
+        "development-framework",
+        "multi-agent",
+        "context-engineering",
+        "brainstorming",
+        "workflow-phases",
+        "scale-adaptive"
+      ],
+      "sources": [
+        {
+          "id": "bmad-method-github",
+          "type": "repository",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Harness Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-github-spec-kit-specification-driven-development.md",
+      "slug": "sources/src-github-spec-kit-specification-driven-development",
+      "title": "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "spec-driven-development",
+        "sdd",
+        "ai-agents",
+        "methodology",
+        "templates",
+        "slash-commands",
+        "constitutional-compliance",
+        "workflow-automation",
+        "extensions",
+        "presets",
+        "claude-code",
+        "cross-domain"
+      ],
+      "sources": [
+        {
+          "id": "src-github-spec-kit",
+          "type": "documentation",
+          "url": "https://github.com/github/spec-kit",
+          "file": "raw/articles/githubspec-kit.md",
+          "title": "GitHub Spec Kit \u2014 Specification-Driven Development Toolkit",
+          "ingested": "2026-04-14"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 Methodology"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-openspec-spec-driven-development-framework.md",
+      "slug": "sources/src-openspec-spec-driven-development-framework",
+      "title": "Synthesis: OpenSpec \u2014 Spec-Driven Development Framework",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "spec-driven-development",
+        "ai-agents",
+        "methodology",
+        "artifacts",
+        "commands",
+        "workflows",
+        "brownfield",
+        "sdlc"
+      ],
+      "sources": [
+        {
+          "id": "openspec-github",
+          "type": "repo",
+          "url": "https://github.com/Fission-AI/OpenSpec"
+        }
+      ],
+      "layer": "",
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Spec-Driven Development"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 SDLC Frameworks Research \u2014 CMMI, Lean Startup, and Agentic SDLC"
+        }
+      ]
+    },
+    {
       "path": "sources/src-plannotator.md",
       "slug": "sources/src-plannotator",
       "title": "Plannotator \u2014 Interactive Plan & Code Review for AI Agents",
@@ -19533,12 +19727,12 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 135,
-      "relationship_count": 913
+      "page_count": 138,
+      "relationship_count": 931
     },
     "ai-agents": {
       "page_count": 49,
-      "relationship_count": 391
+      "relationship_count": 392
     },
     "tools-and-platforms": {
       "page_count": 23,
@@ -19733,7 +19927,8 @@
       "backlog/epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples",
       "backlog/epics/pre-milestone/E003-artifact-type-system",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
-      "domains/cross-domain/methodology-initiative/e003-artifact-type-system-requirements"
+      "domains/cross-domain/methodology-initiative/e003-artifact-type-system-requirements",
+      "sources/src-github-spec-kit-specification-driven-development"
     ],
     "proto-programming": [
       "backlog/epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples",
@@ -20019,6 +20214,9 @@
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
+      "sources/src-bmad-method-agile-ai-development-framework",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "spine/evolution-log/methodology-evolution-history",
       "spine/learning-paths/methodology-fundamentals",
@@ -20161,6 +20359,7 @@
       "domains/cross-domain/methodology-framework/readiness-vs-progress",
       "domains/cross-domain/methodology-framework/sdlc-customization-framework",
       "domains/cross-domain/methodology-framework/three-pm-levels",
+      "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "sources/wiki-methodology/src-sdlc-frameworks-research"
     ],
@@ -20357,6 +20556,7 @@
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
+      "sources/src-github-spec-kit-specification-driven-development",
       "spine/domain-overviews/cross-domain-domain-overview",
       "spine/models/quality/model-sfif-architecture"
     ],
@@ -20422,6 +20622,9 @@
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "sources/src-bmad-method-agile-ai-development-framework",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "sources/wiki-methodology/src-awesome-design-md",
       "spine/domain-overviews/ai-agents-domain-overview"
@@ -20502,6 +20705,7 @@
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/src-github-spec-kit-specification-driven-development",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
@@ -20653,6 +20857,7 @@
       "domains/devops/stage-gate-methodology",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research"
     ],
     "bridge-pattern": [
@@ -20889,6 +21094,7 @@
       "domains/ai-agents/patterns/per-role-command-architecture",
       "sources/claude-code/src-claude-slash-commands",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-openspec-spec-driven-development-framework",
       "spine/models/agent-config/model-skills-commands-hooks",
       "spine/standards/model-standards/model-skills-commands-hooks-standards"
     ],
@@ -20898,7 +21104,8 @@
     "slash-commands": [
       "decisions/02_validated/tools/per-role-command-design-decisions",
       "domains/ai-agents/patterns/per-role-command-architecture",
-      "sources/claude-code/src-claude-slash-commands"
+      "sources/claude-code/src-claude-slash-commands",
+      "sources/src-github-spec-kit-specification-driven-development"
     ],
     "scope": [
       "decisions/02_validated/tools/per-role-command-design-decisions"
@@ -20971,7 +21178,8 @@
     ],
     "workflows": [
       "domains/ai-agents/claude-code/claude-code-best-practices",
-      "sources/claude-code/src-shanraisshan-claude-code-best-practice"
+      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-openspec-spec-driven-development-framework"
     ],
     "prompting": [
       "domains/ai-agents/claude-code/claude-code-best-practices"
@@ -21019,6 +21227,7 @@
       "domains/ai-agents/claude-code/claude-code-context-management",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-bmad-method-agile-ai-development-framework",
       "spine/models/depth/model-context-engineering",
       "spine/standards/model-standards/model-context-engineering-standards"
     ],
@@ -21098,6 +21307,7 @@
       "domains/ai-agents/orchestration/openfleet",
       "domains/ai-agents/patterns/spec-driven-development",
       "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work",
+      "sources/src-bmad-method-agile-ai-development-framework",
       "sources/wiki-methodology/src-llm-wiki-v2-agentmemory"
     ],
     "deterministic-brain": [
@@ -21324,7 +21534,9 @@
     ],
     "spec-driven-development": [
       "domains/ai-agents/patterns/spec-driven-development",
-      "sources/claude-code/src-superpowers-end-of-vibe-coding"
+      "sources/claude-code/src-superpowers-end-of-vibe-coding",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/src-openspec-spec-driven-development-framework"
     ],
     "bmad": [
       "domains/ai-agents/patterns/spec-driven-development"
@@ -21347,6 +21559,16 @@
       "domains/ai-agents/patterns/spec-driven-development"
     ],
     "phase-gating": [
+      "domains/ai-agents/patterns/spec-driven-development"
+    ],
+    "brownfield": [
+      "domains/ai-agents/patterns/spec-driven-development",
+      "sources/src-openspec-spec-driven-development-framework"
+    ],
+    "delta-specs": [
+      "domains/ai-agents/patterns/spec-driven-development"
+    ],
+    "openspec": [
       "domains/ai-agents/patterns/spec-driven-development"
     ],
     "task-lifecycle": [
@@ -23143,6 +23365,37 @@
     "mcp-alternative": [
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
     ],
+    "agile": [
+      "sources/src-bmad-method-agile-ai-development-framework",
+      "sources/wiki-methodology/methodology-artifact-taxonomy-research"
+    ],
+    "development-framework": [
+      "sources/src-bmad-method-agile-ai-development-framework"
+    ],
+    "brainstorming": [
+      "sources/src-bmad-method-agile-ai-development-framework"
+    ],
+    "workflow-phases": [
+      "sources/src-bmad-method-agile-ai-development-framework"
+    ],
+    "scale-adaptive": [
+      "sources/src-bmad-method-agile-ai-development-framework"
+    ],
+    "sdd": [
+      "sources/src-github-spec-kit-specification-driven-development"
+    ],
+    "constitutional-compliance": [
+      "sources/src-github-spec-kit-specification-driven-development"
+    ],
+    "workflow-automation": [
+      "sources/src-github-spec-kit-specification-driven-development"
+    ],
+    "extensions": [
+      "sources/src-github-spec-kit-specification-driven-development"
+    ],
+    "presets": [
+      "sources/src-github-spec-kit-specification-driven-development"
+    ],
     "plan-annotation": [
       "sources/src-plannotator"
     ],
@@ -23197,9 +23450,6 @@
     ],
     "122b-parameters": [
       "sources/tools-integration/src-turboquant-122b-macbook"
-    ],
-    "agile": [
-      "sources/wiki-methodology/methodology-artifact-taxonomy-research"
     ],
     "awesome-list": [
       "sources/wiki-methodology/src-awesome-design-md"

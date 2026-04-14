@@ -116,12 +116,12 @@ CLI+Skills is 12x cheaper in token cost, more accurate for project-internal tool
 
 ## Relationships
 
-- USED BY: AI Agents — Domain Overview
-- IMPLEMENTS: Knowledge Systems — Domain Overview
-- FEEDS INTO: Automation — Domain Overview
-- RELATES TO: Devops — Domain Overview
-- BUILDS ON: AI Models — Domain Overview
-- RELATES TO: Cross-Domain — Domain Overview
+- USED BY: [[ai-agents-domain-overview|AI Agents — Domain Overview]]
+- IMPLEMENTS: [[knowledge-systems-domain-overview|Knowledge Systems — Domain Overview]]
+- FEEDS INTO: [[automation-domain-overview|Automation — Domain Overview]]
+- RELATES TO: [[devops-domain-overview|Devops — Domain Overview]]
+- BUILDS ON: [[ai-models-domain-overview|AI Models — Domain Overview]]
+- RELATES TO: [[cross-domain-domain-overview|Cross-Domain — Domain Overview]]
 
 ## Backlinks
 

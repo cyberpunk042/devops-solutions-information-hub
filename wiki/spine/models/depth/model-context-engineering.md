@@ -281,3 +281,5 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
+[[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
+[[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]

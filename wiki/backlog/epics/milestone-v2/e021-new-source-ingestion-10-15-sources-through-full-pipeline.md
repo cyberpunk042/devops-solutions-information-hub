@@ -5,12 +5,12 @@ aliases:
   - "E021 — New Source Ingestion: 10-15 Sources Through Full Pipeline"
 type: epic
 domain: backlog
-status: draft
+status: active
 priority: P1
 task_type: epic
 current_stage: document
-readiness: 0
-progress: 0
+readiness: 15
+progress: 5
 stages_completed:
 artifacts:
 confidence: high

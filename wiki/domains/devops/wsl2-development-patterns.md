@@ -151,7 +151,7 @@ Cross-referencing `Infrastructure as Code Patterns`: The `Infrastructure as Code
 
 - RELATES TO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 - RELATES TO: [[mcp-integration-architecture|MCP Integration Architecture]]
-- RELATES TO: [[devops-control-plane]]
+- RELATES TO: [[devops-control-plane|devops-control-plane]]
 - ENABLES: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 - RELATES TO: [[obsidian-cli|Obsidian CLI]]
 - RELATES TO: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]

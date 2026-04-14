@@ -9,7 +9,7 @@ domain: ai-agents
 status: synthesized
 confidence: high
 created: 2026-04-09
-updated: 2026-04-10
+updated: 2026-04-14
 sources:
   - id: src-openfleet-methodology-scan
     type: documentation
@@ -31,7 +31,12 @@ sources:
     file: raw/articles/shanraisshan-claude-code-best-practice.md
     title: shanraisshan/claude-code-best-practice
     ingested: 2026-04-08
-tags: [spec-driven-development, bmad, spec-kit, superpowers, openfleet, planning, artifacts, immutable-checkpoints, multi-agent, sdlc, design-before-code, spec-to-code, phase-gating]
+  - id: openspec-github
+    type: repo
+    url: "https://github.com/Fission-AI/OpenSpec"
+    title: "Fission-AI/OpenSpec — Spec-Driven Development Framework"
+    ingested: 2026-04-14
+tags: [spec-driven-development, bmad, spec-kit, superpowers, openfleet, planning, artifacts, immutable-checkpoints, multi-agent, sdlc, design-before-code, spec-to-code, phase-gating, brownfield, delta-specs, openspec]
 ---
 
 # Spec-Driven Development
@@ -116,6 +121,64 @@ All surveyed frameworks include quality requirements on the spec itself:
 
 The convergence: a spec is insufficient if it is vague, missing acceptance criteria, or not traceable to a requirement.
 
+### OpenSpec: Fluid Actions vs. Phase Gates — A New SDD Architecture
+
+OpenSpec v1.0 (OPSX) introduces a structurally different enforcement model compared to earlier SDD frameworks. Rather than phase gates that must be sequentially cleared, OPSX uses an **artifact dependency graph** — a directed acyclic graph (DAG) where artifacts enable rather than block. The key shift:
+
+| Aspect | Phase-Gate SDD (BMAD, Superpowers) | Dependency-Graph SDD (OpenSpec OPSX) |
+|--------|-------------------------------------|--------------------------------------|
+| **Constraint mechanism** | Stage readiness gates | Artifact dependency graph |
+| **Enforcement** | Phase boundary artifacts block progress | Dependencies enable creation, not block |
+| **Iteration** | Within a stage | Edit any artifact anytime |
+| **Backtracking** | Awkward; phase gates don't let you go back | Natural — just edit the artifact |
+| **Context** | Agent workflow, batch operations | Code project, incremental delivery |
+
+OpenSpec's dependency graph for the default `spec-driven` schema:
+
+```
+proposal (root)
+    ├──► specs (requires: proposal)
+    └──► design (requires: proposal)
+              └──► tasks (requires: specs + design)
+                         └──► APPLY (requires: tasks)
+```
+
+The philosophy: "dependencies are enablers, not gates." If you're implementing and discover the design is wrong, you edit `design.md` and continue. There's no phase gate preventing backtracking. This works for code projects where requirements legitimately emerge during implementation. Phase gates (our wiki's methodology, BMAD) are appropriate for knowledge synthesis and infrastructure design where the cost of wrong-direction work is higher and early-stage artifacts genuinely must mature before later stages are attempted.
+
+### Delta Specs: SDD for Brownfield Development
+
+All surveyed SDD frameworks were primarily designed for 0→1 (greenfield) development. OpenSpec's delta spec format extends SDD to 1→N (brownfield) modification, which represents the majority of real software work.
+
+A delta spec describes only what's changing relative to the existing behavioral specification:
+
+```markdown
+## ADDED Requirements
+### Requirement: Two-Factor Authentication
+The system MUST support TOTP-based two-factor authentication.
+
+## MODIFIED Requirements
+### Requirement: Session Expiration
+The system MUST expire sessions after 15 minutes.
+(Previously: 30 minutes)
+
+## REMOVED Requirements
+### Requirement: Remember Me
+(Deprecated in favor of 2FA.)
+```
+
+On archive, each section is processed semantically at the requirement level — appended, replaced, or deleted in the living `openspec/specs/` folder. Two parallel changes can touch the same spec file as long as they modify different requirements, making conflict avoidance structural rather than procedural.
+
+The key architectural distinction: OpenSpec separates `openspec/specs/` (behavioral truth, stable) from `openspec/changes/` (proposed modifications, ephemeral). Changes are self-contained folders with all related artifacts (proposal, specs delta, design, tasks) that merge atomically into the living spec on archive. This "change as folder" model enables: parallel work without conflict, clean audit history with preserved WHY/HOW context, and review efficiency (one folder = one complete picture).
+
+### Progressive Rigor: Spec Weight Must Match Change Risk
+
+OpenSpec explicitly names the bureaucracy trap: applying full spec rigor to every change kills adoption. The framework distinguishes:
+
+- **Lite specs** (default): short behavior-first requirements, clear scope and non-goals, a few concrete acceptance checks
+- **Full specs** (high-risk): RFC 2119 keywords throughout, complete Given/When/Then coverage, cross-team coordination, API/contract changes, migrations, security/privacy concerns
+
+The heuristic: "use the lightest level that still makes the change verifiable." This calibration principle is absent from most SDD documentation but is critical for real-world adoption. The same principle appears in our methodology as model selection — `hotfix` and `documentation` models avoid full stage-gate overhead for cases where the overhead exceeds the risk.
+
 ## Open Questions
 
 - How do spec artifacts handle mid-project discovery? All frameworks assume spec precedes implementation, but real projects often discover requirements during implementation. OpenFleet has a REASONING stage that collects contributions before WORK — is that sufficient for mid-flight spec evolution?
@@ -149,6 +212,7 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 - RELATES TO: [[openfleet|OpenFleet]] (primary source — SPEC-TO-CODE.md, contamination cleanup, plan_quality.py)
 - RELATES TO: [[harness-engineering|Harness Engineering]] (harness is the spec-driven development tooling layer)
 - FEEDS INTO: [[wiki-backlog-pattern|Wiki Backlog Pattern]] (when wiki pages are spec artifacts, the wiki IS the spec system)
+- BUILDS ON: [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]] (primary new source: delta specs, OPSX fluid actions, dependency graph model)
 
 ## Backlinks
 
@@ -160,6 +224,7 @@ The convergence: a spec is insufficient if it is vague, missing acceptance crite
 [[openfleet|OpenFleet]]
 [[harness-engineering|Harness Engineering]]
 [[wiki-backlog-pattern|Wiki Backlog Pattern]]
+[[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]
 [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
 [[methodology-framework|Methodology Framework]]

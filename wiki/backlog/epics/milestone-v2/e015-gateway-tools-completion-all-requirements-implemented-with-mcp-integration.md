@@ -9,8 +9,8 @@ status: active
 priority: P1
 task_type: epic
 current_stage: implement
-readiness: 85
-progress: 80
+readiness: 70
+progress: 65
 stages_completed:
   - "scaffold"
 artifacts:

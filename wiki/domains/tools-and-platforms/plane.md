@@ -109,7 +109,7 @@ Cross-referencing `OpenFleet` and the DSPD fleet integration documented in this 
 - USED BY: [[openfleet|OpenFleet]]
 - RELATES TO: [[aicp|AICP]]
 - RELATES TO: [[openclaw|OpenClaw]]
-- RELATES TO: [[devops-control-plane]]
+- RELATES TO: [[devops-control-plane|devops-control-plane]]
 - ENABLES: [[claude-code-scheduling|Claude Code Scheduling]]
 
 ## Backlinks

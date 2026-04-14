@@ -112,32 +112,122 @@ def _fetch_github_content(url: str) -> Tuple[str, str, str]:
         raise ValueError(f"Cannot parse GitHub URL: {url}")
 
     owner, repo = match.group(1), match.group(2).rstrip("/")
-    api_url = f"https://api.github.com/repos/{owner}/{repo}/readme"
-    req = urllib.request.Request(api_url, headers={
-        "User-Agent": "research-wiki-ingest",
-        "Accept": "application/vnd.github.v3+json",
-    })
+    title = f"{owner}/{repo}"
 
+    # Use gh CLI for richer content if available
+    gh_available = subprocess.run(
+        ["which", "gh"], capture_output=True
+    ).returncode == 0
+
+    content_parts = []
+
+    # 1. Fetch README
     try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-
-        import base64
-        content = base64.b64decode(data.get("content", "")).decode("utf-8")
-        title = f"{owner}/{repo}"
-        return content, title, "documentation"
-    except urllib.error.HTTPError:
-        # No README, try fetching repo description
-        api_url = f"https://api.github.com/repos/{owner}/{repo}"
+        api_url = f"https://api.github.com/repos/{owner}/{repo}/readme"
         req = urllib.request.Request(api_url, headers={
             "User-Agent": "research-wiki-ingest",
             "Accept": "application/vnd.github.v3+json",
         })
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-        desc = data.get("description", "No description")
-        title = f"{owner}/{repo}"
-        return f"# {title}\n\n{desc}\n", title, "documentation"
+        import base64
+        readme = base64.b64decode(data.get("content", "")).decode("utf-8")
+        content_parts.append(f"# README\n\n{readme}")
+    except urllib.error.HTTPError:
+        # No README — try repo description
+        try:
+            api_url = f"https://api.github.com/repos/{owner}/{repo}"
+            req = urllib.request.Request(api_url, headers={
+                "User-Agent": "research-wiki-ingest",
+                "Accept": "application/vnd.github.v3+json",
+            })
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+            content_parts.append(f"# {title}\n\n{data.get('description', 'No description')}")
+        except Exception:
+            content_parts.append(f"# {title}\n\n(No README available)")
+
+    # 2. Fetch repo tree to find key documentation files
+    key_patterns = [
+        ".md", ".yaml", ".yml", ".json",  # docs and configs
+    ]
+    skip_dirs = {
+        "node_modules", ".git", "dist", "build", "__pycache__",
+        ".venv", "vendor", ".github/workflows",
+    }
+    # Directories likely to have important content
+    priority_dirs = {
+        "docs", "spec", "specs", "templates", "standards",
+        "methodology", "src", "lib", "config", "prompts",
+        "agents", "skills", "rules",
+    }
+
+    try:
+        api_url = f"https://api.github.com/repos/{owner}/{repo}/git/trees/main?recursive=1"
+        req = urllib.request.Request(api_url, headers={
+            "User-Agent": "research-wiki-ingest",
+            "Accept": "application/vnd.github.v3+json",
+        })
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                tree_data = json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError:
+            # Try master branch if main doesn't exist
+            api_url = api_url.replace("/main?", "/master?")
+            req = urllib.request.Request(api_url, headers={
+                "User-Agent": "research-wiki-ingest",
+                "Accept": "application/vnd.github.v3+json",
+            })
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                tree_data = json.loads(resp.read().decode("utf-8"))
+
+        # Filter for important files
+        important_files = []
+        for item in tree_data.get("tree", []):
+            if item["type"] != "blob":
+                continue
+            path = item["path"]
+            # Skip vendored/build dirs
+            if any(skip in path for skip in skip_dirs):
+                continue
+            # Skip README (already fetched)
+            if path.lower() in ("readme.md", "readme.rst", "readme.txt"):
+                continue
+            # Include markdown and config files in priority dirs
+            parts = path.split("/")
+            in_priority = any(p.lower() in priority_dirs for p in parts[:-1])
+            is_root_md = len(parts) == 1 and path.endswith(".md")
+            is_root_config = len(parts) == 1 and path.endswith((".yaml", ".yml"))
+            is_priority_file = in_priority and any(path.endswith(ext) for ext in key_patterns)
+
+            if is_root_md or is_root_config or is_priority_file:
+                important_files.append(path)
+
+        # Fetch up to 30 key files (avoid rate limits)
+        fetched_count = 0
+        for fpath in sorted(important_files)[:30]:
+            try:
+                file_url = f"https://api.github.com/repos/{owner}/{repo}/contents/{fpath}"
+                req = urllib.request.Request(file_url, headers={
+                    "User-Agent": "research-wiki-ingest",
+                    "Accept": "application/vnd.github.v3+json",
+                })
+                with urllib.request.urlopen(req, timeout=10) as resp:
+                    fdata = json.loads(resp.read().decode("utf-8"))
+                import base64
+                file_content = base64.b64decode(fdata.get("content", "")).decode("utf-8")
+                content_parts.append(f"\n\n---\n\n# FILE: {fpath}\n\n{file_content}")
+                fetched_count += 1
+            except Exception:
+                continue  # Skip files that can't be fetched
+
+        if fetched_count > 0:
+            content_parts.insert(1, f"\n\n> **Deep fetch: {fetched_count} key files fetched beyond README.**\n")
+
+    except Exception:
+        pass  # Tree fetch failed — we still have the README
+
+    return "\n".join(content_parts), title, "documentation"
 
 
 def _fetch_web_page(url: str) -> Tuple[str, str]:

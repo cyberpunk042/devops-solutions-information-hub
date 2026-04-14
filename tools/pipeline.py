@@ -234,7 +234,13 @@ def post_chain(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
     if validation["errors"] > 0:
         report["success"] = False
 
-    # Step 4: Regenerate wikilinks
+    # Step 4a: Fix relationship targets (bare titles → [[slug|title]])
+    from tools.obsidian import fix_all_relationships
+    rel_fix = fix_all_relationships(wiki_dir)
+    if rel_fix["fixed"] > 0 and verbose:
+        print(f"    Fixed relationships in {rel_fix['fixed']} file(s)")
+
+    # Step 4b: Regenerate wikilinks
     if verbose:
         print("  [4/6] Regenerating wikilinks...")
     obsidian = run_obsidian(project_root)

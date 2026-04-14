@@ -114,7 +114,7 @@ The current polling implementation can run indefinitely without degradation — 
 - DERIVED FROM: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
 - DERIVED FROM: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 - RELATES TO: [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
-- RELATES TO: [[devops-control-plane]]
+- RELATES TO: [[devops-control-plane|devops-control-plane]]
 - ENABLES: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
 - FEEDS INTO: [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 - RELATES TO: [[obsidian-knowledge-vault|Obsidian Knowledge Vault]]

@@ -127,7 +127,7 @@ This is a model for how operational knowledge should flow in any multi-project e
 
 ## Relationships
 
-- DERIVED FROM: [[devops-control-plane]]
+- DERIVED FROM: [[devops-control-plane|devops-control-plane]]
 - IMPLEMENTS: [[openfleet|OpenFleet]]
 - RELATES TO: [[harness-engineering|Harness Engineering]]
 - RELATES TO: [[aicp|AICP]]
