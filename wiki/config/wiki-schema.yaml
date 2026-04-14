@@ -38,6 +38,7 @@ optional_fields:
   - promoted_to          # runtime promotion — new model after promotion
   - promotion_reason     # runtime promotion — why the model changed
   - promoted_at          # runtime promotion — ISO date of the promotion event
+  - methodology_doc_type # optional: declare methodology role (e.g. requirements-spec, ADR, tech-spec, test-plan) while retaining structural type (concept/decision/reference). Makes methodology identity queryable without new wiki types.
   - note_type
   - impediment_type
   - blocked_by
@@ -132,6 +133,16 @@ enums:
     - directive
     - session
     - completion
+    - archived
+  methodology_doc_type:
+    - requirements-spec
+    - infrastructure-analysis
+    - gap-analysis
+    - design-plan
+    - tech-spec
+    - test-plan
+    - operations-plan
+    - ADR
   impediment_type:
     - technical
     - dependency

@@ -330,6 +330,25 @@ types:
 # produced during methodology stages. They use existing wiki page types
 # (concept, decision, reference) but with methodology-specific structure.
 #
+# THE RULE FOR ADDING A NEW WIKI PAGE TYPE (not just a template):
+# A new page type is justified ONLY if it has STRUCTURALLY DIFFERENT rules
+# from all existing types — different required sections, different validation,
+# different lifecycle, or different quality bar. Methodology-specific CONTEXT
+# alone is NOT enough. Examples:
+#
+#   - requirements-spec → use `concept` (same structure as any concept page;
+#     just has methodology context). NOT a new type.
+#   - operations-plan → NEW TYPE (sequential checklist, no-judgment required,
+#     structurally different from concept which is explanatory prose).
+#   - ADR → use `decision` (same structure; classic ADR sections fit within
+#     decision template). NOT a new type, but worth its own methodology
+#     template due to distinct section conventions (Context/Decision/
+#     Consequences).
+#
+# Pages produced via these templates can declare their methodology identity
+# via the optional `methodology_doc_type:` frontmatter field (see wiki-schema.yaml).
+# This makes methodology role QUERYABLE without adding wiki page types.
+#
 # Scaffolder syntax: python3 -m tools.pipeline scaffold methodology/<template> "Title"
 # ---------------------------------------------------------------------------
 methodology_templates:
@@ -368,6 +387,20 @@ methodology_templates:
     template: config/templates/methodology/test-plan.md
     produced_at_stage: design
     description: "Test strategy, test cases with IDs, inputs, expected outputs"
+
+  ADR:
+    wiki_type: decision
+    template: config/templates/methodology/adr.md
+    produced_at_stage: design
+    description: "Architecture Decision Record — formal variant of decision page with Context/Decision/Consequences sections. Use when decision affects system architecture, needs durable provenance, or is hard to reverse."
+    section_conventions:
+      - "Status (proposed/accepted/deprecated/superseded)"
+      - "Context (forces at play, constraints)"
+      - "Decision (imperative statement wrapped in > [!success] callout)"
+      - "Consequences (benefits + costs as two tables)"
+      - "Alternatives Considered (≥2, each with > [!warning] rejection reason)"
+      - "Reversibility (easy/moderate/hard + what reversal requires)"
+      - "Related ADRs (depends on / supersedes / related to)"
 
 # ---------------------------------------------------------------------------
 # Stage Artifact Categories (generic, resolved by domain profiles)
