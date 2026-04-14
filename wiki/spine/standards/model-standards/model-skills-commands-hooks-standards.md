@@ -92,7 +92,7 @@ What a well-designed command looks like.
 > | `/status` | pipeline status | "where are we" | Raw files, page count, validation state |
 > | `/gaps` | pipeline gaps | "what's missing" | Orphans, thin pages, weak domains |
 > | `/review` | pipeline review | "health check" | Post → review → gaps → crossref |
-> | `/backlog` | pipeline backlog | "what's on the board" | Epics, tasks, completion % |
+> | `/backlog` | gateway query --backlog | "what's on the board" | Epics, tasks, completion % |
 > | `/log` | pipeline log | "log this" | Directive logging to wiki/log/ |
 >
 > **What makes this the standard:**

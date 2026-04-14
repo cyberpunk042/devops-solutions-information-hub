@@ -208,9 +208,23 @@ devops-solutions-research-wiki/
 
 ## 3. Tool Topology
 
+### Pipeline vs Gateway: Audience-Based Separation
+
+Two tools, two audiences, two concerns. The division is deliberate.
+
+| | **`tools/pipeline.py`** | **`tools/gateway.py`** |
+|---|------------------------|-----------------------|
+| **Primary audience** | Internal operator + automation (hooks, cron, watcher) | **External consumers** (other projects, MCP clients, agents) AND operator |
+| **Concern** | WRITE operations — ingest, validate, maintain | READ interface + selected write-back (contribute, move) |
+| **Mental model** | "The wiki's internal plumbing" | "The wiki's public API" |
+| **Entry from outside** | Not typical | Canonical via `--wiki-root` or MCP |
+| **Operates on** | This wiki only | This wiki OR any project's wiki (dual-scope) |
+
+**Rule**: pipeline stuff in pipeline, gateway stuff in gateway. Don't blur the boundary.
+
 ### `tools/pipeline.py` — The Orchestrator (1,512 lines)
 
-The primary entry point. Chains all other tools into automated pipelines. Supports three execution modes: `chain` (sequential), `group` (parallel with `ThreadPoolExecutor`), and `tree` (branch/merge). Named chains are defined in `wiki/config/`. SDLC profiles live in `wiki/config/sdlc-profiles/`.
+Chains write-side tools into automated pipelines. Supports three execution modes: `chain` (sequential), `group` (parallel with `ThreadPoolExecutor`), and `tree` (branch/merge). Named chains live in `wiki/config/`.
 
 Key commands:
 - `post` — 6-step validation chain (always run after wiki changes)
@@ -219,12 +233,36 @@ Key commands:
 - `evolve` — delegates to `evolve.py` (score, scaffold, review)
 - `gaps`, `crossref` — analysis pipelines
 - `chain <name>` — runs a named pipeline chain (continue, review, health, evolve, full)
+- `status` — pipeline's own plumbing state: raw files inventory + wiki page count
 
-### `tools/gateway.py` — Unified Interface (1,451 lines)
+Deprecated (use gateway):
+- `backlog` — knowledge query, not pipeline state. Use `gateway query --backlog`.
 
-Dual-scope knowledge interface. Operates on the local second brain OR a target project's wiki via `--wiki-root`. Used by humans (CLI), agents (programmatic), and MCP clients (tool calls).
+### `tools/gateway.py` — Unified Knowledge Interface (1,638 lines)
 
-Auto-detects project identity from filesystem signals (domain markers, scale proxy, execution mode signals). Identity detection logic distinguishes solo mode from harness v1/v2/v3/fleet — having `.claude/settings.json` does NOT make it a harness.
+Dual-scope knowledge interface. Operates on the local second brain OR a target project's wiki via `--wiki-root`. Used by external consumers (MCP clients, sister-project agents) AND the operator.
+
+Auto-detects project identity from filesystem signals (domain markers, scale proxy, execution mode signals). Identity detection distinguishes solo mode from harness v1/v2/v3/fleet — having `.claude/settings.json` does NOT make it a harness.
+
+Key commands:
+- `status` — project dashboard (identity + SDLC profile + models + navigation)
+- `query` — unified query (identity, models, chains, profiles, stages, fields, backlog, lessons, logs, pages, docs)
+- `flow` — Goldilocks 8-step routing
+- `template` — get a template for scaffolding
+- `move`, `archive`, `backup`, `factory-reset` — knowledge operations
+- `contribute` — agent write-back (lesson, remark, correction)
+- `what-do-i-need` — auto-detect + recommend SDLC profile
+
+### Why both `status` commands exist
+
+They serve different audiences:
+
+| Audience | Question | Command |
+|----------|----------|---------|
+| Pipeline operator | "What's in my inbox? How many pages processed?" | `pipeline status` |
+| Anyone (external or operator) | "Who is this project? What profile? Which models?" | `gateway status` |
+
+Same verb, different concern. Not duplicates.
 
 Key command groups:
 - `query` — methodology, models, stages, chains, fields, identity

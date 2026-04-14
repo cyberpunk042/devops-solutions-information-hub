@@ -106,7 +106,7 @@ What a properly run 5-stage sequence looks like end-to-end.
 >
 > **Verification:**
 > - `pipeline chain health` — clean ✅
-> - `pipeline backlog` — shows 2 epics + 1 task ✅
+> - `gateway query --backlog` — shows 2 epics + 1 task ✅
 > - `pipeline post` — 0 validation errors ✅
 > - Manual: backlog items have correct frontmatter, readiness computes from children ✅
 >

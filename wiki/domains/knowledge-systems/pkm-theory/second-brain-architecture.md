@@ -108,7 +108,7 @@ The LLM-assisted ingestion pipeline eliminates the maintenance cost that kills t
 > | **Comparison matrices** | `comparisons/` directory exists but thin; structured tables underrepresented | Create comparison pages for any two `COMPARES TO` linked concepts |
 > | **Review cadence** | No scheduled review mechanism (PARA prescribes weekly) | Weekly `pipeline chain review` via cron or manual |
 > | **Personal annotations** | LLM-generated content is accurate but impersonal | `## My Take` section for first-person reactions |
-> | **Task integration** | Open Questions not auto-extracted to prioritized tasks | `pipeline backlog` command aggregating OQs |
+> | **Task integration** | Open Questions not auto-extracted to prioritized tasks | `gateway query --backlog` command aggregating OQs |
 
 ### The LLM Extension: Maintenance Economics
 
@@ -129,7 +129,7 @@ This is not a marginal efficiency gain — it is a category change. It means the
 > Weekly, via `pipeline chain review` (post → review → gaps → crossref). PARA prescribes weekly review of active projects, quarterly for areas. The watcher daemon handles change-triggered post-chains; `chain review` is a separate cadence-based operation — cron or manual weekly.
 
 > [!example]- Can decisions/ link to backlog for action flow?
-> Yes — the mechanism exists structurally. `pipeline gaps` surfaces structural gaps; the missing piece is a `pipeline backlog` command extracting all `## Open Questions` into a prioritized task list (sorted by page maturity and relationship density). This would close the knowledge-to-action loop that PARA's Express step requires.
+> Yes — the mechanism exists structurally. `pipeline gaps` surfaces structural gaps; the missing piece is a `gateway query --backlog` command extracting all `## Open Questions` into a prioritized task list (sorted by page maturity and relationship density). This would close the knowledge-to-action loop that PARA's Express step requires.
 
 > [!example]- Is a comparisons/ matrix template needed?
 > The template already exists at the schema level — `comparison` type requires `## Comparison Matrix`. The gap is content, not schema: the `comparisons/` directory exists but few comparison pages have been created. For any `COMPARES TO` linked concepts, consider whether a dedicated comparison page adds value beyond prose in individual pages.

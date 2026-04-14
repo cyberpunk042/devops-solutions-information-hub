@@ -39,7 +39,7 @@ Navigation hub for work management — how work is organized, tracked, and enfor
 
 > [!tip] How to enter this domain
 >
-> **CLI/Gateway:** `gateway query --backlog | gateway query --chains | pipeline backlog`
+> **CLI/Gateway:** `gateway query --backlog | gateway query --chains`
 > **Obsidian:** Follow wikilinks from any member page above
 > **MCP:** Use the corresponding wiki_gateway tools
 

@@ -75,11 +75,19 @@ python3 -m tools.pipeline scan /home/jfortin/devops-control-plane/
 
 ### `pipeline status`
 
-Show raw file counts by category and total wiki page count.
+Show **pipeline's internal plumbing state** — raw files by category (awaiting ingestion) and wiki page count. This is the WRITE-side tool's own inventory.
+
+For **project-level status** (identity, SDLC profile, models, etc.), use `gateway status` — that's the READ-side dashboard for the project as a whole.
 
 ```bash
-python3 -m tools.pipeline status
+python3 -m tools.pipeline status       # pipeline state: raw/ inventory + wiki page count
+python3 -m tools.gateway status        # project dashboard: identity + profile + models + navigation
 ```
+
+| Concern | Command | Why |
+|---------|---------|-----|
+| How many unprocessed sources in raw/? | `pipeline status` | Pipeline's inbox |
+| Who am I? What profile am I on? | `gateway status` | Project identity |
 
 ---
 
@@ -155,13 +163,16 @@ python3 -m tools.pipeline evolve --review  # review maturity
 
 ---
 
-### `pipeline backlog`
+### `pipeline backlog` (DEPRECATED)
 
-Show backlog: epics with readiness/priority, tasks, impediments.
+Backlog is a KNOWLEDGE query, not a pipeline operation. Use `gateway query --backlog` instead — it's the canonical interface and works for external consumers too.
 
 ```bash
+# DEPRECATED — prints warning, still works
 python3 -m tools.pipeline backlog
-python3 -m tools.pipeline backlog --epic E018   # detail for one epic
+
+# CANONICAL
+python3 -m tools.gateway query --backlog
 ```
 
 ---

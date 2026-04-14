@@ -25,8 +25,8 @@ These shape how the system works. Deciding these unblocks downstream work.
 
 | # | Question | Source Page | Impact |
 |---|----------|------------|--------|
-| 1 | Should SDLC profiles be YAML configs or wiki pages? (renamed from chains — chains belong to methodology layer) | [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules Epic]] | Determines where profile definitions live |
-| 2 | Should the gateway be a separate Python module or extend pipeline.py? | [[wiki-gateway-tools-unified-knowledge-interface|Gateway Epic]] | Tool architecture |
+| ~~1~~ | ~~Should SDLC profiles be YAML configs or wiki pages?~~ **RESOLVED 2026-04-14:** YAML authoritative, wiki explains. Same pattern as methodology.yaml + model-methodology page. Renamed "SDLC chain" → "SDLC profile" (chain was a category error; chains belong to methodology layer). | [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules Epic]] | Determines where profile definitions live |
+| ~~2~~ | ~~Should the gateway be a separate Python module or extend pipeline.py?~~ **RESOLVED 2026-04-14:** Separate modules with audience-based separation. Pipeline = internal WRITE ops (ingest, validate, maintain). Gateway = external-facing knowledge interface (queries, flow, contribute) — also used by operator. `pipeline backlog` deprecated → `gateway query --backlog`. `status` kept in both with different audiences documented. | [[wiki-gateway-tools-unified-knowledge-interface|Gateway Epic]] | Tool architecture |
 | 3 | Should artifact chain config be inside methodology.yaml or separate? | [[e003-artifact-type-system-requirements|E003 Requirements]] | Config architecture |
 | 4 | Should domain profiles be in the wiki (authoritative) or per-project (local)? | [[methodology-standards-initiative-gaps|Standards Initiative Gaps]] | Ownership model |
 | 5 | Should CLAUDE.md be split per cognitive context? | [[src-openarms-v10-enforcement|OpenArms v10 Synthesis]] | Agent config architecture |

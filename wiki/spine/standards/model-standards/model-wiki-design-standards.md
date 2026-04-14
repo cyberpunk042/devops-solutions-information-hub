@@ -84,7 +84,7 @@ Now the same content, styled with the callout vocabulary:
 > 2. **Design** — Brainstorm with user (5 design sections, each approved), spec written to `docs/superpowers/specs/`
 > 3. **Scaffold** — Schema changes (4 new types, 7 new statuses, 5 new enums), directory structure (`wiki/backlog/`, `wiki/log/`, `wiki/config/`)
 > 4. **Implement** — Python validation, pipeline `backlog` command, `/backlog` + `/log` slash commands, `wiki_backlog` + `wiki_log` MCP tools
-> 5. **Test** — `pipeline chain health` clean, `pipeline backlog` shows 2 epics + 1 task, 0 validation errors
+> 5. **Test** — `pipeline chain health` clean, `gateway query --backlog` shows 2 epics + 1 task, 0 validation errors
 
 > [!tip] **What changed**
 > The blue `[!info]` header catches your eye first — you know WHAT this model is in 2 seconds. The table gives structured data. The teal `[!abstract]` gives selection context. The purple `[!example]-` hides proof behind a fold — expand only when you need it. Four semantic layers, each doing one job. The raw version has the same information but zero layers — everything looks the same.

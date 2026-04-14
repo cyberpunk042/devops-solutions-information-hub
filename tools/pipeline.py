@@ -1451,6 +1451,13 @@ Commands:
         sys.exit(0)
 
     elif args.command == "backlog":
+        # Backlog is a KNOWLEDGE query, not a pipeline operation.
+        # Canonical interface is `gateway query --backlog` (works for external consumers too).
+        # This entry point is kept for backward compatibility with existing scripts/skills.
+        print("NOTE: `pipeline backlog` is deprecated. Use `gateway query --backlog` instead.",
+              file=sys.stderr)
+        print("      Backlog is a knowledge query, not a pipeline operation.", file=sys.stderr)
+        print("", file=sys.stderr)
         epic_id = getattr(args, "epic", None)
         if not epic_id and args.args:
             epic_id = args.args[0]

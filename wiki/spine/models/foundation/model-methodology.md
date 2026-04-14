@@ -115,7 +115,7 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 > 2. **Design** — Brainstorm with user (5 design sections, each approved), spec written to `docs/superpowers/specs/`
 > 3. **Scaffold** — Schema changes (4 new types, 7 new statuses, 5 new enums), directory structure (`wiki/backlog/`, `wiki/log/`, `wiki/config/`), methodology.yaml created
 > 4. **Implement** — Python validation, pipeline `backlog` command, `/backlog` + `/log` slash commands, `wiki_backlog` + `wiki_log` MCP tools
-> 5. **Test** — `pipeline chain health` clean, `pipeline backlog` shows 2 epics + 1 task, 0 validation errors
+> 5. **Test** — `pipeline chain health` clean, `gateway query --backlog` shows 2 epics + 1 task, 0 validation errors
 
 ---
 
