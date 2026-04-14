@@ -124,6 +124,7 @@ The control plane does not use the wiki's methodology.yaml / stage-gate system. 
 > | Component | Status |
 > |-----------|--------|
 > | CLAUDE.md as routing table | Adopted (pre-methodology, rule-heavy variant) |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + Skills) | Not adopted — candidate upgrade. `.agent/rules/` already acts as Layer 3; Layer 1 AGENTS.md would consolidate the 24 mandatory rules into cross-tool format. See [[root-documentation-map|Root Documentation Map]] |
 > | methodology.yaml | Not adopted (uses .agent/rules/ instead) |
 > | Stage enforcement | Not adopted (uses workflow checklists) |
 > | Wiki knowledge base | Not connected |

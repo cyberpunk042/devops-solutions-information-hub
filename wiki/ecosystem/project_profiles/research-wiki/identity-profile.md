@@ -143,11 +143,13 @@ The research wiki's primary export to the ecosystem is the methodology framework
 >
 > | Component | Status |
 > |-----------|--------|
-> | CLAUDE.md as routing table | Adopted (the most evolved instance in the ecosystem) |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + Skills) | Adopted 2026-04-14 — see [[root-documentation-map|Root Documentation Map]] |
+> | CLAUDE.md as routing table | Adopted (107 lines, slimmed from 315) — references AGENTS.md |
+> | 5 thematic root docs (CONTEXT/ARCHITECTURE/DESIGN/TOOLS/SKILLS) | Adopted 2026-04-14 — separation of concerns, discoverable via `gateway query --docs` |
 > | methodology.yaml | Adopted (defines AND uses it) |
 > | Stage enforcement | Adopted (pipeline post as universal gate) |
-> | Wiki knowledge base | IS the knowledge base (300 pages, 2003 relationships) |
-> | Export to other projects | Active (E002 defines interfaces; CLAUDE.md patterns already copied) |
+> | Wiki knowledge base | IS the knowledge base (317 pages, 2080 relationships) |
+> | Export to other projects | Active (E002 defines interfaces; three-layer pattern now documented for ecosystem adoption) |
 > | Feed-back FROM projects | Active (OpenArms: 22 lessons, OpenFleet: 5 patterns, devops-control-plane: 24 rules) |
 
 ### How This Connects — Navigate From Here

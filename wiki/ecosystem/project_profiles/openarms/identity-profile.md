@@ -109,6 +109,7 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 > | Component | Status |
 > |-----------|--------|
 > | CLAUDE.md as routing table | Adopted (v10) |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + Skills) | Not adopted — candidate upgrade (see [[root-documentation-map|Root Documentation Map]] for the wiki's implementation, ~400L CLAUDE.md is harmful per ETH Zurich research) |
 > | methodology.yaml | Adopted (9 models, 7 task types) |
 > | Stage hooks | Adopted (4 hooks) |
 > | Wiki structure | Adopted (wiki/ folder with frontmatter) |

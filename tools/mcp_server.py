@@ -435,6 +435,28 @@ def wiki_gateway_flow(step: int = None) -> str:
     return cmd_flow(paths, step=step)
 
 
+@server.tool()
+def wiki_gateway_docs(doc_name: str = None) -> str:
+    """Query root-level documentation files (README, AGENTS, CLAUDE, CONTEXT, ARCHITECTURE, DESIGN, TOOLS, SKILLS).
+
+    These 8 files at the repository root implement the three-layer agent context
+    architecture. Each has ONE concern. Read by humans, AI tools, and MCP clients
+    to understand the project, its rules, and how to interact with it.
+
+    No arg → list all 8 docs with descriptions and line counts.
+    With name (e.g., "agents", "tools") → metadata + 500-char preview.
+
+    For full content of a root doc, read the file directly.
+
+    Args:
+        doc_name: Optional. One of: readme, agents, claude, context, architecture, design, tools, skills.
+    """
+    from tools.gateway import resolve_paths, query_docs
+    paths = resolve_paths()
+    result = query_docs(paths, doc_name)
+    return json.dumps(result, indent=2, default=str)
+
+
 # ---------------------------------------------------------------------------
 # Entrypoint
 # ---------------------------------------------------------------------------

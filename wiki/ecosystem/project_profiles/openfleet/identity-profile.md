@@ -136,6 +136,7 @@ See [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] for th
 > | Component | Status |
 > |-----------|--------|
 > | CLAUDE.md as routing table | Adopted (per-agent SOUL.md + global CLAUDE.md) |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + per-agent personas) | Partial — SOUL.md already acts as per-agent Layer 2; AGENTS.md as Layer 1 is a candidate upgrade. See [[root-documentation-map|Root Documentation Map]] |
 > | methodology.yaml | Adopted (6-stage model, tool blocking) |
 > | Stage enforcement | Adopted (MCP tool blocking — strongest in ecosystem) |
 > | Wiki knowledge base | Active (219+ KB entries synced via kb_sync → LightRAG) |

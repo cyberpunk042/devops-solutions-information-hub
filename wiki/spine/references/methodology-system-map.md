@@ -41,17 +41,36 @@ Complete map of the methodology system — every component, where it lives, what
 
 ## Reference Content
 
-### The Three Layers
+### The Four Layers
 
 > [!info] How the Methodology System Is Organized
 >
 > | Layer | What It Contains | Purpose |
 > |-------|-----------------|---------|
+> | **Entry** (repo root) | README.md, AGENTS.md, CLAUDE.md + 5 thematic root docs | ORIENTATION — first contact for humans, AI tools, MCP clients |
 > | **Knowledge** (wiki pages) | Models, standards, patterns, decisions, learning paths | UNDERSTANDING — teaches how methodology works |
 > | **Configuration** (config files) | methodology.yaml, artifact-types.yaml, domain profiles, templates | EXECUTION — machines and agents read these |
 > | **Tooling** (tools/) | validate.py, lint.py, pipeline.py scaffolder | ENFORCEMENT — checks compliance automatically |
 >
-> Knowledge defines WHAT and WHY. Configuration defines HOW (machine-readable). Tooling enforces COMPLIANCE. All three layers must agree — a rule in a wiki page that isn't in the config isn't enforced; a config rule without a wiki explanation isn't understood.
+> Entry orients the consumer. Knowledge defines WHAT and WHY. Configuration defines HOW (machine-readable). Tooling enforces COMPLIANCE. All four layers must agree — a rule in a wiki page that isn't in the config isn't enforced; a config rule without a wiki explanation isn't understood; a rule known to the system but absent from root docs isn't discoverable.
+
+### Entry Layer — Root Documentation
+
+> [!abstract] Repository-Level Docs (8 files, 2,714 lines)
+>
+> | File | What It Contains | Audience |
+> |------|-----------------|----------|
+> | [[root-documentation-map|Root Documentation Map]] | The spine navigation hub for all root docs | Anyone |
+> | `README.md` | Project overview, what this IS, role-based entry | First visitor |
+> | `AGENTS.md` | Universal cross-tool context (hard rules, stage gates, page schema) | Any AI tool (Claude, Codex, Copilot, Gemini, Cursor) |
+> | `CLAUDE.md` | Claude-specific overrides (references AGENTS.md) | Claude Code |
+> | `CONTEXT.md` | Identity profile, current state, active epics, constraints | Anyone understanding scope |
+> | `ARCHITECTURE.md` | Data flow, tool topology, page schema, integration points | Anyone modifying structure |
+> | `DESIGN.md` | Visual design principles, callout vocabulary, page layouts | Page creators |
+> | `TOOLS.md` | Complete CLI reference (pipeline, gateway, view, sync, MCP) | Operators |
+> | `SKILLS.md` | Skills catalog, SKILL.md format, extension hierarchy | Skill authors |
+>
+> These files implement the [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]] pattern. They serve as the **discoverable front door** — `gateway query --docs` lists them, MCP `wiki_gateway_docs` tool exposes them, and every cross-tool AI starts here.
 
 ### Knowledge Layer — Wiki Pages
 

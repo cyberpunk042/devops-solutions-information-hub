@@ -94,6 +94,7 @@ The generic Python domain chain at [[domain-chain-python-wiki|Artifact Chain —
 > | Component | Status |
 > |-----------|--------|
 > | CLAUDE.md as routing table | Adopted |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + Skills) | Not adopted — candidate upgrade. AICP already has Layer 3 (78 skills); Layer 1 AGENTS.md would enable cross-tool portability. See [[root-documentation-map|Root Documentation Map]] |
 > | Skills as extension pattern | Adopted (78 skills) |
 > | Wiki knowledge base | Partial (consumes wiki exports in docs/kb/) |
 > | Export from second brain | Defined (E002 integration interface) |
