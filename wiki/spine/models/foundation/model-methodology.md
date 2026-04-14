@@ -851,6 +851,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[2026-04-09-session-summary|Session 2026-04-09 Summary]]
 [[2026-04-10-session-summary|Session 2026-04-10 Summary]]
+[[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Traditional Hierarchy]]
 [[standards-must-preach-by-example|Standards Must Preach by Example]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
 [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]

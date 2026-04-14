@@ -199,3 +199,5 @@ This is relevant to any project that configures AI agent behavior through filesy
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[harness-engineering|Harness Engineering]]
 [[model-context-engineering|Model — Context Engineering]]
+[[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Traditional Hierarchy]]
+[[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]

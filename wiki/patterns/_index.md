@@ -27,6 +27,7 @@ See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis 
 
 ## Pages
 
+- [Three-Layer Agent Context Architecture](01_drafts/three-layer-agent-context-architecture.md) — AI agent context configuration naturally separates into three distinct layers that differ in scope, loading model, an...
 - [Deterministic Shell, LLM Core](03_validated/architecture/deterministic-shell-llm-core.md) — Deterministic Shell, LLM Core is the architectural pattern of wrapping LLM inference inside a deterministic orchestra...
 - [Gateway-Centric Routing](03_validated/architecture/gateway-centric-routing.md) — Gateway-Centric Routing is the architectural pattern of channeling all traffic — messages, tasks, tool calls, or agen...
 - [Plan Execute Review Cycle](03_validated/architecture/plan-execute-review-cycle.md) — The Plan→Execute→Review cycle is a recurring structural pattern observed independently across AI agent orchestration ...
@@ -45,4 +46,4 @@ See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis 
 
 ## Tags
 
-`openfleet`, `orchestration`, `deterministic`, `enforcement`, `agent-compliance`, `guardrails`, `harness`, `agent-architecture`, `mcp`, `feedback-loop`, `cross-domain`, `second-brain`, `infrastructure`, `quality`, `pattern`, `skills`, `llm-core`, `shell-pattern`, `aicp`, `reliability`
+`openfleet`, `orchestration`, `pattern`, `deterministic`, `enforcement`, `agent-compliance`, `claude-md`, `guardrails`, `harness`, `agent-architecture`, `mcp`, `feedback-loop`, `cross-domain`, `second-brain`, `infrastructure`, `quality`, `skills`, `context-engineering`, `agent-config`, `three-layer-architecture`

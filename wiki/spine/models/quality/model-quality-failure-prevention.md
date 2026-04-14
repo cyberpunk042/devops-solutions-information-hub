@@ -460,6 +460,7 @@ The community prompt patch project catalogued 11 specific Claude Code behaviors 
 [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness — Modeling Only What You Know]]
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[methodology-evolution-protocol|Methodology Evolution Protocol]]
 [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]

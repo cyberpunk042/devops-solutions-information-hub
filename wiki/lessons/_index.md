@@ -62,6 +62,8 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
+- [Specs-as-Code-Source Inverts the Traditional Hierarchy](01_drafts/specs-as-code-source-inverts-hierarchy.md) — Traditional software development treats code as the primary artifact and specifications as scaffolding — supporting d...
 - [Context Compaction Is a Reset Event](03_validated/context-engineering/context-compaction-is-a-reset-event.md) — When an LLM agent's context is compacted (summarized to reduce token count), all behavioral corrections accumulated d...
 - [Context Management Is the Primary LLM Productivity Lever](03_validated/context-engineering/context-management-is-primary-productivity-lever.md) — Across all sources analyzing Claude Code effectiveness — practitioner guides, harness engineering frameworks, accurac...
 - [Structured Context Is Proto-Programming for AI Agents](03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents.md) — Markdown is the programming language of AI agents
@@ -108,4 +110,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`methodology`, `quality`, `failure-lesson`, `lesson`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`, `orchestration`, `compounding-knowledge`, `cross-domain`, `automation`, `maintenance`, `framework`
+`methodology`, `quality`, `failure-lesson`, `lesson`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`, `orchestration`, `compounding-knowledge`, `automation`

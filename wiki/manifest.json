@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-14T17:18:26.277772+00:00",
+  "generated": "2026-04-14T17:39:46.408402+00:00",
   "stats": {
-    "pages": 313,
+    "pages": 316,
     "domains": 9,
     "sources": 43,
     "comparisons": 5,
-    "relationships": 2051,
-    "tags_unique": 948,
+    "relationships": 2074,
+    "tags_unique": 956,
     "layers": {
       "3": 4,
       "6": 16,
       "2": 51,
-      "4": 40,
-      "5": 18,
+      "4": 42,
+      "5": 19,
       "1": 25,
       "spine": 62
     },
     "maturity": {
-      "growing": 257,
+      "growing": 260,
       "seed": 13
     }
   },
@@ -9343,6 +9343,166 @@
       "relationships": []
     },
     {
+      "path": "lessons/01_drafts/if-you-can-verify-you-converge.md",
+      "slug": "lessons/01_drafts/if-you-can-verify-you-converge",
+      "title": "If You Can Verify, You Converge",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "verification",
+        "convergence",
+        "deterministic-shell",
+        "llm-core",
+        "retry-loops",
+        "local-llm",
+        "cost-reduction",
+        "compiler-harness",
+        "recursion",
+        "quality-gates",
+        "cross-domain",
+        "lesson"
+      ],
+      "sources": [
+        {
+          "id": "autobe-dev-to-article",
+          "type": "article",
+          "url": "https://dev.to/samchon/autobe-qwen-35-27b-just-built-complete-backends-from-scratch-100-compilation-25x-cheaper-lmd"
+        },
+        {
+          "id": "hrm-trm-youtube-transcript",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=ZgwHaI2C-9s"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "src-autobe-compiler-verified-backend-generation",
+        "src-hrm-trm-tiny-recursion-models",
+        "deterministic-shell-llm-core",
+        "model-quality-failure-prevention"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Deterministic Shell, LLM Core"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Orchestration Patterns"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy.md",
+      "slug": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "title": "Specs-as-Code-Source Inverts the Traditional Hierarchy",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "spec-driven-development",
+        "sdd",
+        "specifications",
+        "artifacts",
+        "methodology",
+        "inversion",
+        "code-generation",
+        "cross-domain",
+        "lesson"
+      ],
+      "sources": [
+        {
+          "id": "src-github-spec-kit",
+          "type": "documentation",
+          "url": "https://github.com/github/spec-kit"
+        },
+        {
+          "id": "openspec-github",
+          "type": "repo",
+          "url": "https://github.com/Fission-AI/OpenSpec"
+        },
+        {
+          "id": "bmad-method-github",
+          "type": "repository",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "src-github-spec-kit-specification-driven-development",
+        "src-openspec-spec-driven-development-framework",
+        "src-bmad-method-agile-ai-development-framework",
+        "model-methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis: OpenSpec \u2014 Spec-Driven Development Framework"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis: BMAD-METHOD \u2014 Agile AI-Driven Development Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Spec-Driven Development"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 If You Can Verify, You Converge"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation"
+        }
+      ]
+    },
+    {
       "path": "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event.md",
       "slug": "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "title": "Context Compaction Is a Reset Event",
@@ -12970,6 +13130,79 @@
         {
           "verb": "RELATES TO",
           "target": "Evolution \u2014 Methodology System"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/three-layer-agent-context-architecture.md",
+      "slug": "patterns/01_drafts/three-layer-agent-context-architecture",
+      "title": "Three-Layer Agent Context Architecture",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-14",
+      "updated": "2026-04-14",
+      "tags": [
+        "context-engineering",
+        "agent-config",
+        "three-layer-architecture",
+        "agents-md",
+        "claude-md",
+        "skill-md",
+        "cross-tool-portability",
+        "context-efficiency",
+        "ai-agents",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "src-skillmd-claudemd-agentsmd-termdock",
+          "type": "article",
+          "url": "https://www.termdock.com/blog/skill-md-vs-claude-md-vs-agents-md"
+        },
+        {
+          "id": "bmad-method-github",
+          "type": "repository",
+          "url": "https://github.com/bmad-code-org/BMAD-METHOD"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "src-skillmd-claudemd-agentsmd-three-layer-context",
+        "src-bmad-method-agile-ai-development-framework",
+        "model-claude-code",
+        "model-skills-commands-hooks"
+      ],
+      "relationships": [
+        {
+          "verb": "INSTANCES IN",
+          "target": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md"
+        },
+        {
+          "verb": "INSTANCES IN",
+          "target": "Synthesis: BMAD-METHOD \u2014 Agile AI-Driven Development Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development"
         }
       ]
     },
@@ -20422,8 +20655,8 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 139,
-      "relationship_count": 933
+      "page_count": 142,
+      "relationship_count": 956
     },
     "ai-agents": {
       "page_count": 56,
@@ -20894,6 +21127,7 @@
       "domains/cross-domain/model-composition-rules",
       "domains/devops/stage-gate-methodology",
       "domains/devops/task-type-artifact-matrix",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
@@ -21003,6 +21237,7 @@
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
@@ -21252,6 +21487,8 @@
       "comparisons/llm-wiki-vs-rag",
       "comparisons/skills-architecture-patterns",
       "domains/cross-domain/integration/skyscraper-pyramid-mountain",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
@@ -21324,6 +21561,7 @@
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-autobe-compiler-verified-backend-generation",
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/src-claude-agent-sdk-and-managed-agents",
@@ -21567,6 +21805,7 @@
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-artifacts/categories/requirements-and-design-artifacts",
       "domains/devops/stage-gate-methodology",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
       "sources/src-openspec-spec-driven-development-framework",
@@ -21601,6 +21840,7 @@
       "domains/ai-agents/patterns/rework-prevention",
       "domains/devops/execution-modes-and-end-conditions",
       "domains/devops/stage-gate-methodology",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation",
       "sources/src-code-review-graph-automated-review"
     ],
@@ -21948,6 +22188,7 @@
     "context-engineering": [
       "domains/ai-agents/claude-code/claude-code-context-management",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/src-7-levels-claude-code-rag",
       "sources/src-bmad-method-agile-ai-development-framework",
@@ -22263,6 +22504,7 @@
     ],
     "spec-driven-development": [
       "domains/ai-agents/patterns/spec-driven-development",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "sources/claude-code/src-superpowers-end-of-vibe-coding",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/src-openspec-spec-driven-development-framework"
@@ -22341,6 +22583,7 @@
     ],
     "local-llm": [
       "domains/ai-models/local-llm-quantization",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
       "sources/src-autobe-compiler-verified-backend-generation",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
@@ -23291,6 +23534,62 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
+    "verification": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/03_validated/methodology-quality/never-present-speculation-as-fact"
+    ],
+    "convergence": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "deterministic-shell": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "llm-core": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "retry-loops": [
+      "lessons/01_drafts/if-you-can-verify-you-converge"
+    ],
+    "cost-reduction": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "sources/src-autobe-compiler-verified-backend-generation"
+    ],
+    "compiler-harness": [
+      "lessons/01_drafts/if-you-can-verify-you-converge"
+    ],
+    "recursion": [
+      "lessons/01_drafts/if-you-can-verify-you-converge"
+    ],
+    "lesson": [
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
+      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
+      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
+      "spine/standards/lesson-page-standards"
+    ],
+    "sdd": [
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "sources/src-github-spec-kit-specification-driven-development"
+    ],
+    "specifications": [
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
+    ],
+    "inversion": [
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
+    ],
+    "code-generation": [
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
+    ],
     "context-compaction": [
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event"
     ],
@@ -23357,11 +23656,6 @@
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
       "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label",
       "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions"
-    ],
-    "convergence": [
-      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
-      "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "loop-ownership": [
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
@@ -23477,15 +23771,6 @@
     "design-principles": [
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
     ],
-    "lesson": [
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
-      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
-      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
-      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
-      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
-      "spine/standards/lesson-page-standards"
-    ],
     "hub": [
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
@@ -23597,9 +23882,6 @@
       "log/2026-04-09/methodology/2026-04-09-directive-stop-guessing-false-claims"
     ],
     "speculation": [
-      "lessons/03_validated/methodology-quality/never-present-speculation-as-fact"
-    ],
-    "verification": [
       "lessons/03_validated/methodology-quality/never-present-speculation-as-fact"
     ],
     "integrity": [
@@ -23773,14 +24055,39 @@
     "gated": [
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
     ],
+    "agent-config": [
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "three-layer-architecture": [
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "agents-md": [
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "skill-md": [
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+    ],
+    "cross-tool-portability": [
+      "patterns/01_drafts/three-layer-agent-context-architecture"
+    ],
+    "context-efficiency": [
+      "patterns/01_drafts/three-layer-agent-context-architecture"
+    ],
+    "pattern": [
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "spine/standards/pattern-page-standards"
+    ],
     "deterministic": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
-    ],
-    "llm-core": [
-      "patterns/03_validated/architecture/deterministic-shell-llm-core",
-      "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "shell-pattern": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
@@ -23848,11 +24155,6 @@
     ],
     "agent-execution": [
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
-    ],
-    "pattern": [
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
-      "spine/standards/pattern-page-standards"
     ],
     "injection": [
       "patterns/03_validated/enforcement/stage-aware-skill-injection"
@@ -24137,9 +24439,6 @@
     "autobe": [
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
-    "deterministic-shell": [
-      "sources/src-autobe-compiler-verified-backend-generation"
-    ],
     "compiler-verification": [
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
@@ -24147,9 +24446,6 @@
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "ast": [
-      "sources/src-autobe-compiler-verified-backend-generation"
-    ],
-    "cost-reduction": [
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "qwen": [
@@ -24230,9 +24526,6 @@
     ],
     "sqlite": [
       "sources/src-code-review-graph-automated-review"
-    ],
-    "sdd": [
-      "sources/src-github-spec-kit-specification-driven-development"
     ],
     "constitutional-compliance": [
       "sources/src-github-spec-kit-specification-driven-development"
@@ -24370,20 +24663,7 @@
     "production-grade": [
       "sources/src-pydantic-ai-typed-agent-framework"
     ],
-    "agents-md": [
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "spine/models/agent-config/model-markdown-as-iac"
-    ],
-    "skill-md": [
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
-    ],
-    "three-layer-architecture": [
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
-    ],
     "cross-tool": [
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
-    ],
-    "agent-config": [
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
     ],
     "eth-zurich-research": [
@@ -24769,9 +25049,16 @@
       ]
     },
     {
+      "target": "Lesson \u2014 If You Can Verify, You Converge",
+      "referenced_by": [
+        "Specs-as-Code-Source Inverts the Traditional Hierarchy"
+      ]
+    },
+    {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
         "AICP \u2014 Identity Profile",
+        "If You Can Verify, You Converge",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
         "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
         "Synthesis \u2014 LLM Architecture Gallery (Raschka)",
@@ -24787,6 +25074,12 @@
         "Claude Code Context Management",
         "Claude Code Skills",
         "Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 SKILL.md vs CLAUDE.md vs AGENTS.md",
+      "referenced_by": [
+        "Three-Layer Agent Context Architecture"
       ]
     },
     {

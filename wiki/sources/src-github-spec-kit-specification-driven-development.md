@@ -273,3 +273,5 @@ The `Verify Tasks Extension` in particular addresses a known failure mode in LLM
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
+[[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Traditional Hierarchy]]
+[[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]

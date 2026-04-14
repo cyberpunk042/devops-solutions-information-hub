@@ -165,6 +165,7 @@ Cross-referencing the `Harness Engineering` and `Plan Execute Review Cycle` page
 [[hooks-design-decisions|Decision — Hooks Design Decisions]]
 [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
 [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
 [[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
 [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]

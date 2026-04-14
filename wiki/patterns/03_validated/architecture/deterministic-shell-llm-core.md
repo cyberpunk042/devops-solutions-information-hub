@@ -135,6 +135,7 @@ Avoid or over-engineering Deterministic Shell, LLM Core when:
 [[agent-orchestration-patterns|Agent Orchestration Patterns]]
 [[claude-code-best-practices|Claude Code Best Practices]]
 [[gateway-centric-routing|Gateway-Centric Routing]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

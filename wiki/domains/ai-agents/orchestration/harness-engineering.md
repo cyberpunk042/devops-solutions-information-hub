@@ -241,6 +241,7 @@ The cost asymmetry is why autonomous systems need proactive enforcement. In an i
 [[design-md-pattern|Design.md Pattern]]
 [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
 [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]

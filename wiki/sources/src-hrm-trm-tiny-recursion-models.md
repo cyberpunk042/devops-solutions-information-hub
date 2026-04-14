@@ -157,3 +157,4 @@ The ARC-AGI benchmark context matters: scores are not comparable to LLM general 
 [[AutoBE]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[local-llm-quantization|Local LLM Quantization]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]

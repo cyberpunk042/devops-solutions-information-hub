@@ -214,4 +214,6 @@ Achieving 100% compilation on ERP-scale systems means the compiler harness handl
 [[spec-driven-development|Spec-Driven Development]]
 [[agent-orchestration-patterns|Agent Orchestration Patterns]]
 [[harness-engineering|Harness Engineering]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
+[[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Traditional Hierarchy]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]

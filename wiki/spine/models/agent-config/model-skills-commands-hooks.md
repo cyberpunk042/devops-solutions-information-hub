@@ -409,3 +409,4 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]
+[[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]

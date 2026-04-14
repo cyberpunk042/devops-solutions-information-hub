@@ -303,6 +303,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[gateway-centric-routing|Gateway-Centric Routing]]
 [[identity-profile|AICP — Identity Profile]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
 [[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]

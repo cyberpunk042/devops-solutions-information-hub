@@ -35,7 +35,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E018 | [E018 — Global Standards Implementation — Actual Adherence Not Just Reference](epics/milestone-v2/e018-global-standards-implementation-actual-adherence-not-just-reference.md) | P2 | draft | 5 |
 | E019 | [E019 — Obsidian Navigation — Complete Browse Experience with Folder Cleanup](epics/milestone-v2/e019-obsidian-navigation-complete-browse-experience-with-folder-cleanup.md) | P1 | draft | 40 |
 | E020 | [E020 — Knowledge Sweep — Global Quality Confirmation by Human Review](epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review.md) | P2 | draft | 5 |
-| E021 | [E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline](epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline.md) | P1 | active | 15 |
+| E021 | [E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline](epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline.md) | P1 | active | 80 |
 | E001 | [Local Inference Engine (Subsystem 3)](epics/pre-milestone/E001-local-inference-engine.md) | P1 | draft | 10 |
 | E002 | [Ecosystem Integration Interfaces](epics/pre-milestone/E002-ecosystem-integration.md) | P2 | draft | 15 |
 | E003 | [Artifact Type System](epics/pre-milestone/E003-artifact-type-system.md) | P0 | active | 55 |

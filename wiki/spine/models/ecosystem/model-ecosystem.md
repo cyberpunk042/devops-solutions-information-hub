@@ -356,6 +356,7 @@ See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the a
 [[model-llm-wiki|Model — LLM Wiki]]
 [[identity-profile|AICP — Identity Profile]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[methodology-evolution-protocol|Methodology Evolution Protocol]]
 [[identity-profile|OpenFleet — Identity Profile]]

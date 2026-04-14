@@ -229,6 +229,7 @@ The heuristic: "use the lightest level that still makes the change verifiable." 
 [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
 [[methodology-framework|Methodology Framework]]
 [[model-methodology|Model — Methodology]]
+[[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Traditional Hierarchy]]
 [[stage-gate-methodology|Stage-Gate Methodology]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
 [[src-shanraisshan-claude-code-best-practice|Synthesis — Claude Code Best Practice (shanraisshan)]]
