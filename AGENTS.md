@@ -142,10 +142,13 @@ This wiki IS the second brain — it's self-referential.
 
 When you learn something the wiki doesn't know:
 ```bash
-python3 -m tools.gateway contribute --type lesson --title "Title" --content "..."
+python3 -m tools.gateway contribute --type lesson --title "Title" --content "..." \
+    --contributor "openarms-harness-v10" --source "/home/jfortin/openarms" --reason "..."
 ```
 
-Creates `wiki/lessons/00_inbox/` page — start of the maturity pipeline.
+Creates `wiki/lessons/00_inbox/` page (lessons) or `wiki/log/` page (remarks, corrections). Audit trail is recorded: `contributed_by`, `contribution_source`, `contribution_date`, `contribution_status: pending-review`.
+
+**Trust model** — neither pure approval nor pure auto-merge. Trust-tiered via maturity lifecycle: contributions auto-land in the 00_inbox (immediate visibility, not yet authoritative); promotion through `00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles` requires human review. Trust tier of the contributor affects which tier they can land in. See `wiki/config/contribution-policy.yaml` for the full tier policy.
 
 ## Key Entry Points
 

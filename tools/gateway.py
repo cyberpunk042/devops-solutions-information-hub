@@ -914,13 +914,42 @@ def op_move(paths: Dict[str, Path], title: str, target_dir: str, dry_run: bool =
 
 
 def op_contribute(paths: Dict[str, Path], contrib_type: str, title: str,
-                  content: str, domain: str = "cross-domain") -> Dict[str, Any]:
-    """Create a structured write-back to the wiki (remark, lesson, correction)."""
+                  content: str, domain: str = "cross-domain",
+                  contributor: str = None, source: str = None,
+                  reason: str = None) -> Dict[str, Any]:
+    """Create a structured write-back to the wiki (remark, lesson, correction).
+
+    Records an audit trail per wiki/config/contribution-policy.yaml:
+    - contributed_by: who/what made this contribution
+    - contribution_source: origin path or "self"
+    - contribution_date: ISO date
+    - contribution_status: "pending-review" (all contributions start here)
+
+    Contributions land in 00_inbox (lessons) or log/ (remarks, corrections).
+    Promotion beyond that requires human review per the trust tier policy.
+    """
     from datetime import datetime
+    import os as _os
+    import socket as _socket
 
     wiki_dir = paths["wiki"]
     today = datetime.now().strftime("%Y-%m-%d")
     slug = title.lower().replace(" ", "-").replace("'", "")[:60]
+
+    # Auto-detect contributor if not provided (fallback: user@host)
+    if not contributor:
+        try:
+            contributor = f"{_os.environ.get('USER', 'unknown')}@{_socket.gethostname()}"
+        except Exception:
+            contributor = "gateway-cli"
+
+    # Auto-detect source if not provided — self if operating on local wiki
+    if not source:
+        wiki_root = paths.get("root")
+        if wiki_root:
+            source = str(wiki_root)
+        else:
+            source = "self"
 
     type_dirs = {
         "lesson": wiki_dir / "lessons" / "00_inbox",
@@ -930,6 +959,16 @@ def op_contribute(paths: Dict[str, Path], contrib_type: str, title: str,
 
     target_dir = type_dirs.get(contrib_type, wiki_dir / "log")
     target_dir.mkdir(parents=True, exist_ok=True)
+
+    # Audit trail YAML fragment (all contributions get this)
+    audit_fragment = (
+        f"contributed_by: \"{contributor}\"\n"
+        f"contribution_source: \"{source}\"\n"
+        f"contribution_date: {today}\n"
+        f"contribution_status: pending-review\n"
+    )
+    if reason:
+        audit_fragment += f"contribution_reason: \"{reason}\"\n"
 
     if contrib_type == "lesson":
         page_content = f"""---
@@ -945,7 +984,7 @@ created: {today}
 updated: {today}
 sources: []
 tags: [contributed, inbox]
----
+{audit_fragment}---
 
 # {title}
 
@@ -967,7 +1006,7 @@ tags: [contributed, inbox]
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 """
     else:
         page_content = f"""---
@@ -981,7 +1020,7 @@ created: {today}
 updated: {today}
 sources: []
 tags: [contributed, {contrib_type}]
----
+{audit_fragment}---
 
 # {title}
 
@@ -991,7 +1030,7 @@ tags: [contributed, {contrib_type}]
 
 ## Relationships
 
-- RELATES TO: [[Model Registry]]
+- RELATES TO: [[model-registry|Model Registry]]
 """
 
     target_path = target_dir / f"{slug}.md"
@@ -1001,6 +1040,11 @@ tags: [contributed, {contrib_type}]
         "created": str(target_path.relative_to(paths["wiki"])),
         "type": contrib_type,
         "title": title,
+        "contributed_by": contributor,
+        "contribution_source": source,
+        "contribution_status": "pending-review",
+        "landing_folder": str(target_dir.relative_to(paths["wiki"])),
+        "note": "Landed in maturity inbox (or log). Promotion requires human review per contribution-policy.yaml.",
     }
 
 
@@ -1373,11 +1417,14 @@ def main():
     fr.add_argument("--confirm", action="store_true", help="Required to actually execute reset")
 
     # Contribute command
-    ct = sub.add_parser("contribute", help="Write back to the wiki")
+    ct = sub.add_parser("contribute", help="Write back to the wiki (lands in 00_inbox / log; promotion requires review)")
     ct.add_argument("--type", required=True, choices=["lesson", "remark", "correction"])
     ct.add_argument("--title", required=True)
     ct.add_argument("--content", required=True)
     ct.add_argument("--domain", default="cross-domain")
+    ct.add_argument("--contributor", help="Contributor identifier (e.g. 'openarms-harness-v10'). Default: user@host")
+    ct.add_argument("--source", help="Origin path of contribution (e.g. '/home/jfortin/openarms'). Default: self")
+    ct.add_argument("--reason", help="Why this contribution is being made (optional audit trail)")
 
     args = parser.parse_args()
     paths = resolve_paths(
@@ -1486,7 +1533,12 @@ def main():
         print(json.dumps(result, indent=2, default=str))
 
     elif args.command == "contribute":
-        result = op_contribute(paths, args.type, args.title, args.content, args.domain)
+        result = op_contribute(
+            paths, args.type, args.title, args.content, args.domain,
+            contributor=getattr(args, "contributor", None),
+            source=getattr(args, "source", None),
+            reason=getattr(args, "reason", None),
+        )
         print(json.dumps(result, indent=2, default=str))
 
     elif args.command == "status":

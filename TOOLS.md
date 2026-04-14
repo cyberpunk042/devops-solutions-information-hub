@@ -375,12 +375,17 @@ python3 -m tools.gateway factory-reset --confirm  # execute (creates backup firs
 
 Write back to the wiki as an agent — lesson, remark, or correction.
 
+**Trust model**: Contributions land in `00_inbox` (lessons) or `log/` (remarks, corrections) with `contribution_status: pending-review`. Promotion through the maturity ladder (inbox → drafts → synthesized → validated → principles) requires human review. See `wiki/config/contribution-policy.yaml` for the full trust-tier policy.
+
 ```bash
 python3 -m tools.gateway contribute \
   --type lesson \
   --title "Always Verify Output Before Reporting Done" \
   --content "Evidence from three sessions: ..." \
-  --domain cross-domain
+  --domain cross-domain \
+  --contributor "openarms-harness-v10" \
+  --source "/home/jfortin/openarms" \
+  --reason "Observed during overnight runs v10.3-v10.5"
 ```
 
 | Flag | Values | Required? |
@@ -389,6 +394,18 @@ python3 -m tools.gateway contribute \
 | `--title` | string | Yes |
 | `--content` | string | Yes |
 | `--domain` | domain name | No (default: `cross-domain`) |
+| `--contributor` | identifier (e.g. `openarms-harness-v10`) | No (default: `user@host`) |
+| `--source` | origin path (e.g. `/home/jfortin/openarms`) | No (default: local wiki root) |
+| `--reason` | free text explaining why | No (optional audit trail) |
+
+**Audit trail recorded in frontmatter:**
+```yaml
+contributed_by: "openarms-harness-v10"
+contribution_source: "/home/jfortin/openarms"
+contribution_date: 2026-04-14
+contribution_status: pending-review
+contribution_reason: "Observed during overnight runs v10.3-v10.5"
+```
 
 ---
 

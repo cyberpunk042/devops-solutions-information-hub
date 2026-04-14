@@ -405,18 +405,34 @@ def wiki_gateway_template(page_type: str) -> str:
 
 
 @server.tool()
-def wiki_gateway_contribute(contrib_type: str, title: str, content: str, domain: str = "cross-domain") -> str:
+def wiki_gateway_contribute(contrib_type: str, title: str, content: str,
+                             domain: str = "cross-domain",
+                             contributor: str = None, source: str = None,
+                             reason: str = None) -> str:
     """Write back to the wiki — create a lesson, remark, or correction.
+
+    Contributions land in 00_inbox (lessons) or log/ (remarks, corrections).
+    All contributions start with contribution_status: pending-review and
+    require human review to be promoted through maturity tiers. See
+    wiki/config/contribution-policy.yaml for the trust-tier policy.
 
     Args:
         contrib_type: One of: lesson, remark, correction
         title: Title for the contribution
         content: Body content
         domain: Target domain (default: cross-domain)
+        contributor: Contributor identifier (e.g. 'openarms-harness-v10').
+                     Defaults to user@host auto-detected by the gateway.
+        source: Origin path of contribution (e.g. '/home/jfortin/openarms').
+                Defaults to 'self' for local contributions.
+        reason: Optional audit trail — why this contribution is being made.
     """
     from tools.gateway import resolve_paths, op_contribute
     paths = resolve_paths()
-    result = op_contribute(paths, contrib_type, title, content, domain)
+    result = op_contribute(
+        paths, contrib_type, title, content, domain,
+        contributor=contributor, source=source, reason=reason,
+    )
     return json.dumps(result, indent=2, default=str)
 
 

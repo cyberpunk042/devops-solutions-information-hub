@@ -367,6 +367,48 @@ domain profiles are added.
 
 ---
 
+### `contribution-policy.yaml` — Trust Tiers for Agent Write-Back
+
+**Purpose:** Declares WHO can contribute WHAT to the wiki, WHERE it lands, and WHAT
+promotion through maturity tiers requires. Answers the "approval vs auto-merge" question
+with: neither — **trust-tiered via maturity lifecycle**.
+
+**What it contains:**
+- `tiers` — 4 contributor tiers (operator / harness-trusted / fleet-agent / external-unknown)
+  with each tier's writable maturity folders and default landing
+- `known_contributors` — registry mapping identifiers (e.g. `openarms-harness-v10`) to their trust tier
+- `promotion` — per-gate requirements (inbox→drafts, drafts→synthesized, synthesized→validated, validated→principles) with manual + automated checks
+- `status_values` — the 4 contribution_status enum values (pending-review, accepted, rejected, superseded)
+- `audit_trail` — required and optional fields every contribution records
+
+**Consumed by:** `tools/gateway.py op_contribute` (records audit fields on every contribution). Future: automated promotion checks when harness graduates from manual-review-only.
+
+**Overrides / Layered on by:** Consuming projects can override this policy with their own `contribution-policy.yaml`. Per the Flexibility Principle, nothing here is mandatory for sister projects — they may tighten, relax, or ignore.
+
+**Example snippet:**
+```yaml
+tiers:
+  harness-trusted:
+    can_write_to: [00_inbox, 01_drafts]
+    default_landing: 00_inbox
+    examples: [openarms-harness-v10]
+
+known_contributors:
+  openarms-harness-v10:
+    tier: harness-trusted
+    contribution_history:
+      - "22 lessons from overnight runs (April 2026)"
+```
+
+**Related wiki pages:**
+- [[context-file-taxonomy|Context File Taxonomy]] (origin/authority dimension)
+- [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] (three lines of defense)
+- [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth]] (trust earned through history)
+
+**Modification notes:** Add entries to `known_contributors` when a new external agent or project establishes contribution history. Tighten `promotion` requirements if quality drift is observed. Loosen only with explicit operator decision (document in a wiki/decisions/ page).
+
+---
+
 ### `methodology.yaml` — The Methodology Engine
 
 **Purpose:** Defines the 9 named models, 5 universal stages, artifact chains, execution
