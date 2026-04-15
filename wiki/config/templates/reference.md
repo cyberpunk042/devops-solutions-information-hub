@@ -48,22 +48,6 @@ tags: []
      > It must be run from the wiki root (where wiki/ and tools/ are siblings).
      > Running it from inside wiki/ causes all path resolutions to fail silently. -->
 
-
-     EXAMPLE structure (replace with your content): -->
-
-> [!info] {{Reference Table Title}}
->
-> | {{Key}} | {{Type}} | {{Required?}} | {{What It Enables}} |
-> |---------|----------|--------------|-------------------|
-> | {{field_1}} | string | Yes | {{what automation reads this}} |
-> | {{field_2}} | enum | No | {{what it controls}} |
->
-> **How to use this table:** Find your field/key in the first column. The "What It Enables" column tells you what HAPPENS when you set this value — not just what it means, but what automation acts on it.
-
-> [!tip] {{Usage guidance}}
->
-> The most common lookup: {{describe the typical use case and how to find the answer in the table above}}.
-
 ## Relationships
 
 - RELATES TO: {{related_page}}

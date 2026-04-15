@@ -27,12 +27,28 @@ tags: []
 ## Insight
 
 <!-- The core learning. Min 50 words. State it plainly.
-     STYLING: Wrap the key insight in > [!warning] or > [!tip] callout.
-     If there is a comparison or taxonomy, use a table inside > [!abstract]. -->
+     STYLING: Wrap the key insight in > [!warning] (failure-mode lessons)
+     or > [!tip] (success/approach lessons). If there is a comparison or
+     taxonomy, use a table inside > [!abstract].
+
+     EXAMPLE Insight (replace with your content):
+
+     > [!tip] CLI tools paired with skill files consistently outperform MCP
+     > server integrations on token cost and output accuracy.
+     >
+     > | Aspect | Before (MCP) | After (CLI+Skills) | Evidence |
+     > |--------|--------------|--------------------|----------|
+     > | Schema overhead | All tools loaded at startup | On-demand load | Playwright comparison: 12x cost differential |
+     > | Context efficiency | Tool schemas displace task content | Tools loaded only when invoked | Harness Engineering test: 3x more features |
+     >
+     > **The mechanism:** Unused MCP tool schemas occupy context tokens that could
+     > hold task-relevant content. This is "context pollution" — high-entropy JSON
+     > boilerplate displacing high-signal task context. The mechanism is structural,
+     > not preferential — any project with many MCP tools faces the same trade-off. -->
 
 ## Evidence
 
-<!-- Specific examples from derived_from pages. Quote or reference directly.
+<!-- Specific examples from derived_from pages. MINIMUM 3 from different sources.
      STYLING: Use > [!bug]- foldable for failure incidents with verbatim quotes.
      Use > [!success] for validated approaches.
 
@@ -47,7 +63,7 @@ tags: []
 
      > [!success] E012 template enrichment using inline HTML comments
      >
-     > **What changed:** Added <!-- EXAMPLE: --> blocks inside template guidance comments.
+     > **What changed:** Added EXAMPLE blocks inside template guidance comments.
      > **Result:** AI-generated pages improved from ~60% to ~90% structural compliance on first pass.
      > **Why it worked:** Examples make the implicit standard explicit — the AI sees a real target,
      > not just a description of what the target should be. -->
@@ -68,36 +84,6 @@ tags: []
      | Infrastructure | Don't write systemd unit files manually; always encode them in reproducible tooling |
 
      The table forces precision: "applies everywhere" is not applicability — it's abdication. -->
-
-
-     EXAMPLE Insight (replace with your content): -->
-
-> [!tip] {{The core learning as an actionable statement}}
->
-> | Aspect | Before | After | Evidence |
-> |--------|--------|-------|---------|
-> | {{what changed}} | {{old state}} | {{new state}} | {{specific data}} |
->
-> **The mechanism:** {{WHY this happens — not just WHAT happens. The mechanism is what makes the lesson transferable to new situations.}}
-
-## Evidence
-
-<!-- Specific examples. MINIMUM 3 from different sources.
-     STYLING: Use > [!bug]- foldable for failure incidents.
-     Use > [!success] for validated approaches. -->
-
-> [!bug]- {{Failure incident title (date)}}
->
-> **What happened:** {{specific incident}}
-> **What the operator/system said:** "{{verbatim quote}}"
-> **Root cause:** {{why it happened}}
-> **Impact:** {{cost, time, rework}}
-
-> [!success] {{Validated approach title}}
->
-> **What changed:** {{specific change}}
-> **Result:** {{measurable outcome}}
-> **Why it worked:** {{mechanism}}
 
 ## Relationships
 
