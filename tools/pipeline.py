@@ -395,6 +395,12 @@ def pipeline_status(project_root: Path) -> Dict[str, Any]:
 # Group execution (parallel)
 # ---------------------------------------------------------------------------
 
+# max_workers is a CONCURRENCY limit (ThreadPoolExecutor thread count), not a
+# content cap. It exists to bound resource usage (network sockets, CPU).
+# Content (URL results) is never capped — every URL in the list is fetched
+# and returned. The no-caps directive targets content caps on reads/lists,
+# not concurrency limits on parallel infrastructure.
+# lint:allow-default-cap
 def group_fetch(urls: List[str], project_root: Path, max_workers: int = 4,
                 verbose: bool = True) -> List[Dict[str, Any]]:
     """Fetch multiple URLs in parallel. Returns list of results."""

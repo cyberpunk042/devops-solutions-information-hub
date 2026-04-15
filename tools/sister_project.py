@@ -207,9 +207,14 @@ def _build_consumption_index(project_cfg: Dict[str, Any]) -> set:
 
 
 def _rel_to_project(project_cfg: Dict[str, Any], file_path: Path) -> str:
-    """Normalize a sister-project file path to its relative form (for consumption check)."""
+    """Normalize a sister-project file path to its relative form (for consumption check).
+
+    Calls .resolve() on the file path so layout entries containing '..' segments
+    (e.g. '../docs/systems' when wiki_dir is 'wiki') normalize correctly before
+    relative_to compares them to the resolved project root.
+    """
     try:
-        return str(file_path.relative_to(_project_root(project_cfg)))
+        return str(file_path.resolve().relative_to(_project_root(project_cfg)))
     except ValueError:
         return str(file_path)
 
@@ -335,19 +340,43 @@ def list_learnings(project_cfg: Dict[str, Any], show_all: bool = False) -> List[
     return result
 
 
-def consumption_summary(project_cfg: Dict[str, Any]) -> Dict[str, Any]:
-    """Return a breakdown of consumed vs unconsumed files across all layout dirs.
+def _flatten_layout_keys(layout: Any, prefix: str = "") -> List[str]:
+    """Walk the project's layout dict and return every leaf key as a dotted path.
 
-    Intended for a 'what's the overall cross-project absorption picture' view.
-    Consumed = referenced by any page in our research-wiki. Does NOT mean
-    validated — see list_learnings docstring.
+    Layouts declared in sister-projects.yaml can nest arbitrarily. This
+    traversal lets the absorption summary cover every declared section
+    without a hardcoded key list — flexibility per the wiki's menu-not-law
+    principle applied to the tool's own registry.
+    """
+    keys: List[str] = []
+    if isinstance(layout, dict):
+        for k, v in layout.items():
+            sub = f"{prefix}.{k}" if prefix else k
+            if isinstance(v, dict):
+                keys.extend(_flatten_layout_keys(v, sub))
+            elif isinstance(v, str):
+                keys.append(sub)
+    return keys
+
+
+def consumption_summary(project_cfg: Dict[str, Any]) -> Dict[str, Any]:
+    """Return a breakdown of consumed vs unconsumed files across ALL declared layout dirs.
+
+    Iterates over every leaf key in the project's layout registry (not a
+    hardcoded list), so adding a new layout key in sister-projects.yaml
+    automatically shows up here. Consumed = referenced by any page in our
+    research-wiki. Does NOT mean validated — see list_learnings docstring.
     """
     consumed = _build_consumption_index(project_cfg)
     sections = {}
-    for layout_key in ("backlog.epics", "backlog.modules", "backlog.tasks",
-                       "logs", "domains.learnings", "domains.architecture"):
+    layout = project_cfg.get("layout", {})
+    for layout_key in _flatten_layout_keys(layout):
         d = _layout_dir(project_cfg, layout_key)
-        if d is None or not d.exists():
+        # Skip layout entries that point at individual files rather than
+        # directories (e.g. openarms config.methodology → config/methodology.yaml).
+        # Those file-sentinels are not absorption-tracked as directories; if
+        # their consumption matters, it's surfaced via total_consumed_paths.
+        if d is None or not d.exists() or not d.is_dir():
             continue
         files = _list_md_files(d)
         total = len(files)

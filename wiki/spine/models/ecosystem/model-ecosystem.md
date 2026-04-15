@@ -175,13 +175,14 @@ Every project in the ecosystem must be understood from TWO perspectives:
 
 The [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] pattern appears throughout the ecosystem:
 
-> [!info] **Four implementations of the same pattern**
+> [!info] **Five implementations of the same pattern**
 > | System | Deterministic shell | LLM core | What it prevents |
 > |--------|-------------------|----------|-----------------|
 > | OpenFleet orchestrator | Python: state diff, budget, heartbeat, dispatch, security, anomaly | Individual agent execution | Hallucinated orchestration state |
 > | AICP complexity scorer | 0-10 scoring, threshold routing | Agent task execution | LLM deciding its own routing |
 > | Wiki evolution scorer | 6 deterministic signals, composite ranking | Page generation after selection | LLM picking its own evolution candidates |
 > | doctor.py governance | 24 static rules, pure conditionals | Agent actions being governed | LLM reasoning around safety rules |
+> | control-plane Adapter/Receipt system | Adapter.execute() wraps subprocess, returns structured Receipt | Whatever the LLM-driven task invokes through the adapter | Exceptions crossing boundaries (cannot be caught by the LLM-consumer) — formalized as [[adapters-never-raise-failure-as-data-at-integration-boundaries\|Adapters Never Raise — Failure as Data]] |
 
 > [!tip] **Why this pattern matters**
 > Deterministic shells are predictable, auditable, cheap, immune to hallucination. LLM cores are contextually intelligent, expensive, probabilistic. Separating them gives reliability AND intelligence without the failure modes of either.

@@ -375,7 +375,7 @@ The field crystallized harness engineering as a named discipline in late-2024 �
 > - **CLAUDE.md** — 180 lines. Schema, ingestion modes, quality gates, tooling commands, agent methodology section with stage gates.
 > - **5 skills** — wiki-agent, evolve, continue, model-builder, notebooklm. Each a folder with `skill.md`.
 > - **9 commands** — `/continue`, `/evolve`, `/ingest`, `/review`, `/gaps`, `/status`, `/backlog`, `/log`, `/build-model`.
-> - **17 MCP tools** — wiki operations accessible from any Claude Code conversation.
+> - **26 MCP tools** (updated 2026-04-15, grown from 17) — wiki operations accessible from any Claude Code conversation. Now past Model — MCP and CLI Integration's stated ~17-20 upper limit for schema overhead; selective tool exposure recommended as the next step.
 > - **Pipeline chains** — `post` (6-step validation), `health`, `evolve`, `continue`, `review`. Deterministic orchestration at level 1.
 > - **No hooks yet** — operating at levels 0-1. Hook-based stage-gate enforcement is the planned next step.
 
@@ -487,7 +487,7 @@ Validated experience from operating Claude Code in this ecosystem.
 > - **CLAUDE.md** — 180 lines. Schema, ingestion modes, quality gates, tooling commands, agent methodology section with stage gates.
 > - **5 skills** — wiki-agent, evolve, continue, model-builder, notebooklm. Each a folder with `skill.md`.
 > - **9 commands** — `/continue`, `/evolve`, `/ingest`, `/review`, `/gaps`, `/status`, `/backlog`, `/log`, `/build-model`.
-> - **17 MCP tools** — wiki operations accessible from any Claude Code conversation.
+> - **26 MCP tools** (updated 2026-04-15, grown from 17) — wiki operations accessible from any Claude Code conversation. Now past Model — MCP and CLI Integration's stated ~17-20 upper limit for schema overhead; selective tool exposure recommended as the next step.
 > - **Pipeline chains** — `post` (6-step validation), `health`, `evolve`, `continue`, `review`. Deterministic orchestration at level 1.
 > - **No hooks yet** — operating at levels 0-1. Hook-based stage-gate enforcement is the planned next step.
 

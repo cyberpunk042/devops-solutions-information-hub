@@ -64,6 +64,16 @@ projects:
       logs: log
       domains:
         architecture: domains/architecture
+      # OpenFleet-specific: authoritative design lives under docs/ (not wiki/) —
+      # docs/systems/ for system specs, docs/milestones/active/ for in-flight
+      # design work with per-milestone subdirs. These are treated as
+      # architecture-class content for absorption-tracking purposes.
+      # Note: layout dirs are not recursive — declare each milestone subdir
+      # explicitly (flexible-tools principle: operator declares what matters).
+      docs:
+        systems: ../docs/systems                              # "../" because layout paths resolve under wiki_dir; docs/ is a sibling
+        milestones_active: ../docs/milestones/active
+        milestone_immune_system: ../docs/milestones/active/immune-system
     queryable_frontmatter:
       - status
       - priority
@@ -76,19 +86,29 @@ projects:
     path: /home/jfortin/devops-expert-local-ai
     wiki_dir: docs/kb                    # AICP uses docs/kb/ not wiki/
     layout:
+      # Actual structure confirmed 2026-04-15 — only 2 top-level dirs under docs/kb
       domains:
-        architecture: architecture
+        infrastructure: infrastructure
+        research: research
     queryable_frontmatter:
       - status
       - tags
 
   devops-control-plane:
-    description: "Unified project management platform — 24 operational rules, tech auto-detection engine, vault"
+    description: "Unified project management platform — operational rules, tech auto-detection engine, vault"
     path: /home/jfortin/devops-control-plane
     wiki_dir: docs                       # repo-root docs/
     layout:
+      # Actual structure confirmed 2026-04-15 — root-level .md files + 3 subdirs.
+      # NOTE: our prior claim of "24 immune system rules under docs/rules/" was wrong;
+      # no rules/ directory exists. Rules-related content lives in the top-level
+      # docs/*.md files (ANALYSIS.md, AUDIT.md, ADAPTERS.md etc.) and in adr/ and audits/.
+      root_docs: .
       domains:
-        rules: rules                     # 24 immune system rules
+        adr: adr
+        api: api
+        audits: audits
+        examples: examples
     queryable_frontmatter:
       - status
       - priority

@@ -118,7 +118,7 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 > | **How does this connect to structured context?** | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] — MCP schemas are UNSTRUCTURED context pollution. CLI+Skills load STRUCTURED context on demand. |
 > | **How does tier-based depth apply?** | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — same principle: lightweight tier = less context loaded = less pollution |
 > | **What is the decision record?** | [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] — CLI for operational tasks, MCP for external service bridges and tool discovery |
-> | **How does this connect to the wiki's own tools?** | The wiki has 17 MCP tools AND CLI pipeline. MCP for discoverability. CLI for operational efficiency. Both exist because the tradeoff is real. |
+> | **How does this connect to the wiki's own tools?** | The wiki has 26 MCP tools (as of 2026-04-15, grown from 17) AND CLI pipeline. MCP for discoverability. CLI for operational efficiency. Both exist because the tradeoff is real. |
 
 ## Relationships
 

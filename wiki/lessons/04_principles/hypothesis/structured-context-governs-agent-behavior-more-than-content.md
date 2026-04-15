@@ -123,6 +123,8 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise — Failure As Data at Integration Boundaries]]
+[[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]

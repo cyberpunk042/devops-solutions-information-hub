@@ -236,6 +236,9 @@ Commands (user trigger)
 | [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]] | L2 | The command+hook composition pattern for interactive approval workflows |
 | [[harness-engineering|Harness Engineering]] | L2 | The governing concept — all four levels as a coordinated control system |
 | [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]] | L6 | When to use MCP (external bridges) vs CLI+Skills (operational tasks) |
+| [[block-with-reason-and-justified-escalation\|Block With Reason and Justified Escalation]] | L5 | The 4-part bypass-mechanism protocol (Block + Reason + Offer + Justification) that PreToolUse hooks emit when they fire. Added 2026-04-15. |
+| [[adapters-never-raise-failure-as-data-at-integration-boundaries\|Adapters Never Raise — Failure as Data]] | L5 | The rule hook handlers and MCP tool surfaces follow: structured result types instead of exceptions across process/language boundaries. Added 2026-04-15. |
+| [[observe-fix-verify-loop\|Observe-Fix-Verify Loop]] | L5 | Battle-testing cycle. Hooks at lifecycle events (SessionEnd, PostToolUse, PostCompact) are the Observe surface; methodology.yaml and schema edits are the Fix surface; next-session compliance is Verify. Added 2026-04-15. |
 
 ---
 

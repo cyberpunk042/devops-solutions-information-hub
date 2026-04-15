@@ -203,7 +203,7 @@ Stage-Gate Methodology is the 5-stage sequential system — Document → Design 
 > | Mechanism | OpenArms | OpenFleet | Research Wiki | Strength |
 > |-----------|----------|-----------|---------------|---------|
 > | Protocol instructions (CLAUDE.md) | Primary | Supplementary | Primary | Works immediately; can degrade with context |
-> | MCP tool blocking | N/A | Primary for CONVERSATION/WORK | 17-tool MCP server (stage-aware queries) | Structural — impossible to violate |
+> | MCP tool blocking | N/A | Primary for CONVERSATION/WORK | 26-tool MCP server (stage-aware queries; count as of 2026-04-15) | Structural — impossible to violate |
 > | One-commit-per-stage | Core convention | Not used | Encouraged but not enforced | Creates auditable git ledger |
 > | Immune system detection | N/A | 4/11 diseases implemented | N/A | Self-correcting after violation |
 > | Readiness range enforcement | Core protocol | Readiness score drives gates | Core protocol | Observable in task frontmatter |

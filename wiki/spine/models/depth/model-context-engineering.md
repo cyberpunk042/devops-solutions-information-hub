@@ -170,6 +170,9 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 | [[validation-matrix-test-suite-for-context-injection|Validation Matrix]] | pattern | 29-scenario test suite for context injection |
 | [[model-markdown-as-iac|Model — Markdown as IaC]] | model | How markdown files configure agent behavior |
 | [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]] | standards | What good injections look like — gold standards + anti-patterns |
+| [[block-with-reason-and-justified-escalation\|Block With Reason and Justified Escalation]] | L5 | Structured escalation-protocol: 4-part schema (Block + Reason + Offer + Justification). The proto-programming principle applied to agent-operator communication at decision boundaries. Added 2026-04-15. |
+| [[adapters-never-raise-failure-as-data-at-integration-boundaries\|Adapters Never Raise — Failure as Data]] | L5 | Structured-result-type pattern at integration boundaries — format-as-enforcement at the function-return level. Same principle as "JSON over Markdown" finding in §Format-as-Enforcement, applied to Python return values. Added 2026-04-15. |
+| [[observe-fix-verify-loop\|Observe-Fix-Verify Loop]] | L5 | The iteration pattern that produces structural refinement. Every OFV cycle Observes what current structure fails to enforce and Fixes the structure (not the instructions). Added 2026-04-15. |
 
 ### Worked Examples — Context Engineering in Practice
 

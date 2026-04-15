@@ -587,6 +587,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         pages,
         wiki_dir / "backlog" / "operator-decision-queue.md",
     )
+    unsolicited_caps = _check_unsolicited_caps(wiki_dir.parent / "tools")
 
     total_issues = (
         len(dead_relationships)
@@ -595,8 +596,8 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         + len(orphan_pages)
         + sum(len(d["issues"]) for d in domain_health)
     )
-    # Unstyled pages, standards issues, and queue drift are advisory —
-    # not counted in total_issues (won't cause `pipeline post` to fail)
+    # Unstyled pages, standards issues, queue drift, unsolicited caps are
+    # advisory — not counted in total_issues (won't cause `pipeline post` to fail)
 
     return {
         "orphan_pages": orphan_pages,
@@ -607,6 +608,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         "filename_issues": filename_issues,
         "standards_issues": standards_issues,
         "queue_drift": queue_drift,
+        "unsolicited_caps": unsolicited_caps,
         "domain_health": domain_health,
         "summary": {
             "pages_scanned": len(pages),
@@ -618,9 +620,141 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
             "unstyled_pages": len(unstyled_pages),
             "standards_issues": len(standards_issues),
             "queue_drift": len(queue_drift),
+            "unsolicited_caps": len(unsolicited_caps),
             "domain_health_issues": sum(len(d["issues"]) for d in domain_health),
         },
     }
+
+
+def _check_unsolicited_caps(tools_dir: Path) -> List[Dict[str, str]]:
+    """Advisory lint — flag Python function parameters that default to caps.
+
+    Scans tools/*.py for function parameter defaults whose NAME matches common
+    cap-semantic patterns (max_*, limit, truncate, head_limit, cap_*) and whose
+    DEFAULT VALUE is a positive integer or truthy literal. Such defaults violate
+    the 2026-04-15 operator directive:
+
+        "no caps, no compacting, read full content always"
+        (see raw/notes/2026-04-15-directive-no-caps-no-compact-read-full.md)
+
+    Caps must be OPT-IN by caller, never defaulted in the function signature.
+    This is the Infrastructure-Over-Instructions implementation of the directive
+    — the rule becomes a standing structural check, not a prose memory.
+
+    Known allowlisted cases: pagination params in API-adjacent code where
+    caller-opt-out is impractical (e.g. external GitHub API calls). These can
+    be suppressed with a `# noqa: nocaps` trailing comment on the param line
+    or with `# lint:allow-default-cap` on the line above the def.
+
+    Returns: list of advisory issues. NEVER BLOCKING.
+    """
+    import re as _re
+    issues: List[Dict[str, str]] = []
+    if not tools_dir.exists() or not tools_dir.is_dir():
+        return issues
+
+    # Pattern: param name matches cap-semantic AND default is int > 0 or True
+    # Captures: (param_name)(: type_annotation)?\s*=\s*(default)
+    #   - max_foo: int = 100
+    #   - limit=50
+    #   - truncate: bool = True
+    #   - head_limit: Optional[int] = 20
+    cap_name = _re.compile(
+        r'\b('
+        r'max_[a-z_]+'     # max_files, max_bytes, max_results, ...
+        r'|limit'
+        r'|truncate'
+        r'|head_limit'
+        r'|cap_[a-z_]+'
+        r'|max_section_[a-z_]+'
+        r')\b'
+    )
+    # Find `name: ... = value` inside function signatures
+    param_re = _re.compile(
+        r'\b([a-z_][a-z0-9_]*)\s*(?::\s*[^=,)]+)?\s*=\s*([^,)\n]+)'
+    )
+    # Truthy default = any positive int literal, True, or a string
+    truthy_int = _re.compile(r'^\s*([1-9]\d*|True)\s*$')
+
+    for py_file in sorted(tools_dir.rglob("*.py")):
+        # Skip the lint checker itself and venv
+        if py_file.name == "lint.py":
+            continue
+        if ".venv" in py_file.parts or "__pycache__" in py_file.parts:
+            continue
+        try:
+            text = py_file.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+        lines = text.split("\n")
+        # Walk line by line, tracking multi-line function signatures
+        in_def = False
+        def_buffer: List[str] = []
+        def_start_line = 0
+        prev_line = ""
+        def_allow_suppress = False
+        for i, line in enumerate(lines, 1):
+            stripped = line.rstrip()
+            if not in_def:
+                if _re.match(r'^\s*def\s+\w+\s*\(', stripped):
+                    in_def = True
+                    def_buffer = [stripped]
+                    def_start_line = i
+                    # Check previous line for suppression pragma
+                    def_allow_suppress = "lint:allow-default-cap" in prev_line
+                    if stripped.rstrip().endswith(")") or stripped.rstrip().endswith("):"):
+                        # Single-line def — process immediately
+                        _scan_def_sig(
+                            "\n".join(def_buffer), def_start_line,
+                            py_file, cap_name, param_re, truthy_int,
+                            def_allow_suppress, issues,
+                        )
+                        in_def = False
+                        def_buffer = []
+                prev_line = stripped
+                continue
+            # In multi-line def
+            def_buffer.append(stripped)
+            if stripped.endswith(")") or stripped.endswith("):") or stripped.endswith(") -> None:") or ") ->" in stripped:
+                _scan_def_sig(
+                    "\n".join(def_buffer), def_start_line,
+                    py_file, cap_name, param_re, truthy_int,
+                    def_allow_suppress, issues,
+                )
+                in_def = False
+                def_buffer = []
+    return issues
+
+
+def _scan_def_sig(
+    sig_text: str, start_line: int, py_file: Path,
+    cap_name: "re.Pattern", param_re: "re.Pattern", truthy_int: "re.Pattern",
+    suppress: bool, issues: List[Dict[str, str]],
+) -> None:
+    """Helper — scan a single function signature for unsolicited cap defaults."""
+    if suppress:
+        return
+    for m in param_re.finditer(sig_text):
+        name, default = m.group(1), m.group(2).strip()
+        if not cap_name.search(name):
+            continue
+        if "nocaps" in default.lower():
+            continue  # trailing noqa-style suppression
+        if not truthy_int.match(default):
+            continue  # e.g. = None, = False, = 0 — those are explicit no-default
+        issues.append({
+            "file": str(py_file.relative_to(py_file.parents[1])),
+            "line": start_line,
+            "param": name,
+            "default": default,
+            "rule": "unsolicited-cap-default",
+            "message": (
+                f"Parameter '{name}' has default value '{default}' — violates "
+                f"no-caps directive (2026-04-15). Caps must be opt-in by caller. "
+                f"Either remove the default, set it to None/0/False, or add "
+                f"'# lint:allow-default-cap' above the def with justification."
+            ),
+        })
 
 
 def _check_standards_exemplars(

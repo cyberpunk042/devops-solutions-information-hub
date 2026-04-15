@@ -16,7 +16,7 @@ instances:
   - {'page': 'Infrastructure Enforcement Proves Instructions Fail', 'context': 'Structural prevention (Line 1) proven by OpenArms hooks — 75% → 0% stage violations'}
   - {'page': 'Agent Failure Taxonomy — Seven Classes of Behavioral Failure', 'context': '6 behavioral failure classes that Line 2 (detection) and Line 3 (correction) address'}
 created: 2026-04-12
-updated: 2026-04-13
+updated: 2026-04-15
 sources:
   - id: openfleet-immune
     type: observation
@@ -26,6 +26,18 @@ sources:
     type: observation
     file: raw/articles/openarms-agent-behavior-failures.md
     description: OpenArms hooks as Line 1 implementation — 215 lines, 100% stage boundary enforcement
+  - id: openfleet-live-immune-system-spec
+    type: observation
+    file: /home/jfortin/openfleet/docs/systems/02-immune-system.md
+    description: Live OpenFleet immune-system spec — opens with "3 files. 746 lines." Lists 5 diseases (deviation / laziness / protocol violation / confident-but-wrong / scope creep) matching our taxonomy. Verified 2026-04-15.
+  - id: openfleet-live-doctor-design
+    type: observation
+    file: /home/jfortin/openfleet/docs/milestones/active/immune-system/02-the-doctor.md
+    description: Live OpenFleet doctor-design doc — grounded in verbatim PO quotes that author the requirements (e.g. "even if it mean having a hidden doctor agent that prune agent and agent work, force compact, rules reinjection..."). Unusually strong source — requirements authored by operator, not deduced by agent. Verified 2026-04-15.
+  - id: openfleet-live-disease-catalogue
+    type: observation
+    file: /home/jfortin/openfleet/docs/milestones/active/immune-system/03-disease-catalogue.md
+    description: Live OpenFleet disease catalogue — per-disease PO evidence quotes + live incident evidence (control-surface-task confident-but-wrong instance). Verified 2026-04-15.
 tags: [immune-system, three-lines-defense, enforcement, detection, correction, quality, agent-fleet, pattern]
 ---
 
@@ -152,11 +164,14 @@ Key design principle: "seeing the pattern does not break the pattern — it's fo
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise — Failure As Data at Integration Boundaries]]
+[[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
+[[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
 [[identity-profile|OpenFleet — Identity Profile]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]

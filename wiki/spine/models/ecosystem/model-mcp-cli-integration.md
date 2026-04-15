@@ -130,8 +130,8 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 > - **Semantic tool naming** — `wiki_search`, `wiki_post`, `wiki_status` — self-describing for autonomous invocation. Opaque names (`do_operation_7`) defeat discoverability.
 > - **Document preconditions in tool descriptions** — autonomous agents have only the schema to guide them. Put preconditions, side effects, expected output format in the description.
 
-> [!example]- **Real instance: this wiki's 17-tool MCP server**
-> Tool names follow `wiki_<verb>` format (semantically clear). Each tool has a single primary function. Descriptions include what the tool returns. The server follows all four design principles — but at 17 tools, it's at the upper limit of acceptable schema overhead. Tools used only in specific workflows (like `wiki_evolve`) could arguably be CLI skills instead.
+> [!example]- **Real instance: this wiki's 26-tool MCP server (updated 2026-04-15)**
+> Tool names follow `wiki_<verb>` format (semantically clear). Each tool has a single primary function. Descriptions include what the tool returns. The server follows all four design principles. **The tool count has grown from 17 to 26 as of 2026-04-15 — now past the "~17-20 upper limit" this model originally stated.** Full enumeration: wiki_backlog, wiki_continue, wiki_crossref, wiki_evolve, wiki_fetch, wiki_fetch_topic, wiki_gaps, wiki_gateway_compliance, wiki_gateway_contribute, wiki_gateway_docs, wiki_gateway_flow, wiki_gateway_health, wiki_gateway_query, wiki_gateway_template, wiki_integrations, wiki_list_pages, wiki_log, wiki_methodology_guide, wiki_mirror_to_notebooklm, wiki_post, wiki_read_page, wiki_scan_project, wiki_search, wiki_sister_project, wiki_status, wiki_sync. Selective tool exposure (loading only context-relevant tools per conversation) is now the recommended next step — currently tools are all eagerly loaded per MCP defaults.
 
 ---
 
@@ -189,7 +189,7 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 > - CLI has 3x more features than MCP version of Playwright
 > - Context-mode sandbox achieves 98% context saving (measured)
 > - Decision framework with 4-step evaluation sequence
-> - MCP server design principles (from operating 17-tool wiki server)
+> - MCP server design principles (from operating a 26-tool wiki server as of 2026-04-15 — grown from 17)
 > - Ecosystem bindings resolved (CLI for internal, MCP for external, sandbox for heavy)
 
 > [!warning] **Thin or unverified**

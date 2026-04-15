@@ -12,7 +12,7 @@ derived_from:
   - "Model: Quality and Failure Prevention"
   - "Infrastructure Enforcement Proves Instructions Fail"
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-15
 sources:
   - id: openarms-e016
     type: observation
@@ -22,6 +22,38 @@ sources:
     type: observation
     file: raw/articles/openarms-methodology-v10-v11.md
     description: OpenArms v10→v11 transition — infrastructure is solved, agent behavior is the remaining frontier
+  - id: openarms-e016-frontmatter-pollution
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-frontmatter-pollution-findings.md
+    description: T109 spike finding — pipeline treats every agent-written file as task artifact. Recommendation Option B — filter in validator using model paths + existing-files.json. Verified 2026-04-15; matches our Class 1 row.
+  - id: openarms-e016-weakest-checker
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-weakest-checker-findings.md
+    description: T110 spike finding — agent's code quality ceiling = strictest gate it believes applies. T110 also adds that code is SHAPED BY the checker targeted (esbuild-shaped code ≠ strict-TS-shaped code), deeper than the gate-skip framing alone. Verified 2026-04-15.
+  - id: openarms-e016-corner-cutting
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-corner-cutting-verification-findings.md
+    description: T108 spike finding — test-stage skill instructs `pnpm test` only; agent faithfully follows. Design gap, not fatigue. v10 derived-gate catches the error at /stage-complete time, but agent doesn't self-verify. Verified 2026-04-15.
+  - id: openarms-e016-environment-patching
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md
+    description: T107 spike finding — T085 $27/12 retries, T086 $7.33/4 retries; combined prompt+infra+model-bias root cause. Recommendation layered pre-flight + retry cap. Verified 2026-04-15; Class 3 refined-fix cell sourced directly from this doc.
+  - id: openarms-e016-sub-agent-compliance
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md
+    description: T111 spike finding — sub-agents violate behavioral rules ~67% of the time (= ~33% compliance) even when rules in spawn prompt. Recommendation Option 3 (trustless verification). Verified 2026-04-15; updated Class 5 number from our prior 50% estimate to T111's measured 67% violation rate.
+  - id: openarms-e016-done-when-acceptance
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md
+    description: T112 spike finding — three-layer problem (bad items upstream + no reject protocol + model_na masking). Recommendation dispatch-time generation with merge strategy 3. Verified 2026-04-15; Class 6 refined-fix cell sourced directly from this doc.
+  - id: openarms-live-integration-tests-insufficient
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md
+    description: "Live OpenArms lesson — closed-verification-loop failure. 686 passing tests across 4 epics at review/100% status, but 2073 lines nothing imported at runtime. Convergent with Class 2 (weakest-checker) at a deeper level: when the agent writes both impl AND tests, tests verify what was built not what should work. Adds the 'externality of verify step' invariant to our taxonomy. Verified 2026-04-15."
+  - id: openarms-live-specific-done-when
+    type: observation
+    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-specific-done-when.md
+    description: "Live OpenArms lesson — convergent with Class 6 fix. Specific Done When items produce better work than generic boilerplate templates. Complements T112 dispatch-time generation by specifying the WHAT-MAKES-A-DONE-WHEN-WORK alongside the WHEN-TO-GENERATE-IT. Verified 2026-04-15."
 tags: [agent-failure, taxonomy, behavioral, compliance, quality, quantified-evidence, openarms]
 ---
 
@@ -47,10 +79,10 @@ After infrastructure enforcement solves stage boundary violations (75% → 0%), 
 > | # | Class | What Happens | Root Cause (3-layer) | Fix Type |
 > |---|-------|-------------|---------------------|----------|
 > | 1 | **Artifact pollution** | Reverted files stay in artifacts list (24% contamination: 8/33 entries across T085-T087). Frontmatter lies. | Post-write hook logs all files. `commitAndAdvance` prefix-filters without consulting model's declared artifact paths. No distinction new-file vs modified-file. | Infra: filter artifacts against model's `src/{module}/{slug}.ts` paths per stage |
-> | 2 | **Weakest-checker optimization** | Agent writes code that passes `pnpm test` (esbuild, no type narrowing) but fails `pnpm tsgo`. T087: `const teamConfig: TeamConfig \| undefined = undefined` — TypeScript narrows to `never`. | Test-stage skill says "Run: pnpm test" only. Implement-stage skill lists "tsgo + check." Agent follows skill LITERALLY. Not fatigue — design gap in skill completeness. | Infra: ALL gates always (tsgo + check + test for every src-touching stage) |
+> | 2 | **Weakest-checker optimization** | Agent writes code that passes `pnpm test` (esbuild, no type narrowing) but fails `pnpm tsgo`. T087: `const teamConfig: TeamConfig \| undefined = undefined` — TypeScript narrows to `never`. **T110 spike finding (verified 2026-04-15): the agent does not just skip the strict checker — the code it produces is SHAPED BY the checker it targets. Code written for esbuild has different characteristics than code written for strict TypeScript.** Fixing the gate catches errors; fixing the agent's awareness changes what it writes. | Test-stage skill says "Run: pnpm test" only. Implement-stage skill lists "tsgo + check." Agent follows skill LITERALLY. Not fatigue — design gap in skill completeness. Code-shape bias is deeper than gate-skip: even with all gates wired, if the agent believes esbuild is the target it writes esbuild-grade code. | Infra: ALL gates always (tsgo + check + test for every src-touching stage) PLUS surface the strictest checker in the test-stage skill text so the agent targets it while writing, not just when running. |
 > | 3 | **Environment patching without escalation** | 4-layer polyfill chain: `path.matchesGlob` → `.toSorted()` → `NODE_OPTIONS` → fnm subprocess. Cost: $12-15 overhead per occurrence. 12 of 17 retries in T085. | **Combined 40/40/20:** Prompt "stuck after 3 attempts" rule doesn't fire because each patch SUCCEEDS (progressive, not repetitive). No stage-level retry counter in validator. Claude's training rewards persistence over escalation. | Infra: stage retry cap (max 3), auto-escalate on 4th. Agent never considered "file concern and stop" as an option — `/concern` lists scope/design issues, not environment |
 > | 4 | **Fatigue cliff** | Verification thoroughness drops stages 4-5. T087: 36 min, skipped tsgo on own test. T085: 66 min, 354 calls. Not random — predictable quality cliff. | Context accumulation + model perception of "almost done." BUT: also a design gap — if the test skill said "tsgo" the agent would run it. Fatigue AND incomplete instructions compound. | Infra: budget cap per task. Infra: mandatory verification gates. Design: complete skill instructions. |
-> | 5 | **Sub-agent non-compliance** | Main agent includes rules in ~80% of sub-agent prompts. Of those receiving rules, ~50% comply (T085-T087: 6, 11, 0 violations across 9 sub-agents). | Sub-agents don't inherit CLAUDE.md. Rules in spawn prompts are soft constraints — same arms-race as pre-E014 main agent. Architecturally unfixable with prompt-only solutions. | **Recommended: Option 3 (trustless verification)** — accept non-compliance, verify sub-agent output. Not Option 2 (wrapper injection: high cost, doesn't fix attention). |
+> | 5 | **Sub-agent non-compliance** | Main agent includes rules in ~80% of sub-agent prompts. **Measured violation rate when rules ARE in the prompt: ~67%** (T111 spike, verified 2026-04-15 — updated from our prior 50% estimate). That is ~33% compliance even with explicit prompt injection — same arms-race signature as pre-E014 main agent. | Sub-agents don't inherit CLAUDE.md. Rules in spawn prompts are soft constraints. Architecturally unfixable with prompt-only solutions. | **Recommended: Option 3 (trustless verification)** — accept ~67% violation as given, verify sub-agent OUTPUT rather than constrain input. Not Option 2 (wrapper injection: high cost, doesn't fix attention). |
 > | 6 | **Silent conflict resolution** | Task says "produce findings doc," model says "produce research doc." Agent produces BOTH, no concern filed. Bad Done When: research tasks have "implementation exists" criteria. `model_na` gate now auto-passes impossible items — MASKS the signal instead of fixing it. | Agent accommodates silently > formal escalation. No reject protocol exists. `/concern` is fire-and-forget (nothing reads `.openarms/concerns.json` during execution). | **Recommended: Option B (dispatch-time generation)** — harness generates Done When from model's artifact definitions at dispatch, ignoring task file boilerplate. |
 > | 7 | **Memory/Wiki conflation** | Agent records project knowledge in Claude Code memory (`~/.claude/...`) instead of wiki. Memory is private, unshared, invisible to brain and other agents. OpenArms incident: agent created `project_five_claude_contexts.md` and `feedback_investigate_before_designing.md` in memory instead of wiki — operator corrected: "all this is not possible to share... please follow the LLM wiki directive." | Claude Code system prompt heavily reinforces "save to memory." Prompt collision: system prompt says "build up memory" vs project CLAUDE.md says "record in wiki." Agent does BOTH, polluting both surfaces. Default behavior (reach for memory) is WRONG for project work. | Rule: "who needs to read this?" If anyone beyond current session → wiki. If just personal preference → memory. Default to wiki. NEVER duplicate. The LLM wiki IS the knowledge system — memory is ephemeral session continuity only. |
 
@@ -197,9 +229,11 @@ OpenArms is actively investigating each failure class. These are the proposed fi
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[session-handoff-standards|Session Handoff Standards]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

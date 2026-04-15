@@ -712,8 +712,8 @@ def query_lessons(paths: Dict[str, Path]) -> Dict[str, Any]:
     return {"lessons": result, "total": sum(len(v) for v in result.values())}
 
 
-def query_logs(paths: Dict[str, Path], limit: int = 10) -> Dict[str, Any]:
-    """Show recent log entries."""
+def query_logs(paths: Dict[str, Path], limit: int = 0) -> Dict[str, Any]:
+    """Show recent log entries. limit=0 returns all (default, per no-caps directive)."""
     wiki_dir = paths["wiki"]
     log_dir = wiki_dir / "log"
 
@@ -732,7 +732,7 @@ def query_logs(paths: Dict[str, Path], limit: int = 10) -> Dict[str, Any]:
                 "note_type": fm.get("note_type", "?"),
                 "created": fm.get("created", "?"),
             })
-        if len(entries) >= limit:
+        if limit > 0 and len(entries) >= limit:
             break
 
     return {"logs": entries, "total": len(entries)}

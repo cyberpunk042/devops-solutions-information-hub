@@ -117,7 +117,7 @@ The compaction lifecycle reveals something non-obvious: **context management is 
 > |----------|---------------|
 > | CLAUDE.md as router | Routes to subsystems, ~230 lines, structured as table of contents |
 > | Deferred loading | Skills (wiki-agent, model-builder, evolve) load on invocation, not at startup |
-> | MCP with CLI fallback | 17 MCP tools registered for discoverability; all have CLI equivalents via `tools/pipeline` |
+> | MCP with CLI fallback | 26 MCP tools registered for discoverability as of 2026-04-15 (grown from 17); all have CLI equivalents via `tools/pipeline` |
 > | Pipeline offloading | Lint, validate, manifest — run as separate processes, not in conversation context |
 > | Session artifacts | `docs/SESSION-*.md` files capture state for cross-session handoff |
 > | Sub-agent scoping | Parallel sub-agents for independent model elevation; main context stays clean |

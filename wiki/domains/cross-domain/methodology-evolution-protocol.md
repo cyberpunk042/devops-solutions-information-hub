@@ -184,3 +184,4 @@ note_type: session
 [[deployment-closure-monitoring-artifacts|Deployment, Closure, and Monitoring Artifacts — Standards and Guide]]
 [[methodology-evolution-history|Evolution — Methodology System]]
 [[methodology-framework|Methodology Framework]]
+[[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]

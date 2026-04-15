@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-15T15:59:49.049583+00:00",
+  "generated": "2026-04-15T17:13:46.023757+00:00",
   "stats": {
-    "pages": 328,
+    "pages": 331,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2164,
-    "tags_unique": 1022,
+    "relationships": 2185,
+    "tags_unique": 1040,
     "layers": {
       "3": 4,
       "6": 16,
       "2": 51,
       "4": 43,
-      "5": 19,
+      "5": 22,
       "1": 32,
       "spine": 65
     },
     "maturity": {
       "growing": 271,
-      "seed": 13
+      "seed": 16
     }
   },
   "pages": [
@@ -6785,6 +6785,24 @@
           "file": "../devops-control-plane/README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
+        },
+        {
+          "id": "devops-control-plane-live-architecture",
+          "type": "observation",
+          "file": "/home/jfortin/devops-control-plane/docs/ARCHITECTURE.md",
+          "description": "Live architecture doc \u2014 classic layered/hexagonal: Interfaces (TUI/CLI/Web) \u2192 Core Domain (Pydantic models + services + engine + use-cases) \u2192 Policy (project.yml, stacks/*.yml) \u2192 Adapter Layer (shell/filesystem/vcs/containers). Strict inward-dependency discipline. Verified 2026-04-15."
+        },
+        {
+          "id": "devops-control-plane-live-design",
+          "type": "observation",
+          "file": "/home/jfortin/devops-control-plane/docs/DESIGN.md",
+          "description": "Live design doc \u2014 defines the product as meta-tool (not application). 6 pillars: Visibility, Integrations, Vaults, Stacks, Automation, Lifecycle. Verified 2026-04-15."
+        },
+        {
+          "id": "devops-control-plane-live-adapters",
+          "type": "observation",
+          "file": "/home/jfortin/devops-control-plane/docs/ADAPTERS.md",
+          "description": "Live ADAPTERS.md \u2014 pluggable Action \u2192 AdapterRegistry \u2192 Receipt pattern with circuit-breaker. 'Adapters never raise exceptions.' Canonical source for our Adapters-Never-Raise pattern page. Verified 2026-04-15."
         }
       ],
       "layer": 2,
@@ -6953,6 +6971,24 @@
           "file": "../devops-control-plane/README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
+        },
+        {
+          "id": "aicp-live-openarms-architecture-analysis",
+          "type": "observation",
+          "file": "/home/jfortin/devops-expert-local-ai/docs/kb/research/openarms-architecture-analysis.md",
+          "description": "Live AICP research doc \u2014 AICP's concrete integration architecture for OpenArms. Captures protocol details (WebSocket ws://localhost:18789, JSON RequestFrame/ResponseFrame/EventFrame), session-key format (acp:uuid, agent:main:wa:peer), 11-row architecture-parallels table (Gateway \u2194 Agent daemon, TaskRecord \u2194 TaskState, ACP \u2194 Fleet agent, etc.), and a 4-phase integration roadmap (MCP \u2192 Provider Plugin \u2192 ACP Runtime \u2192 Full Multimodal). Unique cross-sister-perspective source: AICP analyzing OpenArms as integration target. Verified 2026-04-15."
+        },
+        {
+          "id": "devops-control-plane-live-adapters",
+          "type": "observation",
+          "file": "/home/jfortin/devops-control-plane/docs/ADAPTERS.md",
+          "description": "Live devops-control-plane adapter spec \u2014 concretely defines the plugin/adapter protocol (Action \u2192 AdapterRegistry \u2192 Receipt) that other ecosystem projects follow. Invariant: 'Adapters never raise exceptions.' Feeds the Adapters Never Raise pattern. Verified 2026-04-15."
+        },
+        {
+          "id": "devops-control-plane-live-design",
+          "type": "observation",
+          "file": "/home/jfortin/devops-control-plane/docs/DESIGN.md",
+          "description": "Live devops-control-plane DESIGN.md \u2014 product-vision and core pillars. Frames the control plane as a meta-tool: 'Not an application. A structured way to discover what a solution is, what it needs, and how to act on it \u2014 through any interface (CLI, Web, TUI), backed by pluggable tool bindings.' Six pillars (Visibility, Integrations, Vaults, Stacks, Automation, Lifecycle). Gives the ecosystem's 'infrastructure governance' project a first-principles description. Verified 2026-04-15."
         }
       ],
       "layer": 2,
@@ -9494,6 +9530,12 @@
           "id": "hrm-trm-youtube-transcript",
           "type": "youtube-transcript",
           "url": "https://www.youtube.com/watch?v=ZgwHaI2C-9s"
+        },
+        {
+          "id": "openarms-verify-all-code-paths",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-verify-all-code-paths.md",
+          "description": "Live OpenArms lesson \u2014 convergent evidence. Operator-authored: 'When making an infrastructure change that affects how X is done, it is not enough to edit the file whose name matches the concern. Check EVERY site that does X. Use grep, not intuition. The absence of a compile error after an edit does not mean you fixed everything.' Adds verification-through-enumeration as a 5th convergent instance: AutoBE (compiler), HRM/TRM (recursive verify), our pipeline post chain, OpenArms hooks, and now grep-every-site coverage. Verified 2026-04-15."
         }
       ],
       "layer": 4,
@@ -9849,7 +9891,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-15",
       "tags": [
         "agent-failure",
         "taxonomy",
@@ -9871,6 +9913,54 @@
           "type": "observation",
           "file": "raw/articles/openarms-methodology-v10-v11.md",
           "description": "OpenArms v10\u2192v11 transition \u2014 infrastructure is solved, agent behavior is the remaining frontier"
+        },
+        {
+          "id": "openarms-e016-frontmatter-pollution",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-frontmatter-pollution-findings.md",
+          "description": "T109 spike finding \u2014 pipeline treats every agent-written file as task artifact. Recommendation Option B \u2014 filter in validator using model paths + existing-files.json. Verified 2026-04-15; matches our Class 1 row."
+        },
+        {
+          "id": "openarms-e016-weakest-checker",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-weakest-checker-findings.md",
+          "description": "T110 spike finding \u2014 agent's code quality ceiling = strictest gate it believes applies. T110 also adds that code is SHAPED BY the checker targeted (esbuild-shaped code \u2260 strict-TS-shaped code), deeper than the gate-skip framing alone. Verified 2026-04-15."
+        },
+        {
+          "id": "openarms-e016-corner-cutting",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-corner-cutting-verification-findings.md",
+          "description": "T108 spike finding \u2014 test-stage skill instructs `pnpm test` only; agent faithfully follows. Design gap, not fatigue. v10 derived-gate catches the error at /stage-complete time, but agent doesn't self-verify. Verified 2026-04-15."
+        },
+        {
+          "id": "openarms-e016-environment-patching",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md",
+          "description": "T107 spike finding \u2014 T085 $27/12 retries, T086 $7.33/4 retries; combined prompt+infra+model-bias root cause. Recommendation layered pre-flight + retry cap. Verified 2026-04-15; Class 3 refined-fix cell sourced directly from this doc."
+        },
+        {
+          "id": "openarms-e016-sub-agent-compliance",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md",
+          "description": "T111 spike finding \u2014 sub-agents violate behavioral rules ~67% of the time (= ~33% compliance) even when rules in spawn prompt. Recommendation Option 3 (trustless verification). Verified 2026-04-15; updated Class 5 number from our prior 50% estimate to T111's measured 67% violation rate."
+        },
+        {
+          "id": "openarms-e016-done-when-acceptance",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md",
+          "description": "T112 spike finding \u2014 three-layer problem (bad items upstream + no reject protocol + model_na masking). Recommendation dispatch-time generation with merge strategy 3. Verified 2026-04-15; Class 6 refined-fix cell sourced directly from this doc."
+        },
+        {
+          "id": "openarms-live-integration-tests-insufficient",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md",
+          "description": "Live OpenArms lesson \u2014 closed-verification-loop failure. 686 passing tests across 4 epics at review/100% status, but 2073 lines nothing imported at runtime. Convergent with Class 2 (weakest-checker) at a deeper level: when the agent writes both impl AND tests, tests verify what was built not what should work. Adds the 'externality of verify step' invariant to our taxonomy. Verified 2026-04-15."
+        },
+        {
+          "id": "openarms-live-specific-done-when",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-specific-done-when.md",
+          "description": "Live OpenArms lesson \u2014 convergent with Class 6 fix. Specific Done When items produce better work than generic boilerplate templates. Complements T112 dispatch-time generation by specifying the WHAT-MAKES-A-DONE-WHEN-WORK alongside the WHEN-TO-GENERATE-IT. Verified 2026-04-15."
         }
       ],
       "layer": 4,
@@ -9915,7 +10005,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-12",
+      "updated": "2026-04-15",
       "tags": [
         "enforcement",
         "bypass",
@@ -9937,6 +10027,18 @@
           "type": "observation",
           "file": "raw/articles/openarms-agent-behavior-failures.md",
           "description": "OpenArms T086 \u2014 operator reverted agent's correct fnm fix twice because it looked like scope creep. The block was wrong."
+        },
+        {
+          "id": "openarms-live-read-reasoning-before-reverting",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-read-agent-reasoning-before-reverting.md",
+          "description": "Live OpenArms lesson \u2014 operator-authored reflection on T085+T086 incidents. Primary-source authorship (PO, not agent-deduced) makes this the authoritative instance evidence. Our synthesis ABSTRACTS above it \u2014 the OpenArms lesson is about \"revert without diagnosis\"; our synthesis frames both \"block without bypass\" AND \"revert without diagnosis\" as two faces of the same mindful-enforcement rule. Verified 2026-04-15; content already absorbed at principle level in Evidence section below."
+        },
+        {
+          "id": "openarms-clean-win-scope-expansion",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-clean-win-scope-expansion.md",
+          "description": "Live OpenArms lesson \u2014 convergent sibling. T116 case: agent made an unauthorized 'clean' refactor (standalone function \u2192 private static method on CostAccumulator) while implementing authorized task. Hooks + diff-validators don't catch this class because the refactor is technically correct and in-allowed-surface. The mindful-enforcement bypass mechanism is what surfaces these: agent should block-with-escalation at design-time for any refactor outside task spec, regardless of quality. Verified 2026-04-15. Instance of the broader scope-creep class."
         }
       ],
       "layer": 4,
@@ -13281,6 +13383,253 @@
       "relationships": []
     },
     {
+      "path": "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries.md",
+      "slug": "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "title": "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "pattern",
+        "adapter",
+        "receipt",
+        "failure-as-data",
+        "fault-tolerance",
+        "integration-boundary",
+        "no-exceptions",
+        "cross-domain",
+        "convergent-evidence"
+      ],
+      "sources": [
+        {
+          "id": "devops-control-plane-adapters",
+          "type": "observation",
+          "file": "/home/jfortin/devops-control-plane/docs/ADAPTERS.md",
+          "description": "Canonical specification \u2014 'An adapter is a pluggable component that executes actions against external tools. Adapters never raise exceptions. All failures are captured in the Receipt.' Includes circuit-breaker integration, mock mode for testing, raw command fallback, explicit Adapter ABC with name/is_available/validate/execute methods. Verified 2026-04-15."
+        },
+        {
+          "id": "research-wiki-integrations-py",
+          "type": "file",
+          "file": "tools/integrations.py",
+          "description": "Our integration wrappers \u2014 same shape as control-plane's Adapter. is_available() check, subprocess with timeout, graceful fallback, structured dict returns. Natural instance on this-wiki side."
+        },
+        {
+          "id": "research-wiki-validate-py",
+          "type": "file",
+          "file": "tools/validate.py",
+          "description": "Schema validation using failure-as-data. validate_page returns {errors, warnings} \u2014 356 lines, never raises, entire pipeline-post quality contract runs through it."
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Three Lines of Defense \u2014 Immune System for Agent Quality",
+        "Block With Reason and Justified Escalation"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Block With Reason and Justified Escalation"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Observe-Fix-Verify Loop"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Four-Project Ecosystem"
+        }
+      ]
+    },
+    {
+      "path": "patterns/00_inbox/block-with-reason-and-justified-escalation.md",
+      "slug": "patterns/00_inbox/block-with-reason-and-justified-escalation",
+      "title": "Block With Reason and Justified Escalation \u2014 The Bypass Mechanism for Mindful Enforcement",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "pattern",
+        "enforcement",
+        "bypass",
+        "escalation",
+        "mindful",
+        "block-protocol",
+        "decision-surfacing",
+        "agent-autonomy-boundary"
+      ],
+      "sources": [
+        {
+          "id": "openarms-preliminary-placeholder",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/agent-escalation-with-justification.md",
+          "description": "Preliminary OpenArms placeholder \u2014 operator quote \"When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable.\" File explicitly marked \"The fully synthesized pattern is coming from the brain.\" This pattern page is that synthesis."
+        },
+        {
+          "id": "openarms-e016-environment-patching",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md",
+          "description": "T107 \u2014 root cause of T085. Retry-cap fix is one trigger of this pattern; pattern subsumes the fix by specifying what happens AFTER retry cap fires."
+        },
+        {
+          "id": "openarms-e016-sub-agent-compliance",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md",
+          "description": "T111 \u2014 sub-agent output-verification failures become escalation triggers under this pattern."
+        },
+        {
+          "id": "openarms-e016-done-when-acceptance",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md",
+          "description": "T112 \u2014 silent conflict resolution is the direct failure mode this pattern's block step prevents."
+        },
+        {
+          "id": "research-wiki-rogue-incident-2026-04-15",
+          "type": "directive",
+          "file": "raw/notes/2026-04-15-directive-no-caps-no-compact-read-full.md",
+          "description": "This wiki's own rogue incident \u2014 tool built with unsolicited caps instead of blocking-with-escalation at design time. Third instance proving the pattern is not OpenArms-specific."
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass",
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure",
+        "Infrastructure Over Instructions for Process Enforcement"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        }
+      ]
+    },
+    {
+      "path": "patterns/00_inbox/observe-fix-verify-loop.md",
+      "slug": "patterns/00_inbox/observe-fix-verify-loop",
+      "title": "Observe-Fix-Verify Loop \u2014 The Battle-Testing Cycle for Autonomous Agent Infrastructure",
+      "type": "pattern",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "pattern",
+        "methodology-process",
+        "battle-testing",
+        "iteration",
+        "ofv",
+        "autonomous-agent",
+        "observability",
+        "correction-cycle"
+      ],
+      "sources": [
+        {
+          "id": "openarms-live-ofv-pattern",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/pattern-observe-fix-verify.md",
+          "description": "Live OpenArms pattern file \u2014 operator-authored naming + first-principles description of the OFV cycle as observed in the 2026-04-09 autonomous session. Verified 2026-04-15; this pattern page synthesizes from OA's naming + our own three-layer evidence."
+        },
+        {
+          "id": "openarms-live-methodology-battle-tested",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-methodology-battle-tested.md",
+          "description": "Live OpenArms lesson \u2014 \"stable not because well-designed initially but stress-tested by real operation\" \u2014 the claim this pattern operationalizes. Verified 2026-04-15."
+        },
+        {
+          "id": "openarms-live-integration-tests-insufficient",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md",
+          "description": "Live OpenArms lesson \u2014 closed-verification-loop failure mode (agent writes both impl+tests, 686 passing tests / 0 runtime imports / 2073 lines orphaned). Evidence that the Verify step MUST be external to the agent. Verified 2026-04-15."
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Model \u2014 Methodology",
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "If You Can Verify, You Converge"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Block With Reason and Justified Escalation"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Evolution Protocol"
+        }
+      ]
+    },
+    {
       "path": "patterns/01_drafts/three-layer-agent-context-architecture.md",
       "slug": "patterns/01_drafts/three-layer-agent-context-architecture",
       "title": "Three-Layer Agent Context Architecture",
@@ -14069,7 +14418,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-13",
+      "updated": "2026-04-15",
       "tags": [
         "immune-system",
         "three-lines-defense",
@@ -14092,6 +14441,24 @@
           "type": "observation",
           "file": "raw/articles/openarms-agent-behavior-failures.md",
           "description": "OpenArms hooks as Line 1 implementation \u2014 215 lines, 100% stage boundary enforcement"
+        },
+        {
+          "id": "openfleet-live-immune-system-spec",
+          "type": "observation",
+          "file": "/home/jfortin/openfleet/docs/systems/02-immune-system.md",
+          "description": "Live OpenFleet immune-system spec \u2014 opens with \"3 files. 746 lines.\" Lists 5 diseases (deviation / laziness / protocol violation / confident-but-wrong / scope creep) matching our taxonomy. Verified 2026-04-15."
+        },
+        {
+          "id": "openfleet-live-doctor-design",
+          "type": "observation",
+          "file": "/home/jfortin/openfleet/docs/milestones/active/immune-system/02-the-doctor.md",
+          "description": "Live OpenFleet doctor-design doc \u2014 grounded in verbatim PO quotes that author the requirements (e.g. \"even if it mean having a hidden doctor agent that prune agent and agent work, force compact, rules reinjection...\"). Unusually strong source \u2014 requirements authored by operator, not deduced by agent. Verified 2026-04-15."
+        },
+        {
+          "id": "openfleet-live-disease-catalogue",
+          "type": "observation",
+          "file": "/home/jfortin/openfleet/docs/milestones/active/immune-system/03-disease-catalogue.md",
+          "description": "Live OpenFleet disease catalogue \u2014 per-disease PO evidence quotes + live incident evidence (control-surface-task confident-but-wrong instance). Verified 2026-04-15."
         }
       ],
       "layer": 5,
@@ -19194,6 +19561,12 @@
           "file": "raw/articles/openarms-integration-sprint-learnings.md",
           "title": "OpenArms Integration Sprint Learnings",
           "ingested": "2026-04-09"
+        },
+        {
+          "id": "openarms-live-methodology-battle-tested",
+          "type": "observation",
+          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-methodology-battle-tested.md",
+          "description": "Live OpenArms lesson \u2014 operator-authored evidence for the 'methodology hardened by 7 bugs in one day' narrative cited in Key Insights. Converges with our synthesis: 'An agent methodology written in theory will fail in practice... stable not because it was well-designed initially, but because it was stress-tested by real operation.' Verified 2026-04-15."
         }
       ],
       "layer": "spine",
@@ -21551,12 +21924,12 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 145,
-      "relationship_count": 977
+      "page_count": 146,
+      "relationship_count": 984
     },
     "ai-agents": {
-      "page_count": 63,
-      "relationship_count": 483
+      "page_count": 65,
+      "relationship_count": 497
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -22104,6 +22477,7 @@
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
+      "patterns/00_inbox/block-with-reason-and-justified-escalation",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
@@ -22398,6 +22772,7 @@
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "sources/src-github-spec-kit-specification-driven-development",
@@ -24594,10 +24969,12 @@
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail"
     ],
     "bypass": [
-      "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+      "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
+      "patterns/00_inbox/block-with-reason-and-justified-escalation"
     ],
     "mindful": [
-      "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
+      "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
+      "patterns/00_inbox/block-with-reason-and-justified-escalation"
     ],
     "justified-override": [
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
@@ -25023,6 +25400,69 @@
     "historical": [
       "log/archived/agent-directive-original"
     ],
+    "pattern": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "patterns/00_inbox/block-with-reason-and-justified-escalation",
+      "patterns/00_inbox/observe-fix-verify-loop",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "spine/standards/pattern-page-standards"
+    ],
+    "adapter": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "receipt": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "failure-as-data": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "fault-tolerance": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "integration-boundary": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "no-exceptions": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "convergent-evidence": [
+      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "escalation": [
+      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+    ],
+    "block-protocol": [
+      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+    ],
+    "decision-surfacing": [
+      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+    ],
+    "agent-autonomy-boundary": [
+      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+    ],
+    "methodology-process": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
+    "battle-testing": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
+    "iteration": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
+    "ofv": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
+    "autonomous-agent": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
+    "observability": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
+    "correction-cycle": [
+      "patterns/00_inbox/observe-fix-verify-loop"
+    ],
     "agent-config": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
@@ -25047,12 +25487,6 @@
     ],
     "context-efficiency": [
       "patterns/01_drafts/three-layer-agent-context-architecture"
-    ],
-    "pattern": [
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
-      "spine/standards/pattern-page-standards"
     ],
     "deterministic": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
@@ -26178,6 +26612,13 @@
       ]
     },
     {
+      "target": "Block With Reason and Justified Escalation",
+      "referenced_by": [
+        "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries",
+        "Observe-Fix-Verify Loop \u2014 The Battle-Testing Cycle for Autonomous Agent Infrastructure"
+      ]
+    },
+    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
@@ -26243,6 +26684,12 @@
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
+      ]
+    },
+    {
+      "target": "Observe-Fix-Verify Loop",
+      "referenced_by": [
+        "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries"
       ]
     },
     {

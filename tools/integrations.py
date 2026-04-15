@@ -91,10 +91,18 @@ class ObsidianCLI:
         except OSError as e:
             return {"ok": False, "error": str(e)}
 
-    def search(self, query: str, limit: int = 20, fmt: str = "json") -> Dict[str, Any]:
-        """Search vault content. Falls back to grep if CLI unavailable."""
+    def search(self, query: str, limit: int = 0, fmt: str = "json") -> Dict[str, Any]:
+        """Search vault content. Falls back to grep if CLI unavailable.
+
+        limit=0 (default) → no cap per no-caps directive. Caller passes a positive
+        integer only if they explicitly want truncated results.
+        """
         if self.is_available():
-            return self._run("search", f"query={query}", f"limit={limit}", f"format={fmt}")
+            # Pass limit only when caller explicitly set one
+            args = ["search", f"query={query}", f"format={fmt}"]
+            if limit > 0:
+                args.append(f"limit={limit}")
+            return self._run(*args)
 
         # Fallback: grep wiki files
         from tools.common import find_wiki_pages
