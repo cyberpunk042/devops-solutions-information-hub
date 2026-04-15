@@ -305,6 +305,25 @@ def _check_queue_drift(
     open_row_re = _re.compile(r"^\|\s*(\d+[a-z]?)\s*\|", _re.MULTILINE)
     open_numbers: List[str] = open_row_re.findall(queue_text)
 
+    def _normalize(text: str) -> str:
+        """Lowercase + strip punctuation + collapse whitespace for fuzzy matching."""
+        lower = _re.sub(r"[^\w\s]", " ", text.lower())
+        return _re.sub(r"\s+", " ", lower).strip()
+
+    def _token_overlap(a: str, b: str, min_ratio: float = 0.5) -> bool:
+        """True if normalized `a` and `b` share at least min_ratio of a's content words.
+
+        Content words = tokens ≥4 chars (filters out stop-words like "the",
+        "is", "a"). Useful for matching a queue question ("Optimal context
+        budget per tier") against a callout's strikethrough text.
+        """
+        a_tokens = {t for t in _normalize(a).split() if len(t) >= 4}
+        b_tokens = {t for t in _normalize(b).split() if len(t) >= 4}
+        if not a_tokens:
+            return False
+        overlap = len(a_tokens & b_tokens) / len(a_tokens)
+        return overlap >= min_ratio
+
     # For each line that starts with "| <bare-number> |", capture the row
     # and its wikilink target (last `[[...]]` on the line is the source page)
     for line in queue_text.split("\n"):
@@ -319,6 +338,11 @@ def _check_queue_drift(
             continue
         source_slug = wikilinks[-1]
 
+        # Extract the question text from the row (first pipe-separated cell after number)
+        # Row shape: | N | QUESTION TEXT | [[slug|...]] | ... |
+        row_cells = [c.strip() for c in rest.split("|")]
+        question_text = row_cells[0] if row_cells else ""
+
         # Resolve to a page path
         page = slug_to_path.get(source_slug)
         if page is None:
@@ -330,21 +354,26 @@ def _check_queue_drift(
         except Exception:
             continue
 
-        # `> [!question] ~~...~~` followed (within ~5 lines) by `**RESOLVED:**`
-        # Use multiline regex to find resolved-question callouts in the page
-        resolved_callout_re = _re.compile(
-            r"^>\s*\[!question\]\s*~~[^~]+~~", _re.MULTILINE
+        # `> [!question] ~~...~~` — extract the strikethrough text from each callout
+        callout_re = _re.compile(
+            r"^>\s*\[!question\]\s*(?:\**)~~([^~]+)~~", _re.MULTILINE
         )
-        resolved_count = len(resolved_callout_re.findall(page_text))
+        strikethrough_texts = callout_re.findall(page_text)
+
+        # Match ONLY if a strikethrough callout's text overlaps the queue question.
+        # Reduces false positives when the page has OTHER resolved questions.
+        matching = [t for t in strikethrough_texts if _token_overlap(question_text, t)]
+        resolved_count = len(matching)
 
         if resolved_count > 0:
             issues.append({
                 "queue_number": number,
                 "source_page": source_slug,
                 "resolved_callouts_in_page": resolved_count,
+                "matched_callout_text": matching[0][:80] + ("..." if len(matching[0]) > 80 else ""),
                 "hint": (
-                    f"Queue Q{number} is OPEN but {source_slug} contains "
-                    f"{resolved_count} resolved [!question] callout(s). "
+                    f"Queue Q{number} ('{question_text[:60]}...') is OPEN but {source_slug} "
+                    f"contains a matching resolved [!question] callout ('{matching[0][:60]}...'). "
                     f"Verify if one of them resolves Q{number} and sync the queue."
                 ),
             })
