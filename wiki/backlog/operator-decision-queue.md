@@ -17,11 +17,21 @@ tags: [backlog, decisions, operator, review, queue]
 
 ## Summary
 
-74 operator decisions tracked across the wiki, organized into 5 priority tiers. **P1 (architecture) and P2 (standards & format) are both fully resolved as of 2026-04-14** — 18 decisions closed across 7 commits, all with concrete config/tooling/policy changes, not just prose. 56 remain open across P3 (Tooling & Enforcement), P4 (Agent & Ecosystem), P5 (Methodology Engine Details), and Deferred (Research). Each question links to its source page where the full context and any existing recommendations live.
+74 operator decisions tracked across the wiki, organized into 5 priority tiers. **P1 (architecture), P2 (standards & format), and P3 (tooling & enforcement) are all fully resolved as of 2026-04-14** — 28 decisions closed across 8 commits. 46 remain open across P4 (Agent & Ecosystem, 8 items), P5 (Methodology Engine Details, 16 items), and Deferred (Research, 22 items). Each question links to its source page where the full context lives.
 
 > [!info] Resolution pattern observed
 >
-> Across the Q9-Q17 batch: most questions were already answered inline in the page where the decision is load-bearing (e.g., Q13 in `lesson-page-standards.md:219`, Q15 in `model-wiki-design-standards.md:424`). The queue had them listed as open because answers-in-home-pages did not propagate back to this index. The fix: when you resolve a question in its home page, ALSO update this queue. Future tooling candidate: a lint rule that detects struck-through `[!question] ~~...~~ **RESOLVED:**` callouts in home pages whose matching queue entries are still open.
+> Across the Q9-Q27 batch: every single question was already answered inline in the page where the decision is load-bearing — `lesson-page-standards.md:219` for Q13, `model-wiki-design-standards.md:424` for Q15, `global-standards-adherence.md:114-120` for Q18-19, etc. The queue had them listed as open because the answers-in-home-pages never propagated back to this index. **The fix going forward: when you resolve a question in its home page, ALSO update this queue.** Future tooling candidate: a lint rule that detects struck-through `[!question] ~~...~~ **RESOLVED:**` callouts in home pages whose matching queue entries are still open.
+
+> [!tip] "Future work" cluster surfaced by P3 sync
+>
+> Q20, Q23, Q24, Q25 are all DECISIONS-RESOLVED but WORK-PENDING — they describe gateway diagnostic/health/adoption commands that don't yet exist:
+>
+> - `wiki_methodology_guide` MCP tool (Q20) — wraps existing `gateway what-do-i-need` for MCP consumers
+> - composite **methodology+quality health score** command (Q23+Q24) — derives from existing pipeline data
+> - **super-model compliance checker** (Q25) — reads CLAUDE.md + methodology.yaml, reports adoption tier and gaps
+>
+> These could become a single new epic ("Gateway Diagnostic Commands") sitting alongside E015. Operator decision needed on whether to file as such or distribute across existing epics.
 
 ## Priority 1 — Architecture Decisions (affects multiple epics)
 
@@ -61,16 +71,16 @@ How the system enforces itself.
 
 | # | Question | Source Page |
 |---|----------|------------|
-| 18 | Should the gateway produce an actual OpenAPI spec? | [[global-standards-adherence|Global Standards]] |
-| 19 | Should hook responses follow CloudEvents format? | [[global-standards-adherence|Global Standards]] |
-| 20 | Should the MCP server expose a "methodology guide" tool? | [[ai-methodology-consumption-guide|How AI Agents Consume]] |
-| 21 | Should MCP tools be 1:1 with CLI commands or aggregated? | [[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration|E015]] |
-| 22 | Should skills have a validation/quality schema? | [[model-claude-code-standards|Claude Code Standards]] |
-| 23 | Should there be a "methodology health" score per project? | [[model-methodology-standards|Methodology Standards]] |
-| 24 | Should there be a "quality health score" per project? | [[model-quality-failure-prevention-standards|Quality Standards]] |
-| 25 | Should there be a super-model compliance checker? | [[super-model|Super-Model]] |
-| 26 | What is the minimum viable enforcement for a project without a harness? | [[methodology-standards-initiative-infrastructure|Standards Initiative Infra]] |
-| 27 | Should `factory-reset` be dangerous or safe? | [[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration|E015]] |
+| ~~18~~ | ~~Should the gateway produce an actual OpenAPI spec?~~ **RESOLVED 2026-04-14:** NO until gateway becomes HTTP API. Currently a CLI tool — formal OpenAPI spec is premature (maintenance burden without machine consumers needing self-discovery). The PRINCIPLES of OpenAPI (typed, structured, machine-readable) are already applied to gateway tool design. Resolution exists inline at [[global-standards-adherence\|Global Standards]] line 114-116. Queue sync only. | [[global-standards-adherence\|Global Standards]] |
+| ~~19~~ | ~~Should hook responses follow CloudEvents format?~~ **RESOLVED 2026-04-14:** NOT now. Hooks are local shell scripts, not distributed events. CloudEvents PRINCIPLES (typed structured attributes) ARE applied to frontmatter fields; the literal CloudEvents format applies only when hooks emit to external systems (cross-project event bus). Resolution exists inline at [[global-standards-adherence\|Global Standards]] line 118-120. Queue sync only. | [[global-standards-adherence\|Global Standards]] |
+| ~~20~~ | ~~Should the MCP server expose a "methodology guide" tool?~~ **RESOLVED 2026-04-14:** YES — wire `gateway what-do-i-need` as `wiki_methodology_guide` MCP tool. CLI command already exists; MCP wrapping is the work. Resolution exists inline at [[ai-methodology-consumption-guide\|How AI Agents Consume]]. **Status: decision resolved, work pending** — not yet in any active epic. Future tooling cluster (see queue summary note). | [[ai-methodology-consumption-guide\|How AI Agents Consume]] |
+| ~~21~~ | ~~Should MCP tools be 1:1 with CLI commands or aggregated?~~ **RESOLVED 2026-04-14:** AGGREGATED by task category. MCP tools are task-oriented (`wiki_search`, `wiki_status`, `wiki_gateway_query`, etc.). Already implemented — 22 MCP tools cover 4 categories (query/operate/contribute/status) instead of 1:1 with every CLI command. Resolution exists inline at [[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration\|E015]]. Queue sync only — work already done. | [[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration\|E015]] |
+| ~~22~~ | ~~Should skills have a validation/quality schema?~~ **RESOLVED 2026-04-14:** YES eventually — validate `skill.md` structure (name, description, trigger, content sections) the same way `wiki-schema.yaml` validates wiki pages. NOT urgent at current scale (5 skills in this wiki) — defer until skill count grows beyond ~20 (the threshold where pattern emerges from corpus). Resolution exists inline at [[model-claude-code-standards\|Claude Code Standards]]. Queue sync only. | [[model-claude-code-standards\|Claude Code Standards]] |
+| ~~23~~ | ~~Should there be a "methodology health" score per project?~~ **RESOLVED 2026-04-14:** YES — composite metric derived from existing pipeline post results + lint output + gap analysis. Data already exists; needs a dashboard command. Resolution exists inline at [[model-methodology-standards\|Methodology Standards]]. **Status: decision resolved, work pending** — future gateway diagnostic command. | [[model-methodology-standards\|Methodology Standards]] |
+| ~~24~~ | ~~Should there be a "quality health score" per project?~~ **RESOLVED 2026-04-14:** Same answer as Q23 — ONE composite health score, not two separate ones (methodology health and quality health derive from overlapping data; splitting them invites vanity metrics). Resolution exists inline at [[model-quality-failure-prevention-standards\|Quality Standards]]. **Status: decision resolved, work pending** — same future command as Q23. | [[model-quality-failure-prevention-standards\|Quality Standards]] |
+| ~~25~~ | ~~Should there be a super-model compliance checker?~~ **RESOLVED 2026-04-14:** YES — gateway command reading project CLAUDE.md + methodology.yaml, reporting adoption tier (1-4) + missing models + gaps. Makes adoption MEASURABLE instead of declared. Resolution exists inline at [[super-model\|Super-Model]] (Open Questions section). **Status: decision resolved, work pending** — future gateway command, part of the diagnostic cluster (Q20, Q23, Q24, Q25). | [[super-model\|Super-Model]] |
+| ~~26~~ | ~~What is the minimum viable enforcement for a project without a harness?~~ **RESOLVED 2026-04-14:** CLAUDE.md with MUST/MUST NOT rules + `pipeline post` as single quality gate. The simplified SDLC profile IS the minimum. Hooks/harness/immune system are progressive layers added when scale/PM-level/trust justifies the overhead. Resolution exists inline at [[methodology-standards-initiative-infrastructure\|Standards Initiative Infra]]. Queue sync only. | [[methodology-standards-initiative-infrastructure\|Standards Initiative Infra]] |
+| ~~27~~ | ~~Should `factory-reset` be dangerous or safe?~~ **RESOLVED 2026-04-14:** DANGEROUS with explicit `--confirm` flag. Prints what will be deleted before acting (dry-run by default). Pattern: dangerous-by-design with mandatory acknowledgment beats safe-by-design with eroded utility. Aligns with the "Mindful Enforcement" principle — every irreversible action needs a justified-bypass mechanism, not removal of capability. Resolution exists inline at [[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration\|E015]]. Queue sync only. | [[e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration\|E015]] |
 
 ## Priority 4 — Agent & Ecosystem
 
