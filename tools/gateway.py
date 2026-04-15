@@ -1442,14 +1442,46 @@ def query_health(paths: Dict[str, Path]) -> Dict[str, Any]:
     }
 
     # Dimension 6 — Ingestion backlog (15%)
+    # True backlog = raw files NOT referenced by any wiki page's frontmatter
+    # sources: field. Raw files ARE preserved indefinitely as audit trail
+    # after synthesis — they're not removed. Counting all of them as
+    # "backlog" overstates the problem. Count only unreferenced ones.
     raw_dir = paths["root"] / "raw"
-    raw_count = 0
+    all_raw: List[Path] = []
     if raw_dir.exists():
         for sub in ["articles", "dumps", "notes", "papers", "transcripts"]:
             d = raw_dir / sub
             if d.exists():
-                raw_count += sum(1 for f in d.iterdir() if f.is_file() and f.name != ".gitkeep")
-    ratio = raw_count / max(total_pages, 1)
+                for f in d.iterdir():
+                    if f.is_file() and f.name != ".gitkeep":
+                        all_raw.append(f)
+
+    # Collect referenced raw paths from wiki page frontmatter
+    referenced: set = set()
+    for page in wiki_dir.rglob("*.md"):
+        if page.name == "_index.md":
+            continue
+        try:
+            ptext = page.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(ptext)
+            if not meta:
+                continue
+            for src in meta.get("sources", []) or []:
+                if isinstance(src, dict) and "file" in src:
+                    referenced.add(str(src["file"]).strip())
+        except Exception:
+            continue
+
+    # Count raw files NOT referenced
+    unreferenced_raw: List[str] = []
+    for f in all_raw:
+        rel = f.relative_to(paths["root"])
+        if str(rel) not in referenced:
+            unreferenced_raw.append(str(rel))
+
+    raw_total = len(all_raw)
+    raw_pending = len(unreferenced_raw)
+    ratio = raw_pending / max(total_pages, 1)
     if ratio <= 0.25:
         backlog_score = 100
     elif ratio >= 0.75:
@@ -1459,7 +1491,7 @@ def query_health(paths: Dict[str, Path]) -> Dict[str, Any]:
     dimensions["ingestion_backlog"] = {
         "score": backlog_score,
         "weight": 15,
-        "detail": f"{raw_count} raw files pending / {total_pages} wiki pages (ratio {ratio:.2f}; healthy ≤0.25)",
+        "detail": f"{raw_pending} unreferenced raw files ({raw_total} total in raw/, {raw_total - raw_pending} already synthesized) vs {total_pages} wiki pages — ratio {ratio:.2f}; healthy ≤0.25",
     }
 
     # Composite
