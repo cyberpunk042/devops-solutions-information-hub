@@ -31,12 +31,44 @@ tags: []
 ## Summary
 
 <!-- 2-3 sentences: what this module delivers within its parent epic.
-     A module is a scoped subsystem — independently reviewable with its own design. -->
+     A module is a scoped subsystem — independently reviewable with its own design.
 
-## Goals
+     EXAMPLE (replace):
+     "Update the 3 core models (Methodology, LLM Wiki, Quality) with all session
+     knowledge. These models are referenced by everything else — they must be
+     current before other models can reference them correctly." -->
 
-<!-- Bulleted list of module-scoped deliverables. Subset of epic goals.
-     Each goal is specific and verifiable. -->
+## Tasks
+
+<!-- List of child tasks (created separately in wiki/backlog/tasks/).
+     Format: | Task ID | Title | Readiness | Progress | Status |
+     Track both dimensions for each child.
+
+     EXAMPLE Tasks table (replace with your content):
+
+     | Task | Title | Readiness | Progress | Status |
+     |------|-------|-----------|----------|--------|
+     | T-042 | Enrich pattern.md template with examples | 100% | 100% | done |
+     | T-043 | Enrich concept.md template with examples | 75% | 25% | in-progress |
+
+     Readiness = is this task DEFINED enough to start (requirements, AC set)?
+     Progress = how much WORK is done (scaffold→implement→test)?
+     A task at 100% readiness / 0% progress is fully specified but not started
+     — normal and healthy. A task at 0% readiness / 50% progress is being built
+     without a clear definition — a red flag. -->
+
+| Task | Title | Readiness | Progress | Status |
+|------|-------|-----------|----------|--------|
+| {{task_id}} | {{task_title}} | 0% | 0% | draft |
+
+## Dependencies
+
+<!-- Modules or epics this module blocks on (before its work can start/finish).
+     Distinct from Impediments — Dependencies are STRUCTURAL (scheduling),
+     Impediments are RUNTIME (currently blocking).
+     Format: - [[target|title]] — what it provides that this module needs. -->
+
+- [[{{dependency}}]] — {{what_it_provides}}
 
 ## Done When
 
@@ -47,49 +79,12 @@ tags: []
 - [ ] All child tasks at status: done
 - [ ] {{module_specific_criterion}}
 
-## Tasks
-
-<!-- List of child tasks (created separately in wiki/backlog/tasks/).
-     Format: | Task ID | Title | Readiness | Progress | Status |
-     Track both dimensions for each child. -->
-
-<!-- EXAMPLE Tasks table (replace with your content):
-
-     | Task | Title | Readiness | Progress | Status |
-     |------|-------|-----------|----------|--------|
-     | T-042 | Enrich pattern.md template with examples | 100% | 100% | done |
-     | T-043 | Enrich concept.md template with examples | 75% | 25% | in-progress |
-
-     Readiness = is this task DEFINED enough to start (requirements, acceptance criteria set)?
-     Progress = how much WORK is done (scaffold→implement→test)?
-     A task at 100% readiness / 0% progress is fully specified but not started — normal and healthy.
-     A task at 0% readiness / 50% progress is being built without a clear definition — a red flag. -->
-
-| Task | Title | Readiness | Progress | Status |
-|------|-------|-----------|----------|--------|
-| {{task_id}} | {{task_title}} | 0% | 0% | draft |
-
 ## Impediments
 
-<!-- Active blockers. Remove when resolved.
-     Types: technical, dependency, decision, environment, clarification, scope, external, quality -->
-
-
-
-<!-- READINESS vs PROGRESS for modules:
-     - readiness = AVERAGE of child task readiness (derived, never manual)
-     - progress = AVERAGE of child task progress (derived, never manual)
-     See: wiki/domains/cross-domain/readiness-vs-progress.md -->
-
-## Summary
-
-<!-- 2-3 sentences: what this module delivers within its parent epic.
-     A module is a scoped subsystem — independently reviewable with its own design.
-     
-     EXAMPLE (replace):
-     "Update the 3 core models (Methodology, LLM Wiki, Quality) with all session knowledge.
-     These models are referenced by everything else — they must be current before other models
-     can reference them correctly." -->
+<!-- Active RUNTIME blockers (distinct from structural Dependencies above).
+     Remove entries when resolved.
+     Types: technical, dependency, decision, environment, clarification,
+     scope, external, quality. -->
 
 ## Relationships
 

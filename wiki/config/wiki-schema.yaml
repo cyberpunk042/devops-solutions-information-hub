@@ -245,11 +245,14 @@ required_sections:
     - Relationships
   module:
     # Per Q41 resolution (e003-artifact-type-system-design): "Same pattern as
-    # epic but lighter." A module page CONTAINS tasks (Module Breakdown) and
-    # has cross-module Dependencies. Goals collapses into Summary at module
-    # scope (the module's purpose IS what it does).
+    # epic but lighter." A module page CONTAINS tasks (not modules — that
+    # would be an epic). So Tasks is the right section name, not
+    # "Module Breakdown" (which would fit an epic's child-modules list).
+    # Dependencies = structural scheduling blockers (cross-module).
+    # Goals collapses into Summary at module scope (the module's purpose
+    # IS what it does). Impediments is an optional runtime-blocker section.
     - Summary
-    - Module Breakdown
+    - Tasks
     - Dependencies
     - Done When
     - Relationships
