@@ -1,6 +1,6 @@
 """Automated source ingestion pipeline.
 
-Fetches content from URLs (YouTube, GitHub, web), saves to raw/,
+Fetches content from URLs (YouTube, GitHub, PDF, web), saves to raw/,
 and reports what was captured for wiki processing.
 
 Usage:
@@ -9,9 +9,11 @@ Usage:
     python3 tools/ingest.py --list-raw              # List unprocessed files in raw/
 
 Supported sources:
-    - YouTube videos → extracts transcript automatically
-    - GitHub repos/gists → fetches README or gist content
-    - Web pages → fetches main content
+    - YouTube videos → extracts transcript automatically (raw/transcripts/)
+    - GitHub repos/gists → fetches README + key files via deep tree fetch (raw/articles/)
+    - PDFs (including arxiv.org/pdf/) → extracts text via pypdf; arxiv URLs get
+      enriched with clean title/authors/abstract from the /abs/ page (raw/papers/)
+    - Web pages → fetches main content with HTML stripped (raw/articles/)
 """
 
 import argparse
@@ -249,12 +251,133 @@ def _fetch_web_page(url: str) -> Tuple[str, str]:
     return text, title
 
 
+def _extract_arxiv_id(url: str) -> Optional[str]:
+    """Extract arxiv ID from a /pdf/ or /abs/ URL. Returns None if not arxiv.
+
+    Handles both old-style (cs/0307010) and new-style (2603.25723) IDs,
+    optional version suffix (v1, v2, ...).
+    """
+    # New-style: YYMM.NNNNN with optional version
+    match = re.search(r"arxiv\.org/(?:pdf|abs)/(\d{4}\.\d{4,5})(?:v\d+)?", url)
+    if match:
+        return match.group(1)
+    # Old-style: category/YYMMNNN
+    match = re.search(r"arxiv\.org/(?:pdf|abs)/([a-z\-]+/\d{7})(?:v\d+)?", url)
+    if match:
+        return match.group(1)
+    return None
+
+
+def _fetch_arxiv_metadata(arxiv_id: str) -> Optional[Dict[str, str]]:
+    """Fetch clean title/authors/abstract from arxiv /abs/ page.
+
+    PDF text extraction often produces noisy headers; the abs page has clean
+    structured metadata. Returns None on any failure (caller falls back to
+    PDF-extracted title).
+    """
+    abs_url = f"https://arxiv.org/abs/{arxiv_id}"
+    try:
+        req = urllib.request.Request(abs_url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            html = resp.read().decode("utf-8", errors="ignore")
+    except Exception:
+        return None
+
+    result: Dict[str, str] = {}
+
+    # Title from <meta name="citation_title">
+    title_match = re.search(r'<meta name="citation_title" content="([^"]+)"', html)
+    if title_match:
+        result["title"] = title_match.group(1).strip()
+
+    # Authors from repeated <meta name="citation_author">
+    authors = re.findall(r'<meta name="citation_author" content="([^"]+)"', html)
+    if authors:
+        result["authors"] = ", ".join(authors)
+
+    # Abstract from <blockquote class="abstract">
+    abstract_match = re.search(
+        r'<blockquote class="abstract[^"]*">(.*?)</blockquote>',
+        html,
+        re.DOTALL,
+    )
+    if abstract_match:
+        abstract = abstract_match.group(1)
+        # Strip "Abstract:" descriptor span and remaining HTML
+        abstract = re.sub(r'<span class="descriptor">[^<]+</span>', "", abstract)
+        abstract = re.sub(r"<[^>]+>", " ", abstract)
+        abstract = re.sub(r"\s+", " ", abstract).strip()
+        if abstract:
+            result["abstract"] = abstract
+
+    return result if result else None
+
+
+def _fetch_pdf(url: str) -> Tuple[str, str]:
+    """Fetch a PDF and extract text page-by-page.
+
+    Returns (content, title). Title comes from PDF metadata when available,
+    otherwise the first non-empty content line, otherwise the URL.
+
+    Page boundaries are preserved as ``## Page N`` headers so a synthesizing
+    agent can cite specific pages and so the output stays readable for human
+    review when the PDF is long (academic papers, specs).
+    """
+    import io
+
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        raise RuntimeError(
+            "pypdf not installed. Run: pip3 install pypdf "
+            "(or pip3 install -r requirements.txt)"
+        )
+
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        pdf_bytes = resp.read()
+
+    reader = PdfReader(io.BytesIO(pdf_bytes))
+
+    title: Optional[str] = None
+    if reader.metadata and getattr(reader.metadata, "title", None):
+        candidate = str(reader.metadata.title).strip()
+        if candidate:
+            title = candidate
+
+    page_texts = []
+    for i, page in enumerate(reader.pages, 1):
+        try:
+            text = page.extract_text()
+        except Exception:
+            text = None
+        if text and text.strip():
+            page_texts.append(f"## Page {i}\n\n{text.strip()}")
+
+    content = "\n\n".join(page_texts).strip()
+
+    # Fallback title: first content line (skipping page headers we just inserted)
+    if not title and content:
+        for line in content.split("\n"):
+            line = line.strip()
+            if line and not line.startswith("##"):
+                title = line[:120]
+                break
+
+    if not title:
+        title = url
+
+    return content, title
+
+
 def classify_url(url: str) -> str:
     """Classify a URL into a source type."""
     if "youtube.com" in url or "youtu.be" in url:
         return "youtube"
     if "github.com" in url or "gist.github.com" in url:
         return "github"
+    if url.lower().endswith(".pdf") or "arxiv.org/pdf/" in url.lower():
+        return "pdf"
     return "web"
 
 
@@ -292,6 +415,33 @@ def ingest_url(url: str, project_root: Path) -> Dict[str, Any]:
             raw_file = raw_dir / f"{slug}.md"
 
             full_content = f"# {title}\n\nSource: {url}\nIngested: {datetime.now().isoformat()[:10]}\nType: {src_type}\n\n---\n\n{content}"
+
+        elif url_type == "pdf":
+            content, title = _fetch_pdf(url)
+
+            # Arxiv enrichment: prepend clean metadata block when available.
+            # Generic PDF flow above always works; arxiv enrichment is a
+            # source-specific quality layer on top, not a requirement.
+            arxiv_id = _extract_arxiv_id(url)
+            if arxiv_id:
+                meta = _fetch_arxiv_metadata(arxiv_id)
+                if meta:
+                    if meta.get("title"):
+                        title = meta["title"]
+                    meta_lines = [f"**arxiv ID:** {arxiv_id}"]
+                    if meta.get("title"):
+                        meta_lines.append(f"**Title:** {meta['title']}")
+                    if meta.get("authors"):
+                        meta_lines.append(f"**Authors:** {meta['authors']}")
+                    if meta.get("abstract"):
+                        meta_lines.append(f"**Abstract:** {meta['abstract']}")
+                    content = "\n\n".join(meta_lines) + "\n\n---\n\n" + content
+
+            slug = _slugify(title)
+            raw_dir = project_root / "raw" / "papers"
+            raw_file = raw_dir / f"{slug}.md"
+
+            full_content = f"# {title}\n\nSource: {url}\nIngested: {datetime.now().isoformat()[:10]}\nType: paper\n\n---\n\n{content}"
 
         else:
             content, title = _fetch_web_page(url)
