@@ -1319,6 +1319,196 @@ def query_profiles_list(paths: Dict[str, Path]) -> Dict[str, Any]:
     }
 
 
+def query_health(paths: Dict[str, Path]) -> Dict[str, Any]:
+    """Composite methodology + quality health score for the wiki.
+
+    Resolves Q23 + Q24 from the operator decision queue. ONE composite score
+    (not two separate ones — per the Q24 resolution to avoid vanity metrics)
+    with per-dimension breakdown, derived from existing pipeline/lint/stats
+    data. No new measurement infrastructure required.
+
+    Six dimensions, weighted:
+      1. Validation (30%) — 0 errors required for full score
+      2. Evolution progression (20%) — % of pages past 00_inbox
+      3. Relationship density (15%) — avg relationships per page
+      4. Queue sync (10%) — resolved operator decisions + drift count
+      5. Freshness (10%) — % of pages updated within 90 days
+      6. Ingestion backlog (15%) — raw files pending vs wiki pages
+
+    Returns score 0-100, letter grade, per-dimension breakdown, and up to
+    3 actionable recommendations targeting the weakest dimensions.
+    """
+    from tools.stats import build_stats
+    from tools.lint import lint_wiki, LintConfig
+    from tools.validate import validate_page
+    import re as _re
+
+    wiki_dir = paths["wiki"]
+
+    # Collect data from existing tooling
+    stats = build_stats(wiki_dir)
+    lint_config = LintConfig(
+        stale_threshold_days=90,
+        min_summary_words=30,
+        min_deep_analysis_words=100,
+        min_relationships=1,
+        min_domain_pages=3,
+        min_cross_domain_rels=2,
+        similarity_threshold=0.70,
+    )
+    lint_report = lint_wiki(wiki_dir, lint_config)
+
+    total_pages = stats["total_pages"]
+    dimensions: Dict[str, Dict[str, Any]] = {}
+
+    # Dimension 1 — Validation (30%)
+    val_errors = lint_report["summary"].get("total_issues", 0)
+    if val_errors == 0:
+        val_score = 100
+    elif val_errors < 5:
+        val_score = 70
+    elif val_errors < 10:
+        val_score = 40
+    else:
+        val_score = 0
+    dimensions["validation"] = {
+        "score": val_score,
+        "weight": 30,
+        "detail": f"{val_errors} blocking lint/validation issue(s)",
+    }
+
+    # Dimension 2 — Evolution progression (20%)
+    # Count pages outside 00_inbox folders
+    inbox_pages = 0
+    for md in wiki_dir.rglob("00_inbox/**/*.md"):
+        if md.name != "_index.md":
+            inbox_pages += 1
+    matured = max(total_pages - inbox_pages, 0)
+    evo_score = int(100 * matured / max(total_pages, 1))
+    dimensions["evolution"] = {
+        "score": evo_score,
+        "weight": 20,
+        "detail": f"{matured}/{total_pages} pages past 00_inbox ({inbox_pages} still in inbox)",
+    }
+
+    # Dimension 3 — Relationship density (15%)
+    avg_rels = stats["relationship_density"]["average_per_page"]
+    if avg_rels >= 6:
+        rel_score = 100
+    elif avg_rels >= 4:
+        rel_score = int(50 + (avg_rels - 4) * 25)
+    else:
+        rel_score = max(0, int(avg_rels * 12.5))
+    dimensions["relationships"] = {
+        "score": rel_score,
+        "weight": 15,
+        "detail": f"avg {avg_rels} relationships/page (healthy ≥6, weak <4)",
+    }
+
+    # Dimension 4 — Queue sync (10%)
+    queue_path = wiki_dir / "backlog" / "operator-decision-queue.md"
+    queue_score = 100
+    queue_detail = "queue not found"
+    if queue_path.exists():
+        try:
+            qtext = queue_path.read_text(encoding="utf-8")
+            # Resolved rows: | ~~N~~ |
+            resolved = len(_re.findall(r"^\|\s*~~\d+[a-z]?~~\s*\|", qtext, _re.MULTILINE))
+            # Open rows: | N | (bare integer)
+            open_rows = len(_re.findall(r"^\|\s*\d+[a-z]?\s*\|", qtext, _re.MULTILINE))
+            total_q = resolved + open_rows
+            drift = lint_report["summary"].get("queue_drift", 0)
+            if total_q > 0:
+                base = int(100 * resolved / total_q)
+                # Drift penalty: -10 per drift candidate, min 0
+                queue_score = max(0, base - drift * 10)
+                queue_detail = f"{resolved}/{total_q} resolved ({open_rows} open, {drift} drift candidate(s))"
+        except Exception:
+            queue_detail = "queue parse failed"
+    dimensions["queue_sync"] = {
+        "score": queue_score,
+        "weight": 10,
+        "detail": queue_detail,
+    }
+
+    # Dimension 5 — Freshness (10%)
+    fresh = stats["freshness"]
+    recent = fresh.get("<7d", 0) + fresh.get("<30d", 0) + fresh.get("<90d", 0)
+    fresh_score = int(100 * recent / max(total_pages, 1))
+    dimensions["freshness"] = {
+        "score": fresh_score,
+        "weight": 10,
+        "detail": f"{recent}/{total_pages} pages updated within 90d",
+    }
+
+    # Dimension 6 — Ingestion backlog (15%)
+    raw_dir = paths["root"] / "raw"
+    raw_count = 0
+    if raw_dir.exists():
+        for sub in ["articles", "dumps", "notes", "papers", "transcripts"]:
+            d = raw_dir / sub
+            if d.exists():
+                raw_count += sum(1 for f in d.iterdir() if f.is_file() and f.name != ".gitkeep")
+    ratio = raw_count / max(total_pages, 1)
+    if ratio <= 0.25:
+        backlog_score = 100
+    elif ratio >= 0.75:
+        backlog_score = 0
+    else:
+        backlog_score = int(100 * (0.75 - ratio) / 0.5)
+    dimensions["ingestion_backlog"] = {
+        "score": backlog_score,
+        "weight": 15,
+        "detail": f"{raw_count} raw files pending / {total_pages} wiki pages (ratio {ratio:.2f}; healthy ≤0.25)",
+    }
+
+    # Composite
+    composite = sum(d["score"] * d["weight"] for d in dimensions.values()) / 100
+    composite = round(composite, 1)
+
+    # Letter grade
+    if composite >= 95:
+        grade = "A+"
+    elif composite >= 90:
+        grade = "A"
+    elif composite >= 80:
+        grade = "B"
+    elif composite >= 70:
+        grade = "C"
+    elif composite >= 60:
+        grade = "D"
+    else:
+        grade = "F"
+
+    # Recommendations — target the weakest-scored dimensions
+    weak = sorted(dimensions.items(), key=lambda kv: kv[1]["score"])
+    recommendations = []
+    for name, d in weak[:3]:
+        if d["score"] >= 90:
+            break  # already strong; no recommendation needed
+        if name == "validation":
+            recommendations.append(f"Run `pipeline post` and fix the {d['detail']}.")
+        elif name == "evolution":
+            recommendations.append(f"Promote pages from 00_inbox — {d['detail']}. Review drafts for synthesis candidates.")
+        elif name == "relationships":
+            recommendations.append(f"Strengthen cross-page links — {d['detail']}. Add BUILDS ON / DERIVED FROM verbs to under-connected pages.")
+        elif name == "queue_sync":
+            recommendations.append(f"Sync the operator-decision queue — {d['detail']}. Run `python3 -m tools.lint` to see drift candidates.")
+        elif name == "freshness":
+            recommendations.append(f"Review stale pages — {d['detail']}. Update or archive pages >90d old.")
+        elif name == "ingestion_backlog":
+            recommendations.append(f"Process raw/ files — {d['detail']}. Run `pipeline ingest <file>` or batch-process.")
+
+    return {
+        "composite_score": composite,
+        "grade": grade,
+        "total_pages": total_pages,
+        "dimensions": dimensions,
+        "recommendations": recommendations,
+        "note": "Composite of 6 dimensions — methodology+quality health unified per Q24 resolution (not two separate scores).",
+    }
+
+
 def query_location_mapping(paths: Dict[str, Path], title: Optional[str] = None) -> Dict[str, Any]:
     """Query the location mapping — find where archived/moved pages went."""
     import json as _json
@@ -1396,6 +1586,9 @@ def main():
     # Smart auto-routing
     sub.add_parser("what-do-i-need", help="Auto-detect identity and recommend chain, model, first steps")
 
+    # Health score (Q23+Q24)
+    sub.add_parser("health", help="Composite methodology+quality health score with per-dimension breakdown")
+
     # Status command (smart default — show everything)
     sub.add_parser("status", help="Show project identity, chain, models, and navigation guide")
 
@@ -1434,6 +1627,24 @@ def main():
 
     if args.command == "what-do-i-need":
         print(query_what_do_i_need(paths))
+
+    elif args.command == "health":
+        result = query_health(paths)
+        # Human-readable format
+        print(f"\nWiki Health Score: {result['composite_score']} / 100  ({result['grade']})")
+        print(f"Pages: {result['total_pages']}")
+        print("")
+        print("Dimensions:")
+        for name, d in result["dimensions"].items():
+            bar = "█" * (d["score"] // 10) + "░" * (10 - d["score"] // 10)
+            print(f"  {name:22s} [{bar}] {d['score']:3d}/100 ({d['weight']}%)  — {d['detail']}")
+        if result["recommendations"]:
+            print("")
+            print("Recommendations (targeting weakest dimensions):")
+            for i, rec in enumerate(result["recommendations"], 1):
+                print(f"  {i}. {rec}")
+        print("")
+        print(f"  {result['note']}")
 
     elif args.command == "flow":
         print(cmd_flow(paths, step=getattr(args, "step", None)))

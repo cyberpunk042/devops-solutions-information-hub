@@ -474,6 +474,28 @@ def wiki_gateway_docs(doc_name: str = None) -> str:
 
 
 @server.tool()
+def wiki_gateway_health() -> str:
+    """Composite methodology+quality health score for the wiki with per-dimension breakdown.
+
+    Resolves Q23+Q24. Single composite score (0-100) + letter grade, derived from
+    6 dimensions: validation (30%), evolution progression (20%), relationship
+    density (15%), queue sync (10%), freshness (10%), ingestion backlog (15%).
+    Plus up to 3 actionable recommendations targeting the weakest dimensions.
+
+    Returns a JSON structure with composite_score, grade, total_pages,
+    dimensions (each with score/weight/detail), and recommendations. Use
+    `gateway health` CLI for a human-readable visualization.
+
+    Unified score (not two separate methodology+quality scores) per Q24's
+    "ONE composite, not vanity metrics" resolution.
+    """
+    from tools.gateway import resolve_paths, query_health
+    paths = resolve_paths()
+    result = query_health(paths)
+    return json.dumps(result, indent=2, default=str)
+
+
+@server.tool()
 def wiki_methodology_guide() -> str:
     """Auto-detect project identity and recommend SDLC profile + methodology model + first steps.
 
