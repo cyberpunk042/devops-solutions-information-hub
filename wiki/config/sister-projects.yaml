@@ -1,0 +1,112 @@
+# Sister-Projects Registry
+#
+# Projects in the ecosystem that this wiki can READ (structured, not manual grep).
+# Each entry declares location + wiki layout + what's queryable.
+#
+# Resolves the "how does the research wiki communicate with sister projects"
+# gap — historically agents have browsed sister projects with one-off Bash
+# commands. This registry gives the gateway structured access: list
+# epics/tasks/logs/lessons, read specific docs, find pages by tag, etc.
+#
+# Usage: `python3 -m tools.gateway sister <name> <action> [args]`
+#        MCP: wiki_sister_project_browse
+#
+# Design: additive layer on top of the existing gateway. Each sister project
+# is read-only from this wiki's perspective. Writes go through the sister
+# project's own tooling, not through here.
+
+projects:
+
+  openarms:
+    description: "Personal AI assistant layer — OpenClaw fork, 20+ channels, harness-based solo agent + fleet runtime"
+    path: /home/jfortin/openarms
+    wiki_dir: wiki                       # relative to path
+    # Layout — which directories exist and what's in them
+    layout:
+      backlog:
+        epics: backlog/epics             # E001 through E017 etc.
+        modules: backlog/modules
+        tasks: backlog/tasks             # T001+ task files with frontmatter
+      logs: log                          # dated session/handoff/completion logs
+      domains:                            # knowledge organized by topic
+        architecture: domains/architecture
+        learnings: domains/learnings     # distilled lessons from runs
+      config:
+        methodology: config/methodology.yaml
+        claude_md: CLAUDE.md             # at project root, not under wiki/
+        agents_md: AGENTS.md
+    # Frontmatter fields we care about (for filtering/summary)
+    queryable_frontmatter:
+      - status       # done / review / active / draft / etc.
+      - priority     # P0 / P1 / P2
+      - readiness    # 0-100
+      - current_stage
+      - stages_completed
+      - epic         # task → epic back-reference
+      - task_type
+      - note_type    # session / handoff / completion / etc.
+      - tags
+    # Known file-naming patterns for quick listing
+    patterns:
+      epic: "E\\d{3}-.*\\.md"
+      task: "T\\d{3,4}-.*\\.md"
+      log_dated: "\\d{4}-\\d{2}-\\d{2}-.*\\.md"
+      learning: "agent-behavior-.*\\.md|lesson-.*\\.md|pattern-.*\\.md"
+
+  openfleet:
+    description: "Agent workforce + deterministic orchestrator (10 agents, 30s cycle)"
+    path: /home/jfortin/openfleet
+    wiki_dir: wiki
+    layout:
+      backlog:
+        epics: backlog/epics
+        tasks: backlog/tasks
+      logs: log
+      domains:
+        architecture: domains/architecture
+    queryable_frontmatter:
+      - status
+      - priority
+      - readiness
+      - epic
+      - tags
+
+  aicp:
+    description: "AI Control Platform — local inference routing, 9 loaded models, 80% Claude token reduction target"
+    path: /home/jfortin/devops-expert-local-ai
+    wiki_dir: docs/kb                    # AICP uses docs/kb/ not wiki/
+    layout:
+      domains:
+        architecture: architecture
+    queryable_frontmatter:
+      - status
+      - tags
+
+  devops-control-plane:
+    description: "Unified project management platform — 24 operational rules, tech auto-detection engine, vault"
+    path: /home/jfortin/devops-control-plane
+    wiki_dir: docs                       # repo-root docs/
+    layout:
+      domains:
+        rules: rules                     # 24 immune system rules
+    queryable_frontmatter:
+      - status
+      - priority
+
+  openclaw:
+    description: "Upstream parent of OpenArms — fork relationship, features flow both ways"
+    path: /home/jfortin/openclaw
+    wiki_dir: docs
+    layout: {}
+    queryable_frontmatter: []
+    note: "OpenClaw is OpenArms's upstream. Usually accessed via OpenArms's patches/ directory, not directly."
+
+# Default read limits (prevent runaway reads on huge sister repos)
+limits:
+  max_files_listed: 50
+  max_file_bytes: 20000    # ~500 lines of markdown
+  max_recursive_depth: 4
+
+# Write policy — this wiki never writes to sister projects via these tools.
+# Cross-project contributions go through each project's own contribution flow.
+write_policy: read-only

@@ -522,7 +522,7 @@ Manual start (debugging only):
 | `wiki_backlog` | Backlog summary, optionally filtered by epic |
 | `wiki_log` | Create a log entry in `wiki/log/` |
 
-### Gateway Tools (8)
+### Gateway Tools (9)
 
 | Tool | Parameters | What It Does |
 |------|-----------|-------------|
@@ -533,6 +533,7 @@ Manual start (debugging only):
 | `wiki_gateway_docs` | `doc_name` (optional) | Query 8 root-level docs (README, AGENTS, CLAUDE, CONTEXT, ARCHITECTURE, DESIGN, TOOLS, SKILLS) |
 | `wiki_gateway_health` | none | Composite methodology+quality health score (0-100, grade) with 6-dimension breakdown + recommendations |
 | `wiki_gateway_compliance` | none | Super-model compliance checker — adoption tier (1-4) + per-tier requirements + gaps |
+| `wiki_sister_project` | `project`, `action`, `arg`, `status`, `epic`, `since`, `limit` | Browse sister projects (OpenArms, OpenFleet, AICP, control-plane): list epics/tasks/logs/learnings, read files, grep content. READ-ONLY. |
 | `wiki_methodology_guide` | none | Auto-detect identity + recommend SDLC profile + model + first steps (Goldilocks entry point) |
 
 **`wiki_gateway_query` — `query_type` values:**

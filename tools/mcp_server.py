@@ -474,6 +474,72 @@ def wiki_gateway_docs(doc_name: str = None) -> str:
 
 
 @server.tool()
+def wiki_sister_project(project: str, action: str, arg: str = None, status: str = None, epic: str = None, since: str = None, limit: int = 20) -> str:
+    """Browse sister projects in the ecosystem (OpenArms, OpenFleet, AICP, control-plane).
+
+    Replaces ad-hoc Bash ls/grep/cat with structured access. Reads from
+    wiki/config/sister-projects.yaml registry. Read-only.
+
+    Actions:
+      - "list" (no project needed): list all sister projects
+      - "info": show project config + accessibility
+      - "epics": list epics with frontmatter summary (filter --status)
+      - "tasks": list tasks (filter --status, --epic)
+      - "logs": list dated logs (filter --since YYYY-MM-DD, --limit N)
+      - "learnings": list distilled learnings/lessons/patterns
+      - "read" (arg=path): read a file relative to project root, truncated to 20KB
+      - "find" (arg=pattern): filename regex search
+      - "grep" (arg=text): content search in .md files
+
+    Example: to see OpenArms' E016 research findings:
+      wiki_sister_project(project="openarms", action="tasks", epic="E016")
+      wiki_sister_project(project="openarms", action="read",
+        arg="wiki/domains/learnings/agent-behavior-environment-patching.md")
+    """
+    from tools.sister_project import (
+        load_registry, resolve_project, list_projects, project_info,
+        list_epics, list_tasks, list_logs, list_learnings,
+        read_doc, find_by_filename, grep_content,
+    )
+    registry = load_registry()
+    if project == "list" or action == "list":
+        return json.dumps(list_projects(registry), indent=2, default=str)
+    project_cfg = resolve_project(project, registry)
+    if project_cfg is None:
+        return json.dumps({"error": f"Unknown sister project: {project}",
+                           "known": list(registry.get("projects", {}).keys())})
+    limits = registry.get("limits", {})
+    max_files = limits.get("max_files_listed", 50)
+    max_bytes = limits.get("max_file_bytes", 20000)
+    if action == "info":
+        result = project_info(project_cfg)
+    elif action == "epics":
+        result = list_epics(project_cfg, status_filter=status, max_files=max_files)
+    elif action == "tasks":
+        result = list_tasks(project_cfg, status_filter=status, epic_filter=epic, max_files=max_files)
+    elif action == "logs":
+        result = list_logs(project_cfg, since=since, limit=limit)
+    elif action == "learnings":
+        result = list_learnings(project_cfg, max_files=max_files)
+    elif action == "read":
+        if not arg:
+            return json.dumps({"error": "read requires arg=<relative-path>"})
+        result = read_doc(project_cfg, arg, max_bytes=max_bytes)
+    elif action == "find":
+        if not arg:
+            return json.dumps({"error": "find requires arg=<regex-pattern>"})
+        result = find_by_filename(project_cfg, arg, max_results=limit)
+    elif action == "grep":
+        if not arg:
+            return json.dumps({"error": "grep requires arg=<text>"})
+        result = grep_content(project_cfg, arg, max_results=limit)
+    else:
+        return json.dumps({"error": f"Unknown action: {action}",
+                           "valid": ["list", "info", "epics", "tasks", "logs", "learnings", "read", "find", "grep"]})
+    return json.dumps(result, indent=2, default=str)
+
+
+@server.tool()
 def wiki_gateway_compliance() -> str:
     """Super-model compliance checker — adoption tier + gaps.
 
