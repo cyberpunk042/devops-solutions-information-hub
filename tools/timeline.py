@@ -103,11 +103,18 @@ class TimelineEvent:
     path: str
     subject: List[str] = field(default_factory=list)   # tags or derived subject words
     signal: Optional[str] = None                       # derived: "promoted-to-drafts", "readiness:45→70"
-    threads_to: List[str] = field(default_factory=list)  # cross-project links
+    threads_to: List[str] = field(default_factory=list)  # cross-project links (project:path)
     body_preview: Optional[str] = None                 # first ~240 chars of content
     full_content: Optional[str] = None                 # populated only when --full-content
     commit_sha: Optional[str] = None                   # for commit events
     author: Optional[str] = None                       # for commit events
+    # Phase 4: cross-project arc links — populated after all events gathered.
+    # Each string describes an event in the timeline that this one threads to:
+    # format "YYYY-MM-DD · project · type · title".
+    linked_events: List[str] = field(default_factory=list)
+    # Phase 5: parent epic for task/module events (from frontmatter `epic:` field).
+    # Enables --group-by epic + inline [EXXX] annotation.
+    parent_epic: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         d = asdict(self)
@@ -572,6 +579,9 @@ def extract_frontmatter_events(target: ProjectTarget, since: datetime, until: da
             threads = _extract_threads_to(meta)
             preview = _make_preview(body) if body else None
             full = body if full_content else None
+            # Phase 5: parent epic for task/module events
+            raw_epic = meta.get("epic")
+            parent_epic = str(raw_epic).strip() if raw_epic else None
 
             # Emit one event per distinct date (created and/or updated in range).
             created = _parse_date_field(meta.get("created"))
@@ -590,6 +600,7 @@ def extract_frontmatter_events(target: ProjectTarget, since: datetime, until: da
                     threads_to=threads,
                     body_preview=preview,
                     full_content=full,
+                    parent_epic=parent_epic,
                 ))
             # updated in range (and distinct from created)
             if updated and since <= updated <= until:
@@ -605,6 +616,7 @@ def extract_frontmatter_events(target: ProjectTarget, since: datetime, until: da
                         threads_to=threads,
                         body_preview=preview,
                         full_content=full,
+                        parent_epic=parent_epic,
                     ))
         except Exception:
             # Never break the timeline on one bad page.
@@ -933,6 +945,10 @@ def extract_backlog_deltas(target: ProjectTarget, since: datetime, until: dateti
                 # Skip to avoid double-counting with extract_frontmatter_events.
                 continue
 
+            # Phase 5: parent epic lookup from after_meta (post-change state)
+            raw_epic = after_meta.get("epic")
+            parent_epic = str(raw_epic).strip() if raw_epic else None
+
             events.append(TimelineEvent(
                 date=commit_dt,
                 project=target.name,
@@ -944,6 +960,7 @@ def extract_backlog_deltas(target: ProjectTarget, since: datetime, until: dateti
                 commit_sha=sha,
                 body_preview=None,
                 full_content=None,
+                parent_epic=parent_epic,
             ))
     return events
 
@@ -1242,6 +1259,10 @@ def compute_timeline(
     # frontmatter-snapshot event for the same date adds no new information.
     all_events = _suppress_redundant_snapshots(all_events)
 
+    # Cross-project arc linking: when event A's threads_to points at event B
+    # (same target project+path) and both are in range, mark the link on both.
+    all_events = _link_cross_project_threads(all_events)
+
     # Optional: collapse same-file same-day events into one arc-summary line.
     if collapse_arcs:
         all_events = _collapse_arcs(all_events)
@@ -1295,6 +1316,63 @@ def _suppress_redundant_snapshots(events: List[TimelineEvent]) -> List[TimelineE
             continue
         kept.append(e)
     return kept
+
+
+# ---------------------------------------------------------------------------
+# Cross-project arc linking (Phase 4)
+# ---------------------------------------------------------------------------
+#
+# An event's `threads_to` carries cross-project references (project:path) parsed
+# from the wiki page's `sources:` frontmatter. After all events are gathered, we
+# do a second pass: for each event with threads_to, check whether any OTHER
+# event in the same result set targets the same (project, path). If so, mark
+# the link — both the "from" and "to" events get `linked_events` entries that
+# describe the counterpart.
+#
+# This surfaces the ecosystem arc — a wiki lesson synthesized today visibly
+# connects to the OpenArms incident it derived from, when both fall in range.
+
+
+def _link_cross_project_threads(events: List[TimelineEvent]) -> List[TimelineEvent]:
+    """Populate linked_events for cross-project arcs visible within the result set."""
+    # Index events by (project, path) — both exact and path-prefix lookups
+    by_project_path: Dict[Tuple[str, str], List[TimelineEvent]] = {}
+    for e in events:
+        if not e.path:
+            continue
+        key = (e.project, e.path)
+        by_project_path.setdefault(key, []).append(e)
+
+    # Also index by (project, basename-less path) for fuzzier matches
+    # (a wiki source may reference 'wiki/domains/learnings/foo.md' while an
+    # event emits the same path; exact-match is the common case).
+
+    def _describe(ev: TimelineEvent) -> str:
+        return f"{ev.date.date().isoformat()} · `{ev.project}` · {ev.type} · {ev.title}"
+
+    for e in events:
+        if not e.threads_to:
+            continue
+        for thread in e.threads_to:
+            # thread is like "openarms:wiki/domains/learnings/foo.md"
+            if ":" not in thread:
+                continue
+            tgt_project, tgt_path = thread.split(":", 1)
+            candidates = by_project_path.get((tgt_project, tgt_path), [])
+            if not candidates:
+                # Try removing leading 'wiki/' on target path if registry uses wiki_dir
+                alt_path = tgt_path[5:] if tgt_path.startswith("wiki/") else f"wiki/{tgt_path}"
+                candidates = by_project_path.get((tgt_project, alt_path), [])
+            for cand in candidates:
+                if cand is e:
+                    continue
+                desc = _describe(cand)
+                if desc not in e.linked_events:
+                    e.linked_events.append(desc)
+                back_desc = _describe(e)
+                if back_desc not in cand.linked_events:
+                    cand.linked_events.append(back_desc)
+    return events
 
 
 # ---------------------------------------------------------------------------
@@ -1406,6 +1484,8 @@ def _collapse_arcs(events: List[TimelineEvent]) -> List[TimelineEvent]:
             full_content=last.full_content,
             commit_sha=last.commit_sha,
             author=last.author,
+            parent_epic=last.parent_epic,
+            linked_events=list(last.linked_events),
         ))
 
     return passthrough + collapsed
@@ -1500,6 +1580,43 @@ def render_markdown(events: List[TimelineEvent], targets: List[ProjectTarget],
                     lines.append(e.full_content.rstrip())
                     lines.append("```")
                     lines.append("")
+    elif group_by == "epic":
+        # Phase 5: group task/module events by their parent_epic; others by type.
+        by_epic: Dict[str, List[TimelineEvent]] = {}
+        uncategorized: List[TimelineEvent] = []
+        for e in events:
+            key = e.parent_epic
+            if key:
+                by_epic.setdefault(f"{e.project}::{key}", []).append(e)
+            else:
+                uncategorized.append(e)
+        # Epic groups first, sorted by project+epic
+        for epic_key in sorted(by_epic.keys()):
+            proj, epic_id = epic_key.split("::", 1)
+            evs = by_epic[epic_key]
+            lines.append("")
+            lines.append(f"## `{proj}` · {epic_id} — {len(evs)} events")
+            lines.append("")
+            for e in sorted(evs, key=lambda x: x.date, reverse=True):
+                lines.append(_render_event_line(e, show_date=True))
+                if full_content and e.full_content:
+                    lines.append("")
+                    lines.append("```")
+                    lines.append(e.full_content.rstrip())
+                    lines.append("```")
+                    lines.append("")
+        if uncategorized:
+            lines.append("")
+            lines.append(f"## (no parent epic) — {len(uncategorized)} events")
+            lines.append("")
+            for e in uncategorized:
+                lines.append(_render_event_line(e, show_date=True))
+                if full_content and e.full_content:
+                    lines.append("")
+                    lines.append("```")
+                    lines.append(e.full_content.rstrip())
+                    lines.append("```")
+                    lines.append("")
     else:
         for e in events:
             lines.append(_render_event_line(e, show_date=True))
@@ -1512,7 +1629,9 @@ def _render_event_line(e: TimelineEvent, show_date: bool = False) -> str:
     parts: List[str] = []
     date_prefix = f"{e.date.date().isoformat()} " if show_date else ""
     parts.append(f"- **{date_prefix}{time}**  `{e.project}`  _{e.type}_")
-    parts.append(f"  · **{e.title}**")
+    # Phase 5: inline parent-epic tag for task/module events
+    epic_tag = f" `[{e.parent_epic}]`" if e.parent_epic else ""
+    parts.append(f"  ·{epic_tag} **{e.title}**")
     if e.signal:
         parts.append(f" _(_{e.signal}_)_")
     if e.commit_sha:
@@ -1528,6 +1647,12 @@ def _render_event_line(e: TimelineEvent, show_date: bool = False) -> str:
         parts.append(f"  — {'; '.join(tail_parts)}")
     # Put body preview on continuation line if present
     line = "".join(parts)
+    if e.linked_events:
+        # Cross-project arc: show the connections
+        for linked in e.linked_events[:3]:
+            line += f"\n    ↕ {linked}"
+        if len(e.linked_events) > 3:
+            line += f"\n    ↕ _and {len(e.linked_events) - 3} more_"
     if e.body_preview:
         line += f"\n    > {e.body_preview}"
     return line
@@ -1568,7 +1693,7 @@ def main() -> None:
     p.add_argument("--type", dest="types", default=None,
                    help="Comma-separated event types. Default: all.")
     p.add_argument("--group-by", dest="group_by", default="date",
-                   choices=["date", "project", "type", "none"])
+                   choices=["date", "project", "type", "epic", "none"])
     p.add_argument("--format", dest="output_format", default="markdown",
                    choices=["markdown", "json"])
     p.add_argument("--full-content", dest="full_content", action="store_true",

@@ -1829,7 +1829,7 @@ def main():
     tl.add_argument("--until", default=None, help="Duration or ISO date. Default: now")
     tl.add_argument("--type", dest="tl_types", default=None,
                     help="Comma-separated event types (lesson,pattern,decision,synthesis,epic,task,session,directive,commit)")
-    tl.add_argument("--group-by", dest="tl_group_by", default="date", choices=["date", "project", "type", "none"])
+    tl.add_argument("--group-by", dest="tl_group_by", default="date", choices=["date", "project", "type", "epic", "none"])
     tl.add_argument("--format", dest="tl_format", default="markdown", choices=["markdown", "json"])
     tl.add_argument("--full-content", dest="tl_full_content", action="store_true",
                     help="Include full event bodies (no caps)")
