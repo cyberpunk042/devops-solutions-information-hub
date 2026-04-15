@@ -377,8 +377,8 @@ Changes to this standard should be versioned in the page's `updated:` frontmatte
 ## Backlinks
 
 [[model-wiki-design|Model — Wiki Design]]
-[[Root Documentation Map]]
-[[Context File Taxonomy]]
+[[root-documentation-map|Root Documentation Map]]
+[[context-file-taxonomy|Context File Taxonomy]]
 [[methodology-system-map|Methodology System Map]]
 [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[reference-page-standards|Reference Page Standards]]

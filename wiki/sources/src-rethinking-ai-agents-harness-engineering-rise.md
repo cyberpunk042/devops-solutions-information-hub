@@ -184,4 +184,4 @@ The transcript mentions "harnesses suffer failure modes" in its discussion. The 
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
-[[Harness-Owned Loop]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]

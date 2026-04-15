@@ -186,6 +186,7 @@ The general principle: build the routing infrastructure first, scale the hardwar
 | [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]] | decision | The formal routing decision framework |
 | [[gateway-centric-routing|Gateway-Centric Routing]] | pattern | Architectural pattern for traffic routing |
 | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | pattern | Wrapper pattern keeping LLM inside deterministic orchestration |
+| [[adapters-never-raise-failure-as-data-at-integration-boundaries\|Adapters Never Raise — Failure as Data]] | pattern | The pattern AICP's circuit breakers IMPLEMENT. LocalAI/Claude backend calls never raise; they return structured health results (CLOSED/OPEN/HALF_OPEN). Failure-as-data is what makes the routing decision mechanical and the fallback chain composable. Added 2026-04-15. |
 
 ### Lessons Learned
 

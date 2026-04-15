@@ -1,5 +1,8 @@
 ---
 title: "If You Can Verify, You Converge"
+aliases:
+  - "If You Can Verify, You Converge"
+  - "Lesson — If You Can Verify, You Converge"
 type: lesson
 domain: cross-domain
 layer: 4

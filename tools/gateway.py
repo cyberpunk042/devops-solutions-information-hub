@@ -250,26 +250,44 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     identity = {**detected}
     if declared:
         identity["declared"] = True
-        # Use declared values for recommendation when available
-        declared_chain = declared.get("sdlc chain", "").lower()
-        declared_phase = declared.get("phase", "").lower()
     else:
         identity["declared"] = False
-        declared_chain = ""
-        declared_phase = ""
 
-    # Recommend SDLC profile based on identity (declared overrides detected)
-    mode = identity.get("execution_mode", "solo")
-    phase = declared_phase if declared_phase else identity.get("phase", "poc")
-    scale = identity.get("scale", "micro")
+    # Parse declared strings defensively — they may carry trailing parenthetical
+    # context like "production (used daily, 316+ pages)" or "medium (316 pages, growing)".
+    # Match on keyword containment, not equality.
+    def _extract_keyword(raw: str, vocab: tuple) -> str:
+        """Return the first keyword from `vocab` that appears in raw (case-insensitive)."""
+        if not raw:
+            return ""
+        low = raw.lower()
+        for kw in vocab:
+            if kw in low:
+                return kw
+        return ""
 
-    if "default" in declared_chain:
-        recommended_profile = "default"
-    elif "full" in declared_chain:
-        recommended_profile = "full"
-    elif "simplified" in declared_chain:
-        recommended_profile = "simplified"
-    elif mode == "full-system" or (phase == "production" and scale in ("large", "massive")):
+    declared_profile = _extract_keyword(
+        declared.get("sdlc profile", "") or declared.get("sdlc chain", ""),
+        ("simplified", "default", "full"),
+    )
+    declared_phase = _extract_keyword(
+        declared.get("phase", ""),
+        ("poc", "mvp", "staging", "production"),
+    )
+    declared_scale = _extract_keyword(
+        declared.get("scale", ""),
+        ("micro", "small", "medium", "large", "massive"),
+    )
+
+    # Recommend SDLC profile — declared takes precedence; heuristics are fallback.
+    # Execution mode is NOT used for profile selection (see directive:
+    # raw/notes/2026-04-15-directive-execution-mode-is-consumer-property-not-project.md).
+    phase = declared_phase or identity.get("phase", "poc")
+    scale = declared_scale or identity.get("scale", "micro")
+
+    if declared_profile:
+        recommended_profile = declared_profile
+    elif phase == "production" and scale in ("large", "massive"):
         recommended_profile = "full"
     elif phase in ("staging", "production") or scale in ("medium", "large"):
         recommended_profile = "default"
@@ -277,35 +295,54 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
         recommended_profile = "simplified"
 
     lines = []
-    lines.append("WHAT DO YOU NEED? — Auto-detected recommendations")
+    lines.append("WHAT DO YOU NEED? — Declared identity + task-dependent recommendations")
     lines.append("")
 
-    # Identity with auto-detect WARNINGS
-    lines.append(f"DETECTED IDENTITY:")
+    # PROJECT IDENTITY — declared is authoritative; heuristics are sanity signals.
+    # Execution mode is NOT a project property — it's a consumer/runtime property
+    # (a harness or fleet that WRAPS this project declares the mode; from inside
+    # the project we cannot detect which consumer is using us).
+    # See raw/notes/2026-04-15-directive-execution-mode-is-consumer-property-not-project.md
+    lines.append(f"PROJECT IDENTITY:")
     domain_val = identity.get("domain", "?")
-    phase_val = identity.get("phase", "?")
+    phase_val = declared.get("phase", "").lower() or identity.get("phase", "?")
     scale_val = identity.get("scale", "?")
-    exec_val = identity.get("execution_mode", "?")
+    file_count = identity.get("source_files", "?")
 
-    lines.append(f"  domain:         {domain_val}  ⚠ Auto-detected. Override with --domain if wrong.")
-    lines.append(f"  phase:          {phase_val}  ⚠ Auto-detected from CI/tests/Docker. Override in CLAUDE.md.")
-    lines.append(f"  scale:          {scale_val} ({identity.get('source_files', '?')} files)  ⚠ Auto-detected from file count.")
-    lines.append(f"  execution mode: {exec_val}")
-    if identity.get("execution_mode_confidence") == "certain":
-        lines.append(f"                  (no harness code found → solo is certain)")
-    else:
-        caps = identity.get("harness_capabilities_detected", [])
-        lines.append(f"                  ⚠ CANNOT auto-detect. Harness decides at runtime.")
-        if caps:
-            lines.append(f"                  Capabilities found: {', '.join(caps)}")
-        lines.append(f"                  Declare in CLAUDE.md or pass --execution-mode.")
-    lines.append(f"  second brain:   {identity.get('second_brain', '?')}")
     if declared:
-        lines.append(f"  ✓ Identity also declared in CLAUDE.md — declared values take precedence.")
+        lines.append(f"  domain:         {declared.get('domain', domain_val)}  ✓ declared")
+        lines.append(f"  phase:          {phase_val}  ✓ declared")
+        declared_scale = declared.get("scale", "").lower()
+        if declared_scale:
+            # Sanity-check: flag if heuristic strongly disagrees with declaration
+            mismatch = ""
+            if declared_scale in ("medium", "large", "massive") and isinstance(file_count, int) and file_count < 50:
+                mismatch = f"  ⚠ sanity: file-count heuristic saw only {file_count} (may be counting wrong path)"
+            lines.append(f"  scale:          {declared_scale}  ✓ declared{mismatch}")
+        else:
+            lines.append(f"  scale:          {scale_val} ({file_count} files)  ⚠ heuristic — declare in CLAUDE.md")
+        lines.append(f"  second brain:   {declared.get('second brain', identity.get('second_brain', '?'))}  ✓ declared")
+    else:
+        lines.append(f"  domain:         {domain_val}  ⚠ heuristic — declare in CLAUDE.md")
+        lines.append(f"  phase:          {phase_val}  ⚠ heuristic — declare in CLAUDE.md")
+        lines.append(f"  scale:          {scale_val} ({file_count} files)  ⚠ heuristic — declare in CLAUDE.md")
+        lines.append(f"  second brain:   {identity.get('second_brain', '?')}  ⚠ heuristic")
     lines.append("")
 
-    # Recommendation
-    lines.append(f"RECOMMENDED SDLC PROFILE: {recommended_profile}")
+    # CONSUMER/TASK PROPERTIES — not detectable from inside the project.
+    lines.append("CONSUMER / TASK PROPERTIES (not project properties):")
+    lines.append(f"  execution mode: solo (default)")
+    lines.append(f"                  A harness or fleet that wraps this project DECLARES non-default when it")
+    lines.append(f"                  connects — e.g., via its MCP config `runtime:` field. From inside this")
+    lines.append(f"                  project we cannot detect which consumer (if any) is using us.")
+    lines.append(f"  methodology model: PER TASK, not per project. bug→bug-fix, feature→feature-development,")
+    lines.append(f"                     docs→documentation, research→research, etc. See: gateway query --models")
+    lines.append(f"  SDLC profile:   PER TASK. Declared phase/scale suggests a DEFAULT starting profile but")
+    lines.append(f"                  every task may override. Profiles: simplified / default / full.")
+    lines.append("")
+
+    # Recommendation — framed as a default for most tasks, not a project-wide lock.
+    lines.append(f"SUGGESTED DEFAULT PROFILE (for most tasks given declared identity): {recommended_profile}")
     profile_data = query_profile(paths, recommended_profile)
     if "error" not in profile_data:
         lines.append(f"  {profile_data.get('description', '')}")
@@ -316,24 +353,24 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
         enforcement = profile_data.get("enforcement", {})
         if enforcement:
             lines.append(f"  Enforcement: {enforcement.get('level', '?')}; stage gates: {enforcement.get('stage_gates', '?')}")
+    lines.append(f"  ⚠ This is a DEFAULT suggestion. Override per task — e.g., hotfix uses simplified even in a")
+    lines.append(f"    production project; deep-architecture-review uses full even in an mvp.")
     lines.append("")
 
-    # First steps
+    # First steps — honor the consumer-property framing.
     lines.append("YOUR FIRST STEPS:")
+    step = 1
     if not declared:
-        lines.append("  1. Add Identity Profile to your CLAUDE.md (see: gateway query --identity for the format)")
+        lines.append(f"  {step}. Add Identity Profile to your CLAUDE.md (see: gateway query --identity for the format)")
+        step += 1
 
     domain = identity.get("domain", "unknown")
-    if mode == "solo":
-        lines.append(f"  {'2' if not declared else '1'}. You're in solo mode. Start with: gateway query --model feature-development")
-        lines.append(f"  {'3' if not declared else '2'}. First stage: gateway query --stage document" + (f" --domain {domain}" if domain != "unknown" else ""))
-        lines.append(f"  {'4' if not declared else '3'}. Get the template: gateway template methodology/requirements-spec")
-    elif "harness" in mode:
-        lines.append(f"  {'2' if not declared else '1'}. Your harness handles task dispatch. Check your harness config.")
-        lines.append(f"  {'3' if not declared else '2'}. Query what your current stage needs: gateway query --stage <your-stage> --domain {domain}")
-    else:
-        lines.append(f"  {'2' if not declared else '1'}. Full system detected. Your orchestrator handles dispatch and enforcement.")
-        lines.append(f"  {'3' if not declared else '2'}. Query profile details: gateway query --profile {recommended_profile}")
+    lines.append(f"  {step}. If a harness/fleet is consuming this project: follow ITS dispatch flow — it owns task selection.")
+    step += 1
+    lines.append(f"  {step}. If no harness (solo is the default): pick the model for your TASK:")
+    lines.append(f"       gateway query --model <bug-fix | feature-development | research | documentation | ...>")
+    step += 1
+    lines.append(f"  {step}. First stage for most models: gateway query --stage document" + (f" --domain {domain}" if domain != "unknown" else ""))
 
     lines.append("")
     lines.append("EXPLORE MORE:")

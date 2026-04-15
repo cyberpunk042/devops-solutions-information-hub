@@ -241,6 +241,7 @@ OpenArms is actively investigating each failure class. These are the proposed fi
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
+[[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[session-handoff-standards|Session Handoff Standards]]

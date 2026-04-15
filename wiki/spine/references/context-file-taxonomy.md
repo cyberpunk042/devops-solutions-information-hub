@@ -443,7 +443,7 @@ The following examples show how the 8 dimensions compose for 5 distinct agent ar
 ## Backlinks
 
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
-[[Root Documentation Map]]
+[[root-documentation-map|Root Documentation Map]]
 [[model-context-engineering|Model — Context Engineering]]
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]

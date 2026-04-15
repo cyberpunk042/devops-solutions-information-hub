@@ -62,6 +62,7 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift](00_inbox/execution-mode-is-consumer-property-not-project-property.md) — Execution mode (solo vs harness vs fleet) is a property of the **CONSUMER'S runtime**, not a property of the project
 - [Harness Engineering Is the Dominant Performance Lever](01_drafts/harness-engineering-is-the-dominant-performance-lever.md) — For LLM-based agentic systems, **the harness — not the model — is now the dominant performance lever**
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
 - [Specs-as-Code-Source Inverts the Traditional Hierarchy](01_drafts/specs-as-code-source-inverts-hierarchy.md) — Traditional software development treats code as the primary artifact and specifications as scaffolding — supporting d...
@@ -111,4 +112,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`methodology`, `quality`, `failure-lesson`, `lesson`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`, `orchestration`, `compounding-knowledge`
+`methodology`, `quality`, `lesson`, `failure-lesson`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`, `orchestration`, `compounding-knowledge`

@@ -2,6 +2,7 @@
 title: Harness-Owned Loop — Deterministic Agent Execution
 aliases:
   - "Harness-Owned Loop — Deterministic Agent Execution"
+  - "Harness-Owned Loop"
 type: pattern
 domain: ai-agents
 layer: 5

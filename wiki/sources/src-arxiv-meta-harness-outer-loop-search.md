@@ -195,8 +195,8 @@ The paper presumably discusses the compute cost of running the outer loop — me
 
 [[Synthesis — NLAH]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
-[[Lesson — If You Can Verify, You Converge]]
-[[Harness-Owned Loop]]
+[[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[model-knowledge-evolution|Model — Knowledge Evolution]]
 [[model-context-engineering|Model — Context Engineering]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

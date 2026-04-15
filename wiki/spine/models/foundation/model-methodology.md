@@ -824,6 +824,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[epic-page-standards|Epic Page Standards]]
 [[methodology-evolution-history|Evolution — Methodology System]]
+[[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]

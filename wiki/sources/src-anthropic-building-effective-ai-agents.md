@@ -186,4 +186,4 @@ The post is qualitative throughout. "Most successful implementations" — how ma
 [[Synthesis — Meta-Harness]]
 [[Synthesis — Rethinking AI Agents (YouTube)]]
 [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
-[[Structured Context Is Proto-Programming]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming]]

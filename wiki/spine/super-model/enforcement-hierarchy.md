@@ -34,6 +34,7 @@ Navigation hub for enforcement — how to make agents actually follow methodolog
 > | [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]] | Agent never controls loop, git, or backlog. OpenArms + OpenFleet instances. |
 > | [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]] | 7 classes that persist after infrastructure. 20% clean rate. Per-class fix recommendations. |
 > | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] | Every block needs WHY + bypass. Over-enforcement creates its own failures. |
+> | [[block-with-reason-and-justified-escalation\|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]] | Concrete 4-part bypass protocol (Block + Reason + Offer + Justification). The mechanism Mindful Enforcement requires but does not itself design. Added 2026-04-15. |
 > | [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]] | Corrections lost after compaction. Post-compact hooks rebuild from files. |
 > | [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]] | The quantified proof: 25%→100% with 215 lines of hooks. |
 > | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] | The governing PRINCIPLE: infrastructure > instructions for any tool-call-level rule. |

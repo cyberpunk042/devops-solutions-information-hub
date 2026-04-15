@@ -228,6 +228,7 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
+[[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]

@@ -229,6 +229,9 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | L5 | Pattern: deterministic orchestration wrapping LLM reasoning |
 | [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]] | L5 | Pattern: universal build lifecycle across all 5 projects |
 | [[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]] | L6 | Scale decision for wiki → fleet knowledge integration |
+| [[block-with-reason-and-justified-escalation\|Block With Reason and Justified Escalation]] | L5 | Pattern: structured 4-part bypass protocol (Block + Reason + Offer + Justification) at decision boundaries across the ecosystem — OpenArms T085/T086 retroactive, OpenFleet `fleet_alert`/`fleet_escalate`, wiki design-time defaults. Added 2026-04-15. |
+| [[observe-fix-verify-loop\|Observe-Fix-Verify Loop]] | L5 | Pattern: battle-testing cycle at three timescales — OpenArms session (v1→v7 in a day), OpenFleet runtime (30s doctor cycle), E016 sprint (week-long spikes). Same structure, different temporal granularity. Added 2026-04-15. |
+| [[adapters-never-raise-failure-as-data-at-integration-boundaries\|Adapters Never Raise — Failure as Data]] | L5 | Pattern: structured failure-as-data at integration boundaries — 6 convergent instances (control-plane Adapter/Receipt, OpenFleet immune detection, our MCP/validate/integrations/sister_project). Added 2026-04-15. |
 
 ---
 

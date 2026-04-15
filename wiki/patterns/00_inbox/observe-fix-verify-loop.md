@@ -171,5 +171,5 @@ The repair: **the Verify step must cross an authority boundary.** Options in ord
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
-[[Block With Reason and Justified Escalation]]
+[[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation]]
 [[methodology-evolution-protocol|Methodology Evolution Protocol]]

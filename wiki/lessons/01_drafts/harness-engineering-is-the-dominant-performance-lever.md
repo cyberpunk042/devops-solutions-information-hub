@@ -188,7 +188,7 @@ What this lesson adds:
 [[Synthesis — NLAH]]
 [[Synthesis — Meta-Harness]]
 [[Synthesis — Rethinking AI Agents (YouTube)]]
-[[Harness-Owned Loop]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[Infrastructure Over Instructions for Process Enforcement]]
 [[Structured Context Governs Agent Behavior More Than Content]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]

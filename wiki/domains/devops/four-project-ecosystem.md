@@ -252,6 +252,7 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[methodology-framework|Methodology Framework]]

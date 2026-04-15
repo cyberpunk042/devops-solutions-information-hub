@@ -1,5 +1,8 @@
 ---
 title: "Specs-as-Code-Source Inverts the Traditional Hierarchy"
+aliases:
+  - "Specs-as-Code-Source Inverts the Traditional Hierarchy"
+  - "Specs-as-Code-Source Inverts the Hierarchy"
 type: lesson
 domain: cross-domain
 layer: 4
@@ -171,6 +174,6 @@ The lesson is most immediately actionable in greenfield projects, feature develo
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[model-methodology|Model — Methodology]]
 [[spec-driven-development|Spec-Driven Development]]
-[[Lesson — If You Can Verify, You Converge]]
+[[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]

@@ -178,8 +178,8 @@ This wiki's `tools/pipeline.py` is a relatively heavyweight runtime today (~thou
 
 [[Synthesis — Meta-Harness — Outer-Loop Search]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
-[[Harness-Owned Loop]]
-[[Specs-as-Code-Source Inverts the Hierarchy]]
+[[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
+[[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Hierarchy]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[Infrastructure Over Instructions for Process Enforcement]]
 [[model-claude-code|Model — Claude Code]]

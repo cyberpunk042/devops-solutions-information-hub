@@ -185,8 +185,8 @@ Five projects, five different drivers, one convergent structure. That convergenc
 
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
-[[Block With Reason and Justified Escalation]]
+[[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
-[[Observe-Fix-Verify Loop]]
+[[observe-fix-verify-loop|Observe-Fix-Verify Loop]]
 [[four-project-ecosystem|Four-Project Ecosystem]]

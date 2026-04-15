@@ -50,6 +50,10 @@ def build_title_lookup(manifest: Dict[str, Any]) -> Dict[str, Dict[str, str]]:
         slug = Path(page.get("path", "")).stem
         if slug and slug not in lookup:
             lookup[slug] = entry
+        # Also index by aliases so short-form wikilinks resolve
+        for alias in page.get("aliases", []) or []:
+            if isinstance(alias, str) and alias and alias not in lookup:
+                lookup[alias] = entry
     return lookup
 
 

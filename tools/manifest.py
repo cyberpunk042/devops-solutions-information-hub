@@ -62,7 +62,8 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
     domain_data: Dict[str, Dict[str, int]] = {}
     tag_index: Dict[str, List[str]] = {}
 
-    # First pass: collect all page titles for orphan detection
+    # First pass: collect all page titles AND aliases for orphan detection
+    # (a page referenced via one of its aliases is not an orphan)
     md_files = find_wiki_pages(wiki_dir)
     for md_file in md_files:
         text = md_file.read_text(encoding="utf-8")
@@ -70,6 +71,9 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
         title = meta.get("title", "")
         if title:
             all_titles.add(title)
+        for alias in meta.get("aliases", []) or []:
+            if isinstance(alias, str) and alias:
+                all_titles.add(alias)
 
     # Second pass: build full page records
     for md_file in md_files:
@@ -88,6 +92,7 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
         layer = meta.get("layer", "")
         maturity = meta.get("maturity", "")
         derived_from = meta.get("derived_from", []) or []
+        aliases = meta.get("aliases", []) or []
         slug = _page_slug(md_file, wiki_dir)
 
         # Parse relationships from ## Relationships section
@@ -115,6 +120,7 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
             "layer": layer,
             "maturity": maturity,
             "derived_from": derived_from,
+            "aliases": aliases,
             "relationships": relationships,
         }
         pages_meta.append(page_record)

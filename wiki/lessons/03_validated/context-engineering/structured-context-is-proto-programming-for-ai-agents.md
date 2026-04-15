@@ -2,6 +2,7 @@
 title: Structured Context Is Proto-Programming for AI Agents
 aliases:
   - "Structured Context Is Proto-Programming for AI Agents"
+  - "Structured Context Is Proto-Programming"
 type: lesson
 domain: ai-agents
 layer: 4

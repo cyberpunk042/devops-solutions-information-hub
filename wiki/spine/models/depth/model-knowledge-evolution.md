@@ -179,6 +179,7 @@ When a concept evolves into a lesson or pattern, the source page is PRESERVED, n
 | [[second-brain-architecture|Second Brain Architecture]] | L2 | PKM theory (PARA + Zettelkasten) that influenced the layer model |
 | [[schema-is-the-real-product|Lesson — Schema Is the Real Product — Not the Content]] | L4 | Why the schema matters more than content — content is regenerable |
 | [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]] | L4 | Why evolution fails when ingestion was shallow — garbage in, garbage out |
+| [[observe-fix-verify-loop\|Observe-Fix-Verify Loop]] | L5 | Battle-testing cycle — the evolution mechanism at three timescales (session/runtime/sprint). Each cycle Observes what the current layer fails to enforce, Fixes at the infrastructure level (schema/hook/validator), Verifies persistence across runs. Evolution is what OFV produces over time. Added 2026-04-15. |
 
 ---
 

@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-15T17:41:14.541287+00:00",
+  "generated": "2026-04-15T18:32:01.376707+00:00",
   "stats": {
-    "pages": 331,
+    "pages": 332,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2185,
-    "tags_unique": 1040,
+    "relationships": 2192,
+    "tags_unique": 1048,
     "layers": {
       "3": 4,
       "6": 16,
       "2": 51,
-      "4": 43,
+      "4": 44,
       "5": 22,
       "1": 32,
       "spine": 65
     },
     "maturity": {
       "growing": 271,
-      "seed": 16
+      "seed": 17
     }
   },
   "pages": [
@@ -60,6 +60,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E010 \u2014 Model Updates \u2014 All 16 Models Reflect Current Knowledge",
+        "E010 \u2014 Model Updates: All 16 Models Reflect Current Knowledge"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -129,6 +133,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E011 \u2014 Standards Exemplification \u2014 All 15 Per-Type Standards with Inline Annotated Exemplars",
+        "E011 \u2014 Standards Exemplification: All 15 Per-Type Standards with Inline Annotated Exemplars"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -195,6 +203,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E012 \u2014 Template Enrichment \u2014 Rich Proto-Programming Examples",
+        "E012 \u2014 Template Enrichment: Rich Proto-Programming Examples"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -260,6 +272,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E013 \u2014 Super-Model Evolution \u2014 v2.0 with Sub-Super-Models",
+        "E013 \u2014 Super-Model Evolution: v2.0 with Sub-Super-Models"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -326,6 +342,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E014 \u2014 Goldilocks Navigable System \u2014 Identity to Action in Continuous Flow",
+        "E014 \u2014 Goldilocks Navigable System: Identity to Action in Continuous Flow"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -395,6 +415,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E015 \u2014 Gateway Tools Completion \u2014 All Requirements Implemented with MCP Integration",
+        "E015 \u2014 Gateway Tools Completion: All Requirements Implemented with MCP Integration"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -457,6 +481,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E016 \u2014 Integration Chain Proof \u2014 End to End with OpenArms",
+        "E016 \u2014 Integration Chain Proof: End to End with OpenArms"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -501,6 +529,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E017 \u2014 Context Engineering Framework \u2014 Formalized as Model with Standards",
+        "E017 \u2014 Context Engineering Framework: Formalized as Model with Standards"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -537,6 +569,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E018 \u2014 Global Standards Implementation \u2014 Actual Adherence Not Just Reference",
+        "E018 \u2014 Global Standards Implementation: Actual Adherence Not Just Reference"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -573,6 +609,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E019 \u2014 Obsidian Navigation \u2014 Complete Browse Experience with Folder Cleanup",
+        "E019 \u2014 Obsidian Navigation: Complete Browse Experience with Folder Cleanup"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -609,6 +649,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E020 \u2014 Knowledge Sweep \u2014 Global Quality Confirmation by Human Review",
+        "E020 \u2014 Knowledge Sweep: Global Quality Confirmation by Human Review"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -645,6 +689,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "E021 \u2014 New Source Ingestion \u2014 10-15 Sources Through Full Pipeline",
+        "E021 \u2014 New Source Ingestion: 10-15 Sources Through Full Pipeline"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -678,6 +726,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Local Inference Engine (Subsystem 3)"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -719,6 +770,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Ecosystem Integration Interfaces"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -778,6 +832,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Artifact Type System"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -840,6 +897,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Portable Methodology Engine"
+      ],
       "relationships": [
         {
           "verb": "DEPENDS ON",
@@ -904,6 +964,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Agent Compliance Framework"
+      ],
       "relationships": [
         {
           "verb": "DEPENDS ON",
@@ -975,6 +1038,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Standards-by-Example"
+      ],
       "relationships": [
         {
           "verb": "DEPENDS ON",
@@ -1042,6 +1108,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "SDLC Rules and Structure \u2014 Customizable Project Lifecycle"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -1102,6 +1171,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Wiki Gateway Tools \u2014 Unified Knowledge Interface"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -1160,6 +1232,10 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Milestone \u2014 Second Brain Complete System \u2014 v2.0",
+        "Milestone: Second Brain Complete System \u2014 v2.0"
+      ],
       "relationships": [
         {
           "verb": "CONTAINS",
@@ -1240,6 +1316,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Operator Decision Queue"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -1273,6 +1352,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Research Gaps \u2014 Empirical Questions Requiring Data"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -1308,6 +1390,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Test OpenAI backend with LocalAI"
+      ],
       "relationships": []
     },
     {
@@ -1377,6 +1462,9 @@
       "layer": 3,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Agentic Search vs Vector Search"
+      ],
       "relationships": [
         {
           "verb": "SYNTHESIZES",
@@ -1457,6 +1545,9 @@
       "layer": 3,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Cross-Domain Patterns"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -1545,6 +1636,9 @@
       "layer": 3,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "LLM Wiki vs RAG"
+      ],
       "relationships": [
         {
           "verb": "COMPARES TO",
@@ -1612,6 +1706,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "OpenArms vs OpenFleet Enforcement Architecture"
+      ],
       "relationships": [
         {
           "verb": "COMPARES TO",
@@ -1764,6 +1861,9 @@
       "layer": 3,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Skills Architecture Patterns"
+      ],
       "relationships": [
         {
           "verb": "SYNTHESIZES",
@@ -1831,6 +1931,10 @@
         "NotebookLM",
         "Second Brain Architecture"
       ],
+      "aliases": [
+        "Decision \u2014 Obsidian vs NotebookLM as Knowledge Interface",
+        "Decision: Obsidian vs NotebookLM as Knowledge Interface"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1897,6 +2001,10 @@
         "Skyscraper, Pyramid, Mountain",
         "Methodology Framework"
       ],
+      "aliases": [
+        "Decision \u2014 Quality Tier Operational Decisions",
+        "Decision: Quality Tier Operational Decisions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -1950,6 +2058,10 @@
         "LLM Wiki vs RAG",
         "LightRAG",
         "Knowledge Evolution Pipeline"
+      ],
+      "aliases": [
+        "Decision \u2014 Wiki-First with LightRAG Upgrade Path",
+        "Decision: Wiki-First with LightRAG Upgrade Path"
       ],
       "relationships": [
         {
@@ -2010,6 +2122,10 @@
         "Construction and Testing Artifacts \u2014 Standards and Guide",
         "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide"
       ],
+      "aliases": [
+        "Decision \u2014 Artifact System Design Decisions",
+        "Decision: Artifact System Design Decisions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2068,6 +2184,10 @@
         "Stage-Gate Methodology",
         "Task Type Artifact Matrix"
       ],
+      "aliases": [
+        "Decision \u2014 Execution Mode Edge Cases",
+        "Decision: Execution Mode Edge Cases"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2120,6 +2240,10 @@
         "Task Type Artifact Matrix",
         "Skyscraper, Pyramid, Mountain"
       ],
+      "aliases": [
+        "Decision \u2014 Methodology Framework Design Decisions",
+        "Decision: Methodology Framework Design Decisions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2169,6 +2293,10 @@
         "Initiation and Planning Artifacts \u2014 Standards and Guide",
         "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide",
         "Artifact Chain: Infrastructure/IaC Domain"
+      ],
+      "aliases": [
+        "Decision \u2014 Methodology Stage Extension Decisions",
+        "Decision: Methodology Stage Extension Decisions"
       ],
       "relationships": [
         {
@@ -2223,6 +2351,10 @@
         "Task Lifecycle Stage-Gating",
         "Backlog Hierarchy Rules"
       ],
+      "aliases": [
+        "Decision \u2014 Stage-Gate Operational Decisions",
+        "Decision: Stage-Gate Operational Decisions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2270,6 +2402,10 @@
         "Task Type Artifact Matrix",
         "Stage-Gate Methodology",
         "Methodology Framework"
+      ],
+      "aliases": [
+        "Decision \u2014 Task Type Edge Cases",
+        "Decision: Task Type Edge Cases"
       ],
       "relationships": [
         {
@@ -2341,6 +2477,10 @@
         "Readiness vs Progress \u2014 Two-Dimensional Work Tracking",
         "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
       ],
+      "aliases": [
+        "Decision \u2014 When to Use Milestone vs Epic vs Module vs Task",
+        "Decision: When to Use Milestone vs Epic vs Module vs Task"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2395,6 +2535,10 @@
         "Hooks Lifecycle Architecture",
         "Harness Engineering"
       ],
+      "aliases": [
+        "Decision \u2014 Extension System Operational Decisions",
+        "Decision: Extension System Operational Decisions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2448,6 +2592,10 @@
         "Hooks Lifecycle Architecture",
         "Per-Role Command Architecture",
         "Harness Engineering"
+      ],
+      "aliases": [
+        "Decision \u2014 Hooks Design Decisions",
+        "Decision: Hooks Design Decisions"
       ],
       "relationships": [
         {
@@ -2508,6 +2656,10 @@
         "AICP",
         "Local LLM Quantization",
         "Knowledge Evolution Pipeline"
+      ],
+      "aliases": [
+        "Decision \u2014 Local Model vs Cloud API for Routine Operations",
+        "Decision: Local Model vs Cloud API for Routine Operations"
       ],
       "relationships": [
         {
@@ -2579,6 +2731,10 @@
         "Synthesis: Claude Code Accuracy Tips",
         "MCP Integration Architecture",
         "Claude Code"
+      ],
+      "aliases": [
+        "Decision \u2014 MCP vs CLI for Tool Integration",
+        "Decision: MCP vs CLI for Tool Integration"
       ],
       "relationships": [
         {
@@ -2654,6 +2810,10 @@
         "Claude Code Skills",
         "Hooks Lifecycle Architecture"
       ],
+      "aliases": [
+        "Decision \u2014 Per-Role Command Design Decisions",
+        "Decision: Per-Role Command Design Decisions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2714,6 +2874,10 @@
         "WSL2 Development Patterns",
         "Wiki Event-Driven Automation",
         "Research Pipeline Orchestration"
+      ],
+      "aliases": [
+        "Decision \u2014 Polling vs Event-Driven Change Detection",
+        "Decision: Polling vs Event-Driven Change Detection"
       ],
       "relationships": [
         {
@@ -2796,6 +2960,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code Best Practices"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2882,6 +3049,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code Context Management"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -2988,6 +3158,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code Skills"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3106,6 +3279,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -3191,6 +3367,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Agent Orchestration Patterns"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -3282,6 +3461,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Harness Engineering"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -3371,6 +3553,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "OpenClaw"
+      ],
       "relationships": [
         {
           "verb": "USED BY",
@@ -3433,6 +3618,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "OpenFleet"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -3527,6 +3715,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Design.md Pattern"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -3593,6 +3784,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Hooks Lifecycle Architecture"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -3684,6 +3878,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "LLM Knowledge Linting"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -3776,6 +3973,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Per-Role Command Architecture"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -3857,6 +4057,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Rework Prevention"
+      ],
       "relationships": [
         {
           "verb": "ENABLED BY",
@@ -3960,6 +4163,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Spec-Driven Development"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4043,6 +4249,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Task Lifecycle Stage-Gating"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4129,6 +4338,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Local LLM Quantization"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -4182,6 +4394,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "AI-Driven Content Pipeline"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -4247,6 +4462,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code Scheduling"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -4322,6 +4540,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "MCP Integration Architecture"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4397,6 +4618,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Research Pipeline Orchestration"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4472,6 +4696,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Wiki Event-Driven Automation"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -4566,6 +4793,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "How AI Agents Consume the Methodology Wiki"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4649,6 +4879,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Second Brain Integration System \u2014 Full Chain Requirements"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -4715,6 +4948,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Skyscraper, Pyramid, Mountain"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -4799,6 +5035,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "AI Agent Artifacts \u2014 Standards and Guide"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4880,6 +5119,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Construction and Testing Artifacts \u2014 Standards and Guide"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -4938,6 +5180,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Deployment, Closure, and Monitoring Artifacts \u2014 Standards and Guide"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5014,6 +5259,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Initiation and Planning Artifacts \u2014 Standards and Guide"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5081,6 +5329,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Artifact Taxonomy"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5162,6 +5413,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Requirements and Design Artifacts \u2014 Standards and Guide"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5226,6 +5480,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Artifact Chains by Methodology Model"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -5291,6 +5548,12 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Artifact Chain \u2014 Infrastructure-IaC Domain",
+        "Artifact Chain \u2014 Infrastructure/IaC Domain",
+        "Artifact Chain: Infrastructure-IaC Domain",
+        "Artifact Chain: Infrastructure/IaC Domain"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5365,6 +5628,12 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Artifact Chain \u2014 Knowledge-Evolution Domain",
+        "Artifact Chain \u2014 Knowledge/Evolution Domain",
+        "Artifact Chain: Knowledge-Evolution Domain",
+        "Artifact Chain: Knowledge/Evolution Domain"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5442,6 +5711,12 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Artifact Chain \u2014 Python-Wiki Domain",
+        "Artifact Chain \u2014 Python/Wiki Domain",
+        "Artifact Chain: Python-Wiki Domain",
+        "Artifact Chain: Python/Wiki Domain"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5507,6 +5782,12 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Artifact Chain \u2014 TypeScript-Node Domain",
+        "Artifact Chain \u2014 TypeScript/Node Domain",
+        "Artifact Chain: TypeScript-Node Domain",
+        "Artifact Chain: TypeScript/Node Domain"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5571,6 +5852,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Evolution Protocol"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5631,6 +5915,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Global Standards Adherence \u2014 Engineering Principles the Wiki Follows"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5714,6 +6001,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Config Architecture \u2014 How the Pieces Fit Together"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5790,6 +6080,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Framework"
+      ],
       "relationships": [
         {
           "verb": "CONTAINS",
@@ -5914,6 +6207,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Project Self-Identification Protocol \u2014 The Goldilocks Framework"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -5993,6 +6289,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Readiness vs Progress \u2014 Two-Dimensional Work Tracking"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -6092,6 +6391,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "SDLC Customization Framework \u2014 Phases, Scale, and Profile Selection"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -6163,6 +6465,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Three PM Levels \u2014 Wiki to Fleet to Full Tool"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -6247,6 +6552,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "E003 Artifact Type System \u2014 Design Document"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -6328,6 +6636,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "E003 Artifact Type System \u2014 Requirements Spec"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -6395,6 +6706,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Standards Initiative \u2014 Gap Analysis"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -6461,6 +6775,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Standards Initiative \u2014 Honest Assessment"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -6532,6 +6849,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Standards Initiative \u2014 Infrastructure Analysis"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -6609,6 +6929,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model Composition Rules"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -6666,6 +6989,10 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Operations Plan \u2014 Wiki Post-Ingestion Validation",
+        "Operations Plan: Wiki Post-Ingestion Validation"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -6727,6 +7054,9 @@
       "derived_from": [
         "Stage-Gate Methodology",
         "Wiki Backlog Pattern"
+      ],
+      "aliases": [
+        "Backlog Hierarchy Rules"
       ],
       "relationships": [
         {
@@ -6819,6 +7149,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "devops-control-plane"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -6888,6 +7221,9 @@
       "derived_from": [
         "Stage-Gate Methodology",
         "Task Lifecycle Stage-Gating"
+      ],
+      "aliases": [
+        "Execution Modes and End Conditions"
       ],
       "relationships": [
         {
@@ -7011,6 +7347,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Four-Project Ecosystem"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -7097,6 +7436,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Immune System Rules"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -7179,6 +7521,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Infrastructure as Code Patterns"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -7260,6 +7605,9 @@
       "derived_from": [
         "Task Lifecycle Stage-Gating",
         "Spec-Driven Development"
+      ],
+      "aliases": [
+        "Stage-Gate Methodology"
       ],
       "relationships": [
         {
@@ -7353,6 +7701,9 @@
         "Stage-Gate Methodology",
         "Task Lifecycle Stage-Gating"
       ],
+      "aliases": [
+        "Task Type Artifact Matrix"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -7430,6 +7781,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "WSL2 Development Patterns"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -7500,6 +7854,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Knowledge Evolution Pipeline"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -7571,6 +7928,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Memory Lifecycle Management"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -7649,6 +8009,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "PARA Methodology"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -7719,6 +8082,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Second Brain Architecture"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -7804,6 +8170,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Zettelkasten Methodology"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -7880,6 +8249,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "LightRAG"
+      ],
       "relationships": [
         {
           "verb": "USED BY",
@@ -7960,6 +8332,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "LLM Wiki Pattern"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8077,6 +8452,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Wiki Backlog Pattern"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -8169,6 +8547,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Wiki Ingestion Pipeline"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8255,6 +8636,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Wiki Knowledge Graph"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8328,6 +8712,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "AICP"
+      ],
       "relationships": [
         {
           "verb": "USED BY",
@@ -8397,6 +8784,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Multi-Channel AI Agent Access"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -8479,6 +8869,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "notebooklm-py CLI"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -8554,6 +8947,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "NotebookLM Skills"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8618,6 +9014,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "NotebookLM"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8691,6 +9090,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Obsidian CLI"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -8775,6 +9177,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Obsidian Knowledge Vault"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8862,6 +9267,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Obsidian Skills Ecosystem"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -8929,6 +9337,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "OpenArms"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -9005,6 +9416,9 @@
       "layer": 2,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Plane"
+      ],
       "relationships": [
         {
           "verb": "USED BY",
@@ -9055,6 +9469,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "AICP \u2014 Identity Profile"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -9128,6 +9545,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "devops-control-plane \u2014 Identity Profile"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -9191,6 +9611,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "OpenArms \u2014 Identity Profile"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -9256,6 +9679,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "OpenFleet \u2014 Identity Profile"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -9346,6 +9772,9 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Research Wiki \u2014 Identity Profile"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -9400,7 +9829,88 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property.md",
+      "slug": "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property",
+      "title": "Execution Mode Is a Consumer Property, Not a Project Property \u2014 Guard Against Conflation Drift",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "lesson",
+        "execution-mode",
+        "consumer-property",
+        "project-property",
+        "conflation",
+        "drift-prevention",
+        "goldilocks",
+        "orthogonality",
+        "detection-limits",
+        "declared-over-detected"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-04-15",
+          "type": "directive",
+          "file": "raw/notes/2026-04-15-directive-execution-mode-is-consumer-property-not-project.md",
+          "description": "Operator directive establishing the rule, caught a prior conflation that had slid back into gateway's what-do-i-need tool."
+        },
+        {
+          "id": "research-wiki-gateway-bug",
+          "type": "file",
+          "file": "tools/gateway.py",
+          "description": "The `query_what_do_i_need` function (lines 235-345) as it was BEFORE the fix \u2014 claimed 'no harness code found \u2192 solo is certain' and picked ONE SDLC profile for the whole project from heuristic auto-detection."
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Right Process for Right Context \u2014 The Goldilocks Imperative",
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ],
+      "aliases": [
+        "Execution Mode Is a Consumer Property, Not a Project Property",
+        "Execution Mode Is a Consumer Property",
+        "Consumer Properties vs Project Properties",
+        "Consumer-Property Conflation"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Project Self-Identification Protocol \u2014 The Goldilocks Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        }
+      ]
     },
     {
       "path": "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever.md",
@@ -9464,6 +9974,9 @@
         "src-arxiv-natural-language-agent-harnesses",
         "src-arxiv-meta-harness-outer-loop-search",
         "src-rethinking-ai-agents-harness-engineering-rise"
+      ],
+      "aliases": [
+        "Harness Engineering Is the Dominant Performance Lever"
       ],
       "relationships": [
         {
@@ -9571,6 +10084,10 @@
         "deterministic-shell-llm-core",
         "model-quality-failure-prevention"
       ],
+      "aliases": [
+        "If You Can Verify, You Converge",
+        "Lesson \u2014 If You Can Verify, You Converge"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -9652,6 +10169,10 @@
         "src-bmad-method-agile-ai-development-framework",
         "model-methodology"
       ],
+      "aliases": [
+        "Specs-as-Code-Source Inverts the Traditional Hierarchy",
+        "Specs-as-Code-Source Inverts the Hierarchy"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -9725,6 +10246,9 @@
         "Infrastructure Enforcement Proves Instructions Fail",
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
       ],
+      "aliases": [
+        "Context Compaction Is a Reset Event"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -9782,6 +10306,9 @@
         "Claude Code Best Practices",
         "Synthesis: Claude Code Accuracy Tips",
         "Synthesis: Claude Code Harness Engineering"
+      ],
+      "aliases": [
+        "Context Management Is the Primary LLM Productivity Lever"
       ],
       "relationships": [
         {
@@ -9871,6 +10398,10 @@
         "CLAUDE.md Structural Patterns for Agent Compliance",
         "Model: Markdown as IaC \u2014 Design.md and Agent Configuration",
         "Model: Skills, Commands, and Hooks"
+      ],
+      "aliases": [
+        "Structured Context Is Proto-Programming for AI Agents",
+        "Structured Context Is Proto-Programming"
       ],
       "relationships": [
         {
@@ -10002,6 +10533,9 @@
         "Model: Quality and Failure Prevention",
         "Infrastructure Enforcement Proves Instructions Fail"
       ],
+      "aliases": [
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10083,6 +10617,9 @@
         "Enforcement Hook Patterns",
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
       ],
+      "aliases": [
+        "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10158,6 +10695,9 @@
         "Synthesis: OpenArms v10 \u2014 Infrastructure Enforcement and Agent Behavior",
         "Synthesis: OpenFleet Fleet Architecture \u2014 Immune System, Dispatch, and Tiers",
         "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+      ],
+      "aliases": [
+        "Harness Ownership Converges Independently Across Projects"
       ],
       "relationships": [
         {
@@ -10236,6 +10776,9 @@
         "Enforcement Hook Patterns",
         "Model: Quality and Failure Prevention"
       ],
+      "aliases": [
+        "Infrastructure Enforcement Proves Instructions Fail"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10300,6 +10843,9 @@
       "derived_from": [
         "Wiki Ingestion Pipeline",
         "Research Pipeline Orchestration"
+      ],
+      "aliases": [
+        "Multi-Stage Ingestion Beats Single-Pass Processing"
       ],
       "relationships": [
         {
@@ -10375,6 +10921,9 @@
         "Design.md Pattern",
         "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
       ],
+      "aliases": [
+        "Never Synthesize from Descriptions Alone"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10438,6 +10987,9 @@
         "Synthesis: claude-world/notebooklm-skill",
         "NotebookLM Skills",
         "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
+      ],
+      "aliases": [
+        "NotebookLM as Grounded Research Engine Not Just Note Storage"
       ],
       "relationships": [
         {
@@ -10510,6 +11062,9 @@
         "Knowledge Evolution Pipeline",
         "Wiki Ingestion Pipeline"
       ],
+      "aliases": [
+        "Shallow Ingestion Is Systemic, Not Isolated"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10576,6 +11131,10 @@
         "Agent Orchestration Patterns",
         "Plan Execute Review Cycle",
         "Deterministic Shell, LLM Core"
+      ],
+      "aliases": [
+        "Lesson \u2014 Agent Orchestration Is the Highest-Connected Concept in the Wiki",
+        "Lesson: Agent Orchestration Is the Highest-Connected Concept in the Wiki"
       ],
       "relationships": [
         {
@@ -10645,6 +11204,9 @@
         "LLM Knowledge Linting",
         "Knowledge Evolution Pipeline"
       ],
+      "aliases": [
+        "Automated Knowledge Validation Prevents Silent Wiki Decay"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10710,6 +11272,9 @@
         "LightRAG",
         "LLM Wiki vs RAG",
         "Wiki Knowledge Graph"
+      ],
+      "aliases": [
+        "Graph-Enhanced Retrieval Bridges Wiki Navigation and Vector Search"
       ],
       "relationships": [
         {
@@ -10779,6 +11344,10 @@
         "LLM Wiki Pattern",
         "Second Brain Architecture",
         "Knowledge Evolution Pipeline"
+      ],
+      "aliases": [
+        "Lesson \u2014 Knowledge Systems Is the Foundational Domain for the Entire Wiki",
+        "Lesson: Knowledge Systems Is the Foundational Domain for the Entire Wiki"
       ],
       "relationships": [
         {
@@ -10864,6 +11433,9 @@
         "LLM Wiki Pattern",
         "Wiki Ingestion Pipeline"
       ],
+      "aliases": [
+        "LLM-Maintained Wikis Outperform Static Documentation"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -10941,6 +11513,9 @@
         "Methodology Standards Initiative \u2014 Honest Assessment",
         "Model: LLM Wiki"
       ],
+      "aliases": [
+        "New Content Must Integrate Into Existing Pages"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11001,6 +11576,9 @@
       "derived_from": [
         "Obsidian Knowledge Vault",
         "LLM Wiki Pattern"
+      ],
+      "aliases": [
+        "Obsidian as Knowledge Infrastructure Not Just Note-Taking"
       ],
       "relationships": [
         {
@@ -11066,6 +11644,10 @@
         "Synthesis: Karpathy's LLM Wiki Idea File",
         "LLM Wiki Pattern",
         "Second Brain Architecture"
+      ],
+      "aliases": [
+        "Lesson \u2014 Schema Is the Real Product \u2014 Not the Content",
+        "Lesson: Schema Is the Real Product \u2014 Not the Content"
       ],
       "relationships": [
         {
@@ -11152,6 +11734,9 @@
         "Model: Ecosystem Architecture",
         "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
       ],
+      "aliases": [
+        "The Wiki Is a Hub, Not a Silo"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11220,6 +11805,9 @@
         "Synthesis: Karpathy LLM Wiki Method via Claude Code",
         "LLM Wiki Pattern"
       ],
+      "aliases": [
+        "The Wiki Maintenance Problem Is Solved by LLM Automation"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11276,6 +11864,9 @@
         "Methodology Artifact Taxonomy",
         "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
         "Methodology Standards Initiative \u2014 Honest Assessment"
+      ],
+      "aliases": [
+        "Coverage Blindness \u2014 Modeling Only What You Know"
       ],
       "relationships": [
         {
@@ -11342,6 +11933,9 @@
         "Model: Methodology",
         "Never Skip Stages Even When Told to Continue"
       ],
+      "aliases": [
+        "Follow the Method of Work Not the Methodology Label"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11402,6 +11996,9 @@
         "Methodology Framework",
         "Stage-Gate Methodology"
       ],
+      "aliases": [
+        "Methodology Is a Framework, Not a Fixed Pipeline"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11455,6 +12052,9 @@
       "derived_from": [
         "Stage-Gate Methodology",
         "Methodology Framework"
+      ],
+      "aliases": [
+        "Never Skip Stages Even When Told to Continue"
       ],
       "relationships": [
         {
@@ -11521,6 +12121,9 @@
         "Methodology Framework",
         "Stage-Gate Methodology"
       ],
+      "aliases": [
+        "The Agent Must Practice What It Documents"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11573,6 +12176,9 @@
         "Methodology Artifact Taxonomy",
         "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
         "Construction and Testing Artifacts \u2014 Standards and Guide"
+      ],
+      "aliases": [
+        "Three Classes of Methodology Output"
       ],
       "relationships": [
         {
@@ -11628,6 +12234,9 @@
         "Artifact Chain: Python/Wiki Domain",
         "Artifact Chain: Infrastructure/IaC Domain",
         "Artifact Chain: Knowledge/Evolution Domain"
+      ],
+      "aliases": [
+        "Universal Stages, Domain-Specific Artifacts"
       ],
       "relationships": [
         {
@@ -11713,6 +12322,9 @@
         "Model: Methodology",
         "Methodology Framework"
       ],
+      "aliases": [
+        "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11779,6 +12391,9 @@
         "Infrastructure as Code Patterns",
         "Stage-Gate Methodology"
       ],
+      "aliases": [
+        "Infrastructure Must Be Reproducible, Not Manual"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11832,6 +12447,9 @@
         "Methodology Framework",
         "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features",
         "LLM Wiki Standards \u2014 What Good Looks Like"
+      ],
+      "aliases": [
+        "Models Are Built in Layers, Not All at Once"
       ],
       "relationships": [
         {
@@ -11890,6 +12508,9 @@
         "Model Registry",
         "Models Are Built in Layers, Not All at Once"
       ],
+      "aliases": [
+        "Models Are Systems, Not Documents"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -11941,6 +12562,9 @@
       "derived_from": [
         "Claude Code Context Management",
         "Never Synthesize from Descriptions Alone"
+      ],
+      "aliases": [
+        "Never Present Speculation as Fact"
       ],
       "relationships": [
         {
@@ -11994,6 +12618,9 @@
         "The Agent Must Practice What It Documents",
         "Wiki Design Standards \u2014 What Good Styling Looks Like"
       ],
+      "aliases": [
+        "Standards Must Preach by Example"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -12046,6 +12673,9 @@
         "Model Registry",
         "Models Are Built in Layers, Not All at Once",
         "Models Are Systems, Not Documents"
+      ],
+      "aliases": [
+        "Systemic Incompleteness Is Invisible to Validation"
       ],
       "relationships": [
         {
@@ -12123,6 +12753,9 @@
         "Claude Code",
         "Synthesis: Claude Code Harness Engineering"
       ],
+      "aliases": [
+        "Always Plan Before Executing"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -12195,6 +12828,10 @@
         "Research Pipeline Orchestration",
         "Wiki Event-Driven Automation",
         "MCP Integration Architecture"
+      ],
+      "aliases": [
+        "Lesson \u2014 Automation Is the Bridge Between Knowledge and Action",
+        "Lesson: Automation Is the Bridge Between Knowledge and Action"
       ],
       "relationships": [
         {
@@ -12283,6 +12920,9 @@
         "Claude Code",
         "MCP Integration Architecture"
       ],
+      "aliases": [
+        "CLI Tools Beat MCP for Token Efficiency"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -12351,6 +12991,9 @@
         "Synthesis: kepano/obsidian-skills",
         "Obsidian Skills Ecosystem"
       ],
+      "aliases": [
+        "Skill Specification Is the Key to Ecosystem Interoperability"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -12414,6 +13057,9 @@
       "derived_from": [
         "Claude Code Skills",
         "Claude Code Best Practices"
+      ],
+      "aliases": [
+        "Skills Architecture Is the Dominant LLM Extension Pattern"
       ],
       "relationships": [
         {
@@ -12501,6 +13147,10 @@
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure",
         "Context Compaction Is a Reset Event",
         "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass"
+      ],
+      "aliases": [
+        "Principle \u2014 Infrastructure Over Instructions for Process Enforcement",
+        "Principle: Infrastructure Over Instructions for Process Enforcement"
       ],
       "relationships": [
         {
@@ -12595,6 +13245,10 @@
         "Follow the Method of Work Not the Methodology Label",
         "New Content Must Integrate Into Existing Pages",
         "Models Are Built in Layers, Not All at Once"
+      ],
+      "aliases": [
+        "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative",
+        "Principle: Right Process for Right Context \u2014 The Goldilocks Imperative"
       ],
       "relationships": [
         {
@@ -12693,6 +13347,10 @@
         "Context Compaction Is a Reset Event",
         "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
       ],
+      "aliases": [
+        "Principle \u2014 Structured Context Governs Agent Behavior More Than Content",
+        "Principle: Structured Context Governs Agent Behavior More Than Content"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -12758,6 +13416,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "FOLLOW THE WORKFLOW \u2014 Complete Failure to Practice Methodology"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12790,6 +13451,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Documentation Layers + Old Model Tolerance"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12823,6 +13487,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Methodology Is Flexible \u2014 Multiple Chains, Not One Fixed Pipeline"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12855,6 +13522,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Never Stop at Surface \u2014 Depth Verification Rule"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12883,6 +13553,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Stop Claiming Readiness Without Proof"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12916,6 +13589,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Stop Guessing \u2014 False Claims in Models"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12949,6 +13625,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Bottom-Up Model Completion \u2014 10+ Named Models Required"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -12982,6 +13661,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Model Quality + Links + Schema Naming Issues"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13015,6 +13697,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Models Are Not Documents \u2014 They Must Be Usable Systems"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13050,6 +13735,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Quality Models \u2014 Hub Mindset \u2014 OpenArms Methodology Learnings"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13084,6 +13772,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Wiki Design Model Emerging \u2014 Obsidian Styling as Standard"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13118,6 +13809,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Wiki Design Model \u2014 Research Sources"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13153,6 +13847,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Record the Process \u2014 Skills, Super-Model, Preach by Example"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13186,6 +13883,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Styling \u2014 Make It Look Good in Obsidian"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13219,6 +13919,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Systemic Incompleteness \u2014 No Model Is Finished"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13251,6 +13954,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Validate Second Brain Readiness"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13282,6 +13988,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Ingest awesome-design-md repository"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13313,6 +14022,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Session 2026-04-09 Summary"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13348,6 +14060,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Quality Evolution Epic \u2014 Level Up Everything, One File at a Time"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13379,6 +14094,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Session 2026-04-10 Summary"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -13417,6 +14135,9 @@
       "layer": "",
       "maturity": "",
       "derived_from": [],
+      "aliases": [
+        "Research Wiki Agent Directive (ARCHIVED)"
+      ],
       "relationships": []
     },
     {
@@ -13467,6 +14188,11 @@
         "Infrastructure Over Instructions for Process Enforcement",
         "Three Lines of Defense \u2014 Immune System for Agent Quality",
         "Block With Reason and Justified Escalation"
+      ],
+      "aliases": [
+        "Adapters Never Raise",
+        "Failure As Data",
+        "Receipt Pattern"
       ],
       "relationships": [
         {
@@ -13562,6 +14288,10 @@
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure",
         "Infrastructure Over Instructions for Process Enforcement"
       ],
+      "aliases": [
+        "Block With Reason and Justified Escalation",
+        "Block + Reason + Offer + Justification"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -13638,6 +14368,11 @@
         "Infrastructure Over Instructions for Process Enforcement",
         "Model \u2014 Methodology",
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ],
+      "aliases": [
+        "Observe-Fix-Verify Loop",
+        "OFV Loop",
+        "Battle-Testing Cycle"
       ],
       "relationships": [
         {
@@ -13716,6 +14451,7 @@
         "model-claude-code",
         "model-skills-commands-hooks"
       ],
+      "aliases": [],
       "relationships": [
         {
           "verb": "INSTANCES IN",
@@ -13789,6 +14525,9 @@
         "OpenFleet",
         "Harness Engineering",
         "AICP"
+      ],
+      "aliases": [
+        "Deterministic Shell, LLM Core"
       ],
       "relationships": [
         {
@@ -13883,6 +14622,9 @@
         "OpenArms",
         "OpenClaw",
         "OpenFleet"
+      ],
+      "aliases": [
+        "Gateway-Centric Routing"
       ],
       "relationships": [
         {
@@ -13984,6 +14726,9 @@
         "Claude Code",
         "Research Pipeline Orchestration"
       ],
+      "aliases": [
+        "Plan Execute Review Cycle"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14075,6 +14820,9 @@
         "Second Brain Architecture",
         "Knowledge Evolution Pipeline"
       ],
+      "aliases": [
+        "Progressive Distillation"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14157,6 +14905,9 @@
         "Four-Project Ecosystem",
         "Progressive Distillation"
       ],
+      "aliases": [
+        "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -14235,6 +14986,9 @@
         "Three Lines of Defense \u2014 Immune System for Agent Quality",
         "Model: Quality and Failure Prevention"
       ],
+      "aliases": [
+        "Contribution Gating \u2014 Cross-Agent Inputs Before Work"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14298,6 +15052,9 @@
       "derived_from": [
         "Model: Skills, Commands, and Hooks",
         "Model: Methodology"
+      ],
+      "aliases": [
+        "Enforcement Hook Patterns"
       ],
       "relationships": [
         {
@@ -14368,6 +15125,10 @@
         "Model: Quality and Failure Prevention",
         "Infrastructure Enforcement Proves Instructions Fail"
       ],
+      "aliases": [
+        "Harness-Owned Loop \u2014 Deterministic Agent Execution",
+        "Harness-Owned Loop"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14425,6 +15186,9 @@
       "derived_from": [
         "Model: Skills, Commands, and Hooks",
         "Model: Methodology"
+      ],
+      "aliases": [
+        "Stage-Aware Skill Injection"
       ],
       "relationships": [
         {
@@ -14518,6 +15282,9 @@
         "Model: Quality and Failure Prevention",
         "Enforcement Hook Patterns"
       ],
+      "aliases": [
+        "Three Lines of Defense \u2014 Immune System for Agent Quality"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14586,6 +15353,9 @@
         "Model: Methodology",
         "Never Skip Stages Even When Told to Continue",
         "Always Plan Before Executing"
+      ],
+      "aliases": [
+        "CLAUDE.md Structural Patterns for Agent Compliance"
       ],
       "relationships": [
         {
@@ -14673,6 +15443,9 @@
         "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
         "CLI Tools Beat MCP for Token Efficiency",
         "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
+      ],
+      "aliases": [
+        "Context-Aware Tool Loading"
       ],
       "relationships": [
         {
@@ -14766,6 +15539,9 @@
         "Model: Ecosystem Architecture",
         "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
       ],
+      "aliases": [
+        "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14834,6 +15610,9 @@
         "Three Lines of Defense \u2014 Immune System for Agent Quality",
         "Model: Quality and Failure Prevention"
       ],
+      "aliases": [
+        "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -14892,6 +15671,9 @@
       "derived_from": [
         "Structured Context Is Proto-Programming for AI Agents",
         "Three Lines of Defense \u2014 Immune System for Agent Quality"
+      ],
+      "aliases": [
+        "Validation Matrix \u2014 Test Suite for Context Injection"
       ],
       "relationships": [
         {
@@ -14954,6 +15736,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude Code Accuracy Tips",
+        "Synthesis: Claude Code Accuracy Tips"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15022,6 +15808,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code Slash Commands (artemgetmann)"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -15085,6 +15874,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude Code Harness Engineering",
+        "Synthesis: Claude Code Harness Engineering"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15160,6 +15953,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude Code Best Practice (shanraisshan)",
+        "Synthesis: Claude Code Best Practice (shanraisshan)"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15226,6 +16023,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)",
+        "Synthesis: Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15295,6 +16096,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 18 Claude Code Token Hacks in 18 Minutes",
+        "Synthesis: 18 Claude Code Token Hacks in 18 Minutes"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15356,6 +16161,10 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 OpenArms v10 \u2014 Infrastructure Enforcement and Agent Behavior",
+        "Synthesis: OpenArms v10 \u2014 Infrastructure Enforcement and Agent Behavior"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -15449,6 +16258,10 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 OpenFleet Fleet Architecture \u2014 Immune System, Dispatch, and Tiers",
+        "Synthesis: OpenFleet Fleet Architecture \u2014 Immune System, Dispatch, and Tiers"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -15520,6 +16333,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 axtonliu-axton-obsidian-visual-skills",
+        "Synthesis: axtonliu-axton-obsidian-visual-skills"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15573,6 +16390,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude + NotebookLM Content Automation",
+        "Synthesis: Claude + NotebookLM Content Automation"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15638,6 +16459,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 claude-world-notebooklm-skill",
+        "Synthesis: claude-world-notebooklm-skill"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15693,6 +16518,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 kepano-obsidian-skills",
+        "Synthesis: kepano-obsidian-skills"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15750,6 +16579,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 NotebookLM + Claude Code Workflow via notebooklm-py",
+        "Synthesis: NotebookLM + Claude Code Workflow via notebooklm-py"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15818,6 +16651,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Obsidian + Claude Code Second Brain Setup",
+        "Synthesis: Obsidian + Claude Code Second Brain Setup"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15888,6 +16725,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 pablo-mano-Obsidian-CLI-skill",
+        "Synthesis: pablo-mano-Obsidian-CLI-skill"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -15950,6 +16791,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 PleasePrompto-notebooklm-skill",
+        "Synthesis: PleasePrompto-notebooklm-skill"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -16005,6 +16850,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": []
     },
     {
@@ -16040,6 +16886,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -16102,6 +16949,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16179,6 +17029,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16251,6 +17104,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16325,6 +17181,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16395,6 +17254,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "VALIDATES",
@@ -16461,6 +17321,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16525,6 +17386,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": []
     },
     {
@@ -16559,6 +17421,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": []
     },
     {
@@ -16598,6 +17461,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16665,6 +17531,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16713,6 +17580,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development",
+        "Synthesis: GitHub Spec Kit"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16773,6 +17644,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16836,6 +17708,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -16896,6 +17769,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -16937,6 +17811,7 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "COMPARES TO",
@@ -16997,6 +17872,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Plannotator \u2014 Interactive Plan & Code Review for AI Agents"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -17056,6 +17934,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -17134,6 +18013,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -17196,6 +18078,9 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -17266,6 +18151,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -17323,6 +18209,7 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
+      "aliases": [],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -17369,6 +18256,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Gemma 4 + SearXNG for Free Private OpenClaw",
+        "Synthesis: Gemma 4 + SearXNG for Free Private OpenClaw"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -17426,6 +18317,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
+        "Synthesis: Playwright CLI vs MCP \u2014 Automate QA with Less Tokens"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -17492,6 +18387,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Playwright MCP for Visual Development Testing",
+        "Synthesis: Playwright MCP for Visual Development Testing"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -17556,6 +18455,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 TurboQuant 122B LLM on MacBook",
+        "Synthesis: TurboQuant 122B LLM on MacBook"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -17648,6 +18551,10 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
+        "Synthesis: Methodology Artifact Taxonomy \u2014 Full Spectrum Research"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -17717,6 +18624,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 awesome-design-md \u2014 58 Design Systems for AI Agents",
+        "Synthesis: awesome-design-md \u2014 58 Design Systems for AI Agents"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -17781,6 +18692,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Context Mode \u2014 MCP Sandbox for Context Saving",
+        "Synthesis: Context Mode \u2014 MCP Sandbox for Context Saving"
+      ],
       "relationships": [
         {
           "verb": "EXTENDS",
@@ -17854,6 +18769,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Karpathy LLM Wiki Method via Claude Code",
+        "Synthesis: Karpathy LLM Wiki Method via Claude Code"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -17914,6 +18833,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Karpathy's LLM Wiki Idea File",
+        "Synthesis: Karpathy's LLM Wiki Idea File"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -17978,6 +18901,10 @@
       "layer": 1,
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons",
+        "Synthesis: LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+      ],
       "relationships": [
         {
           "verb": "DERIVED FROM",
@@ -18078,6 +19005,10 @@
       "layer": "",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 SDLC Frameworks Research \u2014 CMMI, Lean Startup, and Agentic SDLC",
+        "Synthesis: SDLC Frameworks Research \u2014 CMMI, Lean Startup, and Agentic SDLC"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -18123,6 +19054,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "AI Agents \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -18168,6 +19102,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "AI Models \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -18209,6 +19146,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Automation \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -18254,6 +19194,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Cross-Domain \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "SYNTHESIZES FROM",
@@ -18299,6 +19242,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Devops \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "ENABLES",
@@ -18340,6 +19286,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Knowledge Systems \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -18385,6 +19334,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Tools And Platforms \u2014 Domain Overview"
+      ],
       "relationships": [
         {
           "verb": "USED BY",
@@ -18445,6 +19397,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Evolution \u2014 Methodology System",
+        "Evolution: Methodology System"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -18501,6 +19457,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Goldilocks Flow \u2014 From Identity to Action"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -18548,6 +19507,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Learning Path \u2014 Methodology Fundamentals",
+        "Learning Path: Methodology Fundamentals"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -18600,6 +19563,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Claude Code",
+        "Model: Claude Code"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -18705,6 +19672,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Markdown as IaC \u2014 Design.md and Agent Configuration",
+        "Model: Markdown as IaC \u2014 Design.md and Agent Configuration"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -18793,6 +19764,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Skills, Commands, and Hooks",
+        "Model: Skills, Commands, and Hooks"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -18914,6 +19889,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Context Engineering",
+        "Model: Context Engineering"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -18985,6 +19964,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Knowledge Evolution",
+        "Model: Knowledge Evolution"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19079,6 +20062,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Local AI ($0 Target)",
+        "Model: Local AI ($0 Target)"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19141,6 +20128,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 NotebookLM",
+        "Model: NotebookLM"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19219,6 +20210,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Second Brain",
+        "Model: Second Brain"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19295,6 +20290,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Automation and Pipelines",
+        "Model: Automation and Pipelines"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19364,6 +20363,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Ecosystem Architecture",
+        "Model: Ecosystem Architecture"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19448,6 +20451,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 MCP and CLI Integration",
+        "Model: MCP and CLI Integration"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19526,6 +20533,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 LLM Wiki",
+        "Model: LLM Wiki"
+      ],
       "relationships": [
         {
           "verb": "FEEDS INTO",
@@ -19625,6 +20636,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Methodology",
+        "Model: Methodology"
+      ],
       "relationships": [
         {
           "verb": "GOVERNS",
@@ -19786,6 +20801,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Wiki Design",
+        "Model: Wiki Design"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19877,6 +20896,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 Quality and Failure Prevention",
+        "Model: Quality and Failure Prevention"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -19963,6 +20986,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model \u2014 SFIF and Architecture",
+        "Model: SFIF and Architecture"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20020,6 +21047,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Adoption Guide \u2014 How to Use This Wiki's Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20091,6 +21121,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context",
+        "Context File Taxonomy"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20166,6 +21200,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Frontmatter Field Reference \u2014 Complete Parameter Documentation"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20221,6 +21258,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Gateway Tools Reference \u2014 Complete Command Documentation"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -20283,6 +21323,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Adoption Guide"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20350,6 +21393,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology System Map"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20395,6 +21441,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Model Registry"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -20450,6 +21499,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Root Documentation Map \u2014 Repository-Level Files",
+        "Root Documentation Map"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -20504,6 +21557,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Operations Plan \u2014 Second Brain Integration Chain \u2014 Complete Walkthrough",
+        "Operations Plan: Second Brain Integration Chain \u2014 Complete Walkthrough"
+      ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
@@ -20563,6 +21620,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Comparison Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20615,6 +21675,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Concept Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20667,6 +21730,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Decision Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20713,6 +21779,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Deep-Dive Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20751,6 +21820,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Domain Overview Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20790,6 +21862,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Epic Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20832,6 +21907,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Evolution Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20870,6 +21948,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Learning Path Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20919,6 +22000,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Lesson Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -20971,6 +22055,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Claude Code Standards \u2014 What Good Agent Configuration Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21046,6 +22133,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Context Engineering Standards \u2014 What Good Structured Context Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21096,6 +22186,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Evolution Standards \u2014 What Good Knowledge Promotion Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21145,6 +22238,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "LLM Wiki Standards \u2014 What Good Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21203,6 +22299,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Methodology Standards \u2014 What Good Execution Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21281,6 +22380,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Quality Standards \u2014 What Good Failure Prevention Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21343,6 +22445,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Extension Standards \u2014 What Good Skills, Commands, and Hooks Look Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21390,6 +22495,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Wiki Design Standards \u2014 What Good Styling Looks Like"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21449,6 +22557,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Note Page Standards"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -21487,6 +22598,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Operations Plan Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21535,6 +22649,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Pattern Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21581,6 +22698,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Reference Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21651,6 +22771,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Session Handoff Standards",
+        "Session Handoff Standards \u2014 What Good Handoffs Look Like"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -21705,6 +22829,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Source-Synthesis Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21748,6 +22875,9 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Task Page Standards"
+      ],
       "relationships": [
         {
           "verb": "BUILDS ON",
@@ -21778,6 +22908,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Sub-Model \u2014 Enforcement Hierarchy \u2014 From Instructions to Immune System",
+        "Sub-Model: Enforcement Hierarchy \u2014 From Instructions to Immune System"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -21808,6 +22942,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Sub-Model \u2014 Goldilocks Protocol \u2014 Identity and Adaptation",
+        "Sub-Model: Goldilocks Protocol \u2014 Identity and Adaptation"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -21838,6 +22976,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Sub-Model \u2014 Integration and Ecosystem \u2014 Dual-Perspective and Feedback",
+        "Sub-Model: Integration and Ecosystem \u2014 Dual-Perspective and Feedback"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -21868,6 +23010,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Sub-Model \u2014 Knowledge Architecture \u2014 Layers, Maturity, and Evolution",
+        "Sub-Model: Knowledge Architecture \u2014 Layers, Maturity, and Evolution"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -21915,6 +23061,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub",
+        "Super-Model: Research Wiki as Ecosystem Intelligence Hub"
+      ],
       "relationships": [
         {
           "verb": "CONTAINS",
@@ -21961,6 +23111,10 @@
       "layer": "spine",
       "maturity": "growing",
       "derived_from": [],
+      "aliases": [
+        "Sub-Model \u2014 Work Management \u2014 Hierarchy, Tracking, and PM Levels",
+        "Sub-Model: Work Management \u2014 Hierarchy, Tracking, and PM Levels"
+      ],
       "relationships": [
         {
           "verb": "PART OF",
@@ -21979,8 +23133,8 @@
       "relationship_count": 131
     },
     "cross-domain": {
-      "page_count": 146,
-      "relationship_count": 984
+      "page_count": 147,
+      "relationship_count": 991
     },
     "ai-agents": {
       "page_count": 65,
@@ -22229,6 +23383,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
       "spine/goldilocks-flow"
     ],
@@ -24893,6 +26048,7 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "lesson": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -24903,6 +26059,30 @@
       "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
       "spine/standards/lesson-page-standards"
+    ],
+    "execution-mode": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "consumer-property": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "project-property": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "conflation": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "drift-prevention": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "orthogonality": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "detection-limits": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "declared-over-detected": [
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
     ],
     "agent-architecture": [
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
@@ -26667,32 +27847,9 @@
       ]
     },
     {
-      "target": "Block With Reason and Justified Escalation",
-      "referenced_by": [
-        "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries",
-        "Observe-Fix-Verify Loop \u2014 The Battle-Testing Cycle for Autonomous Agent Infrastructure"
-      ]
-    },
-    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
-      ]
-    },
-    {
-      "target": "Context File Taxonomy",
-      "referenced_by": [
-        "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
-        "Session Handoff Standards"
-      ]
-    },
-    {
-      "target": "Harness-Owned Loop",
-      "referenced_by": [
-        "Harness Engineering Is the Dominant Performance Lever",
-        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
-        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
-        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
       ]
     },
     {
@@ -26719,14 +27876,6 @@
       ]
     },
     {
-      "target": "Lesson \u2014 If You Can Verify, You Converge",
-      "referenced_by": [
-        "Specs-as-Code-Source Inverts the Traditional Hierarchy",
-        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
-        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
-      ]
-    },
-    {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
         "AICP \u2014 Identity Profile",
@@ -26742,12 +27891,6 @@
       ]
     },
     {
-      "target": "Observe-Fix-Verify Loop",
-      "referenced_by": [
-        "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries"
-      ]
-    },
-    {
       "target": "OpenArms v10 \u2014 Five Cognitive Contexts",
       "referenced_by": [
         "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
@@ -26760,29 +27903,10 @@
       ]
     },
     {
-      "target": "Root Documentation Map",
-      "referenced_by": [
-        "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context",
-        "Session Handoff Standards"
-      ]
-    },
-    {
-      "target": "Specs-as-Code-Source Inverts the Hierarchy",
-      "referenced_by": [
-        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
-      ]
-    },
-    {
       "target": "Structured Context Governs Agent Behavior More Than Content",
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
-      ]
-    },
-    {
-      "target": "Structured Context Is Proto-Programming",
-      "referenced_by": [
-        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
       ]
     },
     {

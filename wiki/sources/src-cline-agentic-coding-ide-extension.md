@@ -165,7 +165,7 @@ A dedicated comparison page ([[model-claude-code|Model — Claude Code]] vs Clin
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
-[[Context File Taxonomy]]
+[[context-file-taxonomy|Context File Taxonomy]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 [[model-local-ai|Model — Local AI ($0 Target)]]

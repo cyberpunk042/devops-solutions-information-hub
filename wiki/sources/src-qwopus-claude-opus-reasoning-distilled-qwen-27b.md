@@ -149,6 +149,6 @@ The Decrypt article is qualitative and the HF model card is marketing-adjacent. 
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[Synthesis — HRM/TRM — Tiny Recursion Models]]
 [[Synthesis — AutoBE — Compiler-Verified Backend Generation]]
-[[Lesson — If You Can Verify, You Converge]]
+[[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
