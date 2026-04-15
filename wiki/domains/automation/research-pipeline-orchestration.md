@@ -107,8 +107,18 @@ The gap between current state and the vision:
 
 ## Open Questions
 
-- How to handle pipeline failures mid-chain (e.g., one URL fails to fetch — skip or retry)? (Requires: external research on asyncio error handling patterns and retry strategies; not directly covered in existing wiki pages)
+- ~~How to handle pipeline failures mid-chain (e.g., one URL fails to fetch — skip or retry)?~~ **RESOLVED (2026-04-15):** **Structured failure-as-data per URL, continue the batch.** The pipeline already implements this via `tools/pipeline.py`'s `group_fetch` which runs URLs in parallel via `ThreadPoolExecutor(max_workers=4)` — each URL's fetch is independent; failure in one doesn't halt others. This follows the [[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise]] pattern: each URL returns a structured result (success payload or failure receipt with error), aggregated at the batch level. **For post-chain steps** (validate, manifest, wikilinks, lint) the semantics are different — these are sequential by design because each step depends on the previous. Retry strategy: none for post-chain (fail-fast on structural errors); operator-controlled for URL fetching (transient failures retry via HTTP client library defaults; persistent failures skip-and-record in the batch receipt). Cross-reference: [[if-you-can-verify-you-converge|If You Can Verify, You Converge]] — failures that the validator catches are cheap to surface early; retry loops are for transient network/service issues, not for validator-failed content.
 - How does the pipeline interact with NotebookLM's research agent (notebooklm source add-research)? (Requires: external research on notebooklm-py API specifics; not covered in existing wiki pages)
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Pipeline mid-chain failure handling** — already implemented. `group_fetch` runs URLs in parallel as independent units (Adapters-Never-Raise); post-chain steps are sequential and fail-fast. Retry for transient network issues; skip-and-record for persistent failures.
+
+**Genuinely deferred:**
+
+- notebooklm-py add-research API integration (external)
 
 ### Answered Open Questions
 

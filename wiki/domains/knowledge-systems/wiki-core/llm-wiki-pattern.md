@@ -127,9 +127,17 @@ A practical advantage is radical simplicity. No databases, no embedding models, 
 
 ## Open Questions
 
-- At what exact scale does the wiki pattern start to degrade compared to vector-based RAG? Is the boundary sharp or gradual? (The v2 document suggests ~100-200 pages for index-only; the LLM Wiki vs RAG comparison page documents ~200 pages / ~500K words as the practical ceiling. Requires: empirical benchmarking to confirm whether degradation is sharp or gradual.)
-- Can the wiki structure be automatically migrated to a graph database or RAG pipeline when scale demands it, preserving the relationships? (Requires: external research on graph DB migration tooling; the wiki documents the hybrid search destination but not the migration path.)
-- Is there a recommended approach for merging multiple single-user wikis into a shared team wiki? (The v2 document proposes mesh sync with last-write-wins, but details are sparse. Requires: external research or implementation experience.)
+- ~~At what exact scale does the wiki pattern start to degrade compared to vector-based RAG?~~ **PARTIALLY RESOLVED (2026-04-15):** **The ceiling is ~200 pages for index-only navigation; this wiki is at 334 pages and past it structurally** — but operational because the graph-RAG upgrade-path ([[wiki-first-with-lightrag-upgrade-path|decision]]) is already available via OpenFleet's `kb_sync.py` which reads `## Relationships` into a LightRAG graph (2,295 explicit relationships). The degradation is **gradual** at the navigation layer (index becomes harder to read in one LLM pass) but **mitigated-by-graph** at the query layer (graph traversal is O(relationships) not O(pages)). Exact sharp-vs-gradual at query-accuracy level requires empirical benchmarking still.
+- ~~Can the wiki structure be automatically migrated to a graph database or RAG pipeline when scale demands it, preserving the relationships?~~ **RESOLVED (2026-04-15):** **Yes — already implemented.** OpenFleet's `kb_sync.py` parses the wiki's `## Relationships` sections (via regex `^([A-Z][A-Z /\-]+?):\s*(.+)$`) and writes them into LightRAG. Per [[four-project-ecosystem|Four-Project Ecosystem]]: 2,295 explicit relationships from 219 KB entries, no separate graph database needed on the wiki side — the markdown-embedded relationships ARE the source of truth, and `kb_sync.py` is the migration adapter. Migration is continuous (runs on change), not a one-time event. No Neo4j/ArangoDB needed unless scale pushes beyond LightRAG's ceiling.
+- ~~Is there a recommended approach for merging multiple single-user wikis into a shared team wiki?~~ **PARTIALLY RESOLVED (2026-04-15):** **This wiki's current approach is hub-and-spoke, NOT mesh-merge.** Per [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop]]: this wiki is the hub; sister projects (AICP, OpenFleet, etc.) maintain their own wikis and feed lessons back via the gateway contribution flow (`python3 -m tools.gateway contribute ...`). Contributions land in `00_inbox`; promotion through the maturity ladder happens with operator review. Hub-and-spoke avoids the semantic-conflict problem of mesh sync by making the hub authoritative. For true mesh sync (multiple peers writing to the same graph), the LLM Wiki v2 last-write-wins proposal is still genuinely external — this wiki doesn't need it because the hub-and-spoke topology is operationally sufficient at 5-project scale.
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Scale ceiling ~200 pages for index-only; LightRAG graph-layer mitigates** — wiki is at 334 pages past the ceiling, but graph layer is operational via `kb_sync.py`.
+- **Automatic migration to graph DB/RAG** — already implemented via `kb_sync.py`. Markdown `## Relationships` is the source of truth; migration is continuous.
+- **Multi-user wiki merge (partial)** — hub-and-spoke works at ecosystem scale via gateway contribution flow. Mesh-sync with conflict resolution still external.
 
 ## Answered Questions
 

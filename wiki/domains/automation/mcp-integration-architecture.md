@@ -128,8 +128,15 @@ Tools:
 
 ## Open Questions
 
-- How to handle MCP server authentication for multi-user scenarios? (Requires: external research on MCP auth patterns; not covered in existing wiki pages)
-- Can one MCP server expose all three tool sets, or should they be separate servers? (Requires: external research on MCP server multi-namespace patterns; not covered in existing wiki pages)
+- How to handle MCP server authentication for multi-user scenarios? (Requires: external research on MCP auth patterns.) **Note (2026-04-15):** [[consumer-runtime-signaling-via-mcp-config|Consumer Runtime Signaling]] is the adjacent pattern for consumer *identification* (who is connecting); authentication (*proving* the identity) is a separate concern the MCP spec itself does not yet standardize. The `env:` block pattern used for runtime signaling could carry a token/credential per the same mechanism — but that's credential-passing, not authentication protocol.
+- ~~Can one MCP server expose all three tool sets, or should they be separate servers?~~ **RESOLVED (2026-04-15):** **One server works at ecosystem scale.** This wiki's own `tools/mcp_server.py` exposes 26 tools across multiple namespaces (`wiki_*`, `wiki_gateway_*`, `wiki_sister_project`) through a single FastMCP server — operationally proven at production scale (Tier 4/4 compliance, daily use). Namespace conventions (prefix-based) provide the organization without requiring separate servers. **When to split:** separate servers make sense when tool sets have different trust levels (e.g., read-only vs write-capable), different auth requirements, or different update cycles. None of those conditions hold for the wiki's current tool set — all tools share the same access model and are versioned together. For external integrations (OpenArms/OpenFleet consuming the wiki), each consumer has its own `.mcp.json` entry but points at the same server process.
+
+### Answered Open Questions
+
+- **Multi-namespace via single MCP server** — operationally proven in this wiki's own MCP server (26 tools, 3 namespace prefixes). Split only when trust/auth/versioning differs across tool sets.
+- **Authentication vs identification** — Consumer Runtime Signaling covers identification; auth is a separate MCP-spec gap.
+
+
 
 ### Answered Open Questions
 

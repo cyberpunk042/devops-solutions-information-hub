@@ -107,8 +107,15 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 
 ## Open Questions
 
-- Should CLAUDE.md have a validated schema (like config/schema.yaml for wiki pages) to enforce required sections? (Requires: decision by the ecosystem curator; technically feasible but no existing tooling in the wiki's validate.py supports prose-section validation)
-- Can config/schema.yaml be extended to validate skills files, not just wiki pages? (Requires: external research on Claude Code skills file structure conventions; not fully documented in existing wiki pages)
+- ~~Should CLAUDE.md have a validated schema (like config/schema.yaml for wiki pages) to enforce required sections?~~ **PARTIALLY RESOLVED (2026-04-15):** **Technically feasible but low-priority given current CLAUDE.md design.** This wiki's CLAUDE.md is ~95 lines (targeting <100 per the ETH Zurich finding that files ≥300 lines reduce task success). At that scale, the 8 structural patterns in [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]] provide soft structural guidance without needing hard schema enforcement. A validated schema would help in larger contexts (multi-project monorepos where CLAUDE.md hierarchies grow) but the ROI is currently lower than other infrastructure priorities. **Recommendation:** add CLAUDE.md schema validation to the epic list for consideration when a specific need surfaces (e.g., cross-project CLAUDE.md consistency audit). Current tooling (`tools/lint.py`, `tools/validate.py`) operates on YAML-frontmatter-bearing wiki pages — extending to prose-section validation would need a new validator that parses structural patterns rather than YAML. Feasible, not urgent.
+- ~~Can config/schema.yaml be extended to validate skills files, not just wiki pages?~~ **RESOLVED (2026-04-15):** **Yes, straightforward.** Claude Code skills files (`.claude/skills/<name>/SKILL.md`) have predictable YAML frontmatter (`name`, `description`) that maps cleanly to a schema entry. The extension requires: (1) a new `content_kind` in `wiki-schema.yaml` for skills (separate from wiki pages to avoid collision); (2) a path-pattern extension in `tools/validate.py` to optionally scan `.claude/skills/**/SKILL.md` in addition to `wiki/**/*.md`; (3) per-field validators for skill frontmatter. [[src-skillmd-claudemd-agentsmd-three-layer-context|Three-Layer Agent Context]] documents the expected frontmatter. **Recommendation:** implement when a skill-validation need arises (e.g., an operator-flagged drift or a skill pack shipped to other projects). Low implementation cost; no structural blocker.
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **CLAUDE.md schema validation** — technically feasible (new prose-structure validator needed), but low ROI at current ~95-line CLAUDE.md size. Add to epic list; not urgent.
+- **Skills file schema validation** — straightforward extension. 3 concrete steps identified; no structural blocker. Implement on-demand.
 
 ### Answered Open Questions
 

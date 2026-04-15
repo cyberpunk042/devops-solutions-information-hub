@@ -181,8 +181,15 @@ The heuristic: "use the lightest level that still makes the change verifiable." 
 
 ## Open Questions
 
-- How do spec artifacts handle mid-project discovery? All frameworks assume spec precedes implementation, but real projects often discover requirements during implementation. OpenFleet has a REASONING stage that collects contributions before WORK — is that sufficient for mid-flight spec evolution?
-- The BMAD multi-agent spec model produces higher-quality specs but at higher cost. Is there a lightweight multi-perspective spec approach for solo developers that approximates the multi-agent benefit?
+- ~~How do spec artifacts handle mid-project discovery?~~ **RESOLVED (2026-04-15):** **Multiple mechanisms exist across the ecosystem, each specialized to a timing/scope.** (1) **OpenFleet's REASONING stage** collects architect + QA contributions BEFORE WORK begins — pre-flight spec refinement. (2) **OpenSpec's delta specs** (`ADDED / MODIFIED / REMOVED` sections) handle evolution DURING implementation — mid-flight delta-based updates to living specs (see [[src-openspec-spec-driven-development-framework|OpenSpec synthesis]]). (3) **Spec-Kit's `/speckit.refine` and `/speckit.iterate` extensions** handle cross-branch spec updates (see [[src-github-spec-kit-specification-driven-development|Spec Kit synthesis]]). (4) **Our wiki's methodology** allows re-entering the Document stage from later stages if discovery warrants (rare, operator-gated). The answer: **mid-project discovery is solved, but at different layers**: REASONING pre-flight, delta-specs mid-flight, stage re-entry for major pivots. Choose the mechanism matching your SDLC depth.
+- ~~The BMAD multi-agent spec model produces higher-quality specs but at higher cost. Is there a lightweight multi-perspective spec approach for solo developers that approximates the multi-agent benefit?~~ **RESOLVED (2026-04-15):** **Yes — three lightweight patterns already documented.** (1) **Spec-Kit's `/speckit.clarify`** with its 5-question cap is a structured-interrogation mechanism that forces multi-perspective consideration without multiple agents (see [[src-github-spec-kit-specification-driven-development|Spec Kit synthesis]]). (2) **BMAD's Party Mode can run solo** — sub-agent personas are spawned by the same Claude instance; the multi-perspective benefit comes from role-switching, not from literal parallel agents. (3) **Our wiki's operator-supervised trust tier** uses the operator as the multi-perspective check — implementer-reviewer-user rolled into one human. **Recommendation:** for genuinely solo work, adopt Spec-Kit's `/speckit.clarify` pattern (5 structured questions) + operator's own review hat. Reserves BMAD's full Party Mode for cases where the spec is genuinely cross-domain and one person cannot credibly hold all perspectives.
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Mid-project discovery across frameworks** — pre-flight (OpenFleet REASONING), mid-flight (OpenSpec delta specs), cross-branch (Spec-Kit refine/iterate), major pivot (our stage re-entry). Layered mechanisms; choose by timing/scope.
+- **Lightweight multi-perspective spec for solo** — Spec-Kit's /speckit.clarify + BMAD Party-Mode-solo + operator-as-reviewer. Three patterns; pick based on domain breadth.
 
 ## Answered Open Questions
 
