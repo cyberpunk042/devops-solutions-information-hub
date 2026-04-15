@@ -75,6 +75,28 @@ Added to the operator decision queue as Q17a during the 2026-04-14 session; reso
 
 6. **Handoffs are quoteable, not ingested.** Wiki pages may link TO a handoff as historical record (the super-model already sources `docs/SESSION-2026-04-12-handoff-v2.md` under `operator-vision`). The handoff stays in `docs/`; the wiki references it. Never reverse this.
 
+## When to Write a Handoff
+
+A handoff is warranted when the next session would otherwise lose useful context. Multiple distinct triggers — any one is sufficient justification. Not every session needs a handoff; many focused-fix sessions are fully recoverable from the git log + commit messages alone.
+
+> [!info] Triggers — write a handoff when ANY apply
+>
+> | Trigger | Why it warrants a handoff |
+> |---------|---------------------------|
+> | **Operator request** | Operator explicitly asks for one. The most common trigger. Operator may know the next session will need cold-start recovery. |
+> | **End of a long session** | Substantial work accumulated (rough threshold: ≥5 commits OR ≥4 hours OR ≥2 distinct work phases). The git log alone won't show *why* the work flowed the way it did. |
+> | **Multiple decisions resolved** | Several operator/architecture decisions made (rough threshold: ≥3). Decisions need their rationale preserved — commit messages capture WHAT changed, handoff captures WHY this resolution over alternatives. |
+> | **Milestone reached** | A backlog milestone, epic completion, or queue tier closed. Worth marking explicitly so the next session sees the milestone, not just the diff. |
+> | **Anticipated context compaction** | Defensive write before a likely compaction. The handoff persists what the in-conversation context is about to lose. See [[context-compaction-is-a-reset-event\|Context Compaction Is a Reset Event]]. |
+> | **Mistakes or course corrections** | Operator had to redirect the session ≥1 time. The Mistakes section is the meta-lesson; without it, the next session may repeat the failure. The Apr 12 v2 handoff is the canonical example — it exists *because* the original Apr 12 handoff didn't capture the corrections. |
+> | **Cross-session work continuing** | Current session set up work that explicitly continues next session (drafts queued for promotion, blocked items awaiting operator, ingestions partially processed). Without a handoff, "what's next" lives only in memory. |
+> | **Ingestion of multiple substantive sources** | Batch source ingestions create a lot of new material that needs context for next-session integration. The Apr 14 handoff is an example. |
+> | **Cross-agent handoff** | Work transitioning to another agent (different operator, different tool, fresh Claude session after a break). Sub-agents and successor agents lack conversation continuity. |
+>
+> **Don't write a handoff when:** single focused fix, no decisions made, no operator directives, work fully captured in commit messages and existing wiki pages. Padding a quiet session is itself an anti-pattern (see Anti-Patterns section below).
+
+The triggers compose: a 10-commit day with 5 decisions resolved AND an ingestion AND a milestone reached has four reasons stacked — that's a strong case. A 1-commit fix with 0 decisions has zero reasons — skip it.
+
 ## The Genre — What a Session Handoff Is
 
 | Property | Value |
