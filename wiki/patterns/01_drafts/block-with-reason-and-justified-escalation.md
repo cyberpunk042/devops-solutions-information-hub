@@ -20,7 +20,7 @@ instances:
     context: "Agent added fnm wrapper to generic validator. Operator reverted twice without reading concern. Had this pattern existed, agent's edit would be preceded by structured escalation — operator sees alternatives BEFORE edit lands, decides on justification not diff."
   - page: "Research Wiki 2026-04-15 — rogue sister-project work"
     context: "Agent built MCP tool with unsolicited max_* caps. Had this pattern existed and been triggered at design-time-parameter-selection, agent would have blocked when assigning any default cap value and emitted escalation with operator-justification options."
-contribution_status: pending-review
+contribution_status: accepted
 created: 2026-04-15
 updated: 2026-04-15
 sources:

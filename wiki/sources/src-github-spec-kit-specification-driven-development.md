@@ -252,12 +252,26 @@ The `Verify Tasks Extension` in particular addresses a known failure mode in LLM
 
 ## Open Questions
 
-- How does Spec Kit handle long-running features where the specification evolves mid-implementation? The `spec-kit-refine` and `spec-kit-iterate` extensions address this, but the core workflow assumes stable specs before tasking begins.
-- What is the empirical reduction in rework when `/speckit.analyze` catches issues before implement? The 15-minute vs 12-hour claim is motivational but unsourced.
-- How does the constitution conflict with team disagreement? The Nine Articles are presented as immutable, but real teams have exceptions. The amendment process requires "maintainer approval" — fine for one project, potentially friction for distributed teams.
-- Does spec kit have a knowledge accumulation mechanism? Feature specs are per-branch artifacts. There is no equivalent of our lessons/patterns/decisions evolution layer — insights from completed features do not feed back into improving future specifications.
-- How does `/speckit.clarify`'s structured 5-question limit interact with genuinely complex requirements? The cap prevents interrogation fatigue but may not be sufficient for enterprise-scale features.
-- The `[NEEDS CLARIFICATION]` marker pattern in spec templates: has anyone built a tool to extract and track these across all features? The `spec-kit-reconcile` extension touches on this but focuses on drift, not initial gaps.
+- How does Spec Kit handle long-running features where the specification evolves mid-implementation? The `spec-kit-refine` and `spec-kit-iterate` extensions address this, but the core workflow assumes stable specs before tasking begins. (Requires: Spec-Kit documentation + case studies.)
+- What is the empirical reduction in rework when `/speckit.analyze` catches issues before implement? The 15-minute vs 12-hour claim is motivational but unsourced. (Requires: empirical measurement from Spec-Kit users.)
+- ~~How does the constitution conflict with team disagreement? The Nine Articles are presented as immutable, but real teams have exceptions.~~ **RESOLVED (2026-04-15):** The "maintainer approval" amendment process IS an implicit bypass mechanism, but it lacks the structured 4-part protocol established in [[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation]]. Team disagreement with a constitutional article is a Block + Reason condition; a well-designed amendment flow would require the challenger to: (1) Block — halt work that depends on the disputed article; (2) Reason — name the specific mechanical cause for dispute (edge case, changed context, empirical failure); (3) Offer — propose ≥2 alternative phrasings or scope-limits; (4) Justification — recommend one with rationale + risks. Spec-Kit's "maintainer approval" step IS essentially this, just unstructured. Per [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Mindful Enforcement]], constitutional rules need justified-bypass even when "immutable" — without it, dissent surfaces as workarounds or churn rather than structured resolution. Distributed teams suffer most when the bypass protocol is implicit; structuring it reduces friction.
+- ~~Does spec kit have a knowledge accumulation mechanism?~~ **RESOLVED (2026-04-15):** **No** — Spec Kit is per-feature/per-branch and has no equivalent of this wiki's maturity lifecycle (`00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles`). Feature specs are ephemeral artifacts; insights from completed features don't compound. The gap the question names is real. **The bridge pattern:** a Spec-Kit-adjacent layer could run post-feature crystallization ([[wiki-event-driven-automation|wiki-event-driven-automation]]'s on-session-end hook) that extracts lessons from a completed spec → implementation cycle and files them into a shared knowledge layer (this wiki's lesson/pattern/decision folders). Per [[src-llm-wiki-v2-agentmemory|LLM Wiki v2]]: "crystallization" is the mechanism. Spec Kit + a wiki integration solves the accumulation gap without changing Spec Kit's per-feature design.
+- How does `/speckit.clarify`'s structured 5-question limit interact with genuinely complex requirements? The cap prevents interrogation fatigue but may not be sufficient for enterprise-scale features. (Requires: Spec-Kit benchmarks on enterprise-scale features.)
+- The `[NEEDS CLARIFICATION]` marker pattern in spec templates: has anyone built a tool to extract and track these across all features? The `spec-kit-reconcile` extension touches on this but focuses on drift, not initial gaps. (Requires: Spec-Kit community plugin ecosystem survey.)
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Constitution vs team disagreement** — Spec-Kit's maintainer-approval step IS an unstructured bypass mechanism. A structured 4-part Block+Reason+Offer+Justification protocol (per [[block-with-reason-and-justified-escalation|Block-With-Reason pattern]]) would reduce distributed-team friction.
+- **Knowledge accumulation gap** — Real gap. Bridge: Spec-Kit + wiki integration via post-feature crystallization (per LLM Wiki v2's crystallization mechanism + [[wiki-event-driven-automation|event-driven hooks]]).
+
+**Genuinely deferred** (require Spec-Kit documentation / empirical data / community survey):
+
+- Long-running feature evolution
+- /speckit.analyze empirical rework reduction
+- /speckit.clarify 5-question cap at enterprise scale
+- [NEEDS CLARIFICATION] cross-feature tracking
 
 ## Relationships
 

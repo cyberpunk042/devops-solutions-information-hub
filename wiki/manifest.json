@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T19:30:28.650873+00:00",
+  "generated": "2026-04-15T20:14:58.406085+00:00",
   "stats": {
     "pages": 334,
     "domains": 9,
@@ -17,8 +17,8 @@
       "spine": 65
     },
     "maturity": {
-      "growing": 271,
-      "seed": 19
+      "growing": 272,
+      "seed": 18
     }
   },
   "pages": [
@@ -1915,8 +1915,8 @@
       ]
     },
     {
-      "path": "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config.md",
-      "slug": "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "path": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config.md",
+      "slug": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "title": "Decision \u2014 Consumer Runtime Signaling via MCP Config",
       "type": "decision",
       "domain": "cross-domain",
@@ -10023,8 +10023,8 @@
       "relationships": []
     },
     {
-      "path": "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property.md",
-      "slug": "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property",
+      "path": "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property.md",
+      "slug": "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "title": "Execution Mode Is a Consumer Property, Not a Project Property \u2014 Guard Against Conflation Drift",
       "type": "lesson",
       "domain": "cross-domain",
@@ -14331,93 +14331,8 @@
       "relationships": []
     },
     {
-      "path": "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries.md",
-      "slug": "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries",
-      "title": "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries",
-      "type": "pattern",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-15",
-      "updated": "2026-04-15",
-      "tags": [
-        "pattern",
-        "adapter",
-        "receipt",
-        "failure-as-data",
-        "fault-tolerance",
-        "integration-boundary",
-        "no-exceptions",
-        "cross-domain",
-        "convergent-evidence"
-      ],
-      "sources": [
-        {
-          "id": "devops-control-plane-adapters",
-          "type": "observation",
-          "project": "devops-control-plane",
-          "path": "docs/ADAPTERS.md",
-          "description": "Canonical specification \u2014 'An adapter is a pluggable component that executes actions against external tools. Adapters never raise exceptions. All failures are captured in the Receipt.' Includes circuit-breaker integration, mock mode for testing, raw command fallback, explicit Adapter ABC with name/is_available/validate/execute methods. Verified 2026-04-15."
-        },
-        {
-          "id": "research-wiki-integrations-py",
-          "type": "file",
-          "file": "tools/integrations.py",
-          "description": "Our integration wrappers \u2014 same shape as control-plane's Adapter. is_available() check, subprocess with timeout, graceful fallback, structured dict returns. Natural instance on this-wiki side."
-        },
-        {
-          "id": "research-wiki-validate-py",
-          "type": "file",
-          "file": "tools/validate.py",
-          "description": "Schema validation using failure-as-data. validate_page returns {errors, warnings} \u2014 356 lines, never raises, entire pipeline-post quality contract runs through it."
-        }
-      ],
-      "layer": 5,
-      "maturity": "seed",
-      "derived_from": [
-        "Infrastructure Over Instructions for Process Enforcement",
-        "Three Lines of Defense \u2014 Immune System for Agent Quality",
-        "Block With Reason and Justified Escalation"
-      ],
-      "aliases": [
-        "Adapters Never Raise",
-        "Failure As Data",
-        "Receipt Pattern"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Block With Reason and Justified Escalation"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Observe-Fix-Verify Loop"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Four-Project Ecosystem"
-        }
-      ]
-    },
-    {
-      "path": "patterns/00_inbox/block-with-reason-and-justified-escalation.md",
-      "slug": "patterns/00_inbox/block-with-reason-and-justified-escalation",
+      "path": "patterns/01_drafts/block-with-reason-and-justified-escalation.md",
+      "slug": "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "title": "Block With Reason and Justified Escalation \u2014 The Bypass Mechanism for Mindful Enforcement",
       "type": "pattern",
       "domain": "ai-agents",
@@ -14510,8 +14425,8 @@
       ]
     },
     {
-      "path": "patterns/00_inbox/observe-fix-verify-loop.md",
-      "slug": "patterns/00_inbox/observe-fix-verify-loop",
+      "path": "patterns/01_drafts/observe-fix-verify-loop.md",
+      "slug": "patterns/01_drafts/observe-fix-verify-loop",
       "title": "Observe-Fix-Verify Loop \u2014 The Battle-Testing Cycle for Autonomous Agent Infrastructure",
       "type": "pattern",
       "domain": "ai-agents",
@@ -14674,6 +14589,91 @@
         {
           "verb": "RELATES TO",
           "target": "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development"
+        }
+      ]
+    },
+    {
+      "path": "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries.md",
+      "slug": "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "title": "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "pattern",
+        "adapter",
+        "receipt",
+        "failure-as-data",
+        "fault-tolerance",
+        "integration-boundary",
+        "no-exceptions",
+        "cross-domain",
+        "convergent-evidence"
+      ],
+      "sources": [
+        {
+          "id": "devops-control-plane-adapters",
+          "type": "observation",
+          "project": "devops-control-plane",
+          "path": "docs/ADAPTERS.md",
+          "description": "Canonical specification \u2014 'An adapter is a pluggable component that executes actions against external tools. Adapters never raise exceptions. All failures are captured in the Receipt.' Includes circuit-breaker integration, mock mode for testing, raw command fallback, explicit Adapter ABC with name/is_available/validate/execute methods. Verified 2026-04-15."
+        },
+        {
+          "id": "research-wiki-integrations-py",
+          "type": "file",
+          "file": "tools/integrations.py",
+          "description": "Our integration wrappers \u2014 same shape as control-plane's Adapter. is_available() check, subprocess with timeout, graceful fallback, structured dict returns. Natural instance on this-wiki side."
+        },
+        {
+          "id": "research-wiki-validate-py",
+          "type": "file",
+          "file": "tools/validate.py",
+          "description": "Schema validation using failure-as-data. validate_page returns {errors, warnings} \u2014 356 lines, never raises, entire pipeline-post quality contract runs through it."
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Three Lines of Defense \u2014 Immune System for Agent Quality",
+        "Block With Reason and Justified Escalation"
+      ],
+      "aliases": [
+        "Adapters Never Raise",
+        "Failure As Data",
+        "Receipt Pattern"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Block With Reason and Justified Escalation"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Observe-Fix-Verify Loop"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Four-Project Ecosystem"
         }
       ]
     },
@@ -23680,7 +23680,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
       "spine/goldilocks-flow"
     ],
@@ -23728,7 +23728,7 @@
     "mcp": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/ai-agents/claude-code/claude-code",
       "domains/automation/mcp-integration-architecture",
@@ -23989,7 +23989,7 @@
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
-      "patterns/00_inbox/block-with-reason-and-justified-escalation",
+      "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
@@ -24285,7 +24285,7 @@
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "sources/src-github-spec-kit-specification-driven-development",
@@ -24509,7 +24509,7 @@
       "domains/cross-domain/model-composition-rules"
     ],
     "decision": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
@@ -24517,28 +24517,28 @@
       "spine/standards/decision-page-standards"
     ],
     "runtime": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config"
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config"
     ],
     "consumer-property": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "harness-signaling": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config"
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config"
     ],
     "fleet-signaling": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config"
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config"
     ],
     "declared-over-detected": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "execution-mode": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "cross-project": [
-      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
     ],
@@ -26389,7 +26389,7 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "lesson": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -26402,19 +26402,19 @@
       "spine/standards/lesson-page-standards"
     ],
     "project-property": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "conflation": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "drift-prevention": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "orthogonality": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "detection-limits": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
     ],
     "agent-architecture": [
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
@@ -26537,11 +26537,11 @@
     ],
     "bypass": [
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
-      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+      "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
     "mindful": [
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
-      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+      "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
     "justified-override": [
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass"
@@ -26964,67 +26964,46 @@
       "log/archived/agent-directive-original"
     ],
     "pattern": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries",
-      "patterns/00_inbox/block-with-reason-and-justified-escalation",
-      "patterns/00_inbox/observe-fix-verify-loop",
+      "patterns/01_drafts/block-with-reason-and-justified-escalation",
+      "patterns/01_drafts/observe-fix-verify-loop",
       "patterns/01_drafts/three-layer-agent-context-architecture",
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/standards/pattern-page-standards"
     ],
-    "adapter": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
-    "receipt": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
-    "failure-as-data": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
-    "fault-tolerance": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
-    "integration-boundary": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
-    "no-exceptions": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
-    "convergent-evidence": [
-      "patterns/00_inbox/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
     "escalation": [
-      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+      "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
     "block-protocol": [
-      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+      "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
     "decision-surfacing": [
-      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+      "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
     "agent-autonomy-boundary": [
-      "patterns/00_inbox/block-with-reason-and-justified-escalation"
+      "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
     "methodology-process": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "battle-testing": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "iteration": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "ofv": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "autonomous-agent": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "observability": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "correction-cycle": [
-      "patterns/00_inbox/observe-fix-verify-loop"
+      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "agent-config": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
@@ -27050,6 +27029,27 @@
     ],
     "context-efficiency": [
       "patterns/01_drafts/three-layer-agent-context-architecture"
+    ],
+    "adapter": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "receipt": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "failure-as-data": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "fault-tolerance": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "integration-boundary": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "no-exceptions": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "convergent-evidence": [
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
     ],
     "deterministic": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core",

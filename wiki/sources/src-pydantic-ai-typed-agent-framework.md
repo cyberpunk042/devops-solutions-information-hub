@@ -161,7 +161,21 @@ Pydantic AI's async-first design means it integrates cleanly with FastAPI, Starl
 - How does the `Capabilities` composition system handle conflicts — two capabilities that both define a tool with the same name, or instructions that contradict each other?
 - What is the performance overhead of JSON Schema validation on every LLM output compared to raw string parsing? At high throughput, does this become a bottleneck?
 - Is there a mechanism for output schema versioning — handling the case where the Pydantic model evolves but existing stored outputs were validated against an older schema?
-- How does Pydantic AI handle the case where a tool call fails during agent execution — does it surface the error to the LLM for self-correction, or terminate the run?
+- ~~How does Pydantic AI handle the case where a tool call fails during agent execution — does it surface the error to the LLM for self-correction, or terminate the run?~~ **PARTIALLY RESOLVED (2026-04-15):** The correct pattern is well-established in this wiki: failures at integration boundaries should be **returned as structured data** ([[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise — Failure as Data]]), surfaced to the LLM so it can self-correct via the same feedback loop as validation failures ([[if-you-can-verify-you-converge|If You Can Verify, You Converge]]). Termination-on-failure is the anti-pattern. Pydantic AI's design philosophy (typed contracts + retry on validation failure) strongly suggests surface-and-retry behavior for tool calls too, but framework-specific confirmation requires reading Pydantic AI's documentation or source. If Pydantic AI does terminate, that would be a framework gap the user should work around by wrapping tool calls in try/except and returning structured failure results (the Adapters-Never-Raise implementation).
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Tool call failure handling (normative)** — surface to LLM for self-correction (per [[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise]] + [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]). Framework-specific confirmation requires Pydantic AI docs/source inspection.
+
+**Genuinely deferred** (require Pydantic AI documentation / source / empirical measurement):
+
+- Structured-output streaming (partial objects during generation)
+- Retry strategy configurability
+- Capabilities composition conflict handling
+- JSON Schema validation performance overhead
+- Output schema versioning mechanism
 
 ## Relationships
 

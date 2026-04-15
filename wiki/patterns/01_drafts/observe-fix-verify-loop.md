@@ -23,7 +23,7 @@ instances:
     context: "This wiki's own session. Built sister_project tool, observed it broke on 3 edge cases while using it (hardcoded layout list, unnormalized `..` paths, file-sentinel crashes), fixed each, verified on the next tool invocation. Three OFV cycles in under an hour."
   - page: "OpenFleet immune-system doctor cycle"
     context: "30-second production OFV at runtime scale. Observe (detection functions per agent-task pair) → Fix (TEACH/COMPACT/PRUNE correction actions) → Verify (agent-health profile persists across cycles, repeat offenders escalate). The pattern productionized as a always-on loop."
-contribution_status: pending-review
+contribution_status: accepted
 created: 2026-04-15
 updated: 2026-04-15
 sources:

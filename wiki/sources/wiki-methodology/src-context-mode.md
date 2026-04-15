@@ -224,13 +224,27 @@ All processing occurs in sandboxed subprocesses on the local machine. No telemet
 
 ## Open Questions
 
-- How does context-mode interact with the research wiki's `research-wiki` MCP server? Context-mode addresses output overhead; the wiki MCP's 15-tool schema loads at initialization. Are both relevant simultaneously, or does the wiki's CLI+Skills fallback make context-mode less important here?
-- Does `ctx_fetch_and_index` + `ctx_search` supersede the wiki's `wiki_fetch` + `wiki_search` workflow for ad-hoc URL research? The wiki provides structured knowledge with relationships and backlinks; context-mode provides fast indexed retrieval with TTL cache. Are these complementary layers?
-- Could `ctx_execute` replace `Bash` calls in the wiki's ingestion pipeline to reduce context noise during long processing sessions (manifest rebuild, validate, lint, obsidian all run in sequence)?
-- At what session length does context-mode's overhead (hook invocations, SQLite writes per tool call, snapshot construction) become worthwhile? The benchmarks show clear wins for 30-minute+ sessions — what is the break-even for a 5-minute targeted query?
-- For fleet use cases (OpenFleet agents): would context-mode installed fleet-wide (via OpenClaw gateway plugin) reduce per-agent context pressure enough to justify the dependency? Each agent is already a Claude Code instance; compaction amnesia in long-running fleet tasks is a real failure mode.
-- The `ctx_batch_execute` tool combines multiple commands + searches into a single call (986 KB → 62 KB). For the wiki's post-ingestion chain (6 sequential pipeline steps), would batching them via `ctx_batch_execute` materially reduce the context footprint of post-processing runs?
-- What is the behavior when `ctx_execute` is called from within a subagent? The hook architecture captures subagent invocations as P3 events — but does the subagent's sandbox inherit the parent session's permission rules and credential passthrough?
+- ~~How does context-mode interact with the research wiki's `research-wiki` MCP server?~~ **RESOLVED (2026-04-15):** They are **complementary layers**, not competing. Wiki MCP is about the TOOL SURFACE (structured knowledge access via 26 tools); context-mode is about OUTPUT-TOKEN MANAGEMENT across any tool calls. The wiki's [[no-caps-no-compacting-read-full|no-caps directive]] requires wiki tools return full content; context-mode's SQLite-snapshot mechanism would then manage the resulting context pressure downstream. Both operate at different layers of the agent's runtime stack.
+- ~~Does `ctx_fetch_and_index` + `ctx_search` supersede the wiki's `wiki_fetch` + `wiki_search` workflow for ad-hoc URL research?~~ **RESOLVED (2026-04-15):** **Complementary, not superseding.** `wiki_fetch` drops sources into `raw/articles/` for permanent ingestion through the wiki's synthesis pipeline (multi-stage → seed/growing/mature/canonical). `ctx_fetch_and_index` caches with TTL for in-session ephemeral retrieval. Different lifespans, different purposes — use wiki_fetch when the source is worth keeping, ctx_fetch when you just need to consult it once.
+- ~~Could `ctx_execute` replace `Bash` calls in the wiki's ingestion pipeline to reduce context noise during long processing sessions?~~ **PARTIALLY RESOLVED (2026-04-15):** The post-chain's 6 steps run as **internal Python function calls** within `post_chain()`, not as separate subprocess invocations — a single Bash call triggers all 6 steps in one return. Context noise is already minimal at that layer. `ctx_execute` would only help for cases where the operator is running the steps individually via separate `python3 -m tools.pipeline <step>` calls, which is not the norm. Cosmetic improvement, not architectural gap.
+- At what session length does context-mode's overhead (hook invocations, SQLite writes per tool call, snapshot construction) become worthwhile? The benchmarks show clear wins for 30-minute+ sessions — what is the break-even for a 5-minute targeted query? (Requires: empirical measurement in production sessions of varying length.)
+- For fleet use cases (OpenFleet agents): would context-mode installed fleet-wide (via OpenClaw gateway plugin) reduce per-agent context pressure enough to justify the dependency? Ties to the [[consumer-runtime-signaling-via-mcp-config|Consumer Runtime Signaling decision]] — fleet's `MCP_CLIENT_RUNTIME` could carry context-mode-enabled as a nested capability signal. (Requires: OpenFleet design coordination + context-compaction-reset-event measurement in fleet mode.)
+- ~~The `ctx_batch_execute` tool combines multiple commands + searches into a single call (986 KB → 62 KB). For the wiki's post-ingestion chain, would batching them via `ctx_batch_execute` materially reduce the context footprint?~~ **RESOLVED (2026-04-15):** **No gain for the post-chain specifically.** See above — `post_chain()` already batches the 6 steps into one Python-internal call; the entire chain returns a single structured report. `ctx_batch_execute` would help for operator-initiated sequences of DISTINCT commands (e.g., `ingest X && evolve --score && gateway health`), but not for the already-batched post-chain.
+- What is the behavior when `ctx_execute` is called from within a subagent? The hook architecture captures subagent invocations as P3 events — but does the subagent's sandbox inherit the parent session's permission rules and credential passthrough? (Requires: external research or direct testing against context-mode's hook implementation — this is a context-mode project detail, not a wiki-side question.)
+
+### Answered Open Questions
+
+**Resolved by cross-reference with this wiki's state** (2026-04-15 session):
+
+- **Layer separation** — context-mode and wiki MCP occupy different layers (tool surface vs output-token management). Not competing.
+- **Different lifespans** — wiki_fetch is permanent-ingestion, ctx_fetch is ephemeral-TTL. Complementary workflows.
+- **Post-chain already batched** — the 6-step pipeline runs as internal Python calls; `ctx_batch_execute` offers no additional reduction.
+
+**Genuinely deferred** (require external data or cross-project coordination):
+
+- **Break-even session length** — empirical measurement needed
+- **Fleet integration** — ties to [[consumer-runtime-signaling-via-mcp-config|Consumer Runtime Signaling]]; coordinate with OpenFleet
+- **Subagent sandbox behavior** — context-mode implementation detail
 
 ### How This Connects — Navigate From Here
 

@@ -180,7 +180,20 @@ This is relevant to any project that configures AI agent behavior through filesy
 - Does BMAD's brainstorming phase integrate with external research (web search, domain data) or is it purely facilitated ideation from the human's existing knowledge?
 - The PRFAQ workflow uses "5-stage coached workflow with subagent architecture" — what exactly are the 5 stages and how does the subagent decomposition work? The Czech docs describe it but the English CHANGELOG only names the feature.
 - How does BMAD handle context window limits for large architecture documents in Phase 3? The `project-context.md` guidance says "keep it short," but large systems generate large ADR sets.
-- Could our wiki adopt the `project-context.md` pattern as a per-domain "implementation constitution" that agent workflows auto-load? This would complement CLAUDE.md (project-level) with domain-level guidance.
+- ~~Could our wiki adopt the `project-context.md` pattern as a per-domain "implementation constitution" that agent workflows auto-load? This would complement CLAUDE.md (project-level) with domain-level guidance.~~ **PARTIALLY RESOLVED (2026-04-15):** The wiki **already has** per-domain guidance surfaces, but they're **passive** (agent must know to read them): `wiki/config/domain-profiles/` (per-domain artifact chains), `wiki/spine/domain-overviews/` (per-domain knowledge state), `wiki/domains/<domain>/_index.md` (per-domain page indexes), plus `wiki/config/methodology.yaml` (domain-agnostic models). BMAD's `project-context.md` proposes an **active** pattern (auto-loaded at agent-workflow start). The gap is not content — we have rich per-domain material — but a **loading mechanism** that makes it context-injected rather than discovery-dependent. Recommendation: **yes, worth adopting the auto-load pattern**, but wire it to the existing domain-overview pages rather than creating a new file type. Candidate design: `gateway load-domain-context <domain>` returns the domain overview + relevant standards + active-epic artifact links as a single injection. Ties to [[structured-context-is-proto-programming-for-ai-agents|Structured Context Principle]] (auto-load > discovery) and [[wiki-event-driven-automation|Event-Driven Automation]] (session-start hook). Defer implementation until operator confirms direction.
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **project-context.md adoption for our wiki** — content already exists (domain-overviews, domain-profiles, methodology.yaml); gap is loading mechanism (passive → active). Recommendation: wire auto-load to existing domain-overview pages via `gateway load-domain-context <domain>`, don't create a new file type. Ties to Structured Context Principle + Event-Driven Automation.
+
+**Genuinely deferred** (require BMAD documentation / external research):
+
+- Party Mode scaling beyond ~5 agents
+- Brainstorming phase external-research integration
+- PRFAQ 5-stage workflow details (Czech docs or source)
+- Large architecture document handling in Phase 3
 
 ## Relationships
 

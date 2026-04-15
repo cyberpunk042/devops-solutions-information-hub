@@ -8,8 +8,8 @@ type: pattern
 domain: cross-domain
 layer: 5
 status: synthesized
-confidence: medium
-maturity: seed
+confidence: high
+maturity: growing
 derived_from:
   - "Infrastructure Over Instructions for Process Enforcement"
   - "Three Lines of Defense — Immune System for Agent Quality"
@@ -27,7 +27,7 @@ instances:
     context: "wiki_* MCP tools return JSON payloads including error dicts ({'error': ...}) instead of raising — crucial because the MCP caller (Claude Code) cannot handle Python exceptions. Same pattern enforced by the protocol: results are data."
   - page: "Research Wiki sister_project.py"
     context: "list_epics / list_tasks / read_doc / read_all all return Dict or List — errors become {'error': 'message'} entries inline, never raised. Recently-discovered bug (NotADirectoryError on file-sentinel layout entries) was a REGRESSION of this pattern — fix added is_dir() guard to restore the contract."
-contribution_status: pending-review
+contribution_status: accepted
 created: 2026-04-15
 updated: 2026-04-15
 sources:

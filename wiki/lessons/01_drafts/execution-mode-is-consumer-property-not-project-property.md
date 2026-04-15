@@ -15,7 +15,7 @@ derived_from:
   - "Right Process for Right Context — The Goldilocks Imperative"
   - "Infrastructure Over Instructions for Process Enforcement"
   - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
-contribution_status: pending-review
+contribution_status: accepted
 created: 2026-04-15
 updated: 2026-04-15
 sources:

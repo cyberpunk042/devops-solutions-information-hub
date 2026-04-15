@@ -15,7 +15,7 @@ derived_from:
   - "Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift"
   - "Model — MCP and CLI Integration"
   - "Adapters Never Raise — Failure As Data at Integration Boundaries"
-contribution_status: pending-review
+contribution_status: accepted
 created: 2026-04-15
 updated: 2026-04-15
 sources:

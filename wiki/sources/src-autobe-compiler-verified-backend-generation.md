@@ -195,7 +195,21 @@ Achieving 100% compilation on ERP-scale systems means the compiler harness handl
 - What is the failure mode when the four compilers have conflicting constraints? Can a spec be self-contradictory in ways that prevent convergence?
 - How does the system handle incremental updates — given an existing backend, can it evolve the schema and regenerate all downstream artifacts while preserving existing business logic?
 - Is there an upper bound on the AST size that LLMs can reliably fill? Does performance degrade for extremely large systems, and if so, how does AutoBE partition the generation task?
-- How does AutoBE's approach compare to static analysis tools (like Prisma schema validators or OpenAPI validators) that already exist in the ecosystem? What does the LLM-in-compiler pattern add that a deterministic schema-first tool cannot?
+- ~~How does AutoBE's approach compare to static analysis tools (like Prisma schema validators or OpenAPI validators) that already exist in the ecosystem? What does the LLM-in-compiler pattern add that a deterministic schema-first tool cannot?~~ **RESOLVED (2026-04-15):** Different information-flow direction. **Static analyzers VERIFY a human-written artifact** — the artifact is input, verification is output. **LLM-in-compiler GENERATES the artifact** and iterates with the compiler as verifier — the compiler's failure signal drives the LLM's next attempt. Both use compilers as source of truth; the distinction is whether the compiler is the END of the pipeline (static analysis) or a feedback loop WITHIN the pipeline (AutoBE). This is the [[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise]] pattern at the model-integration level — compiler failures become structured diagnostics the LLM consumes, not exceptions that halt the process. Static tools can't drive generation because they don't produce the artifact they verify; LLM-in-compiler closes the loop. Per [[if-you-can-verify-you-converge|If You Can Verify, You Converge]], this is exactly why AutoBE achieves 100% compilation — the verifier is in the generation loop, not downstream of it.
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Static analysis vs LLM-in-compiler** — different information-flow direction. Static analyzers consume artifacts; LLM-in-compiler is inside the generation loop driven by compiler-as-verifier.
+
+**Genuinely deferred** (require external AutoBE research / empirical measurement):
+
+- Minimum retry count threshold per Qwen-class model on ERP-scale systems
+- Spec ambiguity handling (multiple valid implementations)
+- Four-compiler conflict resolution semantics
+- Incremental update / schema evolution support
+- Upper bound on AST size before LLM fill degrades
 
 ## Relationships
 

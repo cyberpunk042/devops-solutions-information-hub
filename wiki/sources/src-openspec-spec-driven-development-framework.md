@@ -288,12 +288,26 @@ The OPSX migration guide explicitly describes the architectural improvement: pas
 
 ## Open Questions
 
-- How does OpenSpec handle long-running changes (weeks of development) where the codebase evolves significantly during the change? Does the proposal/spec need retroactive updates?
-- What is the empirical evidence for "AI unpredictability without specs"? The claim is central to the framework's value proposition but is stated axiomatically.
-- How does the delta spec parsing handle edge cases — what if a requirement is renamed but not using the RENAMED section? Does the system have conflict detection for semantically overlapping requirements in different delta sections?
-- Does the `/opsx:verify` command (completeness/correctness/coherence) produce measurable differences in implementation quality compared to unverified changes? No benchmarks are cited.
-- OpenSpec recommends "Opus 4.5 and GPT 5.2 for best results." How degraded is the experience on smaller/cheaper models? Is there a capability floor?
-- The custom schema system (`openspec schemas/`) enables teams to define their own artifact flows. How much real-world adoption exists beyond the default `spec-driven` schema?
+- How does OpenSpec handle long-running changes (weeks of development) where the codebase evolves significantly during the change? Does the proposal/spec need retroactive updates? (Requires: OpenSpec documentation + case studies — not answerable from this wiki's state.)
+- ~~What is the empirical evidence for "AI unpredictability without specs"?~~ **PARTIALLY RESOLVED (2026-04-15):** Ecosystem evidence converges on the claim. OpenArms instruction-only compliance was 25% before hooks, 60% with structured instructions, ~100% with infrastructure enforcement ([[infrastructure-enforcement-proves-instructions-fail|quantified proof]]). [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Seven distinct failure classes]] persist even with infrastructure — unpredictability is real and class-structured, not amorphous. Specs reduce unpredictability by replacing free-form prose interpretation with structured artifact reading ([[structured-context-governs-agent-behavior-more-than-content|Structured Context Principle]]). The remaining question — whether OpenSpec specifically measured the delta their framework produces vs unstructured — is OpenSpec-internal and still genuinely open.
+- How does the delta spec parsing handle edge cases — what if a requirement is renamed but not using the RENAMED section? Does the system have conflict detection for semantically overlapping requirements in different delta sections? (Requires: OpenSpec implementation inspection.)
+- Does the `/opsx:verify` command (completeness/correctness/coherence) produce measurable differences in implementation quality compared to unverified changes? No benchmarks are cited. (Requires: empirical measurement from OpenSpec users.)
+- ~~OpenSpec recommends "Opus 4.5 and GPT 5.2 for best results." How degraded is the experience on smaller/cheaper models? Is there a capability floor?~~ **PARTIALLY RESOLVED (2026-04-15):** The capability floor is **lower than the recommendation suggests** when structured verification exists. [[src-autobe-compiler-verified-backend-generation|AutoBE]] shows Qwen 3.5-27B achieving 100% compilation at **25× lower cost than Opus 4.6** — model capability differences affected retry count, not final quality, because the compiler verification loop closed the gap. [[src-hrm-trm-tiny-recursion-models|HRM/TRM]] (7-27M params) beat GPT-5 on ARC-AGI via recursive inference. [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Qwopus]] distilled Opus reasoning into Qwen 27B running on consumer hardware. **For OpenSpec specifically:** the recommendation likely reflects use-without-verification; with `/opsx:verify` in the loop, smaller models should close the gap (but empirical measurement by OpenSpec users is needed to confirm).
+- The custom schema system (`openspec schemas/`) enables teams to define their own artifact flows. How much real-world adoption exists beyond the default `spec-driven` schema? (Requires: OpenSpec community data.)
+
+### Answered Open Questions
+
+**Partially resolved by wiki cross-reference** (2026-04-15):
+
+- **AI-unpredictability-without-specs claim** — supported by this wiki's quantified enforcement data (25→60→100%) + 7-class agent failure taxonomy. OpenSpec's own framework-delta measurement remains open.
+- **Capability floor for smaller models** — lower than the recommendation suggests when verification is in the loop (AutoBE, HRM/TRM, Qwopus evidence). OpenSpec-specific measurement needed.
+
+**Genuinely deferred** (require OpenSpec-internal documentation / community data):
+
+- Long-running change evolution handling
+- Delta spec edge-case parsing
+- /opsx:verify measurable impact
+- Custom schema real-world adoption
 
 ## Relationships
 

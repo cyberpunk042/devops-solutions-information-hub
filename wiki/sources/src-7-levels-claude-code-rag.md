@@ -271,11 +271,24 @@ At low document counts and solo-operator scale, this difference may not manifest
 
 ## Open Questions
 
-- At what document count does Obsidian's index traversal cost begin to exceed a graph RAG query cost?
-- Does LightRAG's claimed superiority over Microsoft's GraphRAG hold on code-heavy technical corpora (vs. general text)?
-- What is the practical accuracy of Gemini Embedding 2 for video content retrieval vs. transcript-only embedding?
-- Can the Obsidian vault architecture in this wiki be extended with LightRAG as a complementary system for cross-document relational queries?
-- What is the real accuracy gap in 2026 between naive RAG and graph RAG on modern models (given the benchmarks cited are 6-8 months old)?
+- ~~At what document count does Obsidian's index traversal cost begin to exceed a graph RAG query cost?~~ **PARTIALLY RESOLVED (2026-04-15):** This wiki's [[llm-wiki-vs-rag|LLM Wiki vs RAG]] comparison sets the ceiling for **index-only navigation** at **~200 pages**. Beyond that, `index.md` itself becomes too long for the LLM to read in one pass — matching the [[src-llm-wiki-v2-agentmemory|LLM Wiki v2]] finding (~100-200 pages is where flat-file search breaks down). The crossover with graph-RAG query cost depends on the specific query type (single-hop vs multi-hop), but structural index breakdown is well-bounded. Exact graph-RAG cost comparison at varying sizes remains empirical.
+- Does LightRAG's claimed superiority over Microsoft's GraphRAG hold on code-heavy technical corpora (vs. general text)? (Requires: benchmark comparison on code corpora — external empirical data.)
+- What is the practical accuracy of Gemini Embedding 2 for video content retrieval vs. transcript-only embedding? (Requires: empirical measurement — external.)
+- ~~Can the Obsidian vault architecture in this wiki be extended with LightRAG as a complementary system for cross-document relational queries?~~ **RESOLVED (2026-04-15):** **Yes — this is a documented upgrade path.** See [[wiki-first-with-lightrag-upgrade-path|Decision — Wiki-First with LightRAG Upgrade Path]]: the wiki's Obsidian vault provides structural navigation at current scale (334 pages, avg 6.6 relationships/page), with LightRAG available as a graph-RAG layer when query complexity or scale demands it. Additionally, OpenFleet's `kb_sync.py` already parses the wiki's `## Relationships` sections into a LightRAG graph (2,295 explicit relationships from 219 KB entries per [[four-project-ecosystem|Four-Project Ecosystem]]). The extension is not theoretical — it is partially operational in the ecosystem.
+- What is the real accuracy gap in 2026 between naive RAG and graph RAG on modern models (given the benchmarks cited are 6-8 months old)? (Requires: recent benchmark data — external empirical.)
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **Obsidian index ceiling at ~200 pages** — partial answer from [[llm-wiki-vs-rag|LLM Wiki vs RAG]] and LLM Wiki v2 finding; graph-RAG crossover cost remains empirical.
+- **Obsidian + LightRAG extension** — documented upgrade path ([[wiki-first-with-lightrag-upgrade-path|Decision]]) + partially operational (OpenFleet's kb_sync.py integration).
+
+**Genuinely deferred** (require external empirical benchmarks):
+
+- LightRAG vs GraphRAG on code corpora
+- Gemini Embedding 2 video retrieval accuracy
+- 2026 RAG-vs-graph-RAG accuracy gap
 
 ## Relationships
 

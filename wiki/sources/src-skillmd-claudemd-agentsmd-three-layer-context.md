@@ -245,10 +245,22 @@ The description is the critical field — it must be precise enough to trigger o
 
 ## Open Questions
 
-- Does the ETH Zurich research control for context file size, or is the −3% finding attributable to size rather than origin (AI vs human)? If size is the confound, the finding points more directly to the size limits than to the human-written requirement.
-- How does the three-layer architecture interact with multi-agent setups? Sub-agents in Claude Code do not inherit CLAUDE.md rules reliably (~33% compliance per Class 5 agent failure taxonomy). Does AGENTS.md fare better in sub-agent contexts?
-- At what project complexity threshold does the three-layer architecture require a Layer 2+ (a secondary CLAUDE.md section) rather than strict minimalism? The research wiki's own CLAUDE.md at 270+ lines is one data point.
-- The Linux Foundation Agentic AI Foundation's AGENTS.md standard — what is its normative spec URL and version history? Is this a format spec or governance standard?
+- Does the ETH Zurich research control for context file size, or is the −3% finding attributable to size rather than origin (AI vs human)? If size is the confound, the finding points more directly to the size limits than to the human-written requirement. (Requires: ETH Zurich paper methodology inspection — external.)
+- ~~How does the three-layer architecture interact with multi-agent setups? Sub-agents in Claude Code do not inherit CLAUDE.md rules reliably (~33% compliance per Class 5 agent failure taxonomy). Does AGENTS.md fare better in sub-agent contexts?~~ **RESOLVED (2026-04-15):** **AGENTS.md is designed for cross-tool inheritance; CLAUDE.md is not.** This wiki's own CLAUDE.md explicitly documents the sub-agent dispatch problem: *"Sub-agents inherit AGENTS.md context but NOT CLAUDE.md"* — per CLAUDE.md's "Flow Per Mode" section. The architecture intentionally separates universal context (AGENTS.md, inheritance-friendly) from Claude-specific context (CLAUDE.md, session-local). AGENTS.md therefore DOES fare better in sub-agent contexts, but only to the extent it contains universal rules. See [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy]] Class 5 for the ~33% baseline problem; the mitigation is to include critical rules in the sub-agent's spawn prompt explicitly rather than rely on file-inheritance.
+- ~~At what project complexity threshold does the three-layer architecture require a Layer 2+ (a secondary CLAUDE.md section) rather than strict minimalism?~~ **RESOLVED (2026-04-15):** **File-size-driven, not complexity-driven.** This wiki's own CLAUDE.md explicitly targets `<100 lines` (currently ~95 lines) per the ETH Zurich finding that context files ≥300 lines reduce task success by ~3%. When content exceeds that sweet spot, the wiki splits into thematic files: AGENTS.md (universal), CONTEXT.md (identity), ARCHITECTURE.md, DESIGN.md, TOOLS.md, SKILLS.md — see [[root-documentation-map|Root Documentation Map]] for the full 8-doc layout. The threshold is **not project-complexity but CLAUDE.md size** — when the single-file budget is exhausted, split by concern rather than grow the file. The research wiki's "270+ lines" mentioned in the question is outdated; current CLAUDE.md is 95 lines because the wiki already adopted the split-by-concern approach that answers its own question.
+- The Linux Foundation Agentic AI Foundation's AGENTS.md standard — what is its normative spec URL and version history? Is this a format spec or governance standard? (Requires: external research on the AAF organization and their standards repo.)
+
+### Answered Open Questions
+
+**Resolved by wiki cross-reference** (2026-04-15):
+
+- **AGENTS.md vs CLAUDE.md in sub-agent contexts** — AGENTS.md inherits (designed for it); CLAUDE.md does not. Mitigation for sub-agent non-compliance is explicit spawn-prompt rules, not file inheritance.
+- **Three-layer complexity threshold** — file-size-driven (CLAUDE.md `<100 lines` target per ETH Zurich `<300 lines` finding). Split by concern into thematic files when budget exhausted. This wiki did this — [[root-documentation-map|8 root docs]].
+
+**Genuinely deferred** (require external research):
+
+- ETH Zurich methodology confound (size vs origin)
+- Linux Foundation AAF AGENTS.md standard version/URL
 
 ---
 
