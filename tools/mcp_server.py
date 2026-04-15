@@ -474,32 +474,49 @@ def wiki_gateway_docs(doc_name: str = None) -> str:
 
 
 @server.tool()
-def wiki_sister_project(project: str, action: str, arg: str = None, status: str = None, epic: str = None, since: str = None, limit: int = 20) -> str:
-    """Browse sister projects in the ecosystem (OpenArms, OpenFleet, AICP, control-plane).
+def wiki_sister_project(project: str, action: str, arg: str = None, status: str = None, epic: str = None, since: str = None, show_all: bool = False) -> str:
+    """Browse sister projects in the ecosystem (OpenArms, OpenFleet, AICP, devops-control-plane, OpenClaw).
 
-    Replaces ad-hoc Bash ls/grep/cat with structured access. Reads from
-    wiki/config/sister-projects.yaml registry. Read-only.
+    Replaces ad-hoc Bash ls/grep/cat with structured, read-only access. Reads
+    from wiki/config/sister-projects.yaml registry.
+
+    NO TRUNCATION. All list actions return every match; read actions return
+    full content. Caps are never added by default.
+
+    DIFFERENTIAL BY DEFAULT. List actions (epics, tasks, logs, learnings)
+    return ONLY items not yet referenced by any page in our research-wiki —
+    i.e. what remains to absorb. Pass show_all=True to see everything. The
+    "consumed" flag on each returned item indicates whether our wiki
+    references its live path. Consumed ≠ validated — sister claims are weak
+    signals to investigate, not ground truth to mirror.
 
     Actions:
-      - "list" (no project needed): list all sister projects
+      - "list" (no project needed): list all registered sister projects
       - "info": show project config + accessibility
-      - "epics": list epics with frontmatter summary (filter --status)
-      - "tasks": list tasks (filter --status, --epic)
-      - "logs": list dated logs (filter --since YYYY-MM-DD, --limit N)
-      - "learnings": list distilled learnings/lessons/patterns
-      - "read" (arg=path): read a file relative to project root, truncated to 20KB
-      - "find" (arg=pattern): filename regex search
-      - "grep" (arg=text): content search in .md files
+      - "epics" [status=X, show_all]: list unconsumed epics (or all)
+      - "tasks" [status=X, epic=Y, show_all]: list unconsumed tasks (or all)
+      - "logs" [since=YYYY-MM-DD, show_all]: list unconsumed logs (or all)
+      - "learnings" [show_all]: list unconsumed learnings (or all)
+      - "summary": absorption breakdown — consumed vs unconsumed counts per layout section
+      - "read-all" (arg=<layout-key>, optional status=<filename-regex>):
+        read FULL content of every .md file in a layout directory in one call.
+      - "read" (arg=<relative-path>): read a single file's FULL content
+      - "find" (arg=<regex-pattern>): filename regex search across project
+      - "grep" (arg=<text>): content search in .md files (case-insensitive)
 
-    Example: to see OpenArms' E016 research findings:
-      wiki_sister_project(project="openarms", action="tasks", epic="E016")
-      wiki_sister_project(project="openarms", action="read",
-        arg="wiki/domains/learnings/agent-behavior-environment-patching.md")
+    Examples:
+      wiki_sister_project(project="openarms", action="learnings")
+        → only OpenArms learnings NOT yet referenced by our wiki (the delta)
+      wiki_sister_project(project="openarms", action="learnings", show_all=True)
+        → every OpenArms learning with its 'consumed' flag
+      wiki_sister_project(project="openarms", action="summary")
+        → per-layout absorption percentages
     """
     from tools.sister_project import (
         load_registry, resolve_project, list_projects, project_info,
         list_epics, list_tasks, list_logs, list_learnings,
-        read_doc, find_by_filename, grep_content,
+        read_doc, read_all, find_by_filename, grep_content,
+        consumption_summary,
     )
     registry = load_registry()
     if project == "list" or action == "list":
@@ -508,34 +525,38 @@ def wiki_sister_project(project: str, action: str, arg: str = None, status: str 
     if project_cfg is None:
         return json.dumps({"error": f"Unknown sister project: {project}",
                            "known": list(registry.get("projects", {}).keys())})
-    limits = registry.get("limits", {})
-    max_files = limits.get("max_files_listed", 50)
-    max_bytes = limits.get("max_file_bytes", 20000)
     if action == "info":
         result = project_info(project_cfg)
     elif action == "epics":
-        result = list_epics(project_cfg, status_filter=status, max_files=max_files)
+        result = list_epics(project_cfg, status_filter=status, show_all=show_all)
     elif action == "tasks":
-        result = list_tasks(project_cfg, status_filter=status, epic_filter=epic, max_files=max_files)
+        result = list_tasks(project_cfg, status_filter=status, epic_filter=epic, show_all=show_all)
     elif action == "logs":
-        result = list_logs(project_cfg, since=since, limit=limit)
+        result = list_logs(project_cfg, since=since, show_all=show_all)
     elif action == "learnings":
-        result = list_learnings(project_cfg, max_files=max_files)
+        result = list_learnings(project_cfg, show_all=show_all)
+    elif action == "summary":
+        result = consumption_summary(project_cfg)
+    elif action in ("read-all", "read_all", "readall"):
+        if not arg:
+            return json.dumps({"error": "read-all requires arg=<layout-key> (e.g. 'domains.learnings')"})
+        result = read_all(project_cfg, arg, name_pattern=status)
     elif action == "read":
         if not arg:
             return json.dumps({"error": "read requires arg=<relative-path>"})
-        result = read_doc(project_cfg, arg, max_bytes=max_bytes)
+        result = read_doc(project_cfg, arg)
     elif action == "find":
         if not arg:
             return json.dumps({"error": "find requires arg=<regex-pattern>"})
-        result = find_by_filename(project_cfg, arg, max_results=limit)
+        result = find_by_filename(project_cfg, arg)
     elif action == "grep":
         if not arg:
             return json.dumps({"error": "grep requires arg=<text>"})
-        result = grep_content(project_cfg, arg, max_results=limit)
+        result = grep_content(project_cfg, arg)
     else:
         return json.dumps({"error": f"Unknown action: {action}",
-                           "valid": ["list", "info", "epics", "tasks", "logs", "learnings", "read", "find", "grep"]})
+                           "valid": ["list", "info", "epics", "tasks", "logs", "learnings",
+                                     "summary", "read-all", "read", "find", "grep"]})
     return json.dumps(result, indent=2, default=str)
 
 

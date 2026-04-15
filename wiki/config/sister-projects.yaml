@@ -101,12 +101,10 @@ projects:
     queryable_frontmatter: []
     note: "OpenClaw is OpenArms's upstream. Usually accessed via OpenArms's patches/ directory, not directly."
 
-# Default read limits (prevent runaway reads on huge sister repos)
-limits:
-  max_files_listed: 50
-  max_file_bytes: 20000    # ~500 lines of markdown
-  max_recursive_depth: 4
-
 # Write policy — this wiki never writes to sister projects via these tools.
 # Cross-project contributions go through each project's own contribution flow.
+# NO TRUNCATION policy: the sister_project tool does not apply default caps
+# on list/read/grep operations. Callers receive full content. See
+# raw/notes/2026-04-15-directive-no-caps-no-compact-read-full.md for the
+# operator directive that established this rule.
 write_policy: read-only
