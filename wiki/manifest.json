@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-15T11:10:19.190740+00:00",
+  "generated": "2026-04-15T11:31:14.251426+00:00",
   "stats": {
-    "pages": 322,
+    "pages": 328,
     "domains": 9,
-    "sources": 45,
+    "sources": 50,
     "comparisons": 5,
-    "relationships": 2109,
-    "tags_unique": 980,
+    "relationships": 2164,
+    "tags_unique": 1022,
     "layers": {
       "3": 4,
       "6": 16,
       "2": 51,
-      "4": 42,
+      "4": 43,
       "5": 19,
-      "1": 27,
+      "1": 32,
       "spine": 65
     },
     "maturity": {
-      "growing": 265,
+      "growing": 271,
       "seed": 13
     }
   },
@@ -9343,6 +9343,124 @@
       "relationships": []
     },
     {
+      "path": "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever.md",
+      "slug": "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "title": "Harness Engineering Is the Dominant Performance Lever",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "lesson",
+        "harness-engineering",
+        "agent-architecture",
+        "performance-lever",
+        "model-vs-harness",
+        "os-analogy",
+        "five-canonical-patterns",
+        "multi-context-window",
+        "externalized-control",
+        "ai-agents"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-dec-2024",
+          "type": "article",
+          "url": "https://www.anthropic.com/engineering/building-effective-agents",
+          "description": "Anthropic \u2014 5 canonical workflow patterns + ACI principle"
+        },
+        {
+          "id": "anthropic-nov-2025",
+          "type": "article",
+          "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+          "description": "Anthropic \u2014 initializer + coding agent pattern + 4 failure modes"
+        },
+        {
+          "id": "nlah-mar-2026",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2603.25723",
+          "description": "NLAH (Tsinghua) \u2014 externalize harness as natural-language artifact"
+        },
+        {
+          "id": "meta-harness-mar-2026",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2603.28052v1",
+          "description": "Meta-Harness (Stanford/DSPy lineage) \u2014 outer-loop search over harness code"
+        },
+        {
+          "id": "rethinking-agents-mar-2026",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Xxuxg8PcBvc",
+          "description": "YouTube meta-synthesis \u2014 OS analogy + 6\u00d7 quote + LangChain TerminalBench-2 result"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "src-anthropic-building-effective-ai-agents",
+        "src-anthropic-effective-harnesses-long-running-agents",
+        "src-arxiv-natural-language-agent-harnesses",
+        "src-arxiv-meta-harness-outer-loop-search",
+        "src-rethinking-ai-agents-harness-engineering-rise"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 Anthropic Building Effective AI Agents"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 NLAH"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 Meta-Harness"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 Rethinking AI Agents (YouTube)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three-Layer Agent Context Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "If You Can Verify, You Converge"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Context Engineering"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/if-you-can-verify-you-converge.md",
       "slug": "lessons/01_drafts/if-you-can-verify-you-converge",
       "title": "If You Can Verify, You Converge",
@@ -15528,6 +15646,303 @@
       ]
     },
     {
+      "path": "sources/src-anthropic-building-effective-ai-agents.md",
+      "slug": "sources/src-anthropic-building-effective-ai-agents",
+      "title": "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "anthropic",
+        "agentic-systems",
+        "workflows",
+        "agents",
+        "prompt-chaining",
+        "routing",
+        "parallelization",
+        "orchestrator-workers",
+        "evaluator-optimizer",
+        "aci",
+        "agent-computer-interface",
+        "harness-patterns"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-building-effective-agents",
+          "type": "article",
+          "url": "https://www.anthropic.com/engineering/building-effective-agents",
+          "file": "raw/articles/building-effective-ai-agents-anthropic.md",
+          "title": "Building Effective AI Agents",
+          "authors": "Erik Schluntz, Barry Zhang",
+          "published": "2024-12-19",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 NLAH"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Meta-Harness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Rethinking AI Agents (YouTube)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Is a Framework, Not a Fixed Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Is Proto-Programming"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-anthropic-effective-harnesses-long-running-agents.md",
+      "slug": "sources/src-anthropic-effective-harnesses-long-running-agents",
+      "title": "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "authoritative",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "anthropic",
+        "harness-engineering",
+        "long-running-agents",
+        "multi-context-window",
+        "initializer-agent",
+        "coding-agent",
+        "feature-list",
+        "progress-file",
+        "init-script",
+        "claude-progress",
+        "compaction"
+      ],
+      "sources": [
+        {
+          "id": "anthropic-effective-harnesses",
+          "type": "article",
+          "url": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+          "file": "raw/articles/effective-harnesses-for-long-running-agents-anthropic.md",
+          "title": "Effective harnesses for long-running agents",
+          "authors": "Justin Young (lead), David Hershey, Prithvi Rajasakeran, et al.",
+          "published": "2025-11-26",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic Building Effective AI Agents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Compaction Is a Reset Event"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three-Layer Agent Context Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-arxiv-meta-harness-outer-loop-search.md",
+      "slug": "sources/src-arxiv-meta-harness-outer-loop-search",
+      "title": "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "arxiv",
+        "meta-harness",
+        "outer-loop-optimization",
+        "harness-search",
+        "agentic-proposer",
+        "dspy-lineage",
+        "terminalbench-2",
+        "automated-engineering",
+        "harness-engineering",
+        "stanford"
+      ],
+      "sources": [
+        {
+          "id": "meta-harness-arxiv",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2603.28052v1",
+          "file": "raw/papers/meta-harness-end-to-end-optimization-of-model-harnesses.md",
+          "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+          "authors": "Yoonho Lee, Roshen Nair, Qizheng Zhang, Kangwook Lee, Omar Khattab, Chelsea Finn (Stanford)",
+          "arxiv_id": "2603.28052",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 NLAH"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 If You Can Verify, You Converge"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Knowledge Evolution"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic Building Effective AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Rethinking AI Agents (YouTube)"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-arxiv-natural-language-agent-harnesses.md",
+      "slug": "sources/src-arxiv-natural-language-agent-harnesses",
+      "title": "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "arxiv",
+        "nlah",
+        "natural-language-harness",
+        "intelligent-harness-runtime",
+        "harness-portability",
+        "controllerless-agents",
+        "durable-artifacts",
+        "harness-engineering"
+      ],
+      "sources": [
+        {
+          "id": "nlah-arxiv",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2603.25723",
+          "file": "raw/papers/natural-language-agent-harnesses.md",
+          "title": "Natural-Language Agent Harnesses",
+          "authors": "Linyue Pan, Lexiao Zou, Shuo Guo, Jingchen Ni, Hai-Tao Zheng (Tsinghua University; Harbin Institute of Technology, Shenzhen)",
+          "arxiv_id": "2603.25723",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Meta-Harness \u2014 Outer-Loop Search"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Specs-as-Code-Source Inverts the Hierarchy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Rethinking AI Agents (YouTube)"
+        }
+      ]
+    },
+    {
       "path": "sources/src-autobe-compiler-verified-backend-generation.md",
       "slug": "sources/src-autobe-compiler-verified-backend-generation",
       "title": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
@@ -16325,6 +16740,76 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-rethinking-ai-agents-harness-engineering-rise.md",
+      "slug": "sources/src-rethinking-ai-agents-harness-engineering-rise",
+      "title": "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "youtube",
+        "harness-engineering",
+        "meta-synthesis",
+        "langchain",
+        "langchain-deep-agent",
+        "anthropic-five-patterns",
+        "os-analogy",
+        "agent-equals-model-plus-harness",
+        "terminalbench-2",
+        "six-x-performance"
+      ],
+      "sources": [
+        {
+          "id": "rethinking-ai-agents-youtube",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=Xxuxg8PcBvc",
+          "file": "raw/transcripts/rethinking-ai-agents-the-rise-of-harness-engineering.txt",
+          "title": "Rethinking AI Agents: The Rise of Harness Engineering",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic Building Effective AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 NLAH"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Meta-Harness"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
         }
       ]
     },
@@ -21070,8 +21555,8 @@
       "relationship_count": 977
     },
     "ai-agents": {
-      "page_count": 57,
-      "relationship_count": 428
+      "page_count": 63,
+      "relationship_count": 483
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -21338,6 +21823,7 @@
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "patterns/03_validated/architecture/gateway-centric-routing",
+      "sources/src-anthropic-building-effective-ai-agents",
       "spine/goldilocks-flow"
     ],
     "flow": [
@@ -21980,6 +22466,7 @@
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-autobe-compiler-verified-backend-generation",
@@ -22564,6 +23051,7 @@
     "workflows": [
       "domains/ai-agents/claude-code/claude-code-best-practices",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/src-anthropic-building-effective-ai-agents",
       "sources/src-openspec-spec-driven-development-framework"
     ],
     "prompting": [
@@ -22666,10 +23154,13 @@
       "domains/ai-agents/claude-code/claude-code"
     ],
     "coding-agent": [
-      "domains/ai-agents/claude-code/claude-code"
+      "domains/ai-agents/claude-code/claude-code",
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
     ],
     "anthropic": [
       "domains/ai-agents/claude-code/claude-code",
+      "sources/src-anthropic-building-effective-ai-agents",
+      "sources/src-anthropic-effective-harnesses-long-running-agents",
       "sources/src-openclaw-billing-proxy"
     ],
     "automation": [
@@ -22720,11 +23211,16 @@
       "domains/ai-agents/orchestration/harness-engineering",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/ai-agents/patterns/rework-prevention",
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/03_validated/knowledge-systems/agent-orchestration-is-highest-connected-concept",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-harness-engineering",
+      "sources/src-anthropic-effective-harnesses-long-running-agents",
+      "sources/src-arxiv-meta-harness-outer-loop-search",
+      "sources/src-arxiv-natural-language-agent-harnesses",
       "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-rethinking-ai-agents-harness-engineering-rise",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks"
     ],
@@ -22846,7 +23342,8 @@
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated"
     ],
     "compaction": [
-      "domains/ai-agents/patterns/hooks-lifecycle-architecture"
+      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
     ],
     "linting": [
       "domains/ai-agents/patterns/llm-knowledge-linting",
@@ -23965,6 +24462,44 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
+    "lesson": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
+      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
+      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
+      "spine/standards/lesson-page-standards"
+    ],
+    "agent-architecture": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "spine/models/agent-config/model-claude-code"
+    ],
+    "performance-lever": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
+    ],
+    "model-vs-harness": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
+    ],
+    "os-analogy": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "five-canonical-patterns": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
+    ],
+    "multi-context-window": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "externalized-control": [
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
+    ],
     "verification": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/03_validated/methodology-quality/never-present-speculation-as-fact"
@@ -23996,17 +24531,6 @@
     ],
     "recursion": [
       "lessons/01_drafts/if-you-can-verify-you-converge"
-    ],
-    "lesson": [
-      "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
-      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
-      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
-      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
-      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
-      "spine/standards/lesson-page-standards"
     ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -24544,11 +25068,6 @@
     "separation-of-concerns": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
-    "agent-architecture": [
-      "patterns/03_validated/architecture/deterministic-shell-llm-core",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "spine/models/agent-config/model-claude-code"
-    ],
     "single-control-plane": [
       "patterns/03_validated/architecture/gateway-centric-routing"
     ],
@@ -24884,6 +25403,100 @@
     "embeddings": [
       "sources/src-7-levels-claude-code-rag"
     ],
+    "agentic-systems": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "agents": [
+      "sources/src-anthropic-building-effective-ai-agents",
+      "spine/references/context-file-taxonomy",
+      "spine/references/root-documentation-map"
+    ],
+    "prompt-chaining": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "parallelization": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "orchestrator-workers": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "evaluator-optimizer": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "aci": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "agent-computer-interface": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "harness-patterns": [
+      "sources/src-anthropic-building-effective-ai-agents"
+    ],
+    "long-running-agents": [
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "initializer-agent": [
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "feature-list": [
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "progress-file": [
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "init-script": [
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "claude-progress": [
+      "sources/src-anthropic-effective-harnesses-long-running-agents"
+    ],
+    "arxiv": [
+      "sources/src-arxiv-meta-harness-outer-loop-search",
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
+    "meta-harness": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "outer-loop-optimization": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "harness-search": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "agentic-proposer": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "dspy-lineage": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "terminalbench-2": [
+      "sources/src-arxiv-meta-harness-outer-loop-search",
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "automated-engineering": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "stanford": [
+      "sources/src-arxiv-meta-harness-outer-loop-search"
+    ],
+    "nlah": [
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
+    "natural-language-harness": [
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
+    "intelligent-harness-runtime": [
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
+    "harness-portability": [
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
+    "controllerless-agents": [
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
+    "durable-artifacts": [
+      "sources/src-arxiv-natural-language-agent-harnesses"
+    ],
     "autobe": [
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
@@ -25138,6 +25751,27 @@
     ],
     "structural-alignment": [
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "youtube": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "meta-synthesis": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "langchain": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "langchain-deep-agent": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "anthropic-five-patterns": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "agent-equals-model-plus-harness": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
+    ],
+    "six-x-performance": [
+      "sources/src-rethinking-ai-agents-harness-engineering-rise"
     ],
     "cross-tool": [
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
@@ -25400,10 +26034,6 @@
       "spine/references/context-file-taxonomy",
       "spine/references/root-documentation-map"
     ],
-    "agents": [
-      "spine/references/context-file-taxonomy",
-      "spine/references/root-documentation-map"
-    ],
     "cognitive-contexts": [
       "spine/references/context-file-taxonomy"
     ],
@@ -25561,15 +26191,42 @@
       ]
     },
     {
+      "target": "Harness-Owned Loop",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Infrastructure Over Instructions for Process Enforcement",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ]
+    },
+    {
       "target": "LLM Architecture Gallery",
       "referenced_by": [
         "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
       ]
     },
     {
+      "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever",
+      "referenced_by": [
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
+        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents",
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
       "target": "Lesson \u2014 If You Can Verify, You Converge",
       "referenced_by": [
         "Specs-as-Code-Source Inverts the Traditional Hierarchy",
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
       ]
     },
@@ -25608,6 +26265,41 @@
       ]
     },
     {
+      "target": "Specs-as-Code-Source Inverts the Hierarchy",
+      "referenced_by": [
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ]
+    },
+    {
+      "target": "Structured Context Governs Agent Behavior More Than Content",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+      ]
+    },
+    {
+      "target": "Structured Context Is Proto-Programming",
+      "referenced_by": [
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Anthropic Building Effective AI Agents",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents",
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 AutoBE \u2014 Compiler-Verified Backend Generation",
       "referenced_by": [
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
@@ -25623,9 +26315,47 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 Effective Harnesses for Long-Running Agents",
+      "referenced_by": [
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 HRM/TRM \u2014 Tiny Recursion Models",
       "referenced_by": [
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Meta-Harness",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Meta-Harness \u2014 Outer-Loop Search",
+      "referenced_by": [
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 NLAH",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Rethinking AI Agents",
+      "referenced_by": [
+        "Harness Engineering Is the Dominant Performance Lever",
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
       ]
     },
     {

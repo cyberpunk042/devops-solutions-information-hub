@@ -262,6 +262,58 @@ The 13 guardrail rules (R01-R13) from the claude-code-harness project implement 
 > [!abstract] **This ecosystem's current operating level**
 > Levels 0-1 (prompt guidance + workflow orchestration via skills and pipeline chains). Level 2 (hook-based runtime guardrails) is the natural next step — the wiki's methodology.yaml defines stage boundaries, but enforcement is currently instruction-based, not hook-based. Level 3 (deterministic orchestration) is already implemented in OpenFleet's brain.
 
+#### Harness Engineering as a Named Discipline (NEW 2026-04-15)
+
+The field crystallized harness engineering as a named discipline in late-2024 → early-2026. Five converging sources documented in [[harness-engineering-is-the-dominant-performance-lever|Lesson — Harness Engineering Is the Dominant Performance Lever]]:
+
+> [!info] The OS analogy — load-bearing pedagogy
+>
+> | LLM system | OS analog |
+> |------------|-----------|
+> | Raw LLM | CPU (powerful but inert) |
+> | Context window | RAM (fast but volatile, limited) |
+> | External databases | Disk (slow, persistent, large) |
+> | Tool integrations | Device drivers |
+> | **Harness** | **Operating system** (coordinates what the CPU sees and when) |
+>
+> Source: [[src-rethinking-ai-agents-harness-engineering-rise|Rethinking AI Agents — The Rise of Harness Engineering]] meta-synthesis. Reframes Skills/Hooks/MCP/Plan-mode/Stage-gates as kernel-level primitives in the Claude Code OS.
+
+> [!success] The 5 canonical workflow patterns (Anthropic Dec 2024)
+>
+> Every production agent composes these five primitives. The taxonomy has become field-canonical (cited by NLAH, Meta-Harness, the YouTube meta-synthesis):
+>
+> | Pattern | What it does | Claude Code analog |
+> |---------|-------------|---------------------|
+> | **Prompt chaining** | Sequential steps with gates between | `pipeline` chain: fetch → process → validate → integrate |
+> | **Routing** | Classify input → specialized followup | Skill auto-injection by trigger description match |
+> | **Parallelization** | Sectioning (independent subtasks) + Voting (same task multiple times) | TodoWrite parallel branches; multi-agent dispatch |
+> | **Orchestrator-workers** | Central LLM dispatches to workers, synthesizes | Subagent dispatch with results aggregation |
+> | **Evaluator-optimizer** | One LLM generates, another evaluates in a loop | `pipeline post` validate → fix → re-validate cycle |
+>
+> Source: [[src-anthropic-building-effective-ai-agents|Anthropic — Building Effective AI Agents]]. Anthropic's three core principles for any agent design: maintain simplicity, prioritize transparency (show planning), invest in the **Agent-Computer Interface (ACI)** as a discipline parallel to HCI.
+
+> [!success] The long-running multi-context-window pattern (Anthropic Nov 2025)
+>
+> Compaction alone is NOT sufficient for tasks spanning multiple context windows. Even Opus 4.5 + Claude Agent SDK fails without explicit harness artifacts. Solution:
+>
+> | Component | Role |
+> |-----------|------|
+> | `init.sh` | Initializer agent writes; coding agent reads at session start to bring up dev env |
+> | `feature_list.json` | Initializer writes ~200 features as `passes:false`; coding agent flips to `passes:true` only after end-to-end testing |
+> | `claude-progress.txt` | Coding agent reads at session start, updates at session end |
+> | Initial `git commit` | Bootstrap state for git-history-as-memory |
+>
+> JSON over Markdown for `feature_list.json` because "the model is less likely to inappropriately change or overwrite JSON files" — format-as-enforcement. Source: [[src-anthropic-effective-harnesses-long-running-agents|Anthropic — Effective Harnesses for Long-Running Agents]].
+
+> [!warning] **Quantified leverage — why this matters**
+>
+> - **6× performance variation** from harness changes alone, same model, same benchmark (Stanford research, cited via [[src-rethinking-ai-agents-harness-engineering-rise|YouTube meta-synthesis]])
+> - **+7.7 points with 4× fewer context tokens** via automated harness search ([[src-arxiv-meta-harness-outer-loop-search|Meta-Harness, Stanford March 2026]])
+> - **LangChain coding agent: outside top 30 → rank 5 on TerminalBench-2** by harness-only changes (cited via YouTube)
+> - **Production failure modes catalogued** with concrete fixes ([[src-anthropic-effective-harnesses-long-running-agents|Anthropic Nov 2025]])
+>
+> The model is increasingly commoditized; the harness is where the leverage lives. This wiki's `methodology.yaml` + `AGENTS.md` + `CLAUDE.md` + skills + standards is a partial NLAH (Natural-Language Agent Harness — see [[src-arxiv-natural-language-agent-harnesses|NLAH paper]]) — naming this lets us be deliberate.
+
 ---
 
 ### Documentation Layers
@@ -509,14 +561,19 @@ Validated experience from operating Claude Code in this ecosystem.
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[model-context-engineering|Model — Context Engineering]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns]]
+[[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic — Effective Harnesses for Long-Running Agents]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
+[[src-arxiv-natural-language-agent-harnesses|Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
+[[src-rethinking-ai-agents-harness-engineering-rise|Synthesis — Rethinking AI Agents — The Rise of Harness Engineering (YouTube Meta-Synthesis)]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]

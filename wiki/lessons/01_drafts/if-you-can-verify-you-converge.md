@@ -168,3 +168,4 @@ The lesson applies wherever the rightmost column is Yes. For AICP's routing arch
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[harness-engineering|Harness Engineering]]
 [[agent-orchestration-patterns|Agent Orchestration Patterns]]
+[[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]

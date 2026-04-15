@@ -62,6 +62,7 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [Harness Engineering Is the Dominant Performance Lever](01_drafts/harness-engineering-is-the-dominant-performance-lever.md) — For LLM-based agentic systems, **the harness — not the model — is now the dominant performance lever**
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
 - [Specs-as-Code-Source Inverts the Traditional Hierarchy](01_drafts/specs-as-code-source-inverts-hierarchy.md) — Traditional software development treats code as the primary artifact and specifications as scaffolding — supporting d...
 - [Context Compaction Is a Reset Event](03_validated/context-engineering/context-compaction-is-a-reset-event.md) — When an LLM agent's context is compacted (summarized to reduce token count), all behavioral corrections accumulated d...
@@ -110,4 +111,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`methodology`, `quality`, `failure-lesson`, `lesson`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`, `orchestration`, `compounding-knowledge`, `automation`
+`methodology`, `quality`, `failure-lesson`, `lesson`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`, `orchestration`, `compounding-knowledge`

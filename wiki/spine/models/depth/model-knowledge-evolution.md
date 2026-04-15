@@ -321,3 +321,4 @@ Evolved pages organize into maturity-based subfolders: `00_inbox → 01_drafts �
 [[model-notebooklm|Model — NotebookLM]]
 [[model-sfif-architecture|Model — SFIF and Architecture]]
 [[pattern-page-standards|Pattern Page Standards]]
+[[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search]]

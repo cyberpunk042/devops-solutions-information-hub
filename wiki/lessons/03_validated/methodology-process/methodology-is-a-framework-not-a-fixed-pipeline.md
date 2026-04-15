@@ -103,3 +103,4 @@ The failure is conceptual, not technical. The agent understood the 5-stage seque
 [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[methodology-framework-design-decisions|Decision — Methodology Framework Design Decisions]]
 [[2026-04-09-directive-methodology-is-flexible-not-fixed|Methodology Is Flexible — Multiple Chains, Not One Fixed Pipeline]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns]]

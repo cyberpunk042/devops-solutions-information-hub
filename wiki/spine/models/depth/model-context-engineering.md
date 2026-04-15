@@ -281,6 +281,41 @@ The cross-tool analysis of SKILL.md vs CLAUDE.md vs AGENTS.md documents the emer
 >
 > Convergence across 4 independent frameworks on structured context, tiered depth, and per-context injection validates that these are domain-level patterns — not preferences or ecosystem quirks.
 
+### The OS Analogy — Context as RAM (NEW 2026-04-15)
+
+The harness-engineering field has crystallized a powerful pedagogical reframing of the entire LLM stack — and context is the load-bearing piece in the middle:
+
+| LLM system | OS analog | Context-engineering implication |
+|------------|-----------|-------------------------------|
+| Raw LLM | CPU | Powerful but inert — needs context to act |
+| **Context window** | **RAM** | **Fast but volatile + size-limited — what's in context governs what the model does this call** |
+| External databases / wiki / RAG | Disk | Slow but persistent — context fetches from here |
+| Tool integrations (MCP, CLI) | Device drivers | Mediated I/O — context contains tool descriptions |
+| Harness | Operating system | Decides what gets loaded into RAM (context) at each call |
+
+Source: [[src-rethinking-ai-agents-harness-engineering-rise|Rethinking AI Agents — The Rise of Harness Engineering]] meta-synthesis. This analogy reframes context engineering as **RAM management for LLMs** — and context engineering's tier system (lightweight / capable / expert) becomes RAM allocation policy. The Goldilocks principle in this lens: don't load expert-tier RAM for a lightweight task; you waste the limited window.
+
+### Quantified Context Efficiency — Meta-Harness (NEW 2026-04-15)
+
+[[src-arxiv-meta-harness-outer-loop-search|Meta-Harness (Stanford, March 2026)]] empirically measured the leverage of better context management:
+
+> **+7.7 points improvement over a state-of-the-art context management system, while using 4× FEWER context tokens.**
+
+Same task, same model. Better context engineering = better accuracy AND lower cost simultaneously. Two implications for this model:
+
+1. **The tier-system + per-context injection design has measurable upside** — quantification was previously qualitative; now there's a citable +7.7 / 4× number.
+2. **Context efficiency is searchable** — Meta-Harness used outer-loop search to discover better context strategies. The wiki could adopt the same pattern for self-improvement (proposer + verifier + filesystem memory of prior candidates). See [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]] for the broader pattern.
+
+### Format-as-Enforcement — JSON over Markdown for State Files (NEW 2026-04-15)
+
+[[src-anthropic-effective-harnesses-long-running-agents|Anthropic — Effective Harnesses for Long-Running Agents]] documents a load-bearing micro-finding:
+
+> "We landed on using JSON for [the feature list], as the model is less likely to inappropriately change or overwrite JSON files compared to Markdown files."
+
+This is **format-as-enforcement** — the structural rigidity of the file format itself constrains the agent's behavior. Same insight as [[structured-context-governs-agent-behavior-more-than-content|Structured Context Governs Agent Behavior More Than Content]] applied to the FILE FORMAT level rather than the content level.
+
+For this wiki: methodology.yaml is YAML (structurally rigid) for the same reason — the agent doesn't casually rewrite YAML the way it casually rewrites prose. Wiki page frontmatter is YAML for the same reason. The choice of file FORMAT is itself enforcement infrastructure. Add to context-engineering's structural principles section as a tactical guideline.
+
 ---
 
 ## Open Questions
@@ -331,7 +366,9 @@ The cross-tool analysis of SKILL.md vs CLAUDE.md vs AGENTS.md documents the emer
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
+[[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
+[[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]

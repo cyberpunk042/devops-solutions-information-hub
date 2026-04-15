@@ -95,6 +95,28 @@ The pattern separates WHAT the agent does (produce artifacts, reason about code,
 >
 > **Result:** Deterministic — same agent/task state always produces same decision. No AI judgment in the control loop.
 
+> [!example]- Anthropic Claude Agent SDK: Initializer + Coding Agent (Production)
+>
+> **Loop:** Initializer agent (first session only) writes `init.sh` + `feature_list.json` (~200 features marked `passes:false`) + `claude-progress.txt` + initial git commit. Every subsequent session = coding agent that reads progress + git log + init.sh, picks ONE feature, implements it, tests end-to-end (browser automation), flips `passes:true` only after verification, commits with descriptive message, updates progress.
+>
+> **Key constraint:** The system prompt and tools are IDENTICAL across both — only the initial USER prompt differs. Specialization without architectural separation. The harness owns the cross-session continuity; the agent owns the single-feature work.
+>
+> **Result:** Even Opus 4.5 fails at building a claude.ai clone WITHOUT this harness pattern (one-shots the app, leaves env messy, declares premature victory). With it, succeeds across many context windows. Source: [[src-anthropic-effective-harnesses-long-running-agents|Anthropic — Effective Harnesses for Long-Running Agents]] (Nov 2025).
+
+## Convergent Evidence — Cross-Source Validation (NEW 2026-04-15)
+
+This pattern has been independently validated across 5 sources crystallizing the harness-engineering discipline:
+
+| Source | Validation |
+|--------|------------|
+| [[src-anthropic-building-effective-ai-agents\|Anthropic — Building Effective Agents]] (Dec 2024) | "Maintain simplicity, prioritize transparency, carefully craft the ACI" — three principles match the loop's design |
+| [[src-anthropic-effective-harnesses-long-running-agents\|Anthropic — Effective Harnesses for Long-Running Agents]] (Nov 2025) | Production pattern (initializer + coding agent + artifacts) is harness-owned-loop applied to multi-context-window tasks |
+| [[src-arxiv-natural-language-agent-harnesses\|NLAH paper]] (Tsinghua, March 2026) | Academic formalization: harness as portable text artifact, runtime as lightweight adapter — same architecture as harness.ts/harness.py |
+| [[src-arxiv-meta-harness-outer-loop-search\|Meta-Harness paper]] (Stanford, March 2026) | Outer-loop search produces +7.7 points with 4× fewer context tokens — proves the harness-side has dramatic optimization headroom |
+| [[src-rethinking-ai-agents-harness-engineering-rise\|Rethinking AI Agents (YouTube)]] (March 2026) | "6× performance variation from harness alone" + LangChain's TerminalBench-2 jump (rank 30+ → 5) via harness-only changes |
+
+The harness-owned-loop pattern is now **field-validated**, not just project-validated. See [[harness-engineering-is-the-dominant-performance-lever|Lesson — Harness Engineering Is the Dominant Performance Lever]] for the synthesis.
+
 ## When To Apply
 
 > [!tip] Conditions for Harness-Owned Loop
@@ -150,6 +172,7 @@ The pattern separates WHAT the agent does (produce artifacts, reason about code,
 [[identity-profile|OpenFleet — Identity Profile]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
+[[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic — Effective Harnesses for Long-Running Agents]]
 [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
 [[src-openfleet-fleet-architecture|Synthesis — OpenFleet Fleet Architecture — Immune System, Dispatch, and Tiers]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
