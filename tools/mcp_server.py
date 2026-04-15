@@ -452,6 +452,68 @@ def wiki_gateway_flow(step: int = None) -> str:
 
 
 @server.tool()
+def wiki_gateway_timeline(scope: str = None, since: str = "7d", until: str = None,
+                           types: str = None, group_by: str = "date",
+                           output_format: str = "markdown",
+                           full_content: bool = False,
+                           remote: bool = False,
+                           collapse_arcs: bool = False) -> str:
+    """Computed cross-project temporal view of ecosystem activity.
+
+    Aggregates commits, lessons, patterns, decisions, syntheses, epics, tasks,
+    directives, sessions, and handoffs from one or more projects over a time range.
+    No stored artifact — computed on demand from source of truth.
+
+    Scope is set-valued and position-aware:
+      - 'self'  = the invoking project
+      - 'brain' = the declared second-brain
+      - 'all'   = every project in the brain's sister-projects registry
+      - or explicit names: openarms, openfleet, aicp, devops-control-plane
+      - compose with commas: 'self,brain,openarms'
+
+    Default scope: 'self' when run from the brain; 'self,brain' from a sister.
+
+    Args:
+        scope: Comma-separated scope list. Default: caller-dependent (see above).
+        since: Duration (e.g. '7d', '24h', '2w') or ISO date. Default: '7d'.
+        until: Duration or ISO date. Default: now.
+        types: Comma-separated event types (lesson,pattern,decision,synthesis,epic,task,session,directive,commit,handoff). Default: all.
+        group_by: 'date' | 'project' | 'type' | 'none'. Default: 'date'.
+        output_format: 'markdown' | 'json'. Default: 'markdown'.
+        full_content: If True, include full event bodies (no caps).
+        remote: If True, fetch non-local projects via gh api (slower — opt-in).
+                Without this flag, unavailable projects surface as notices only.
+        collapse_arcs: If True, collapse same-file same-day event clusters into
+                       one arc-summary line (useful for compact journey views).
+
+    Returns: rendered timeline as markdown (default) or JSON.
+
+    See: wiki/decisions/01_drafts/consumer-runtime-signaling-via-mcp-config.md
+    for how runtime signaling relates to cross-project timeline queries.
+    """
+    from tools.timeline import compute_timeline
+    scope_list = None
+    if scope:
+        scope_list = [s.strip() for s in scope.split(",") if s.strip()]
+    types_list = None
+    if types:
+        types_list = [t.strip() for t in types.split(",") if t.strip()]
+    return compute_timeline(
+        scope=scope_list,
+        since=since,
+        until=until,
+        types=types_list,
+        wiki_root=None,
+        brain_root=None,
+        full_content=full_content,
+        group_by=group_by,
+        output_format=output_format,
+        remote=remote,
+        collapse_arcs=collapse_arcs,
+    )
+
+
+@server.tool()
 def wiki_gateway_docs(doc_name: str = None) -> str:
     """Query root-level documentation files (README, AGENTS, CLAUDE, CONTEXT, ARCHITECTURE, DESIGN, TOOLS, SKILLS).
 

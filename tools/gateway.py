@@ -1822,6 +1822,23 @@ def main():
     fr.add_argument("--confirm", action="store_true", help="Required to actually execute reset")
 
     # Contribute command
+    tl = sub.add_parser("timeline", help="Computed cross-project temporal view (commits, lessons, sessions, directives, epics, tasks)")
+    tl.add_argument("--scope", default=None,
+                    help="Comma-separated: self, brain, all, or project names. Default: self (from brain) / self,brain (from sister)")
+    tl.add_argument("--since", default="7d", help="Duration (7d, 24h, 2w) or ISO date. Default: 7d")
+    tl.add_argument("--until", default=None, help="Duration or ISO date. Default: now")
+    tl.add_argument("--type", dest="tl_types", default=None,
+                    help="Comma-separated event types (lesson,pattern,decision,synthesis,epic,task,session,directive,commit)")
+    tl.add_argument("--group-by", dest="tl_group_by", default="date", choices=["date", "project", "type", "none"])
+    tl.add_argument("--format", dest="tl_format", default="markdown", choices=["markdown", "json"])
+    tl.add_argument("--full-content", dest="tl_full_content", action="store_true",
+                    help="Include full event bodies (no caps)")
+    tl.add_argument("--remote", dest="tl_remote", action="store_true",
+                    help="Fetch non-local projects via gh api (slower — opt-in). "
+                         "Without this flag, unavailable projects surface as notices only.")
+    tl.add_argument("--collapse-arcs", dest="tl_collapse_arcs", action="store_true",
+                    help="Collapse same-file same-day event clusters into one arc-summary line")
+
     ct = sub.add_parser("contribute", help="Write back to the wiki (lands in 00_inbox / log; promotion requires review)")
     ct.add_argument("--type", required=True, choices=["lesson", "remark", "correction"])
     ct.add_argument("--title", required=True)
@@ -1984,6 +2001,29 @@ def main():
             reason=getattr(args, "reason", None),
         )
         print(json.dumps(result, indent=2, default=str))
+
+    elif args.command == "timeline":
+        from tools.timeline import compute_timeline
+        scope_list = None
+        if args.scope:
+            scope_list = [s.strip() for s in args.scope.split(",") if s.strip()]
+        types_list = None
+        if args.tl_types:
+            types_list = [t.strip() for t in args.tl_types.split(",") if t.strip()]
+        output = compute_timeline(
+            scope=scope_list,
+            since=args.since,
+            until=args.until,
+            types=types_list,
+            wiki_root=paths.get("root"),
+            brain_root=paths.get("brain_root"),
+            full_content=args.tl_full_content,
+            group_by=args.tl_group_by,
+            output_format=args.tl_format,
+            remote=args.tl_remote,
+            collapse_arcs=args.tl_collapse_arcs,
+        )
+        print(output)
 
     elif args.command == "status":
         # Smart default: show everything relevant about this project
