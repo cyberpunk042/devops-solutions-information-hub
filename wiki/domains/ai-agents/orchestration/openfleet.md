@@ -13,7 +13,8 @@ updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [openfleet, ai-agents, fleet-management, orchestration, deterministic-brain, vibe-managing, mission-control, openclaw, lightrag, multi-agent]

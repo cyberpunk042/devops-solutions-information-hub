@@ -24,35 +24,43 @@ sources:
     description: OpenArms v10→v11 transition — infrastructure is solved, agent behavior is the remaining frontier
   - id: openarms-e016-frontmatter-pollution
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-frontmatter-pollution-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-frontmatter-pollution-findings.md
     description: T109 spike finding — pipeline treats every agent-written file as task artifact. Recommendation Option B — filter in validator using model paths + existing-files.json. Verified 2026-04-15; matches our Class 1 row.
   - id: openarms-e016-weakest-checker
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-weakest-checker-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-weakest-checker-findings.md
     description: T110 spike finding — agent's code quality ceiling = strictest gate it believes applies. T110 also adds that code is SHAPED BY the checker targeted (esbuild-shaped code ≠ strict-TS-shaped code), deeper than the gate-skip framing alone. Verified 2026-04-15.
   - id: openarms-e016-corner-cutting
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-corner-cutting-verification-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-corner-cutting-verification-findings.md
     description: T108 spike finding — test-stage skill instructs `pnpm test` only; agent faithfully follows. Design gap, not fatigue. v10 derived-gate catches the error at /stage-complete time, but agent doesn't self-verify. Verified 2026-04-15.
   - id: openarms-e016-environment-patching
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-environment-patching-findings.md
     description: T107 spike finding — T085 $27/12 retries, T086 $7.33/4 retries; combined prompt+infra+model-bias root cause. Recommendation layered pre-flight + retry cap. Verified 2026-04-15; Class 3 refined-fix cell sourced directly from this doc.
   - id: openarms-e016-sub-agent-compliance
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md
     description: T111 spike finding — sub-agents violate behavioral rules ~67% of the time (= ~33% compliance) even when rules in spawn prompt. Recommendation Option 3 (trustless verification). Verified 2026-04-15; updated Class 5 number from our prior 50% estimate to T111's measured 67% violation rate.
   - id: openarms-e016-done-when-acceptance
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md
     description: T112 spike finding — three-layer problem (bad items upstream + no reject protocol + model_na masking). Recommendation dispatch-time generation with merge strategy 3. Verified 2026-04-15; Class 6 refined-fix cell sourced directly from this doc.
   - id: openarms-live-integration-tests-insufficient
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-integration-tests-insufficient.md
     description: "Live OpenArms lesson — closed-verification-loop failure. 686 passing tests across 4 epics at review/100% status, but 2073 lines nothing imported at runtime. Convergent with Class 2 (weakest-checker) at a deeper level: when the agent writes both impl AND tests, tests verify what was built not what should work. Adds the 'externality of verify step' invariant to our taxonomy. Verified 2026-04-15."
   - id: openarms-live-specific-done-when
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-specific-done-when.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-specific-done-when.md
     description: "Live OpenArms lesson — convergent with Class 6 fix. Specific Done When items produce better work than generic boilerplate templates. Complements T112 dispatch-time generation by specifying the WHAT-MAKES-A-DONE-WHEN-WORK alongside the WHEN-TO-GENERATE-IT. Verified 2026-04-15."
 tags: [agent-failure, taxonomy, behavioral, compliance, quality, quantified-evidence, openarms]
 ---

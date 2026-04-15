@@ -22,7 +22,8 @@ sources:
     url: "https://www.youtube.com/watch?v=ZgwHaI2C-9s"
   - id: openarms-verify-all-code-paths
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-verify-all-code-paths.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-verify-all-code-paths.md
     description: "Live OpenArms lesson — convergent evidence. Operator-authored: 'When making an infrastructure change that affects how X is done, it is not enough to edit the file whose name matches the concern. Check EVERY site that does X. Use grep, not intuition. The absence of a compile error after an edit does not mean you fixed everything.' Adds verification-through-enumeration as a 5th convergent instance: AutoBE (compiler), HRM/TRM (recursive verify), our pipeline post chain, OpenArms hooks, and now grep-every-site coverage. Verified 2026-04-15."
 tags:
   - verification

@@ -18,7 +18,8 @@ sources:
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [rework-prevention, planning, quality-gates, spec-compliance, agent-behavior, harness-engineering, openfleet, test-driven, context-management, cost-of-rework]

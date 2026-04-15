@@ -305,6 +305,20 @@ source_required_fields:
   - id
   - type
 
+# A source must carry at least one of these locator fields:
+# - url: external web reference (any absolute URL)
+# - file: path relative to project root OR legacy absolute path (deprecated; migrate to project+path)
+# - project: sister-project identifier from wiki/config/sister-projects.yaml
+#            (when project is present, `path` is also REQUIRED and is relative to the project root)
+# The project+path form is preferred for anything inside the 5-project ecosystem —
+# it is portable (no hardcoded home paths), supports git-remote fallback via
+# tools/source_resolver.py, and makes the registry the single source of truth for
+# project locations. Verified 2026-04-15.
 source_needs_one_of:
   - url
   - file
+  - project
+
+# When source declares `project:`, the `path:` field is also required.
+# Validator should flag source entries with project-but-no-path as warnings.
+source_project_companion_field: path

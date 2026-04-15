@@ -26,19 +26,23 @@ updated: 2026-04-15
 sources:
   - id: openarms-preliminary-placeholder
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/agent-escalation-with-justification.md
+    project: openarms
+    path: wiki/domains/learnings/agent-escalation-with-justification.md
     description: Preliminary OpenArms placeholder — operator quote "When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable." File explicitly marked "The fully synthesized pattern is coming from the brain." This pattern page is that synthesis.
   - id: openarms-e016-environment-patching
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-environment-patching-findings.md
     description: T107 — root cause of T085. Retry-cap fix is one trigger of this pattern; pattern subsumes the fix by specifying what happens AFTER retry cap fires.
   - id: openarms-e016-sub-agent-compliance
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md
     description: T111 — sub-agent output-verification failures become escalation triggers under this pattern.
   - id: openarms-e016-done-when-acceptance
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md
+    project: openarms
+    path: wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md
     description: T112 — silent conflict resolution is the direct failure mode this pattern's block step prevents.
   - id: research-wiki-rogue-incident-2026-04-15
     type: directive

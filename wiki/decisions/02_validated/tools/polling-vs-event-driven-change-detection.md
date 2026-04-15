@@ -19,7 +19,8 @@ updated: 2026-04-13
 sources:
   - id: src-devops-control-plane-local
     type: documentation
-    file: ../devops-control-plane/README.md
+    project: devops-control-plane
+    path: README.md
     title: devops-control-plane — Local Project Documentation
 tags: [polling, inotify, fswatch, wsl2, change-detection, watcher, daemon, event-driven, filesystem, devops]
 ---

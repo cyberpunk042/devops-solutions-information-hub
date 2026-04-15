@@ -165,23 +165,59 @@ def _summarize_page(path: Path, queryable_fields: List[str]) -> Dict[str, Any]:
     return summary
 
 
-def _build_consumption_index(project_cfg: Dict[str, Any]) -> set:
+def _build_consumption_index(project_cfg: Dict[str, Any], project_name: Optional[str] = None) -> set:
     """Return set of sister-project relative paths referenced by any research-wiki page.
 
     A sister file is considered CONSUMED if at least one page in our wiki
-    references its live path — via frontmatter fields (sources.file,
-    contribution_source, derived_from, related) or body text. This powers
-    "differential by default" listing: `list_*` actions filter out consumed
-    items unless the caller asks for everything.
+    references its live path. References are detected through three mechanisms:
 
-    The wiki's higher-ground principle: sister content is INPUT to synthesis,
-    not output to mirror. This index tells us what remains to absorb.
+    1. NEW (2026-04-15 directive form): structured frontmatter source entries
+       with `project: X, path: Y` — the canonical portable form.
+    2. Legacy absolute path in body text or frontmatter `file:` fields
+       (e.g. /home/jfortin/openarms/wiki/...). Deprecated; kept for back-compat
+       until all wiki pages are migrated.
+    3. Relative-path mentions in body text (e.g. `openarms/wiki/...`).
+
+    Also recognizes project ALIASES declared in the registry (e.g. 'aicp' has
+    alias 'devops-expert-local-ai'), so a source citing either name against the
+    same underlying path counts once.
+
+    Args:
+        project_cfg: the registry entry for this project.
+        project_name: optional registry KEY for this project (e.g. 'aicp').
+            If provided, included in the project_names matcher list. When
+            callers already know the name (e.g. iterating the projects dict),
+            passing it here catches sources that cite the registry key rather
+            than the directory basename.
 
     Returns: set of paths relative to the sister project's ROOT
     (e.g. 'wiki/domains/learnings/foo.md', 'backlog/tasks/T100.md').
     """
     project_root_abs = str(_project_root(project_cfg))
-    project_name = Path(project_root_abs).name  # e.g. 'openarms'
+    # Project name set: registry key (preferred) + directory basename + aliases.
+    # Look up the registry key by comparing project_cfg against the full registry.
+    project_names: List[str] = []
+    if project_name:
+        project_names.append(project_name)
+    else:
+        try:
+            registry = load_registry()
+            for key, cfg in registry.get("projects", {}).items():
+                if cfg is project_cfg:
+                    project_names.append(key)
+                    break
+                # Also match by path — handles deep-copy-of-config cases
+                if cfg.get("path") == project_cfg.get("path"):
+                    project_names.append(key)
+                    break
+        except Exception:
+            pass
+    basename = Path(project_root_abs).name
+    if basename and basename not in project_names:
+        project_names.append(basename)
+    for alias in project_cfg.get("aliases", []) or []:
+        if alias and alias not in project_names:
+            project_names.append(alias)
 
     our_root = get_project_root()
     our_wiki = our_root / "wiki"
@@ -190,18 +226,34 @@ def _build_consumption_index(project_cfg: Dict[str, Any]) -> set:
 
     consumed: set = set()
     abs_re = re.compile(rf'{re.escape(project_root_abs)}/([\w\-/.]+\.md)')
-    # Relative match: require non-word boundary or start-of-string before project name
-    rel_re = re.compile(rf'(?:^|[^\w\-/]){re.escape(project_name)}/([\w\-/.]+\.md)')
+    # Relative match: any of our project names as path-prefix, matching .md file
+    rel_alternation = "|".join(re.escape(n) for n in project_names)
+    rel_re = re.compile(rf'(?:^|[^\w\-/])(?:{rel_alternation})/([\w\-/.]+\.md)')
 
     for md in our_wiki.rglob("*.md"):
         try:
             text = md.read_text(encoding="utf-8", errors="replace")
         except Exception:
             continue
+        # Regex sweeps — catch body text + frontmatter absolute/relative mentions
         for m in abs_re.finditer(text):
             consumed.add(m.group(1))
         for m in rel_re.finditer(text):
             consumed.add(m.group(1))
+        # Structured sweep — parse frontmatter sources[] for project+path pairs
+        try:
+            meta, _body = parse_frontmatter(text)
+        except Exception:
+            continue
+        if not meta:
+            continue
+        for src in meta.get("sources", []) or []:
+            if not isinstance(src, dict):
+                continue
+            src_project = src.get("project")
+            src_path = src.get("path")
+            if src_project and src_path and src_project in project_names:
+                consumed.add(str(src_path))
 
     return consumed
 

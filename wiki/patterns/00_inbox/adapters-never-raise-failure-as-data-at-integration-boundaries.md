@@ -33,7 +33,8 @@ updated: 2026-04-15
 sources:
   - id: devops-control-plane-adapters
     type: observation
-    file: /home/jfortin/devops-control-plane/docs/ADAPTERS.md
+    project: devops-control-plane
+    path: docs/ADAPTERS.md
     description: "Canonical specification — 'An adapter is a pluggable component that executes actions against external tools. Adapters never raise exceptions. All failures are captured in the Receipt.' Includes circuit-breaker integration, mock mode for testing, raw command fallback, explicit Adapter ABC with name/is_available/validate/execute methods. Verified 2026-04-15."
   - id: research-wiki-integrations-py
     type: file

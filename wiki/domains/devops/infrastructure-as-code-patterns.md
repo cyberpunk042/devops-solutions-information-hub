@@ -13,7 +13,8 @@ updated: 2026-04-13
 sources:
   - id: src-devops-control-plane-local
     type: documentation
-    file: ../devops-control-plane/README.md
+    project: devops-control-plane
+    path: README.md
     title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
   - id: src-design-md-research
@@ -24,7 +25,8 @@ sources:
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, iac, infrastructure-as-code, claude-md, design-md, schema-yaml, setup-py, service-templates, agent-configuration, markdown-config]

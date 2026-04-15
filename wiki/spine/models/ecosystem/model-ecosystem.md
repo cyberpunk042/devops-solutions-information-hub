@@ -14,7 +14,8 @@ updated: 2026-04-13
 sources:
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
 tags: [ecosystem, model, openfleet, aicp, openarms, devops-control-plane, multi-project, integration, spine, architecture]
 ---

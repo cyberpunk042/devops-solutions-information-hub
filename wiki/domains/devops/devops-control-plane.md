@@ -13,20 +13,24 @@ updated: 2026-04-13
 sources:
   - id: src-devops-control-plane-local
     type: documentation
-    file: ../devops-control-plane/README.md
+    project: devops-control-plane
+    path: README.md
     title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
   - id: devops-control-plane-live-architecture
     type: observation
-    file: /home/jfortin/devops-control-plane/docs/ARCHITECTURE.md
+    project: devops-control-plane
+    path: docs/ARCHITECTURE.md
     description: "Live architecture doc — classic layered/hexagonal: Interfaces (TUI/CLI/Web) → Core Domain (Pydantic models + services + engine + use-cases) → Policy (project.yml, stacks/*.yml) → Adapter Layer (shell/filesystem/vcs/containers). Strict inward-dependency discipline. Verified 2026-04-15."
   - id: devops-control-plane-live-design
     type: observation
-    file: /home/jfortin/devops-control-plane/docs/DESIGN.md
+    project: devops-control-plane
+    path: docs/DESIGN.md
     description: "Live design doc — defines the product as meta-tool (not application). 6 pillars: Visibility, Integrations, Vaults, Stacks, Automation, Lifecycle. Verified 2026-04-15."
   - id: devops-control-plane-live-adapters
     type: observation
-    file: /home/jfortin/devops-control-plane/docs/ADAPTERS.md
+    project: devops-control-plane
+    path: docs/ADAPTERS.md
     description: "Live ADAPTERS.md — pluggable Action → AdapterRegistry → Receipt pattern with circuit-breaker. 'Adapters never raise exceptions.' Canonical source for our Adapters-Never-Raise pattern page. Verified 2026-04-15."
 tags: [devops, control-plane, project-management, tech-detection, vault, encryption, audit, multi-interface, adapters, infrastructure]
 ---

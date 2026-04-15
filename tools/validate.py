@@ -86,6 +86,7 @@ def validate_page(
     if isinstance(sources, list):
         src_required = schema.get("source_required_fields", [])
         src_needs_one = schema.get("source_needs_one_of", [])
+        src_project_companion = schema.get("source_project_companion_field", "path")
         for i, src in enumerate(sources):
             if not isinstance(src, dict):
                 errors.append({"code": "invalid_source", "message": f"Source {i} is not a dict"})
@@ -101,6 +102,28 @@ def validate_page(
                     "code": "source_missing_ref",
                     "message": f"Source {i} needs at least one of: {src_needs_one}",
                 })
+            # When source uses project: X, path: Y must also be present (per 2026-04-15 directive)
+            if "project" in src and src_project_companion and src_project_companion not in src:
+                errors.append({
+                    "code": "source_project_missing_path",
+                    "message": (
+                        f"Source {i} has 'project' but no '{src_project_companion}'. "
+                        f"The project+path source form requires both. "
+                        f"See wiki/config/sister-projects.yaml for valid project names."
+                    ),
+                })
+            # Warn on deprecated absolute-path form (migrate to project+path)
+            if "file" in src and isinstance(src.get("file"), str):
+                fp = src["file"]
+                if fp.startswith("/home/") or fp.startswith("/Users/"):
+                    warnings.append({
+                        "code": "source_file_absolute_path_deprecated",
+                        "message": (
+                            f"Source {i} uses absolute home path '{fp}'. "
+                            "Migrate to project+path form (per 2026-04-15 source-mechanism directive). "
+                            "See wiki/config/sister-projects.yaml."
+                        ),
+                    })
             if "type" in src and src["type"] not in enums.get("source_type", []):
                 warnings.append({
                     "code": "invalid_source_type",

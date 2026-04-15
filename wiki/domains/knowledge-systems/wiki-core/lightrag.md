@@ -18,7 +18,8 @@ sources:
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — LightRAG Integration
     ingested: 2026-04-08
 tags: [lightrag, rag, knowledge-graph, entity-extraction, graph-retrieval, vector-search, hybrid-search, mcp, openfleet]

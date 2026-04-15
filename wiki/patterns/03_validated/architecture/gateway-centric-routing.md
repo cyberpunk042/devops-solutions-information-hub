@@ -26,7 +26,8 @@ sources:
     title: OpenArms — Project Documentation
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
   - id: src-openclaw-docs
     type: documentation

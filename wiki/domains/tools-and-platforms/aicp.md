@@ -13,7 +13,8 @@ updated: 2026-04-13
 sources:
   - id: src-aicp-local
     type: documentation
-    file: ../devops-expert-local-ai/CLAUDE.md
+    project: aicp
+    path: CLAUDE.md
     title: AICP — Local Project Documentation
     ingested: 2026-04-08
 tags: [aicp, localai, ai-control-platform, backend-routing, think-edit-act, guardrails, circuit-breaker, fleet-integration, local-first]

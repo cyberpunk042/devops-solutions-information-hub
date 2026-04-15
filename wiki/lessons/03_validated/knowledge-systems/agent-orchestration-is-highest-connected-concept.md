@@ -18,7 +18,8 @@ updated: 2026-04-13
 sources:
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
 tags: [orchestration, ai-agents, hub-page, knowledge-graph, connectivity, cross-domain, openfleet, harness-engineering]
 ---

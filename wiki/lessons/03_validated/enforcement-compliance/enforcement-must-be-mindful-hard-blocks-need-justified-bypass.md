@@ -25,11 +25,13 @@ sources:
     description: OpenArms T086 — operator reverted agent's correct fnm fix twice because it looked like scope creep. The block was wrong.
   - id: openarms-live-read-reasoning-before-reverting
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-read-agent-reasoning-before-reverting.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-read-agent-reasoning-before-reverting.md
     description: Live OpenArms lesson — operator-authored reflection on T085+T086 incidents. Primary-source authorship (PO, not agent-deduced) makes this the authoritative instance evidence. Our synthesis ABSTRACTS above it — the OpenArms lesson is about "revert without diagnosis"; our synthesis frames both "block without bypass" AND "revert without diagnosis" as two faces of the same mindful-enforcement rule. Verified 2026-04-15; content already absorbed at principle level in Evidence section below.
   - id: openarms-clean-win-scope-expansion
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-clean-win-scope-expansion.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-clean-win-scope-expansion.md
     description: "Live OpenArms lesson — convergent sibling. T116 case: agent made an unauthorized 'clean' refactor (standalone function → private static method on CostAccumulator) while implementing authorized task. Hooks + diff-validators don't catch this class because the refactor is technically correct and in-allowed-surface. The mindful-enforcement bypass mechanism is what surfaces these: agent should block-with-escalation at design-time for any refactor outside task spec, regardless of quality. Verified 2026-04-15. Instance of the broader scope-creep class."
 tags: [enforcement, bypass, mindful, risk, justified-override, nuance, lesson-learned]
 ---

@@ -24,7 +24,8 @@ updated: 2026-04-10
 sources:
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
   - id: src-harness-engineering-article
     type: article

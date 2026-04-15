@@ -18,7 +18,8 @@ sources:
     ingested: 2026-04-08
   - id: src-devops-control-plane-local
     type: documentation
-    file: ../devops-control-plane/README.md
+    project: devops-control-plane
+    path: README.md
     title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
 tags: [devops, wsl2, windows-subsystem-linux, obsidian-sync, systemd, daemon, cross-platform, inotify, sync, filesystem]

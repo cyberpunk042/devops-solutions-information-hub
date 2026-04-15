@@ -34,7 +34,8 @@ sources:
     ingested: 2026-04-09
   - id: openarms-live-methodology-battle-tested
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-methodology-battle-tested.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-methodology-battle-tested.md
     description: "Live OpenArms lesson — operator-authored evidence for the 'methodology hardened by 7 bugs in one day' narrative cited in Key Insights. Converges with our synthesis: 'An agent methodology written in theory will fail in practice... stable not because it was well-designed initially, but because it was stress-tested by real operation.' Verified 2026-04-15."
 tags: [methodology, model, stage-gate, task-types, composable, backlog, execution-modes, framework, spine, flexible, multi-track, multi-model]
 ---

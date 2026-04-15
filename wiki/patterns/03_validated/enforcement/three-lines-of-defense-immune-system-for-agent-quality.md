@@ -28,15 +28,18 @@ sources:
     description: OpenArms hooks as Line 1 implementation — 215 lines, 100% stage boundary enforcement
   - id: openfleet-live-immune-system-spec
     type: observation
-    file: /home/jfortin/openfleet/docs/systems/02-immune-system.md
+    project: openfleet
+    path: docs/systems/02-immune-system.md
     description: Live OpenFleet immune-system spec — opens with "3 files. 746 lines." Lists 5 diseases (deviation / laziness / protocol violation / confident-but-wrong / scope creep) matching our taxonomy. Verified 2026-04-15.
   - id: openfleet-live-doctor-design
     type: observation
-    file: /home/jfortin/openfleet/docs/milestones/active/immune-system/02-the-doctor.md
+    project: openfleet
+    path: docs/milestones/active/immune-system/02-the-doctor.md
     description: Live OpenFleet doctor-design doc — grounded in verbatim PO quotes that author the requirements (e.g. "even if it mean having a hidden doctor agent that prune agent and agent work, force compact, rules reinjection..."). Unusually strong source — requirements authored by operator, not deduced by agent. Verified 2026-04-15.
   - id: openfleet-live-disease-catalogue
     type: observation
-    file: /home/jfortin/openfleet/docs/milestones/active/immune-system/03-disease-catalogue.md
+    project: openfleet
+    path: docs/milestones/active/immune-system/03-disease-catalogue.md
     description: Live OpenFleet disease catalogue — per-disease PO evidence quotes + live incident evidence (control-surface-task confident-but-wrong instance). Verified 2026-04-15.
 tags: [immune-system, three-lines-defense, enforcement, detection, correction, quality, agent-fleet, pattern]
 ---

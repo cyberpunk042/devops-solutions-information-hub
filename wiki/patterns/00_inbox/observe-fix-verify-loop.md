@@ -29,15 +29,18 @@ updated: 2026-04-15
 sources:
   - id: openarms-live-ofv-pattern
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/pattern-observe-fix-verify.md
+    project: openarms
+    path: wiki/domains/learnings/pattern-observe-fix-verify.md
     description: Live OpenArms pattern file — operator-authored naming + first-principles description of the OFV cycle as observed in the 2026-04-09 autonomous session. Verified 2026-04-15; this pattern page synthesizes from OA's naming + our own three-layer evidence.
   - id: openarms-live-methodology-battle-tested
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-methodology-battle-tested.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-methodology-battle-tested.md
     description: Live OpenArms lesson — "stable not because well-designed initially but stress-tested by real operation" — the claim this pattern operationalizes. Verified 2026-04-15.
   - id: openarms-live-integration-tests-insufficient
     type: observation
-    file: /home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md
+    project: openarms
+    path: wiki/domains/learnings/lesson-integration-tests-insufficient.md
     description: Live OpenArms lesson — closed-verification-loop failure mode (agent writes both impl+tests, 686 passing tests / 0 runtime imports / 2073 lines orphaned). Evidence that the Verify step MUST be external to the agent. Verified 2026-04-15.
 tags: [pattern, methodology-process, battle-testing, iteration, ofv, autonomous-agent, observability, correction-cycle]
 ---

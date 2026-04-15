@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-15T17:13:46.023757+00:00",
+  "generated": "2026-04-15T17:41:14.541287+00:00",
   "stats": {
     "pages": 331,
     "domains": 9,
@@ -1434,7 +1434,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
@@ -2496,7 +2497,8 @@
         {
           "id": "src-aicp-local",
           "type": "documentation",
-          "file": "../devops-expert-local-ai/CLAUDE.md",
+          "project": "aicp",
+          "path": "CLAUDE.md",
           "title": "AICP \u2014 Local Project Documentation"
         }
       ],
@@ -2701,7 +2703,8 @@
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation"
         }
       ],
@@ -3172,7 +3175,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
@@ -3358,7 +3362,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 OpenClaw Usage",
           "ingested": "2026-04-08"
         }
@@ -3419,7 +3424,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -3842,7 +3848,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -6782,26 +6789,30 @@
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
         {
           "id": "devops-control-plane-live-architecture",
           "type": "observation",
-          "file": "/home/jfortin/devops-control-plane/docs/ARCHITECTURE.md",
+          "project": "devops-control-plane",
+          "path": "docs/ARCHITECTURE.md",
           "description": "Live architecture doc \u2014 classic layered/hexagonal: Interfaces (TUI/CLI/Web) \u2192 Core Domain (Pydantic models + services + engine + use-cases) \u2192 Policy (project.yml, stacks/*.yml) \u2192 Adapter Layer (shell/filesystem/vcs/containers). Strict inward-dependency discipline. Verified 2026-04-15."
         },
         {
           "id": "devops-control-plane-live-design",
           "type": "observation",
-          "file": "/home/jfortin/devops-control-plane/docs/DESIGN.md",
+          "project": "devops-control-plane",
+          "path": "docs/DESIGN.md",
           "description": "Live design doc \u2014 defines the product as meta-tool (not application). 6 pillars: Visibility, Integrations, Vaults, Stacks, Automation, Lifecycle. Verified 2026-04-15."
         },
         {
           "id": "devops-control-plane-live-adapters",
           "type": "observation",
-          "file": "/home/jfortin/devops-control-plane/docs/ADAPTERS.md",
+          "project": "devops-control-plane",
+          "path": "docs/ADAPTERS.md",
           "description": "Live ADAPTERS.md \u2014 pluggable Action \u2192 AdapterRegistry \u2192 Receipt pattern with circuit-breaker. 'Adapters never raise exceptions.' Canonical source for our Adapters-Never-Raise pattern page. Verified 2026-04-15."
         }
       ],
@@ -6947,14 +6958,16 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
         {
           "id": "src-aicp-local",
           "type": "documentation",
-          "file": "../devops-expert-local-ai/CLAUDE.md",
+          "project": "aicp",
+          "path": "CLAUDE.md",
           "title": "AICP \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
@@ -6968,26 +6981,30 @@
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
         {
           "id": "aicp-live-openarms-architecture-analysis",
           "type": "observation",
-          "file": "/home/jfortin/devops-expert-local-ai/docs/kb/research/openarms-architecture-analysis.md",
+          "project": "aicp",
+          "path": "docs/kb/research/openarms-architecture-analysis.md",
           "description": "Live AICP research doc \u2014 AICP's concrete integration architecture for OpenArms. Captures protocol details (WebSocket ws://localhost:18789, JSON RequestFrame/ResponseFrame/EventFrame), session-key format (acp:uuid, agent:main:wa:peer), 11-row architecture-parallels table (Gateway \u2194 Agent daemon, TaskRecord \u2194 TaskState, ACP \u2194 Fleet agent, etc.), and a 4-phase integration roadmap (MCP \u2192 Provider Plugin \u2192 ACP Runtime \u2192 Full Multimodal). Unique cross-sister-perspective source: AICP analyzing OpenArms as integration target. Verified 2026-04-15."
         },
         {
           "id": "devops-control-plane-live-adapters",
           "type": "observation",
-          "file": "/home/jfortin/devops-control-plane/docs/ADAPTERS.md",
+          "project": "devops-control-plane",
+          "path": "docs/ADAPTERS.md",
           "description": "Live devops-control-plane adapter spec \u2014 concretely defines the plugin/adapter protocol (Action \u2192 AdapterRegistry \u2192 Receipt) that other ecosystem projects follow. Invariant: 'Adapters never raise exceptions.' Feeds the Adapters Never Raise pattern. Verified 2026-04-15."
         },
         {
           "id": "devops-control-plane-live-design",
           "type": "observation",
-          "file": "/home/jfortin/devops-control-plane/docs/DESIGN.md",
+          "project": "devops-control-plane",
+          "path": "docs/DESIGN.md",
           "description": "Live devops-control-plane DESIGN.md \u2014 product-vision and core pillars. Frames the control plane as a meta-tool: 'Not an application. A structured way to discover what a solution is, what it needs, and how to act on it \u2014 through any interface (CLI, Web, TUI), backed by pluggable tool bindings.' Six pillars (Visibility, Integrations, Vaults, Stacks, Automation, Lifecycle). Gives the ecosystem's 'infrastructure governance' project a first-principles description. Verified 2026-04-15."
         }
       ],
@@ -7063,14 +7080,16 @@
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -7135,7 +7154,8 @@
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
@@ -7150,7 +7170,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -7400,7 +7421,8 @@
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -7849,7 +7871,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 LightRAG Integration",
           "ingested": "2026-04-08"
         }
@@ -8296,7 +8319,8 @@
         {
           "id": "src-aicp-local",
           "type": "documentation",
-          "file": "../devops-expert-local-ai/CLAUDE.md",
+          "project": "aicp",
+          "path": "CLAUDE.md",
           "title": "AICP \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -9534,7 +9558,8 @@
         {
           "id": "openarms-verify-all-code-paths",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-verify-all-code-paths.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-verify-all-code-paths.md",
           "description": "Live OpenArms lesson \u2014 convergent evidence. Operator-authored: 'When making an infrastructure change that affects how X is done, it is not enough to edit the file whose name matches the concern. Check EVERY site that does X. Use grep, not intuition. The absence of a compile error after an edit does not mean you fixed everything.' Adds verification-through-enumeration as a 5th convergent instance: AutoBE (compiler), HRM/TRM (recursive verify), our pipeline post chain, OpenArms hooks, and now grep-every-site coverage. Verified 2026-04-15."
         }
       ],
@@ -9917,49 +9942,57 @@
         {
           "id": "openarms-e016-frontmatter-pollution",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-frontmatter-pollution-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-frontmatter-pollution-findings.md",
           "description": "T109 spike finding \u2014 pipeline treats every agent-written file as task artifact. Recommendation Option B \u2014 filter in validator using model paths + existing-files.json. Verified 2026-04-15; matches our Class 1 row."
         },
         {
           "id": "openarms-e016-weakest-checker",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-weakest-checker-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-weakest-checker-findings.md",
           "description": "T110 spike finding \u2014 agent's code quality ceiling = strictest gate it believes applies. T110 also adds that code is SHAPED BY the checker targeted (esbuild-shaped code \u2260 strict-TS-shaped code), deeper than the gate-skip framing alone. Verified 2026-04-15."
         },
         {
           "id": "openarms-e016-corner-cutting",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-corner-cutting-verification-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-corner-cutting-verification-findings.md",
           "description": "T108 spike finding \u2014 test-stage skill instructs `pnpm test` only; agent faithfully follows. Design gap, not fatigue. v10 derived-gate catches the error at /stage-complete time, but agent doesn't self-verify. Verified 2026-04-15."
         },
         {
           "id": "openarms-e016-environment-patching",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-environment-patching-findings.md",
           "description": "T107 spike finding \u2014 T085 $27/12 retries, T086 $7.33/4 retries; combined prompt+infra+model-bias root cause. Recommendation layered pre-flight + retry cap. Verified 2026-04-15; Class 3 refined-fix cell sourced directly from this doc."
         },
         {
           "id": "openarms-e016-sub-agent-compliance",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md",
           "description": "T111 spike finding \u2014 sub-agents violate behavioral rules ~67% of the time (= ~33% compliance) even when rules in spawn prompt. Recommendation Option 3 (trustless verification). Verified 2026-04-15; updated Class 5 number from our prior 50% estimate to T111's measured 67% violation rate."
         },
         {
           "id": "openarms-e016-done-when-acceptance",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md",
           "description": "T112 spike finding \u2014 three-layer problem (bad items upstream + no reject protocol + model_na masking). Recommendation dispatch-time generation with merge strategy 3. Verified 2026-04-15; Class 6 refined-fix cell sourced directly from this doc."
         },
         {
           "id": "openarms-live-integration-tests-insufficient",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-integration-tests-insufficient.md",
           "description": "Live OpenArms lesson \u2014 closed-verification-loop failure. 686 passing tests across 4 epics at review/100% status, but 2073 lines nothing imported at runtime. Convergent with Class 2 (weakest-checker) at a deeper level: when the agent writes both impl AND tests, tests verify what was built not what should work. Adds the 'externality of verify step' invariant to our taxonomy. Verified 2026-04-15."
         },
         {
           "id": "openarms-live-specific-done-when",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-specific-done-when.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-specific-done-when.md",
           "description": "Live OpenArms lesson \u2014 convergent with Class 6 fix. Specific Done When items produce better work than generic boilerplate templates. Complements T112 dispatch-time generation by specifying the WHAT-MAKES-A-DONE-WHEN-WORK alongside the WHEN-TO-GENERATE-IT. Verified 2026-04-15."
         }
       ],
@@ -10031,13 +10064,15 @@
         {
           "id": "openarms-live-read-reasoning-before-reverting",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-read-agent-reasoning-before-reverting.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-read-agent-reasoning-before-reverting.md",
           "description": "Live OpenArms lesson \u2014 operator-authored reflection on T085+T086 incidents. Primary-source authorship (PO, not agent-deduced) makes this the authoritative instance evidence. Our synthesis ABSTRACTS above it \u2014 the OpenArms lesson is about \"revert without diagnosis\"; our synthesis frames both \"block without bypass\" AND \"revert without diagnosis\" as two faces of the same mindful-enforcement rule. Verified 2026-04-15; content already absorbed at principle level in Evidence section below."
         },
         {
           "id": "openarms-clean-win-scope-expansion",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-clean-win-scope-expansion.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-clean-win-scope-expansion.md",
           "description": "Live OpenArms lesson \u2014 convergent sibling. T116 case: agent made an unauthorized 'clean' refactor (standalone function \u2192 private static method on CostAccumulator) while implementing authorized task. Hooks + diff-validators don't catch this class because the refactor is technically correct and in-allowed-surface. The mindful-enforcement bypass mechanism is what surfaces these: agent should block-with-escalation at design-time for any refactor outside task spec, regardless of quality. Verified 2026-04-15. Instance of the broader scope-creep class."
         }
       ],
@@ -10530,7 +10565,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation"
         }
       ],
@@ -12073,7 +12109,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }
@@ -13407,7 +13444,8 @@
         {
           "id": "devops-control-plane-adapters",
           "type": "observation",
-          "file": "/home/jfortin/devops-control-plane/docs/ADAPTERS.md",
+          "project": "devops-control-plane",
+          "path": "docs/ADAPTERS.md",
           "description": "Canonical specification \u2014 'An adapter is a pluggable component that executes actions against external tools. Adapters never raise exceptions. All failures are captured in the Receipt.' Includes circuit-breaker integration, mock mode for testing, raw command fallback, explicit Adapter ABC with name/is_available/validate/execute methods. Verified 2026-04-15."
         },
         {
@@ -13485,25 +13523,29 @@
         {
           "id": "openarms-preliminary-placeholder",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/agent-escalation-with-justification.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/agent-escalation-with-justification.md",
           "description": "Preliminary OpenArms placeholder \u2014 operator quote \"When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable.\" File explicitly marked \"The fully synthesized pattern is coming from the brain.\" This pattern page is that synthesis."
         },
         {
           "id": "openarms-e016-environment-patching",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-environment-patching-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-environment-patching-findings.md",
           "description": "T107 \u2014 root cause of T085. Retry-cap fix is one trigger of this pattern; pattern subsumes the fix by specifying what happens AFTER retry cap fires."
         },
         {
           "id": "openarms-e016-sub-agent-compliance",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-sub-agent-compliance-findings.md",
           "description": "T111 \u2014 sub-agent output-verification failures become escalation triggers under this pattern."
         },
         {
           "id": "openarms-e016-done-when-acceptance",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md",
+          "project": "openarms",
+          "path": "wiki/domains/architecture/agent-behavior-done-when-acceptance-findings.md",
           "description": "T112 \u2014 silent conflict resolution is the direct failure mode this pattern's block step prevents."
         },
         {
@@ -13571,19 +13613,22 @@
         {
           "id": "openarms-live-ofv-pattern",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/pattern-observe-fix-verify.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/pattern-observe-fix-verify.md",
           "description": "Live OpenArms pattern file \u2014 operator-authored naming + first-principles description of the OFV cycle as observed in the 2026-04-09 autonomous session. Verified 2026-04-15; this pattern page synthesizes from OA's naming + our own three-layer evidence."
         },
         {
           "id": "openarms-live-methodology-battle-tested",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-methodology-battle-tested.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-methodology-battle-tested.md",
           "description": "Live OpenArms lesson \u2014 \"stable not because well-designed initially but stress-tested by real operation\" \u2014 the claim this pattern operationalizes. Verified 2026-04-15."
         },
         {
           "id": "openarms-live-integration-tests-insufficient",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-integration-tests-insufficient.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-integration-tests-insufficient.md",
           "description": "Live OpenArms lesson \u2014 closed-verification-loop failure mode (agent writes both impl+tests, 686 passing tests / 0 runtime imports / 2073 lines orphaned). Evidence that the Verify step MUST be external to the agent. Verified 2026-04-15."
         }
       ],
@@ -13733,7 +13778,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation"
         }
       ],
@@ -13820,7 +13866,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation"
         },
         {
@@ -13906,7 +13953,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation"
         },
         {
@@ -14445,19 +14493,22 @@
         {
           "id": "openfleet-live-immune-system-spec",
           "type": "observation",
-          "file": "/home/jfortin/openfleet/docs/systems/02-immune-system.md",
+          "project": "openfleet",
+          "path": "docs/systems/02-immune-system.md",
           "description": "Live OpenFleet immune-system spec \u2014 opens with \"3 files. 746 lines.\" Lists 5 diseases (deviation / laziness / protocol violation / confident-but-wrong / scope creep) matching our taxonomy. Verified 2026-04-15."
         },
         {
           "id": "openfleet-live-doctor-design",
           "type": "observation",
-          "file": "/home/jfortin/openfleet/docs/milestones/active/immune-system/02-the-doctor.md",
+          "project": "openfleet",
+          "path": "docs/milestones/active/immune-system/02-the-doctor.md",
           "description": "Live OpenFleet doctor-design doc \u2014 grounded in verbatim PO quotes that author the requirements (e.g. \"even if it mean having a hidden doctor agent that prune agent and agent work, force compact, rules reinjection...\"). Unusually strong source \u2014 requirements authored by operator, not deduced by agent. Verified 2026-04-15."
         },
         {
           "id": "openfleet-live-disease-catalogue",
           "type": "observation",
-          "file": "/home/jfortin/openfleet/docs/milestones/active/immune-system/03-disease-catalogue.md",
+          "project": "openfleet",
+          "path": "docs/milestones/active/immune-system/03-disease-catalogue.md",
           "description": "Live OpenFleet disease catalogue \u2014 per-disease PO evidence quotes + live incident evidence (control-surface-task confident-but-wrong instance). Verified 2026-04-15."
         }
       ],
@@ -19305,7 +19356,8 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation"
         }
       ],
@@ -19565,7 +19617,8 @@
         {
           "id": "openarms-live-methodology-battle-tested",
           "type": "observation",
-          "file": "/home/jfortin/openarms/wiki/domains/learnings/lesson-methodology-battle-tested.md",
+          "project": "openarms",
+          "path": "wiki/domains/learnings/lesson-methodology-battle-tested.md",
           "description": "Live OpenArms lesson \u2014 operator-authored evidence for the 'methodology hardened by 7 bugs in one day' narrative cited in Key Insights. Converges with our synthesis: 'An agent methodology written in theory will fail in practice... stable not because it was well-designed initially, but because it was stress-tested by real operation.' Verified 2026-04-15."
         }
       ],
@@ -19807,14 +19860,16 @@
         {
           "id": "src-openfleet-local",
           "type": "documentation",
-          "file": "../openfleet/CLAUDE.md",
+          "project": "openfleet",
+          "path": "CLAUDE.md",
           "title": "OpenFleet \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         },
         {
           "id": "src-devops-control-plane-local",
           "type": "documentation",
-          "file": "../devops-control-plane/README.md",
+          "project": "devops-control-plane",
+          "path": "README.md",
           "title": "devops-control-plane \u2014 Local Project Documentation",
           "ingested": "2026-04-08"
         }

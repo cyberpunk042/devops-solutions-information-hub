@@ -13,12 +13,14 @@ updated: 2026-04-13
 sources:
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — Local Project Documentation
     ingested: 2026-04-08
   - id: src-aicp-local
     type: documentation
-    file: ../devops-expert-local-ai/CLAUDE.md
+    project: aicp
+    path: CLAUDE.md
     title: AICP — Local Project Documentation
     ingested: 2026-04-08
   - id: src-openarms-local
@@ -28,20 +30,24 @@ sources:
     ingested: 2026-04-08
   - id: src-devops-control-plane-local
     type: documentation
-    file: ../devops-control-plane/README.md
+    project: devops-control-plane
+    path: README.md
     title: devops-control-plane — Local Project Documentation
     ingested: 2026-04-08
   - id: aicp-live-openarms-architecture-analysis
     type: observation
-    file: /home/jfortin/devops-expert-local-ai/docs/kb/research/openarms-architecture-analysis.md
+    project: aicp
+    path: docs/kb/research/openarms-architecture-analysis.md
     description: "Live AICP research doc — AICP's concrete integration architecture for OpenArms. Captures protocol details (WebSocket ws://localhost:18789, JSON RequestFrame/ResponseFrame/EventFrame), session-key format (acp:uuid, agent:main:wa:peer), 11-row architecture-parallels table (Gateway ↔ Agent daemon, TaskRecord ↔ TaskState, ACP ↔ Fleet agent, etc.), and a 4-phase integration roadmap (MCP → Provider Plugin → ACP Runtime → Full Multimodal). Unique cross-sister-perspective source: AICP analyzing OpenArms as integration target. Verified 2026-04-15."
   - id: devops-control-plane-live-adapters
     type: observation
-    file: /home/jfortin/devops-control-plane/docs/ADAPTERS.md
+    project: devops-control-plane
+    path: docs/ADAPTERS.md
     description: "Live devops-control-plane adapter spec — concretely defines the plugin/adapter protocol (Action → AdapterRegistry → Receipt) that other ecosystem projects follow. Invariant: 'Adapters never raise exceptions.' Feeds the Adapters Never Raise pattern. Verified 2026-04-15."
   - id: devops-control-plane-live-design
     type: observation
-    file: /home/jfortin/devops-control-plane/docs/DESIGN.md
+    project: devops-control-plane
+    path: docs/DESIGN.md
     description: "Live devops-control-plane DESIGN.md — product-vision and core pillars. Frames the control plane as a meta-tool: 'Not an application. A structured way to discover what a solution is, what it needs, and how to act on it — through any interface (CLI, Web, TUI), backed by pluggable tool bindings.' Six pillars (Visibility, Integrations, Vaults, Stacks, Automation, Lifecycle). Gives the ecosystem's 'infrastructure governance' project a first-principles description. Verified 2026-04-15."
 tags: [devops, ecosystem, openfleet, aicp, devops-control-plane, openarms, research-wiki, architecture, multi-project, integration]
 ---

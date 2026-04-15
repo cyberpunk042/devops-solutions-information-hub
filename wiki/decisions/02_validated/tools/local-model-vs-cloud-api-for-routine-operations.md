@@ -19,7 +19,8 @@ updated: 2026-04-13
 sources:
   - id: src-aicp-local
     type: documentation
-    file: ../devops-expert-local-ai/CLAUDE.md
+    project: aicp
+    path: CLAUDE.md
     title: AICP — Local Project Documentation
 tags: [aicp, localai, claude, routing, local-first, cost-optimization, backend-selection, complexity-scoring, wiki-pipeline]
 ---

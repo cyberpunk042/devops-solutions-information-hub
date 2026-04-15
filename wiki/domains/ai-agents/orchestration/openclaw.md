@@ -18,7 +18,8 @@ sources:
     ingested: 2026-04-08
   - id: src-openfleet-local
     type: documentation
-    file: ../openfleet/CLAUDE.md
+    project: openfleet
+    path: CLAUDE.md
     title: OpenFleet — OpenClaw Usage
     ingested: 2026-04-08
 tags: [openclaw, agent-framework, gateway, brain, memory, skills, heartbeat, mission-control, multi-agent, messaging]
