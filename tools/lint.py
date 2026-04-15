@@ -255,6 +255,103 @@ def _check_filename_hygiene(
     return issues
 
 
+def _check_queue_drift(
+    pages: List[Path],
+    queue_path: Path,
+) -> List[Dict[str, Any]]:
+    """Detect drift between the operator-decision-queue and home-page resolutions.
+
+    The queue at wiki/backlog/operator-decision-queue.md tracks operator
+    decisions across the wiki. Each entry links to a "source page" where
+    the question is load-bearing. Resolutions can land in either place:
+
+    1. In the queue table (struck-through with `~~N~~` and `**RESOLVED:**`)
+    2. In the home page (struck-through `[!question] ~~...~~ **RESOLVED:**`
+       callout)
+
+    Drift = the two are out of sync. Specifically, this check flags:
+
+    - **drift_home_resolved_queue_open**: the queue lists question N as OPEN
+      (no strikethrough on the row number), but the linked source page
+      contains `[!question] ~~...~~ **RESOLVED:**` callouts. Operator should
+      verify whether one of those resolved callouts corresponds to the open
+      queue entry and sync if so.
+
+    Returns advisory issues — not blocking. Designed to prevent recurrence
+    of the queue-drift pattern observed during the 2026-04-15 session
+    (P2-P5 questions were all already resolved inline; queue had not been
+    synced — 36 entries needed propagation).
+    """
+    if not queue_path.exists():
+        return []
+
+    import re as _re
+    issues: List[Dict[str, Any]] = []
+
+    try:
+        queue_text = queue_path.read_text(encoding="utf-8")
+    except Exception:
+        return []
+
+    # Build slug → page-path mapping for source-page resolution
+    slug_to_path: Dict[str, Path] = {}
+    for page in pages:
+        slug_to_path[page.stem] = page
+
+    # Parse queue rows. Each row looks like:
+    #   | <number_or_~~strikethrough~~> | <question or RESOLVED text> | [[slug|title]] |
+    # An OPEN row has a bare integer between pipes:  | 9 |
+    # A RESOLVED row has strikethrough:              | ~~9~~ |
+    open_row_re = _re.compile(r"^\|\s*(\d+[a-z]?)\s*\|", _re.MULTILINE)
+    open_numbers: List[str] = open_row_re.findall(queue_text)
+
+    # For each line that starts with "| <bare-number> |", capture the row
+    # and its wikilink target (last `[[...]]` on the line is the source page)
+    for line in queue_text.split("\n"):
+        m = _re.match(r"^\|\s*(\d+[a-z]?)\s*\|(.*)$", line)
+        if not m:
+            continue
+        number = m.group(1)
+        rest = m.group(2)
+        # Find the last wikilink on the row — it's the source-page link
+        wikilinks = _re.findall(r"\[\[([^\]|]+)(?:\|[^\]]+)?\]\]", rest)
+        if not wikilinks:
+            continue
+        source_slug = wikilinks[-1]
+
+        # Resolve to a page path
+        page = slug_to_path.get(source_slug)
+        if page is None:
+            continue
+
+        # Read source page; look for resolved-question callouts
+        try:
+            page_text = page.read_text(encoding="utf-8")
+        except Exception:
+            continue
+
+        # `> [!question] ~~...~~` followed (within ~5 lines) by `**RESOLVED:**`
+        # Use multiline regex to find resolved-question callouts in the page
+        resolved_callout_re = _re.compile(
+            r"^>\s*\[!question\]\s*~~[^~]+~~", _re.MULTILINE
+        )
+        resolved_count = len(resolved_callout_re.findall(page_text))
+
+        if resolved_count > 0:
+            issues.append({
+                "queue_number": number,
+                "source_page": source_slug,
+                "resolved_callouts_in_page": resolved_count,
+                "hint": (
+                    f"Queue Q{number} is OPEN but {source_slug} contains "
+                    f"{resolved_count} resolved [!question] callout(s). "
+                    f"Verify if one of them resolves Q{number} and sync the queue."
+                ),
+            })
+
+    return issues
+
+
 def _check_unstyled_pages(
     pages: List[Path],
     min_lines: int = 80,
@@ -457,6 +554,10 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
     unstyled_pages = _check_unstyled_pages(pages)
     filename_issues = _check_filename_hygiene(pages)
     standards_issues = _check_standards_exemplars(pages)
+    queue_drift = _check_queue_drift(
+        pages,
+        wiki_dir / "backlog" / "operator-decision-queue.md",
+    )
 
     total_issues = (
         len(dead_relationships)
@@ -465,7 +566,8 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         + len(orphan_pages)
         + sum(len(d["issues"]) for d in domain_health)
     )
-    # Unstyled pages are advisory — not counted in total_issues
+    # Unstyled pages, standards issues, and queue drift are advisory —
+    # not counted in total_issues (won't cause `pipeline post` to fail)
 
     return {
         "orphan_pages": orphan_pages,
@@ -475,6 +577,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         "unstyled_pages": unstyled_pages,
         "filename_issues": filename_issues,
         "standards_issues": standards_issues,
+        "queue_drift": queue_drift,
         "domain_health": domain_health,
         "summary": {
             "pages_scanned": len(pages),
@@ -485,6 +588,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
             "orphan_pages": len(orphan_pages),
             "unstyled_pages": len(unstyled_pages),
             "standards_issues": len(standards_issues),
+            "queue_drift": len(queue_drift),
             "domain_health_issues": sum(len(d["issues"]) for d in domain_health),
         },
     }
@@ -627,10 +731,20 @@ def _print_human_report(report: Dict[str, Any]) -> None:
             print(f"  {p['title']} [{p['type']}]: {p['lines']} lines, no callouts")
         print()
 
+    if report.get("queue_drift"):
+        print(f"Queue Drift ({len(report['queue_drift'])}) [advisory]:")
+        print(f"  Operator-decision-queue entries that may be out-of-sync with home-page resolutions.")
+        print(f"  Verify each: if the home-page resolved-callout corresponds to the queue entry, sync the queue.")
+        for d in report["queue_drift"]:
+            print(f"  Q{d['queue_number']} (open) → {d['source_page']} ({d['resolved_callouts_in_page']} resolved callout(s) in page)")
+        print()
+
     status = "PASS" if s["total_issues"] == 0 else "FAIL"
     print(f"{status}: {s['total_issues']} issue(s) found")
     if s.get("unstyled_pages", 0) > 0:
         print(f"  ({s['unstyled_pages']} unstyled pages — advisory, not blocking)")
+    if s.get("queue_drift", 0) > 0:
+        print(f"  ({s['queue_drift']} queue-drift candidates — advisory, not blocking)")
 
 
 def main():
