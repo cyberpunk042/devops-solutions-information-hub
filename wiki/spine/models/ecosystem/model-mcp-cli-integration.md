@@ -275,3 +275,4 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[claude-code-context-management|Claude Code Context Management]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
+[[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]

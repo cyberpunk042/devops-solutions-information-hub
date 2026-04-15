@@ -86,7 +86,7 @@ Every context file has exactly one value per dimension. Together, 8 values defin
 
 **Dimension 7 — Depth Relationship.** Every file stands in some relationship to the wiki knowledge base. *Condensed* means the file is a summary of deeper wiki pages — the reader can get more from the wiki. *Authoritative* means the file IS the deep content — no separate wiki page expands it further. *Index* means the file is a navigation entry to wiki pages. *Orphan* means no wiki page corresponds to this file — it stands alone (historical logs, runtime-generated files).
 
-**Dimension 8 — Expansion Pattern.** Structural, not semantic. *Flat file* — one file, no companion. *File + companion folder* — a root file plus a folder containing expansion entries. *Folder (README-indexed)* — a directory whose README orients the reader to all sub-contents. *Runtime-generated tree* — a folder whose contents accumulate at runtime with entries created by agents or harnesses.
+**Dimension 8 — Expansion Pattern.** Structural, not semantic. *Flat file* — one file, no companion. *File + companion folder* — a root file plus a folder containing expansion entries. *Folder (README-indexed)* — a directory whose README orients the reader to all sub-contents. *Runtime-generated tree* — a folder whose contents accumulate at runtime with entries created by agents or harnesses. *Manifest with imports* — a root file that is itself a list of `@`-include statements aggregating sibling files at load time (observed in Cline's CLAUDE.md: `@.clinerules/general.md` + others).
 
 ---
 
@@ -102,6 +102,7 @@ The expansion pattern dimension reveals a recurring structural idiom that appear
 > | **File + companion folder** | Root file + sibling folder containing depth entries | `SKILLS.md` (root) + `.claude/skills/*.md` (individual skills) |
 > | **Folder (README-indexed)** | Directory with `README.md` explaining contents | `wiki/config/sdlc-profiles/` + `wiki/config/README.md` |
 > | **Runtime-generated tree** | Static root doc + companion folders accumulating at runtime | OpenFleet `SOUL.md` (static) + `tasks/` (per-dispatch) + `heartbeat/` (per-tick) + `feed/` (streaming) |
+> | **Manifest with imports** | Root file is a list of `@`-include statements; real content lives in sibling files resolved at load time | Cline's `CLAUDE.md`: `@.clinerules/general.md` + `@.clinerules/network.md` + `@.clinerules/cli.md` (root is 3 lines; content is in the imported files). See [[src-cline-agentic-coding-ide-extension\|Synthesis — Cline]] |
 
 **Why the pattern works:**
 

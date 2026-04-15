@@ -90,6 +90,7 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 | Claude Code ecosystem | ai-agents | AGENTS.md (<100 lines, cross-tool) | CLAUDE.md (<20 lines, Claude delta) | `.claude/skills/*.md` (<500 lines each) |
 | BMAD-METHOD | methodology | `project-context.md` (living constitution, auto-loaded by all agents) | Per-agent persona files (PM, Architect, Developer, etc.) | Task workflow skills (brainstorming, quick-dev, code-review, etc.) |
 | This wiki (post-refactor 2026-04-14) | knowledge | AGENTS.md (159 lines) | CLAUDE.md (107 lines, slimmed from 315) | `.claude/skills/` + 5 thematic root docs |
+| Cline (VS Code extension, v3.55+) | ai-agents | AGENTS.md (explicit support added) | CLAUDE.md as pure imports: `@.clinerules/general.md` + others | `.agents/skills/*/SKILL.md` (folder-per-skill pattern) |
 
 > [!example]- Instance 1: Claude Code Ecosystem (canonical source)
 >
@@ -135,6 +136,18 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 > - **SKILLS.md** (275L) — skills directory guide, format, extension hierarchy
 >
 > **Result:** 2,714 lines across 8 files vs 315 lines crammed into one. Each file has ONE responsibility. AGENTS.md slightly over the 100-line target (pragmatic — this is a complex system with many sacrosanct rules), CLAUDE.md slightly over 100 (107) but well below the 300-line ETH Zurich harm threshold. See [[root-documentation-map|Root Documentation Map]] for the full implementation map.
+
+> [!example]- Instance 4: Cline (independent implementation, VS Code extension, 2026-04-15 evidence)
+>
+> **Source:** [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension]]
+>
+> **Layer 1 — AGENTS.md:** Cline added explicit AGENTS.md support (per changelog). Cross-tool universal standard adopted independently by a VS Code extension reaching millions of users. Direct ecosystem validation that AGENTS.md is not Claude-Code-specific — it's the emerging universal agent context standard.
+>
+> **Layer 2 — CLAUDE.md as pure imports:** Cline's own `CLAUDE.md` is three lines: `@.clinerules/general.md` + `@.clinerules/network.md` + `@.clinerules/cli.md`. This is a distinct composition pattern from the delta-overrides approach. The manifest aggregates separate concern-files via `@`-include syntax. Two legitimate composition patterns for Layer 2: **delta overrides** (our approach) and **manifest + imports** (Cline). Both valid, different trade-offs.
+>
+> **Layer 3 — `.agents/skills/`:** Folder-per-skill pattern with SKILL.md anchor. Example in repo: `.agents/skills/create-pull-request/SKILL.md`. Migration noted in changelog: "Move PR skill to .agents/skills" — Cline is actively aligning with the cross-tool `.agents/` convention that AGENTS.md implies.
+>
+> **Structural confirmation:** Cline's convergence is particularly strong evidence because (a) it's independently developed, (b) it's at consumer scale (millions of users), (c) it REVERSED design choices (strict plan mode became opt-in in v3.55) which shows the architecture was refined against real friction rather than imposed. The three-layer pattern is now validated across FOUR independent implementations at different scales and domains.
 
 ## When To Apply
 
@@ -185,3 +198,4 @@ The 500-line ceiling per skill file is a per-file limit, not an aggregate limit.
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]
+[[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]

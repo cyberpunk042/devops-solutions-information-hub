@@ -53,6 +53,7 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 > | Runtime | Configuration | Extension | Key Difference |
 > |---------|--------------|-----------|----------------|
 > | **Claude Code** | CLAUDE.md + settings.json | Skills, hooks, MCP tools | This model's reference implementation |
+> | **Cline** (VS Code extension) | AGENTS.md + CLAUDE.md (as `@`-imports) + `.clinerules/*.md` | `.agents/skills/`, hooks, MCP, checkpoints, plan/act modes | Architectural twin of Claude Code in an IDE UX. Per-step workspace snapshots; MCP-creation-on-demand; strict plan mode opt-in. See [[src-cline-agentic-coding-ide-extension\|Synthesis — Cline]] |
 > | **Cursor** | .cursorrules | Custom rules, @commands | IDE-integrated, visual-first |
 > | **Windsurf** | .windsurf/rules/*.md | Cascade flows | Directory-based rules, 12k char limit per file |
 > | **GitHub Copilot** | .github/copilot-instructions.md | Extensions | IDE-embedded, completion-focused |
@@ -514,6 +515,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
+[[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]

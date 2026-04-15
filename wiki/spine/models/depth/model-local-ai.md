@@ -242,6 +242,16 @@ Hierarchical Recurrent Models (27M parameters) and Token Recurrent Models (7M pa
 
 Raschka's 2026 gallery documents that top model architectures have converged around Multi-head Latent Attention (MLA) + Mixture-of-Experts (MoE) — DeepSeek V3 and Mistral Large 3 use near-identical templates. Active parameter fractions of 3-10% are the norm: a 30B MoE model activates only 3B parameters per token. This means the quality gap between a local 30B MoE (e.g., Qwen3-30B MoE, already loaded) and a cloud 200B+ dense model is smaller than raw parameter counts suggest. For routing decisions, the relevant comparison is not total parameters — it is activated parameters per inference pass.
 
+**[[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Qwopus]]: Reasoning Distillation Makes Opus-Style Local (NEW 2026-04-15)**
+
+Developer Jackrong distilled Claude Opus 4.6's chain-of-thought reasoning into Qwen3.5-27B via LoRA fine-tuning, producing the Qwopus family. v3 uses **structural alignment** (training the model to reason step-by-step faithfully) + explicit tool-calling reinforcement. Reported: 95.73% on HumanEval; coding output beat Google's Gemma 4 (41B params) despite being 27B. Runs on Apple MacBook 32GB unified memory via GGUF + LM Studio. **1M+ downloads across the model family.** Claude Code and OpenCode compatibility tested and working without patches. Full training pipeline (Qwen base → Unsloth → LoRA → response-only fine-tuning → GGUF) published on GitHub — fully reproducible on Colab.
+
+> [!success] **Stage 3 is no longer "future" — it's "select the right model now"**
+>
+> Before Qwopus: Stage 3 (complex reasoning local) was gated on the 19GB VRAM upgrade + the Gemma4-E4B landing. After Qwopus: a 27B reasoning-distilled model runs on consumer hardware today, with tool-calling intact, preserving "full thinking mode." The AICP Stage 3 roadmap gains a concrete Tier 2-3 model candidate. The routing-portfolio strategy graduates from architectural plan to operational reality.
+
+**The fourth converging data point on training-matters-more-than-size:** AutoBE (Qwen 25× cheaper than Opus with verification) + HRM/TRM (27M beats GPT-5 on ARC-AGI) + MLA/MoE convergence (3-10% active params) + **Qwopus (27B distilled beats 41B undistilled)**. Four independent mechanisms arrive at the same conclusion: **training methodology dominates parameter count for structured reasoning tasks**. The empirical case for $0 local inference is stronger than Stage 3's original design assumed.
+
 > [!info] **Synthesis: What this means for the routing model**
 >
 > | Prior assumption | Updated by evidence |
@@ -306,6 +316,8 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
+[[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
+[[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Synthesis — Qwopus — Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B]]

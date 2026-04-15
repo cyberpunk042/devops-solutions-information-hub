@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-15T00:13:36.466746+00:00",
+  "generated": "2026-04-15T10:44:25.521128+00:00",
   "stats": {
-    "pages": 320,
+    "pages": 322,
     "domains": 9,
-    "sources": 43,
+    "sources": 45,
     "comparisons": 5,
-    "relationships": 2095,
-    "tags_unique": 971,
+    "relationships": 2109,
+    "tags_unique": 980,
     "layers": {
       "3": 4,
       "6": 16,
       "2": 51,
       "4": 42,
       "5": 19,
-      "1": 25,
+      "1": 27,
       "spine": 65
     },
     "maturity": {
-      "growing": 263,
+      "growing": 265,
       "seed": 13
     }
   },
@@ -15729,6 +15729,78 @@
       "relationships": []
     },
     {
+      "path": "sources/src-cline-agentic-coding-ide-extension.md",
+      "slug": "sources/src-cline-agentic-coding-ide-extension",
+      "title": "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
+      "type": "source-synthesis",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "cline",
+        "claude-code",
+        "vs-code-extension",
+        "agentic-coding",
+        "mcp",
+        "skills",
+        "hooks",
+        "plan-mode",
+        "checkpoints",
+        "agents-md",
+        "multi-provider",
+        "ecosystem-comparison"
+      ],
+      "sources": [
+        {
+          "id": "cline-github",
+          "type": "documentation",
+          "url": "https://github.com/cline/cline",
+          "file": "raw/articles/clinecline.md",
+          "title": "cline/cline \u2014 VS Code extension for agentic coding",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context File Taxonomy"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Three-Layer Agent Context Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 Claude Code"
+        }
+      ]
+    },
+    {
       "path": "sources/src-code-review-graph-automated-review.md",
       "slug": "sources/src-code-review-graph-automated-review",
       "title": "Source \u2014 code-review-graph: Graph-Based Automated Code Review",
@@ -16182,6 +16254,76 @@
         },
         {
           "verb": "BUILDS ON",
+          "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b.md",
+      "slug": "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "title": "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "distillation",
+        "local-ai",
+        "qwen",
+        "claude-opus",
+        "reasoning",
+        "gguf",
+        "consumer-hardware",
+        "aicp",
+        "zero-cost",
+        "structural-alignment"
+      ],
+      "sources": [
+        {
+          "id": "decrypt-article",
+          "type": "article",
+          "url": "https://decrypt.co/364047/want-claude-opus-ai-potato-pc-next-best-bet",
+          "file": "raw/articles/want-claude-opus-ai-on-your-potato-pc-this-is-your-next-best-bet-decrypt.md",
+          "title": "Want Claude Opus AI on Your Potato PC? This Is Your Next-Best Bet",
+          "ingested": "2026-04-15"
+        },
+        {
+          "id": "huggingface-model-card",
+          "type": "article",
+          "url": "https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled",
+          "file": "raw/articles/jackrongqwen35-27b-claude-46-opus-reasoning-distilled-hugging-face.md",
+          "title": "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled \u00b7 Hugging Face",
+          "ingested": "2026-04-15"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 HRM/TRM \u2014 Tiny Recursion Models"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 AutoBE \u2014 Compiler-Verified Backend Generation"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Lesson \u2014 If You Can Verify, You Converge"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "RELATES TO",
           "target": "Model \u2014 Ecosystem Architecture"
         }
       ]
@@ -20928,8 +21070,8 @@
       "relationship_count": 977
     },
     "ai-agents": {
-      "page_count": 56,
-      "relationship_count": 420
+      "page_count": 57,
+      "relationship_count": 428
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -20940,8 +21082,8 @@
       "relationship_count": 99
     },
     "ai-models": {
-      "page_count": 6,
-      "relationship_count": 25
+      "page_count": 7,
+      "relationship_count": 31
     },
     "automation": {
       "page_count": 7,
@@ -21231,6 +21373,7 @@
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
       "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
@@ -21300,6 +21443,7 @@
       "domains/tools-and-platforms/aicp",
       "ecosystem/project_profiles/aicp/identity-profile",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem"
     ],
@@ -21313,6 +21457,7 @@
     ],
     "zero-cost": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "spine/models/depth/model-local-ai"
     ],
     "ecosystem": [
@@ -21498,6 +21643,7 @@
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/src-claude-agent-sdk-and-managed-agents",
+      "sources/src-cline-agentic-coding-ide-extension",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -21541,6 +21687,7 @@
       "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
+      "sources/src-cline-agentic-coding-ide-extension",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -21928,6 +22075,7 @@
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
       "sources/src-7-levels-claude-code-rag",
       "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
@@ -22401,7 +22549,8 @@
       "spine/standards/model-standards/model-llm-wiki-standards"
     ],
     "plan-mode": [
-      "domains/ai-agents/claude-code/claude-code-best-practices"
+      "domains/ai-agents/claude-code/claude-code-best-practices",
+      "sources/src-cline-agentic-coding-ide-extension"
     ],
     "subagents": [
       "domains/ai-agents/claude-code/claude-code-best-practices",
@@ -22889,7 +23038,8 @@
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "consumer-hardware": [
-      "domains/ai-models/local-llm-quantization"
+      "domains/ai-models/local-llm-quantization",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
@@ -23179,7 +23329,8 @@
       "domains/cross-domain/methodology-framework/methodology-config-architecture"
     ],
     "reasoning": [
-      "domains/cross-domain/methodology-framework/methodology-config-architecture"
+      "domains/cross-domain/methodology-framework/methodology-config-architecture",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "composable": [
       "domains/cross-domain/methodology-framework/methodology-framework",
@@ -24359,6 +24510,7 @@
     ],
     "agents-md": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "spine/models/agent-config/model-markdown-as-iac"
     ],
@@ -24416,7 +24568,8 @@
       "patterns/03_validated/architecture/progressive-distillation"
     ],
     "distillation": [
-      "patterns/03_validated/architecture/progressive-distillation"
+      "patterns/03_validated/architecture/progressive-distillation",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "features": [
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
@@ -24716,6 +24869,7 @@
     ],
     "local-ai": [
       "sources/src-27-questions-llm-selection",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "spine/models/depth/model-local-ai"
     ],
     "performance": [
@@ -24743,7 +24897,8 @@
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "qwen": [
-      "sources/src-autobe-compiler-verified-backend-generation"
+      "sources/src-autobe-compiler-verified-backend-generation",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "structured-outputs": [
       "sources/src-autobe-compiler-verified-backend-generation",
@@ -24801,6 +24956,24 @@
     ],
     "quality-enforcement": [
       "sources/src-claude-code-prompt-patch-rebalancing"
+    ],
+    "cline": [
+      "sources/src-cline-agentic-coding-ide-extension"
+    ],
+    "vs-code-extension": [
+      "sources/src-cline-agentic-coding-ide-extension"
+    ],
+    "agentic-coding": [
+      "sources/src-cline-agentic-coding-ide-extension"
+    ],
+    "checkpoints": [
+      "sources/src-cline-agentic-coding-ide-extension"
+    ],
+    "multi-provider": [
+      "sources/src-cline-agentic-coding-ide-extension"
+    ],
+    "ecosystem-comparison": [
+      "sources/src-cline-agentic-coding-ide-extension"
     ],
     "code-review": [
       "sources/src-code-review-graph-automated-review",
@@ -24956,6 +25129,15 @@
     ],
     "production-grade": [
       "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "claude-opus": [
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "gguf": [
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "structural-alignment": [
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "cross-tool": [
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
@@ -25374,6 +25556,7 @@
     {
       "target": "Context File Taxonomy",
       "referenced_by": [
+        "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
         "Session Handoff Standards"
       ]
     },
@@ -25386,7 +25569,8 @@
     {
       "target": "Lesson \u2014 If You Can Verify, You Converge",
       "referenced_by": [
-        "Specs-as-Code-Source Inverts the Traditional Hierarchy"
+        "Specs-as-Code-Source Inverts the Traditional Hierarchy",
+        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
       ]
     },
     {
@@ -25395,9 +25579,11 @@
         "AICP \u2014 Identity Profile",
         "If You Can Verify, You Converge",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
+        "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
         "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
         "Synthesis \u2014 LLM Architecture Gallery (Raschka)",
         "Synthesis \u2014 Pydantic AI: Typed Agent Framework",
+        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
       ]
@@ -25422,12 +25608,24 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 AutoBE \u2014 Compiler-Verified Backend Generation",
+      "referenced_by": [
+        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Claude Code Best Practice",
       "referenced_by": [
         "Claude Code Best Practices",
         "Claude Code Context Management",
         "Claude Code Skills",
         "Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 HRM/TRM \u2014 Tiny Recursion Models",
+      "referenced_by": [
+        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
       ]
     },
     {
