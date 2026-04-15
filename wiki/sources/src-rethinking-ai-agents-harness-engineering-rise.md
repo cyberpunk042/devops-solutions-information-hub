@@ -177,10 +177,10 @@ The transcript mentions "harnesses suffer failure modes" in its discussion. The 
 
 ## Backlinks
 
-[[Synthesis — Anthropic Building Effective AI Agents]]
-[[Synthesis — Anthropic Effective Harnesses for Long-Running Agents]]
-[[Synthesis — NLAH]]
-[[Synthesis — Meta-Harness]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic Building Effective AI Agents]]
+[[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic Effective Harnesses for Long-Running Agents]]
+[[src-arxiv-natural-language-agent-harnesses|Synthesis — NLAH]]
+[[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]

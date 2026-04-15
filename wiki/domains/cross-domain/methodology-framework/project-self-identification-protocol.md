@@ -41,8 +41,8 @@ Every agent session, every harness run, every tool invocation must be able to an
 >
 > | # | Question | Values | Source | Auto-Detectable? |
 > |---|---------|--------|--------|-----------------|
-> | 1 | **What am I?** | Solo / harness-managed / fleet agent / sub-agent | The PROGRAM that launched you decides this | **No** — the harness/system tells you at runtime, or you're in solo mode (certain if no harness code exists) |
-> | 2 | **What execution mode?** | solo / harness v1 / harness v2 / harness v3 / full system | The harness decides its own version at launch based on its flags and capabilities | **No** — filesystem shows what CAPABILITIES exist, not what mode is RUNNING. Declare in CLAUDE.md or pass at runtime. |
+> | 1 | **What am I?** | Solo / harness-managed / fleet agent / sub-agent | The CONSUMER's runtime decides this (the program that launched you) | **No** — **solo is the default** for every project. A harness or fleet that wraps a project DECLARES non-default when it connects (e.g., via MCP config `runtime:` field). From inside the project, this cannot be detected — local absence of harness code is NOT evidence of solo mode elsewhere. See [[execution-mode-is-consumer-property-not-project-property\|Execution Mode Is a Consumer Property, Not a Project Property]]. |
+> | 2 | **What execution mode?** | solo / harness v1 / harness v2 / harness v3 / full system | The harness decides its own version at launch based on its flags and capabilities | **No** — execution mode is a CONSUMER property, not a project property. Filesystem may show what CAPABILITIES exist locally, but can never reveal which consumer is using the project elsewhere. Declare in CLAUDE.md or pass at runtime. |
 > | 3 | **What domain?** | TypeScript / Python / Infrastructure / Knowledge / Mixed | package.json, pyproject.toml, main.tf, wiki/config/ | **Yes** — detectable from project marker files |
 > | 4 | **What project phase?** | POC / MVP / Staging / Production | CI presence, test presence, Docker/deployment markers | **Partially** — heuristic from CI+tests+deploy markers. Operator should confirm. |
 > | 5 | **What scale?** | micro / small / medium / large / massive | Source file count (excluding vendored deps) | **Yes** — detectable by counting source files |
@@ -187,6 +187,7 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 > | What PM level? | [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]] — tracking depth matches PM level |
 > | What trust tier? | [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]] — context depth adapts per tier |
 > | All answers combined | [[methodology-adoption-guide|Methodology Adoption Guide]] — selects tier + profile + domain + enforcement |
+> | Project vs consumer vs task orthogonality | [[execution-mode-is-consumer-property-not-project-property\|Execution Mode Is a Consumer Property]] — three-layer orthogonality: stable identity / phase-scale state / consumer-task properties. Execution mode, SDLC profile, methodology model, and stage are NOT project properties — they are per-task or per-consumer. Added 2026-04-15. |
 
 ## Open Questions
 
@@ -207,6 +208,7 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 - BUILDS ON: [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 - BUILDS ON: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 - RELATES TO: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+- RELATES TO: [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property]]
 - RELATES TO: [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 - RELATES TO: [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 - RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
@@ -220,17 +222,20 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]
 [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+[[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property]]
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
 [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
+[[mcp-runtime-signaling|MCP Runtime Signaling — Integration Guide for Consumers]]
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]

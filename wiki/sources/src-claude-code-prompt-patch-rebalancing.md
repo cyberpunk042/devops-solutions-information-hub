@@ -209,3 +209,14 @@ Operators who do not apply the patch can achieve similar results through prompt 
 
 ## Relationships
 
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[model-context-engineering|Model — Context Engineering]]
+- RELATES TO: [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+- RELATES TO: [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
+
+## Backlinks
+
+[[model-claude-code|Model — Claude Code]]
+[[model-context-engineering|Model — Context Engineering]]
+[[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

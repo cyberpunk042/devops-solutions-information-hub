@@ -14,6 +14,7 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 
 ## Pages
 
+- [Decision — Consumer Runtime Signaling via MCP Config](00_inbox/consumer-runtime-signaling-via-mcp-config.md) — When a consumer (OpenArms harness, OpenFleet orchestrator, solo Claude session, or any other MCP client) connects to ...
 - [Decision — Obsidian vs NotebookLM as Knowledge Interface](02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface.md) — Obsidian and NotebookLM serve complementary roles as knowledge interfaces and should both be maintained rather than c...
 - [Decision — Quality Tier Operational Decisions](02_validated/knowledge/quality-tier-operational-decisions.md) — Three open questions from Skyscraper, Pyramid, Mountain resolved by cross-referencing the Methodology Framework, Immu...
 - [Decision — Wiki-First with LightRAG Upgrade Path](02_validated/knowledge/wiki-first-with-lightrag-upgrade-path.md) — This wiki operates in wiki-first mode — pure structured markdown with index navigation — until it approaches 200 page...
@@ -33,4 +34,4 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 
 ## Tags
 
-`design-decisions`, `decision`, `methodology`, `versioning`, `skills`, `hooks`, `quality-tiers`, `composition`, `stage-gate`, `obsidian`, `notebooklm`, `knowledge-interface`, `second-brain`, `graph-view`, `grounded-qa`, `complementary-tools`, `wiki-frontend`, `research-interface`, `skyscraper`, `pyramid`
+`design-decisions`, `decision`, `methodology`, `versioning`, `skills`, `hooks`, `mcp`, `quality-tiers`, `composition`, `stage-gate`, `runtime`, `consumer-property`, `harness-signaling`, `fleet-signaling`, `declared-over-detected`, `execution-mode`, `cross-project`, `obsidian`, `notebooklm`, `knowledge-interface`

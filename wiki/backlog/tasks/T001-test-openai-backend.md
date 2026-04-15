@@ -33,3 +33,17 @@ Run `pipeline evolve --auto --backend openai --top 1` against a running LocalAI 
 - [ ] `pipeline evolve --auto --backend openai --top 1` completes without error
 - [ ] Generated page passes `pipeline post` validation
 - [ ] Token count and generation time documented
+
+## Relationships
+
+- PART OF: [[E001-local-inference-engine|E001 — Local Inference Engine]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[model-local-ai|Model — Local AI ($0 Target)]]
+- RELATES TO: [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+
+## Backlinks
+
+[[E001-local-inference-engine|E001 — Local Inference Engine]]
+[[aicp|AICP]]
+[[model-local-ai|Model — Local AI ($0 Target)]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]

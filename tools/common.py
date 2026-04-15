@@ -5,11 +5,46 @@ and config file loading. Used by validate.py, manifest.py, lint.py, export.py,
 and stats.py.
 """
 
+import os
 import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 import yaml
+
+
+# ---------------------------------------------------------------------------
+# Consumer runtime signaling
+# ---------------------------------------------------------------------------
+#
+# Per `wiki/decisions/00_inbox/consumer-runtime-signaling-via-mcp-config.md`:
+# a consumer (harness/fleet/solo) declares its runtime identity via the
+# `MCP_CLIENT_RUNTIME` environment variable, which MCP clients pass through
+# via their `.mcp.json` entry's `env:` block.
+#
+# Solo is the default. The wiki cannot detect non-default modes from inside
+# the project — only the consumer's runtime knows. See also:
+# `wiki/lessons/00_inbox/execution-mode-is-consumer-property-not-project-property.md`
+
+CONSUMER_RUNTIME_ENV = "MCP_CLIENT_RUNTIME"
+CONSUMER_RUNTIME_DEFAULT = "solo"
+
+
+def get_consumer_runtime() -> str:
+    """Return the consumer's declared runtime identity.
+
+    Reads the MCP_CLIENT_RUNTIME env var that an MCP client can set via its
+    `.mcp.json` entry's `env:` block. Falls back to `"solo"` when unset or empty
+    — solo is the default for every project; non-default must be declared
+    by the consumer.
+    """
+    value = os.environ.get(CONSUMER_RUNTIME_ENV, "").strip()
+    return value or CONSUMER_RUNTIME_DEFAULT
+
+
+def consumer_runtime_is_declared() -> bool:
+    """True if the consumer explicitly declared a non-default runtime."""
+    return bool(os.environ.get(CONSUMER_RUNTIME_ENV, "").strip())
 
 
 def parse_frontmatter(text: str) -> Tuple[Dict[str, Any], str]:

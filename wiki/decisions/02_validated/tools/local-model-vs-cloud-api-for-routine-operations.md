@@ -118,3 +118,5 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 [[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
 [[model-knowledge-evolution|Model — Knowledge Evolution]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
+[[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
+[[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

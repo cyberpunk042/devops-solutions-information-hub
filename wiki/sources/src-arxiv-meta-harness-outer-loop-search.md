@@ -2,6 +2,9 @@
 title: "Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search"
 aliases:
   - "Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search"
+  - "Synthesis — Meta-Harness — Outer-Loop Search"
+  - "Synthesis — Meta-Harness"
+  - "Meta-Harness"
 type: source-synthesis
 domain: ai-agents
 layer: 1
@@ -193,12 +196,12 @@ The paper presumably discusses the compute cost of running the outer loop — me
 
 ## Backlinks
 
-[[Synthesis — NLAH]]
+[[src-arxiv-natural-language-agent-harnesses|Synthesis — NLAH]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
 [[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[model-knowledge-evolution|Model — Knowledge Evolution]]
 [[model-context-engineering|Model — Context Engineering]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
-[[Synthesis — Anthropic Building Effective AI Agents]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic Building Effective AI Agents]]
 [[Synthesis — Rethinking AI Agents (YouTube)]]

@@ -146,5 +146,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[plane|Plane]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
+[[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
 [[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
 [[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
+[[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

@@ -190,3 +190,4 @@ Five projects, five different drivers, one convergent structure. That convergenc
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
+[[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]

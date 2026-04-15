@@ -2,6 +2,8 @@
 title: Local Inference Engine (Subsystem 3)
 aliases:
   - "Local Inference Engine (Subsystem 3)"
+  - "E001 — Local Inference Engine"
+  - "E001-local-inference-engine"
 type: epic
 domain: backlog
 status: draft

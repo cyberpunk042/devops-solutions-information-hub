@@ -330,6 +330,7 @@ Examples:
 [[methodology-framework|Methodology Framework]]
 [[model-context-engineering|Model — Context Engineering]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]

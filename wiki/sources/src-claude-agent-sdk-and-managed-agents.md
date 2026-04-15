@@ -289,6 +289,17 @@ This SDK is the programmatic foundation that underlies every harness engineering
 
 ## Relationships
 
+- RELATES TO: [[model-claude-code|Model — Claude Code]]
+- RELATES TO: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- RELATES TO: [[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns]]
+- RELATES TO: [[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic — Effective Harnesses for Long-Running Agents]]
+- FEEDS INTO: [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
+
 ## Backlinks
 
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns]]
+[[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic — Effective Harnesses for Long-Running Agents]]
+[[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]

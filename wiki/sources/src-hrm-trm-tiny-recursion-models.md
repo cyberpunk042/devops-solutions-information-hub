@@ -1,5 +1,10 @@
 ---
 title: "Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+aliases:
+  - "Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
+  - "Synthesis — HRM/TRM — Tiny Recursion Models"
+  - "HRM/TRM"
+  - "HRM and TRM"
 type: source-synthesis
 domain: ai-models
 status: synthesized
@@ -154,7 +159,7 @@ The ARC-AGI benchmark context matters: scores are not comparable to LLM general 
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
 [[LLM Architecture Gallery]]
-[[AutoBE]]
+[[src-autobe-compiler-verified-backend-generation|AutoBE]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[local-llm-quantization|Local LLM Quantization]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]

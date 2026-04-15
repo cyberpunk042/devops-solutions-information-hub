@@ -183,10 +183,10 @@ What this lesson adds:
 
 ## Backlinks
 
-[[Synthesis — Anthropic Building Effective AI Agents]]
-[[Synthesis — Anthropic Effective Harnesses for Long-Running Agents]]
-[[Synthesis — NLAH]]
-[[Synthesis — Meta-Harness]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic Building Effective AI Agents]]
+[[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Anthropic Effective Harnesses for Long-Running Agents]]
+[[src-arxiv-natural-language-agent-harnesses|Synthesis — NLAH]]
+[[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness]]
 [[Synthesis — Rethinking AI Agents (YouTube)]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[Infrastructure Over Instructions for Process Enforcement]]
@@ -196,3 +196,5 @@ What this lesson adds:
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[model-context-engineering|Model — Context Engineering]]
+[[src-vercel-opensrc-toolkit|Source — vercel-labs/opensrc: Source Code Access Toolkit for AI Agents]]
+[[src-claude-agent-sdk-and-managed-agents|Synthesis — Claude Agent SDK and Managed Agents]]

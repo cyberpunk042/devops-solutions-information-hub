@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-15T18:32:01.376707+00:00",
+  "generated": "2026-04-15T19:30:28.650873+00:00",
   "stats": {
-    "pages": 332,
+    "pages": 334,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2192,
-    "tags_unique": 1048,
+    "relationships": 2231,
+    "tags_unique": 1054,
     "layers": {
       "3": 4,
-      "6": 16,
+      "6": 17,
       "2": 51,
       "4": 44,
       "5": 22,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 271,
-      "seed": 17
+      "seed": 19
     }
   },
   "pages": [
@@ -727,7 +727,9 @@
       "maturity": "",
       "derived_from": [],
       "aliases": [
-        "Local Inference Engine (Subsystem 3)"
+        "Local Inference Engine (Subsystem 3)",
+        "E001 \u2014 Local Inference Engine",
+        "E001-local-inference-engine"
       ],
       "relationships": [
         {
@@ -1393,7 +1395,24 @@
       "aliases": [
         "Test OpenAI backend with LocalAI"
       ],
-      "relationships": []
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E001 \u2014 Local Inference Engine"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Local Model vs Cloud API for Routine Operations"
+        }
+      ]
     },
     {
       "path": "comparisons/agentic-search-vs-vector-search.md",
@@ -1892,6 +1911,94 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki Pattern"
+        }
+      ]
+    },
+    {
+      "path": "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config.md",
+      "slug": "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "title": "Decision \u2014 Consumer Runtime Signaling via MCP Config",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "decision",
+        "mcp",
+        "runtime",
+        "consumer-property",
+        "harness-signaling",
+        "fleet-signaling",
+        "declared-over-detected",
+        "execution-mode",
+        "cross-project"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-consumer-property",
+          "type": "directive",
+          "file": "raw/notes/2026-04-15-directive-execution-mode-is-consumer-property-not-project.md",
+          "description": "Operator's proposal to explore: 'it would require development in back and forth with openarms and openfleet to allow them to use the tool and it detect automatically or simply maybe just inside the mcp config ? to explore.'"
+        },
+        {
+          "id": "consumer-property-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/00_inbox/execution-mode-is-consumer-property-not-project-property.md",
+          "description": "Lesson establishing that execution mode, SDLC profile, methodology model, and stage are consumer/task properties \u2014 not project properties. Names this decision as Open Question."
+        },
+        {
+          "id": "mcp-spec-config-format",
+          "type": "documentation",
+          "url": "https://modelcontextprotocol.io/docs/concepts/architecture",
+          "description": "MCP architecture spec \u2014 client-server handshake includes configuration dict that servers can inspect. The `runtime:` field is within the MCP protocol's extensibility surface."
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Execution Mode Is a Consumer Property, Not a Project Property \u2014 Guard Against Conflation Drift",
+        "Model \u2014 MCP and CLI Integration",
+        "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries"
+      ],
+      "aliases": [
+        "Decision \u2014 Consumer Runtime Signaling via MCP Config",
+        "Consumer Runtime Signaling",
+        "MCP Runtime Field"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Adapters Never Raise \u2014 Failure As Data at Integration Boundaries"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Project Self-Identification Protocol \u2014 The Goldilocks Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Ecosystem Architecture"
         }
       ]
     },
@@ -4983,6 +5090,85 @@
       ]
     },
     {
+      "path": "domains/cross-domain/mcp-runtime-signaling.md",
+      "slug": "domains/cross-domain/mcp-runtime-signaling",
+      "title": "MCP Runtime Signaling \u2014 Integration Guide for Consumers",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "reference",
+        "mcp",
+        "runtime-signaling",
+        "consumer-declaration",
+        "integration-guide",
+        "harness",
+        "fleet",
+        "openarms",
+        "openfleet",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "decision-consumer-runtime-signaling",
+          "type": "wiki",
+          "file": "wiki/decisions/00_inbox/consumer-runtime-signaling-via-mcp-config.md",
+          "description": "The decision establishing MCP_CLIENT_RUNTIME as the declaration mechanism."
+        },
+        {
+          "id": "consumer-property-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/00_inbox/execution-mode-is-consumer-property-not-project-property.md",
+          "description": "The lesson on why the consumer (not the wiki) must declare runtime."
+        },
+        {
+          "id": "runtime-values-config",
+          "type": "file",
+          "file": "wiki/config/mcp-runtime-values.yaml",
+          "description": "Enumeration of valid runtime values + convention + coordination process."
+        },
+        {
+          "id": "common-py-helper",
+          "type": "file",
+          "file": "tools/common.py",
+          "description": "Wiki-side implementation: get_consumer_runtime() + consumer_runtime_is_declared()."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "MCP Runtime Signaling \u2014 Integration Guide for Consumers",
+        "MCP Runtime Signaling",
+        "MCP_CLIENT_RUNTIME"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Decision \u2014 Consumer Runtime Signaling via MCP Config"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Project Self-Identification Protocol \u2014 The Goldilocks Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Four-Project Ecosystem"
+        }
+      ]
+    },
+    {
       "path": "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts.md",
       "slug": "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "title": "AI Agent Artifacts \u2014 Standards and Guide",
@@ -6226,6 +6412,10 @@
         {
           "verb": "RELATES TO",
           "target": "Structured Context Is Proto-Programming for AI Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
         },
         {
           "verb": "RELATES TO",
@@ -16851,7 +17041,28 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": []
+      "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Decision \u2014 Local Model vs Cloud API for Routine Operations"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Models \u2014 Domain Overview"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        }
+      ]
     },
     {
       "path": "sources/src-7-levels-claude-code-rag.md",
@@ -16950,7 +17161,9 @@
       "maturity": "growing",
       "derived_from": [],
       "aliases": [
-        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
+        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
+        "Synthesis \u2014 Anthropic Building Effective AI Agents",
+        "Building Effective AI Agents"
       ],
       "relationships": [
         {
@@ -17030,7 +17243,10 @@
       "maturity": "growing",
       "derived_from": [],
       "aliases": [
-        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents",
+        "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents",
+        "Synthesis \u2014 Effective Harnesses for Long-Running Agents",
+        "Effective Harnesses for Long-Running Agents"
       ],
       "relationships": [
         {
@@ -17105,7 +17321,10 @@
       "maturity": "growing",
       "derived_from": [],
       "aliases": [
-        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search"
+        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
+        "Synthesis \u2014 Meta-Harness \u2014 Outer-Loop Search",
+        "Synthesis \u2014 Meta-Harness",
+        "Meta-Harness"
       ],
       "relationships": [
         {
@@ -17182,7 +17401,10 @@
       "maturity": "growing",
       "derived_from": [],
       "aliases": [
-        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
+        "Synthesis \u2014 NLAH",
+        "NLAH",
+        "Natural-Language Agent Harnesses"
       ],
       "relationships": [
         {
@@ -17254,7 +17476,11 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
-      "aliases": [],
+      "aliases": [
+        "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
+        "Synthesis \u2014 AutoBE \u2014 Compiler-Verified Backend Generation",
+        "AutoBE"
+      ],
       "relationships": [
         {
           "verb": "VALIDATES",
@@ -17387,7 +17613,28 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": []
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Harness Engineering Is the Dominant Performance Lever"
+        }
+      ]
     },
     {
       "path": "sources/src-claude-code-prompt-patch-rebalancing.md",
@@ -17422,7 +17669,24 @@
       "maturity": "seed",
       "derived_from": [],
       "aliases": [],
-      "relationships": []
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structured Context Is Proto-Programming for AI Agents"
+        }
+      ]
     },
     {
       "path": "sources/src-cline-agentic-coding-ide-extension.md",
@@ -17644,7 +17908,12 @@
       "layer": "",
       "maturity": "seed",
       "derived_from": [],
-      "aliases": [],
+      "aliases": [
+        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
+        "Synthesis \u2014 HRM/TRM \u2014 Tiny Recursion Models",
+        "HRM/TRM",
+        "HRM and TRM"
+      ],
       "relationships": [
         {
           "verb": "RELATES TO",
@@ -18218,6 +18487,22 @@
         {
           "verb": "RELATES TO",
           "target": "OpenFleet"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Harness Engineering Is the Dominant Performance Lever"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Never Synthesize From Descriptions Alone"
         }
       ]
     },
@@ -18907,10 +19192,6 @@
       ],
       "relationships": [
         {
-          "verb": "DERIVED FROM",
-          "target": "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
-        },
-        {
           "verb": "BUILDS ON",
           "target": "LLM Wiki Pattern"
         },
@@ -18929,6 +19210,22 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki vs RAG"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Memory Lifecycle Management"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Knowledge Graph"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Event-Driven Automation"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Schema Is the Real Product"
         }
       ]
     },
@@ -23130,19 +23427,19 @@
   "domains": {
     "backlog": {
       "page_count": 24,
-      "relationship_count": 131
+      "relationship_count": 135
     },
     "cross-domain": {
-      "page_count": 147,
-      "relationship_count": 991
+      "page_count": 149,
+      "relationship_count": 1005
     },
     "ai-agents": {
       "page_count": 65,
-      "relationship_count": 497
+      "relationship_count": 506
     },
     "tools-and-platforms": {
       "page_count": 24,
-      "relationship_count": 161
+      "relationship_count": 165
     },
     "devops": {
       "page_count": 14,
@@ -23150,7 +23447,7 @@
     },
     "ai-models": {
       "page_count": 7,
-      "relationship_count": 31
+      "relationship_count": 36
     },
     "automation": {
       "page_count": 7,
@@ -23158,7 +23455,7 @@
     },
     "knowledge-systems": {
       "page_count": 22,
-      "relationship_count": 189
+      "relationship_count": 192
     },
     "log": {
       "page_count": 21,
@@ -23431,9 +23728,11 @@
     "mcp": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/ai-agents/claude-code/claude-code",
       "domains/automation/mcp-integration-architecture",
+      "domains/cross-domain/mcp-runtime-signaling",
       "domains/knowledge-systems/wiki-core/lightrag",
       "domains/tools-and-platforms/notebooklm-skills",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
@@ -23481,6 +23780,7 @@
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
+      "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/execution-modes-and-end-conditions",
       "domains/devops/four-project-ecosystem",
@@ -23508,6 +23808,7 @@
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
       "ecosystem/project_profiles/aicp/identity-profile",
@@ -23554,6 +23855,7 @@
       "domains/ai-agents/patterns/rework-prevention",
       "domains/ai-agents/patterns/spec-driven-development",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
+      "domains/cross-domain/mcp-runtime-signaling",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/four-project-ecosystem",
       "domains/devops/immune-system-rules",
@@ -23809,6 +24111,7 @@
     "harness": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "decisions/02_validated/tools/extension-system-operational-decisions",
+      "domains/cross-domain/mcp-runtime-signaling",
       "domains/cross-domain/methodology-framework/three-pm-levels",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
@@ -24205,6 +24508,40 @@
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/cross-domain/model-composition-rules"
     ],
+    "decision": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
+      "decisions/02_validated/methodology/artifact-system-design-decisions",
+      "decisions/02_validated/methodology/methodology-stage-extension-decisions",
+      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
+      "spine/standards/decision-page-standards"
+    ],
+    "runtime": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config"
+    ],
+    "consumer-property": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "harness-signaling": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config"
+    ],
+    "fleet-signaling": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config"
+    ],
+    "declared-over-detected": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "execution-mode": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
+    ],
+    "cross-project": [
+      "decisions/00_inbox/consumer-runtime-signaling-via-mcp-config",
+      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
+    ],
     "knowledge-interface": [
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface"
     ],
@@ -24265,13 +24602,6 @@
       "decisions/02_validated/tools/extension-system-operational-decisions",
       "decisions/02_validated/tools/hooks-design-decisions",
       "decisions/02_validated/tools/per-role-command-design-decisions"
-    ],
-    "decision": [
-      "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
-      "decisions/02_validated/methodology/artifact-system-design-decisions",
-      "decisions/02_validated/methodology/methodology-stage-extension-decisions",
-      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
-      "spine/standards/decision-page-standards"
     ],
     "lightrag": [
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
@@ -25238,6 +25568,32 @@
     "systems-course": [
       "domains/cross-domain/integration/skyscraper-pyramid-mountain"
     ],
+    "reference": [
+      "domains/cross-domain/mcp-runtime-signaling",
+      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
+      "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
+      "spine/goldilocks-flow",
+      "spine/references/context-file-taxonomy",
+      "spine/references/frontmatter-field-reference",
+      "spine/references/gateway-tools-reference",
+      "spine/references/methodology-system-map",
+      "spine/references/root-documentation-map",
+      "spine/standards/reference-page-standards"
+    ],
+    "runtime-signaling": [
+      "domains/cross-domain/mcp-runtime-signaling"
+    ],
+    "consumer-declaration": [
+      "domains/cross-domain/mcp-runtime-signaling"
+    ],
+    "integration-guide": [
+      "domains/cross-domain/mcp-runtime-signaling"
+    ],
+    "fleet": [
+      "domains/cross-domain/mcp-runtime-signaling",
+      "domains/cross-domain/methodology-framework/three-pm-levels",
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture"
+    ],
     "persona": [
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts"
     ],
@@ -25303,17 +25659,6 @@
       "spine/references/frontmatter-field-reference",
       "spine/references/gateway-tools-reference",
       "spine/references/root-documentation-map"
-    ],
-    "reference": [
-      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
-      "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
-      "spine/goldilocks-flow",
-      "spine/references/context-file-taxonomy",
-      "spine/references/frontmatter-field-reference",
-      "spine/references/gateway-tools-reference",
-      "spine/references/methodology-system-map",
-      "spine/references/root-documentation-map",
-      "spine/standards/reference-page-standards"
     ],
     "adr": [
       "domains/cross-domain/methodology-artifacts/categories/requirements-and-design-artifacts"
@@ -25477,10 +25822,6 @@
     ],
     "wiki-llm": [
       "domains/cross-domain/methodology-framework/three-pm-levels"
-    ],
-    "fleet": [
-      "domains/cross-domain/methodology-framework/three-pm-levels",
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture"
     ],
     "plane": [
       "domains/cross-domain/methodology-framework/three-pm-levels",
@@ -26060,12 +26401,6 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
       "spine/standards/lesson-page-standards"
     ],
-    "execution-mode": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
-    ],
-    "consumer-property": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
-    ],
     "project-property": [
       "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
     ],
@@ -26079,9 +26414,6 @@
       "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
     ],
     "detection-limits": [
-      "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
-    ],
-    "declared-over-detected": [
       "lessons/00_inbox/execution-mode-is-consumer-property-not-project-property"
     ],
     "agent-architecture": [
@@ -26230,10 +26562,6 @@
     ],
     "independent-evolution": [
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects"
-    ],
-    "cross-project": [
-      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
     ],
     "instructions": [
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
@@ -27841,12 +28169,6 @@
   },
   "orphaned_refs": [
     {
-      "target": "AutoBE",
-      "referenced_by": [
-        "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
-      ]
-    },
-    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
@@ -27878,8 +28200,10 @@
     {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
+        "Test OpenAI backend with LocalAI",
         "AICP \u2014 Identity Profile",
         "If You Can Verify, You Converge",
+        "Source \u2014 27 Questions to Ask Before Choosing an LLM",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
         "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
         "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
@@ -27888,6 +28212,12 @@
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
+      ]
+    },
+    {
+      "target": "Never Synthesize From Descriptions Alone",
+      "referenced_by": [
+        "Source \u2014 vercel-labs/opensrc: Source Code Access Toolkit for AI Agents"
       ]
     },
     {
@@ -27903,32 +28233,16 @@
       ]
     },
     {
+      "target": "Schema Is the Real Product",
+      "referenced_by": [
+        "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+      ]
+    },
+    {
       "target": "Structured Context Governs Agent Behavior More Than Content",
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 Anthropic Building Effective AI Agents",
-      "referenced_by": [
-        "Harness Engineering Is the Dominant Performance Lever",
-        "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents",
-        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
-        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents",
-      "referenced_by": [
-        "Harness Engineering Is the Dominant Performance Lever",
-        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 AutoBE \u2014 Compiler-Verified Backend Generation",
-      "referenced_by": [
-        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
       ]
     },
     {
@@ -27938,41 +28252,6 @@
         "Claude Code Context Management",
         "Claude Code Skills",
         "Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 Effective Harnesses for Long-Running Agents",
-      "referenced_by": [
-        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 HRM/TRM \u2014 Tiny Recursion Models",
-      "referenced_by": [
-        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 Meta-Harness",
-      "referenced_by": [
-        "Harness Engineering Is the Dominant Performance Lever",
-        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
-        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 Meta-Harness \u2014 Outer-Loop Search",
-      "referenced_by": [
-        "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
-      ]
-    },
-    {
-      "target": "Synthesis \u2014 NLAH",
-      "referenced_by": [
-        "Harness Engineering Is the Dominant Performance Lever",
-        "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
-        "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
-        "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
       ]
     },
     {

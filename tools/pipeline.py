@@ -25,6 +25,7 @@ Usage:
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -556,8 +557,23 @@ def run_gaps(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
         sections = parse_sections(body)
         oq = sections.get("Open Questions", "")
         if oq.strip():
-            questions = [l.strip().lstrip("- ") for l in oq.splitlines()
-                         if l.strip().startswith("-")]
+            # Skip bullets that are marked RESOLVED via any of:
+            #   - `~~strikethrough~~` in the question text (wiki convention)
+            #   - `**RESOLVED:**` or `RESOLVED:` prefix/inline tag
+            #   - presence of a "### Answered" subheader (split and take only
+            #     the section before it — bullets under Answered/Resolved are
+            #     explicitly resolved)
+            lines = oq.splitlines()
+            answered_marker_re = re.compile(r"^###\s+(answered|resolved)", re.IGNORECASE)
+            resolved_in_line_re = re.compile(r"~~|(\*\*)?RESOLVED(\*\*)?\s*[:\-]", re.IGNORECASE)
+            active_lines: List[str] = []
+            for line in lines:
+                if answered_marker_re.match(line.strip()):
+                    break  # everything after this header is resolved
+                active_lines.append(line)
+            questions = [l.strip().lstrip("- ") for l in active_lines
+                         if l.strip().startswith("-")
+                         and not resolved_in_line_re.search(l)]
             for q in questions:
                 report["open_questions"].append({
                     "question": q,

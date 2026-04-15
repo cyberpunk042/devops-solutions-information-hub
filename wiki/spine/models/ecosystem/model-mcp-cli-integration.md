@@ -274,6 +274,8 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[harness-engineering|Harness Engineering]]
 [[claude-code-context-management|Claude Code Context Management]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
+[[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
+[[mcp-runtime-signaling|MCP Runtime Signaling — Integration Guide for Consumers]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]

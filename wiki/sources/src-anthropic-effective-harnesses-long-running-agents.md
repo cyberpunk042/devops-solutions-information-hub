@@ -2,6 +2,9 @@
 title: "Synthesis — Anthropic — Effective Harnesses for Long-Running Agents"
 aliases:
   - "Synthesis — Anthropic — Effective Harnesses for Long-Running Agents"
+  - "Synthesis — Anthropic Effective Harnesses for Long-Running Agents"
+  - "Synthesis — Effective Harnesses for Long-Running Agents"
+  - "Effective Harnesses for Long-Running Agents"
 type: source-synthesis
 domain: ai-agents
 layer: 1
@@ -187,7 +190,7 @@ The post explicitly limits scope to web app development. Generalization to other
 
 ## Backlinks
 
-[[Synthesis — Anthropic Building Effective AI Agents]]
+[[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic Building Effective AI Agents]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
@@ -195,3 +198,4 @@ The post explicitly limits scope to web app development. Generalization to other
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
 [[Structured Context Governs Agent Behavior More Than Content]]
 [[model-claude-code|Model — Claude Code]]
+[[src-claude-agent-sdk-and-managed-agents|Synthesis — Claude Agent SDK and Managed Agents]]

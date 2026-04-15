@@ -169,6 +169,7 @@ The harness-owned-loop pattern is now **field-validated**, not just project-vali
 [[adapters-never-raise-failure-as-data-at-integration-boundaries|Adapters Never Raise — Failure As Data at Integration Boundaries]]
 [[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]]
 [[harness-ownership-converges-independently-across-projects|Harness Ownership Converges Independently Across Projects]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]

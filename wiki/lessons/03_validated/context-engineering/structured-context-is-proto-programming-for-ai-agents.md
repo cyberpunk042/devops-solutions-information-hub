@@ -196,6 +196,7 @@ This is why OpenArms's 8 CLAUDE.md structural patterns improved compliance from 
 [[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
+[[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
 [[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search]]
 [[src-arxiv-natural-language-agent-harnesses|Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts]]

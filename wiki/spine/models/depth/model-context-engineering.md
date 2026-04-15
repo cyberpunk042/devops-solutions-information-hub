@@ -173,6 +173,8 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 | [[block-with-reason-and-justified-escalation\|Block With Reason and Justified Escalation]] | L5 | Structured escalation-protocol: 4-part schema (Block + Reason + Offer + Justification). The proto-programming principle applied to agent-operator communication at decision boundaries. Added 2026-04-15. |
 | [[adapters-never-raise-failure-as-data-at-integration-boundaries\|Adapters Never Raise — Failure as Data]] | L5 | Structured-result-type pattern at integration boundaries — format-as-enforcement at the function-return level. Same principle as "JSON over Markdown" finding in §Format-as-Enforcement, applied to Python return values. Added 2026-04-15. |
 | [[observe-fix-verify-loop\|Observe-Fix-Verify Loop]] | L5 | The iteration pattern that produces structural refinement. Every OFV cycle Observes what current structure fails to enforce and Fixes the structure (not the instructions). Added 2026-04-15. |
+| [[execution-mode-is-consumer-property-not-project-property\|Execution Mode Is a Consumer Property]] | L4 | Three-layer orthogonality — context authority comes from project (stable), project-declared (phase/scale), and consumer-declared (per-connection) layers. Conflating layers produces the "detect what the consumer must declare" failure mode. Added 2026-04-15. |
+| [[consumer-runtime-signaling-via-mcp-config\|Decision — Consumer Runtime Signaling via MCP Config]] | L6 | Implementation of the consumer layer: `MCP_CLIENT_RUNTIME` env var carries the declaration via MCP's standard `env:` block. Context engineering at the protocol boundary. Added 2026-04-15. |
 
 ### Worked Examples — Context Engineering in Practice
 
@@ -321,6 +323,45 @@ For this wiki: methodology.yaml is YAML (structurally rigid) for the same reason
 
 ---
 
+### Three-Layer Orthogonality — Context Authority by Layer (NEW 2026-04-15)
+
+A context-engineering principle surfaced by the [[execution-mode-is-consumer-property-not-project-property|Consumer Property lesson]] that this model previously did not explicitly articulate: **context dimensions are not uniform** — they come from **three different authorities**, each with distinct loading mechanisms, caching policies, and failure modes when conflated.
+
+> [!abstract] The Three Authorities of Agent Context
+>
+> | Layer | Properties | Declared by | Loading mechanism | Changes |
+> |---|---|---|---|---|
+> | **Stable project identity** | type, domain, second-brain, repo topology | The project (CLAUDE.md, CONTEXT.md, AGENTS.md) | Loaded at session start from repo files — authoritative | Rarely (quarters/years) |
+> | **Phase / scale state** | phase, scale, PM level, trust tier | The project (declared; reviewed periodically) | Loaded at session start from declarations; heuristics as sanity-check signals | Slowly (weeks/quarters) |
+> | **Consumer / task properties** | execution mode, SDLC profile, methodology model, current stage | The **consumer** at connect time (for session-level) OR per-task | Consumer declares via `MCP_CLIENT_RUNTIME` env ([[consumer-runtime-signaling-via-mcp-config\|decision]]); per-task from task frontmatter | Per-session (consumer) / per-task (model/stage) |
+
+### Why this matters for context injection
+
+Each layer has a different **caching policy** and a different **failure mode when conflated**:
+
+- **Stable identity**: load once per session, bake into base context. Failure mode if re-queried per task: wasted context tokens repeating the same identity block.
+- **Phase/scale**: load once per session from declaration. Failure mode if heuristically "detected": wrong recommendations for the project as a whole ([[execution-mode-is-consumer-property-not-project-property|the consumer-property failure caught 2026-04-15]]).
+- **Consumer properties**: attach to session at connect time from the consumer's declaration. Failure mode if the wiki tries to "detect" these from inside: tautology (solo-if-no-harness-code-here is trivially true locally) or wrong guess (containers, pipes, remote clients obscure the invoker).
+- **Task properties**: compute per task from task frontmatter. Failure mode if bound project-wide: the "project frozen to one model" conflation — a production project running a hotfix doesn't want `default` profile; it wants `simplified` for THAT task.
+
+### The symmetric rule
+
+> [!tip] Context-engineering corollary: declared > detected
+>
+> For every identity/context dimension, prefer the DECLARED value from the authoritative layer over any HEURISTIC-DETECTED value. Heuristics are sanity-check signals at best — never override declarations. Tools that claim to "detect" what the consumer must declare (execution mode) are lying; tools that claim to pick a per-task value (SDLC profile) for the whole project are conflating layers.
+>
+> This is the same structural principle as [[structured-context-governs-agent-behavior-more-than-content|Structured Context Governs Agent Behavior]] applied at the AUTHORITY level: the STRUCTURE of declarations (who declares what, when) programs context behavior more than the content of any individual field.
+
+### Worked example — `gateway what-do-i-need` before/after
+
+**Before the fix (2026-04-15 morning):** the tool conflated all three layers. It claimed "DETECTED IDENTITY" for fields that were actually declared, auto-detected execution mode from filesystem heuristics, bound one SDLC profile to the whole project. Output was confidently wrong — production projects got `simplified` profile recommendations because heuristics didn't read declarations.
+
+**After the fix:** three distinct output blocks match the three authorities — `PROJECT IDENTITY` (declared, ✓-marked), `CONSUMER / TASK PROPERTIES` (solo default; consumer declares non-default), `SUGGESTED DEFAULT PROFILE` (per-task, with explicit "override per task" caveat). The tool now honors the orthogonality structurally, not just in prose.
+
+Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property]].
+
+---
+
 ## Open Questions
 
 > [!question] ~~Can we define a formal grammar for structured context?~~
@@ -370,6 +411,7 @@ For this wiki: methodology.yaml is YAML (structurally rigid) for the same reason
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
+[[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]

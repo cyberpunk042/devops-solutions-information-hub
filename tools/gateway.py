@@ -30,7 +30,11 @@ from typing import Any, Dict, List, Optional
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from tools.common import (
+    CONSUMER_RUNTIME_DEFAULT,
+    CONSUMER_RUNTIME_ENV,
+    consumer_runtime_is_declared,
     find_wiki_pages,
+    get_consumer_runtime,
     get_project_root,
     load_config,
     parse_frontmatter,
@@ -330,11 +334,17 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     lines.append("")
 
     # CONSUMER/TASK PROPERTIES — not detectable from inside the project.
+    # Per `wiki/decisions/00_inbox/consumer-runtime-signaling-via-mcp-config.md`,
+    # consumers declare non-default runtime via MCP_CLIENT_RUNTIME env var.
     lines.append("CONSUMER / TASK PROPERTIES (not project properties):")
-    lines.append(f"  execution mode: solo (default)")
-    lines.append(f"                  A harness or fleet that wraps this project DECLARES non-default when it")
-    lines.append(f"                  connects — e.g., via its MCP config `runtime:` field. From inside this")
-    lines.append(f"                  project we cannot detect which consumer (if any) is using us.")
+    runtime = get_consumer_runtime()
+    if consumer_runtime_is_declared():
+        lines.append(f"  execution mode: {runtime}  ✓ declared by consumer (via {CONSUMER_RUNTIME_ENV})")
+    else:
+        lines.append(f"  execution mode: {runtime} (default — no consumer declared otherwise)")
+        lines.append(f"                  A harness or fleet that wraps this project DECLARES non-default via its")
+        lines.append(f"                  `.mcp.json` entry's env block: {{\"env\": {{\"{CONSUMER_RUNTIME_ENV}\": \"harness-<name>-<version>\"}}}}.")
+        lines.append(f"                  From inside this project we cannot detect which consumer (if any) is using us.")
     lines.append(f"  methodology model: PER TASK, not per project. bug→bug-fix, feature→feature-development,")
     lines.append(f"                     docs→documentation, research→research, etc. See: gateway query --models")
     lines.append(f"  SDLC profile:   PER TASK. Declared phase/scale suggests a DEFAULT starting profile but")

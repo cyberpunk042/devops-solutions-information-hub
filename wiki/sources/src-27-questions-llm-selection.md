@@ -149,3 +149,16 @@ The framework also highlights a gap: the wiki has no systematic evaluation recor
 
 ## Relationships
 
+- FEEDS INTO: [[model-local-ai|Model — Local AI ($0 Target)]]
+- FEEDS INTO: [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+- RELATES TO: [[ai-models-domain-overview|AI Models — Domain Overview]]
+- RELATES TO: [[aicp|AICP]]
+- RELATES TO: [[local-llm-quantization|Local LLM Quantization]]
+
+## Backlinks
+
+[[model-local-ai|Model — Local AI ($0 Target)]]
+[[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
+[[ai-models-domain-overview|AI Models — Domain Overview]]
+[[aicp|AICP]]
+[[local-llm-quantization|Local LLM Quantization]]

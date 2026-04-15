@@ -116,3 +116,4 @@ bge-m3 is the current production choice in both AICP and OpenFleet. text-embeddi
 [[automation-domain-overview|Automation — Domain Overview]]
 [[devops-domain-overview|Devops — Domain Overview]]
 [[cross-domain-domain-overview|Cross-Domain — Domain Overview]]
+[[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]

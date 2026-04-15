@@ -2,6 +2,8 @@
 title: "Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns"
 aliases:
   - "Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns"
+  - "Synthesis — Anthropic Building Effective AI Agents"
+  - "Building Effective AI Agents"
 type: source-synthesis
 domain: ai-agents
 layer: 1
@@ -181,9 +183,10 @@ The post is qualitative throughout. "Most successful implementations" — how ma
 [[model-claude-code|Model — Claude Code]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
-[[Synthesis — Effective Harnesses for Long-Running Agents]]
-[[Synthesis — NLAH]]
-[[Synthesis — Meta-Harness]]
+[[src-anthropic-effective-harnesses-long-running-agents|Synthesis — Effective Harnesses for Long-Running Agents]]
+[[src-arxiv-natural-language-agent-harnesses|Synthesis — NLAH]]
+[[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness]]
 [[Synthesis — Rethinking AI Agents (YouTube)]]
 [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology Is a Framework, Not a Fixed Pipeline]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming]]
+[[src-claude-agent-sdk-and-managed-agents|Synthesis — Claude Agent SDK and Managed Agents]]

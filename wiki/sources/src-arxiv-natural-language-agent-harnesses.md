@@ -2,6 +2,9 @@
 title: "Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts"
 aliases:
   - "Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts"
+  - "Synthesis — NLAH"
+  - "NLAH"
+  - "Natural-Language Agent Harnesses"
 type: source-synthesis
 domain: ai-agents
 layer: 1
@@ -176,7 +179,7 @@ This wiki's `tools/pipeline.py` is a relatively heavyweight runtime today (~thou
 
 ## Backlinks
 
-[[Synthesis — Meta-Harness — Outer-Loop Search]]
+[[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness — Outer-Loop Search]]
 [[Lesson — Harness Engineering Is the Dominant Performance Lever]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[specs-as-code-source-inverts-hierarchy|Specs-as-Code-Source Inverts the Hierarchy]]

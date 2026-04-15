@@ -174,8 +174,16 @@ The multi-registry support (npm/PyPI/crates.io/GitHub) maps to our multi-domain 
 
 - RELATES TO: [[model-ecosystem|Model — Ecosystem Architecture]] (multi-registry + global cache patterns relevant to cross-project tooling)
 - RELATES TO: [[openfleet|OpenFleet]] (global cache and multi-project sharing patterns applicable to fleet infrastructure)
+- RELATES TO: [[model-claude-code|Model — Claude Code]] (agent-tool category — give agents access to dependency source)
+- RELATES TO: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]] (CLI tool consumed as an agent command surface)
+- FEEDS INTO: [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]] (source-access is harness infrastructure; agents that can read dependency source outperform agents that can only read types)
+- ENABLES: [[never-synthesize-from-descriptions-alone|Never Synthesize From Descriptions Alone]] (the principle opensrc operationalizes at the agent-tool level — reading implementation beats reading docs)
 
 ## Backlinks
 
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[openfleet|OpenFleet]]
+[[model-claude-code|Model — Claude Code]]
+[[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
+[[Never Synthesize From Descriptions Alone]]

@@ -100,21 +100,24 @@ Partially answerable from existing wiki knowledge: structural conflicts (two age
 
 ## Relationships
 
-- DERIVED FROM: [[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
 - BUILDS ON: [[llm-wiki-pattern|LLM Wiki Pattern]]
 - BUILDS ON: [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
 - EXTENDS: [[llm-knowledge-linting|LLM Knowledge Linting]]
 - EXTENDS: [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 - RELATES TO: [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
+- RELATES TO: [[memory-lifecycle-management|Memory Lifecycle Management]]
+- RELATES TO: [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+- RELATES TO: [[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+- RELATES TO: [[schema-is-the-real-product|Schema Is the Real Product]]
 
 ## Backlinks
 
-[[src-llm-wiki-v2-agentmemory|Synthesis — LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons]]
 [[llm-wiki-pattern|LLM Wiki Pattern]]
 [[src-karpathy-llm-wiki-idea-file|Synthesis — Karpathy's LLM Wiki Idea File]]
 [[llm-knowledge-linting|LLM Knowledge Linting]]
 [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 [[llm-wiki-vs-rag|LLM Wiki vs RAG]]
 [[memory-lifecycle-management|Memory Lifecycle Management]]
-[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
 [[wiki-knowledge-graph|Wiki Knowledge Graph]]
+[[wiki-event-driven-automation|Wiki Event-Driven Automation]]
+[[Schema Is the Real Product]]

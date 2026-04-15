@@ -1,5 +1,9 @@
 ---
 title: "Synthesis — AutoBE: Compiler-Verified Backend Generation"
+aliases:
+  - "Synthesis — AutoBE: Compiler-Verified Backend Generation"
+  - "Synthesis — AutoBE — Compiler-Verified Backend Generation"
+  - "AutoBE"
 type: source-synthesis
 domain: ai-agents
 status: synthesized
