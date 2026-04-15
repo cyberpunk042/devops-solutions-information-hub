@@ -457,7 +457,9 @@ def wiki_gateway_timeline(scope: str = None, since: str = "7d", until: str = Non
                            output_format: str = "markdown",
                            full_content: bool = False,
                            remote: bool = False,
-                           collapse_arcs: bool = False) -> str:
+                           collapse_arcs: bool = False,
+                           epic: str = None,
+                           path_filter: str = None) -> str:
     """Computed cross-project temporal view of ecosystem activity.
 
     Aggregates commits, lessons, patterns, decisions, syntheses, epics, tasks,
@@ -485,6 +487,8 @@ def wiki_gateway_timeline(scope: str = None, since: str = "7d", until: str = Non
                 Without this flag, unavailable projects surface as notices only.
         collapse_arcs: If True, collapse same-file same-day event clusters into
                        one arc-summary line (useful for compact journey views).
+        epic: Filter to one epic (e.g. 'E013'). Matches parent_epic OR epic file.
+        path_filter: Filter events whose path contains this substring.
 
     Returns: rendered timeline as markdown (default) or JSON.
 
@@ -510,6 +514,8 @@ def wiki_gateway_timeline(scope: str = None, since: str = "7d", until: str = Non
         output_format=output_format,
         remote=remote,
         collapse_arcs=collapse_arcs,
+        epic=epic,
+        path_filter=path_filter,
     )
 
 

@@ -1181,6 +1181,8 @@ def compute_timeline(
     output_format: str = "markdown",
     remote: bool = False,
     collapse_arcs: bool = False,
+    epic: Optional[str] = None,
+    path_filter: Optional[str] = None,
 ) -> str:
     """Entry point used by CLI + MCP.
 
@@ -1253,6 +1255,24 @@ def compute_timeline(
     # Apply types filter to commits (not filtered above since git log can't filter by type).
     if types_filter:
         all_events = [e for e in all_events if e.type in types_filter]
+
+    # Epic filter: keep events whose parent_epic matches OR whose path is the epic file itself.
+    if epic:
+        e_norm = epic.strip()
+        def _matches_epic(ev: TimelineEvent) -> bool:
+            if ev.parent_epic == e_norm:
+                return True
+            # Epic file itself: path like 'wiki/backlog/epics/E013-*.md' or the full title
+            if ev.path and f"/{e_norm}-" in f"/{ev.path}":
+                return True
+            if ev.path and ev.path.endswith(f"{e_norm}.md"):
+                return True
+            return False
+        all_events = [ev for ev in all_events if _matches_epic(ev)]
+
+    # Path filter: substring match against event path.
+    if path_filter:
+        all_events = [ev for ev in all_events if path_filter in ev.path]
 
     # Noise reduction: suppress snapshot events that duplicate delta events.
     # When a file has delta events (with commit_sha) on a date, its bare
@@ -1703,6 +1723,10 @@ def main() -> None:
                         "Without this flag, unavailable projects surface as notices only.")
     p.add_argument("--collapse-arcs", dest="collapse_arcs", action="store_true",
                    help="Collapse same-file same-day event clusters into one arc-summary line.")
+    p.add_argument("--epic", dest="epic", default=None,
+                   help="Filter to one epic (e.g. --epic E013). Matches parent_epic OR the epic file itself.")
+    p.add_argument("--path", dest="path_filter", default=None,
+                   help="Filter events whose path contains this substring (e.g. --path T120).")
     p.add_argument("--wiki-root", dest="wiki_root", default=None,
                    help="Override self project root (default: current project).")
     p.add_argument("--brain", dest="brain", default=None,
@@ -1731,6 +1755,8 @@ def main() -> None:
         output_format=args.output_format,
         remote=args.remote,
         collapse_arcs=args.collapse_arcs,
+        epic=args.epic,
+        path_filter=args.path_filter,
     )
     print(output)
 

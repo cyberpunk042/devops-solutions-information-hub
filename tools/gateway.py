@@ -1838,6 +1838,10 @@ def main():
                          "Without this flag, unavailable projects surface as notices only.")
     tl.add_argument("--collapse-arcs", dest="tl_collapse_arcs", action="store_true",
                     help="Collapse same-file same-day event clusters into one arc-summary line")
+    tl.add_argument("--epic", dest="tl_epic", default=None,
+                    help="Filter to one epic (e.g. --epic E013). Matches parent_epic OR epic file.")
+    tl.add_argument("--path", dest="tl_path", default=None,
+                    help="Filter events whose path contains this substring (e.g. --path T120)")
 
     ct = sub.add_parser("contribute", help="Write back to the wiki (lands in 00_inbox / log; promotion requires review)")
     ct.add_argument("--type", required=True, choices=["lesson", "remark", "correction"])
@@ -2022,6 +2026,8 @@ def main():
             output_format=args.tl_format,
             remote=args.tl_remote,
             collapse_arcs=args.tl_collapse_arcs,
+            epic=args.tl_epic,
+            path_filter=args.tl_path,
         )
         print(output)
 
