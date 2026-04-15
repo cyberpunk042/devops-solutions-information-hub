@@ -113,6 +113,43 @@ The summaries below are quick reference. For full quality bars, common failures,
 
 ---
 
+### Quick Start Callout Policy
+
+> [!info] When and how a page gets an "AI Quick Start" callout — resolves Q12
+>
+> A Quick Start callout is a 5-10 line `> [!tip] AI Quick Start` block placed IMMEDIATELY AFTER the H1 title and BEFORE the Summary section. It tells an AI agent in under 30 seconds: what this page is for, when to consume it, and what to do after reading. It is not a teaser — it is an actionable header that lets an agent skip the body if it has the answer already.
+>
+> **Qualifying criteria — add a Quick Start callout when ALL are true:**
+>
+> | Criterion | Threshold |
+> |-----------|-----------|
+> | **Page role** | Model page, standards page, reference/navigation hub, or learning-path entry. NOT needed on lessons, patterns, decisions (the page Summary suffices), short note pages, or source syntheses. |
+> | **Length** | ≥200 lines. Pages shorter than that don't need a header because the body IS the Quick Start. |
+> | **Agent action pattern** | Reading the page requires a specific action sequence afterward (select a model, follow a stage, produce an artifact). If reading is passive learning, the Quick Start is noise. |
+>
+> **Format (from [[methodology-system-map|Methodology System Map]] and [[model-methodology|Model — Methodology]]):**
+>
+> ```markdown
+> > [!tip] AI Quick Start — {One-line framing of what this page is for}
+> >
+> > - **"{user question 1}?"** → {actionable next step with wikilink}
+> > - **"{user question 2}?"** → {actionable next step with wikilink}
+> > - **"{user question 3}?"** → {actionable next step with wikilink}
+> > - **Need {specific artifact}?** → {where to find it}
+> > - **Need to add something new?** → {pointer to extension section}
+> ```
+>
+> - 4-7 bullets typical; exceeds 10 only for hub pages
+> - Each bullet is `question/situation → actionable next step` — not a description of the page's content
+> - Wikilinks to the actual destination page, not another summary
+> - Uses `> [!tip]` callout (semantic: "start here")
+>
+> **When the Quick Start and Summary seem to overlap:** the Quick Start is for an AGENT about to act. The Summary is for a HUMAN about to read. Duplication is acceptable — they serve different audiences. If they say exactly the same thing in the same way, the Quick Start is too abstract or the Summary is too terse.
+>
+> **Current adoption:** 16 pages have Quick Start callouts as of 2026-04-14 (per methodology-system-map). Retroactive audit across long model/standards pages is E020 scope (Knowledge Sweep).
+
+---
+
 ### Gold Standard: Concept Page
 
 **Reference**: [[methodology-framework|Methodology Framework]] — 347 lines, 17 relationships
