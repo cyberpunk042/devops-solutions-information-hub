@@ -157,6 +157,10 @@ models:
           - artifact: wiki-page
             count: "1+"
             purpose: "Research findings with sources and evidence"
+            templates:
+              - source-synthesis  # primary — capturing external material
+              - concept           # when investigation yields a structured concept
+              - reference         # when output is a comparison/options table
         forbidden: [code-file, test-file]
         gate:
           checks: [wiki-page-exists]
@@ -167,6 +171,9 @@ models:
             count: "1+"
             purpose: "Options compared, recommendation stated, implications mapped"
             depends_on: [document.wiki-page]
+            templates:
+              - methodology/design-plan  # problem + options + recommendation
+              - decision                  # resolved decision from research
         forbidden: [code-file, test-file]
         gate:
           checks: [design-doc-exists, options-compared]
@@ -185,6 +192,8 @@ models:
           - artifact: wiki-page
             count: "1"
             purpose: "Source inventory: pages to distill from, convergence identified"
+            templates:
+              - note  # lightweight — inventory notes, not evolved content yet
         gate:
           checks: [sources-identified, convergence-stated]
 
@@ -194,6 +203,11 @@ models:
             count: "1"
             purpose: "Evolved page with evidence from source pages"
             depends_on: [document.wiki-page]
+            templates:
+              - lesson     # failure-pattern or success-pattern distillation
+              - pattern    # reusable structural/architectural pattern
+              - decision   # resolved policy question with alternatives
+              - principle  # highest-layer convergence (rare — needs 3+ lessons)
         gate:
           checks: [evolved-page-valid, evidence-from-sources, pipeline-post-passes]
 
@@ -210,6 +224,15 @@ models:
           - artifact: wiki-page
             count: "1+"
             purpose: "Complete wiki page meeting all quality gates"
+            templates:
+              # Documentation tasks can produce any wiki page type — pick based on content shape
+              - concept           # explanatory prose about a subject
+              - reference         # structured lookup material (tables, lists)
+              - deep-dive         # extended analysis where a concept isn't enough
+              - domain-overview   # orientation for a domain's pages
+              - learning-path     # curriculum / guided sequence
+              - evolution         # historical record of how something changed
+              - note              # quick log entry (operator directives, session notes)
         gate:
           checks: [wiki-page-valid, pipeline-post-passes]
 
@@ -227,6 +250,9 @@ models:
           - artifact: wiki-page
             count: "1"
             purpose: "Bug analysis: description, reproduction steps, root cause with file refs"
+            templates:
+              - note     # quick bug log with reproduction + root cause
+              - concept  # when bug requires understanding a non-trivial subsystem
         gate:
           checks: [root-cause-identified]
 
@@ -265,6 +291,9 @@ models:
           - artifact: wiki-page
             count: "1"
             purpose: "Current structure mapped, target structure defined, migration plan"
+            templates:
+              - methodology/gap-analysis  # current vs target with migration plan
+              - concept                    # explanatory mapping when gap-analysis is overkill
         gate:
           checks: [current-and-target-documented]
 
@@ -381,6 +410,9 @@ models:
         required:
           - artifact: wiki-page
             purpose: "Project structure, directory layout, config skeleton"
+            templates:
+              - concept           # describes the project's structural decisions
+              - domain-overview   # if the project IS a domain getting orientation
         gate:
           checks: [project-structure-exists]
 
@@ -388,6 +420,9 @@ models:
         required:
           - artifact: wiki-page
             purpose: "Core dependencies, base config, CI setup documented"
+            templates:
+              - reference  # tables of dependencies, configs, CI steps
+              - concept    # narrative explanation of foundation choices
         composition_model: documentation
         gate:
           checks: [foundation-documented]
@@ -396,6 +431,10 @@ models:
         required:
           - artifact: wiki-page
             purpose: "Tooling, automation, deployment pipeline documented"
+            templates:
+              - methodology/tech-spec  # API/interface contracts for infra components
+              - reference              # tooling reference tables
+              - operations-plan        # if infrastructure setup needs sequential steps
         composition_model: feature-development
         gate:
           checks: [infrastructure-operational]

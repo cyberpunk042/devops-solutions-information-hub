@@ -118,6 +118,7 @@ types:
 
   reference:
     category: knowledge-pages
+    artifact_class: documentation  # references are LOOKUP material — explanatory, findable
     template: config/templates/reference.md
     content_thresholds:
       summary_min_words: 30
@@ -129,6 +130,7 @@ types:
 
   deep-dive:
     category: knowledge-pages
+    artifact_class: documentation  # deep-dives are extended explanations — same class as concept
     template: config/templates/deep-dive.md
     content_thresholds:
       summary_min_words: 30
@@ -219,6 +221,7 @@ types:
 
   domain-overview:
     category: navigation-pages
+    artifact_class: documentation  # navigation aid, organizes other pages
     template: config/templates/domain-overview.md
     content_thresholds:
       summary_min_words: 30
@@ -228,6 +231,7 @@ types:
 
   evolution:
     category: navigation-pages
+    artifact_class: documentation  # historical record, explains how things changed
     template: config/templates/evolution.md
     content_thresholds:
       summary_min_words: 30
@@ -236,6 +240,7 @@ types:
 
   learning-path:
     category: navigation-pages
+    artifact_class: documentation  # curriculum/sequencing guide
     template: config/templates/learning-path.md
     content_thresholds:
       summary_min_words: 30
@@ -245,6 +250,7 @@ types:
 
   index:
     category: navigation-pages
+    artifact_class: documentation  # navigation index
     template: null  # indexes are hand-crafted or auto-generated
     verification:
       gate: pipeline-post
@@ -279,6 +285,7 @@ types:
 
   module:
     category: backlog-pages
+    artifact_class: document  # modules are BINDING work definitions (like epic, lighter)
     template: config/templates/module.md
     required_frontmatter:
       - priority
@@ -291,6 +298,7 @@ types:
 
   task:
     category: backlog-pages
+    artifact_class: document  # tasks are BINDING work definitions — constrain execution
     template: config/templates/task.md
     required_frontmatter:
       - priority
@@ -303,6 +311,7 @@ types:
 
   note:
     category: backlog-pages
+    artifact_class: documentation  # notes are recording/logging — explanatory, not constraining
     template: config/templates/note.md
     content_thresholds:
       summary_min_words: 10
@@ -354,42 +363,49 @@ types:
 methodology_templates:
   requirements-spec:
     wiki_type: concept
+    artifact_class: document  # requirements are BINDING specifications
     template: config/templates/methodology/requirements-spec.md
     produced_at_stage: document
     description: "Functional requirements, non-functional requirements, acceptance criteria"
 
   infrastructure-analysis:
     wiki_type: concept
+    artifact_class: documentation  # analysis output — describes existing state
     template: config/templates/methodology/infrastructure-analysis.md
     produced_at_stage: document
     description: "Mapping of existing infrastructure — files, components, data flow"
 
   gap-analysis:
     wiki_type: concept
+    artifact_class: documentation  # analysis output — describes delta, not binding
     template: config/templates/methodology/gap-analysis.md
     produced_at_stage: document
     description: "Gap identification — current vs required state, impact, complexity"
 
   design-plan:
     wiki_type: concept
+    artifact_class: document  # design decisions constrain subsequent implementation
     template: config/templates/methodology/design-plan.md
     produced_at_stage: design
     description: "Problem analysis, alternatives, trade-offs, decisions, rationale"
 
   tech-spec:
     wiki_type: reference
+    artifact_class: document  # technical contract — constrains APIs and interfaces
     template: config/templates/methodology/tech-spec.md
     produced_at_stage: design
     description: "Component specs, API tables, interface definitions, state management"
 
   test-plan:
     wiki_type: reference
+    artifact_class: document  # test contract — constrains what must pass
     template: config/templates/methodology/test-plan.md
     produced_at_stage: design
     description: "Test strategy, test cases with IDs, inputs, expected outputs"
 
   ADR:
     wiki_type: decision
+    artifact_class: document  # architectural decisions are BINDING
     template: config/templates/methodology/adr.md
     produced_at_stage: design
     description: "Architecture Decision Record — formal variant of decision page with Context/Decision/Consequences sections. Use when decision affects system architecture, needs durable provenance, or is hard to reverse."

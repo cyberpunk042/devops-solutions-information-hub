@@ -244,8 +244,13 @@ required_sections:
     - Done When
     - Relationships
   module:
+    # Per Q41 resolution (e003-artifact-type-system-design): "Same pattern as
+    # epic but lighter." A module page CONTAINS tasks (Module Breakdown) and
+    # has cross-module Dependencies. Goals collapses into Summary at module
+    # scope (the module's purpose IS what it does).
     - Summary
-    - Goals
+    - Module Breakdown
+    - Dependencies
     - Done When
     - Relationships
   task:
