@@ -86,6 +86,33 @@ The summaries below are quick reference. For full quality bars, common failures,
 
 ---
 
+### Template Policy
+
+> [!info] How templates are structured — policy governing all files in wiki/config/templates/
+>
+> This is the cross-cutting policy every page template follows. Resolves operator decision queue **Q11 (structure vs structure+example split)**. If you are creating or editing a template, follow this policy. Live templates: `wiki/config/templates/*.md` (18 page types) + `wiki/config/templates/methodology/*.md` (7 methodology artifacts).
+>
+> | Dimension | Policy | Rationale |
+> |-----------|--------|-----------|
+> | **Structure** | **UNIFIED, not two-section.** The structure IS the example. One canonical skeleton with rich example content inside HTML comments. Do NOT split into "structure section" + "example section" — this produces duplicate headers when scaffolded and drifts over time. | Per E012 inline resolution 2026-04-13: "the structure IS the example. One section, rich content." Templates with both structure and separate examples developed duplicate `## Evidence` / `## Insight` headers when edited by different agents (observed in `lesson.md`, `reference.md`). |
+> | **Example placement** | **Inside HTML comments** (`<!-- EXAMPLE: ... -->`), not as pre-filled live content. The agent reads the example, sees what good looks like, then replaces placeholders with real content. | Pre-filled live content risks being left in final pages. HTML comments are clearly not-real-content and get stripped/ignored by the rendered page if they survive. |
+> | **Example content quality** | **Concrete and specific** — names actual projects/data/files that the wiki has synthesized, not hypothetical "Foo/Bar." The example SHOULD look like a real wiki page from the corpus. | A template example that says "replace with your domain" teaches less than one that shows "TypeScript \| Scaffold empty modules before writing business logic; prevents type-coupling creep." The concrete example shows what the abstract rule LOOKS LIKE when applied. |
+> | **Placeholders** | **`{{double-brace}}` markers** for fields the agent must replace (title, date, domain, derived_page_N). Scaffolder substitutes these at generation time. Everything else stays — agent may edit, but doesn't HAVE to. | Typed substitution points keep mechanical fields (frontmatter) deterministic while keeping content fields (example narratives) as guidance. |
+> | **Self-validation** | **Scaffolding from the template produces a page that passes `pipeline post` with 0 errors on first run.** If a template's example content violates the page type's standards (missing required section, insufficient word count), the template is bugged — not the agent. | Preach by example at the template level. A template that scaffolds to a failing page teaches the agent that failure is acceptable. |
+> | **Styling callouts** | **Match the page-type standard's required callouts** — e.g., lesson templates MUST show `> [!warning]` or `> [!tip]` wrapping the Insight example, because the lesson standard requires that callout on the real page. | The template demonstrates compliance with the standard it scaffolds. If the standard requires semantic callouts, the template must show them. |
+> | **Methodology templates** | **Same policy, applied to `wiki/config/templates/methodology/*.md`.** These scaffold methodology documents (ADR, requirements-spec, design-plan, etc.) — not wiki page types. They inherit structure from their parent wiki type (concept/reference/decision) and layer methodology-specific sections on top. | Methodology templates are specialized instances of wiki page types, not a separate template system. They validate against the same wiki-schema + artifact-types.yaml rules. |
+>
+> **Anti-patterns observed in the corpus** (flagged for E012 cleanup):
+>
+> - `wiki/config/templates/lesson.md` — has `## Evidence` heading twice (once at line 33 with HTML comment, once at line 83 with live example callout). Scaffolds to a page with duplicate headers.
+> - `wiki/config/templates/reference.md` — has HTML-comment example AND live example section outside comments. Same risk: duplicate or conflicting structure on scaffold.
+>
+> **Gold-standard template examples:**
+> - [decision.md](wiki/config/templates/decision.md) — rich `EXAMPLE:` blocks inside HTML comments for every section. Concrete names (MCP vs CLI decision, work hierarchy decision) drawn from real wiki pages. No duplicate sections.
+> - [pattern.md](wiki/config/templates/pattern.md), [operations-plan.md](wiki/config/templates/operations-plan.md) — similar clean structure per E012 classification ("ALREADY RICH").
+
+---
+
 ### Gold Standard: Concept Page
 
 **Reference**: [[methodology-framework|Methodology Framework]] — 347 lines, 17 relationships
