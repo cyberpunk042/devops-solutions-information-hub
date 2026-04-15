@@ -522,7 +522,7 @@ Manual start (debugging only):
 | `wiki_backlog` | Backlog summary, optionally filtered by epic |
 | `wiki_log` | Create a log entry in `wiki/log/` |
 
-### Gateway Tools (4)
+### Gateway Tools (6)
 
 | Tool | Parameters | What It Does |
 |------|-----------|-------------|
@@ -530,6 +530,8 @@ Manual start (debugging only):
 | `wiki_gateway_template` | `page_type` | Get a page template by type |
 | `wiki_gateway_contribute` | `contrib_type`, `title`, `content`, `domain` | Write-back: lesson, remark, or correction |
 | `wiki_gateway_flow` | `step` (optional 1-8) | Goldilocks flow — 8-step routing |
+| `wiki_gateway_docs` | `doc_name` (optional) | Query 8 root-level docs (README, AGENTS, CLAUDE, CONTEXT, ARCHITECTURE, DESIGN, TOOLS, SKILLS) |
+| `wiki_methodology_guide` | none | Auto-detect identity + recommend SDLC profile + model + first steps (Goldilocks entry point) |
 
 **`wiki_gateway_query` — `query_type` values:**
 

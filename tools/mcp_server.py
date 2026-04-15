@@ -473,6 +473,33 @@ def wiki_gateway_docs(doc_name: str = None) -> str:
     return json.dumps(result, indent=2, default=str)
 
 
+@server.tool()
+def wiki_methodology_guide() -> str:
+    """Auto-detect project identity and recommend SDLC profile + methodology model + first steps.
+
+    This is the agent-facing entry point to the Goldilocks identity protocol.
+    Given the current working directory, it auto-detects:
+      - domain (knowledge/typescript/python-wiki/infrastructure)
+      - phase (poc/mvp/staging/production)
+      - scale (micro/small/medium/large)
+      - execution mode (solo/harness/fleet)
+      - second-brain relationship
+
+    Then recommends:
+      - SDLC profile (simplified / default / full)
+      - Available methodology models for this context
+      - Concrete first steps to take (CLI commands)
+      - Exploration pointers (other gateway queries to try next)
+
+    Use this when an agent arrives fresh on a project and needs orientation
+    before starting work. Wraps the CLI `gateway what-do-i-need` command.
+    Declared values in CLAUDE.md take precedence over auto-detection.
+    """
+    from tools.gateway import resolve_paths, query_what_do_i_need
+    paths = resolve_paths()
+    return query_what_do_i_need(paths)
+
+
 # ---------------------------------------------------------------------------
 # Entrypoint
 # ---------------------------------------------------------------------------
