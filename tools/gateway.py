@@ -1509,6 +1509,136 @@ def query_health(paths: Dict[str, Path]) -> Dict[str, Any]:
     }
 
 
+def query_compliance(paths: Dict[str, Path]) -> Dict[str, Any]:
+    """Super-model compliance checker — report project's adoption tier and gaps.
+
+    Resolves Q25 from the operator decision queue. Reads the project's
+    structure (CLAUDE.md, methodology.yaml, wiki/, tools/) and reports
+    which super-model adoption tier the project has reached, which
+    requirements are met per tier, and what's missing to advance.
+
+    Four adoption tiers (from wiki/spine/super-model/super-model.md):
+      Tier 1 — Agent Foundation: CLAUDE.md + wiki-schema.yaml + templates
+      Tier 2 — Stage-Gate Process: methodology.yaml + backlog hierarchy
+      Tier 3 — Evolution Pipeline: evolve tool + maturity folders
+      Tier 4 — Hub Integration: export profiles + MCP server
+
+    Returns current_tier (highest fully met), max_tier (4), per-tier
+    requirement checklists with met/missing, and up to 3 actionable
+    recommendations for advancing to the next tier.
+    """
+    root = paths["root"]
+    wiki = paths["wiki"]
+
+    def _check(path_spec: str, description: str) -> Dict[str, Any]:
+        """Check if a path exists. path_spec is relative to project root."""
+        exists = (root / path_spec).exists()
+        return {"path": path_spec, "description": description, "met": exists}
+
+    # Tier 1 — Agent Foundation
+    tier1 = {
+        "name": "Agent Foundation",
+        "description": "Structured knowledge base with schema + templates + routing",
+        "requirements": [
+            _check("CLAUDE.md", "Project routing table / context for Claude"),
+            _check("wiki/config/wiki-schema.yaml", "Frontmatter schema defining valid page types"),
+            _check("wiki/config/templates", "Page templates directory (scaffolds for each type)"),
+        ],
+    }
+
+    # Tier 2 — Stage-Gate Process
+    tier2 = {
+        "name": "Stage-Gate Process",
+        "description": "Methodology engine + work tracking + stage discipline",
+        "requirements": [
+            _check("wiki/config/methodology.yaml", "Methodology models with stage chains"),
+            _check("wiki/backlog", "Backlog hierarchy directory (milestones/epics/modules/tasks)"),
+            _check("AGENTS.md", "Universal cross-tool agent context (three-layer pattern)"),
+        ],
+    }
+
+    # Tier 3 — Evolution Pipeline
+    # Maturity folders: wiki has multiple subdirs with 00_inbox, 01_drafts, etc.
+    maturity_dirs = ["lessons", "patterns", "decisions"]
+    maturity_met = all(
+        (wiki / d / "00_inbox").exists() or (wiki / d / "01_drafts").exists()
+        for d in maturity_dirs
+    )
+    tier3 = {
+        "name": "Evolution Pipeline",
+        "description": "Self-improving wiki with maturity lifecycle + scoring + promotion",
+        "requirements": [
+            _check("tools/evolve.py", "Evolution scoring + promotion tooling"),
+            {
+                "path": "wiki/{lessons,patterns,decisions}/00_inbox",
+                "description": "Maturity lifecycle folders (00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles)",
+                "met": maturity_met,
+            },
+            _check("tools/lint.py", "Quality/drift detection (includes queue-drift check)"),
+        ],
+    }
+
+    # Tier 4 — Hub Integration
+    tier4 = {
+        "name": "Hub Integration",
+        "description": "Ecosystem participation — export, MCP, bidirectional knowledge flow",
+        "requirements": [
+            _check("wiki/config/export-profiles.yaml", "Export transforms for sister projects"),
+            _check("tools/mcp_server.py", "MCP server exposing wiki operations"),
+            _check(".mcp.json", "MCP server registration for Claude Code"),
+        ],
+    }
+
+    tiers = [tier1, tier2, tier3, tier4]
+
+    # Compute current tier — highest FULLY met (tiers are cumulative)
+    current_tier = 0
+    for i, tier in enumerate(tiers, 1):
+        if all(req["met"] for req in tier["requirements"]):
+            current_tier = i
+        else:
+            break
+
+    # Gather gaps across all tiers
+    gaps: List[Dict[str, Any]] = []
+    for i, tier in enumerate(tiers, 1):
+        for req in tier["requirements"]:
+            if not req["met"]:
+                gaps.append({
+                    "tier": i,
+                    "tier_name": tier["name"],
+                    "missing": req["path"],
+                    "description": req["description"],
+                })
+
+    # Recommendations — target the NEXT tier up
+    recommendations: List[str] = []
+    if current_tier < 4:
+        next_tier = tiers[current_tier]  # 0-indexed; current_tier is already the next
+        missing_in_next = [req for req in next_tier["requirements"] if not req["met"]]
+        if missing_in_next:
+            recommendations.append(
+                f"To reach Tier {current_tier + 1} ({next_tier['name']}), add: "
+                + ", ".join(req["path"] for req in missing_in_next)
+            )
+        for req in missing_in_next[:2]:
+            recommendations.append(f"Missing: {req['path']} — {req['description']}")
+    else:
+        recommendations.append(
+            "At Tier 4 (Hub Integration) — the highest adoption tier. No gaps to fill."
+        )
+
+    return {
+        "current_tier": current_tier,
+        "max_tier": 4,
+        "current_tier_name": tiers[current_tier - 1]["name"] if current_tier > 0 else "Not yet adopted",
+        "tiers": tiers,
+        "gaps": gaps,
+        "recommendations": recommendations,
+        "note": "Super-model adoption tiers are CUMULATIVE — Tier N requires all Tiers 1..N to be met.",
+    }
+
+
 def query_location_mapping(paths: Dict[str, Path], title: Optional[str] = None) -> Dict[str, Any]:
     """Query the location mapping — find where archived/moved pages went."""
     import json as _json
@@ -1589,6 +1719,9 @@ def main():
     # Health score (Q23+Q24)
     sub.add_parser("health", help="Composite methodology+quality health score with per-dimension breakdown")
 
+    # Compliance checker (Q25)
+    sub.add_parser("compliance", help="Super-model compliance checker — adoption tier + gaps")
+
     # Status command (smart default — show everything)
     sub.add_parser("status", help="Show project identity, chain, models, and navigation guide")
 
@@ -1627,6 +1760,27 @@ def main():
 
     if args.command == "what-do-i-need":
         print(query_what_do_i_need(paths))
+
+    elif args.command == "compliance":
+        result = query_compliance(paths)
+        print(f"\nSuper-Model Compliance — Tier {result['current_tier']} / {result['max_tier']}  ({result['current_tier_name']})")
+        print(f"{result['note']}")
+        print("")
+        for i, tier in enumerate(result["tiers"], 1):
+            met_count = sum(1 for r in tier["requirements"] if r["met"])
+            total = len(tier["requirements"])
+            mark = "✓" if met_count == total else ("⚠" if met_count > 0 else "✗")
+            print(f"{mark} Tier {i} — {tier['name']}  ({met_count}/{total} requirements met)")
+            print(f"    {tier['description']}")
+            for req in tier["requirements"]:
+                symbol = "✓" if req["met"] else "✗"
+                print(f"      {symbol} {req['path']}  — {req['description']}")
+            print("")
+        if result["recommendations"]:
+            print("Recommendations:")
+            for i, rec in enumerate(result["recommendations"], 1):
+                print(f"  {i}. {rec}")
+            print("")
 
     elif args.command == "health":
         result = query_health(paths)

@@ -474,6 +474,31 @@ def wiki_gateway_docs(doc_name: str = None) -> str:
 
 
 @server.tool()
+def wiki_gateway_compliance() -> str:
+    """Super-model compliance checker — adoption tier + gaps.
+
+    Resolves Q25. Reads the project's structure (CLAUDE.md, AGENTS.md,
+    methodology.yaml, wiki/, tools/) and reports which super-model
+    adoption tier (1-4) the project has reached, per-tier requirement
+    checklist with met/missing, and recommendations for advancing.
+
+    Four tiers (cumulative):
+      1 — Agent Foundation (CLAUDE.md + schema + templates)
+      2 — Stage-Gate Process (methodology.yaml + backlog + AGENTS.md)
+      3 — Evolution Pipeline (evolve + lint + maturity folders)
+      4 — Hub Integration (export profiles + MCP server + .mcp.json)
+
+    Returns JSON with current_tier, max_tier, per-tier breakdown, gaps,
+    and actionable recommendations. Makes adoption MEASURABLE instead
+    of declared.
+    """
+    from tools.gateway import resolve_paths, query_compliance
+    paths = resolve_paths()
+    result = query_compliance(paths)
+    return json.dumps(result, indent=2, default=str)
+
+
+@server.tool()
 def wiki_gateway_health() -> str:
     """Composite methodology+quality health score for the wiki with per-dimension breakdown.
 
