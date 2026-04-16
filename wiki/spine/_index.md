@@ -82,6 +82,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Model — Quality and Failure Prevention](models/quality/model-quality-failure-prevention.md) — Quality and failure prevention for AI agents is not a set of best practices — it is a system with three enforcement l...
 - [Model — SFIF and Architecture](models/quality/model-sfif-architecture.md) — The SFIF and Architecture model describes the universal 4-stage build lifecycle (Scaffold → Foundation → Infrastructu...
 - [Adoption Guide — How to Use This Wiki's Standards](references/adoption-guide.md) — This guide explains how any project in the ecosystem (or outside it) picks up the methodology, stage-gate system, bac...
+- [Consumer Integration Roadmap — OpenArms Exemplar (First Full Plan)](references/consumer-integration-roadmap-exemplar.md) — The first concrete milestone-level plan for a consumer project integrating with the second brain
 - [Context File Taxonomy — The 8 Dimensions of Agent Context](references/context-file-taxonomy.md) — The complexity of agent context is NOT captured by a fixed number of "cognitive contexts
 - [Frontmatter Field Reference — Complete Parameter Documentation](references/frontmatter-field-reference.md) — Complete reference for every YAML frontmatter field used in the wiki
 - [Gateway Tools Reference — Complete Command Documentation](references/gateway-tools-reference.md) — Complete reference for the wiki gateway — the unified Python interface serving humans (CLI), AI agents (programmatic)...
@@ -124,4 +125,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `page-type`, `exemplar`, `model`, `domain-overview`, `methodology`, `gold-standard`, `reference`, `anti-patterns`, `skills`, `concept`, `sub-model`, `navigation-hub`, `hooks`, `second-brain`, `ecosystem`, `integration`, `evolution`
+`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `domain-overview`, `methodology`, `reference`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `second-brain`, `ecosystem`, `adoption`

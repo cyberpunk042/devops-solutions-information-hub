@@ -104,6 +104,25 @@ The structural consistency principle: every scenario follows the SAME skeleton. 
 >
 > **Gap:** A validation matrix for the wiki would define: "when an agent runs `/continue`, it should receive: current page count, pending raw files, evolution candidates, gap analysis. Here is the expected format."
 
+> [!warning]- OpenArms: Non-Adoption After 5 Months — the Adoption-Difficulty Evidence (2026-04-16)
+>
+> OpenArms operates at Tier 2 with 5 methodology skills (methodology-common + per-stage skills for document/design/scaffold/implement/test). After 5 months of methodology evolution and the 2026-04-16 second-brain integration session, **OpenArms has NO validation matrix for its skills.**
+>
+> From OpenArms's integration notes (Part 22): *"We have 5 methodology skills but no validation matrix. Gap: if a skill change drops a constraint, nothing catches it."*
+>
+> **Why this is evidence-worthy (not a criticism):**
+>
+> - OpenArms is a mature adopter — not a project that "hasn't gotten around to it yet"
+> - They explicitly read this pattern page during integration
+> - They named the gap themselves in their notes
+> - They labeled it "Milestone 2 work" — not "oversight"
+>
+> **What the non-adoption reveals:** validation matrix adoption has a high effort threshold. The infrastructure required — scenario files per (stage × task-type × tier), automated diff against context builder output, regression testing on every context-code change — is itself a mini-project. A 29-scenario matrix like OpenFleet's takes days-to-weeks to build. For solo-to-mid projects, the cost/benefit tilts toward "visual inspection + structural consistency" until the skill count exceeds what a human can audit manually.
+>
+> **When solo projects should adopt:** skill count ≥ 8, OR skills being modified by multiple people, OR observed regressions where a skill change silently dropped a constraint. Below those thresholds, OpenArms is evidence that delaying this adoption is defensible.
+>
+> **Practical lesson:** the pattern belongs at Tier 3 adoption, not Tier 2. The existing "When To Apply" criteria are correct; but the pattern page should be read in context of [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]] — matrix infrastructure is a significant architectural investment like Line 2/3 of the Three Lines of Defense.
+
 ## When To Apply
 
 > [!tip] Conditions for a Validation Matrix
@@ -142,6 +161,7 @@ The structural consistency principle: every scenario follows the SAME skeleton. 
 - RELATES TO: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+- RELATES TO: [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]]
 - FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 
 ## Backlinks
@@ -151,6 +171,7 @@ The structural consistency principle: every scenario follows the SAME skeleton. 
 [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[model-context-engineering|Model — Context Engineering]]
 [[identity-profile|OpenFleet — Identity Profile]]

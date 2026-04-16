@@ -156,3 +156,4 @@ The pattern has four structural steps — apply in order:
 [[model-context-engineering|Model — Context Engineering]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[Claude Code Standards]]
+[[consumer-integration-roadmap-exemplar|Consumer Integration Roadmap — OpenArms Exemplar (First Full Plan)]]

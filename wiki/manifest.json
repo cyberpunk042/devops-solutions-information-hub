@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-16T19:35:26.528616+00:00",
+  "generated": "2026-04-16T19:41:30.430536+00:00",
   "stats": {
-    "pages": 356,
+    "pages": 357,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2378,
-    "tags_unique": 1095,
+    "relationships": 2386,
+    "tags_unique": 1097,
     "layers": {
       "3": 4,
       "6": 18,
@@ -14,10 +14,10 @@
       "4": 55,
       "5": 27,
       "1": 32,
-      "spine": 66
+      "spine": 67
     },
     "maturity": {
-      "growing": 273,
+      "growing": 274,
       "seed": 35
     }
   },
@@ -17260,6 +17260,10 @@
           "target": "Enforcement Hook Patterns"
         },
         {
+          "verb": "RELATES TO",
+          "target": "Defense Layer Progression Is Expensive"
+        },
+        {
           "verb": "FEEDS INTO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
@@ -22752,6 +22756,83 @@
       ]
     },
     {
+      "path": "spine/references/consumer-integration-roadmap-exemplar.md",
+      "slug": "spine/references/consumer-integration-roadmap-exemplar",
+      "title": "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "reference",
+        "integration",
+        "roadmap",
+        "milestones",
+        "adoption",
+        "consumer",
+        "exemplar",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-integration-plan",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "Parts 6 and 14-19 \u2014 OpenArms's own 5-milestone integration plan produced during first consumer integration. ~27-30 epics, ~150-200 tasks, 800-1200 hours."
+        },
+        {
+          "id": "integration-chain",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-integration-chain.md"
+        },
+        {
+          "id": "adoption-guide",
+          "type": "wiki",
+          "file": "wiki/spine/references/methodology-adoption-guide.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Consumer Integration Roadmap \u2014 OpenArms Exemplar",
+        "Consumer Integration Roadmap"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Operations Plan \u2014 Second Brain Integration Chain"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "OpenArms \u2014 Identity Profile"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Defense Layer Progression Is Expensive"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Progressive Structural Enrichment in Agent Config"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Goldilocks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Super-Model"
+        }
+      ]
+    },
+    {
       "path": "spine/references/context-file-taxonomy.md",
       "slug": "spine/references/context-file-taxonomy",
       "title": "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context",
@@ -24901,12 +24982,12 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 164,
-      "relationship_count": 1103
+      "page_count": 165,
+      "relationship_count": 1110
     },
     "ai-agents": {
       "page_count": 68,
-      "relationship_count": 531
+      "relationship_count": 532
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -25258,6 +25339,7 @@
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
       "spine/models/ecosystem/model-ecosystem",
       "spine/models/ecosystem/model-mcp-cli-integration",
+      "spine/references/consumer-integration-roadmap-exemplar",
       "spine/references/second-brain-integration-chain",
       "spine/super-model/super-model"
     ],
@@ -25286,7 +25368,8 @@
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
-      "spine/models/ecosystem/model-ecosystem"
+      "spine/models/ecosystem/model-ecosystem",
+      "spine/references/consumer-integration-roadmap-exemplar"
     ],
     "end-to-end": [
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms"
@@ -27157,6 +27240,7 @@
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
       "spine/goldilocks-flow",
+      "spine/references/consumer-integration-roadmap-exemplar",
       "spine/references/context-file-taxonomy",
       "spine/references/frontmatter-field-reference",
       "spine/references/gateway-tools-reference",
@@ -28009,6 +28093,7 @@
     "adoption": [
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "spine/references/adoption-guide",
+      "spine/references/consumer-integration-roadmap-exemplar",
       "spine/references/methodology-adoption-guide",
       "spine/super-model/super-model"
     ],
@@ -28029,7 +28114,8 @@
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
     ],
     "consumer": [
-      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "spine/references/consumer-integration-roadmap-exemplar"
     ],
     "meta-lesson": [
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
@@ -29705,6 +29791,30 @@
     "rework": [
       "spine/models/quality/model-quality-failure-prevention"
     ],
+    "roadmap": [
+      "spine/references/consumer-integration-roadmap-exemplar"
+    ],
+    "milestones": [
+      "spine/references/consumer-integration-roadmap-exemplar"
+    ],
+    "exemplar": [
+      "spine/references/consumer-integration-roadmap-exemplar",
+      "spine/standards/comparison-page-standards",
+      "spine/standards/concept-page-standards",
+      "spine/standards/decision-page-standards",
+      "spine/standards/deep-dive-page-standards",
+      "spine/standards/domain-overview-page-standards",
+      "spine/standards/epic-page-standards",
+      "spine/standards/evolution-page-standards",
+      "spine/standards/learning-path-page-standards",
+      "spine/standards/lesson-page-standards",
+      "spine/standards/note-page-standards",
+      "spine/standards/operations-plan-page-standards",
+      "spine/standards/pattern-page-standards",
+      "spine/standards/reference-page-standards",
+      "spine/standards/source-synthesis-page-standards",
+      "spine/standards/task-page-standards"
+    ],
     "context": [
       "spine/references/context-file-taxonomy",
       "spine/references/root-documentation-map"
@@ -29746,23 +29856,6 @@
       "spine/references/second-brain-integration-chain"
     ],
     "page-type": [
-      "spine/standards/comparison-page-standards",
-      "spine/standards/concept-page-standards",
-      "spine/standards/decision-page-standards",
-      "spine/standards/deep-dive-page-standards",
-      "spine/standards/domain-overview-page-standards",
-      "spine/standards/epic-page-standards",
-      "spine/standards/evolution-page-standards",
-      "spine/standards/learning-path-page-standards",
-      "spine/standards/lesson-page-standards",
-      "spine/standards/note-page-standards",
-      "spine/standards/operations-plan-page-standards",
-      "spine/standards/pattern-page-standards",
-      "spine/standards/reference-page-standards",
-      "spine/standards/source-synthesis-page-standards",
-      "spine/standards/task-page-standards"
-    ],
-    "exemplar": [
       "spine/standards/comparison-page-standards",
       "spine/standards/concept-page-standards",
       "spine/standards/decision-page-standards",
@@ -30036,6 +30129,12 @@
       ]
     },
     {
+      "target": "Operations Plan \u2014 Second Brain Integration Chain",
+      "referenced_by": [
+        "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)"
+      ]
+    },
+    {
       "target": "Per-Task Cost Growth",
       "referenced_by": [
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
@@ -30063,7 +30162,8 @@
     {
       "target": "Principle \u2014 Goldilocks",
       "referenced_by": [
-        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity"
+        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity",
+        "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)"
       ]
     },
     {
@@ -30127,6 +30227,12 @@
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+      ]
+    },
+    {
+      "target": "Super-Model",
+      "referenced_by": [
+        "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)"
       ]
     },
     {

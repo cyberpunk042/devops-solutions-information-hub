@@ -118,41 +118,87 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 
 ## Second Brain Integration (2026-04-16 — First Consumer)
 
-> [!success] OpenArms was the first live consumer of the second brain. Tier 0 → Tier 2 in one session.
+> [!success] OpenArms was the first live consumer of the second brain. Tier 0 → Tier 2 in one session. Evolution continued through 23 session parts producing 15 adoption items and 14 contributions.
 
-### What OpenArms adopted
+### What OpenArms adopted (15 items across one session)
 
-| Adoption | Before | After | Evidence |
-|---|---|---|---|
-| **AGENTS.md** | 700 lines (monolith) | 136 lines + 12 `.claude/rules/*.md` | Follows <200 line standard |
-| **Identity Profile** | None | Goldilocks table (stable fields only) | Consumer properties NOT hardcoded |
-| **Page templates** | None | 7 templates in `wiki/config/templates/` | Closes Tier 1 gap |
-| **Compliance tier** | Tier 0 (0/3 Tier 1) | Tier 2 (3/3 Tier 1, 3/3 Tier 2) | `gateway compliance` verified |
-| **Bidirectional flow** | One-way (brain reads OpenArms) | Bidirectional (6+2 lessons contributed back) | First OFV cycle operational |
+| # | Adoption | Before | After | Commit |
+|---|---|---|---|---|
+| 1 | **AGENTS.md restructure** | 471 lines (monolith) | 124 lines + 12 `.claude/rules/*.md` | `0507a2a4` |
+| 2 | **Page templates** | None | 7 templates from second brain (task, lesson, epic, note, concept, decision, pattern) | `e4a1b8e0` |
+| 3 | **Identity Profile** | None | Goldilocks table with stable-only fields (no consumer properties) | `a6c13c8c` |
+| 4 | **Schema required_sections fix** | Aspirational (333 violations) | Minimum = Summary+Relationships; aspirational moved to `recommended_sections` | `3c8f64db` |
+| 5 | **Progress field in schema** | `readiness` only | `progress: int 0-100` added per Rule 4 of Backlog Hierarchy Rules | `afc34f4` |
+| 6 | **Progress computation in `recalculate-epic.cjs`** | N/A | Upward-flow computation mirroring readiness | `a27aaff` |
+| 7 | **Progress display in `select-task.cjs`** | N/A | Both fields in `--json` output | `9b9ccbe` |
+| 8 | **Progress computation in `validate-stage.cjs`** | N/A | Computed on execution stages (scaffold/implement/test) | `7ae48ef` |
+| 9 | **Typed concerns** | Free-text `/concern` | 8-type impediment classification | `b4bc195` |
+| 10 | **Artifact path verification** | Frontmatter trusted as declared | `fs.existsSync()` check at gate close | `b4ed8349` |
+| 11 | **Progress=100 at task completion + cap bug fix** | Progress could exceed 100 | Capped + set at done | `b4ed8349` |
+| 12 | **Methodology versioning** | No version field | `v11.0` ("second brain integration era" — honors prior 10 undocumented evolutions) | `2d8b2a31` |
+| 13 | **Rule 8 sparse-coverage warning** | No warning on sparse epics | `recalculate-epic.cjs` warns when readiness flips with <5 children | `74e8a50d` |
+| 14 | **Learnings.md structural restructure** | Bullets only | Hard/soft separation + numbered tables + section dividers (5 of 8 CLAUDE.md Structural Patterns) | `67ab1328` |
+| 15 | **Three principles table in AGENTS.md** | None | Goldilocks + Principles table with measured evidence per row (v8 75%→v10 0%; $9.07 vs $1.20; AGENTS.md 0 tables vs 3) | `73f89612` |
 
-### What OpenArms contributed back
+**Compliance: Tier 0 → Tier 2/4** (Tier 1 = 3/3, Tier 2 = 3/3). **AGENTS.md trajectory: 471 → 124 → 144 lines.** Full test suite: 1,776 passing throughout.
+
+### What OpenArms contributed back (14 items total)
 
 **8 lessons** (6 operational + 2 meta):
-1. turnCount bug — aspirational naming in lifecycle code
+
+1. turnCount bug — aspirational naming in lifecycle code (promoted to L5 pattern)
 2. Per-task cost growth — multi-task runs cost 2.6x naive prediction
-3. Pre-write hook race prevention — operator/agent file contention
-4. Clean-win scope expansion — Class A/B/C unauthorized modification taxonomy
+3. Pre-write hook race prevention — operator/agent file contention (integrated as Pattern 5 extension of Write Guard)
+4. Clean-win scope expansion — Class A/B/C unauthorized modification taxonomy (added as Class 8 of Agent Failure Taxonomy)
 5. Right-size methodology model — 86.8% cost reduction ($9.07 → $1.20)
-6. Epic readiness math — sparse-children metric failure
+6. Epic readiness math — sparse-children metric failure (promoted to L5 pattern: Hierarchical Metrics Fail on Sparse Coverage)
 7. Knowledge-tooling gap — knowledge in prose but not queryable by tooling
 8. Schema aspirationalism — aspirational schemas without validation create false confidence
 
-**2 corrections** to second brain content:
+**4 corrections/remarks** to second brain content:
+
 - Hook count: 4 files implementing 5 patterns (Pattern 5 extends Pattern 2)
 - Health lint: task/note pages are intentionally thin, skip thin-page checks
+- Rule 8 ↔ Hierarchical Metrics connection (structural fix for the pattern)
+- AGENTS.md restructure confirms structural patterns (5/8 adoption evidence)
 
-### What it revealed about the second brain
+**2 implementation/gap lessons**:
 
-9 findings (F1-F9), all addressed. The integration exposed that the tools were built for self-use, not consumer use. The reframe: the second brain is a TEACHING SYSTEM for adoption, not a RUNTIME SERVICE for querying. See `raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md` (871 lines).
+- Stage return mechanism missing — agent can only go forward, no return-to-Design
+- Structural patterns adoption is progressive — first real consumer data
+
+### What it revealed about the second brain (3 OFV cycles)
+
+9 findings (F1-F9) across 3 Observe-Fix-Verify cycles:
+
+| Round | OpenArms observed | Second brain fixed | OpenArms verified |
+|---|---|---|---|
+| **Round 1** | 9 findings: compliance wrong, health using wrong schema, orient shortcircuits, status asks for consumer properties, no scale estimate, reading order wrong, format bridge undocumented | Resolver functional equivalence, session-state with orient-specific freshness, orient rewritten 3 times, status split into Project/State/Consumer, scale ("15-25 epics, 80-150+ tasks") added | All commands re-run; fixes confirmed |
+| **Round 2** | Artifact chains empty, SDLC profiles missing, stage query sparse, field query unknown | Brain fallback for chains+profiles, stage queries enriched with chain-derived data, field query wired | `has_chain: True` across all 9 models |
+| **Round 3** | Lint false positives on task/note pages (93 thin, 240 orphan mostly valid) | `lint.py` adds `thin_exempt_types = {"task", "note", "module"}` | Errors dropped; remaining real |
+
+The integration exposed that the tools were built for self-use, not consumer use. **The reframe: the second brain is a TEACHING SYSTEM for adoption, not a RUNTIME SERVICE for querying.** See `raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md` (871 lines).
 
 ### Integration chain progress (E016)
 
-10/17 steps done. Blockers: Step 4 (identity in CLAUDE.md — now DONE with restructure), Step 12 (real task using chain — next), Step 13 (readiness vs progress separation — schema change).
+11/17 steps done (was 10/17; step 4 — Identity Profile in AGENTS.md — now complete after restructure). Remaining partials/blockers:
+
+- **Step 8** — Stage query returns readiness ranges; ALLOWED/FORBIDDEN now available via chain query, two access paths
+- **Step 11** — Field queries work partially (returns type + required? but sparse descriptions)
+- **Step 12** — Real task using chain output as methodology source: requires harness to inject chain data. M1 work.
+- **Step 13** — Readiness vs progress separation: DONE in schema + all 4 CJS scripts (was pending; adoption item #5-8)
+- **Step 14** — Impediment typing: DONE (adoption item #9)
+- **Step 16** — Project scan: Not yet run; quick-win candidate
+
+### Known gaps OpenArms identified (candidates for future evolution)
+
+- **Mandatory skills as gates** — skill invocation verification before `/stage-complete` (captured as [[mandatory-without-verification-is-not-enforced|this lesson]])
+- **Tier-based context depth per task type** — same-depth-for-all-tasks (captured as [[context-depth-must-vary-per-task-type-not-per-project|this lesson]])
+- **Stage return mechanism** — agent can only go forward; no return-to-Design on discovery
+- **Scaffold self-check before /stage-complete** — agent validates own output before gate runs
+- **Validation Matrix not adopted** — 5 skills, no validation matrix; skill change dropping a constraint goes undetected
+- **CLAUDE.md Structural Patterns 7-8** — Anchor Phrases and Concrete Examples missing in rule files
+- **Backlog Rule 8 full implementation** — warning-only; auto-generation of missing children is M2-M3 work
 
 ### How This Connects — Navigate From Here
 
@@ -181,3 +227,4 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
 [[model-methodology|Model — Methodology]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[consumer-integration-roadmap-exemplar|Consumer Integration Roadmap — OpenArms Exemplar (First Full Plan)]]

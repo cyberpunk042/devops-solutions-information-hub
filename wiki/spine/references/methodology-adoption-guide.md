@@ -68,6 +68,39 @@ Step-by-step guide for any project to adopt the research wiki's methodology. Cov
 >
 > **Scale reality check:** Full integration from Tier 1 to Tier 4 is approximately **23 epics, 125-185 tasks, 5 milestones across months of sustained effort.** Tier 1 is minutes. Tier 2 is hours. Tier 3 is days-to-weeks. Tier 4 is weeks-to-months. Don't plan for a weekend — plan for graduated adoption over time. Evidence: OpenArms first consumer integration (2026-04-16).
 
+> [!success] First Consumer Adoption Evidence — OpenArms Tier 0 → Tier 2 in one session (2026-04-16)
+>
+> What actually happened vs what was documented in the guide. OpenArms (TypeScript/Node harness project, 5 months of prior methodology evolution) integrated with the second brain over one session producing 15 adoption items and 14 contributions.
+>
+> **What took less time than expected (under ~1 hour each):**
+>
+> | Work | Why it was fast |
+> |---|---|
+> | Adopt page templates (7 files) | `gateway template <type>` returned full templates with inline guidance. Copy + adapt, done. |
+> | Apply compliance checker | `gateway compliance` (after functional-equivalence fix) pointed at exact gaps |
+> | Contribute first lesson back | `gateway contribute` normalized format on intake — no format conversion needed |
+> | Declare Identity Profile (stable fields only) | Separating stable-from-consumer properties prevented the overload trap |
+>
+> **What took more time than expected (half-day to full-day each):**
+>
+> | Work | Why it was slow |
+> |---|---|
+> | AGENTS.md restructure (471 → 124) | Extracting 12 companion rule files + deciding what routes where. Required real design thinking. |
+> | Progress field across 4 CJS scripts + schema | Two-field model touched every frontmatter reader. Plus a progress-cap bug found during adoption. |
+> | Typed impediments (8-value taxonomy in `/concern`) | Updating every concern trigger and documentation site |
+> | Artifact path verification | Integrating fs.existsSync check into gate-close flow, handling edge cases |
+>
+> **What was revealed but NOT shipped this session (Milestone 1+ work):**
+>
+> - Mandatory skills as gates (skill invocation verification) — requires `invoked-skills.log` infrastructure
+> - Tier-based context depth per task type — requires harness prompt builder evolution
+> - Rule files adopting Patterns 7-8 (Anchor Phrases, Concrete Examples) — per-rule-file restructure
+> - Validation Matrix for the 5 skills — test suite infrastructure (see [[validation-matrix-test-suite-for-context-injection|the pattern]])
+> - Stage return mechanism — harness architecture change
+> - Full Rule 8 auto-generation — semantic understanding of epic scope
+>
+> **Practical implication for adopters:** the "quick wins" are templates + compliance + first contribution. Expect half a day for identity+AGENTS.md restructure. Expect a full day per schema field you add (progress, impediment_type). Plan M1+ for the infrastructure-level work (mandatory-as-gate, tier routing, validation matrix). See [[identity-profile|OpenArms — Identity Profile]] for the full 15-item adoption log with commits.
+
 ### Tier 1: Read (learning path) / Assess (integration path)
 
 **Learning path** (no existing methodology):
@@ -347,6 +380,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
+[[consumer-integration-roadmap-exemplar|Consumer Integration Roadmap — OpenArms Exemplar (First Full Plan)]]
 [[context-depth-must-vary-per-task-type-not-per-project|Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity]]
 [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones]]
