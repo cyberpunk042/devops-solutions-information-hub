@@ -561,6 +561,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[model-context-engineering|Model — Context Engineering]]

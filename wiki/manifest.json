@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-15T23:15:50.827842+00:00",
+  "generated": "2026-04-16T00:33:26.004443+00:00",
   "stats": {
-    "pages": 334,
+    "pages": 336,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2231,
-    "tags_unique": 1054,
+    "relationships": 2250,
+    "tags_unique": 1059,
     "layers": {
       "3": 4,
       "6": 17,
@@ -14,10 +14,10 @@
       "4": 44,
       "5": 22,
       "1": 32,
-      "spine": 65
+      "spine": 66
     },
     "maturity": {
-      "growing": 272,
+      "growing": 273,
       "seed": 18
     }
   },
@@ -701,6 +701,99 @@
         {
           "verb": "IMPLEMENTS",
           "target": "Second Brain Integration System \u2014 Full Chain Requirements"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md",
+      "slug": "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "title": "E022 \u2014 Context-Aware Gateway Orientation and Task Routing",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "epic",
+        "gateway",
+        "orientation",
+        "context-aware",
+        "knowledge-project",
+        "v2",
+        "milestone-v2",
+        "p1",
+        "srp",
+        "proto-programming"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/second-brain-complete-system-v2-0.md"
+        },
+        {
+          "id": "operator-directive-rework",
+          "type": "directive",
+          "file": "raw/notes/2026-04-15-directive-knowledge-project-methodology-rework.md"
+        },
+        {
+          "id": "output-contract",
+          "type": "wiki",
+          "file": "wiki/spine/standards/gateway-output-contract.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E022 \u2014 Context-Aware Gateway Orientation and Task Routing",
+        "E022 \u2014 Context-Aware Gateway Orientation and Routing"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 Second Brain Complete System \u2014 v2.0"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Gateway Output Contract \u2014 What Good Tool Output Looks Like"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E015 \u2014 Gateway Tools Completion \u2014 All Requirements Implemented with MCP Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Consumer Runtime Signaling via MCP Config"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "E023 \u2014 Gateway-Wide Output Contract Audit (follow-on, stub in M005)"
         }
       ]
     },
@@ -22219,6 +22312,96 @@
       ]
     },
     {
+      "path": "spine/standards/gateway-output-contract.md",
+      "slug": "spine/standards/gateway-output-contract",
+      "title": "Gateway Output Contract \u2014 What Good Tool Output Looks Like",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "standards",
+        "gateway",
+        "tool-output",
+        "context-injection",
+        "contract",
+        "structured-context",
+        "proto-programming",
+        "srp"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-rework",
+          "type": "directive",
+          "file": "raw/notes/2026-04-15-directive-knowledge-project-methodology-rework.md"
+        },
+        {
+          "id": "principle-structured-context",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md"
+        },
+        {
+          "id": "principle-infrastructure",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        },
+        {
+          "id": "model-context-engineering",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-context-engineering.md"
+        },
+        {
+          "id": "execution-mode-consumer-property",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/execution-mode-is-consumer-property-not-project-property.md"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Gateway Output Contract \u2014 What Good Tool Output Looks Like",
+        "Gateway Output Contract",
+        "Gateway Output Standards"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Consumer Runtime Signaling via MCP Config"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "E022 \u2014 Context-Aware Gateway Orientation and Routing"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Model \u2014 Claude Code"
+        }
+      ]
+    },
+    {
       "path": "spine/standards/learning-path-page-standards.md",
       "slug": "spine/standards/learning-path-page-standards",
       "title": "Learning Path Page Standards",
@@ -23426,12 +23609,12 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 24,
-      "relationship_count": 135
+      "page_count": 25,
+      "relationship_count": 146
     },
     "cross-domain": {
-      "page_count": 149,
-      "relationship_count": 1005
+      "page_count": 150,
+      "relationship_count": 1013
     },
     "ai-agents": {
       "page_count": 65,
@@ -23476,6 +23659,7 @@
       "backlog/epics/milestone-v2/e019-obsidian-navigation-complete-browse-experience-with-folder-cleanup",
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -23514,6 +23698,7 @@
       "backlog/epics/milestone-v2/e019-obsidian-navigation-complete-browse-experience-with-folder-cleanup",
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "backlog/milestones/second-brain-complete-system-v2-0"
     ],
     "milestone-v2": [
@@ -23528,7 +23713,8 @@
       "backlog/epics/milestone-v2/e018-global-standards-implementation-actual-adherence-not-just-reference",
       "backlog/epics/milestone-v2/e019-obsidian-navigation-complete-browse-experience-with-folder-cleanup",
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
-      "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline"
+      "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
     ],
     "standards": [
       "backlog/epics/milestone-v2/e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e",
@@ -23554,6 +23740,7 @@
       "spine/standards/domain-overview-page-standards",
       "spine/standards/epic-page-standards",
       "spine/standards/evolution-page-standards",
+      "spine/standards/gateway-output-contract",
       "spine/standards/learning-path-page-standards",
       "spine/standards/lesson-page-standards",
       "spine/standards/model-standards/model-claude-code-standards",
@@ -23636,9 +23823,11 @@
     ],
     "proto-programming": [
       "backlog/epics/milestone-v2/e012-template-enrichment-rich-proto-programming-examples",
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
       "spine/models/depth/model-context-engineering",
+      "spine/standards/gateway-output-contract",
       "spine/standards/model-standards/model-context-engineering-standards"
     ],
     "enrichment": [
@@ -23712,12 +23901,14 @@
     ],
     "gateway": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
       "domains/ai-agents/orchestration/openclaw",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
       "patterns/03_validated/architecture/gateway-centric-routing",
-      "spine/references/gateway-tools-reference"
+      "spine/references/gateway-tools-reference",
+      "spine/standards/gateway-output-contract"
     ],
     "tools": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
@@ -23799,6 +23990,25 @@
     ],
     "end-to-end": [
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms"
+    ],
+    "orientation": [
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
+    ],
+    "context-aware": [
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "comparisons/cross-domain-patterns",
+      "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
+    ],
+    "knowledge-project": [
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
+    ],
+    "p1": [
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
+    ],
+    "srp": [
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "domains/cross-domain/methodology-framework/global-standards-adherence",
+      "spine/standards/gateway-output-contract"
     ],
     "local-inference": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -24315,10 +24525,6 @@
     "deferred-loading": [
       "comparisons/cross-domain-patterns",
       "patterns/03_validated/knowledge/context-aware-tool-loading"
-    ],
-    "context-aware": [
-      "comparisons/cross-domain-patterns",
-      "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
     ],
     "orchestration": [
       "comparisons/cross-domain-patterns",
@@ -25244,7 +25450,8 @@
     ],
     "context-injection": [
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
-      "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection"
+      "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
+      "spine/standards/gateway-output-contract"
     ],
     "blocking-pattern": [
       "domains/ai-agents/patterns/hooks-lifecycle-architecture"
@@ -25731,9 +25938,6 @@
       "domains/cross-domain/methodology-framework/global-standards-adherence"
     ],
     "ddd": [
-      "domains/cross-domain/methodology-framework/global-standards-adherence"
-    ],
-    "srp": [
       "domains/cross-domain/methodology-framework/global-standards-adherence"
     ],
     "oop": [
@@ -26512,6 +26716,7 @@
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
       "patterns/03_validated/knowledge/validation-matrix-test-suite-for-context-injection",
+      "spine/standards/gateway-output-contract",
       "spine/standards/model-standards/model-context-engineering-standards"
     ],
     "magic-tricks": [
@@ -28109,6 +28314,12 @@
     "deep-dive": [
       "spine/standards/deep-dive-page-standards"
     ],
+    "tool-output": [
+      "spine/standards/gateway-output-contract"
+    ],
+    "contract": [
+      "spine/standards/gateway-output-contract"
+    ],
     "gold-standard": [
       "spine/standards/model-standards/model-claude-code-standards",
       "spine/standards/model-standards/model-context-engineering-standards",
@@ -28172,6 +28383,12 @@
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
+      ]
+    },
+    {
+      "target": "E023 \u2014 Gateway-Wide Output Contract Audit",
+      "referenced_by": [
+        "E022 \u2014 Context-Aware Gateway Orientation and Task Routing"
       ]
     },
     {

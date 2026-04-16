@@ -97,6 +97,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Domain Overview Page Standards](standards/domain-overview-page-standards.md) — Standards for domain overview pages — curator pages that assess a domain's knowledge state, classify pages by maturit...
 - [Epic Page Standards](standards/epic-page-standards.md) — Standards for epic pages — strategic containers that break into modules and tasks
 - [Evolution Page Standards](standards/evolution-page-standards.md) — Standards for evolution pages — historical narratives tracking how a concept, system, or domain changed over time
+- [Gateway Output Contract — What Good Tool Output Looks Like](standards/gateway-output-contract.md) — Tool outputs from gateway subcommands are **context injections to the invoking agent, not data returns**
 - [Learning Path Page Standards](standards/learning-path-page-standards.md) — Standards for learning path pages — curated sequences that guide a reader through a topic in a specific order
 - [Lesson Page Standards](standards/lesson-page-standards.md) — Standards for lesson pages — actionable learnings distilled from convergent evidence across multiple sources
 - [Claude Code Standards — What Good Agent Configuration Looks Like](standards/model-standards/model-claude-code-standards.md) — This page defines the quality bar for CLAUDE CODE CONFIGURATION

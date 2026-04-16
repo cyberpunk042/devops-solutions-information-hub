@@ -128,6 +128,8 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[e012-template-enrichment-rich-proto-programming-examples|E012 — Template Enrichment — Rich Proto-Programming Examples]]
+[[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
+[[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[model-context-engineering|Model — Context Engineering]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]

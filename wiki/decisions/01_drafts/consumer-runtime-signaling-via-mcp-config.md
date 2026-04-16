@@ -205,4 +205,6 @@ None of these impacts corrupt data; they reduce observability. The decision is s
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
+[[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
+[[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[mcp-runtime-signaling|MCP Runtime Signaling — Integration Guide for Consumers]]

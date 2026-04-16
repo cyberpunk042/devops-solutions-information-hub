@@ -166,3 +166,4 @@ Complete ALL 44 functional requirements for the gateway tools — the unified Py
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]
 [[e016-integration-chain-proof-end-to-end-with-openarms|E016 — Integration Chain Proof — End to End with OpenArms]]
 [[e018-global-standards-implementation-actual-adherence-not-just-reference|E018 — Global Standards Implementation — Actual Adherence Not Just Reference]]
+[[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]

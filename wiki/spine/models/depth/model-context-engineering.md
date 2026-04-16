@@ -410,6 +410,8 @@ Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execut
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
+[[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
+[[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]

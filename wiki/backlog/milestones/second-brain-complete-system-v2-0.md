@@ -197,4 +197,5 @@ These are FUTURE — scoped after the first 12 epics prove the system works.
 [[e021-new-source-ingestion-10-15-sources-through-full-pipeline|E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
 [[operator-decision-queue|Operator Decision Queue]]
