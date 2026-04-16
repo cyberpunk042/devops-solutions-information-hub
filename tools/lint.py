@@ -196,6 +196,9 @@ def _check_thin_pages(
     thin: List[Dict[str, Any]] = []
     # Types that require Deep Analysis
     deep_analysis_types = {"concept", "deep-dive", "comparison"}
+    # Types that are intentionally thin — skip thin-page checks
+    # (OpenArms correction 2026-04-16: task pages are 20-50 lines by design)
+    thin_exempt_types = {"task", "note", "module"}
     for page in pages:
         try:
             text = page.read_text(encoding="utf-8")
@@ -204,6 +207,9 @@ def _check_thin_pages(
                 continue
             page_type = meta.get("type", "")
             title = meta.get("title", page.stem)
+            # Skip thin-page checks for types that are intentionally brief
+            if page_type in thin_exempt_types:
+                continue
             sections = parse_sections(body)
 
             # Check Summary word count

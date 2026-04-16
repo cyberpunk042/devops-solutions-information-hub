@@ -281,6 +281,7 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[e022-m003-what-do-i-need-upgrade|E022-M003 — Gateway What-Do-I-Need Upgrade (Module Design)]]
 [[e023-gateway-wide-output-contract-audit|E023 — Gateway-Wide Output Contract Audit]]
 [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
+[[first-consumer-integration-reveals-systematic-gaps-between-k|First consumer integration reveals systematic gaps between knowledge and tooling]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[mcp-runtime-signaling|MCP Runtime Signaling — Integration Guide for Consumers]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]

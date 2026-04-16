@@ -829,6 +829,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[Epic Readiness Math Bug — average(child.readiness) Wrong for Sparse Children (OpenArms E013)]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[identity-profile|AICP — Identity Profile]]
+[[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]
 [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
 [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
 [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]

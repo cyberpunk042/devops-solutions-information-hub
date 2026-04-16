@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T17:41:16.147372+00:00",
+  "generated": "2026-04-16T18:27:50.141831+00:00",
   "stats": {
-    "pages": 347,
+    "pages": 350,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2319,
-    "tags_unique": 1072,
+    "relationships": 2334,
+    "tags_unique": 1081,
     "layers": {
       "3": 4,
       "6": 17,
       "2": 51,
-      "4": 50,
-      "5": 24,
+      "4": 52,
+      "5": 25,
       "1": 32,
       "spine": 66
     },
     "maturity": {
       "growing": 273,
-      "seed": 26
+      "seed": 29
     }
   },
   "pages": [
@@ -10304,6 +10304,123 @@
       "relationships": []
     },
     {
+      "path": "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k.md",
+      "slug": "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "title": "First consumer integration reveals systematic gaps between knowledge and tooling",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox",
+        "integration",
+        "knowledge-tooling-gap",
+        "consumer",
+        "meta-lesson"
+      ],
+      "sources": [
+        {
+          "id": "openarms-integration-feedback",
+          "type": "wiki",
+          "file": "raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md",
+          "description": "871-line feedback document from first live consumer integration"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Systemic Incompleteness Is Invisible to Validation"
+      ],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "EXTENDS",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "EXTENDS",
+          "target": "Systemic Incompleteness Is Invisible to Validation"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Gateway Output Contract"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve.md",
+      "slug": "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "title": "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox",
+        "schema",
+        "validation",
+        "aspirational",
+        "false-confidence"
+      ],
+      "sources": [
+        {
+          "id": "openarms-schema",
+          "type": "observation",
+          "project": "openarms",
+          "path": "wiki/config/schema.yaml",
+          "description": "Schema defines required_sections per type; no validator enforces them. 333 violations discovered via health check."
+        },
+        {
+          "id": "openarms-integration-feedback",
+          "type": "wiki",
+          "file": "raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Systemic Incompleteness Is Invisible to Validation"
+      ],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "EXTENDS",
+          "target": "Systemic Incompleteness Is Invisible to Validation"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Schema Is the Real Product"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
       "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -14914,6 +15031,71 @@
         "Research Wiki Agent Directive (ARCHIVED)"
       ],
       "relationships": []
+    },
+    {
+      "path": "patterns/01_drafts/agent-execution-cost-optimization-stack.md",
+      "slug": "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "title": "Agent Execution Cost Optimization Stack",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "pattern",
+        "cost",
+        "optimization",
+        "methodology",
+        "agent-execution",
+        "multi-task",
+        "contributed",
+        "synthesized"
+      ],
+      "sources": [
+        {
+          "id": "openarms-right-size",
+          "type": "wiki",
+          "file": "wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md"
+        },
+        {
+          "id": "openarms-cost-growth",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Right-size the methodology model to the actual work, not the structural category",
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+      ],
+      "aliases": [
+        "Agent Execution Cost Optimization Stack",
+        "Cost Optimization Stack"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Right-Size Methodology Model \u2014 OpenArms Evidence"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Per-Task Cost Growth \u2014 OpenArms Evidence"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Management Is the Primary LLM Productivity Lever"
+        }
+      ]
     },
     {
       "path": "patterns/01_drafts/aspirational-naming-in-lifecycle-code.md",
@@ -24229,8 +24411,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 158,
-      "relationship_count": 1066
+      "page_count": 161,
+      "relationship_count": 1081
     },
     "ai-agents": {
       "page_count": 65,
@@ -24582,6 +24764,7 @@
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/integration/second-brain-integration-requirements",
       "domains/devops/four-project-ecosystem",
+      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
       "spine/models/ecosystem/model-ecosystem",
       "spine/models/ecosystem/model-mcp-cli-integration",
@@ -24783,6 +24966,7 @@
       "log/2026-04-09/methodology/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/src-github-spec-kit-specification-driven-development",
@@ -24921,6 +25105,7 @@
     "validation": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
+      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/automated-knowledge-validation-prevents-wiki-decay",
       "lessons/03_validated/methodology-quality/systemic-incompleteness-is-invisible-to-validation",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness"
@@ -27051,6 +27236,7 @@
     ],
     "schema": [
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
+      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "log/2026-04-09/models/2026-04-09-directive-model-quality-links-schema",
       "spine/models/foundation/model-llm-wiki",
@@ -27253,22 +27439,42 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
+      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "inbox": [
+      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
+    ],
+    "knowledge-tooling-gap": [
+      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k"
+    ],
+    "consumer": [
+      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k"
+    ],
+    "meta-lesson": [
+      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k"
+    ],
+    "aspirational": [
+      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
+    ],
+    "false-confidence": [
+      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
     ],
     "lesson": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
@@ -27850,6 +28056,7 @@
       "log/archived/agent-directive-original"
     ],
     "pattern": [
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
@@ -27859,6 +28066,22 @@
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/standards/pattern-page-standards"
+    ],
+    "cost": [
+      "patterns/01_drafts/agent-execution-cost-optimization-stack"
+    ],
+    "optimization": [
+      "patterns/01_drafts/agent-execution-cost-optimization-stack"
+    ],
+    "agent-execution": [
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
+    ],
+    "multi-task": [
+      "patterns/01_drafts/agent-execution-cost-optimization-stack"
+    ],
+    "synthesized": [
+      "patterns/01_drafts/agent-execution-cost-optimization-stack"
     ],
     "naming": [
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code"
@@ -28010,9 +28233,6 @@
     ],
     "synergy-matrix": [
       "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work"
-    ],
-    "agent-execution": [
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
     ],
     "injection": [
       "patterns/03_validated/enforcement/stage-aware-skill-injection"
@@ -29207,6 +29427,7 @@
         "Test OpenAI backend with LocalAI",
         "AICP \u2014 Identity Profile",
         "If You Can Verify, You Converge",
+        "Agent Execution Cost Optimization Stack",
         "Source \u2014 27 Questions to Ask Before Choosing an LLM",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
         "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
@@ -29250,9 +29471,22 @@
       ]
     },
     {
+      "target": "Per-Task Cost Growth \u2014 OpenArms Evidence",
+      "referenced_by": [
+        "Agent Execution Cost Optimization Stack"
+      ]
+    },
+    {
       "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Principle \u2014 Infrastructure Over Instructions",
+      "referenced_by": [
+        "First consumer integration reveals systematic gaps between knowledge and tooling",
+        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence"
       ]
     },
     {
@@ -29276,6 +29510,12 @@
       ]
     },
     {
+      "target": "Right-Size Methodology Model \u2014 OpenArms Evidence",
+      "referenced_by": [
+        "Agent Execution Cost Optimization Stack"
+      ]
+    },
+    {
       "target": "Right-Size Methodology Model \u2014 Selection Needs Novelty Dimension",
       "referenced_by": [
         "Model \u2014 Methodology"
@@ -29284,6 +29524,7 @@
     {
       "target": "Schema Is the Real Product",
       "referenced_by": [
+        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
         "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
       ]
     },

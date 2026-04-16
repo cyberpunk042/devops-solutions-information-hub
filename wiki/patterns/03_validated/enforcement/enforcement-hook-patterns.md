@@ -166,7 +166,9 @@ esac
 
 **When to use:** For long-running sessions where context compaction may remove the CLAUDE.md methodology sections. Without this, agents lose their rules after compaction and revert to default behavior.
 
-### Pattern 5: Race Prevention Guard (Pre-Write) (NEW 2026-04-16)
+### Pattern 5: Race Prevention Guard (Pre-Write extension) (NEW 2026-04-16)
+
+> [!info] **Implementation note from OpenArms (correction 2026-04-16):** This pattern is typically implemented as an extension of Pattern 2 (Write Guard), NOT as a separate hook file. OpenArms has 4 hook FILES (pre-bash, pre-write, post-write, post-compact) implementing 5 PATTERNS. The pre-write.sh contains BOTH stage-scope blocking (Pattern 2) AND race prevention (Pattern 5) in the same 106-line file.
 
 Prevents race conditions between operator-Claude and a running autonomous agent on shared filesystem surfaces.
 

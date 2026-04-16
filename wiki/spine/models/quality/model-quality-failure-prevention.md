@@ -477,6 +477,7 @@ The community prompt patch project catalogued 11 specific Claude Code behaviors 
 [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[schema-aspirationalism-—-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
 [[src-code-review-graph-automated-review|Source — code-review-graph: Graph-Based Automated Code Review]]
 [[standards-must-preach-by-example|Standards Must Preach by Example]]
 [[E006-standards-by-example|Standards-by-Example]]

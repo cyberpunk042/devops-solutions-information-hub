@@ -115,3 +115,4 @@ From Claude Code Best Practices: "All workflows converge on one pattern: Ten maj
 [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]]
 [[openfleet|OpenFleet]]
 [[aicp|AICP]]
+[[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]

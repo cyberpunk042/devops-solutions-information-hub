@@ -314,6 +314,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[gateway-centric-routing|Gateway-Centric Routing]]
 [[identity-profile|AICP — Identity Profile]]
+[[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]

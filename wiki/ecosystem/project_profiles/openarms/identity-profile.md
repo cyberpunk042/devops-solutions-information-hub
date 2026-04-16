@@ -116,6 +116,44 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 > | Export from second brain | Pending (E016 proved the chain) |
 > | Feed-back TO second brain | Active (22 lesson files ingested the 2026-04-12 session) |
 
+## Second Brain Integration (2026-04-16 — First Consumer)
+
+> [!success] OpenArms was the first live consumer of the second brain. Tier 0 → Tier 2 in one session.
+
+### What OpenArms adopted
+
+| Adoption | Before | After | Evidence |
+|---|---|---|---|
+| **AGENTS.md** | 700 lines (monolith) | 136 lines + 12 `.claude/rules/*.md` | Follows <200 line standard |
+| **Identity Profile** | None | Goldilocks table (stable fields only) | Consumer properties NOT hardcoded |
+| **Page templates** | None | 7 templates in `wiki/config/templates/` | Closes Tier 1 gap |
+| **Compliance tier** | Tier 0 (0/3 Tier 1) | Tier 2 (3/3 Tier 1, 3/3 Tier 2) | `gateway compliance` verified |
+| **Bidirectional flow** | One-way (brain reads OpenArms) | Bidirectional (6+2 lessons contributed back) | First OFV cycle operational |
+
+### What OpenArms contributed back
+
+**8 lessons** (6 operational + 2 meta):
+1. turnCount bug — aspirational naming in lifecycle code
+2. Per-task cost growth — multi-task runs cost 2.6x naive prediction
+3. Pre-write hook race prevention — operator/agent file contention
+4. Clean-win scope expansion — Class A/B/C unauthorized modification taxonomy
+5. Right-size methodology model — 86.8% cost reduction ($9.07 → $1.20)
+6. Epic readiness math — sparse-children metric failure
+7. Knowledge-tooling gap — knowledge in prose but not queryable by tooling
+8. Schema aspirationalism — aspirational schemas without validation create false confidence
+
+**2 corrections** to second brain content:
+- Hook count: 4 files implementing 5 patterns (Pattern 5 extends Pattern 2)
+- Health lint: task/note pages are intentionally thin, skip thin-page checks
+
+### What it revealed about the second brain
+
+9 findings (F1-F9), all addressed. The integration exposed that the tools were built for self-use, not consumer use. The reframe: the second brain is a TEACHING SYSTEM for adoption, not a RUNTIME SERVICE for querying. See `raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md` (871 lines).
+
+### Integration chain progress (E016)
+
+10/17 steps done. Blockers: Step 4 (identity in CLAUDE.md — now DONE with restructure), Step 12 (real task using chain — next), Step 13 (readiness vs progress separation — schema change).
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Profile → Related Knowledge

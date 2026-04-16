@@ -62,6 +62,8 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [First consumer integration reveals systematic gaps between knowledge and tooling](00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k.md) — The second brain's model pages contain 800+ lines of deep, evidence-backed knowledge per model
+- [Schema aspirationalism — defining required sections you never validate produces false confidence](00_inbox/schema-aspirationalism-—-defining-required-sections-you-neve.md) — A schema that defines `required_sections` per page type without any validator checking section structure creates fals...
 - [Per-task cost grows monotonically across multi-task runs (context accumulation)](01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md) — When running multiple tasks in sequence within a single harness invocation (`--tasks N`), each successive task costs ...
 - [The harness 'turnCount' variable counts streaming events, not conversational turns](01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md) — In the OpenArms harness (`agent-run-harness
 - [The pre-write hook prevents operator-Claude from racing the running agent on backlog files](01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md) — During an active `pnpm openarms agent run`, the methodology enforcement hooks (`pre-bash
@@ -118,4 +120,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`methodology`, `quality`, `lesson`, `failure-lesson`, `contributed`, `inbox`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`, `compliance`
+`methodology`, `quality`, `lesson`, `failure-lesson`, `contributed`, `inbox`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `validation`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`
