@@ -633,13 +633,239 @@ This is the real scale. It's not a weekend project. It's months of sustained eff
 
 ---
 
+## Part 10: Third Round — Artifact Chains and SDLC Profiles Now Queryable
+
+The second brain dropped another update. The commit message: `feat: Enhance gateway queries to utilize brain's methodology for canonical chain definitions and improve SDLC profile handling`.
+
+### What changed — both major gaps from Part 8 are fixed
+
+#### Artifact chains are now fully structured and queryable
+
+`gateway query --model feature-development --full-chain` now returns full per-stage data:
+
+```
+document:
+  required: [{artifact: wiki-page, count: 1+, purpose: "Requirements spec, infrastructure analysis, gap analysis",
+              templates: [requirements-spec, infrastructure-analysis, gap-analysis]}]
+  forbidden: [code-file, test-file]
+  gate: {checks: [wiki-page-exists, no-code-files-created]}
+
+scaffold:
+  required: [{artifact: type-definition, purpose: "Types, interfaces, schemas — zero behavior"},
+             {artifact: test-stub, purpose: "Empty test files with placeholder assertions"}]
+  forbidden: [implementation, test-implementation]
+  gate: {checks: [types-compile, no-business-logic, test-stubs-exist]}
+
+implement:
+  required: [{artifact: implementation, purpose: "Business logic filling scaffold stubs"},
+             {artifact: integration-wiring, purpose: "Existing file imports and calls new code"}]
+  forbidden: [test-implementation]
+  gate: {checks: [code-compiles, lint-passes, integration-wiring-exists]}
+
+test:
+  required: [{artifact: test-implementation, purpose: "Real assertions replacing scaffold placeholders"},
+             {artifact: test-results, purpose: "Gate output showing 0 failures"}]
+  gate: {checks: [tests-pass, no-placeholder-assertions]}
+```
+
+All 9 chains now return `has_chain: True`. The integration chain is equally detailed:
+
+```
+scaffold: {required: [type-definition (bridge adapter interfaces), test-stub]}
+implement: {required: [implementation (bridge logic, <80 LOC), integration-wiring (consumer file modified)]}
+test: {required: [test-implementation (proves wiring works), test-results (0 failures)]}
+```
+
+**Why this matters for OpenArms:** This structured data is exactly what our `validate-stage.cjs` needs. Today our validator checks basic stage rules from `methodology.yaml`. With this chain data, it could check: "Did the scaffold stage produce type definitions? Did the implement stage modify an existing consumer file? Are there test stubs from scaffold still containing placeholders?" The gap between what the second brain knows and what our validator enforces just got bridgeable.
+
+#### SDLC profiles are now queryable
+
+Three profiles returned:
+
+| Profile        | Phases                           | Scale                  | Models                                 |
+| -------------- | -------------------------------- | ---------------------- | -------------------------------------- |
+| **simplified** | POC, early-MVP                   | micro, small           | 4 (hotfix, bug-fix, docs, feature-dev) |
+| **default**    | MVP, staging, early-production   | small, medium          | all 8                                  |
+| **full**       | staging, production, maintenance | medium, large, massive | all 8                                  |
+
+We're at `default` trending `full`. This confirms we have the right model set and our process weight is appropriate for our phase.
+
+#### Stage queries still return empty ALLOWED/FORBIDDEN
+
+`gateway query --stage implement --domain typescript` still returns empty `allowed_outputs` and `forbidden_outputs`. The rich data now lives in the chain definitions (`required`/`forbidden` per stage per model), not in the standalone stage query. Two access paths to similar data — the chain path is now complete, the stage path is still sparse. This is a minor gap now that chains work.
+
+### The real-time feedback loop in action
+
+This session has produced a live demonstration of the OFV (Observe-Fix-Verify) loop across two projects:
+
+1. **Round 1** — We observed 9 problems (F1-F9). Documented them.
+2. **Round 2** — The operator took the feedback to the second brain. F1, F4, F5, F6, F7, F8 fixed within minutes. We verified.
+3. **Round 3** — We documented deeper gaps (artifact chains empty, SDLC profiles missing). The second brain fixed both. We verified.
+
+Three OFV cycles in one session. The gap between "knowledge exists in the model pages" and "knowledge is queryable via the gateway" has been closing in real time.
+
+### What this means for the integration roadmap
+
+**The gateway is now a real adoption tool, not just an orientation aid.** With structured artifact chains, a consumer can:
+
+1. Query the chain for their task's model
+2. Compare the chain's per-stage requirements against their local validator
+3. Identify which gate checks they enforce and which they don't
+4. Spec tasks to add missing enforcement
+
+This changes Milestone 1 (Methodology Deepening) from "read model pages and manually extract rules" to "query chains and diff against local config." Much more automatable. The harness prompt builder could call `gateway query --model integration --full-chain` and embed the chain rules directly into the agent's context. Not as a runtime dependency — as a one-time adoption artifact that gets committed to our local config.
+
+### Remaining gaps (as of end of third round)
+
+1. **Stage query empty** — `--stage --domain` returns readiness ranges but no ALLOWED/FORBIDDEN. Chains have this data but you need to know the model first.
+2. **Health validation details** — 336 errors but no way to see WHICH pages fail and WHY. No `--verbose` flag. The second brain would need to add detail output.
+3. **Our 333 schema violations** — still entirely our problem. No second-brain fix can address this. We wrote aspirational required_sections we never validate.
+4. **CLAUDE.md size** — ours is 700+ lines (AGENTS.md symlinked). The standard says <200. This is Milestone 0, epic 2. Large restructure.
+
+---
+
 ## Relationships
 
 - PRODUCED_BY: 2026-04-16 operator-Claude session — first consumer integration with second brain
-- EVIDENCE: `gateway status`, `gateway compliance`, `gateway health`, `gateway orient`, `gateway what-do-i-need`, `gateway flow` outputs
+- EVIDENCE: `gateway status`, `gateway compliance`, `gateway health`, `gateway orient`, `gateway what-do-i-need`, `gateway flow`, `gateway query --model --full-chain`, `gateway query --profiles`, `gateway query --chains`, `gateway query --stage`, `gateway navigate`, `gateway timeline`, `gateway contribute` outputs
 - EVIDENCE: Full reads of ALL 16 model pages, 3 standards pages, 1 identity profile, 1 lesson, 1 epic from the second brain
+- EVIDENCE: 3 OFV cycles observed in real time — feedback delivered, fixes applied, verification passed
 - INFORMS: second brain E022 (Context-Aware Gateway Orientation)
-- INFORMS: future integration milestone planning
+- INFORMS: future integration milestone planning — Milestone 1 now more automatable via structured chain queries
 - INFORMS: `MCP_CLIENT_RUNTIME` implementation
+- INFORMS: OpenArms `validate-stage.cjs` evolution to use second-brain chain data
 - RELATES_TO: `wiki/log/2026-04-16-handoff-turbo-mode-preparation.md`
 - RELATES_TO: `wiki/domains/learnings/lesson-five-claude-contexts.md` (the identity varies by cognitive context)
+
+---
+
+## Part 11: E016 Chain Walkthrough — Where We Actually Stand
+
+The second brain has a 17-step integration chain (`wiki/spine/references/second-brain-integration-chain.md`) and an epic (E016) that says "prove it works with OpenArms." We ARE the proof. Here's each step, what we did, and whether it passed.
+
+### Phase 1: Discovery
+
+| Step                     | Command                  | Status  | Notes                                                                                                                            |
+| ------------------------ | ------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| 1. First Contact         | `gateway` (no args)      | ✅ Done | Guided entry works.                                                                                                              |
+| 2. Auto-Detect Identity  | `gateway what-do-i-need` | ✅ Done | Detected domain: typescript, returned task-type routing table. Correctly says "these models should be in YOUR methodology.yaml." |
+| 3. Browse Knowledge Tree | `gateway navigate`       | ✅ Done | Full tree with 11 branches, each with drill-down commands. Clean.                                                                |
+
+### Phase 2: Identity
+
+| Step                        | Command                    | Status              | Notes                                                                                                                                                                                                                                                                                                                                           |
+| --------------------------- | -------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 4. Declare Identity Profile | Add table to CLAUDE.md     | ❌ NOT DONE         | Our CLAUDE.md has no Identity Profile table. The `status` command correctly tells us which fields are stable (type, domain, second-brain relationship) vs consumer properties (execution mode, SDLC profile). But we haven't declared the stable fields yet. **BLOCKER: Our CLAUDE.md is 700+ lines and needs restructure before adding more.** |
+| 5. Select SDLC Profile      | `gateway query --profiles` | ✅ Done (read-only) | We know we're `default` trending `full`. Not yet declared in CLAUDE.md.                                                                                                                                                                                                                                                                         |
+
+### Phase 3: Methodology
+
+| Step                    | Command                                                  | Status     | Notes                                                                                                                                                                  |
+| ----------------------- | -------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 6. Understand Models    | `gateway query --models`                                 | ✅ Done    | All 9 models match our methodology.yaml 1:1.                                                                                                                           |
+| 7. Learn Stages         | `gateway query --model feature-development --full-chain` | ✅ Done    | Full artifact chain returned with required/forbidden/gate per stage. As of Round 3, this works for all 9 models.                                                       |
+| 8. Domain Stage Details | `gateway query --stage implement --domain typescript`    | ⚠️ Partial | Returns readiness ranges but ALLOWED/FORBIDDEN are empty. The data is in the chain (Step 7) not the stage query. Functionally covered but via a different access path. |
+
+### Phase 4: Standards
+
+| Step                          | Command                                            | Status            | Notes                                                                                                                                                                                                                                                      |
+| ----------------------------- | -------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 9. Review Quality Standards   | Read standards pages                               | ✅ Done           | Read Methodology Standards, Claude Code Standards, Task Page Standards. Key finding: our CLAUDE.md violates the <200 line standard. Our task specs mostly follow the Task Page Standard. Our lessons use a different format than the Lesson Page Standard. |
+| 10. Get Templates             | `gateway template lesson`, `gateway template task` | ✅ Done           | Both templates are rich with inline guidance, examples, and styling directives. The task template includes readiness vs progress explanation and specific Done When examples.                                                                              |
+| 11. Review Frontmatter Fields | `gateway query --field readiness`                  | ⚠️ Not tested yet | Haven't queried individual field definitions.                                                                                                                                                                                                              |
+
+### Phase 5: Work Loop
+
+| Step                             | Command                                 | Status                      | Notes                                                                                                                                                                                                                                                                                           |
+| -------------------------------- | --------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 12. Follow Stage Sequence        | Execute a real task following the chain | ⚠️ Not done in THIS session | We've executed 120+ tasks (T001-T120) following our own stage sequence. The second brain's chain matches our operational practice. But we haven't done one USING the chain output as the source of truth.                                                                                       |
+| 13. Track Readiness and Progress |                                         | ⚠️ Partial                  | We track `readiness` and `stages_completed` in task frontmatter. We DON'T track `progress` as a separate dimension — the second brain defines readiness (definition completeness) and progress (execution completeness) as two independent fields. We conflate them into one `readiness` field. |
+| 14. Handle Impediments           |                                         | ⚠️ Partial                  | We have `/concern` for raising issues. The second brain defines 8 impediment types (technical, dependency, decision, environment, clarification, scope, external, quality). We don't type our impediments.                                                                                      |
+
+### Phase 6: Feedback
+
+| Step                     | Command                            | Status      | Notes                                                                                                                                                                                                                   |
+| ------------------------ | ---------------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 15. Contribute Learnings | `gateway contribute --type lesson` | ✅ Done     | Successfully contributed `lesson-harness-turncount-misnamed.md`. Landed in `00_inbox` with `pending-review` status. Timeline confirmed it appeared. The second brain also ingested 5 more of our lessons independently. |
+| 16. Scan Project         | `pipeline scan ../openarms/`       | ❌ Not done | Haven't run the project scanner. This would feed our CLAUDE.md, methodology.yaml, lessons, etc. as raw sources for the second brain to synthesize.                                                                      |
+
+### Phase 7: Local/Remote Mode
+
+| Step            | Command | Status  | Notes                                                                                                                                 |
+| --------------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| 17. Choose Mode |         | ✅ Done | We're using local mode via `tools/gateway.py` forwarder with `--wiki-root` pointed at our working directory. Auto-detected correctly. |
+
+### Chain Score: 10/17 fully done, 4/17 partial, 3/17 not done
+
+**Fully done (10):** Steps 1, 2, 3, 5, 6, 7, 9, 10, 15, 17
+**Partial (4):** Steps 8, 11, 13, 14
+**Not done (3):** Steps 4 (Identity Profile in CLAUDE.md), 12 (real task using chain), 16 (project scan)
+
+### What blocks us from completing the chain
+
+1. **Step 4 — Identity Profile** is blocked by CLAUDE.md restructure. At 700+ lines, adding more content is wrong. We need to shrink it first (route to files per the <200 line standard), THEN add the identity profile. This is Milestone 0, Epic 2 in the roadmap.
+
+2. **Step 12 — Real task using chain** requires running an `agent run` where the agent's methodology source is the second brain's chain output rather than (or in addition to) our local skills. This is a real integration task — it needs the harness to bake chain data into the agent prompt.
+
+3. **Step 16 — Project scan** can be done now. It's just running a command. Low effort.
+
+4. **Step 13 — readiness vs progress separation** is a schema change. Our frontmatter tracks `readiness` but not `progress` as a separate dimension. Adding `progress` to our schema means updating all task files and the `select-task.cjs` / `validate-stage.cjs` / `recalculate-epic.cjs` scripts that read frontmatter.
+
+### What we can do RIGHT NOW without any restructure
+
+- **Step 11**: Query individual field definitions (`gateway query --field readiness`, `--field impediment_type`)
+- **Step 16**: Run `pipeline scan` against our project
+- **Step 14**: Start typing impediments in our task frontmatter using the 8-type system
+- Contribute the remaining 5 lessons we haven't submitted yet
+
+---
+
+## Part 12: Immediate Actions Executed + Schema Gap Analysis
+
+### Lessons contributed (6/6 complete)
+
+All 6 new lessons from T088-T120 operations are now in the second brain's `00_inbox`:
+
+1. ✅ `lesson-harness-turncount-misnamed.md` (Round 2)
+2. ✅ `lesson-multi-task-cost-growth.md`
+3. ✅ `lesson-methodology-model-right-sizing.md`
+4. ✅ `lesson-hook-protects-operator-during-runs.md`
+5. ✅ `lesson-epic-readiness-sparse-children.md`
+6. ✅ `lesson-clean-win-scope-expansion.md`
+
+The bidirectional loop is active. The second brain will promote these through its maturity lifecycle.
+
+### Field query gap confirmed
+
+`gateway query --field readiness` returns "Unknown field" with empty available lists. The frontmatter field reference exists as a wiki page (`wiki/spine/references/frontmatter-field-reference.md`) but isn't wired into the query command. Step 11 can't complete via gateway — read the page directly.
+
+### Schema gap analysis — what our frontmatter is missing
+
+Read the full Frontmatter Field Reference. Compared against our `wiki/config/schema.yaml`.
+
+**Fields we have and they have (aligned):** title, type, domain, status, created, updated, tags, confidence, maturity, priority, task_type, current_stage, readiness, stages_completed, artifacts, epic, module, depends_on, estimate, sources
+
+**HIGH-impact missing fields:**
+
+| Field                        | Purpose                                                                                                             | Impact                                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `progress` (int 0-100)       | Execution completeness — separate from readiness (definition completeness)                                          | HIGH — we conflate into one field. Separation enables honest tracking. Touches select-task, validate-stage, recalculate-epic, all task files. |
+| `impediment_type` (8 values) | Typed blocker classification: technical, dependency, decision, environment, clarification, scope, external, quality | HIGH — enables self-diagnosis, pattern detection, escalation rules. Our `/concern` is untyped.                                                |
+
+**MEDIUM-impact missing fields:**
+
+| Field                 | Purpose                                    | Needed when                   |
+| --------------------- | ------------------------------------------ | ----------------------------- |
+| `layer` (int 1-6)     | Knowledge evolution layer                  | Tier 3 adoption               |
+| `derived_from` (list) | Provenance chain for evolved pages         | Tier 3 adoption               |
+| `aliases` (list)      | Alternative titles for wikilink resolution | Cross-referencing improvement |
+
+**Enum differences:**
+
+| Enum        | Ours             | Theirs                                   | Gap                                                                                                                  |
+| ----------- | ---------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `type`      | 12 values        | 18 values                                | +6 types we may never need (source-synthesis, domain-overview, learning-path, evolution, operations-plan, milestone) |
+| `status`    | Single lifecycle | Separate knowledge vs backlog lifecycles | Different status values per page family                                                                              |
+| `task_type` | spike            | research                                 | Naming difference only                                                                                               |
+
+**The readiness/progress separation is the #1 schema change.** It's the foundation for honest work tracking and the second brain's two-dimensional model. Everything else can wait.

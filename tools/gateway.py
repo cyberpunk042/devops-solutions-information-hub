@@ -890,9 +890,50 @@ def query_stage(paths: Dict[str, Path], stage: str, domain: Optional[str] = None
         result["readiness_range"] = stage_def.get("readiness_range", [])
         result["gate_commands"] = stage_def.get("gate_commands", [])
 
+    # Enrich from chain data — aggregate ALLOWED/FORBIDDEN from all models that have this stage
+    # This fills the gap when standalone stage definitions are sparse but chain data is rich
+    brain_config = paths.get("brain_config", paths["config"])
+    brain_meth_path = brain_config / "methodology.yaml"
+    if brain_meth_path.exists():
+        brain_meth = load_config(brain_meth_path)
+    else:
+        brain_meth = methodology
+    if brain_meth:
+        chain_required = []
+        chain_forbidden = []
+        chain_gates = []
+        models_with_stage = []
+        for model_name, model_def in brain_meth.get("models", {}).items():
+            chain = model_def.get("chain", {})
+            if stage in chain:
+                stage_chain = chain[stage]
+                models_with_stage.append(model_name)
+                for req in stage_chain.get("required", []):
+                    artifact = req.get("artifact", "")
+                    purpose = req.get("purpose", "")
+                    if artifact and artifact not in [r.get("artifact") for r in chain_required]:
+                        chain_required.append({"artifact": artifact, "purpose": purpose})
+                for forb in stage_chain.get("forbidden", []):
+                    if forb not in chain_forbidden:
+                        chain_forbidden.append(forb)
+                for check in stage_chain.get("gate", {}).get("checks", []):
+                    if check not in chain_gates:
+                        chain_gates.append(check)
+        if chain_required:
+            result["chain_required_artifacts"] = chain_required
+        if chain_forbidden:
+            result["chain_forbidden"] = chain_forbidden
+        if chain_gates:
+            result["chain_gate_checks"] = chain_gates
+        if models_with_stage:
+            result["models_using_this_stage"] = models_with_stage
+
     # Domain-specific overrides
     if domain:
-        profile_path = paths["config"] / "domain-profiles" / f"{domain}.yaml"
+        brain_config_dir = paths.get("brain_config", paths["config"])
+        profile_path = brain_config_dir / "domain-profiles" / f"{domain}.yaml"
+        if not profile_path.exists():
+            profile_path = paths["config"] / "domain-profiles" / f"{domain}.yaml"
         profile = load_config(profile_path)
         if profile:
             overrides = profile.get("stage_overrides", {}).get(stage, {})
@@ -957,28 +998,49 @@ def query_models_list(paths: Dict[str, Path]) -> Dict[str, Any]:
 
 
 def query_field(paths: Dict[str, Path], field_name: str) -> Dict[str, Any]:
-    """Explain a frontmatter field — what it means, valid values, what reads it."""
-    schema = load_config(paths["schema"])
-    if not schema:
-        return {"error": "wiki-schema.yaml not found"}
+    """Explain a frontmatter field — what it means, valid values, what reads it.
 
-    required = schema.get("required_fields", [])
-    optional = schema.get("optional_fields", [])
-    enums = schema.get("enums", {})
+    Checks local schema first, falls back to the brain's schema (which has
+    the canonical field definitions including fields the local project may
+    not use yet).
+    """
+    schema = load_config(paths["schema"])
+    brain_schema = None
+    brain_config = paths.get("brain_config")
+    if brain_config:
+        for candidate in ["wiki-schema.yaml", "schema.yaml"]:
+            bp = brain_config / candidate
+            if bp.exists():
+                brain_schema = load_config(bp)
+                break
+
+    # Merge: local schema fields + brain schema fields (brain adds canonical definitions)
+    all_required = set(schema.get("required_fields", []) if schema else [])
+    all_optional = set(schema.get("optional_fields", []) if schema else [])
+    all_enums = dict(schema.get("enums", {}) if schema else {})
+
+    if brain_schema:
+        all_required |= set(brain_schema.get("required_fields", []))
+        all_optional |= set(brain_schema.get("optional_fields", []))
+        for k, v in brain_schema.get("enums", {}).items():
+            if k not in all_enums:
+                all_enums[k] = v
 
     result = {"field": field_name}
-    if field_name in required:
+    if field_name in all_required:
         result["required"] = True
-    elif field_name in optional:
+        result["source"] = "local" if schema and field_name in schema.get("required_fields", []) else "second-brain"
+    elif field_name in all_optional:
         result["required"] = False
+        result["source"] = "local" if schema and field_name in schema.get("optional_fields", []) else "second-brain"
     else:
         result["error"] = f"Unknown field: {field_name}"
-        result["available_required"] = required
-        result["available_optional"] = optional
+        result["available_required"] = sorted(all_required)
+        result["available_optional"] = sorted(all_optional)
         return result
 
-    if field_name in enums:
-        result["valid_values"] = enums[field_name]
+    if field_name in all_enums:
+        result["valid_values"] = all_enums[field_name]
 
     return result
 
@@ -2213,7 +2275,8 @@ def main():
     sub.add_parser("what-do-i-need", help="Auto-detect identity and recommend chain, model, first steps")
 
     # Health score (Q23+Q24)
-    sub.add_parser("health", help="Composite methodology+quality health score with per-dimension breakdown")
+    h = sub.add_parser("health", help="Composite methodology+quality health score with per-dimension breakdown")
+    h.add_argument("--verbose", action="store_true", help="Show which pages have validation errors")
 
     # Compliance checker (Q25)
     sub.add_parser("compliance", help="Super-model compliance checker — adoption tier + gaps")
@@ -2327,6 +2390,27 @@ def main():
                 print(f"  {i}. {rec}")
         print("")
         print(f"  {result['note']}")
+
+        # Verbose: show page-level validation errors
+        if getattr(args, "verbose", False):
+            from tools.validate import validate_page
+            from tools.common import find_wiki_pages
+            wiki_dir = paths["wiki"]
+            schema_path = paths["schema"]
+            errors_shown = 0
+            print("\n--- Validation Errors (--verbose) ---\n")
+            for page in sorted(find_wiki_pages(wiki_dir)):
+                vr = validate_page(page, schema_path)
+                if vr["errors"]:
+                    rel = page.relative_to(wiki_dir) if wiki_dir in page.parents else page
+                    for err in vr["errors"]:
+                        print(f"  {rel}: {err['message']}")
+                        errors_shown += 1
+                    if errors_shown >= 50:
+                        print(f"\n  ... (showing first 50 of {result['dimensions'].get('validation', {}).get('detail', '?')})")
+                        break
+            if errors_shown == 0:
+                print("  No validation errors found.")
 
     elif args.command == "flow":
         print(cmd_flow(paths, step=getattr(args, "step", None)))

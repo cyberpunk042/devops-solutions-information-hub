@@ -62,12 +62,12 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
-- [Agents take small unauthorized scope expansions when the change is a 'clean win'](00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha.md) — The v8 methodology cracked down on agents adding unrelated work mid-task ("scope creep")
-- [Epic readiness math is wrong when an epic has implicit goals beyond its current children](00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md) — The harness computes epic readiness as the average of its child task readiness
-- [Per-task cost grows monotonically across multi-task runs (context accumulation)](00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md) — 
-- [Right-size the methodology model to the actual work, not the structural category](00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the.md) — The methodology selector picks a model based on `task_type` (`task`, `bug`, `spike`, `docs`, `refactor`, etc
-- [The harness 'turnCount' variable counts streaming events, not conversational turns](00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-.md) — `src/commands/agent-run-harness
-- [The pre-write hook prevents operator-Claude from racing the running agent on backlog files](00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md) — While a `pnpm openarms agent run` is in flight, the `scripts/methodology/hooks/pre-bash
+- [Agents take small unauthorized scope expansions when the change is a 'clean win'](00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha.md) — The v8 methodology blocks overt scope creep through stage hooks, diff validators, and done-when checks
+- [Epic readiness math is wrong when an epic has implicit goals beyond its current children](00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md) — The harness computes epic readiness as the average of its child task readiness values
+- [Per-task cost grows monotonically across multi-task runs (context accumulation)](00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md) — When running multiple tasks in sequence within a single harness invocation (`--tasks N`), each successive task costs ...
+- [Right-size the methodology model to the actual work, not the structural category](00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the.md) — The methodology selector picks a model based on `task_type` alone
+- [The harness 'turnCount' variable counts streaming events, not conversational turns](00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-.md) — In the OpenArms harness (`agent-run-harness
+- [The pre-write hook prevents operator-Claude from racing the running agent on backlog files](00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md) — During an active `pnpm openarms agent run`, the methodology enforcement hooks (`pre-bash
 - [Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift](01_drafts/execution-mode-is-consumer-property-not-project-property.md) — Execution mode (solo vs harness vs fleet) is a property of the **CONSUMER'S runtime**, not a property of the project
 - [Harness Engineering Is the Dominant Performance Lever](01_drafts/harness-engineering-is-the-dominant-performance-lever.md) — For LLM-based agentic systems, **the harness — not the model — is now the dominant performance lever**
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...

@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-16T16:47:46.949849+00:00",
+  "generated": "2026-04-16T17:12:01.748178+00:00",
   "stats": {
     "pages": 345,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2269,
+    "relationships": 2303,
     "tags_unique": 1070,
     "layers": {
       "3": 4,
@@ -10325,7 +10325,27 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Model Registry"
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Right-Size Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mindful Enforcement"
         }
       ]
     },
@@ -10351,7 +10371,27 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Model Registry"
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Coverage Blindness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Systemic Incompleteness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness turnCount Bug"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Right-Size Methodology Model"
         }
       ]
     },
@@ -10377,7 +10417,27 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Model Registry"
+          "target": "Right-Size Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness turnCount Bug"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic Readiness Math"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Management"
         }
       ]
     },
@@ -10403,7 +10463,43 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Model Registry"
+          "target": "Method of Work"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "not the label"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology as Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "not rigidly apply one model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Per-Task Cost Growth"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic Readiness Math"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Universal Stages"
+        },
+        {
+          "verb": "PRODUCED BY",
+          "target": "T116 cost analysis (2026-04-14)"
+        },
+        {
+          "verb": "PRODUCED BY",
+          "target": "validated by T117"
         }
       ]
     },
@@ -10429,7 +10525,27 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Model Registry"
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Per-Task Cost Growth"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic Readiness Math"
         }
       ]
     },
@@ -10455,7 +10571,27 @@
       "relationships": [
         {
           "verb": "RELATES TO",
-          "target": "Model Registry"
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Enforcement"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Block with Reason"
         }
       ]
     },
@@ -23958,7 +24094,7 @@
     },
     "cross-domain": {
       "page_count": 156,
-      "relationship_count": 1019
+      "relationship_count": 1053
     },
     "ai-agents": {
       "page_count": 65,
@@ -28782,9 +28918,56 @@
   },
   "orphaned_refs": [
     {
+      "target": "Agent Failure Taxonomy",
+      "referenced_by": [
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+        "The harness 'turnCount' variable counts streaming events, not conversational turns",
+        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
+      ]
+    },
+    {
+      "target": "Block with Reason",
+      "referenced_by": [
+        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
+      ]
+    },
+    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
+      ]
+    },
+    {
+      "target": "Context Management",
+      "referenced_by": [
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+      ]
+    },
+    {
+      "target": "Coverage Blindness",
+      "referenced_by": [
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
+      ]
+    },
+    {
+      "target": "Epic Readiness Math",
+      "referenced_by": [
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)",
+        "Right-size the methodology model to the actual work, not the structural category",
+        "The harness 'turnCount' variable counts streaming events, not conversational turns"
+      ]
+    },
+    {
+      "target": "Harness turnCount Bug",
+      "referenced_by": [
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+      ]
+    },
+    {
+      "target": "Infrastructure Enforcement",
+      "referenced_by": [
+        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
       ]
     },
     {
@@ -28808,6 +28991,24 @@
         "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
         "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Method of Work",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "Methodology as Framework",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "Mindful Enforcement",
+      "referenced_by": [
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'"
       ]
     },
     {
@@ -28843,6 +29044,27 @@
       "target": "OpenFleet Fleet Architecture",
       "referenced_by": [
         "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
+      ]
+    },
+    {
+      "target": "Per-Task Cost Growth",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category",
+        "The harness 'turnCount' variable counts streaming events, not conversational turns"
+      ]
+    },
+    {
+      "target": "Quality Failure Prevention",
+      "referenced_by": [
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'"
+      ]
+    },
+    {
+      "target": "Right-Size Methodology Model",
+      "referenced_by": [
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)"
       ]
     },
     {
@@ -28887,6 +29109,49 @@
       "target": "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding",
       "referenced_by": [
         "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)"
+      ]
+    },
+    {
+      "target": "Systemic Incompleteness",
+      "referenced_by": [
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
+      ]
+    },
+    {
+      "target": "T116 cost analysis",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "Three Lines of Defense",
+      "referenced_by": [
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
+      ]
+    },
+    {
+      "target": "Universal Stages",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "not rigidly apply one model",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "not the label",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "validated by T117",
+      "referenced_by": [
+        "Right-size the methodology model to the actual work, not the structural category"
       ]
     }
   ]
