@@ -62,9 +62,9 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
-- [First consumer integration reveals systematic gaps between knowledge and tooling](00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k.md) — The second brain's model pages contain 800+ lines of deep, evidence-backed knowledge per model
-- [Schema aspirationalism — defining required sections you never validate produces false confidence](00_inbox/schema-aspirationalism-—-defining-required-sections-you-neve.md) — A schema that defines `required_sections` per page type without any validator checking section structure creates fals...
+- [First consumer integration reveals systematic gaps between knowledge and tooling](01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k.md) — The second brain's model pages contain 800+ lines of deep, evidence-backed knowledge per model
 - [Per-task cost grows monotonically across multi-task runs (context accumulation)](01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md) — When running multiple tasks in sequence within a single harness invocation (`--tasks N`), each successive task costs ...
+- [Schema aspirationalism — defining required sections you never validate produces false confidence](01_drafts/contributed/schema-aspirationalism-—-defining-required-sections-you-neve.md) — A schema that defines `required_sections` per page type without any validator checking section structure creates fals...
 - [The harness 'turnCount' variable counts streaming events, not conversational turns](01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md) — In the OpenArms harness (`agent-run-harness
 - [The pre-write hook prevents operator-Claude from racing the running agent on backlog files](01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md) — During an active `pnpm openarms agent run`, the methodology enforcement hooks (`pre-bash
 - [Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift](01_drafts/execution-mode-is-consumer-property-not-project-property.md) — Execution mode (solo vs harness vs fleet) is a property of the **CONSUMER'S runtime**, not a property of the project

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T18:27:50.141831+00:00",
+  "generated": "2026-04-16T18:31:37.350227+00:00",
   "stats": {
     "pages": 350,
     "domains": 9,
@@ -10304,8 +10304,8 @@
       "relationships": []
     },
     {
-      "path": "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k.md",
-      "slug": "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "path": "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k.md",
+      "slug": "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "title": "First consumer integration reveals systematic gaps between knowledge and tooling",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10360,8 +10360,54 @@
       ]
     },
     {
-      "path": "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve.md",
-      "slug": "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
+      "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Right-Size Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness turnCount Bug"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic Readiness Math"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Management"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve.md",
+      "slug": "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "title": "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10417,52 +10463,6 @@
         {
           "verb": "RELATES TO",
           "target": "Schema Is the Real Product"
-        }
-      ]
-    },
-    {
-      "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
-      "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-16",
-      "updated": "2026-04-16",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Right-Size Methodology Model"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Harness turnCount Bug"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Epic Readiness Math"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model: Methodology"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Harness-Owned Loop"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Context Management"
         }
       ]
     },
@@ -24764,7 +24764,7 @@
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/integration/second-brain-integration-requirements",
       "domains/devops/four-project-ecosystem",
-      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
       "spine/models/ecosystem/model-ecosystem",
       "spine/models/ecosystem/model-mcp-cli-integration",
@@ -25105,7 +25105,7 @@
     "validation": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
-      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/automated-knowledge-validation-prevents-wiki-decay",
       "lessons/03_validated/methodology-quality/systemic-incompleteness-is-invisible-to-validation",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness"
@@ -27236,7 +27236,7 @@
     ],
     "schema": [
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
-      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "log/2026-04-09/models/2026-04-09-directive-model-quality-links-schema",
       "spine/models/foundation/model-llm-wiki",
@@ -27439,9 +27439,9 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
-      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
@@ -27452,9 +27452,9 @@
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "inbox": [
-      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
@@ -27462,19 +27462,19 @@
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
     ],
     "knowledge-tooling-gap": [
-      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k"
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
     ],
     "consumer": [
-      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k"
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
     ],
     "meta-lesson": [
-      "lessons/00_inbox/first-consumer-integration-reveals-systematic-gaps-between-k"
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
     ],
     "aspirational": [
-      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
     ],
     "false-confidence": [
-      "lessons/00_inbox/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
     ],
     "lesson": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",

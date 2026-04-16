@@ -188,6 +188,16 @@ Every field in the backlog hierarchy should be documented: what it means, when i
 > [!question] How does readiness propagate for milestones? **PARTIALLY RESOLVED**
 > Milestone readiness = AVERAGE of child epic readiness (same rule as epic→task). Simple average, not weighted. The Goldilocks principle applies: for a Simplified profile milestone, all epics crossing 50% readiness may be sufficient to start work. For a Full profile milestone, all epics must cross 99%. The THRESHOLD adapts per profile, but the PROPAGATION is always average. Remaining: should any epic at 0% block the milestone regardless of average?
 
+> [!warning] **Known failure: sparse-coverage metric inflation (NEW 2026-04-16)**
+>
+> `average(child.readiness)` produces fiction when children don't cover the parent's full scope. OpenArms E013: 1 child (T115 spike) completed → `average([100]) = 100` → epic auto-flipped to review status with 14 remaining tasks. 5/5 frontmatter fields were wrong after 3 completions. Trust rules:
+> - 1-4 children: DO NOT trust derived readiness
+> - 5+ children with mixed states: approximately correct
+> - 10+ children: reliable
+> - Any parent with implicit goals beyond current children: never trust regardless of count
+>
+> See [[hierarchical-metrics-fail-on-sparse-coverage|Hierarchical Metrics Fail on Sparse Coverage]] for the generalized pattern and [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math]] for the full OpenArms evidence.
+
 > [!question] ~~What is the minimum readiness threshold for dispatch?~~
 > **RESOLVED:** Per profile level. Simplified: 30 (operator judgment). Default: 80. Full: 99 (PO confirms). Defined in SDLC profile configs.
 > OpenFleet gates at 99. Is that too high for simplified profile projects? Should the gate be configurable per SDLC profile? (Requires: data from different project types.)
