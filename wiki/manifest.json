@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T17:30:17.112816+00:00",
+  "generated": "2026-04-16T17:38:04.315655+00:00",
   "stats": {
-    "pages": 345,
+    "pages": 347,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2310,
-    "tags_unique": 1070,
+    "relationships": 2319,
+    "tags_unique": 1072,
     "layers": {
       "3": 4,
       "6": 17,
       "2": 51,
       "4": 50,
-      "5": 22,
+      "5": 24,
       "1": 32,
       "spine": 66
     },
     "maturity": {
       "growing": 273,
-      "seed": 24
+      "seed": 26
     }
   },
   "pages": [
@@ -14916,6 +14916,58 @@
       "relationships": []
     },
     {
+      "path": "patterns/01_drafts/aspirational-naming-in-lifecycle-code.md",
+      "slug": "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "title": "Aspirational Naming in Lifecycle Code",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "pattern",
+        "naming",
+        "lifecycle",
+        "metrics",
+        "anti-pattern",
+        "contributed"
+      ],
+      "sources": [
+        {
+          "id": "openarms-turncount",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "The harness 'turnCount' variable counts streaming events, not conversational turns"
+      ],
+      "aliases": [
+        "Aspirational Naming in Lifecycle Code"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Harness turnCount Bug \u2014 OpenArms Evidence"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Observe-Fix-Verify Loop"
+        }
+      ]
+    },
+    {
       "path": "patterns/01_drafts/block-with-reason-and-justified-escalation.md",
       "slug": "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "title": "Block With Reason and Justified Escalation \u2014 The Bypass Mechanism for Mindful Enforcement",
@@ -15006,6 +15058,62 @@
         {
           "verb": "RELATES TO",
           "target": "Harness-Owned Loop \u2014 Deterministic Agent Execution"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage.md",
+      "slug": "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "title": "Hierarchical Metrics Fail on Sparse Coverage",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "pattern",
+        "metrics",
+        "hierarchy",
+        "coverage",
+        "anti-pattern",
+        "contributed"
+      ],
+      "sources": [
+        {
+          "id": "openarms-epic-readiness",
+          "type": "wiki",
+          "file": "wiki/lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
+      ],
+      "aliases": [
+        "Hierarchical Metrics Fail on Sparse Coverage"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Epic Readiness Math \u2014 OpenArms Evidence"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Readiness vs Progress"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Coverage Blindness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Systemic Incompleteness"
         }
       ]
     },
@@ -24121,8 +24229,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 156,
-      "relationship_count": 1057
+      "page_count": 158,
+      "relationship_count": 1066
     },
     "ai-agents": {
       "page_count": 65,
@@ -24840,6 +24948,7 @@
     "lifecycle": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "spine/models/agent-config/model-skills-commands-hooks"
     ],
     "phases": [
@@ -25531,7 +25640,8 @@
     ],
     "hierarchy": [
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
-      "domains/devops/backlog-hierarchy-rules"
+      "domains/devops/backlog-hierarchy-rules",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "task": [
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
@@ -27148,7 +27258,9 @@
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "inbox": [
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
@@ -27429,7 +27541,9 @@
     ],
     "anti-pattern": [
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
-      "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions"
+      "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "knowledge-infrastructure": [
       "lessons/03_validated/knowledge-systems/obsidian-as-knowledge-infrastructure"
@@ -27452,7 +27566,8 @@
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
     ],
     "coverage": [
-      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know"
+      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "blindness": [
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know"
@@ -27735,13 +27850,22 @@
       "log/archived/agent-directive-original"
     ],
     "pattern": [
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/observe-fix-verify-loop",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/standards/pattern-page-standards"
+    ],
+    "naming": [
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code"
+    ],
+    "metrics": [
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "escalation": [
       "patterns/01_drafts/block-with-reason-and-justified-escalation"
@@ -28950,7 +29074,8 @@
       "referenced_by": [
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
         "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
-        "Agents take small unauthorized scope expansions when the change is a 'clean win'"
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+        "Aspirational Naming in Lifecycle Code"
       ]
     },
     {
@@ -28986,7 +29111,8 @@
     {
       "target": "Coverage Blindness",
       "referenced_by": [
-        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
+        "Hierarchical Metrics Fail on Sparse Coverage"
       ]
     },
     {
@@ -29004,6 +29130,12 @@
       ]
     },
     {
+      "target": "Epic Readiness Math \u2014 OpenArms Evidence",
+      "referenced_by": [
+        "Hierarchical Metrics Fail on Sparse Coverage"
+      ]
+    },
+    {
       "target": "Harness turnCount Bug",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -29014,6 +29146,12 @@
       "target": "Harness turnCount Bug \u2014 Aspirational Naming in Lifecycle Code",
       "referenced_by": [
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ]
+    },
+    {
+      "target": "Harness turnCount Bug \u2014 OpenArms Evidence",
+      "referenced_by": [
+        "Aspirational Naming in Lifecycle Code"
       ]
     },
     {
@@ -29124,6 +29262,12 @@
       ]
     },
     {
+      "target": "Readiness vs Progress",
+      "referenced_by": [
+        "Hierarchical Metrics Fail on Sparse Coverage"
+      ]
+    },
+    {
       "target": "Right-Size Methodology Model",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -29184,7 +29328,8 @@
     {
       "target": "Systemic Incompleteness",
       "referenced_by": [
-        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
+        "Hierarchical Metrics Fail on Sparse Coverage"
       ]
     },
     {

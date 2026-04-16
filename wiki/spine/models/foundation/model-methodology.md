@@ -306,15 +306,26 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 
 Selection is not a lookup table — it's a multi-dimensional evaluation. Here's how it works in practice:
 
-**The 5 condition dimensions:**
+**The 6 condition dimensions (5 original + novelty added 2026-04-16):**
 
 | Dimension | What it evaluates | How it affects selection |
 |-----------|------------------|------------------------|
 | **Task type** | What kind of work is this? | `spike` → Research model. `docs` → Documentation model. `module` → Feature Development model. |
+| **Novelty (NEW)** | Is the solution KNOWN or needs DISCOVERY? | Known pattern extension → Integration (3 stages, 86.8% cheaper). Unknown solution → Feature Development (5 stages, full design). Evidence: OpenArms T116 ($9.07) vs T117 ($1.20). |
 | **Project phase** | Where is the project in its lifecycle? | Foundation phase → emphasize Document + Design. Features phase → emphasize Implement + Test. |
 | **Domain** | What kind of system is this? | Code domain → Feature Development family. Knowledge domain → Ingestion Pipeline family. |
 | **Scale** | How big is this change? | Single function → skip Document (context already known). New subsystem → full model + design review gate. |
 | **Urgency/State** | How urgent? What's the current codebase state? | Critical production bug → Hotfix model. Legacy codebase at Mountain tier → Pyramid quality target. |
+
+> [!tip] **The Novelty Dimension — Right-Sizing (added 2026-04-16)**
+>
+> | Novelty level | Model | Cost profile | When |
+> |---|---|---|---|
+> | **Solution known** — extending an established pattern | `integration` (scaffold → implement → test) | ~$1.20/task | Adding fields, wiring modules, mechanical extensions |
+> | **Solution partially known** — understood but needs root-cause doc | `bug-fix` (document → implement → test) | ~$2-3/task | Restoring behavior, known area, no new architecture |
+> | **Solution unknown** — multiple alternatives, design needed | `feature-development` (all 5 stages) | ~$9/task | Novel features, new subsystems, architectural decisions |
+>
+> **The cost-to-value collapse:** Document + Design stages cost ~$3-4 and produce 8+ wiki files for mechanical work whose design is already obvious. For known-pattern work, those stages are ceremonial — they produce artifacts but deliver no decision-making value. Skip them. See [[right-size-the-methodology-model-to-the-actual-work,-not-the|Right-Size Methodology Model — OpenArms Evidence]].
 
 > [!example]- **Worked example: "Research how OpenArms does methodology enforcement"**
 > **Evaluating conditions:**
@@ -836,6 +847,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[follow-the-method-of-work-not-the-methodology-label|Follow the Method of Work Not the Methodology Label]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
 [[hardcoded-instances-fail-build-frameworks-not-solutions|Hardcoded Instances Fail — Build Frameworks Not Solutions]]
+[[hierarchical-metrics-fail-on-sparse-coverage|Hierarchical Metrics Fail on Sparse Coverage]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
 [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]

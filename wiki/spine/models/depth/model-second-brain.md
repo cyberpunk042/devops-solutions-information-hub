@@ -198,11 +198,12 @@ The maturity ladder makes this compounding visible: a page starts as `seed` (thi
 > - Zettelkasten mapping (three note types → raw/sources/domains)
 > - The maintenance problem and its automation solution
 > - Obsidian as graph infrastructure, not just an editor
+> - **First consumer integration validated (2026-04-16).** OpenArms connected as first live consumer. 3 OFV cycles. 6 lessons contributed back, 8 failure class refined, 2 new patterns extracted. Bidirectional flow is operational, not theoretical. The cross-project evidence claim is empirically confirmed: knowledge synthesized from multiple projects IS qualitatively better for methodology decisions than single-project observations.
 
 > [!warning] Thin or missing
 > - No empirical threshold for when connection density produces emergent insights
-> - No formal "Projects" equivalent in the wiki (PARA gap)
 > - Stale page handling policy (passive `status: stale` vs active archival)
+> - Consumer adoption path is scaffold-level — 9 findings from first integration revealed systemic gaps in compliance/health/orient tools (all fixed 2026-04-16 but the architecture needs deepening)
 
 ### How to Adopt
 

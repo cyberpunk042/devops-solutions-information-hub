@@ -254,12 +254,16 @@ All five projects run on a single machine: WSL2 on Windows. This is intentional 
 > - Deterministic shell + LLM core pattern across 4 implementations
 > - File-based coupling model (durable interfaces, replaceable implementations)
 > - WSL2 deployment reality
+> - **First consumer integration proven (2026-04-16).** OpenArms connected as live consumer from another machine. `setup --connect` installed MCP + CLI forwarders + AGENTS.md brain pointer in one command. 3 OFV feedback cycles in one session. 6 lessons flowed back, 2 new patterns extracted, methodology model evolved with 6th selection dimension. E016 chain: 10/17 steps completed. Scale confirmed: full adoption is 23 epics, 125-185 tasks, 5 milestones. See `raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md` (871 lines).
+> - **Bidirectional knowledge flow operational.** Contribute → absorb → promote → cross-link → evolve model. Not theoretical — executed with real evidence from T088-T120 operations.
 
 > [!warning] **Thin or unverified**
 > - `kb_sync.py` performance at scale — untested beyond 200 pages
 > - OpenArms routing to specialized agent pools — single runtime currently
 > - AICP ↔ OpenFleet integration formality — currently informal skills export + dispatch
 > - Cross-wiki evolution — can AICP's wiki evolve from this wiki's pages?
+> - Consumer adoption beyond Tier 2 — OpenArms is functionally Tier 2; Tier 3 (evolution pipeline) and Tier 4 (hub integration) untested with any consumer
+> - Multi-machine deployment — first test worked but the setup flow needs hardening for edge cases
 > - Multi-machine deployment — everything is single-machine currently; no distributed architecture tested
 
 ---

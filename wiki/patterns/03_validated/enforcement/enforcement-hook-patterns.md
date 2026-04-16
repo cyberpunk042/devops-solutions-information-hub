@@ -166,6 +166,31 @@ esac
 
 **When to use:** For long-running sessions where context compaction may remove the CLAUDE.md methodology sections. Without this, agents lose their rules after compaction and revert to default behavior.
 
+### Pattern 5: Race Prevention Guard (Pre-Write) (NEW 2026-04-16)
+
+Prevents race conditions between operator-Claude and a running autonomous agent on shared filesystem surfaces.
+
+```bash
+#!/bin/bash
+# pre-write.sh (race prevention addition)
+FILE_PATH="$1"
+HARNESS_ACTIVE=$(test -f .openarms/methodology-enforced && echo "true" || echo "false")
+
+if [ "$HARNESS_ACTIVE" = "true" ]; then
+  # Block operator writes to harness-owned surfaces during active runs
+  if echo "$FILE_PATH" | grep -qE "^wiki/backlog/(tasks|epics)/"; then
+    echo "BLOCKED: Backlog files are managed by the harness during active runs."
+    echo "Safe alternatives: write to wiki/lessons/, wiki/log/, or scratch buffers."
+    echo "Wait for the run to complete before editing backlog."
+    exit 1
+  fi
+fi
+```
+
+**When to use:** When multiple Claude Code contexts (operator + agent, or agent + sub-agent) share a filesystem. The harness writes to backlog files during stage transitions; concurrent operator edits create silent data loss. The hook discriminates between harness-owned surfaces (backlog, state files) and operator-territory (lessons, logs, directives).
+
+**Key design insight from OpenArms (2026-04-16):** The discrimination is what makes this pattern viable. A blanket "no writes during runs" blocks productive parallel work. The rule: anything the harness might write during the active stage is unsafe; everything else is safe. The Safe/Unsafe table in the lesson provides the concrete boundary. See [[the-pre-write-hook-prevents-operator-claude-from-racing-the-|Pre-Write Hook Race Prevention — Full Evidence]].
+
 ## Instances
 
 > [!example]- Instance: OpenArms v10 Enforcement Infrastructure (14 scripts + 4 hooks)
