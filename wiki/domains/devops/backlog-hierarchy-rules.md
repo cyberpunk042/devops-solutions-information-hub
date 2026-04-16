@@ -201,6 +201,31 @@ Examples of gaps that require new tasks:
 
 ---
 
+### Rule Implementation Status — What Gets Coded, What Stays Advisory
+
+> [!warning] The 8 rules are not equally easy to put in code. A mature consumer project's implementation status reveals the adoption order.
+>
+> OpenArms, a Tier 2 adopter with 14 methodology CJS scripts in `scripts/methodology/`, shows this pattern (verified 2026-04-16):
+>
+> | Rule | Implementation in OpenArms code | Why this rank |
+> |---|---|---|
+> | **Rule 1** (epic never auto-done) | ✅ Full — `verify-done-when.cjs` + `recalculate-epic.cjs` cap at `review` | Simple gate: check level==epic before allowing status=done |
+> | **Rule 2** (module never auto-done) | ✅ Full — same mechanism as Rule 1 | Same gate, different level |
+> | **Rule 3** (task atomic, stage-gated) | ✅ Full — `validate-stage.cjs` enforces stage sequence | The existing stage-gate system IS Rule 3 |
+> | **Rule 4** (readiness + progress independent) | ⚠️ Partial — readiness in code since v1; progress added 2026-04-16 across 4 scripts | Two-field model needs touching every script that reads frontmatter. Cost scales with # of scripts. |
+> | **Rule 5** (status flows upward) | ✅ Full — `recalculate-epic.cjs` + index updates | Natural consequence of hierarchical computation |
+> | **Rule 6** (work on tasks, not epics) | ✳️ Conventional — enforced by `select-task.cjs` only returning leaf tasks | Not coded as a blocker; the "shape" of select-task enforces it indirectly |
+> | **Rule 7** (epic in-progress for weeks is OK) | ❌ Not in code — cultural rule | Nothing to enforce; it's an anti-anxiety rule for operators |
+> | **Rule 8** (create new tasks to cover gaps) | ⚠️ Warning-only — `recalculate-epic.cjs` emits sparse-coverage warning (commit `74e8a50d`, 2026-04-16) | Full Rule 8 (auto-generation of missing children) is HARD — requires understanding epic acceptance criteria semantically. Warning is the first step. |
+>
+> **The adoption order reveals the cost curve:** Rules 1-3, 5 are trivial gates (hours). Rule 4 is medium (~2-3 hours, touches multiple scripts). Rule 6 is conventional (enforced by shape, not code). Rule 7 is cultural (no code). Rule 8 is hard (requires understanding scope — the warning layer is a half-measure that leaves the hard part for M2-M3 work).
+>
+> **Implication for adopters:** build Rules 1-3, 5 first (they're easy and the highest-value gates). Build Rule 4's two-field model when you need the definition/execution distinction. Rule 8's warning is worth the effort (prevents the Hierarchical Metrics Fail pattern); Rule 8's auto-generation is a milestone-sized investment.
+>
+> **Connection:** [[hierarchical-metrics-fail-on-sparse-coverage|Hierarchical Metrics Fail on Sparse Coverage]] names WHY Rule 8 matters. Rule 8 names WHAT the response should be. Neither is complete without the other.
+
+---
+
 ### Readiness Calculation Example
 
 Epic E007 has 2 modules, each with tasks:
@@ -462,6 +487,7 @@ MILESTONE (delivery target)
 [[spec-driven-development|Spec-Driven Development]]
 [[immune-system-rules|Immune System Rules]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
+[[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
 [[execution-mode-edge-cases|Decision — Execution Mode Edge Cases]]
 [[stage-gate-operational-decisions|Decision — Stage-Gate Operational Decisions]]
 [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]

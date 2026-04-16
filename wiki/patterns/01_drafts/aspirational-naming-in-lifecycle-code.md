@@ -86,4 +86,6 @@ The bug is invisible when the ratio is stable (thresholds can be recalibrated to
 [[Agent Failure Taxonomy]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop]]
+[[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
+[[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]

@@ -59,6 +59,26 @@ Work tracking requires TWO independent dimensions: READINESS (is this defined we
 > task_progress: int = 0   # Post-dispatch work progression (0-100). 
 >                          # 70=done, 80=challenged, 90=reviewed, 100=complete.
 > ```
+
+> [!success] OpenArms First-Adopter Implementation (2026-04-16)
+>
+> OpenArms became the first consumer project to implement the two-field model in operational code after reading this page. Implementation trajectory over a single session:
+>
+> | Script | Before | After | Commit |
+> |---|---|---|---|
+> | Schema (`wiki/config/schema.yaml`) | `readiness` only | Added `progress: int 0-100` | `afc34f4` |
+> | `recalculate-epic.cjs` | Computed readiness from children | Added progress computation (same upward-flow logic, independent field) | `a27aaff` |
+> | `select-task.cjs` | Displayed readiness | Added progress display in `--json` output | `9b9ccbe` |
+> | `validate-stage.cjs` | Stage-rule validation only | Added progress computation on execution stages (scaffold/implement/test) | `7ae48ef` |
+> | `verify-done-when.cjs` | Checked Done When items | Added `progress = 100` assignment at task completion + cap at 100 bug fix | `b4ed834`, `74e8a50` |
+>
+> **What took real work (gap between page and code):**
+>
+> - Progress cap bug: computation could exceed 100% when tasks had more `stages_completed` than their model requires (e.g., completed with 4 stages for a 3-stage model). Fixed by capping per-child progress at 100. Pattern: the two-field model is simple in theory; per-hierarchy-level computation rules need implementation care.
+> - OpenArms does NOT yet implement OpenFleet's `70/80/90/100` progress semantics (done-claim / challenged / reviewed / delivered). Their progress field currently supports `0-100` monotonic advancement. The semantic stages are reserved for future M2 work.
+> - The two-field model required touching 4 CJS scripts + the schema + all existing task files. First-adopter cost: ~2-3 hours of focused work. Ongoing cost: minimal — once wired, both fields flow automatically.
+>
+> **Contract at the gate:** OpenArms's implementation confirms the invariant — `readiness=100` does NOT auto-set `progress`, and vice versa. The two fields remain independent. 99→100 on either side is human-only (they retained this). The pattern transfers; the specific numbers/semantics adapt per project.
 >
 > | Field | Range | Owner | Gate | Purpose |
 > |-------|-------|-------|------|---------|

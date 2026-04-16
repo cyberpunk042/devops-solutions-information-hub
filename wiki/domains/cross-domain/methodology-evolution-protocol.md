@@ -84,6 +84,42 @@ methodology_version: "1.0"  # pin to specific version
 auto_upgrade: minor          # auto-accept minor, require manual for major
 ```
 
+### First Adopter — OpenArms v11.0 (2026-04-16)
+
+> [!success] OpenArms was the first consumer project to version its methodology.yaml explicitly
+>
+> Before the second-brain integration session: `methodology.yaml` had no version field. Methodology was the current state of the file; history was in git log only.
+>
+> After (commit `2d8b2a31`, 2026-04-16):
+>
+> ```yaml
+> # methodology.yaml
+> version: "11.0"  # Second brain integration era
+> ```
+>
+> **Why v11.0 and not v1.0:** OpenArms had gone through 10 undocumented evolutions (v1→v10 per the `lesson-methodology-battle-tested.md` history — 7 bugs, 6 versions in one day 2026-04-09; subsequent evolution through v10 overnight-run enforcement; then E016 spikes; then second-brain integration). Rather than retroactively version earlier states, the first explicit version acknowledged the true operational history: v11 is where we are now; the implicit v1-v10 sequence is documented in lesson files.
+>
+> **What changed at v11.0:**
+>
+> - Added explicit `version` field
+> - Added `progress` field to artifacts per Rule 4 of Backlog Hierarchy Rules
+> - Added `impediment_type` with 8-value taxonomy (`technical`, `dependency`, `decision`, `environment`, `clarification`, `scope`, `external`, `quality`)
+> - Added Rule 8 sparse-coverage warning to `recalculate-epic.cjs`
+> - Added artifact path verification to `verify-done-when.cjs`
+> - Capped progress at 100 (previously could exceed when `stages_completed` > model's required stages)
+>
+> **Lesson from the first adoption:** versioning retroactively is awkward but necessary. When a mature project finally versions its config, it should use a version number that honors its actual evolution depth. v11.0 tells consumers "this is a mature config with ten generations of hardening behind it" — not v1.0 which would mislead.
+
+### The Agent Never Evolves the Methodology — OpenArms Evidence
+
+> [!warning] Governance rule: evolution authority belongs to the operator, not the agent
+>
+> OpenArms explicitly encoded this rule in its second-brain integration session. The operator directive: "the agent never evolves the methodology — the operator does." The rationale is runaway self-modification: agents incentivized to complete tasks would eventually loosen their own constraints (skip stages, reduce verification, lower readiness gates) if empowered to change the rules. The agent reads the current version EXACTLY. The operator reviews evidence and makes changes.
+>
+> **Concretely in code:** the hooks and validators that read `methodology.yaml` are READ-ONLY from the agent's perspective. `pre-write.sh` actively blocks agent writes to `methodology.yaml` (methodology-infrastructure-locked unless meta-task flag is set). The flag is operator-controlled.
+>
+> **This is a subtle Infrastructure > Instructions application:** the operator's authority to evolve methodology is PROTECTED by infrastructure, not by a rule the agent is expected to follow. If the agent could write to methodology.yaml, prose rules telling it not to would fail like other prose rules (~25% compliance). A write-guard enforces governance structurally.
+
 ### Propagation Mechanism
 
 > [!tip] How Changes Reach Consumer Projects

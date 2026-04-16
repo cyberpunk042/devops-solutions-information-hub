@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T19:23:08.233648+00:00",
+  "generated": "2026-04-16T19:35:26.528616+00:00",
   "stats": {
-    "pages": 354,
+    "pages": 356,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2362,
-    "tags_unique": 1092,
+    "relationships": 2378,
+    "tags_unique": 1095,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 54,
-      "5": 26,
+      "4": 55,
+      "5": 27,
       "1": 32,
       "spine": 66
     },
     "maturity": {
       "growing": 273,
-      "seed": 33
+      "seed": 35
     }
   },
   "pages": [
@@ -10452,6 +10452,92 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/contributed/defense-layer-progression-is-expensive.md",
+      "slug": "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
+      "title": "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "lesson",
+        "enforcement",
+        "three-lines-of-defense",
+        "adoption",
+        "cost-curve",
+        "contributed",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-integration-notes",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "Part 23 observation \u2014 OpenArms has Line 1 (prevention) but Lines 2-3 (detection, correction) are Milestone 3 work"
+        },
+        {
+          "id": "three-lines-of-defense",
+          "type": "wiki",
+          "file": "wiki/patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality.md",
+          "description": "The pattern this lesson observes adoption data for"
+        },
+        {
+          "id": "openfleet-immune-system",
+          "type": "wiki",
+          "file": "wiki/spine/models/quality/model-quality-failure-prevention.md",
+          "description": "OpenFleet operates at all three lines; used as the 'fully operational' comparison point"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Three Lines of Defense \u2014 Immune System for Agent Quality",
+        "Model: Quality and Failure Prevention",
+        "Infrastructure Over Instructions for Process Enforcement"
+      ],
+      "aliases": [
+        "Defense Layer Progression Is Expensive",
+        "Prevention \u2192 Detection \u2192 Correction Is a Cost Curve"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Three Lines of Defense \u2014 Immune System for Agent Quality"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Aspirational Naming in Lifecycle Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Observe-Fix-Verify Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Quality Standards"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k.md",
       "slug": "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "title": "First consumer integration reveals systematic gaps between knowledge and tooling",
@@ -15324,6 +15410,88 @@
         {
           "verb": "RELATES TO",
           "target": "Context Management Is the Primary LLM Productivity Lever"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/artifact-path-verification-at-gate-close.md",
+      "slug": "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "title": "Artifact Path Verification at Gate Close",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "pattern",
+        "enforcement",
+        "gate-close",
+        "artifacts",
+        "readiness",
+        "verification",
+        "infrastructure",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-integration-notes",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "Parts 17 and 20 \u2014 identified that 'readiness is computed, not self-reported' requires verifier to check artifact paths against filesystem"
+        },
+        {
+          "id": "openarms-verify-done-when",
+          "type": "file",
+          "project": "openarms",
+          "path": "scripts/methodology/verify-done-when.cjs",
+          "description": "The implementation commit b4ed8349 that wired artifact-path verification into the Done When gate"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure",
+        "Aspirational Naming in Lifecycle Code"
+      ],
+      "aliases": [
+        "Artifact Path Verification at Gate Close",
+        "Verify Declared Artifacts Exist"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Aspirational Naming in Lifecycle Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Readiness vs Progress"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -24733,12 +24901,12 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 163,
-      "relationship_count": 1095
+      "page_count": 164,
+      "relationship_count": 1103
     },
     "ai-agents": {
-      "page_count": 67,
-      "relationship_count": 523
+      "page_count": 68,
+      "relationship_count": 531
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -25109,10 +25277,12 @@
       "domains/tools-and-platforms/openarms",
       "ecosystem/project_profiles/openarms/identity-profile",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
@@ -25345,11 +25515,13 @@
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
@@ -25494,7 +25666,8 @@
       "domains/cross-domain/methodology-framework/readiness-vs-progress",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/stage-gate-methodology",
-      "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness"
+      "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close"
     ],
     "progress": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
@@ -26034,6 +26207,7 @@
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
@@ -26051,6 +26225,7 @@
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research"
     ],
@@ -27787,6 +27962,7 @@
     ],
     "lesson": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
@@ -27812,6 +27988,7 @@
     ],
     "contributed": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
@@ -27825,6 +28002,18 @@
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
+    ],
+    "three-lines-of-defense": [
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive"
+    ],
+    "adoption": [
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
+      "spine/references/adoption-guide",
+      "spine/references/methodology-adoption-guide",
+      "spine/super-model/super-model"
+    ],
+    "cost-curve": [
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive"
     ],
     "inbox": [
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
@@ -27900,7 +28089,8 @@
     ],
     "verification": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/03_validated/methodology-quality/never-present-speculation-as-fact"
+      "lessons/03_validated/methodology-quality/never-present-speculation-as-fact",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close"
     ],
     "convergence": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
@@ -28425,6 +28615,7 @@
     ],
     "pattern": [
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
@@ -28451,6 +28642,9 @@
     ],
     "synthesized": [
       "patterns/01_drafts/agent-execution-cost-optimization-stack"
+    ],
+    "gate-close": [
+      "patterns/01_drafts/artifact-path-verification-at-gate-close"
     ],
     "naming": [
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code"
@@ -29511,11 +29705,6 @@
     "rework": [
       "spine/models/quality/model-quality-failure-prevention"
     ],
-    "adoption": [
-      "spine/references/adoption-guide",
-      "spine/references/methodology-adoption-guide",
-      "spine/super-model/super-model"
-    ],
     "context": [
       "spine/references/context-file-taxonomy",
       "spine/references/root-documentation-map"
@@ -29670,6 +29859,7 @@
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
         "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+        "Artifact Path Verification at Gate Close",
         "Aspirational Naming in Lifecycle Code"
       ]
     },
@@ -29879,6 +30069,7 @@
     {
       "target": "Principle \u2014 Infrastructure Over Instructions",
       "referenced_by": [
+        "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
         "First consumer integration reveals systematic gaps between knowledge and tooling",
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence"
       ]
@@ -29890,8 +30081,15 @@
       ]
     },
     {
+      "target": "Quality Standards",
+      "referenced_by": [
+        "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones"
+      ]
+    },
+    {
       "target": "Readiness vs Progress",
       "referenced_by": [
+        "Artifact Path Verification at Gate Close",
         "Hierarchical Metrics Fail on Sparse Coverage"
       ]
     },

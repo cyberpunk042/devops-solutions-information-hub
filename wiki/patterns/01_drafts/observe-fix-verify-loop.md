@@ -96,6 +96,7 @@ The repair: **the Verify step must cross an authority boundary.** Options in ord
 | **OpenArms v1→v7 (2026-04-09)** | 10 cycles / 1 day | Agent-report streams, per-run stage-violation counts | methodology.yaml invariants, CLAUDE.md hooks, new schema fields | Operator review + next-run compliance measurement |
 | **OpenArms E016 T107-T112 (2026-03→04)** | 6 cycles / 6 weeks | Past-run logs for 5 production tasks T085-T087 | Per-class fix recommendation in findings docs | Cross-check against independent evidence + operator review |
 | **Research Wiki tool-building (2026-04-15)** | 3 cycles / <1 hour | Tool-error tracebacks during real use | tools/sister_project.py + sister-projects.yaml | Next tool invocation on same inputs |
+| **Cross-project OFV (2026-04-16)** | 3 cycles / 1 session | OpenArms observed 9 findings (F1-F9) from first integration | Fixes applied to second brain's gateway / resolver / lint | OpenArms re-ran same commands and verified fixes |
 | **OpenFleet immune system (continuous)** | ∞ cycles / 30s each | Doctor detection functions on live agents | gateway-injected corrections | Agent-health profile persistence across cycles |
 
 > [!example]- Detailed walk-through: Research Wiki's 3-cycle tool-building OFV
@@ -146,8 +147,19 @@ The repair: **the Verify step must cross an authority boundary.** Options in ord
 > [!question] What is the minimum cycle frequency below which the pattern degrades?
 > OA ran 10 cycles/day in 2026-04-09; OF runs continuous 30s cycles; E016 ran ~1 cycle/week. Is there a floor (e.g. 1 cycle/month) below which the pattern collapses into ad-hoc patching? Open.
 
-> [!question] Can the Verify step be chained across projects (sister-verifies-sister)?
-> If OA observes a failure and fixes it in the methodology that feeds OpenFleet, does OF's subsequent run count as Verify? This would make cross-project OFV explicit. Open — this wiki's consumption-tracker tool is early infrastructure toward this.
+> [!question] ~~Can the Verify step be chained across projects (sister-verifies-sister)?~~
+>
+> **RESOLVED 2026-04-16 — YES, and it is the most powerful OFV variant.** Three cycles in a single session with OpenArms as the first live consumer of the second brain:
+>
+> | Cycle | Observe (OpenArms) | Fix (Second Brain) | Verify (OpenArms) |
+> |---|---|---|---|
+> | **Round 1** | 9 findings (F1-F9) from running gateway commands: compliance shows Tier 0 when actually Tier 2, health uses brain's schema not project's, orient shortcircuits for "returning," status asks for static consumer properties, orient gives no scale estimate, standards-first reading-order wrong for integration consumers, contribute format bridge undocumented, no scale reality check, 6 lessons not yet contributed | `tools/gateway.py` resolver changes (functional equivalence via `_check_any`), `tools/common.py` session-state with orient-specific freshness, orient output rewritten 3 times (thin→enriched→adoption-framed), status split into Project Identity / State / Consumer Properties, orient adds scale "15-25 epics, 80-150+ tasks" | OpenArms re-ran same commands and confirmed: compliance → Tier 2 functional, orient full output, status no longer asks for consumer properties, scale now present |
+> | **Round 2** | Deeper gaps: artifact chains return `chain: {}`, SDLC profiles "No directory found," stage query empty ALLOWED/FORBIDDEN, field query "Unknown field" | Gateway query evolved: `query_model` falls back to brain methodology, `query_profiles_list` brain fallback, stage queries enriched with chain-derived data, field query wired from frontmatter-field-reference | Re-ran `gateway query --model X --full-chain` — `has_chain: True` across all 9 models. SDLC profiles list works. Fields queryable. |
+> | **Round 3** | Lint false positives: task pages 30-word summary minimum against intentionally-thin task standard. Health flagged 93 "thin" + 240 "orphan" — many are valid task/note pages | `tools/lint.py` added `thin_exempt_types = {"task", "note", "module"}` | OpenArms ran `gateway health --verbose` — errors dropped; remaining are real. |
+>
+> **What this answers:** the Verify step's externality requirement (above) is MAXIMALLY satisfied when Verify comes from a DIFFERENT PROJECT than Fix. OpenArms cannot have false confidence in the second brain's fix because OpenArms didn't write it. The second brain cannot have false confidence in its own fix because OpenArms runs the same commands with the same inputs and reports objectively. **Cross-project OFV is the strongest Verify authority short of a formal external auditor** — and it is achievable whenever two projects in the same ecosystem consume each other's work.
+>
+> Implication for multi-project ecosystems: the sister-projects.yaml registry + `gateway contribute` + `gateway timeline` collectively form the infrastructure for cross-project OFV. Every sister project that runs against the second brain's tools is a potential Verify authority for the second brain's fixes. The loop extends naturally.
 
 > [!question] What makes a Fix a ROOT fix versus a symptom patch?
 > Tentative criterion: a root fix is one that, if undone, causes the original failure to recur — regardless of surface details. A symptom patch suppresses one instance. Tightening needed.

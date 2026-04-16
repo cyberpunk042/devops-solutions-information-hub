@@ -834,6 +834,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
 [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
 [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
+[[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
 [[E003-artifact-type-system|Artifact Type System]]
 [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
 [[artifact-system-design-decisions|Decision — Artifact System Design Decisions]]
