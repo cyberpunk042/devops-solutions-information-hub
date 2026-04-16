@@ -422,12 +422,70 @@ def connect_second_brain(project_root: Path, brain_path: Path = None):
     _install_gateway_forwarder(project_root, brain_path, venv)
     _install_view_forwarder(project_root, brain_path, venv)
 
+    # Add second-brain connection block to AGENTS.md (or CLAUDE.md) if not already present
+    _inject_brain_pointer(project_root, brain_path)
+
     log_info(f"Connected to second brain: {brain_path}")
     log_info(f"  MCP entry:  {mcp_json_path}")
-    log_info(f"  CLI script: {project_root / 'tools' / 'gateway.py'}")
-    log_info(f"  Usage:      python3 -m tools.gateway orient")
+    log_info(f"  CLI:        python3 -m tools.gateway orient")
+    log_info(f"              python3 -m tools.view spine")
     log_info(f"  MCP:        wiki_gateway_orient (from Claude Code)")
     return True
+
+
+_BRAIN_POINTER_MARKER = "<!-- SECOND-BRAIN-CONNECTION -->"
+
+_BRAIN_POINTER_BLOCK = """
+{marker}
+## Second Brain Connection
+
+This project is connected to the **second brain** (research wiki) — a shared
+knowledge system holding methodology, standards, lessons, patterns, and decisions
+across the ecosystem. Your brain (this CLAUDE.md/AGENTS.md + skills + hooks) is
+YOUR agent. The second brain is a SEPARATE system you consume from and contribute to.
+
+**First step for any fresh agent or session:**
+```
+python3 -m tools.gateway orient
+```
+
+**Browse the second brain's knowledge:**
+```
+python3 -m tools.view spine          # models, standards, sub-models
+python3 -m tools.view model <name>   # one model in full
+python3 -m tools.view lessons        # validated lessons
+python3 -m tools.view search <query> # search across all knowledge
+```
+
+**MCP tools** (available in Claude Code via .mcp.json):
+`wiki_gateway_orient`, `wiki_gateway_query`, `wiki_search`, `wiki_read_page`,
+`wiki_gateway_contribute`, `wiki_gateway_timeline`, and 20+ more.
+
+**Contribute learnings back:** `python3 -m tools.gateway contribute --type lesson --title "..."`
+{marker_end}
+"""
+
+
+def _inject_brain_pointer(project_root: Path, brain_path: Path):
+    """Add a second-brain connection block to the project's AGENTS.md or CLAUDE.md.
+
+    Injects once. Skips if marker already present. Prefers AGENTS.md (cross-tool);
+    falls back to CLAUDE.md.
+    """
+    for fname in ["AGENTS.md", "CLAUDE.md"]:
+        target = project_root / fname
+        if target.exists():
+            content = target.read_text(encoding="utf-8")
+            if _BRAIN_POINTER_MARKER in content:
+                return  # Already injected
+            block = _BRAIN_POINTER_BLOCK.format(
+                marker=_BRAIN_POINTER_MARKER,
+                marker_end=_BRAIN_POINTER_MARKER.replace("-->", "-END -->"),
+            )
+            target.write_text(content + block, encoding="utf-8")
+            log_info(f"  Brain pointer added to: {target}")
+            return
+    log_warn("  No AGENTS.md or CLAUDE.md found — skipping brain pointer injection")
 
 
 def _install_gateway_forwarder(project_root: Path, brain_path: Path, venv: Path):

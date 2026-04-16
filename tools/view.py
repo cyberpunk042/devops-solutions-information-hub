@@ -156,7 +156,7 @@ RESEARCH WIKI ({total} pages, {rels} relationships)
     print(f"    ├── Backlog ({len(backlog)} items)")
     print(f"    └── Log ({len(logs)} entries)")
     print()
-    print("Drill down:  (python3 wiki.py <command>)")
+    print("Drill down:  (python3 -m tools.view <command>)")
     print("  spine              Models + standards detail")
     print("  model X            One model's member pages")
     print("  domain X           One domain's concept pages")
@@ -237,7 +237,7 @@ def cmd_spine(manifest: Dict, root: Path):
         print()
 
     # Drill-down hint at the end
-    print("Drill into a model:  python3 wiki.py model <name>")
+    print("Drill into a model:  python3 -m tools.view model <name>")
     print(f"  e.g.  model {keys[0]},  model {keys[2]},  model {keys[-1]}")
 
 
@@ -449,7 +449,7 @@ def cmd_model(manifest: Dict, root: Path, model_name: str, full: bool = False):
             print(f"    [{typ}] {t}  [{fpath}]")
 
     key = title.replace("Model — ", "").replace("Model: ", "").replace("Super-Model — ", "").replace("Super-Model: ", "").split()[0].lower()
-    print(f"\n  Full page:  python3 wiki.py model {key} --full")
+    print(f"\n  Full page:  python3 -m tools.view model {key} --full")
 
 
 def cmd_domain(manifest: Dict, root: Path, domain: str, brief: bool = False):
@@ -515,6 +515,48 @@ def cmd_decisions(manifest: Dict, root: Path):
         print(f"    [{path}]")
         print()
     print("Read a decision:  cat <path>  or open in your editor")
+
+
+def cmd_patterns(manifest: Dict, root: Path):
+    """All patterns with summaries."""
+    patterns = [p for p in manifest["pages"] if p.get("type") == "pattern"]
+    print(f"\n=== PATTERNS ({len(patterns)}) ===\n")
+    for p in sorted(patterns, key=lambda x: x.get("title", "")):
+        summary = _summary_for(p, root)
+        mat = p.get("maturity", "")
+        path = "wiki/" + p.get("path", "")
+        print(f"  {p['title']} [{mat}]")
+        if summary:
+            print(f"    {summary}")
+        print(f"    [{path}]")
+        print()
+
+
+def cmd_principles(manifest: Dict, root: Path):
+    """All principles with summaries."""
+    principles = [p for p in manifest["pages"] if p.get("type") == "principle"]
+    print(f"\n=== PRINCIPLES ({len(principles)}) ===\n")
+    for p in sorted(principles, key=lambda x: x.get("title", "")):
+        summary = _summary_for(p, root)
+        path = "wiki/" + p.get("path", "")
+        print(f"  {p['title']}")
+        if summary:
+            print(f"    {summary}")
+        print(f"    [{path}]")
+        print()
+
+
+def cmd_standards(manifest: Dict, root: Path):
+    """All standards pages."""
+    standards = [p for p in manifest["pages"]
+                 if "standards" in p.get("path", "").lower()
+                 and p.get("path", "").startswith("spine/standards/")]
+    print(f"\n=== STANDARDS ({len(standards)}) ===\n")
+    for s in sorted(standards, key=lambda x: x.get("title", "")):
+        path = "wiki/" + s.get("path", "")
+        print(f"  {s['title']}")
+        print(f"    [{path}]")
+        print()
 
 
 def cmd_refs(manifest: Dict, root: Path, query: str):
@@ -593,9 +635,27 @@ def cmd_search(manifest: Dict, root: Path, query: str, filter_type: Optional[str
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Browse the wiki knowledge tree")
-    parser.add_argument("command", nargs="?", default="tree")
-    parser.add_argument("argument", nargs="?", default=None)
+    parser = argparse.ArgumentParser(
+        description="Browse the second brain's knowledge tree",
+        epilog="""commands:
+  (no command)    Full wiki tree (dashboard)
+  spine           Super-model, sub-models, all 16 models with paths
+  models          Same as spine
+  model <name>    One model in full (summary, insights, lessons, standards)
+  lessons         All validated lessons by category
+  patterns        All validated patterns with summaries
+  decisions       All decision records with summaries
+  principles      Governing principles (distilled from lessons)
+  standards       All per-type and per-model standards pages
+  domain <name>   One domain with pages and summaries
+  search <query>  Search across the entire wiki
+  refs <title>    Trace relationships for a page""",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument("command", nargs="?", default="tree",
+                        help="What to browse (see list above)")
+    parser.add_argument("argument", nargs="?", default=None,
+                        help="Model name, domain name, search query, or page title")
     parser.add_argument("--brief", action="store_true")
     parser.add_argument("--full", action="store_true", help="Show full page content")
     parser.add_argument("--type", dest="filter_type")
@@ -619,6 +679,9 @@ def main():
         "domain": lambda: cmd_domain(manifest, root, args.argument or "", brief=args.brief),
         "lessons": lambda: cmd_lessons(manifest, root),
         "decisions": lambda: cmd_decisions(manifest, root),
+        "patterns": lambda: cmd_patterns(manifest, root),
+        "principles": lambda: cmd_principles(manifest, root),
+        "standards": lambda: cmd_standards(manifest, root),
         "refs": lambda: cmd_refs(manifest, root, args.argument or ""),
         "search": lambda: cmd_search(manifest, root, args.argument or "", filter_type=args.filter_type),
     }
