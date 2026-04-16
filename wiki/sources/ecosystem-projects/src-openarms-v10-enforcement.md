@@ -102,7 +102,7 @@ OpenArms has distilled 18 lesson files + 4 findings docs in `wiki/domains/learni
 
 **Five cognitive contexts reading one CLAUDE.md:** Interactive operator, solo run-mode agent, sub-agents, persona templates, provisioned live agents — each needs different rules from the same file. Rules like "after compaction re-read memories" actively mislead the solo agent (which has no persistent memory). Fix: move solo-agent rules to skills, keep CLAUDE.md for shared + operator rules.
 
-**Memory vs Wiki conflation (7th failure class):** Agent records project knowledge in Claude Code memory (`~/.claude/`) instead of wiki. Memory is private, unshared, invisible to brain and other agents. Decision rule: "Who needs to read this?" If anyone beyond current session → wiki. Default to wiki. NEVER duplicate.
+**Memory vs Wiki conflation (7th failure class):** Agent records project knowledge in Claude Code memory (`~/.claude/`) instead of wiki. Memory is private, unshared, invisible to the second brain and other agents. Decision rule: "Who needs to read this?" If anyone beyond current session → wiki. Default to wiki. NEVER duplicate.
 
 **Environment patching root cause is 3-layer (40/40/20):** 40% prompt (rule doesn't fire for progressive patches), 40% infrastructure (no stage-level retry counter — `validate-stage.cjs` returns PASS/FAIL but doesn't count calls), 20% model training (rewards persistence over escalation). Agent listed 3 options for T085's Node 18 error — NONE was "file concern and stop."
 

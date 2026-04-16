@@ -86,12 +86,12 @@ def detect_context(
         elif any(kw in runtime for kw in ("harness-", "fleet-")):
             location = "sister"
         else:
-            location = "brain-self"
+            location = "second-brain"
     else:
         # Resolve from filesystem: brain has sister-projects.yaml
         check_root = wiki_root or _try_project_root()
         if check_root and (check_root / "wiki" / "config" / "sister-projects.yaml").exists():
-            location = "brain-self"
+            location = "second-brain"
         elif check_root and (check_root / "wiki").is_dir():
             location = "sister"
         else:

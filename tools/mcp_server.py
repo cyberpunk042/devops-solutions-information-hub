@@ -442,14 +442,14 @@ def wiki_gateway_orient(orient_as: str = None, fresh: bool = False,
     """Context-aware orientation for fresh agents.
 
     Run this FIRST in any new session, after compaction, or when entering the
-    brain for the first time. Detects your context (brain-self / sister /
+    brain for the first time. Detects your context (second-brain / sister /
     external) and freshness (fresh / task-bound / returning), then shows the
     appropriate reading path and standing rules.
 
     DO NOT invoke during an active task — use wiki_gateway_query instead.
 
     Args:
-        orient_as: Explicit context override ('brain-self', 'sister', 'external').
+        orient_as: Explicit context override ('second-brain', 'sister', 'external').
                    Omit for auto-detection.
         fresh: Force fresh-agent mode (e.g. after compaction).
         output_format: 'text' (default) or 'json' for structured data.

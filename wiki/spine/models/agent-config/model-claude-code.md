@@ -260,7 +260,7 @@ The 13 guardrail rules (R01-R13) from the claude-code-harness project implement 
 > The convergence across 10+ open-source frameworks confirms this cycle is inherent to effective AI-assisted development. See [[plan-execute-review-cycle|Plan Execute Review Cycle]].
 
 > [!abstract] **This ecosystem's current operating level**
-> Levels 0-1 (prompt guidance + workflow orchestration via skills and pipeline chains). Level 2 (hook-based runtime guardrails) is the natural next step — the wiki's methodology.yaml defines stage boundaries, but enforcement is currently instruction-based, not hook-based. Level 3 (deterministic orchestration) is already implemented in OpenFleet's brain.
+> Levels 0-1 (prompt guidance + workflow orchestration via skills and pipeline chains). Level 2 (hook-based runtime guardrails) is the natural next step — the wiki's methodology.yaml defines stage boundaries, but enforcement is currently instruction-based, not hook-based. Level 3 (deterministic orchestration) is already implemented in OpenFleet's orchestrator.
 
 #### Harness Engineering as a Named Discipline (NEW 2026-04-15)
 

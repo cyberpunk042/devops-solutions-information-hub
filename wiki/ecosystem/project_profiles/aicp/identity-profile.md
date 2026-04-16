@@ -32,7 +32,7 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 > | **Execution Mode** | Solo | Human + Claude in conversation, no harness, no fleet dispatch |
 > | **Domain** | Backend AI Platform (Python) | 60 Python modules, 1,631 tests |
 > | **Phase** | Production | Stage 1 (LocalAI functional) complete, Stage 2 (routing) implemented |
-> | **Scale** | Medium (~60 modules) | Growing, but less documented in the brain than OpenFleet/OpenArms |
+> | **Scale** | Medium (~60 modules) | Growing, but less documented in the second brain than OpenFleet/OpenArms |
 > | **PM Level** | L1 (CLAUDE.md directives) | No harness or orchestrator — skill-based extension |
 > | **Trust Tier** | Operator-supervised | Solo execution, human decides |
 > | **SDLC Profile** | Simplified | Lighter process — fewer artifacts per stage |
@@ -41,7 +41,7 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 
 > [!warning] Knowledge Depth Caveat
 >
-> The brain's understanding of AICP is based primarily on its concept page, the ecosystem overview, and its integration surface with OpenFleet. Deep internal architecture (routing engine internals, circuit breaker implementation details, skill authoring patterns) has NOT been synthesized from source code. The lessons below are drawn from what the brain observes at the integration boundary.
+> The second brain's understanding of AICP is based primarily on its concept page, the ecosystem overview, and its integration surface with OpenFleet. Deep internal architecture (routing engine internals, circuit breaker implementation details, skill authoring patterns) has NOT been synthesized from source code. The lessons below are drawn from what the brain observes at the integration boundary.
 
 > [!tip] Key Lessons Contributed
 >
@@ -60,7 +60,7 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 
 ## Artifact Chain (Project-Specific)
 
-The brain has limited visibility into AICP's artifact chain. Known artifacts:
+The second brain has limited visibility into AICP's artifact chain. Known artifacts:
 
 > [!abstract] AICP Known Artifacts
 >
@@ -83,7 +83,7 @@ The generic Python domain chain at [[domain-chain-python-wiki|Artifact Chain —
 > | Aspect | Standard (Wiki) | AICP Approach |
 > |--------|-----------------|---------------|
 > | SDLC profile | Default (5-stage, gated) | Simplified (lighter gates, fewer mandatory artifacts) |
-> | Skill authoring | Template-based | 78 skills suggest a mature internal authoring pattern — not yet documented in the brain |
+> | Skill authoring | Template-based | 78 skills suggest a mature internal authoring pattern — not yet documented in the second brain |
 > | Testing | pipeline post | pytest with 1,631 tests — high coverage culture |
 > | Profile system | N/A | 9 profiles controlling backend selection — a methodology-adjacent routing concern |
 

@@ -19,6 +19,7 @@ Shell shortcut: ./wiki (Linux/macOS) or wiki.cmd (Windows)
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -176,7 +177,11 @@ def cmd_spine(manifest: Dict, root: Path):
     standards_list = [p for p in pages if "Standards" in p.get("title", "") and "What Good" in p.get("title", "")]
     standards_map = {s["title"]: s for s in standards_list}
 
-    # Super-model — match spine pages only (not log notes with "Super-Model" in title)
+    # Sub-super-models for listing under super-model
+    sub_models = [p for p in pages
+                  if p.get("title", "").startswith("Sub-Model") and p.get("path", "").startswith("spine/")]
+
+    # Super-model
     print("\n=== SPINE ===\n")
     for p in pages:
         if "Super-Model" in p.get("title", "") and p.get("path", "").startswith("spine/"):
@@ -184,16 +189,24 @@ def cmd_spine(manifest: Dict, root: Path):
             print(f"  ★ {p['title']}")
             if s:
                 print(f"    {s}")
+            print(f"    [wiki/{p.get('path', '')}]")
+            if sub_models:
+                print(f"    Sub-models ({len(sub_models)}):")
+                for sm in sorted(sub_models, key=lambda x: x.get("title", "")):
+                    sm_name = sm["title"].replace("Sub-Model — ", "").replace("Sub-Model: ", "")
+                    print(f"      - {sm_name}  [wiki/{sm.get('path', '')}]")
             print()
             break
     for p in pages:
         if p.get("title") == "Model Registry":
             print(f"  ★ Model Registry — entry point for all {len(models)} models")
+            print(f"    [wiki/{p.get('path', '')}]")
             print()
             break
     for p in pages:
         if "Adoption Guide" in p.get("title", "") and p.get("path", "").startswith("spine/"):
             print(f"  ★ {p['title']}")
+            print(f"    [wiki/{p.get('path', '')}]")
             print()
             break
 
@@ -589,6 +602,13 @@ def main():
     args = parser.parse_args()
 
     root = get_project_root()
+
+    # When invoked from outside the second brain (via forwarder), show the root
+    # so file paths in the output can be resolved.
+    caller_dir = os.environ.get("WIKI_VIEW_CALLER_DIR", "")
+    if caller_dir and str(Path(caller_dir).resolve()) != str(root.resolve()):
+        print(f"[second-brain root: {root}]\n")
+
     manifest = load_manifest()
 
     cmds = {

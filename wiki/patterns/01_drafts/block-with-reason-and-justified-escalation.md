@@ -28,7 +28,7 @@ sources:
     type: observation
     project: openarms
     path: wiki/domains/learnings/agent-escalation-with-justification.md
-    description: Preliminary OpenArms placeholder — operator quote "When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable." File explicitly marked "The fully synthesized pattern is coming from the brain." This pattern page is that synthesis.
+    description: Preliminary OpenArms placeholder — operator quote "When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable." File explicitly marked "The fully synthesized pattern is coming from the second brain." This pattern page is that synthesis.
   - id: openarms-e016-environment-patching
     type: observation
     project: openarms

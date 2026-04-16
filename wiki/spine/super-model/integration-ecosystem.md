@@ -47,7 +47,7 @@ Navigation hub for ecosystem integration — how the second brain connects to pr
 
 ### Standards
 
-Dual-scope is fundamental: every tool works toward brain AND toward project wiki.
+Dual-scope is fundamental: every tool works toward the second brain AND toward project wiki.
 
 ### How This Connects — Navigate From Here
 

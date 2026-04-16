@@ -63,7 +63,7 @@ The second brain's understanding of OpenFleet as an ecosystem member. OpenFleet 
 
 ## What the Brain Learned FROM OpenFleet
 
-These are cross-referenced to the wiki's lesson and pattern pages — the brain's distilled understanding, not OpenFleet documentation.
+These are cross-referenced to the wiki's lesson and pattern pages — the second brain's distilled understanding, not OpenFleet documentation.
 
 > [!tip] Key Lessons Contributed
 >
@@ -89,7 +89,7 @@ These are cross-referenced to the wiki's lesson and pattern pages — the brain'
 
 ## Unique Discoveries
 
-Patterns that the brain learned ONLY from OpenFleet — not observed in other ecosystem projects:
+Patterns that the second brain learned ONLY from OpenFleet — not observed in other ecosystem projects:
 
 - **5 named diseases with detection functions**: Deviation, Laziness, Protocol violation, Confident-but-wrong (3+ corrections), Scope creep. Each has a specific detection function in doctor.py.
 - **Storm graduation**: CRITICAL→full stop, STORM→no dispatch, WARNING→limit to 1. Orchestrator responds proportionally to severity.

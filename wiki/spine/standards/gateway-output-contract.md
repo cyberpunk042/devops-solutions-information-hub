@@ -45,7 +45,7 @@ Tool outputs from gateway subcommands are **context injections to the invoking a
 
 3. **Declared > detected — always.** Context-aware branching must honor the three-layer authority ([[execution-mode-is-consumer-property-not-project-property|stable identity + phase/scale + consumer/task]]). Heuristic detection is a sanity-check signal, never an override of explicit declaration. Tools that claim to "detect" what the consumer must declare are lying.
 
-4. **Size ceiling is a discipline, not a limit.** The brain teaches context hygiene (Model — Claude Code). Outputs that can flood context compound per invocation. Default ≤60 lines; past that, point to a reference page. Full-content opt-in via explicit operator flag, never default.
+4. **Size ceiling is a discipline, not a limit.** The second brain teaches context hygiene (Model — Claude Code). Outputs that can flood context compound per invocation. Default ≤60 lines; past that, point to a reference page. Full-content opt-in via explicit operator flag, never default.
 
 5. **Read-whole marker is proto-programming applied to output shape.** Agents skim under context pressure. An explicit structural marker at the top overrides skim heuristics. Use it when the output contains task-routing, decision-branching, or context-critical information buried past the first 20 lines.
 
@@ -74,8 +74,8 @@ This contract codifies the structural rules every gateway subcommand must inheri
 >
 > | Aspect | Definition |
 > |--------|------------|
-> | **WHY** | Three-layer orthogonality: stable identity (brain vs. sister) + phase/scale (declared) + consumer/task (per-invocation) each have different authority and invocation source. Same output for all contexts = wrong shape for most invocations. |
-> | **HOW** | Branch on `(location: brain \| sister \| external) × (freshness: fresh \| returning \| task-bound)`. Declared flags override heuristics always. Heuristics are sanity-check signals, never overrides. |
+> | **WHY** | Three-layer orthogonality: stable identity (second-brain vs. sister) + phase/scale (declared) + consumer/task (per-invocation) each have different authority and invocation source. Same output for all contexts = wrong shape for most invocations. |
+> | **HOW** | Branch on `(location: second-brain \| sister \| external) × (freshness: fresh \| returning \| task-bound)`. Declared flags override heuristics always. Heuristics are sanity-check signals, never overrides. |
 > | **GATE** | Same invocation in different contexts produces meaningfully different output tailored to that context. |
 > | **ANTI-PATTERN** | `gateway flow` today auto-detects `phase: mvp \| scale: micro \| mode: solo` even when CLAUDE.md explicitly declares `production \| medium \| solo`. Heuristic override of declaration is the exact conflation Principle 2 names. |
 
@@ -114,9 +114,9 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 >
 > | Location | Detection rule | Source of truth |
 > |----------|---------------|----------------|
-> | **brain-self** | `--wiki-root` resolves to research-wiki repo (or no flag + CWD is the brain) | Repo identity in CLAUDE.md + `--wiki-root` |
-> | **sister** | `--wiki-root` resolves to a registered sister, OR `--brain` is explicit and CWD is different | `sister-projects.yaml` registry + explicit flags |
-> | **external** | No `--wiki-root` or `--brain` resolution, typically an MCP-only caller | Absence of any repo-linked flag |
+> | **second-brain** | CWD or `--wiki-root` resolves to a repo containing `wiki/config/sister-projects.yaml` (only the second brain has this) | Filesystem signal + CLAUDE.md |
+> | **sister** | CWD or `--wiki-root` resolves to a repo with `wiki/` but WITHOUT `sister-projects.yaml` | Filesystem signal |
+> | **external** | No resolvable wiki root, or consumer declares external via `MCP_CLIENT_RUNTIME` | Absence of repo context |
 >
 > **Freshness overlay** — each location branches further on freshness signal:
 >
@@ -128,42 +128,43 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 >
 > Consumer declaration via `MCP_CLIENT_RUNTIME` env var ([[consumer-runtime-signaling-via-mcp-config|existing decision]]) overrides heuristic location detection. Declared > detected.
 
-### Annotated Exemplar 1 — `gateway orient` (brain-mode, fresh agent)
+### Annotated Exemplar 1 — `gateway orient` (second-brain-mode, fresh agent)
 
 > [!example]- Output block
 >
 > ```
-> ⚠ READ THIS OUTPUT IN FULL — routing decisions depend on every section.
+> ⚠ READ THIS OUTPUT IN FULL — every section changes how you operate here.
 >
-> ORIENT — You are inside the second brain
-> ========================================
+> ORIENT — You are inside the research wiki (the ecosystem's second brain)
+> ==========================================================================
 >
-> YOU ARE:     a fresh agent inside research-wiki (the brain itself)
-> FRESHNESS:   post-compaction / first session / no prior state found
-> LOCATION:    brain-self (resolved via --wiki-root)
+> CRITICAL DISTINCTION — your brain ≠ the second brain:
+>   Your brain = CLAUDE.md + AGENTS.md + skills + hooks + commands. Per-project.
+>   The second brain = THIS wiki. A shared knowledge system holding methodology,
+>   standards, lessons, patterns, decisions across 5 projects.
 >
-> BEFORE YOU DO ANY TASK, INTERNALIZE THE BASE.
+> THREE PRINCIPLES (these govern every decision you make here):
+>   1. Infrastructure > Instructions — prose = 25%. Hooks = 100%. Measured.
+>   2. Structured Context > Content — tables program behavior, paragraphs don't.
+>   3. Goldilocks — process adapts to identity. Don't hardcode one level.
 >
-> Recommended reading path (30-60 min, in order):
+> WHAT WE DO (10 knowledge-project verbs — this is NOT app development):
+>   aggregate → process → evaluate → learn → integrate →
+>   modelize → validate → standardize → teach → offer
 >
->   1. wiki/spine/super-model/super-model.md
->   2. 5 sub-super-models in wiki/spine/super-model/
->        goldilocks-protocol, enforcement-hierarchy,
->        knowledge-architecture, work-management,
->        integration-ecosystem
->   3. wiki/spine/references/model-registry.md    (16 models index)
->   4. Foundation models (dependency order):
->        model-llm-wiki → model-methodology → model-wiki-design
->   5. wiki/lessons/04_principles/hypothesis/      (3 principles)
->   6. wiki/spine/standards/                       (per-type standards)
+> RULES THAT PREVENT THE ERRORS YOU WILL OTHERWISE MAKE:
+>   - Log operator directives verbatim in raw/notes/ BEFORE acting
+>   - Read files in FULL — "20 lines of 20M then pretend" is the named illness
+>   - Answer questions before asking — derive, present for confirmation
+>   - Blockers → build tooling, never hand back to the operator
+>   - Run `pipeline post` after every wiki change — 0 errors. Not advisory.
+>   - Use this gateway for routing. Do NOT improvise onboarding plans.
 >
-> STANDING RULES (read in full, not summarized):
->   memory/feedback_verbatim_always.md
->   memory/feedback_no_caps_no_compact_read_full.md
->   memory/feedback_answer_before_asking.md
->   memory/feedback_pipeline_not_manual.md
+> READ THE BASE (each builds on the previous):
+>   1. super-model.md → 2. model-registry.md → 3. foundation models
+>   4. 3 principles → 5. per-type standards
 >
-> NEXT: gateway what-do-i-need    (after internalizing the base)
+> NEXT: gateway what-do-i-need    (after you have internalized the base)
 > ```
 
 > [!abstract] Rule-by-rule audit of the exemplar
@@ -171,22 +172,22 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 > | Rule | Applied in exemplar | Line reference |
 > |------|-------------------|----------------|
 > | **1 — SRP** | Answers only "who are you, where, what to internalize." Does NOT route to specific tasks — that is `what-do-i-need`'s job. | Whole block |
-> | **2 — Context-aware** | `brain-self + fresh` branch. Different from sister-mode (which shows contribute flow) or external (tool list). | Header lines "LOCATION / FRESHNESS" |
-> | **3 — Size ceiling** | 28 content lines. Under 60-line default. Reading path is a numbered list, not inline prose. | Whole block |
+> | **2 — Context-aware** | `second-brain + fresh` branch. Different from sister-mode (which shows consume/contribute) or external (MCP tool list). | CRITICAL DISTINCTION + context-specific sections |
+> | **3 — Size ceiling** | ~42 content lines. Under 60-line default. Structured sections, not prose. | Whole block |
 > | **4 — Read-whole marker** | `⚠` first line with specific reason: "routing decisions depend on every section." | Line 1 |
 > | **5 — Closing next-move** | `NEXT: gateway what-do-i-need` — single, unambiguous next step. | Last line |
 
-### Annotated Exemplar 2 — `gateway what-do-i-need` (brain-mode, task-bound)
+### Annotated Exemplar 2 — `gateway what-do-i-need` (second-brain-mode, task-bound)
 
 > [!example]- Output block
 >
 > ```
 > ⚠ READ THIS OUTPUT IN FULL — routing depends on the task-type table.
 >
-> WHAT DO YOU NEED? — Inside the second brain (self = brain)
+> WHAT DO YOU NEED? — Inside the second brain (the research wiki)
 >
 > YOUR CONTEXT:
->   location:   research-wiki (brain-self)
+>   location:   research-wiki (second-brain)
 >   freshness:  task-bound (session-state present)
 >
 > IF YOU ARE FRESH, run `gateway orient` first. Otherwise pick a task:
@@ -213,8 +214,8 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 >
 > | Rule | Applied in exemplar | Line reference |
 > |------|-------------------|----------------|
-> | **1 — SRP** | Answers only "given task-bound in brain, what's the path?" Does NOT orient, does NOT execute — just routes. | Whole block |
-> | **2 — Context-aware** | brain-self + task-bound branch. Different from app-task routing (which would show feature-dev stages) or sister branch. | Header + task-type table |
+> | **1 — SRP** | Answers only "given task-bound in the second brain, what's the path?" Does NOT orient, does NOT execute — just routes. | Whole block |
+> | **2 — Context-aware** | second-brain + task-bound branch. Shows knowledge-verb task types, NOT app-dev models. Different from sister (brain-query routing) or external (MCP pointers). | Task-type table |
 > | **3 — Size ceiling** | 32 content lines. Under 60-line default. | Whole block |
 > | **4 — Read-whole marker** | `⚠` with specific reason pointing to the task-type table. | Line 1 |
 > | **5 — Closing next-move** | `NEXT: gateway query --task <type>` — unambiguous, even with placeholder. | Last line |
@@ -260,7 +261,7 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 > [!success] **Well-covered**
 > - Five rules with WHY / HOW / GATE / ANTI-PATTERN for each
 > - Three-context branching matrix aligned with three-layer orthogonality
-> - Two annotated exemplars (orient brain-mode, what-do-i-need brain-mode)
+> - Two annotated exemplars (orient second-brain-mode, what-do-i-need second-brain-mode)
 > - Three anti-patterns grounded in observed 2026-04-15 behavior
 > - Proto-programming extended from inputs to outputs (new application of Principle 2)
 

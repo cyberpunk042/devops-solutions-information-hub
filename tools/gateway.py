@@ -203,11 +203,14 @@ def resolve_paths(wiki_root: Optional[str] = None, brain_root: Optional[str] = N
         if (local_wiki / "config" / "methodology.yaml").exists() and (local_wiki / "manifest.json").exists():
             brain_path = local_root
         else:
-            # Look for common second brain locations
-            for candidate in [
-                local_root.parent / "devops-solutions-research-wiki",
-                Path.home() / "devops-solutions-research-wiki",
-            ]:
+            # Look for common second brain locations (canonical + aliases)
+            _brain_names = [
+                "devops-solutions-information-hub",
+                "devops-solutions-research-wiki",
+            ]
+            _search_dirs = [local_root.parent, Path.home()]
+            candidates = [d / n for d in _search_dirs for n in _brain_names]
+            for candidate in candidates:
                 if (candidate / "wiki" / "config" / "methodology.yaml").exists():
                     brain_path = candidate
                     break
@@ -263,10 +266,10 @@ def gateway_orient(paths: Dict[str, Path], args) -> None:
         print(_json.dumps({"location": location, "freshness": freshness,
                            "consumer_runtime": context["consumer_runtime"],
                            "next": _orient_next_move(location, freshness)}, indent=2))
-    elif location == "brain-self" and freshness == "fresh":
+    elif location == "second-brain" and freshness == "fresh":
         _orient_brain_fresh()
-    elif location == "brain-self":
-        _orient_brain_returning(freshness)
+    elif location == "second-brain":
+        _orient_second_brain_returning(freshness)
     elif location == "sister" and freshness == "fresh":
         _orient_sister_fresh()
     elif location == "sister":
@@ -287,44 +290,63 @@ def _orient_next_move(location: str, freshness: str) -> str:
 
 
 def _orient_brain_fresh() -> None:
-    """Full orient output for brain-self + fresh agent."""
-    print("""\u26a0 READ THIS OUTPUT IN FULL — routing decisions depend on every section.
+    """Full orient output for second-brain + fresh agent."""
+    print("""\u26a0 READ THIS OUTPUT IN FULL \u2014 every section changes how you operate here.
 
-ORIENT — You are inside the second brain
-========================================
+ORIENT \u2014 You are inside the research wiki (the ecosystem's second brain)
+==========================================================================
 
-YOU ARE:     a fresh agent inside research-wiki (the brain itself)
-FRESHNESS:   post-compaction / first session / no prior state found
-LOCATION:    brain-self (resolved from project root)
+CRITICAL DISTINCTION \u2014 your brain \u2260 the second brain:
+  Your brain = CLAUDE.md + AGENTS.md + skills + hooks + commands. Per-project.
+  Constitutes YOUR agent. Every project in this ecosystem has its own brain.
+  The second brain = THIS wiki. A shared knowledge system holding methodology,
+  standards, lessons, patterns, decisions across 5 projects. Projects consume
+  from it. Projects contribute to it. It validates itself with its own
+  methodology. 339+ pages, 2260+ relationships, 16 models, 3 principles.
 
-BEFORE YOU DO ANY TASK, INTERNALIZE THE BASE.
+THREE PRINCIPLES (these govern every decision you make here):
+  1. Infrastructure > Instructions \u2014 if a rule can be checked by a tool,
+     enforce it structurally (hooks, validators), not with prose. Prose = 25%
+     compliance. Hooks = 100%. This is measured, not theoretical.
+  2. Structured Context > Content \u2014 tables, MUST/MUST NOT lists, YAML fields
+     program your behavior more reliably than paragraphs. Design injections as
+     structured programs, not natural language.
+  3. Goldilocks \u2014 process adapts to identity (type \u00d7 phase \u00d7 scale \u00d7 PM level).
+     A POC doesn't need full enforcement. Production does. Don't hardcode one
+     process level for all contexts.
 
-Recommended reading path (in order):
+WHAT WE DO (10 knowledge-project verbs \u2014 this is NOT app development):
+  aggregate \u2192 process \u2192 evaluate \u2192 learn \u2192 integrate \u2192
+  modelize \u2192 validate \u2192 standardize \u2192 teach \u2192 offer
 
-  1. wiki/spine/super-model/super-model.md        (the thesis + 5 sub-hubs)
-  2. wiki/spine/super-model/                       (5 sub-super-models)
-       goldilocks-protocol, enforcement-hierarchy,
-       knowledge-architecture, work-management,
-       integration-ecosystem
-  3. wiki/spine/references/model-registry.md       (16 models index)
-  4. Foundation models (dependency order):
-       model-llm-wiki → model-methodology → model-wiki-design
-  5. wiki/lessons/04_principles/hypothesis/         (3 principles)
-  6. wiki/spine/standards/                          (per-type standards)
+RULES THAT PREVENT THE ERRORS YOU WILL OTHERWISE MAKE:
+  - Log operator directives verbatim in raw/notes/ BEFORE acting on them
+  - Read files in FULL \u2014 never truncate, never skim. "20 lines of 20M then
+    pretend you know everything" is the named illness. The operator catches it.
+  - When a question comes up, answer it yourself first and present for
+    confirmation. Don't leave floating questions. Don't present menus.
+  - When something is blocked, build the tool to unblock it. Never hand
+    work back to the operator as a manual step.
+  - Run `pipeline post` after every wiki change \u2014 0 errors. Not advisory.
+  - Use this gateway (`orient` \u2192 `what-do-i-need`) for routing. Do NOT
+    improvise your own onboarding plan.
+  - Browse the wiki with `python3 -m tools.view` (spine, models, lessons,
+    patterns, search). This is the primary interface for reading content.
 
-STANDING RULES (read each in full, not summarized):
-  - Log operator directives verbatim BEFORE acting
-  - Read full files, not first-N-lines — no caps, no compacting
-  - Answer questions before asking — derive, present, confirm
-  - Blockers → build tooling, never hand back manually
-  - Run pipeline post after every wiki change
+READ THE BASE (each builds on the previous):
+  1. wiki/spine/super-model/super-model.md         \u2192 what this system IS
+  2. wiki/spine/references/model-registry.md        \u2192 the 16 models
+  3. model-llm-wiki \u2192 model-methodology \u2192 model-wiki-design (foundations)
+  4. wiki/lessons/04_principles/hypothesis/          \u2192 3 principles in full
+  5. wiki/spine/standards/                           \u2192 what "good" looks like
+  Complete path: wiki/spine/learning-paths/methodology-fundamentals.md
 
-NEXT: gateway what-do-i-need    (after internalizing the base)""")
+NEXT: gateway what-do-i-need    (after you have internalized the base)""")
 
 
-def _orient_brain_returning(freshness: str) -> None:
-    """Redirect for brain-self + task-bound/returning agent."""
-    print(f"""ORIENT — You are inside the second brain ({freshness})
+def _orient_second_brain_returning(freshness: str) -> None:
+    """Redirect for second-brain + task-bound/returning agent."""
+    print(f"""ORIENT \u2014 You are inside the second brain ({freshness})
 
 You already know the base. Proceed to task routing.
 
@@ -333,26 +355,41 @@ NEXT: gateway what-do-i-need""")
 
 def _orient_sister_fresh() -> None:
     """Full orient for sister project + fresh agent."""
-    print("""\u26a0 READ THIS OUTPUT IN FULL — you need orientation before consuming.
+    print("""\u26a0 READ THIS OUTPUT IN FULL \u2014 you need orientation before consuming.
 
-ORIENT — You are a sister project connecting to the second brain
-================================================================
+ORIENT \u2014 Sister project connecting to the second brain
+========================================================
 
-YOU ARE:     an agent in a sister project consuming the brain
-FRESHNESS:   fresh (first contact or post-compaction)
+YOUR BRAIN IS YOUR OWN: your CLAUDE.md, AGENTS.md, skills, hooks, commands.
+These constitute YOUR agent. They define YOUR project's behavior and rules.
+Do not confuse your brain with the second brain.
 
-HOW TO CONSUME THE BRAIN:
+THE SECOND BRAIN IS A SEPARATE SYSTEM: the research wiki. It holds shared
+methodology, standards, validated lessons, patterns, and decisions across the
+ecosystem. You CONSUME methodology and standards from it. You CONTRIBUTE
+operational learnings back to it. The second brain evolves from your lessons.
 
-  1. Read your project's AGENTS.md for stable identity
-  2. Query methodology:   gateway query --model <task-type> --brain
-  3. Query standards:      gateway query --standards <type> --brain
-  4. Contribute learnings: gateway contribute --type lesson --brain
-  5. Declare runtime:      .mcp.json → "env": {"MCP_CLIENT_RUNTIME": "harness-<name>-<version>"}
+THREE PRINCIPLES (the second brain enforces these \u2014 your brain should too):
+  1. Infrastructure > Instructions \u2014 enforce rules structurally, not in prose
+  2. Structured Context > Content \u2014 structure programs agent behavior
+  3. Goldilocks \u2014 right process for YOUR project's identity and phase
+
+HOW TO CONSUME THE SECOND BRAIN:
+  1. Read YOUR AGENTS.md first \u2014 know your own identity before querying
+  2. Query methodology for your task type (bug-fix, feature-dev, research...)
+  3. Query standards for the artifact you're producing (lesson, pattern, spec...)
+  4. Query all available methodology models to see the full catalog
+  5. Contribute learnings back after work (lessons, corrections, remarks)
+  6. Declare your runtime: "env": {"MCP_CLIENT_RUNTIME": "harness-<name>-<version>"}
+
+  Interface depends on how you connect:
+    CLI:  gateway query --model <type> --brain <second-brain-path>
+    MCP:  wiki_gateway_query(model="<type>")
 
 FULL INTEGRATION CHAIN (17 steps):
   wiki/spine/references/second-brain-integration-chain.md
 
-NEXT: gateway what-do-i-need    (for task routing after orientation)""")
+NEXT: query the second brain for your task's methodology model""")
 
 
 def _orient_sister_returning(freshness: str) -> None:
@@ -391,7 +428,7 @@ def _wdin_brain_task_bound() -> str:
     """Brain-self + task-bound: knowledge-verb task routing table."""
     return """\u26a0 READ THIS OUTPUT IN FULL \u2014 routing depends on the task-type table.
 
-WHAT DO YOU NEED? \u2014 Inside the second brain (self = brain)
+WHAT DO YOU NEED? \u2014 Inside the second brain (the research wiki)
 
   Task type               | Verbs activated               | Entry
   ------------------------|-------------------------------|------------------------
@@ -415,19 +452,27 @@ NEXT: gateway query --task <type>    (loads verb chain for that task)"""
 
 
 def _wdin_sister(project_name: str) -> str:
-    """Sister + task-bound: brain query routing."""
-    return f"""WHAT DO YOU NEED? \u2014 Sister project ({project_name}), task-bound
+    """Sister + task-bound: methodology model routing from the second brain."""
+    return f"""\u26a0 READ THIS OUTPUT IN FULL \u2014 routing depends on the task-type table.
 
-  Your project methodology models:
-    gateway query --models --wiki-root .
+WHAT DO YOU NEED? \u2014 Sister project ({project_name}), task-bound
 
-  Brain's methodology for your task type:
-    gateway query --model <type> --brain
+  Your task type        | Methodology model    | Stages
+  ----------------------|----------------------|-------------------------------
+  Feature / epic        | feature-development  | document \u2192 design \u2192 scaffold \u2192 implement \u2192 test
+  Bug fix               | bug-fix              | document \u2192 implement \u2192 test
+  Research / spike      | research             | document \u2192 design (caps at 50%)
+  Documentation         | documentation        | document
+  Refactor              | refactor             | document \u2192 scaffold \u2192 implement \u2192 test
+  Hotfix (known fix)    | hotfix               | implement \u2192 test
+  Integration           | integration          | scaffold \u2192 implement \u2192 test
 
-  Contribute back after work:
-    gateway contribute --type lesson --brain
+  Query full model detail:  gateway query --model <name>
+  Query stage rules:        gateway query --stage <name> --domain <yours>
+  Query standards:          gateway query --standards <artifact-type>
+  Contribute learnings:     gateway contribute --type lesson --title "..."
 
-NEXT: gateway query --model <task-type> --brain"""
+NEXT: gateway query --model <task-type>"""
 
 
 def _wdin_external() -> str:
@@ -473,7 +518,7 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     # Fresh agents (any location) → redirect to orient
     if freshness == "fresh":
         write_session_state(ctx, subcommand="what-do-i-need")
-        ctx_label = ("the second brain" if location == "brain-self"
+        ctx_label = ("the second brain" if location == "second-brain"
                      else "a sister project" if location == "sister"
                      else "an external client")
         return (
@@ -484,7 +529,7 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
         )
 
     # Brain-self + task-bound → knowledge-verb task table
-    if location == "brain-self":
+    if location == "second-brain":
         write_session_state(ctx, subcommand="what-do-i-need")
         return _wdin_brain_task_bound()
 
@@ -499,7 +544,13 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
         write_session_state(ctx, subcommand="what-do-i-need")
         return _wdin_external()
 
-    # Fallback: existing output (legacy path — should not normally reach here)
+    # -----------------------------------------------------------------------
+    # LEGACY FALLBACK — reached only if detect_context returns an unrecognized
+    # location (second-brain / sister / external cover all known cases).
+    # This is the pre-E022 output. Kept as safety net; will be removed once
+    # E022 test stage confirms all contexts are covered (T-E022-13).
+    # -----------------------------------------------------------------------
+
     # Auto-detect what we can
     detected = auto_detect_identity(root)
 
@@ -2050,7 +2101,7 @@ def main():
 
     # Orient — context-aware onboarding (E022-M002)
     o = sub.add_parser("orient", help="Context-aware orientation — who are you, where, what to internalize")
-    o.add_argument("--orient-as", choices=["brain-self", "sister", "external"],
+    o.add_argument("--orient-as", choices=["second-brain", "sister", "external"],
                    help="Explicit context override (trumps auto-detection)")
     o.add_argument("--fresh", action="store_true",
                    help="Force fresh-agent mode (e.g. after compaction)")

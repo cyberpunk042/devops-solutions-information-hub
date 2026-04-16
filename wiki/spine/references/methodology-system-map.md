@@ -177,6 +177,7 @@ Complete map of the methodology system — every component, where it lives, what
 > | task | [[task-page-standards|Task Page Standards]] |
 > | note | [[note-page-standards|Note Page Standards]] |
 > | session-handoff (non-wiki genre) | [[session-handoff-standards|Session Handoff Standards]] |
+> | gateway-output (tool output contract) | [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]] |
 
 > [!abstract] AI Agent Consumption & Elevation
 >

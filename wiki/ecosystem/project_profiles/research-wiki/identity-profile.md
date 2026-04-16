@@ -52,7 +52,7 @@ This is the only self-referential profile in the ecosystem. The research wiki:
 - **Validates** the methodology framework (pipeline post enforces its own schema)
 - **Exports** the methodology framework (other projects consume its CLAUDE.md patterns, methodology.yaml, templates)
 
-The brain is both the map AND a territory on that map. When it describes "how to build a wiki page," it is also describing itself.
+The second brain is both the map AND a territory on that map. When it describes "how to build a wiki page," it is also describing itself.
 
 ## What the Brain Learned FROM Itself
 
@@ -159,7 +159,7 @@ The research wiki's primary export to the ecosystem is the methodology framework
 > | Direction | Go To |
 > |-----------|-------|
 > | **Ecosystem overview** | [[four-project-ecosystem|Four-Project Ecosystem]] |
-> | **Super-model (brain overview)** | [[super-model|Research Wiki as Ecosystem Intelligence Hub]] |
+> | **Super-model (second brain overview)** | [[super-model|Research Wiki as Ecosystem Intelligence Hub]] |
 > | **Model registry (all 16 models)** | [[model-registry|Model Registry]] |
 > | **Methodology model** | [[model-methodology|Model — Methodology]] |
 > | **Second brain model** | [[model-second-brain|Model — Second Brain]] |

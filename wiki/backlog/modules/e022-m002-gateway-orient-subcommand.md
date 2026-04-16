@@ -31,7 +31,7 @@ tags: [module, gateway, orient, context-detection, session-state, design, e022]
 
 ## Summary
 
-Design for the new `gateway orient` subcommand. Its job: answer "who are you, where, are you fresh, what must you internalize before doing anything" — with context-aware output branching on location (brain-self / sister / external) × freshness (fresh / task-bound / returning). This design spec covers context detection function, session-state file format, output mode dispatch, and declared-over-detected ordering. Gate: spec reviewed and approved before scaffold stage.
+Design for the new `gateway orient` subcommand. Its job: answer "who are you, where, are you fresh, what must you internalize before doing anything" — with context-aware output branching on location (second-brain / sister / external) × freshness (fresh / task-bound / returning). This design spec covers context detection function, session-state file format, output mode dispatch, and declared-over-detected ordering. Gate: spec reviewed and approved before scaffold stage.
 
 ## Goals
 
@@ -60,8 +60,8 @@ Design for the new `gateway orient` subcommand. Its job: answer "who are you, wh
 ```
 if MCP_CLIENT_RUNTIME set AND indicates external:
     location = external
-elif --wiki-root resolves to brain repo (or CWD is brain repo):
-    location = brain-self
+elif --wiki-root resolves to second-brain repo (or CWD is second-brain repo):
+    location = second-brain
 elif --wiki-root resolves to registered sister (from sister-projects.yaml):
     location = sister
 else:
@@ -100,7 +100,7 @@ else:
 {
   "last_invocation": "2026-04-15T20:30:00Z",
   "last_subcommand": "orient",
-  "location": "brain-self",
+  "location": "second-brain",
   "freshness": "fresh",
   "current_task_type": null,
   "consumer_runtime": "solo",
@@ -121,10 +121,10 @@ Six (location, freshness) cells, three require full orient output, three redirec
 >
 > | Location | Freshness | Output |
 > |----------|-----------|--------|
-> | brain-self | fresh | Full orient — brain reading path + standing rules |
-> | brain-self | task-bound | Redirect: `NEXT: gateway what-do-i-need` (you know the base) |
-> | brain-self | returning | Redirect: `NEXT: gateway what-do-i-need` |
-> | sister | fresh | Full orient — how to consume brain + contribute pattern |
+> | second-brain | fresh | Full orient — brain reading path + standing rules |
+> | second-brain | task-bound | Redirect: `NEXT: gateway what-do-i-need` (you know the base) |
+> | second-brain | returning | Redirect: `NEXT: gateway what-do-i-need` |
+> | sister | fresh | Full orient — how to consume second brain + contribute pattern |
 > | sister | task-bound | Redirect: `NEXT: gateway query --task <type> --brain` |
 > | sister | returning | Redirect: `NEXT: gateway <last_subcommand>` or `what-do-i-need` |
 > | external | any | Full orient — MCP tool list + one-shot docs (freshness irrelevant without session file) |
@@ -138,7 +138,7 @@ When a heuristic signal disagrees with a declared value, emit a warning on **std
 Warning format:
 
 ```
-⚠ heuristic detected location=brain-self (CWD=<path>) but MCP_CLIENT_RUNTIME
+⚠ heuristic detected location=second-brain (CWD=<path>) but MCP_CLIENT_RUNTIME
   declared location=external. Honoring declaration (external).
   To override declaration, pass --wiki-root explicitly or unset the env var.
 ```
@@ -149,7 +149,7 @@ Rationale: silencing the heuristic entirely would hide bugs (wrong env var, typo
 
 ```
 gateway orient
-    [--orient-as brain-self|sister|external]         # explicit override
+    [--orient-as second-brain|sister|external]         # explicit override
     [--fresh]                                         # force fresh freshness
     [--wiki-root PATH]                                # existing flag, reused
     [--brain PATH]                                    # existing flag, reused
@@ -162,7 +162,7 @@ gateway orient
 
 `wiki_gateway_orient(orient_as, fresh, wiki_root, brain, output_format)` — same surface as CLI. Description in the MCP tool registration must include:
 
-- When to invoke (fresh session, post-compaction, entering the brain for the first time)
+- When to invoke (fresh session, post-compaction, entering the second brain for the first time)
 - What it returns (context + reading path + standing rules + next move)
 - When NOT to invoke (during an active task — use what-do-i-need instead)
 
@@ -170,7 +170,7 @@ gateway orient
 
 | Task | What | Stage |
 |------|------|-------|
-| T-E022-04 | Design context detection function (brain-self / sister / external × fresh / task-bound / returning) with declared > detected priority | design (DONE — Decision 1 of this doc) |
+| T-E022-04 | Design context detection function (second-brain / sister / external × fresh / task-bound / returning) with declared > detected priority | design (DONE — Decision 1 of this doc) |
 | T-E022-05 | Design session-state file format for freshness detection | design (DONE — Decision 2 of this doc) |
 | T-E022-06 | Scaffold `orient` subcommand in `tools/gateway.py` with argparse entry + context detector stub + empty mode handlers | scaffold |
 | T-E022-07 | Implement the six output modes (3 full orient outputs + 3 redirects per dispatch matrix) | implement |
@@ -188,8 +188,8 @@ gateway orient
 
 ## Open Questions
 
-> [!question] Should `session-state.json` include a hash of CLAUDE.md / CONTEXT.md to detect brain repo changes?
-> Useful for invalidating session-state when the brain's declarations change (e.g., phase moves from production to staging). Adds complexity; may be overkill for a cache file. Lean: NO for v1; add later if drift becomes a real problem.
+> [!question] Should `session-state.json` include a hash of CLAUDE.md / CONTEXT.md to detect second-brain repo changes?
+> Useful for invalidating session-state when the second brain's declarations change (e.g., phase moves from production to staging). Adds complexity; may be overkill for a cache file. Lean: NO for v1; add later if drift becomes a real problem.
 
 > [!question] Should the 30-minute staleness threshold be configurable?
 > Different sessions have different cadences. A cron-driven agent may invoke every few hours; an interactive session every few minutes. Lean: YES, but not for v1. Hard-code 30 min initially; make configurable if the value proves wrong.
@@ -204,7 +204,7 @@ gateway orient
 
 - [[e022-context-aware-gateway-orientation-and-routing|E022]] — parent epic
 - [[gateway-output-contract|Gateway Output Contract]] — every mode's output is audited against its 5 rules
-- `sister-projects.yaml` registry — used to classify `sister` location (must be readable from brain)
+- `sister-projects.yaml` registry — used to classify `sister` location (must be readable from the second brain)
 - Existing `tools/gateway.py` — adds new subparser, reuses `--wiki-root` / `--brain` resolution
 - Existing `MCP_CLIENT_RUNTIME` env var convention ([[consumer-runtime-signaling-via-mcp-config|Consumer Runtime Signaling via MCP Config]])
 

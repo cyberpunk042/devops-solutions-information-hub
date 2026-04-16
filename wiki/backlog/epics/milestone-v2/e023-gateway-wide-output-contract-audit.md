@@ -37,7 +37,7 @@ Follow-on to E022. E022 ships the [[gateway-output-contract|Gateway Output Contr
 
 ## Why This Is Follow-On, Not Part of E022
 
-The operator's `+1 × 2` framing scoped E022 to exactly two changes (new `orient` + upgraded `what-do-i-need`) plus the contract. Auditing the full gateway in one epic would have violated the brain's volume-not-quality rule: one scoped epic with complete execution > one sprawling epic with flim traces across many subcommands. E023 exists so the follow-on is not forgotten, not to be activated in parallel.
+The operator's `+1 × 2` framing scoped E022 to exactly two changes (new `orient` + upgraded `what-do-i-need`) plus the contract. Auditing the full gateway in one epic would have violated the second brain's volume-not-quality rule: one scoped epic with complete execution > one sprawling epic with flim traces across many subcommands. E023 exists so the follow-on is not forgotten, not to be activated in parallel.
 
 ## Goals
 

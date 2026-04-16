@@ -382,9 +382,9 @@ The wiki tools work in TWO directions:
 >
 > | Direction | What Happens | How |
 > |-----------|-------------|-----|
-> | **Project → Second Brain** | Project queries methodology, standards, chains, templates | `gateway query --stage document --wiki-root ~/brain` or auto-detect |
+> | **Project → Second Brain** | Project queries methodology, standards, chains, templates | `gateway query --stage document --wiki-root ~/second-brain` or auto-detect |
 > | **Second Brain → Project** | Standards applied to project's own wiki pages | Project runs pipeline tools on its own wiki |
-> | **Project → Second Brain (feedback)** | Project contributes learnings back | `gateway contribute --type lesson --wiki-root ~/brain` |
+> | **Project → Second Brain (feedback)** | Project contributes learnings back | `gateway contribute --type lesson --wiki-root ~/second-brain` |
 > | **Self (second brain = project)** | The wiki operates on itself | Default mode — no --wiki-root needed |
 
 The `--wiki-root` flag targets a project wiki. The `--brain` flag targets the second brain. Auto-detection finds the second brain in sibling directories. When running ON the second brain itself, both are the same.

@@ -86,7 +86,7 @@ Models are not independent — they build on each other. Here is the adoption or
 
 ## Per-Project Adaptation
 
-Each project adapts the super-model to its context. The brain maintains an identity profile for each project — see [[identity-profile|ecosystem project profiles]] for the full details.
+Each project adapts the super-model to its context. The second brain maintains an identity profile for each project — see [[identity-profile|ecosystem project profiles]] for the full details.
 
 > [!info] Ecosystem projects at a glance
 >
@@ -140,7 +140,7 @@ Each project adapts the super-model to its context. The brain maintains an ident
 > - 5 sub-super-models as navigation hubs (Goldilocks, Enforcement, Knowledge, Work Management, Integration)
 > - 4 domain chains genericized (options by SDLC level, project profiles for specific instances)
 > - 3 SDLC profile configs as POLICY (simplified/default/full — draft status)
-> - Ecosystem project profiles separating brain knowledge from project-specific knowledge
+> - Ecosystem project profiles separating second-brain knowledge from project-specific knowledge
 > - [[filename|title]] wikilinks + frontmatter aliases for Obsidian resolution
 > - 8 root-level docs implementing three-layer agent context architecture (README + AGENTS + CLAUDE + CONTEXT + ARCHITECTURE + DESIGN + TOOLS + SKILLS) — see [[root-documentation-map|Root Documentation Map]]
 > - 16 source syntheses + 3 evolved pages from 2026-04-14 batch ingestion (OpenSpec, spec-kit, BMAD, Agent SDK, Pydantic AI, AutoBE, HRM/TRM, etc.)

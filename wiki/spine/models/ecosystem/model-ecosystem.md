@@ -168,7 +168,7 @@ Every project in the ecosystem must be understood from TWO perspectives:
 > | **Standalone** | What does this project DO? What is its primary role? What are its own standards? | The project's own CLAUDE.md, DESIGN.md |
 > | **Ecosystem node** | What does this project CONTRIBUTE to the ecosystem? What does it CONSUME? How does it INTEGRATE? | The wiki's [[ecosystem-project-profiles|project profiles]] in `wiki/ecosystem/project_profiles/` |
 >
-> A project that only knows itself is isolated. A project that only knows the ecosystem is hollow. The dual-perspective principle requires BOTH: self-sufficient projects that also participate in a larger system. The wiki maintains this second perspective — it is the brain's UNDERSTANDING of each project, not a mirror of project docs.
+> A project that only knows itself is isolated. A project that only knows the ecosystem is hollow. The dual-perspective principle requires BOTH: self-sufficient projects that also participate in a larger system. The wiki maintains this second perspective — it is the second brain's UNDERSTANDING of each project, not a mirror of project docs.
 
 ---
 

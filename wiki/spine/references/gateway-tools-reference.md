@@ -23,7 +23,7 @@ tags: [reference, gateway, tools, cli, api, documentation]
 >
 > - **First time?** Just run `python3 -m tools.gateway` — guided entry shows common paths
 > - **Know what you need?** See command table below
-> - **From another project?** Add `--wiki-root /path/to/brain` to any command
+> - **From another project?** Add `--wiki-root /path/to/second-brain` to any command
 > - **Want auto-recommendations?** `python3 -m tools.gateway what-do-i-need`
 
 ## Summary
@@ -98,8 +98,8 @@ The gateway auto-detects what it CAN from the filesystem:
 > | Mode | When | How |
 > |------|------|-----|
 > | **Local (default)** | Working on the second brain itself | Just run `gateway` — auto-detects |
-> | **Remote project → brain** | From another project, querying the brain | `gateway --wiki-root ~/brain query --models` |
-> | **Remote brain → project** | From the brain, targeting a project | Not typical — use the project's own gateway |
+> | **Remote project → second brain** | From another project, querying the second brain | `gateway --wiki-root ~/brain query --models` |
+> | **Remote second brain → project** | From the second brain, targeting a project | Not typical — use the project's own gateway |
 
 The `--wiki-root` flag determines which wiki's pages you browse/modify.
 The `--brain` flag determines where methodology configs, chains, templates come from.

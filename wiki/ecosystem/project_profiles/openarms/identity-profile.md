@@ -53,7 +53,7 @@ The second brain's understanding of OpenArms as an ecosystem member. OpenArms is
 
 ## What the Brain Learned FROM OpenArms
 
-These are cross-referenced to the wiki's lesson and pattern pages — the brain's distilled understanding, not OpenArms documentation.
+These are cross-referenced to the wiki's lesson and pattern pages — the second brain's distilled understanding, not OpenArms documentation.
 
 > [!tip] Key Lessons Contributed
 >

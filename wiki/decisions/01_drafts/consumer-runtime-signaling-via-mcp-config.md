@@ -139,7 +139,7 @@ Empirical evidence supporting the choice:
 Downstream impact if reversed:
 - `gateway what-do-i-need` loses the CONSUMER row's authoritative data → falls back to the current "solo is the default" honesty (still correct, just less specific when a harness is actually present).
 - Any `wiki_*` tool that later added runtime-aware branching loses its signal → falls back to solo-default behavior.
-- Wiki-side session logs lose the consumer-runtime column → gain less observability over who's using the brain.
+- Wiki-side session logs lose the consumer-runtime column → gain less observability over who's using the second brain.
 
 None of these impacts corrupt data; they reduce observability. The decision is safe to make and safe to undo.
 

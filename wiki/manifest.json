@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T13:54:06.432943+00:00",
+  "generated": "2026-04-16T15:13:56.867191+00:00",
   "stats": {
     "pages": 339,
     "domains": 9,
@@ -14637,7 +14637,7 @@
           "type": "observation",
           "project": "openarms",
           "path": "wiki/domains/learnings/agent-escalation-with-justification.md",
-          "description": "Preliminary OpenArms placeholder \u2014 operator quote \"When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable.\" File explicitly marked \"The fully synthesized pattern is coming from the brain.\" This pattern page is that synthesis."
+          "description": "Preliminary OpenArms placeholder \u2014 operator quote \"When you block you give the proper reason, and you offer to escalate with a justification if deemed reasonable.\" File explicitly marked \"The fully synthesized pattern is coming from the second brain.\" This pattern page is that synthesis."
         },
         {
           "id": "openarms-e016-environment-patching",

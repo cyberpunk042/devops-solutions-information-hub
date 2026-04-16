@@ -8,13 +8,15 @@ domain: backlog
 status: active
 priority: P1
 task_type: epic
-current_stage: implement
-readiness: 80
-progress: 75
+current_stage: review
+readiness: 95
+progress: 90
 stages_completed:
   - "document"
   - "design"
   - "scaffold"
+  - "implement"
+  - "test"
 artifacts:
   - "raw/notes/2026-04-15-directive-knowledge-project-methodology-rework.md"
   - "wiki/spine/standards/gateway-output-contract.md"
@@ -45,7 +47,7 @@ tags: [epic, gateway, orientation, context-aware, knowledge-project, v2, milesto
 
 ## Summary
 
-Fix the post-compaction onboarding gap: the current gateway is app-project-shaped, and a fresh agent inside the brain (the knowledge project itself) gets routed to task-picking output when it needs orientation first. This epic adds a new `gateway orient` subcommand for orientation-before-routing, upgrades `gateway what-do-i-need` to be context-aware (brain / sister / external + fresh / task-bound / returning), codifies the [[gateway-output-contract|Gateway Output Contract]] as a spine standard every subcommand inherits, and exposes both subcommands as MCP tools. The broader gateway audit (applying the contract to remaining subcommands) is deferred to a follow-on epic (E023).
+Fix the post-compaction onboarding gap: the current gateway is app-project-shaped, and a fresh agent inside the second brain (the knowledge project itself) gets routed to task-picking output when it needs orientation first. This epic adds a new `gateway orient` subcommand for orientation-before-routing, upgrades `gateway what-do-i-need` to be context-aware (brain / sister / external + fresh / task-bound / returning), codifies the [[gateway-output-contract|Gateway Output Contract]] as a spine standard every subcommand inherits, and exposes both subcommands as MCP tools. The broader gateway audit (applying the contract to remaining subcommands) is deferred to a follow-on epic (E023).
 
 ## Operator Directive
 
@@ -57,8 +59,8 @@ Full verbatim: `raw/notes/2026-04-15-directive-knowledge-project-methodology-rew
 
 ## Goals
 
-- `gateway orient` ships as a new subcommand answering "who are you, where, what must you internalize" — with three context modes (brain / sister / external) and a freshness overlay
-- `gateway what-do-i-need` upgraded to branch on context instead of returning one-size-fits-all task routing — brain-self mode returns knowledge-verb task types, not app-dev models
+- `gateway orient` ships as a new subcommand answering "who are you, where, what must you internalize" — with three context modes (second-brain / sister / external) and a freshness overlay
+- `gateway what-do-i-need` upgraded to branch on context instead of returning one-size-fits-all task routing — second-brain mode returns knowledge-verb task types, not app-dev models
 - Both subcommands honor the [[gateway-output-contract|Gateway Output Contract]] (5 rules: SRP, context-aware, size ceiling, read-whole marker, closing next-move)
 - MCP exposure: `wiki_gateway_orient` tool; `wiki_gateway_what_do_i_need` kept but context-aware internally
 - Contract becomes the standard subsequent subcommands are validated against (follow-on E023 audits the rest)
@@ -67,8 +69,8 @@ Full verbatim: `raw/notes/2026-04-15-directive-knowledge-project-methodology-rew
 
 - [ ] `wiki/spine/standards/gateway-output-contract.md` exists with ≥2 annotated exemplars and ≥3 anti-patterns (M001 — DONE when this epic logs it as artifact)
 - [ ] `gateway orient` subcommand implemented in `tools/gateway.py`
-- [ ] `gateway orient` output passes all 5 contract rules for brain-self / sister / external × fresh / task-bound (6 contexts)
-- [ ] `gateway what-do-i-need` upgraded with context-aware branching — brain-self mode returns knowledge-verb task routing (NOT app-dev models)
+- [ ] `gateway orient` output passes all 5 contract rules for second-brain / sister / external × fresh / task-bound (6 contexts)
+- [ ] `gateway what-do-i-need` upgraded with context-aware branching — second-brain mode returns knowledge-verb task routing (NOT app-dev models)
 - [ ] `gateway what-do-i-need` output passes all 5 contract rules across all contexts
 - [ ] Declared > detected: both subcommands use heuristics only as sanity-check signals, never as overrides of declared values (no auto-detected phase/scale override of CLAUDE.md declarations)
 - [ ] MCP tool `wiki_gateway_orient` exposed in `tools/mcp_server.py` with complete description
@@ -92,7 +94,7 @@ Full verbatim: `raw/notes/2026-04-15-directive-knowledge-project-methodology-rew
 > | **Estimated tasks** | 12-15 |
 > | **Dependencies** | E015 (Gateway Tools Completion — this extends the gateway with new subcommand + contract) · the `methodology-fundamentals` learning path (orient points to it) |
 > | **Follow-on** | E023 — Gateway-Wide Output Contract Audit (document-stage only in this epic; full work deferred) |
-> | **Related epic (not dependency)** | E024 — Knowledge-Verbs Methodology Model (separate data-layer epic; what-do-i-need brain-mode routes to its verbs once ready) |
+> | **Related epic (not dependency)** | E024 — Knowledge-Verbs Methodology Model (separate data-layer epic; what-do-i-need second-brain-mode routes to its verbs once ready) |
 
 ## Module Breakdown
 
@@ -110,7 +112,7 @@ Full verbatim: `raw/notes/2026-04-15-directive-knowledge-project-methodology-rew
 
 | Task | What | Stage |
 |------|------|-------|
-| T-E022-04 | Design context detection function (brain-self / sister / external × fresh / task-bound / returning) with declared > detected priority | design |
+| T-E022-04 | Design context detection function (second-brain / sister / external × fresh / task-bound / returning) with declared > detected priority | design |
 | T-E022-05 | Design session-state file format for freshness detection (or reuse existing pattern) | design |
 | T-E022-06 | Scaffold `orient` subcommand in `tools/gateway.py` with argparse entry + context detector stub | scaffold |
 | T-E022-07 | Implement the six output modes (3 locations × 2 primary freshness states, one path for returning = redirect to what-do-i-need) | implement |
@@ -122,7 +124,7 @@ Full verbatim: `raw/notes/2026-04-15-directive-knowledge-project-methodology-rew
 |------|------|-------|
 | T-E022-09 | Design context branching for current what-do-i-need output; separate SRP violations (remove consumer-runtime + default-profile blocks into appropriate subcommands or conditional sections) | design |
 | T-E022-10 | Scaffold context branches in what-do-i-need handler | scaffold |
-| T-E022-11 | Implement brain-self branch returning knowledge-verb task types (depends on E024 naming or uses concept placeholders) | implement |
+| T-E022-11 | Implement second-brain branch returning knowledge-verb task types (depends on E024 naming or uses concept placeholders) | implement |
 | T-E022-12 | Implement sister and external branches | implement |
 | T-E022-13 | Honor declared > detected: remove heuristic overrides of CLAUDE.md declarations; heuristics become sanity-check warnings only | implement |
 | T-E022-14 | Verify all 6 contexts pass 5 contract rules | test |
@@ -146,12 +148,12 @@ E023 is NOT implemented here. Only its document-stage scaffold lives in this epi
 ## Dependencies
 
 - **E015 (Gateway Tools Completion):** This epic extends the gateway with a new subcommand + the output contract. E015 builds the engine; E022 adds context-awareness as the next capability layer.
-- **`methodology-fundamentals` learning path:** `gateway orient` points to this as the canonical brain-self reading path for fresh agents. Must exist (it does).
+- **`methodology-fundamentals` learning path:** `gateway orient` points to this as the canonical second-brain reading path for fresh agents. Must exist (it does).
 - **[[consumer-runtime-signaling-via-mcp-config|Consumer Runtime Signaling decision]]:** Declared > detected is the inherited principle. Both subcommands honor `MCP_CLIENT_RUNTIME` as the authoritative consumer declaration.
 
 ## Open Questions
 
-> [!question] Should `gateway what-do-i-need` auto-redirect to `orient` when it detects fresh+in-brain, or just emit a pointer?
+> [!question] Should `gateway what-do-i-need` auto-redirect to `orient` when it detects fresh+in-second-brain, or just emit a pointer?
 > **Answer-before-ask leaning:** pointer. Explicit > implicit. Agent asking `what-do-i-need` while fresh gets a single-line "NEXT: gateway orient" at the top, not auto-redirect. Preserves consumer intent ("I chose this command for a reason"). Confirmed in M003 design stage.
 
 > [!question] How is "fresh" reliably detected post-compaction?
@@ -164,11 +166,11 @@ E023 is NOT implemented here. Only its document-stage scaffold lives in this epi
 
 > [!info] For anyone picking this up in a fresh context
 >
-> **What this epic does:** Adds context-aware orientation and task routing to the gateway. Fresh agents inside the brain (post-compaction) get oriented before routed. Both subcommands honor a new output contract that every gateway subcommand will eventually inherit.
+> **What this epic does:** Adds context-aware orientation and task routing to the gateway. Fresh agents inside the second brain (post-compaction) get oriented before routed. Both subcommands honor a new output contract that every gateway subcommand will eventually inherit.
 >
 > **What this epic does NOT do:**
 > - Audit every existing gateway subcommand against the contract (deferred to E023)
-> - Build the knowledge-verbs methodology model that `what-do-i-need` brain-mode routes to (separate epic — E024)
+> - Build the knowledge-verbs methodology model that `what-do-i-need` second-brain-mode routes to (separate epic — E024)
 > - Modify `tools/mcp_server.py` core — only adds new tool exposures
 >
 > **Current state:** Document stage. M001 artifact complete (the contract spine standard). M002-M005 awaiting design / scaffold approval.

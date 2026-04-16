@@ -22,7 +22,7 @@ See [CONTEXT.md](CONTEXT.md) for the full identity profile with current mileston
 
 **Superpowers skills are active** — use them proactively. If a skill matches the task, invoke it. Skill priority: process first (brainstorming, debugging) → implementation second.
 
-**After compaction or fresh start, run `gateway orient` first.** It detects your context (brain/sister/external × fresh/returning) and routes you to the right reading path before task routing. See [Gateway Output Contract](wiki/spine/standards/gateway-output-contract.md).
+**After compaction or fresh start, run `gateway orient` first.** It detects your context (second-brain/sister/external × fresh/returning) and routes you to the right reading path before task routing. See [Gateway Output Contract](wiki/spine/standards/gateway-output-contract.md).
 
 **MCP server exposes 26+ tools.** Registered in `.mcp.json`. Gateway tools (`wiki_gateway_query`, `wiki_gateway_orient`, `wiki_gateway_contribute`, `wiki_gateway_flow`, `wiki_gateway_timeline`) for unified operations.
 

@@ -168,6 +168,7 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 | [[src-playwright-cli-vs-mcp|Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens]] | L1 | The primary evidence — 10-step QA test comparison |
 | [[src-playwright-mcp-visual-testing|Synthesis — Playwright MCP for Visual Development Testing]] | L1 | The counter-evidence — when MCP wins for interactive visual iteration |
 | [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]] | L1 | The sandbox evidence — 98% context saving |
+| [[gateway-output-contract\|Gateway Output Contract]] | Standards | The 5-rule output contract for gateway subcommands — proto-programming applied to tool outputs. Added 2026-04-15. |
 
 ---
 
