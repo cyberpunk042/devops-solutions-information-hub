@@ -76,6 +76,7 @@ The bug is invisible when the ratio is stable (thresholds can be recalibrated to
 ## Relationships
 
 - DERIVED FROM: [[the-harness-turncount-variable-counts-streaming-events,-not-|Harness turnCount Bug — OpenArms Evidence]]
+- EXTENDED BY: [[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]] — the meta-pattern; this is the variable-layer instance
 - RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy]] — aspirational naming creates a new category of infrastructure bug
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] — lifecycle decisions in the deterministic shell
 - RELATES TO: [[observe-fix-verify-loop|Observe-Fix-Verify Loop]] — the pattern is detected via OFV (observe absurd metric → fix naming → verify thresholds)
@@ -83,6 +84,7 @@ The bug is invisible when the ratio is stable (thresholds can be recalibrated to
 ## Backlinks
 
 [[Harness turnCount Bug — OpenArms Evidence]]
+[[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 [[Agent Failure Taxonomy]]
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop]]

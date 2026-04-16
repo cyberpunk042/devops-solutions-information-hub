@@ -294,6 +294,7 @@ fi
 [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[agents-take-small-unauthorized-scope-expansions-when-the-cha|Agents take small unauthorized scope expansions when the change is a 'clean win']]
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
+[[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 [[construction-and-testing-artifacts|Construction and Testing Artifacts — Standards and Guide]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones]]

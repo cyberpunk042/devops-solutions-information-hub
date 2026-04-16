@@ -132,6 +132,7 @@ Class 4 of the [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agen
 
 - DERIVED FROM: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 - BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+- EXTENDED BY: [[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]] — the meta-pattern; this is the skill-attribute-layer instance
 - RELATES TO: [[aspirational-naming-in-lifecycle-code|Aspirational Naming in Lifecycle Code]]
 - RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy]]
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
@@ -142,6 +143,7 @@ Class 4 of the [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agen
 
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
+[[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 [[aspirational-naming-in-lifecycle-code|Aspirational Naming in Lifecycle Code]]
 [[Agent Failure Taxonomy]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]

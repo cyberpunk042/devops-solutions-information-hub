@@ -41,18 +41,19 @@ Identity protocol: `wiki/domains/cross-domain/project-self-identification-protoc
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 345 |
-| **Relationships** | 2310 |
+| **Pages** | 358 |
+| **Relationships** | 2386+ |
 | **Validation errors** | 0 |
 | **MCP tools** | 26+ |
 | **Named models** | 16 (+ 9 methodology models) |
 | **Standards pages** | 25 (per-type + per-model + gateway output contract) |
 | **Sub-super-models** | 5 |
-| **Validated lessons** | 44 + 6 contributed (in 01_drafts) |
-| **Validated patterns** | 19 |
-| **Validated decisions** | 17 |
-| **Principles** | 3 |
+| **Validated lessons** | 44 + 10 contributed (3 in 02_synthesized, 7 in 01_drafts) |
+| **Validated patterns** | 19 + 5 in 01_drafts (incl. progressive-structural-enrichment, artifact-path-verification, aspirational-declaration-without-enforcement meta-pattern) |
+| **Validated decisions** | 17 + 1 in 01_drafts (extended-to-adaptive-thinking-migration) |
+| **Principles** | 3 (+ 1 candidate: aspirational-declaration cross-layer meta-pattern with 3 validated instances) |
 | **Ecosystem project profiles** | 5 (all connected via `setup --connect`) |
+| **Consumer integration roadmap exemplar** | Published (OpenArms 5-milestone / 27-epic / 800-1200 hour plan) |
 
 ### The Three Validated Principles
 

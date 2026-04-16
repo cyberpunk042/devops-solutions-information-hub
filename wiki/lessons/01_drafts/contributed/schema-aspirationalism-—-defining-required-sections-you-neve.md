@@ -84,6 +84,7 @@ This lesson applies to three decisions:
 ## Relationships
 
 - EXTENDS: [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]] — same gap at the schema level
+- EXTENDED BY: [[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]] — the meta-pattern; this is the schema-layer instance
 - RELATES TO: [[model-llm-wiki|Model — LLM Wiki]] — wiki schema as the real product
 - RELATES TO: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions]] — an unenforced schema IS instruction, not infrastructure
 - RELATES TO: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] — the three-layer defense requires all three layers
@@ -92,6 +93,7 @@ This lesson applies to three decisions:
 ## Backlinks
 
 [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
+[[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 [[model-llm-wiki|Model — LLM Wiki]]
 [[Principle — Infrastructure Over Instructions]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

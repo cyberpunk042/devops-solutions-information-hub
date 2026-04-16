@@ -171,3 +171,4 @@ This pattern closes a specific gap in the readiness-computed-not-claimed invaria
 [[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[model-methodology|Model — Methodology]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]

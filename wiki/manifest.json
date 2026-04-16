@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T19:41:30.430536+00:00",
+  "generated": "2026-04-16T19:47:48.577248+00:00",
   "stats": {
-    "pages": 357,
+    "pages": 358,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2386,
-    "tags_unique": 1097,
+    "relationships": 2398,
+    "tags_unique": 1100,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
       "4": 55,
-      "5": 27,
+      "5": 28,
       "1": 32,
       "spine": 67
     },
     "maturity": {
       "growing": 274,
-      "seed": 35
+      "seed": 36
     }
   },
   "pages": [
@@ -10654,6 +10654,10 @@
           "target": "Model \u2014 Skills, Commands, and Hooks"
         },
         {
+          "verb": "EXTENDED BY",
+          "target": "Aspirational Declaration Produces False Confidence at Every Layer"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Aspirational Naming in Lifecycle Code"
         },
@@ -10763,6 +10767,10 @@
         {
           "verb": "EXTENDS",
           "target": "Systemic Incompleteness Is Invisible to Validation"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Aspirational Declaration Produces False Confidence at Every Layer"
         },
         {
           "verb": "RELATES TO",
@@ -15496,6 +15504,107 @@
       ]
     },
     {
+      "path": "patterns/01_drafts/aspirational-declaration-without-enforcement.md",
+      "slug": "patterns/01_drafts/aspirational-declaration-without-enforcement",
+      "title": "Aspirational Declaration Produces False Confidence at Every Layer",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "pattern",
+        "cross-layer",
+        "aspirational",
+        "declaration",
+        "enforcement",
+        "false-confidence",
+        "infrastructure",
+        "meta-pattern",
+        "contributed",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "turncount-instance",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md",
+          "description": "Variable-layer instance \u2014 OpenArms harness turnCount counting streaming events"
+        },
+        {
+          "id": "schema-aspirationalism-instance",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve.md",
+          "description": "Schema-layer instance \u2014 OpenArms 333 validation failures against aspirational required_sections"
+        },
+        {
+          "id": "mandatory-instance",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced.md",
+          "description": "Skill-attribute-layer instance \u2014 OpenArms 5 mandatory skills without invocation verification"
+        },
+        {
+          "id": "infrastructure-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md",
+          "description": "The governing principle \u2014 this pattern is a cross-layer corollary of Infrastructure > Instructions"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "Aspirational Naming in Lifecycle Code",
+        "Schema aspirationalism \u2014 defining required sections you never validate",
+        "Mandatory Without Verification Is Not Enforced",
+        "Infrastructure Over Instructions for Process Enforcement"
+      ],
+      "aliases": [
+        "Aspirational Declaration Produces False Confidence at Every Layer",
+        "Aspirational Declaration Without Enforcement",
+        "The Aspirational Layer",
+        "Named Without Enforced"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Aspirational Naming in Lifecycle Code"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Mandatory Without Verification Is Not Enforced"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Observe-Fix-Verify Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Defense Layer Progression Is Expensive"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Artifact Path Verification at Gate Close"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Quality Standards"
+        }
+      ]
+    },
+    {
       "path": "patterns/01_drafts/aspirational-naming-in-lifecycle-code.md",
       "slug": "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "title": "Aspirational Naming in Lifecycle Code",
@@ -15532,6 +15641,10 @@
         {
           "verb": "DERIVED FROM",
           "target": "Harness turnCount Bug \u2014 OpenArms Evidence"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Aspirational Declaration Produces False Confidence at Every Layer"
         },
         {
           "verb": "RELATES TO",
@@ -24982,12 +25095,12 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 165,
-      "relationship_count": 1110
+      "page_count": 166,
+      "relationship_count": 1121
     },
     "ai-agents": {
       "page_count": 68,
-      "relationship_count": 532
+      "relationship_count": 533
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -25365,6 +25478,7 @@
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
@@ -25605,6 +25719,7 @@
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
@@ -26291,6 +26406,7 @@
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
@@ -28083,6 +28199,7 @@
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
@@ -28127,10 +28244,12 @@
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced"
     ],
     "aspirational": [
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "false-confidence": [
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "project-property": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
@@ -28702,6 +28821,7 @@
     "pattern": [
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
@@ -28731,6 +28851,15 @@
     ],
     "gate-close": [
       "patterns/01_drafts/artifact-path-verification-at-gate-close"
+    ],
+    "cross-layer": [
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
+    ],
+    "declaration": [
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
+    ],
+    "meta-pattern": [
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "naming": [
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code"
@@ -30171,7 +30300,8 @@
       "referenced_by": [
         "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
         "First consumer integration reveals systematic gaps between knowledge and tooling",
-        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence"
+        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
+        "Aspirational Declaration Produces False Confidence at Every Layer"
       ]
     },
     {
@@ -30183,7 +30313,8 @@
     {
       "target": "Quality Standards",
       "referenced_by": [
-        "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones"
+        "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
+        "Aspirational Declaration Produces False Confidence at Every Layer"
       ]
     },
     {

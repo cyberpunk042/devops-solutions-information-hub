@@ -379,6 +379,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[domain-chain-python-wiki|Artifact Chain — Python-Wiki Domain]]
 [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]]
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
+[[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
 [[consumer-integration-roadmap-exemplar|Consumer Integration Roadmap — OpenArms Exemplar (First Full Plan)]]
 [[context-depth-must-vary-per-task-type-not-per-project|Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity]]

@@ -29,6 +29,7 @@ See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis 
 
 - [Agent Execution Cost Optimization Stack](01_drafts/agent-execution-cost-optimization-stack.md) — Agent execution cost is reducible through a five-layer optimization stack (3 original + 2 added with Opus 4
 - [Artifact Path Verification at Gate Close](01_drafts/artifact-path-verification-at-gate-close.md) — At the moment a task gate closes (`/stage-complete`, `/task-done`, readiness advancing to 100), the harness must veri...
+- [Aspirational Declaration Produces False Confidence at Every Layer](01_drafts/aspirational-declaration-without-enforcement.md) — Declaring something (a variable name, a required field, an attribute value, a policy) creates the appearance of enfor...
 - [Aspirational Naming in Lifecycle Code](01_drafts/aspirational-naming-in-lifecycle-code.md) — When a variable in lifecycle-critical code is named after its intended semantic meaning (e
 - [Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement](01_drafts/block-with-reason-and-justified-escalation.md) — When an autonomous agent encounters a condition where it SHOULD not proceed silently — a blocked action, an out-of-sc...
 - [Hierarchical Metrics Fail on Sparse Coverage](01_drafts/hierarchical-metrics-fail-on-sparse-coverage.md) — When a parent metric is derived from its children (average, sum, max) and the children don't cover the parent's full ...
@@ -54,4 +55,4 @@ See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis 
 
 ## Tags
 
-`pattern`, `openfleet`, `enforcement`, `contributed`, `orchestration`, `infrastructure`, `openarms`, `claude-md`, `cross-domain`, `deterministic`, `agent-compliance`, `methodology`, `agent-execution`, `metrics`, `anti-pattern`, `agent-config`, `agents-md`, `guardrails`, `harness`, `agent-architecture`
+`pattern`, `enforcement`, `openfleet`, `contributed`, `infrastructure`, `openarms`, `orchestration`, `claude-md`, `cross-domain`, `deterministic`, `agent-compliance`, `methodology`, `agent-execution`, `metrics`, `anti-pattern`, `agent-config`, `agents-md`, `guardrails`, `harness`, `agent-architecture`
