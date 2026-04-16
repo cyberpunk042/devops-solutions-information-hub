@@ -337,11 +337,307 @@ These extend the second brain's enforcement and harness engineering knowledge wi
 
 **Scale: 30+ epics, 150+ tasks, multiple months of sustained effort.** This is the real scope.
 
+---
+
+## Part 8: Second Round — After Feedback (2026-04-16, same session)
+
+> The operator took Part 6's feedback to the second brain. The second brain updated its gateway tooling. We re-tested. This section records what changed and what's left.
+
+### What the second brain fixed (immediately, within minutes)
+
+#### F1 → FIXED: Compliance checker now finds our schema
+
+Before: `✗ wiki/config/wiki-schema.yaml` — looked for exact filename.
+After: `✓ wiki/config/schema.yaml — Frontmatter schema (any location)` — finds our schema by function.
+
+The checker went from Tier 0 ("Not yet adopted") to "1 file away from Tier 1, functionally Tier 2." Our only Tier 1 gap is now `wiki/config/templates/`. This is a real gap — we don't have page templates in a standard location.
+
+Tier 3 also improved: `✓ scripts/methodology/validate-stage.cjs — Quality/validation tooling` — it found our validation infrastructure even though it's CJS scripts, not Python.
+
+Tier 4: now `2/3` — found both `.mcp.json` entries. Only missing `export-profiles.yaml`.
+
+**Verdict: F1 addressed. The checker now measures functional equivalence, not path conformance.**
+
+#### F4 → FIXED: Identity profile no longer asks for consumer properties
+
+Before: `IDENTITY: not configured. Add Identity Profile table to CLAUDE.md`
+After: `PROJECT IDENTITY: not fully configured. Stable fields to add to CLAUDE.md: type, domain, second-brain relationship. Do NOT hardcode: execution mode, SDLC profile, methodology model (these are consumer/task properties)`
+
+The status command now explicitly tells you which fields are project-level (stable, go in CLAUDE.md) vs consumer-level (dynamic, don't hardcode). This is exactly the split we proposed.
+
+**Verdict: F4 addressed. The gateway no longer contradicts its own lesson.**
+
+#### F5 + F8 → FIXED: Orient now shows scale and adoption tiers
+
+Before: `"You have prior context. Route directly to brain queries."` (one-liner)
+After: Full orientation with:
+
+- The core principle: "YOUR BRAIN IS YOUR OWN... The second brain is a SEPARATE shared knowledge system. Your goal is NOT to depend on it at runtime."
+- 4 adoption tiers with descriptions
+- Scale estimate: "15-25 epics, 80-150+ tasks across months"
+- Reading order: standards before models (our F6 recommendation)
+- Contribute guidance: "Your format is accepted — the second brain normalizes on intake" (our F7 concern)
+
+**Verdict: F5 and F8 addressed. A first consumer now gets the full picture including realistic scale.**
+
+#### F6 → FIXED: Standards-first reading order
+
+Before: Orient didn't specify reading order.
+After: "WHAT TO READ FIRST: 1. standards → 2. spine → 3. model methodology → 4. lessons → 5. patterns"
+
+**Verdict: F6 addressed.**
+
+#### F7 → FIXED: Feed-back format bridge clarified
+
+Before: Ambiguous — no documentation on what format `contribute` expects.
+After: Orient says "Your format is accepted — the second brain normalizes on intake."
+
+**Verdict: F7 addressed at the messaging level. Needs testing with actual contributions.**
+
+### What's still open after the second brain update
+
+#### F2: Health score still needs investigation
+
+We haven't re-run `gateway health` yet. The 332 validation errors and 0.9 relationship density were likely schema-mismatch artifacts. If the compliance checker now respects our schema, does the health checker too?
+
+#### F3: Orient freshness detection
+
+The orient command now gives full output for sister projects regardless of freshness. This may have overcorrected — a returning consumer who already knows the landscape doesn't need the full orientation every time. But for now, more information > less information. The nuance can come later.
+
+#### F9 → TESTED: Lesson contribution works
+
+Contributed `lesson-harness-turncount-misnamed.md` via:
+
+```
+gateway contribute --type lesson --title "..." --content "..." --contributor "openarms-operator-claude" --source "/path/to/local/lesson"
+```
+
+Result: landed in `lessons/00_inbox/` with `contribution_status: pending-review`. The second brain assigned it to the maturity inbox for human review before promotion. The `gateway timeline` confirmed the contribution appears in the cross-project temporal view.
+
+**The format bridge works.** We sent our content; the second brain wrapped it in its own frontmatter (added `layer: 4`, `maturity: seed`, `contribution_status: pending-review`). We don't need to write in their format — `contribute` normalizes.
+
+**Observation:** The timeline also showed that the second brain had ALREADY ingested our other 5 lesson files independently — they appear as `_lesson_` entries in `00_inbox` with creation dates of 2026-04-16. The operator must have fed them directly or the second brain pulled them from our repo.
+
+### New observations from the second round
+
+#### The "adopt not depend" framing changes everything
+
+The orient output's opening line — "Your goal is NOT to depend on it at runtime — it's to ADOPT what fits your identity and evolve your own brain until it's strong on its own" — is the correct framing we were missing in the first round. This means:
+
+- The harness agent should NOT call `gateway query` at runtime
+- Instead, the OUTPUT of `gateway query` should inform how we evolve our local `methodology.yaml`, `skill-stage-mapping.yaml`, hooks, and skills
+- The second brain is a knowledge source for EVOLUTION, not a service for RUNTIME DEPENDENCY
+- Each adoption tier is about absorbing knowledge into local infrastructure, not connecting to external services
+
+This aligns with the operator's correction: the goal is to make our brain stronger, not to add a runtime dependency.
+
+#### The compliance gap is now clear and actionable
+
+One item to Tier 1: `wiki/config/templates/` — we need page templates.
+The Tier 2 gap was already closed (we have methodology.yaml + backlog + AGENTS.md).
+Tier 3 needs: evolution pipeline tooling + knowledge layer structure.
+Tier 4 needs: export profiles.
+
+This is a real, measurable integration path — not "do everything at once."
+
+#### The `what-do-i-need` reframing is correct
+
+"These methodology models should be in YOUR project's methodology.yaml" — positions the second brain as a reference for evolving local config. Compare to the old framing which implied runtime querying. The new framing says: read this, adopt what fits, put it in YOUR files.
+
+### Deeper exploration findings (continued second round)
+
+#### F2 FOLLOW-UP: Health check now uses our schema but still scores 54/100
+
+Re-ran `gateway health`. Good news: it now says `Schema: /home/jfortin/openarms/wiki/config/schema.yaml` and `Source: project-own`. It's using OUR schema. Score barely changed: 54.4/100 with 333 validation issues.
+
+This means the 333 errors are NOT schema-mismatch artifacts — they're real violations of OUR OWN schema. Our pages are failing our own rules. The health check is now legitimate.
+
+The breakdown:
+
+- **validation: 0/100** (333 blocking issues) — our pages don't conform to our own `schema.yaml` required_sections. Example: our `lesson` type requires `[Summary, Context, Insight, Application, Relationships]` but our actual lessons use `[Summary, Evidence, Root Cause, Relationships]`. We wrote a schema we don't follow.
+- **relationships: 12/100** (avg 1.0/page, healthy ≥6) — our `related:` frontmatter has 2-4 entries. The health check wants 6+ typed relationships. This is a real gap in our wiki's cross-linking density.
+- **freshness: 76/100** (309/405 pages updated within 90d) — 96 stale pages.
+- **evolution: 100/100** — all pages past inbox. Good.
+- **ingestion_backlog: 100/100** — no unreferenced raw files. Good.
+
+**The uncomfortable truth:** The health check revealed that our OWN schema is aspirational, not operational. We defined `required_sections` for each type but never enforced them. Our validation pipeline (`validate-stage.cjs`) checks task frontmatter, not wiki page section structure. This is a real gap — and it's ours, not the second brain's.
+
+**What this means for integration:** Before we can reach Tier 3 (evolution pipeline), we need to either (a) align our pages to our own schema, or (b) align our schema to what our pages actually look like. Both are work. The schema was written aspirationally when the wiki was scaffolded; the pages evolved differently. This is the same bug the second brain's lesson `"Systemic Incompleteness Is Invisible to Validation"` describes — we had 0 validation errors before because nobody was validating section structure.
+
+#### Artifact chains are not queryable — the deepest operational data is in prose
+
+`gateway query --model feature-development --full-chain` returns `chain: {}`. All 9 models return `has_chain: False, stage_count: 0`. The artifact chain data (24 artifacts for feature-development in the TypeScript domain, per-stage ALLOWED/FORBIDDEN, gate commands) exists in the model pages as rich markdown — I read it in detail — but it's NOT in structured config the gateway can return.
+
+Similarly, `gateway query --stage implement --domain typescript` returns readiness ranges (80-95) but empty ALLOWED/FORBIDDEN lists and empty gate commands. The rich operational rules ("ALLOWED: business logic, helper functions. FORBIDDEN: modifying test files. REQUIRED: at least one existing runtime file must import new code") are in the model page prose, not in queryable config.
+
+This is a significant gap for the "adopt into your own brain" flow. The gateway can tell you which models and stages exist, but NOT what artifacts each stage produces or what rules each stage enforces. To get that, you have to read the full model pages (~800 lines each). The gateway is a table of contents, not an encyclopedia.
+
+**What the second brain should evolve:** Either (a) structure the artifact chain data as YAML/JSON that the gateway can return, or (b) make the gateway query commands read and extract from the model page markdown. Option (a) is cleaner but requires maintaining two copies. Option (b) is harder but keeps a single source of truth.
+
+**What this means for OpenArms:** When we want to evolve our `methodology.yaml` or `skill-stage-mapping.yaml` to align with the second brain's artifact chains, we can't query for the data — we have to read the full model pages. The gateway is useful for orientation and navigation but not yet for structured adoption of artifact chain rules.
+
+#### SDLC profiles not queryable — "No sdlc-profiles directory found"
+
+`gateway query --profiles` returned `error: No sdlc-profiles directory found`. The SDLC profiles (simplified/default/full) are documented in the model pages and referenced extensively, but the config files don't exist yet in the second brain. The gateway's navigate command lists them; the query command can't return them.
+
+This is another "knowledge exists in prose, not in queryable config" gap. The Goldilocks protocol talks about 3 SDLC profiles; the tooling can't deliver them.
+
+#### The lesson template is rich and instructive
+
+`gateway template lesson` returns a full template with:
+
+- Required sections: Summary, Context, Insight, Evidence, Applicability, Relationships
+- Styling guidelines inside HTML comments (use `> [!warning]` for failure lessons, `> [!tip]` for success lessons, tables inside `> [!abstract]`)
+- Example content showing what good evidence items look like
+- Minimum requirements ("MINIMUM 3 evidence items from different sources")
+
+This is significantly richer than our lesson format. Our lessons have Summary + Evidence + Root Cause + Relationships. Theirs want Context (when does this apply?), Insight (the core learning, with callout styling), Evidence (3+ items with specific formatting), and Applicability (per-domain table).
+
+**Integration decision needed:** Do we adopt the second brain's lesson template for new lessons going forward? It's better structured. But our existing 16 lessons would need reformatting. Or we could adopt it for new lessons only and let the old ones be "pre-standard" artifacts.
+
+#### The timeline is the most powerful cross-project tool
+
+`gateway timeline` shows OpenArms and research-wiki activity interleaved chronologically with semantic event types: commits, epic progress (readiness changes), lessons, directives, sessions, handoffs. It showed:
+
+1. Our integration feedback was ingested as a directive in the second brain
+2. E022 went from 15% → 95% readiness in the same day based on our feedback
+3. Our 6 contributed lessons are visible as inbox items
+4. The operator's verbatim frustration messages were captured as directives
+
+This is real cross-project visibility. It answers "what happened across the ecosystem today?" in one command. For turbo-mode agent runs, running `gateway timeline` after each run could show how the work affected the ecosystem — not just our repo.
+
+#### The navigate command is a clean entry point
+
+`gateway navigate` outputs a tree-structured view of the full knowledge system: Identity → SDLC Profiles → Methodology Chains → Models → Stages → Enforcement → Principles → Tracking → Hierarchy → PM Levels → Tools. Each node has the gateway command to drill deeper. This is the map of the territory.
+
+For integration planning, the navigate tree is the closest thing to "here's what you could adopt." Each branch is a potential integration workstream. The navigate tree with 11 top-level branches roughly maps to the milestone structure: each branch becomes 1-3 epics of adoption work.
+
+### Summary of the second round
+
+**What improved:** orient (massive), status (fixed identity conflation), compliance (finds our schema), contribute (works), timeline (powerful).
+
+**What's still broken:** artifact chains not queryable (prose-only), SDLC profiles not queryable (config doesn't exist), ALLOWED/FORBIDDEN not in stage queries, health validation counts are now real (our own schema violations).
+
+**What we learned about ourselves:** Our wiki schema is aspirational, not operational. We defined required_sections we never enforce. 333 of our own pages violate our own rules. This is a real debt that any integration work must address first.
+
+**The critical reframe confirmed:** The second brain is a knowledge system to ADOPT FROM, not a runtime service. The gateway is a navigation aid and contribution channel. The real work is evolving our local brain (CLAUDE.md, methodology.yaml, skill-stage-mapping.yaml, hooks, validators, page templates, wiki schema) to absorb the second brain's operational knowledge. That work is 30+ epics. It starts with fixing our own schema compliance.
+
+---
+
+## Part 9: Full Model Survey — What Each Model Means for OpenArms Integration
+
+All 16 models read. Here's what each one means for us, organized by integration relevance.
+
+### Already integrated (we built these patterns)
+
+| Model                              | What it covers                                                       | Our status                                                                  | Integration work needed                                                                                                                   |
+| ---------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Methodology**                    | 9 named models, stage gates, ALLOWED/FORBIDDEN, composition          | We ARE the primary evidence source. methodology.yaml matches 1:1.           | Adopt composition rules, quality dimension (Skyscraper/Pyramid/Mountain explicit selection), domain-specific artifact chains. Low effort. |
+| **SFIF and Architecture**          | Scaffold→Foundation→Infrastructure→Features lifecycle, quality tiers | We follow SFIF implicitly. Our epics are SFIF stages (E014=Infrastructure). | Make SFIF explicit in our wiki and task planning. Adopt the audit checklist. Low effort.                                                  |
+| **Quality and Failure Prevention** | Three-layer defense, 7 failure classes, enforcement hierarchy        | We have hooks (Layer 1), teaching (Layer 2 via skills), review gates.       | Name our failure classes using the taxonomy. Track clean completion rate. Add the 7-class tracking to post-run reports. Medium effort.    |
+
+### Partially integrated (infrastructure exists, knowledge needs absorption)
+
+| Model                           | What it covers                                                                 | Our status                                                            | Integration work needed                                                                                                                                                                                              |
+| ------------------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Claude Code**                 | 4-level extension system, context management, harness engineering              | We have all 4 levels: CLAUDE.md, 5 skills, 4 hooks, 3 commands.       | Adopt CLAUDE.md standards (under 200 lines — ours is ~700 including AGENTS.md). Adopt skill quality bar (progressive disclosure, trigger phrases). Adopt hook coverage patterns (R01-R13 guardrails). HIGH effort.   |
+| **Skills, Commands, and Hooks** | Extension hierarchy, context-aware loading, Plannotator pattern                | We have 5 methodology skills + stage-mapping.                         | Adopt skill-stage-mapping standards. Add more hook patterns (currently 4 hooks, the second brain documents 13 guardrail rules). Adopt the Plannotator pattern for command+hook composition. Medium effort.           |
+| **Context Engineering**         | Three levels (prompt/context/structural), autocomplete chain, tier-based depth | Our injection envelope is one instance. Post-compact hook is another. | Adopt the full autocomplete chain (8 steps). Implement tier-based context depth in our skill injection. Formalize our 5 cognitive contexts as the second brain's "per-context injection design." MEDIUM-HIGH effort. |
+| **Markdown as IaC**             | CLAUDE.md + DESIGN.md + AGENTS.md + SOUL.md companion ecosystem                | We have CLAUDE.md (=AGENTS.md symlink). No DESIGN.md, no SOUL.md.     | Evaluate whether DESIGN.md and SOUL.md are relevant for OpenArms. If the fleet vision advances, SOUL.md becomes critical. LOW priority, low effort when needed.                                                      |
+| **Ecosystem Architecture**      | 5-project topology, integration map, knowledge feedback loop, dual-perspective | We're one of the 5 projects. The identity profile captures our role.  | Formalize our integration points (what we consume, what we produce). Adopt the dual-perspective principle (standalone + ecosystem node). LOW effort.                                                                 |
+
+### Not integrated (genuinely new capability)
+
+| Model                        | What it covers                                                               | Our status                                                                   | Integration work needed                                                                                                                                                             |
+| ---------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Knowledge Evolution**      | 6-layer density architecture, scorer, maturity lifecycle, promotion pipeline | We have lessons but no evolution pipeline. No scorer. No maturity promotion. | This is Tier 3 adoption. Build local evolution pipeline (or adopt the second brain's). Add maturity lifecycle to our wiki pages. HIGH effort — this is multiple epics.              |
+| **LLM Wiki**                 | What a wiki IS — schema, operations, quality gates, navigation               | We have a wiki with schema but 333 validation failures.                      | Fix our schema compliance. Adopt quality gates (summary ≥30 words, ≥1 relationship, ≥6 relationships for healthy). Adopt the page-type standards. HIGH effort — touches 400+ pages. |
+| **Wiki Design**              | Visual layer — callout vocabulary, styling standards                         | We don't use callout vocabulary consistently.                                | Adopt callout styling (> [!warning], > [!tip], > [!info], > [!abstract]) for our wiki pages. LOW effort per page, but 400+ pages to evolve.                                         |
+| **Automation and Pipelines** | Post-chain, event-driven hooks, multi-pass ingestion                         | We have validate-stage.cjs and build pipeline but no wiki-level post-chain.  | Build a wiki validation post-chain (our version of `pipeline post`). Add event-driven hooks for wiki changes. MEDIUM effort.                                                        |
+| **Second Brain**             | PKM theory — PARA + Zettelkasten hybrid, maintenance automation              | We use the wiki as knowledge store but not as a PKM system.                  | Adopt progressive distillation as a conscious practice. Map our wiki to PARA buckets. CONCEPTUAL — changes how we think about the wiki, not just tooling.                           |
+| **Local AI ($0 Target)**     | Cost reduction via local inference routing, AICP integration                 | We track cost but don't route to local models.                               | Relevant when AICP matures. LOW priority now.                                                                                                                                       |
+| **MCP and CLI Integration**  | CLI+Skills vs MCP decision, context-mode sandbox                             | We use CLI+Skills. We have `.mcp.json` for the second brain.                 | Already aligned. Adopt the context-mode sandbox pattern for heavy subagent operations. LOW effort.                                                                                  |
+| **NotebookLM**               | External research tool as grounded complement                                | Not integrated, not a priority.                                              | SKIP for now.                                                                                                                                                                       |
+
+### Key standards to adopt (from the 25 available)
+
+| Standard                          | Why it matters for us                                                                   | Priority                                            |
+| --------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Methodology Standards**         | Defines execution quality bar. Gold-standard examples from our own ecosystem.           | P0 — read and internalize immediately               |
+| **Claude Code Standards**         | Defines CLAUDE.md, skill, hook, context management quality bars. Our config needs work. | P0 — our CLAUDE.md is 700+ lines, should be <200    |
+| **Task Page Standards**           | Defines task spec quality. "Done When must name specific files." We mostly follow this. | P1 — adopt formally, add to task spec template      |
+| **Lesson Page Standards**         | Defines lesson format. Our 16 lessons use a different format.                           | P1 — adopt for new lessons, don't retrofit old ones |
+| **Quality Standards**             | Defines failure prevention quality bar. Three-layer defense + 7 failure classes.        | P1 — adopt the taxonomy                             |
+| **Context Engineering Standards** | Defines structured context quality bar.                                                 | P2 — after Claude Code standards                    |
+| **Extension Standards**           | Defines skill/command/hook quality bar.                                                 | P2 — after Claude Code standards                    |
+| **Epic Page Standards**           | Defines epic spec quality. Our epics are lightweight.                                   | P2 — useful when creating integration epics         |
+
+### The integration roadmap (preliminary)
+
+Based on the full model survey, here's the shape of the work:
+
+**Milestone 0: Foundation Alignment (prerequisite to everything)**
+
+- Epic: Fix our own schema compliance (333 validation failures)
+- Epic: CLAUDE.md restructure (700→200 lines, route to files)
+- Epic: Adopt task page standards (specific Done When, frontmatter completeness)
+- Epic: Adopt lesson page standards (for new lessons going forward)
+- **~4 epics, ~15-25 tasks**
+
+**Milestone 1: Methodology Deepening**
+
+- Epic: Adopt quality dimension (explicit Skyscraper/Pyramid/Mountain selection per task)
+- Epic: Adopt model composition rules (sequential, nested, conditional, parallel)
+- Epic: Adopt domain-specific artifact chains (TypeScript chain, 24 artifacts)
+- Epic: Adopt the 7 failure class taxonomy in post-run reports
+- Epic: Enrich stage rules (ALLOWED/FORBIDDEN in our methodology.yaml with gate commands)
+- **~5 epics, ~20-30 tasks**
+
+**Milestone 2: Enforcement Evolution**
+
+- Epic: Adopt R01-R13 guardrail hook patterns (expand our 4 hooks to cover the 13 rules)
+- Epic: Adopt Claude Code standards (CLAUDE.md structure, skill quality bar, hook patterns)
+- Epic: Implement Plannotator pattern (command+hook composition)
+- Epic: Adopt context autocomplete chain (8-step context build from CLAUDE.md to post-compact)
+- Epic: Implement tier-based context depth in skill injection
+- **~5 epics, ~25-35 tasks**
+
+**Milestone 3: Wiki Evolution**
+
+- Epic: Adopt LLM Wiki quality gates (summary length, relationship density, freshness)
+- Epic: Build wiki validation post-chain (our `pipeline post` equivalent)
+- Epic: Adopt wiki design standards (callout vocabulary, styling consistency)
+- Epic: Add relationship density (from avg 1.0 to target 6.0 per page)
+- Epic: Adopt progressive distillation as a practice
+- **~5 epics, ~30-40 tasks**
+
+**Milestone 4: Knowledge Evolution Pipeline (Tier 3)**
+
+- Epic: Build evolution scorer (6 signals, deterministic)
+- Epic: Build maturity lifecycle for wiki pages (seed→growing→mature→canonical)
+- Epic: Build promotion pipeline with human review gate
+- Epic: Add knowledge layer structure (L1-L6)
+- **~4 epics, ~20-30 tasks**
+
+**Milestone 5: Hub Integration (Tier 4)**
+
+- Epic: Build export profiles for the second brain
+- Epic: Implement MCP_CLIENT_RUNTIME declaration
+- Epic: Build bidirectional sync (contribute pipeline + import pipeline)
+- Epic: Implement contribution gating for multi-agent work
+- **~4 epics, ~15-25 tasks**
+
+**Total: ~23 epics, ~125-185 tasks, 5 milestones. Estimated 800-1200 hours of agent+operator work.**
+
+This is the real scale. It's not a weekend project. It's months of sustained effort that transforms OpenArms from a project with a wiki into a project with a fully integrated knowledge evolution system connected to a cross-project intelligence hub.
+
+---
+
 ## Relationships
 
 - PRODUCED_BY: 2026-04-16 operator-Claude session — first consumer integration with second brain
 - EVIDENCE: `gateway status`, `gateway compliance`, `gateway health`, `gateway orient`, `gateway what-do-i-need`, `gateway flow` outputs
-- EVIDENCE: Full reads of 6 model pages, 1 identity profile, 1 lesson, 1 epic from the second brain
+- EVIDENCE: Full reads of ALL 16 model pages, 3 standards pages, 1 identity profile, 1 lesson, 1 epic from the second brain
 - INFORMS: second brain E022 (Context-Aware Gateway Orientation)
 - INFORMS: future integration milestone planning
 - INFORMS: `MCP_CLIENT_RUNTIME` implementation

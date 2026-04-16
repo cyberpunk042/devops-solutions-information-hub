@@ -903,7 +903,11 @@ def query_stage(paths: Dict[str, Path], stage: str, domain: Optional[str] = None
 
 
 def query_model(paths: Dict[str, Path], model_name: str, full_chain: bool = False) -> Dict[str, Any]:
-    """Query a methodology model — stages, artifacts, chain."""
+    """Query a methodology model — stages, artifacts, chain.
+
+    Uses local methodology for model listing. When full_chain is requested,
+    falls back to the brain's methodology which has canonical chain definitions.
+    """
     methodology = load_config(paths["methodology"])
     if not methodology:
         return {"error": "methodology.yaml not found"}
@@ -921,7 +925,16 @@ def query_model(paths: Dict[str, Path], model_name: str, full_chain: bool = Fals
     }
 
     if full_chain:
-        result["chain"] = model_def.get("chain", {})
+        chain = model_def.get("chain", {})
+        # If local methodology has no chains, try the brain's (canonical source)
+        if not chain:
+            brain_config = paths.get("brain_config")
+            if brain_config:
+                brain_meth = load_config(brain_config / "methodology.yaml")
+                if brain_meth:
+                    brain_model = brain_meth.get("models", {}).get(model_name, {})
+                    chain = brain_model.get("chain", {})
+        result["chain"] = chain
 
     return result
 
@@ -1585,9 +1598,16 @@ def query_chain(paths: Dict[str, Path], model_name: str) -> Dict[str, Any]:
     (e.g. feature-development has stages document→design→scaffold→implement→test,
     each with required/forbidden artifacts and gate checks).
 
+    Chains come from the BRAIN's methodology (canonical definitions).
+    Local methodology tells you which models you USE; the brain's has the chains.
+
     For SDLC-level POLICY (simplified/default/full), use query_profile instead.
     """
-    methodology_path = paths["config"] / "methodology.yaml"
+    # Use brain's methodology for chains (canonical), fall back to local
+    brain_config = paths.get("brain_config", paths["config"])
+    methodology_path = brain_config / "methodology.yaml"
+    if not methodology_path.exists():
+        methodology_path = paths["config"] / "methodology.yaml"
     data = load_config(methodology_path)
     if not data:
         return {"error": "methodology.yaml not found"}
@@ -1633,8 +1653,14 @@ def query_chain(paths: Dict[str, Path], model_name: str) -> Dict[str, Any]:
 
 
 def query_chains_list(paths: Dict[str, Path]) -> Dict[str, Any]:
-    """List all methodology models with their chains."""
-    methodology_path = paths["config"] / "methodology.yaml"
+    """List all methodology models with their chains.
+
+    Uses brain's methodology for chain data (canonical definitions).
+    """
+    brain_config = paths.get("brain_config", paths["config"])
+    methodology_path = brain_config / "methodology.yaml"
+    if not methodology_path.exists():
+        methodology_path = paths["config"] / "methodology.yaml"
     data = load_config(methodology_path)
     if not data:
         return {"error": "methodology.yaml not found"}
@@ -1664,10 +1690,17 @@ def query_profile(paths: Dict[str, Path], profile_name: str) -> Dict[str, Any]:
     The profile does not itself define a chain — it references methodology
     models (each of which has its own chain).
     """
-    profile_path = paths["config"] / "sdlc-profiles" / f"{profile_name}.yaml"
+    # SDLC profiles live in the brain's config (canonical reference)
+    brain_config = paths.get("brain_config", paths["config"])
+    profile_path = brain_config / "sdlc-profiles" / f"{profile_name}.yaml"
+    if not profile_path.exists():
+        profile_path = paths["config"] / "sdlc-profiles" / f"{profile_name}.yaml"
     data = load_config(profile_path)
     if not data:
-        available = [f.stem for f in (paths["config"] / "sdlc-profiles").glob("*.yaml")]
+        profiles_dir = brain_config / "sdlc-profiles"
+        if not profiles_dir.exists():
+            profiles_dir = paths["config"] / "sdlc-profiles"
+        available = [f.stem for f in profiles_dir.glob("*.yaml")] if profiles_dir.exists() else []
         return {"error": f"SDLC profile '{profile_name}' not found", "available": available}
 
     return {
@@ -1683,8 +1716,11 @@ def query_profile(paths: Dict[str, Path], profile_name: str) -> Dict[str, Any]:
 
 
 def query_profiles_list(paths: Dict[str, Path]) -> Dict[str, Any]:
-    """List all available SDLC profiles."""
-    profiles_dir = paths["config"] / "sdlc-profiles"
+    """List all available SDLC profiles. Uses brain's profiles as canonical."""
+    brain_config = paths.get("brain_config", paths["config"])
+    profiles_dir = brain_config / "sdlc-profiles"
+    if not profiles_dir.exists():
+        profiles_dir = paths["config"] / "sdlc-profiles"
     if not profiles_dir.exists():
         return {"error": "No sdlc-profiles directory found", "profiles": []}
 
