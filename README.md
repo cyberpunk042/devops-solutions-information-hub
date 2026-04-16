@@ -58,24 +58,28 @@ Knowledge flows **bidirectionally**: the second brain spreads methodology outwar
 git clone <repo-url> ~/devops-solutions-information-hub
 cd ~/devops-solutions-information-hub
 
-# 2. Full setup (creates .venv, installs deps, configures Obsidian if present)
+# 2. Full setup — creates .venv, installs deps, configures Obsidian if present,
+#    generates the machine-specific .mcp.json for this brain, AND auto-connects
+#    all authorized sister projects found locally (per sister-projects.yaml auto_connect field).
 python3 -m tools.setup
 
-# 3. Generate the machine-specific .mcp.json (REQUIRED after clone on any new machine)
-#    .mcp.json is gitignored — each machine regenerates it with its own absolute paths.
+# 2b. (Alternative) Regenerate just the MCP connection layer without reinstalling deps.
+#     Useful after pulling changes or switching venvs. Same auto-connect behavior as step 2.
 python3 -m tools.setup --init
 
-# 4. Verify — should print PASS with 0 errors
+# 3. Verify — should print PASS with 0 errors
 python3 -m tools.pipeline post
 
-# 5. Orient — should show the second-brain orientation
+# 4. Orient — should show the second-brain orientation
 python3 -m tools.gateway orient
 
-# 6. Browse — should show all 16 models, standards, sub-models
+# 5. Browse — should show all 16 models, standards, sub-models
 python3 -m tools.view spine
 ```
 
-**Why step 3?** MCP protocol requires absolute paths in `command` and `cwd`. Committing those would hardcode one user's home directory. `.mcp.json` is gitignored and regenerated per-machine by `--init`. The committed `.mcp.json.template` shows the expected structure.
+**Why is `.mcp.json` auto-generated?** MCP protocol requires absolute paths in `command` and `cwd`. Committing those would hardcode one user's home directory. `.mcp.json` is gitignored and regenerated per-machine. The committed `.mcp.json.template` shows the expected structure. See lesson: [Machine-Specific Config in VCS Is Aspirational Portability](wiki/lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability.md).
+
+**Why does full setup auto-connect sisters?** Sisters are declared in [wiki/config/sister-projects.yaml](wiki/config/sister-projects.yaml) with an `auto_connect` field. Projects you've authorized (`auto_connect: true`) are connected automatically whenever they exist locally. Projects pending authorization (`auto_connect: false`) are skipped with a log line explaining how to connect them explicitly (`--connect-project <path>`). This prevents the "one declaration file, manual step to actually apply" gap — if a project is declared, known, and authorized, the setup follows through.
 
 ### Connecting sister projects
 

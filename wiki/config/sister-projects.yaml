@@ -34,6 +34,7 @@ projects:
     description: "Personal AI assistant layer — OpenClaw fork, 20+ channels, harness-based solo agent + fleet runtime"
     path: ~/openarms
     wiki_dir: wiki                       # relative to path
+    auto_connect: true                   # operator-authorized: full setup will connect this sister
     remote:
       type: github
       owner: cyberpunk042
@@ -76,6 +77,7 @@ projects:
     description: "Agent workforce + deterministic orchestrator (10 agents, 30s cycle)"
     path: ~/openfleet
     wiki_dir: wiki
+    auto_connect: true                   # operator-authorized
     remote:
       type: github
       owner: cyberpunk042
@@ -110,6 +112,7 @@ projects:
     description: "AI Control Platform — local inference routing, 9 loaded models, 80% Claude token reduction target"
     path: ~/devops-expert-local-ai
     wiki_dir: docs/kb                    # AICP uses docs/kb/ not wiki/
+    auto_connect: true                   # operator-authorized
     remote:
       type: github
       owner: cyberpunk042
@@ -131,6 +134,7 @@ projects:
     description: "Unified project management platform — operational rules, tech auto-detection engine, vault"
     path: ~/devops-control-plane
     wiki_dir: docs                       # repo-root docs/
+    auto_connect: false                  # PENDING operator authorization; skip in full setup — use `--connect-project ~/devops-control-plane` to connect explicitly
     remote:
       type: github
       owner: cyberpunk042
@@ -156,6 +160,7 @@ projects:
     description: "Upstream parent of OpenArms — fork relationship, features flow both ways"
     path: ~/openclaw
     wiki_dir: docs
+    auto_connect: false                  # not locally accessible + not an integration target
     remote:
       type: github
       owner: cyberpunk042                 # TODO: verify owner when openclaw is accessible

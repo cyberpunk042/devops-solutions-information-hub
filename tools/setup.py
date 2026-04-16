@@ -547,10 +547,21 @@ sys.exit(subprocess.call(
     gateway_file.write_text(forwarder, encoding="utf-8")
 
 
-def connect_all_sisters(brain_root: Path):
-    """Connect all sister projects from sister-projects.yaml to the second brain.
+def connect_all_sisters(brain_root: Path, only_authorized: bool = True):
+    """Connect sister projects from sister-projects.yaml to the second brain.
 
     Reads the registry, resolves paths, connects each project that exists locally.
+
+    Args:
+        brain_root: path to the second brain.
+        only_authorized: if True (default), only connect projects with
+            `auto_connect: true` in the registry. If False, connect everything
+            that exists locally (legacy behavior — use with intent).
+
+    The `auto_connect` field is operator-authorization. `false` means the
+    project is declared in the registry (for read-only operations, sister_project
+    queries, timeline) but MCP wiring requires explicit operator command
+    (`--connect-project <path>`).
     """
     registry_path = brain_root / "wiki" / "config" / "sister-projects.yaml"
     if not registry_path.exists():
@@ -563,9 +574,17 @@ def connect_all_sisters(brain_root: Path):
 
     connected = 0
     skipped = 0
+    skipped_auth = 0
     for name, info in projects.items():
         raw_path = info.get("path", "")
+        auto = info.get("auto_connect", False)
         project_path = Path(os.path.expanduser(raw_path))
+
+        if only_authorized and not auto:
+            log_info(f"  {name}: auto_connect=false — skipped (use `--connect-project {raw_path}` to connect explicitly)")
+            skipped_auth += 1
+            continue
+
         if project_path.exists():
             success = connect_second_brain(project_path, brain_root)
             if success:
@@ -576,7 +595,7 @@ def connect_all_sisters(brain_root: Path):
             log_warn(f"  {name}: path {raw_path} not found locally — skipped")
             skipped += 1
 
-    log_info(f"\nConnected: {connected} | Skipped: {skipped} | Total: {len(projects)}")
+    log_info(f"\nConnected: {connected} | Skipped (path/error): {skipped} | Skipped (not authorized): {skipped_auth} | Total: {len(projects)}")
     return connected > 0
 
 
@@ -671,6 +690,11 @@ def init_self_mcp(brain_root: Path):
     log_info(f"  Command:  {mcp_entry['command']}")
     log_info(f"  Cwd:      {mcp_entry['cwd']}")
     log_info(f"  (.mcp.json is gitignored — each machine regenerates with its own paths.)")
+
+    # Auto-connect authorized sisters on this machine
+    log_info("")
+    log_info("Connecting authorized sister projects (per sister-projects.yaml auto_connect):")
+    connect_all_sisters(brain_root, only_authorized=True)
     return True
 
 
@@ -759,6 +783,10 @@ def main():
         install_deps(root)
         print()
         configure_obsidian(root)
+        print()
+        # Generate machine-specific .mcp.json for this brain AND auto-connect authorized sisters
+        log_info("=== Generating .mcp.json for this machine + connecting authorized sisters ===")
+        init_self_mcp(root)
         log_info("=== Setup complete ===")
 
 
