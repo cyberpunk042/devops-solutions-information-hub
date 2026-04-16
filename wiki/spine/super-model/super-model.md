@@ -127,7 +127,7 @@ Each project adapts the super-model to its context. The second brain maintains a
 > | **Standards** | 22 (15 per-type + 7 model standards, all with annotated exemplars) |
 > | **Lessons** | 42+ validated (all with Self-Check sections) |
 > | **Patterns** | 16+ validated |
-> | **Principles** | 3 (Infrastructure, Structured Context, Goldilocks) |
+> | **Principles** | 4 (Infrastructure > Instructions, Structured Context > Content, Goldilocks, Declarations Are Aspirational Until Verified) |
 > | **Decisions** | 16 validated |
 > | **Comparisons** | 5 |
 > | **Source syntheses** | 44+ (16 added 2026-04-14 batch) |
@@ -267,6 +267,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[identity-profile|Research Wiki — Identity Profile]]

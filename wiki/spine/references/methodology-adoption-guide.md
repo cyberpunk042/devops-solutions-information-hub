@@ -408,6 +408,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[model-context-engineering|Model — Context Engineering]]
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]

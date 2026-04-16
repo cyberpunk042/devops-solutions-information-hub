@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-16T20:11:30.026166+00:00",
+  "generated": "2026-04-16T20:19:49.129640+00:00",
   "stats": {
-    "pages": 360,
+    "pages": 361,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2413,
+    "relationships": 2425,
     "tags_unique": 1104,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
       "4": 57,
-      "5": 28,
+      "5": 29,
       "1": 32,
       "spine": 67
     },
     "maturity": {
-      "growing": 274,
+      "growing": 275,
       "seed": 38
     }
   },
@@ -14484,6 +14484,102 @@
       ]
     },
     {
+      "path": "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+      "slug": "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
+      "title": "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
+      "type": "principle",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "principle",
+        "declaration",
+        "verification",
+        "infrastructure",
+        "aspirational",
+        "cross-layer",
+        "validated",
+        "convergent"
+      ],
+      "sources": [
+        {
+          "id": "aspirational-declaration-meta-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/01_drafts/aspirational-declaration-without-enforcement.md",
+          "description": "The L5 meta-pattern with 5 validated cross-layer instances that promoted to this principle"
+        },
+        {
+          "id": "infrastructure-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md",
+          "description": "The sibling principle this one generalizes from the process-enforcement layer to every declaration layer"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [
+        "Aspirational Naming in Lifecycle Code",
+        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
+        "Mandatory Without Verification Is Not Enforced",
+        "Machine-Specific Config in VCS Is Aspirational Portability",
+        "Structural Compliance Is Not Operational Compliance",
+        "Aspirational Declaration Produces False Confidence at Every Layer"
+      ],
+      "aliases": [
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Principle: Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Declaration-Verification Principle"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Aspirational Naming in Lifecycle Code"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Schema Aspirationalism"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Mandatory Without Verification Is Not Enforced"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Machine-Specific Config in VCS Is Aspirational Portability"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Aspirational Declaration Produces False Confidence at Every Layer"
+        },
+        {
+          "verb": "GENERALIZES",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Right Process for Right Context"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
       "path": "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md",
       "slug": "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "title": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement",
@@ -15744,6 +15840,10 @@
         {
           "verb": "BUILDS ON",
           "target": "Observe-Fix-Verify Loop"
+        },
+        {
+          "verb": "SUPERSEDED BY",
+          "target": "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
         },
         {
           "verb": "RELATES TO",
@@ -25258,8 +25358,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 168,
-      "relationship_count": 1136
+      "page_count": 169,
+      "relationship_count": 1148
     },
     "ai-agents": {
       "page_count": 68,
@@ -26570,6 +26670,7 @@
       "domains/devops/devops-control-plane",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "patterns/01_drafts/artifact-path-verification-at-gate-close",
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
@@ -28419,6 +28520,7 @@
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "false-confidence": [
@@ -28476,6 +28578,7 @@
     "verification": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/03_validated/methodology-quality/never-present-speculation-as-fact",
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "patterns/01_drafts/artifact-path-verification-at-gate-close"
     ],
     "convergence": [
@@ -28861,14 +28964,25 @@
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern"
     ],
     "principle": [
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content"
     ],
+    "declaration": [
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
+    ],
+    "cross-layer": [
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
+    ],
     "validated": [
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
     ],
     "convergent": [
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
     ],
     "adaptation": [
@@ -29042,12 +29156,6 @@
     ],
     "gate-close": [
       "patterns/01_drafts/artifact-path-verification-at-gate-close"
-    ],
-    "cross-layer": [
-      "patterns/01_drafts/aspirational-declaration-without-enforcement"
-    ],
-    "declaration": [
-      "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "meta-pattern": [
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
@@ -30403,6 +30511,12 @@
       ]
     },
     {
+      "target": "Machine-Specific Config in VCS Is Aspirational Portability",
+      "referenced_by": [
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ]
+    },
+    {
       "target": "Mandatory Without Verification",
       "referenced_by": [
         "Machine-Specific Config in Version Control Is Aspirational Portability"
@@ -30512,6 +30626,12 @@
       ]
     },
     {
+      "target": "Principle \u2014 Right Process for Right Context",
+      "referenced_by": [
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ]
+    },
+    {
       "target": "Quality Failure Prevention",
       "referenced_by": [
         "Agents take small unauthorized scope expansions when the change is a 'clean win'"
@@ -30558,7 +30678,8 @@
       "target": "Schema Aspirationalism",
       "referenced_by": [
         "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth",
-        "Machine-Specific Config in Version Control Is Aspirational Portability"
+        "Machine-Specific Config in Version Control Is Aspirational Portability",
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
       ]
     },
     {

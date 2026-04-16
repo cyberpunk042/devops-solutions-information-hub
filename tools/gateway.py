@@ -320,9 +320,9 @@ CRITICAL DISTINCTION \u2014 your brain \u2260 the second brain:
   The second brain = THIS wiki. A shared knowledge system holding methodology,
   standards, lessons, patterns, decisions across 5 projects. Projects consume
   from it. Projects contribute to it. It validates itself with its own
-  methodology. 339+ pages, 2260+ relationships, 16 models, 3 principles.
+  methodology. 360+ pages, 2400+ relationships, 16 models, 4 principles.
 
-THREE PRINCIPLES (these govern every decision you make here):
+FOUR PRINCIPLES (these govern every decision you make here):
   1. Infrastructure > Instructions \u2014 if a rule can be checked by a tool,
      enforce it structurally (hooks, validators), not with prose. Prose = 25%
      compliance. Hooks = 100%. This is measured, not theoretical.
@@ -332,6 +332,11 @@ THREE PRINCIPLES (these govern every decision you make here):
   3. Goldilocks \u2014 process adapts to identity (type \u00d7 phase \u00d7 scale \u00d7 PM level).
      A POC doesn't need full enforcement. Production does. Don't hardcode one
      process level for all contexts.
+  4. Declarations Are Aspirational Until Infrastructure Verifies Them \u2014
+     any declaration (name, field, attribute, claim, tier) is aspirational
+     unless a gate verifies it holds. Generalizes #1 from process rules to
+     every layer. 5 validated instances. Fix: pair every declaration with a
+     verification gate, or rename/demote to match reality.
 
 WHAT WE DO (10 knowledge-project verbs \u2014 this is NOT app development):
   aggregate \u2192 process \u2192 evaluate \u2192 learn \u2192 integrate \u2192
@@ -355,7 +360,7 @@ READ THE BASE (each builds on the previous):
   1. wiki/spine/super-model/super-model.md         \u2192 what this system IS
   2. wiki/spine/references/model-registry.md        \u2192 the 16 models
   3. model-llm-wiki \u2192 model-methodology \u2192 model-wiki-design (foundations)
-  4. wiki/lessons/04_principles/hypothesis/          \u2192 3 principles in full
+  4. wiki/lessons/04_principles/hypothesis/          \u2192 4 principles in full
   5. wiki/spine/standards/                           \u2192 what "good" looks like
   Complete path: wiki/spine/learning-paths/methodology-fundamentals.md
 
@@ -393,10 +398,12 @@ ADOPTION TIERS (where is your project?):
   Full integration is 15-25 epics, 80-150+ tasks across months.
   Start with your current tier's gaps. Don't try to jump to Tier 4.
 
-THREE PRINCIPLES (adopt these into YOUR brain):
+FOUR PRINCIPLES (adopt these into YOUR brain):
   1. Infrastructure > Instructions \u2014 enforce rules structurally, not in prose
   2. Structured Context > Content \u2014 structure programs agent behavior
   3. Goldilocks \u2014 right process for YOUR project's identity and phase
+  4. Declarations Are Aspirational Until Verified \u2014 pair every declared
+     name/field/attribute/claim with a verification gate, or rename/demote
 
 WHAT TO READ FIRST (standards before models for integration):
   1. python3 -m tools.view standards    \u2192 what "good" looks like per artifact

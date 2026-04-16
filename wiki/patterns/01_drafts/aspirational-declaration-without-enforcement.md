@@ -185,6 +185,7 @@ Each of these is a candidate; when any crosses from observation to validated ins
 - DERIVED FROM: [[aspirational-naming-in-lifecycle-code|Aspirational Naming in Lifecycle Code]]
 - DERIVED FROM: [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced]]
 - BUILDS ON: [[observe-fix-verify-loop|Observe-Fix-Verify Loop]]
+- SUPERSEDED BY: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]] (this L5 meta-pattern promoted to principle 2026-04-16 upon reaching 5 validated layer instances)
 - RELATES TO: [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]]
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 - RELATES TO: [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
@@ -197,6 +198,7 @@ Each of these is a candidate; when any crosses from observation to validated ins
 [[aspirational-naming-in-lifecycle-code|Aspirational Naming in Lifecycle Code]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]

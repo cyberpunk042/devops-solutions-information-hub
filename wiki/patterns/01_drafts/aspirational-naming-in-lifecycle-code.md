@@ -91,3 +91,4 @@ The bug is invisible when the ratio is stable (thresholds can be recalibrated to
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]

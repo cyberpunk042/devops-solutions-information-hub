@@ -55,13 +55,14 @@ Identity protocol: `wiki/domains/cross-domain/project-self-identification-protoc
 | **Ecosystem project profiles** | 5 (all connected via `setup --connect`) |
 | **Consumer integration roadmap exemplar** | Published (OpenArms 5-milestone / 27-epic / 800-1200 hour plan) |
 
-### The Three Validated Principles
+### The Four Validated Principles
 
 These govern all agent behavior and wiki design. Derived from ≥3 independent evidence sources:
 
 1. **Infrastructure Over Instructions** — hooks and validators achieve ~100% compliance; CLAUDE.md rules alone achieve ~25%. Enforce through tooling.
 2. **Structured Context Governs Agent Behavior More Than Content** — markdown structure (tables, headers, callouts, YAML) programs agent behavior 2-3× more effectively than equivalent prose.
 3. **Right Process for Right Context (Goldilocks)** — methodology depth must adapt to phase × scale × trust. POC + micro = simplified profile. Production + large + fleet = full profile with immune system.
+4. **Declarations Are Aspirational Until Infrastructure Verifies Them** (NEW 2026-04-16) — any declared element (name, field, attribute, claim, tier) is aspirational unless a gate verifies it holds. Generalizes #1 from process rules to every declaration layer. 5 validated instances: variable (turnCount), schema (required_sections), skill-attribute (mandatory: true), version-control config (.mcp.json absolute paths), compliance-measurement (Tier 4 structural ≠ operational). Fix: pair every declaration with a verification gate, or rename/demote to match reality.
 
 Principles folder: `wiki/lessons/04_principles/`
 
