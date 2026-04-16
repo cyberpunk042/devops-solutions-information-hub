@@ -136,3 +136,4 @@ For any process rule that can be checked at the tool-call level, infrastructure 
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]

@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T19:47:48.577248+00:00",
+  "generated": "2026-04-16T19:54:25.125665+00:00",
   "stats": {
-    "pages": 358,
+    "pages": 359,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2398,
-    "tags_unique": 1100,
+    "relationships": 2405,
+    "tags_unique": 1101,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 55,
+      "4": 56,
       "5": 28,
       "1": 32,
       "spine": 67
     },
     "maturity": {
       "growing": 274,
-      "seed": 36
+      "seed": 37
     }
   },
   "pages": [
@@ -10787,6 +10787,83 @@
         {
           "verb": "RELATES TO",
           "target": "Schema Is the Real Product"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance.md",
+      "slug": "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "title": "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "lesson",
+        "compliance",
+        "measurement",
+        "aspirational",
+        "structural",
+        "operational",
+        "contributed",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-tier-0-to-4-caveat",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "Part 27 \u2014 OpenArms reached Tier 4 structural compliance in one session while honestly naming the operational gap. Evolve.py is a stub; export-profiles.yaml is config without a pipeline; the compliance checker recognized these as 'structurally present' without measuring implementation depth."
+        },
+        {
+          "id": "gateway-compliance-checker",
+          "type": "file",
+          "file": "tools/gateway.py",
+          "description": "The compliance checker that measures structural presence (file exists at candidate path) rather than operational depth (pipeline actually runs it, scorer has 6 signals, etc.)."
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Aspirational Declaration Produces False Confidence at Every Layer",
+        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
+        "Infrastructure Over Instructions for Process Enforcement"
+      ],
+      "aliases": [
+        "Structural Compliance Is Not Operational Compliance",
+        "Compliance Checker Measures Presence Not Depth"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Aspirational Declaration Produces False Confidence at Every Layer"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Schema Aspirationalism"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Readiness vs Progress"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Consumer Integration Roadmap Exemplar"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Defense Layer Progression Is Expensive"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -25095,8 +25172,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 166,
-      "relationship_count": 1121
+      "page_count": 167,
+      "relationship_count": 1128
     },
     "ai-agents": {
       "page_count": 68,
@@ -25474,6 +25551,7 @@
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
@@ -25991,7 +26069,8 @@
       "backlog/research-gaps"
     ],
     "measurement": [
-      "backlog/research-gaps"
+      "backlog/research-gaps",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance"
     ],
     "open-questions": [
       "backlog/research-gaps"
@@ -26434,6 +26513,7 @@
     "compliance": [
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
@@ -28164,6 +28244,7 @@
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
@@ -28193,6 +28274,7 @@
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
@@ -28245,11 +28327,19 @@
     ],
     "aspirational": [
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "false-confidence": [
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
+    ],
+    "structural": [
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
+    ],
+    "operational": [
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance"
     ],
     "project-property": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
@@ -28915,9 +29005,6 @@
       "spine/models/agent-config/model-markdown-as-iac"
     ],
     "progressive-enrichment": [
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
-    ],
-    "structural": [
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "three-layer-architecture": [
@@ -30116,6 +30203,12 @@
       ]
     },
     {
+      "target": "Consumer Integration Roadmap Exemplar",
+      "referenced_by": [
+        "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth"
+      ]
+    },
+    {
       "target": "Context Engineering Standards",
       "referenced_by": [
         "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity"
@@ -30320,6 +30413,7 @@
     {
       "target": "Readiness vs Progress",
       "referenced_by": [
+        "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth",
         "Artifact Path Verification at Gate Close",
         "Hierarchical Metrics Fail on Sparse Coverage"
       ]
@@ -30344,6 +30438,12 @@
       "target": "Right-Size Methodology Model \u2014 Selection Needs Novelty Dimension",
       "referenced_by": [
         "Model \u2014 Methodology"
+      ]
+    },
+    {
+      "target": "Schema Aspirationalism",
+      "referenced_by": [
+        "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth"
       ]
     },
     {

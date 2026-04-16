@@ -118,7 +118,7 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 
 ## Second Brain Integration (2026-04-16 — First Consumer)
 
-> [!success] OpenArms was the first live consumer of the second brain. Tier 0 → Tier 2 in one session. Evolution continued through 23 session parts producing 15 adoption items and 14 contributions.
+> [!success] OpenArms was the first live consumer of the second brain. **Tier 0 → Tier 4 structural in one session** (27-part integration log). Evolution produced 22 adoption items and 15 contributions. Operational depth: Tier 2+ with Tier 3 scaffolded — the evolve.py pipeline is a stub; the export-profiles.yaml is declaration without a runtime pipeline. See [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]].
 
 ### What OpenArms adopted (15 items across one session)
 
@@ -140,7 +140,7 @@ OpenArms uses a 24-artifact chain for Feature Development at the Default SDLC le
 | 14 | **Learnings.md structural restructure** | Bullets only | Hard/soft separation + numbered tables + section dividers (5 of 8 CLAUDE.md Structural Patterns) | `67ab1328` |
 | 15 | **Three principles table in AGENTS.md** | None | Goldilocks + Principles table with measured evidence per row (v8 75%→v10 0%; $9.07 vs $1.20; AGENTS.md 0 tables vs 3) | `73f89612` |
 
-**Compliance: Tier 0 → Tier 2/4** (Tier 1 = 3/3, Tier 2 = 3/3). **AGENTS.md trajectory: 471 → 124 → 144 lines.** Full test suite: 1,776 passing throughout.
+**Compliance: Tier 0 → Tier 4/4 STRUCTURALLY (Tier 2+ operationally)**. All 4 tiers structurally complete by end of session (items 1-22). AGENTS.md trajectory: 471 → 124 → 144 lines. **All 12 rule files in `.claude/rules/` restructured with tables** (items 16-19, commits `bcb0aaa3` etc.) — full application of CLAUDE.md Structural Patterns. Added items 20-22: knowledge-layer directories (`wiki/patterns/` + `wiki/decisions/`), `wiki/config/export-profiles.yaml` (3 profiles: lessons, methodology, task-history), `tools/evolve.py` (125-line Tier 3 stub). Full test suite: 1,776 passing throughout.
 
 ### What OpenArms contributed back (14 items total)
 

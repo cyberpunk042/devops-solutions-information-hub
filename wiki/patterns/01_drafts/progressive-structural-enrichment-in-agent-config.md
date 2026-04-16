@@ -70,7 +70,24 @@ The pattern has four structural steps — apply in order:
 >
 > **Step 3 — add principles table (commit `73f89612`):** ~135 → 144 lines. Added Three Principles table with measured evidence per row: Infrastructure > Instructions (OpenArms v8 75% → v10 0%), Goldilocks (T116 $9.07 vs T117 $1.20 = 86.8% reduction), Structured Context > Content (AGENTS.md 0 tables vs agent-directive.md 3 tables = 65pp compliance difference). Evidence-bound principles program every design decision downstream.
 >
-> **Measured result:** 5 of 8 CLAUDE.md Structural Patterns applied in one session (Sacrosanct retained, Progressive Disclosure via routing, Command Checkpoints /stage-complete+/task-done, Section Dividers in restructured learnings.md, Hard/Soft Rule Separation in learnings.md tables). Still missing: Anchor Phrases (Pattern 7) and Concrete Examples (Pattern 8). Final state: 144 lines, under 200 target, compliance improvements measurable.
+> **Step 4 — apply structural patterns across ALL 12 companion rule files (commits `dce575f6`, `eb443df8`, `c9333c4e`, `bcb0aaa3`):** Beyond AGENTS.md itself, the same table-first structure applied to every companion rule file. Each restructured from bullets to tables with hard/soft separation where applicable:
+>
+> | File | Structure applied |
+> |---|---|
+> | `learnings.md` | Hard Rules (# + Rule + Enforcement + Evidence), Judgment Rules, per-context sections |
+> | `build-test.md` | Hard Rules (# + Rule + Gate), Commands table, Verification Modes table |
+> | `coding-style.md` | Hard Rules, Boundary Rules, Preferences, Naming table |
+> | `collaboration.md` | Hard Rules (# + Rule + Why), Multi-Agent Safety, Lint/Format decision table |
+> | `testing.md` | Hard Rules (# + Rule + Gate), Test Commands, Performance Guardrails |
+> | `architecture-boundaries.md` | Repo Map, Boundary Rules (MUST / MUST NOT columns) |
+> | `release-git.md` | Skills table, Commit Rules, Git Rules |
+> | `project-structure.md` | Directory Layout, Plugin Rules, Channels table |
+> | `docs.md` | Mintlify Rules (numbered), i18n Steps (numbered) |
+> | `security.md` | Credentials table, Hard Rules |
+> | `platform.md` | Vocabulary, Version Locations, Skills, Gateway, Rules |
+> | `vm-ops.md` | Single operations table |
+>
+> **Measured result:** 5 of 8 CLAUDE.md Structural Patterns applied across AGENTS.md + all 12 rule files in one session. Still missing: Anchor Phrases (Pattern 7) and Concrete Examples (Pattern 8). Final state: AGENTS.md 144 lines (under 200 target) + 12 rule files each using tables, with same-layer hard/soft separation where applicable. **Same-session compounding:** this pattern page was created MID-SESSION based on OpenArms's Steps 1-3 trajectory. OpenArms then immediately adopted Step 4 (the 12-file restructure) using this pattern's own guidance. Pattern production and adoption compounded within hours — the knowledge loop closing on itself.
 
 > [!example]- Instance 2: Research Wiki CLAUDE.md 2026-04-11 to 2026-04-16
 >

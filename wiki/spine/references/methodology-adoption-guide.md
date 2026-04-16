@@ -99,7 +99,9 @@ Step-by-step guide for any project to adopt the research wiki's methodology. Cov
 > - Stage return mechanism — harness architecture change
 > - Full Rule 8 auto-generation — semantic understanding of epic scope
 >
-> **Practical implication for adopters:** the "quick wins" are templates + compliance + first contribution. Expect half a day for identity+AGENTS.md restructure. Expect a full day per schema field you add (progress, impediment_type). Plan M1+ for the infrastructure-level work (mandatory-as-gate, tier routing, validation matrix). See [[identity-profile|OpenArms — Identity Profile]] for the full 15-item adoption log with commits.
+> **Practical implication for adopters:** the "quick wins" are templates + compliance + first contribution. Expect half a day for identity+AGENTS.md restructure. Expect a full day per schema field you add (progress, impediment_type). Plan M1+ for the infrastructure-level work (mandatory-as-gate, tier routing, validation matrix). See [[identity-profile|OpenArms — Identity Profile]] for the full 22-item adoption log with commits.
+>
+> **Structural vs operational compliance distinction (critical):** OpenArms's session continued past "Tier 2" and reached **Tier 4 STRUCTURAL compliance** (compliance checker: all 4 tiers 3/3) by adding `wiki/patterns/` + `wiki/decisions/` directories, an `export-profiles.yaml` config, and a `tools/evolve.py` stub. These satisfy the structural checks that `gateway compliance` measures. They do NOT constitute operational Tier 3-4 — the evolve.py is a stub, the export profiles have no runtime pipeline. Honest reporting: "Tier 4 structural / Tier 2+ operational." See [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]. Adopters should separate the two dimensions in their own reporting from day 1.
 
 ### Tier 1: Read (learning path) / Assess (integration path)
 
@@ -414,6 +416,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
+[[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]
 [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]

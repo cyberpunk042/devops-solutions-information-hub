@@ -200,3 +200,4 @@ Each of these is a candidate; when any crosses from observation to validated ins
 [[Quality Standards]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
 [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
+[[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]
