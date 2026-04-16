@@ -5,7 +5,7 @@ domain: backlog
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-04-15
+updated: 2026-04-16
 sources: []
 tags: [backlog, planning, epics, roadmap]
 ---
@@ -18,7 +18,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 
 | Milestone | Target | Status | Epics |
 |-----------|--------|--------|-------|
-| [Milestone — Second Brain Complete System — v2.0](milestones/second-brain-complete-system-v2-0.md) | 2026-05-15 | draft | E010, E011, E012, E013, E014, E015, E016, E017, E018, E019, E020, E021 |
+| [Milestone — Second Brain Complete System — v2.0](milestones/second-brain-complete-system-v2-0.md) | 2026-05-15 | draft | E010, E011, E012, E013, E014, E015, E016, E017, E018, E019, E020, E021, E022, E023 |
 
 ## Epics
 
@@ -36,7 +36,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E019 | [E019 — Obsidian Navigation — Complete Browse Experience with Folder Cleanup](epics/milestone-v2/e019-obsidian-navigation-complete-browse-experience-with-folder-cleanup.md) | P1 | draft | 40 |
 | E020 | [E020 — Knowledge Sweep — Global Quality Confirmation by Human Review](epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review.md) | P2 | draft | 5 |
 | E021 | [E021 — New Source Ingestion — 10-15 Sources Through Full Pipeline](epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline.md) | P1 | active | 80 |
-| E022 | [E022 — Context-Aware Gateway Orientation and Task Routing](epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md) | P1 | active | 40 |
+| E022 | [E022 — Context-Aware Gateway Orientation and Task Routing](epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md) | P1 | active | 80 |
 | E023 | [E023 — Gateway-Wide Output Contract Audit](epics/milestone-v2/e023-gateway-wide-output-contract-audit.md) | P2 | draft | 5 |
 | E001 | [Local Inference Engine (Subsystem 3)](epics/pre-milestone/E001-local-inference-engine.md) | P1 | draft | 10 |
 | E002 | [Ecosystem Integration Interfaces](epics/pre-milestone/E002-ecosystem-integration.md) | P2 | draft | 15 |

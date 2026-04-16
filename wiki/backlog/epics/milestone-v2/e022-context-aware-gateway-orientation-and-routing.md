@@ -8,16 +8,23 @@ domain: backlog
 status: active
 priority: P1
 task_type: epic
-current_stage: design
-readiness: 40
-progress: 35
-stages_completed: []
+current_stage: implement
+readiness: 80
+progress: 75
+stages_completed:
+  - "document"
+  - "design"
+  - "scaffold"
 artifacts:
   - "raw/notes/2026-04-15-directive-knowledge-project-methodology-rework.md"
   - "wiki/spine/standards/gateway-output-contract.md"
   - "wiki/backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit.md"
   - "wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md"
   - "wiki/backlog/modules/e022-m003-what-do-i-need-upgrade.md"
+  - "tools/common.py"
+  - "tools/gateway.py"
+  - "tools/mcp_server.py"
+  - "CLAUDE.md"
 confidence: high
 created: 2026-04-15
 updated: 2026-04-15

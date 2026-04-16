@@ -244,9 +244,8 @@ def gateway_orient(paths: Dict[str, Path], args) -> None:
 
     Answers: 'who are you, where, are you fresh, what must you internalize?'
     Branches on (location × freshness) per E022-M002 dispatch matrix.
-
-    SCAFFOLD: prints placeholder per detected context.
-    Implement stage (T-E022-07) adds real output modes.
+    Honors Gateway Output Contract: SRP, context-aware, size ceiling,
+    read-whole marker, closing next-move.
     """
     context = detect_context(
         wiki_root=paths.get("root"),
@@ -257,31 +256,194 @@ def gateway_orient(paths: Dict[str, Path], args) -> None:
 
     location = context["location"]
     freshness = context["freshness"]
+    fmt = getattr(args, "orient_format", "text")
 
-    # SCAFFOLD: placeholder outputs per dispatch matrix cell
-    # T-E022-07 implements real output for each cell
-    if location == "brain-self" and freshness == "fresh":
-        print(f"[SCAFFOLD] orient — brain-self + fresh")
-        print(f"  Full orient output: reading path + standing rules")
-        print(f"  NEXT: gateway what-do-i-need")
+    if fmt == "json":
+        import json as _json
+        print(_json.dumps({"location": location, "freshness": freshness,
+                           "consumer_runtime": context["consumer_runtime"],
+                           "next": _orient_next_move(location, freshness)}, indent=2))
+    elif location == "brain-self" and freshness == "fresh":
+        _orient_brain_fresh()
     elif location == "brain-self":
-        print(f"[SCAFFOLD] orient — brain-self + {freshness}")
-        print(f"  Redirect: you know the base already")
-        print(f"  NEXT: gateway what-do-i-need")
+        _orient_brain_returning(freshness)
     elif location == "sister" and freshness == "fresh":
-        print(f"[SCAFFOLD] orient — sister + fresh")
-        print(f"  Full orient output: how to consume brain + contribute")
-        print(f"  NEXT: gateway what-do-i-need")
+        _orient_sister_fresh()
     elif location == "sister":
-        print(f"[SCAFFOLD] orient — sister + {freshness}")
-        print(f"  Redirect: use gateway query --model <type> --brain")
-        print(f"  NEXT: gateway query --model <type> --brain")
+        _orient_sister_returning(freshness)
     else:
-        print(f"[SCAFFOLD] orient — external")
-        print(f"  MCP tool list + one-shot docs")
-        print(f"  NEXT: wiki_status")
+        _orient_external()
 
     write_session_state(context, subcommand="orient")
+
+
+def _orient_next_move(location: str, freshness: str) -> str:
+    """Determine the NEXT command for closing-next-move rule."""
+    if freshness == "fresh":
+        return "gateway what-do-i-need"
+    if location == "sister":
+        return "gateway query --model <type> --brain"
+    return "gateway what-do-i-need"
+
+
+def _orient_brain_fresh() -> None:
+    """Full orient output for brain-self + fresh agent."""
+    print("""\u26a0 READ THIS OUTPUT IN FULL — routing decisions depend on every section.
+
+ORIENT — You are inside the second brain
+========================================
+
+YOU ARE:     a fresh agent inside research-wiki (the brain itself)
+FRESHNESS:   post-compaction / first session / no prior state found
+LOCATION:    brain-self (resolved from project root)
+
+BEFORE YOU DO ANY TASK, INTERNALIZE THE BASE.
+
+Recommended reading path (in order):
+
+  1. wiki/spine/super-model/super-model.md        (the thesis + 5 sub-hubs)
+  2. wiki/spine/super-model/                       (5 sub-super-models)
+       goldilocks-protocol, enforcement-hierarchy,
+       knowledge-architecture, work-management,
+       integration-ecosystem
+  3. wiki/spine/references/model-registry.md       (16 models index)
+  4. Foundation models (dependency order):
+       model-llm-wiki → model-methodology → model-wiki-design
+  5. wiki/lessons/04_principles/hypothesis/         (3 principles)
+  6. wiki/spine/standards/                          (per-type standards)
+
+STANDING RULES (read each in full, not summarized):
+  - Log operator directives verbatim BEFORE acting
+  - Read full files, not first-N-lines — no caps, no compacting
+  - Answer questions before asking — derive, present, confirm
+  - Blockers → build tooling, never hand back manually
+  - Run pipeline post after every wiki change
+
+NEXT: gateway what-do-i-need    (after internalizing the base)""")
+
+
+def _orient_brain_returning(freshness: str) -> None:
+    """Redirect for brain-self + task-bound/returning agent."""
+    print(f"""ORIENT — You are inside the second brain ({freshness})
+
+You already know the base. Proceed to task routing.
+
+NEXT: gateway what-do-i-need""")
+
+
+def _orient_sister_fresh() -> None:
+    """Full orient for sister project + fresh agent."""
+    print("""\u26a0 READ THIS OUTPUT IN FULL — you need orientation before consuming.
+
+ORIENT — You are a sister project connecting to the second brain
+================================================================
+
+YOU ARE:     an agent in a sister project consuming the brain
+FRESHNESS:   fresh (first contact or post-compaction)
+
+HOW TO CONSUME THE BRAIN:
+
+  1. Read your project's AGENTS.md for stable identity
+  2. Query methodology:   gateway query --model <task-type> --brain
+  3. Query standards:      gateway query --standards <type> --brain
+  4. Contribute learnings: gateway contribute --type lesson --brain
+  5. Declare runtime:      .mcp.json → "env": {"MCP_CLIENT_RUNTIME": "harness-<name>-<version>"}
+
+FULL INTEGRATION CHAIN (17 steps):
+  wiki/spine/references/second-brain-integration-chain.md
+
+NEXT: gateway what-do-i-need    (for task routing after orientation)""")
+
+
+def _orient_sister_returning(freshness: str) -> None:
+    """Redirect for sister + task-bound/returning."""
+    print(f"""ORIENT — Sister project ({freshness})
+
+You have prior context. Route directly to brain queries.
+
+NEXT: gateway query --model <task-type> --brain""")
+
+
+def _orient_external() -> None:
+    """Orient for external MCP client (no repo context)."""
+    print("""ORIENT — External MCP client
+
+Available MCP tools: wiki_status, wiki_search, wiki_read_page,
+  wiki_gateway_query, wiki_gateway_docs, wiki_gateway_contribute,
+  wiki_gateway_flow, wiki_gateway_template, wiki_gateway_timeline, ...
+
+Start with:
+  wiki_status              → wiki health snapshot
+  wiki_gateway_docs        → root documentation list
+  wiki_search              → keyword search across wiki
+
+One-shot orientation:
+  wiki_read_page("super-model")
+
+NEXT: wiki_status    (start with status)""")
+
+
+# ---------------------------------------------------------------------------
+# What-do-i-need: context-aware output helpers (E022-M003)
+# ---------------------------------------------------------------------------
+
+def _wdin_brain_task_bound() -> str:
+    """Brain-self + task-bound: knowledge-verb task routing table."""
+    return """\u26a0 READ THIS OUTPUT IN FULL \u2014 routing depends on the task-type table.
+
+WHAT DO YOU NEED? \u2014 Inside the second brain (self = brain)
+
+  Task type               | Verbs activated               | Entry
+  ------------------------|-------------------------------|------------------------
+  Ingest source           | aggregate \u2192 process            | skill: wiki-agent
+                          |   \u2192 integrate \u2192 validate     |
+  Evolve candidate        | evaluate \u2192 learn              | skill: evolve
+                          |   \u2192 integrate \u2192 validate     |
+  Promote to principle    | evaluate \u2192 modelize           | gateway query --review
+                          |   \u2192 validate                   |
+  Author standards        | modelize \u2192 standardize        | skill: model-builder
+                          |   \u2192 teach \u2192 validate         |
+  Aggregation sweep       | aggregate \u2192 integrate         | sister_project + timeline
+                          |   \u2192 evaluate (read-only)       |
+  Cross-ecosystem retro   | aggregate \u2192 integrate         | timeline --scope all
+                          |   (timeline) \u2192 evaluate        |
+  Expose new tool         | offer \u2192 validate              | tools/gateway.py + mcp_server.py
+
+  Not listed? \u2192 gateway orient  (for full base context)
+
+NEXT: gateway query --task <type>    (loads verb chain for that task)"""
+
+
+def _wdin_sister(project_name: str) -> str:
+    """Sister + task-bound: brain query routing."""
+    return f"""WHAT DO YOU NEED? \u2014 Sister project ({project_name}), task-bound
+
+  Your project methodology models:
+    gateway query --models --wiki-root .
+
+  Brain's methodology for your task type:
+    gateway query --model <type> --brain
+
+  Contribute back after work:
+    gateway contribute --type lesson --brain
+
+NEXT: gateway query --model <task-type> --brain"""
+
+
+def _wdin_external() -> str:
+    """External MCP client: tool pointers."""
+    return """WHAT DO YOU NEED? \u2014 External MCP client
+
+  Available MCP tools: wiki_status, wiki_search, wiki_read_page,
+    wiki_gateway_query, wiki_gateway_docs, wiki_gateway_contribute,
+    wiki_gateway_flow, wiki_gateway_template, wiki_gateway_timeline, ...
+
+  Start with:
+    wiki_status              \u2192 wiki health snapshot
+    wiki_gateway_docs        \u2192 root documentation list
+    wiki_search              \u2192 keyword search across wiki
+
+NEXT: wiki_status"""
 
 
 # ---------------------------------------------------------------------------
@@ -300,15 +462,44 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
     """
     root = paths["root"]
 
-    # E022 SCAFFOLD: context detection — falls through to existing behavior
-    # T-E022-11 (brain-self) and T-E022-12 (sister/external) add real branches
-    _context = detect_context(
+    # E022-M003: context-aware branching (T-E022-11, T-E022-12)
+    ctx = detect_context(
         wiki_root=paths.get("root"),
         brain_root=paths.get("brain_root"),
     )
-    # SCAFFOLD: context is detected but not yet used for branching.
-    # Existing output remains the default for all contexts until implement stage.
+    location = ctx["location"]
+    freshness = ctx["freshness"]
 
+    # Fresh agents (any location) → redirect to orient
+    if freshness == "fresh":
+        write_session_state(ctx, subcommand="what-do-i-need")
+        ctx_label = ("the second brain" if location == "brain-self"
+                     else "a sister project" if location == "sister"
+                     else "an external client")
+        return (
+            "\u26a0 READ THIS OUTPUT IN FULL \u2014 you need orientation before routing.\n\n"
+            f"WHAT DO YOU NEED? \u2014 You are {ctx_label}, but FRESH.\n\n"
+            "You need orientation before task routing.\n\n"
+            "NEXT: gateway orient    (internalize the base first)"
+        )
+
+    # Brain-self + task-bound → knowledge-verb task table
+    if location == "brain-self":
+        write_session_state(ctx, subcommand="what-do-i-need")
+        return _wdin_brain_task_bound()
+
+    # Sister + task-bound → brain query routing
+    if location == "sister":
+        write_session_state(ctx, subcommand="what-do-i-need")
+        project_name = root.name if root else "unknown"
+        return _wdin_sister(project_name)
+
+    # External → MCP tool pointers
+    if location == "external":
+        write_session_state(ctx, subcommand="what-do-i-need")
+        return _wdin_external()
+
+    # Fallback: existing output (legacy path — should not normally reach here)
     # Auto-detect what we can
     detected = auto_detect_identity(root)
 

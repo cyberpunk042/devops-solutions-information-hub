@@ -22,7 +22,9 @@ See [CONTEXT.md](CONTEXT.md) for the full identity profile with current mileston
 
 **Superpowers skills are active** — use them proactively. If a skill matches the task, invoke it. Skill priority: process first (brainstorming, debugging) → implementation second.
 
-**MCP server exposes 21 tools.** Registered in `.mcp.json`. Start with `wiki_status` to orient, then `wiki_search`, `wiki_read_page`, `wiki_list_pages` for navigation. Gateway tools (`wiki_gateway_query`, `wiki_gateway_template`, `wiki_gateway_contribute`, `wiki_gateway_flow`) for unified operations.
+**After compaction or fresh start, run `gateway orient` first.** It detects your context (brain/sister/external × fresh/returning) and routes you to the right reading path before task routing. See [Gateway Output Contract](wiki/spine/standards/gateway-output-contract.md).
+
+**MCP server exposes 26+ tools.** Registered in `.mcp.json`. Gateway tools (`wiki_gateway_query`, `wiki_gateway_orient`, `wiki_gateway_contribute`, `wiki_gateway_flow`, `wiki_gateway_timeline`) for unified operations.
 
 **TodoWrite tool for multi-step work.** Track progress on anything ≥3 steps.
 
@@ -47,13 +49,14 @@ See [SKILLS.md](SKILLS.md) for the full directory and conventions.
 
 | Action | Command |
 |--------|---------|
+| Orient (fresh/post-compaction) | `python3 -m tools.gateway orient` |
 | Full post-ingestion chain | `python3 -m tools.pipeline post` |
 | Fetch URL(s) | `python3 -m tools.pipeline fetch URL [URL...]` |
 | Fetch topic (web search) | `python3 -m tools.pipeline fetch --topic "query"` |
 | Scan a local project | `python3 -m tools.pipeline scan ../project/` |
 | Score evolution candidates | `python3 -m tools.pipeline evolve --score` |
 | Scaffold a new page | `python3 -m tools.pipeline scaffold <type> "<title>"` |
-| Show identity + recommendations | `python3 -m tools.gateway what-do-i-need` |
+| Task routing (context-aware) | `python3 -m tools.gateway what-do-i-need` |
 | Goldilocks flow walkthrough | `python3 -m tools.gateway flow [--step N]` |
 | Query the wiki | `python3 -m tools.gateway query --<dimension>` |
 | Dashboard view | `python3 -m tools.view` |

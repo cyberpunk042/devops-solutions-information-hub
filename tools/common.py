@@ -5,8 +5,10 @@ and config file loading. Used by validate.py, manifest.py, lint.py, export.py,
 and stats.py.
 """
 
+import json
 import os
 import re
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -53,6 +55,7 @@ def consumer_runtime_is_declared() -> bool:
 # ---------------------------------------------------------------------------
 
 SESSION_STATE_PATH = Path.home() / ".cache" / "research-wiki" / "session-state.json"
+SESSION_STALENESS_MINUTES = 30
 
 
 def detect_context(
@@ -63,27 +66,81 @@ def detect_context(
 ) -> dict:
     """Detect (location, freshness) context for gateway output branching.
 
-    Priority stack (highest first): orient_as flag > MCP_CLIENT_RUNTIME env >
-    --wiki-root resolution > CLAUDE.md declarations > filesystem heuristics.
+    Priority stack (highest first):
+      1. orient_as flag (explicit override)
+      2. MCP_CLIENT_RUNTIME env (consumer-declared)
+      3. wiki_root resolution (brain has sister-projects.yaml; sisters don't)
+      4. CWD heuristic (sanity-check only)
 
-    SCAFFOLD: returns hardcoded brain-self + fresh.
-    Real detection logic comes in T-E022-07 (implement stage).
+    Design: wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md
     """
-    # SCAFFOLD — hardcoded stub values
+    # --- Location detection ---
+    if orient_as:
+        location = orient_as
+    elif consumer_runtime_is_declared():
+        runtime = get_consumer_runtime()
+        # External consumers typically declare "harness-*" or "fleet-*"
+        # Brain-self is solo or brain-specific; sister has project-specific names
+        if any(kw in runtime for kw in ("external", "mcp-client")):
+            location = "external"
+        elif any(kw in runtime for kw in ("harness-", "fleet-")):
+            location = "sister"
+        else:
+            location = "brain-self"
+    else:
+        # Resolve from filesystem: brain has sister-projects.yaml
+        check_root = wiki_root or _try_project_root()
+        if check_root and (check_root / "wiki" / "config" / "sister-projects.yaml").exists():
+            location = "brain-self"
+        elif check_root and (check_root / "wiki").is_dir():
+            location = "sister"
+        else:
+            location = "external"
+
+    # --- Freshness detection ---
+    if fresh:
+        freshness = "fresh"
+    else:
+        state = read_session_state()
+        if state is None:
+            freshness = "fresh"
+        elif state.get("current_task_type"):
+            freshness = "task-bound"
+        else:
+            freshness = "returning"
+
     return {
-        "location": "brain-self",
-        "freshness": "fresh" if fresh else "fresh",
+        "location": location,
+        "freshness": freshness,
         "consumer_runtime": get_consumer_runtime(),
     }
+
+
+def _try_project_root() -> Optional[Path]:
+    """Best-effort project root detection without raising."""
+    try:
+        return get_project_root()
+    except Exception:
+        return None
 
 
 def read_session_state() -> Optional[dict]:
     """Read session-state from SESSION_STATE_PATH.
 
-    Returns dict or None if no state / stale / file absent.
-    SCAFFOLD: always returns None (every invocation is 'fresh').
+    Returns dict or None if file absent, unreadable, or stale (>30 min).
     """
-    return None
+    if not SESSION_STATE_PATH.exists():
+        return None
+    try:
+        data = json.loads(SESSION_STATE_PATH.read_text(encoding="utf-8"))
+        last_str = data.get("last_invocation", "")
+        if last_str:
+            last = datetime.fromisoformat(last_str)
+            if datetime.now() - last > timedelta(minutes=SESSION_STALENESS_MINUTES):
+                return None
+        return data
+    except (json.JSONDecodeError, ValueError, KeyError, OSError):
+        return None
 
 
 def write_session_state(
@@ -91,11 +148,20 @@ def write_session_state(
     subcommand: str = "orient",
     task_type: str = None,
 ) -> None:
-    """Write session-state after a gateway invocation.
-
-    SCAFFOLD: no-op. Implement stage writes real JSON to SESSION_STATE_PATH.
-    """
-    pass
+    """Write session-state after a gateway invocation."""
+    try:
+        SESSION_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        data = {
+            "last_invocation": datetime.now().isoformat(),
+            "last_subcommand": subcommand,
+            "location": context.get("location", "unknown"),
+            "freshness": context.get("freshness", "unknown"),
+            "current_task_type": task_type,
+            "consumer_runtime": context.get("consumer_runtime", "solo"),
+        }
+        SESSION_STATE_PATH.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    except OSError:
+        pass  # Non-critical — session-state is a cache, not authoritative
 
 
 def parse_frontmatter(text: str) -> Tuple[Dict[str, Any], str]:

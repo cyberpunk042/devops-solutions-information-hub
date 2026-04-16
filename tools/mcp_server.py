@@ -437,6 +437,35 @@ def wiki_gateway_contribute(contrib_type: str, title: str, content: str,
 
 
 @server.tool()
+def wiki_gateway_orient(orient_as: str = None, fresh: bool = False,
+                         output_format: str = "text") -> str:
+    """Context-aware orientation for fresh agents.
+
+    Run this FIRST in any new session, after compaction, or when entering the
+    brain for the first time. Detects your context (brain-self / sister /
+    external) and freshness (fresh / task-bound / returning), then shows the
+    appropriate reading path and standing rules.
+
+    DO NOT invoke during an active task — use wiki_gateway_query instead.
+
+    Args:
+        orient_as: Explicit context override ('brain-self', 'sister', 'external').
+                   Omit for auto-detection.
+        fresh: Force fresh-agent mode (e.g. after compaction).
+        output_format: 'text' (default) or 'json' for structured data.
+    """
+    import io, contextlib, argparse
+    from tools.gateway import resolve_paths, gateway_orient
+    paths = resolve_paths()
+    args = argparse.Namespace(orient_as=orient_as, fresh=fresh,
+                              orient_format=output_format)
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        gateway_orient(paths, args)
+    return buf.getvalue()
+
+
+@server.tool()
 def wiki_gateway_flow(step: int = None) -> str:
     """Goldilocks flow — step-by-step routing from identity to action.
 

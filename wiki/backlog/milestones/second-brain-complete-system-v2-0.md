@@ -23,6 +23,8 @@ epics:
   - "E019"
   - "E020"
   - "E021"
+  - "E022"
+  - "E023"
 acceptance_criteria:
   - "Operator can browse Obsidian from any entry point and find everything"
   - "Operator can run CLI/gateway and find everything"
