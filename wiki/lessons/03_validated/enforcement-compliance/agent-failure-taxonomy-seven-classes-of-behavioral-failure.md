@@ -228,6 +228,9 @@ OpenArms is actively investigating each failure class. These are the proposed fi
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 - RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 - FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- EXTENDED BY: [[agents-take-small-unauthorized-scope-expansions-when-the-cha|Clean-Win Scope Expansion — Class A/B/C Taxonomy (OpenArms T116-T119)]]
+- EXTENDED BY: [[the-harness-turncount-variable-counts-streaming-events,-not-|Harness turnCount Bug — Aspirational Naming in Lifecycle Code (OpenArms)]]
+- EXTENDED BY: [[per-task-cost-grows-monotonically-across-multi-task-runs-(co|Per-Task Cost Growth — Context Accumulation in Multi-Task Runs (OpenArms)]]
 
 ## Backlinks
 
@@ -237,6 +240,9 @@ OpenArms is actively investigating each failure class. These are the proposed fi
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[Clean-Win Scope Expansion — Class A/B/C Taxonomy (OpenArms T116-T119)]]
+[[Harness turnCount Bug — Aspirational Naming in Lifecycle Code (OpenArms)]]
+[[Per-Task Cost Growth — Context Accumulation in Multi-Task Runs (OpenArms)]]
 [[block-with-reason-and-justified-escalation|Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]

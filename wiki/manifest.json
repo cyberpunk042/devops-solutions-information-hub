@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-16T17:12:01.748178+00:00",
+  "generated": "2026-04-16T17:26:25.491205+00:00",
   "stats": {
     "pages": 345,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2303,
+    "relationships": 2310,
     "tags_unique": 1070,
     "layers": {
       "3": 4,
@@ -10304,8 +10304,8 @@
       "relationships": []
     },
     {
-      "path": "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
-      "slug": "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "path": "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
+      "slug": "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "title": "Agents take small unauthorized scope expansions when the change is a 'clean win'",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10350,8 +10350,8 @@
       ]
     },
     {
-      "path": "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md",
-      "slug": "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "path": "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md",
+      "slug": "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "title": "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10396,8 +10396,8 @@
       ]
     },
     {
-      "path": "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
-      "slug": "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
+      "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10442,8 +10442,8 @@
       ]
     },
     {
-      "path": "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
-      "slug": "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "path": "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
+      "slug": "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
       "title": "Right-size the methodology model to the actual work, not the structural category",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10504,8 +10504,8 @@
       ]
     },
     {
-      "path": "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-.md",
-      "slug": "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "path": "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md",
+      "slug": "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "title": "The harness 'turnCount' variable counts streaming events, not conversational turns",
       "type": "lesson",
       "domain": "cross-domain",
@@ -10550,8 +10550,8 @@
       ]
     },
     {
-      "path": "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md",
-      "slug": "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "path": "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md",
+      "slug": "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "title": "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
       "type": "lesson",
       "domain": "cross-domain",
@@ -11323,6 +11323,18 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Clean-Win Scope Expansion \u2014 Class A/B/C Taxonomy (OpenArms T116-T119)"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Harness turnCount Bug \u2014 Aspirational Naming in Lifecycle Code (OpenArms)"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Per-Task Cost Growth \u2014 Context Accumulation in Multi-Task Runs (OpenArms)"
         }
       ]
     },
@@ -15847,6 +15859,14 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention (OpenArms)"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Clean-Win Scope Expansion \u2014 What Hooks Miss (OpenArms T116-T119)"
         }
       ]
     },
@@ -21594,6 +21614,14 @@
         {
           "verb": "RELATES TO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        },
+        {
+          "verb": "CHALLENGED BY",
+          "target": "Right-Size Methodology Model \u2014 Selection Needs Novelty Dimension (OpenArms T116 vs T117, 86.8% cost reduction)"
+        },
+        {
+          "verb": "CHALLENGED BY",
+          "target": "Epic Readiness Math Bug \u2014 average(child.readiness) Wrong for Sparse Children (OpenArms E013)"
         }
       ]
     },
@@ -24094,11 +24122,11 @@
     },
     "cross-domain": {
       "page_count": 156,
-      "relationship_count": 1053
+      "relationship_count": 1057
     },
     "ai-agents": {
       "page_count": 65,
-      "relationship_count": 506
+      "relationship_count": 509
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -27115,20 +27143,20 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
-      "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the",
-      "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-",
-      "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
+      "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
     ],
     "inbox": [
-      "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the",
-      "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-",
-      "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
+      "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
     ],
     "lesson": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
@@ -28938,6 +28966,18 @@
       ]
     },
     {
+      "target": "Clean-Win Scope Expansion \u2014 Class A/B/C Taxonomy",
+      "referenced_by": [
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ]
+    },
+    {
+      "target": "Clean-Win Scope Expansion \u2014 What Hooks Miss",
+      "referenced_by": [
+        "Enforcement Hook Patterns"
+      ]
+    },
+    {
       "target": "Context Management",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)"
@@ -28958,10 +28998,22 @@
       ]
     },
     {
+      "target": "Epic Readiness Math Bug \u2014 average(child.readiness) Wrong for Sparse Children",
+      "referenced_by": [
+        "Model \u2014 Methodology"
+      ]
+    },
+    {
       "target": "Harness turnCount Bug",
       "referenced_by": [
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
         "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+      ]
+    },
+    {
+      "target": "Harness turnCount Bug \u2014 Aspirational Naming in Lifecycle Code",
+      "referenced_by": [
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
       ]
     },
     {
@@ -29054,6 +29106,18 @@
       ]
     },
     {
+      "target": "Per-Task Cost Growth \u2014 Context Accumulation in Multi-Task Runs",
+      "referenced_by": [
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ]
+    },
+    {
+      "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
+      "referenced_by": [
+        "Enforcement Hook Patterns"
+      ]
+    },
+    {
       "target": "Quality Failure Prevention",
       "referenced_by": [
         "Agents take small unauthorized scope expansions when the change is a 'clean win'"
@@ -29065,6 +29129,12 @@
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
         "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+      ]
+    },
+    {
+      "target": "Right-Size Methodology Model \u2014 Selection Needs Novelty Dimension",
+      "referenced_by": [
+        "Model \u2014 Methodology"
       ]
     },
     {

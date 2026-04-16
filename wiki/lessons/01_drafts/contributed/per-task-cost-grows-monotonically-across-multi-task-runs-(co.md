@@ -14,7 +14,7 @@ tags: [contributed, inbox]
 contributed_by: "openarms-harness-v10"
 contribution_source: "/home/jfortin/openarms"
 contribution_date: 2026-04-16
-contribution_status: pending-review
+contribution_status: accepted
 contribution_reason: "First bidirectional contribution test — F9 from first consumer integration feedback"
 ---
 

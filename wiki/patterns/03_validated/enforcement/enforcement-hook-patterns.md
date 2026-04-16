@@ -249,6 +249,8 @@ esac
 - RELATES TO: [[model-claude-code|Model — Claude Code]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]
 - FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- EXTENDED BY: [[the-pre-write-hook-prevents-operator-claude-from-racing-the-|Pre-Write Hook Race Prevention — Operator/Agent File Contention (OpenArms)]]
+- EXTENDED BY: [[agents-take-small-unauthorized-scope-expansions-when-the-cha|Clean-Win Scope Expansion — What Hooks Miss (OpenArms T116-T119)]]
 
 ## Backlinks
 
@@ -259,6 +261,8 @@ esac
 [[model-claude-code|Model — Claude Code]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[Pre-Write Hook Race Prevention — Operator/Agent File Contention (OpenArms)]]
+[[Clean-Win Scope Expansion — What Hooks Miss (OpenArms T116-T119)]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[agents-take-small-unauthorized-scope-expansions-when-the-cha|Agents take small unauthorized scope expansions when the change is a 'clean win']]

@@ -41,18 +41,18 @@ Identity protocol: `wiki/domains/cross-domain/project-self-identification-protoc
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 316 |
-| **Relationships** | 2074 |
+| **Pages** | 345 |
+| **Relationships** | 2310 |
 | **Validation errors** | 0 |
-| **Lint issues** | 0 |
+| **MCP tools** | 26+ |
 | **Named models** | 16 (+ 9 methodology models) |
-| **Standards pages** | 22 (all have annotated exemplars) |
+| **Standards pages** | 25 (per-type + per-model + gateway output contract) |
 | **Sub-super-models** | 5 |
-| **Validated lessons** | 40+ |
-| **Validated patterns** | 16+ |
-| **Validated decisions** | 16+ |
+| **Validated lessons** | 44 + 6 contributed (in 01_drafts) |
+| **Validated patterns** | 19 |
+| **Validated decisions** | 17 |
 | **Principles** | 3 |
-| **Ecosystem project profiles** | 5 |
+| **Ecosystem project profiles** | 5 (all connected via `setup --connect`) |
 
 ### The Three Validated Principles
 
@@ -89,10 +89,12 @@ Milestone page: `wiki/backlog/milestones/second-brain-complete-system-v2-0.md`
 | Epic | Title | Priority | Stage |
 |------|-------|----------|-------|
 | E013 | Super-Model Evolution — v2.0 with Sub-Super-Models | P0 | document (75% done) |
-| E016 | Integration Chain Proof — End to End with OpenArms | P1 | document (20% done) |
+| E016 | Integration Chain Proof — End to End with OpenArms | P1 | implement (10/17 chain steps done — first consumer test 2026-04-16) |
 | E018 | Global Standards Implementation — Actual Adherence Not Just Reference | P2 | document (0% done) |
 | E019 | Obsidian Navigation — Complete Browse Experience with Folder Cleanup | P1 | document (30% done) |
 | E020 | Knowledge Sweep — Global Quality Confirmation by Human Review | P2 | document (0% done) |
+| E022 | Context-Aware Gateway Orientation and Task Routing | P1 | review (95% readiness, orient + what-do-i-need shipped) |
+| E023 | Gateway-Wide Output Contract Audit | P2 | draft (stub, follows E022) |
 
 All epics: `wiki/backlog/epics/milestone-v2/`
 
@@ -224,4 +226,4 @@ Per-type thresholds: `wiki/config/artifact-types.yaml`
 
 ---
 
-*Last updated: 2026-04-14. Source of truth for all metrics: `python3 -m tools.pipeline status`*
+*Last updated: 2026-04-16. Source of truth for all metrics: `python3 -m tools.pipeline status`*

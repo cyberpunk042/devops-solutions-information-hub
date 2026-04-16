@@ -784,6 +784,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 - RELATES TO: [[spec-driven-development|Spec-Driven Development]]
 - RELATES TO: [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 - RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+- CHALLENGED BY: [[right-size-the-methodology-model-to-the-actual-work,-not-the|Right-Size Methodology Model — Selection Needs Novelty Dimension (OpenArms T116 vs T117, 86.8% cost reduction)]]
+- CHALLENGED BY: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math Bug — average(child.readiness) Wrong for Sparse Children (OpenArms E013)]]
 
 ## Backlinks
 
@@ -808,6 +810,8 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[spec-driven-development|Spec-Driven Development]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
+[[Right-Size Methodology Model — Selection Needs Novelty Dimension (OpenArms T116 vs T117, 86.8% cost reduction)]]
+[[Epic Readiness Math Bug — average(child.readiness) Wrong for Sparse Children (OpenArms E013)]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[identity-profile|AICP — Identity Profile]]
 [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
