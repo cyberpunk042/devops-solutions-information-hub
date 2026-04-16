@@ -115,5 +115,6 @@ The critical insight: at step 1, we claimed "models are done" because entry poin
 [[2026-04-09-directive-models-are-not-documents|Models Are Not Documents — They Must Be Usable Systems]]
 [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]
 [[2026-04-09-directive-stop-claiming-readiness|Stop Claiming Readiness Without Proof]]
 [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]

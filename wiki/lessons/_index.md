@@ -62,7 +62,9 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity](01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project.md) — Context engineering defines three tier budgets (Expert 5-10K / Capable 2-5K / Lightweight 500-1K tokens) with a 10× c...
 - [First consumer integration reveals systematic gaps between knowledge and tooling](01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k.md) — The second brain's model pages contain 800+ lines of deep, evidence-backed knowledge per model
+- [Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions](01_drafts/contributed/mandatory-without-verification-is-not-enforced.md) — Extension Standards (for Claude Code skills) define a `mandatory` attribute marking skills the agent MUST invoke duri...
 - [Per-task cost grows monotonically across multi-task runs (context accumulation)](01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md) — When running multiple tasks in sequence within a single harness invocation (`--tasks N`), each successive task costs ...
 - [Schema aspirationalism — defining required sections you never validate produces false confidence](01_drafts/contributed/schema-aspirationalism-—-defining-required-sections-you-neve.md) — A schema that defines `required_sections` per page type without any validator checking section structure creates fals...
 - [The harness 'turnCount' variable counts streaming events, not conversational turns](01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md) — In the OpenArms harness (`agent-run-harness
@@ -120,4 +122,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`methodology`, `quality`, `lesson`, `failure-lesson`, `contributed`, `inbox`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `enforcement`, `validation`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`, `claude-code`, `markdown`, `taxonomy`
+`methodology`, `lesson`, `quality`, `contributed`, `failure-lesson`, `inbox`, `enforcement`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `openarms`, `skills`, `infrastructure`, `validation`, `harness-engineering`, `convergence`, `artifacts`, `agent-behavior`

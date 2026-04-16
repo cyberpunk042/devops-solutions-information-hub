@@ -65,6 +65,23 @@ The pattern has three structural components:
 - **Diagnose it** by asking: "do the current children cover ALL of the parent's goals?" If not, the metric is an artifact
 - **Fix it** (cheap): warn on 100% with <5 children. (Medium): parent done-when items as an independent gate. (Expensive): scope declaration with coverage tracking.
 
+## Structural Fix — Backlog Rule 8
+
+> [!tip] Backlog Hierarchy Rule 8 is the STRUCTURAL fix for this pattern
+>
+> The pattern names the failure mode; [[backlog-hierarchy-rules|Backlog Hierarchy Rule 8]] names the remediation: **create new tasks when an epic has no tasks left but readiness < 100%**. Rule 8 closes the gap by requiring the harness to detect "children done, parent not complete by acceptance criteria" and respond by generating missing children rather than flipping the parent to review.
+>
+> **The harness responsibilities Rule 8 implies:**
+>
+> | Responsibility | What the harness does |
+> |---|---|
+> | Detection | All children are `done` but parent's acceptance criteria name work that has no matching child |
+> | Classification | Surface as `impediment_type: scope` on the parent epic |
+> | Gate | Block status progression to `review` until new child tasks are created that cover the missing scope |
+> | Evidence | OpenArms implemented Rule 8's warning layer as `recalculate-epic.cjs` enhancement on 2026-04-16 (commit `74e8a50d`). Full Rule 8 gap-detection (auto-generation of missing children) is not yet in code — only warning. |
+>
+> The pattern and Rule 8 are bidirectional: the pattern explains WHY a metric failed; Rule 8 prescribes HOW the harness should respond. Without Rule 8 in code, the pattern's remediation stays advisory.
+
 ## When Not To
 
 - When children ARE the complete scope (leaf-level tasks in a fully decomposed work breakdown)
@@ -85,6 +102,7 @@ The pattern has three structural components:
 - DERIVED FROM: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math — OpenArms Evidence]]
 - RELATES TO: [[model-methodology|Model — Methodology]] — readiness computation and epic lifecycle
 - RELATES TO: [[readiness-vs-progress|Readiness vs Progress]] — the two-dimensional tracking model this pattern challenges
+- RELATES TO: [[backlog-hierarchy-rules|Backlog Hierarchy Rules]] — Rule 8 is the structural fix this pattern prescribes
 - RELATES TO: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness]] — same structural gap at the metric level
 - RELATES TO: [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness]] — implicit goals invisible to the formula
 
@@ -93,5 +111,6 @@ The pattern has three structural components:
 [[Epic Readiness Math — OpenArms Evidence]]
 [[model-methodology|Model — Methodology]]
 [[Readiness vs Progress]]
+[[backlog-hierarchy-rules|Backlog Hierarchy Rules]]
 [[Coverage Blindness]]
 [[Systemic Incompleteness]]

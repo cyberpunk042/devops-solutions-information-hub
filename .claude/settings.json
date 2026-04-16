@@ -45,7 +45,12 @@
       "WebFetch(domain:www.eweek.com)",
       "WebFetch(domain:www.infoworld.com)",
       "Bash(python3 -m tools.lint)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(python3 -m tools.gateway orient)",
+      "Bash(python3 -m tools.gateway what-do-i-need)",
+      "Bash(python3 -m tools.gateway status)",
+      "Bash(claude --version)",
+      "Bash(python3 -m tools.view spine)"
     ]
   }
 }

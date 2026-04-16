@@ -17,6 +17,7 @@ instances:
   - {'page': 'OpenArms agent-directive.md', 'context': '424 lines, 3 tables, 9 dividers, 31 numbered lists, 14-step work loop — implements all 6 structural techniques, highest compliance'}
   - {'page': 'Research Wiki CLAUDE.md', 'context': '170 lines, restructured 2026-04-11 with tables, dividers, ALLOWED/FORBIDDEN — intermediate compliance'}
   - {'page': 'OpenArms stage skills (5 files)', 'context': '29-43 lines each, MUST/MUST NOT lists, runtime state injection, stage-specific narrowing — highest per-stage compliance'}
+  - {'page': 'OpenArms AGENTS.md adoption (2026-04-16)', 'context': '471 → 124 → 144 line trajectory. First real adoption of this standard by a consumer project. Session restructured AGENTS.md from encyclopedia (bullets only, 0 tables) to routing table + 12 companion rule files in .claude/rules/. Then added Goldilocks identity table + Principles table with measured evidence. 5 of 8 patterns applied in one session: Sacrosanct (retained), Progressive Disclosure (routing to rule files), Command Checkpoints (/stage-complete, /task-done), Section Dividers (in restructured learnings.md), Hard/Soft Rule Separation (in learnings.md tables). Missing: Anchor Phrases (Pattern 7), Concrete Examples (Pattern 8). Evidence the standard is adoptable by a real project in a single session.'}
 created: 2026-04-11
 updated: 2026-04-13
 sources:
@@ -330,6 +331,7 @@ Examples:
 [[methodology-framework|Methodology Framework]]
 [[model-context-engineering|Model — Context Engineering]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
+[[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]
 [[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]

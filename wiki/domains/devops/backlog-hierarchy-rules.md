@@ -467,6 +467,7 @@ MILESTONE (delivery target)
 [[when-to-use-milestone-vs-epic-vs-module-vs-task|Decision — When to Use Milestone vs Epic vs Module vs Task]]
 [[epic-page-standards|Epic Page Standards]]
 [[frontmatter-field-reference|Frontmatter Field Reference — Complete Parameter Documentation]]
+[[hierarchical-metrics-fail-on-sparse-coverage|Hierarchical Metrics Fail on Sparse Coverage]]
 [[initiation-and-planning-artifacts|Initiation and Planning Artifacts — Standards and Guide]]
 [[methodology-framework|Methodology Framework]]
 [[methodology-standards-initiative-infrastructure|Methodology Standards Initiative — Infrastructure Analysis]]

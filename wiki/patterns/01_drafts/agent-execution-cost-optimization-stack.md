@@ -101,3 +101,4 @@ The stack is ordered by ROI — highest-impact, lowest-effort optimizations firs
 [[model-methodology|Model — Methodology]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
+[[context-depth-must-vary-per-task-type-not-per-project|Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity]]

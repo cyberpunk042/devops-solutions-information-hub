@@ -133,3 +133,4 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[model-context-engineering|Model — Context Engineering]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
+[[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]

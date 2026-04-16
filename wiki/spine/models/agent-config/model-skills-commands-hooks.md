@@ -405,6 +405,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
+[[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
 [[methodology-standards-initiative-gaps|Methodology Standards Initiative — Gap Analysis]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]

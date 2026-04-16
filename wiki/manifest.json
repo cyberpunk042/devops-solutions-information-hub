@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T18:49:53.385531+00:00",
+  "generated": "2026-04-16T19:23:08.233648+00:00",
   "stats": {
-    "pages": 351,
+    "pages": 354,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2339,
-    "tags_unique": 1086,
+    "relationships": 2362,
+    "tags_unique": 1092,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 52,
-      "5": 25,
+      "4": 54,
+      "5": 26,
       "1": 32,
       "spine": 66
     },
     "maturity": {
       "growing": 273,
-      "seed": 30
+      "seed": 33
     }
   },
   "pages": [
@@ -10370,6 +10370,88 @@
       "relationships": []
     },
     {
+      "path": "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project.md",
+      "slug": "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "title": "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "lesson",
+        "context-engineering",
+        "tier-selection",
+        "right-sizing",
+        "context-depth",
+        "contributed",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-integration-notes",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "OpenArms Part 17 and Part 22 \u2014 identified that skill injection gives same context depth to every task regardless of complexity"
+        },
+        {
+          "id": "right-sizing-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
+          "description": "Right-size lesson: T116 $9.07 vs T117 $1.20, 86.8% reduction by using integration model for mechanical work"
+        },
+        {
+          "id": "tier-context-depth-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates.md",
+          "description": "The pattern this lesson extends \u2014 tier selection framed as trust-earned-per-task-type, not only per-agent"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Model: Context Engineering",
+        "Right-Size the Methodology Model to the Actual Work",
+        "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates"
+      ],
+      "aliases": [
+        "Context Depth Must Vary Per Task Type, Not Per Project",
+        "Tier Selection Is Per-Task, Not Per-Project"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Right-Size Methodology Model"
+        },
+        {
+          "verb": "EXTENDS",
+          "target": "Tier-Based Context Depth \u2014 Trust Earned Through Approval Rates"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Execution Cost Optimization Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Goldilocks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Context Engineering Standards"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k.md",
       "slug": "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "title": "First consumer integration reveals systematic gaps between knowledge and tooling",
@@ -10422,6 +10504,88 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced.md",
+      "slug": "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "title": "Mandatory Without Verification Is Not Enforced \u2014 Skill-Layer Instance of Infrastructure > Instructions",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "lesson",
+        "skills",
+        "enforcement",
+        "mandatory",
+        "gate-verification",
+        "infrastructure",
+        "contributed",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-integration-notes",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "OpenArms Part 22 Extension Standards read \u2014 identified that mandatory skills are currently advisory, not gated"
+        },
+        {
+          "id": "extension-standards",
+          "type": "wiki",
+          "file": "wiki/spine/standards/model-standards/model-skills-commands-hooks-standards.md",
+          "description": "Extension Standards defines 'mandatory' as a skill quality attribute but the standard does not prescribe gate enforcement"
+        },
+        {
+          "id": "infrastructure-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Model: Skills, Commands, and Hooks",
+        "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
+      ],
+      "aliases": [
+        "Mandatory Without Verification Is Not Enforced",
+        "Mandatory But Advisory \u2014 Skill Invocation Without Gate"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Aspirational Naming in Lifecycle Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Extension Standards \u2014 What Good Skills, Commands, and Hooks Look Like"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -15357,6 +15521,10 @@
         },
         {
           "verb": "RELATES TO",
+          "target": "Backlog Hierarchy Rules"
+        },
+        {
+          "verb": "RELATES TO",
           "target": "Coverage Blindness"
         },
         {
@@ -15452,6 +15620,94 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Evolution Protocol"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/progressive-structural-enrichment-in-agent-config.md",
+      "slug": "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "title": "Progressive Structural Enrichment in Agent Config",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "pattern",
+        "agent-config",
+        "claude-md",
+        "agents-md",
+        "progressive-enrichment",
+        "structural",
+        "contributed",
+        "openarms"
+      ],
+      "sources": [
+        {
+          "id": "openarms-agents-restructure",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/openarms-agents.md-restructure-confirms-structural-patterns-.md",
+          "description": "OpenArms marker note documenting the 471 \u2192 124 \u2192 144 line trajectory with 5/8 structural patterns applied"
+        },
+        {
+          "id": "openarms-integration-notes",
+          "type": "file",
+          "project": "openarms",
+          "path": "wiki/log/2026-04-16-second-brain-integration-notes.md",
+          "description": "Parts 15, 22, 23 \u2014 documents the AGENTS.md evolution across the session"
+        },
+        {
+          "id": "sfif-pattern",
+          "type": "wiki",
+          "file": "wiki/patterns/03_validated/architecture/scaffold-foundation-infrastructure-features.md",
+          "description": "SFIF applied to agent config: scaffold (lean) \u2192 foundation (routing) \u2192 infrastructure (structured additions) \u2192 features (richer compliance signals)"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "CLAUDE.md Structural Patterns for Agent Compliance",
+        "Models Are Built in Layers, Not All at Once",
+        "Hardcoded Instances Fail \u2014 Build Frameworks Not Solutions"
+      ],
+      "aliases": [
+        "Progressive Structural Enrichment in Agent Config",
+        "Progressive Structural Enrichment"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "CLAUDE.md Structural Patterns for Agent Compliance"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Models Are Built in Layers, Not All at Once"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Mode Is a Consumer Property"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Claude Code Standards"
         }
       ]
     },
@@ -24477,12 +24733,12 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 162,
-      "relationship_count": 1086
+      "page_count": 163,
+      "relationship_count": 1095
     },
     "ai-agents": {
-      "page_count": 65,
-      "relationship_count": 509
+      "page_count": 67,
+      "relationship_count": 523
     },
     "tools-and-platforms": {
       "page_count": 24,
@@ -24852,9 +25108,12 @@
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
       "ecosystem/project_profiles/openarms/identity-profile",
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "spine/models/ecosystem/model-ecosystem"
@@ -25086,6 +25345,7 @@
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
@@ -25128,6 +25388,7 @@
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
@@ -25148,6 +25409,7 @@
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
       "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
@@ -25769,6 +26031,7 @@
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-infrastructure",
       "domains/devops/devops-control-plane",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
@@ -26159,6 +26422,7 @@
     ],
     "context-engineering": [
       "domains/ai-agents/claude-code/claude-code-context-management",
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
@@ -27521,8 +27785,35 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
+    "lesson": [
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
+      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
+      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
+      "spine/standards/lesson-page-standards"
+    ],
+    "tier-selection": [
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project"
+    ],
+    "right-sizing": [
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project"
+    ],
+    "context-depth": [
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates"
+    ],
     "contributed": [
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
@@ -27532,7 +27823,8 @@
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "inbox": [
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
@@ -27553,24 +27845,17 @@
     "meta-lesson": [
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
     ],
+    "mandatory": [
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced"
+    ],
+    "gate-verification": [
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced"
+    ],
     "aspirational": [
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
     ],
     "false-confidence": [
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve"
-    ],
-    "lesson": [
-      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
-      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
-      "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
-      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
-      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
-      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
-      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
-      "spine/standards/lesson-page-standards"
     ],
     "project-property": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property"
@@ -28144,6 +28429,7 @@
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
@@ -28207,19 +28493,27 @@
       "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "agent-config": [
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "spine/references/context-file-taxonomy"
     ],
-    "three-layer-architecture": [
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
-    ],
     "agents-md": [
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "progressive-enrichment": [
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
+    ],
+    "structural": [
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
+    ],
+    "three-layer-architecture": [
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
     ],
     "skill-md": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
@@ -28362,9 +28656,6 @@
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth"
     ],
     "tier-progression": [
-      "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates"
-    ],
-    "context-depth": [
       "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates"
     ],
     "trust": [
@@ -29375,6 +29666,7 @@
     {
       "target": "Agent Failure Taxonomy",
       "referenced_by": [
+        "Mandatory Without Verification Is Not Enforced \u2014 Skill-Layer Instance of Infrastructure > Instructions",
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
         "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
@@ -29394,6 +29686,12 @@
       ]
     },
     {
+      "target": "Claude Code Standards",
+      "referenced_by": [
+        "Progressive Structural Enrichment in Agent Config"
+      ]
+    },
+    {
       "target": "Clean-Win Scope Expansion \u2014 Class A/B/C Taxonomy",
       "referenced_by": [
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure"
@@ -29403,6 +29701,12 @@
       "target": "Clean-Win Scope Expansion \u2014 What Hooks Miss",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Context Engineering Standards",
+      "referenced_by": [
+        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity"
       ]
     },
     {
@@ -29567,6 +29871,12 @@
       ]
     },
     {
+      "target": "Principle \u2014 Goldilocks",
+      "referenced_by": [
+        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity"
+      ]
+    },
+    {
       "target": "Principle \u2014 Infrastructure Over Instructions",
       "referenced_by": [
         "First consumer integration reveals systematic gaps between knowledge and tooling",
@@ -29589,6 +29899,7 @@
       "target": "Right-Size Methodology Model",
       "referenced_by": [
         "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
+        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity",
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children"

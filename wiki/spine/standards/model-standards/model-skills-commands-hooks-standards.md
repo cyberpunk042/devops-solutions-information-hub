@@ -244,3 +244,4 @@ What good command → skill → hook composition looks like.
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
+[[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]

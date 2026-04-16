@@ -191,6 +191,7 @@ SFIF applies everywhere software is built from scratch or significantly refactor
 [[model-sfif-architecture|Model — SFIF and Architecture]]
 [[models-are-built-in-layers-not-all-at-once|Models Are Built in Layers, Not All at Once]]
 [[src-plannotator|Plannotator — Interactive Plan & Code Review for AI Agents]]
+[[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]
 [[stage-gate-methodology|Stage-Gate Methodology]]
 [[task-lifecycle-stage-gating|Task Lifecycle Stage-Gating]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
