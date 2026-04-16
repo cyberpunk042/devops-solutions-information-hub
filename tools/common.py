@@ -98,6 +98,11 @@ def detect_context(
             location = "external"
 
     # --- Freshness detection ---
+    # F3 fix: orient should only shortcircuit if orient ITSELF ran recently.
+    # Running `gateway status` or `gateway health` does NOT mean you're oriented.
+    # Freshness = "returning" ONLY if last_subcommand was "orient" AND within 5 min.
+    # Freshness = "task-bound" ONLY if a task type was explicitly set.
+    # Everything else = "fresh" (safe default: over-orient is better than under-orient).
     if fresh:
         freshness = "fresh"
     else:
@@ -106,8 +111,19 @@ def detect_context(
             freshness = "fresh"
         elif state.get("current_task_type"):
             freshness = "task-bound"
+        elif state.get("last_subcommand") == "orient":
+            # Only "returning" if orient specifically ran recently (5-min window)
+            try:
+                last = datetime.fromisoformat(state.get("last_invocation", ""))
+                if datetime.now() - last < timedelta(minutes=5):
+                    freshness = "returning"
+                else:
+                    freshness = "fresh"
+            except (ValueError, TypeError):
+                freshness = "fresh"
         else:
-            freshness = "returning"
+            # Any other gateway command ran (status, health, query) — NOT oriented
+            freshness = "fresh"
 
     return {
         "location": location,

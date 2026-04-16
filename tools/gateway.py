@@ -220,18 +220,36 @@ def resolve_paths(wiki_root: Optional[str] = None, brain_root: Optional[str] = N
     brain_wiki = brain_path / "wiki" if (brain_path / "wiki").exists() else brain_path
     brain_config = brain_wiki / "config"
 
+    # Resolve local config — the project's OWN schema, methodology, templates
+    local_config = local_wiki / "config" if (local_wiki / "config").exists() else None
+    # For schema: use the PROJECT's own schema first, fall back to brain's
+    # F1/F2 fix: consumer projects have their own schema — use it for validation
+    local_schema = None
+    if local_config:
+        for candidate in ["wiki-schema.yaml", "schema.yaml"]:
+            if (local_config / candidate).exists():
+                local_schema = local_config / candidate
+                break
+    # For methodology: project's own first, brain's as reference
+    local_methodology = None
+    if local_config and (local_config / "methodology.yaml").exists():
+        local_methodology = local_config / "methodology.yaml"
+
     return {
         "root": local_root,
         "wiki": local_wiki,
-        "local_config": local_wiki / "config" if (local_wiki / "config").exists() else brain_config,
-        # Brain paths — where methodology, standards, chains, templates live
+        "local_config": local_config or brain_config,
+        # Brain paths — where methodology, standards, chains, templates live (reference)
         "brain_root": brain_path,
         "brain_wiki": brain_wiki,
-        "config": brain_config,
-        "methodology": brain_config / "methodology.yaml",
-        "artifact_types": brain_config / "artifact-types.yaml",
-        "schema": brain_config / "wiki-schema.yaml",
-        "templates": brain_config / "templates",
+        "brain_config": brain_config,
+        # Active config — local when available, brain as fallback
+        # This is what validation/lint/health should use
+        "config": local_config or brain_config,
+        "methodology": local_methodology or brain_config / "methodology.yaml",
+        "artifact_types": (local_config / "artifact-types.yaml") if local_config and (local_config / "artifact-types.yaml").exists() else brain_config / "artifact-types.yaml",
+        "schema": local_schema or brain_config / "wiki-schema.yaml",
+        "templates": (local_config / "templates") if local_config and (local_config / "templates").exists() else brain_config / "templates",
         # Whether local and brain are the same
         "is_brain": str(local_root.resolve()) == str(brain_path.resolve()),
     }
@@ -355,41 +373,48 @@ NEXT: gateway what-do-i-need""")
 
 def _orient_sister_fresh() -> None:
     """Full orient for sister project + fresh agent."""
-    print("""\u26a0 READ THIS OUTPUT IN FULL \u2014 you need orientation before consuming.
+    print("""\u26a0 READ THIS OUTPUT IN FULL \u2014 every section matters for integration.
 
 ORIENT \u2014 Sister project connecting to the second brain
 ========================================================
 
 YOUR BRAIN IS YOUR OWN: your CLAUDE.md, AGENTS.md, skills, hooks, commands.
-These constitute YOUR agent. They define YOUR project's behavior and rules.
-Do not confuse your brain with the second brain.
+These constitute YOUR agent. The second brain is a SEPARATE shared knowledge
+system. Your goal is NOT to depend on it at runtime \u2014 it's to ADOPT what
+fits your identity and evolve your own brain until it's strong on its own.
 
-THE SECOND BRAIN IS A SEPARATE SYSTEM: the research wiki. It holds shared
-methodology, standards, validated lessons, patterns, and decisions across the
-ecosystem. You CONSUME methodology and standards from it. You CONTRIBUTE
-operational learnings back to it. The second brain evolves from your lessons.
+ADOPTION TIERS (where is your project?):
+  Tier 1 \u2014 Agent Foundation:    CLAUDE.md + schema + templates
+  Tier 2 \u2014 Stage-Gate Process:  methodology.yaml + backlog + enforcement
+  Tier 3 \u2014 Evolution Pipeline:  maturity lifecycle + scoring + promotion
+  Tier 4 \u2014 Hub Integration:     bidirectional sync + export + contribute
 
-THREE PRINCIPLES (the second brain enforces these \u2014 your brain should too):
+  Check your tier:  python3 -m tools.gateway compliance
+  Full integration is 15-25 epics, 80-150+ tasks across months.
+  Start with your current tier's gaps. Don't try to jump to Tier 4.
+
+THREE PRINCIPLES (adopt these into YOUR brain):
   1. Infrastructure > Instructions \u2014 enforce rules structurally, not in prose
   2. Structured Context > Content \u2014 structure programs agent behavior
   3. Goldilocks \u2014 right process for YOUR project's identity and phase
 
-HOW TO CONSUME THE SECOND BRAIN:
-  1. Read YOUR AGENTS.md first \u2014 know your own identity before querying
-  2. Query methodology for your task type (bug-fix, feature-dev, research...)
-  3. Query standards for the artifact you're producing (lesson, pattern, spec...)
-  4. Query all available methodology models to see the full catalog
-  5. Contribute learnings back after work (lessons, corrections, remarks)
-  6. Declare your runtime: "env": {"MCP_CLIENT_RUNTIME": "harness-<name>-<version>"}
+WHAT TO READ FIRST (standards before models for integration):
+  1. python3 -m tools.view standards    \u2192 what "good" looks like per artifact
+  2. python3 -m tools.view spine        \u2192 all 16 models + sub-models
+  3. python3 -m tools.view model methodology \u2192 how work proceeds (9 models)
+  4. python3 -m tools.view lessons      \u2192 validated operational knowledge
+  5. python3 -m tools.view patterns     \u2192 recurring structural patterns
 
-  Interface depends on how you connect:
-    CLI:  gateway query --model <type> --brain <second-brain-path>
-    MCP:  wiki_gateway_query(model="<type>")
+HOW TO QUERY (once you know what you need):
+  CLI:  python3 -m tools.gateway query --model <type>
+  CLI:  python3 -m tools.gateway query --stage <name> --domain <yours>
+  MCP:  wiki_gateway_query(model="<type>")
 
-FULL INTEGRATION CHAIN (17 steps):
-  wiki/spine/references/second-brain-integration-chain.md
+HOW TO CONTRIBUTE BACK:
+  CLI:  python3 -m tools.gateway contribute --type lesson --title "..."
+  Your format is accepted \u2014 the second brain normalizes on intake.
 
-NEXT: query the second brain for your task's methodology model""")
+NEXT: python3 -m tools.gateway compliance   (see where you are)""")
 
 
 def _orient_sister_returning(freshness: str) -> None:
@@ -452,12 +477,15 @@ NEXT: gateway query --task <type>    (loads verb chain for that task)"""
 
 
 def _wdin_sister(project_name: str) -> str:
-    """Sister + task-bound: methodology model routing from the second brain."""
-    return f"""\u26a0 READ THIS OUTPUT IN FULL \u2014 routing depends on the task-type table.
+    """Sister + task-bound: methodology models to adopt from the second brain."""
+    return f"""\u26a0 READ THIS OUTPUT IN FULL \u2014 these are the models to adopt.
 
 WHAT DO YOU NEED? \u2014 Sister project ({project_name}), task-bound
 
-  Your task type        | Methodology model    | Stages
+  These methodology models should be in YOUR project's methodology.yaml.
+  If they're not, adopt the ones that match your work.
+
+  Your task type        | Model                | Stages
   ----------------------|----------------------|-------------------------------
   Feature / epic        | feature-development  | document \u2192 design \u2192 scaffold \u2192 implement \u2192 test
   Bug fix               | bug-fix              | document \u2192 implement \u2192 test
@@ -467,12 +495,12 @@ WHAT DO YOU NEED? \u2014 Sister project ({project_name}), task-bound
   Hotfix (known fix)    | hotfix               | implement \u2192 test
   Integration           | integration          | scaffold \u2192 implement \u2192 test
 
-  Query full model detail:  gateway query --model <name>
-  Query stage rules:        gateway query --stage <name> --domain <yours>
-  Query standards:          gateway query --standards <artifact-type>
-  Contribute learnings:     gateway contribute --type lesson --title "..."
+  Adopt a model:          gateway query --model <name> --full-chain
+  Check stage rules:      gateway query --stage <name> --domain <yours>
+  Check standards:        python3 -m tools.view standards
+  After work, contribute: gateway contribute --type lesson --title "..."
 
-NEXT: gateway query --model <task-type>"""
+NEXT: gateway query --model <task-type> --full-chain"""
 
 
 def _wdin_external() -> str:
@@ -1358,6 +1386,10 @@ tags: [contributed, inbox]
 
 <!-- What evidence supports this? -->
 
+## Applicability
+
+Contributed from {source}. Applicability to be assessed during promotion review.
+
 ## Relationships
 
 - RELATES TO: [[model-registry|Model Registry]]
@@ -1921,14 +1953,29 @@ def query_compliance(paths: Dict[str, Path]) -> Dict[str, Any]:
         exists = (root / path_spec).exists()
         return {"path": path_spec, "description": description, "met": exists}
 
+    def _check_any(candidates: List[str], description: str) -> Dict[str, Any]:
+        """Check if ANY of the candidate paths exists (functional equivalence).
+
+        F1 fix: consumers may have the same artifact at a different path.
+        schema.yaml == wiki-schema.yaml; wiki/config/ == config/; etc.
+        """
+        for c in candidates:
+            if (root / c).exists():
+                return {"path": c, "description": description, "met": True}
+        return {"path": candidates[0], "description": description, "met": False}
+
     # Tier 1 — Agent Foundation
     tier1 = {
         "name": "Agent Foundation",
         "description": "Structured knowledge base with schema + templates + routing",
         "requirements": [
-            _check("CLAUDE.md", "Project routing table / context for Claude"),
-            _check("wiki/config/wiki-schema.yaml", "Frontmatter schema defining valid page types"),
-            _check("wiki/config/templates", "Page templates directory (scaffolds for each type)"),
+            _check_any(["CLAUDE.md", "AGENTS.md", ".cursorrules"],
+                       "Agent brain file (CLAUDE.md, AGENTS.md, or equivalent)"),
+            _check_any(["wiki/config/wiki-schema.yaml", "wiki/config/schema.yaml",
+                        "config/wiki-schema.yaml", "config/schema.yaml"],
+                       "Frontmatter schema (any location)"),
+            _check_any(["wiki/config/templates", "config/templates", "templates"],
+                       "Page templates directory"),
         ],
     }
 
@@ -1937,30 +1984,45 @@ def query_compliance(paths: Dict[str, Path]) -> Dict[str, Any]:
         "name": "Stage-Gate Process",
         "description": "Methodology engine + work tracking + stage discipline",
         "requirements": [
-            _check("wiki/config/methodology.yaml", "Methodology models with stage chains"),
-            _check("wiki/backlog", "Backlog hierarchy directory (milestones/epics/modules/tasks)"),
-            _check("AGENTS.md", "Universal cross-tool agent context (three-layer pattern)"),
+            _check_any(["wiki/config/methodology.yaml", "config/methodology.yaml",
+                        "methodology.yaml"],
+                       "Methodology models with stage chains"),
+            _check_any(["wiki/backlog", "backlog", "wiki/backlog/epics"],
+                       "Backlog hierarchy (milestones/epics/modules/tasks)"),
+            _check_any(["AGENTS.md", "CLAUDE.md"],
+                       "Agent context file (universal or tool-specific)"),
         ],
     }
 
     # Tier 3 — Evolution Pipeline
-    # Maturity folders: wiki has multiple subdirs with 00_inbox, 01_drafts, etc.
-    maturity_dirs = ["lessons", "patterns", "decisions"]
+    # Maturity folders: check under wiki/ OR at root
+    maturity_dirs_options = [
+        ["wiki/lessons", "lessons", "wiki/domains/learnings"],
+        ["wiki/patterns", "patterns"],
+        ["wiki/decisions", "decisions"],
+    ]
     maturity_met = all(
-        (wiki / d / "00_inbox").exists() or (wiki / d / "01_drafts").exists()
-        for d in maturity_dirs
+        any(
+            (root / d / "00_inbox").exists() or
+            (root / d / "01_drafts").exists() or
+            (root / d).exists()  # has the directory at all
+            for d in options
+        )
+        for options in maturity_dirs_options
     )
     tier3 = {
         "name": "Evolution Pipeline",
         "description": "Self-improving wiki with maturity lifecycle + scoring + promotion",
         "requirements": [
-            _check("tools/evolve.py", "Evolution scoring + promotion tooling"),
+            _check_any(["tools/evolve.py", "scripts/evolve.js", "scripts/methodology/evolve.cjs"],
+                       "Evolution scoring / promotion tooling"),
             {
-                "path": "wiki/{lessons,patterns,decisions}/00_inbox",
-                "description": "Maturity lifecycle folders (00_inbox → 01_drafts → 02_synthesized → 03_validated → 04_principles)",
+                "path": "wiki/{lessons,patterns,decisions}/",
+                "description": "Knowledge layers (lessons, patterns, decisions — any structure)",
                 "met": maturity_met,
             },
-            _check("tools/lint.py", "Quality/drift detection (includes queue-drift check)"),
+            _check_any(["tools/lint.py", "tools/validate.py", "scripts/methodology/validate-stage.cjs"],
+                       "Quality/validation tooling"),
         ],
     }
 
@@ -1969,9 +2031,12 @@ def query_compliance(paths: Dict[str, Path]) -> Dict[str, Any]:
         "name": "Hub Integration",
         "description": "Ecosystem participation — export, MCP, bidirectional knowledge flow",
         "requirements": [
-            _check("wiki/config/export-profiles.yaml", "Export transforms for sister projects"),
-            _check("tools/mcp_server.py", "MCP server exposing wiki operations"),
-            _check(".mcp.json", "MCP server registration for Claude Code"),
+            _check_any(["wiki/config/export-profiles.yaml", "config/export-profiles.yaml"],
+                       "Export transforms for other projects"),
+            _check_any(["tools/mcp_server.py", ".mcp.json"],
+                       "MCP server or MCP connection (producer or consumer)"),
+            _check_any([".mcp.json", "mcp.json"],
+                       "MCP configuration file"),
         ],
     }
 
@@ -2159,7 +2224,9 @@ def main():
     tl.add_argument("--path", dest="tl_path", default=None,
                     help="Filter events whose path contains this substring (e.g. --path T120)")
 
-    ct = sub.add_parser("contribute", help="Write back to the wiki (lands in 00_inbox / log; promotion requires review)")
+    ct = sub.add_parser("contribute", help="Contribute a lesson/remark/correction back to the second brain. "
+                        "Pass your content as plain text — the second brain normalizes it into the right format. "
+                        "Contributions land in 00_inbox (lessons) or log/ (remarks/corrections). Promotion requires operator review.")
     ct.add_argument("--type", required=True, choices=["lesson", "remark", "correction"])
     ct.add_argument("--title", required=True)
     ct.add_argument("--content", required=True)
@@ -2202,6 +2269,12 @@ def main():
             print("")
 
     elif args.command == "health":
+        # F2 fix: show which schema is being used for validation
+        schema_source = "project" if paths.get("schema") and "wiki-schema" not in str(paths["schema"]) or not paths.get("is_brain") else "second-brain"
+        if not paths.get("is_brain"):
+            used_schema = paths.get("schema", "unknown")
+            print(f"\n  Schema: {used_schema}")
+            print(f"  Source: {'project-own' if used_schema and paths['root'] in used_schema.parents else 'second-brain (fallback)'}\n")
         result = query_health(paths)
         # Human-readable format
         print(f"\nWiki Health Score: {result['composite_score']} / 100  ({result['grade']})")
@@ -2364,12 +2437,30 @@ def main():
         # Identity
         id_data = identity.get("identity", {})
         if id_data:
-            print("IDENTITY (who am I?)")
+            # F4 fix: split display into project-level (stable) vs consumer-level (dynamic)
+            stable_keys = {"type", "domain", "second brain", "second-brain"}
+            dynamic_keys = {"execution mode", "sdlc profile", "sdlc chain",
+                           "pm level", "trust tier", "phase", "scale"}
+            print("PROJECT IDENTITY (stable — declared in CLAUDE.md):")
             for k, v in id_data.items():
-                print(f"  {k}: {v}")
+                if k.lower() in stable_keys:
+                    print(f"  {k}: {v}")
+            print()
+            print("PROJECT STATE (declared, reviewed periodically):")
+            for k, v in id_data.items():
+                if k.lower() in dynamic_keys:
+                    print(f"  {k}: {v}")
+            print()
+            print("CONSUMER PROPERTIES (per-session, NOT in CLAUDE.md):")
+            print("  execution mode: declared by consumer at connect time via MCP_CLIENT_RUNTIME")
+            print("  methodology model: per task, not per project")
+            print("  SDLC profile: per task, overridable — default from phase/scale")
         else:
-            print("IDENTITY: not configured. Add Identity Profile table to CLAUDE.md")
-            print("  See: wiki/domains/cross-domain/project-self-identification-protocol.md")
+            print("PROJECT IDENTITY: not fully configured.")
+            print("  Stable fields to add to CLAUDE.md: type, domain, second-brain relationship")
+            print("  Do NOT hardcode: execution mode, SDLC profile, methodology model")
+            print("  (these are consumer/task properties — see gateway orient for details)")
+            print("  Reference: wiki/domains/cross-domain/project-self-identification-protocol.md")
         print()
 
         # SDLC Profile

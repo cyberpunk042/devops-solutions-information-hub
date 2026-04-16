@@ -440,26 +440,29 @@ _BRAIN_POINTER_BLOCK = """
 ## Second Brain Connection
 
 This project is connected to the **second brain** (research wiki) — a shared
-knowledge system holding methodology, standards, lessons, patterns, and decisions
-across the ecosystem. Your brain (this CLAUDE.md/AGENTS.md + skills + hooks) is
-YOUR agent. The second brain is a SEPARATE system you consume from and contribute to.
+knowledge system holding methodology, standards, validated lessons, patterns,
+and decisions across the ecosystem.
 
-**First step for any fresh agent or session:**
-```
-python3 -m tools.gateway orient
-```
+**Your brain** (this CLAUDE.md/AGENTS.md + skills + hooks) is YOUR agent.
+**The second brain** is a SEPARATE system. The goal is NOT runtime dependency —
+it's to ADOPT what fits your identity and EVOLVE your own brain.
+
+**Adoption tiers** — check where you are: `python3 -m tools.gateway compliance`
+- Tier 1: Agent foundation (schema + templates)
+- Tier 2: Stage-gate process (methodology + backlog + enforcement)
+- Tier 3: Evolution pipeline (maturity lifecycle + scoring)
+- Tier 4: Hub integration (bidirectional sync + export + contribute)
+
+**First step for any fresh session:** `python3 -m tools.gateway orient`
 
 **Browse the second brain's knowledge:**
 ```
-python3 -m tools.view spine          # models, standards, sub-models
+python3 -m tools.view spine          # all 16 models, standards, sub-models
+python3 -m tools.view standards      # what "good" looks like per artifact type
 python3 -m tools.view model <name>   # one model in full
-python3 -m tools.view lessons        # validated lessons
+python3 -m tools.view lessons        # 44 validated operational lessons
 python3 -m tools.view search <query> # search across all knowledge
 ```
-
-**MCP tools** (available in Claude Code via .mcp.json):
-`wiki_gateway_orient`, `wiki_gateway_query`, `wiki_search`, `wiki_read_page`,
-`wiki_gateway_contribute`, `wiki_gateway_timeline`, and 20+ more.
 
 **Contribute learnings back:** `python3 -m tools.gateway contribute --type lesson --title "..."`
 {marker_end}
@@ -467,23 +470,32 @@ python3 -m tools.view search <query> # search across all knowledge
 
 
 def _inject_brain_pointer(project_root: Path, brain_path: Path):
-    """Add a second-brain connection block to the project's AGENTS.md or CLAUDE.md.
+    """Add or update the second-brain connection block in AGENTS.md or CLAUDE.md.
 
-    Injects once. Skips if marker already present. Prefers AGENTS.md (cross-tool);
-    falls back to CLAUDE.md.
+    If the marker block exists, REPLACES it (so re-connect updates the content).
+    Prefers AGENTS.md (cross-tool); falls back to CLAUDE.md.
     """
+    marker_end = _BRAIN_POINTER_MARKER.replace("-->", "-END -->")
+    block = _BRAIN_POINTER_BLOCK.format(
+        marker=_BRAIN_POINTER_MARKER,
+        marker_end=marker_end,
+    )
+
     for fname in ["AGENTS.md", "CLAUDE.md"]:
         target = project_root / fname
         if target.exists():
             content = target.read_text(encoding="utf-8")
-            if _BRAIN_POINTER_MARKER in content:
-                return  # Already injected
-            block = _BRAIN_POINTER_BLOCK.format(
-                marker=_BRAIN_POINTER_MARKER,
-                marker_end=_BRAIN_POINTER_MARKER.replace("-->", "-END -->"),
-            )
-            target.write_text(content + block, encoding="utf-8")
-            log_info(f"  Brain pointer added to: {target}")
+            if _BRAIN_POINTER_MARKER in content and marker_end in content:
+                # Replace existing block
+                start = content.index(_BRAIN_POINTER_MARKER)
+                end = content.index(marker_end) + len(marker_end)
+                content = content[:start] + block.strip() + content[end:]
+                target.write_text(content, encoding="utf-8")
+                log_info(f"  Brain pointer updated in: {target}")
+            elif _BRAIN_POINTER_MARKER not in content:
+                # First injection
+                target.write_text(content + block, encoding="utf-8")
+                log_info(f"  Brain pointer added to: {target}")
             return
     log_warn("  No AGENTS.md or CLAUDE.md found — skipping brain pointer injection")
 

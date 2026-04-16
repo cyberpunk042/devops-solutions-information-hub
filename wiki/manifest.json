@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T15:29:27.676651+00:00",
+  "generated": "2026-04-16T16:21:22.987258+00:00",
   "stats": {
-    "pages": 339,
+    "pages": 345,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2263,
-    "tags_unique": 1068,
+    "relationships": 2269,
+    "tags_unique": 1070,
     "layers": {
       "3": 4,
       "6": 17,
       "2": 51,
-      "4": 44,
+      "4": 50,
       "5": 22,
       "1": 32,
       "spine": 66
     },
     "maturity": {
       "growing": 273,
-      "seed": 18
+      "seed": 24
     }
   },
   "pages": [
@@ -10302,6 +10302,162 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
+      "slug": "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "title": "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md",
+      "slug": "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "title": "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
+      "slug": "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
+      "slug": "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "title": "Right-size the methodology model to the actual work, not the structural category",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-.md",
+      "slug": "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "title": "The harness 'turnCount' variable counts streaming events, not conversational turns",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-.md",
+      "slug": "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "title": "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
     },
     {
       "path": "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property.md",
@@ -23801,8 +23957,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 150,
-      "relationship_count": 1013
+      "page_count": 156,
+      "relationship_count": 1019
     },
     "ai-agents": {
       "page_count": 65,
@@ -26821,6 +26977,22 @@
       "ecosystem/project_profiles/research-wiki/identity-profile",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
+    ],
+    "contributed": [
+      "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
+    ],
+    "inbox": [
+      "lessons/00_inbox/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/00_inbox/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/00_inbox/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/00_inbox/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "lessons/00_inbox/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/00_inbox/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
     ],
     "lesson": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
