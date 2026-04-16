@@ -330,3 +330,6 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 [[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Routing]]
 [[model-claude-code|Model — Claude Code]]
 [[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
+[[e022-m002-gateway-orient-subcommand|E022-M002 — Gateway Orient Subcommand (Module Design)]]
+[[e022-m003-what-do-i-need-upgrade|E022-M003 — Gateway What-Do-I-Need Upgrade (Module Design)]]
+[[e023-gateway-wide-output-contract-audit|E023 — Gateway-Wide Output Contract Audit]]

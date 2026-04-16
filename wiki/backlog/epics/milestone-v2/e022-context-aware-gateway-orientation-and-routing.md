@@ -8,13 +8,16 @@ domain: backlog
 status: active
 priority: P1
 task_type: epic
-current_stage: document
-readiness: 15
-progress: 0
+current_stage: design
+readiness: 40
+progress: 35
 stages_completed: []
 artifacts:
   - "raw/notes/2026-04-15-directive-knowledge-project-methodology-rework.md"
   - "wiki/spine/standards/gateway-output-contract.md"
+  - "wiki/backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit.md"
+  - "wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md"
+  - "wiki/backlog/modules/e022-m003-what-do-i-need-upgrade.md"
 confidence: high
 created: 2026-04-15
 updated: 2026-04-15
@@ -194,3 +197,6 @@ E023 is NOT implemented here. Only its document-stage scaffold lives in this epi
 [[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[model-context-engineering|Model — Context Engineering]]
+[[e022-m002-gateway-orient-subcommand|E022-M002 — Gateway Orient Subcommand (Module Design)]]
+[[e022-m003-what-do-i-need-upgrade|E022-M003 — Gateway What-Do-I-Need Upgrade (Module Design)]]
+[[e023-gateway-wide-output-contract-audit|E023 — Gateway-Wide Output Contract Audit]]

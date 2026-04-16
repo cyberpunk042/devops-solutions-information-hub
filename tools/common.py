@@ -47,6 +47,57 @@ def consumer_runtime_is_declared() -> bool:
     return bool(os.environ.get(CONSUMER_RUNTIME_ENV, "").strip())
 
 
+# ---------------------------------------------------------------------------
+# Context detection — shared by gateway orient + what-do-i-need (E022)
+# Design: wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md
+# ---------------------------------------------------------------------------
+
+SESSION_STATE_PATH = Path.home() / ".cache" / "research-wiki" / "session-state.json"
+
+
+def detect_context(
+    wiki_root: Path = None,
+    brain_root: Path = None,
+    orient_as: str = None,
+    fresh: bool = False,
+) -> dict:
+    """Detect (location, freshness) context for gateway output branching.
+
+    Priority stack (highest first): orient_as flag > MCP_CLIENT_RUNTIME env >
+    --wiki-root resolution > CLAUDE.md declarations > filesystem heuristics.
+
+    SCAFFOLD: returns hardcoded brain-self + fresh.
+    Real detection logic comes in T-E022-07 (implement stage).
+    """
+    # SCAFFOLD — hardcoded stub values
+    return {
+        "location": "brain-self",
+        "freshness": "fresh" if fresh else "fresh",
+        "consumer_runtime": get_consumer_runtime(),
+    }
+
+
+def read_session_state() -> Optional[dict]:
+    """Read session-state from SESSION_STATE_PATH.
+
+    Returns dict or None if no state / stale / file absent.
+    SCAFFOLD: always returns None (every invocation is 'fresh').
+    """
+    return None
+
+
+def write_session_state(
+    context: dict,
+    subcommand: str = "orient",
+    task_type: str = None,
+) -> None:
+    """Write session-state after a gateway invocation.
+
+    SCAFFOLD: no-op. Implement stage writes real JSON to SESSION_STATE_PATH.
+    """
+    pass
+
+
 def parse_frontmatter(text: str) -> Tuple[Dict[str, Any], str]:
     """Parse YAML frontmatter from markdown text.
 

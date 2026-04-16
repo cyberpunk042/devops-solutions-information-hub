@@ -198,4 +198,5 @@ These are FUTURE — scoped after the first 12 epics prove the system works.
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
+[[e023-gateway-wide-output-contract-audit|E023 — Gateway-Wide Output Contract Audit]]
 [[operator-decision-queue|Operator Decision Queue]]

@@ -33,6 +33,7 @@ from tools.common import (
     CONSUMER_RUNTIME_DEFAULT,
     CONSUMER_RUNTIME_ENV,
     consumer_runtime_is_declared,
+    detect_context,
     find_wiki_pages,
     get_consumer_runtime,
     get_project_root,
@@ -40,6 +41,7 @@ from tools.common import (
     parse_frontmatter,
     parse_relationships,
     parse_sections,
+    write_session_state,
 )
 
 
@@ -233,6 +235,56 @@ def resolve_paths(wiki_root: Optional[str] = None, brain_root: Optional[str] = N
 
 
 # ---------------------------------------------------------------------------
+# Orient: context-aware onboarding for fresh agents (E022-M002)
+# Design: wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md
+# ---------------------------------------------------------------------------
+
+def gateway_orient(paths: Dict[str, Path], args) -> None:
+    """Orient — context-aware onboarding.
+
+    Answers: 'who are you, where, are you fresh, what must you internalize?'
+    Branches on (location × freshness) per E022-M002 dispatch matrix.
+
+    SCAFFOLD: prints placeholder per detected context.
+    Implement stage (T-E022-07) adds real output modes.
+    """
+    context = detect_context(
+        wiki_root=paths.get("root"),
+        brain_root=paths.get("brain_root"),
+        orient_as=getattr(args, "orient_as", None),
+        fresh=getattr(args, "fresh", False),
+    )
+
+    location = context["location"]
+    freshness = context["freshness"]
+
+    # SCAFFOLD: placeholder outputs per dispatch matrix cell
+    # T-E022-07 implements real output for each cell
+    if location == "brain-self" and freshness == "fresh":
+        print(f"[SCAFFOLD] orient — brain-self + fresh")
+        print(f"  Full orient output: reading path + standing rules")
+        print(f"  NEXT: gateway what-do-i-need")
+    elif location == "brain-self":
+        print(f"[SCAFFOLD] orient — brain-self + {freshness}")
+        print(f"  Redirect: you know the base already")
+        print(f"  NEXT: gateway what-do-i-need")
+    elif location == "sister" and freshness == "fresh":
+        print(f"[SCAFFOLD] orient — sister + fresh")
+        print(f"  Full orient output: how to consume brain + contribute")
+        print(f"  NEXT: gateway what-do-i-need")
+    elif location == "sister":
+        print(f"[SCAFFOLD] orient — sister + {freshness}")
+        print(f"  Redirect: use gateway query --model <type> --brain")
+        print(f"  NEXT: gateway query --model <type> --brain")
+    else:
+        print(f"[SCAFFOLD] orient — external")
+        print(f"  MCP tool list + one-shot docs")
+        print(f"  NEXT: wiki_status")
+
+    write_session_state(context, subcommand="orient")
+
+
+# ---------------------------------------------------------------------------
 # Query: methodology, stages, chains, artifacts, fields, identity
 # ---------------------------------------------------------------------------
 
@@ -241,8 +293,21 @@ def query_what_do_i_need(paths: Dict[str, Path]) -> str:
 
     This is the "I don't know what I don't know" entry point.
     Detects as much as possible automatically, recommends next actions.
+
+    E022-M003 upgrade: context-aware branching (brain / sister / external ×
+    fresh / task-bound). SCAFFOLD adds detection call; implement stage adds
+    real branches. See wiki/backlog/modules/e022-m003-what-do-i-need-upgrade.md
     """
     root = paths["root"]
+
+    # E022 SCAFFOLD: context detection — falls through to existing behavior
+    # T-E022-11 (brain-self) and T-E022-12 (sister/external) add real branches
+    _context = detect_context(
+        wiki_root=paths.get("root"),
+        brain_root=paths.get("brain_root"),
+    )
+    # SCAFFOLD: context is detected but not yet used for branching.
+    # Existing output remains the default for all contexts until implement stage.
 
     # Auto-detect what we can
     detected = auto_detect_identity(root)
@@ -1792,6 +1857,15 @@ def main():
     m.add_argument("--to", required=True, help="Target directory within wiki/")
     m.add_argument("--dry-run", action="store_true")
 
+    # Orient — context-aware onboarding (E022-M002)
+    o = sub.add_parser("orient", help="Context-aware orientation — who are you, where, what to internalize")
+    o.add_argument("--orient-as", choices=["brain-self", "sister", "external"],
+                   help="Explicit context override (trumps auto-detection)")
+    o.add_argument("--fresh", action="store_true",
+                   help="Force fresh-agent mode (e.g. after compaction)")
+    o.add_argument("--format", dest="orient_format", default="text",
+                   choices=["text", "json"], help="Output format (default: text)")
+
     # Smart auto-routing
     sub.add_parser("what-do-i-need", help="Auto-detect identity and recommend chain, model, first steps")
 
@@ -1858,7 +1932,10 @@ def main():
         brain_root=args.brain if hasattr(args, "brain") else None,
     )
 
-    if args.command == "what-do-i-need":
+    if args.command == "orient":
+        gateway_orient(paths, args)
+
+    elif args.command == "what-do-i-need":
         print(query_what_do_i_need(paths))
 
     elif args.command == "compliance":

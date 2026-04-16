@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-16T00:33:26.004443+00:00",
+  "generated": "2026-04-16T01:15:12.186877+00:00",
   "stats": {
-    "pages": 336,
+    "pages": 339,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2250,
-    "tags_unique": 1059,
+    "relationships": 2263,
+    "tags_unique": 1068,
     "layers": {
       "3": 4,
       "6": 17,
@@ -790,10 +790,70 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Context Engineering"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit.md",
+      "slug": "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "title": "E023 \u2014 Gateway-Wide Output Contract Audit",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "epic",
+        "gateway",
+        "audit",
+        "contract-compliance",
+        "v2",
+        "milestone-v2",
+        "p2",
+        "follow-on",
+        "stub"
+      ],
+      "sources": [
+        {
+          "id": "milestone",
+          "type": "file",
+          "file": "wiki/backlog/milestones/second-brain-complete-system-v2-0.md"
         },
         {
-          "verb": "FEEDS INTO",
-          "target": "E023 \u2014 Gateway-Wide Output Contract Audit (follow-on, stub in M005)"
+          "id": "e022-predecessor",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md"
+        },
+        {
+          "id": "output-contract",
+          "type": "wiki",
+          "file": "wiki/spine/standards/gateway-output-contract.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E023 \u2014 Gateway-Wide Output Contract Audit",
+        "E023 \u2014 Gateway Output Audit"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone \u2014 Second Brain Complete System \u2014 v2.0"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E022 \u2014 Context-Aware Gateway Orientation and Task Routing"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Gateway Output Contract \u2014 What Good Tool Output Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
         }
       ]
     },
@@ -1387,6 +1447,134 @@
         {
           "verb": "BUILDS ON",
           "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e022-m002-gateway-orient-subcommand.md",
+      "slug": "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "title": "E022-M002 \u2014 Gateway Orient Subcommand (Module Design)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "module",
+        "gateway",
+        "orient",
+        "context-detection",
+        "session-state",
+        "design",
+        "e022"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md"
+        },
+        {
+          "id": "output-contract",
+          "type": "wiki",
+          "file": "wiki/spine/standards/gateway-output-contract.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E022-M002 \u2014 Gateway Orient Subcommand",
+        "M002 \u2014 Gateway Orient Subcommand"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E022 \u2014 Context-Aware Gateway Orientation and Task Routing"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Gateway Output Contract \u2014 What Good Tool Output Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Consumer Runtime Signaling via MCP Config"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e022-m003-what-do-i-need-upgrade.md",
+      "slug": "backlog/modules/e022-m003-what-do-i-need-upgrade",
+      "title": "E022-M003 \u2014 Gateway What-Do-I-Need Upgrade (Module Design)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-15",
+      "updated": "2026-04-15",
+      "tags": [
+        "module",
+        "gateway",
+        "what-do-i-need",
+        "context-aware",
+        "srp",
+        "upgrade",
+        "design",
+        "e022"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md"
+        },
+        {
+          "id": "output-contract",
+          "type": "wiki",
+          "file": "wiki/spine/standards/gateway-output-contract.md"
+        },
+        {
+          "id": "m002-design",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "E022-M003 \u2014 Gateway What-Do-I-Need Upgrade",
+        "M003 \u2014 What-Do-I-Need Upgrade"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E022 \u2014 Context-Aware Gateway Orientation and Task Routing"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E022-M002 \u2014 Gateway Orient Subcommand"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Gateway Output Contract \u2014 What Good Tool Output Looks Like"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Execution Mode Is a Consumer Property, Not a Project Property"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
         }
       ]
     },
@@ -23609,8 +23797,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 25,
-      "relationship_count": 146
+      "page_count": 28,
+      "relationship_count": 159
     },
     "cross-domain": {
       "page_count": 150,
@@ -23660,6 +23848,7 @@
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -23699,6 +23888,7 @@
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
       "backlog/milestones/second-brain-complete-system-v2-0"
     ],
     "milestone-v2": [
@@ -23714,7 +23904,8 @@
       "backlog/epics/milestone-v2/e019-obsidian-navigation-complete-browse-experience-with-folder-cleanup",
       "backlog/epics/milestone-v2/e020-knowledge-sweep-global-quality-confirmation-by-human-review",
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
-      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
     ],
     "standards": [
       "backlog/epics/milestone-v2/e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e",
@@ -23902,7 +24093,10 @@
     "gateway": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
+      "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "domains/ai-agents/orchestration/openclaw",
       "domains/tools-and-platforms/multi-channel-ai-agent-access",
       "domains/tools-and-platforms/openarms",
@@ -23996,6 +24190,7 @@
     ],
     "context-aware": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "comparisons/cross-domain-patterns",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
     ],
@@ -24007,8 +24202,26 @@
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "domains/cross-domain/methodology-framework/global-standards-adherence",
       "spine/standards/gateway-output-contract"
+    ],
+    "audit": [
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "domains/devops/devops-control-plane",
+      "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated"
+    ],
+    "contract-compliance": [
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
+    ],
+    "p2": [
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
+    ],
+    "follow-on": [
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
+    ],
+    "stub": [
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
     ],
     "local-inference": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -24391,6 +24604,43 @@
     ],
     "complete-system": [
       "backlog/milestones/second-brain-complete-system-v2-0"
+    ],
+    "module": [
+      "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "backlog/modules/e022-m003-what-do-i-need-upgrade",
+      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
+      "domains/devops/backlog-hierarchy-rules",
+      "domains/devops/task-type-artifact-matrix"
+    ],
+    "orient": [
+      "backlog/modules/e022-m002-gateway-orient-subcommand"
+    ],
+    "context-detection": [
+      "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "domains/cross-domain/methodology-framework/project-self-identification-protocol"
+    ],
+    "session-state": [
+      "backlog/modules/e022-m002-gateway-orient-subcommand"
+    ],
+    "design": [
+      "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "backlog/modules/e022-m003-what-do-i-need-upgrade",
+      "decisions/02_validated/methodology/artifact-system-design-decisions",
+      "domains/cross-domain/methodology-artifacts/categories/requirements-and-design-artifacts",
+      "domains/cross-domain/methodology-initiative/e003-artifact-type-system-design",
+      "domains/devops/stage-gate-methodology",
+      "log/2026-04-09/system/2026-04-09-directive-styling-obsidian",
+      "spine/references/root-documentation-map"
+    ],
+    "e022": [
+      "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "backlog/modules/e022-m003-what-do-i-need-upgrade"
+    ],
+    "what-do-i-need": [
+      "backlog/modules/e022-m003-what-do-i-need-upgrade"
+    ],
+    "upgrade": [
+      "backlog/modules/e022-m003-what-do-i-need-upgrade"
     ],
     "backlog": [
       "backlog/operator-decision-queue",
@@ -24852,14 +25102,6 @@
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
       "sources/src-27-questions-llm-selection"
     ],
-    "design": [
-      "decisions/02_validated/methodology/artifact-system-design-decisions",
-      "domains/cross-domain/methodology-artifacts/categories/requirements-and-design-artifacts",
-      "domains/cross-domain/methodology-initiative/e003-artifact-type-system-design",
-      "domains/devops/stage-gate-methodology",
-      "log/2026-04-09/system/2026-04-09-directive-styling-obsidian",
-      "spine/references/root-documentation-map"
-    ],
     "execution-modes": [
       "decisions/02_validated/methodology/execution-mode-edge-cases",
       "domains/ai-agents/patterns/per-role-command-architecture",
@@ -24970,11 +25212,6 @@
     "hierarchy": [
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules"
-    ],
-    "module": [
-      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
-      "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/task-type-artifact-matrix"
     ],
     "task": [
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
@@ -25986,9 +26223,6 @@
     "self-identification": [
       "domains/cross-domain/methodology-framework/project-self-identification-protocol"
     ],
-    "context-detection": [
-      "domains/cross-domain/methodology-framework/project-self-identification-protocol"
-    ],
     "adaptive": [
       "domains/cross-domain/methodology-framework/project-self-identification-protocol"
     ],
@@ -26099,10 +26333,6 @@
     ],
     "encryption": [
       "domains/devops/devops-control-plane"
-    ],
-    "audit": [
-      "domains/devops/devops-control-plane",
-      "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated"
     ],
     "multi-interface": [
       "domains/devops/devops-control-plane"
@@ -28383,12 +28613,6 @@
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
-      ]
-    },
-    {
-      "target": "E023 \u2014 Gateway-Wide Output Contract Audit",
-      "referenced_by": [
-        "E022 \u2014 Context-Aware Gateway Orientation and Task Routing"
       ]
     },
     {

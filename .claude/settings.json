@@ -43,7 +43,8 @@
       "Bash(grep -l \"lesson-convergence-on-obsidian-knowledge-vault\" /home/jfortin/devops-solutions-research-wiki/wiki/lessons/*.md)",
       "WebFetch(domain:sebastianraschka.com)",
       "WebFetch(domain:www.eweek.com)",
-      "WebFetch(domain:www.infoworld.com)"
+      "WebFetch(domain:www.infoworld.com)",
+      "Bash(python3 -m tools.lint)"
     ]
   }
 }
