@@ -33,7 +33,7 @@ tags: [pattern, cost, optimization, methodology, agent-execution, multi-task, co
 
 ## Summary
 
-Agent execution cost is reducible through a three-layer optimization stack, ordered by impact. Each layer is independent — you can apply any subset — but they compound multiplicatively. First-order (model right-sizing) saves 5-10x. Second-order (single-task preference) saves ~2x. Third-order (context bloat minimization) is behavioral discipline with diminishing returns. Combined, the stack can reduce a multi-task run from $54 to $8 for the same deliverables.
+Agent execution cost is reducible through a five-layer optimization stack (3 original + 2 added with Opus 4.7), ordered by impact. Each layer is independent — you can apply any subset — but they compound multiplicatively. Combined, the stack can reduce a multi-task run from $54 to under $5 for the same deliverables.
 
 ## Pattern Description
 
@@ -42,8 +42,10 @@ The stack is ordered by ROI — highest-impact, lowest-effort optimizations firs
 | Layer | Optimization | Mechanism | Measured savings | Effort |
 |---|---|---|---|---|
 | **1st order** | Right-size the methodology model | Use `integration` (3 stages) instead of `feature-development` (5 stages) for known-pattern work. Skip doc+design when the answer is obvious. | 86.8% per task ($9.07 → $1.20) | Zero — just pick the right `task_type` |
-| **2nd order** | Prefer single-task runs | Each task in a multi-task run inherits prior context burden. Run tasks individually when operator time is cheap. | ~2.6x per run ($3.60 predicted → $9.29 actual for 3-task) | Low — launch N times instead of once |
-| **3rd order** | Minimize cross-task context bloat | Avoid unnecessary file changes that inflate codebase size for subsequent tasks. Small commit footprints. | Unquantified — behavioral | Medium — requires discipline |
+| **2nd order** | Right-size the effort level (NEW) | Use `high` for implementation, `medium` for maintenance, `xhigh` for architecture. Lower effort = less thinking = fewer tokens. | ~2-3x per effort level step (estimated from token reduction) | Zero — set effort per task |
+| **3rd order** | Right-size the Claude model (NEW) | Use Opus 4.6 for extended-thinking tasks; 4.7 for literal/memory tasks. 4.7's tokenizer costs 35% more — use 4.6 when context is heavy. | Up to 35% savings on context-heavy tasks | Low — model selection per task |
+| **4th order** | Prefer single-task runs | Each task in a multi-task run inherits prior context burden. Run tasks individually when operator time is cheap. | ~2.6x per run ($3.60 predicted → $9.29 actual for 3-task) | Low — launch N times instead of once |
+| **5th order** | Minimize cross-task context bloat | Avoid unnecessary file changes that inflate codebase size for subsequent tasks. Small commit footprints. | Unquantified — behavioral | Medium — requires discipline |
 
 **The multiplication:**
 - 6-task track at feature-development, multi-task: ~$54 (6 × $9.07)

@@ -105,6 +105,20 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 
 **The budget tradeoff:** More context = more information for better decisions. But also: more context = more noise, higher cost, faster degradation. The Goldilocks principle applies to context too — "just right" is the tier that matches the agent's trust level and the task's complexity.
 
+> [!warning] **Model-specific token budgets (NEW 2026-04-16)**
+>
+> Opus 4.7 uses a new tokenizer that consumes ~1-1.35x more tokens for the same text. The tier budgets above are calibrated for 4.6. For 4.7, multiply by the tokenizer factor:
+>
+> | Tier | 4.6 budget | 4.7 budget (×1.35) | Impact |
+> |---|---|---|---|
+> | Expert | 5,000-10,000 | 6,750-13,500 | 35% more expensive per message |
+> | Capable | 2,000-5,000 | 2,700-6,750 | May push over limits that worked on 4.6 |
+> | Lightweight | 500-1,000 | 675-1,350 | Still manageable |
+>
+> **Design implication:** Context injection that fits comfortably on 4.6 may trigger compaction earlier on 4.7. A 200-line CLAUDE.md costs 35% more per message. The <200 line standard becomes even more important. Skills that load 500+ tokens of context have a higher cost floor on 4.7.
+>
+> **4.7 task budgets as complement:** Opus 4.7's advisory task budgets (`task_budget: {type: "tokens", total: N}`) let the MODEL self-moderate context consumption across a full agentic loop. This is a new lever: instead of controlling context from outside (tier selection), the model controls itself from inside (task budget countdown). The two compose: tier controls WHAT goes in, task budget controls HOW MUCH the model generates.
+
 ### Structural Patterns That Work
 
 > [!info] Proven Structural Patterns for AI Context
@@ -410,6 +424,7 @@ Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execut
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-context-engineering-standards|Context Engineering Standards — What Good Structured Context Looks Like]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
+[[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
 [[e022-context-aware-gateway-orientation-and-routing|E022 — Context-Aware Gateway Orientation and Task Routing]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]

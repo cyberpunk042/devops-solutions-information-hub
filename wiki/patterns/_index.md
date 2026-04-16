@@ -27,7 +27,7 @@ See also: [[cross-domain-patterns|Cross-Domain Patterns]] for the meta-analysis 
 
 ## Pages
 
-- [Agent Execution Cost Optimization Stack](01_drafts/agent-execution-cost-optimization-stack.md) — Agent execution cost is reducible through a three-layer optimization stack, ordered by impact
+- [Agent Execution Cost Optimization Stack](01_drafts/agent-execution-cost-optimization-stack.md) — Agent execution cost is reducible through a five-layer optimization stack (3 original + 2 added with Opus 4
 - [Aspirational Naming in Lifecycle Code](01_drafts/aspirational-naming-in-lifecycle-code.md) — When a variable in lifecycle-critical code is named after its intended semantic meaning (e
 - [Block With Reason and Justified Escalation — The Bypass Mechanism for Mindful Enforcement](01_drafts/block-with-reason-and-justified-escalation.md) — When an autonomous agent encounters a condition where it SHOULD not proceed silently — a blocked action, an out-of-sc...
 - [Hierarchical Metrics Fail on Sparse Coverage](01_drafts/hierarchical-metrics-fail-on-sparse-coverage.md) — When a parent metric is derived from its children (average, sum, max) and the children don't cover the parent's full ...

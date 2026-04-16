@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-16T18:31:37.350227+00:00",
+  "generated": "2026-04-16T18:46:09.332248+00:00",
   "stats": {
-    "pages": 350,
+    "pages": 351,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2334,
-    "tags_unique": 1081,
+    "relationships": 2339,
+    "tags_unique": 1086,
     "layers": {
       "3": 4,
-      "6": 17,
+      "6": 18,
       "2": 51,
       "4": 52,
       "5": 25,
@@ -18,7 +18,7 @@
     },
     "maturity": {
       "growing": 273,
-      "seed": 29
+      "seed": 30
     }
   },
   "pages": [
@@ -2280,6 +2280,72 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/extended-to-adaptive-thinking-migration.md",
+      "slug": "decisions/01_drafts/extended-to-adaptive-thinking-migration",
+      "title": "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "decision",
+        "thinking",
+        "adaptive",
+        "extended",
+        "migration",
+        "opus-4.7",
+        "breaking-change"
+      ],
+      "sources": [
+        {
+          "id": "opus-4-7-docs",
+          "type": "article",
+          "url": "https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-6"
+        },
+        {
+          "id": "adaptive-thinking-docs",
+          "type": "article",
+          "url": "https://platform.claude.com/docs/en/build-with-claude/adaptive-thinking"
+        },
+        {
+          "id": "research-note",
+          "type": "wiki",
+          "file": "raw/notes/2026-04-16-research-claude-code-2.1.94-to-2.1.111-and-opus-4.7.md"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
+        "Extended to Adaptive Migration"
+      ],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cost Optimization Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Right-Size Methodology Model"
         }
       ]
     },
@@ -24411,8 +24477,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 161,
-      "relationship_count": 1081
+      "page_count": 162,
+      "relationship_count": 1086
     },
     "ai-agents": {
       "page_count": 65,
@@ -25580,6 +25646,7 @@
     ],
     "decision": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
@@ -25611,6 +25678,25 @@
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
+    ],
+    "thinking": [
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration"
+    ],
+    "adaptive": [
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration",
+      "domains/cross-domain/methodology-framework/project-self-identification-protocol"
+    ],
+    "extended": [
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration"
+    ],
+    "migration": [
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration"
+    ],
+    "opus-4.7": [
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration"
+    ],
+    "breaking-change": [
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration"
     ],
     "knowledge-interface": [
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface"
@@ -26836,9 +26922,6 @@
       "spine/models/foundation/model-methodology"
     ],
     "self-identification": [
-      "domains/cross-domain/methodology-framework/project-self-identification-protocol"
-    ],
-    "adaptive": [
       "domains/cross-domain/methodology-framework/project-self-identification-protocol"
     ],
     "tracking": [
@@ -29425,6 +29508,7 @@
       "target": "Model \u2014 Local AI",
       "referenced_by": [
         "Test OpenAI backend with LocalAI",
+        "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
         "AICP \u2014 Identity Profile",
         "If You Can Verify, You Converge",
         "Agent Execution Cost Optimization Stack",
@@ -29504,6 +29588,7 @@
     {
       "target": "Right-Size Methodology Model",
       "referenced_by": [
+        "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children"

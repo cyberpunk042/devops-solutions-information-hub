@@ -46,6 +46,28 @@ Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writ
 
 - **SDLC profiles adapt Claude Code configuration.** A POC project needs a lean CLAUDE.md with 2-3 methodology models. A production fleet needs full methodology.yaml + domain profiles + hooks + commands. The identity profile determines which level of Claude Code configuration is appropriate. See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]].
 
+- **Model choice is now a routing dimension (NEW 2026-04-16).** Opus 4.6 and 4.7 coexist with different behavior profiles. 4.7 follows instructions more literally, spawns fewer subagents, uses a new tokenizer (+35% tokens), and removes extended thinking in favor of adaptive-only. Context injection (CLAUDE.md, skills, hooks) must adapt per model: prompt style (explicit for 4.7 vs inferred for 4.6), token budgets (×1.35 for 4.7), thinking configuration (`budget_tokens` on 4.6 vs `effort` level on 4.7). The harness should declare which model it targets and adapt accordingly.
+
+- **Five effort levels now available.** `low → medium → high → xhigh → max`. Default changed from medium to high in CLI 2.1.95. `xhigh` is new for 4.7, recommended for coding/agentic. This adds a cost-quality lever per task alongside methodology model selection. Combined with the Cost Optimization Stack: right-size model (5-10x savings) + right-size effort (further 2-3x per level) + right-size Claude model (4.6 vs 4.7 per task needs).
+
+- **PreCompact hooks can now BLOCK compaction (CLI 2.1.105).** Exit code 2 from a PreCompact hook prevents compaction. New enforcement capability: the harness can keep critical context alive when the system would otherwise compact it. Useful for mid-stage work where compaction would lose stage state.
+
+### Model Coexistence — Opus 4.6 vs 4.7
+
+> [!info] **Multi-model routing for production harnesses (NEW 2026-04-16)**
+>
+> | Dimension | Opus 4.6 | Opus 4.7 | Routing rule |
+> |---|---|---|---|
+> | **Thinking** | Extended (budget_tokens) OR adaptive | Adaptive ONLY (off by default) | Tasks needing guaranteed deep thinking → 4.6. Tasks needing speed/cost control → 4.7 with effort. |
+> | **Tokenizer** | Standard | +1-1.35x tokens | Context-heavy tasks (large CLAUDE.md, many skills) → 4.6 is cheaper. Short tasks → 4.7 is fine. |
+> | **Instruction style** | Infers from context | Literal, won't generalize | Prompts relying on agent inference → 4.6. Explicit task specs → 4.7 is more reliable. |
+> | **Tool calling** | Frequent by default | Fewer, more reasoning | Tasks needing many tool calls → 4.6 or raise effort on 4.7. Reasoning-heavy tasks → 4.7. |
+> | **Subagents** | Spawns frequently | Fewer by default | Parallel research tasks → 4.6 or prompt 4.7 explicitly. Sequential work → 4.7 is fine. |
+> | **Task budgets** | Not available | Advisory token budget (beta) | Long agentic loops needing scope control → 4.7 with task_budget. |
+> | **Memory** | Standard | Improved file-based memory | Tasks spanning many turns with scratchpad → 4.7 advantage. |
+>
+> **The simplest migration path:** Start all tasks on 4.6 (no changes). Test individual task types on 4.7 with explicit prompting. Move tasks to 4.7 only when verified. Keep 4.6 as fallback.
+
 ### Agent Runtime Landscape
 
 > [!info] Claude Code is one agent runtime — the patterns transfer
@@ -560,6 +582,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[model-claude-code-standards|Claude Code Standards — What Good Agent Configuration Looks Like]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
+[[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]

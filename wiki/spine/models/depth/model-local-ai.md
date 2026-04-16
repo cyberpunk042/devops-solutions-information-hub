@@ -85,6 +85,24 @@ These hold regardless of which stack or pattern you choose:
 - **The complexity scorer threshold is the routing mechanism** — not manual human selection
 - **The $0 target applies to maintenance, not creation** — knowledge creation remains cloud; routine operations become free
 
+### Cloud Model Selection — Opus 4.6 vs 4.7 (NEW 2026-04-16)
+
+With Opus 4.7's launch, the "route to cloud" decision gains a model dimension. Not all cloud tasks should go to the same model:
+
+> [!info] **Three-tier cloud routing**
+>
+> | Tier | Cloud model | Effort level | Use when |
+> |---|---|---|---|
+> | **Cloud-light** | Opus 4.6 + medium effort | Extended thinking available, cheaper tokenizer | Context-heavy tasks, prompts relying on inference, backward-compat |
+> | **Cloud-standard** | Opus 4.7 + high effort | Adaptive thinking, better memory, literal following | Standard implementation, explicit task specs, multi-turn with scratchpad |
+> | **Cloud-heavy** | Opus 4.7 + xhigh effort | Maximum reasoning for complex problems | Architecture decisions, novel synthesis, deep code review |
+>
+> Combined with local routing: `simple → local ($0) → moderate → cloud-light → complex → cloud-standard → novel → cloud-heavy`
+>
+> This extends the AICP complexity scorer from a binary decision (local/cloud) to a 4-tier routing stack. The additional tiers add granularity without changing the scoring mechanism — same complexity signal, more routing targets.
+
+**The 35% tokenizer cost matters for routing decisions.** A task that fits comfortably in Opus 4.6's token budget may be 35% more expensive on 4.7. For context-heavy operations (large CLAUDE.md, many skills loaded, long conversation), 4.6 is cheaper per message. The routing decision should factor token economics alongside capability needs.
+
 ---
 
 ### Instance — AICP Routing
@@ -315,6 +333,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[gateway-centric-routing|Gateway-Centric Routing]]
 [[identity-profile|AICP — Identity Profile]]
 [[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]
+[[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
