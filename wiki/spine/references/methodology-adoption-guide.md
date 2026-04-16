@@ -59,14 +59,31 @@ Step-by-step guide for any project to adopt the research wiki's methodology. Cov
 >
 > Most projects should start by reading the models and following them manually. When agents start skipping stages or producing wrong artifacts, move to Tier 2. When you can't tell if methodology was followed, add Tier 3. When you run autonomous agents overnight, you need Tier 4.
 
-### Tier 1: Read the Models
+> [!warning] Two reading orders — pick yours (NEW 2026-04-16, from first consumer integration)
+>
+> | You are... | Read this order | Why |
+> |---|---|---|
+> | **Learning** (no existing methodology) | Models first → then standards | Models teach WHAT the system IS; standards come after understanding |
+> | **Integrating** (existing methodology infrastructure) | Standards first → then models | Standards tell you "what good looks like" — you assess your gaps against them. Models explain the system you're aligning with. |
+>
+> **Scale reality check:** Full integration from Tier 1 to Tier 4 is approximately **23 epics, 125-185 tasks, 5 milestones across months of sustained effort.** Tier 1 is minutes. Tier 2 is hours. Tier 3 is days-to-weeks. Tier 4 is weeks-to-months. Don't plan for a weekend — plan for graduated adoption over time. Evidence: OpenArms first consumer integration (2026-04-16).
 
-No configuration needed. Just read these wiki pages:
+### Tier 1: Read (learning path) / Assess (integration path)
+
+**Learning path** (no existing methodology):
 
 1. **Start here:** [[model-methodology|Model — Methodology]] — the 9 named models and when to use each
 2. **Understand stages:** [[stage-gate-methodology|Stage-Gate Methodology]] — the 5 stages and their boundaries
 3. **Know the artifacts:** [[artifact-chains-by-model|Artifact Chains by Methodology Model]] — what each stage produces
 4. **Quality tiers:** [[skyscraper-pyramid-mountain|Skyscraper, Pyramid, Mountain]] — choose your quality level explicitly
+
+**Integration path** (existing methodology, need alignment):
+
+1. **Standards first:** `python3 -m tools.view standards` — what "good" looks like per artifact type
+2. **Check compliance:** `python3 -m tools.gateway compliance` — which tier you're functionally at
+3. **Query your gaps:** `python3 -m tools.gateway query --model <your-task-type> --full-chain` — what the canonical chain expects
+4. **Then models:** `python3 -m tools.view model methodology` — the full system to understand WHY
+5. **Then health:** `python3 -m tools.gateway health --verbose` — page-level validation against your own schema
 
 Then in your CLAUDE.md, add a reference:
 

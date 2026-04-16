@@ -216,6 +216,24 @@ Each step is independent. To undo:
 - [ ] At least one contribution back to the second brain
 - [ ] `gateway what-do-i-need` shows your declared identity (not "unknown")
 
+### First Consumer Walkthrough — OpenArms (2026-04-16)
+
+> [!success] E016 proof — 10/17 steps completed in first live integration session
+>
+> | Phase | Steps | Status |
+> |---|---|---|
+> | Discovery (1-3) | First contact, auto-detect, browse tree | 3/3 ✅ |
+> | Identity (4-5) | Declare profile, select SDLC profile | 1/2 (step 4 blocked by CLAUDE.md restructure) |
+> | Methodology (6-8) | Understand models, learn stages, domain details | 2.5/3 (stage query partial) |
+> | Standards (9-11) | Review standards, get templates, query fields | 2.5/3 |
+> | Work Loop (12-14) | Follow sequence, track readiness/progress, handle impediments | 0.5/3 (not yet executed using chain) |
+> | Feedback (15-16) | Contribute learnings, scan project | 1/2 (6 lessons contributed, scan not run) |
+> | Mode (17) | Choose local/remote | 1/1 ✅ |
+>
+> **Blockers:** Step 4 (identity in CLAUDE.md) blocked by OpenArms' 700-line CLAUDE.md needing restructure. Step 12 (real task using chain output) requires harness integration. Step 13 (readiness vs progress separation) is a schema change.
+>
+> **Full evidence:** `raw/notes/2026-04-16-openarms-first-consumer-integration-feedback.md` (871 lines)
+
 ### How This Connects — Navigate From Here
 
 > [!abstract] From This Page → Related Knowledge
