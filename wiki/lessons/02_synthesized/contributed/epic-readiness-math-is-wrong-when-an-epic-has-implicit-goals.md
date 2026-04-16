@@ -88,6 +88,16 @@ Five structural fixes, in order of cost:
 - Re-check and fix epic frontmatter after every child completion
 - Treat the epic body as authoritative over frontmatter when conditions above apply
 
+## Self-Check
+
+> [!warning] After any child task completes, ask:
+>
+> 1. How many children does this epic have? If 1-4: DO NOT trust readiness
+> 2. Does the epic have implicit goals not yet broken into tasks?
+> 3. Did `recalculate-epic` write `current_stage` to the epic? (category error — epics don't have stages)
+> 4. Does the artifacts list aggregate ALL children's outputs, or just the first child's?
+> 5. If readiness is 100% and you know there's more work: override manually NOW
+
 ## Relationships
 
 - RELATES TO: [[model-methodology|Model: Methodology]] -- the readiness computation and epic lifecycle logic

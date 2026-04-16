@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T17:26:25.491205+00:00",
+  "generated": "2026-04-16T17:30:17.112816+00:00",
   "stats": {
     "pages": 345,
     "domains": 9,
@@ -10304,98 +10304,6 @@
       "relationships": []
     },
     {
-      "path": "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
-      "slug": "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "title": "Agents take small unauthorized scope expansions when the change is a 'clean win'",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-16",
-      "updated": "2026-04-16",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Agent Failure Taxonomy"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Enforcement Hook Patterns"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Three Lines of Defense"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Quality Failure Prevention"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Right-Size Methodology Model"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Mindful Enforcement"
-        }
-      ]
-    },
-    {
-      "path": "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md",
-      "slug": "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "title": "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-16",
-      "updated": "2026-04-16",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Model: Methodology"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Harness-Owned Loop"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Coverage Blindness"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Systemic Incompleteness"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Harness turnCount Bug"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Right-Size Methodology Model"
-        }
-      ]
-    },
-    {
       "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
       "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
       "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -10438,68 +10346,6 @@
         {
           "verb": "RELATES TO",
           "target": "Context Management"
-        }
-      ]
-    },
-    {
-      "path": "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
-      "slug": "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
-      "title": "Right-size the methodology model to the actual work, not the structural category",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-16",
-      "updated": "2026-04-16",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Method of Work"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "not the label"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Methodology as Framework"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "not rigidly apply one model"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model: Methodology"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Per-Task Cost Growth"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Epic Readiness Math"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Universal Stages"
-        },
-        {
-          "verb": "PRODUCED BY",
-          "target": "T116 cost analysis (2026-04-14)"
-        },
-        {
-          "verb": "PRODUCED BY",
-          "target": "validated by T117"
         }
       ]
     },
@@ -10968,6 +10814,160 @@
         {
           "verb": "RELATES TO",
           "target": "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation"
+        }
+      ]
+    },
+    {
+      "path": "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
+      "slug": "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "title": "Agents take small unauthorized scope expansions when the change is a 'clean win'",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Agent Failure Taxonomy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Enforcement Hook Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Lines of Defense"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Quality Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Right-Size Methodology Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mindful Enforcement"
+        }
+      ]
+    },
+    {
+      "path": "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md",
+      "slug": "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "title": "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness-Owned Loop"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Coverage Blindness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Systemic Incompleteness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness turnCount Bug"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Right-Size Methodology Model"
+        }
+      ]
+    },
+    {
+      "path": "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
+      "slug": "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "title": "Right-size the methodology model to the actual work, not the structural category",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Method of Work"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "not the label"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology as Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "not rigidly apply one model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model: Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Per-Task Cost Growth"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic Readiness Math"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Universal Stages"
+        },
+        {
+          "verb": "PRODUCED BY",
+          "target": "T116 cost analysis (2026-04-14)"
+        },
+        {
+          "verb": "PRODUCED BY",
+          "target": "validated by T117"
         }
       ]
     },
@@ -27143,20 +27143,20 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
-      "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
-      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
     ],
     "inbox": [
-      "lessons/01_drafts/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/01_drafts/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/01_drafts/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
-      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-"
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
     ],
     "lesson": [
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
@@ -28948,9 +28948,9 @@
     {
       "target": "Agent Failure Taxonomy",
       "referenced_by": [
-        "Agents take small unauthorized scope expansions when the change is a 'clean win'",
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
-        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
+        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'"
       ]
     },
     {
@@ -28993,8 +28993,8 @@
       "target": "Epic Readiness Math",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
-        "Right-size the methodology model to the actual work, not the structural category",
-        "The harness 'turnCount' variable counts streaming events, not conversational turns"
+        "The harness 'turnCount' variable counts streaming events, not conversational turns",
+        "Right-size the methodology model to the actual work, not the structural category"
       ]
     },
     {
@@ -29006,8 +29006,8 @@
     {
       "target": "Harness turnCount Bug",
       "referenced_by": [
-        "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
-        "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)",
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
       ]
     },
     {
@@ -29101,8 +29101,8 @@
     {
       "target": "Per-Task Cost Growth",
       "referenced_by": [
-        "Right-size the methodology model to the actual work, not the structural category",
-        "The harness 'turnCount' variable counts streaming events, not conversational turns"
+        "The harness 'turnCount' variable counts streaming events, not conversational turns",
+        "Right-size the methodology model to the actual work, not the structural category"
       ]
     },
     {
@@ -29126,9 +29126,9 @@
     {
       "target": "Right-Size Methodology Model",
       "referenced_by": [
+        "Per-task cost grows monotonically across multi-task runs (context accumulation)",
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
-        "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
-        "Per-task cost grows monotonically across multi-task runs (context accumulation)"
+        "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
       ]
     },
     {
@@ -29196,8 +29196,8 @@
     {
       "target": "Three Lines of Defense",
       "referenced_by": [
-        "Agents take small unauthorized scope expansions when the change is a 'clean win'",
-        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
+        "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
+        "Agents take small unauthorized scope expansions when the change is a 'clean win'"
       ]
     },
     {

@@ -74,6 +74,16 @@ This lesson applies to three design decisions:
 
 **When this lesson does NOT apply**: If the project does not use structured task specs with explicit scope boundaries, clean-win refactors are likely the right default behavior. This lesson is specific to methodology-governed agent execution where predictability and audit trails matter.
 
+## Self-Check
+
+> [!warning] Before reviewing an agent's implement-stage diff, ask:
+>
+> 1. Does the diff touch files the spec assumed would stay the SAME?
+> 2. Are there "clean" refactors mixed into the same commit as spec'd work?
+> 3. If yes: is the refactor Class A (forbidden), B (allowed), or C (gray area)?
+> 4. Does the task spec have explicit Out of Scope language?
+> 5. Did the agent use `/concern` for improvement opportunities instead of acting?
+
 ## Relationships
 
 - RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy]] -- scope expansion as a behavioral failure class

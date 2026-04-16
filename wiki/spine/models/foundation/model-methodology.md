@@ -72,6 +72,10 @@ The Methodology model defines a flexible FRAMEWORK for defining, selecting, comp
 
 - **Readiness and progress are TWO independent dimensions.** Readiness = definition completeness (left side of SDLC). Progress = execution completeness (right side). They advance in parallel and converge. 99→100 is human-only on BOTH. See [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]].
 
+- **Model selection needs a NOVELTY dimension, not just task type (NEW 2026-04-16).** OpenArms T116 ($9.07, 35 min, 5 stages) vs T117 ($1.20, 18 min, 3 stages) — same scope of mechanical work, 86.8% cost reduction by using `integration` instead of `feature-development`. The selector currently uses `task_type` alone; the right model depends on whether the solution is KNOWN (use integration/bug-fix) or needs DISCOVERY (use feature-development). See [[right-size-the-methodology-model-to-the-actual-work,-not-the|Right-Size Methodology Model — OpenArms Evidence]].
+
+- **Epic readiness as average(child.readiness) fails on sparse children (NEW 2026-04-16).** When an epic has 1-4 children that don't cover full scope, completing them all flips readiness to 100% prematurely. OpenArms E013: 5/5 frontmatter fields were fiction after 3 completions. Trust rules: 1-4 children = don't trust, 5+ = approximately correct, 10+ = reliable. See [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math — OpenArms Evidence]].
+
 - **Three SDLC profiles adapt the methodology to project context.** Simplified (POC, 2-3 stages, advisory enforcement), Default (MVP→Staging, all stages, hooks optional), Full (Production, all stages, full infrastructure enforcement). See [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]].
 
 ## Deep Analysis

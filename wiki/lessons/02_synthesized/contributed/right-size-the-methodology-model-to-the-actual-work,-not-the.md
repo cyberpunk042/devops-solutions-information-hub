@@ -85,6 +85,16 @@ This lesson applies to three concrete actions:
 
 **Agent self-right-sizing (future)**: The agent currently cannot change its own methodology model mid-run. A future pre-spawn check that asks "does the spec'd model fit the actual work?" could propose downgrades to the operator before starting. This is speculative but worth tracking as a research spike if cost-per-task remains a recurring pain point.
 
+## Self-Check
+
+> [!warning] Before spec'ing a task, ask:
+>
+> 1. Is the solution KNOWN from an existing pattern, or does it need DISCOVERY?
+> 2. If known: use `integration` (3 stages) or `bug-fix` (3 stages), NOT `feature-development` (5 stages)
+> 3. Would the document + design stages produce anything the scaffold stage doesn't already give you?
+> 4. Check: 5-stage runs cost 3-5x more than 3-stage for mechanical work
+> 5. When in doubt: start with `integration`, escalate only if scaffold reveals unexpected complexity
+
 ## Relationships
 
 - RELATES TO: [[follow-the-method-of-work-not-the-methodology-label|Method of Work]] -- matching the process to the work, not the label
