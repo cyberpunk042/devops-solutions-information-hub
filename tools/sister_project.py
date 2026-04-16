@@ -174,7 +174,7 @@ def _build_consumption_index(project_cfg: Dict[str, Any], project_name: Optional
     1. NEW (2026-04-15 directive form): structured frontmatter source entries
        with `project: X, path: Y` — the canonical portable form.
     2. Legacy absolute path in body text or frontmatter `file:` fields
-       (e.g. /home/jfortin/openarms/wiki/...). Deprecated; kept for back-compat
+       (e.g. ~/openarms/wiki/... after expansion). Deprecated; kept for back-compat
        until all wiki pages are migrated.
     3. Relative-path mentions in body text (e.g. `openarms/wiki/...`).
 

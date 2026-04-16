@@ -61,15 +61,21 @@ cd ~/devops-solutions-information-hub
 # 2. Full setup (creates .venv, installs deps, configures Obsidian if present)
 python3 -m tools.setup
 
-# 3. Verify — should print PASS with 0 errors
+# 3. Generate the machine-specific .mcp.json (REQUIRED after clone on any new machine)
+#    .mcp.json is gitignored — each machine regenerates it with its own absolute paths.
+python3 -m tools.setup --init
+
+# 4. Verify — should print PASS with 0 errors
 python3 -m tools.pipeline post
 
-# 4. Orient — should show the second-brain orientation
+# 5. Orient — should show the second-brain orientation
 python3 -m tools.gateway orient
 
-# 5. Browse — should show all 16 models, standards, sub-models
+# 6. Browse — should show all 16 models, standards, sub-models
 python3 -m tools.view spine
 ```
+
+**Why step 3?** MCP protocol requires absolute paths in `command` and `cwd`. Committing those would hardcode one user's home directory. `.mcp.json` is gitignored and regenerated per-machine by `--init`. The committed `.mcp.json.template` shows the expected structure.
 
 ### Connecting sister projects
 

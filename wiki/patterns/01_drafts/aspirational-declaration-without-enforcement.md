@@ -17,7 +17,11 @@ instances:
   - page: "Schema aspirationalism — defining required sections you never validate"
     context: "Schema-layer instance. required_sections in wiki-schema.yaml declares what each page type MUST contain. Validator does not actually check section presence against the declared list. 333 validation failures against project's own schema — the declaration existed without enforcement for months."
   - page: "Mandatory Without Verification Is Not Enforced"
-    context: "Skill-attribute-layer instance. Extension Standards define `mandatory: true` for skills the agent must invoke. Harness does not verify invocation before closing the stage. Declaration says enforced; infrastructure does not enforce. ~60% compliance (teaching layer) vs 100% (gate layer). "
+    context: "Skill-attribute-layer instance. Extension Standards define `mandatory: true` for skills the agent must invoke. Harness does not verify invocation before closing the stage. Declaration says enforced; infrastructure does not enforce. ~60% compliance (teaching layer) vs 100% (gate layer)."
+  - page: "Machine-Specific Config in VCS Is Aspirational Portability"
+    context: "Version-control layer instance. .mcp.json committed with `/home/jfortin/...` absolute paths. README declared the project portable. First transfer attempt surfaced the gap. Fix: gitignore + template + `setup.py --init` generator. Self-referential: the second brain that HOSTS this meta-pattern failed the same pattern for months until stress-tested."
+  - page: "Structural Compliance Is Not Operational Compliance"
+    context: "Compliance-measurement layer instance. Compliance checker verifies file presence at candidate paths. A project can reach Tier 4 structurally (OpenArms 2026-04-16) with stub implementations — evolve.py is 125 lines with basic word-count scoring, not a real 6-signal evolution pipeline. Structure exists; operation does not. Self-referential: the compliance checker itself is an aspirational declaration."
 derived_from:
   - "Aspirational Naming in Lifecycle Code"
   - "Schema aspirationalism — defining required sections you never validate"
@@ -49,7 +53,7 @@ tags: [pattern, cross-layer, aspirational, declaration, enforcement, false-confi
 
 ## Summary
 
-Declaring something (a variable name, a required field, an attribute value, a policy) creates the appearance of enforcement without delivering the reality. When the declaration is not paired with infrastructure that verifies it holds, the declaration becomes ASPIRATIONAL — a statement of intent the system does not back up. The failure mode manifests at every layer of a software system: variable names (turnCount), schema fields (required_sections), skill attributes (mandatory: true), configuration declarations, policy statements, documentation promises. Three validated instances across three different layers confirm this is a structural pattern, not a coincidence. **The mechanism is always the same:** declaration exists, downstream code assumes the declaration holds, no gate verifies, confidence compounds until the gap surfaces as a bug, outage, or failed audit.
+Declaring something (a variable name, a required field, an attribute value, a policy) creates the appearance of enforcement without delivering the reality. When the declaration is not paired with infrastructure that verifies it holds, the declaration becomes ASPIRATIONAL — a statement of intent the system does not back up. The failure mode manifests at every layer of a software system: variable names (turnCount), schema fields (required_sections), skill attributes (mandatory: true), configuration declarations (version-control portability), compliance measurements (structural vs operational), policy statements, documentation promises. **Five validated instances across five different layers** (variable / schema / skill-attribute / version-control / compliance-measurement) confirm this is a structural pattern, not a coincidence. With ≥5 validated layer instances, this pattern is at principle-promotion threshold. **The mechanism is always the same:** declaration exists, downstream code assumes the declaration holds, no gate verifies, confidence compounds until the gap surfaces as a bug, outage, or failed audit.
 
 ## Pattern Description
 
@@ -67,7 +71,7 @@ The pattern has three structural components — ALL must be present for the fail
 
 ## Instances
 
-Three instances across three different layers — same mechanism, different abstraction level.
+Five instances across five different layers — same mechanism, different abstraction level. Five validated instances put this at the principle-promotion threshold.
 
 > [!example]- Instance 1: Variable-layer — OpenArms `turnCount` (2026-04-14)
 >
@@ -198,6 +202,7 @@ Each of these is a candidate; when any crosses from observation to validated ins
 [[artifact-path-verification-at-gate-close|Artifact Path Verification at Gate Close]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[Quality Standards]]
+[[machine-specific-config-in-vcs-is-aspirational-portability|Machine-Specific Config in Version Control Is Aspirational Portability]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
 [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]

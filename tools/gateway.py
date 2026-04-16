@@ -2331,7 +2331,7 @@ def main():
     ct.add_argument("--content", required=True)
     ct.add_argument("--domain", default="cross-domain")
     ct.add_argument("--contributor", help="Contributor identifier (e.g. 'openarms-harness-v10'). Default: user@host")
-    ct.add_argument("--source", help="Origin path of contribution (e.g. '/home/jfortin/openarms'). Default: self")
+    ct.add_argument("--source", help="Origin path of contribution (e.g. '~/openarms'). Default: self")
     ct.add_argument("--reason", help="Why this contribution is being made (optional audit trail)")
 
     args = parser.parse_args()

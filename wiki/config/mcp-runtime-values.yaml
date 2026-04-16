@@ -9,7 +9,7 @@
 #       "research-wiki": {
 #         "command": "python3",
 #         "args": ["-m", "tools.mcp_server"],
-#         "cwd": "/home/jfortin/devops-solutions-research-wiki",
+#         "cwd": "${HOME}/devops-solutions-research-wiki",
 #         "env": {
 #           "MCP_CLIENT_RUNTIME": "harness-openarms-v10"
 #         }

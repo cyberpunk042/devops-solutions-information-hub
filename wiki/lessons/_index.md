@@ -74,6 +74,7 @@ Lessons that synthesize an entire domain's structural position.
 - [Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift](01_drafts/execution-mode-is-consumer-property-not-project-property.md) — Execution mode (solo vs harness vs fleet) is a property of the **CONSUMER'S runtime**, not a property of the project
 - [Harness Engineering Is the Dominant Performance Lever](01_drafts/harness-engineering-is-the-dominant-performance-lever.md) — For LLM-based agentic systems, **the harness — not the model — is now the dominant performance lever**
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
+- [Machine-Specific Config in Version Control Is Aspirational Portability](01_drafts/machine-specific-config-in-vcs-is-aspirational-portability.md) — Committing configuration files that contain machine-specific absolute paths silently breaks portability
 - [Specs-as-Code-Source Inverts the Traditional Hierarchy](01_drafts/specs-as-code-source-inverts-hierarchy.md) — Traditional software development treats code as the primary artifact and specifications as scaffolding — supporting d...
 - [Agents take small unauthorized scope expansions when the change is a 'clean win'](02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md) — The v8 methodology blocks overt scope creep through stage hooks, diff validators, and done-when checks
 - [Epic readiness math is wrong when an epic has implicit goals beyond its current children](02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md) — The harness computes epic readiness as the average of its child task readiness values
@@ -124,4 +125,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`lesson`, `methodology`, `contributed`, `quality`, `failure-lesson`, `inbox`, `openarms`, `enforcement`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `compliance`, `infrastructure`, `validation`, `harness-engineering`, `convergence`, `artifacts`
+`lesson`, `contributed`, `methodology`, `quality`, `failure-lesson`, `inbox`, `openarms`, `enforcement`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `compliance`, `infrastructure`, `validation`, `aspirational`, `harness-engineering`, `convergence`

@@ -35,3 +35,10 @@ wiki/.evolve-queue/*.prompt.md
 wiki/patterns/pattern-*-+-*.md
 
 .sync-state.json
+
+# Machine-specific MCP config (regenerated per-machine via `python3 -m tools.setup --init`)
+# The template .mcp.json.template is tracked as reference.
+.mcp.json
+
+# Per-user Claude Code settings (allowlists, etc.)
+.claude/settings.local.json

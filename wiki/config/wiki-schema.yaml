@@ -40,7 +40,7 @@ optional_fields:
   - promoted_at          # runtime promotion — ISO date of the promotion event
   - methodology_doc_type # optional: declare methodology role (e.g. requirements-spec, ADR, tech-spec, test-plan) while retaining structural type (concept/decision/reference). Makes methodology identity queryable without new wiki types.
   - contributed_by       # audit: who/what contributed this page (e.g. "operator", "openarms-harness-v10", "gateway-cli")
-  - contribution_source  # audit: origin path or "self" (e.g. "/home/jfortin/openarms" for sister-project contribution)
+  - contribution_source  # audit: origin path or "self" (e.g. "~/openarms" for sister-project contribution)
   - contribution_date    # audit: ISO date of contribution
   - contribution_status  # audit: pending-review / accepted / rejected / superseded
   - note_type

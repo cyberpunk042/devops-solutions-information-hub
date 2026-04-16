@@ -620,6 +620,60 @@ sys.exit(subprocess.call(
     view_file.write_text(forwarder, encoding="utf-8")
 
 
+def init_self_mcp(brain_root: Path):
+    """Generate .mcp.json at the second brain root pointing at itself.
+
+    This is the portable replacement for committing an absolute-path .mcp.json.
+    Each clone runs this once to generate a machine-specific .mcp.json that is
+    gitignored (so machine-specific absolute paths never get committed).
+
+    MCP protocol requires absolute paths in `command` and `cwd` — no tilde
+    expansion, no relative paths. So we resolve at setup time and write the
+    absolute paths for THIS machine.
+
+    Usage:
+        python3 -m tools.setup --init
+
+    Idempotent — safe to re-run after pulling changes or recreating the venv.
+    """
+    brain_root = brain_root.resolve()
+    venv = brain_root / ".venv" / "bin" / "python"
+    if not venv.exists():
+        venv = brain_root / ".venv" / "Scripts" / "python.exe"  # Windows
+    if not venv.exists():
+        log_warn(f"Venv not found at {brain_root}/.venv — falling back to system python3.")
+        log_warn("  Run `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt` first.")
+        venv = Path(shutil.which("python3") or "python3")
+
+    mcp_entry = {
+        "command": str(venv),
+        "args": ["-m", "tools.mcp_server"],
+        "cwd": str(brain_root),
+    }
+
+    mcp_json_path = brain_root / ".mcp.json"
+    if mcp_json_path.exists():
+        try:
+            mcp_config = json.loads(mcp_json_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            mcp_config = {}
+    else:
+        mcp_config = {}
+
+    if "mcpServers" not in mcp_config:
+        mcp_config["mcpServers"] = {}
+
+    mcp_config["mcpServers"]["research-wiki"] = mcp_entry
+    mcp_json_path.write_text(json.dumps(mcp_config, indent=2) + "\n", encoding="utf-8")
+
+    log_info(f"Generated .mcp.json for this machine:")
+    log_info(f"  Path:     {mcp_json_path}")
+    log_info(f"  Command:  {mcp_entry['command']}")
+    log_info(f"  Cwd:      {mcp_entry['cwd']}")
+    log_info(f"  (.mcp.json is gitignored — each machine regenerates with its own paths.)")
+    return True
+
+
 def disconnect_second_brain(project_root: Path):
     """Remove the second brain MCP server entry from a project's .mcp.json."""
     mcp_json_path = project_root / ".mcp.json"
@@ -649,6 +703,8 @@ def main():
     parser.add_argument("--services", nargs="?", const="__list__", default=None,
                         metavar="NAME", help="Deploy a systemd service (or list available)")
     parser.add_argument("--target", help="Sync target path (for wiki-sync service)")
+    parser.add_argument("--init", action="store_true",
+                        help="Generate .mcp.json at this brain root for the current machine (gitignored; run after clone)")
     parser.add_argument("--connect", action="store_true",
                         help="Connect THIS project to the second brain (adds MCP server to .mcp.json)")
     parser.add_argument("--connect-project", metavar="PATH",
@@ -663,7 +719,10 @@ def main():
 
     root = get_project_root()
 
-    if args.connect:
+    if args.init:
+        success = init_self_mcp(root)
+        sys.exit(0 if success else 1)
+    elif args.connect:
         brain = Path(args.brain).resolve() if args.brain else None
         success = connect_second_brain(root, brain)
         sys.exit(0 if success else 1)

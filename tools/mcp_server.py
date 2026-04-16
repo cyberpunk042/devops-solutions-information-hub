@@ -423,7 +423,7 @@ def wiki_gateway_contribute(contrib_type: str, title: str, content: str,
         domain: Target domain (default: cross-domain)
         contributor: Contributor identifier (e.g. 'openarms-harness-v10').
                      Defaults to user@host auto-detected by the gateway.
-        source: Origin path of contribution (e.g. '/home/jfortin/openarms').
+        source: Origin path of contribution (e.g. '~/openarms').
                 Defaults to 'self' for local contributions.
         reason: Optional audit trail — why this contribution is being made.
     """

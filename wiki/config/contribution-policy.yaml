@@ -88,7 +88,9 @@ known_contributors:
     contribution_history:
       - "22 lessons from overnight runs (April 2026)"
     project_path_hints:
-      - "/home/jfortin/openarms"
+      # Tilde-form paths — resolved at runtime via Path.expanduser().
+      # Authoritative path registry is wiki/config/sister-projects.yaml.
+      - "~/openarms"
       - "openarms"
 
   gateway-cli:

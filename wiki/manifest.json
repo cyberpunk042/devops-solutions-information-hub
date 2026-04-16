@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T19:54:25.125665+00:00",
+  "generated": "2026-04-16T20:11:30.026166+00:00",
   "stats": {
-    "pages": 359,
+    "pages": 360,
     "domains": 9,
     "sources": 50,
     "comparisons": 5,
-    "relationships": 2405,
-    "tags_unique": 1101,
+    "relationships": 2413,
+    "tags_unique": 1104,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 56,
+      "4": 57,
       "5": 28,
       "1": 32,
       "spine": 67
     },
     "maturity": {
       "growing": 274,
-      "seed": 37
+      "seed": 38
     }
   },
   "pages": [
@@ -11247,6 +11247,92 @@
         {
           "verb": "RELATES TO",
           "target": "Agent Orchestration Patterns"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability.md",
+      "slug": "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "title": "Machine-Specific Config in Version Control Is Aspirational Portability",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "lesson",
+        "portability",
+        "machine-specific",
+        "config",
+        "absolute-paths",
+        "mcp",
+        "aspirational",
+        "contributed",
+        "self"
+      ],
+      "sources": [
+        {
+          "id": "research-wiki-mcp-json",
+          "type": "file",
+          "file": ".mcp.json.template",
+          "description": "The research wiki's own .mcp.json was committed with /home/jfortin/... absolute paths. Operator noticed the portability gap when preparing to transfer the repo to another machine. The portability claim (README: 'clone on any machine') was aspirational until .mcp.json was gitignored + regenerated per-machine via setup --init."
+        },
+        {
+          "id": "setup-init-fix",
+          "type": "file",
+          "file": "tools/setup.py",
+          "description": "The fix: setup.py --init generates .mcp.json at clone time with machine-specific absolute paths. Template committed as reference. .mcp.json gitignored."
+        },
+        {
+          "id": "directive-log",
+          "type": "file",
+          "file": "raw/notes/2026-04-16-directive-portability-absolute-paths.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Aspirational Declaration Produces False Confidence at Every Layer",
+        "Infrastructure Must Be Reproducible, Not Manual",
+        "Infrastructure Over Instructions for Process Enforcement"
+      ],
+      "aliases": [
+        "Machine-Specific Config in Version Control Is Aspirational Portability",
+        "Committed Absolute Paths Break Portability"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Aspirational Declaration Produces False Confidence at Every Layer"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Infrastructure Must Be Reproducible, Not Manual"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Schema Aspirationalism"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mandatory Without Verification"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "LLM Wiki Standards"
         }
       ]
     },
@@ -25172,8 +25258,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 167,
-      "relationship_count": 1128
+      "page_count": 168,
+      "relationship_count": 1136
     },
     "ai-agents": {
       "page_count": 68,
@@ -25491,6 +25577,7 @@
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/knowledge-systems/wiki-core/lightrag",
       "domains/tools-and-platforms/notebooklm-skills",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
       "patterns/03_validated/architecture/gateway-centric-routing",
@@ -27608,6 +27695,7 @@
     ],
     "config": [
       "domains/cross-domain/methodology-framework/methodology-config-architecture",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
     ],
     "flexible-model": [
@@ -28248,6 +28336,7 @@
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
@@ -28277,6 +28366,7 @@
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
@@ -28328,6 +28418,7 @@
     "aspirational": [
       "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "false-confidence": [
@@ -28414,6 +28505,19 @@
     ],
     "recursion": [
       "lessons/01_drafts/if-you-can-verify-you-converge"
+    ],
+    "portability": [
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
+    ],
+    "machine-specific": [
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
+    ],
+    "absolute-paths": [
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
+    ],
+    "self": [
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
@@ -28751,9 +28855,6 @@
       "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
     ],
     "specification": [
-      "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
-    ],
-    "portability": [
       "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
     ],
     "llm-extension": [
@@ -30286,6 +30387,12 @@
       ]
     },
     {
+      "target": "LLM Wiki Standards",
+      "referenced_by": [
+        "Machine-Specific Config in Version Control Is Aspirational Portability"
+      ]
+    },
+    {
       "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever",
       "referenced_by": [
         "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
@@ -30293,6 +30400,12 @@
         "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
         "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "Mandatory Without Verification",
+      "referenced_by": [
+        "Machine-Specific Config in Version Control Is Aspirational Portability"
       ]
     },
     {
@@ -30394,6 +30507,7 @@
         "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
         "First consumer integration reveals systematic gaps between knowledge and tooling",
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
+        "Machine-Specific Config in Version Control Is Aspirational Portability",
         "Aspirational Declaration Produces False Confidence at Every Layer"
       ]
     },
@@ -30443,7 +30557,8 @@
     {
       "target": "Schema Aspirationalism",
       "referenced_by": [
-        "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth"
+        "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth",
+        "Machine-Specific Config in Version Control Is Aspirational Portability"
       ]
     },
     {

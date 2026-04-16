@@ -21,7 +21,7 @@ A wiki page's frontmatter can reference a sister-project source in three forms:
         type: observation
         file: raw/articles/openarms-readme.md      # project-relative
         # OR (deprecated, migrate):
-        file: /home/jfortin/openarms/wiki/...      # absolute path
+        file: ~/openarms/wiki/...      # absolute path (deprecated — prefer project+path form)
 
     # NEW: project + path form
     sources:
@@ -409,7 +409,7 @@ def resolve_source(
 def _infer_project_from_legacy_path(
     legacy_file: str, registry: Dict[str, Any]
 ) -> Optional[tuple]:
-    """Given an absolute path like /home/jfortin/openarms/wiki/foo.md,
+    """Given an absolute path like ~/openarms/wiki/foo.md (after ~/-expansion),
     try to match against a project's configured path (after ~/ expansion).
 
     Returns (project_name, relative_path) or None.

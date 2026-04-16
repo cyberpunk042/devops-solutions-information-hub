@@ -126,4 +126,5 @@ This lesson applies universally across infrastructure work:
 [[methodology-framework|Methodology Framework]]
 [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 [[immune-system-rules|Immune System Rules]]
+[[machine-specific-config-in-vcs-is-aspirational-portability|Machine-Specific Config in Version Control Is Aspirational Portability]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]

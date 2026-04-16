@@ -1,0 +1,10 @@
+{
+  "_comment": "This is a TEMPLATE. The real .mcp.json is gitignored and generated per-machine by `python3 -m tools.setup --init`. MCP protocol requires absolute paths in `command` and `cwd` — no tilde expansion. Each machine resolves its own paths at setup time. See raw/notes/2026-04-16-directive-portability-absolute-paths.md.",
+  "mcpServers": {
+    "research-wiki": {
+      "command": "{{BRAIN_ROOT}}/.venv/bin/python",
+      "args": ["-m", "tools.mcp_server"],
+      "cwd": "{{BRAIN_ROOT}}"
+    }
+  }
+}

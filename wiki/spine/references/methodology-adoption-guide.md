@@ -398,6 +398,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+[[machine-specific-config-in-vcs-is-aspirational-portability|Machine-Specific Config in Version Control Is Aspirational Portability]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
 [[methodology-artifact-taxonomy|Methodology Artifact Taxonomy]]
 [[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
