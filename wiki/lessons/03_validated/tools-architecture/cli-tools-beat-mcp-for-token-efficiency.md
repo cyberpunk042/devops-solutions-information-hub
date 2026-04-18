@@ -142,6 +142,7 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 [[claude-code-skills|Claude Code Skills]]
 [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
 [[context-aware-tool-loading|Context-Aware Tool Loading]]
+[[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]
 [[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]

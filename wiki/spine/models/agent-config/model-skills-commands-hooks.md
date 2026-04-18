@@ -403,6 +403,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
+[[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]

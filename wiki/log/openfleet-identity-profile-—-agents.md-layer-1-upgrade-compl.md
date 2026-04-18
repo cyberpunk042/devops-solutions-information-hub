@@ -12,8 +12,14 @@ tags: [contributed, correction]
 contributed_by: "openfleet-solo-session-2026-04-18"
 contribution_source: "/home/jfortin/openfleet"
 contribution_date: 2026-04-18
-contribution_status: pending-review
+contribution_status: accepted
 contribution_reason: "Brain's identity-profile of OpenFleet is stale on one specific row (AGENTS.md-as-Layer-1 was 'candidate upgrade'; we completed the upgrade 2026-04-17). Updating keeps brain's view of us current. Re-file: first attempt had path references mangled by bash backtick-interpretation."
+resolution_date: 2026-04-18
+resolution_notes: |
+  OpenFleet identity profile row "Three-layer root docs" updated with full file-evidence
+  (AGENTS.md 222L, CLAUDE.md 118L down from 358L, .claude/rules/ breakdown, Progressive
+  Structural Enrichment attribution). Side note about Walkthrough C acknowledged —
+  corrections already landed in goldilocks-flow.md from the 2026-04-17 OpenFleet correction.
 ---
 
 # OpenFleet identity profile — AGENTS.md Layer-1 upgrade completed 2026-04-17 (was 'candidate')

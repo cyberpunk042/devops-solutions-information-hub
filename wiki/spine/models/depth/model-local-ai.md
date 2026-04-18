@@ -426,6 +426,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[identity-profile|AICP — Identity Profile]]
 [[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]
 [[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
+[[localai-over-ollama-vllm-for-multi-model-orchestration|Decision — LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[open-model-evaluation-framework|Open-Model Evaluation Framework — How to Look at a New Model Announcement]]

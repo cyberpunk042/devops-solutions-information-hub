@@ -138,7 +138,7 @@ See [[domain-chain-typescript|Artifact Chain — TypeScript-Node Domain]] for th
 > | Component | Status |
 > |-----------|--------|
 > | CLAUDE.md as routing table | Adopted (per-agent SOUL.md + global CLAUDE.md) |
-> | Three-layer root docs (AGENTS.md + CLAUDE.md + per-agent personas) | Partial — SOUL.md already acts as per-agent Layer 2; AGENTS.md as Layer 1 is a candidate upgrade. See [[root-documentation-map|Root Documentation Map]] |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + per-agent personas) | **Adopted (2026-04-17)** — AGENTS.md Layer 1 universal (222 lines), CLAUDE.md Layer 2 Claude-specific delta (118 lines, down from 358 pre-restructure), `.claude/rules/` for detailed rules (`work-mode.md` 74L + `second-brain-connection.md` 93L), SOUL.md per-agent persona (Layer 3 equivalent). Progressive Structural Enrichment pattern applied: 358L CLAUDE.md → 118L delta + 222L universal AGENTS.md. PO-approved restructure. See [[root-documentation-map\|Root Documentation Map]] |
 > | methodology.yaml | Adopted (6-stage model, tool blocking) |
 > | Stage enforcement | Adopted (MCP tool blocking — strongest in ecosystem) |
 > | Wiki knowledge base | Active (219+ KB entries synced via kb_sync → LightRAG) |

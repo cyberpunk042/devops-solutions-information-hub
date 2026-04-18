@@ -583,6 +583,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
+[[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]

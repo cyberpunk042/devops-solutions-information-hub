@@ -16,6 +16,8 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 
 - [Decision — Consumer Runtime Signaling via MCP Config](01_drafts/consumer-runtime-signaling-via-mcp-config.md) — When a consumer (OpenArms harness, OpenFleet orchestrator, solo Claude session, or any other MCP client) connects to ...
 - [Decision — Extended Thinking to Adaptive Thinking Migration](01_drafts/extended-to-adaptive-thinking-migration.md) — Opus 4
+- [Decision — LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint](01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration.md) — AICP uses **LocalAI v4
+- [Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)](01_drafts/skills-as-primary-extension-pattern.md) — AICP exposes capability through three mechanisms: **78 conditional skills** (`
 - [Decision — Obsidian vs NotebookLM as Knowledge Interface](02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface.md) — Obsidian and NotebookLM serve complementary roles as knowledge interfaces and should both be maintained rather than c...
 - [Decision — Quality Tier Operational Decisions](02_validated/knowledge/quality-tier-operational-decisions.md) — Three open questions from Skyscraper, Pyramid, Mountain resolved by cross-referencing the Methodology Framework, Immu...
 - [Decision — Wiki-First with LightRAG Upgrade Path](02_validated/knowledge/wiki-first-with-lightrag-upgrade-path.md) — This wiki operates in wiki-first mode — pure structured markdown with index navigation — until it approaches 200 page...
@@ -35,4 +37,4 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 
 ## Tags
 
-`design-decisions`, `decision`, `methodology`, `versioning`, `skills`, `hooks`, `mcp`, `quality-tiers`, `composition`, `stage-gate`, `runtime`, `consumer-property`, `harness-signaling`, `fleet-signaling`, `declared-over-detected`, `execution-mode`, `cross-project`, `thinking`, `adaptive`, `extended`
+`decision`, `design-decisions`, `skills`, `mcp`, `aicp`, `methodology`, `versioning`, `hooks`, `runtime`, `localai`, `infrastructure`, `transferable`, `architecture`, `quality-tiers`, `composition`, `stage-gate`, `consumer-property`, `harness-signaling`, `fleet-signaling`, `declared-over-detected`
