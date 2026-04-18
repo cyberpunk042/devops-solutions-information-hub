@@ -89,6 +89,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Methodology Adoption Guide](references/methodology-adoption-guide.md) — Step-by-step guide for any project to adopt the research wiki's methodology
 - [Methodology System Map](references/methodology-system-map.md) — Complete map of the methodology system — every component, where it lives, what it does, and how they connect
 - [Model Registry](references/model-registry.md) — This is the entry point for all named models in the wiki
+- [Open-Model Evaluation Framework — How to Look at a New Model Announcement](references/open-model-evaluation-framework.md) — Between late 2024 and early 2026, the open-weight reasoning-model landscape went from "years behind closed frontier" ...
 - [Root Documentation Map — Repository-Level Files](references/root-documentation-map.md) — The repository root contains 8 documentation files (2,714 total lines) that serve as the entry point for humans, AI t...
 - [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](references/second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
@@ -125,4 +126,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `domain-overview`, `methodology`, `reference`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `second-brain`, `ecosystem`, `adoption`
+`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `domain-overview`, `methodology`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `second-brain`, `ecosystem`, `adoption`

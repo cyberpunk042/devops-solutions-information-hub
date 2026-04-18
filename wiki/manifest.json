@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-18T00:59:58.153192+00:00",
+  "generated": "2026-04-18T01:20:15.910467+00:00",
   "stats": {
-    "pages": 366,
+    "pages": 368,
     "domains": 9,
-    "sources": 52,
+    "sources": 53,
     "comparisons": 5,
-    "relationships": 2445,
-    "tags_unique": 1116,
+    "relationships": 2461,
+    "tags_unique": 1124,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
       "4": 58,
       "5": 29,
-      "1": 34,
-      "spine": 67
+      "1": 35,
+      "spine": 68
     },
     "maturity": {
-      "growing": 277,
+      "growing": 279,
       "seed": 39
     }
   },
@@ -20108,6 +20108,14 @@
           "file": "raw/articles/jackrongqwen35-27b-claude-46-opus-reasoning-distilled-hugging-face.md",
           "title": "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled \u00b7 Hugging Face",
           "ingested": "2026-04-15"
+        },
+        {
+          "id": "huggingface-qwopus-v3-gguf",
+          "type": "article",
+          "url": "https://huggingface.co/Jackrong/Qwopus3.5-27B-v3-GGUF",
+          "file": "raw/articles/jackrongqwopus35-27b-v3-gguf-hugging-face.md",
+          "title": "Jackrong/Qwopus3.5-27B-v3-GGUF \u00b7 Hugging Face",
+          "ingested": "2026-04-17"
         }
       ],
       "layer": 1,
@@ -20130,8 +20138,16 @@
           "target": "Synthesis \u2014 AutoBE \u2014 Compiler-Verified Backend Generation"
         },
         {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
           "verb": "FEEDS INTO",
           "target": "Lesson \u2014 If You Can Verify, You Converge"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Open-Model Evaluation Framework"
         },
         {
           "verb": "RELATES TO",
@@ -20757,6 +20773,72 @@
         {
           "verb": "RELATES TO",
           "target": "LightRAG"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+      "slug": "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "title": "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "unsloth",
+        "lora",
+        "fine-tuning",
+        "consumer-hardware",
+        "training",
+        "quantization",
+        "moe-training",
+        "aicp",
+        "cost-optimization",
+        "qwopus"
+      ],
+      "sources": [
+        {
+          "id": "src-unsloth-github",
+          "type": "repository",
+          "url": "https://github.com/unslothai/unsloth",
+          "file": "raw/articles/unslothaiunsloth.md",
+          "title": "unslothai/unsloth \u2014 GitHub Repository",
+          "ingested": "2026-04-17"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+        "Synthesis: Unsloth"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Open-Model Evaluation Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
         }
       ]
     },
@@ -22345,6 +22427,12 @@
           "title": "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
         },
         {
+          "id": "src-unsloth-fast-lora-consumer-hardware",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "title": "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware"
+        },
+        {
           "id": "src-turboquant-122b-macbook",
           "type": "wiki",
           "file": "wiki/sources/tools-integration/src-turboquant-122b-macbook.md",
@@ -23851,6 +23939,89 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 Wiki Design"
+        }
+      ]
+    },
+    {
+      "path": "spine/references/open-model-evaluation-framework.md",
+      "slug": "spine/references/open-model-evaluation-framework",
+      "title": "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "reference",
+        "evaluation",
+        "local-llm",
+        "open-weight",
+        "framework",
+        "checklist",
+        "routing",
+        "cost-optimization"
+      ],
+      "sources": [
+        {
+          "id": "src-gpt-oss-openai-open-weight-moe",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md",
+          "title": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "id": "src-airllm-layer-wise-inference-nvme-ssd-offload",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md",
+          "title": "Synthesis \u2014 AirLLM"
+        },
+        {
+          "id": "src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+          "type": "wiki",
+          "file": "wiki/sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b.md",
+          "title": "Synthesis \u2014 Qwopus"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Open-Model Evaluation Framework",
+        "How to Evaluate a New Open-Weight Model",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Decision \u2014 Local vs Cloud Routing"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 AirLLM"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
         }
       ]
     },
@@ -25618,8 +25789,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 170,
-      "relationship_count": 1149
+      "page_count": 171,
+      "relationship_count": 1157
     },
     "ai-agents": {
       "page_count": 68,
@@ -25634,8 +25805,8 @@
       "relationship_count": 99
     },
     "ai-models": {
-      "page_count": 9,
-      "relationship_count": 53
+      "page_count": 10,
+      "relationship_count": 61
     },
     "automation": {
       "page_count": 7,
@@ -25901,7 +26072,8 @@
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/src-anthropic-building-effective-ai-agents",
-      "spine/goldilocks-flow"
+      "spine/goldilocks-flow",
+      "spine/references/open-model-evaluation-framework"
     ],
     "flow": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
@@ -26067,6 +26239,7 @@
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem"
     ],
@@ -27007,7 +27180,8 @@
       "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions",
       "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
       "spine/models/foundation/model-methodology",
-      "spine/references/methodology-system-map"
+      "spine/references/methodology-system-map",
+      "spine/references/open-model-evaluation-framework"
     ],
     "model-selection": [
       "decisions/02_validated/methodology/methodology-framework-design-decisions",
@@ -27127,7 +27301,9 @@
       "sources/claude-code/src-token-hacks-claude-code",
       "sources/src-27-questions-llm-selection",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/open-model-evaluation-framework"
     ],
     "backend-selection": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
@@ -27732,7 +27908,8 @@
     "quantization": [
       "domains/ai-models/local-llm-quantization",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
-      "sources/tools-integration/src-turboquant-122b-macbook"
+      "sources/tools-integration/src-turboquant-122b-macbook",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "local-llm": [
       "domains/ai-models/local-llm-quantization",
@@ -27740,7 +27917,8 @@
       "sources/src-autobe-compiler-verified-backend-generation",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
-      "sources/tools-integration/src-turboquant-122b-macbook"
+      "sources/tools-integration/src-turboquant-122b-macbook",
+      "spine/references/open-model-evaluation-framework"
     ],
     "mlx": [
       "domains/ai-models/local-llm-quantization",
@@ -27770,7 +27948,8 @@
     ],
     "consumer-hardware": [
       "domains/ai-models/local-llm-quantization",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
@@ -27897,6 +28076,7 @@
       "spine/references/frontmatter-field-reference",
       "spine/references/gateway-tools-reference",
       "spine/references/methodology-system-map",
+      "spine/references/open-model-evaluation-framework",
       "spine/references/root-documentation-map",
       "spine/standards/reference-page-standards"
     ],
@@ -30313,7 +30493,8 @@
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "open-weight": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "spine/references/open-model-evaluation-framework"
     ],
     "apache-2-0": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
@@ -30350,6 +30531,24 @@
     ],
     "122b-parameters": [
       "sources/tools-integration/src-turboquant-122b-macbook"
+    ],
+    "unsloth": [
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "lora": [
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "fine-tuning": [
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "training": [
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "moe-training": [
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "qwopus": [
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "awesome-list": [
       "sources/wiki-methodology/src-awesome-design-md"
@@ -30582,6 +30781,12 @@
     "entry-point": [
       "spine/references/model-registry"
     ],
+    "evaluation": [
+      "spine/references/open-model-evaluation-framework"
+    ],
+    "checklist": [
+      "spine/references/open-model-evaluation-framework"
+    ],
     "root": [
       "spine/references/root-documentation-map"
     ],
@@ -30748,6 +30953,12 @@
       ]
     },
     {
+      "target": "Decision \u2014 Local vs Cloud Routing",
+      "referenced_by": [
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+      ]
+    },
+    {
       "target": "Epic Readiness Math",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -30868,8 +31079,11 @@
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Model \u2014 NotebookLM",
-        "Model \u2014 Automation and Pipelines"
+        "Model \u2014 Automation and Pipelines",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
     {
@@ -30924,7 +31138,9 @@
     {
       "target": "Principle \u2014 Declarations Aspirational Until Verified",
       "referenced_by": [
-        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
     {
@@ -31024,7 +31240,8 @@
     {
       "target": "Synthesis \u2014 AirLLM",
       "referenced_by": [
-        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
     {
@@ -31039,7 +31256,9 @@
     {
       "target": "Synthesis \u2014 Qwopus",
       "referenced_by": [
-        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
     {
@@ -31073,7 +31292,10 @@
     {
       "target": "Synthesis \u2014 gpt-oss",
       "referenced_by": [
-        "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload"
+        "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
+        "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
+        "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
     {

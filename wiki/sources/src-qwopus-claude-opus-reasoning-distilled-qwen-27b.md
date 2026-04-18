@@ -23,6 +23,12 @@ sources:
     file: raw/articles/jackrongqwen35-27b-claude-46-opus-reasoning-distilled-hugging-face.md
     title: "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled · Hugging Face"
     ingested: 2026-04-15
+  - id: huggingface-qwopus-v3-gguf
+    type: article
+    url: https://huggingface.co/Jackrong/Qwopus3.5-27B-v3-GGUF
+    file: raw/articles/jackrongqwopus35-27b-v3-gguf-hugging-face.md
+    title: "Jackrong/Qwopus3.5-27B-v3-GGUF · Hugging Face"
+    ingested: 2026-04-17
 tags: [distillation, local-ai, qwen, claude-opus, reasoning, gguf, consumer-hardware, aicp, zero-cost, structural-alignment]
 ---
 
@@ -110,6 +116,61 @@ The Decrypt article explicitly names **Claude Code and OpenCode** as tested agen
 
 None observed. Qwopus is consistent with every convergent insight the wiki has previously captured about local inference and distillation.
 
+## v3 GGUF Quantization Detail (NEW 2026-04-17)
+
+The Qwopus3.5-27B-v3-GGUF repository provides a full quantization spectrum — this is the operationally-useful data for deployment decisions.
+
+> [!abstract] Quantization variants and VRAM fit on common hardware
+>
+> | Quantization | File size | Effective VRAM need | Quality vs BF16 | Fits 8 GB? | Fits 19 GB? | Fits 24 GB? |
+> |--------------|-----------|---------------------|-----------------|-------------|-------------|-------------|
+> | Q2_K | 10.7 GB | ~11 GB | Limited | No | **Yes (headroom)** | Yes |
+> | Q3_K_S | 12.1 GB | ~13 GB | Mobile-grade | No | **Yes** | Yes |
+> | Q3_K_M | 13.3 GB | ~14 GB | Balanced compression | No | **Yes (recommended safer default)** | Yes |
+> | Q3_K_L | 14.3 GB | ~15 GB | Better than Q3_K | No | **Yes** | Yes |
+> | Q4_K_S | 15.6 GB | ~17 GB | Good balance | No | **Yes (tight)** | Yes |
+> | **Q4_K_M** | **16.5 GB** | **~17-18 GB** | **High quality (popular choice)** | No | **Yes (sweet spot — ~1-2 GB context headroom)** | Yes |
+> | Q5_K_M | 19.2 GB | ~20-21 GB | High quality, minimal loss | No | **No (exceeds with context)** | Yes |
+> | Q6_K | 22.1 GB | ~23-24 GB | Near-original | No | No | Yes (tight) |
+> | Q8_0 | 28.6 GB | ~29-30 GB | Minimal quantization | No | No | No (needs CPU offload) |
+> | BF16 (full) | 53.8 GB | ~54-55 GB | Original precision | No | No | No |
+
+**For a 19 GB VRAM machine: Q4_K_M is the sweet spot; Q3_K_M is the safe default with extra context room. Q5_K_M does NOT fit despite nominally being 19.2 GB — context overhead (1-3 GB) pushes it over the ceiling.**
+
+### v2 → v3: Training Methodology Delta
+
+The HF v3 model card makes the v2-vs-v3 distinction explicit:
+
+| Aspect | v2 (Distillation) | v3 (Structural Alignment) |
+|--------|-------------------|---------------------------|
+| CoT source | Third-party distilled traces | Curated, verifiable reasoning chains |
+| Learning target | Imitate teacher outputs | Learn process-level reasoning |
+| Reasoning style | Compressed, potentially fabricated | Explicit, step-by-step, faithful |
+| Robustness | Lower on unseen tasks | **Higher generalization** |
+| CoT length | Shorter | **Slightly longer (more explicit steps)** |
+
+v3 transitions from "answer imitation" to "process-level reasoning learning" with improved faithfulness and interpretability. This is the **structural alignment** mechanism that makes the model more reliable in autonomous agent loops.
+
+### Clarified Benchmark — HumanEval 164-Task Full Benchmark
+
+The earlier "95.73% HumanEval" number is the **plus-pass** score on strict evaluation — the harder version. The base-pass number is higher:
+
+| Model | HumanEval base pass | HumanEval plus pass | Delta vs Qwen3.5 |
+|-------|---------------------|---------------------|-------------------|
+| **Qwopus3.5-27B-v3** | **97.56% (160/164)** | **95.73% (157/164)** | **+1.22 pp** over base |
+| Qwen3.5-27B (base) | 95.73% (157/164) | 94.51% (155/164) | Baseline |
+| Claude-Distilled-v2 | 95.12% (156/164) | 92.68% (152/164) | -1.83 pp vs base |
+
+v3 also beats base Qwen3.5-27B on MMLU-Pro by ~4 points, and achieves comparable results with **fewer output tokens** (reasoning efficiency gain).
+
+### Deployment Path Confirmed
+
+Model card explicitly lists supported inference backends: **llama.cpp ✅ · LM Studio ✅ · Ollama ✅ · GPT4All ✅**. No proprietary inference provider. This is the full open consumer stack — zero-friction deployment on any machine with llama.cpp or a wrapper.
+
+### Evaluation Framework Connection
+
+This model is a **worked example** in [[open-model-evaluation-framework|Open-Model Evaluation Framework]] — all 5 evaluation stages (identify, size-and-fit, capability, deployment, routing-slot) are demonstrated against Qwopus v3 in that page. For future model announcements in the same tier (local-reasoning, 20-30B), apply the same framework.
+
 ## Deep Analysis
 
 ### What "Structural Alignment" Actually Means
@@ -140,7 +201,9 @@ The Decrypt article is qualitative and the HF model card is marketing-adjacent. 
 - RELATES TO: [[model-local-ai|Model — Local AI ($0 Target)]]
 - RELATES TO: [[src-hrm-trm-tiny-recursion-models|Synthesis — HRM/TRM — Tiny Recursion Models]]
 - RELATES TO: [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE — Compiler-Verified Backend Generation]]
+- RELATES TO: [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss]] (competing / complementary local-reasoning tier candidate)
 - FEEDS INTO: [[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
+- FEEDS INTO: [[open-model-evaluation-framework|Open-Model Evaluation Framework]] (worked example)
 - RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
 - RELATES TO: [[model-ecosystem|Model — Ecosystem Architecture]]
 
@@ -149,7 +212,9 @@ The Decrypt article is qualitative and the HF model card is marketing-adjacent. 
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[src-hrm-trm-tiny-recursion-models|Synthesis — HRM/TRM — Tiny Recursion Models]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE — Compiler-Verified Backend Generation]]
+[[Synthesis — gpt-oss]]
 [[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
+[[open-model-evaluation-framework|Open-Model Evaluation Framework]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]

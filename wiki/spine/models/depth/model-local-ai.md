@@ -23,6 +23,10 @@ sources:
     type: wiki
     file: wiki/sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md
     title: "Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+  - id: src-unsloth-fast-lora-consumer-hardware
+    type: wiki
+    file: wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md
+    title: "Synthesis — Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware"
   - id: src-turboquant-122b-macbook
     type: wiki
     file: wiki/sources/tools-integration/src-turboquant-122b-macbook.md
@@ -92,6 +96,25 @@ These hold regardless of which stack or pattern you choose:
 - **Circuit breakers must be active on every backend** — no routing without health checks
 - **The complexity scorer threshold is the routing mechanism** — not manual human selection
 - **The $0 target applies to maintenance, not creation** — knowledge creation remains cloud; routine operations become free
+
+### Fine-Tuning as a $0-Target Tier (NEW 2026-04-17)
+
+The routing model above assumes inference over a fixed catalog of models. With [[src-unsloth-fast-lora-consumer-hardware|Unsloth]] making LoRA fine-tuning feasible on 19 GB VRAM (Qwen3.5-4B and Llama 3.1-8B train on Colab free 16 GB T4), **fine-tuning becomes a META-tier that shapes the catalog itself**. Domain-specific LoRAs produce base+adapter pairs tuned for specific task classes — a methodology-fluent fine-tune of Qwen3.5-4B on the wiki corpus, a coding-specialized fine-tune on a code-review dataset, an agent-tool-use fine-tune for OpenFleet workflows.
+
+> [!info] **The fine-tuning meta-tier changes how the routing catalog is built**
+>
+> | Layer | Without fine-tuning | With fine-tuning (Unsloth) |
+> |-------|--------------------|-----------------------------|
+> | Model selection | Pick from HuggingFace catalog | Pick base + fine-tune for task class |
+> | Task-specific quality | Limited by generic model fit | Targeted fine-tune closes the gap |
+> | Deployment footprint | Full model per task class | One base + many 10-100 MB LoRA adapters |
+> | Cost to create a specialized model | Research-lab budget | 2-6 hours on consumer hardware |
+
+**Concrete ecosystem implication**: the wiki itself (367 pages, 2455 relationships, 16 models, 22+ standards) is a candidate SFT training corpus. Unsloth Data Recipes auto-convert structured Markdown into training pairs. A 4-8 hour fine-tune run produces a locally-deployable model that speaks fluent methodology — routable via AICP for wiki-maintenance tasks at $0 per invocation. See [[src-unsloth-fast-lora-consumer-hardware|Unsloth synthesis]] for feasibility math and the Qwopus precedent.
+
+### How to Evaluate a New Model Announcement (NEW 2026-04-17)
+
+With open-weight models landing weekly, the process for evaluating "should I care about this one?" must be stable, short (~1 hour for a defensible decision), and repeatable. See [[open-model-evaluation-framework|Open-Model Evaluation Framework — How to Look at a New Model Announcement]] for the 5-stage process (Identify → Size & Fit → Capability → Deployment → Slot), Principle-4 red-flag mapping, and the 2026-04 worked examples (AirLLM, gpt-oss, Qwopus v3). This is the consumable page to bookmark when a new announcement lands.
 
 ### Open-Model Landscape — 2025-2026 Competitive Parity (NEW 2026-04-17)
 
@@ -405,6 +428,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
+[[open-model-evaluation-framework|Open-Model Evaluation Framework — How to Look at a New Model Announcement]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
@@ -413,5 +437,6 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Synthesis — Qwopus — Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B]]
+[[src-unsloth-fast-lora-consumer-hardware|Synthesis — Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware]]
 [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

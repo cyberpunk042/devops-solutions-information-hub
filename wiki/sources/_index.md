@@ -49,6 +49,7 @@ Source synthesis pages — one per ingested source.
 - [Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens](tools-integration/src-playwright-cli-vs-mcp.md) — A direct side-by-side comparison of Playwright's MCP server integration vs
 - [Synthesis — Playwright MCP for Visual Development Testing](tools-integration/src-playwright-mcp-visual-testing.md) — Demonstrates how to embed Playwright MCP into a front-end development workflow so that Claude Code can see and verify...
 - [Synthesis — TurboQuant 122B LLM on MacBook](tools-integration/src-turboquant-122b-macbook.md) — TurboQuant, originally Google's quantization technique, has been adapted for Apple Silicon via MLX and extended to Mi...
+- [Synthesis — Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware](tools-integration/src-unsloth-fast-lora-consumer-hardware.md) — Unsloth is the de facto consumer-hardware fine-tuning framework for open-weight LLMs
 - [Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research](wiki-methodology/methodology-artifact-taxonomy-research.md) — Comprehensive research into methodology artifacts across five domains: traditional SDLC, Agile/Scrum, DevOps/Infrastr...
 - [Synthesis — awesome-design-md — 58 Design Systems for AI Agents](wiki-methodology/src-awesome-design-md.md) — A curated collection of 58 DESIGN
 - [Synthesis — Context Mode — MCP Sandbox for Context Saving](wiki-methodology/src-context-mode.md) — Context Mode is an MCP server and multi-platform plugin that solves the context window problem from three angles simu...
@@ -59,4 +60,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `ai-agents`, `skills`, `mcp`, `harness-engineering`, `obsidian`, `notebooklm`, `cli`, `automation`, `hooks`, `context-management`, `subagents`, `context-engineering`, `cost-optimization`, `source-synthesis`, `knowledge-base`, `local-llm`, `methodology`, `commands`, `workflows`
+`claude-code`, `ai-agents`, `skills`, `mcp`, `harness-engineering`, `obsidian`, `notebooklm`, `cli`, `automation`, `hooks`, `cost-optimization`, `context-management`, `subagents`, `context-engineering`, `source-synthesis`, `knowledge-base`, `local-llm`, `methodology`, `aicp`, `commands`
