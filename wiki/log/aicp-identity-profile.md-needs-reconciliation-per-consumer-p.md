@@ -12,8 +12,22 @@ tags: [contributed, correction]
 contributed_by: "aicp-self"
 contribution_source: "/home/jfortin/devops-expert-local-ai"
 contribution_date: 2026-04-17
-contribution_status: pending-review
+contribution_status: accepted
 contribution_reason: "Brain's identity-profile.md predates the consumer-property doctrine (2026-04-15) and needs reconciliation. AICP now declares identity per latest doctrine in its CLAUDE.md."
+resolution_date: 2026-04-17
+resolution_notes: |
+  All 6 specific fixes applied to wiki/ecosystem/project_profiles/aicp/identity-profile.md:
+  (1) Identity table restructured with Stable / State / Consumer-Task layer labels per doctrine.
+  (2) SDLC Profile moved to Consumer/Task with 'default (Goldilocks)' not 'simplified' for production+medium.
+  (3) Scale updated: 61 modules / 94 test files / 1,758 tests / 78 skills / 9 profiles / 14 model configs.
+  (4) Phase updated: Stage 2 operational (4-tier router + circuit breakers + DLQ + warmup); Stage 3 hardware unlocked 2026-04-17.
+  (5) Adoption Status updated: Feed-back now 'active' (3 contributions filed); Tier 4/4 structural / Tier 2+ operational.
+  (6) Knowledge Gaps extended: empirical routing split pending on new 19 GB hardware.
+
+  Cross-project impact: doctrine violation was present in 4 of 5 project profiles. Same
+  doctrine-note pattern applied to devops-control-plane, openarms, openfleet, research-wiki
+  identity profiles in this session. OpenArms/OpenFleet received nuanced notes since their
+  harness/fleet nature is intrinsic to the project, not just consumer-declared default.
 ---
 
 # AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts

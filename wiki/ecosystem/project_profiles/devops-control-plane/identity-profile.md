@@ -31,20 +31,22 @@ tags: [ecosystem, project-profile, devops-control-plane, identity, goldilocks]
 
 The second brain's understanding of devops-control-plane as an ecosystem member. The control plane is a unified solution management platform (Python) with three interfaces: interactive TUI (manage.sh), CLI (Click), and web dashboard (Flask SPA). It auto-detects 20 technology stacks, provides AES-256-GCM encrypted vaults, an append-only audit ledger, and pluggable adapter architecture. Its most significant contribution to the ecosystem is as an operational DNA donor: 24 immune system rules derived from 16 post-mortems became OpenFleet's doctor.py. The control plane's own CLAUDE.md uses a rule-heavy enforcement approach (24 mandatory rules) that predates the methodology framework.
 
-## Identity (Goldilocks 7 Dimensions)
+## Identity (Goldilocks)
 
-> [!info] devops-control-plane Goldilocks Profile
+> [!info] devops-control-plane Identity Profile
 >
-> | Dimension | Value | Evidence |
-> |-----------|-------|---------|
-> | **Type** | product (infrastructure management platform) | TUI + CLI + Web dashboard, 29 service packages |
-> | **Execution Mode** | Solo | Human + Claude in conversation, rule-heavy CLAUDE.md |
-> | **Domain** | Infrastructure Management (Python) | Python 3.12, Click, Flask, Pydantic v2 |
-> | **Phase** | Production | Used for project management with active vault, detection engine |
-> | **Scale** | Medium-Large (29 service packages, 19 CLI domain packages) | Broad surface area: vault, content, pages, git, backup, secrets, audit, k8s, terraform, docker |
-> | **PM Level** | L1 (CLAUDE.md directives + rules) | 24 mandatory rules in .agent/rules/, workflow routing checklists |
-> | **Trust Tier** | Operator-supervised | Solo execution with heavy rule enforcement |
-> | **SDLC Profile** | Simplified | Lighter process — workflow checklists over stage gates |
+> Per [[execution-mode-is-consumer-property-not-project-property|Consumer-Property Doctrine]] (2026-04-15), rows marked **Stable** / **State** are project fields; rows marked **Consumer/Task** are defaults the consumer may override at connect time.
+>
+> | Dimension | Layer | Value | Evidence |
+> |-----------|-------|-------|----------|
+> | **Type** | Stable | product (infrastructure management platform) | TUI + CLI + Web dashboard, 29 service packages |
+> | **Domain** | Stable | Infrastructure Management (Python) | Python 3.12, Click, Flask, Pydantic v2 |
+> | **Phase** | State | production | Used for project management with active vault, detection engine |
+> | **Scale** | State | medium-large (29 service packages, 19 CLI domain packages) | Broad surface area: vault, content, pages, git, backup, secrets, audit, k8s, terraform, docker |
+> | Execution Mode | Consumer/Task (default) | solo | Default — current operational mode is human+Claude with rule-heavy CLAUDE.md. Consumer declares at MCP connect if non-default. |
+> | SDLC Profile | Consumer/Task (default) | simplified | Current workflow-checklist style; consumer may pick `default` for feature work. |
+> | PM Level | Consumer/Task (default) | L1 (CLAUDE.md directives + rules) | 24 mandatory rules in .agent/rules/, workflow routing checklists |
+> | Trust Tier | Consumer/Task (default) | operator-supervised | Current mode; could rise with proven-automation evidence |
 
 ## Execution Mode Detail
 

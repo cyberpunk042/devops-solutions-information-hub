@@ -22,20 +22,28 @@ tags: [ecosystem, project-profile, aicp, identity, goldilocks]
 
 The second brain's understanding of AICP (AI Control Platform) as an ecosystem member. AICP is a Python backend platform that orchestrates local and cloud AI backends under user control. Its core thesis: "You -> AICP -> (LocalAI | Claude Code) -> Your Project." It provides backend routing with complexity scoring, 78 skills, circuit breaker patterns, guardrails, and 9 operational profiles. The brain's knowledge of AICP is thinner than OpenFleet or OpenArms — much of its internals have not been deeply synthesized beyond its concept page and integration points.
 
-## Identity (Goldilocks 7 Dimensions)
+## Identity (Goldilocks — Stable + State Fields Only)
 
-> [!info] AICP Goldilocks Profile
+> [!info] AICP Identity Profile
 >
-> | Dimension | Value | Evidence |
-> |-----------|-------|---------|
-> | **Type** | product (backend platform) | CLI + backend routing + MCP server + guardrails |
-> | **Execution Mode** | Solo | Human + Claude in conversation, no harness, no fleet dispatch |
-> | **Domain** | Backend AI Platform (Python) | 60 Python modules, 1,631 tests |
-> | **Phase** | Production | Stage 1 (LocalAI functional) complete, Stage 2 (routing) implemented |
-> | **Scale** | Medium (~60 modules) | Growing, but less documented in the second brain than OpenFleet/OpenArms |
-> | **PM Level** | L1 (CLAUDE.md directives) | No harness or orchestrator — skill-based extension |
-> | **Trust Tier** | Operator-supervised | Solo execution, human decides |
-> | **SDLC Profile** | Simplified | Lighter process — fewer artifacts per stage |
+> Per [[execution-mode-is-consumer-property-not-project-property|Consumer-Property Doctrine]] (2026-04-15), this table lists only **stable project identity** and **phase/scale state**. Consumer/task properties (execution mode, SDLC profile, methodology model, current stage) are declared by the consumer at connection time, not hard-coded to the project. Defaults are noted below the table.
+>
+> | Dimension | Layer | Value | Evidence |
+> |-----------|-------|-------|----------|
+> | **Type** | Stable | product (backend AI platform) | CLI + backend routing + MCP server + guardrails |
+> | **Domain** | Stable | backend-ai-platform (Python) | 61 modules, 94 test files, 1,758 tests, 78 skills, 9 profiles, 14 model configs |
+> | **Second-brain relationship** | Stable | connected | tools/gateway.py forwarder installed; Tier 4/4 structural compliance (operational tier ~2+) |
+> | **Phase** | State | production | Stage 2 routing operational (4-tier router + circuit breakers + DLQ + warmup); Stage 3 hardware unlocked 2026-04-17 (19 GB VRAM dual-GPU: RTX 2080 8GB + RTX 2080 Ti 11GB) |
+> | **Scale** | State | medium | 61 modules, 94 test files, 1,758 tests, 78 skills, 9 profiles, 14 model configs |
+>
+> > [!tip] Consumer/task properties — NOT project-bound
+> >
+> > | Property | Default (consumer may override) | Rationale |
+> > |----------|--------------------------------|-----------|
+> > | Execution Mode | solo | Solo is the universal default; harness/fleet would declare at MCP connect |
+> > | SDLC Profile | default (Goldilocks) | Production + medium scale ⇒ default per [[sdlc-customization-framework\|SDLC Customization Framework]]; simplified reserved for POC/micro |
+> > | Methodology Model | task-dependent | bug-fix, feature-development, research — each task picks its own model |
+> > | PM Level / Trust Tier | L1 / operator-supervised (current single-operator workflow) | Changes if AICP is later embedded in a fleet or harness runtime |
 
 ## What the Brain Learned FROM AICP
 
@@ -89,16 +97,18 @@ The generic Python domain chain at [[domain-chain-python-wiki|Artifact Chain —
 
 ## Integration with Second Brain
 
-> [!abstract] Adoption Status
+> [!abstract] Adoption Status (updated 2026-04-17)
 >
 > | Component | Status |
 > |-----------|--------|
-> | CLAUDE.md as routing table | Adopted |
-> | Three-layer root docs (AGENTS.md + CLAUDE.md + Skills) | Not adopted — candidate upgrade. AICP already has Layer 3 (78 skills); Layer 1 AGENTS.md would enable cross-tool portability. See [[root-documentation-map|Root Documentation Map]] |
+> | CLAUDE.md as routing table | Adopted; Identity Profile section added 2026-04-17 per doctrine |
+> | Three-layer root docs (AGENTS.md + CLAUDE.md + Skills) | Layer 3 adopted (78 skills); Layer 1 AGENTS.md would enable cross-tool portability — candidate upgrade. See [[root-documentation-map\|Root Documentation Map]] |
 > | Skills as extension pattern | Adopted (78 skills) |
-> | Wiki knowledge base | Partial (consumes wiki exports in docs/kb/) |
+> | Wiki knowledge base | Consumed (docs/kb/ + gateway forwarder) |
 > | Export from second brain | Defined (E002 integration interface) |
-> | Feed-back TO second brain | Minimal (concept page + integration patterns) |
+> | Feed-back TO second brain | **Active as of 2026-04-17** — 3 contributions filed (Stage-3 hardware unlocked · this identity reconciliation · three-layer autocomplete validation lesson) |
+> | Structural compliance | **Tier 4/4** per `gateway compliance` check |
+> | Operational compliance | Tier 2+ (honest reporting per [[structural-compliance-is-not-operational-compliance\|Structural Compliance Is Not Operational Compliance]]) |
 
 ## 2026-04-17 Update — Stage 5 Trajectory Changed
 
@@ -134,6 +144,7 @@ None of these require hardware beyond what the operator already has. The work is
 > - Guardrails pipeline implementation (how path rules and response filters compose)
 > - Dual-machine Alpha/Bravo architecture failure modes
 > - Actual token cost reduction measurements at Stage 2
+> - **Empirical routing split with 19 GB dual-GPU hardware** (Stage 3 hardware just unlocked 2026-04-17; measurements pending — connects to [[model-local-ai\|Model — Local AI]] "Empirical routing split after Stage 3" open question, now answerable in principle)
 >
 > These gaps are acknowledged, not hidden. Future ingestion of AICP source code would fill them.
 

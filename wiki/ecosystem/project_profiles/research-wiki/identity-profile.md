@@ -29,20 +29,23 @@ tags: [ecosystem, project-profile, research-wiki, identity, goldilocks, self-ref
 
 The second brain's understanding of ITSELF as an ecosystem member. This profile is self-referential: the research wiki IS the second brain, and this page is the brain describing its own identity, role, and contribution to the ecosystem. The wiki is a research-grade knowledge synthesis system and central intelligence spine for the devops ecosystem (OpenFleet, AICP, devops-control-plane). At 300 pages and 2,003 relationships, it is the largest knowledge artifact in the ecosystem. Its primary contribution is the methodology framework itself — all models, standards, artifact chains, quality gates, and the knowledge architecture that the other projects consume.
 
-## Identity (Goldilocks 7 Dimensions)
+## Identity (Goldilocks)
 
-> [!info] Research Wiki Goldilocks Profile
+> [!info] Research Wiki Identity Profile
 >
-> | Dimension | Value | Evidence |
-> |-----------|-------|---------|
-> | **Type** | system (framework + instance + second brain) | Both the methodology framework AND a running instance of it |
-> | **Execution Mode** | Solo (human + Claude in conversation) | No harness, no loop. Operator directs, Claude executes, pipeline validates. |
-> | **Domain** | Knowledge (Python/wiki tools) | Python tooling: pipeline, gateway, validate, lint, stats, view, export, sync |
-> | **Phase** | Production | Used daily, 300+ pages, methodology consumed by ecosystem |
-> | **Scale** | Medium (300 pages, growing) | 7 domains, 15 named models, 78 artifact types, 6-layer knowledge evolution |
-> | **PM Level** | L1 (wiki backlog, CLAUDE.md directives, pipeline tools) | Backlog of epics, CLAUDE.md as routing table, pipeline post as gate |
-> | **Trust Tier** | Operator-supervised | Human reviews all produced content |
-> | **SDLC Profile** | Default (stage-gated with selected artifacts) | 5 stages, artifact chains, pipeline post validation |
+> Per [[execution-mode-is-consumer-property-not-project-property|Consumer-Property Doctrine]] (2026-04-15), rows marked **Stable** / **State** are project fields; rows marked **Consumer/Task** are defaults the consumer may override at connect time.
+>
+> | Dimension | Layer | Value | Evidence |
+> |-----------|-------|-------|----------|
+> | **Type** | Stable | system (framework + instance + second brain) | Both the methodology framework AND a running instance of it |
+> | **Domain** | Stable | Knowledge (Python/wiki tools) | Python tooling: pipeline, gateway, validate, lint, stats, view, export, sync |
+> | **Second-brain relationship** | Stable | IS the second brain (self-referential) | This wiki defines the methodology it uses on itself |
+> | **Phase** | State | production | Used daily, 369+ pages, methodology consumed by ecosystem |
+> | **Scale** | State | medium (369 pages, 2470+ relationships, growing) | 7 domains, 16 named models, 78 artifact types, 4 principles |
+> | Execution Mode | Consumer/Task (default) | solo (human + Claude in conversation) | Default — no harness, no loop. Consumer declares at MCP connect if non-default. |
+> | SDLC Profile | Consumer/Task (default) | default (stage-gated with selected artifacts) | 5 stages, artifact chains, pipeline post validation. Per-task override allowed. |
+> | PM Level | Consumer/Task (default) | L1 (wiki backlog, CLAUDE.md directives, pipeline tools) | Backlog of epics, CLAUDE.md as routing table, pipeline post as gate |
+> | Trust Tier | Consumer/Task (default) | operator-supervised | Human reviews all produced content |
 
 ## What Makes This Profile Unique
 

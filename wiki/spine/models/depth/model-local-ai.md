@@ -442,3 +442,4 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]
 [[2026-consumer-hardware-ai-stack|The 2026 Consumer-Hardware AI Stack — Strategic Synthesis]]
+[[three-layer-autocomplete-chain-validated-in-production-fleet|Three-layer autocomplete chain validated in production fleet operation]]

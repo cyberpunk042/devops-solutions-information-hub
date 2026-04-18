@@ -25,20 +25,22 @@ tags: [ecosystem, project-profile, openarms, identity, goldilocks]
 
 The second brain's understanding of OpenArms as an ecosystem member. OpenArms is a TypeScript/Node.js agent platform that evolved from a simple CLI tool through 10 methodology versions, proving that infrastructure enforcement works where instruction-based compliance fails. It is the most methodology-evolved project in the ecosystem and the primary source of enforcement lessons.
 
-## Identity (Goldilocks 7 Dimensions)
+## Identity (Goldilocks)
 
-> [!info] OpenArms Goldilocks Profile
+> [!info] OpenArms Identity Profile
 >
-> | Dimension | Value | Evidence |
-> |-----------|-------|---------|
-> | **Type** | product (agent platform) | CLI + agent run + provisioning + fleet dispatch |
-> | **Execution Mode** | Harness v2 (enforced) | `agent run` wraps Claude in methodology loop with hooks + validation |
-> | **Domain** | Backend API / Agent Platform (TypeScript/Node) | pnpm + tsgo + oxlint + vitest stack |
-> | **Phase** | Production | Used daily, 93+ completed tasks |
-> | **Scale** | Medium-Large (~50k LOC estimated) | Growing codebase with 8 execution modes |
-> | **PM Level** | L2 (Harness) | methodology.yaml + agent-directive + task frontmatter + hooks |
-> | **Trust Tier** | Capable (earned through 93 tasks, 9 methodology versions) | Auto-approval on routine operations |
-> | **SDLC Profile** | Default → trending Full | Stage-gated with artifact requirements, hooks enforcing boundaries |
+> Per [[execution-mode-is-consumer-property-not-project-property|Consumer-Property Doctrine]] (2026-04-15), rows marked **Stable** / **State** are project fields; rows marked **Consumer/Task** are defaults the consumer may override at connect time. OpenArms is a *harness engineering project* — it BUILDS harness runtime, which is a different thing from its own execution mode as a project.
+>
+> | Dimension | Layer | Value | Evidence |
+> |-----------|-------|-------|----------|
+> | **Type** | Stable | product (harness-engineering / agent platform) | CLI + agent run + provisioning + fleet dispatch |
+> | **Domain** | Stable | Backend API / Agent Platform (TypeScript/Node) | pnpm + tsgo + oxlint + vitest stack |
+> | **Phase** | State | production | Used daily, 93+ completed tasks, 10 methodology versions |
+> | **Scale** | State | medium-large (~50k LOC estimated) | Growing codebase with 8 execution modes shipped |
+> | Execution Mode | Consumer/Task (typical) | harness v2 (when OpenArms runs its own harness on itself) | `agent run` wraps Claude in methodology loop with hooks + validation. Solo is still valid for direct operator work in the repo. |
+> | SDLC Profile | Consumer/Task (typical) | default → trending full | Stage-gated with artifact requirements, hooks enforcing boundaries; consumer may downgrade for hotfixes |
+> | PM Level | Consumer/Task (typical) | L2 (harness-owned) | methodology.yaml + agent-directive + task frontmatter + hooks |
+> | Trust Tier | Consumer/Task (earned) | capable (earned through 93 tasks, 9 methodology versions) | Auto-approval on routine operations; per-task boundary |
 
 ## Execution Mode History
 

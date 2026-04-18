@@ -12,8 +12,16 @@ tags: [contributed, remark]
 contributed_by: "aicp-self"
 contribution_source: "/home/jfortin/devops-expert-local-ai"
 contribution_date: 2026-04-17
-contribution_status: pending-review
+contribution_status: accepted
 contribution_reason: "Status update on Local AI model open question: 19GB hardware is now in place"
+resolution_date: 2026-04-17
+resolution_notes: |
+  Hardware unlock incorporated into AICP identity profile's State row (phase/scale detail).
+  Knowledge-gap entry added: "Empirical routing split with 19 GB dual-GPU hardware (measurements pending)"
+  linked to Model — Local AI's "Empirical routing split after Stage 3" open question.
+  Aligns with 2026-04-17 strategic synthesis [[2026-consumer-hardware-ai-stack|2026 Consumer-Hardware AI Stack]]
+  which names Stage 5 as integration-blocked (no longer hardware-blocked) — this contribution is the
+  first concrete confirmation of that trajectory shift.
 ---
 
 # AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU

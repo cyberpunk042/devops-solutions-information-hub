@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-18T01:58:18.081442+00:00",
+  "generated": "2026-04-18T02:05:45.016659+00:00",
   "stats": {
-    "pages": 374,
+    "pages": 375,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2479,
+    "relationships": 2484,
     "tags_unique": 1126,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 58,
+      "4": 59,
       "5": 29,
       "1": 35,
       "spine": 69
     },
     "maturity": {
       "growing": 280,
-      "seed": 39
+      "seed": 40
     }
   },
   "pages": [
@@ -10368,6 +10368,48 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet.md",
+      "slug": "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
+      "title": "Three-layer autocomplete chain validated in production fleet operation",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Engineering Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "VALIDATES IN PRODUCTION",
+          "target": "Context Engineering Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
     },
     {
       "path": "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems.md",
@@ -26042,8 +26084,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 172,
-      "relationship_count": 1166
+      "page_count": 173,
+      "relationship_count": 1171
     },
     "ai-agents": {
       "page_count": 68,
@@ -29138,6 +29180,7 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
+      "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
@@ -29165,6 +29208,7 @@
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "inbox": [
+      "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
@@ -31223,6 +31267,8 @@
     {
       "target": "Context Engineering Standards",
       "referenced_by": [
+        "Three-layer autocomplete chain validated in production fleet operation",
+        "Three-layer autocomplete chain validated in production fleet operation",
         "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity"
       ]
     },
@@ -31355,6 +31401,7 @@
         "Test OpenAI backend with LocalAI",
         "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
         "AICP \u2014 Identity Profile",
+        "Three-layer autocomplete chain validated in production fleet operation",
         "If You Can Verify, You Converge",
         "Session 2026-04-17 Summary",
         "Agent Execution Cost Optimization Stack",

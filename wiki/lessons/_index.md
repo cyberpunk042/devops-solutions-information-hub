@@ -62,6 +62,7 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [Three-layer autocomplete chain validated in production fleet operation](00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet.md) — Context Engineering Standards' 8-step autocomplete chain maps cleanly to a three-layer runtime composition deployed i...
 - [Verify Before Contributing to External Knowledge Systems](00_inbox/verify-before-contributing-to-external-knowledge-systems.md) — When an agent writes to an external knowledge system via `gateway contribute` (lesson, correction, remark) or any equ...
 - [Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity](01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project.md) — Context engineering defines three tier budgets (Expert 5-10K / Capable 2-5K / Lightweight 500-1K tokens) with a 10× c...
 - [Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones](01_drafts/contributed/defense-layer-progression-is-expensive.md) — The Three Lines of Defense pattern (Prevention → Detection → Correction) is often read as a checklist: adopt all thre...
@@ -127,4 +128,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`lesson`, `contributed`, `methodology`, `quality`, `failure-lesson`, `inbox`, `openarms`, `enforcement`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `principle`, `validation`, `harness-engineering`
+`contributed`, `lesson`, `methodology`, `quality`, `inbox`, `failure-lesson`, `openarms`, `enforcement`, `cross-domain`, `agent-failure`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `principle`, `validation`, `harness-engineering`

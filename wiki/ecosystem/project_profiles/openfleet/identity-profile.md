@@ -31,20 +31,22 @@ tags: [ecosystem, project-profile, openfleet, identity, goldilocks]
 
 The second brain's understanding of OpenFleet as an ecosystem member. OpenFleet is a fleet orchestration framework (TypeScript/Node.js + Python orchestrator) that manages 10 specialized AI agents through deterministic dispatch, an immune system with 3 lines of defense, tier-based trust progression, contribution gating, and standing orders. It is the most architecturally complex project in the ecosystem and the primary source of multi-agent coordination patterns. Its orchestrator makes zero LLM calls — pure Python on a 30-second cycle.
 
-## Identity (Goldilocks 7 Dimensions)
+## Identity (Goldilocks)
 
-> [!info] OpenFleet Goldilocks Profile
+> [!info] OpenFleet Identity Profile
 >
-> | Dimension | Value | Evidence |
-> |-----------|-------|---------|
-> | **Type** | system (fleet orchestrator) | Orchestrator + 10 agents + Mission Control + gateway + IRC + knowledge graph |
-> | **Execution Mode** | Full System (orchestrator + 10 agents) | Deterministic brain dispatches; agents don't self-direct. Harness-owned loop. |
-> | **Domain** | AI Agent Orchestration (TypeScript/Node + Python) | Agent code in TS, orchestrator in Python, IaC scripts in Bash |
-> | **Phase** | Production | Running fleet with sprints, dispatches, and immune system active |
-> | **Scale** | Large (~3,815 .md files, 2,246-line orchestrator) | 10 agents, 219+ KB entries, 42+ IaC scripts |
-> | **PM Level** | L3 (Orchestrator) | Deterministic brain decides dispatch, priority, gating; PO sets direction through boards |
-> | **Trust Tier** | Tier-progressive (Trainee→Standard→Expert per agent per task type) | Rolling 20-record approval windows, PO confirms tier changes |
-> | **SDLC Profile** | Full | 6 stages (conversation→analysis→investigation→reasoning→work→review), MCP tool blocking per stage |
+> Per [[execution-mode-is-consumer-property-not-project-property|Consumer-Property Doctrine]] (2026-04-15), rows marked **Stable** / **State** are project fields; rows marked **Consumer/Task** are defaults that apply to OpenFleet's own orchestrator-managed runtime. OpenFleet is a *fleet engineering project* — it BUILDS the orchestrator; its orchestrator is how OpenFleet's own work typically runs.
+>
+> | Dimension | Layer | Value | Evidence |
+> |-----------|-------|-------|----------|
+> | **Type** | Stable | system (fleet orchestrator) | Orchestrator + 10 agents + Mission Control + gateway + IRC + knowledge graph |
+> | **Domain** | Stable | AI Agent Orchestration (TypeScript/Node + Python) | Agent code in TS, orchestrator in Python, IaC scripts in Bash |
+> | **Phase** | State | production | Running fleet with sprints, dispatches, and immune system active |
+> | **Scale** | State | large (~3,815 .md files, 2,246-line orchestrator) | 10 live agent workspaces, 219+ KB entries, 42+ IaC scripts |
+> | Execution Mode | Consumer/Task (typical) | full system (orchestrator + 10 agents) | Deterministic brain dispatches; agents don't self-direct. Harness-owned loop. Solo still valid for direct operator work in the repo. |
+> | SDLC Profile | Consumer/Task (typical) | full | 6 stages (conversation→analysis→investigation→reasoning→work→review), MCP tool blocking per stage |
+> | PM Level | Consumer/Task (typical) | L3 (orchestrator-owned) | Deterministic brain decides dispatch, priority, gating; PO sets direction through boards |
+> | Trust Tier | Consumer/Task (earned, per-agent per-task-type) | tier-progressive (Trainee→Standard→Expert) | Rolling 20-record approval windows, PO confirms tier changes |
 
 ## Execution Mode Detail
 
