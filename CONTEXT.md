@@ -41,17 +41,19 @@ Identity protocol: `wiki/domains/cross-domain/project-self-identification-protoc
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 358 |
-| **Relationships** | 2386+ |
+| **Pages** | 369 |
+| **Relationships** | 2461+ |
 | **Validation errors** | 0 |
 | **MCP tools** | 26+ |
 | **Named models** | 16 (+ 9 methodology models) |
 | **Standards pages** | 25 (per-type + per-model + gateway output contract) |
 | **Sub-super-models** | 5 |
-| **Validated lessons** | 44 + 10 contributed (3 in 02_synthesized, 7 in 01_drafts) |
+| **Validated lessons** | 44 + 11 contributed (3 in 02_synthesized, 7 in 01_drafts, 1 in 00_inbox from OpenFleet 2026-04-17) |
 | **Validated patterns** | 19 + 5 in 01_drafts (incl. progressive-structural-enrichment, artifact-path-verification, aspirational-declaration-without-enforcement meta-pattern) |
 | **Validated decisions** | 17 + 1 in 01_drafts (extended-to-adaptive-thinking-migration) |
-| **Principles** | 3 (+ 1 candidate: aspirational-declaration cross-layer meta-pattern with 3 validated instances) |
+| **Principles** | **4** (Infrastructure > Instructions · Structured Context > Content · Goldilocks · Declarations Aspirational Until Verified — 2026-04-16 promotion with 5 validated cross-layer instances) |
+| **Source syntheses** | 48+ (4 added 2026-04-17: AirLLM · gpt-oss · Unsloth · Qwopus v3 update) |
+| **Spine references** | 2 added 2026-04-17 (Open-Model Evaluation Framework, 2026 Consumer-Hardware AI Stack) |
 | **Ecosystem project profiles** | 5 (all connected via `setup --connect`) |
 | **Consumer integration roadmap exemplar** | Published (OpenArms 5-milestone / 27-epic / 800-1200 hour plan) |
 

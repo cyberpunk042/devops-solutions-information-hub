@@ -279,4 +279,5 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
 [[knowledge-architecture|Sub-Model — Knowledge Architecture — Layers, Maturity, and Evolution]]
 [[work-management|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]]
+[[2026-consumer-hardware-ai-stack|The 2026 Consumer-Hardware AI Stack — Strategic Synthesis]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]

@@ -152,3 +152,4 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
 [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]
+[[2026-consumer-hardware-ai-stack|The 2026 Consumer-Hardware AI Stack — Strategic Synthesis]]

@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-18T01:20:15.910467+00:00",
+  "generated": "2026-04-18T01:32:13.001200+00:00",
   "stats": {
-    "pages": 368,
+    "pages": 369,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2461,
-    "tags_unique": 1124,
+    "relationships": 2470,
+    "tags_unique": 1126,
     "layers": {
       "3": 4,
       "6": 18,
@@ -14,10 +14,10 @@
       "4": 58,
       "5": 29,
       "1": 35,
-      "spine": 68
+      "spine": 69
     },
     "maturity": {
-      "growing": 279,
+      "growing": 280,
       "seed": 39
     }
   },
@@ -23432,6 +23432,106 @@
       ]
     },
     {
+      "path": "spine/references/2026-consumer-hardware-ai-stack.md",
+      "slug": "spine/references/2026-consumer-hardware-ai-stack",
+      "title": "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "strategic-synthesis",
+        "consumer-hardware",
+        "local-ai",
+        "open-weight",
+        "ecosystem",
+        "cost-optimization",
+        "2026-landscape",
+        "aicp",
+        "spine"
+      ],
+      "sources": [
+        {
+          "id": "src-unsloth-fast-lora-consumer-hardware",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "title": "Synthesis \u2014 Unsloth"
+        },
+        {
+          "id": "src-gpt-oss-openai-open-weight-moe",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md",
+          "title": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "id": "src-airllm-layer-wise-inference-nvme-ssd-offload",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md",
+          "title": "Synthesis \u2014 AirLLM"
+        },
+        {
+          "id": "src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+          "type": "wiki",
+          "file": "wiki/sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b.md",
+          "title": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "id": "open-model-evaluation-framework",
+          "type": "wiki",
+          "file": "wiki/spine/references/open-model-evaluation-framework.md",
+          "title": "Open-Model Evaluation Framework"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+        "2026 Consumer AI Stack",
+        "Four-Layer Consumer-Hardware AI Stack"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Unsloth"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 AirLLM"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Open-Model Evaluation Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "spine/references/adoption-guide.md",
       "slug": "spine/references/adoption-guide",
       "title": "Adoption Guide \u2014 How to Use This Wiki's Standards",
@@ -25789,8 +25889,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 171,
-      "relationship_count": 1157
+      "page_count": 172,
+      "relationship_count": 1166
     },
     "ai-agents": {
       "page_count": 68,
@@ -26241,7 +26341,8 @@
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/models/depth/model-local-ai",
-      "spine/models/ecosystem/model-ecosystem"
+      "spine/models/ecosystem/model-ecosystem",
+      "spine/references/2026-consumer-hardware-ai-stack"
     ],
     "localai": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -26269,6 +26370,7 @@
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "spine/models/ecosystem/model-ecosystem",
+      "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/adoption-guide",
       "spine/references/methodology-adoption-guide",
       "spine/super-model/super-model"
@@ -27303,6 +27405,7 @@
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework"
     ],
     "backend-selection": [
@@ -27949,7 +28052,8 @@
     "consumer-hardware": [
       "domains/ai-models/local-llm-quantization",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/2026-consumer-hardware-ai-stack"
     ],
     "content-pipeline": [
       "domains/automation/ai-driven-content-pipeline",
@@ -30035,7 +30139,8 @@
     "local-ai": [
       "sources/src-27-questions-llm-selection",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
-      "spine/models/depth/model-local-ai"
+      "spine/models/depth/model-local-ai",
+      "spine/references/2026-consumer-hardware-ai-stack"
     ],
     "performance": [
       "sources/src-27-questions-llm-selection"
@@ -30494,6 +30599,7 @@
     ],
     "open-weight": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework"
     ],
     "apache-2-0": [
@@ -30645,6 +30751,7 @@
       "spine/models/foundation/model-methodology",
       "spine/models/quality/model-quality-failure-prevention",
       "spine/models/quality/model-sfif-architecture",
+      "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/model-registry",
       "spine/super-model/enforcement-hierarchy",
       "spine/super-model/goldilocks-protocol",
@@ -30725,6 +30832,12 @@
     ],
     "rework": [
       "spine/models/quality/model-quality-failure-prevention"
+    ],
+    "strategic-synthesis": [
+      "spine/references/2026-consumer-hardware-ai-stack"
+    ],
+    "2026-landscape": [
+      "spine/references/2026-consumer-hardware-ai-stack"
     ],
     "roadmap": [
       "spine/references/consumer-integration-roadmap-exemplar"
@@ -31082,6 +31195,7 @@
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines",
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
@@ -31133,6 +31247,12 @@
       "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Principle 4 \u2014 Declarations Aspirational Until Verified",
+      "referenced_by": [
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
       ]
     },
     {
@@ -31241,6 +31361,7 @@
       "target": "Synthesis \u2014 AirLLM",
       "referenced_by": [
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
@@ -31258,6 +31379,7 @@
       "referenced_by": [
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
@@ -31290,11 +31412,18 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 Unsloth",
+      "referenced_by": [
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 gpt-oss",
       "referenced_by": [
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
     },
