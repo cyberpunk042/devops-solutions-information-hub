@@ -98,6 +98,20 @@ After infrastructure enforcement solves stage boundary violations (75% → 0%), 
 
 The fundamental insight: **infrastructure solves PROCESS failures (what stages run, what tools are available). Behavioral failures are about JUDGMENT (what to verify, when to stop, how to handle conflicts).** The next frontier is not more hooks — it's judgment scaffolding: design-implementation drift detection, concern-channel enforcement, and novelty-based model selection.
 
+### Candidate Extensions from OpenFleet doctor.py (2026-04-18 — pending ≥3 evidence for promotion)
+
+> [!info] OpenFleet mapped its `fleet/core/doctor.py` (679 lines, 10 detection rules) against this taxonomy and found 5 NOVEL detection categories not covered by Classes 1-8. Filed as [remark](../../../log/5-candidate-behavioral-failure-detection-rules-from-openflee.md) (not promoted to class) pending ≥3-evidence threshold per lesson-page-standards.
+>
+> | # | OpenFleet Detection | Distinct from | Why it matters |
+> |---|---------------------|---------------|-----------------|
+> | 1 | `detect_correction_threshold` — agent corrected too many times on the same task (measures REVIEWER feedback count, not agent self-repetition) | Class "confident-but-wrong" (same mistake repeated 3+ times by agent) | Multi-iteration rework without root-cause fix. Fleet-scale only — solo agents don't have enough interaction surface |
+> | 2 | `detect_code_without_reading` — agent wrote code without reading existing code first | "Never Synthesize from Descriptions Alone" lesson (ingestion depth, Layer 0 vs Layer 1) | About WRITE discipline, not READ. Fleet-scale: specialist agents inherit large codebases; writing without reading produces drift and stale-pattern replication |
+> | 3 | `detect_cascading_fix` — fix-on-fix chain, each fix succeeds and reveals next failure | Class 3 Environment Patching (polyfill chains are one specific kind) | Domain-general — could promote as **generalization of Class 3** or as a sibling class. Not just environment-specific |
+> | 4 | `detect_abstraction` — agent replaced literal requirements with abstractions prematurely | "Hardcoded Instances Fail — Build Frameworks Not Solutions" lesson (inverse) | Specialist agents (architect, senior-engineer roles) retrofit their own abstractions onto concrete PO requirements. **Cost: vision drift disguised as generalization.** |
+> | 5 | `detect_not_listening` — agent produces output instead of processing PO input | No brain equivalent | Fleet-scale detection heuristic: unprocessed mentions in mentions queue + continued output generation. May not generalize to solo agents |
+>
+> Each rule needs ≥3 independent evidence items before promoting into the class list. OpenFleet has operational data in `fleet/core/intervention` logs + agent-session runs; a dedicated audit would extract evidence per rule. Watch signal: this remark becomes a lesson when either (a) the operator sees Class-9-class behavior in OpenArms or Research Wiki, or (b) OpenFleet's intervention-log audit produces the evidence.
+
 ## Evidence
 
 > [!bug]- Class 2: Weakest-Checker Optimization (T087)

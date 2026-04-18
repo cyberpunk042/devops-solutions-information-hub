@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-18T20:44:53.196143+00:00",
+  "generated": "2026-04-18T22:46:36.832174+00:00",
   "stats": {
-    "pages": 377,
+    "pages": 380,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2500,
-    "tags_unique": 1130,
+    "relationships": 2509,
+    "tags_unique": 1133,
     "layers": {
       "3": 4,
       "6": 18,
@@ -14,11 +14,11 @@
       "4": 60,
       "5": 30,
       "1": 35,
-      "spine": 69
+      "spine": 70
     },
     "maturity": {
       "growing": 281,
-      "seed": 41
+      "seed": 42
     }
   },
   "pages": [
@@ -10484,10 +10484,6 @@
         {
           "verb": "RELATES TO",
           "target": "Model Registry"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "Gateway future work \u2014 `gateway contribute --verify-claim` flag"
         }
       ]
     },
@@ -15755,6 +15751,32 @@
       ]
     },
     {
+      "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
+      "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
+      "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "contributed",
+        "remark"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md",
       "slug": "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "title": "AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts",
@@ -15903,6 +15925,32 @@
       "tags": [
         "contributed",
         "remark"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl.md",
+      "slug": "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl",
+      "title": "OpenFleet identity profile \u2014 AGENTS.md Layer-1 upgrade completed 2026-04-17 (was 'candidate')",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "contributed",
+        "correction"
       ],
       "sources": [],
       "layer": "",
@@ -24533,6 +24581,96 @@
       ]
     },
     {
+      "path": "spine/references/second-brain-custom-model-strategy.md",
+      "slug": "spine/references/second-brain-custom-model-strategy",
+      "title": "Second-Brain Custom Model \u2014 Training Strategy and Roadmap",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "strategy",
+        "custom-model",
+        "fine-tuning",
+        "lora",
+        "second-brain",
+        "wiki-corpus",
+        "aicp",
+        "localai",
+        "cost-optimization"
+      ],
+      "sources": [
+        {
+          "id": "src-unsloth-fast-lora-consumer-hardware",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "title": "Synthesis \u2014 Unsloth"
+        },
+        {
+          "id": "src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+          "type": "wiki",
+          "file": "wiki/sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b.md",
+          "title": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "id": "src-gpt-oss-openai-open-weight-moe",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md",
+          "title": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "id": "2026-consumer-hardware-ai-stack",
+          "type": "wiki",
+          "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
+          "title": "2026 Consumer-Hardware AI Stack"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap",
+        "Second-Brain Custom Model Strategy",
+        "Custom Model for the Second Brain"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Unsloth"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Open-Model Evaluation Framework"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "spine/references/second-brain-integration-chain.md",
       "slug": "spine/references/second-brain-integration-chain",
       "title": "Operations Plan \u2014 Second Brain Integration Chain \u2014 Complete Walkthrough",
@@ -26225,8 +26363,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 175,
-      "relationship_count": 1187
+      "page_count": 176,
+      "relationship_count": 1194
     },
     "ai-agents": {
       "page_count": 68,
@@ -26253,8 +26391,8 @@
       "relationship_count": 192
     },
     "log": {
-      "page_count": 28,
-      "relationship_count": 49
+      "page_count": 30,
+      "relationship_count": 51
     }
   },
   "tags": {
@@ -26679,12 +26817,14 @@
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem",
-      "spine/references/2026-consumer-hardware-ai-stack"
+      "spine/references/2026-consumer-hardware-ai-stack",
+      "spine/references/second-brain-custom-model-strategy"
     ],
     "localai": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
-      "domains/tools-and-platforms/aicp"
+      "domains/tools-and-platforms/aicp",
+      "spine/references/second-brain-custom-model-strategy"
     ],
     "subsystem-3": [
       "backlog/epics/pre-milestone/E001-local-inference-engine"
@@ -27045,6 +27185,7 @@
       "sources/wiki-methodology/src-karpathy-llm-wiki-idea-file",
       "spine/models/depth/model-knowledge-evolution",
       "spine/models/depth/model-second-brain",
+      "spine/references/second-brain-custom-model-strategy",
       "spine/references/second-brain-integration-chain",
       "spine/super-model/super-model"
     ],
@@ -27745,7 +27886,8 @@
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/2026-consumer-hardware-ai-stack",
-      "spine/references/open-model-evaluation-framework"
+      "spine/references/open-model-evaluation-framework",
+      "spine/references/second-brain-custom-model-strategy"
     ],
     "backend-selection": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
@@ -29339,11 +29481,13 @@
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
       "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
+      "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl",
       "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
@@ -29995,6 +30139,7 @@
     ],
     "remark": [
       "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
+      "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
       "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
       "spine/models/foundation/model-wiki-design"
@@ -30038,6 +30183,7 @@
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl",
       "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
@@ -31012,10 +31158,12 @@
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "lora": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/second-brain-custom-model-strategy"
     ],
     "fine-tuning": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/second-brain-custom-model-strategy"
     ],
     "training": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
@@ -31276,6 +31424,15 @@
     "readme": [
       "spine/references/root-documentation-map"
     ],
+    "strategy": [
+      "spine/references/second-brain-custom-model-strategy"
+    ],
+    "custom-model": [
+      "spine/references/second-brain-custom-model-strategy"
+    ],
+    "wiki-corpus": [
+      "spine/references/second-brain-custom-model-strategy"
+    ],
     "walkthrough": [
       "spine/references/second-brain-integration-chain"
     ],
@@ -31372,7 +31529,8 @@
     {
       "target": "2026 Consumer-Hardware AI Stack",
       "referenced_by": [
-        "Session 2026-04-17 Summary"
+        "Session 2026-04-17 Summary",
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
     {
@@ -31479,12 +31637,6 @@
       "target": "Extension Standards",
       "referenced_by": [
         "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps"
-      ]
-    },
-    {
-      "target": "Gateway future work \u2014 `gateway contribute --verify-claim` flag",
-      "referenced_by": [
-        "Verify Before Contributing to External Knowledge Systems"
       ]
     },
     {
@@ -31596,7 +31748,8 @@
         "Model \u2014 Automation and Pipelines",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
-        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
     {
@@ -31667,7 +31820,8 @@
         "Verify Before Contributing to External Knowledge Systems",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
-        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
     {
@@ -31799,7 +31953,8 @@
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
-        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
     {
@@ -31833,7 +31988,8 @@
     {
       "target": "Synthesis \u2014 Unsloth",
       "referenced_by": [
-        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
     {
@@ -31843,7 +31999,8 @@
         "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
-        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
+        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
     {

@@ -92,6 +92,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Model Registry](references/model-registry.md) — This is the entry point for all named models in the wiki
 - [Open-Model Evaluation Framework — How to Look at a New Model Announcement](references/open-model-evaluation-framework.md) — Between late 2024 and early 2026, the open-weight reasoning-model landscape went from "years behind closed frontier" ...
 - [Root Documentation Map — Repository-Level Files](references/root-documentation-map.md) — The repository root contains 8 documentation files (2,714 total lines) that serve as the entry point for humans, AI t...
+- [Second-Brain Custom Model — Training Strategy and Roadmap](references/second-brain-custom-model-strategy.md) — With the 2026 consumer-hardware AI stack in place (Unsloth training · gpt-oss / Qwen / Qwopus bases · llama
 - [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](references/second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
 - [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (74 pages)
@@ -127,4 +128,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `domain-overview`, `methodology`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `second-brain`, `adoption`
+`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `domain-overview`, `methodology`, `gold-standard`, `anti-patterns`, `skills`, `second-brain`, `concept`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `aicp`

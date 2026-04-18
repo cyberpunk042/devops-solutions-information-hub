@@ -19,12 +19,14 @@ Operator directives, session summaries, and task completion notes.
 | Date | Title | Type | Tags |
 |------|-------|------|------|
 | 2026-04-17 | [Walkthrough C (OpenFleet) ground-truth verification 2026-04-17](walkthrough-c-(openfleet)-ground-truth-verification-2026-04-.md) | session | `contributed`, `correction` |
+| 2026-04-18 | [OpenFleet identity profile — AGENTS.md Layer-1 upgrade completed 2026-04-17 (was 'candidate')](openfleet-identity-profile-—-agents.md-layer-1-upgrade-compl.md) | session | `contributed`, `correction` |
 | 2026-04-17 | [Gateway identity parser fragility + forwarder contribute-target bug (2026-04-17)](gateway-identity-parser-fragility-+-forwarder-contribute-tar.md) | session | `contributed`, `remark` |
 | 2026-04-16 | [Compliance checker: AGENTS.md match by filename regardless of role — per-agent persona files falsely satisfy Tier 2 (inverse of F1 fix)](compliance-checker:-agents.md-match-by-filename-regardless-o.md) | session | `contributed`, `correction` |
 | 2026-04-12 | [Research Wiki Agent Directive (ARCHIVED 2026-04-14)](archived/agent-directive-original.md) | directive | `archived`, `agent-directive`, `superseded`, `historical` |
 | 2026-04-16 | [Amendment to prior compliance-checker correction: root-depth heuristic insufficient — OpenFleet's root AGENTS.md IS at depth 0 but functions as agent-workspace template](amendment-to-prior-compliance-checker-correction:-root-depth.md) | session | `contributed`, `correction` |
 | 2026-04-17 | [AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU](aicp-stage-3-hardware-unlocked-2026-04-17-—-19gb-vram-dual-g.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
+| 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [Session 2026-04-17 Summary](2026-04-17/2026-04-17-session-summary.md) | session | `log`, `session`, `progress`, `summary`, `local-ai`, `open-weight`, `consumer-hardware` |
 | 2026-04-10 | [Session 2026-04-10 Summary](2026-04-10/2026-04-10-session-summary.md) | session | `log`, `session`, `progress`, `summary` |
 | 2026-04-10 | [Quality Evolution Epic — Level Up Everything, One File at a Time](2026-04-10/2026-04-10-directive-quality-evolution-epic.md) | directive | `log`, `directive`, `quality`, `evolution`, `epic`, `standards`, `iterative`, `gated` |

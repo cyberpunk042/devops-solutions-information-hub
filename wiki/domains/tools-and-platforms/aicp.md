@@ -146,6 +146,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[plane|Plane]]
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[second-brain-custom-model-strategy|Second-Brain Custom Model — Training Strategy and Roadmap]]
 [[2026-04-17-session-summary|Session 2026-04-17 Summary]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
