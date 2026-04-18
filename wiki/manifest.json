@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-16T20:51:51.295505+00:00",
+  "generated": "2026-04-18T00:59:58.153192+00:00",
   "stats": {
-    "pages": 361,
+    "pages": 366,
     "domains": 9,
-    "sources": 50,
+    "sources": 52,
     "comparisons": 5,
-    "relationships": 2425,
-    "tags_unique": 1104,
+    "relationships": 2445,
+    "tags_unique": 1116,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 57,
+      "4": 58,
       "5": 29,
-      "1": 32,
+      "1": 34,
       "spine": 67
     },
     "maturity": {
-      "growing": 275,
-      "seed": 38
+      "growing": 277,
+      "seed": 39
     }
   },
   "pages": [
@@ -10370,6 +10370,32 @@
       "relationships": []
     },
     {
+      "path": "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems.md",
+      "slug": "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
+      "title": "Verify Before Contributing to External Knowledge Systems",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project.md",
       "slug": "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "title": "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity",
@@ -15584,6 +15610,32 @@
       ]
     },
     {
+      "path": "log/amendment-to-prior-compliance-checker-correction:-root-depth.md",
+      "slug": "log/amendment-to-prior-compliance-checker-correction:-root-depth",
+      "title": "Amendment to prior compliance-checker correction: root-depth heuristic insufficient \u2014 OpenFleet's root AGENTS.md IS at depth 0 but functions as agent-workspace template",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "correction"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "log/archived/agent-directive-original.md",
       "slug": "log/archived/agent-directive-original",
       "title": "Research Wiki Agent Directive (ARCHIVED 2026-04-14)",
@@ -15614,6 +15666,32 @@
         "Research Wiki Agent Directive (ARCHIVED)"
       ],
       "relationships": []
+    },
+    {
+      "path": "log/compliance-checker:-agents.md-match-by-filename-regardless-o.md",
+      "slug": "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "title": "Compliance checker: AGENTS.md match by filename regardless of role \u2014 per-agent persona files falsely satisfy Tier 2 (inverse of F1 fix)",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-16",
+      "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "correction"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
     },
     {
       "path": "patterns/01_drafts/agent-execution-cost-optimization-stack.md",
@@ -20260,6 +20338,92 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md",
+      "slug": "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "title": "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "airllm",
+        "local-llm",
+        "layer-wise-inference",
+        "ssd-offload",
+        "nvme",
+        "quantization",
+        "batch-inference",
+        "cost-optimization",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "src-airllm-github",
+          "type": "repository",
+          "url": "https://github.com/lyogavin/airllm",
+          "file": "raw/articles/lyogavinairllm.md",
+          "title": "AirLLM \u2014 GitHub Repository (lyogavin/airllm)",
+          "ingested": "2026-04-17"
+        },
+        {
+          "id": "src-airllm-datasharepro-review",
+          "type": "article",
+          "url": "https://datasharepro.in/airllm/",
+          "file": "raw/articles/airllm-review-democratizing-access-vs-the-unavoidable-physics-of-latency-datasha.md",
+          "title": "AirLLM Review: Democratizing Access vs. The Unavoidable Physics of Latency",
+          "ingested": "2026-04-17"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
+        "Synthesis: AirLLM",
+        "AirLLM Source Synthesis"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Synthesis \u2014 TurboQuant 122B LLM on MacBook"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Local Model vs Cloud API for Routine Operations"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-gemma4-searxng-openclaw.md",
       "slug": "sources/tools-integration/src-gemma4-searxng-openclaw",
       "title": "Synthesis \u2014 Gemma 4 + SearXNG for Free Private OpenClaw",
@@ -20318,6 +20482,90 @@
         {
           "verb": "RELATES TO",
           "target": "LightRAG"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md",
+      "slug": "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "title": "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "gpt-oss",
+        "openai",
+        "open-weight",
+        "apache-2-0",
+        "moe",
+        "mxfp4",
+        "agentic",
+        "local-llm",
+        "harmony-format",
+        "reasoning",
+        "cost-optimization",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "src-gpt-oss-github",
+          "type": "repository",
+          "url": "https://github.com/openai/gpt-oss",
+          "file": "raw/articles/openaigpt-oss.md",
+          "title": "openai/gpt-oss \u2014 GitHub Repository",
+          "ingested": "2026-04-17"
+        },
+        {
+          "id": "src-gpt-oss-model-card",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2508.10925",
+          "title": "gpt-oss-120b & gpt-oss-20b Model Card (OpenAI 2025)",
+          "ingested": "2026-04-17"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis: gpt-oss",
+        "gpt-oss Source Synthesis"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 AirLLM"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 TurboQuant"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Local LLM Quantization"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Local Model vs Cloud API for Routine Operations"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
         }
       ]
     },
@@ -22083,6 +22331,18 @@
           "id": "src-aicp-identity-profile",
           "type": "wiki",
           "file": "wiki/ecosystem/project_profiles/aicp/identity-profile.md"
+        },
+        {
+          "id": "src-airllm-layer-wise-inference-nvme-ssd-offload",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md",
+          "title": "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload"
+        },
+        {
+          "id": "src-gpt-oss-openai-open-weight-moe",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md",
+          "title": "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
         },
         {
           "id": "src-turboquant-122b-macbook",
@@ -25358,8 +25618,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 169,
-      "relationship_count": 1148
+      "page_count": 170,
+      "relationship_count": 1149
     },
     "ai-agents": {
       "page_count": 68,
@@ -25374,8 +25634,8 @@
       "relationship_count": 99
     },
     "ai-models": {
-      "page_count": 7,
-      "relationship_count": 36
+      "page_count": 9,
+      "relationship_count": 53
     },
     "automation": {
       "page_count": 7,
@@ -25386,8 +25646,8 @@
       "relationship_count": 192
     },
     "log": {
-      "page_count": 21,
-      "relationship_count": 38
+      "page_count": 23,
+      "relationship_count": 40
     }
   },
   "tags": {
@@ -25805,6 +26065,8 @@
       "ecosystem/project_profiles/aicp/identity-profile",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem"
     ],
@@ -26863,7 +27125,9 @@
       "domains/ai-agents/claude-code/claude-code-context-management",
       "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates",
       "sources/claude-code/src-token-hacks-claude-code",
-      "sources/src-27-questions-llm-selection"
+      "sources/src-27-questions-llm-selection",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "backend-selection": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
@@ -27467,12 +27731,15 @@
     ],
     "quantization": [
       "domains/ai-models/local-llm-quantization",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "local-llm": [
       "domains/ai-models/local-llm-quantization",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "sources/src-autobe-compiler-verified-backend-generation",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "mlx": [
@@ -27490,6 +27757,7 @@
     "moe": [
       "domains/ai-models/local-llm-quantization",
       "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "turboquant": [
@@ -27807,7 +28075,8 @@
     ],
     "reasoning": [
       "domains/cross-domain/methodology-framework/methodology-config-architecture",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "composable": [
       "domains/cross-domain/methodology-framework/methodology-framework",
@@ -28429,6 +28698,40 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
+    "contributed": [
+      "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "log/amendment-to-prior-compliance-checker-correction:-root-depth",
+      "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
+    ],
+    "inbox": [
+      "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
+      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
+      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
+    ],
     "lesson": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
@@ -28457,26 +28760,6 @@
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "patterns/03_validated/knowledge/tier-based-context-depth-trust-earned-through-approval-rates"
     ],
-    "contributed": [
-      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
-      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
-      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
-      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
-      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
-      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
-      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
-      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
-      "patterns/01_drafts/agent-execution-cost-optimization-stack",
-      "patterns/01_drafts/aspirational-declaration-without-enforcement",
-      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
-    ],
     "three-lines-of-defense": [
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive"
     ],
@@ -28489,16 +28772,6 @@
     ],
     "cost-curve": [
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive"
-    ],
-    "inbox": [
-      "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
-      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
-      "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
-      "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
-      "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
     ],
     "knowledge-tooling-gap": [
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k"
@@ -29111,6 +29384,11 @@
     "gated": [
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
     ],
+    "correction": [
+      "log/amendment-to-prior-compliance-checker-correction:-root-depth",
+      "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
+    ],
     "archived": [
       "log/archived/agent-directive-original"
     ],
@@ -29323,9 +29601,6 @@
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
     "detection": [
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
-    ],
-    "correction": [
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
     "agent-fleet": [
@@ -30001,6 +30276,21 @@
     "opensrc": [
       "sources/src-vercel-opensrc-toolkit"
     ],
+    "airllm": [
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
+    "layer-wise-inference": [
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
+    "ssd-offload": [
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
+    "nvme": [
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
+    "batch-inference": [
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
     "searxng": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
@@ -30015,6 +30305,27 @@
     ],
     "tool-calling": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
+    ],
+    "gpt-oss": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "openai": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "open-weight": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "apache-2-0": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "mxfp4": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "agentic": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "harmony-format": [
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "qa-automation": [
       "sources/tools-integration/src-playwright-cli-vs-mcp"
@@ -30555,6 +30866,8 @@
         "Synthesis \u2014 LLM Architecture Gallery (Raschka)",
         "Synthesis \u2014 Pydantic AI: Typed Agent Framework",
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
+        "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines"
       ]
@@ -30606,6 +30919,12 @@
       "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Principle \u2014 Declarations Aspirational Until Verified",
+      "referenced_by": [
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
       ]
     },
     {
@@ -30703,12 +31022,24 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 AirLLM",
+      "referenced_by": [
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Claude Code Best Practice",
       "referenced_by": [
         "Claude Code Best Practices",
         "Claude Code Context Management",
         "Claude Code Skills",
         "Synthesis \u2014 Claude Code Best Practice (shanraisshan)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Qwopus",
+      "referenced_by": [
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
       ]
     },
     {
@@ -30731,6 +31062,18 @@
       "target": "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding",
       "referenced_by": [
         "Synthesis \u2014 Superpowers Plugin \u2014 End of Vibe Coding (Full Tutorial)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 TurboQuant",
+      "referenced_by": [
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 gpt-oss",
+      "referenced_by": [
+        "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload"
       ]
     },
     {

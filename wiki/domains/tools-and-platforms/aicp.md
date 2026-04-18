@@ -147,6 +147,8 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
 [[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
 [[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
+[[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

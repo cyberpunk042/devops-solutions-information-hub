@@ -60,3 +60,4 @@ TurboQuant, originally Google's quantization technique, has been adapted for App
 [[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
 [[aicp|AICP]]
 [[lightrag|LightRAG]]
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]

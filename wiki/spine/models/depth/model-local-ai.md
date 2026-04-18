@@ -15,6 +15,14 @@ sources:
   - id: src-aicp-identity-profile
     type: wiki
     file: wiki/ecosystem/project_profiles/aicp/identity-profile.md
+  - id: src-airllm-layer-wise-inference-nvme-ssd-offload
+    type: wiki
+    file: wiki/sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md
+    title: "Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload"
+  - id: src-gpt-oss-openai-open-weight-moe
+    type: wiki
+    file: wiki/sources/tools-integration/src-gpt-oss-openai-open-weight-moe.md
+    title: "Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
   - id: src-turboquant-122b-macbook
     type: wiki
     file: wiki/sources/tools-integration/src-turboquant-122b-macbook.md
@@ -84,6 +92,67 @@ These hold regardless of which stack or pattern you choose:
 - **Circuit breakers must be active on every backend** — no routing without health checks
 - **The complexity scorer threshold is the routing mechanism** — not manual human selection
 - **The $0 target applies to maintenance, not creation** — knowledge creation remains cloud; routine operations become free
+
+### Open-Model Landscape — 2025-2026 Competitive Parity (NEW 2026-04-17)
+
+The $0-target model was designed under a 2024 assumption: **closed frontier models (Claude, GPT-4) decisively outperform open-weight alternatives on reasoning, tool-use, and novel synthesis.** The routing framework treated cloud as the default for anything beyond mechanical tasks, with local reserved for validation/maintenance work. That assumption is no longer true. Between late 2024 and early 2026, the open-weight landscape closed the capability gap from *years* to *months* across the tiers that matter for routing decisions.
+
+> [!info] **2025-2026 Open-Weight Reasoning-Model Landscape**
+>
+> | Model | Total / Active | License | Released | Approximate closed-model parity |
+> |-------|----------------|---------|----------|----------------------------------|
+> | DeepSeek V3 / R1 | 671B MoE / 37B active | DeepSeek / MIT | 2024-12 / 2025-01 | GPT-4o class; R1 approaches O1 reasoning |
+> | Qwen 3 family | 30B MoE, 72B dense, etc. | Apache 2.0 | 2025 H1 | GPT-4 class benchmarks; Claude 3.5 tool use |
+> | Llama 3.3 / Llama 4 | 70B, 405B, MoE variants | Meta community | 2024-12 / 2025 | GPT-4o parity; Llama 4 approaches Sonnet 4 |
+> | Mistral Large 3 | ~120B MoE | Mistral commercial / research | 2025 H1 | Claude 3.5 on most tasks |
+> | [[src-gpt-oss-openai-open-weight-moe\|**gpt-oss 20b / 120b**]] | **21B / 3.6B · 117B / 5.1B** | **Apache 2.0** | **2025-08** | **GPT-5 reasoning-light / Claude 4 tool-use** |
+> | [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b\|Qwopus 27B distilled]] | 27B dense + LoRA | Apache 2.0 | 2025 H2 | Opus 4.6 on reasoning tasks |
+> | Hermes 4 | 70B fine-tuned | Llama derivative | 2025 H2 | Agentic tool-use SOTA |
+
+**The strategic shift** — the question "can I do this locally at $0?" changed from "maybe for batch work" in 2024 to **"yes at interactive latency on consumer hardware"** in 2026. The closed-frontier advantage narrowed to: maximum-stakes novel synthesis, very long-context work (>200K), benchmark absolute leadership, and reasoning efficiency (token count per equivalent-quality answer).
+
+**For the routing model, this means:**
+
+1. **More tiers are local-reachable.** Previously local covered simple → moderate. Now local covers simple → substantive. Only novel / architectural / very-long-context remains cloud-only.
+2. **Model sovereignty is a first-class dimension.** Apache-2.0 models (Qwen 3, gpt-oss, Qwopus) can be bundled with deployments, fine-tuned, audited. This matters for OpenFleet agent distribution, AICP deployment, and the wiki's teaching-for-adoption model.
+3. **The $0-target 80% claim is structurally reachable — the blocker is integration, not capability.** AICP's Stage 5 target ("80%+ Claude token reduction") was modeled as hardware-blocked (19 GB VRAM upgrade). It is now **tool-integration-blocked**: select the open-weight models, wire them into the complexity scorer, fine-tune routing thresholds per task class.
+
+**Principle-4 footnote.** "Open-weight" is a declaration. Its verification varies by dimension: **weights downloadable = yes**; **training reproducible = no** (no training data, no RLHF recipe released for most of these). The honest framing for the wiki and for downstream consumers: gpt-oss / Llama / Qwen are *deployable* openly; they are NOT *reproducible* openly. Depending on the consumer's threat model, that distinction may or may not matter, but it must be DECLARED explicitly. See [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]].
+
+### Disk-Offload as a New Routing Tier — AirLLM (NEW 2026-04-17)
+
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|AirLLM]] adds a strategy orthogonal to every prior approach in this model: instead of fitting a smaller model into VRAM (quantization, distillation, MoE-aware loading) or using unified memory (Apple Silicon), it **keeps the model on an NVMe SSD and streams one transformer layer at a time into VRAM**. A 70B model runs on 4 GB VRAM; a 405B model runs on 8 GB VRAM. The trade-off is brutal and transparent: the bottleneck moves from VRAM capacity to disk bandwidth. A 4-bit-quantized 70B model on Gen4 NVMe ≈ 5.7 seconds per token — unusable for interactive work, tolerable for overnight batch, excellent for capability validation.
+
+> [!info] **Extended routing stack — AirLLM adds a local-batch tier**
+>
+> | Tier | Target | Latency | Fits when |
+> |------|--------|---------|-----------|
+> | **local-interactive** | Qwen3, Gemma4 in-VRAM | 10-60 tok/s | Short-context deterministic tasks, tool calls, real-time |
+> | **local-reasoning** | Qwopus 27B (needs 19GB VRAM) | 10-30 tok/s | Complex reasoning + tool-calling, still real-time |
+> | **local-batch (NEW via AirLLM)** | 70B-405B streamed from NVMe | 0.05-2 tok/s | Offline synthesis, corpus extraction, privacy-locked overnight runs, capability validation before cloud spend |
+> | **cloud-light** | Opus 4.6 + medium effort | seconds | Context-heavy, inference-reliant |
+> | **cloud-standard** | Opus 4.7 + high effort | seconds | Standard implementation |
+> | **cloud-heavy** | Opus 4.7 + xhigh effort | seconds | Architecture, novel synthesis |
+
+**The new dimension: VRAM sets the *latency floor*; NVMe capacity sets the *capability ceiling*.** With 19 GB VRAM alone, a 70B model does not fit (40 GB Q4) and cannot run. With 19 GB VRAM + AirLLM + enough free NVMe, it runs at ~5.7 s/tok — slow, but locally viable for batch work. These are complementary, not competing: Qwopus/Gemma4 cover interactive reasoning; AirLLM covers offline capability validation that was previously only cloud-feasible.
+
+**When to choose the local-batch tier:**
+- Prototyping whether a 70B-class model is worth cloud spend for a specific task class before paying
+- Offline corpus work where wall-clock is measured in hours and cost must be $0
+- Privacy-sensitive inference where data cannot leave the host
+- Capability ceiling experiments — "does this task need more than a distilled 27B?"
+
+**When NOT to choose local-batch:**
+- Any interactive chat or agent loop (time-to-first-token is seconds-to-minutes)
+- Multi-user serving (sequential architecture, no batch across requests)
+- Any SLA tighter than "overnight"
+
+**Concrete trade-off for operator's 19 GB VRAM:**
+- Interactive/reasoning ≤27B: in-VRAM (Qwopus, Gemma4) at 10-30 tok/s
+- Batch capability validation 70B-405B: AirLLM at 0.05-2 tok/s, via NVMe SSD free space
+- The NVMe drive (its generation, its free space) becomes the load-bearing hardware for this tier — it is the physical substrate the model lives on while running.
+
+**Principle-4 footnote.** AirLLM's marketing ("70B on 4GB *without quantization*") is a classroom instance of [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]] — structurally true, operationally aspirational without a latency SLO. See the [[src-airllm-layer-wise-inference-nvme-ssd-offload|synthesis page]] for the full derivation. For AICP routing, the honest declaration is "70B on 4GB VRAM at ≤0.2 tok/s via NVMe streaming" — the latency context is what makes the declaration verifiable, and therefore usable in a routing decision.
 
 ### Cloud Model Selection — Opus 4.6 vs 4.7 (NEW 2026-04-16)
 
@@ -337,10 +406,12 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Synthesis — Qwopus — Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B]]
+[[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

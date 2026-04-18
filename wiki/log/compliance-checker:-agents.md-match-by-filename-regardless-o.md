@@ -37,3 +37,7 @@ CROSS-REFERENCES: (1) Validates and extends 'Structural Compliance Is Not Operat
 ## Relationships
 
 - RELATES TO: [[model-registry|Model Registry]]
+
+## Backlinks
+
+[[model-registry|Model Registry]]

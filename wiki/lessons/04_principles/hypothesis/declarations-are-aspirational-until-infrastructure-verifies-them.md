@@ -148,3 +148,4 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 [[Principle — Right Process for Right Context]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]

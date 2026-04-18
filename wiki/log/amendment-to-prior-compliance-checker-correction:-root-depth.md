@@ -41,3 +41,7 @@ SECOND-ORDER LESSON: My first contribution violated my own project's 'verify bef
 ## Relationships
 
 - RELATES TO: [[model-registry|Model Registry]]
+
+## Backlinks
+
+[[model-registry|Model Registry]]

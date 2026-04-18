@@ -119,4 +119,6 @@ The one risk: if local model quality issues produce a batch of subtly incorrect 
 [[model-knowledge-evolution|Model — Knowledge Evolution]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
+[[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

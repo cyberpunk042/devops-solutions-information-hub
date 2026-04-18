@@ -152,3 +152,4 @@ The Decrypt article is qualitative and the HF model card is marketing-adjacent. 
 [[if-you-can-verify-you-converge|Lesson — If You Can Verify, You Converge]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
+[[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
