@@ -251,6 +251,11 @@ Commands (user trigger)
 | [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]] | agentskills.io format works across 5+ agent platforms. Format choice is a one-time decision with compounding gains. |
 | [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | Skills that teach methodology must also be in CLAUDE.md. Teaching and enforcement must be layered. |
 | [[always-plan-before-executing|Always Plan Before Executing]] | Planning prevents rework — and the extension system is HOW planning is operationalized (skills carry the planning workflow). |
+| [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski\|Boilerplate Skill Anti-Pattern at Scale]] | AICP audit 2026-04-17: 37/78 skills share identical boilerplate, 0/78 pass Extension Standards' 5 required elements. The scaffolded-skill-library scaling failure mode, quantified. |
+
+### Worked-Example Decision (AICP, 2026-04-18)
+
+[[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]] concretizes this model at scale: 78 conditional skills + 11 MCP tools + guardrails, with explicit rejection of 4 alternatives (MCP-everywhere / skills-only / hooks-only / one-mega-skill-per-role). Rationale applies to any project matching the constraint set (capability count + external-integration need + fail-closed enforcement). Ecosystem convergence: OpenArms (50+ skills + ClawHub + R01-R13), research wiki (9 skills + 21 MCP + minimal hooks), AICP (78 + 11 + guardrails) — three independent arrivals at the three-mechanism split.
 
 ---
 

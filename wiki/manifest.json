@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-18T22:52:57.082386+00:00",
+  "generated": "2026-04-18T23:02:47.763518+00:00",
   "stats": {
     "pages": 382,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2520,
+    "relationships": 2517,
     "tags_unique": 1135,
     "layers": {
       "3": 4,
@@ -2423,14 +2423,6 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 Skills as Primary Extension Pattern"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "AICP's unified 7-capability inference stack via one container"
-        },
-        {
-          "verb": "CONSTRAINS",
-          "target": "future capability additions \u2014 new modalities must be expressible through LocalAI or justify a second runtime"
         }
       ]
     },
@@ -2524,10 +2516,6 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 LocalAI over Ollama / vLLM"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "78 conditional skills + 11 MCP tools + guardrails as three-layer extension architecture"
         }
       ]
     },
@@ -26546,7 +26534,7 @@
     },
     "cross-domain": {
       "page_count": 178,
-      "relationship_count": 1205
+      "relationship_count": 1202
     },
     "ai-agents": {
       "page_count": 68,
@@ -31738,18 +31726,6 @@
       ]
     },
     {
-      "target": "78 conditional skills + 11 MCP tools + guardrails as three-layer extension architecture",
-      "referenced_by": [
-        "Decision \u2014 Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)"
-      ]
-    },
-    {
-      "target": "AICP's unified 7-capability inference stack via one container",
-      "referenced_by": [
-        "Decision \u2014 LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint"
-      ]
-    },
-    {
       "target": "Agent Failure Taxonomy",
       "referenced_by": [
         "Mandatory Without Verification Is Not Enforced \u2014 Skill-Layer Instance of Infrastructure > Instructions",
@@ -32263,12 +32239,6 @@
       "target": "Universal Stages",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
-      ]
-    },
-    {
-      "target": "future capability additions \u2014 new modalities must be expressible through LocalAI or justify a second runtime",
-      "referenced_by": [
-        "Decision \u2014 LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint"
       ]
     },
     {
