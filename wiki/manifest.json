@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-18T01:40:22.771990+00:00",
+  "generated": "2026-04-18T01:58:18.081442+00:00",
   "stats": {
-    "pages": 370,
+    "pages": 374,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2475,
+    "relationships": 2479,
     "tags_unique": 1126,
     "layers": {
       "3": 4,
@@ -15659,6 +15659,58 @@
       ]
     },
     {
+      "path": "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md",
+      "slug": "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
+      "title": "AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "contributed",
+        "correction"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g.md",
+      "slug": "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
+      "title": "AICP Stage 3 hardware unlocked 2026-04-17 \u2014 19GB VRAM dual-GPU",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "contributed",
+        "remark"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "log/amendment-to-prior-compliance-checker-correction:-root-depth.md",
       "slug": "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "title": "Amendment to prior compliance-checker correction: root-depth heuristic insufficient \u2014 OpenFleet's root AGENTS.md IS at depth 0 but functions as agent-workspace template",
@@ -15726,6 +15778,58 @@
       "confidence": "medium",
       "created": "2026-04-16",
       "updated": "2026-04-16",
+      "tags": [
+        "contributed",
+        "correction"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar.md",
+      "slug": "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
+      "title": "Gateway identity parser fragility + forwarder contribute-target bug (2026-04-17)",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "contributed",
+        "remark"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-.md",
+      "slug": "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
+      "title": "Walkthrough C (OpenFleet) ground-truth verification 2026-04-17",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
       "tags": [
         "contributed",
         "correction"
@@ -25966,8 +26070,8 @@
       "relationship_count": 192
     },
     "log": {
-      "page_count": 24,
-      "relationship_count": 45
+      "page_count": 28,
+      "relationship_count": 49
     }
   },
   "tags": {
@@ -29048,8 +29152,12 @@
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
+      "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
+      "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
@@ -29698,6 +29806,8 @@
     ],
     "remark": [
       "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
+      "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
+      "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
       "spine/models/foundation/model-wiki-design"
     ],
     "visual": [
@@ -29736,8 +29846,10 @@
       "spine/references/open-model-evaluation-framework"
     ],
     "correction": [
+      "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
     "archived": [

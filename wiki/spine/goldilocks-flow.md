@@ -260,16 +260,18 @@ These are not hypothetical — each profile exists in the ecosystem. Follow alon
 >
 > **Step 8 — FEEDBACK:** Harness runs `gateway contribute` for lessons discovered during execution. Contributions enter `wiki/lessons/00_inbox/` in the second brain. Post-run: harness generates a completion note in `raw/notes/`.
 
-> [!example]- Walkthrough C: Full System — OpenFleet (10-Agent Fleet)
+> [!example]- Walkthrough C: Full System — OpenFleet (10-Agent Fleet) — *last verified 2026-04-17*
 >
-> **Step 1 — DETECT:** Gateway auto-detects per-agent: `domain=typescript`, `scale=large` (10 concurrent agents, 50k+ LOC across workspaces). `phase=production`. Second brain = `connected` via `kb_sync.py` + LightRAG.
+> **Step 1 — DETECT:** Gateway auto-detects per-agent: `domain=typescript`, `scale=large` (10 live agent workspaces, 50k+ LOC across workspaces). `phase=production`. Second brain = `connected` via `kb_sync.py` (851 lines) + LightRAG (`scripts/setup-lightrag.sh`, `scripts/lightrag-index.sh`).
 >
-> **Step 2 — DECLARE:** Each agent workspace has AGENTS.md:
+> **Step 2 — DECLARE:** Each of the 10 live agent workspaces (architect, devops, devsecops-expert, fleet-ops, project-manager, qa-engineer, software-engineer, technical-writer, ux-designer, accountability-generator) has AGENTS.md:
 > `Type=fleet-agent, Execution Mode=full system, Domain=typescript, Phase=production, Scale=large, PM Level=L3, Trust Tier=standard/expert (per agent approval rates)`
+>
+> *Migration in progress (2026-04-17): `agents/_template/` has moved to WORKSPACE.md per the Three-Layer Agent Context Architecture; live agents follow.*
 >
 > Fleet-level identity is in the orchestrator config, not per-agent CLAUDE.md. The orchestrator declares system identity; agents inherit with overrides.
 >
-> **Step 3 — SELECT PROFILE:** Production + large + fleet → **Full** profile. All 5 stages. Readiness gate = 99. Full immune system: doctor.py (24 rules), MCP tool blocking (1033-line validator), heartbeat enforcement, budget limits.
+> **Step 3 — SELECT PROFILE:** Production + large + fleet → **Full** profile. All 5 stages. Readiness gate = 99. Full immune system: `fleet/core/doctor.py` (679 lines, rule-set enforcement), MCP tool blocking via `fleet/mcp/tools.py` (3915 lines), heartbeat enforcement, budget limits.
 >
 > **Flexibility:** Fleet agents cannot downgrade their profile — the orchestrator enforces Full for all dispatched work. An agent CAN receive a `hotfix` model (implement→test only) but the profile wrapper is always Full.
 >

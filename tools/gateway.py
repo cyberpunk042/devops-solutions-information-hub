@@ -23,6 +23,7 @@ Dual-scope: operates on the local wiki by default. Pass --wiki-root to target a 
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -848,18 +849,36 @@ def cmd_flow(paths: Dict[str, Path], step: int = None) -> str:
     return "\n".join(lines)
 
 
+_IDENTITY_HEADING_RE = re.compile(
+    r"^#{1,6}\s+.*\b("
+    r"Identity\s+Profile|"
+    r"Project\s+Identity|"
+    r"Goldilocks\s+Identity|"
+    r"Goldilocks\s+Profile|"
+    r"Identity\s*\(Goldilocks"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
 def query_identity(paths: Dict[str, Path]) -> Dict[str, Any]:
-    """Read the project's identity profile from CLAUDE.md."""
+    """Read the project's identity profile from CLAUDE.md.
+
+    Matches a range of heading forms (Identity Profile, Project Identity,
+    Goldilocks Profile, Identity (Goldilocks — ...)) since consumer projects
+    vary in which prescribed template they adopted. Reported 2026-04-17 by
+    openfleet-solo-session: heading '## Project Identity (Goldilocks ...)'
+    was silently missed by the prior literal-substring match.
+    """
     claude_md = paths["root"] / "CLAUDE.md"
     if not claude_md.exists():
         return {"error": "No CLAUDE.md found", "identity": None}
 
     text = claude_md.read_text(encoding="utf-8")
-    # Parse identity table if it exists
     identity = {}
     in_identity = False
     for line in text.split("\n"):
-        if "Identity Profile" in line:
+        if _IDENTITY_HEADING_RE.match(line):
             in_identity = True
             continue
         if in_identity and line.startswith("|") and "**" in line:
@@ -1380,7 +1399,7 @@ def op_move(paths: Dict[str, Path], title: str, target_dir: str, dry_run: bool =
 def op_contribute(paths: Dict[str, Path], contrib_type: str, title: str,
                   content: str, domain: str = "cross-domain",
                   contributor: str = None, source: str = None,
-                  reason: str = None) -> Dict[str, Any]:
+                  reason: str = None, target: str = "brain") -> Dict[str, Any]:
     """Create a structured write-back to the wiki (remark, lesson, correction).
 
     Records an audit trail per wiki/config/contribution-policy.yaml:
@@ -1396,7 +1415,17 @@ def op_contribute(paths: Dict[str, Path], contrib_type: str, title: str,
     import os as _os
     import socket as _socket
 
-    wiki_dir = paths["wiki"]
+    # Target resolution. Default 'brain' means contributions land in the second
+    # brain's intake even when invoked via a consumer forwarder that auto-adds
+    # --wiki-root. Pass --target local to write to the caller's own wiki
+    # instead (self-contribution). If no second brain is configured,
+    # brain_wiki == wiki, so 'brain' falls back to local automatically.
+    # Reported 2026-04-17 by openfleet-solo-session after two contributions
+    # misfiled into /home/jfortin/openfleet/wiki/log/ instead of the brain's.
+    if target == "local":
+        wiki_dir = paths["wiki"]
+    else:  # 'brain' (default) — may equal local when no brain is configured
+        wiki_dir = paths.get("brain_wiki") or paths["wiki"]
     today = datetime.now().strftime("%Y-%m-%d")
     slug = title.lower().replace(" ", "-").replace("'", "")[:60]
 
@@ -2340,6 +2369,12 @@ def main():
     ct.add_argument("--contributor", help="Contributor identifier (e.g. 'openarms-harness-v10'). Default: user@host")
     ct.add_argument("--source", help="Origin path of contribution (e.g. '~/openarms'). Default: self")
     ct.add_argument("--reason", help="Why this contribution is being made (optional audit trail)")
+    ct.add_argument("--target", choices=["brain", "local"], default="brain",
+                    help="Where the contribution lands. 'brain' (default) writes to the "
+                         "second brain's intake even when invoked via a consumer-project "
+                         "forwarder that auto-adds --wiki-root. 'local' writes to --wiki-root "
+                         "(the caller's own wiki) for self-contribution. If no second brain "
+                         "is configured, 'brain' falls back to local automatically.")
 
     args = parser.parse_args()
     paths = resolve_paths(
@@ -2522,6 +2557,7 @@ def main():
             contributor=getattr(args, "contributor", None),
             source=getattr(args, "source", None),
             reason=getattr(args, "reason", None),
+            target=getattr(args, "target", "brain"),
         )
         print(json.dumps(result, indent=2, default=str))
 
