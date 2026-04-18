@@ -10,7 +10,7 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Right Process for Right Context — The Goldilocks Imperative"
   - "Infrastructure Over Instructions for Process Enforcement"
@@ -101,6 +101,22 @@ Prose rules erode. Only **structural encoding** persists: the tool's output form
 > [!info]- Prior conflation: project frozen to a methodology model
 >
 > In an earlier session, an agent assumed that a project picks ONE methodology model for its lifetime. The correction: a bug-fix task uses `bug-fix` model (document → implement → test), a feature uses `feature-development` (document → design → scaffold → implement → test), research uses `research` (document → design), and all three may happen within the same project on the same day. The operator's current message names this directly: *"a project is always solo by default... AI would think a project is frozen to a model."* Same class of failure, different dimension.
+
+## Applied — Cross-Project Evidence (2026-04-17 / 18)
+
+> [!success] **Maturity bump seed → growing 2026-04-18**: systemic application demonstrated across the ecosystem
+>
+> AICP filed a [correction](../../log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) on 2026-04-17 reporting that the brain's own AICP identity profile hardcoded consumer/task properties (execution mode, SDLC profile) as project fields — in direct violation of this doctrine. Audit revealed the violation was systemic: 4 of 5 project profiles in `wiki/ecosystem/project_profiles/*/identity-profile.md` had the same issue.
+>
+> | Profile | Violation before | Fix applied |
+> |---------|------------------|-------------|
+> | AICP | "Execution Mode: Solo" / "SDLC Profile: Simplified" | Full restructure with Stable / State / Consumer-Task layer labels |
+> | devops-control-plane | "Execution Mode: Solo" / "SDLC Profile: Simplified" | Layer labels + doctrine-note preamble |
+> | OpenArms | "Execution Mode: Harness v2 (enforced)" / "SDLC Profile: Default → trending Full" | Layer labels + "harness engineering project, typical consumer mode" framing |
+> | OpenFleet | "Execution Mode: Full System (orchestrator + 10 agents)" / "SDLC Profile: Full" | Layer labels + "fleet engineering project, typical consumer mode" framing |
+> | research-wiki | "Execution Mode: Solo" / "SDLC Profile: Default" | Layer labels + doctrine-note preamble |
+>
+> This is the doctrine's first broad application. The seed-tier evidence was the single gateway-tool bug (2026-04-15); growing-tier evidence is cross-ecosystem propagation: the same orthogonality violation appeared in 4 independent profiles that pre-dated the doctrine. Next evidence threshold for maturity → mature: the schema or lint check that structurally prevents re-sliding (per the Structural Prevention section below).
 
 ## Applicability
 

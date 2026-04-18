@@ -41,20 +41,21 @@ Identity protocol: `wiki/domains/cross-domain/project-self-identification-protoc
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 369 |
-| **Relationships** | 2461+ |
+| **Pages** | 377 |
+| **Relationships** | 2497+ |
 | **Validation errors** | 0 |
 | **MCP tools** | 26+ |
 | **Named models** | 16 (+ 9 methodology models) |
 | **Standards pages** | 25 (per-type + per-model + gateway output contract) |
 | **Sub-super-models** | 5 |
-| **Validated lessons** | 44 + 11 contributed (3 in 02_synthesized, 7 in 01_drafts, 1 in 00_inbox from OpenFleet 2026-04-17) |
-| **Validated patterns** | 19 + 5 in 01_drafts (incl. progressive-structural-enrichment, artifact-path-verification, aspirational-declaration-without-enforcement meta-pattern) |
+| **Validated lessons** | 44 + 13 contributed (3 in 02_synthesized, 7+1 in 01_drafts, 3 in 00_inbox: verify-before-contributing · three-layer-autocomplete-chain · boilerplate-skill-anti-pattern — all pending operator review) |
+| **Validated patterns** | 19 + 6 in 01_drafts (incl. progressive-structural-enrichment, artifact-path-verification, aspirational-declaration-without-enforcement meta-pattern, **profile-as-coordination-bundle** added 2026-04-18) |
 | **Validated decisions** | 17 + 1 in 01_drafts (extended-to-adaptive-thinking-migration) |
 | **Principles** | **4** (Infrastructure > Instructions · Structured Context > Content · Goldilocks · Declarations Aspirational Until Verified — 2026-04-16 promotion with 5 validated cross-layer instances) |
 | **Source syntheses** | 48+ (4 added 2026-04-17: AirLLM · gpt-oss · Unsloth · Qwopus v3 update) |
 | **Spine references** | 2 added 2026-04-17 (Open-Model Evaluation Framework, 2026 Consumer-Hardware AI Stack) |
-| **Ecosystem project profiles** | 5 (all connected via `setup --connect`) |
+| **Ecosystem project profiles** | 5 (all connected via `setup --connect`; all 5 reconciled with consumer-property doctrine 2026-04-17/18) |
+| **Cross-project contributions accepted** | 6 (OpenFleet: 2 gateway-bug + walkthrough-C · AICP: Stage-3-unlock + identity-reconciliation + profile-pattern + skill-anti-pattern) |
 | **Consumer integration roadmap exemplar** | Published (OpenArms 5-milestone / 27-epic / 800-1200 hour plan) |
 
 ### The Four Validated Principles

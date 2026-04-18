@@ -164,12 +164,12 @@ Each step ADDS to the context. The chain is PROGRESSIVE — later steps build on
 > - 8 structural patterns documented with evidence from OpenArms/OpenFleet
 > - Five cognitive contexts identified with per-context injection design
 > - Tier-based context depth with 3 tiers and cost data (10x difference)
-> - Context autocomplete chain (8 steps from CLAUDE.md to post-compact rebuild)
+> - Context autocomplete chain (8 steps from CLAUDE.md to post-compact rebuild) — **validated in production 2026-04-17** by [[three-layer-autocomplete-chain-validated-in-production-fleet\|AICP + OpenFleet three-layer composition]]: static map + knowledge graph + per-agent memory. 4 empirical measurement sources including 2,695 LightRAG entity labels and 31 navigator tests × 26 intents × 4 depth tiers
 > - Validation matrix concept (29 scenarios = test suite for context injection)
+> - Context capacity budgets — tier predictions confirmed empirically: opus 5-8K chars / sonnet 2-5K / localai 50-500 chars, all under 8K gateway limit, drops at section boundaries
 
 > [!warning] **Thin or unverified**
-> - Smart autocomplete chain not implemented in tooling (documented but not automated)
-> - Context capacity budgets are estimates (500/2,000/5,000 tokens) — not measured empirically
+> - Smart autocomplete chain partially implemented — AICP/OpenFleet shipped it as three runtime layers (see Well-covered above); brain's reference implementation still pending. Gap is brain-side tooling, not concept validity
 > - Formal structural grammar not defined (what are the "language constructs" of markdown as programming?)
 > - Per-context CLAUDE.md splitting not implemented (OpenArms still has one file for 5 contexts)
 
@@ -382,8 +382,11 @@ Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execut
 > **RESOLVED:** Partially. Informal grammar in model-context-engineering. Formal grammar needs research into LLM markdown parsing behavior.
 > Headers = scope. Callouts = typed blocks. Tables = decision matrices. YAML = typed parameters. Can we formalize this into a grammar that GENERATES valid context injections? (Requires: analysis of all validation matrix scenarios for common constructs.)
 
-> [!question] What is the optimal context budget per tier?
-> The 500/2,000/5,000 estimates are from OpenFleet's tier profiles. Are they optimal? (Requires: measuring output quality vs context size across tasks.)
+> [!question] ~~What is the optimal context budget per tier?~~
+> **PARTIALLY RESOLVED 2026-04-17:** AICP's [[three-layer-autocomplete-chain-validated-in-production-fleet|production validation]] confirmed the tier-budget shape (opus 5-8K chars / sonnet 2-5K / localai 50-500 chars, all under 8K gateway limit, drops at section boundaries). Optimality of the specific numbers still needs output-quality-vs-size measurement across tasks. Shape validated; optima pending empirical curve.
+
+> [!question] Is the 8-step autocomplete chain coherent as a three-layer runtime?
+> **RESOLVED 2026-04-17** by [[three-layer-autocomplete-chain-validated-in-production-fleet|AICP + OpenFleet production validation]]: YES. The 8 Standards steps compose into three runtime layers — static map (intent-map.yaml + injection-profiles + cross-references) + knowledge graph (LightRAG zero-LLM) + per-agent memory (claude-mem) — chained priority-ordered with budget enforcement at each. 4 measurement sources; 31 navigator tests × 26 intents × 4 depth tiers.
 
 ### How This Connects — Navigate From Here
 

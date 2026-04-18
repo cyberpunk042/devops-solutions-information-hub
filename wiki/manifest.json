@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-18T12:14:50.074343+00:00",
+  "generated": "2026-04-18T20:44:53.196143+00:00",
   "stats": {
     "pages": 377,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2497,
+    "relationships": 2500,
     "tags_unique": 1130,
     "layers": {
       "3": 4,
@@ -17,8 +17,8 @@
       "spine": 69
     },
     "maturity": {
-      "growing": 280,
-      "seed": 42
+      "growing": 281,
+      "seed": 41
     }
   },
   "pages": [
@@ -10475,7 +10475,19 @@
       "relationships": [
         {
           "verb": "RELATES TO",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "RELATES TO",
           "target": "Model Registry"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Gateway future work \u2014 `gateway contribute --verify-claim` flag"
         }
       ]
     },
@@ -11106,7 +11118,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Right Process for Right Context \u2014 The Goldilocks Imperative",
         "Infrastructure Over Instructions for Process Enforcement",
@@ -26214,7 +26226,7 @@
     },
     "cross-domain": {
       "page_count": 175,
-      "relationship_count": 1184
+      "relationship_count": 1187
     },
     "ai-agents": {
       "page_count": 68,
@@ -31470,6 +31482,12 @@
       ]
     },
     {
+      "target": "Gateway future work \u2014 `gateway contribute --verify-claim` flag",
+      "referenced_by": [
+        "Verify Before Contributing to External Knowledge Systems"
+      ]
+    },
+    {
       "target": "Harness turnCount Bug",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -31646,6 +31664,7 @@
       "target": "Principle \u2014 Declarations Aspirational Until Verified",
       "referenced_by": [
         "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
+        "Verify Before Contributing to External Knowledge Systems",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"

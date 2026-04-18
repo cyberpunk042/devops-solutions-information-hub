@@ -67,24 +67,76 @@ Full version with formatted tables, foldable evidence callouts, and per-domain a
 
 ## Context
 
-<!-- When does this lesson apply? -->
+> [!warning] When does this lesson apply?
+>
+> - You are about to call `gateway contribute --type lesson/correction/remark` against an external knowledge system
+> - You are writing a session note, handoff doc, bug report, or any other artifact that cites the STATE of files or systems OUTSIDE the current conversation turn
+> - You are a cross-project agent (fleet agent, harness agent, MCP client) filing input into another project's intake
+> - Any agent pipeline where `contribution_status: pending-review` suggests downstream consumers will trust the factual anchors until operator review
 
 ## Insight
 
-<!-- The core learning -->
+> [!tip] Form-validity does not compensate for factual-invalidity at the anchor layer
+>
+> The mechanism: **correct reasoning + wrong factual anchor = a contribution that makes a right point using a wrong example.** The consumer (second brain, operator, downstream agent) treats the anchor as grounded. When the anchor is false, the contribution confuses rather than informs, AND creates the appearance of an immature consumer.
+>
+> This is [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]] applied across project boundaries: an agent's claim about another project's state is a DECLARATION. Schema-valid frontmatter and well-argued prose verify the FORM of the contribution. They do not verify the FACTUAL CONTENT the contribution asserts.
+>
+> **Cost asymmetry makes the self-check trivial:** `ls path` or `Read file` takes <1 second. Amending a bad contribution takes ~10 minutes plus credibility erosion plus two brain-log entries (original + amendment) instead of one consolidated.
 
 ## Evidence
 
-<!-- What evidence supports this? -->
+> [!abstract] Four self-failure instances from OpenFleet's first-consumer session (2026-04-16)
+>
+> | # | Failure | Correct behavior |
+> |---|---------|------------------|
+> | 1 | Filed correction claiming "no root AGENTS.md exists in OpenFleet" | Root AGENTS.md existed (9289 bytes). A single `ls` would have verified. Amendment filed as [[amendment-to-prior-compliance-checker-correction:-root-depth\|amendment note]]. |
+> | 2 | Unilaterally weakened brain-seeded wiki schema to reduce validation errors | The "minimize-the-job" anti-pattern. Operator feedback: *"do not minimize."* Reverted. |
+> | 3 | Reverted unilaterally after operator feedback | Operator response: *"giving up is still unilateral."* Reversion of a contested change needs the same deliberation as the original change. |
+> | 4 | Produced a multi-milestone plan when asked for context regathering | Operator response: *"the brain was explaining everything — follow the trail."* Contribution should match what was asked for, not add more. |
+>
+> **Each failure shared one mechanism**: the agent asserted a factual anchor about state outside the conversation turn without verifying it against the current repo. The resulting contributions were schema-valid (the form-validation layer passed) but factually wrong (the content-verification layer was missing).
+
+## Self-Check Protocol
+
+> [!tip] Apply before every contribution
+>
+> 1. **What factual anchor am I asserting about state outside this conversation turn?** (file existence, size, content, behavior, system state)
+> 2. **Can I verify it with a single tool call?** (ls, Read, grep, `pipeline post`)
+> 3. **Did I run that verification in the last 5 minutes, against the current repo state?**
+> 4. **If any answer is no — verify now OR demote to hypothesis** (`confidence: low`, `maturity: seed`)
 
 ## Applicability
 
-Contributed from /home/jfortin/openfleet. Applicability to be assessed during promotion review.
+> [!abstract] Applies when
+>
+> - Agent platform (OpenFleet): every `fleet_contribute` call
+> - Sister-project integration: every `gateway contribute --wiki-root` with a target outside the caller's own repo
+> - Contribution gating per synergy matrix: contributions cite verifiable artifacts from the contributor's stage work
+> - Cross-agent contributions (design input, test definition) citing reasoned-from-memory artifacts
+>
+> Does NOT apply to
+>
+> - Brainstorming — but label clearly as hypothesis
+> - Interactive conversation where the operator challenges immediately
+> - Claims about the conversation itself (what was said, what was agreed) — those are turn-internal
+>
+> Contributed from /home/jfortin/openfleet. Applicability assessed during promotion review.
+
+## Structural Prevention
+
+> [!info] **Proposed infrastructure-layer enforcement**
+>
+> A `gateway contribute --verify-claim <file> --claim "no X exists"` flag could infrastructure-enforce this lesson — turning the check from agent discipline (Principle 1-layer: prose instruction) into a gate (Principle 1-layer: mechanical verification). This is Principle 1 applied to this lesson's implementation. Candidate future work for the brain's gateway.
 
 ## Relationships
 
+- RELATES TO: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]
+- RELATES TO: [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]] (schema-valid contribution with wrong content is analogous at the form-vs-content layer)
 - RELATES TO: [[model-registry|Model Registry]]
 
 ## Backlinks
 
+[[Principle — Declarations Aspirational Until Verified]]
+[[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]
 [[model-registry|Model Registry]]
