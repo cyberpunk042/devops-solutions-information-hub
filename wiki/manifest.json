@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-18T01:32:13.001200+00:00",
+  "generated": "2026-04-18T01:40:22.771990+00:00",
   "stats": {
-    "pages": 369,
+    "pages": 370,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2470,
+    "relationships": 2475,
     "tags_unique": 1126,
     "layers": {
       "3": 4,
@@ -15610,6 +15610,55 @@
       ]
     },
     {
+      "path": "log/2026-04-17/2026-04-17-session-summary.md",
+      "slug": "log/2026-04-17/2026-04-17-session-summary",
+      "title": "Session 2026-04-17 Summary",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "log",
+        "session",
+        "progress",
+        "summary",
+        "local-ai",
+        "open-weight",
+        "consumer-hardware"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "Session 2026-04-17 Summary"
+      ],
+      "relationships": [
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Open-Model Evaluation Framework"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle 4 \u2014 Declarations Aspirational"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        }
+      ]
+    },
+    {
       "path": "log/amendment-to-prior-compliance-checker-correction:-root-depth.md",
       "slug": "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "title": "Amendment to prior compliance-checker correction: root-depth heuristic insufficient \u2014 OpenFleet's root AGENTS.md IS at depth 0 but functions as agent-workspace template",
@@ -25917,8 +25966,8 @@
       "relationship_count": 192
     },
     "log": {
-      "page_count": 23,
-      "relationship_count": 40
+      "page_count": 24,
+      "relationship_count": 45
     }
   },
   "tags": {
@@ -26673,7 +26722,8 @@
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "domains/cross-domain/methodology-framework/readiness-vs-progress",
       "log/2026-04-09/system/2026-04-09-session-summary",
-      "log/2026-04-10/2026-04-10-session-summary"
+      "log/2026-04-10/2026-04-10-session-summary",
+      "log/2026-04-17/2026-04-17-session-summary"
     ],
     "unified-interface": [
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface"
@@ -28051,6 +28101,7 @@
     ],
     "consumer-hardware": [
       "domains/ai-models/local-llm-quantization",
+      "log/2026-04-17/2026-04-17-session-summary",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/2026-consumer-hardware-ai-stack"
@@ -29569,6 +29620,7 @@
       "log/2026-04-09/system/2026-04-09-session-summary",
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
       "log/2026-04-10/2026-04-10-session-summary",
+      "log/2026-04-17/2026-04-17-session-summary",
       "spine/standards/note-page-standards"
     ],
     "directive": [
@@ -29656,17 +29708,32 @@
     ],
     "session": [
       "log/2026-04-09/system/2026-04-09-session-summary",
-      "log/2026-04-10/2026-04-10-session-summary"
+      "log/2026-04-10/2026-04-10-session-summary",
+      "log/2026-04-17/2026-04-17-session-summary"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
-      "log/2026-04-10/2026-04-10-session-summary"
+      "log/2026-04-10/2026-04-10-session-summary",
+      "log/2026-04-17/2026-04-17-session-summary"
     ],
     "iterative": [
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
     ],
     "gated": [
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic"
+    ],
+    "local-ai": [
+      "log/2026-04-17/2026-04-17-session-summary",
+      "sources/src-27-questions-llm-selection",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "spine/models/depth/model-local-ai",
+      "spine/references/2026-consumer-hardware-ai-stack"
+    ],
+    "open-weight": [
+      "log/2026-04-17/2026-04-17-session-summary",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "spine/references/2026-consumer-hardware-ai-stack",
+      "spine/references/open-model-evaluation-framework"
     ],
     "correction": [
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
@@ -30136,12 +30203,6 @@
     "decision-criteria": [
       "sources/src-27-questions-llm-selection"
     ],
-    "local-ai": [
-      "sources/src-27-questions-llm-selection",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
-      "spine/models/depth/model-local-ai",
-      "spine/references/2026-consumer-hardware-ai-stack"
-    ],
     "performance": [
       "sources/src-27-questions-llm-selection"
     ],
@@ -30597,11 +30658,6 @@
     "openai": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
-    "open-weight": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
-      "spine/references/2026-consumer-hardware-ai-stack",
-      "spine/references/open-model-evaluation-framework"
-    ],
     "apache-2-0": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
@@ -31000,6 +31056,12 @@
   },
   "orphaned_refs": [
     {
+      "target": "2026 Consumer-Hardware AI Stack",
+      "referenced_by": [
+        "Session 2026-04-17 Summary"
+      ]
+    },
+    {
       "target": "Agent Failure Taxonomy",
       "referenced_by": [
         "Mandatory Without Verification Is Not Enforced \u2014 Skill-Layer Instance of Infrastructure > Instructions",
@@ -31182,6 +31244,7 @@
         "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
         "AICP \u2014 Identity Profile",
         "If You Can Verify, You Converge",
+        "Session 2026-04-17 Summary",
         "Agent Execution Cost Optimization Stack",
         "Source \u2014 27 Questions to Ask Before Choosing an LLM",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
@@ -31247,6 +31310,12 @@
       "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Principle 4 \u2014 Declarations Aspirational",
+      "referenced_by": [
+        "Session 2026-04-17 Summary"
       ]
     },
     {

@@ -145,6 +145,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[openarms|OpenArms]]
 [[plane|Plane]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
+[[2026-04-17-session-summary|Session 2026-04-17 Summary]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]

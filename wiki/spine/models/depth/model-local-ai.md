@@ -429,6 +429,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[model-notebooklm|Model — NotebookLM]]
 [[open-model-evaluation-framework|Open-Model Evaluation Framework — How to Look at a New Model Announcement]]
+[[2026-04-17-session-summary|Session 2026-04-17 Summary]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]

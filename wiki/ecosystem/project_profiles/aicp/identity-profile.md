@@ -100,6 +100,30 @@ The generic Python domain chain at [[domain-chain-python-wiki|Artifact Chain —
 > | Export from second brain | Defined (E002 integration interface) |
 > | Feed-back TO second brain | Minimal (concept page + integration patterns) |
 
+## 2026-04-17 Update — Stage 5 Trajectory Changed
+
+The 2026-04-17 ingestion wave (AirLLM, gpt-oss, Qwopus v3, Unsloth — synthesized in [[2026-consumer-hardware-ai-stack|2026 Consumer-Hardware AI Stack]]) materially changed AICP's Stage 5 positioning:
+
+> [!info] **AICP Stage Status Before and After 2026-04-17**
+>
+> | Stage | Goal | Pre-2026-04 | Post-2026-04-17 |
+> |-------|------|--------------|-----------------|
+> | 1 | LocalAI functional | Complete | Complete |
+> | 2 | Route simple ops to LocalAI | Complete | Complete |
+> | 3 | Progressive offload | **Hardware-blocked on 19 GB VRAM** | **Unblocked** — 19 GB actual + [[src-gpt-oss-openai-open-weight-moe\|gpt-oss-20b]] fills the reasoning tier |
+> | 4 | Circuit breakers + DLQ | Planned | Planned (unchanged) |
+> | 5 | 80%+ Claude reduction | Aspirational, distant | **Integration-blocked, not hardware-blocked** — Q2-Q3 2026 objective |
+
+**Four concrete wiring tasks** unlock Stage 5 (from the [[2026-consumer-hardware-ai-stack|Consumer-Hardware Stack Synthesis]]'s AICP-roadmap section):
+1. Wire gpt-oss-20b as local-reasoning tier in the complexity scorer
+2. Wire gpt-oss-120b via llama.cpp `-ngl` offload as local-batch-reasoning tier
+3. Train a wiki-corpus LoRA (Qwen3.5-4B base via [[src-unsloth-fast-lora-consumer-hardware|Unsloth]]) as methodology-maintenance tier
+4. Complete Stage 4 circuit breakers + DLQ (already planned)
+
+None of these require hardware beyond what the operator already has. The work is integration effort, not research-lab budget.
+
+**Candidate epic**: E024 — Local-First Routing Integration (Stage 3-5). Measurable outcome: routing-split metric moves from ~40% local to >80% local. Operator-supervised.
+
 ## Knowledge Gaps
 
 > [!warning] What the Brain Does NOT Know About AICP
