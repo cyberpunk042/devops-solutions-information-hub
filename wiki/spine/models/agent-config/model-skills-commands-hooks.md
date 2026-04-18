@@ -400,6 +400,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[E005-agent-compliance-framework|Agent Compliance Framework]]
+[[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]

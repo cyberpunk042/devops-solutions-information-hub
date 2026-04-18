@@ -195,8 +195,8 @@ What good command → skill → hook composition looks like.
 ## Open Questions
 
 > [!question] ~~**Should skills have a validation schema?**~~
-> **RESOLVED:** Same as above — yes eventually, not now.
-> Like wiki pages have `wiki-schema.yaml`, should skills have a schema checking for trigger phrases, operations, quality bar, and gotchas? (Requires: enough skills to see the pattern — 5 in this wiki, 50+ in OpenArms)
+> **RESOLVED (re-confirmed 2026-04-18 with quantitative evidence):** YES — urgency upgraded. AICP contributed a 2026-04-17 audit of its 78-skill library ([[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]]): 37/78 (47%) share identical generic Process boilerplate; **0/78** have trigger phrases, named operations, quality bar, or gotchas. 18 of these are fleet-referenced as agent-required. This is the quantitative argument for the schema — scaffolded skill libraries decay to boilerplate predictably when no schema enforces the 5 structural elements, and consumer trust erodes silently.
+> Like wiki pages have `wiki-schema.yaml`, should skills have a schema checking for trigger phrases, operations, quality bar, and gotchas? Evidence says yes; AICP's Phase 4 (schema enforcement in `tools/lint.py` once >50 skills are properly authored) is the concrete implementation path.
 
 > [!question] ~~**Can command selection be automated based on role context?**~~
 > **RESOLVED:** Yes — the harness knows the agent role and can filter available commands. Already how OpenFleet dispatch works.

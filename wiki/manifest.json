@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-18T02:05:45.016659+00:00",
+  "generated": "2026-04-18T12:14:50.074343+00:00",
   "stats": {
-    "pages": 375,
+    "pages": 377,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2484,
-    "tags_unique": 1126,
+    "relationships": 2497,
+    "tags_unique": 1130,
     "layers": {
       "3": 4,
       "6": 18,
       "2": 51,
-      "4": 59,
-      "5": 29,
+      "4": 60,
+      "5": 30,
       "1": 35,
       "spine": 69
     },
     "maturity": {
       "growing": 280,
-      "seed": 40
+      "seed": 42
     }
   },
   "pages": [
@@ -10370,6 +10370,48 @@
       "relationships": []
     },
     {
+      "path": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski.md",
+      "slug": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski",
+      "title": "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-17",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Extension Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Profile as Coordination Bundle"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet.md",
       "slug": "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "title": "Three-layer autocomplete chain validated in production fleet operation",
@@ -16437,6 +16479,93 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Evolution Protocol"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/profile-as-coordination-bundle.md",
+      "slug": "patterns/01_drafts/profile-as-coordination-bundle",
+      "title": "Profile as Coordination Bundle",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "pattern",
+        "profile",
+        "coordination",
+        "configuration",
+        "bundling",
+        "cross-subsystem",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "aicp-profiles-impl",
+          "type": "file",
+          "file": "aicp/core/profiles.py",
+          "description": "600-line profile loader/validator/resolver/diff engine with `extends:` inheritance, deep merge, circular-detection (AICP project)"
+        },
+        {
+          "id": "aicp-profile-tests",
+          "type": "file",
+          "file": "tests/test_profiles.py",
+          "description": "49 tests covering load order, inheritance, deep merge, circular detection (AICP project)"
+        },
+        {
+          "id": "aicp-makefile",
+          "type": "file",
+          "file": "Makefile",
+          "description": "profile-list / profile-show / profile-diff / profile-validate / profile-use Make targets (AICP project)"
+        },
+        {
+          "id": "aicp-contribution",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/patterns/01_drafts/profile-as-coordination-bundle.md",
+          "description": "Original contribution from AICP 2026-04-18, staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Profile as Coordination Bundle",
+        "Coordination Bundle Pattern"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "SDLC Customization Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Sub-Model \u2014 Goldilocks Protocol"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AICP"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three-Layer Autocomplete Chain Validated"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Boilerplate Skill Anti-Pattern at Scale"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model Registry"
         }
       ]
     },
@@ -26084,8 +26213,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 173,
-      "relationship_count": 1171
+      "page_count": 175,
+      "relationship_count": 1184
     },
     "ai-agents": {
       "page_count": 68,
@@ -26530,6 +26659,7 @@
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
       "ecosystem/project_profiles/aicp/identity-profile",
+      "patterns/01_drafts/profile-as-coordination-bundle",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
@@ -26693,6 +26823,7 @@
     ],
     "configuration": [
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
+      "patterns/01_drafts/profile-as-coordination-bundle",
       "spine/references/context-file-taxonomy",
       "spine/standards/model-standards/model-claude-code-standards"
     ],
@@ -29180,6 +29311,7 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
+      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski",
       "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -29208,6 +29340,7 @@
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "inbox": [
+      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski",
       "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
@@ -29916,6 +30049,7 @@
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/profile-as-coordination-bundle",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
@@ -29984,6 +30118,18 @@
     ],
     "correction-cycle": [
       "patterns/01_drafts/observe-fix-verify-loop"
+    ],
+    "profile": [
+      "patterns/01_drafts/profile-as-coordination-bundle"
+    ],
+    "coordination": [
+      "patterns/01_drafts/profile-as-coordination-bundle"
+    ],
+    "bundling": [
+      "patterns/01_drafts/profile-as-coordination-bundle"
+    ],
+    "cross-subsystem": [
+      "patterns/01_drafts/profile-as-coordination-bundle"
     ],
     "agent-config": [
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
@@ -31235,6 +31381,12 @@
       ]
     },
     {
+      "target": "Boilerplate Skill Anti-Pattern at Scale",
+      "referenced_by": [
+        "Profile as Coordination Bundle"
+      ]
+    },
+    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
@@ -31309,6 +31461,12 @@
       "target": "Epic Readiness Math \u2014 OpenArms Evidence",
       "referenced_by": [
         "Hierarchical Metrics Fail on Sparse Coverage"
+      ]
+    },
+    {
+      "target": "Extension Standards",
+      "referenced_by": [
+        "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps"
       ]
     },
     {
@@ -31405,6 +31563,7 @@
         "If You Can Verify, You Converge",
         "Session 2026-04-17 Summary",
         "Agent Execution Cost Optimization Stack",
+        "Profile as Coordination Bundle",
         "Source \u2014 27 Questions to Ask Before Choosing an LLM",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
         "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
@@ -31486,6 +31645,7 @@
     {
       "target": "Principle \u2014 Declarations Aspirational Until Verified",
       "referenced_by": [
+        "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
@@ -31558,6 +31718,12 @@
       ]
     },
     {
+      "target": "SDLC Customization Framework",
+      "referenced_by": [
+        "Profile as Coordination Bundle"
+      ]
+    },
+    {
       "target": "Schema Aspirationalism",
       "referenced_by": [
         "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth",
@@ -31577,6 +31743,12 @@
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+      ]
+    },
+    {
+      "target": "Sub-Model \u2014 Goldilocks Protocol",
+      "referenced_by": [
+        "Profile as Coordination Bundle"
       ]
     },
     {
@@ -31673,6 +31845,12 @@
       "referenced_by": [
         "The pre-write hook prevents operator-Claude from racing the running agent on backlog files",
         "Agents take small unauthorized scope expansions when the change is a 'clean win'"
+      ]
+    },
+    {
+      "target": "Three-Layer Autocomplete Chain Validated",
+      "referenced_by": [
+        "Profile as Coordination Bundle"
       ]
     },
     {

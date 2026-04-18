@@ -144,6 +144,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
 [[openarms|OpenArms]]
 [[plane|Plane]]
+[[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[scaffold-foundation-infrastructure-features|Scaffold → Foundation → Infrastructure → Features]]
 [[2026-04-17-session-summary|Session 2026-04-17 Summary]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
