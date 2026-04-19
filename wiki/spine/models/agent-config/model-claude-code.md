@@ -604,4 +604,5 @@ Validated experience from operating Claude Code in this ecosystem.
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-rethinking-ai-agents-harness-engineering-rise|Synthesis — Rethinking AI Agents — The Rise of Harness Engineering (YouTube Meta-Synthesis)]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
+[[three-permission-modes-think-edit-act|Three Permission Modes (Think / Edit / Act) — Operator-Selected AI Authority Tiers]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]

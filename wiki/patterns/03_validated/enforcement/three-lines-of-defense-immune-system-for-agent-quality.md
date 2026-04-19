@@ -115,6 +115,18 @@ Key design principle: "seeing the pattern does not break the pattern — it's fo
 >
 > **Lines 2-3 missing:** No doctor cycle, no automated detection. Agent behavioral failures (6 classes) are detected only when operator reviews output manually. This is why clean completion rate is 20% — infrastructure prevents process violations but doesn't detect or correct behavioral failures.
 
+> [!example]- AICP: 3-Layer Inference Reliability Stack (production, 2026-04-18/19)
+>
+> AICP instantiates the three-lines-of-defense pattern at the **AI-inference layer** (complementary to OpenFleet's agent-behavior layer). The three layers are its reliability stack, each a first-class pattern:
+>
+> **Line 1 (prevention / fast-fail):** [[per-backend-circuit-breaker-with-failover-chain\|Per-Backend Three-State Circuit Breaker]] — `aicp/core/circuit_breaker.py` (207 lines). Per-backend state machine (CLOSED/OPEN/HALF_OPEN) with configurable thresholds (`failure_threshold: 3` default, `2` in reliable profile). OPEN state short-circuits timeout waits so failover triggers in microseconds instead of 60-second per-call waits.
+>
+> **Line 2 (detection / routing):** Failover chain in `aicp/core/controller.py` (local → fleet → openrouter → claude). `CircuitBreakerOpen` caught in the same except clause as generic Exception — controller doesn't branch on failure type; it advances to next backend. Quality-score escalation threshold triggers auto-retry on next tier when output scores below profile-configured cutoff.
+>
+> **Line 3 (correction / durability):** [[per-day-jsonl-dlq-with-retry-budget\|Per-Day JSONL DLQ]] — `aicp/core/dlq.py` (260 lines). When failover chain exhausts, persist to `~/.aicp/dlq/<UTC-date>.jsonl` with full task context. Retry via operator-invoked `aicp --retry-dlq` OR agent-invoked MCP `dlq_status` polling. Profile-configurable `max_retries` (3 default, 5 in reliable).
+>
+> **Key design:** same pattern, different scope from OpenFleet's. Where OpenFleet's doctor.py catches AGENT BEHAVIOR failures, AICP's stack catches INFERENCE BACKEND failures. Both use profile-tunable thresholds ([[profile-as-coordination-bundle\|Profile as Coordination Bundle]]). Both hide the enforcement from the entity being enforced — agents don't see the doctor; inference callers don't see the breaker's internal state. Evidence that the three-lines pattern generalizes across failure domains (behavioral + infrastructural) within the ecosystem.
+
 ## When To Apply
 
 > [!tip] Conditions for the Immune System Pattern

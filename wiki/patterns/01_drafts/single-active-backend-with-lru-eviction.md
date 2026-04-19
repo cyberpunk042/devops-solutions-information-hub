@@ -144,4 +144,7 @@ RTX 2080 8 GB + RTX 2080 Ti 11 GB. One could naively set MAX_ACTIVE_BACKENDS=6 t
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[per-backend-circuit-breaker-with-failover-chain|Per-Backend Circuit Breaker with Failover Chain]]
 [[AICP's $0 target on consumer hardware]]
+[[4-tier-router-with-profiles-over-hardcoded-routing|Decision — 4-Tier Router with Configurable Profiles over Hardcoded Routing]]
+[[asymmetric-kv-cache-quantization-q4-keys-q2-values|Decision — Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models]]
+[[qwen3-8b-as-main-reasoning-model|Decision — Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)]]
 [[per-backend-circuit-breaker-with-failover-chain|Per-Backend Three-State Circuit Breaker with Failover-Chain Integration]]

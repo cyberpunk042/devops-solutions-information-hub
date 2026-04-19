@@ -146,5 +146,6 @@ Avoid Gateway-Centric Routing when:
 [[aicp|AICP]]
 [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 [[identity-profile|AICP — Identity Profile]]
+[[4-tier-router-with-profiles-over-hardcoded-routing|Decision — 4-Tier Router with Configurable Profiles over Hardcoded Routing]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-local-ai|Model — Local AI ($0 Target)]]

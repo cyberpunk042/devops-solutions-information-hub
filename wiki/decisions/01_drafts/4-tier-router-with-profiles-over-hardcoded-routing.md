@@ -156,5 +156,5 @@ If extended (add a 5th tier):
 [[single-active-backend-with-lru-eviction|Single-Active Backend with LRU Eviction]]
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[three-permission-modes-think-edit-act|Three Permission Modes]]
-[[skills-as-primary-extension-pattern|Decision — Skills as Primary Extension Pattern]]
-[[localai-over-ollama-vllm-for-multi-model-orchestration|Decision — LocalAI over Ollama/vLLM]]
+[[Decision — Skills as Primary Extension Pattern]]
+[[Decision — LocalAI over Ollama/vLLM]]

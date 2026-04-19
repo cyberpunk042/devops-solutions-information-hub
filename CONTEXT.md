@@ -41,21 +41,21 @@ Identity protocol: `wiki/domains/cross-domain/project-self-identification-protoc
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 377 |
-| **Relationships** | 2497+ |
+| **Pages** | 391 |
+| **Relationships** | 2560+ |
 | **Validation errors** | 0 |
 | **MCP tools** | 26+ |
 | **Named models** | 16 (+ 9 methodology models) |
 | **Standards pages** | 25 (per-type + per-model + gateway output contract) |
 | **Sub-super-models** | 5 |
-| **Validated lessons** | 44 + 13 contributed (3 in 02_synthesized, 7+1 in 01_drafts, 3 in 00_inbox: verify-before-contributing · three-layer-autocomplete-chain · boilerplate-skill-anti-pattern — all pending operator review) |
-| **Validated patterns** | 19 + 6 in 01_drafts (incl. progressive-structural-enrichment, artifact-path-verification, aspirational-declaration-without-enforcement meta-pattern, **profile-as-coordination-bundle** added 2026-04-18) |
-| **Validated decisions** | 17 + 1 in 01_drafts (extended-to-adaptive-thinking-migration) |
+| **Validated lessons** | 44 + 13 contributed (3 in 02_synthesized, 7+1 in 01_drafts, 3 in 00_inbox pending operator review) |
+| **Validated patterns** | 19 + **11 in 01_drafts** (6 prior + 5 new AICP 2026-04-18/19: profile-as-coordination-bundle, single-active-backend-with-lru-eviction, per-backend-circuit-breaker-with-failover-chain, per-day-jsonl-dlq-with-retry-budget, three-permission-modes-think-edit-act) |
+| **Validated decisions** | 17 + **8 in 01_drafts** (1 prior + 7 new AICP 2026-04-18/19: localai-over-ollama-vllm · skills-as-primary-extension-pattern · 4-tier-router-with-profiles · pretooluse-hooks-layered-approach · aicp-active-state-mechanism-for-hooks · asymmetric-kv-cache-quantization · qwen3-8b-as-main-reasoning-model) |
 | **Principles** | **4** (Infrastructure > Instructions · Structured Context > Content · Goldilocks · Declarations Aspirational Until Verified — 2026-04-16 promotion with 5 validated cross-layer instances) |
 | **Source syntheses** | 48+ (4 added 2026-04-17: AirLLM · gpt-oss · Unsloth · Qwopus v3 update) |
-| **Spine references** | 2 added 2026-04-17 (Open-Model Evaluation Framework, 2026 Consumer-Hardware AI Stack) |
+| **Spine references** | 3 added 2026-04-17/18 (Open-Model Evaluation Framework, 2026 Consumer-Hardware AI Stack, Second-Brain Custom Model Strategy) |
 | **Ecosystem project profiles** | 5 (all connected via `setup --connect`; all 5 reconciled with consumer-property doctrine 2026-04-17/18) |
-| **Cross-project contributions accepted** | 6 (OpenFleet: 2 gateway-bug + walkthrough-C · AICP: Stage-3-unlock + identity-reconciliation + profile-pattern + skill-anti-pattern) |
+| **Cross-project contributions accepted** | **17** (OpenFleet: 4 gateway-bug + walkthrough-C + AGENTS-upgrade + detection-rules + verify-before-contributing · AICP: 13 incl. Stage-3-unlock + identity-reconciliation + 5 patterns + 7 decisions + boilerplate-skill + autocomplete-chain) |
 | **Consumer integration roadmap exemplar** | Published (OpenArms 5-milestone / 27-epic / 800-1200 hour plan) |
 
 ### The Four Validated Principles

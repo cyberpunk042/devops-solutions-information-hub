@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-19T21:05:24.689372+00:00",
+  "generated": "2026-04-19T21:46:49.754063+00:00",
   "stats": {
-    "pages": 385,
+    "pages": 391,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2535,
-    "tags_unique": 1146,
+    "relationships": 2560,
+    "tags_unique": 1155,
     "layers": {
       "3": 4,
-      "6": 20,
+      "6": 25,
       "2": 51,
       "4": 60,
-      "5": 33,
+      "5": 34,
       "1": 35,
       "spine": 70
     },
     "maturity": {
       "growing": 281,
-      "seed": 47
+      "seed": 53
     }
   },
   "pages": [
@@ -2196,6 +2196,271 @@
       ]
     },
     {
+      "path": "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing.md",
+      "slug": "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "title": "Decision \u2014 4-Tier Router with Configurable Profiles over Hardcoded Routing",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "decision",
+        "router",
+        "profiles",
+        "architecture",
+        "aicp",
+        "local-first",
+        "transferable",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "aicp-router",
+          "type": "file",
+          "file": "aicp/core/router.py",
+          "description": "4-tier router implementation with score-based dispatch (AICP project)"
+        },
+        {
+          "id": "aicp-profiles",
+          "type": "directory",
+          "file": "config/profiles/",
+          "description": "9 profile YAML files: default, fast, offline, thorough, code-review, fleet-light, reliable, dual-gpu, benchmark (AICP project)"
+        },
+        {
+          "id": "aicp-circuit-breaker",
+          "type": "file",
+          "file": "aicp/core/circuit_breaker.py",
+          "description": "Per-backend state machine wired into router dispatch (AICP project)"
+        },
+        {
+          "id": "profile-tests",
+          "type": "file",
+          "file": "tests/test_profiles.py",
+          "description": "49 profile tests (AICP project)"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing.md",
+          "description": "AICP's original submission, 2026-04-18 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "model-local-ai",
+        "gateway-centric-routing"
+      ],
+      "aliases": [
+        "Decision \u2014 4-Tier Router with Configurable Profiles over Hardcoded Routing",
+        "Decision: 4-Tier Router with Profiles"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Gateway-Centric Routing"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Per-Backend Circuit Breaker with Failover Chain"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Per-Day JSONL DLQ with Retry Budget"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Single-Active Backend with LRU Eviction"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Profile as Coordination Bundle"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Permission Modes"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Skills as Primary Extension Pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 LocalAI over Ollama/vLLM"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/aicp-active-state-mechanism-for-hooks.md",
+      "slug": "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "title": "Decision \u2014 AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "decision",
+        "hooks",
+        "state",
+        "stage-gate",
+        "aicp",
+        "transferable",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "layer-a-decision",
+          "type": "wiki",
+          "file": "wiki/decisions/01_drafts/pretooluse-hooks-layered-approach.md",
+          "description": "Layer A decision enumerated 3 candidate state mechanisms; this decision picks among them"
+        },
+        {
+          "id": "aicp-domain-profile",
+          "type": "wiki",
+          "file": "wiki/config/domain-profiles/backend-ai-platform-python.yaml",
+          "description": "Per-stage forbidden_zones that Layer B hooks will enforce"
+        },
+        {
+          "id": "aicp-backlog-tasks",
+          "type": "directory",
+          "file": "wiki/backlog/tasks/",
+          "description": "Where active tasks will live (currently placeholder; no live tasks yet)"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/decisions/01_drafts/aicp-active-state-mechanism-for-hooks.md",
+          "description": "AICP's original submission, 2026-04-18 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "pretooluse-hooks-layered-approach",
+        "model-quality-failure-prevention"
+      ],
+      "aliases": [
+        "Decision \u2014 AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback",
+        "Decision: AICP Active-State Mechanism"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Decision \u2014 Layered PreToolUse Hooks"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Three Permission Modes"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Profile as Coordination Bundle"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values.md",
+      "slug": "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "title": "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-19",
+      "updated": "2026-04-19",
+      "tags": [
+        "decision",
+        "kv-cache",
+        "quantization",
+        "qwen3",
+        "gpu",
+        "vram",
+        "dual-gpu",
+        "aicp",
+        "transferable",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "qwen3-8b-config",
+          "type": "file",
+          "file": "config/models/qwen3-8b.yaml",
+          "description": "Qwen3-8B \u2014 cache_type_k=q4_0, cache_type_v=q2_K, flash_attention=true, context_size=16384 (AICP project)"
+        },
+        {
+          "id": "qwen3-30b-config",
+          "type": "file",
+          "file": "config/models/qwen3-30b-a3b.yaml",
+          "description": "Qwen3-30B-A3B MoE \u2014 same asymmetric KV pattern, 'critical for MoE \u2014 saves significant VRAM' (AICP project)"
+        },
+        {
+          "id": "gpu-helpers",
+          "type": "file",
+          "file": "aicp/core/gpu.py",
+          "description": "estimate_kv_cache_mb() and calculate_optimal_config() \u2014 read cache_type_k from model YAML, assume q4_0 = 4x reduction vs f16 (AICP project)"
+        },
+        {
+          "id": "dual-gpu-profile",
+          "type": "file",
+          "file": "config/profiles/dual-gpu.yaml",
+          "description": "Extends default; promotes qwen3-30b-a3b primary; CONTEXT_SIZE=32768 (AICP project)"
+        },
+        {
+          "id": "llamacpp-turboquant",
+          "type": "external",
+          "url": "https://github.com/ggml-org/llama.cpp/discussions/20969",
+          "description": "Upstream tracking issue for TurboQuant 'turbo3' KV types \u2014 future asymmetric option"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values.md",
+          "description": "AICP's original submission, 2026-04-19 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "model-local-ai",
+        "qwen3-8b-as-main-reasoning-model",
+        "single-active-backend-with-lru-eviction"
+      ],
+      "aliases": [
+        "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models",
+        "Decision: Asymmetric KV Cache Quantization"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Qwen3-8B as Main Reasoning Model"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 LocalAI over Ollama/vLLM"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Single-Active Backend with LRU Eviction"
+        }
+      ]
+    },
+    {
       "path": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config.md",
       "slug": "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "title": "Decision \u2014 Consumer Runtime Signaling via MCP Config",
@@ -2423,6 +2688,171 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 Skills as Primary Extension Pattern"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/pretooluse-hooks-layered-approach.md",
+      "slug": "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "title": "Decision \u2014 Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "decision",
+        "hooks",
+        "claude-code",
+        "enforcement",
+        "security",
+        "aicp",
+        "transferable"
+      ],
+      "sources": [
+        {
+          "id": "aicp-settings",
+          "type": "file",
+          "file": ".claude/settings.json",
+          "description": "AICP's Claude Code settings \u2014 currently has permissions allowlist but no hooks (AICP project)"
+        },
+        {
+          "id": "aicp-guardrails",
+          "type": "directory",
+          "file": "aicp/guardrails/",
+          "description": "AICP's BACKEND-LAYER guardrails (paths, response, checks) \u2014 server-side enforcement; this decision adds CLIENT-LAYER hooks"
+        },
+        {
+          "id": "claude-code-harness-r01-r13",
+          "type": "external",
+          "url": "https://github.com/shanraisshan/claude-code-best-practice",
+          "description": "13 baseline hook rules per claude-code-harness conventions"
+        },
+        {
+          "id": "quality-standards",
+          "type": "wiki",
+          "file": "wiki/spine/standards/model-standards/model-quality-failure-prevention-standards.md",
+          "description": "Quality Standards: instructions alone ~25% compliance, hooks ~98%"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/decisions/01_drafts/pretooluse-hooks-layered-approach.md",
+          "description": "AICP's original submission, 2026-04-18 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "model-quality-failure-prevention",
+        "model-claude-code",
+        "model-skills-commands-hooks"
+      ],
+      "aliases": [
+        "Decision \u2014 Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later",
+        "Decision: Layered PreToolUse Hooks"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Decision \u2014 Skills as Primary Extension Pattern"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Three Permission Modes"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/qwen3-8b-as-main-reasoning-model.md",
+      "slug": "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "title": "Decision \u2014 Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "decision",
+        "qwen3",
+        "model",
+        "reasoning",
+        "aicp",
+        "transferable",
+        "pattern"
+      ],
+      "sources": [
+        {
+          "id": "aicp-models-config",
+          "type": "file",
+          "file": "config/models/qwen3-8b.yaml",
+          "description": "qwen3-8b config \u2014 4.9 GB GGUF, 6 GB+ VRAM, thinking mode, native tool calling (AICP project)"
+        },
+        {
+          "id": "aicp-default-profile",
+          "type": "file",
+          "file": "config/profiles/default.yaml",
+          "description": "Default profile primary backend = qwen3-8b (AICP project)"
+        },
+        {
+          "id": "model-evals",
+          "type": "directory",
+          "file": "docs/kb/models/",
+          "description": "Model evaluation notes (AICP project)"
+        },
+        {
+          "id": "model-local-ai",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-local-ai.md",
+          "description": "Qwen3 family (8B, 4B, 30B MoE) covers most text tasks"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/decisions/01_drafts/qwen3-8b-as-main-reasoning-model.md",
+          "description": "AICP's original submission, 2026-04-18 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "model-local-ai",
+        "localai-over-ollama-vllm-for-multi-model-orchestration"
+      ],
+      "aliases": [
+        "Decision \u2014 Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)",
+        "Decision: Qwen3-8B as Main Reasoning Model"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 LocalAI over Ollama/vLLM"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 4-Tier Router with Profiles"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Single-Active Backend with LRU Eviction"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Asymmetric KV Cache Quantization"
         }
       ]
     },
@@ -16784,10 +17214,6 @@
         {
           "verb": "COMPLEMENTS",
           "target": "Per-Day JSONL DLQ with Retry Budget"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "AICP's failover chain \u2014 the chain only works operationally because per-backend breakers make failover trigger fast"
         }
       ]
     },
@@ -16854,18 +17280,6 @@
         {
           "verb": "COMPLEMENTS",
           "target": "Profile as Coordination Bundle"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "Operator-driven incident recovery (`aicp --retry-dlq`) + agent-driven recovery (MCP `dlq_status` polling)"
-        },
-        {
-          "verb": "DEPENDS ON",
-          "target": "A bounded"
-        },
-        {
-          "verb": "DEPENDS ON",
-          "target": "replayable workload shape (prompt + mode + project_path reconstructs the AI inference call)"
         }
       ]
     },
@@ -17100,10 +17514,6 @@
           "target": "Model \u2014 Local AI ($0 Target)"
         },
         {
-          "verb": "IMPLEMENTS",
-          "target": "per-resource-class single-active runtime pattern"
-        },
-        {
           "verb": "RELATES TO",
           "target": "Decision \u2014 LocalAI over Ollama / vLLM"
         },
@@ -17118,10 +17528,6 @@
         {
           "verb": "ENABLES",
           "target": "AICP's $0 target on consumer hardware"
-        },
-        {
-          "verb": "CONTRASTS WITH",
-          "target": "vLLM-style \"one big instance per model\" \u2014 opposite tradeoff space"
         }
       ]
     },
@@ -17200,6 +17606,78 @@
         {
           "verb": "RELATES TO",
           "target": "Synthesis \u2014 GitHub Spec Kit: Specification-Driven Development"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/three-permission-modes-think-edit-act.md",
+      "slug": "patterns/01_drafts/three-permission-modes-think-edit-act",
+      "title": "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "pattern",
+        "modes",
+        "permission",
+        "authority",
+        "aicp",
+        "transferable",
+        "principle"
+      ],
+      "sources": [
+        {
+          "id": "aicp-modes",
+          "type": "file",
+          "file": "aicp/core/modes.py",
+          "description": "Mode enforcement code (Think/Edit/Act definitions + per-mode tool allowlists) \u2014 AICP project"
+        },
+        {
+          "id": "aicp-claude-md",
+          "type": "file",
+          "file": "CLAUDE.md",
+          "description": "AICP CLAUDE.md `## Architecture > Three Permission Modes` \u2014 operator-facing description"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/patterns/01_drafts/three-permission-modes-think-edit-act.md",
+          "description": "AICP's original submission, 2026-04-18 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "model-quality-failure-prevention",
+        "model-claude-code"
+      ],
+      "aliases": [
+        "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers",
+        "Three Permission Modes"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Skills as Primary Extension Pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Layered PreToolUse Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 4-tier Router with Profiles"
         }
       ]
     },
@@ -26771,8 +27249,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 181,
-      "relationship_count": 1220
+      "page_count": 187,
+      "relationship_count": 1245
     },
     "ai-agents": {
       "page_count": 68,
@@ -27213,7 +27691,12 @@
     "aicp": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "domains/cross-domain/mcp-runtime-signaling",
@@ -27224,6 +27707,7 @@
       "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
       "patterns/01_drafts/profile-as-coordination-bundle",
       "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "patterns/01_drafts/three-permission-modes-think-edit-act",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
@@ -27407,6 +27891,7 @@
     "enforcement": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "comparisons/openarms-vs-openfleet-enforcement",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
@@ -27427,6 +27912,8 @@
     "hooks": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "comparisons/openarms-vs-openfleet-enforcement",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/02_validated/tools/extension-system-operational-decisions",
       "decisions/02_validated/tools/hooks-design-decisions",
       "decisions/02_validated/tools/per-role-command-design-decisions",
@@ -27874,6 +28361,7 @@
     "architecture": [
       "comparisons/openarms-vs-openfleet-enforcement",
       "comparisons/skills-architecture-patterns",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/cross-domain/integration/skyscraper-pyramid-mountain",
@@ -27888,6 +28376,7 @@
     ],
     "claude-code": [
       "comparisons/skills-architecture-patterns",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/ai-agents/claude-code/claude-code-best-practices",
       "domains/ai-agents/claude-code/claude-code-context-management",
@@ -27979,15 +28468,116 @@
       "domains/cross-domain/model-composition-rules"
     ],
     "decision": [
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/extended-to-adaptive-thinking-migration",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "spine/standards/decision-page-standards"
+    ],
+    "router": [
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
+    ],
+    "profiles": [
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
+    ],
+    "local-first": [
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "domains/ai-models/local-llm-quantization",
+      "domains/tools-and-platforms/aicp",
+      "sources/tools-integration/src-gemma4-searxng-openclaw"
+    ],
+    "transferable": [
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "domains/cross-domain/methodology-framework/methodology-framework",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "patterns/01_drafts/three-permission-modes-think-edit-act",
+      "spine/models/foundation/model-llm-wiki",
+      "spine/references/adoption-guide"
+    ],
+    "pattern": [
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/block-with-reason-and-justified-escalation",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
+      "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "patterns/01_drafts/profile-as-coordination-bundle",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "patterns/01_drafts/three-permission-modes-think-edit-act",
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "spine/standards/pattern-page-standards"
+    ],
+    "state": [
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks"
+    ],
+    "stage-gate": [
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/02_validated/methodology/stage-gate-operational-decisions",
+      "decisions/02_validated/tools/hooks-design-decisions",
+      "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
+      "domains/cross-domain/methodology-framework/methodology-framework",
+      "domains/devops/stage-gate-methodology",
+      "patterns/03_validated/enforcement/stage-aware-skill-injection",
+      "spine/evolution-log/methodology-evolution-history",
+      "spine/models/foundation/model-methodology",
+      "spine/standards/model-standards/model-methodology-standards"
+    ],
+    "kv-cache": [
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "sources/src-llm-architecture-gallery-raschka"
+    ],
+    "quantization": [
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "domains/ai-models/local-llm-quantization",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-turboquant-122b-macbook",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "qwen3": [
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model"
+    ],
+    "gpu": [
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "vram": [
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "spine/models/depth/model-local-ai"
+    ],
+    "dual-gpu": [
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values"
     ],
     "runtime": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
@@ -28058,15 +28648,31 @@
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
     ],
-    "transferable": [
-      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
-      "decisions/01_drafts/skills-as-primary-extension-pattern",
-      "domains/cross-domain/methodology-framework/methodology-framework",
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
-      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
-      "patterns/01_drafts/single-active-backend-with-lru-eviction",
+    "security": [
+      "decisions/01_drafts/pretooluse-hooks-layered-approach"
+    ],
+    "model": [
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "spine/models/agent-config/model-markdown-as-iac",
+      "spine/models/depth/model-context-engineering",
+      "spine/models/depth/model-knowledge-evolution",
+      "spine/models/depth/model-local-ai",
+      "spine/models/depth/model-notebooklm",
+      "spine/models/depth/model-second-brain",
+      "spine/models/ecosystem/model-automation-pipelines",
+      "spine/models/ecosystem/model-ecosystem",
+      "spine/models/ecosystem/model-mcp-cli-integration",
       "spine/models/foundation/model-llm-wiki",
-      "spine/references/adoption-guide"
+      "spine/models/foundation/model-methodology",
+      "spine/models/foundation/model-wiki-design",
+      "spine/models/quality/model-quality-failure-prevention",
+      "spine/models/quality/model-sfif-architecture"
+    ],
+    "reasoning": [
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "domains/cross-domain/methodology-framework/methodology-config-architecture",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "extension": [
       "decisions/01_drafts/skills-as-primary-extension-pattern"
@@ -28078,26 +28684,6 @@
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
       "sources/claude-code/src-harness-engineering"
-    ],
-    "pattern": [
-      "decisions/01_drafts/skills-as-primary-extension-pattern",
-      "patterns/01_drafts/agent-execution-cost-optimization-stack",
-      "patterns/01_drafts/artifact-path-verification-at-gate-close",
-      "patterns/01_drafts/aspirational-declaration-without-enforcement",
-      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/block-with-reason-and-justified-escalation",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
-      "patterns/01_drafts/observe-fix-verify-loop",
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
-      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
-      "patterns/01_drafts/profile-as-coordination-bundle",
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
-      "patterns/01_drafts/single-active-backend-with-lru-eviction",
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
-      "spine/standards/pattern-page-standards"
     ],
     "knowledge-interface": [
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface"
@@ -28268,17 +28854,6 @@
     "status-report": [
       "decisions/02_validated/methodology/methodology-stage-extension-decisions"
     ],
-    "stage-gate": [
-      "decisions/02_validated/methodology/stage-gate-operational-decisions",
-      "decisions/02_validated/tools/hooks-design-decisions",
-      "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
-      "domains/cross-domain/methodology-framework/methodology-framework",
-      "domains/devops/stage-gate-methodology",
-      "patterns/03_validated/enforcement/stage-aware-skill-injection",
-      "spine/evolution-log/methodology-evolution-history",
-      "spine/models/foundation/model-methodology",
-      "spine/standards/model-standards/model-methodology-standards"
-    ],
     "discovery": [
       "decisions/02_validated/methodology/stage-gate-operational-decisions"
     ],
@@ -28340,12 +28915,6 @@
     "claude": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "spine/references/root-documentation-map"
-    ],
-    "local-first": [
-      "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
-      "domains/ai-models/local-llm-quantization",
-      "domains/tools-and-platforms/aicp",
-      "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "cost-optimization": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
@@ -28953,12 +29522,6 @@
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
       "domains/devops/stage-gate-methodology"
     ],
-    "quantization": [
-      "domains/ai-models/local-llm-quantization",
-      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
-      "sources/tools-integration/src-turboquant-122b-macbook",
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
-    ],
     "local-llm": [
       "domains/ai-models/local-llm-quantization",
       "lessons/01_drafts/if-you-can-verify-you-converge",
@@ -29298,11 +29861,6 @@
     ],
     "wiki-config": [
       "domains/cross-domain/methodology-framework/methodology-config-architecture"
-    ],
-    "reasoning": [
-      "domains/cross-domain/methodology-framework/methodology-config-architecture",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "composable": [
       "domains/cross-domain/methodology-framework/methodology-framework",
@@ -30472,7 +31030,8 @@
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
-      "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content"
+      "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
+      "patterns/01_drafts/three-permission-modes-think-edit-act"
     ],
     "declaration": [
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
@@ -30776,13 +31335,6 @@
     "progressive-enrichment": [
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
-    "gpu": [
-      "patterns/01_drafts/single-active-backend-with-lru-eviction"
-    ],
-    "vram": [
-      "patterns/01_drafts/single-active-backend-with-lru-eviction",
-      "spine/models/depth/model-local-ai"
-    ],
     "eviction": [
       "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
@@ -30802,6 +31354,15 @@
     ],
     "context-efficiency": [
       "patterns/01_drafts/three-layer-agent-context-architecture"
+    ],
+    "modes": [
+      "patterns/01_drafts/three-permission-modes-think-edit-act"
+    ],
+    "permission": [
+      "patterns/01_drafts/three-permission-modes-think-edit-act"
+    ],
+    "authority": [
+      "patterns/01_drafts/three-permission-modes-think-edit-act"
     ],
     "adapter": [
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
@@ -31420,9 +31981,6 @@
     "attention-mechanisms": [
       "sources/src-llm-architecture-gallery-raschka"
     ],
-    "kv-cache": [
-      "sources/src-llm-architecture-gallery-raschka"
-    ],
     "mla": [
       "sources/src-llm-architecture-gallery-raschka"
     ],
@@ -31758,22 +32316,6 @@
       "spine/super-model/knowledge-architecture",
       "spine/super-model/work-management"
     ],
-    "model": [
-      "spine/models/agent-config/model-markdown-as-iac",
-      "spine/models/depth/model-context-engineering",
-      "spine/models/depth/model-knowledge-evolution",
-      "spine/models/depth/model-local-ai",
-      "spine/models/depth/model-notebooklm",
-      "spine/models/depth/model-second-brain",
-      "spine/models/ecosystem/model-automation-pipelines",
-      "spine/models/ecosystem/model-ecosystem",
-      "spine/models/ecosystem/model-mcp-cli-integration",
-      "spine/models/foundation/model-llm-wiki",
-      "spine/models/foundation/model-methodology",
-      "spine/models/foundation/model-wiki-design",
-      "spine/models/quality/model-quality-failure-prevention",
-      "spine/models/quality/model-sfif-architecture"
-    ],
     "soul-md": [
       "spine/models/agent-config/model-markdown-as-iac"
     ],
@@ -32012,21 +32554,9 @@
       ]
     },
     {
-      "target": "A bounded",
-      "referenced_by": [
-        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking"
-      ]
-    },
-    {
       "target": "AICP's $0 target on consumer hardware",
       "referenced_by": [
         "Single-Active Backend with LRU Eviction"
-      ]
-    },
-    {
-      "target": "AICP's failover chain \u2014 the chain only works operationally because per-backend breakers make failover trigger fast",
-      "referenced_by": [
-        "Per-Backend Three-State Circuit Breaker with Failover-Chain Integration"
       ]
     },
     {
@@ -32105,6 +32635,31 @@
       ]
     },
     {
+      "target": "Decision \u2014 4-Tier Router with Profiles",
+      "referenced_by": [
+        "Decision \u2014 Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)"
+      ]
+    },
+    {
+      "target": "Decision \u2014 4-tier Router with Profiles",
+      "referenced_by": [
+        "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers"
+      ]
+    },
+    {
+      "target": "Decision \u2014 Asymmetric KV Cache Quantization",
+      "referenced_by": [
+        "Decision \u2014 Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)"
+      ]
+    },
+    {
+      "target": "Decision \u2014 Layered PreToolUse Hooks",
+      "referenced_by": [
+        "Decision \u2014 AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback",
+        "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers"
+      ]
+    },
+    {
       "target": "Decision \u2014 Local vs Cloud Routing",
       "referenced_by": [
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
@@ -32118,9 +32673,26 @@
       ]
     },
     {
+      "target": "Decision \u2014 LocalAI over Ollama/vLLM",
+      "referenced_by": [
+        "Decision \u2014 4-Tier Router with Configurable Profiles over Hardcoded Routing",
+        "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models",
+        "Decision \u2014 Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)"
+      ]
+    },
+    {
+      "target": "Decision \u2014 Qwen3-8B as Main Reasoning Model",
+      "referenced_by": [
+        "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models"
+      ]
+    },
+    {
       "target": "Decision \u2014 Skills as Primary Extension Pattern",
       "referenced_by": [
-        "Decision \u2014 LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint"
+        "Decision \u2014 4-Tier Router with Configurable Profiles over Hardcoded Routing",
+        "Decision \u2014 LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint",
+        "Decision \u2014 Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later",
+        "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers"
       ]
     },
     {
@@ -32237,8 +32809,11 @@
       "target": "Model \u2014 Local AI",
       "referenced_by": [
         "Test OpenAI backend with LocalAI",
+        "Decision \u2014 4-Tier Router with Configurable Profiles over Hardcoded Routing",
+        "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models",
         "Decision \u2014 Extended Thinking to Adaptive Thinking Migration",
         "Decision \u2014 LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint",
+        "Decision \u2014 Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)",
         "AICP \u2014 Identity Profile",
         "Three-layer autocomplete chain validated in production fleet operation",
         "If You Can Verify, You Converge",
@@ -32286,12 +32861,6 @@
       "target": "Operations Plan \u2014 Second Brain Integration Chain",
       "referenced_by": [
         "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)"
-      ]
-    },
-    {
-      "target": "Operator-driven incident recovery (`aicp --retry-dlq`) + agent-driven recovery",
-      "referenced_by": [
-        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking"
       ]
     },
     {
@@ -32563,24 +33132,6 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
-      ]
-    },
-    {
-      "target": "per-resource-class single-active runtime pattern",
-      "referenced_by": [
-        "Single-Active Backend with LRU Eviction"
-      ]
-    },
-    {
-      "target": "replayable workload shape",
-      "referenced_by": [
-        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking"
-      ]
-    },
-    {
-      "target": "vLLM-style \"one big instance per model\" \u2014 opposite tradeoff space",
-      "referenced_by": [
-        "Single-Active Backend with LRU Eviction"
       ]
     },
     {

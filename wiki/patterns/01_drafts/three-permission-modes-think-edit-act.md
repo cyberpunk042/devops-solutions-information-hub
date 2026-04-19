@@ -132,17 +132,14 @@ Anthropic's Claude Code has a "Plan Mode" structurally identical to AICP's Think
 
 - BUILDS ON: [[model-quality-failure-prevention|Model — Quality and Failure Prevention]] (enforcement-level evidence)
 - BUILDS ON: [[model-claude-code|Model — Claude Code]] (Plan Mode is one Think instance)
-- IMPLEMENTS: monotonic-authority-tiers + mechanical-enforcement principles
 - RELATES TO: [[skills-as-primary-extension-pattern|Decision — Skills as Primary Extension Pattern]] (skills load conditionally; modes gate authority — different axes, both compose)
 - RELATES TO: [[pretooluse-hooks-layered-approach|Decision — Layered PreToolUse Hooks]] (hooks enforce universal R01-R04; modes enforce per-session authority — both Layer 2 enforcement, complementary)
 - RELATES TO: [[4-tier-router-with-profiles-over-hardcoded-routing|Decision — 4-tier Router with Profiles]] (profiles' `force_cloud_modes` is the mechanism making mode a routing dimension)
-- ENABLES: AICP's tiered cost model — Think sessions stay cheap, Act sessions earn cloud cost via consequence weight
-- CONTRASTS WITH: capability-based authorization (per-call signed permissions) — different model, fully-autonomous systems
 
 ## Backlinks
 
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[model-claude-code|Model — Claude Code]]
-[[skills-as-primary-extension-pattern|Decision — Skills as Primary Extension Pattern]]
-[[pretooluse-hooks-layered-approach|Decision — Layered PreToolUse Hooks]]
-[[4-tier-router-with-profiles-over-hardcoded-routing|Decision — 4-tier Router with Profiles]]
+[[Decision — Skills as Primary Extension Pattern]]
+[[Decision — Layered PreToolUse Hooks]]
+[[Decision — 4-tier Router with Profiles]]

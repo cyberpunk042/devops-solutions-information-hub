@@ -47,24 +47,43 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 
 ## What the Brain Learned FROM AICP
 
-> [!warning] Knowledge Depth Caveat
+> [!success] Knowledge Depth Update (2026-04-18/19)
 >
-> The second brain's understanding of AICP is based primarily on its concept page, the ecosystem overview, and its integration surface with OpenFleet. Deep internal architecture (routing engine internals, circuit breaker implementation details, skill authoring patterns) has NOT been synthesized from source code. The lessons below are drawn from what the brain observes at the integration boundary.
+> AICP has contributed **13 first-party architecture artifacts** to the brain directly via `gateway contribute` — 5 patterns + 7 decisions + 2 lessons + session remarks. The brain's understanding of AICP internals now includes source-backed details: circuit_breaker.py (207 lines, state machine), dlq.py (260 lines, JSONL schema), router.py + profiles.py (600 lines + 49 tests), 14 model YAMLs. This is no longer surface-only; AICP-as-source is the deepest-covered sister project after OpenFleet.
 
-> [!tip] Key Lessons Contributed
+> [!tip] Key Lessons Contributed (ecosystem-level)
 >
 > | Lesson | What AICP Proved |
 > |--------|-----------------|
-> | [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]] | 78 skills in .claude/skills/ — the largest skill collection in the ecosystem. 18 referenced in fleet's agent-tooling.yaml. |
-> | [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] | AICP exposes 11 MCP tools AND a CLI — the routing decision itself is an MCP tool (`route`), proving MCP can wrap complex decisions |
-> | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | Router's complexity scoring + circuit breaker + profile thresholds are deterministic; only the final inference call is LLM |
+> | [[skills-architecture-is-dominant-extension-pattern\|Skills Architecture Is the Dominant LLM Extension Pattern]] | 78 skills in `.claude/skills/` — the largest skill collection in the ecosystem. 18 referenced in fleet's agent-tooling.yaml. |
+> | [[cli-tools-beat-mcp-for-token-efficiency\|CLI Tools Beat MCP for Token Efficiency]] | AICP exposes 11 MCP tools AND a CLI — the routing decision itself is an MCP tool (`route`), proving MCP can wrap complex decisions |
+> | [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] | Router's complexity scoring + circuit breaker + profile thresholds are deterministic; only the final inference call is LLM |
+> | [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski\|Boilerplate Skill Anti-Pattern at Scale]] | 47% of AICP's 78 skills are identical boilerplate — the scaling failure mode of scaffolded libraries quantified |
+> | [[three-layer-autocomplete-chain-validated-in-production-fleet\|Three-Layer Autocomplete Chain]] | Context Engineering Standards' 8-step chain maps to static map + knowledge graph + per-agent memory — production-validated |
 
-> [!tip] Key Patterns Observed
+> [!tip] Key Patterns Contributed (5 · all AICP 2026-04-18/19)
 >
-> | Pattern | How AICP Implements It |
-> |---------|----------------------|
-> | [[gateway-centric-routing|Gateway-Centric Routing]] | Auto mode: score complexity → check circuit breaker → apply profile thresholds → select backend → failover chain |
-> | [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]] | Router is pure logic; LLM calls happen after routing decision |
+> | Pattern | Role |
+> |---------|------|
+> | [[profile-as-coordination-bundle\|Profile as Coordination Bundle]] | Cross-subsystem coordination; 6 instances including 2 brain-native |
+> | [[single-active-backend-with-lru-eviction\|Single-Active Backend with LRU Eviction]] | VRAM-constrained multi-model orchestration |
+> | [[per-backend-circuit-breaker-with-failover-chain\|Per-Backend Circuit Breaker with Failover Chain]] | Reliability stack layer 1 of 3 |
+> | [[per-day-jsonl-dlq-with-retry-budget\|Per-Day JSONL DLQ with Retry Budget]] | Reliability stack layer 3 of 3 |
+> | [[three-permission-modes-think-edit-act\|Three Permission Modes]] | Operator-selected AI authority tiers (Think/Edit/Act) |
+>
+> Plus [[gateway-centric-routing\|Gateway-Centric Routing]] + [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] (previously observed).
+
+> [!tip] Key Decisions Contributed (7 · all AICP 2026-04-18/19)
+>
+> | Decision | Topic |
+> |----------|-------|
+> | [[localai-over-ollama-vllm-for-multi-model-orchestration\|LocalAI over Ollama/vLLM]] | Runtime selection (hard reversibility) |
+> | [[skills-as-primary-extension-pattern\|Skills as Primary Extension Pattern]] | Three-mechanism extension split |
+> | [[4-tier-router-with-profiles-over-hardcoded-routing\|4-Tier Router with Profiles]] | Routing architecture |
+> | [[pretooluse-hooks-layered-approach\|Layered PreToolUse Hooks]] | Layer A safety baseline + Layer B stage-gate (deferred) |
+> | [[aicp-active-state-mechanism-for-hooks\|AICP Active-State Mechanism]] | `.aicp/state.yaml` + git-branch fallback |
+> | [[asymmetric-kv-cache-quantization-q4-keys-q2-values\|Asymmetric KV Cache Quantization]] | q4_0 keys + q2_K values for Qwen3 |
+> | [[qwen3-8b-as-main-reasoning-model\|Qwen3-8B as Main Reasoning Model]] | Default primary backend selection |
 
 ## Artifact Chain (Project-Specific)
 
