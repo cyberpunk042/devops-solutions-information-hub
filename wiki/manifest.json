@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-18T23:02:47.763518+00:00",
+  "generated": "2026-04-19T21:05:24.689372+00:00",
   "stats": {
-    "pages": 382,
+    "pages": 385,
     "domains": 9,
     "sources": 53,
     "comparisons": 5,
-    "relationships": 2517,
-    "tags_unique": 1135,
+    "relationships": 2535,
+    "tags_unique": 1146,
     "layers": {
       "3": 4,
       "6": 20,
       "2": 51,
       "4": 60,
-      "5": 30,
+      "5": 33,
       "1": 35,
       "spine": 70
     },
     "maturity": {
       "growing": 281,
-      "seed": 44
+      "seed": 47
     }
   },
   "pages": [
@@ -16713,6 +16713,163 @@
       ]
     },
     {
+      "path": "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain.md",
+      "slug": "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "title": "Per-Backend Three-State Circuit Breaker with Failover-Chain Integration",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-19",
+      "updated": "2026-04-19",
+      "tags": [
+        "pattern",
+        "reliability",
+        "circuit-breaker",
+        "failover",
+        "backend",
+        "state-machine",
+        "aicp",
+        "transferable"
+      ],
+      "sources": [
+        {
+          "id": "aicp-circuit-breaker",
+          "type": "file",
+          "file": "aicp/core/circuit_breaker.py",
+          "description": "207-line implementation \u2014 State enum (CLOSED/OPEN/HALF_OPEN), CircuitBreaker class with thread-safe transitions, build_breakers() factory, CircuitBreakerOpen exception (AICP project)"
+        },
+        {
+          "id": "aicp-controller-failover",
+          "type": "file",
+          "file": "aicp/core/controller.py",
+          "description": "Wires breakers per backend; wraps backend.execute() in breaker.call(); catches CircuitBreakerOpen with generic Exception clause to trigger failover (AICP project)"
+        },
+        {
+          "id": "reliable-profile",
+          "type": "file",
+          "file": "config/profiles/reliable.yaml",
+          "description": "Aggressive breaker config \u2014 demonstrates profile-tunable thresholds (AICP project)"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain.md",
+          "description": "AICP's original submission, 2026-04-19 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "model-quality-failure-prevention",
+        "profile-as-coordination-bundle"
+      ],
+      "aliases": [
+        "Per-Backend Three-State Circuit Breaker with Failover-Chain Integration",
+        "Per-Backend Circuit Breaker with Failover Chain"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Profile as Coordination Bundle"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Single-Active Backend with LRU Eviction"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Per-Day JSONL DLQ with Retry Budget"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "AICP's failover chain \u2014 the chain only works operationally because per-backend breakers make failover trigger fast"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget.md",
+      "slug": "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "title": "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-19",
+      "updated": "2026-04-19",
+      "tags": [
+        "pattern",
+        "reliability",
+        "dlq",
+        "dead-letter-queue",
+        "persistence",
+        "retry",
+        "jsonl",
+        "aicp",
+        "transferable"
+      ],
+      "sources": [
+        {
+          "id": "aicp-dlq",
+          "type": "file",
+          "file": "aicp/core/dlq.py",
+          "description": "260-line implementation \u2014 enqueue/list_entries/count/retry_pending/_prune_oldest/_mark_entry/status; per-day JSONL files in ~/.aicp/dlq/ keyed by UTC date (AICP project)"
+        },
+        {
+          "id": "aicp-controller-failure-path",
+          "type": "file",
+          "file": "aicp/core/controller.py",
+          "description": "Lines 487-499 \u2014 DLQ persistence inside except clause AFTER failover exhaustion; original error still propagates upstream after DLQ write (AICP project)"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget.md",
+          "description": "AICP's original submission, 2026-04-19 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "model-quality-failure-prevention",
+        "per-backend-circuit-breaker-with-failover-chain"
+      ],
+      "aliases": [
+        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking",
+        "Per-Day JSONL DLQ with Retry Budget"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Quality and Failure Prevention"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Per-Backend Circuit Breaker with Failover Chain"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Profile as Coordination Bundle"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "Operator-driven incident recovery (`aicp --retry-dlq`) + agent-driven recovery (MCP `dlq_status` polling)"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "A bounded"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "replayable workload shape (prompt + mode + project_path reconstructs the AI inference call)"
+        }
+      ]
+    },
+    {
       "path": "patterns/01_drafts/profile-as-coordination-bundle.md",
       "slug": "patterns/01_drafts/profile-as-coordination-bundle",
       "title": "Profile as Coordination Bundle",
@@ -16884,6 +17041,87 @@
         {
           "verb": "FEEDS INTO",
           "target": "Claude Code Standards"
+        }
+      ]
+    },
+    {
+      "path": "patterns/01_drafts/single-active-backend-with-lru-eviction.md",
+      "slug": "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "title": "Single-Active Backend with LRU Eviction",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-18",
+      "updated": "2026-04-18",
+      "tags": [
+        "pattern",
+        "gpu",
+        "vram",
+        "eviction",
+        "lru",
+        "backend",
+        "local-ai",
+        "aicp",
+        "transferable"
+      ],
+      "sources": [
+        {
+          "id": "aicp-compose",
+          "type": "file",
+          "file": "docker-compose.yaml",
+          "description": "LocalAI container with LOCALAI_MAX_ACTIVE_BACKENDS=3 + watchdog config (AICP project)"
+        },
+        {
+          "id": "aicp-models-config",
+          "type": "directory",
+          "file": "config/models/",
+          "description": "14 model YAMLs \u2014 only ONE chat-class GPU model can be active at a time even with MAX=3 (the other 2 slots are CPU embedding + reranker) (AICP project)"
+        },
+        {
+          "id": "aicp-contribution-staging",
+          "type": "wiki",
+          "file": "raw/articles/from-aicp/patterns/01_drafts/single-active-backend-with-lru-eviction.md",
+          "description": "AICP's original submission, 2026-04-18 staged in raw/ before ingestion here"
+        }
+      ],
+      "layer": 5,
+      "maturity": "seed",
+      "derived_from": [
+        "model-local-ai",
+        "localai-over-ollama-vllm-for-multi-model-orchestration"
+      ],
+      "aliases": [
+        "Single-Active Backend with LRU Eviction"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "per-resource-class single-active runtime pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 LocalAI over Ollama / vLLM"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Profile as Coordination Bundle"
+        },
+        {
+          "verb": "COMPLEMENTS",
+          "target": "Per-Backend Circuit Breaker with Failover Chain"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "AICP's $0 target on consumer hardware"
+        },
+        {
+          "verb": "CONTRASTS WITH",
+          "target": "vLLM-style \"one big instance per model\" \u2014 opposite tradeoff space"
         }
       ]
     },
@@ -26533,8 +26771,8 @@
       "relationship_count": 159
     },
     "cross-domain": {
-      "page_count": 178,
-      "relationship_count": 1202
+      "page_count": 181,
+      "relationship_count": 1220
     },
     "ai-agents": {
       "page_count": 68,
@@ -26982,7 +27220,10 @@
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/aicp",
       "ecosystem/project_profiles/aicp/identity-profile",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
       "patterns/01_drafts/profile-as-coordination-bundle",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
@@ -27821,6 +28062,9 @@
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "domains/cross-domain/methodology-framework/methodology-framework",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
       "spine/models/foundation/model-llm-wiki",
       "spine/references/adoption-guide"
     ],
@@ -27844,8 +28088,11 @@
       "patterns/01_drafts/block-with-reason-and-justified-escalation",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage",
       "patterns/01_drafts/observe-fix-verify-loop",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
       "patterns/01_drafts/profile-as-coordination-bundle",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
@@ -29526,7 +29773,8 @@
       "domains/tools-and-platforms/aicp"
     ],
     "circuit-breaker": [
-      "domains/tools-and-platforms/aicp"
+      "domains/tools-and-platforms/aicp",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
     ],
     "fleet-integration": [
       "domains/tools-and-platforms/aicp",
@@ -30376,6 +30624,7 @@
     ],
     "local-ai": [
       "log/2026-04-17/2026-04-17-session-summary",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
       "sources/src-27-questions-llm-selection",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "spine/models/depth/model-local-ai",
@@ -30469,6 +30718,36 @@
     "correction-cycle": [
       "patterns/01_drafts/observe-fix-verify-loop"
     ],
+    "reliability": [
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "patterns/03_validated/architecture/deterministic-shell-llm-core"
+    ],
+    "failover": [
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
+    ],
+    "backend": [
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "state-machine": [
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
+    ],
+    "dlq": [
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget"
+    ],
+    "dead-letter-queue": [
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget"
+    ],
+    "persistence": [
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget"
+    ],
+    "retry": [
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget"
+    ],
+    "jsonl": [
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget"
+    ],
     "profile": [
       "patterns/01_drafts/profile-as-coordination-bundle"
     ],
@@ -30496,6 +30775,19 @@
     ],
     "progressive-enrichment": [
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
+    ],
+    "gpu": [
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "vram": [
+      "patterns/01_drafts/single-active-backend-with-lru-eviction",
+      "spine/models/depth/model-local-ai"
+    ],
+    "eviction": [
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "lru": [
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
     "three-layer-architecture": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
@@ -30538,9 +30830,6 @@
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution"
     ],
     "shell-pattern": [
-      "patterns/03_validated/architecture/deterministic-shell-llm-core"
-    ],
-    "reliability": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
     "separation-of-concerns": [
@@ -31514,9 +31803,6 @@
       "spine/models/ecosystem/model-automation-pipelines",
       "spine/standards/concept-page-standards"
     ],
-    "vram": [
-      "spine/models/depth/model-local-ai"
-    ],
     "grounded-research": [
       "spine/models/depth/model-notebooklm"
     ],
@@ -31726,6 +32012,24 @@
       ]
     },
     {
+      "target": "A bounded",
+      "referenced_by": [
+        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking"
+      ]
+    },
+    {
+      "target": "AICP's $0 target on consumer hardware",
+      "referenced_by": [
+        "Single-Active Backend with LRU Eviction"
+      ]
+    },
+    {
+      "target": "AICP's failover chain \u2014 the chain only works operationally because per-backend breakers make failover trigger fast",
+      "referenced_by": [
+        "Per-Backend Three-State Circuit Breaker with Failover-Chain Integration"
+      ]
+    },
+    {
       "target": "Agent Failure Taxonomy",
       "referenced_by": [
         "Mandatory Without Verification Is Not Enforced \u2014 Skill-Layer Instance of Infrastructure > Instructions",
@@ -31809,7 +32113,8 @@
     {
       "target": "Decision \u2014 LocalAI over Ollama / vLLM",
       "referenced_by": [
-        "Decision \u2014 Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)"
+        "Decision \u2014 Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)",
+        "Single-Active Backend with LRU Eviction"
       ]
     },
     {
@@ -31940,6 +32245,7 @@
         "Session 2026-04-17 Summary",
         "Agent Execution Cost Optimization Stack",
         "Profile as Coordination Bundle",
+        "Single-Active Backend with LRU Eviction",
         "Source \u2014 27 Questions to Ask Before Choosing an LLM",
         "Synthesis \u2014 AutoBE: Compiler-Verified Backend Generation",
         "Synthesis \u2014 Cline \u2014 Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP",
@@ -31980,6 +32286,12 @@
       "target": "Operations Plan \u2014 Second Brain Integration Chain",
       "referenced_by": [
         "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)"
+      ]
+    },
+    {
+      "target": "Operator-driven incident recovery (`aicp --retry-dlq`) + agent-driven recovery",
+      "referenced_by": [
+        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking"
       ]
     },
     {
@@ -32251,6 +32563,24 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "per-resource-class single-active runtime pattern",
+      "referenced_by": [
+        "Single-Active Backend with LRU Eviction"
+      ]
+    },
+    {
+      "target": "replayable workload shape",
+      "referenced_by": [
+        "Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking"
+      ]
+    },
+    {
+      "target": "vLLM-style \"one big instance per model\" \u2014 opposite tradeoff space",
+      "referenced_by": [
+        "Single-Active Backend with LRU Eviction"
       ]
     },
     {

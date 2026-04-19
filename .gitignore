@@ -42,3 +42,5 @@ wiki/patterns/pattern-*-+-*.md
 
 # Per-user Claude Code settings (allowlists, etc.)
 .claude/settings.local.json
+
+scheduled_tasks.lock

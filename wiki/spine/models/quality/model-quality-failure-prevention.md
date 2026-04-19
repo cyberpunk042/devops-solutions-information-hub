@@ -476,6 +476,8 @@ The community prompt patch project catalogued 11 specific Claude Code behaviors 
 [[model-sfif-architecture|Model — SFIF and Architecture]]
 [[never-present-speculation-as-fact|Never Present Speculation as Fact]]
 [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
+[[per-backend-circuit-breaker-with-failover-chain|Per-Backend Three-State Circuit Breaker with Failover-Chain Integration]]
+[[per-day-jsonl-dlq-with-retry-budget|Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]

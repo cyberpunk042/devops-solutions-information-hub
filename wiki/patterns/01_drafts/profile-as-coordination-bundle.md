@@ -172,3 +172,6 @@ The [[model-context-engineering|Model — Context Engineering]] tier system coor
 [[model-registry|Model Registry]]
 [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps]]
 [[localai-over-ollama-vllm-for-multi-model-orchestration|Decision — LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint]]
+[[per-backend-circuit-breaker-with-failover-chain|Per-Backend Three-State Circuit Breaker with Failover-Chain Integration]]
+[[per-day-jsonl-dlq-with-retry-budget|Per-Day JSONL Dead-Letter Queue with Retry Budget and Status Tracking]]
+[[single-active-backend-with-lru-eviction|Single-Active Backend with LRU Eviction]]

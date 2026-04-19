@@ -433,6 +433,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[second-brain-custom-model-strategy|Second-Brain Custom Model — Training Strategy and Roadmap]]
 [[2026-04-17-session-summary|Session 2026-04-17 Summary]]
+[[single-active-backend-with-lru-eviction|Single-Active Backend with LRU Eviction]]
 [[src-27-questions-llm-selection|Source — 27 Questions to Ask Before Choosing an LLM]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
