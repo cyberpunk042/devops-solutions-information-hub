@@ -171,6 +171,34 @@ Each lesson was extracted from a real operational failure in this wiki. Each map
 
 ---
 
+### The Inference-Layer Reliability Stack (AICP, NEW 2026-04-18/19)
+
+AICP instantiates the same three-lines-of-defense pattern at a different scope — **AI-inference backend reliability** rather than agent-behavior enforcement. Three first-class patterns compose into one stack:
+
+> [!info] **AICP's three-layer reliability composition** (complement to OpenFleet's doctor.py behavior layer)
+>
+> | Layer | Pattern | Code | What it handles |
+> |-------|---------|------|-----------------|
+> | **1 — Fast-fail per backend** | [[per-backend-circuit-breaker-with-failover-chain\|Per-Backend Circuit Breaker with Failover Chain]] | `aicp/core/circuit_breaker.py` (207 L) | Repeated synchronous-wait failures on a known-bad backend. CLOSED→OPEN→HALF_OPEN state machine; per-backend isolation; profile-tunable thresholds (default 3, reliable 2) |
+> | **2 — Cross-backend failover** | Controller failover chain | `aicp/core/controller.py` | `CircuitBreakerOpen` caught alongside generic `Exception` — same except clause advances to next backend (local → fleet → openrouter → claude). Quality-score escalation threshold triggers auto-retry on next tier |
+> | **3 — Durable persistence** | [[per-day-jsonl-dlq-with-retry-budget\|Per-Day JSONL DLQ with Retry Budget]] | `aicp/core/dlq.py` (260 L) | When failover chain exhausts: persist to `~/.aicp/dlq/<UTC-date>.jsonl` with full task context. Retry via `aicp --retry-dlq` CLI OR MCP `dlq_status` polling. Profile-tunable retries (default 3, reliable 5) |
+
+The stack composes with AICP's runtime substrate: [[single-active-backend-with-lru-eviction\|Single-Active Backend with LRU Eviction]] handles the VRAM-constrained model-loading layer; [[profile-as-coordination-bundle\|Profile as Coordination Bundle]] coordinates the ~12-setting reliability profile (circuit_breaker + warmup + dlq + reports) with one `make profile-use reliable` switch.
+
+**Evidence the three-lines pattern generalizes across failure domains:**
+
+| Scope | Agent-behavior layer (OpenFleet) | Inference-backend layer (AICP) |
+|-------|----------------------------------|--------------------------------|
+| Line 1 — Prevention | Stage-gated tools, contribution gating | Per-backend circuit breakers |
+| Line 2 — Detection | doctor.py cycle (30s, 10 rules) | Failover chain auto-escalation |
+| Line 3 — Correction | PRUNE/ESCALATE/quarantine | DLQ persistence + retry budget |
+
+Both **hide enforcement from the enforced entity** (agents don't see the doctor; inference callers don't see the breaker state). Both use **profile-tunable thresholds** per workload. Both **compose additively** — removing any layer leaves a known failure mode uncovered.
+
+This is the first ecosystem evidence that three-lines generalizes beyond a single failure domain. See [[three-lines-of-defense-immune-system-for-agent-quality\|Three Lines of Defense]] Instances section for the full cross-project comparison.
+
+---
+
 ### The Enforcement Level Hierarchy
 
 > [!info] **Enforcement levels — from hope to certainty**

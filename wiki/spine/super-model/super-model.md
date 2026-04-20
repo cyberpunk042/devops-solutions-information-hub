@@ -117,24 +117,24 @@ Each project adapts the super-model to its context. The second brain maintains a
 
 ## Current State — v2.0
 
-> [!abstract] System metrics (updated 2026-04-14)
+> [!abstract] System metrics (updated 2026-04-19)
 >
 > | Metric | Value |
 > |--------|-------|
-> | **Pages** | 317 |
-> | **Relationships** | 2,074+ |
+> | **Pages** | 391 |
+> | **Relationships** | 2,560+ |
 > | **Models** | 16 (+ 9 methodology models in methodology.yaml) |
-> | **Standards** | 22 (15 per-type + 7 model standards, all with annotated exemplars) |
-> | **Lessons** | 42+ validated (all with Self-Check sections) |
-> | **Patterns** | 16+ validated |
+> | **Standards** | 25 (per-type + per-model + gateway output contract) |
+> | **Lessons** | 44+ validated + 13 contributed (3 inbox pending review) |
+> | **Patterns** | 19+ validated + 11 in 01_drafts (5 new from AICP 2026-04-18/19) |
 > | **Principles** | 4 (Infrastructure > Instructions, Structured Context > Content, Goldilocks, Declarations Are Aspirational Until Verified) |
-> | **Decisions** | 16 validated |
-> | **Comparisons** | 5 |
-> | **Source syntheses** | 44+ (16 added 2026-04-14 batch) |
-> | **Ecosystem profiles** | 5 (OpenArms, OpenFleet, AICP, devops-control-plane, Research Wiki) |
-> | **Root-level docs** | 8 (README + AGENTS + CLAUDE + 5 thematic) |
+> | **Decisions** | 17+ validated + 8 in 01_drafts (7 new from AICP 2026-04-18/19) |
+> | **Source syntheses** | 48+ (4 added 2026-04-17: AirLLM, gpt-oss, Unsloth, Qwopus v3) |
+> | **Spine references** | 3 added 2026-04-17/18 (Open-Model Evaluation Framework, 2026 Consumer-Hardware AI Stack, Second-Brain Custom Model Strategy) |
+> | **Ecosystem profiles** | 5 (OpenArms, OpenFleet, AICP, devops-control-plane, Research Wiki) — all reconciled with consumer-property doctrine |
+> | **Cross-project contributions accepted** | 17 (OpenFleet: 5, AICP: 13, others: —) — 4-day window 2026-04-16→19 |
 > | **Validation errors** | 0 |
-> | **Lint issues** | 0 |
+> | **Lint issues** | 3 (pre-existing) |
 >
 > **v2.0 architecture:**
 > - 5 sub-super-models as navigation hubs (Goldilocks, Enforcement, Knowledge, Work Management, Integration)
