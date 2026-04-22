@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T16:17:20.097340+00:00",
+  "generated": "2026-04-22T16:22:48.049029+00:00",
   "stats": {
-    "pages": 433,
+    "pages": 439,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2696,
-    "tags_unique": 1246,
+    "relationships": 2713,
+    "tags_unique": 1258,
     "layers": {
       "3": 4,
       "6": 25,
@@ -2149,6 +2149,48 @@
       ]
     },
     {
+      "path": "backlog/modules/e010-m001-64gb-ram-install-and-verify.md",
+      "slug": "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "title": "E010 M001 \u2014 64 GB RAM Install and Verify (physical + WSL detection)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p0",
+        "e010",
+        "ram",
+        "hardware",
+        "wsl",
+        "memory",
+        "install"
+      ],
+      "sources": [
+        {
+          "id": "e010-storage-and-hardware-enablement",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E010-storage-and-hardware-enablement.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        }
+      ]
+    },
+    {
       "path": "backlog/modules/e010-m002-dev-sdd-mount-procedure.md",
       "slug": "backlog/modules/e010-m002-dev-sdd-mount-procedure",
       "title": "E010 M002 \u2014 /dev/sdd Mount Procedure (ext4 at /mnt/models)",
@@ -2185,6 +2227,112 @@
         {
           "verb": "PART OF",
           "target": "E010-storage-and-hardware-enablement"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e010-m003-storage-tiering-documentation.md",
+      "slug": "backlog/modules/e010-m003-storage-tiering-documentation",
+      "title": "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p0",
+        "e010",
+        "storage",
+        "tiering",
+        "documentation",
+        "reference",
+        "hardware-ground-truth"
+      ],
+      "sources": [
+        {
+          "id": "e010-storage-and-hardware-enablement",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E010-storage-and-hardware-enablement.md"
+        },
+        {
+          "id": "operator-hardware-ground-truth",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`wiki/spine/references/operator-workstation-storage-tiering.md`"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e010-m004-model-weights-inventory.md",
+      "slug": "backlog/modules/e010-m004-model-weights-inventory",
+      "title": "E010 M004 \u2014 Model Weights Inventory Tool and Manifest",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e010",
+        "inventory",
+        "models",
+        "weights",
+        "script",
+        "manifest",
+        "backup-strategy"
+      ],
+      "sources": [
+        {
+          "id": "e010-storage-and-hardware-enablement",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E010-storage-and-hardware-enablement.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`tools/inventory_models.sh`"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`wiki/spine/references/model-weights-manifest.md`"
         }
       ]
     },
@@ -2835,6 +2983,52 @@
         {
           "verb": "DEPENDS ON",
           "target": "T002-run-openrouter-smoke-tests"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive.md",
+      "slug": "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
+      "title": "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p0",
+        "e010",
+        "dev-sdd",
+        "blkid",
+        "fsck",
+        "non-destructive",
+        "pre-mount"
+      ],
+      "sources": [
+        {
+          "id": "e010-m002-dev-sdd-mount-procedure",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m002-dev-sdd-mount-procedure.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "T009-mount-dev-sdd-at-mnt-models"
         }
       ]
     },
@@ -3802,6 +3996,95 @@
         {
           "verb": "PART OF",
           "target": "E008-local-k2-6-offline-frontier-tier"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference.md",
+      "slug": "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "title": "T041 \u2014 Author operator-workstation-storage-tiering.md Reference Page",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p0",
+        "e010",
+        "reference",
+        "storage",
+        "disk-tiering",
+        "documentation",
+        "hardware-facts"
+      ],
+      "sources": [
+        {
+          "id": "e010-m003-storage-tiering-documentation",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m003-storage-tiering-documentation.md"
+        },
+        {
+          "id": "operator-hardware-ground-truth",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e010-m003-storage-tiering-documentation"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T043-author-inventory-models-script.md",
+      "slug": "backlog/tasks/T043-author-inventory-models-script",
+      "title": "T043 \u2014 Author tools/inventory_models.sh (idempotent, markdown + JSON)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e010",
+        "inventory",
+        "script",
+        "scaffold",
+        "models",
+        "markdown-output"
+      ],
+      "sources": [
+        {
+          "id": "e010-m004-model-weights-inventory",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m004-model-weights-inventory.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e010-m004-model-weights-inventory"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
         }
       ]
     },
@@ -29540,8 +29823,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 68,
-      "relationship_count": 284
+      "page_count": 74,
+      "relationship_count": 301
     },
     "cross-domain": {
       "page_count": 187,
@@ -29606,6 +29889,8 @@
     ],
     "models": [
       "backlog/epics/milestone-v2/e010-model-updates-all-15-models-reflect-current-knowledge",
+      "backlog/modules/e010-m004-model-weights-inventory",
+      "backlog/tasks/T043-author-inventory-models-script",
       "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
       "domains/cross-domain/model-composition-rules",
       "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
@@ -29972,6 +30257,7 @@
       "backlog/modules/e008-m003-first-light-benchmark",
       "backlog/modules/e008-m004-local-backend-adapter",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e010-m004-model-weights-inventory",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
@@ -29996,7 +30282,8 @@
       "backlog/tasks/T029-author-routing-review-ritual-standard",
       "backlog/tasks/T030-verify-cuda-toolchain",
       "backlog/tasks/T031-create-ktransformers-venv",
-      "backlog/tasks/T033-author-kt-smoke-script"
+      "backlog/tasks/T033-author-kt-smoke-script",
+      "backlog/tasks/T043-author-inventory-models-script"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -30368,8 +30655,12 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "backlog/modules/e010-m003-storage-tiering-documentation",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
-      "backlog/tasks/T003-harness-test-1-sanity"
+      "backlog/tasks/T003-harness-test-1-sanity",
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference"
     ],
     "openrouter": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
@@ -30471,15 +30762,19 @@
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
     ],
     "hardware": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify"
     ],
     "storage": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference"
     ],
     "ram": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify"
     ],
     "nvme": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -30487,6 +30782,7 @@
     ],
     "wsl": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure"
     ],
     "ext4": [
@@ -30495,13 +30791,15 @@
     ],
     "dev-sdd": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
     ],
     "vhdx": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
     ],
     "disk-tiering": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference"
     ],
     "complexity-scorer": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
@@ -30675,7 +30973,10 @@
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "backlog/modules/e008-m003-first-light-benchmark",
       "backlog/modules/e008-m004-local-backend-adapter",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/modules/e010-m004-model-weights-inventory",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
@@ -30717,6 +31018,7 @@
     ],
     "install": [
       "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/tasks/T011-install-huggingface-hub-cli"
     ],
     "cuda": [
@@ -30755,7 +31057,19 @@
       "backlog/modules/e008-m004-local-backend-adapter"
     ],
     "e010": [
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/modules/e010-m004-model-weights-inventory",
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "backlog/tasks/T043-author-inventory-models-script"
+    ],
+    "memory": [
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "domains/ai-agents/claude-code/claude-code-context-management",
+      "domains/ai-agents/orchestration/openclaw",
+      "sources/src-7-levels-claude-code-rag"
     ],
     "mount": [
       "backlog/modules/e010-m002-dev-sdd-mount-procedure"
@@ -30765,6 +31079,57 @@
     ],
     "sudo": [
       "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "tiering": [
+      "backlog/modules/e010-m003-storage-tiering-documentation"
+    ],
+    "documentation": [
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
+      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
+      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
+      "spine/references/frontmatter-field-reference",
+      "spine/references/gateway-tools-reference",
+      "spine/references/root-documentation-map"
+    ],
+    "reference": [
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "domains/cross-domain/mcp-runtime-signaling",
+      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
+      "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
+      "spine/goldilocks-flow",
+      "spine/references/consumer-integration-roadmap-exemplar",
+      "spine/references/context-file-taxonomy",
+      "spine/references/frontmatter-field-reference",
+      "spine/references/gateway-tools-reference",
+      "spine/references/methodology-system-map",
+      "spine/references/open-model-evaluation-framework",
+      "spine/references/root-documentation-map",
+      "spine/standards/reference-page-standards"
+    ],
+    "hardware-ground-truth": [
+      "backlog/modules/e010-m003-storage-tiering-documentation"
+    ],
+    "inventory": [
+      "backlog/modules/e010-m004-model-weights-inventory",
+      "backlog/tasks/T043-author-inventory-models-script"
+    ],
+    "weights": [
+      "backlog/modules/e010-m004-model-weights-inventory"
+    ],
+    "script": [
+      "backlog/modules/e010-m004-model-weights-inventory",
+      "backlog/tasks/T033-author-kt-smoke-script",
+      "backlog/tasks/T043-author-inventory-models-script"
+    ],
+    "manifest": [
+      "backlog/modules/e010-m004-model-weights-inventory"
+    ],
+    "backup-strategy": [
+      "backlog/modules/e010-m004-model-weights-inventory"
     ],
     "e011": [
       "backlog/modules/e011-m001-tier-definitions-update",
@@ -30945,6 +31310,7 @@
     "task": [
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
@@ -30965,6 +31331,8 @@
       "backlog/tasks/T030-verify-cuda-toolchain",
       "backlog/tasks/T031-create-ktransformers-venv",
       "backlog/tasks/T033-author-kt-smoke-script",
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "backlog/tasks/T043-author-inventory-models-script",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -30981,6 +31349,18 @@
     ],
     "gpt": [
       "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "blkid": [
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
+    ],
+    "fsck": [
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
+    ],
+    "non-destructive": [
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
+    ],
+    "pre-mount": [
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
     ],
     "huggingface": [
       "backlog/tasks/T011-install-huggingface-hub-cli"
@@ -31067,15 +31447,6 @@
       "backlog/tasks/T026-document-aicp-fallback-chain-standard",
       "backlog/tasks/T029-author-routing-review-ritual-standard"
     ],
-    "documentation": [
-      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
-      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
-      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
-      "spine/references/frontmatter-field-reference",
-      "spine/references/gateway-tools-reference",
-      "spine/references/root-documentation-map"
-    ],
     "wiki-page": [
       "backlog/tasks/T026-document-aicp-fallback-chain-standard"
     ],
@@ -31124,17 +31495,21 @@
     "isolation": [
       "backlog/tasks/T031-create-ktransformers-venv"
     ],
-    "script": [
-      "backlog/tasks/T033-author-kt-smoke-script"
-    ],
     "scaffold": [
       "backlog/tasks/T033-author-kt-smoke-script",
+      "backlog/tasks/T043-author-inventory-models-script",
       "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts",
       "domains/devops/stage-gate-methodology",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "kt-smoke": [
       "backlog/tasks/T033-author-kt-smoke-script"
+    ],
+    "hardware-facts": [
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference"
+    ],
+    "markdown-output": [
+      "backlog/tasks/T043-author-inventory-models-script"
     ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
@@ -32033,11 +32408,6 @@
       "domains/ai-agents/claude-code/claude-code-context-management",
       "sources/claude-code/src-token-hacks-claude-code"
     ],
-    "memory": [
-      "domains/ai-agents/claude-code/claude-code-context-management",
-      "domains/ai-agents/orchestration/openclaw",
-      "sources/src-7-levels-claude-code-rag"
-    ],
     "context-engineering": [
       "domains/ai-agents/claude-code/claude-code-context-management",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -32580,20 +32950,6 @@
     ],
     "systems-course": [
       "domains/cross-domain/integration/skyscraper-pyramid-mountain"
-    ],
-    "reference": [
-      "domains/cross-domain/mcp-runtime-signaling",
-      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
-      "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
-      "spine/goldilocks-flow",
-      "spine/references/consumer-integration-roadmap-exemplar",
-      "spine/references/context-file-taxonomy",
-      "spine/references/frontmatter-field-reference",
-      "spine/references/gateway-tools-reference",
-      "spine/references/methodology-system-map",
-      "spine/references/open-model-evaluation-framework",
-      "spine/references/root-documentation-map",
-      "spine/standards/reference-page-standards"
     ],
     "runtime-signaling": [
       "domains/cross-domain/mcp-runtime-signaling"
@@ -35559,6 +35915,7 @@
         "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
         "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
         "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+        "E010 M001 \u2014 64 GB RAM Install and Verify (physical + WSL detection)",
         "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)",
         "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
         "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
@@ -35578,7 +35935,13 @@
         "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
         "E012 \u2014 Custom Model Library (Unsloth LoRAs on Wiki Corpus)",
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
-        "E010 M002 \u2014 /dev/sdd Mount Procedure (ext4 at /mnt/models)"
+        "E010 M001 \u2014 64 GB RAM Install and Verify (physical + WSL detection)",
+        "E010 M002 \u2014 /dev/sdd Mount Procedure (ext4 at /mnt/models)",
+        "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
+        "E010 M004 \u2014 Model Weights Inventory Tool and Manifest",
+        "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)",
+        "T041 \u2014 Author operator-workstation-storage-tiering.md Reference Page",
+        "T043 \u2014 Author tools/inventory_models.sh (idempotent, markdown + JSON)"
       ]
     },
     {
@@ -36044,6 +36407,12 @@
       ]
     },
     {
+      "target": "T009-mount-dev-sdd-at-mnt-models",
+      "referenced_by": [
+        "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)"
+      ]
+    },
+    {
       "target": "T014-add-k2-6-backend-entries-to-default-yaml",
       "referenced_by": [
         "T015 \u2014 Extend router.py Complexity-to-Tier Mapping for 5 Tiers",
@@ -36139,6 +36508,24 @@
       ]
     },
     {
+      "target": "`tools/inventory_models.sh`",
+      "referenced_by": [
+        "E010 M004 \u2014 Model Weights Inventory Tool and Manifest"
+      ]
+    },
+    {
+      "target": "`wiki/spine/references/model-weights-manifest.md`",
+      "referenced_by": [
+        "E010 M004 \u2014 Model Weights Inventory Tool and Manifest"
+      ]
+    },
+    {
+      "target": "`wiki/spine/references/operator-workstation-storage-tiering.md`",
+      "referenced_by": [
+        "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)"
+      ]
+    },
+    {
       "target": "e007-m002-harness-interactive-validation",
       "referenced_by": [
         "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
@@ -36160,6 +36547,7 @@
       "referenced_by": [
         "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
         "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+        "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
         "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
         "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)"
       ]
@@ -36182,7 +36570,22 @@
     {
       "target": "e010-m002-dev-sdd-mount-procedure",
       "referenced_by": [
-        "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify"
+        "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
+        "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
+        "E010 M004 \u2014 Model Weights Inventory Tool and Manifest",
+        "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)"
+      ]
+    },
+    {
+      "target": "e010-m003-storage-tiering-documentation",
+      "referenced_by": [
+        "T041 \u2014 Author operator-workstation-storage-tiering.md Reference Page"
+      ]
+    },
+    {
+      "target": "e010-m004-model-weights-inventory",
+      "referenced_by": [
+        "T043 \u2014 Author tools/inventory_models.sh (idempotent, markdown + JSON)"
       ]
     },
     {
