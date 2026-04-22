@@ -18,6 +18,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 
 | Milestone | Target | Status | Epics |
 |-----------|--------|--------|-------|
+| [Milestone: Post-Anthropic Self-Autonomous AI Stack](milestones/post-anthropic-self-autonomous-stack.md) | 2026-04-27 | draft | E007, E008, E009, E010, E011, E012 |
 | [Milestone — Second Brain Complete System — v2.0](milestones/second-brain-complete-system-v2-0.md) | 2026-05-15 | draft | E010, E011, E012, E013, E014, E015, E016, E017, E018, E019, E020, E021, E022, E023 |
 
 ## Epics
@@ -44,6 +45,12 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E004 | [Portable Methodology Engine](epics/pre-milestone/E004-portable-methodology-engine.md) | P0 | in-progress | 15 |
 | E005 | [Agent Compliance Framework](epics/pre-milestone/E005-agent-compliance-framework.md) | P0 | in-progress | 55 |
 | E006 | [Standards-by-Example](epics/pre-milestone/E006-standards-by-example.md) | P1 | in-progress | 70 |
+| E007 | [E007 — OpenRouter Deadline De-Risk (Claude Code CLI → K2.6)](epics/pre-milestone/E007-openrouter-deadline-de-risk.md) | P0 | in-progress | 75 |
+| E008 | [E008 — Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)](epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md) | P1 | draft | 20 |
+| E009 | [E009 — Harness Neutrality (OpenCode as Second Consumer)](epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md) | P1 | draft | 15 |
+| E010 | [E010 — Storage and Hardware Enablement (64 GB RAM + /dev/sdd + tiering)](epics/pre-milestone/E010-storage-and-hardware-enablement.md) | P0 | draft | 25 |
+| E011 | [E011 — Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)](epics/pre-milestone/E011-routing-integration-aicp-tiers.md) | P1 | draft | 10 |
+| E012 | [E012 — Custom Model Library (Unsloth LoRAs on Wiki Corpus)](epics/pre-milestone/E012-custom-model-library-unsloth-loras.md) | P2 | draft | 5 |
 | SDLC | [SDLC Rules and Structure — Customizable Project Lifecycle](epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md) | P0 | draft | 10 |
 | WIKI | [Wiki Gateway Tools — Unified Knowledge Interface](epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface.md) | P0 | draft | 5 |
 

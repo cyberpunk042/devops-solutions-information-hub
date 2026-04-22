@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T14:26:25.936551+00:00",
+  "generated": "2026-04-22T16:06:31.996481+00:00",
   "stats": {
-    "pages": 393,
+    "pages": 413,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2571,
-    "tags_unique": 1169,
+    "relationships": 2639,
+    "tags_unique": 1216,
     "layers": {
       "3": 4,
       "6": 25,
@@ -1229,6 +1229,352 @@
       ]
     },
     {
+      "path": "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk.md",
+      "slug": "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "title": "E007 \u2014 OpenRouter Deadline De-Risk (Claude Code CLI \u2192 K2.6)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "in-progress",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "epic",
+        "p0",
+        "openrouter",
+        "kimi-k2-6",
+        "claude-code-cli",
+        "harness",
+        "subscription-deadline",
+        "deadline-2026-04-27",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        },
+        {
+          "id": "src-kimi-k2-6-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md",
+          "title": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "id": "openrouter-claude-code-docs",
+          "type": "api-documentation",
+          "url": "https://openrouter.ai/docs/guides/coding-agents/claude-code-integration",
+          "title": "OpenRouter \u2014 Claude Code Integration",
+          "ingested": "2026-04-22"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md",
+      "slug": "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "title": "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "epic",
+        "p1",
+        "kimi-k2-6",
+        "ktransformers",
+        "offline",
+        "local-inference",
+        "gguf",
+        "moe",
+        "disk-offload",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        },
+        {
+          "id": "src-kimi-k2-6-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md",
+          "title": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "id": "src-airllm-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md",
+          "title": "Synthesis \u2014 AirLLM"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 AirLLM"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md",
+      "slug": "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "title": "E009 \u2014 Harness Neutrality (OpenCode as Second Consumer)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "epic",
+        "p1",
+        "harness",
+        "opencode",
+        "harness-neutral",
+        "consumer-property-doctrine",
+        "skills-portability",
+        "mcp",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E007-openrouter-deadline-de-risk"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement.md",
+      "slug": "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "title": "E010 \u2014 Storage and Hardware Enablement (64 GB RAM + /dev/sdd + tiering)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "epic",
+        "p0",
+        "hardware",
+        "storage",
+        "ram",
+        "nvme",
+        "wsl",
+        "ext4",
+        "dev-sdd",
+        "vhdx",
+        "disk-tiering",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers.md",
+      "slug": "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "title": "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "epic",
+        "p1",
+        "aicp",
+        "routing",
+        "complexity-scorer",
+        "tiers",
+        "k2-6",
+        "openrouter",
+        "local-inference",
+        "circuit-breaker",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        },
+        {
+          "id": "model-local-ai",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-local-ai.md",
+          "title": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "id": "2026-consumer-hardware-stack",
+          "type": "wiki",
+          "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
+          "title": "2026 Consumer-Hardware AI Stack"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E007-openrouter-deadline-de-risk"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer-Hardware AI Stack"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md",
+      "slug": "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "title": "E012 \u2014 Custom Model Library (Unsloth LoRAs on Wiki Corpus)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "epic",
+        "p2",
+        "custom-models",
+        "unsloth",
+        "lora",
+        "fine-tuning",
+        "wiki-assistant",
+        "wiki-router",
+        "multi-lora",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md",
+          "title": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "id": "src-unsloth-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "title": "Synthesis \u2014 Unsloth"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "E007-openrouter-deadline-de-risk"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Unsloth"
+        }
+      ]
+    },
+    {
       "path": "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md",
       "slug": "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "title": "SDLC Rules and Structure \u2014 Customizable Project Lifecycle",
@@ -1358,6 +1704,108 @@
       ]
     },
     {
+      "path": "backlog/milestones/post-anthropic-self-autonomous-stack.md",
+      "slug": "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "title": "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+      "type": "milestone",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "milestone",
+        "self-autonomous",
+        "post-anthropic",
+        "kimi-k2-6",
+        "openrouter",
+        "harness-neutral",
+        "5-day-plan",
+        "p0"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        },
+        {
+          "id": "src-kimi-k2-6-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md",
+          "title": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "id": "2026-consumer-hardware-stack",
+          "type": "wiki",
+          "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
+          "title": "The 2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "id": "model-local-ai",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-local-ai.md",
+          "title": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md",
+          "title": "Second-Brain Custom Model Strategy"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "CONTAINS",
+          "target": "E007-openrouter-deadline-de-risk"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E009-harness-neutrality-and-openCode-parity"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E010-storage-and-hardware-enablement"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "CONTAINS",
+          "target": "E012-custom-model-library-unsloth-loras"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "The 2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "backlog/milestones/second-brain-complete-system-v2-0.md",
       "slug": "backlog/milestones/second-brain-complete-system-v2-0",
       "title": "Milestone \u2014 Second Brain Complete System \u2014 v2.0",
@@ -1448,6 +1896,455 @@
         {
           "verb": "BUILDS ON",
           "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e007-m002-harness-interactive-validation.md",
+      "slug": "backlog/modules/e007-m002-harness-interactive-validation",
+      "title": "E007 M002 \u2014 Harness Interactive Validation (Tests 1-5)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p0",
+        "e007",
+        "harness-test",
+        "interactive",
+        "tool-use",
+        "claude-code-cli",
+        "openrouter",
+        "kimi-k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e007-openrouter-deadline-de-risk",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk.md"
+        },
+        {
+          "id": "day-1-setup-procedure",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-22-openrouter-k2-6-day-1-setup-procedure.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E007-openrouter-deadline-de-risk"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify.md",
+      "slug": "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "title": "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e008",
+        "gguf",
+        "kimi-k2-6",
+        "download",
+        "hf",
+        "unsloth",
+        "storage"
+      ],
+      "sources": [
+        {
+          "id": "e008-local-k2-6-offline-frontier-tier",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md"
+        },
+        {
+          "id": "unsloth-k2-6-gguf",
+          "type": "repository",
+          "url": "https://huggingface.co/unsloth/Kimi-K2.6-GGUF",
+          "title": "unsloth/Kimi-K2.6-GGUF \u2014 Hugging Face"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e010-m002-dev-sdd-mount-procedure.md",
+      "slug": "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "title": "E010 M002 \u2014 /dev/sdd Mount Procedure (ext4 at /mnt/models)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e010",
+        "dev-sdd",
+        "ext4",
+        "mount",
+        "fstab",
+        "wsl",
+        "storage",
+        "sudo"
+      ],
+      "sources": [
+        {
+          "id": "e010-storage-and-hardware-enablement",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E010-storage-and-hardware-enablement.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E010-storage-and-hardware-enablement"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e011-m001-tier-definitions-update.md",
+      "slug": "backlog/modules/e011-m001-tier-definitions-update",
+      "title": "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e011",
+        "aicp",
+        "tier-config",
+        "router",
+        "complexity-scorer",
+        "k2-6",
+        "default-yaml"
+      ],
+      "sources": [
+        {
+          "id": "e011-routing-integration-aicp-tiers",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers.md"
+        },
+        {
+          "id": "aicp-default-config",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/config/default.yaml"
+        },
+        {
+          "id": "aicp-router",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/router.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e007-m002-harness-interactive-validation"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m003-k2-6-local-backend-adapter"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter.md",
+      "slug": "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "title": "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e011",
+        "aicp",
+        "openrouter",
+        "k2-6",
+        "backend",
+        "adapter",
+        "reuse"
+      ],
+      "sources": [
+        {
+          "id": "e011-routing-integration-aicp-tiers",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers.md"
+        },
+        {
+          "id": "aicp-openrouter-backend",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/backends/openrouter.py"
+        },
+        {
+          "id": "aicp-cli-main",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/cli/main.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e011-m001-tier-definitions-update"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m005-routing-metric-and-review-ritual"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e011-m003-k2-6-local-backend-adapter.md",
+      "slug": "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "title": "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e011",
+        "aicp",
+        "k2-6",
+        "local",
+        "ktransformers",
+        "localai",
+        "backend",
+        "adapter"
+      ],
+      "sources": [
+        {
+          "id": "e011-routing-integration-aicp-tiers",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers.md"
+        },
+        {
+          "id": "e008-local-k2-6-offline-frontier-tier",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md"
+        },
+        {
+          "id": "aicp-localai-backend",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/backends/localai.py"
+        },
+        {
+          "id": "ktransformers-readme",
+          "type": "repository",
+          "url": "https://github.com/kvcache-ai/ktransformers",
+          "title": "KTransformers \u2014 MoE disk-offload inference"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e011-m001-tier-definitions-update"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain.md",
+      "slug": "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "title": "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e011",
+        "aicp",
+        "circuit-breaker",
+        "failover",
+        "reliability",
+        "k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e011-routing-integration-aicp-tiers",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers.md"
+        },
+        {
+          "id": "aicp-circuit-breaker",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/circuit_breaker.py"
+        },
+        {
+          "id": "aicp-controller",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/controller.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e011-m003-k2-6-local-backend-adapter"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m005-routing-metric-and-review-ritual"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e011-m005-routing-metric-and-review-ritual.md",
+      "slug": "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "title": "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e011",
+        "aicp",
+        "metrics",
+        "prometheus",
+        "observability",
+        "ritual",
+        "review"
+      ],
+      "sources": [
+        {
+          "id": "e011-routing-integration-aicp-tiers",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers.md"
+        },
+        {
+          "id": "aicp-prometheus",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/prometheus.py"
+        },
+        {
+          "id": "aicp-metrics",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/metrics.py"
+        },
+        {
+          "id": "aicp-history",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/history.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`wiki/spine/standards/routing-review-ritual.md`"
         }
       ]
     },
@@ -1693,6 +2590,249 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 Local Model vs Cloud API for Routine Operations"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T002-run-openrouter-smoke-tests.md",
+      "slug": "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "title": "T002 \u2014 Run OpenRouter Smoke Tests (K2.6 + Opus + GPT-5.4)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "done",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p0",
+        "done",
+        "e007",
+        "smoke-test",
+        "openrouter",
+        "kimi-k2-6",
+        "opus",
+        "gpt"
+      ],
+      "sources": [
+        {
+          "id": "e007-m002-harness-interactive-validation",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e007-m002-harness-interactive-validation.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E007-openrouter-deadline-de-risk"
+        },
+        {
+          "verb": "PART OF",
+          "target": "e007-m002-harness-interactive-validation"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T003-harness-test-1-sanity.md",
+      "slug": "backlog/tasks/T003-harness-test-1-sanity",
+      "title": "T003 \u2014 Harness Test 1: `/status` + Identity + Simple Tool Use",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p0",
+        "e007",
+        "harness-test",
+        "interactive",
+        "claude-code-cli",
+        "tool-use"
+      ],
+      "sources": [
+        {
+          "id": "e007-m002-harness-interactive-validation",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e007-m002-harness-interactive-validation.md"
+        },
+        {
+          "id": "day-1-setup-procedure",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-22-openrouter-k2-6-day-1-setup-procedure.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e007-m002-harness-interactive-validation"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E007-openrouter-deadline-de-risk"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T002-run-openrouter-smoke-tests"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml.md",
+      "slug": "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "title": "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "config",
+        "default-yaml",
+        "k2-6",
+        "tier",
+        "openrouter",
+        "local"
+      ],
+      "sources": [
+        {
+          "id": "e011-m001-tier-definitions-update",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m001-tier-definitions-update.md"
+        },
+        {
+          "id": "aicp-default-config",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/config/default.yaml"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m001-tier-definitions-update"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T017-parameterize-openrouter-backend-config-key.md",
+      "slug": "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "title": "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "openrouter",
+        "backend",
+        "refactor",
+        "k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e011-m002-k2-6-openrouter-backend-adapter",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m002-k2-6-openrouter-backend-adapter.md"
+        },
+        {
+          "id": "aicp-openrouter-backend",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/backends/openrouter.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T014-add-k2-6-backend-entries-to-default-yaml"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main.md",
+      "slug": "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "title": "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "cli",
+        "backend-registration",
+        "k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e011-m002-k2-6-openrouter-backend-adapter",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m002-k2-6-openrouter-backend-adapter.md"
+        },
+        {
+          "id": "aicp-cli-main",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/cli/main.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T017-parameterize-openrouter-backend-config-key"
         }
       ]
     },
@@ -27431,8 +28571,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 28,
-      "relationship_count": 159
+      "page_count": 48,
+      "relationship_count": 227
     },
     "cross-domain": {
       "page_count": 187,
@@ -27483,6 +28623,12 @@
       "backlog/epics/milestone-v2/e021-new-source-ingestion-10-15-sources-through-full-pipeline",
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -27715,6 +28861,7 @@
     ],
     "routing": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/src-anthropic-building-effective-ai-agents",
@@ -27747,6 +28894,7 @@
     ],
     "mcp": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
@@ -27845,7 +28993,20 @@
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
     ],
     "p1": [
-      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -27862,7 +29023,8 @@
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
     ],
     "p2": [
-      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
+      "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
     ],
     "follow-on": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
@@ -27872,11 +29034,22 @@
     ],
     "local-inference": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/tasks/T001-test-openai-backend"
     ],
     "aicp": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
@@ -27907,6 +29080,7 @@
     ],
     "localai": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "domains/tools-and-platforms/aicp",
@@ -28185,6 +29359,193 @@
     "self-validation": [
       "backlog/epics/pre-milestone/E006-standards-by-example"
     ],
+    "p0": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "backlog/tasks/T003-harness-test-1-sanity"
+    ],
+    "openrouter": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "kimi-k2-6": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
+    ],
+    "claude-code-cli": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/tasks/T003-harness-test-1-sanity"
+    ],
+    "harness": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
+      "decisions/02_validated/tools/extension-system-operational-decisions",
+      "domains/cross-domain/mcp-runtime-signaling",
+      "domains/cross-domain/methodology-framework/three-pm-levels",
+      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "patterns/03_validated/architecture/deterministic-shell-llm-core",
+      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "spine/models/quality/model-quality-failure-prevention",
+      "spine/standards/model-standards/model-claude-code-standards"
+    ],
+    "subscription-deadline": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk"
+    ],
+    "deadline-2026-04-27": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk"
+    ],
+    "post-anthropic": [
+      "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/milestones/post-anthropic-self-autonomous-stack"
+    ],
+    "ktransformers": [
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "offline": [
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier"
+    ],
+    "gguf": [
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "moe": [
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "domains/ai-models/local-llm-quantization",
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-turboquant-122b-macbook"
+    ],
+    "disk-offload": [
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier"
+    ],
+    "opencode": [
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
+    ],
+    "harness-neutral": [
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/milestones/post-anthropic-self-autonomous-stack"
+    ],
+    "consumer-property-doctrine": [
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
+    ],
+    "skills-portability": [
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
+    ],
+    "hardware": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+    ],
+    "storage": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "ram": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+    ],
+    "nvme": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
+    "wsl": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "ext4": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "dev-sdd": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "vhdx": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+    ],
+    "disk-tiering": [
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+    ],
+    "complexity-scorer": [
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e011-m001-tier-definitions-update"
+    ],
+    "tiers": [
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "spine/models/depth/model-context-engineering"
+    ],
+    "k2-6": [
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "circuit-breaker": [
+      "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "domains/tools-and-platforms/aicp",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
+    ],
+    "custom-models": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+    ],
+    "unsloth": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "lora": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/second-brain-custom-model-strategy"
+    ],
+    "fine-tuning": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/second-brain-custom-model-strategy"
+    ],
+    "wiki-assistant": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+    ],
+    "wiki-router": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+    ],
+    "multi-lora": [
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+    ],
     "sdlc": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "domains/ai-agents/patterns/spec-driven-development",
@@ -28213,18 +29574,6 @@
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/cross-domain/methodology-framework/sdlc-customization-framework"
-    ],
-    "harness": [
-      "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
-      "decisions/02_validated/tools/extension-system-operational-decisions",
-      "domains/cross-domain/mcp-runtime-signaling",
-      "domains/cross-domain/methodology-framework/three-pm-levels",
-      "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
-      "patterns/03_validated/architecture/deterministic-shell-llm-core",
-      "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
-      "spine/models/quality/model-quality-failure-prevention",
-      "spine/standards/model-standards/model-claude-code-standards"
     ],
     "pm-levels": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
@@ -28286,18 +29635,143 @@
       "domains/cross-domain/methodology-artifacts/categories/deployment-closure-monitoring-artifacts"
     ],
     "milestone": [
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/milestones/second-brain-complete-system-v2-0",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task"
+    ],
+    "self-autonomous": [
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
+    ],
+    "5-day-plan": [
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
     ],
     "complete-system": [
       "backlog/milestones/second-brain-complete-system-v2-0"
     ],
     "module": [
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix"
+    ],
+    "e007": [
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "backlog/tasks/T003-harness-test-1-sanity"
+    ],
+    "harness-test": [
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/tasks/T003-harness-test-1-sanity"
+    ],
+    "interactive": [
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/tasks/T003-harness-test-1-sanity"
+    ],
+    "tool-use": [
+      "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/tasks/T003-harness-test-1-sanity",
+      "sources/src-claude-agent-sdk-and-managed-agents"
+    ],
+    "e008": [
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
+    ],
+    "download": [
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
+    ],
+    "hf": [
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
+    ],
+    "e010": [
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "mount": [
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "fstab": [
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "sudo": [
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+    ],
+    "e011": [
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main"
+    ],
+    "tier-config": [
+      "backlog/modules/e011-m001-tier-definitions-update"
+    ],
+    "router": [
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
+    ],
+    "default-yaml": [
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
+    ],
+    "backend": [
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "adapter": [
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "reuse": [
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter"
+    ],
+    "local": [
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
+    ],
+    "failover": [
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
+    ],
+    "reliability": [
+      "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
+      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
+      "patterns/03_validated/architecture/deterministic-shell-llm-core"
+    ],
+    "metrics": [
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
+      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
+    ],
+    "prometheus": [
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual"
+    ],
+    "observability": [
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "patterns/01_drafts/observe-fix-verify-loop"
+    ],
+    "ritual": [
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual"
+    ],
+    "review": [
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/operator-decision-queue"
     ],
     "orient": [
       "backlog/modules/e022-m002-gateway-orient-subcommand"
@@ -28343,9 +29817,6 @@
     "operator": [
       "backlog/operator-decision-queue"
     ],
-    "review": [
-      "backlog/operator-decision-queue"
-    ],
     "queue": [
       "backlog/operator-decision-queue"
     ],
@@ -28382,6 +29853,61 @@
     ],
     "blocked": [
       "backlog/tasks/T001-test-openai-backend"
+    ],
+    "task": [
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "backlog/tasks/T003-harness-test-1-sanity",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
+      "domains/devops/backlog-hierarchy-rules",
+      "domains/devops/task-type-artifact-matrix",
+      "spine/standards/task-page-standards"
+    ],
+    "done": [
+      "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "smoke-test": [
+      "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "opus": [
+      "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "gpt": [
+      "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "config": [
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "domains/cross-domain/methodology-framework/methodology-config-architecture",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
+    ],
+    "tier": [
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
+    ],
+    "refactor": [
+      "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "domains/devops/task-type-artifact-matrix"
+    ],
+    "cli": [
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
+      "domains/tools-and-platforms/notebooklm-py-cli",
+      "domains/tools-and-platforms/obsidian-cli",
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/claude-code/src-claude-slash-commands",
+      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "spine/models/ecosystem/model-mcp-cli-integration",
+      "spine/references/gateway-tools-reference"
+    ],
+    "backend-registration": [
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main"
     ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
@@ -28671,9 +30197,6 @@
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "spine/standards/decision-page-standards"
-    ],
-    "router": [
-      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
     ],
     "profiles": [
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
@@ -29072,12 +30595,6 @@
       "domains/devops/backlog-hierarchy-rules",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
-    "task": [
-      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
-      "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/task-type-artifact-matrix",
-      "spine/standards/task-page-standards"
-    ],
     "work-management": [
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/cross-domain/methodology-framework/readiness-vs-progress"
@@ -29128,21 +30645,6 @@
     ],
     "wiki-pipeline": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
-    ],
-    "cli": [
-      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
-      "domains/tools-and-platforms/notebooklm-py-cli",
-      "domains/tools-and-platforms/obsidian-cli",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem",
-      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "sources/claude-code/src-claude-slash-commands",
-      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/src-vercel-opensrc-toolkit",
-      "sources/tools-integration/src-playwright-cli-vs-mcp",
-      "spine/models/ecosystem/model-mcp-cli-integration",
-      "spine/references/gateway-tools-reference"
     ],
     "tool-integration": [
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
@@ -29729,13 +31231,6 @@
       "domains/ai-models/local-llm-quantization",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
-    "moe": [
-      "domains/ai-models/local-llm-quantization",
-      "sources/src-llm-architecture-gallery-raschka",
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "sources/tools-integration/src-turboquant-122b-macbook"
-    ],
     "turboquant": [
       "domains/ai-models/local-llm-quantization",
       "sources/tools-integration/src-turboquant-122b-macbook"
@@ -30042,11 +31537,6 @@
     "cloudevents": [
       "domains/cross-domain/methodology-framework/global-standards-adherence"
     ],
-    "config": [
-      "domains/cross-domain/methodology-framework/methodology-config-architecture",
-      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
-    ],
     "flexible-model": [
       "domains/cross-domain/methodology-framework/methodology-config-architecture"
     ],
@@ -30277,9 +31767,6 @@
       "domains/devops/task-type-artifact-matrix"
     ],
     "docs": [
-      "domains/devops/task-type-artifact-matrix"
-    ],
-    "refactor": [
       "domains/devops/task-type-artifact-matrix"
     ],
     "stage-requirements": [
@@ -30520,10 +32007,6 @@
     ],
     "think-edit-act": [
       "domains/tools-and-platforms/aicp"
-    ],
-    "circuit-breaker": [
-      "domains/tools-and-platforms/aicp",
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
     ],
     "fleet-integration": [
       "domains/tools-and-platforms/aicp",
@@ -31388,19 +32871,6 @@
       "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework"
     ],
-    "openrouter": [
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
-    "kimi-k2-6": [
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
-    ],
-    "self-autonomous": [
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
-    ],
-    "5-day-plan": [
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
-    ],
     "poc": [
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
@@ -31453,10 +32923,6 @@
     "naming": [
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code"
     ],
-    "metrics": [
-      "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
-      "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
-    ],
     "escalation": [
       "patterns/01_drafts/block-with-reason-and-justified-escalation"
     ],
@@ -31484,23 +32950,8 @@
     "autonomous-agent": [
       "patterns/01_drafts/observe-fix-verify-loop"
     ],
-    "observability": [
-      "patterns/01_drafts/observe-fix-verify-loop"
-    ],
     "correction-cycle": [
       "patterns/01_drafts/observe-fix-verify-loop"
-    ],
-    "reliability": [
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
-      "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
-      "patterns/03_validated/architecture/deterministic-shell-llm-core"
-    ],
-    "failover": [
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
-    ],
-    "backend": [
-      "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
-      "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
     "state-machine": [
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
@@ -31576,9 +33027,6 @@
     ],
     "authority": [
       "patterns/01_drafts/three-permission-modes-think-edit-act"
-    ],
-    "adapter": [
-      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
     ],
     "receipt": [
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
@@ -31771,10 +33219,6 @@
     ],
     "orchestrator": [
       "sources/ecosystem-projects/src-openfleet-fleet-architecture"
-    ],
-    "tiers": [
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
-      "spine/models/depth/model-context-engineering"
     ],
     "contributions": [
       "sources/ecosystem-projects/src-openfleet-fleet-architecture"
@@ -32066,9 +33510,6 @@
     "managed-agents": [
       "sources/src-claude-agent-sdk-and-managed-agents"
     ],
-    "tool-use": [
-      "sources/src-claude-agent-sdk-and-managed-agents"
-    ],
     "permissions": [
       "sources/src-claude-agent-sdk-and-managed-agents"
     ],
@@ -32268,10 +33709,6 @@
     "claude-opus": [
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
-    "gguf": [
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
     "structural-alignment": [
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
@@ -32342,9 +33779,6 @@
     "ssd-offload": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
-    "nvme": [
-      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
-    ],
     "batch-inference": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
@@ -32385,9 +33819,6 @@
     "kimi": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
-    "k2-6": [
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
     "moonshot": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
@@ -32404,9 +33835,6 @@
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "multimodal": [
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
-    ],
-    "ktransformers": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "qa-automation": [
@@ -32432,17 +33860,6 @@
     ],
     "122b-parameters": [
       "sources/tools-integration/src-turboquant-122b-macbook"
-    ],
-    "unsloth": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
-    ],
-    "lora": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
-      "spine/references/second-brain-custom-model-strategy"
-    ],
-    "fine-tuning": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
-      "spine/references/second-brain-custom-model-strategy"
     ],
     "training": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
@@ -32789,6 +34206,7 @@
     {
       "target": "2026 Consumer-Hardware AI Stack",
       "referenced_by": [
+        "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
         "Session 2026-04-17 Summary",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
@@ -32937,6 +34355,62 @@
       ]
     },
     {
+      "target": "E007-openrouter-deadline-de-risk",
+      "referenced_by": [
+        "E009 \u2014 Harness Neutrality (OpenCode as Second Consumer)",
+        "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
+        "E012 \u2014 Custom Model Library (Unsloth LoRAs on Wiki Corpus)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "E007 M002 \u2014 Harness Interactive Validation (Tests 1-5)",
+        "T002 \u2014 Run OpenRouter Smoke Tests (K2.6 + Opus + GPT-5.4)",
+        "T003 \u2014 Harness Test 1: `/status` + Identity + Simple Tool Use"
+      ]
+    },
+    {
+      "target": "E008-local-k2-6-offline-frontier-tier",
+      "referenced_by": [
+        "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify"
+      ]
+    },
+    {
+      "target": "E009-harness-neutrality-and-openCode-parity",
+      "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+      ]
+    },
+    {
+      "target": "E010-storage-and-hardware-enablement",
+      "referenced_by": [
+        "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
+        "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
+        "E012 \u2014 Custom Model Library (Unsloth LoRAs on Wiki Corpus)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "E010 M002 \u2014 /dev/sdd Mount Procedure (ext4 at /mnt/models)"
+      ]
+    },
+    {
+      "target": "E011-routing-integration-aicp-tiers",
+      "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
+        "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
+        "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
+        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
+        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
+        "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml",
+        "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
+        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py"
+      ]
+    },
+    {
+      "target": "E012-custom-model-library-unsloth-loras",
+      "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+      ]
+    },
+    {
       "target": "Epic Readiness Math",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -33049,6 +34523,8 @@
     {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
+        "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "Test OpenAI backend with LocalAI",
         "Decision \u2014 4-Tier Router with Configurable Profiles over Hardcoded Routing",
         "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models",
@@ -33139,6 +34615,7 @@
     {
       "target": "Principle 4 \u2014 Declarations Aspirational Until Verified",
       "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
       ]
@@ -33263,6 +34740,7 @@
     {
       "target": "Synthesis \u2014 AirLLM",
       "referenced_by": [
+        "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
@@ -33281,6 +34759,9 @@
     {
       "target": "Synthesis \u2014 Kimi K2.6",
       "referenced_by": [
+        "E007 \u2014 OpenRouter Deadline De-Risk (Claude Code CLI \u2192 K2.6)",
+        "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
       ]
     },
@@ -33327,6 +34808,7 @@
     {
       "target": "Synthesis \u2014 Unsloth",
       "referenced_by": [
+        "E012 \u2014 Custom Model Library (Unsloth LoRAs on Wiki Corpus)",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
@@ -33352,9 +34834,33 @@
       ]
     },
     {
+      "target": "T002-run-openrouter-smoke-tests",
+      "referenced_by": [
+        "T003 \u2014 Harness Test 1: `/status` + Identity + Simple Tool Use"
+      ]
+    },
+    {
+      "target": "T014-add-k2-6-backend-entries-to-default-yaml",
+      "referenced_by": [
+        "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key"
+      ]
+    },
+    {
+      "target": "T017-parameterize-openrouter-backend-config-key",
+      "referenced_by": [
+        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py"
+      ]
+    },
+    {
       "target": "T116 cost analysis",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "The 2026 Consumer-Hardware AI Stack",
+      "referenced_by": [
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack"
       ]
     },
     {
@@ -33374,6 +34880,72 @@
       "target": "Universal Stages",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "`wiki/spine/standards/routing-review-ritual.md`",
+      "referenced_by": [
+        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual"
+      ]
+    },
+    {
+      "target": "e007-m002-harness-interactive-validation",
+      "referenced_by": [
+        "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
+        "T002 \u2014 Run OpenRouter Smoke Tests (K2.6 + Opus + GPT-5.4)",
+        "T003 \u2014 Harness Test 1: `/status` + Identity + Simple Tool Use"
+      ]
+    },
+    {
+      "target": "e008-m002-k2-6-q2-gguf-download-and-verify",
+      "referenced_by": [
+        "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)"
+      ]
+    },
+    {
+      "target": "e010-m002-dev-sdd-mount-procedure",
+      "referenced_by": [
+        "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify"
+      ]
+    },
+    {
+      "target": "e011-m001-tier-definitions-update",
+      "referenced_by": [
+        "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
+        "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
+        "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml"
+      ]
+    },
+    {
+      "target": "e011-m002-k2-6-openrouter-backend-adapter",
+      "referenced_by": [
+        "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
+        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
+        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
+        "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
+        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py"
+      ]
+    },
+    {
+      "target": "e011-m003-k2-6-local-backend-adapter",
+      "referenced_by": [
+        "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
+        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)"
+      ]
+    },
+    {
+      "target": "e011-m004-circuit-breakers-and-fallback-chain",
+      "referenced_by": [
+        "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
+        "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
+        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual"
+      ]
+    },
+    {
+      "target": "e011-m005-routing-metric-and-review-ritual",
+      "referenced_by": [
+        "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
+        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)"
       ]
     },
     {

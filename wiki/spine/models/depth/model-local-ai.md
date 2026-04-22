@@ -468,6 +468,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[localai-over-ollama-vllm-for-multi-model-orchestration|Decision — LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint]]
 [[qwen3-8b-as-main-reasoning-model|Decision — Qwen3-8B as AICP's Main Reasoning Model (over Hermes-7B, CodeLlama-7B, Gemma-3 4B)]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
+[[post-anthropic-self-autonomous-stack|Milestone: Post-Anthropic Self-Autonomous AI Stack]]
 [[model-notebooklm|Model — NotebookLM]]
 [[open-model-evaluation-framework|Open-Model Evaluation Framework — How to Look at a New Model Announcement]]
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
