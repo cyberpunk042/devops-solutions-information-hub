@@ -40,3 +40,6 @@ tags: [backlog, tasks]
 | T033 | [T033 — Author scripts/kt-smoke.sh (benchmark harness)](T033-author-kt-smoke-script.md) | P1 | draft |  | 90 | E008 |
 | T041 | [T041 — Author operator-workstation-storage-tiering.md Reference Page](T041-author-operator-workstation-storage-tiering-reference.md) | P0 | draft |  | 100 | E010 |
 | T043 | [T043 — Author tools/inventory_models.sh (idempotent, markdown + JSON)](T043-author-inventory-models-script.md) | P1 | draft |  | 95 | E010 |
+| T045 | [T045 — Install OpenCode Binary + Verify `opencode --version`](T045-install-opencode-binary.md) | P1 | draft |  | 100 | E009 |
+| T051 | [T051 — Audit OpenCode's Skill / Agent Format + Invocation Convention](T051-audit-opencode-skill-and-agent-format.md) | P1 | draft |  | 100 | E009 |
+| T055 | [T055 — Draft the Harness Contract Outline (skeleton + section headings)](T055-draft-harness-contract-outline.md) | P1 | draft |  | 100 | E009 |

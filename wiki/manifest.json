@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T16:22:48.049029+00:00",
+  "generated": "2026-04-22T16:33:16.938252+00:00",
   "stats": {
-    "pages": 439,
+    "pages": 446,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2713,
-    "tags_unique": 1258,
+    "relationships": 2737,
+    "tags_unique": 1269,
     "layers": {
       "3": 4,
       "6": 25,
@@ -2149,6 +2149,223 @@
       ]
     },
     {
+      "path": "backlog/modules/e009-m001-opencode-install-and-base-config.md",
+      "slug": "backlog/modules/e009-m001-opencode-install-and-base-config",
+      "title": "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e009",
+        "opencode",
+        "install",
+        "config",
+        "openrouter",
+        "k2-6",
+        "harness-neutral"
+      ],
+      "sources": [
+        {
+          "id": "e009-harness-neutrality-and-opencode-parity",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md"
+        },
+        {
+          "id": "opencode-repo",
+          "type": "repository",
+          "url": "https://github.com/sst/opencode",
+          "title": "sst/opencode"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e007-m002-harness-interactive-validation"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e009-m002-mcp-server-continuity"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e009-m003-skill-portability"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e009-m002-mcp-server-continuity.md",
+      "slug": "backlog/modules/e009-m002-mcp-server-continuity",
+      "title": "E009 M002 \u2014 MCP Server Continuity (research-wiki, claude-mem, plannotator)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e009",
+        "mcp",
+        "opencode",
+        "research-wiki",
+        "claude-mem",
+        "plannotator",
+        "continuity"
+      ],
+      "sources": [
+        {
+          "id": "e009-harness-neutrality-and-opencode-parity",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md"
+        },
+        {
+          "id": "mcp-spec",
+          "type": "repository",
+          "url": "https://github.com/modelcontextprotocol/specification",
+          "title": "Model Context Protocol specification"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e009-m001-opencode-install-and-base-config"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e009-m004-harness-contract-document"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e009-m003-skill-portability.md",
+      "slug": "backlog/modules/e009-m003-skill-portability",
+      "title": "E009 M003 \u2014 Skill Portability (port 3 top skills to OpenCode format)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e009",
+        "skills",
+        "opencode",
+        "portability",
+        "adapter",
+        "continue",
+        "ingest",
+        "log"
+      ],
+      "sources": [
+        {
+          "id": "e009-harness-neutrality-and-opencode-parity",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md"
+        },
+        {
+          "id": "claude-skills-dir",
+          "type": "repository",
+          "file": "/home/jfortin/devops-solutions-research-wiki/.claude/skills"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e009-m001-opencode-install-and-base-config"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e009-m002-mcp-server-continuity"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e009-m004-harness-contract-document"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e009-m004-harness-contract-document.md",
+      "slug": "backlog/modules/e009-m004-harness-contract-document",
+      "title": "E009 M004 \u2014 Harness Contract Document (harness-neutral invariants)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e009",
+        "harness",
+        "contract",
+        "standard",
+        "consumer-property-doctrine",
+        "doctrine"
+      ],
+      "sources": [
+        {
+          "id": "e009-harness-neutrality-and-opencode-parity",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e009-m002-mcp-server-continuity"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e009-m003-skill-portability"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`wiki/spine/standards/harness-contract.md`"
+        }
+      ]
+    },
+    {
       "path": "backlog/modules/e010-m001-64gb-ram-install-and-verify.md",
       "slug": "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "title": "E010 M001 \u2014 64 GB RAM Install and Verify (physical + WSL detection)",
@@ -4085,6 +4302,143 @@
         {
           "verb": "PART OF",
           "target": "E010-storage-and-hardware-enablement"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T045-install-opencode-binary.md",
+      "slug": "backlog/tasks/T045-install-opencode-binary",
+      "title": "T045 \u2014 Install OpenCode Binary + Verify `opencode --version`",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e009",
+        "opencode",
+        "install",
+        "binary",
+        "version-check"
+      ],
+      "sources": [
+        {
+          "id": "e009-m001-opencode-install-and-base-config",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e009-m001-opencode-install-and-base-config.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e009-m001-opencode-install-and-base-config"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T051-audit-opencode-skill-and-agent-format.md",
+      "slug": "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "title": "T051 \u2014 Audit OpenCode's Skill / Agent Format + Invocation Convention",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e009",
+        "opencode",
+        "skills",
+        "agents",
+        "audit",
+        "research"
+      ],
+      "sources": [
+        {
+          "id": "e009-m003-skill-portability",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e009-m003-skill-portability.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e009-m003-skill-portability"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T045-install-opencode-binary"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "T055-draft-harness-contract-outline"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T055-draft-harness-contract-outline.md",
+      "slug": "backlog/tasks/T055-draft-harness-contract-outline",
+      "title": "T055 \u2014 Draft the Harness Contract Outline (skeleton + section headings)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e009",
+        "harness-contract",
+        "standard",
+        "skeleton",
+        "outline",
+        "drafting"
+      ],
+      "sources": [
+        {
+          "id": "e009-m004-harness-contract-document",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e009-m004-harness-contract-document.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e009-m004-harness-contract-document"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E009-harness-neutrality-and-opencode-parity"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "T056-fill-harness-contract-sections"
         }
       ]
     },
@@ -29823,8 +30177,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 74,
-      "relationship_count": 301
+      "page_count": 81,
+      "relationship_count": 325
     },
     "cross-domain": {
       "page_count": 187,
@@ -30151,6 +30505,7 @@
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
+      "backlog/modules/e009-m002-mcp-server-continuity",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
@@ -30256,6 +30611,10 @@
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "backlog/modules/e008-m003-first-light-benchmark",
       "backlog/modules/e008-m004-local-backend-adapter",
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "backlog/modules/e009-m003-skill-portability",
+      "backlog/modules/e009-m004-harness-contract-document",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
       "backlog/modules/e010-m004-model-weights-inventory",
       "backlog/modules/e011-m001-tier-definitions-update",
@@ -30283,7 +30642,10 @@
       "backlog/tasks/T030-verify-cuda-toolchain",
       "backlog/tasks/T031-create-ktransformers-venv",
       "backlog/tasks/T033-author-kt-smoke-script",
-      "backlog/tasks/T043-author-inventory-models-script"
+      "backlog/tasks/T043-author-inventory-models-script",
+      "backlog/tasks/T045-install-opencode-binary",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "backlog/tasks/T055-draft-harness-contract-outline"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -30293,6 +30655,7 @@
     ],
     "audit": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "domains/devops/devops-control-plane",
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated"
     ],
@@ -30602,6 +30965,8 @@
     ],
     "skills": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
+      "backlog/modules/e009-m003-skill-portability",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "comparisons/skills-architecture-patterns",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/extension-system-operational-decisions",
@@ -30667,6 +31032,7 @@
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
@@ -30693,6 +31059,7 @@
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
+      "backlog/modules/e009-m004-harness-contract-document",
       "decisions/02_validated/tools/extension-system-operational-decisions",
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/cross-domain/methodology-framework/three-pm-levels",
@@ -30749,14 +31116,21 @@
       "backlog/modules/e008-m001-ktransformers-install-and-config"
     ],
     "opencode": [
-      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "backlog/modules/e009-m003-skill-portability",
+      "backlog/tasks/T045-install-opencode-binary",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format"
     ],
     "harness-neutral": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
-      "backlog/milestones/post-anthropic-self-autonomous-stack"
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "backlog/modules/e009-m001-opencode-install-and-base-config"
     ],
     "consumer-property-doctrine": [
-      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
+      "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/modules/e009-m004-harness-contract-document"
     ],
     "skills-portability": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
@@ -30814,6 +31188,7 @@
     "k2-6": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/modules/e008-m003-first-light-benchmark",
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
@@ -30973,6 +31348,10 @@
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "backlog/modules/e008-m003-first-light-benchmark",
       "backlog/modules/e008-m004-local-backend-adapter",
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "backlog/modules/e009-m003-skill-portability",
+      "backlog/modules/e009-m004-harness-contract-document",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
       "backlog/modules/e010-m003-storage-tiering-documentation",
@@ -31018,8 +31397,10 @@
     ],
     "install": [
       "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
-      "backlog/tasks/T011-install-huggingface-hub-cli"
+      "backlog/tasks/T011-install-huggingface-hub-cli",
+      "backlog/tasks/T045-install-opencode-binary"
     ],
     "cuda": [
       "backlog/modules/e008-m001-ktransformers-install-and-config",
@@ -31055,6 +31436,97 @@
     ],
     "endpoint": [
       "backlog/modules/e008-m004-local-backend-adapter"
+    ],
+    "e009": [
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "backlog/modules/e009-m003-skill-portability",
+      "backlog/modules/e009-m004-harness-contract-document",
+      "backlog/tasks/T045-install-opencode-binary",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "backlog/tasks/T055-draft-harness-contract-outline"
+    ],
+    "config": [
+      "backlog/modules/e009-m001-opencode-install-and-base-config",
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "domains/cross-domain/methodology-framework/methodology-config-architecture",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
+    ],
+    "research-wiki": [
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "domains/devops/four-project-ecosystem",
+      "ecosystem/project_profiles/research-wiki/identity-profile"
+    ],
+    "claude-mem": [
+      "backlog/modules/e009-m002-mcp-server-continuity"
+    ],
+    "plannotator": [
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "domains/ai-agents/patterns/per-role-command-architecture",
+      "sources/src-plannotator",
+      "spine/models/agent-config/model-skills-commands-hooks"
+    ],
+    "continuity": [
+      "backlog/modules/e009-m002-mcp-server-continuity",
+      "spine/standards/session-handoff-standards"
+    ],
+    "portability": [
+      "backlog/modules/e009-m003-skill-portability",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
+    ],
+    "adapter": [
+      "backlog/modules/e009-m003-skill-portability",
+      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
+      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
+    ],
+    "continue": [
+      "backlog/modules/e009-m003-skill-portability"
+    ],
+    "ingest": [
+      "backlog/modules/e009-m003-skill-portability"
+    ],
+    "log": [
+      "backlog/modules/e009-m003-skill-portability",
+      "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
+      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
+      "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed",
+      "log/2026-04-09/methodology/2026-04-09-directive-never-stop-at-surface",
+      "log/2026-04-09/methodology/2026-04-09-directive-stop-claiming-readiness",
+      "log/2026-04-09/methodology/2026-04-09-directive-stop-guessing-false-claims",
+      "log/2026-04-09/models/2026-04-09-directive-bottom-up-model-completion",
+      "log/2026-04-09/models/2026-04-09-directive-model-quality-links-schema",
+      "log/2026-04-09/models/2026-04-09-directive-models-are-not-documents",
+      "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
+      "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-emerging",
+      "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
+      "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
+      "log/2026-04-09/system/2026-04-09-directive-styling-obsidian",
+      "log/2026-04-09/system/2026-04-09-directive-systemic-incompleteness",
+      "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
+      "log/2026-04-09/system/2026-04-09-ingest-awesome-design-md",
+      "log/2026-04-09/system/2026-04-09-session-summary",
+      "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
+      "log/2026-04-10/2026-04-10-session-summary",
+      "log/2026-04-17/2026-04-17-session-summary",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "spine/standards/note-page-standards"
+    ],
+    "contract": [
+      "backlog/modules/e009-m004-harness-contract-document",
+      "spine/standards/gateway-output-contract"
+    ],
+    "standard": [
+      "backlog/modules/e009-m004-harness-contract-document",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T029-author-routing-review-ritual-standard",
+      "backlog/tasks/T055-draft-harness-contract-outline"
+    ],
+    "doctrine": [
+      "backlog/modules/e009-m004-harness-contract-document"
     ],
     "e010": [
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -31174,11 +31646,6 @@
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
       "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
-    "adapter": [
-      "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
-      "backlog/modules/e011-m003-k2-6-local-backend-adapter",
-      "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
-    ],
     "reuse": [
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter"
     ],
@@ -31275,6 +31742,7 @@
     ],
     "research": [
       "backlog/research-gaps",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "domains/tools-and-platforms/notebooklm",
       "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
@@ -31333,6 +31801,9 @@
       "backlog/tasks/T033-author-kt-smoke-script",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
       "backlog/tasks/T043-author-inventory-models-script",
+      "backlog/tasks/T045-install-opencode-binary",
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "backlog/tasks/T055-draft-harness-contract-outline",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -31388,13 +31859,6 @@
       "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T031-create-ktransformers-venv"
     ],
-    "config": [
-      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
-      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
-      "domains/cross-domain/methodology-framework/methodology-config-architecture",
-      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
-    ],
     "tier": [
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
     ],
@@ -31442,10 +31906,6 @@
     ],
     "integration-test": [
       "backlog/tasks/T025-fallback-chain-integration-test"
-    ],
-    "standard": [
-      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
-      "backlog/tasks/T029-author-routing-review-ritual-standard"
     ],
     "wiki-page": [
       "backlog/tasks/T026-document-aicp-fallback-chain-standard"
@@ -31510,6 +31970,30 @@
     ],
     "markdown-output": [
       "backlog/tasks/T043-author-inventory-models-script"
+    ],
+    "binary": [
+      "backlog/tasks/T045-install-opencode-binary"
+    ],
+    "version-check": [
+      "backlog/tasks/T045-install-opencode-binary"
+    ],
+    "agents": [
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "sources/src-anthropic-building-effective-ai-agents",
+      "spine/references/context-file-taxonomy",
+      "spine/references/root-documentation-map"
+    ],
+    "harness-contract": [
+      "backlog/tasks/T055-draft-harness-contract-outline"
+    ],
+    "skeleton": [
+      "backlog/tasks/T055-draft-harness-contract-outline"
+    ],
+    "outline": [
+      "backlog/tasks/T055-draft-harness-contract-outline"
+    ],
+    "drafting": [
+      "backlog/tasks/T055-draft-harness-contract-outline"
     ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
@@ -32691,11 +33175,6 @@
     "developer-experience": [
       "domains/ai-agents/patterns/per-role-command-architecture"
     ],
-    "plannotator": [
-      "domains/ai-agents/patterns/per-role-command-architecture",
-      "sources/src-plannotator",
-      "spine/models/agent-config/model-skills-commands-hooks"
-    ],
     "ecosystem-sharing": [
       "domains/ai-agents/patterns/per-role-command-architecture"
     ],
@@ -33262,10 +33741,6 @@
       "domains/devops/four-project-ecosystem",
       "ecosystem/project_profiles/devops-control-plane/identity-profile",
       "spine/models/ecosystem/model-ecosystem"
-    ],
-    "research-wiki": [
-      "domains/devops/four-project-ecosystem",
-      "ecosystem/project_profiles/research-wiki/identity-profile"
     ],
     "multi-project": [
       "domains/devops/four-project-ecosystem",
@@ -33892,10 +34367,6 @@
     "recursion": [
       "lessons/01_drafts/if-you-can-verify-you-converge"
     ],
-    "portability": [
-      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
-    ],
     "machine-specific": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
@@ -34274,31 +34745,6 @@
     ],
     "right-process": [
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
-    ],
-    "log": [
-      "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
-      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
-      "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed",
-      "log/2026-04-09/methodology/2026-04-09-directive-never-stop-at-surface",
-      "log/2026-04-09/methodology/2026-04-09-directive-stop-claiming-readiness",
-      "log/2026-04-09/methodology/2026-04-09-directive-stop-guessing-false-claims",
-      "log/2026-04-09/models/2026-04-09-directive-bottom-up-model-completion",
-      "log/2026-04-09/models/2026-04-09-directive-model-quality-links-schema",
-      "log/2026-04-09/models/2026-04-09-directive-models-are-not-documents",
-      "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
-      "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-emerging",
-      "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
-      "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
-      "log/2026-04-09/system/2026-04-09-directive-styling-obsidian",
-      "log/2026-04-09/system/2026-04-09-directive-systemic-incompleteness",
-      "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
-      "log/2026-04-09/system/2026-04-09-ingest-awesome-design-md",
-      "log/2026-04-09/system/2026-04-09-session-summary",
-      "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
-      "log/2026-04-10/2026-04-10-session-summary",
-      "log/2026-04-17/2026-04-17-session-summary",
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
-      "spine/standards/note-page-standards"
     ],
     "directive": [
       "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
@@ -34916,11 +35362,6 @@
     ],
     "agentic-systems": [
       "sources/src-anthropic-building-effective-ai-agents"
-    ],
-    "agents": [
-      "sources/src-anthropic-building-effective-ai-agents",
-      "spine/references/context-file-taxonomy",
-      "spine/references/root-documentation-map"
     ],
     "prompt-chaining": [
       "sources/src-anthropic-building-effective-ai-agents"
@@ -35681,9 +36122,6 @@
     "tool-output": [
       "spine/standards/gateway-output-contract"
     ],
-    "contract": [
-      "spine/standards/gateway-output-contract"
-    ],
     "gold-standard": [
       "spine/standards/model-standards/model-claude-code-standards",
       "spine/standards/model-standards/model-context-engineering-standards",
@@ -35713,9 +36151,6 @@
       "spine/standards/note-page-standards"
     ],
     "session-handoff": [
-      "spine/standards/session-handoff-standards"
-    ],
-    "continuity": [
       "spine/standards/session-handoff-standards"
     ],
     "meta-documentation": [
@@ -35926,6 +36361,18 @@
       "target": "E009-harness-neutrality-and-openCode-parity",
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+      ]
+    },
+    {
+      "target": "E009-harness-neutrality-and-opencode-parity",
+      "referenced_by": [
+        "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
+        "E009 M002 \u2014 MCP Server Continuity (research-wiki, claude-mem, plannotator)",
+        "E009 M003 \u2014 Skill Portability (port 3 top skills to OpenCode format)",
+        "E009 M004 \u2014 Harness Contract Document (harness-neutral invariants)",
+        "T045 \u2014 Install OpenCode Binary + Verify `opencode --version`",
+        "T051 \u2014 Audit OpenCode's Skill / Agent Format + Invocation Convention",
+        "T055 \u2014 Draft the Harness Contract Outline (skeleton + section headings)"
       ]
     },
     {
@@ -36477,6 +36924,24 @@
       ]
     },
     {
+      "target": "T045-install-opencode-binary",
+      "referenced_by": [
+        "T051 \u2014 Audit OpenCode's Skill / Agent Format + Invocation Convention"
+      ]
+    },
+    {
+      "target": "T055-draft-harness-contract-outline",
+      "referenced_by": [
+        "T051 \u2014 Audit OpenCode's Skill / Agent Format + Invocation Convention"
+      ]
+    },
+    {
+      "target": "T056-fill-harness-contract-sections",
+      "referenced_by": [
+        "T055 \u2014 Draft the Harness Contract Outline (skeleton + section headings)"
+      ]
+    },
+    {
       "target": "T116 cost analysis",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -36526,8 +36991,15 @@
       ]
     },
     {
+      "target": "`wiki/spine/standards/harness-contract.md`",
+      "referenced_by": [
+        "E009 M004 \u2014 Harness Contract Document (harness-neutral invariants)"
+      ]
+    },
+    {
       "target": "e007-m002-harness-interactive-validation",
       "referenced_by": [
+        "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
         "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
         "T002 \u2014 Run OpenRouter Smoke Tests (K2.6 + Opus + GPT-5.4)",
         "T003 \u2014 Harness Test 1: `/status` + Identity + Simple Tool Use"
@@ -36565,6 +37037,38 @@
       "referenced_by": [
         "E008 M001 \u2014 KTransformers Install and CUDA Config",
         "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)"
+      ]
+    },
+    {
+      "target": "e009-m001-opencode-install-and-base-config",
+      "referenced_by": [
+        "E009 M002 \u2014 MCP Server Continuity (research-wiki, claude-mem, plannotator)",
+        "E009 M003 \u2014 Skill Portability (port 3 top skills to OpenCode format)",
+        "T045 \u2014 Install OpenCode Binary + Verify `opencode --version`"
+      ]
+    },
+    {
+      "target": "e009-m002-mcp-server-continuity",
+      "referenced_by": [
+        "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
+        "E009 M003 \u2014 Skill Portability (port 3 top skills to OpenCode format)",
+        "E009 M004 \u2014 Harness Contract Document (harness-neutral invariants)"
+      ]
+    },
+    {
+      "target": "e009-m003-skill-portability",
+      "referenced_by": [
+        "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
+        "E009 M004 \u2014 Harness Contract Document (harness-neutral invariants)",
+        "T051 \u2014 Audit OpenCode's Skill / Agent Format + Invocation Convention"
+      ]
+    },
+    {
+      "target": "e009-m004-harness-contract-document",
+      "referenced_by": [
+        "E009 M002 \u2014 MCP Server Continuity (research-wiki, claude-mem, plannotator)",
+        "E009 M003 \u2014 Skill Portability (port 3 top skills to OpenCode format)",
+        "T055 \u2014 Draft the Harness Contract Outline (skeleton + section headings)"
       ]
     },
     {
