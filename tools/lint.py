@@ -797,7 +797,9 @@ def _check_standards_exemplars(
                 elif line.startswith("## ") and not line.startswith("### "):
                     in_gold_section = False
                 if in_gold_section and not in_backlinks:
-                    refs = _re.findall(r"\[\[([^\]]+)\]\]", line)
+                    # Strip inline code spans so [[wikilink]] in prose isn't flagged
+                    scan_line = _re.sub(r"`[^`]*`", "", line)
+                    refs = _re.findall(r"\[\[([^\]]+)\]\]", scan_line)
                     for ref in refs:
                         if "|" in ref:
                             slug, display = ref.split("|", 1)
