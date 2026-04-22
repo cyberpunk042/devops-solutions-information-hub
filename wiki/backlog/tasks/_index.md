@@ -17,6 +17,7 @@ tags: [backlog, tasks]
 | T001 | [Test OpenAI backend with LocalAI](T001-test-openai-backend.md) | P1 | blocked |  | 0 | E001 |
 | T002 | [T002 — Run OpenRouter Smoke Tests (K2.6 + Opus + GPT-5.4)](T002-run-openrouter-smoke-tests.md) | P0 | done |  | 100 | E007 |
 | T003 | [T003 — Harness Test 1: `/status` + Identity + Simple Tool Use](T003-harness-test-1-sanity.md) | P0 | draft |  | 100 | E007 |
+| T011 | [T011 — Install huggingface_hub CLI (prerequisite for K2.6 download)](T011-install-huggingface-hub-cli.md) | P1 | draft |  | 100 | E008 |
 | T014 | [T014 — Add K2.6 Backend Entries to config/default.yaml](T014-add-k2-6-backend-entries-to-default-yaml.md) | P1 | draft |  | 100 | E011 |
 | T015 | [T015 — Extend router.py Complexity-to-Tier Mapping for 5 Tiers](T015-extend-router-complexity-to-tier-mapping.md) | P1 | draft |  | 90 | E011 |
 | T016 | [T016 — Update failover_chain + Add quality / fast Profiles](T016-update-failover-chain-and-profiles.md) | P1 | draft |  | 80 | E011 |
@@ -33,3 +34,6 @@ tags: [backlog, tasks]
 | T027 | [T027 — Verify Metrics (Prometheus + aggregate) Capture k2_6 Backends](T027-verify-metrics-capture-k2-6-backends.md) | P1 | draft |  | 100 | E011 |
 | T028 | [T028 — Add `aicp routing-report` CLI Command (7d Rollup)](T028-add-routing-report-cli-command.md) | P1 | draft |  | 85 | E011 |
 | T029 | [T029 — Author Routing Review Ritual Standard](T029-author-routing-review-ritual-standard.md) | P1 | draft |  | 90 | E011 |
+| T030 | [T030 — Verify CUDA Toolchain + GPU Driver Compatibility](T030-verify-cuda-toolchain.md) | P1 | draft |  | 100 | E008 |
+| T031 | [T031 — Create Dedicated venv at /home/jfortin/ktransformers-env/](T031-create-ktransformers-venv.md) | P1 | draft |  | 100 | E008 |
+| T033 | [T033 — Author scripts/kt-smoke.sh (benchmark harness)](T033-author-kt-smoke-script.md) | P1 | draft |  | 90 | E008 |

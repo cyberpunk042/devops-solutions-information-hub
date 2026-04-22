@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T16:12:02.985578+00:00",
+  "generated": "2026-04-22T16:17:20.097340+00:00",
   "stats": {
-    "pages": 426,
+    "pages": 433,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2677,
-    "tags_unique": 1231,
+    "relationships": 2696,
+    "tags_unique": 1246,
     "layers": {
       "3": 4,
       "6": 25,
@@ -1944,6 +1944,58 @@
       ]
     },
     {
+      "path": "backlog/modules/e008-m001-ktransformers-install-and-config.md",
+      "slug": "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "title": "E008 M001 \u2014 KTransformers Install and CUDA Config",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e008",
+        "ktransformers",
+        "install",
+        "cuda",
+        "moe",
+        "disk-offload"
+      ],
+      "sources": [
+        {
+          "id": "e008-local-k2-6-offline-frontier-tier",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md"
+        },
+        {
+          "id": "ktransformers-repo",
+          "type": "repository",
+          "url": "https://github.com/kvcache-ai/ktransformers",
+          "title": "KTransformers \u2014 kvcache.ai"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e008-m003-first-light-benchmark"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e008-m004-local-backend-adapter"
+        }
+      ]
+    },
+    {
       "path": "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify.md",
       "slug": "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "title": "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
@@ -1989,6 +2041,110 @@
         {
           "verb": "DEPENDS ON",
           "target": "e010-m002-dev-sdd-mount-procedure"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e008-m003-first-light-benchmark.md",
+      "slug": "backlog/modules/e008-m003-first-light-benchmark",
+      "title": "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e008",
+        "ktransformers",
+        "benchmark",
+        "k2-6",
+        "tok-per-s",
+        "first-light"
+      ],
+      "sources": [
+        {
+          "id": "e008-local-k2-6-offline-frontier-tier",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e008-m001-ktransformers-install-and-config"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e008-m004-local-backend-adapter"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e008-m004-local-backend-adapter.md",
+      "slug": "backlog/modules/e008-m004-local-backend-adapter",
+      "title": "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p1",
+        "e008",
+        "ktransformers",
+        "openai-compat",
+        "server",
+        "systemd",
+        "endpoint"
+      ],
+      "sources": [
+        {
+          "id": "e008-local-k2-6-offline-frontier-tier",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e008-m001-ktransformers-install-and-config"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e008-m003-first-light-benchmark"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e011-m003-k2-6-local-backend-adapter"
         }
       ]
     },
@@ -2683,6 +2839,47 @@
       ]
     },
     {
+      "path": "backlog/tasks/T011-install-huggingface-hub-cli.md",
+      "slug": "backlog/tasks/T011-install-huggingface-hub-cli",
+      "title": "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e008",
+        "huggingface",
+        "cli",
+        "install",
+        "preparation"
+      ],
+      "sources": [
+        {
+          "id": "e008-m002-k2-6-q2-gguf-download-and-verify",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        }
+      ]
+    },
+    {
       "path": "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml.md",
       "slug": "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "title": "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml",
@@ -3319,10 +3516,6 @@
         {
           "verb": "PART OF",
           "target": "E011-routing-integration-aicp-tiers"
-        },
-        {
-          "verb": "PRODUCES",
-          "target": "`wiki/spine/standards/aicp-fallback-chain.md`"
         }
       ]
     },
@@ -3481,10 +3674,134 @@
         {
           "verb": "DEPENDS ON",
           "target": "T028-add-routing-report-cli-command"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T030-verify-cuda-toolchain.md",
+      "slug": "backlog/tasks/T030-verify-cuda-toolchain",
+      "title": "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e008",
+        "cuda",
+        "nvcc",
+        "nvidia-smi",
+        "wsl2",
+        "verification"
+      ],
+      "sources": [
+        {
+          "id": "e008-m001-ktransformers-install-and-config",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e008-m001-ktransformers-install-and-config.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e008-m001-ktransformers-install-and-config"
         },
         {
-          "verb": "PRODUCES",
-          "target": "`wiki/spine/standards/routing-review-ritual.md`"
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T031-create-ktransformers-venv.md",
+      "slug": "backlog/tasks/T031-create-ktransformers-venv",
+      "title": "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e008",
+        "python",
+        "venv",
+        "preparation",
+        "isolation"
+      ],
+      "sources": [
+        {
+          "id": "e008-m001-ktransformers-install-and-config",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e008-m001-ktransformers-install-and-config.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e008-m001-ktransformers-install-and-config"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T030-verify-cuda-toolchain"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T033-author-kt-smoke-script.md",
+      "slug": "backlog/tasks/T033-author-kt-smoke-script",
+      "title": "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e008",
+        "script",
+        "benchmark",
+        "scaffold",
+        "kt-smoke"
+      ],
+      "sources": [
+        {
+          "id": "e008-m003-first-light-benchmark",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e008-m003-first-light-benchmark.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e008-m003-first-light-benchmark"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E008-local-k2-6-offline-frontier-tier"
         }
       ]
     },
@@ -29223,8 +29540,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 61,
-      "relationship_count": 265
+      "page_count": 68,
+      "relationship_count": 284
     },
     "cross-domain": {
       "page_count": 187,
@@ -29650,13 +29967,17 @@
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e008-m003-first-light-benchmark",
+      "backlog/modules/e008-m004-local-backend-adapter",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
       "backlog/tasks/T016-update-failover-chain-and-profiles",
@@ -29672,7 +29993,10 @@
       "backlog/tasks/T026-document-aicp-fallback-chain-standard",
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T028-add-routing-report-cli-command",
-      "backlog/tasks/T029-author-routing-review-ritual-standard"
+      "backlog/tasks/T029-author-routing-review-ritual-standard",
+      "backlog/tasks/T030-verify-cuda-toolchain",
+      "backlog/tasks/T031-create-ktransformers-venv",
+      "backlog/tasks/T033-author-kt-smoke-script"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -30105,6 +30429,9 @@
     ],
     "ktransformers": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/modules/e008-m003-first-light-benchmark",
+      "backlog/modules/e008-m004-local-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
@@ -30119,6 +30446,7 @@
     ],
     "moe": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
       "domains/ai-models/local-llm-quantization",
       "sources/src-llm-architecture-gallery-raschka",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
@@ -30126,7 +30454,8 @@
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "disk-offload": [
-      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier"
+      "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
+      "backlog/modules/e008-m001-ktransformers-install-and-config"
     ],
     "opencode": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
@@ -30186,6 +30515,7 @@
     ],
     "k2-6": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/modules/e008-m003-first-light-benchmark",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
@@ -30341,7 +30671,10 @@
     ],
     "module": [
       "backlog/modules/e007-m002-harness-interactive-validation",
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e008-m003-first-light-benchmark",
+      "backlog/modules/e008-m004-local-backend-adapter",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
@@ -30373,13 +30706,53 @@
       "sources/src-claude-agent-sdk-and-managed-agents"
     ],
     "e008": [
-      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e008-m003-first-light-benchmark",
+      "backlog/modules/e008-m004-local-backend-adapter",
+      "backlog/tasks/T011-install-huggingface-hub-cli",
+      "backlog/tasks/T030-verify-cuda-toolchain",
+      "backlog/tasks/T031-create-ktransformers-venv",
+      "backlog/tasks/T033-author-kt-smoke-script"
+    ],
+    "install": [
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/tasks/T011-install-huggingface-hub-cli"
+    ],
+    "cuda": [
+      "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/tasks/T030-verify-cuda-toolchain"
     ],
     "download": [
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
     ],
     "hf": [
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
+    ],
+    "benchmark": [
+      "backlog/modules/e008-m003-first-light-benchmark",
+      "backlog/tasks/T033-author-kt-smoke-script",
+      "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "tok-per-s": [
+      "backlog/modules/e008-m003-first-light-benchmark"
+    ],
+    "first-light": [
+      "backlog/modules/e008-m003-first-light-benchmark"
+    ],
+    "openai-compat": [
+      "backlog/modules/e008-m004-local-backend-adapter"
+    ],
+    "server": [
+      "backlog/modules/e008-m004-local-backend-adapter"
+    ],
+    "systemd": [
+      "backlog/modules/e008-m004-local-backend-adapter",
+      "domains/devops/wsl2-development-patterns",
+      "lessons/03_validated/methodology-quality/infrastructure-must-be-reproducible-not-manual"
+    ],
+    "endpoint": [
+      "backlog/modules/e008-m004-local-backend-adapter"
     ],
     "e010": [
       "backlog/modules/e010-m002-dev-sdd-mount-procedure"
@@ -30572,6 +30945,7 @@
     "task": [
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
+      "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
       "backlog/tasks/T016-update-failover-chain-and-profiles",
@@ -30588,6 +30962,9 @@
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T028-add-routing-report-cli-command",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
+      "backlog/tasks/T030-verify-cuda-toolchain",
+      "backlog/tasks/T031-create-ktransformers-venv",
+      "backlog/tasks/T033-author-kt-smoke-script",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -30604,6 +30981,32 @@
     ],
     "gpt": [
       "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "huggingface": [
+      "backlog/tasks/T011-install-huggingface-hub-cli"
+    ],
+    "cli": [
+      "backlog/tasks/T011-install-huggingface-hub-cli",
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "backlog/tasks/T028-add-routing-report-cli-command",
+      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
+      "domains/tools-and-platforms/notebooklm-py-cli",
+      "domains/tools-and-platforms/obsidian-cli",
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/claude-code/src-claude-slash-commands",
+      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "spine/models/ecosystem/model-mcp-cli-integration",
+      "spine/references/gateway-tools-reference"
+    ],
+    "preparation": [
+      "backlog/tasks/T011-install-huggingface-hub-cli",
+      "backlog/tasks/T031-create-ktransformers-venv"
     ],
     "config": [
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
@@ -30632,24 +31035,6 @@
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
       "backlog/tasks/T020-parameterize-localai-backend-config-key",
       "domains/devops/task-type-artifact-matrix"
-    ],
-    "cli": [
-      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
-      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
-      "backlog/tasks/T028-add-routing-report-cli-command",
-      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
-      "domains/tools-and-platforms/notebooklm-py-cli",
-      "domains/tools-and-platforms/obsidian-cli",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem",
-      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "sources/claude-code/src-claude-slash-commands",
-      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/src-vercel-opensrc-toolkit",
-      "sources/tools-integration/src-playwright-cli-vs-mcp",
-      "spine/models/ecosystem/model-mcp-cli-integration",
-      "spine/references/gateway-tools-reference"
     ],
     "backend-registration": [
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
@@ -30696,6 +31081,7 @@
     ],
     "verification": [
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "backlog/tasks/T030-verify-cuda-toolchain",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/03_validated/methodology-quality/never-present-speculation-as-fact",
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
@@ -30712,6 +31098,43 @@
     ],
     "weekly-review": [
       "backlog/tasks/T029-author-routing-review-ritual-standard"
+    ],
+    "nvcc": [
+      "backlog/tasks/T030-verify-cuda-toolchain"
+    ],
+    "nvidia-smi": [
+      "backlog/tasks/T030-verify-cuda-toolchain"
+    ],
+    "wsl2": [
+      "backlog/tasks/T030-verify-cuda-toolchain",
+      "decisions/02_validated/tools/polling-vs-event-driven-change-detection",
+      "domains/devops/wsl2-development-patterns"
+    ],
+    "python": [
+      "backlog/tasks/T031-create-ktransformers-venv",
+      "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
+      "domains/tools-and-platforms/notebooklm-py-cli",
+      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
+      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/src-pydantic-ai-typed-agent-framework"
+    ],
+    "venv": [
+      "backlog/tasks/T031-create-ktransformers-venv"
+    ],
+    "isolation": [
+      "backlog/tasks/T031-create-ktransformers-venv"
+    ],
+    "script": [
+      "backlog/tasks/T033-author-kt-smoke-script"
+    ],
+    "scaffold": [
+      "backlog/tasks/T033-author-kt-smoke-script",
+      "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts",
+      "domains/devops/stage-gate-methodology",
+      "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
+    ],
+    "kt-smoke": [
+      "backlog/tasks/T033-author-kt-smoke-script"
     ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
@@ -31512,10 +31935,6 @@
     "fswatch": [
       "decisions/02_validated/tools/polling-vs-event-driven-change-detection"
     ],
-    "wsl2": [
-      "decisions/02_validated/tools/polling-vs-event-driven-change-detection",
-      "domains/devops/wsl2-development-patterns"
-    ],
     "change-detection": [
       "decisions/02_validated/tools/polling-vs-event-driven-change-detection"
     ],
@@ -32196,11 +32615,6 @@
     "construction": [
       "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts"
     ],
-    "scaffold": [
-      "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts",
-      "domains/devops/stage-gate-methodology",
-      "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
-    ],
     "implement": [
       "domains/cross-domain/methodology-artifacts/categories/construction-and-testing-artifacts",
       "domains/devops/stage-gate-methodology"
@@ -32289,13 +32703,6 @@
       "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
       "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
-    ],
-    "python": [
-      "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
-      "domains/tools-and-platforms/notebooklm-py-cli",
-      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
-      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
-      "sources/src-pydantic-ai-typed-agent-framework"
     ],
     "node": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript"
@@ -32579,10 +32986,6 @@
     ],
     "obsidian-sync": [
       "domains/devops/wsl2-development-patterns"
-    ],
-    "systemd": [
-      "domains/devops/wsl2-development-patterns",
-      "lessons/03_validated/methodology-quality/infrastructure-must-be-reproducible-not-manual"
     ],
     "cross-platform": [
       "domains/devops/wsl2-development-patterns"
@@ -34401,9 +34804,6 @@
     "logical-reasoning": [
       "sources/src-hrm-trm-tiny-recursion-models"
     ],
-    "benchmark": [
-      "sources/src-hrm-trm-tiny-recursion-models"
-    ],
     "scaling-hypothesis": [
       "sources/src-hrm-trm-tiny-recursion-models"
     ],
@@ -35155,7 +35555,14 @@
       "referenced_by": [
         "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
-        "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify"
+        "E008 M001 \u2014 KTransformers Install and CUDA Config",
+        "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
+        "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
+        "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+        "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)",
+        "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
+        "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
+        "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)"
       ]
     },
     {
@@ -35695,6 +36102,12 @@
       ]
     },
     {
+      "target": "T030-verify-cuda-toolchain",
+      "referenced_by": [
+        "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/"
+      ]
+    },
+    {
       "target": "T116 cost analysis",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -35726,18 +36139,6 @@
       ]
     },
     {
-      "target": "`wiki/spine/standards/aicp-fallback-chain.md`",
-      "referenced_by": [
-        "T026 \u2014 Document AICP Fallback Chain as Standard Page"
-      ]
-    },
-    {
-      "target": "`wiki/spine/standards/routing-review-ritual.md`",
-      "referenced_by": [
-        "T029 \u2014 Author Routing Review Ritual Standard"
-      ]
-    },
-    {
       "target": "e007-m002-harness-interactive-validation",
       "referenced_by": [
         "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
@@ -35746,9 +36147,36 @@
       ]
     },
     {
+      "target": "e008-m001-ktransformers-install-and-config",
+      "referenced_by": [
+        "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
+        "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+        "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
+        "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/"
+      ]
+    },
+    {
       "target": "e008-m002-k2-6-q2-gguf-download-and-verify",
       "referenced_by": [
-        "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)"
+        "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
+        "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+        "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
+        "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)"
+      ]
+    },
+    {
+      "target": "e008-m003-first-light-benchmark",
+      "referenced_by": [
+        "E008 M001 \u2014 KTransformers Install and CUDA Config",
+        "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
+        "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)"
+      ]
+    },
+    {
+      "target": "e008-m004-local-backend-adapter",
+      "referenced_by": [
+        "E008 M001 \u2014 KTransformers Install and CUDA Config",
+        "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)"
       ]
     },
     {
@@ -35781,6 +36209,7 @@
     {
       "target": "e011-m003-k2-6-local-backend-adapter",
       "referenced_by": [
+        "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
         "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
         "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
         "T020 \u2014 Parameterize LocalAIBackend __init__ to accept config_key",
