@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T16:33:16.938252+00:00",
+  "generated": "2026-04-22T16:43:06.661663+00:00",
   "stats": {
-    "pages": 446,
+    "pages": 453,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2737,
-    "tags_unique": 1269,
+    "relationships": 2757,
+    "tags_unique": 1283,
     "layers": {
       "3": 4,
       "6": 25,
@@ -2358,10 +2358,6 @@
         {
           "verb": "DEPENDS ON",
           "target": "e009-m003-skill-portability"
-        },
-        {
-          "verb": "PRODUCES",
-          "target": "`wiki/spine/standards/harness-contract.md`"
         }
       ]
     },
@@ -2862,6 +2858,232 @@
         {
           "verb": "DEPENDS ON",
           "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e012-m001-unsloth-toolchain-install.md",
+      "slug": "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "title": "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p2",
+        "e012",
+        "unsloth",
+        "lora",
+        "install",
+        "cuda",
+        "gpu",
+        "training-toolchain"
+      ],
+      "sources": [
+        {
+          "id": "e012-custom-model-library-unsloth-loras",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md"
+        },
+        {
+          "id": "src-unsloth-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md"
+        },
+        {
+          "id": "unsloth-repo",
+          "type": "repository",
+          "url": "https://github.com/unslothai/unsloth",
+          "title": "Unsloth AI \u2014 unslothai/unsloth"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e012-m002-wiki-assistant-candidate-a"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e012-m003-wiki-router-candidate-d"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "e012-m004-multi-lora-adapter-architecture-e"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e012-m002-wiki-assistant-candidate-a.md",
+      "slug": "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "title": "E012 M002 \u2014 Wiki-Assistant (Candidate A, Qwen3.5-4B + LoRA rank 32)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p2",
+        "e012",
+        "wiki-assistant",
+        "candidate-a",
+        "qwen",
+        "lora",
+        "fine-tuning",
+        "sft",
+        "methodology"
+      ],
+      "sources": [
+        {
+          "id": "e012-custom-model-library-unsloth-loras",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md"
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e012-m001-unsloth-toolchain-install"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e011-m001-tier-definitions-update"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e012-m003-wiki-router-candidate-d.md",
+      "slug": "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "title": "E012 M003 \u2014 Wiki-Router (Candidate D, Qwen3.5-0.5B complexity classifier)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p2",
+        "e012",
+        "wiki-router",
+        "candidate-d",
+        "qwen",
+        "complexity-classifier",
+        "lora",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "e012-custom-model-library-unsloth-loras",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md"
+        },
+        {
+          "id": "aicp-router",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/router.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e012-m001-unsloth-toolchain-install"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e011-m005-routing-metric-and-review-ritual"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/e012-m004-multi-lora-adapter-architecture-e.md",
+      "slug": "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
+      "title": "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "module",
+        "p2",
+        "e012",
+        "multi-lora",
+        "candidate-e",
+        "adapter-swap",
+        "peft",
+        "specialization"
+      ],
+      "sources": [
+        {
+          "id": "e012-custom-model-library-unsloth-loras",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md"
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e012-m001-unsloth-toolchain-install"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "e012-m002-wiki-assistant-candidate-a"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e011-m001-tier-definitions-update"
         }
       ]
     },
@@ -4439,6 +4661,132 @@
         {
           "verb": "FEEDS INTO",
           "target": "T056-fill-harness-contract-sections"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T058-create-unsloth-venv.md",
+      "slug": "backlog/tasks/T058-create-unsloth-venv",
+      "title": "T058 \u2014 Create /home/jfortin/unsloth-env/ venv + Install unsloth",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p2",
+        "e012",
+        "unsloth",
+        "venv",
+        "install",
+        "preparation"
+      ],
+      "sources": [
+        {
+          "id": "e012-m001-unsloth-toolchain-install",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e012-m001-unsloth-toolchain-install.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e012-m001-unsloth-toolchain-install"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T060-audit-wiki-corpus-training-readiness.md",
+      "slug": "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "title": "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p2",
+        "e012",
+        "audit",
+        "corpus",
+        "wiki",
+        "training-data",
+        "qa-pairs"
+      ],
+      "sources": [
+        {
+          "id": "e012-m002-wiki-assistant-candidate-a",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e012-m002-wiki-assistant-candidate-a.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e012-m002-wiki-assistant-candidate-a"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T070-design-adapter-training-datasets.md",
+      "slug": "backlog/tasks/T070-design-adapter-training-datasets",
+      "title": "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p2",
+        "e012",
+        "dataset-design",
+        "multi-lora",
+        "adapters",
+        "methodology",
+        "compliance",
+        "relationships"
+      ],
+      "sources": [
+        {
+          "id": "e012-m004-multi-lora-adapter-architecture-e",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e012-m004-multi-lora-adapter-architecture-e.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e012-m004-multi-lora-adapter-architecture-e"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E012-custom-model-library-unsloth-loras"
         }
       ]
     },
@@ -30177,8 +30525,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 81,
-      "relationship_count": 325
+      "page_count": 88,
+      "relationship_count": 345
     },
     "cross-domain": {
       "page_count": 187,
@@ -30656,6 +31004,7 @@
     "audit": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "domains/devops/devops-control-plane",
       "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated"
     ],
@@ -30664,7 +31013,14 @@
     ],
     "p2": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit",
-      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
+      "backlog/tasks/T058-create-unsloth-venv",
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "backlog/tasks/T070-design-adapter-training-datasets"
     ],
     "follow-on": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
@@ -30687,6 +31043,7 @@
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/modules/e012-m003-wiki-router-candidate-d",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
       "backlog/tasks/T016-update-failover-chain-and-profiles",
@@ -30803,6 +31160,8 @@
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "backlog/epics/pre-milestone/E006-standards-by-example",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/tasks/T070-design-adapter-training-datasets",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-framework-design-decisions",
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
@@ -31217,26 +31576,36 @@
     "unsloth": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "backlog/tasks/T058-create-unsloth-venv",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "lora": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/modules/e012-m003-wiki-router-candidate-d",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/second-brain-custom-model-strategy"
     ],
     "fine-tuning": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/second-brain-custom-model-strategy"
     ],
     "wiki-assistant": [
-      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a"
     ],
     "wiki-router": [
-      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e012-m003-wiki-router-candidate-d"
     ],
     "multi-lora": [
-      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras"
+      "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
+      "backlog/tasks/T070-design-adapter-training-datasets"
     ],
     "sdlc": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
@@ -31361,6 +31730,10 @@
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
@@ -31399,11 +31772,14 @@
       "backlog/modules/e008-m001-ktransformers-install-and-config",
       "backlog/modules/e009-m001-opencode-install-and-base-config",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
       "backlog/tasks/T011-install-huggingface-hub-cli",
-      "backlog/tasks/T045-install-opencode-binary"
+      "backlog/tasks/T045-install-opencode-binary",
+      "backlog/tasks/T058-create-unsloth-venv"
     ],
     "cuda": [
       "backlog/modules/e008-m001-ktransformers-install-and-config",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
       "backlog/tasks/T030-verify-cuda-toolchain"
     ],
     "download": [
@@ -31693,6 +32069,53 @@
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/operator-decision-queue"
     ],
+    "e012": [
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
+      "backlog/tasks/T058-create-unsloth-venv",
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "backlog/tasks/T070-design-adapter-training-datasets"
+    ],
+    "gpu": [
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "training-toolchain": [
+      "backlog/modules/e012-m001-unsloth-toolchain-install"
+    ],
+    "candidate-a": [
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a"
+    ],
+    "qwen": [
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "sources/src-autobe-compiler-verified-backend-generation",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "sft": [
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a"
+    ],
+    "candidate-d": [
+      "backlog/modules/e012-m003-wiki-router-candidate-d"
+    ],
+    "complexity-classifier": [
+      "backlog/modules/e012-m003-wiki-router-candidate-d"
+    ],
+    "candidate-e": [
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e"
+    ],
+    "adapter-swap": [
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e"
+    ],
+    "peft": [
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e"
+    ],
+    "specialization": [
+      "backlog/modules/e012-m004-multi-lora-adapter-architecture-e"
+    ],
     "orient": [
       "backlog/modules/e022-m002-gateway-orient-subcommand"
     ],
@@ -31804,6 +32227,9 @@
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "backlog/tasks/T055-draft-harness-contract-outline",
+      "backlog/tasks/T058-create-unsloth-venv",
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "backlog/tasks/T070-design-adapter-training-datasets",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -31857,7 +32283,8 @@
     ],
     "preparation": [
       "backlog/tasks/T011-install-huggingface-hub-cli",
-      "backlog/tasks/T031-create-ktransformers-venv"
+      "backlog/tasks/T031-create-ktransformers-venv",
+      "backlog/tasks/T058-create-unsloth-venv"
     ],
     "tier": [
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
@@ -31950,7 +32377,8 @@
       "sources/src-pydantic-ai-typed-agent-framework"
     ],
     "venv": [
-      "backlog/tasks/T031-create-ktransformers-venv"
+      "backlog/tasks/T031-create-ktransformers-venv",
+      "backlog/tasks/T058-create-unsloth-venv"
     ],
     "isolation": [
       "backlog/tasks/T031-create-ktransformers-venv"
@@ -31994,6 +32422,44 @@
     ],
     "drafting": [
       "backlog/tasks/T055-draft-harness-contract-outline"
+    ],
+    "corpus": [
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
+    ],
+    "wiki": [
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "domains/cross-domain/methodology-artifacts/chains/domain-chain-knowledge",
+      "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
+      "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
+      "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
+      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "training-data": [
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
+    ],
+    "qa-pairs": [
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
+    ],
+    "dataset-design": [
+      "backlog/tasks/T070-design-adapter-training-datasets"
+    ],
+    "adapters": [
+      "backlog/tasks/T070-design-adapter-training-datasets",
+      "domains/devops/devops-control-plane"
+    ],
+    "compliance": [
+      "backlog/tasks/T070-design-adapter-training-datasets",
+      "decisions/02_validated/methodology/artifact-system-design-decisions",
+      "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
+      "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
+      "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
+      "sources/src-27-questions-llm-selection"
+    ],
+    "relationships": [
+      "backlog/tasks/T070-design-adapter-training-datasets",
+      "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation"
     ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
@@ -32362,10 +32828,6 @@
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model"
     ],
-    "gpu": [
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "patterns/01_drafts/single-active-backend-with-lru-eviction"
-    ],
     "vram": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "patterns/01_drafts/single-active-backend-with-lru-eviction",
@@ -32566,15 +33028,6 @@
     ],
     "bridge-pattern": [
       "decisions/02_validated/methodology/artifact-system-design-decisions"
-    ],
-    "compliance": [
-      "decisions/02_validated/methodology/artifact-system-design-decisions",
-      "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
-      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
-      "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
-      "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
-      "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content",
-      "sources/src-27-questions-llm-selection"
     ],
     "execution-modes": [
       "decisions/02_validated/methodology/execution-mode-edge-cases",
@@ -33532,13 +33985,6 @@
     "knowledge": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-knowledge"
     ],
-    "wiki": [
-      "domains/cross-domain/methodology-artifacts/chains/domain-chain-knowledge",
-      "domains/cross-domain/methodology-artifacts/chains/domain-chain-python-wiki",
-      "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
-      "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
-      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
-    ],
     "node": [
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-typescript"
     ],
@@ -33705,9 +34151,6 @@
       "domains/devops/devops-control-plane"
     ],
     "multi-interface": [
-      "domains/devops/devops-control-plane"
-    ],
-    "adapters": [
       "domains/devops/devops-control-plane"
     ],
     "end-conditions": [
@@ -34551,9 +34994,6 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain"
     ],
     "static-docs": [
-      "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation"
-    ],
-    "relationships": [
       "lessons/03_validated/knowledge-systems/llm-maintained-wikis-outperform-static-documentation"
     ],
     "discoverability": [
@@ -35460,10 +35900,6 @@
     ],
     "ast": [
       "sources/src-autobe-compiler-verified-backend-generation"
-    ],
-    "qwen": [
-      "sources/src-autobe-compiler-verified-backend-generation",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "structured-outputs": [
       "sources/src-autobe-compiler-verified-backend-generation",
@@ -36421,7 +36857,14 @@
     {
       "target": "E012-custom-model-library-unsloth-loras",
       "referenced_by": [
-        "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
+        "E012 M002 \u2014 Wiki-Assistant (Candidate A, Qwen3.5-4B + LoRA rank 32)",
+        "E012 M003 \u2014 Wiki-Router (Candidate D, Qwen3.5-0.5B complexity classifier)",
+        "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
+        "T058 \u2014 Create /home/jfortin/unsloth-env/ venv + Install unsloth",
+        "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
+        "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)"
       ]
     },
     {
@@ -36991,12 +37434,6 @@
       ]
     },
     {
-      "target": "`wiki/spine/standards/harness-contract.md`",
-      "referenced_by": [
-        "E009 M004 \u2014 Harness Contract Document (harness-neutral invariants)"
-      ]
-    },
-    {
       "target": "e007-m002-harness-interactive-validation",
       "referenced_by": [
         "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
@@ -37097,6 +37534,8 @@
       "referenced_by": [
         "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
         "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
+        "E012 M002 \u2014 Wiki-Assistant (Candidate A, Qwen3.5-4B + LoRA rank 32)",
+        "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
         "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml",
         "T015 \u2014 Extend router.py Complexity-to-Tier Mapping for 5 Tiers",
         "T016 \u2014 Update failover_chain + Add quality / fast Profiles"
@@ -37108,6 +37547,7 @@
         "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
         "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
         "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
+        "E012 M003 \u2014 Wiki-Router (Candidate D, Qwen3.5-0.5B complexity classifier)",
         "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
         "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py",
         "T019 \u2014 Extend Pricing Table with moonshotai/kimi-k2.6"
@@ -37141,9 +37581,40 @@
       "referenced_by": [
         "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
         "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
+        "E012 M003 \u2014 Wiki-Router (Candidate D, Qwen3.5-0.5B complexity classifier)",
         "T027 \u2014 Verify Metrics (Prometheus + aggregate) Capture k2_6 Backends",
         "T028 \u2014 Add `aicp routing-report` CLI Command (7d Rollup)",
         "T029 \u2014 Author Routing Review Ritual Standard"
+      ]
+    },
+    {
+      "target": "e012-m001-unsloth-toolchain-install",
+      "referenced_by": [
+        "E012 M002 \u2014 Wiki-Assistant (Candidate A, Qwen3.5-4B + LoRA rank 32)",
+        "E012 M003 \u2014 Wiki-Router (Candidate D, Qwen3.5-0.5B complexity classifier)",
+        "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
+        "T058 \u2014 Create /home/jfortin/unsloth-env/ venv + Install unsloth"
+      ]
+    },
+    {
+      "target": "e012-m002-wiki-assistant-candidate-a",
+      "referenced_by": [
+        "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
+        "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
+        "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)"
+      ]
+    },
+    {
+      "target": "e012-m003-wiki-router-candidate-d",
+      "referenced_by": [
+        "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)"
+      ]
+    },
+    {
+      "target": "e012-m004-multi-lora-adapter-architecture-e",
+      "referenced_by": [
+        "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
+        "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)"
       ]
     },
     {
