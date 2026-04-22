@@ -2,13 +2,13 @@
 title: "T041 — Author operator-workstation-storage-tiering.md Reference Page"
 type: task
 domain: backlog
-status: draft
+status: done
 priority: P0
 task_type: task
-current_stage: design
+current_stage: test
 readiness: 100
-progress: 0
-stages_completed: [document, design]
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts:
   - wiki/spine/references/operator-workstation-storage-tiering.md
 estimate: S

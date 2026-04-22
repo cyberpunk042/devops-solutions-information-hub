@@ -27,6 +27,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-17 | [AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU](aicp-stage-3-hardware-unlocked-2026-04-17-—-19gb-vram-dual-g.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
 | 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
+| 2026-04-22 | [Corpus Training Readiness Audit (T060) — E012 Wiki-Assistant](2026-04-23-corpus-training-readiness-audit.md) | completion | `note`, `completion`, `t060`, `e012`, `corpus`, `audit`, `training-readiness`, `wiki-assistant`, `sft`, `qa-pairs` |
 | 2026-04-22 | [Day 1 — OpenRouter + Kimi K2.6 via Claude Code CLI (Setup + POC Procedure)](2026-04-22-openrouter-k2-6-day-1-setup-procedure.md) | note | `log`, `openrouter`, `kimi-k2-6`, `claude-code`, `harness`, `self-autonomous`, `5-day-plan`, `poc`, `procedure` |
 | 2026-04-17 | [Session 2026-04-17 Summary](2026-04-17/2026-04-17-session-summary.md) | session | `log`, `session`, `progress`, `summary`, `local-ai`, `open-weight`, `consumer-hardware` |
 | 2026-04-10 | [Session 2026-04-10 Summary](2026-04-10/2026-04-10-session-summary.md) | session | `log`, `session`, `progress`, `summary` |

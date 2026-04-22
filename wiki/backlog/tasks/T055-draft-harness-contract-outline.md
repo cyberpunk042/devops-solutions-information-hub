@@ -2,13 +2,13 @@
 title: "T055 — Draft the Harness Contract Outline (skeleton + section headings)"
 type: task
 domain: backlog
-status: draft
+status: done
 priority: P1
 task_type: task
-current_stage: design
+current_stage: test
 readiness: 100
-progress: 0
-stages_completed: [document, design]
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts:
   - wiki/spine/standards/harness-contract.md
 estimate: S

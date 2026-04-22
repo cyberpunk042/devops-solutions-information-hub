@@ -38,11 +38,11 @@ tags: [backlog, tasks]
 | T030 | [T030 — Verify CUDA Toolchain + GPU Driver Compatibility](T030-verify-cuda-toolchain.md) | P1 | draft |  | 100 | E008 |
 | T031 | [T031 — Create Dedicated venv at /home/jfortin/ktransformers-env/](T031-create-ktransformers-venv.md) | P1 | draft |  | 100 | E008 |
 | T033 | [T033 — Author scripts/kt-smoke.sh (benchmark harness)](T033-author-kt-smoke-script.md) | P1 | draft |  | 90 | E008 |
-| T041 | [T041 — Author operator-workstation-storage-tiering.md Reference Page](T041-author-operator-workstation-storage-tiering-reference.md) | P0 | draft |  | 100 | E010 |
+| T041 | [T041 — Author operator-workstation-storage-tiering.md Reference Page](T041-author-operator-workstation-storage-tiering-reference.md) | P0 | done |  | 100 | E010 |
 | T043 | [T043 — Author tools/inventory_models.sh (idempotent, markdown + JSON)](T043-author-inventory-models-script.md) | P1 | draft |  | 95 | E010 |
 | T045 | [T045 — Install OpenCode Binary + Verify `opencode --version`](T045-install-opencode-binary.md) | P1 | draft |  | 100 | E009 |
 | T051 | [T051 — Audit OpenCode's Skill / Agent Format + Invocation Convention](T051-audit-opencode-skill-and-agent-format.md) | P1 | draft |  | 100 | E009 |
-| T055 | [T055 — Draft the Harness Contract Outline (skeleton + section headings)](T055-draft-harness-contract-outline.md) | P1 | draft |  | 100 | E009 |
+| T055 | [T055 — Draft the Harness Contract Outline (skeleton + section headings)](T055-draft-harness-contract-outline.md) | P1 | done |  | 100 | E009 |
 | T058 | [T058 — Create /home/jfortin/unsloth-env/ venv + Install unsloth](T058-create-unsloth-venv.md) | P2 | draft |  | 100 | E012 |
-| T060 | [T060 — Audit Wiki Corpus Training Readiness (page counts + Q&A shape)](T060-audit-wiki-corpus-training-readiness.md) | P2 | draft |  | 100 | E012 |
+| T060 | [T060 — Audit Wiki Corpus Training Readiness (page counts + Q&A shape)](T060-audit-wiki-corpus-training-readiness.md) | P2 | done |  | 100 | E012 |
 | T070 | [T070 — Design 3 Adapter Training Datasets (methodology, compliance, relationship)](T070-design-adapter-training-datasets.md) | P2 | draft |  | 90 | E012 |

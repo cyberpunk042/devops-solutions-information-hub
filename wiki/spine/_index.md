@@ -91,6 +91,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Methodology System Map](references/methodology-system-map.md) — Complete map of the methodology system — every component, where it lives, what it does, and how they connect
 - [Model Registry](references/model-registry.md) — This is the entry point for all named models in the wiki
 - [Open-Model Evaluation Framework — How to Look at a New Model Announcement](references/open-model-evaluation-framework.md) — Between late 2024 and early 2026, the open-weight reasoning-model landscape went from "years behind closed frontier" ...
+- [Operator Workstation — Storage Tiering (authoritative disk map)](references/operator-workstation-storage-tiering.md) — Authoritative disk and filesystem map for the operator's workstation as of **2026-04-22**
 - [Root Documentation Map — Repository-Level Files](references/root-documentation-map.md) — The repository root contains 8 documentation files (2,714 total lines) that serve as the entry point for humans, AI t...
 - [Second-Brain Custom Model — Training Strategy and Roadmap](references/second-brain-custom-model-strategy.md) — With the 2026 consumer-hardware AI stack in place (Unsloth training · gpt-oss / Qwen / Qwopus bases · llama
 - [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](references/second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
@@ -102,6 +103,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Epic Page Standards](standards/epic-page-standards.md) — Standards for epic pages — strategic containers that break into modules and tasks
 - [Evolution Page Standards](standards/evolution-page-standards.md) — Standards for evolution pages — historical narratives tracking how a concept, system, or domain changed over time
 - [Gateway Output Contract — What Good Tool Output Looks Like](standards/gateway-output-contract.md) — Tool outputs from gateway subcommands are **context injections to the invoking agent, not data returns**
+- [Harness Contract — Invariants for a Harness-Neutral Ecosystem](standards/harness-contract.md) — This document defines the invariants any AI-coding harness (Claude Code, OpenCode, Gemini CLI, a custom wrapper) must...
 - [Learning Path Page Standards](standards/learning-path-page-standards.md) — Standards for learning path pages — curated sequences that guide a reader through a topic in a specific order
 - [Lesson Page Standards](standards/lesson-page-standards.md) — Standards for lesson pages — actionable learnings distilled from convergent evidence across multiple sources
 - [Claude Code Standards — What Good Agent Configuration Looks Like](standards/model-standards/model-claude-code-standards.md) — This page defines the quality bar for CLAUDE CODE CONFIGURATION
@@ -128,4 +130,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `domain-overview`, `methodology`, `gold-standard`, `anti-patterns`, `skills`, `second-brain`, `concept`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `aicp`
+`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `second-brain`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `aicp`

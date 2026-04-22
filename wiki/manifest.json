@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T16:43:06.661663+00:00",
+  "generated": "2026-04-22T17:00:02.758508+00:00",
   "stats": {
-    "pages": 453,
+    "pages": 456,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2757,
-    "tags_unique": 1283,
+    "relationships": 2770,
+    "tags_unique": 1294,
     "layers": {
       "3": 4,
       "6": 25,
@@ -15,11 +15,12 @@
       "5": 34,
       "0": 1,
       "1": 36,
-      "spine": 70
+      "spine": 71
     },
     "maturity": {
       "growing": 282,
-      "seed": 54
+      "seed": 55,
+      "mature": 1
     }
   },
   "pages": [
@@ -4444,7 +4445,7 @@
       "title": "T041 \u2014 Author operator-workstation-storage-tiering.md Reference Page",
       "type": "task",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -4624,7 +4625,7 @@
       "title": "T055 \u2014 Draft the Harness Contract Outline (skeleton + section headings)",
       "type": "task",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -4711,7 +4712,7 @@
       "title": "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
       "type": "task",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -19488,6 +19489,59 @@
       "relationships": []
     },
     {
+      "path": "log/2026-04-23-corpus-training-readiness-audit.md",
+      "slug": "log/2026-04-23-corpus-training-readiness-audit",
+      "title": "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant",
+      "type": "note",
+      "domain": "knowledge-systems",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "note",
+        "completion",
+        "t060",
+        "e012",
+        "corpus",
+        "audit",
+        "training-readiness",
+        "wiki-assistant",
+        "sft",
+        "qa-pairs"
+      ],
+      "sources": [
+        {
+          "id": "t060-audit-wiki-corpus-training-readiness",
+          "type": "wiki",
+          "file": "wiki/backlog/tasks/T060-audit-wiki-corpus-training-readiness.md"
+        },
+        {
+          "id": "e012-m002-wiki-assistant-candidate-a",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e012-m002-wiki-assistant-candidate-a.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "T060-audit-wiki-corpus-training-readiness"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e012-m002-wiki-assistant-candidate-a"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "E012-custom-model-library-unsloth-loras"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -28676,6 +28730,78 @@
       ]
     },
     {
+      "path": "spine/references/operator-workstation-storage-tiering.md",
+      "slug": "spine/references/operator-workstation-storage-tiering",
+      "title": "Operator Workstation \u2014 Storage Tiering (authoritative disk map)",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "verified",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "reference",
+        "p0",
+        "hardware",
+        "storage",
+        "disks",
+        "tiering",
+        "nvme",
+        "sata",
+        "raid",
+        "wsl",
+        "9p",
+        "ground-truth",
+        "operator-workstation"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md",
+          "title": "Post-Anthropic Self-Autonomous Stack \u2014 Directive Note"
+        },
+        {
+          "id": "dmesg-evidence",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md",
+          "title": "dmesg output 2026-04-22 confirmed EXT4 recovery on /dev/sdd (logged in directive note)"
+        },
+        {
+          "id": "operator-clarifications",
+          "type": "file",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md",
+          "title": "Operator stated RAID topology multiple times 2026-04-22 (captured verbatim in directive note)"
+        }
+      ],
+      "layer": "",
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E010 \u2014 Storage and Hardware Enablement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "verb": "REFERENCED BY",
+          "target": "E008 M002 \u2014 K2.6 Q2 download"
+        },
+        {
+          "verb": "REFERENCED BY",
+          "target": "E010 M002 \u2014 /dev/sdd mount"
+        },
+        {
+          "verb": "REFERENCED BY",
+          "target": "Model \u2014 Local AI"
+        }
+      ]
+    },
+    {
       "path": "spine/references/root-documentation-map.md",
       "slug": "spine/references/root-documentation-map",
       "title": "Root Documentation Map \u2014 Repository-Level Files",
@@ -29314,6 +29440,83 @@
         {
           "verb": "ENABLES",
           "target": "Model \u2014 Claude Code"
+        }
+      ]
+    },
+    {
+      "path": "spine/standards/harness-contract.md",
+      "slug": "spine/standards/harness-contract",
+      "title": "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "concept",
+        "spine",
+        "harness",
+        "contract",
+        "standard",
+        "consumer-property-doctrine",
+        "methodology",
+        "mcp",
+        "skills",
+        "tool-semantics",
+        "cost-tracking"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-04-22-directive-post-anthropic-self-autonomous-plan.md"
+        },
+        {
+          "id": "e009-harness-neutrality-and-opencode-parity",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity.md"
+        },
+        {
+          "id": "claude-code-docs",
+          "type": "reference",
+          "url": "https://docs.anthropic.com/en/docs/claude-code",
+          "title": "Claude Code documentation"
+        },
+        {
+          "id": "opencode-repo",
+          "type": "repository",
+          "url": "https://github.com/sst/opencode",
+          "title": "sst/opencode"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Harness Contract",
+        "Harness-Neutral Invariants"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "E009 \u2014 Harness Neutrality + OpenCode Parity"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Post-Anthropic Directive"
+        },
+        {
+          "verb": "REFERENCED BY",
+          "target": "E009 M001 \u2014 OpenCode install"
+        },
+        {
+          "verb": "REFERENCED BY",
+          "target": "E009 M002 \u2014 MCP continuity"
+        },
+        {
+          "verb": "REFERENCED BY",
+          "target": "E009 M003 \u2014 Skill portability"
         }
       ]
     },
@@ -30529,8 +30732,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 187,
-      "relationship_count": 1246
+      "page_count": 189,
+      "relationship_count": 1256
     },
     "ai-agents": {
       "page_count": 68,
@@ -30553,8 +30756,8 @@
       "relationship_count": 55
     },
     "knowledge-systems": {
-      "page_count": 22,
-      "relationship_count": 192
+      "page_count": 23,
+      "relationship_count": 195
     },
     "log": {
       "page_count": 30,
@@ -30875,7 +31078,8 @@
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
-      "spine/models/ecosystem/model-mcp-cli-integration"
+      "spine/models/ecosystem/model-mcp-cli-integration",
+      "spine/standards/harness-contract"
     ],
     "api": [
       "backlog/epics/milestone-v2/e015-gateway-tools-completion-all-requirements-implemented-with-mcp-integration",
@@ -31006,7 +31210,8 @@
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "domains/devops/devops-control-plane",
-      "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated"
+      "lessons/03_validated/ingestion-research/shallow-ingestion-is-systemic-not-isolated",
+      "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "contract-compliance": [
       "backlog/epics/milestone-v2/e023-gateway-wide-output-contract-audit"
@@ -31224,6 +31429,7 @@
       "spine/references/adoption-guide",
       "spine/references/methodology-adoption-guide",
       "spine/references/methodology-system-map",
+      "spine/standards/harness-contract",
       "spine/standards/model-standards/model-methodology-standards"
     ],
     "artifact-types": [
@@ -31357,6 +31563,7 @@
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
       "spine/references/root-documentation-map",
+      "spine/standards/harness-contract",
       "spine/standards/model-standards/model-claude-code-standards",
       "spine/standards/model-standards/model-skills-commands-hooks-standards"
     ],
@@ -31384,7 +31591,8 @@
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
-      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference"
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "spine/references/operator-workstation-storage-tiering"
     ],
     "openrouter": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
@@ -31427,6 +31635,7 @@
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "spine/models/quality/model-quality-failure-prevention",
+      "spine/standards/harness-contract",
       "spine/standards/model-standards/model-claude-code-standards"
     ],
     "subscription-deadline": [
@@ -31489,21 +31698,24 @@
     ],
     "consumer-property-doctrine": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
-      "backlog/modules/e009-m004-harness-contract-document"
+      "backlog/modules/e009-m004-harness-contract-document",
+      "spine/standards/harness-contract"
     ],
     "skills-portability": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity"
     ],
     "hardware": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "backlog/modules/e010-m001-64gb-ram-install-and-verify"
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "spine/references/operator-workstation-storage-tiering"
     ],
     "storage": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
       "backlog/modules/e010-m003-storage-tiering-documentation",
-      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference"
+      "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "spine/references/operator-workstation-storage-tiering"
     ],
     "ram": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -31511,12 +31723,14 @@
     ],
     "nvme": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "spine/references/operator-workstation-storage-tiering"
     ],
     "wsl": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "spine/references/operator-workstation-storage-tiering"
     ],
     "ext4": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -31596,7 +31810,8 @@
     ],
     "wiki-assistant": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
-      "backlog/modules/e012-m002-wiki-assistant-candidate-a"
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "wiki-router": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
@@ -31893,13 +32108,15 @@
     ],
     "contract": [
       "backlog/modules/e009-m004-harness-contract-document",
-      "spine/standards/gateway-output-contract"
+      "spine/standards/gateway-output-contract",
+      "spine/standards/harness-contract"
     ],
     "standard": [
       "backlog/modules/e009-m004-harness-contract-document",
       "backlog/tasks/T026-document-aicp-fallback-chain-standard",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
-      "backlog/tasks/T055-draft-harness-contract-outline"
+      "backlog/tasks/T055-draft-harness-contract-outline",
+      "spine/standards/harness-contract"
     ],
     "doctrine": [
       "backlog/modules/e009-m004-harness-contract-document"
@@ -31929,7 +32146,8 @@
       "backlog/modules/e010-m002-dev-sdd-mount-procedure"
     ],
     "tiering": [
-      "backlog/modules/e010-m003-storage-tiering-documentation"
+      "backlog/modules/e010-m003-storage-tiering-documentation",
+      "spine/references/operator-workstation-storage-tiering"
     ],
     "documentation": [
       "backlog/modules/e010-m003-storage-tiering-documentation",
@@ -31955,6 +32173,7 @@
       "spine/references/gateway-tools-reference",
       "spine/references/methodology-system-map",
       "spine/references/open-model-evaluation-framework",
+      "spine/references/operator-workstation-storage-tiering",
       "spine/references/root-documentation-map",
       "spine/standards/reference-page-standards"
     ],
@@ -32076,7 +32295,8 @@
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
       "backlog/tasks/T058-create-unsloth-venv",
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
-      "backlog/tasks/T070-design-adapter-training-datasets"
+      "backlog/tasks/T070-design-adapter-training-datasets",
+      "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "gpu": [
       "backlog/modules/e012-m001-unsloth-toolchain-install",
@@ -32096,7 +32316,8 @@
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "sft": [
-      "backlog/modules/e012-m002-wiki-assistant-candidate-a"
+      "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "candidate-d": [
       "backlog/modules/e012-m003-wiki-router-candidate-d"
@@ -32424,7 +32645,8 @@
       "backlog/tasks/T055-draft-harness-contract-outline"
     ],
     "corpus": [
-      "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "wiki": [
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
@@ -32438,7 +32660,8 @@
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
     ],
     "qa-pairs": [
-      "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "dataset-design": [
       "backlog/tasks/T070-design-adapter-training-datasets"
@@ -35310,6 +35533,19 @@
     "procedure": [
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
     ],
+    "note": [
+      "log/2026-04-23-corpus-training-readiness-audit",
+      "spine/standards/note-page-standards"
+    ],
+    "completion": [
+      "log/2026-04-23-corpus-training-readiness-audit"
+    ],
+    "t060": [
+      "log/2026-04-23-corpus-training-readiness-audit"
+    ],
+    "training-readiness": [
+      "log/2026-04-23-corpus-training-readiness-audit"
+    ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
@@ -36384,6 +36620,7 @@
       "spine/models/quality/model-sfif-architecture",
       "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/model-registry",
+      "spine/standards/harness-contract",
       "spine/super-model/enforcement-hierarchy",
       "spine/super-model/goldilocks-protocol",
       "spine/super-model/integration-ecosystem",
@@ -36417,7 +36654,8 @@
       "spine/models/depth/model-notebooklm",
       "spine/models/depth/model-second-brain",
       "spine/models/ecosystem/model-automation-pipelines",
-      "spine/standards/concept-page-standards"
+      "spine/standards/concept-page-standards",
+      "spine/standards/harness-contract"
     ],
     "grounded-research": [
       "spine/models/depth/model-notebooklm"
@@ -36512,6 +36750,24 @@
     "checklist": [
       "spine/references/open-model-evaluation-framework"
     ],
+    "disks": [
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "sata": [
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "raid": [
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "9p": [
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "ground-truth": [
+      "spine/references/operator-workstation-storage-tiering"
+    ],
+    "operator-workstation": [
+      "spine/references/operator-workstation-storage-tiering"
+    ],
     "root": [
       "spine/references/root-documentation-map"
     ],
@@ -36558,6 +36814,12 @@
     "tool-output": [
       "spine/standards/gateway-output-contract"
     ],
+    "tool-semantics": [
+      "spine/standards/harness-contract"
+    ],
+    "cost-tracking": [
+      "spine/standards/harness-contract"
+    ],
     "gold-standard": [
       "spine/standards/model-standards/model-claude-code-standards",
       "spine/standards/model-standards/model-context-engineering-standards",
@@ -36582,9 +36844,6 @@
     ],
     "wiki-model": [
       "spine/standards/model-standards/model-llm-wiki-standards"
-    ],
-    "note": [
-      "spine/standards/note-page-standards"
     ],
     "session-handoff": [
       "spine/standards/session-handoff-standards"
@@ -36620,6 +36879,7 @@
         "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
         "Session 2026-04-17 Summary",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
+        "Operator Workstation \u2014 Storage Tiering (authoritative disk map)",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
@@ -36778,6 +37038,12 @@
       ]
     },
     {
+      "target": "E008 M002 \u2014 K2.6 Q2 download",
+      "referenced_by": [
+        "Operator Workstation \u2014 Storage Tiering (authoritative disk map)"
+      ]
+    },
+    {
       "target": "E008-local-k2-6-offline-frontier-tier",
       "referenced_by": [
         "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
@@ -36791,6 +37057,30 @@
         "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
         "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
         "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)"
+      ]
+    },
+    {
+      "target": "E009 M001 \u2014 OpenCode install",
+      "referenced_by": [
+        "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
+      ]
+    },
+    {
+      "target": "E009 M002 \u2014 MCP continuity",
+      "referenced_by": [
+        "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
+      ]
+    },
+    {
+      "target": "E009 M003 \u2014 Skill portability",
+      "referenced_by": [
+        "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
+      ]
+    },
+    {
+      "target": "E009 \u2014 Harness Neutrality + OpenCode Parity",
+      "referenced_by": [
+        "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
       ]
     },
     {
@@ -36809,6 +37099,18 @@
         "T045 \u2014 Install OpenCode Binary + Verify `opencode --version`",
         "T051 \u2014 Audit OpenCode's Skill / Agent Format + Invocation Convention",
         "T055 \u2014 Draft the Harness Contract Outline (skeleton + section headings)"
+      ]
+    },
+    {
+      "target": "E010 M002 \u2014 /dev/sdd mount",
+      "referenced_by": [
+        "Operator Workstation \u2014 Storage Tiering (authoritative disk map)"
+      ]
+    },
+    {
+      "target": "E010 \u2014 Storage and Hardware Enablement",
+      "referenced_by": [
+        "Operator Workstation \u2014 Storage Tiering (authoritative disk map)"
       ]
     },
     {
@@ -36864,7 +37166,8 @@
         "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
         "T058 \u2014 Create /home/jfortin/unsloth-env/ venv + Install unsloth",
         "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
-        "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)"
+        "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)",
+        "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant"
       ]
     },
     {
@@ -37011,6 +37314,7 @@
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
+        "Operator Workstation \u2014 Storage Tiering (authoritative disk map)",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
@@ -37055,6 +37359,12 @@
       "target": "Per-Task Cost Growth \u2014 OpenArms Evidence",
       "referenced_by": [
         "Agent Execution Cost Optimization Stack"
+      ]
+    },
+    {
+      "target": "Post-Anthropic Directive",
+      "referenced_by": [
+        "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
       ]
     },
     {
@@ -37385,6 +37695,12 @@
       ]
     },
     {
+      "target": "T060-audit-wiki-corpus-training-readiness",
+      "referenced_by": [
+        "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant"
+      ]
+    },
+    {
       "target": "T116 cost analysis",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -37601,7 +37917,8 @@
       "referenced_by": [
         "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
         "E012 M004 \u2014 Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)",
-        "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)"
+        "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
+        "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant"
       ]
     },
     {

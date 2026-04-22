@@ -2,13 +2,13 @@
 title: "T060 — Audit Wiki Corpus Training Readiness (page counts + Q&A shape)"
 type: task
 domain: backlog
-status: draft
+status: done
 priority: P2
 task_type: task
-current_stage: design
+current_stage: test
 readiness: 100
-progress: 0
-stages_completed: [document, design]
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts:
   - wiki/log/2026-04-23-corpus-training-readiness-audit.md
 estimate: S
