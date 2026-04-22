@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T16:06:31.996481+00:00",
+  "generated": "2026-04-22T16:12:02.985578+00:00",
   "stats": {
-    "pages": 413,
+    "pages": 426,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2639,
-    "tags_unique": 1216,
+    "relationships": 2677,
+    "tags_unique": 1231,
     "layers": {
       "3": 4,
       "6": 25,
@@ -2341,10 +2341,6 @@
         {
           "verb": "DEPENDS ON",
           "target": "e011-m004-circuit-breakers-and-fallback-chain"
-        },
-        {
-          "verb": "PRODUCES",
-          "target": "`wiki/spine/standards/routing-review-ritual.md`"
         }
       ]
     },
@@ -2736,6 +2732,109 @@
       ]
     },
     {
+      "path": "backlog/tasks/T015-extend-router-complexity-to-tier-mapping.md",
+      "slug": "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
+      "title": "T015 \u2014 Extend router.py Complexity-to-Tier Mapping for 5 Tiers",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "router",
+        "complexity-scorer",
+        "tier-mapping",
+        "k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e011-m001-tier-definitions-update",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m001-tier-definitions-update.md"
+        },
+        {
+          "id": "aicp-router",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/router.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m001-tier-definitions-update"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T014-add-k2-6-backend-entries-to-default-yaml"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T016-update-failover-chain-and-profiles.md",
+      "slug": "backlog/tasks/T016-update-failover-chain-and-profiles",
+      "title": "T016 \u2014 Update failover_chain + Add quality / fast Profiles",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "profiles",
+        "failover-chain",
+        "quality",
+        "fast",
+        "k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e011-m001-tier-definitions-update",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m001-tier-definitions-update.md"
+        },
+        {
+          "id": "aicp-profiles",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/config/profiles"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m001-tier-definitions-update"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T015-extend-router-complexity-to-tier-mapping"
+        }
+      ]
+    },
+    {
       "path": "backlog/tasks/T017-parameterize-openrouter-backend-config-key.md",
       "slug": "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
       "title": "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
@@ -2833,6 +2932,559 @@
         {
           "verb": "DEPENDS ON",
           "target": "T017-parameterize-openrouter-backend-config-key"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T019-extend-pricing-table-for-k2-6.md",
+      "slug": "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "title": "T019 \u2014 Extend Pricing Table with moonshotai/kimi-k2.6",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "pricing",
+        "cost",
+        "openrouter",
+        "k2-6"
+      ],
+      "sources": [
+        {
+          "id": "e011-m002-k2-6-openrouter-backend-adapter",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m002-k2-6-openrouter-backend-adapter.md"
+        },
+        {
+          "id": "aicp-openrouter-backend",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/backends/openrouter.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m002-k2-6-openrouter-backend-adapter"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T017-parameterize-openrouter-backend-config-key"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T020-parameterize-localai-backend-config-key.md",
+      "slug": "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "title": "T020 \u2014 Parameterize LocalAIBackend __init__ to accept config_key",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "localai",
+        "backend",
+        "refactor",
+        "k2-6",
+        "local"
+      ],
+      "sources": [
+        {
+          "id": "e011-m003-k2-6-local-backend-adapter",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m003-k2-6-local-backend-adapter.md"
+        },
+        {
+          "id": "aicp-localai-backend",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/backends/localai.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m003-k2-6-local-backend-adapter"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main.md",
+      "slug": "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "title": "T021 \u2014 Register k2_6_local Instance in aicp/cli/main.py (enabled-gated)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "cli",
+        "backend-registration",
+        "k2-6",
+        "local"
+      ],
+      "sources": [
+        {
+          "id": "e011-m003-k2-6-local-backend-adapter",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m003-k2-6-local-backend-adapter.md"
+        },
+        {
+          "id": "aicp-cli-main",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/cli/main.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m003-k2-6-local-backend-adapter"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T020-parameterize-localai-backend-config-key"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T022-implement-fast-tcp-probe-is-available.md",
+      "slug": "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
+      "title": "T022 \u2014 Implement Fast TCP Probe for LocalAIBackend.is_available()",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "is-available",
+        "tcp-probe",
+        "reliability",
+        "failover"
+      ],
+      "sources": [
+        {
+          "id": "e011-m003-k2-6-local-backend-adapter",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m003-k2-6-local-backend-adapter.md"
+        },
+        {
+          "id": "aicp-localai-backend",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/backends/localai.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m003-k2-6-local-backend-adapter"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T020-parameterize-localai-backend-config-key"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T023-add-per-backend-circuit-breaker-config.md",
+      "slug": "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "title": "T023 \u2014 Add Per-Backend circuit_breaker Config Stanzas",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "circuit-breaker",
+        "config",
+        "reliability"
+      ],
+      "sources": [
+        {
+          "id": "e011-m004-circuit-breakers-and-fallback-chain",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m004-circuit-breakers-and-fallback-chain.md"
+        },
+        {
+          "id": "aicp-circuit-breaker",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/circuit_breaker.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides.md",
+      "slug": "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
+      "title": "T024 \u2014 Extend build_breakers() to Honor per_backend Overrides",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "circuit-breaker",
+        "build-breakers"
+      ],
+      "sources": [
+        {
+          "id": "e011-m004-circuit-breakers-and-fallback-chain",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m004-circuit-breakers-and-fallback-chain.md"
+        },
+        {
+          "id": "aicp-circuit-breaker",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/circuit_breaker.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T023-add-per-backend-circuit-breaker-config"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T025-fallback-chain-integration-test.md",
+      "slug": "backlog/tasks/T025-fallback-chain-integration-test",
+      "title": "T025 \u2014 Fallback-Chain Integration Test (3 failures \u2192 next tier)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "fallback-chain",
+        "integration-test",
+        "reliability"
+      ],
+      "sources": [
+        {
+          "id": "e011-m004-circuit-breakers-and-fallback-chain",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m004-circuit-breakers-and-fallback-chain.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T024-extend-build-breakers-for-per-backend-overrides"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T018-register-k2-6-openrouter-instance-in-cli-main"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T026-document-aicp-fallback-chain-standard.md",
+      "slug": "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "title": "T026 \u2014 Document AICP Fallback Chain as Standard Page",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "standard",
+        "documentation",
+        "fallback-chain",
+        "wiki-page"
+      ],
+      "sources": [
+        {
+          "id": "e011-m004-circuit-breakers-and-fallback-chain",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m004-circuit-breakers-and-fallback-chain.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m004-circuit-breakers-and-fallback-chain"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`wiki/spine/standards/aicp-fallback-chain.md`"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T027-verify-metrics-capture-k2-6-backends.md",
+      "slug": "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "title": "T027 \u2014 Verify Metrics (Prometheus + aggregate) Capture k2_6 Backends",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "metrics",
+        "prometheus",
+        "verification",
+        "observability"
+      ],
+      "sources": [
+        {
+          "id": "e011-m005-routing-metric-and-review-ritual",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m005-routing-metric-and-review-ritual.md"
+        },
+        {
+          "id": "aicp-prometheus",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/prometheus.py"
+        },
+        {
+          "id": "aicp-metrics",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/metrics.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m005-routing-metric-and-review-ritual"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T018-register-k2-6-openrouter-instance-in-cli-main"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T028-add-routing-report-cli-command.md",
+      "slug": "backlog/tasks/T028-add-routing-report-cli-command",
+      "title": "T028 \u2014 Add `aicp routing-report` CLI Command (7d Rollup)",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "cli",
+        "routing-report",
+        "metrics-rollup",
+        "reporting"
+      ],
+      "sources": [
+        {
+          "id": "e011-m005-routing-metric-and-review-ritual",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m005-routing-metric-and-review-ritual.md"
+        },
+        {
+          "id": "aicp-cli-main",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/cli/main.py"
+        },
+        {
+          "id": "aicp-metrics",
+          "type": "repository",
+          "file": "/home/jfortin/devops-expert-local-ai/aicp/core/metrics.py"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m005-routing-metric-and-review-ritual"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T027-verify-metrics-capture-k2-6-backends"
+        }
+      ]
+    },
+    {
+      "path": "backlog/tasks/T029-author-routing-review-ritual-standard.md",
+      "slug": "backlog/tasks/T029-author-routing-review-ritual-standard",
+      "title": "T029 \u2014 Author Routing Review Ritual Standard",
+      "type": "task",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "task",
+        "p1",
+        "e011",
+        "aicp",
+        "standard",
+        "ritual",
+        "weekly-review",
+        "observability"
+      ],
+      "sources": [
+        {
+          "id": "e011-m005-routing-metric-and-review-ritual",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e011-m005-routing-metric-and-review-ritual.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "e011-m005-routing-metric-and-review-ritual"
+        },
+        {
+          "verb": "PART OF",
+          "target": "E011-routing-integration-aicp-tiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "T028-add-routing-report-cli-command"
+        },
+        {
+          "verb": "PRODUCES",
+          "target": "`wiki/spine/standards/routing-review-ritual.md`"
         }
       ]
     },
@@ -28571,8 +29223,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 48,
-      "relationship_count": 227
+      "page_count": 61,
+      "relationship_count": 265
     },
     "cross-domain": {
       "page_count": 187,
@@ -28739,6 +29391,7 @@
     "quality": [
       "backlog/epics/milestone-v2/e011-standards-exemplification-all-15-per-type-standards-with-inline-annotated-e",
       "backlog/epics/pre-milestone/E006-standards-by-example",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
       "domains/cross-domain/integration/skyscraper-pyramid-mountain",
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
@@ -29005,8 +29658,21 @@
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
-      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main"
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
+      "backlog/tasks/T025-fallback-chain-integration-test",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "backlog/tasks/T028-add-routing-report-cli-command",
+      "backlog/tasks/T029-author-routing-review-ritual-standard"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -29048,8 +29714,21 @@
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
+      "backlog/tasks/T025-fallback-chain-integration-test",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "backlog/tasks/T028-add-routing-report-cli-command",
+      "backlog/tasks/T029-author-routing-review-ritual-standard",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
@@ -29081,6 +29760,7 @@
     "localai": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "domains/tools-and-platforms/aicp",
@@ -29376,6 +30056,7 @@
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
@@ -29495,7 +30176,8 @@
     ],
     "complexity-scorer": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
-      "backlog/modules/e011-m001-tier-definitions-update"
+      "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping"
     ],
     "tiers": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
@@ -29509,13 +30191,20 @@
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "circuit-breaker": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
       "domains/tools-and-platforms/aicp",
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
     ],
@@ -29711,14 +30400,28 @@
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
-      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main"
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
+      "backlog/tasks/T025-fallback-chain-integration-test",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "backlog/tasks/T028-add-routing-report-cli-command",
+      "backlog/tasks/T029-author-routing-review-ritual-standard"
     ],
     "tier-config": [
       "backlog/modules/e011-m001-tier-definitions-update"
     ],
     "router": [
       "backlog/modules/e011-m001-tier-definitions-update",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
     ],
     "default-yaml": [
@@ -29729,6 +30432,7 @@
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
       "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
@@ -29742,32 +30446,43 @@
     ],
     "local": [
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
-      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
+      "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main"
     ],
     "failover": [
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain"
     ],
     "reliability": [
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "backlog/tasks/T025-fallback-chain-integration-test",
       "patterns/01_drafts/per-backend-circuit-breaker-with-failover-chain",
       "patterns/01_drafts/per-day-jsonl-dlq-with-retry-budget",
       "patterns/03_validated/architecture/deterministic-shell-llm-core"
     ],
     "metrics": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
     ],
     "prometheus": [
-      "backlog/modules/e011-m005-routing-metric-and-review-ritual"
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends"
     ],
     "observability": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "backlog/tasks/T029-author-routing-review-ritual-standard",
       "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "ritual": [
-      "backlog/modules/e011-m005-routing-metric-and-review-ritual"
+      "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/tasks/T029-author-routing-review-ritual-standard"
     ],
     "review": [
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
@@ -29858,8 +30573,21 @@
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
+      "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides",
+      "backlog/tasks/T025-fallback-chain-integration-test",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "backlog/tasks/T028-add-routing-report-cli-command",
+      "backlog/tasks/T029-author-routing-review-ritual-standard",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -29879,6 +30607,7 @@
     ],
     "config": [
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
+      "backlog/tasks/T023-add-per-backend-circuit-breaker-config",
       "domains/cross-domain/methodology-framework/methodology-config-architecture",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
@@ -29886,12 +30615,28 @@
     "tier": [
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml"
     ],
+    "tier-mapping": [
+      "backlog/tasks/T015-extend-router-complexity-to-tier-mapping"
+    ],
+    "profiles": [
+      "backlog/tasks/T016-update-failover-chain-and-profiles",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
+    ],
+    "failover-chain": [
+      "backlog/tasks/T016-update-failover-chain-and-profiles"
+    ],
+    "fast": [
+      "backlog/tasks/T016-update-failover-chain-and-profiles"
+    ],
     "refactor": [
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
+      "backlog/tasks/T020-parameterize-localai-backend-config-key",
       "domains/devops/task-type-artifact-matrix"
     ],
     "cli": [
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "backlog/tasks/T028-add-routing-report-cli-command",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/obsidian-cli",
@@ -29907,7 +30652,66 @@
       "spine/references/gateway-tools-reference"
     ],
     "backend-registration": [
-      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main"
+      "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main"
+    ],
+    "pricing": [
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6"
+    ],
+    "cost": [
+      "backlog/tasks/T019-extend-pricing-table-for-k2-6",
+      "patterns/01_drafts/agent-execution-cost-optimization-stack"
+    ],
+    "is-available": [
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available"
+    ],
+    "tcp-probe": [
+      "backlog/tasks/T022-implement-fast-tcp-probe-is-available"
+    ],
+    "build-breakers": [
+      "backlog/tasks/T024-extend-build-breakers-for-per-backend-overrides"
+    ],
+    "fallback-chain": [
+      "backlog/tasks/T025-fallback-chain-integration-test",
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard"
+    ],
+    "integration-test": [
+      "backlog/tasks/T025-fallback-chain-integration-test"
+    ],
+    "standard": [
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "backlog/tasks/T029-author-routing-review-ritual-standard"
+    ],
+    "documentation": [
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard",
+      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
+      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
+      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
+      "spine/references/frontmatter-field-reference",
+      "spine/references/gateway-tools-reference",
+      "spine/references/root-documentation-map"
+    ],
+    "wiki-page": [
+      "backlog/tasks/T026-document-aicp-fallback-chain-standard"
+    ],
+    "verification": [
+      "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/03_validated/methodology-quality/never-present-speculation-as-fact",
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
+      "patterns/01_drafts/artifact-path-verification-at-gate-close"
+    ],
+    "routing-report": [
+      "backlog/tasks/T028-add-routing-report-cli-command"
+    ],
+    "metrics-rollup": [
+      "backlog/tasks/T028-add-routing-report-cli-command"
+    ],
+    "reporting": [
+      "backlog/tasks/T028-add-routing-report-cli-command"
+    ],
+    "weekly-review": [
+      "backlog/tasks/T029-author-routing-review-ritual-standard"
     ],
     "agentic-search": [
       "comparisons/agentic-search-vs-vector-search"
@@ -30197,9 +31001,6 @@
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "spine/standards/decision-page-standards"
-    ],
-    "profiles": [
-      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing"
     ],
     "local-first": [
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
@@ -31447,14 +32248,6 @@
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output"
     ],
-    "documentation": [
-      "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
-      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models",
-      "spine/references/frontmatter-field-reference",
-      "spine/references/gateway-tools-reference",
-      "spine/references/root-documentation-map"
-    ],
     "adr": [
       "domains/cross-domain/methodology-artifacts/categories/requirements-and-design-artifacts"
     ],
@@ -32312,12 +33105,6 @@
     "externalized-control": [
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever"
     ],
-    "verification": [
-      "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/03_validated/methodology-quality/never-present-speculation-as-fact",
-      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
-      "patterns/01_drafts/artifact-path-verification-at-gate-close"
-    ],
     "convergence": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
@@ -32897,9 +33684,6 @@
     ],
     "historical": [
       "log/archived/agent-directive-original"
-    ],
-    "cost": [
-      "patterns/01_drafts/agent-execution-cost-optimization-stack"
     ],
     "optimization": [
       "patterns/01_drafts/agent-execution-cost-optimization-stack"
@@ -34400,8 +35184,21 @@
         "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
         "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
         "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml",
+        "T015 \u2014 Extend router.py Complexity-to-Tier Mapping for 5 Tiers",
+        "T016 \u2014 Update failover_chain + Add quality / fast Profiles",
         "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
-        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py"
+        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py",
+        "T019 \u2014 Extend Pricing Table with moonshotai/kimi-k2.6",
+        "T020 \u2014 Parameterize LocalAIBackend __init__ to accept config_key",
+        "T021 \u2014 Register k2_6_local Instance in aicp/cli/main.py (enabled-gated)",
+        "T022 \u2014 Implement Fast TCP Probe for LocalAIBackend.is_available()",
+        "T023 \u2014 Add Per-Backend circuit_breaker Config Stanzas",
+        "T024 \u2014 Extend build_breakers() to Honor per_backend Overrides",
+        "T025 \u2014 Fallback-Chain Integration Test (3 failures \u2192 next tier)",
+        "T026 \u2014 Document AICP Fallback Chain as Standard Page",
+        "T027 \u2014 Verify Metrics (Prometheus + aggregate) Capture k2_6 Backends",
+        "T028 \u2014 Add `aicp routing-report` CLI Command (7d Rollup)",
+        "T029 \u2014 Author Routing Review Ritual Standard"
       ]
     },
     {
@@ -34842,13 +35639,59 @@
     {
       "target": "T014-add-k2-6-backend-entries-to-default-yaml",
       "referenced_by": [
+        "T015 \u2014 Extend router.py Complexity-to-Tier Mapping for 5 Tiers",
         "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key"
+      ]
+    },
+    {
+      "target": "T015-extend-router-complexity-to-tier-mapping",
+      "referenced_by": [
+        "T016 \u2014 Update failover_chain + Add quality / fast Profiles"
       ]
     },
     {
       "target": "T017-parameterize-openrouter-backend-config-key",
       "referenced_by": [
-        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py"
+        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py",
+        "T019 \u2014 Extend Pricing Table with moonshotai/kimi-k2.6"
+      ]
+    },
+    {
+      "target": "T018-register-k2-6-openrouter-instance-in-cli-main",
+      "referenced_by": [
+        "T025 \u2014 Fallback-Chain Integration Test (3 failures \u2192 next tier)",
+        "T027 \u2014 Verify Metrics (Prometheus + aggregate) Capture k2_6 Backends"
+      ]
+    },
+    {
+      "target": "T020-parameterize-localai-backend-config-key",
+      "referenced_by": [
+        "T021 \u2014 Register k2_6_local Instance in aicp/cli/main.py (enabled-gated)",
+        "T022 \u2014 Implement Fast TCP Probe for LocalAIBackend.is_available()"
+      ]
+    },
+    {
+      "target": "T023-add-per-backend-circuit-breaker-config",
+      "referenced_by": [
+        "T024 \u2014 Extend build_breakers() to Honor per_backend Overrides"
+      ]
+    },
+    {
+      "target": "T024-extend-build-breakers-for-per-backend-overrides",
+      "referenced_by": [
+        "T025 \u2014 Fallback-Chain Integration Test (3 failures \u2192 next tier)"
+      ]
+    },
+    {
+      "target": "T027-verify-metrics-capture-k2-6-backends",
+      "referenced_by": [
+        "T028 \u2014 Add `aicp routing-report` CLI Command (7d Rollup)"
+      ]
+    },
+    {
+      "target": "T028-add-routing-report-cli-command",
+      "referenced_by": [
+        "T029 \u2014 Author Routing Review Ritual Standard"
       ]
     },
     {
@@ -34883,9 +35726,15 @@
       ]
     },
     {
+      "target": "`wiki/spine/standards/aicp-fallback-chain.md`",
+      "referenced_by": [
+        "T026 \u2014 Document AICP Fallback Chain as Standard Page"
+      ]
+    },
+    {
       "target": "`wiki/spine/standards/routing-review-ritual.md`",
       "referenced_by": [
-        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual"
+        "T029 \u2014 Author Routing Review Ritual Standard"
       ]
     },
     {
@@ -34913,7 +35762,9 @@
       "referenced_by": [
         "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
         "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
-        "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml"
+        "T014 \u2014 Add K2.6 Backend Entries to config/default.yaml",
+        "T015 \u2014 Extend router.py Complexity-to-Tier Mapping for 5 Tiers",
+        "T016 \u2014 Update failover_chain + Add quality / fast Profiles"
       ]
     },
     {
@@ -34923,14 +35774,18 @@
         "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
         "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
         "T017 \u2014 Parameterize OpenRouterBackend __init__ to accept config_key",
-        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py"
+        "T018 \u2014 Register k2_6_openrouter Instance in aicp/cli/main.py",
+        "T019 \u2014 Extend Pricing Table with moonshotai/kimi-k2.6"
       ]
     },
     {
       "target": "e011-m003-k2-6-local-backend-adapter",
       "referenced_by": [
         "E011 M001 \u2014 Tier Definitions Update (default.yaml + router.py thresholds)",
-        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)"
+        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
+        "T020 \u2014 Parameterize LocalAIBackend __init__ to accept config_key",
+        "T021 \u2014 Register k2_6_local Instance in aicp/cli/main.py (enabled-gated)",
+        "T022 \u2014 Implement Fast TCP Probe for LocalAIBackend.is_available()"
       ]
     },
     {
@@ -34938,14 +35793,21 @@
       "referenced_by": [
         "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
         "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
-        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual"
+        "E011 M005 \u2014 Routing-Split Metric and Weekly Review Ritual",
+        "T023 \u2014 Add Per-Backend circuit_breaker Config Stanzas",
+        "T024 \u2014 Extend build_breakers() to Honor per_backend Overrides",
+        "T025 \u2014 Fallback-Chain Integration Test (3 failures \u2192 next tier)",
+        "T026 \u2014 Document AICP Fallback Chain as Standard Page"
       ]
     },
     {
       "target": "e011-m005-routing-metric-and-review-ritual",
       "referenced_by": [
         "E011 M002 \u2014 K2.6 OpenRouter Backend Adapter (reuse OpenRouterBackend)",
-        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)"
+        "E011 M004 \u2014 Circuit Breakers and Fallback Chain (per-backend tuning)",
+        "T027 \u2014 Verify Metrics (Prometheus + aggregate) Capture k2_6 Backends",
+        "T028 \u2014 Add `aicp routing-report` CLI Command (7d Rollup)",
+        "T029 \u2014 Author Routing Review Ritual Standard"
       ]
     },
     {
