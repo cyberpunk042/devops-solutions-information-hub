@@ -165,6 +165,44 @@ The wiki IS the highest-value fine-tuning corpus in the ecosystem: 368 curated p
 
 None of these gaps block current AICP work. They are second-wave improvements that, as they land, further compress the cloud-routing fraction.
 
+## 2026-04-22 Addendum — Kimi K2.6 Rewrites the Premium Tier
+
+Five days after the original 2026-04-17 synthesis, **Moonshot AI released [[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6]]** (2026-04-20) — a **1T-total / 32B-active MoE** that **leads Claude Opus 4.6 and GPT-5.4 on agentic reasoning (HLE-Full 54.0) and real-world coding (SWE-Bench Pro 58.6)**, under a modified MIT license, at OpenRouter pricing of **$0.80 / $3.50 per M tokens (~1/20th Opus)**. It adds a fifth layer to the stack:
+
+> [!info] **Fifth layer — Premium/Routing at 1/20th Cost**
+>
+> | Layer | What it provides | 2026 example | Hardware floor | Matured |
+> |-------|------------------|--------------|----------------|---------|
+> | **5. Premium online (NEW)** | Frontier agentic capability at open-model prices | [[src-kimi-k2-6-moonshot-agent-swarm\|Kimi K2.6 via OpenRouter]] | N/A (online) | 2026-04-20 |
+>
+> And as a **local-batch-frontier** option: K2.6 Q2 GGUF (340 GB) via **KTransformers** on 19 GB VRAM + 64 GB RAM (incoming) + RAID 0 NVMe swap — realistic ~3-10 tok/s.
+
+**What this changes in the summary table** (updated 2026-04-22):
+
+> [!success] **$0 target and premium-cheap routing** (post-K2.6 update)
+>
+> | Task class | 2024 routing | 2026-04-17 routing | 2026-04-22 routing |
+> |------------|---------------|---------------------|---------------------|
+> | Multi-step agent workflows with tool calls | Cloud | Local (gpt-oss / Qwopus) | **K2.6 cheap-cloud OR local** |
+> | Code review, refactors | Cloud | Local (Qwopus) | **K2.6 cheap-cloud (58.6 SWE-Pro) OR local** |
+> | Substantive reasoning on corpus-wide analysis | Cloud | Local batch (gpt-oss-120b offload) | **K2.6 cheap-cloud OR K2.6 local-batch** |
+> | Novel cross-domain synthesis | Cloud (Opus) | Cloud (Opus) | **K2.6 cheap-cloud (agentic SOTA) — falls back to Opus only for pure-math / vision corners** |
+> | Architecture decisions, security review | Cloud (Opus) | Cloud (Opus) | **K2.6 cheap-cloud primary, Opus 4.7 xhigh as deliberate fallback** |
+
+**The new equilibrium**: ~90% local + ~8% K2.6-on-OpenRouter + ~2% Opus (or direct Moonshot) for the remaining pure-math / maximum-stakes / very-long-context corners. The cloud-spend budget effectively collapses by an order of magnitude for the same quality ceiling.
+
+**Operator's 5-day self-autonomous workstation plan gains one critical path**: validate Claude Code CLI → OpenRouter → K2.6 (via `ANTHROPIC_BASE_URL` env var) on day 1. If it works, the Claude Code subscription transition (2026-04-27) becomes a non-event — the harness stays, the backend changes, the cost falls ~95%. Add to the operator's concrete next-moves table:
+
+> [!tip] **Post-K2.6 next moves**
+>
+> | Action | Hours | Output | Dependency |
+> |--------|-------|--------|------------|
+> | 11. OpenRouter account + K2.6 API key | 0.5 h | Primary premium-cheap route available | None |
+> | 12. Test Claude Code CLI → OpenRouter → K2.6 via env vars on wiki workload | 1-2 h | Subscription deadline de-risked | #11 |
+> | 13. Download K2.6 Q2 GGUF (340 GB) to RAID 0 NVMe | 2-4 h (network-bound) | Offline frontier capability staged | 1 TB NVMe free |
+> | 14. KTransformers setup + K2.6 Q2 local benchmark | 3-6 h | Real tok/s measured; Tier 2 viability confirmed | #13 + 64 GB RAM installed |
+> | 15. Wire K2.6 as AICP premium-cheap tier (OpenRouter first, local fallback) | 4-8 h | ~90% local + ~8% K2.6 routing-split reached | #7, #12 |
+
 ## Connection to the Four Principles
 
 > [!abstract] **How today's synthesis validates (or extends) the four principles**
@@ -220,6 +258,7 @@ The four principles held across a day of intensive ingestion with no gaps or exc
 - BUILDS ON: [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss]]
 - BUILDS ON: [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM]]
 - BUILDS ON: [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Synthesis — Qwopus]]
+- BUILDS ON: [[src-kimi-k2-6-moonshot-agent-swarm|Synthesis — Kimi K2.6]]
 - BUILDS ON: [[open-model-evaluation-framework|Open-Model Evaluation Framework]]
 - FEEDS INTO: [[model-local-ai|Model — Local AI ($0 Target)]]
 - FEEDS INTO: [[aicp|AICP]]
@@ -232,6 +271,7 @@ The four principles held across a day of intensive ingestion with no gaps or exc
 [[Synthesis — gpt-oss]]
 [[Synthesis — AirLLM]]
 [[Synthesis — Qwopus]]
+[[Synthesis — Kimi K2.6]]
 [[open-model-evaluation-framework|Open-Model Evaluation Framework]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[aicp|AICP]]

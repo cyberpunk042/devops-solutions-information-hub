@@ -50,7 +50,10 @@
       "Bash(python3 -m tools.gateway what-do-i-need)",
       "Bash(python3 -m tools.gateway status)",
       "Bash(claude --version)",
-      "Bash(python3 -m tools.view spine)"
+      "Bash(python3 -m tools.view spine)",
+      "WebFetch(domain:www.kimi.com)",
+      "WebFetch(domain:openrouter.ai)",
+      "WebFetch(domain:the-decoder.com)"
     ]
   }
 }

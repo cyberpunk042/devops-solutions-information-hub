@@ -131,6 +131,7 @@ The $0-target model was designed under a 2024 assumption: **closed frontier mode
 > | [[src-gpt-oss-openai-open-weight-moe\|**gpt-oss 20b / 120b**]] | **21B / 3.6B · 117B / 5.1B** | **Apache 2.0** | **2025-08** | **GPT-5 reasoning-light / Claude 4 tool-use** |
 > | [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b\|Qwopus 27B distilled]] | 27B dense + LoRA | Apache 2.0 | 2025 H2 | Opus 4.6 on reasoning tasks |
 > | Hermes 4 | 70B fine-tuned | Llama derivative | 2025 H2 | Agentic tool-use SOTA |
+> | [[src-kimi-k2-6-moonshot-agent-swarm\|**Kimi K2.6 (NEW 2026-04-22)**]] | **1T / 32B active MoE · 384 experts · MLA** | **modified MIT** | **2026-04-20** | **LEADS Opus 4.6 + GPT-5.4 on agentic (HLE-Full 54.0) and real-world coding (SWE-Bench Pro 58.6); 300-sub-agent swarm native** |
 
 **The strategic shift** — the question "can I do this locally at $0?" changed from "maybe for batch work" in 2024 to **"yes at interactive latency on consumer hardware"** in 2026. The closed-frontier advantage narrowed to: maximum-stakes novel synthesis, very long-context work (>200K), benchmark absolute leadership, and reasoning efficiency (token count per equivalent-quality answer).
 
@@ -176,6 +177,42 @@ The $0-target model was designed under a 2024 assumption: **closed frontier mode
 - The NVMe drive (its generation, its free space) becomes the load-bearing hardware for this tier — it is the physical substrate the model lives on while running.
 
 **Principle-4 footnote.** AirLLM's marketing ("70B on 4GB *without quantization*") is a classroom instance of [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]] — structurally true, operationally aspirational without a latency SLO. See the [[src-airllm-layer-wise-inference-nvme-ssd-offload|synthesis page]] for the full derivation. For AICP routing, the honest declaration is "70B on 4GB VRAM at ≤0.2 tok/s via NVMe streaming" — the latency context is what makes the declaration verifiable, and therefore usable in a routing decision.
+
+### Kimi K2.6 — Agentic Frontier at 1/20th Cost, Dual-Slot (NEW 2026-04-22)
+
+[[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6]] (Moonshot AI, released 2026-04-20, modified-MIT) is a **1T-total / 32B-active-per-token MoE** with 384 experts, MLA attention, 256K context, native INT4 via quantization-aware training, and a **300-sub-agent · 4,000-step · 12+h autonomous-execution** Agent Swarm that is a *model-native* capability (not an application pattern). On elite benchmarks, K2.6 **leads the closed frontier on agentic tasks** (HLE-Full with Tools: 54.0 vs Opus 4.6 at 53.0 and GPT-5.4 at 52.1) and on **real-world coding** (SWE-Bench Pro: 58.6, top rank). It trails on pure math (AIME 2026: 96.4 vs GPT-5.4 at 99.2) and multimodal (MMMU-Pro: 79.4 vs Gemini 3.1 Pro at 83.0).
+
+The strategic point: **K2.6 is the first open-weight model to top the closed frontier on the benchmarks that matter for the operator's workloads** — and its OpenRouter pricing is **$0.80 per M input tokens · $3.50 per M output tokens**, ~**1/20th of Claude Opus 4.6**. This is not "approaching parity." This is a phase change in the economics of premium routing.
+
+K2.6 slots in **two tiers simultaneously** on the operator's hardware (19 GB VRAM + 64 GB RAM incoming + RAID 0 NVMe with large swap):
+
+> [!info] **K2.6 dual-slot in the routing stack**
+>
+> | Deployment | Tier | Latency | Cost | Use when |
+> |---|---|---|---|---|
+> | **OpenRouter → K2.6 (primary)** | premium/routing | seconds (first token) | $0.80/$3.50 per M | Default for agentic, coding, long-horizon work — replaces the "route to Claude" default for operator's workloads |
+> | **KTransformers → K2.6 Q2 (340 GB) on NVMe + 64 GB RAM + swap** | local-batch-frontier | ~3-10 tok/s realistic (needs benchmarking) | $0 + electricity | Offline frontier capability, privacy-locked runs, no-API-key environments, $0-target experiments |
+> | **Direct Moonshot API / Agent Platform** | premium/swarm | seconds | similar to OpenRouter | When full 300-sub-agent Agent Swarm programmatic invocation is required (OpenRouter may not expose full swarm API) |
+
+**Revised 4-tier + disk routing stack (post-K2.6):**
+
+> [!info] **2026-04-22 unified routing stack**
+>
+> | Tier | Target | Latency | Cost | Fits |
+> |---|---|---|---|---|
+> | **local-interactive** | Qwen3-8B, gpt-oss-20b, Gemma4 in VRAM | 10-60 tok/s | $0 | Short-context deterministic, tool calls |
+> | **local-reasoning** | Qwopus 27B, gpt-oss-120b MoE-offload | 3-30 tok/s | $0 | Complex reasoning + tool-calling |
+> | **local-batch** | AirLLM 70B-405B, K2.6 Q2 via KTransformers | 0.05-10 tok/s | $0 | Offline, privacy, overnight, frontier-local |
+> | **premium-cheap-online (NEW via K2.6)** | OpenRouter → K2.6 | seconds to first token | $0.80/$3.50 per M | **Default for agentic, coding, long-horizon (replaces Claude default)** |
+> | **cloud-light** | Opus 4.6 medium effort | seconds | $3/$15 per M (approx) | Context-heavy fallback |
+> | **cloud-standard** | Opus 4.7 high effort | seconds | $15/$75 per M (approx) | Max stakes novel synthesis, very long context |
+> | **cloud-heavy** | Opus 4.7 xhigh effort | seconds | $15+/$75+ per M | Architecture, deep review |
+
+**The structural shift.** With Claude Opus as the routing default, the cost-optimization lever was "route more to local." With **K2.6 on OpenRouter as the premium-cheap default, the lever becomes "route more to K2.6, keep Claude for the fraction where it still wins."** Pure math, very long context >200K, and a handful of creative/writing tasks remain Opus-favored; everything else becomes K2.6-favored at ~5% of the per-token cost.
+
+**For the 5-day self-autonomous workstation plan** (operator's Claude Code subscription transitions 2026-04-27): K2.6 via OpenRouter is the single highest-leverage move to make **before the deadline** — Claude Code CLI honors `ANTHROPIC_BASE_URL` + `ANTHROPIC_API_KEY` env vars and can route to OpenAI-compatible endpoints. Validating K2.6-via-OpenRouter as a Claude-Code backend on day 1 de-risks the entire week.
+
+**Principle-4 footnote.** "K2.6 beats Opus 4.6 on agentic" is a vendor/benchmark declaration. Verification trail: primary sources (Moonshot blog, SiliconANGLE, MarkTechPost dated 2026-04-20) cross-validate benchmark numbers; The Decoder and BuildFastWithAI independently confirm the ranking. **Independent production verification on operator's actual workloads (wiki synthesis, DevOps orchestration, multi-step research) is PENDING** — the declaration is verified at benchmark layer but aspirational at operator-workload layer until Day-1 A/B testing lands. See [[src-kimi-k2-6-moonshot-agent-swarm|the synthesis page]] for the full State-of-Knowledge verification table.
 
 ### Cloud Model Selection — Opus 4.6 vs 4.7 (NEW 2026-04-16)
 
@@ -442,6 +479,7 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[src-autobe-compiler-verified-backend-generation|Synthesis — AutoBE: Compiler-Verified Backend Generation]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-hrm-trm-tiny-recursion-models|Synthesis — HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI]]
+[[src-kimi-k2-6-moonshot-agent-swarm|Synthesis — Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Synthesis — Qwopus — Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B]]

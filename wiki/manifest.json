@@ -1,24 +1,25 @@
 {
-  "generated": "2026-04-20T01:23:09.132953+00:00",
+  "generated": "2026-04-22T14:26:25.936551+00:00",
   "stats": {
-    "pages": 391,
+    "pages": 393,
     "domains": 9,
-    "sources": 53,
+    "sources": 54,
     "comparisons": 5,
-    "relationships": 2560,
-    "tags_unique": 1155,
+    "relationships": 2571,
+    "tags_unique": 1169,
     "layers": {
       "3": 4,
       "6": 25,
       "2": 51,
       "4": 60,
       "5": 34,
-      "1": 35,
+      "0": 1,
+      "1": 36,
       "spine": 70
     },
     "maturity": {
-      "growing": 281,
-      "seed": 53
+      "growing": 282,
+      "seed": 54
     }
   },
   "pages": [
@@ -16351,6 +16352,48 @@
       ]
     },
     {
+      "path": "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure.md",
+      "slug": "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "title": "Day 1 \u2014 OpenRouter + Kimi K2.6 via Claude Code CLI (Setup + POC Procedure)",
+      "type": "note",
+      "domain": "ai-models",
+      "status": "draft",
+      "confidence": "medium",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "log",
+        "openrouter",
+        "kimi-k2-6",
+        "claude-code",
+        "harness",
+        "self-autonomous",
+        "5-day-plan",
+        "poc",
+        "procedure"
+      ],
+      "sources": [
+        {
+          "id": "src-kimi-k2-6-moonshot-agent-swarm",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md",
+          "title": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "id": "openrouter-claude-code-docs",
+          "type": "api-documentation",
+          "url": "https://openrouter.ai/docs/guides/coding-agents/claude-code-integration",
+          "title": "OpenRouter \u2014 Claude Code Integration",
+          "ingested": "2026-04-22"
+        }
+      ],
+      "layer": 0,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -21856,6 +21899,145 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md",
+      "slug": "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "title": "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
+      "type": "source-synthesis",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "kimi",
+        "k2-6",
+        "moonshot",
+        "open-weight",
+        "mit-license",
+        "moe",
+        "mla",
+        "agentic",
+        "agent-swarm",
+        "long-horizon-coding",
+        "256k-context",
+        "multimodal",
+        "gguf",
+        "openrouter",
+        "ktransformers",
+        "cost-optimization",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "src-kimi-k2-6-blog",
+          "type": "blog-post",
+          "url": "https://www.kimi.com/blog/kimi-k2-6",
+          "title": "Kimi K2.6 Tech Blog \u2014 Advancing Open-Source Coding (Moonshot AI)",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-k2-6-the-decoder",
+          "type": "article",
+          "url": "https://the-decoder.com/open-weight-kimi-k2-6-takes-on-gpt-5-4-and-claude-opus-4-6-with-agent-swarms/",
+          "title": "Open-weight Kimi K2.6 takes on GPT-5.4 and Claude Opus 4.6 with agent swarms",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-k2-6-siliconangle",
+          "type": "article",
+          "url": "https://siliconangle.com/2026/04/20/moonshot-ai-releases-kimi-k2-6-model-1t-parameters-attention-optimizations/",
+          "title": "Moonshot AI releases Kimi-K2.6 model with 1T parameters, attention optimizations",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-k2-6-marktechpost",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/04/20/moonshot-ai-releases-kimi-k2-6-with-long-horizon-coding-agent-swarm-scaling-to-300-sub-agents-and-4000-coordinated-steps/",
+          "title": "Moonshot AI Releases Kimi K2.6 with Long-Horizon Coding, Agent Swarm Scaling to 300 Sub-Agents",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-k2-6-unsloth-gguf",
+          "type": "repository",
+          "url": "https://huggingface.co/unsloth/Kimi-K2.6-GGUF",
+          "title": "unsloth/Kimi-K2.6-GGUF \u2014 Hugging Face",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-k2-6-openrouter",
+          "type": "api-documentation",
+          "url": "https://openrouter.ai/moonshotai/kimi-k2.6",
+          "title": "Kimi K2.6 \u2014 API Pricing & Providers | OpenRouter",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-benchmarks-buildfast",
+          "type": "article",
+          "url": "https://www.buildfastwithai.com/blogs/kimi-k2-6-vs-gpt-claude-benchmarks",
+          "title": "Kimi K2.6 vs GPT-5.4 vs Claude Opus: Who Wins? (2026)",
+          "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-latent-space-ainews",
+          "type": "article",
+          "url": "https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds",
+          "title": "AINews \u2014 Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6",
+          "ingested": "2026-04-22"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
+        "Synthesis: Kimi K2.6",
+        "Kimi K2.6 Source Synthesis",
+        "K2.6"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 AirLLM"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 gpt-oss"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Open-Model Evaluation Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Qwopus"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Unsloth"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 TurboQuant"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-playwright-cli-vs-mcp.md",
       "slug": "sources/tools-integration/src-playwright-cli-vs-mcp",
       "title": "Synthesis \u2014 Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
@@ -24781,6 +24963,10 @@
         },
         {
           "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "BUILDS ON",
           "target": "Open-Model Evaluation Framework"
         },
         {
@@ -27250,7 +27436,7 @@
     },
     "cross-domain": {
       "page_count": 187,
-      "relationship_count": 1245
+      "relationship_count": 1246
     },
     "ai-agents": {
       "page_count": 68,
@@ -27265,8 +27451,8 @@
       "relationship_count": 99
     },
     "ai-models": {
-      "page_count": 10,
-      "relationship_count": 61
+      "page_count": 12,
+      "relationship_count": 71
     },
     "automation": {
       "page_count": 7,
@@ -27712,6 +27898,7 @@
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem",
@@ -28033,6 +28220,7 @@
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/cross-domain/methodology-framework/three-pm-levels",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "spine/models/quality/model-quality-failure-prevention",
@@ -28392,6 +28580,7 @@
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/claude-code/src-claude-slash-commands",
@@ -28924,6 +29113,7 @@
       "sources/src-27-questions-llm-selection",
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework",
@@ -29543,6 +29733,7 @@
       "domains/ai-models/local-llm-quantization",
       "sources/src-llm-architecture-gallery-raschka",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "turboquant": [
@@ -31077,6 +31268,7 @@
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
       "log/2026-04-10/2026-04-10-session-summary",
       "log/2026-04-17/2026-04-17-session-summary",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "spine/standards/note-page-standards"
     ],
     "directive": [
@@ -31192,8 +31384,29 @@
     "open-weight": [
       "log/2026-04-17/2026-04-17-session-summary",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework"
+    ],
+    "openrouter": [
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "kimi-k2-6": [
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
+    ],
+    "self-autonomous": [
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
+    ],
+    "5-day-plan": [
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
+    ],
+    "poc": [
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
+    ],
+    "procedure": [
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -31424,9 +31637,6 @@
     "build-lifecycle": [
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "spine/models/quality/model-sfif-architecture"
-    ],
-    "poc": [
-      "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
     ],
     "mvp": [
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
@@ -31982,7 +32192,8 @@
       "sources/src-llm-architecture-gallery-raschka"
     ],
     "mla": [
-      "sources/src-llm-architecture-gallery-raschka"
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "linear-attention": [
       "sources/src-llm-architecture-gallery-raschka"
@@ -32058,7 +32269,8 @@
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "gguf": [
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "structural-alignment": [
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
@@ -32164,10 +32376,38 @@
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
     "agentic": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "harmony-format": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "kimi": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "k2-6": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "moonshot": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "mit-license": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "agent-swarm": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "long-horizon-coding": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "256k-context": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "multimodal": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "ktransformers": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "qa-automation": [
       "sources/tools-integration/src-playwright-cli-vs-mcp"
@@ -32550,6 +32790,7 @@
       "target": "2026 Consumer-Hardware AI Stack",
       "referenced_by": [
         "Session 2026-04-17 Summary",
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
@@ -32830,6 +33071,7 @@
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines",
@@ -32897,6 +33139,7 @@
     {
       "target": "Principle 4 \u2014 Declarations Aspirational Until Verified",
       "referenced_by": [
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
       ]
     },
@@ -33021,6 +33264,7 @@
       "target": "Synthesis \u2014 AirLLM",
       "referenced_by": [
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement"
       ]
@@ -33035,9 +33279,16 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 Kimi K2.6",
+      "referenced_by": [
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Qwopus",
       "referenced_by": [
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
@@ -33069,12 +33320,14 @@
     {
       "target": "Synthesis \u2014 TurboQuant",
       "referenced_by": [
-        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)"
+        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model"
       ]
     },
     {
       "target": "Synthesis \u2014 Unsloth",
       "referenced_by": [
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
@@ -33084,6 +33337,7 @@
       "referenced_by": [
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
         "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
+        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",

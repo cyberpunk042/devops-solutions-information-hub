@@ -136,6 +136,35 @@ Five approaches, from smallest/fastest to largest/most-capable. All are compatib
 - **Integration**: AICP dispatches based on task class, loading the right adapter
 - **Risk**: requires adapter-management infrastructure (inference-time swap); multiple evaluation sets (one per adapter). But long-term this is the architecture that scales with task diversity.
 
+## 2026-04-22 Addendum — K2.6 Rewrites the Capability Budget for B and C
+
+When this strategy was written (Stage 1 of consumer-hardware synthesis), the target for Candidates **B (Wiki-Reasoner)** and **C (Wiki-Opus-Distilled)** was *raw methodology-reasoning capability*. The path: train on Opus traces, arrive at something like Opus-grade reasoning, run it on 19 GB VRAM at $0 per invocation. Candidate C's cost (Colab A100 ~$5-20) and time (8-24 h) reflected that capability goal.
+
+Five days later (2026-04-22), **[[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6]] on OpenRouter gives you Opus-4.6-class agentic and coding capability for $0.80 / $3.50 per million tokens** — ~1/20th Anthropic pricing, MIT-licensed, with 256K context and native agentic-swarm orchestration. At operator's expected volume, *using* K2.6 via OpenRouter is effectively cheaper than *training* a custom distilled model — and arrives at strictly higher raw capability than any 27B distill can reach.
+
+**Reassessment of each candidate under the K2.6 reality:**
+
+> [!info] **Candidate × K2.6 impact table**
+>
+> | Candidate | 2026-04-17 framing | 2026-04-22 reassessment |
+> |---|---|---|
+> | **A — Wiki-Assistant** | First experiment, toolchain fluency | **Still recommended — K2.6 does NOT replace this.** A local 4B methodology-fluent model is about *privacy, speed on tiny queries, offline capability*, not raw capability. |
+> | **B — Wiki-Reasoner** | Substantive methodology reasoning at $0 runtime | **Deprioritize or reframe.** If the goal is raw reasoning quality, K2.6 via OpenRouter dominates strictly. Rescoped goal: "privacy-locked methodology reasoning" — narrow, defensible. Otherwise skip. |
+> | **C — Wiki-Opus-Distilled** | Opus-grade reasoning at $0 per invocation | **Mostly obsoleted.** Training a 27B distill to approach Opus 4.6 quality when K2.6 surpasses Opus 4.6 on the relevant benchmarks for ~5% of Opus cost is a reversal of the economics. Keep only if the pressure is *fully offline* or *absolute data sovereignty for methodology decisions*. |
+> | **D — Wiki-Router** | Fast local task classifier for AICP | **Strengthened.** K2.6 makes more routes valuable, which makes smart routing more valuable. Router quality now decides which queries get K2.6 premium-cheap vs truly-local vs Opus-fallback. Higher-leverage than before. |
+> | **E — Base + Multi-LoRA** | Long-term scalable adapter library | **Strengthened.** Each adapter (scaffolder, relationship-suggester, compliance-checker) targets a *specific domain operation on the wiki corpus*, which K2.6 does NOT inherently know. Capability comes from K2.6; domain-knowledge shaping comes from the LoRAs. They compose rather than compete. |
+
+**Strategic reshape of the phased rollout:**
+
+- **Phase 0**: Unchanged — Ollama + Unsloth toolchain setup, Qwen3.5-4B download.
+- **Phase 1 (Candidate A)**: Unchanged — still the first deployable artifact.
+- **Phase 2 (Candidate D, promoted from Phase 3)**: Router becomes higher priority — it is the glue between tiers, and K2.6 makes the tiers more differentiated.
+- **Phase 3 (Candidate E, promoted from Phase 4-5)**: Multi-LoRA domain adapters layered on top of K2.6 or a small base. This is the real long-term architecture.
+- **Phase 4 (Candidate B — narrowed)**: Only if privacy/offline pressure demands it. Keep scoped to "methodology reasoning, offline only."
+- **Phase 5 (Candidate C — deferred)**: Deferred or deprecated. Revisit only if K2.6 becomes unavailable or quality-regresses at a scale that matters.
+
+**The deeper principle.** The custom-model strategy exists to *fill gaps in the commercial landscape*. When the commercial landscape shifts — as it did on 2026-04-20 with K2.6 — the gaps move. The strategy must follow. The candidates are *tools*, not *destinations*; their justification is the shape of the gap on the day we pick them up.
+
 ## Data Preparation Strategy
 
 The wiki corpus as of 2026-04-18: 377 pages, 2500 relationships, 16 models, 22 standards, 44+ validated lessons, 19+ validated patterns, 17 decisions, 48+ source syntheses, 4 principles. All under consistent YAML frontmatter + Markdown structure.

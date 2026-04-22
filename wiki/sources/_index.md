@@ -46,6 +46,7 @@ Source synthesis pages — one per ingested source.
 - [Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload](tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md) — AirLLM is a Python library (Apache-2
 - [Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw](tools-integration/src-gemma4-searxng-openclaw.md) — A practical tutorial on running OpenClaw 100% free and 100% private using Google's Gemma 4 open-source models via Oll...
 - [Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)](tools-integration/src-gpt-oss-openai-open-weight-moe.md) — In August 2025 OpenAI released **gpt-oss-20b** (21B total params, 3
+- [Synthesis — Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model](tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md) — On **2026-04-20**, Moonshot AI released **Kimi K2
 - [Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens](tools-integration/src-playwright-cli-vs-mcp.md) — A direct side-by-side comparison of Playwright's MCP server integration vs
 - [Synthesis — Playwright MCP for Visual Development Testing](tools-integration/src-playwright-mcp-visual-testing.md) — Demonstrates how to embed Playwright MCP into a front-end development workflow so that Claude Code can see and verify...
 - [Synthesis — TurboQuant 122B LLM on MacBook](tools-integration/src-turboquant-122b-macbook.md) — TurboQuant, originally Google's quantization technique, has been adapted for Apple Silicon via MLX and extended to Mi...
@@ -60,4 +61,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `ai-agents`, `skills`, `mcp`, `harness-engineering`, `obsidian`, `notebooklm`, `cli`, `automation`, `hooks`, `cost-optimization`, `context-management`, `subagents`, `context-engineering`, `source-synthesis`, `knowledge-base`, `local-llm`, `methodology`, `aicp`, `commands`
+`claude-code`, `ai-agents`, `skills`, `mcp`, `harness-engineering`, `cost-optimization`, `obsidian`, `notebooklm`, `cli`, `automation`, `hooks`, `aicp`, `context-management`, `subagents`, `context-engineering`, `source-synthesis`, `knowledge-base`, `local-llm`, `methodology`, `moe`

@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-04-19
+updated: 2026-04-22
 sources: []
 tags: [log, directives, sessions]
 ---
@@ -27,6 +27,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-17 | [AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU](aicp-stage-3-hardware-unlocked-2026-04-17-—-19gb-vram-dual-g.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
 | 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
+| 2026-04-22 | [Day 1 — OpenRouter + Kimi K2.6 via Claude Code CLI (Setup + POC Procedure)](2026-04-22-openrouter-k2-6-day-1-setup-procedure.md) | note | `log`, `openrouter`, `kimi-k2-6`, `claude-code`, `harness`, `self-autonomous`, `5-day-plan`, `poc`, `procedure` |
 | 2026-04-17 | [Session 2026-04-17 Summary](2026-04-17/2026-04-17-session-summary.md) | session | `log`, `session`, `progress`, `summary`, `local-ai`, `open-weight`, `consumer-hardware` |
 | 2026-04-10 | [Session 2026-04-10 Summary](2026-04-10/2026-04-10-session-summary.md) | session | `log`, `session`, `progress`, `summary` |
 | 2026-04-10 | [Quality Evolution Epic — Level Up Everything, One File at a Time](2026-04-10/2026-04-10-directive-quality-evolution-epic.md) | directive | `log`, `directive`, `quality`, `evolution`, `epic`, `standards`, `iterative`, `gated` |
