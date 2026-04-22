@@ -1,8 +1,6 @@
 {
-  "vimMode": false,
-  "strictLineBreaks": true,
-  "showFrontmatter": true,
-  "foldHeading": true,
-  "foldIndent": true,
-  "defaultViewMode": "preview"
+  "livePreview": true,
+  "readableLineLength": true,
+  "showLineNumber": true,
+  "strictLineBreaks": false
 }

@@ -71,7 +71,7 @@ Beyond OpenArms, any system where a diagnostic log message reports an inflated m
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]] -- lifecycle hooks and session management
 - RELATES TO: [[model-methodology|Model: Methodology]] -- methodology infrastructure bugs
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] -- the harness dispatch and session lifecycle system
-- RELATES TO: [[[[per-task-cost-grows-monotonically-across-multi-task-runs-(co|Per-Task Cost Growth]] -- cost implications of premature fresh sessions]]
+- RELATES TO: [[[[per-task-cost-grows-monotonically-across-multi-task-runs|Per-Task Cost Growth]] -- cost implications of premature fresh sessions]]
 - RELATES TO: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math]] -- both surfaced from multi-task run observations
 
 ## Backlinks

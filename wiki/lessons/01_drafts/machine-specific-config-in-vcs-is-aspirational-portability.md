@@ -149,7 +149,7 @@ For any project with this issue, the pattern is:
 > |-----------|-------|
 > | **The meta-pattern** | [[aspirational-declaration-without-enforcement\|Aspirational Declaration Produces False Confidence]] — this is the 4th-layer instance (version control config) |
 > | **The infrastructure principle** | [[infrastructure-must-be-reproducible-not-manual\|Infrastructure Must Be Reproducible, Not Manual]] — `setup --init` is reproducible; manual path-fixing is not |
-> | **The sibling at the schema layer** | [[schema-aspirationalism-—-defining-required-sections-you-neve\|Schema Aspirationalism]] |
+> | **The sibling at the schema layer** | [[schema-aspirationalism-defining-required-sections-you-neve\|Schema Aspirationalism]] |
 > | **The sibling at the skill layer** | [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification]] |
 > | **The sibling at the compliance layer** | [[structural-compliance-is-not-operational-compliance\|Structural Compliance Is Not Operational Compliance]] |
 > | **The verb chain that produced the fix** | This lesson itself — the second brain's own `aggregate → process → integrate → modelize → teach` loop applied to its own portability gap |
@@ -159,7 +159,7 @@ For any project with this issue, the pattern is:
 - DERIVED FROM: [[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 - BUILDS ON: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions]]
 - RELATES TO: [[infrastructure-must-be-reproducible-not-manual|Infrastructure Must Be Reproducible, Not Manual]]
-- RELATES TO: [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema Aspirationalism]]
+- RELATES TO: [[schema-aspirationalism-defining-required-sections-you-neve|Schema Aspirationalism]]
 - RELATES TO: [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification]]
 - RELATES TO: [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]
 - FEEDS INTO: [[methodology-adoption-guide|Methodology Adoption Guide]]

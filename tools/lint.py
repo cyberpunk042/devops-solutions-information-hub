@@ -775,16 +775,7 @@ def _check_standards_exemplars(
     import re as _re
     issues: List[Dict[str, str]] = []
 
-    # Build title set from all pages
-    known_titles: set = set()
-    for page in pages:
-        try:
-            text = page.read_text(encoding="utf-8")
-            meta, _ = parse_frontmatter(text)
-            if meta and "title" in meta:
-                known_titles.add(meta["title"])
-        except Exception:
-            continue
+    known = _collect_page_titles(pages)
 
     # Check standards pages
     for page in pages:
@@ -796,7 +787,6 @@ def _check_standards_exemplars(
             if not meta:
                 continue
             title = meta.get("title", "")
-            # Find all [[references]] in Gold Standard sections
             in_gold_section = False
             in_backlinks = False
             for line in body.split("\n"):
@@ -809,11 +799,17 @@ def _check_standards_exemplars(
                 if in_gold_section and not in_backlinks:
                     refs = _re.findall(r"\[\[([^\]]+)\]\]", line)
                     for ref in refs:
-                        if ref not in known_titles:
-                            issues.append({
-                                "standards_page": title,
-                                "missing_exemplar": ref,
-                            })
+                        if "|" in ref:
+                            slug, display = ref.split("|", 1)
+                            slug, display = slug.strip(), display.strip()
+                            if slug in known or display in known:
+                                continue
+                        elif ref.strip() in known:
+                            continue
+                        issues.append({
+                            "standards_page": title,
+                            "missing_exemplar": ref,
+                        })
         except Exception:
             continue
     return issues

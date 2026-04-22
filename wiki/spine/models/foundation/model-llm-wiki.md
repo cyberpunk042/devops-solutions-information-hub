@@ -560,7 +560,7 @@ From building with this model — validated experience:
 [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[new-content-must-integrate-into-existing-pages|New Content Must Integrate Into Existing Pages]]
 [[wiki-post-ingestion-operations-plan|Operations Plan — Wiki Post-Ingestion Validation]]
-[[schema-aspirationalism-—-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
+[[schema-aspirationalism-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]

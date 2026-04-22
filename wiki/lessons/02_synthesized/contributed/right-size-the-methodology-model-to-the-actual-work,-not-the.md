@@ -100,7 +100,7 @@ This lesson applies to three concrete actions:
 - RELATES TO: [[follow-the-method-of-work-not-the-methodology-label|Method of Work]] -- matching the process to the work, not the label
 - RELATES TO: [[methodology-is-a-framework-not-a-fixed-pipeline|Methodology as Framework]] -- the methodology should flex, not rigidly apply one model
 - RELATES TO: [[model-methodology|Model: Methodology]] -- the methodology model definitions and selection logic
-- RELATES TO: [[[[per-task-cost-grows-monotonically-across-multi-task-runs-(co|Per-Task Cost Growth]] -- second-order cost optimization layered on top of this first-order savings]]
+- RELATES TO: [[[[per-task-cost-grows-monotonically-across-multi-task-runs|Per-Task Cost Growth]] -- second-order cost optimization layered on top of this first-order savings]]
 - RELATES TO: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math]] -- both surfaced from T115/T116 runs
 - RELATES TO: [[universal-stages-domain-specific-artifacts|Universal Stages]] -- the stage model that right-sizing selects from
 - PRODUCED BY: T116 cost analysis (2026-04-14), validated by T117

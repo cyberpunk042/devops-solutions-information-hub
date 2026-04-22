@@ -50,7 +50,7 @@ Any declaration — a variable name, a schema field, a skill attribute, a config
 > | Layer | Instance | Declaration | Missing Gate | Manifestation |
 > |---|---|---|---|---|
 > | **Variable** | [[aspirational-naming-in-lifecycle-code\|Aspirational Naming in Lifecycle Code]] | `turnCount` variable name implies conversational turns | No validation that increment trigger matches the name's semantics | 3352 "turns" in a 10-turn session; thresholds fire 20-50× too early |
-> | **Schema** | [[schema-aspirationalism-—-defining-required-sections-you-neve\|Schema Aspirationalism]] | `required_sections` in wiki-schema.yaml | No validator enforces section presence | 333 validation failures against the project's own schema, silent for months |
+> | **Schema** | [[schema-aspirationalism-defining-required-sections-you-neve\|Schema Aspirationalism]] | `required_sections` in wiki-schema.yaml | No validator enforces section presence | 333 validation failures against the project's own schema, silent for months |
 > | **Skill attribute** | [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification Is Not Enforced]] | `mandatory: true` on skills per Extension Standards | No gate reads `invoked-skills.log` before `/stage-complete` | ~60% skill-invocation compliance vs ~100% with gate |
 > | **Version-control config** | [[machine-specific-config-in-vcs-is-aspirational-portability\|Machine-Specific Config in VCS Is Aspirational Portability]] | README says "clone on any machine" | No linter forbids absolute paths in tracked files | `.mcp.json` with `/home/jfortin/...` breaks on first machine transfer |
 > | **Compliance measurement** | [[structural-compliance-is-not-operational-compliance\|Structural Compliance Is Not Operational Compliance]] | `gateway compliance` reports Tier 4 | Check verifies file presence, not implementation depth | OpenArms Tier 4 structural achieved in one session with Tier 2 operational depth |
@@ -114,7 +114,7 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 > | **The meta-pattern this promotes from** | [[aspirational-declaration-without-enforcement\|Aspirational Declaration Produces False Confidence at Every Layer]] (L5 meta-pattern with all 5 instances) |
 > | **The sibling principle it generalizes** | [[infrastructure-over-instructions-for-process-enforcement\|Infrastructure Over Instructions]] |
 > | **Variable-layer instance** | [[aspirational-naming-in-lifecycle-code\|Aspirational Naming]] |
-> | **Schema-layer instance** | [[schema-aspirationalism-—-defining-required-sections-you-neve\|Schema Aspirationalism]] |
+> | **Schema-layer instance** | [[schema-aspirationalism-defining-required-sections-you-neve\|Schema Aspirationalism]] |
 > | **Skill-attribute-layer instance** | [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification]] |
 > | **VCS-layer instance** | [[machine-specific-config-in-vcs-is-aspirational-portability\|Machine-Specific Config in VCS]] |
 > | **Compliance-measurement-layer instance** | [[structural-compliance-is-not-operational-compliance\|Structural Compliance Is Not Operational Compliance]] |
@@ -124,7 +124,7 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 ## Relationships
 
 - DERIVED FROM: [[aspirational-naming-in-lifecycle-code|Aspirational Naming in Lifecycle Code]]
-- DERIVED FROM: [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema Aspirationalism]]
+- DERIVED FROM: [[schema-aspirationalism-defining-required-sections-you-neve|Schema Aspirationalism]]
 - DERIVED FROM: [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced]]
 - DERIVED FROM: [[machine-specific-config-in-vcs-is-aspirational-portability|Machine-Specific Config in VCS Is Aspirational Portability]]
 - DERIVED FROM: [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]

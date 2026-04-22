@@ -485,6 +485,7 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
     """
     milestones_dir = backlog_dir / "milestones"
     epics_dir = backlog_dir / "epics"
+    modules_dir = backlog_dir / "modules"
     tasks_dir = backlog_dir / "tasks"
     today = __import__("datetime").date.today().isoformat()
 
@@ -525,6 +526,29 @@ def rebuild_backlog_index(backlog_dir: Path) -> None:
                 "priority": meta.get("priority", ""),
                 "status": meta.get("status", ""),
                 "readiness": meta.get("readiness", ""),
+            })
+
+    # --- Collect modules ---
+    modules = []
+    if modules_dir.exists():
+        for md_file in sorted(modules_dir.rglob("*.md")):
+            if md_file.name == "_index.md":
+                continue
+            text = md_file.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(text)
+            if not meta:
+                continue
+            stem = md_file.stem
+            parts = stem.split("-", 2)
+            module_id = "-".join(parts[:2]).upper() if len(parts) >= 2 else stem.upper()
+            modules.append({
+                "id": module_id,
+                "title": meta.get("title", stem),
+                "priority": meta.get("priority", ""),
+                "status": meta.get("status", ""),
+                "stage": meta.get("current_stage", ""),
+                "readiness": meta.get("readiness", ""),
+                "epic": meta.get("epic", ""),
             })
 
     # --- Collect tasks ---
@@ -629,7 +653,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 
 {loose_section}## Modules
 
-See [modules/](modules/)
+See [modules/_index.md](modules/_index.md)
 
 ## Tasks
 
@@ -676,6 +700,45 @@ tags: [backlog, tasks]
 """
     tasks_index_path = tasks_dir / "_index.md"
     tasks_index_path.write_text(tasks_index_content, encoding="utf-8")
+
+    # --- Rebuild wiki/backlog/modules/_index.md ---
+    if modules_dir.exists():
+        module_files = {}
+        for md_file in sorted(modules_dir.rglob("*.md")):
+            if md_file.name == "_index.md":
+                continue
+            text = md_file.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(text)
+            if meta and meta.get("title"):
+                module_files[meta["title"]] = str(md_file.relative_to(modules_dir))
+
+        module_rows = "\n".join(
+            f"| {m['id']} | [{m['title']}]({module_files.get(m['title'], '')}) | {m['priority']} | {m['status']} | {m['stage']} | {m['readiness']} | {m['epic']} |"
+            if m['title'] in module_files else
+            f"| {m['id']} | {m['title']} | {m['priority']} | {m['status']} | {m['stage']} | {m['readiness']} | {m['epic']} |"
+            for m in modules
+        ) or "<!-- No modules yet -->"
+
+        modules_index_content = f"""---
+title: "Modules"
+type: index
+domain: backlog
+status: active
+confidence: high
+created: 2026-04-09
+updated: {today}
+sources: []
+tags: [backlog, modules]
+---
+
+# Modules
+
+| ID | Module | Priority | Status | Stage | Readiness | Epic |
+|----|--------|----------|--------|-------|-----------|------|
+{module_rows}
+"""
+        modules_index_path = modules_dir / "_index.md"
+        modules_index_path.write_text(modules_index_content, encoding="utf-8")
 
 
 def rebuild_log_index(log_dir: Path) -> None:

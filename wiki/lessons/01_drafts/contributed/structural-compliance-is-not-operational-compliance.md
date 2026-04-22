@@ -98,7 +98,7 @@ The second brain's `gateway compliance` check uses `_check_any(candidate_paths)`
 
 **Evidence 4: Historical parallel with schema aspirationalism**
 
-The same structural gap exists in [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema Aspirationalism]]: a schema declares `required_sections` without a validator that enforces them. The schema STRUCTURALLY exists; it does not OPERATIONALLY constrain. OpenArms's 333 validation failures were the manifestation. Tier 4 structural compliance with Tier 2 operational depth is the same pattern applied to a higher-level abstraction (whole-pipeline presence) rather than a lower-level one (schema field).
+The same structural gap exists in [[schema-aspirationalism-defining-required-sections-you-neve|Schema Aspirationalism]]: a schema declares `required_sections` without a validator that enforces them. The schema STRUCTURALLY exists; it does not OPERATIONALLY constrain. OpenArms's 333 validation failures were the manifestation. Tier 4 structural compliance with Tier 2 operational depth is the same pattern applied to a higher-level abstraction (whole-pipeline presence) rather than a lower-level one (schema field).
 
 ## Applicability
 
@@ -147,7 +147,7 @@ The same structural gap exists in [[schema-aspirationalism-—-defining-required
 > |-----------|-------|
 > | **The meta-pattern this is an instance of** | [[aspirational-declaration-without-enforcement\|Aspirational Declaration Produces False Confidence]] — compliance checker is an aspirational declaration at the tooling layer |
 > | **The principle** | [[infrastructure-over-instructions-for-process-enforcement\|Infrastructure > Instructions]] — structural checks are infrastructure; operational checks require MORE infrastructure |
-> | **The sibling pattern** | [[schema-aspirationalism-—-defining-required-sections-you-neve\|Schema Aspirationalism]] — same gap at schema layer |
+> | **The sibling pattern** | [[schema-aspirationalism-defining-required-sections-you-neve\|Schema Aspirationalism]] — same gap at schema layer |
 > | **The adoption implication** | [[consumer-integration-roadmap-exemplar\|Consumer Integration Roadmap Exemplar]] — Tier 4 structural in a day ≠ Tier 4 operational in months |
 > | **The two-dimensional tracking analog** | [[readiness-vs-progress\|Readiness vs Progress]] — two dimensions at the work-tracking layer; this is two dimensions at the compliance layer |
 > | **First consumer evidence** | [[identity-profile\|OpenArms — Identity Profile]] |
@@ -156,7 +156,7 @@ The same structural gap exists in [[schema-aspirationalism-—-defining-required
 
 - DERIVED FROM: [[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]]
 - BUILDS ON: [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
-- RELATES TO: [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema Aspirationalism]]
+- RELATES TO: [[schema-aspirationalism-defining-required-sections-you-neve|Schema Aspirationalism]]
 - RELATES TO: [[readiness-vs-progress|Readiness vs Progress]]
 - RELATES TO: [[consumer-integration-roadmap-exemplar|Consumer Integration Roadmap Exemplar]]
 - RELATES TO: [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T22:11:59.364044+00:00",
+  "generated": "2026-04-22T23:23:22.401571+00:00",
   "stats": {
     "pages": 462,
     "domains": 9,
@@ -14494,8 +14494,8 @@
       ]
     },
     {
-      "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md",
-      "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
+      "path": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs.md",
+      "slug": "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
       "title": "Per-task cost grows monotonically across multi-task runs (context accumulation)",
       "type": "lesson",
       "domain": "cross-domain",
@@ -14540,8 +14540,8 @@
       ]
     },
     {
-      "path": "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve.md",
-      "slug": "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "path": "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve.md",
+      "slug": "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "title": "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
       "type": "lesson",
       "domain": "cross-domain",
@@ -19902,8 +19902,8 @@
       ]
     },
     {
-      "path": "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g.md",
-      "slug": "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
+      "path": "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g.md",
+      "slug": "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
       "title": "AICP Stage 3 hardware unlocked 2026-04-17 \u2014 19GB VRAM dual-GPU",
       "type": "note",
       "domain": "log",
@@ -20012,8 +20012,8 @@
       ]
     },
     {
-      "path": "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar.md",
-      "slug": "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
+      "path": "log/gateway-identity-parser-fragility-forwarder-contribute-tar.md",
+      "slug": "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
       "title": "Gateway identity parser fragility + forwarder contribute-target bug (2026-04-17)",
       "type": "note",
       "domain": "log",
@@ -20038,8 +20038,8 @@
       ]
     },
     {
-      "path": "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl.md",
-      "slug": "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl",
+      "path": "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl.md",
+      "slug": "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
       "title": "OpenFleet identity profile \u2014 AGENTS.md Layer-1 upgrade completed 2026-04-17 (was 'candidate')",
       "type": "note",
       "domain": "log",
@@ -20064,8 +20064,8 @@
       ]
     },
     {
-      "path": "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-.md",
-      "slug": "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
+      "path": "log/walkthrough-c-openfleet-ground-truth-verification-2026-04.md",
+      "slug": "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "title": "Walkthrough C (OpenFleet) ground-truth verification 2026-04-17",
       "type": "note",
       "domain": "log",
@@ -20118,7 +20118,7 @@
         {
           "id": "openarms-cost-growth",
           "type": "wiki",
-          "file": "wiki/lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md"
+          "file": "wiki/lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs.md"
         }
       ],
       "layer": 5,
@@ -20268,7 +20268,7 @@
         {
           "id": "schema-aspirationalism-instance",
           "type": "wiki",
-          "file": "wiki/lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve.md",
+          "file": "wiki/lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve.md",
           "description": "Schema-layer instance \u2014 OpenArms 333 validation failures against aspirational required_sections"
         },
         {
@@ -31949,7 +31949,7 @@
     "validation": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/automated-knowledge-validation-prevents-wiki-decay",
       "lessons/03_validated/methodology-quality/systemic-incompleteness-is-invisible-to-validation",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness"
@@ -35053,7 +35053,7 @@
     ],
     "schema": [
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "log/2026-04-09/models/2026-04-09-directive-model-quality-links-schema",
       "spine/models/foundation/model-llm-wiki",
@@ -35260,8 +35260,8 @@
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
-      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
@@ -35271,12 +35271,12 @@
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
       "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
-      "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
+      "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
-      "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
-      "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl",
-      "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
+      "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
+      "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
+      "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code",
@@ -35288,8 +35288,8 @@
       "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
-      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co",
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
@@ -35354,14 +35354,14 @@
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced"
     ],
     "aspirational": [
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "false-confidence": [
-      "lessons/01_drafts/contributed/schema-aspirationalism-\u2014-defining-required-sections-you-neve",
+      "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "structural": [
@@ -35892,8 +35892,8 @@
     "remark": [
       "log/2026-04-09/models/2026-04-09-directive-wiki-design-model-research",
       "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
-      "log/aicp-stage-3-hardware-unlocked-2026-04-17-\u2014-19gb-vram-dual-g",
-      "log/gateway-identity-parser-fragility-+-forwarder-contribute-tar",
+      "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
+      "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
       "spine/models/foundation/model-wiki-design"
     ],
     "visual": [
@@ -36019,8 +36019,8 @@
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction:-root-depth",
       "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
-      "log/openfleet-identity-profile-\u2014-agents.md-layer-1-upgrade-compl",
-      "log/walkthrough-c-(openfleet)-ground-truth-verification-2026-04-",
+      "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
+      "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
     ],
     "archived": [

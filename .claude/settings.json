@@ -53,7 +53,8 @@
       "Bash(python3 -m tools.view spine)",
       "WebFetch(domain:www.kimi.com)",
       "WebFetch(domain:openrouter.ai)",
-      "WebFetch(domain:the-decoder.com)"
+      "WebFetch(domain:the-decoder.com)",
+      "mcp__research-wiki__wiki_gateway_health"
     ]
   }
 }

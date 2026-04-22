@@ -36,7 +36,7 @@ sources:
     description: "Variable-layer instance — OpenArms harness turnCount counting streaming events"
   - id: schema-aspirationalism-instance
     type: wiki
-    file: wiki/lessons/01_drafts/contributed/schema-aspirationalism-—-defining-required-sections-you-neve.md
+    file: wiki/lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve.md
     description: "Schema-layer instance — OpenArms 333 validation failures against aspirational required_sections"
   - id: mandatory-instance
     type: wiki
@@ -99,7 +99,7 @@ Five instances across five different layers — same mechanism, different abstra
 >
 > **Fix:** either align schema to reality (demote aspirational sections from `required_sections` to `recommended_sections` — OpenArms chose this) OR add validator that enforces the declared sections.
 >
-> See: [[schema-aspirationalism-—-defining-required-sections-you-neve|Schema Aspirationalism]] lesson.
+> See: [[schema-aspirationalism-defining-required-sections-you-neve|Schema Aspirationalism]] lesson.
 
 > [!example]- Instance 3: Skill-attribute-layer — OpenArms mandatory skills (observed 2026-04-16)
 >
@@ -152,7 +152,7 @@ Five instances across five different layers — same mechanism, different abstra
 | **Gradual failure** | The drift between declaration and reality compounds over time. One instance is a bug; the pattern is a systemic risk. |
 | **Detection cost** | High initially (gap is invisible by design) but low once you know to look. Every new layer adds surface area. |
 | **Prevention cost** | Trivial at design time (pair every declaration with a verification plan). Expensive in existing codebases (audit all declarations). |
-| **Composability** | Composes with [[aspirational-naming-in-lifecycle-code\|Aspirational Naming]], [[schema-aspirationalism-—-defining-required-sections-you-neve\|Schema Aspirationalism]], [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification]] — this pattern unifies them at the meta level. |
+| **Composability** | Composes with [[aspirational-naming-in-lifecycle-code\|Aspirational Naming]], [[schema-aspirationalism-defining-required-sections-you-neve\|Schema Aspirationalism]], [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification]] — this pattern unifies them at the meta level. |
 | **Principle potential** | With ≥3 validated instances across layers, this is promotion-candidate to L5+ principle territory. Current status: seed pattern; watch for a 4th layer instance to cross the threshold. |
 
 ## Candidate Fourth-Layer Instances (Watch List)
@@ -174,7 +174,7 @@ Each of these is a candidate; when any crosses from observation to validated ins
 > |-----------|-------|
 > | **The governing principle** | [[infrastructure-over-instructions-for-process-enforcement\|Infrastructure > Instructions]] — this pattern is the cross-layer corollary |
 > | **Variable-layer instance** | [[aspirational-naming-in-lifecycle-code\|Aspirational Naming in Lifecycle Code]] |
-> | **Schema-layer instance** | [[schema-aspirationalism-—-defining-required-sections-you-neve\|Schema Aspirationalism]] |
+> | **Schema-layer instance** | [[schema-aspirationalism-defining-required-sections-you-neve\|Schema Aspirationalism]] |
 > | **Skill-attribute-layer instance** | [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification Is Not Enforced]] |
 > | **The cost-curve lesson** | [[defense-layer-progression-is-expensive\|Defense Layer Progression Is Expensive]] — aspirational three-lines-of-defense claim at architecture layer |
 > | **The detection pattern** | [[observe-fix-verify-loop\|OFV Loop]] — how aspirational declarations get detected and fixed |
@@ -206,5 +206,5 @@ Each of these is a candidate; when any crosses from observation to validated ins
 [[Quality Standards]]
 [[machine-specific-config-in-vcs-is-aspirational-portability|Machine-Specific Config in Version Control Is Aspirational Portability]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
-[[schema-aspirationalism-—-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
+[[schema-aspirationalism-defining-required-sections-you-neve|Schema aspirationalism — defining required sections you never validate produces false confidence]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]

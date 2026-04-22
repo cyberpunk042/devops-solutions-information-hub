@@ -61,7 +61,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 
 ## Modules
 
-See [modules/](modules/)
+See [modules/_index.md](modules/_index.md)
 
 ## Tasks
 

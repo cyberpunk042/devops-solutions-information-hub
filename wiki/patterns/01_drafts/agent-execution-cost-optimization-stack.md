@@ -25,7 +25,7 @@ sources:
     file: wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md
   - id: openarms-cost-growth
     type: wiki
-    file: wiki/lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs-(co.md
+    file: wiki/lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs.md
 tags: [pattern, cost, optimization, methodology, agent-execution, multi-task, contributed, synthesized]
 ---
 
@@ -89,7 +89,7 @@ The stack is ordered by ROI — highest-impact, lowest-effort optimizations firs
 ## Relationships
 
 - DERIVED FROM: [[right-size-the-methodology-model-to-the-actual-work,-not-the|Right-Size Methodology Model — OpenArms Evidence]]
-- DERIVED FROM: [[per-task-cost-grows-monotonically-across-multi-task-runs-(co|Per-Task Cost Growth — OpenArms Evidence]]
+- DERIVED FROM: [[per-task-cost-grows-monotonically-across-multi-task-runs|Per-Task Cost Growth — OpenArms Evidence]]
 - RELATES TO: [[model-methodology|Model — Methodology]] — model selection and stage economics
 - RELATES TO: [[model-local-ai|Model — Local AI ($0 Target)]] — the ultimate cost optimization: route to local inference
 - RELATES TO: [[context-management-is-primary-productivity-lever|Context Management Is the Primary LLM Productivity Lever]]
