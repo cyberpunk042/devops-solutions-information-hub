@@ -168,3 +168,4 @@ This milestone delivers the *deadline-absorbed* state. The next natural phase ta
 [[E010-storage-and-hardware-enablement|E010 — Storage and Hardware Enablement (64 GB RAM + /dev/sdd + tiering)]]
 [[E011-routing-integration-aicp-tiers|E011 — Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)]]
 [[E012-custom-model-library-unsloth-loras|E012 — Custom Model Library (Unsloth LoRAs on Wiki Corpus)]]
+[[wsl-ubuntu-migration-handoff|WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)]]

@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T19:54:52.168071+00:00",
+  "generated": "2026-04-22T22:11:59.364044+00:00",
   "stats": {
-    "pages": 460,
+    "pages": 462,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2786,
-    "tags_unique": 1305,
+    "relationships": 2797,
+    "tags_unique": 1311,
     "layers": {
       "3": 4,
       "6": 25,
@@ -20,7 +20,7 @@
     "maturity": {
       "growing": 282,
       "seed": 55,
-      "mature": 1
+      "mature": 2
     }
   },
   "pages": [
@@ -19489,6 +19489,74 @@
       "relationships": []
     },
     {
+      "path": "log/2026-04-22-wsl-migration-to-ubuntu-24-04.md",
+      "slug": "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "title": "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "note",
+        "completion",
+        "e008",
+        "e010",
+        "wsl",
+        "ubuntu-20-04",
+        "ubuntu-24-04",
+        "migration",
+        "glibc",
+        "ktransformers",
+        "decision",
+        "handoff"
+      ],
+      "sources": [
+        {
+          "id": "e008-m001-ktransformers-install-and-config",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e008-m001-ktransformers-install-and-config.md"
+        },
+        {
+          "id": "e010-m002-dev-sdd-mount-procedure",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m002-dev-sdd-mount-procedure.md"
+        },
+        {
+          "id": "vhdx-attach-fix",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-23-vhdx-attach-procedure-and-hcs-fix.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPLETES",
+          "target": "e008-m001-ktransformers-install-and-config"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-23-ram-upgrade-48gb-wsl"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-23-k2-6-q2-download-complete"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-23-corpus-training-readiness-audit.md",
       "slug": "log/2026-04-23-corpus-training-readiness-audit",
       "title": "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant",
@@ -29261,6 +29329,76 @@
       ]
     },
     {
+      "path": "spine/references/wsl-ubuntu-migration-handoff.md",
+      "slug": "spine/references/wsl-ubuntu-migration-handoff",
+      "title": "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "verified",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "reference",
+        "p0",
+        "wsl",
+        "ubuntu-24-04",
+        "migration",
+        "handoff",
+        "pickup-cold",
+        "ml-workstation",
+        "ktransformers",
+        "aicp"
+      ],
+      "sources": [
+        {
+          "id": "wsl-migration-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-22-wsl-migration-to-ubuntu-24-04.md"
+        },
+        {
+          "id": "vhdx-attach-fix",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-23-vhdx-attach-procedure-and-hcs-fix.md"
+        },
+        {
+          "id": "storage-tiering-ref",
+          "type": "wiki",
+          "file": "wiki/spine/references/operator-workstation-storage-tiering.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Milestone: Post-Anthropic Self-Autonomous AI Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-22-wsl-migration-to-ubuntu-24-04"
+        },
+        {
+          "verb": "REFERENCES",
+          "target": "operator-workstation-storage-tiering"
+        },
+        {
+          "verb": "REFERENCES",
+          "target": "2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "E012-custom-model-library-unsloth-loras"
+        }
+      ]
+    },
+    {
       "path": "spine/standards/comparison-page-standards.md",
       "slug": "spine/standards/comparison-page-standards",
       "title": "Comparison Page Standards",
@@ -30972,8 +31110,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 192,
-      "relationship_count": 1268
+      "page_count": 194,
+      "relationship_count": 1279
     },
     "ai-agents": {
       "page_count": 68,
@@ -31531,7 +31669,8 @@
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem",
       "spine/references/2026-consumer-hardware-ai-stack",
-      "spine/references/second-brain-custom-model-strategy"
+      "spine/references/second-brain-custom-model-strategy",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "localai": [
       "backlog/epics/pre-milestone/E001-local-inference-engine",
@@ -31832,7 +31971,8 @@
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
-      "spine/references/operator-workstation-storage-tiering"
+      "spine/references/operator-workstation-storage-tiering",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "openrouter": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
@@ -31899,7 +32039,9 @@
       "backlog/modules/e008-m003-first-light-benchmark",
       "backlog/modules/e008-m004-local-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "offline": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier"
@@ -31973,9 +32115,11 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-ram-upgrade-48gb-wsl",
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
-      "spine/references/operator-workstation-storage-tiering"
+      "spine/references/operator-workstation-storage-tiering",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "ext4": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -32232,6 +32376,7 @@
       "backlog/tasks/T030-verify-cuda-toolchain",
       "backlog/tasks/T031-create-ktransformers-venv",
       "backlog/tasks/T033-author-kt-smoke-script",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-k2-6-q2-download-complete"
     ],
     "install": [
@@ -32381,6 +32526,7 @@
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
       "backlog/tasks/T043-author-inventory-models-script",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-e010-m002-mount-complete",
       "log/2026-04-23-ram-upgrade-48gb-wsl",
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
@@ -32432,6 +32578,7 @@
       "spine/references/open-model-evaluation-framework",
       "spine/references/operator-workstation-storage-tiering",
       "spine/references/root-documentation-map",
+      "spine/references/wsl-ubuntu-migration-handoff",
       "spine/standards/reference-page-standards"
     ],
     "hardware-ground-truth": [
@@ -33228,6 +33375,7 @@
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-stage-extension-decisions",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "spine/standards/decision-page-standards"
     ],
     "local-first": [
@@ -33354,7 +33502,9 @@
       "decisions/01_drafts/extended-to-adaptive-thinking-migration"
     ],
     "migration": [
-      "decisions/01_drafts/extended-to-adaptive-thinking-migration"
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "opus-4.7": [
       "decisions/01_drafts/extended-to-adaptive-thinking-migration"
@@ -35791,6 +35941,7 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure"
     ],
     "note": [
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-corpus-training-readiness-audit",
       "log/2026-04-23-e010-m002-mount-complete",
       "log/2026-04-23-k2-6-q2-download-complete",
@@ -35799,11 +35950,26 @@
       "spine/standards/note-page-standards"
     ],
     "completion": [
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-corpus-training-readiness-audit",
       "log/2026-04-23-e010-m002-mount-complete",
       "log/2026-04-23-k2-6-q2-download-complete",
       "log/2026-04-23-ram-upgrade-48gb-wsl",
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
+    "ubuntu-20-04": [
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04"
+    ],
+    "ubuntu-24-04": [
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "spine/references/wsl-ubuntu-migration-handoff"
+    ],
+    "glibc": [
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04"
+    ],
+    "handoff": [
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
       "log/2026-04-23-corpus-training-readiness-audit"
@@ -37086,6 +37252,12 @@
     "walkthrough": [
       "spine/references/second-brain-integration-chain"
     ],
+    "pickup-cold": [
+      "spine/references/wsl-ubuntu-migration-handoff"
+    ],
+    "ml-workstation": [
+      "spine/references/wsl-ubuntu-migration-handoff"
+    ],
     "page-type": [
       "spine/standards/comparison-page-standards",
       "spine/standards/concept-page-standards",
@@ -37184,21 +37356,36 @@
       ]
     },
     {
+      "target": "2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "referenced_by": [
+        "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
+      ]
+    },
+    {
       "target": "2026-04-23-e010-m002-mount-complete",
       "referenced_by": [
         "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
       ]
     },
     {
+      "target": "2026-04-23-k2-6-q2-download-complete",
+      "referenced_by": [
+        "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain"
+      ]
+    },
+    {
       "target": "2026-04-23-ram-upgrade-48gb-wsl",
       "referenced_by": [
+        "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
       ]
     },
     {
       "target": "2026-04-23-vhdx-attach-procedure-and-hcs-fix",
       "referenced_by": [
-        "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX"
+        "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain",
+        "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
+        "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
       ]
     },
     {
@@ -37376,7 +37563,8 @@
         "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
         "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)",
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
-        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
+        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
+        "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
       ]
     },
     {
@@ -37488,7 +37676,8 @@
         "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
         "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)",
         "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant",
-        "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)"
+        "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
+        "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
       ]
     },
     {
@@ -38086,6 +38275,7 @@
         "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
         "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
         "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
+        "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain",
         "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
       ]
     },
@@ -38162,6 +38352,7 @@
         "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
         "E010 M004 \u2014 Model Weights Inventory Tool and Manifest",
         "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)",
+        "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain",
         "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
       ]
@@ -38284,7 +38475,8 @@
       "referenced_by": [
         "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
-        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
+        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
+        "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
       ]
     },
     {

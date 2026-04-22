@@ -95,6 +95,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Root Documentation Map — Repository-Level Files](references/root-documentation-map.md) — The repository root contains 8 documentation files (2,714 total lines) that serve as the entry point for humans, AI t...
 - [Second-Brain Custom Model — Training Strategy and Roadmap](references/second-brain-custom-model-strategy.md) — With the 2026 consumer-hardware AI stack in place (Unsloth training · gpt-oss / Qwen / Qwopus bases · llama
 - [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](references/second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
+- [WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)](references/wsl-ubuntu-migration-handoff.md) — This page is the **pickup-cold procedure** for any AI session (or the operator after an absence) that lands in the Po...
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
 - [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (74 pages)
 - [Decision Page Standards](standards/decision-page-standards.md) — Standards for decision pages — the highest-layer evolved page type (Layer 6)
@@ -130,4 +131,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `second-brain`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`, `aicp`
+`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `second-brain`, `aicp`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`
