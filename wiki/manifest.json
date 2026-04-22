@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-22T23:23:22.401571+00:00",
+  "generated": "2026-04-22T23:34:18.821660+00:00",
   "stats": {
-    "pages": 462,
+    "pages": 463,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2797,
+    "relationships": 2799,
     "tags_unique": 1311,
     "layers": {
       "3": 4,
@@ -19447,6 +19447,36 @@
       ]
     },
     {
+      "path": "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health.md",
+      "slug": "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health",
+      "title": "Lint tooling fixes + backlog modules index gap \u2014 wiki health D \u2192 A+",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "log",
+        "completion"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "wsl-ubuntu-migration-handoff"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-22-wsl-migration-to-ubuntu-24-04"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure.md",
       "slug": "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "title": "Day 1 \u2014 OpenRouter + Kimi K2.6 via Claude Code CLI (Setup + POC Procedure)",
@@ -31138,8 +31168,8 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 30,
-      "relationship_count": 51
+      "page_count": 31,
+      "relationship_count": 53
     }
   },
   "tags": {
@@ -32500,6 +32530,7 @@
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
       "log/2026-04-10/2026-04-10-session-summary",
       "log/2026-04-17/2026-04-17-session-summary",
+      "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "spine/standards/note-page-standards"
     ],
@@ -35933,6 +35964,15 @@
       "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework"
     ],
+    "completion": [
+      "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "log/2026-04-23-corpus-training-readiness-audit",
+      "log/2026-04-23-e010-m002-mount-complete",
+      "log/2026-04-23-k2-6-q2-download-complete",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
     "poc": [
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
@@ -35948,14 +35988,6 @@
       "log/2026-04-23-ram-upgrade-48gb-wsl",
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
       "spine/standards/note-page-standards"
-    ],
-    "completion": [
-      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
-      "log/2026-04-23-corpus-training-readiness-audit",
-      "log/2026-04-23-e010-m002-mount-complete",
-      "log/2026-04-23-k2-6-q2-download-complete",
-      "log/2026-04-23-ram-upgrade-48gb-wsl",
-      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
     "ubuntu-20-04": [
       "log/2026-04-22-wsl-migration-to-ubuntu-24-04"
@@ -37358,6 +37390,7 @@
     {
       "target": "2026-04-22-wsl-migration-to-ubuntu-24-04",
       "referenced_by": [
+        "Lint tooling fixes + backlog modules index gap \u2014 wiki health D \u2192 A+",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
       ]
     },
@@ -38483,6 +38516,12 @@
       "target": "validated by T117",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "wsl-ubuntu-migration-handoff",
+      "referenced_by": [
+        "Lint tooling fixes + backlog modules index gap \u2014 wiki health D \u2192 A+"
       ]
     }
   ]

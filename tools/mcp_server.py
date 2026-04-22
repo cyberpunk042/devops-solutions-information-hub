@@ -308,7 +308,8 @@ def wiki_log(title: str, content: str, note_type: str = "directive") -> str:
     Args:
         title: Title for the log entry.
         content: Body content to include verbatim.
-        note_type: One of directive, session-summary, completion-note (default: directive).
+        note_type: One of directive, session, completion, archived (default: directive).
+            Aliases 'session-summary' and 'completion-note' are accepted and normalized.
     """
     from datetime import date as _date
 
@@ -317,16 +318,30 @@ def wiki_log(title: str, content: str, note_type: str = "directive") -> str:
     log_dir.mkdir(parents=True, exist_ok=True)
 
     today = _date.today().isoformat()
-    slug = title.lower().replace(" ", "-").replace(":", "").replace("/", "-")[:60].strip("-")
+    import re as _re
+    slug = title.lower()
+    slug = _re.sub(r"[^a-z0-9]+", "-", slug)
+    slug = slug.strip("-")[:60].strip("-")
     filename = f"{today}-{slug}.md"
     file_path = log_dir / filename
 
+    # Map caller-friendly aliases to the validator's accepted enum
+    note_type_map = {
+        "directive": "directive",
+        "session": "session",
+        "session-summary": "session",
+        "completion": "completion",
+        "completion-note": "completion",
+        "archived": "archived",
+    }
+    canonical_note_type = note_type_map.get(note_type, "directive")
     tags_map = {
         "directive": ["log", "directive"],
-        "session-summary": ["log", "session"],
-        "completion-note": ["log", "completion"],
+        "session": ["log", "session"],
+        "completion": ["log", "completion"],
+        "archived": ["log", "archived"],
     }
-    tags = tags_map.get(note_type, ["log", note_type])
+    tags = tags_map.get(canonical_note_type, ["log", canonical_note_type])
     tags_yaml = "[" + ", ".join(tags) + "]"
 
     frontmatter = (
@@ -334,7 +349,7 @@ def wiki_log(title: str, content: str, note_type: str = "directive") -> str:
         f"title: \"{title}\"\n"
         f"type: note\n"
         f"domain: log\n"
-        f"note_type: {note_type}\n"
+        f"note_type: {canonical_note_type}\n"
         f"status: active\n"
         f"confidence: high\n"
         f"created: {today}\n"
