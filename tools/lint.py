@@ -244,20 +244,27 @@ def _check_thin_pages(
 def _check_filename_hygiene(
     pages: List[Path],
 ) -> List[Dict[str, Any]]:
-    """Find pages with non-ASCII or non-standard characters in filenames."""
+    """Find pages with non-ASCII or non-slug characters in filenames.
+
+    Valid wiki filename = lowercase slug using [a-zA-Z0-9._-] only. Anything else
+    breaks one of: filesystem portability (Windows rejects `:`,`?`,`*`,`<`,`>`,`|`),
+    URL/markdown-link parsing (`(`,`)`,`%`,`#`,`?`,`&`, spaces), or the project's
+    ASCII convention (em-dash, other non-ASCII).
+    """
     import re
     issues: List[Dict[str, Any]] = []
+    allowed = re.compile(r"^[a-zA-Z0-9._-]+$")
     for page in pages:
         name = page.name
-        # Check for non-ASCII (em-dash, special chars)
         if not name.isascii():
             issues.append({"file": name, "issue": "non-ASCII characters"})
-        # Check for plus signs
-        elif "+" in name:
-            issues.append({"file": name, "issue": "plus sign in filename"})
-        # Check for parentheses (except in titles like "($0 Target)" which are ok in frontmatter but bad in filenames)
-        elif "(" in name or ")" in name:
-            issues.append({"file": name, "issue": "parentheses in filename"})
+            continue
+        if not allowed.match(name):
+            bad = sorted({c for c in name if not re.match(r"[a-zA-Z0-9._-]", c)})
+            issues.append({
+                "file": name,
+                "issue": f"disallowed chars: {' '.join(repr(c) for c in bad)}",
+            })
     return issues
 
 

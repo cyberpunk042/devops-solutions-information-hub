@@ -20,7 +20,7 @@ updated: 2026-04-16
 sources:
   - id: openarms-turncount
     type: wiki
-    file: wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md
+    file: wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not.md
 tags: [pattern, naming, lifecycle, metrics, anti-pattern, contributed]
 ---
 
@@ -75,7 +75,7 @@ The bug is invisible when the ratio is stable (thresholds can be recalibrated to
 
 ## Relationships
 
-- DERIVED FROM: [[the-harness-turncount-variable-counts-streaming-events,-not-|Harness turnCount Bug — OpenArms Evidence]]
+- DERIVED FROM: [[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug — OpenArms Evidence]]
 - EXTENDED BY: [[aspirational-declaration-without-enforcement|Aspirational Declaration Produces False Confidence at Every Layer]] — the meta-pattern; this is the variable-layer instance
 - RELATES TO: [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy]] — aspirational naming creates a new category of infrastructure bug
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] — lifecycle decisions in the deterministic shell

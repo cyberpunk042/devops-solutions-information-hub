@@ -23,7 +23,7 @@ sources:
     description: "OpenArms Part 17 and Part 22 — identified that skill injection gives same context depth to every task regardless of complexity"
   - id: right-sizing-lesson
     type: wiki
-    file: wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md
+    file: wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the.md
     description: "Right-size lesson: T116 $9.07 vs T117 $1.20, 86.8% reduction by using integration model for mechanical work"
   - id: tier-context-depth-pattern
     type: wiki
@@ -77,7 +77,7 @@ OpenArms runs 5 methodology skills that load the same context on every task invo
 
 **Evidence 2: Right-sizing lesson quantified 86.8% cost reduction at model layer**
 
-The [[right-size-the-methodology-model-to-the-actual-work,-not-the|right-size methodology model]] lesson (contributed by OpenArms, evolved to `02_synthesized`) proved that selecting `task_type: integration` over `task_type: task` (feature-development) for mechanical extensions saved 86.8% cost and 49% time on T117 vs T116. Model selection is a per-task routing dimension. Context depth is a parallel per-task routing dimension at a finer layer — same logic, same expected savings order-of-magnitude, different mechanism.
+The [[right-size-the-methodology-model-to-the-actual-work-not-the|right-size methodology model]] lesson (contributed by OpenArms, evolved to `02_synthesized`) proved that selecting `task_type: integration` over `task_type: task` (feature-development) for mechanical extensions saved 86.8% cost and 49% time on T117 vs T116. Model selection is a per-task routing dimension. Context depth is a parallel per-task routing dimension at a finer layer — same logic, same expected savings order-of-magnitude, different mechanism.
 
 **Evidence 3: Tier budgets have 10× cost differential per message**
 
@@ -122,7 +122,7 @@ The [[agent-execution-cost-optimization-stack|Cost Optimization Stack]] pattern 
 > | Direction | Go To |
 > |-----------|-------|
 > | **The pattern this extends** | [[tier-based-context-depth-trust-earned-through-approval-rates\|Tier-Based Context Depth]] — extends trust dimension with task-properties dimension |
-> | **The sibling lesson at model layer** | [[right-size-the-methodology-model-to-the-actual-work,-not-the\|Right-Size Methodology Model]] — same logic at higher layer |
+> | **The sibling lesson at model layer** | [[right-size-the-methodology-model-to-the-actual-work-not-the\|Right-Size Methodology Model]] — same logic at higher layer |
 > | **The governing model** | [[model-context-engineering\|Model — Context Engineering]] — defines the three-tier budget system |
 > | **The compounding stack** | [[agent-execution-cost-optimization-stack\|Cost Optimization Stack]] — 5 layers; this is the tier-budget layer |
 > | **The principle** | [[right-process-for-right-context-the-goldilocks-imperative\|Goldilocks]] — process adapts to context; so should context itself |
@@ -130,7 +130,7 @@ The [[agent-execution-cost-optimization-stack|Cost Optimization Stack]] pattern 
 ## Relationships
 
 - DERIVED FROM: [[model-context-engineering|Model — Context Engineering]]
-- DERIVED FROM: [[right-size-the-methodology-model-to-the-actual-work,-not-the|Right-Size Methodology Model]]
+- DERIVED FROM: [[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]]
 - EXTENDS: [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 - RELATES TO: [[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]
 - RELATES TO: [[right-process-for-right-context-the-goldilocks-imperative|Principle — Goldilocks]]

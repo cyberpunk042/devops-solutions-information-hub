@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T23:34:18.821660+00:00",
+  "generated": "2026-04-22T23:40:16.824615+00:00",
   "stats": {
     "pages": 463,
     "domains": 9,
@@ -5995,7 +5995,7 @@
         {
           "id": "skills-audit",
           "type": "wiki",
-          "file": "wiki/lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski.md",
+          "file": "wiki/lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md",
           "description": "Audit revealing 47% of 78 skills were instruction-dump boilerplate \u2014 consequence of the pattern scaling without authoring discipline"
         },
         {
@@ -14066,8 +14066,8 @@
       "relationships": []
     },
     {
-      "path": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski.md",
-      "slug": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski",
+      "path": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md",
+      "slug": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "title": "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
       "type": "lesson",
       "domain": "cross-domain",
@@ -14213,7 +14213,7 @@
         {
           "id": "right-sizing-lesson",
           "type": "wiki",
-          "file": "wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
+          "file": "wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the.md",
           "description": "Right-size lesson: T116 $9.07 vs T117 $1.20, 86.8% reduction by using integration model for mechanical work"
         },
         {
@@ -14682,8 +14682,8 @@
       ]
     },
     {
-      "path": "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md",
-      "slug": "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "path": "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not.md",
+      "slug": "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
       "title": "The harness 'turnCount' variable counts streaming events, not conversational turns",
       "type": "lesson",
       "domain": "cross-domain",
@@ -15328,8 +15328,8 @@
       ]
     },
     {
-      "path": "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md",
-      "slug": "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "path": "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the.md",
+      "slug": "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the",
       "title": "Right-size the methodology model to the actual work, not the structural category",
       "type": "lesson",
       "domain": "cross-domain",
@@ -19958,8 +19958,8 @@
       ]
     },
     {
-      "path": "log/amendment-to-prior-compliance-checker-correction:-root-depth.md",
-      "slug": "log/amendment-to-prior-compliance-checker-correction:-root-depth",
+      "path": "log/amendment-to-prior-compliance-checker-correction-root-depth.md",
+      "slug": "log/amendment-to-prior-compliance-checker-correction-root-depth",
       "title": "Amendment to prior compliance-checker correction: root-depth heuristic insufficient \u2014 OpenFleet's root AGENTS.md IS at depth 0 but functions as agent-workspace template",
       "type": "note",
       "domain": "log",
@@ -20016,8 +20016,8 @@
       "relationships": []
     },
     {
-      "path": "log/compliance-checker:-agents.md-match-by-filename-regardless-o.md",
-      "slug": "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "path": "log/compliance-checker-agents-md-match-by-filename-regardless-o.md",
+      "slug": "log/compliance-checker-agents-md-match-by-filename-regardless-o",
       "title": "Compliance checker: AGENTS.md match by filename regardless of role \u2014 per-agent persona files falsely satisfy Tier 2 (inverse of F1 fix)",
       "type": "note",
       "domain": "log",
@@ -20143,7 +20143,7 @@
         {
           "id": "openarms-right-size",
           "type": "wiki",
-          "file": "wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the.md"
+          "file": "wiki/lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the.md"
         },
         {
           "id": "openarms-cost-growth",
@@ -20292,7 +20292,7 @@
         {
           "id": "turncount-instance",
           "type": "wiki",
-          "file": "wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md",
+          "file": "wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not.md",
           "description": "Variable-layer instance \u2014 OpenArms harness turnCount counting streaming events"
         },
         {
@@ -20393,7 +20393,7 @@
         {
           "id": "openarms-turncount",
           "type": "wiki",
-          "file": "wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md"
+          "file": "wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not.md"
         }
       ],
       "layer": 5,
@@ -35284,7 +35284,7 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
-      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski",
+      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -35294,17 +35294,17 @@
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
       "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
-      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the",
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the",
       "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
-      "log/amendment-to-prior-compliance-checker-correction:-root-depth",
-      "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "log/amendment-to-prior-compliance-checker-correction-root-depth",
+      "log/compliance-checker-agents-md-match-by-filename-regardless-o",
       "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
       "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
       "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
@@ -35315,17 +35315,17 @@
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "inbox": [
-      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski",
+      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
       "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
       "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
-      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-",
+      "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
-      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work,-not-the"
+      "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the"
     ],
     "lesson": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -36049,8 +36049,8 @@
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
-      "log/amendment-to-prior-compliance-checker-correction:-root-depth",
-      "log/compliance-checker:-agents.md-match-by-filename-regardless-o",
+      "log/amendment-to-prior-compliance-checker-correction-root-depth",
+      "log/compliance-checker-agents-md-match-by-filename-regardless-o",
       "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
       "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"

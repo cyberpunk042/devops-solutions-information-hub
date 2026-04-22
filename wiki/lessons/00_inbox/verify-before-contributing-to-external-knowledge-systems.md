@@ -90,7 +90,7 @@ Full version with formatted tables, foldable evidence callouts, and per-domain a
 >
 > | # | Failure | Correct behavior |
 > |---|---------|------------------|
-> | 1 | Filed correction claiming "no root AGENTS.md exists in OpenFleet" | Root AGENTS.md existed (9289 bytes). A single `ls` would have verified. Amendment filed as [[amendment-to-prior-compliance-checker-correction:-root-depth\|amendment note]]. |
+> | 1 | Filed correction claiming "no root AGENTS.md exists in OpenFleet" | Root AGENTS.md existed (9289 bytes). A single `ls` would have verified. Amendment filed as [[amendment-to-prior-compliance-checker-correction-root-depth\|amendment note]]. |
 > | 2 | Unilaterally weakened brain-seeded wiki schema to reduce validation errors | The "minimize-the-job" anti-pattern. Operator feedback: *"do not minimize."* Reverted. |
 > | 3 | Reverted unilaterally after operator feedback | Operator response: *"giving up is still unilateral."* Reversion of a contested change needs the same deliberation as the original change. |
 > | 4 | Produced a multi-milestone plan when asked for context regathering | Operator response: *"the brain was explaining everything — follow the trail."* Contribution should match what was asked for, not add more. |

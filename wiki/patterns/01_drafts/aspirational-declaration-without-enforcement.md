@@ -32,7 +32,7 @@ updated: 2026-04-16
 sources:
   - id: turncount-instance
     type: wiki
-    file: wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events,-not-.md
+    file: wiki/lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not.md
     description: "Variable-layer instance — OpenArms harness turnCount counting streaming events"
   - id: schema-aspirationalism-instance
     type: wiki

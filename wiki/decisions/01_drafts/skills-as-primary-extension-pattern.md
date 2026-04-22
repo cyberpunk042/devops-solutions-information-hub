@@ -31,7 +31,7 @@ sources:
     description: "Backend guardrails (paths, response filtering, mode enforcement) — AICP's hook-equivalent"
   - id: skills-audit
     type: wiki
-    file: wiki/lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski.md
+    file: wiki/lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md
     description: "Audit revealing 47% of 78 skills were instruction-dump boilerplate — consequence of the pattern scaling without authoring discipline"
   - id: cli-vs-mcp-lesson
     type: wiki
@@ -105,7 +105,7 @@ Instead of `feature-implement` + `feature-test` + `feature-review` + ..., have o
 >
 > 3. **Guardrails complement skills with fail-closed enforcement.** Skills can teach "don't write .env files" but cannot enforce it — the agent's reasoning can override. Guardrails check at the backend boundary deterministically. Together: skills teach (60% compliance), guardrails enforce (98% compliance) — three-layer defense per Quality Standards.
 >
-> 4. **78 skills surface a real risk: scaffolded boilerplate.** The [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|2026-04-17 audit]] found 47% of AICP skills were identical generic Process boilerplate (instruction-dump anti-pattern). This is a maintenance hazard, not a refutation of the design — boilerplate skills are a quality bar problem to fix (Step 9.6 — 5/16 fleet-referenced rewritten as of 2026-04-18), not evidence the pattern is wrong. The skill mechanism is sound; the implementation needs Standards-level authoring.
+> 4. **78 skills surface a real risk: scaffolded boilerplate.** The [[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|2026-04-17 audit]] found 47% of AICP skills were identical generic Process boilerplate (instruction-dump anti-pattern). This is a maintenance hazard, not a refutation of the design — boilerplate skills are a quality bar problem to fix (Step 9.6 — 5/16 fleet-referenced rewritten as of 2026-04-18), not evidence the pattern is wrong. The skill mechanism is sound; the implementation needs Standards-level authoring.
 >
 > 5. **The ecosystem converges on this split.** OpenArms uses 50+ skills + ClawHub MCP marketplace + R01-R13 hooks. The second brain uses 9 skills + 21 MCP tools + minimal hooks. Both arrived at the three-layer split independently. AICP's split (78 + 11 + guardrails) follows the same shape, scaled to its larger skill library.
 >
@@ -145,7 +145,7 @@ This decision is **AICP-specific but transferable in shape**. Any project with >
 - BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 - BUILDS ON: [[model-claude-code|Model — Claude Code]]
 - IMPLEMENTS: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] (the convergence-evidence lesson)
-- RELATES TO: [[[[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]] (the boilerplate problem this decision's pattern surfaces but doesn't cause)]]
+- RELATES TO: [[[[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]] (the boilerplate problem this decision's pattern surfaces but doesn't cause)]]
 - RELATES TO: [[localai-over-ollama-vllm-for-multi-model-orchestration|Decision — LocalAI over Ollama / vLLM]] (sibling AICP decision — both concern config-driven coordination)
 
 ## Backlinks

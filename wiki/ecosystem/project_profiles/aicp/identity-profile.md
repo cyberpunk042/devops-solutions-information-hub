@@ -58,7 +58,7 @@ The second brain's understanding of AICP (AI Control Platform) as an ecosystem m
 > | [[skills-architecture-is-dominant-extension-pattern\|Skills Architecture Is the Dominant LLM Extension Pattern]] | 78 skills in `.claude/skills/` — the largest skill collection in the ecosystem. 18 referenced in fleet's agent-tooling.yaml. |
 > | [[cli-tools-beat-mcp-for-token-efficiency\|CLI Tools Beat MCP for Token Efficiency]] | AICP exposes 11 MCP tools AND a CLI — the routing decision itself is an MCP tool (`route`), proving MCP can wrap complex decisions |
 > | [[deterministic-shell-llm-core\|Deterministic Shell, LLM Core]] | Router's complexity scoring + circuit breaker + profile thresholds are deterministic; only the final inference call is LLM |
-> | [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski\|Boilerplate Skill Anti-Pattern at Scale]] | 47% of AICP's 78 skills are identical boilerplate — the scaling failure mode of scaffolded libraries quantified |
+> | [[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski\|Boilerplate Skill Anti-Pattern at Scale]] | 47% of AICP's 78 skills are identical boilerplate — the scaling failure mode of scaffolded libraries quantified |
 > | [[three-layer-autocomplete-chain-validated-in-production-fleet\|Three-Layer Autocomplete Chain]] | Context Engineering Standards' 8-step chain maps to static map + knowledge graph + per-agent memory — production-validated |
 
 > [!tip] Key Patterns Contributed (5 · all AICP 2026-04-18/19)

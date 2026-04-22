@@ -251,7 +251,7 @@ Commands (user trigger)
 | [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]] | agentskills.io format works across 5+ agent platforms. Format choice is a one-time decision with compounding gains. |
 | [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] | Skills that teach methodology must also be in CLAUDE.md. Teaching and enforcement must be layered. |
 | [[always-plan-before-executing|Always Plan Before Executing]] | Planning prevents rework — and the extension system is HOW planning is operationalized (skills carry the planning workflow). |
-| [[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski\|Boilerplate Skill Anti-Pattern at Scale]] | AICP audit 2026-04-17: 37/78 skills share identical boilerplate, 0/78 pass Extension Standards' 5 required elements. The scaffolded-skill-library scaling failure mode, quantified. |
+| [[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski\|Boilerplate Skill Anti-Pattern at Scale]] | AICP audit 2026-04-17: 37/78 skills share identical boilerplate, 0/78 pass Extension Standards' 5 required elements. The scaffolded-skill-library scaling failure mode, quantified. |
 
 ### Worked-Example Decision (AICP, 2026-04-18)
 
@@ -405,7 +405,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[E005-agent-compliance-framework|Agent Compliance Framework]]
-[[boilerplate-skill-anti-pattern-at-scale:-47%-of-aicps-78-ski|Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps]]
+[[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps]]
 [[claude-md-structural-patterns|CLAUDE.md Structural Patterns for Agent Compliance]]
 [[context-file-taxonomy|Context File Taxonomy — The 8 Dimensions of Agent Context]]
 [[pretooluse-hooks-layered-approach|Decision — Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later]]

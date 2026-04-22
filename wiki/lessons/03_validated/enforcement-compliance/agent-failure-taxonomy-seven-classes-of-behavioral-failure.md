@@ -245,7 +245,7 @@ OpenArms is actively investigating each failure class. These are the proposed fi
 - RELATES TO: [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 - FEEDS INTO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 - EXTENDED BY: [[agents-take-small-unauthorized-scope-expansions-when-the-cha|Clean-Win Scope Expansion — Class A/B/C Taxonomy (OpenArms T116-T119)]]
-- EXTENDED BY: [[the-harness-turncount-variable-counts-streaming-events,-not-|Harness turnCount Bug — Aspirational Naming in Lifecycle Code (OpenArms)]]
+- EXTENDED BY: [[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug — Aspirational Naming in Lifecycle Code (OpenArms)]]
 - EXTENDED BY: [[per-task-cost-grows-monotonically-across-multi-task-runs|Per-Task Cost Growth — Context Accumulation in Multi-Task Runs (OpenArms)]]
 
 ## Backlinks

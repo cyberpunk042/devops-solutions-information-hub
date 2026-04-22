@@ -306,7 +306,7 @@ fi
 [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[src-openarms-v10-enforcement|Synthesis — OpenArms v10 — Infrastructure Enforcement and Agent Behavior]]
-[[the-harness-turncount-variable-counts-streaming-events,-not-|The harness 'turnCount' variable counts streaming events, not conversational turns]]
+[[the-harness-turncount-variable-counts-streaming-events-not|The harness 'turnCount' variable counts streaming events, not conversational turns]]
 [[the-pre-write-hook-prevents-operator-claude-from-racing-the-|The pre-write hook prevents operator-Claude from racing the running agent on backlog files]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
 [[validation-matrix-test-suite-for-context-injection|Validation Matrix — Test Suite for Context Injection]]

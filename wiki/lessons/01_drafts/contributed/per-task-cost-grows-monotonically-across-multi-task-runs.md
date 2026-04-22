@@ -88,8 +88,8 @@ This lesson applies to three concrete planning scenarios:
 
 ## Relationships
 
-- RELATES TO: [[[[right-size-the-methodology-model-to-the-actual-work,-not-the|Right-Size Methodology Model]] -- first-order cost optimization that this lesson layers on top of]]
-- RELATES TO: [[[[the-harness-turncount-variable-counts-streaming-events,-not-|Harness turnCount Bug]] -- partial cause of cost growth via premature fresh sessions]]
+- RELATES TO: [[[[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- first-order cost optimization that this lesson layers on top of]]
+- RELATES TO: [[[[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug]] -- partial cause of cost growth via premature fresh sessions]]
 - RELATES TO: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math]] -- both lessons surfaced from the same multi-task run
 - RELATES TO: [[model-methodology|Model: Methodology]] -- methodology infrastructure and cost analysis
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] -- session lifecycle and dispatch architecture
