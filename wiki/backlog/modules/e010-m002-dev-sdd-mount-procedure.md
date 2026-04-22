@@ -2,13 +2,13 @@
 title: "E010 M002 — /dev/sdd Mount Procedure (ext4 at /mnt/models)"
 type: module
 domain: backlog
-status: draft
+status: done
 priority: P1
 task_type: module
-current_stage: design
-readiness: 50
-progress: 0
-stages_completed: [document]
+current_stage: test
+readiness: 100
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts: []
 epic: "E010"
 depends_on: []

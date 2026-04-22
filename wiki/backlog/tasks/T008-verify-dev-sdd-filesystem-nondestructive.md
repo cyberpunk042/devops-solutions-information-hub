@@ -2,13 +2,13 @@
 title: "T008 — Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)"
 type: task
 domain: backlog
-status: draft
+status: done
 priority: P0
 task_type: task
-current_stage: design
+current_stage: test
 readiness: 100
-progress: 0
-stages_completed: [document, design]
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts: []
 estimate: XS
 epic: "E010"

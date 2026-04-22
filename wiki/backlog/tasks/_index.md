@@ -17,7 +17,7 @@ tags: [backlog, tasks]
 | T001 | [Test OpenAI backend with LocalAI](T001-test-openai-backend.md) | P1 | blocked |  | 0 | E001 |
 | T002 | [T002 — Run OpenRouter Smoke Tests (K2.6 + Opus + GPT-5.4)](T002-run-openrouter-smoke-tests.md) | P0 | done |  | 100 | E007 |
 | T003 | [T003 — Harness Test 1: `/status` + Identity + Simple Tool Use](T003-harness-test-1-sanity.md) | P0 | draft |  | 100 | E007 |
-| T008 | [T008 — Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)](T008-verify-dev-sdd-filesystem-nondestructive.md) | P0 | draft |  | 100 | E010 |
+| T008 | [T008 — Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)](T008-verify-dev-sdd-filesystem-nondestructive.md) | P0 | done |  | 100 | E010 |
 | T011 | [T011 — Install huggingface_hub CLI (prerequisite for K2.6 download)](T011-install-huggingface-hub-cli.md) | P1 | draft |  | 100 | E008 |
 | T014 | [T014 — Add K2.6 Backend Entries to config/default.yaml](T014-add-k2-6-backend-entries-to-default-yaml.md) | P1 | draft |  | 100 | E011 |
 | T015 | [T015 — Extend router.py Complexity-to-Tier Mapping for 5 Tiers](T015-extend-router-complexity-to-tier-mapping.md) | P1 | draft |  | 90 | E011 |

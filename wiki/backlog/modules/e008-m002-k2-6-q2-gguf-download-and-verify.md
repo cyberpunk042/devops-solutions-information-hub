@@ -2,13 +2,13 @@
 title: "E008 M002 — K2.6 Q2 GGUF Download and Verify"
 type: module
 domain: backlog
-status: draft
+status: done
 priority: P1
 task_type: module
-current_stage: design
-readiness: 40
-progress: 0
-stages_completed: [document]
+current_stage: test
+readiness: 100
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts: []
 epic: "E008"
 depends_on:

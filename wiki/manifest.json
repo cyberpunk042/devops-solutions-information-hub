@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-22T17:00:02.758508+00:00",
+  "generated": "2026-04-22T19:54:52.168071+00:00",
   "stats": {
-    "pages": 456,
+    "pages": 460,
     "domains": 9,
     "sources": 54,
     "comparisons": 5,
-    "relationships": 2770,
-    "tags_unique": 1294,
+    "relationships": 2786,
+    "tags_unique": 1305,
     "layers": {
       "3": 4,
       "6": 25,
@@ -2002,7 +2002,7 @@
       "title": "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
       "type": "module",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -2368,7 +2368,7 @@
       "title": "E010 M001 \u2014 64 GB RAM Install and Verify (physical + WSL detection)",
       "type": "module",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -2410,7 +2410,7 @@
       "title": "E010 M002 \u2014 /dev/sdd Mount Procedure (ext4 at /mnt/models)",
       "type": "module",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -3432,7 +3432,7 @@
       "title": "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)",
       "type": "task",
       "domain": "backlog",
-      "status": "draft",
+      "status": "done",
       "confidence": "high",
       "created": "2026-04-22",
       "updated": "2026-04-22",
@@ -19542,6 +19542,246 @@
       ]
     },
     {
+      "path": "log/2026-04-23-e010-m002-mount-complete.md",
+      "slug": "log/2026-04-23-e010-m002-mount-complete",
+      "title": "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "note",
+        "completion",
+        "e010",
+        "mount",
+        "ext4",
+        "dev-sdd",
+        "mnt-models",
+        "milestone-gate"
+      ],
+      "sources": [
+        {
+          "id": "e010-m002-dev-sdd-mount-procedure",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m002-dev-sdd-mount-procedure.md"
+        },
+        {
+          "id": "vhdx-attach-fix",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-23-vhdx-attach-procedure-and-hcs-fix.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPLETES",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "operator-workstation-storage-tiering"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-23-k2-6-q2-download-complete.md",
+      "slug": "log/2026-04-23-k2-6-q2-download-complete",
+      "title": "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)",
+      "type": "note",
+      "domain": "ai-models",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "note",
+        "completion",
+        "e008",
+        "k2-6",
+        "gguf",
+        "download",
+        "sha256-verified",
+        "unsloth",
+        "hf-cli"
+      ],
+      "sources": [
+        {
+          "id": "e008-m002-k2-6-q2-gguf-download-and-verify",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify.md"
+        },
+        {
+          "id": "unsloth-k2-6-gguf",
+          "type": "repository",
+          "url": "https://huggingface.co/unsloth/Kimi-K2.6-GGUF",
+          "title": "unsloth/Kimi-K2.6-GGUF"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPLETES",
+          "target": "e008-m002-k2-6-q2-gguf-download-and-verify"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "e008-m003-first-light-benchmark"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "e008-m001-ktransformers-install-and-config"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-23-e010-m002-mount-complete"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-23-ram-upgrade-48gb-wsl.md",
+      "slug": "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "title": "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "note",
+        "completion",
+        "e010",
+        "ram",
+        "hardware",
+        "wsl",
+        "48gb",
+        "64gb",
+        "milestone-gate"
+      ],
+      "sources": [
+        {
+          "id": "e010-m001-64gb-ram-install-and-verify",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m001-64gb-ram-install-and-verify.md"
+        },
+        {
+          "id": "operator-workstation-storage-tiering",
+          "type": "wiki",
+          "file": "wiki/spine/references/operator-workstation-storage-tiering.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPLETES",
+          "target": "e010-m001-64gb-ram-install-and-verify"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "E012-custom-model-library-unsloth-loras"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "operator-workstation-storage-tiering"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix.md",
+      "slug": "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
+      "title": "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "note",
+        "completion",
+        "e010",
+        "vhdx",
+        "wsl",
+        "mount",
+        "hcs",
+        "access-denied",
+        "icacls",
+        "takeown",
+        "troubleshooting",
+        "gotcha"
+      ],
+      "sources": [
+        {
+          "id": "e010-m002-dev-sdd-mount-procedure",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e010-m002-dev-sdd-mount-procedure.md"
+        },
+        {
+          "id": "microsoft-qna-hcs-access-denied",
+          "type": "reference",
+          "url": "https://learn.microsoft.com/en-us/answers/questions/1697336/error-code-wsl-service-createinstance-mountvhd-hcs",
+          "title": "Microsoft Q&A \u2014 HCS/E_ACCESSDENIED fix via ownership change"
+        },
+        {
+          "id": "wsl-issue-12493",
+          "type": "reference",
+          "url": "https://github.com/microsoft/WSL/issues/12493",
+          "title": "WSL #12493 \u2014 Windows Security Entities on --mount"
+        },
+        {
+          "id": "wsl-issue-11323",
+          "type": "reference",
+          "url": "https://github.com/microsoft/WSL/issues/11323",
+          "title": "WSL #11323 \u2014 2.1.5.0 HCS/E_ACCESSDENIED regression"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "e010-m002-dev-sdd-mount-procedure"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "operator-workstation-storage-tiering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-23-ram-upgrade-48gb-wsl"
+        },
+        {
+          "verb": "UNBLOCKS",
+          "target": "E008-local-k2-6-offline-frontier-tier"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -30732,8 +30972,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 189,
-      "relationship_count": 1256
+      "page_count": 192,
+      "relationship_count": 1268
     },
     "ai-agents": {
       "page_count": 68,
@@ -30748,8 +30988,8 @@
       "relationship_count": 99
     },
     "ai-models": {
-      "page_count": 12,
-      "relationship_count": 71
+      "page_count": 13,
+      "relationship_count": 75
     },
     "automation": {
       "page_count": 7,
@@ -31667,6 +31907,7 @@
     "gguf": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "log/2026-04-23-k2-6-q2-download-complete",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
@@ -31707,6 +31948,7 @@
     "hardware": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
       "spine/references/operator-workstation-storage-tiering"
     ],
     "storage": [
@@ -31719,7 +31961,8 @@
     ],
     "ram": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "backlog/modules/e010-m001-64gb-ram-install-and-verify"
+      "backlog/modules/e010-m001-64gb-ram-install-and-verify",
+      "log/2026-04-23-ram-upgrade-48gb-wsl"
     ],
     "nvme": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -31730,19 +31973,24 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
       "spine/references/operator-workstation-storage-tiering"
     ],
     "ext4": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "log/2026-04-23-e010-m002-mount-complete"
     ],
     "dev-sdd": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/modules/e010-m002-dev-sdd-mount-procedure",
-      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
+      "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
+      "log/2026-04-23-e010-m002-mount-complete"
     ],
     "vhdx": [
-      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement"
+      "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
     "disk-tiering": [
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
@@ -31774,6 +32022,7 @@
       "backlog/tasks/T019-extend-pricing-table-for-k2-6",
       "backlog/tasks/T020-parameterize-localai-backend-config-key",
       "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "log/2026-04-23-k2-6-q2-download-complete",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "circuit-breaker": [
@@ -31792,6 +32041,7 @@
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "backlog/modules/e012-m001-unsloth-toolchain-install",
       "backlog/tasks/T058-create-unsloth-venv",
+      "log/2026-04-23-k2-6-q2-download-complete",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "lora": [
@@ -31981,7 +32231,8 @@
       "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T030-verify-cuda-toolchain",
       "backlog/tasks/T031-create-ktransformers-venv",
-      "backlog/tasks/T033-author-kt-smoke-script"
+      "backlog/tasks/T033-author-kt-smoke-script",
+      "log/2026-04-23-k2-6-q2-download-complete"
     ],
     "install": [
       "backlog/modules/e008-m001-ktransformers-install-and-config",
@@ -31998,7 +32249,8 @@
       "backlog/tasks/T030-verify-cuda-toolchain"
     ],
     "download": [
-      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
+      "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
+      "log/2026-04-23-k2-6-q2-download-complete"
     ],
     "hf": [
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify"
@@ -32128,7 +32380,10 @@
       "backlog/modules/e010-m004-model-weights-inventory",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
-      "backlog/tasks/T043-author-inventory-models-script"
+      "backlog/tasks/T043-author-inventory-models-script",
+      "log/2026-04-23-e010-m002-mount-complete",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
     "memory": [
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -32137,7 +32392,9 @@
       "sources/src-7-levels-claude-code-rag"
     ],
     "mount": [
-      "backlog/modules/e010-m002-dev-sdd-mount-procedure"
+      "backlog/modules/e010-m002-dev-sdd-mount-procedure",
+      "log/2026-04-23-e010-m002-mount-complete",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
     "fstab": [
       "backlog/modules/e010-m002-dev-sdd-mount-procedure"
@@ -35535,16 +35792,62 @@
     ],
     "note": [
       "log/2026-04-23-corpus-training-readiness-audit",
+      "log/2026-04-23-e010-m002-mount-complete",
+      "log/2026-04-23-k2-6-q2-download-complete",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
       "spine/standards/note-page-standards"
     ],
     "completion": [
-      "log/2026-04-23-corpus-training-readiness-audit"
+      "log/2026-04-23-corpus-training-readiness-audit",
+      "log/2026-04-23-e010-m002-mount-complete",
+      "log/2026-04-23-k2-6-q2-download-complete",
+      "log/2026-04-23-ram-upgrade-48gb-wsl",
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
     "t060": [
       "log/2026-04-23-corpus-training-readiness-audit"
     ],
     "training-readiness": [
       "log/2026-04-23-corpus-training-readiness-audit"
+    ],
+    "mnt-models": [
+      "log/2026-04-23-e010-m002-mount-complete"
+    ],
+    "milestone-gate": [
+      "log/2026-04-23-e010-m002-mount-complete",
+      "log/2026-04-23-ram-upgrade-48gb-wsl"
+    ],
+    "sha256-verified": [
+      "log/2026-04-23-k2-6-q2-download-complete"
+    ],
+    "hf-cli": [
+      "log/2026-04-23-k2-6-q2-download-complete"
+    ],
+    "48gb": [
+      "log/2026-04-23-ram-upgrade-48gb-wsl"
+    ],
+    "64gb": [
+      "log/2026-04-23-ram-upgrade-48gb-wsl"
+    ],
+    "hcs": [
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
+    "access-denied": [
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
+    "icacls": [
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
+    "takeown": [
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
+    "troubleshooting": [
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
+    ],
+    "gotcha": [
+      "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -35971,9 +36274,6 @@
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
     ],
     "headless": [
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
-    ],
-    "troubleshooting": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
     ],
     "marketplace": [
@@ -36884,6 +37184,24 @@
       ]
     },
     {
+      "target": "2026-04-23-e010-m002-mount-complete",
+      "referenced_by": [
+        "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
+      ]
+    },
+    {
+      "target": "2026-04-23-ram-upgrade-48gb-wsl",
+      "referenced_by": [
+        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
+      ]
+    },
+    {
+      "target": "2026-04-23-vhdx-attach-procedure-and-hcs-fix",
+      "referenced_by": [
+        "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX"
+      ]
+    },
+    {
       "target": "AICP's $0 target on consumer hardware",
       "referenced_by": [
         "Single-Active Backend with LRU Eviction"
@@ -37056,7 +37374,9 @@
         "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)",
         "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
         "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
-        "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)"
+        "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)",
+        "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
+        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
       ]
     },
     {
@@ -37167,7 +37487,8 @@
         "T058 \u2014 Create /home/jfortin/unsloth-env/ venv + Install unsloth",
         "T060 \u2014 Audit Wiki Corpus Training Readiness (page counts + Q&A shape)",
         "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)",
-        "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant"
+        "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant",
+        "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)"
       ]
     },
     {
@@ -37764,7 +38085,8 @@
         "E008 M003 \u2014 K2.6 First-Light Benchmark (cold start + tok/s at 3 contexts)",
         "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
         "T030 \u2014 Verify CUDA Toolchain + GPU Driver Compatibility",
-        "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/"
+        "T031 \u2014 Create Dedicated venv at /home/jfortin/ktransformers-env/",
+        "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
       ]
     },
     {
@@ -37774,7 +38096,9 @@
         "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
         "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
         "E011 M003 \u2014 K2.6 Local Backend Adapter (KTransformers OpenAI-compat)",
-        "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)"
+        "T011 \u2014 Install huggingface_hub CLI (prerequisite for K2.6 download)",
+        "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
+        "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
       ]
     },
     {
@@ -37782,7 +38106,8 @@
       "referenced_by": [
         "E008 M001 \u2014 KTransformers Install and CUDA Config",
         "E008 M004 \u2014 Local K2.6 OpenAI-Compat Endpoint (KTransformers server)",
-        "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)"
+        "T033 \u2014 Author scripts/kt-smoke.sh (benchmark harness)",
+        "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
       ]
     },
     {
@@ -37825,12 +38150,20 @@
       ]
     },
     {
+      "target": "e010-m001-64gb-ram-install-and-verify",
+      "referenced_by": [
+        "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)"
+      ]
+    },
+    {
       "target": "e010-m002-dev-sdd-mount-procedure",
       "referenced_by": [
         "E008 M002 \u2014 K2.6 Q2 GGUF Download and Verify",
         "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)",
         "E010 M004 \u2014 Model Weights Inventory Tool and Manifest",
-        "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)"
+        "T008 \u2014 Verify /dev/sdd Filesystem (blkid + fsck -n, non-destructive)",
+        "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
+        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
       ]
     },
     {
@@ -37944,6 +38277,14 @@
       "target": "not the label",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "operator-workstation-storage-tiering",
+      "referenced_by": [
+        "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
+        "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
+        "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)"
       ]
     },
     {

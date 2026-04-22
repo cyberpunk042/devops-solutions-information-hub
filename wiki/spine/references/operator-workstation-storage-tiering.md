@@ -33,26 +33,44 @@ Authoritative disk and filesystem map for the operator's workstation as of **202
 > [!warning] Operator ground truth overrides AI assumption.
 > If you find yourself about to assert something about this hardware, check this table. If the table disagrees with your belief, **the table is right**. Do not re-litigate settled facts with the operator.
 
-## Ground-truth disk map
+## Corrections history
+
+> [!warning] 2026-04-22 evening — disk-letter mappings corrected
+> The initial version of this page had D:\ incorrectly labeled as the 1.9 TB SATA RAID. **D:\ is actually the NVMe drive** (where WSL's root VHDX and `D:\vdisks\models.vhdx` live). Operator corrected the mapping during the VHDX attach session. See `wiki/log/2026-04-23-vhdx-attach-procedure-and-hcs-fix.md`.
+>
+> Windows-OS placement was also initially guessed as "Disk 2 = 500 GB Intel RAID 0." Per operator: **Windows OS is on an Intel RAID 0**, and the **1.9 TB NAS SSD is on a separate RAID 0** — both RAID volumes exist, but the size-to-purpose mapping I'd drawn was wrong. Specifics of disk numbers ↔ drive letters remain **unverified** and are left as `?` below until operator confirms via `Get-PhysicalDisk` / `Get-Partition`.
+
+## Ground-truth disk map (partial — verified fields only)
 
 > [!info] Physical disks → WSL access → real-world bandwidth → recommended use
 >
-> | Win Disk | Size | Physical media | WSL access path | Filesystem layer | Read BW (real-world) | Recommended use |
-> |----------|------|----------------|-----------------|------------------|----------------------|-----------------|
-> | 0 | 931 GB | **WD_BLACK SN770** (single Gen4 NVMe) | `/dev/sdd` (dynamic VHDX, ext4 native) | native ext4 in WSL | **5–7 GB/s** (estimated; `fio` to confirm) | ⭐ K2.6 weights, AirLLM offload, hot model cache |
-> | 1 | 1.9 TB | **2× SATA SSDs in Intel RAID 0** (NOT NVMe) | `/mnt/d` (NTFS via 9P) | 9P passthrough | **~1–2 GB/s effective** (9P-capped; physical stripe ~0.8–1.0 GB/s) | Archives, backups, datasets — NOT LLM weights |
-> | 2 | ~500 GB | Intel RAID 0 | Windows OS partition | — | — | ⛔ OFF-LIMITS (Windows system) |
-> | 3 | 4 TB | Sabrent external USB | `/mnt/e` (NTFS via 9P) | 9P + USB | USB-limited (≤500 MB/s practical) | Cold storage, archives |
-> | 4 | 233 GB | — | Docker volume | — | — | ⛔ OFF-LIMITS (Docker) |
+> | Win drive | Size | Physical media | WSL access path | Filesystem layer | Read BW (real-world) | Recommended use |
+> |-----------|------|----------------|-----------------|------------------|----------------------|-----------------|
+> | **D:\** | (large, contains WSL root VHDX + models.vhdx) | **NVMe** (verified 2026-04-22 by operator) | `/dev/sdc` (WSL root), `/dev/sdd` (models VHDX) | native ext4 in WSL, no 9P | native NVMe speeds, ~3–7 GB/s | ⭐ K2.6 weights, AirLLM offload, hot model cache |
+> | (RAID #1) | ~500 GB | **Intel RAID 0** (Windows OS) | `C:\` presumably | — | — | ⛔ OFF-LIMITS (Windows system) |
+> | (RAID #2) | **1.9 TB** | **2× SSDs in Intel RAID 0** (NAS SSD; operator-confirmed RAID 0, NOT NVMe) | whichever letter it's mapped to via 9P | 9P passthrough | ~0.8–1.0 GB/s physical, 9P-capped further | Archives, backups, datasets — NOT LLM weights |
+> | (USB) | 4 TB | Sabrent external USB | `/mnt/<letter>` (9P) | 9P + USB | USB-limited (≤500 MB/s practical) | Cold storage, archives |
+> | (Docker) | 233 GB | — | Docker-reserved | — | — | ⛔ OFF-LIMITS (Docker) |
 
-Bandwidth provenance: numbers labeled "estimated" come from manufacturer specs and architecture reasoning; numbers labeled "measured" come from `fio` runs recorded in the log directory. Re-run `fio` post-mount (T009) and update this table with measured figures.
+The disk-number-to-drive-letter mapping is deliberately left unstated here — it can be recovered accurately via:
+
+```powershell
+Get-PhysicalDisk | Select-Object DeviceID, FriendlyName, MediaType, Size | Format-Table
+Get-Partition | Where-Object DriveLetter | Select-Object DiskNumber, DriveLetter, Size | Format-Table
+```
+
+Update this page when operator produces that output.
+
+Bandwidth provenance: numbers labeled "estimated" come from manufacturer specs and architecture reasoning; numbers labeled "measured" come from `fio` runs recorded in the log directory. Run `fio` on `/mnt/models` after mount and record the measured NVMe number here.
 
 ## Common mistakes — ground-truth affirmed
 
-> [!warning] Mistake #1 — the 1.9 TB Intel RAID 0 is SATA, NOT NVMe.
-> Operator confirmed **multiple times** on 2026-04-22. The disk shows up in Windows Disk Management and WMIC as a single "Raid0SSDStorage" volume, which is easy to misread as a single NVMe. It is **two SATA SSDs striped**. Two 550 MB/s SATA SSDs in RAID 0 will never beat one Gen4 NVMe at 7 GB/s, regardless of stripe math.
+> [!warning] Mistake #1 — the 1.9 TB Intel RAID 0 is SSDs, NOT NVMe.
+> Operator confirmed **multiple times** on 2026-04-22. The disk shows up in Windows Disk Management as a single "Raid0SSDStorage" volume, which is easy to misread as a single NVMe. It is **two SSDs striped in RAID 0**. Two SATA-class SSDs in RAID 0 will never beat one Gen4 NVMe, regardless of stripe math.
 >
-> If you are about to recommend putting K2.6 weights on `/mnt/d` or the 1.9 TB RAID — **stop**. The correct target is `/dev/sdd`.
+> If you are about to recommend putting K2.6 weights on the 1.9 TB RAID — **stop**. The correct target is a VHDX on the NVMe (D:\\ → `/dev/sdd` via `wsl --mount --vhd`).
+>
+> **Clarification 2026-04-22 evening**: D:\ is the NVMe, NOT the 1.9 TB RAID. The drive-letter mapping in the original version of this page was wrong.
 
 > [!warning] Mistake #2 — assuming `/mnt/d` is "NVMe-fast" because Windows says the underlying disk is fast.
 > WSL's `/mnt/c`, `/mnt/d`, etc. sit behind a **9P server** — a filesystem virtualization layer that caps throughput well below native. Even if the underlying Windows disk were a Gen4 NVMe, the 9P roundtrip for every `read(2)` / `write(2)` caps practical bandwidth at ~1–2 GB/s at best. This is a WSL architectural fact, not a configuration issue.

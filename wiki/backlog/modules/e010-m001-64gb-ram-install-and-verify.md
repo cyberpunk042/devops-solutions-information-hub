@@ -2,13 +2,13 @@
 title: "E010 M001 — 64 GB RAM Install and Verify (physical + WSL detection)"
 type: module
 domain: backlog
-status: draft
+status: done
 priority: P0
 task_type: module
-current_stage: design
+current_stage: test
 readiness: 100
-progress: 0
-stages_completed: [document]
+progress: 100
+stages_completed: [document, design, scaffold, implement, test]
 artifacts: []
 epic: "E010"
 depends_on: []
