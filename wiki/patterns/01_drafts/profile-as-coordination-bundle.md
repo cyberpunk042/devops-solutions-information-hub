@@ -157,7 +157,7 @@ The [[model-context-engineering|Model — Context Engineering]] tier system coor
 - RELATES TO: [[model-local-ai|Model — Local AI ($0 Target)]] (AICP's 9 profiles configure routing-layer bundles)
 - RELATES TO: [[aicp|AICP]] (canonical implementation)
 - RELATES TO: [[three-layer-autocomplete-chain-validated-in-production-fleet|Three-Layer Autocomplete Chain Validated]] (per-tier context budgets are profile-coupled — same pattern, context-layer scope)
-- RELATES TO: [[[[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]] (skills load conditionally per task; profiles configure conditionally per deployment — same per-context-config principle, different scope)]]
+- RELATES TO: [[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]] (skills load conditionally per task; profiles configure conditionally per deployment — same per-context-config principle, different scope)
 - FEEDS INTO: [[model-registry|Model Registry]]
 
 ## Backlinks

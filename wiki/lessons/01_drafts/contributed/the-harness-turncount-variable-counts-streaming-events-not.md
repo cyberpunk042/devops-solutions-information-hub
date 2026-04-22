@@ -24,6 +24,9 @@ contribution_reason: "First bidirectional contribution test — F9 from first co
 
 In the OpenArms harness (`agent-run-harness.ts:373`), the `turnCount` variable drives session-lifecycle decisions: compacting at >150 and starting fresh sessions at >=200. The variable is meant to represent conversational turns but actually increments on every `message_start` streaming event, which fires dozens of times per assistant turn. This inflates the count by 20-50x, causing sessions to restart far earlier than intended -- after roughly 10 real conversational turns instead of 200. The bug was invisible during single-task runs because `decideSessionLifecycle` never reached the `turnCount` check on the first dispatch.
 
+> [!bug] 20–50x inflation, only visible in multi-task runs
+> `turnCount` increments per `message_start` stream event, not per conversational turn. The `>=200` fresh-session threshold fires at ~10 real turns. Single-task runs bypass the check entirely, so all pre-Phase-2/3 development shipped with the bug latent.
+
 ## Context
 
 This lesson applies whenever an agent harness uses streaming event counts as proxies for higher-level conversational metrics. The pattern generalizes beyond OpenArms: any system that counts protocol-level events (stream chunks, SSE frames, message blocks) and uses those counts for lifecycle decisions will hit the same inflation problem if the metric name suggests a different semantic level than what is actually measured.
@@ -35,6 +38,9 @@ The bug specifically surfaces in multi-task runs (`--tasks N` where N >= 2). Sin
 **Naming a variable after its intended semantic meaning rather than its actual measurement source creates invisible bugs in lifecycle-critical code.** The `turnCount` name led every reader (including the original author) to assume the thresholds (150/200) referred to conversational turns. In reality, they referred to streaming events, making the compact threshold dead code (it fires at ~7 real turns, but the fresh threshold at ~10 real turns fires almost simultaneously) and the fresh threshold wildly premature.
 
 The deeper pattern: when a metric drives automated decisions, the metric's name must precisely describe what it measures, not what the designer wished it measured. Aspirational naming in lifecycle code is a class of bug that compiles, passes unit tests, and only manifests at integration boundaries.
+
+> [!important] Name metrics by what they measure, not what you wished they measured
+> When a metric drives automated decisions, aspirational naming is a bug class that compiles, passes unit tests, and only surfaces at integration time. For lifecycle-critical counters, track both the raw stream-event count (for diagnostics) AND the conversational-turn count (for decisions) as separate variables.
 
 ## Evidence
 
@@ -71,7 +77,7 @@ Beyond OpenArms, any system where a diagnostic log message reports an inflated m
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]] -- lifecycle hooks and session management
 - RELATES TO: [[model-methodology|Model: Methodology]] -- methodology infrastructure bugs
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] -- the harness dispatch and session lifecycle system
-- RELATES TO: [[[[per-task-cost-grows-monotonically-across-multi-task-runs|Per-Task Cost Growth]] -- cost implications of premature fresh sessions]]
+- RELATES TO: [[per-task-cost-grows-monotonically-across-multi-task-runs|Per-Task Cost Growth]] -- cost implications of premature fresh sessions
 - RELATES TO: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math]] -- both surfaced from multi-task run observations
 
 ## Backlinks

@@ -24,6 +24,9 @@ contribution_reason: "First bidirectional contribution test — F9 from first co
 
 During an active `pnpm openarms agent run`, the methodology enforcement hooks (`pre-bash.sh`, `pre-write.sh`) block writes to task files, epic files, and `_index.md` from all contexts -- including operator-Claude running in a separate session. This is defense-in-depth working correctly: the harness writes these files during stage transitions, and concurrent operator edits would create race conditions where one set of changes is silently lost. The operator's productive parallel work during an active run must be confined to reading, lesson writing, log entries, and scratch drafts -- not backlog modifications.
 
+> [!warning] The operator's parallel session is NOT a separate-process loophole
+> Operator-Claude and the running agent share a filesystem. Concurrent edits to harness-owned files (`wiki/backlog/tasks/*`, `_index.md`, epic files, `.openarms/` state) race — one side's changes get silently overwritten. The hook catches this at write-time with an explicit block, not silent data loss.
+
 ## Context
 
 This lesson applies whenever an operator runs a parallel Claude Code session while an autonomous agent run is in flight. The natural impulse is to use the wait time productively by pre-speccing the next tasks, updating the backlog index, or editing epic files. The hooks correctly prevent this because the harness owns those files during active runs.
@@ -46,6 +49,9 @@ The corrective workflow during active runs:
 | Edit `scripts/methodology/` | Run `select-task` (state changes mid-run) |
 
 The rule of thumb: anything the harness or agent might write during the active stage is unsafe for operator-Claude. When in doubt, wait for the run to complete.
+
+> [!tip] Productive operator-Claude work during an active run
+> Route wait-time to: lesson refinement, log writes, directive authoring (CLAUDE.md / AGENTS.md), architecture reading, scratch drafts. Avoid: task/epic/`_index.md` edits, `.openarms/` state edits, `select-task`, commits on backlog files.
 
 ## Evidence
 

@@ -99,7 +99,7 @@ The migration is driven by three factors:
 - RELATES TO: [[model-context-engineering|Model — Context Engineering]] — model-specific token budgets
 - RELATES TO: [[model-local-ai|Model — Local AI ($0 Target)]] — three-tier cloud routing
 - RELATES TO: [[agent-execution-cost-optimization-stack|Cost Optimization Stack]] — effort + model as cost levers
-- RELATES TO: [[[[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] — methodology model + Claude model = two optimization dimensions]]
+- RELATES TO: [[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] — methodology model + Claude model = two optimization dimensions
 
 ## Backlinks
 

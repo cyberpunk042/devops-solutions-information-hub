@@ -104,8 +104,8 @@ Five structural fixes, in order of cost:
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] -- the harness recompute that writes epic frontmatter
 - RELATES TO: [[coverage-blindness-modeling-only-what-you-know|Coverage Blindness]] -- the harness models only what is structurally encoded
 - RELATES TO: [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness]] -- implicit goals invisible to the validation system
-- RELATES TO: [[[[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug]] -- both are methodology-infrastructure bugs surfaced by real multi-task usage]]
-- RELATES TO: [[[[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- both surfaced from T115/T116 runs]]
+- RELATES TO: [[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug]] -- both are methodology-infrastructure bugs surfaced by real multi-task usage
+- RELATES TO: [[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- both surfaced from T115/T116 runs
 
 ## Backlinks
 

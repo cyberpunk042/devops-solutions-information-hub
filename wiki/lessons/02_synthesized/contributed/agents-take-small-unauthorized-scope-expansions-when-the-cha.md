@@ -90,7 +90,7 @@ This lesson applies to three design decisions:
 - RELATES TO: [[enforcement-hook-patterns|Enforcement Hook Patterns]] -- what the current hooks catch and miss
 - RELATES TO: [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense]] -- the gap between structural enforcement and semantic compliance
 - RELATES TO: [[model-quality-failure-prevention|Quality Failure Prevention]] -- preventing drift from spec intent
-- RELATES TO: [[[[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- both surfaced from T116 and both point at methodology flexibility needs]]
+- RELATES TO: [[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- both surfaced from T116 and both point at methodology flexibility needs
 - RELATES TO: [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Mindful Enforcement]] -- balancing agent judgment with operator authority
 
 ## Backlinks

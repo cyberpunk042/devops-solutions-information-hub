@@ -24,6 +24,12 @@ contribution_reason: "First bidirectional contribution test — F9 from first co
 
 When running multiple tasks in sequence within a single harness invocation (`--tasks N`), each successive task costs more than the previous one, even when the tasks are similar in scope and complexity. The growth comes from three compounding effects: codebase context accumulates as each task adds files, session resumption carries replay overhead, and fresh sessions triggered mid-run must reload an increasingly large codebase. Naive budgeting (`N x single-task cost`) underestimates actual multi-task cost by roughly 2-3x. The rule of thumb until more data is available: budget `N x baseline x 2` for multi-task runs.
 
+> [!warning] The naive budget is wrong by ~2.6x
+> `N x single-task-cost` assumes tasks are independent. They aren't — each task inherits the context burden of all prior tasks. Observed: $9.29 actual vs. $3.60 naive prediction (+158%).
+
+> [!tip] Conservative budget rule
+> Budget `N x baseline x 2` for multi-task autonomous runs until the growth factor is calibrated across more runs.
+
 ## Context
 
 This lesson applies when planning and budgeting autonomous agent runs that execute multiple tasks sequentially in a single harness session. The pattern is specific to harness architectures where tasks share (or inherit) codebase context within a session, and where session lifecycle decisions (compact, fresh) are triggered by accumulated metrics.
@@ -84,12 +90,13 @@ This lesson applies to three concrete planning scenarios:
 
 3. **Evaluating the interaction with the turnCount bug.** The premature fresh-session triggering from the inflated `turnCount` metric forces unnecessary context reloads, amplifying the growth factor. Fixing the turnCount bug should reduce multi-task cost growth -- re-running a similar scenario post-fix would confirm this empirically.
 
-**Confidence caveat**: This lesson is based on a single multi-task run. Open questions remain about whether the growth factor depends on epic scope (disjoint task contexts might not compound), task shape (research tasks read more and write less), or whether it is specific to E013 Track A's overlapping infrastructure changes.
+> [!note] Confidence caveat — single data point
+> Based on one multi-task run (E013 Track A, T118/T119/T120). Open questions: does the growth factor depend on epic scope (disjoint task contexts might not compound)? On task shape (research-heavy tasks read more and write less)? Or is it specific to this epic's overlapping infrastructure changes?
 
 ## Relationships
 
-- RELATES TO: [[[[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- first-order cost optimization that this lesson layers on top of]]
-- RELATES TO: [[[[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug]] -- partial cause of cost growth via premature fresh sessions]]
+- RELATES TO: [[right-size-the-methodology-model-to-the-actual-work-not-the|Right-Size Methodology Model]] -- first-order cost optimization that this lesson layers on top of
+- RELATES TO: [[the-harness-turncount-variable-counts-streaming-events-not|Harness turnCount Bug]] -- partial cause of cost growth via premature fresh sessions
 - RELATES TO: [[epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals|Epic Readiness Math]] -- both lessons surfaced from the same multi-task run
 - RELATES TO: [[model-methodology|Model: Methodology]] -- methodology infrastructure and cost analysis
 - RELATES TO: [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop]] -- session lifecycle and dispatch architecture

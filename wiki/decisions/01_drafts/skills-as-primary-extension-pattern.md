@@ -145,7 +145,7 @@ This decision is **AICP-specific but transferable in shape**. Any project with >
 - BUILDS ON: [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 - BUILDS ON: [[model-claude-code|Model — Claude Code]]
 - IMPLEMENTS: [[cli-tools-beat-mcp-for-token-efficiency|CLI Tools Beat MCP for Token Efficiency]] (the convergence-evidence lesson)
-- RELATES TO: [[[[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]] (the boilerplate problem this decision's pattern surfaces but doesn't cause)]]
+- RELATES TO: [[boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski|Boilerplate Skill Anti-Pattern at Scale]] (the boilerplate problem this decision's pattern surfaces but doesn't cause)
 - RELATES TO: [[localai-over-ollama-vllm-for-multi-model-orchestration|Decision — LocalAI over Ollama / vLLM]] (sibling AICP decision — both concern config-driven coordination)
 
 ## Backlinks
