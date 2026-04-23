@@ -15,6 +15,7 @@ derived_from:
   - "MCP Integration Architecture"
 created: 2026-04-08
 updated: 2026-04-10
+last_reviewed: 2026-04-22
 sources:
   - id: src-user-directive-ecosystem
     type: notes

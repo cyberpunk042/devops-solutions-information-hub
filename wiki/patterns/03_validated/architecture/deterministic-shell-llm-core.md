@@ -19,6 +19,7 @@ instances:
   - {'page': 'Harness Engineering', 'context': '13 TypeScript guardrail rules (R01-R13) form the deterministic enforcement shell: they block dangerous operations, query out-of-scope writes, and enforce the Plan→Work→Review cycle at execution time. The LLM (Claude) executes within the guardrail boundaries.'}
 created: 2026-04-08
 updated: 2026-04-10
+last_reviewed: 2026-04-22
 sources:
   - id: src-openfleet-local
     type: documentation

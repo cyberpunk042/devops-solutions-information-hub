@@ -13,6 +13,7 @@ derived_from:
   - "Wiki Ingestion Pipeline"
 created: 2026-04-09
 updated: 2026-04-10
+last_reviewed: 2026-04-22
 sources:
   - id: directive-systemic-shallow-ingestion
     type: log

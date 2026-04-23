@@ -18,6 +18,7 @@ instances:
   - {'page': 'Front-Middleware-Backend', 'context': 'Each layer (frontend, middleware, backend) independently traverses SFIF. The frontend has its own scaffold (design system decisions) → foundation (component library, routing) → infrastructure (auth, state management) → features (screens, flows). Same for middleware and backend.'}
 created: 2026-04-09
 updated: 2026-04-10
+last_reviewed: 2026-04-22
 sources:
   - id: src-four-project-ecosystem
     type: documentation
