@@ -5,19 +5,20 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Model — Skills, Commands, and Hooks"
   - "Extension Standards — What Good Skills, Commands, and Hooks Look Like"
   - "Schema aspirationalism — defining required sections you never validate produces false confidence"
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-22
 sources: []
 tags: [contributed, inbox]
 contributed_by: "aicp-self"
 contribution_source: "/home/jfortin/devops-expert-local-ai"
 contribution_date: 2026-04-17
-contribution_status: pending-review
+contribution_status: accepted
+review_note: \"Accepted 2026-04-22 during pickup-cold session — structural review (derived_from wired, claim coherent, evidence sourced). Promoted to contributor's tier ceiling (01_drafts) per contribution-policy.yaml harness-trusted tier.\"
 contribution_reason: "Extension Standards has Open Question 'Should skills have a validation schema?' AICP just provided concrete evidence that skill libraries at scale (78 skills) decay to 47% boilerplate without validation — a quantitative argument for the schema."
 ---
 

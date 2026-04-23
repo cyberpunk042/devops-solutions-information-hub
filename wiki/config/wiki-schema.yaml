@@ -43,6 +43,7 @@ optional_fields:
   - contribution_source  # audit: origin path or "self" (e.g. "~/openarms" for sister-project contribution)
   - contribution_date    # audit: ISO date of contribution
   - contribution_status  # audit: pending-review / accepted / rejected / superseded
+  - review_note          # audit: freeform note from the reviewer when a contribution is accepted/rejected; pairs with contribution_status transitions
   - note_type
   - last_reviewed        # audit: ISO date of last operator-review of this evolved page against its derived_from sources. Distinct from `updated` (content change) so reviewers can signal "still current" without aspirational date-bumping. Used by detect_stale.
   - impediment_type

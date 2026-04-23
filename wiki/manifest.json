@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T01:50:02.815582+00:00",
+  "generated": "2026-04-23T01:54:38.162615+00:00",
   "stats": {
     "pages": 466,
     "domains": 9,
@@ -18,8 +18,8 @@
       "spine": 71
     },
     "maturity": {
-      "growing": 311,
-      "seed": 28,
+      "growing": 314,
+      "seed": 25,
       "mature": 2
     }
   },
@@ -14413,15 +14413,15 @@
       "relationships": []
     },
     {
-      "path": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md",
-      "slug": "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
+      "path": "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md",
+      "slug": "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "title": "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
       "type": "lesson",
       "domain": "cross-domain",
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-17",
-      "updated": "2026-04-17",
+      "updated": "2026-04-22",
       "last_reviewed": "",
       "tags": [
         "contributed",
@@ -14429,7 +14429,7 @@
       ],
       "sources": [],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model \u2014 Skills, Commands, and Hooks",
         "Extension Standards \u2014 What Good Skills, Commands, and Hooks Look Like",
@@ -14452,89 +14452,6 @@
         {
           "verb": "RELATES TO",
           "target": "Profile as Coordination Bundle"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model Registry"
-        }
-      ]
-    },
-    {
-      "path": "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet.md",
-      "slug": "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
-      "title": "Three-layer autocomplete chain validated in production fleet operation",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-17",
-      "updated": "2026-04-17",
-      "last_reviewed": "",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [
-        "Model \u2014 Context Engineering",
-        "Context Engineering Standards \u2014 What Good Structured Context Looks Like"
-      ],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Model \u2014 Context Engineering"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Context Engineering Standards"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model \u2014 Local AI ($0 Target)"
-        },
-        {
-          "verb": "VALIDATES IN PRODUCTION",
-          "target": "Context Engineering Standards"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Model Registry"
-        }
-      ]
-    },
-    {
-      "path": "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems.md",
-      "slug": "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
-      "title": "Verify Before Contributing to External Knowledge Systems",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "medium",
-      "created": "2026-04-17",
-      "updated": "2026-04-17",
-      "last_reviewed": "",
-      "tags": [
-        "contributed",
-        "inbox"
-      ],
-      "sources": [],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [
-        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
-      ],
-      "aliases": [],
-      "relationships": [
-        {
-          "verb": "RELATES TO",
-          "target": "Principle \u2014 Declarations Aspirational Until Verified"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Structural Compliance Is Not Operational Compliance"
         },
         {
           "verb": "RELATES TO",
@@ -15138,6 +15055,89 @@
         {
           "verb": "RELATES TO",
           "target": "Block with Reason"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet.md",
+      "slug": "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
+      "title": "Three-layer autocomplete chain validated in production fleet operation",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-22",
+      "last_reviewed": "",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Model \u2014 Context Engineering",
+        "Context Engineering Standards \u2014 What Good Structured Context Looks Like"
+      ],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Engineering Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "VALIDATES IN PRODUCTION",
+          "target": "Context Engineering Standards"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems.md",
+      "slug": "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
+      "title": "Verify Before Contributing to External Knowledge Systems",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-17",
+      "updated": "2026-04-22",
+      "last_reviewed": "",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
         }
       ]
     },
@@ -36000,9 +36000,7 @@
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
     "contributed": [
-      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
-      "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
-      "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
+      "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
@@ -36012,6 +36010,8 @@
       "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
+      "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
@@ -36031,14 +36031,14 @@
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "inbox": [
-      "lessons/00_inbox/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
-      "lessons/00_inbox/three-layer-autocomplete-chain-validated-in-production-fleet",
-      "lessons/00_inbox/verify-before-contributing-to-external-knowledge-systems",
+      "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
       "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/01_drafts/contributed/the-harness-turncount-variable-counts-streaming-events-not",
       "lessons/01_drafts/contributed/the-pre-write-hook-prevents-operator-claude-from-racing-the-",
+      "lessons/01_drafts/contributed/three-layer-autocomplete-chain-validated-in-production-fleet",
+      "lessons/01_drafts/contributed/verify-before-contributing-to-external-knowledge-systems",
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the"
@@ -38159,9 +38159,9 @@
     {
       "target": "Context Engineering Standards",
       "referenced_by": [
+        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity",
         "Three-layer autocomplete chain validated in production fleet operation",
-        "Three-layer autocomplete chain validated in production fleet operation",
-        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity"
+        "Three-layer autocomplete chain validated in production fleet operation"
       ]
     },
     {

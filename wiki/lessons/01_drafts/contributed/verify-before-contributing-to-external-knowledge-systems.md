@@ -5,17 +5,18 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Principle — Declarations Are Aspirational Until Infrastructure Verifies Them"
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-22
 sources: []
 tags: [contributed, inbox]
 contributed_by: "openfleet-solo-session"
 contribution_source: "/home/jfortin/openfleet"
 contribution_date: 2026-04-17
-contribution_status: pending-review
+contribution_status: accepted
+review_note: \"Accepted 2026-04-22 during pickup-cold session — structural review (derived_from wired, claim coherent, evidence sourced). Promoted to contributor's tier ceiling (01_drafts) per contribution-policy.yaml harness-trusted tier.\"
 contribution_reason: "First-consumer self-failure documented and turned into lesson — extends Principle 4 across project boundaries"
 ---
 
