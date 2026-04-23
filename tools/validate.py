@@ -15,7 +15,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from tools.common import (
     find_wiki_pages,
@@ -29,12 +29,18 @@ from tools.common import (
 
 
 def validate_page(
-    page_path: Path, schema_path: Path
+    page_path: Path,
+    schema_path: Path,
+    schema: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """Validate a single wiki page against schema.
 
     Returns {"file": str, "errors": [...], "warnings": [...]}.
     Each error/warning has "code", "message", and optional "field".
+
+    If `schema` is provided (already-parsed schema dict), it is used directly
+    and `schema_path` is unused. Callers validating many pages should load the
+    schema ONCE and pass it in — re-parsing per page costs ~12ms × N pages.
     """
     errors: List[Dict[str, str]] = []
     warnings: List[Dict[str, str]] = []
@@ -44,7 +50,8 @@ def validate_page(
         "warnings": warnings,
     }
 
-    schema = load_config(schema_path)
+    if schema is None:
+        schema = load_config(schema_path)
     if schema is None:
         errors.append({"code": "schema_missing", "message": f"Schema not found: {schema_path}"})
         return result
@@ -323,6 +330,7 @@ def validate_wiki(
     """Validate all .md files in a directory."""
     skip_dirs = {"config", ".obsidian", ".evolve-queue"}
     skip_names = {"index.md"}
+    schema = load_config(schema_path)  # Load once, reuse across pages (was per-page = 5s of waste)
     results = []
     for md_file in sorted(wiki_dir.rglob("*.md")):
         if md_file.name.startswith("_"):
@@ -334,7 +342,7 @@ def validate_wiki(
                 continue
         except ValueError:
             pass
-        results.append(validate_page(md_file, schema_path))
+        results.append(validate_page(md_file, schema_path, schema=schema))
     return results
 
 

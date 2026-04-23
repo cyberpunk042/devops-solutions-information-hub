@@ -104,12 +104,14 @@ def run_validate(wiki_dir: Path, schema_path: Path) -> Dict[str, Any]:
     skip_names = {"index.md"}
     skip_dirs = {"config"}
 
+    schema = load_config(schema_path)  # Load once, reuse across pages (was per-page = ~5s of waste)
+
     for page in pages:
         if page.name in skip_names and page.parent == wiki_dir:
             continue
         if any(d in skip_dirs for d in page.relative_to(wiki_dir).parts):
             continue
-        result = validate_page(page, schema_path)
+        result = validate_page(page, schema_path, schema=schema)
         errors = result.get("errors", [])
         warnings = result.get("warnings", [])
         if errors or warnings:
