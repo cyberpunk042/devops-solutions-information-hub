@@ -16,6 +16,7 @@ instances:
   - {'page': 'Harness-Owned Loop — Deterministic Agent Execution', 'context': 'Orchestrator uses tier to determine context depth for dispatch — lightweight agents get minimal context'}
 created: 2026-04-12
 updated: 2026-04-13
+last_reviewed: 2026-04-22
 sources:
   - id: openfleet-tiers
     type: observation

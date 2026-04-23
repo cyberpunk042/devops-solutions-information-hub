@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T00:57:13.722670+00:00",
+  "generated": "2026-04-23T01:05:31.548147+00:00",
   "stats": {
     "pages": 466,
     "domains": 9,
@@ -18907,7 +18907,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "principle",
         "goldilocks",
@@ -22269,7 +22269,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "contribution-gating",
         "cross-agent",
@@ -22915,7 +22915,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "tier-progression",
         "context-depth",
@@ -22979,7 +22979,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-13",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "validation-matrix",
         "testing",

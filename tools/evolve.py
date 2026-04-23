@@ -1111,21 +1111,131 @@ def mark_reviewed(
     return {"ok": True, "path": str(path.relative_to(project_root)), "last_reviewed": today}
 
 
-def detect_stale(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
+def _classify_source_change(
+    project_root: Path,
+    source_path: str,
+    since_date: str,
+    until_date: str,
+) -> Dict[str, Any]:
+    """Classify git diff on a source file between two dates as metadata-only or body-change.
+
+    Returns dict with:
+        classification: "metadata-only" | "body-change" | "unknown"
+        body_change_lines: int
+        commits: [(sha, message), ...]
+
+    Heuristic: a `+` or `-` line counts as body change unless it matches:
+        - frontmatter metadata fields (updated, last_reviewed, created, aliases, tags)
+        - backlink entries (bare `[[slug|Title]]` lines)
+        - empty/whitespace lines
+        - YAML list continuation (  - "...")
+    """
+    import subprocess
+    source_str = str(source_path) if not str(source_path).startswith("wiki/") else str(source_path)
+    try:
+        log = subprocess.run(
+            ["git", "-C", str(project_root), "log",
+             f"--since={since_date}",
+             f"--until={until_date} 23:59:59",
+             "--format=%H|%s", "--", source_str],
+            capture_output=True, text=True, check=False,
+        )
+    except Exception:
+        return {"classification": "unknown", "body_change_lines": 0, "commits": []}
+
+    commits = []
+    for line in log.stdout.strip().split("\n"):
+        if not line or "|" not in line:
+            continue
+        sha, msg = line.split("|", 1)
+        commits.append((sha, msg))
+
+    if not commits:
+        return {"classification": "unknown", "body_change_lines": 0, "commits": []}
+
+    import re as _re
+    # Top-level frontmatter keys (appear at column 0 in frontmatter)
+    top_level_metadata_keys = (
+        "updated:", "last_reviewed:", "created:", "aliases:",
+        "tags:", "status:", "confidence:", "maturity:", "layer:",
+        "type:", "domain:", "subdomain:", "priority:", "reversibility:",
+        "derived_from:", "sources:",
+    )
+    # Nested YAML key pattern — indented `  key:` or `    key:`
+    nested_yaml_key_re = _re.compile(r"^\s{2,}[a-z_][a-z0-9_]*:\s*")
+    # Bare wikilink (backlinks entry)
+    wikilink_only_re = _re.compile(r"^\[\[[^\]]+\]\]$")
+
+    body_change_lines = 0
+    for sha, _msg in commits:
+        try:
+            show = subprocess.run(
+                ["git", "-C", str(project_root), "show", "--format=", sha, "--", source_str],
+                capture_output=True, text=True, check=False,
+            )
+        except Exception:
+            continue
+        for raw in show.stdout.split("\n"):
+            if not raw or not (raw.startswith("+") or raw.startswith("-")):
+                continue
+            if raw.startswith("+++") or raw.startswith("---"):
+                continue
+            content = raw[1:]  # preserve indentation
+            stripped = content.strip()
+            if not stripped:
+                continue
+            # Top-level frontmatter keys
+            if any(content.startswith(p) for p in top_level_metadata_keys):
+                continue
+            # Nested YAML (indented `  key:` — source-entry fields, list values)
+            if nested_yaml_key_re.match(content):
+                continue
+            # YAML list entry
+            if stripped.startswith("- ") or stripped.startswith("-\t"):
+                continue
+            # Bare wikilink
+            if wikilink_only_re.match(stripped):
+                continue
+            # Frontmatter terminator
+            if stripped == "---":
+                continue
+            body_change_lines += 1
+
+    classification = "metadata-only" if body_change_lines == 0 else "body-change"
+    return {
+        "classification": classification,
+        "body_change_lines": body_change_lines,
+        "commits": commits,
+    }
+
+
+def detect_stale(
+    project_root: Path,
+    verbose: bool = True,
+    analyze: bool = False,
+) -> Dict[str, Any]:
     """Find evolved pages whose derived_from sources have been updated more recently.
 
     Compares each source's `updated` against the page's freshness cutoff —
     `max(page.updated, page.last_reviewed)`. `last_reviewed` lets an operator
     signal "I read both pages, content is still current" without editing
     `updated` aspirationally (which is a real hazard per the wiki's Principle 4).
+
+    If `analyze=True`, each newer source is classified as metadata-only or
+    body-change via git-diff inspection between the freshness cutoff and
+    source.updated. Metadata-only sources indicate the evolved page is safe
+    to mark-reviewed without content revision.
     """
     wiki_dir = project_root / "wiki"
     manifest = build_manifest(wiki_dir)
     pages = manifest["pages"]
 
-    # Build title → updated map
+    # Build title → updated map and title → path map
     title_to_updated: Dict[str, str] = {
         p["title"]: p.get("updated", "") for p in pages
+    }
+    title_to_path: Dict[str, str] = {
+        p["title"]: f"wiki/{p.get('path', '')}" for p in pages if p.get("path")
     }
 
     stale: List[Dict[str, Any]] = []
@@ -1152,10 +1262,21 @@ def detect_stale(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
         for source_title in derived:
             source_updated = title_to_updated.get(source_title, "")
             if source_updated and source_updated > freshness_cutoff:
-                newer_sources.append({
+                entry: Dict[str, Any] = {
                     "title": source_title,
                     "updated": source_updated,
-                })
+                }
+                if analyze:
+                    source_path = title_to_path.get(source_title)
+                    if source_path:
+                        cls = _classify_source_change(
+                            project_root, source_path,
+                            since_date=freshness_cutoff,
+                            until_date=source_updated,
+                        )
+                        entry["classification"] = cls["classification"]
+                        entry["body_change_lines"] = cls["body_change_lines"]
+                newer_sources.append(entry)
 
         if newer_sources:
             stale.append({
@@ -1170,10 +1291,27 @@ def detect_stale(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
 
     if verbose:
         print(f"\n  Stale evolved pages: {len(stale)}")
+        metadata_only_pages = 0
         for p in stale:
-            print(f"    [{p['type']}] {p['title']} (updated {p['updated']})")
+            # Page is metadata-only if every newer source was classified as metadata-only
+            classifications = [ns.get("classification") for ns in p["newer_sources"] if "classification" in ns]
+            page_is_metadata_only = analyze and classifications and all(c == "metadata-only" for c in classifications)
+            if page_is_metadata_only:
+                metadata_only_pages += 1
+            marker = "  [✓ metadata-only — safe to mark-reviewed]" if page_is_metadata_only else ""
+            print(f"    [{p['type']}] {p['title']} (updated {p['updated']}){marker}")
             for ns in p["newer_sources"]:
-                print(f"      source '{ns['title']}' updated {ns['updated']}")
+                suffix = ""
+                if "classification" in ns:
+                    if ns["classification"] == "metadata-only":
+                        suffix = "  [metadata-only]"
+                    elif ns["classification"] == "body-change":
+                        suffix = f"  [body-change: {ns.get('body_change_lines', '?')} lines]"
+                    else:
+                        suffix = "  [unknown]"
+                print(f"      source '{ns['title']}' updated {ns['updated']}{suffix}")
+        if analyze:
+            print(f"\n  Of {len(stale)} stale pages, {metadata_only_pages} are metadata-only (safe to mark-reviewed).")
 
     return {"stale_pages": stale, "count": len(stale)}
 
@@ -1191,6 +1329,7 @@ def evolve(
     domain_filter: Optional[str] = None,
     clear_queue: bool = False,
     page_ref: Optional[str] = None,
+    analyze: bool = False,
     verbose: bool = True,
 ) -> Dict[str, Any]:
     """Main evolution orchestrator.
@@ -1240,7 +1379,7 @@ def evolve(
     # stale mode — find stale evolved pages
     # ------------------------------------------------------------------
     if mode == "stale":
-        stale_result = detect_stale(project_root, verbose=verbose)
+        stale_result = detect_stale(project_root, verbose=verbose, analyze=analyze)
         result["stale"] = stale_result
         return result
 
@@ -1369,6 +1508,12 @@ def main() -> None:
         help="Page reference for mark-reviewed mode: slug, title, or path relative to wiki/",
     )
     parser.add_argument(
+        "--analyze",
+        action="store_true",
+        default=False,
+        help="In stale mode, classify each newer-source change as metadata-only or body-change via git-diff",
+    )
+    parser.add_argument(
         "--top", "-n",
         type=int,
         default=10,
@@ -1423,6 +1568,7 @@ def main() -> None:
         domain_filter=args.domain_filter,
         clear_queue=args.clear,
         page_ref=args.page_ref,
+        analyze=args.analyze,
         verbose=not args.quiet,
     )
 

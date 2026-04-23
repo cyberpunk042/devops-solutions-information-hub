@@ -16,6 +16,7 @@ instances:
   - {'page': 'Harness-Owned Loop — Deterministic Agent Execution', 'context': 'Orchestrator Step 2.5 checks contribution completeness before allowing dispatch to WORK stage'}
 created: 2026-04-12
 updated: 2026-04-13
+last_reviewed: 2026-04-22
 sources:
   - id: openfleet-contributions
     type: observation

@@ -17,6 +17,7 @@ derived_from:
   - "Models Are Built in Layers, Not All at Once"
 created: 2026-04-12
 updated: 2026-04-13
+last_reviewed: 2026-04-22
 sources:
   - id: operator-goldilocks
     type: directive
