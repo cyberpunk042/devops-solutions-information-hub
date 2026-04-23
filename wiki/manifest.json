@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-23T00:47:57.768094+00:00",
+  "generated": "2026-04-23T00:53:44.145302+00:00",
   "stats": {
-    "pages": 464,
+    "pages": 465,
     "domains": 9,
     "sources": 54,
     "comparisons": 6,
-    "relationships": 2805,
+    "relationships": 2808,
     "tags_unique": 1311,
     "layers": {
       "3": 4,
@@ -18643,7 +18643,7 @@
       "confidence": "high",
       "created": "2026-04-16",
       "updated": "2026-04-16",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "principle",
         "declaration",
@@ -19804,6 +19804,41 @@
         {
           "verb": "RELATES TO",
           "target": "AICP"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli.md",
+      "slug": "log/2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli",
+      "title": "last_reviewed frontmatter field + evolve mark-reviewed CLI",
+      "type": "note",
+      "domain": "log",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "last_reviewed": "",
+      "tags": [
+        "log",
+        "completion"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Aspirational Naming in Lifecycle Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Schema aspirationalism"
         }
       ]
     },
@@ -31703,8 +31738,8 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 31,
-      "relationship_count": 53
+      "page_count": 32,
+      "relationship_count": 56
     }
   },
   "tags": {
@@ -33070,6 +33105,7 @@
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
       "log/2026-04-10/2026-04-10-session-summary",
       "log/2026-04-17/2026-04-17-session-summary",
+      "log/2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli",
       "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "spine/standards/note-page-standards"
@@ -36535,6 +36571,7 @@
       "spine/references/open-model-evaluation-framework"
     ],
     "completion": [
+      "log/2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli",
       "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health",
       "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-corpus-training-readiness-audit",
@@ -38572,6 +38609,12 @@
       "referenced_by": [
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
         "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
+      ]
+    },
+    {
+      "target": "Schema aspirationalism",
+      "referenced_by": [
+        "last_reviewed frontmatter field + evolve mark-reviewed CLI"
       ]
     },
     {

@@ -54,7 +54,8 @@
       "WebFetch(domain:www.kimi.com)",
       "WebFetch(domain:openrouter.ai)",
       "WebFetch(domain:the-decoder.com)",
-      "mcp__research-wiki__wiki_gateway_health"
+      "mcp__research-wiki__wiki_gateway_health",
+      "mcp__research-wiki__wiki_log"
     ]
   }
 }

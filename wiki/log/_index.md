@@ -35,6 +35,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-22 | [WSL Migration — Ubuntu 20.04 → Ubuntu 24.04 for K2.6 + ML Toolchain](2026-04-22-wsl-migration-to-ubuntu-24-04.md) | completion | `note`, `completion`, `e008`, `e010`, `wsl`, `ubuntu-20-04`, `ubuntu-24-04`, `migration`, `glibc`, `ktransformers`, `decision`, `handoff` |
 | 2026-04-22 | [Day 1 — OpenRouter + Kimi K2.6 via Claude Code CLI (Setup + POC Procedure)](2026-04-22-openrouter-k2-6-day-1-setup-procedure.md) | note | `log`, `openrouter`, `kimi-k2-6`, `claude-code`, `harness`, `self-autonomous`, `5-day-plan`, `poc`, `procedure` |
 | 2026-04-22 | [Lint tooling fixes + backlog modules index gap — wiki health D → A+](2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health.md) | completion | `log`, `completion` |
+| 2026-04-22 | [last_reviewed frontmatter field + evolve mark-reviewed CLI](2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli.md) | completion | `log`, `completion` |
 | 2026-04-17 | [Session 2026-04-17 Summary](2026-04-17/2026-04-17-session-summary.md) | session | `log`, `session`, `progress`, `summary`, `local-ai`, `open-weight`, `consumer-hardware` |
 | 2026-04-10 | [Session 2026-04-10 Summary](2026-04-10/2026-04-10-session-summary.md) | session | `log`, `session`, `progress`, `summary` |
 | 2026-04-10 | [Quality Evolution Epic — Level Up Everything, One File at a Time](2026-04-10/2026-04-10-directive-quality-evolution-epic.md) | directive | `log`, `directive`, `quality`, `evolution`, `epic`, `standards`, `iterative`, `gated` |

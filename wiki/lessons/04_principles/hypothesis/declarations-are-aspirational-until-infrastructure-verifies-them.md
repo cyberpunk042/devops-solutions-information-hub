@@ -19,6 +19,7 @@ derived_from:
   - "Aspirational Declaration Produces False Confidence at Every Layer"
 created: 2026-04-16
 updated: 2026-04-16
+last_reviewed: 2026-04-22
 sources:
   - id: aspirational-declaration-meta-pattern
     type: wiki
@@ -149,3 +150,4 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
+[[2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli|last_reviewed frontmatter field + evolve mark-reviewed CLI]]

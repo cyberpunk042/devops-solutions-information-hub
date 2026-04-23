@@ -92,3 +92,4 @@ The bug is invisible when the ratio is stable (thresholds can be recalibrated to
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive — Prevention Is Cheap, Detection and Correction Are Milestones]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
+[[2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli|last_reviewed frontmatter field + evolve mark-reviewed CLI]]
