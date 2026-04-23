@@ -6,7 +6,9 @@ layer: 4
 status: synthesized
 confidence: medium
 maturity: seed
-derived_from: []
+derived_from:
+  - "Model — Context Engineering"
+  - "Context Engineering Standards — What Good Structured Context Looks Like"
 created: 2026-04-17
 updated: 2026-04-17
 sources: []

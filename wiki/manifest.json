@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T01:30:28.391957+00:00",
+  "generated": "2026-04-23T01:50:02.815582+00:00",
   "stats": {
     "pages": 466,
     "domains": 9,
@@ -14430,7 +14430,11 @@
       "sources": [],
       "layer": 4,
       "maturity": "seed",
-      "derived_from": [],
+      "derived_from": [
+        "Model \u2014 Skills, Commands, and Hooks",
+        "Extension Standards \u2014 What Good Skills, Commands, and Hooks Look Like",
+        "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence"
+      ],
       "aliases": [],
       "relationships": [
         {
@@ -14473,7 +14477,10 @@
       "sources": [],
       "layer": 4,
       "maturity": "seed",
-      "derived_from": [],
+      "derived_from": [
+        "Model \u2014 Context Engineering",
+        "Context Engineering Standards \u2014 What Good Structured Context Looks Like"
+      ],
       "aliases": [],
       "relationships": [
         {
@@ -14516,7 +14523,9 @@
       "sources": [],
       "layer": 4,
       "maturity": "seed",
-      "derived_from": [],
+      "derived_from": [
+        "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ],
       "aliases": [],
       "relationships": [
         {

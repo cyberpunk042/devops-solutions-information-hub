@@ -6,7 +6,8 @@ layer: 4
 status: synthesized
 confidence: medium
 maturity: seed
-derived_from: []
+derived_from:
+  - "Principle — Declarations Are Aspirational Until Infrastructure Verifies Them"
 created: 2026-04-17
 updated: 2026-04-17
 sources: []

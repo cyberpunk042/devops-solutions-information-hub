@@ -6,7 +6,10 @@ layer: 4
 status: synthesized
 confidence: medium
 maturity: seed
-derived_from: []
+derived_from:
+  - "Model — Skills, Commands, and Hooks"
+  - "Extension Standards — What Good Skills, Commands, and Hooks Look Like"
+  - "Schema aspirationalism — defining required sections you never validate produces false confidence"
 created: 2026-04-17
 updated: 2026-04-17
 sources: []
