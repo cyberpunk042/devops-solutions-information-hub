@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T01:25:30.483182+00:00",
+  "generated": "2026-04-23T01:30:28.391957+00:00",
   "stats": {
     "pages": 466,
     "domains": 9,
@@ -17612,7 +17612,7 @@
       "confidence": "authoritative",
       "created": "2026-04-09",
       "updated": "2026-04-10",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -17747,7 +17747,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-12",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "methodology",
         "artifacts",
@@ -17955,7 +17955,7 @@
       "confidence": "authoritative",
       "created": "2026-04-09",
       "updated": "2026-04-10",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "failure-lesson",
         "methodology",
@@ -18811,7 +18811,7 @@
       "confidence": "authoritative",
       "created": "2026-04-12",
       "updated": "2026-04-13",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "principle",
         "enforcement",

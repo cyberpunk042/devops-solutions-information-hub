@@ -13,6 +13,7 @@ derived_from:
   - "Stage-Gate Methodology"
 created: 2026-04-09
 updated: 2026-04-10
+last_reviewed: 2026-04-22
 sources:
   - id: directive-no-new-sources
     type: log

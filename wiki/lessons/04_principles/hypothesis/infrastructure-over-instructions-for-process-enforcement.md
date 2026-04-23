@@ -17,6 +17,7 @@ derived_from:
   - "Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass"
 created: 2026-04-12
 updated: 2026-04-13
+last_reviewed: 2026-04-22
 sources:
   - id: openarms-v10
     type: observation
