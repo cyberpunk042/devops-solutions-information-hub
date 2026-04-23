@@ -7,7 +7,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 instances:
   - page: "OpenArms epic readiness"
     context: "average(child.readiness) = 100% with 1 of 14 children done. 5/5 frontmatter fields fiction. Dangerous when 1-4 children, benign at 10+."
@@ -16,7 +16,7 @@ instances:
 derived_from:
   - "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-epic-readiness
     type: wiki

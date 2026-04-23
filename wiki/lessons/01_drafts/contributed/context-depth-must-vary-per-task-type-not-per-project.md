@@ -8,13 +8,13 @@ domain: ai-agents
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Model: Context Engineering"
   - "Right-Size the Methodology Model to the Actual Work"
   - "Tier-Based Context Depth — Trust Earned Through Approval Rates"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-integration-notes
     type: file

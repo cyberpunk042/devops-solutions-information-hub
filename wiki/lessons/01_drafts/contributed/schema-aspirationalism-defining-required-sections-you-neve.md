@@ -5,11 +5,11 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Systemic Incompleteness Is Invisible to Validation"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-schema
     type: observation

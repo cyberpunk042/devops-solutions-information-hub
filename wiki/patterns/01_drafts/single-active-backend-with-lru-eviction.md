@@ -7,7 +7,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - model-local-ai
   - localai-over-ollama-vllm-for-multi-model-orchestration
@@ -21,7 +21,7 @@ instances:
   - page: "AICP `default` profile parallelism"
     context: "LLAMACPP_PARALLEL=2 × CONTEXT_SIZE=16384 → 8192 per slot. Fast profile uses PARALLEL=4 + CONTEXT=8192 → 2048 per slot. The parallelism knob shapes the slot; MAX_ACTIVE_BACKENDS bounds how many slots coexist."
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-22
 sources:
   - id: aicp-compose
     type: file

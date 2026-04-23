@@ -8,14 +8,14 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 reversibility: easy
 derived_from:
   - model-local-ai
   - qwen3-8b-as-main-reasoning-model
   - single-active-backend-with-lru-eviction
 created: 2026-04-19
-updated: 2026-04-19
+updated: 2026-04-22
 sources:
   - id: qwen3-8b-config
     type: file

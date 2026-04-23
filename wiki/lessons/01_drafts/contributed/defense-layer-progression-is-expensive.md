@@ -8,13 +8,13 @@ domain: ai-agents
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Three Lines of Defense — Immune System for Agent Quality"
   - "Model: Quality and Failure Prevention"
   - "Infrastructure Over Instructions for Process Enforcement"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-integration-notes
     type: file

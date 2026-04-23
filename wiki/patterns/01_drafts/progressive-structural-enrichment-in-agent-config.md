@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 instances:
   - page: "OpenArms AGENTS.md 2026-04-16 trajectory"
     context: "471 lines (encyclopedia, bullets only, 0 tables) → 124 lines (lean routing table + 12 companion rule files) → 144 lines (added Goldilocks identity table + Three Principles table with measured evidence). Two enrichment steps after the lean foundation. Each step added STRUCTURE, not prose. Compliance improvements measurable (5/8 CLAUDE.md Structural Patterns applied in one session)."
@@ -19,7 +19,7 @@ derived_from:
   - "Models Are Built in Layers, Not All at Once"
   - "Hardcoded Instances Fail — Build Frameworks Not Solutions"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-agents-restructure
     type: file

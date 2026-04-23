@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - model-quality-failure-prevention
   - profile-as-coordination-bundle
@@ -20,7 +20,7 @@ instances:
   - page: "AICP DLQ integration"
     context: "When all failover backends fail, controller persists the failed task to JSONL via `dlq.enqueue()` before re-raising. Breaker + failover + DLQ form a three-layer reliability stack — fast-fail per backend, graceful failover across backends, durable persistence when the chain exhausts."
 created: 2026-04-19
-updated: 2026-04-19
+updated: 2026-04-22
 sources:
   - id: aicp-circuit-breaker
     type: file

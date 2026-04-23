@@ -8,12 +8,12 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 reversibility: hard
 derived_from:
   - model-local-ai
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-22
 sources:
   - id: aicp-compose
     type: file

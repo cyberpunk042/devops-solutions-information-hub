@@ -8,13 +8,13 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 reversibility: easy
 derived_from:
   - model-local-ai
   - localai-over-ollama-vllm-for-multi-model-orchestration
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-22
 sources:
   - id: aicp-models-config
     type: file

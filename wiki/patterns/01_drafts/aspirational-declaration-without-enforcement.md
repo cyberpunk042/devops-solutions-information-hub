@@ -10,7 +10,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 instances:
   - page: "Aspirational Naming in Lifecycle Code"
     context: "Variable-layer instance. turnCount is declared to measure conversational turns; actually counts streaming events. Declaration (name) vs reality (increment trigger) diverge silently. Thresholds calibrated to the declaration fire at the wrong measurement units."
@@ -28,7 +28,7 @@ derived_from:
   - "Mandatory Without Verification Is Not Enforced"
   - "Infrastructure Over Instructions for Process Enforcement"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: turncount-instance
     type: wiki

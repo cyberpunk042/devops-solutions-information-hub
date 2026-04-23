@@ -8,7 +8,7 @@ domain: ai-agents
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass"
   - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
@@ -22,7 +22,7 @@ instances:
     context: "Agent built MCP tool with unsolicited max_* caps. Had this pattern existed and been triggered at design-time-parameter-selection, agent would have blocked when assigning any default cap value and emitted escalation with operator-justification options."
 contribution_status: accepted
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-22
 sources:
   - id: openarms-preliminary-placeholder
     type: observation

@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - model-quality-failure-prevention
   - model-claude-code
@@ -22,7 +22,7 @@ instances:
   - page: "Claude Code's Plan Mode"
     context: "Anthropic's Claude Code has a 'Plan Mode' structurally identical to AICP's Think — analysis without execution. Independent designs landing on the same Think/Edit/Act partition is evidence the pattern reflects a real design constraint."
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-22
 sources:
   - id: aicp-modes
     type: file

@@ -8,13 +8,13 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Aspirational Declaration Produces False Confidence at Every Layer"
   - "Schema aspirationalism — defining required sections you never validate produces false confidence"
   - "Infrastructure Over Instructions for Process Enforcement"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-tier-0-to-4-caveat
     type: file

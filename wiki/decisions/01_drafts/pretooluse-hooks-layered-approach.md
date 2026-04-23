@@ -8,14 +8,14 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 reversibility: easy
 derived_from:
   - model-quality-failure-prevention
   - model-claude-code
   - model-skills-commands-hooks
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-22
 sources:
   - id: aicp-settings
     type: file

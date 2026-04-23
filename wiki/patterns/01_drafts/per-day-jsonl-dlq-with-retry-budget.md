@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - model-quality-failure-prevention
   - per-backend-circuit-breaker-with-failover-chain
@@ -20,7 +20,7 @@ instances:
   - page: "AICP reliable profile (config/profiles/reliable.yaml)"
     context: "Production-leaning overrides — `dlq.max_retries: 5` vs default 3; reduced `retry_delay_seconds`. Same DLQ code path, different operational policy. Profile bundles this with breaker + warmup + reports."
 created: 2026-04-19
-updated: 2026-04-19
+updated: 2026-04-22
 sources:
   - id: aicp-dlq
     type: file

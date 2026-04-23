@@ -8,14 +8,14 @@ domain: cross-domain
 layer: 6
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 reversibility: moderate
 derived_from:
   - model-skills-commands-hooks
   - model-claude-code
   - cli-tools-beat-mcp-for-token-efficiency
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-22
 sources:
   - id: aicp-skills
     type: directory

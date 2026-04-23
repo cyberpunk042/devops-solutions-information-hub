@@ -7,7 +7,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 instances:
   - page: "OpenArms harness turnCount"
     context: "turnCount counted streaming events, not conversational turns. 3352 'turns' were actually stream messages. Thresholds set for turns applied to stream events — 20-50x inflation."
@@ -16,7 +16,7 @@ instances:
 derived_from:
   - "The harness 'turnCount' variable counts streaming events, not conversational turns"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-turncount
     type: wiki

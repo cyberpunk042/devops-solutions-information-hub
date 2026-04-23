@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-22T23:47:44.531272+00:00",
+  "generated": "2026-04-23T00:30:34.686463+00:00",
   "stats": {
     "pages": 463,
     "domains": 9,
@@ -18,8 +18,8 @@
       "spine": 71
     },
     "maturity": {
-      "growing": 282,
-      "seed": 55,
+      "growing": 309,
+      "seed": 28,
       "mature": 2
     }
   },
@@ -5300,7 +5300,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "router",
@@ -5344,7 +5344,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-local-ai",
         "gateway-centric-routing"
@@ -5401,7 +5401,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "hooks",
@@ -5438,7 +5438,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "pretooluse-hooks-layered-approach",
         "model-quality-failure-prevention"
@@ -5475,7 +5475,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-19",
-      "updated": "2026-04-19",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "kv-cache",
@@ -5527,7 +5527,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-local-ai",
         "qwen3-8b-as-main-reasoning-model",
@@ -5565,7 +5565,7 @@
       "status": "draft",
       "confidence": "medium",
       "created": "2026-04-15",
-      "updated": "2026-04-15",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "mcp",
@@ -5598,7 +5598,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Execution Mode Is a Consumer Property, Not a Project Property \u2014 Guard Against Conflation Drift",
         "Model \u2014 MCP and CLI Integration",
@@ -5719,7 +5719,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "localai",
@@ -5764,7 +5764,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-local-ai"
       ],
@@ -5796,7 +5796,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "hooks",
@@ -5839,7 +5839,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-quality-failure-prevention",
         "model-claude-code",
@@ -5877,7 +5877,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "qwen3",
@@ -5920,7 +5920,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-local-ai",
         "localai-over-ollama-vllm-for-multi-model-orchestration"
@@ -5961,7 +5961,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "decision",
         "skills",
@@ -6012,7 +6012,7 @@
         }
       ],
       "layer": 6,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-skills-commands-hooks",
         "model-claude-code",
@@ -14192,7 +14192,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "lesson",
         "context-engineering",
@@ -14224,7 +14224,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Model: Context Engineering",
         "Right-Size the Methodology Model to the Actual Work",
@@ -14274,7 +14274,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "lesson",
         "enforcement",
@@ -14306,7 +14306,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Three Lines of Defense \u2014 Immune System for Agent Quality",
         "Model: Quality and Failure Prevention",
@@ -14360,7 +14360,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "contributed",
         "inbox",
@@ -14378,7 +14378,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Infrastructure Over Instructions for Process Enforcement",
         "Systemic Incompleteness Is Invisible to Validation"
@@ -14416,7 +14416,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "lesson",
         "skills",
@@ -14448,7 +14448,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Infrastructure Over Instructions for Process Enforcement",
         "Model: Skills, Commands, and Hooks",
@@ -14548,7 +14548,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "contributed",
         "inbox",
@@ -14572,7 +14572,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Systemic Incompleteness Is Invisible to Validation"
       ],
@@ -14613,7 +14613,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "lesson",
         "compliance",
@@ -14640,7 +14640,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Aspirational Declaration Produces False Confidence at Every Layer",
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
@@ -15073,7 +15073,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "lesson",
         "portability",
@@ -15105,7 +15105,7 @@
         }
       ],
       "layer": 4,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Aspirational Declaration Produces False Confidence at Every Layer",
         "Infrastructure Must Be Reproducible, Not Manual",
@@ -20128,7 +20128,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "cost",
@@ -20152,7 +20152,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Right-size the methodology model to the actual work, not the structural category",
         "Per-task cost grows monotonically across multi-task runs (context accumulation)"
@@ -20193,7 +20193,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "enforcement",
@@ -20221,7 +20221,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Infrastructure Over Instructions for Process Enforcement",
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure",
@@ -20275,7 +20275,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "cross-layer",
@@ -20315,7 +20315,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Aspirational Naming in Lifecycle Code",
         "Schema aspirationalism \u2014 defining required sections you never validate",
@@ -20380,7 +20380,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "naming",
@@ -20397,7 +20397,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "The harness 'turnCount' variable counts streaming events, not conversational turns"
       ],
@@ -20436,7 +20436,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-15",
-      "updated": "2026-04-15",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "enforcement",
@@ -20484,7 +20484,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass",
         "Agent Failure Taxonomy \u2014 Seven Classes of Behavioral Failure",
@@ -20530,7 +20530,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "metrics",
@@ -20547,7 +20547,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children"
       ],
@@ -20590,7 +20590,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-15",
-      "updated": "2026-04-15",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "methodology-process",
@@ -20625,7 +20625,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "Infrastructure Over Instructions for Process Enforcement",
         "Model \u2014 Methodology",
@@ -20680,7 +20680,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-19",
-      "updated": "2026-04-19",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "reliability",
@@ -20718,7 +20718,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-quality-failure-prevention",
         "profile-as-coordination-bundle"
@@ -20755,7 +20755,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-19",
-      "updated": "2026-04-19",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "reliability",
@@ -20788,7 +20788,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-quality-failure-prevention",
         "per-backend-circuit-breaker-with-failover-chain"
@@ -20908,7 +20908,7 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-16",
-      "updated": "2026-04-16",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "agent-config",
@@ -20942,7 +20942,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "CLAUDE.md Structural Patterns for Agent Compliance",
         "Models Are Built in Layers, Not All at Once",
@@ -20996,7 +20996,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "gpu",
@@ -21029,7 +21029,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-local-ai",
         "localai-over-ollama-vllm-for-multi-model-orchestration"
@@ -21147,7 +21147,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-22",
       "tags": [
         "pattern",
         "modes",
@@ -21178,7 +21178,7 @@
         }
       ],
       "layer": 5,
-      "maturity": "seed",
+      "maturity": "growing",
       "derived_from": [
         "model-quality-failure-prevention",
         "model-claude-code"

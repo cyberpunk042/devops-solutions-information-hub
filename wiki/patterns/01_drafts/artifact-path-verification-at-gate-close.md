@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 instances:
   - page: "OpenArms verify-done-when.cjs (2026-04-16)"
     context: "Extended the Done When verifier with an artifact-existence check: for every path declared in task frontmatter's `artifacts:` list, the verifier now runs `fs.existsSync()` before allowing `readiness=100`. Commit `b4ed8349`. Addresses the 'readiness lies' class where agents mark tasks complete without producing the declared outputs."
@@ -19,7 +19,7 @@ derived_from:
   - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
   - "Aspirational Naming in Lifecycle Code"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-integration-notes
     type: file

@@ -8,7 +8,7 @@ domain: cross-domain
 layer: 5
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 instances:
   - page: "OpenArms T116 vs T117"
     context: "Right-sizing from feature-development to integration saved 86.8% ($9.07 → $1.20). First-order optimization."
@@ -18,7 +18,7 @@ derived_from:
   - "Right-size the methodology model to the actual work, not the structural category"
   - "Per-task cost grows monotonically across multi-task runs (context accumulation)"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-right-size
     type: wiki

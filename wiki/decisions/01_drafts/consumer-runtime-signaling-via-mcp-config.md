@@ -9,7 +9,7 @@ domain: cross-domain
 layer: 6
 status: draft
 confidence: medium
-maturity: seed
+maturity: growing
 reversibility: easy
 derived_from:
   - "Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift"
@@ -17,7 +17,7 @@ derived_from:
   - "Adapters Never Raise — Failure As Data at Integration Boundaries"
 contribution_status: accepted
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-22
 sources:
   - id: operator-directive-consumer-property
     type: directive

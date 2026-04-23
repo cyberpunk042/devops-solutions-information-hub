@@ -8,13 +8,13 @@ domain: ai-agents
 layer: 4
 status: synthesized
 confidence: medium
-maturity: seed
+maturity: growing
 derived_from:
   - "Infrastructure Over Instructions for Process Enforcement"
   - "Model: Skills, Commands, and Hooks"
   - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-integration-notes
     type: file

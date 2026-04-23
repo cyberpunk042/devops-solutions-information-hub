@@ -5,12 +5,12 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 derived_from:
   - "Infrastructure Over Instructions for Process Enforcement"
   - "Systemic Incompleteness Is Invisible to Validation"
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-22
 sources:
   - id: openarms-integration-feedback
     type: wiki
