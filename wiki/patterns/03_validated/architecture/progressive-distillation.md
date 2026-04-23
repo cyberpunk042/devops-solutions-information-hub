@@ -18,6 +18,7 @@ instances:
   - {'page': 'Research Wiki', 'context': 'The wiki itself: raw/ → sources/ → domains/ → lessons/ → patterns/ → decisions/. Six layers, each qualitatively different from the previous.'}
 created: 2026-04-08
 updated: 2026-04-10
+last_reviewed: 2026-04-22
 sources:
   - id: src-second-brain-research
     type: article

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-23T01:05:31.548147+00:00",
+  "generated": "2026-04-23T01:14:23.506137+00:00",
   "stats": {
     "pages": 466,
     "domains": 9,
@@ -16226,7 +16226,7 @@
       "confidence": "authoritative",
       "created": "2026-04-12",
       "updated": "2026-04-12",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "convergence",
         "harness",
@@ -16306,7 +16306,7 @@
       "confidence": "authoritative",
       "created": "2026-04-12",
       "updated": "2026-04-12",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "enforcement",
         "hooks",
@@ -17430,7 +17430,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-12",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "methodology",
         "coverage",
@@ -17804,7 +17804,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-12",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "methodology",
         "domain-specific",
@@ -17875,7 +17875,7 @@
       "confidence": "high",
       "created": "2026-04-12",
       "updated": "2026-04-12",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "methodology",
         "framework",
@@ -22092,7 +22092,7 @@
       "confidence": "high",
       "created": "2026-04-08",
       "updated": "2026-04-10",
-      "last_reviewed": "",
+      "last_reviewed": "2026-04-22",
       "tags": [
         "progressive-distillation",
         "knowledge-systems",

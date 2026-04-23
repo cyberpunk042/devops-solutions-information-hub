@@ -1133,8 +1133,12 @@ def _classify_source_change(
     import subprocess
     source_str = str(source_path) if not str(source_path).startswith("wiki/") else str(source_path)
     try:
+        # --follow so rename/move commits are tracked; --diff-filter=M keeps only in-place
+        # modifications. Pure renames (R) and adds (A) change content-location, not content,
+        # so they should not count against the evolved page's freshness.
         log = subprocess.run(
-            ["git", "-C", str(project_root), "log",
+            ["git", "-C", str(project_root), "log", "--follow",
+             "--diff-filter=M",
              f"--since={since_date}",
              f"--until={until_date} 23:59:59",
              "--format=%H|%s", "--", source_str],
@@ -1151,7 +1155,9 @@ def _classify_source_change(
         commits.append((sha, msg))
 
     if not commits:
-        return {"classification": "unknown", "body_change_lines": 0, "commits": []}
+        # No in-place modifications in the window — the page was only moved/renamed,
+        # which is a location change, not a content change.
+        return {"classification": "metadata-only", "body_change_lines": 0, "commits": []}
 
     import re as _re
     # Top-level frontmatter keys (appear at column 0 in frontmatter)
@@ -1198,6 +1204,15 @@ def _classify_source_change(
                 continue
             # Frontmatter terminator
             if stripped == "---":
+                continue
+            # Question lifecycle callouts (question opener, strikethrough, resolution note)
+            # These are metadata-of-the-knowledge-state, not content evolution
+            if stripped.startswith("> [!question]") or stripped.startswith("> [!example]"):
+                continue
+            if stripped.startswith("> **RESOLVED") or stripped.startswith("> **PARTIALLY RESOLVED") or stripped.startswith("> **DEFERRED"):
+                continue
+            # Strikethrough-only transformation of an existing line (resolving an inline question/note)
+            if "~~" in stripped:
                 continue
             body_change_lines += 1
 

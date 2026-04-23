@@ -14,6 +14,7 @@ derived_from:
   - "Harness-Owned Loop — Deterministic Agent Execution"
 created: 2026-04-12
 updated: 2026-04-12
+last_reviewed: 2026-04-22
 sources:
   - id: openarms-harness
     type: observation
