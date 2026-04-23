@@ -88,6 +88,7 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
         confidence = meta.get("confidence", "")
         created = str(meta.get("created", ""))
         updated = str(meta.get("updated", ""))
+        last_reviewed = str(meta.get("last_reviewed", ""))
         sources = meta.get("sources", []) or []
         layer = meta.get("layer", "")
         maturity = meta.get("maturity", "")
@@ -115,6 +116,7 @@ def build_manifest(wiki_dir: Path) -> Dict[str, Any]:
             "confidence": confidence,
             "created": created,
             "updated": updated,
+            "last_reviewed": last_reviewed,
             "tags": tags,
             "sources": sources,
             "layer": layer,

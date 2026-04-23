@@ -13,6 +13,7 @@ derived_from:
   - "Agent Failure Taxonomy — Seven Classes of Behavioral Failure"
 created: 2026-04-12
 updated: 2026-04-13
+last_reviewed: 2026-04-22
 sources:
   - id: openarms-compaction
     type: observation

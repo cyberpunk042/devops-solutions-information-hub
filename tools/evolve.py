@@ -1039,11 +1039,85 @@ def review_seeds(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
     return {"ready_for_promotion": ready, "count": len(ready)}
 
 
+def mark_reviewed(
+    project_root: Path,
+    page_ref: Optional[str],
+    verbose: bool = True,
+) -> Dict[str, Any]:
+    """Stamp `last_reviewed: <today>` into a page's frontmatter.
+
+    page_ref can be: a slug (stem), a title, or a path relative to wiki/.
+    Used by operators to signal "I compared the evolved page to its current
+    sources, content is still accurate" without editing `updated:` aspirationally.
+    """
+    from datetime import date as _date
+    import re as _re
+
+    wiki_dir = project_root / "wiki"
+    if not page_ref:
+        return {"ok": False, "error": "page_ref required (--page <slug|title|path>)"}
+
+    # Resolve to a path
+    candidates: List[Path] = []
+    for md in wiki_dir.rglob("*.md"):
+        if md.name == "_index.md":
+            continue
+        if md.stem == page_ref or str(md.relative_to(wiki_dir)) == page_ref:
+            candidates = [md]
+            break
+        try:
+            text = md.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        meta, _ = parse_frontmatter(text)
+        if meta and meta.get("title") == page_ref:
+            candidates.append(md)
+
+    if not candidates:
+        return {"ok": False, "error": f"No page matched '{page_ref}'"}
+    if len(candidates) > 1:
+        return {
+            "ok": False,
+            "error": f"Ambiguous: {page_ref} matches {len(candidates)} pages — use a slug or path",
+        }
+
+    path = candidates[0]
+    text = path.read_text(encoding="utf-8")
+    today = _date.today().isoformat()
+
+    if _re.search(r"^last_reviewed:\s*\S", text, flags=_re.MULTILINE):
+        new_text = _re.sub(
+            r"^last_reviewed:\s*\S.*$",
+            f"last_reviewed: {today}",
+            text,
+            count=1,
+            flags=_re.MULTILINE,
+        )
+    else:
+        new_text = _re.sub(
+            r"^updated:\s*(\S+)\s*$",
+            lambda m: f"updated: {m.group(1)}\nlast_reviewed: {today}",
+            text,
+            count=1,
+            flags=_re.MULTILINE,
+        )
+
+    if new_text == text:
+        return {"ok": False, "error": "Failed to insert last_reviewed (no 'updated:' line found)"}
+
+    path.write_text(new_text, encoding="utf-8")
+    if verbose:
+        print(f"  Marked reviewed: {path.relative_to(project_root)} (last_reviewed: {today})")
+    return {"ok": True, "path": str(path.relative_to(project_root)), "last_reviewed": today}
+
+
 def detect_stale(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
     """Find evolved pages whose derived_from sources have been updated more recently.
 
-    If a source page has a newer 'updated' date than the evolved page, the evolved
-    page may be stale.
+    Compares each source's `updated` against the page's freshness cutoff —
+    `max(page.updated, page.last_reviewed)`. `last_reviewed` lets an operator
+    signal "I read both pages, content is still current" without editing
+    `updated` aspirationally (which is a real hazard per the wiki's Principle 4).
     """
     wiki_dir = project_root / "wiki"
     manifest = build_manifest(wiki_dir)
@@ -1070,11 +1144,14 @@ def detect_stale(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
         if not page_updated:
             continue
 
+        last_reviewed = page.get("last_reviewed", "") or ""
+        freshness_cutoff = max(page_updated, last_reviewed)
+
         derived = page.get("derived_from", []) or []
         newer_sources = []
         for source_title in derived:
             source_updated = title_to_updated.get(source_title, "")
-            if source_updated and source_updated > page_updated:
+            if source_updated and source_updated > freshness_cutoff:
                 newer_sources.append({
                     "title": source_title,
                     "updated": source_updated,
@@ -1086,6 +1163,7 @@ def detect_stale(project_root: Path, verbose: bool = True) -> Dict[str, Any]:
                 "type": page.get("type", ""),
                 "layer": layer,
                 "updated": page_updated,
+                "last_reviewed": last_reviewed,
                 "newer_sources": newer_sources,
                 "path": page.get("path", ""),
             })
@@ -1112,18 +1190,20 @@ def evolve(
     type_filter: Optional[str] = None,
     domain_filter: Optional[str] = None,
     clear_queue: bool = False,
+    page_ref: Optional[str] = None,
     verbose: bool = True,
 ) -> Dict[str, Any]:
     """Main evolution orchestrator.
 
     Modes:
-        score     — Score candidates and print ranked table.
-        scaffold  — Score + scaffold top candidates via pipeline.scaffold_page.
-        dry-run   — Score + print generated prompts (no files written).
-        auto      — Score + scaffold + generate via LLM backend.
-        execute   — List or clear the generation queue.
-        review    — Find seed pages ready for promotion.
-        stale     — Find evolved pages with stale sources.
+        score          — Score candidates and print ranked table.
+        scaffold       — Score + scaffold top candidates via pipeline.scaffold_page.
+        dry-run        — Score + print generated prompts (no files written).
+        auto           — Score + scaffold + generate via LLM backend.
+        execute        — List or clear the generation queue.
+        review         — Find seed pages ready for promotion.
+        stale          — Find evolved pages with stale sources.
+        mark-reviewed  — Stamp a page's last_reviewed to today (requires --page).
 
     Args:
         project_root: Path to project root.
@@ -1162,6 +1242,16 @@ def evolve(
     if mode == "stale":
         stale_result = detect_stale(project_root, verbose=verbose)
         result["stale"] = stale_result
+        return result
+
+    # ------------------------------------------------------------------
+    # mark-reviewed mode — stamp a page's last_reviewed to today
+    # ------------------------------------------------------------------
+    if mode == "mark-reviewed":
+        mark_result = mark_reviewed(
+            project_root, page_ref=page_ref, verbose=verbose
+        )
+        result["mark_reviewed"] = mark_result
         return result
 
     # ------------------------------------------------------------------
@@ -1269,8 +1359,14 @@ def main() -> None:
         "mode",
         nargs="?",
         default="score",
-        choices=["score", "scaffold", "dry-run", "auto", "execute", "review", "stale"],
+        choices=["score", "scaffold", "dry-run", "auto", "execute", "review", "stale", "mark-reviewed"],
         help="Operation mode (default: score)",
+    )
+    parser.add_argument(
+        "--page",
+        dest="page_ref",
+        default=None,
+        help="Page reference for mark-reviewed mode: slug, title, or path relative to wiki/",
     )
     parser.add_argument(
         "--top", "-n",
@@ -1326,6 +1422,7 @@ def main() -> None:
         type_filter=args.type_filter,
         domain_filter=args.domain_filter,
         clear_queue=args.clear,
+        page_ref=args.page_ref,
         verbose=not args.quiet,
     )
 
