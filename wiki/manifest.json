@@ -1,15 +1,15 @@
 {
-  "generated": "2026-04-23T00:53:44.145302+00:00",
+  "generated": "2026-04-23T00:57:13.722670+00:00",
   "stats": {
-    "pages": 465,
+    "pages": 466,
     "domains": 9,
     "sources": 54,
-    "comparisons": 6,
-    "relationships": 2808,
-    "tags_unique": 1311,
+    "comparisons": 7,
+    "relationships": 2814,
+    "tags_unique": 1312,
     "layers": {
       "3": 4,
-      "5": 35,
+      "5": 36,
       "6": 25,
       "2": 51,
       "4": 60,
@@ -18,7 +18,7 @@
       "spine": 71
     },
     "maturity": {
-      "growing": 310,
+      "growing": 311,
       "seed": 28,
       "mature": 2
     }
@@ -5154,6 +5154,77 @@
         {
           "verb": "RELATES TO",
           "target": "NotebookLM"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/mcp-vs-cli-decision-vs-lesson.md",
+      "slug": "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "title": "MCP vs CLI \u2014 Decision Artifact vs Lesson Artifact",
+      "type": "comparison",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "last_reviewed": "",
+      "tags": [
+        "comparison",
+        "mcp",
+        "cli",
+        "skills",
+        "tool-integration",
+        "token-efficiency",
+        "decision",
+        "lesson",
+        "artifact-type",
+        "claude-code"
+      ],
+      "sources": [
+        {
+          "id": "decision-mcp-vs-cli",
+          "type": "wiki",
+          "file": "wiki/decisions/02_validated/tools/mcp-vs-cli-for-tool-integration.md",
+          "description": "The decision artifact \u2014 actionable scenario matrix, alternatives, rationale, reversibility, dependencies"
+        },
+        {
+          "id": "lesson-cli-beats-mcp",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency.md",
+          "description": "The lesson artifact \u2014 context, insight, mechanism, evidence, applicability"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "MCP vs CLI \u2014 Decision Artifact vs Lesson Artifact",
+        "Decision vs Lesson \u2014 MCP vs CLI"
+      ],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "Decision \u2014 MCP vs CLI for Tool Integration"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP Integration Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context-Aware Tool Loading"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Skills as the Primary Extension Pattern"
         }
       ]
     },
@@ -31710,8 +31781,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 195,
-      "relationship_count": 1285
+      "page_count": 196,
+      "relationship_count": 1291
     },
     "ai-agents": {
       "page_count": 68,
@@ -32035,6 +32106,7 @@
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
       "backlog/modules/e009-m002-mcp-server-continuity",
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
@@ -32516,6 +32588,7 @@
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "backlog/modules/e009-m003-skill-portability",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
       "comparisons/skills-architecture-patterns",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/tools/extension-system-operational-decisions",
@@ -33499,6 +33572,7 @@
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
       "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
       "backlog/tasks/T028-add-routing-report-cli-command",
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
       "domains/tools-and-platforms/notebooklm-py-cli",
       "domains/tools-and-platforms/obsidian-cli",
@@ -33726,6 +33800,7 @@
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/llm-wiki-vs-rag",
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "spine/standards/comparison-page-standards"
@@ -33852,6 +33927,107 @@
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "spine/models/depth/model-second-brain"
     ],
+    "tool-integration": [
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
+      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
+      "spine/models/ecosystem/model-mcp-cli-integration"
+    ],
+    "token-efficiency": [
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
+      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/src-7-levels-claude-code-rag",
+      "sources/src-code-review-graph-automated-review",
+      "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "spine/models/ecosystem/model-mcp-cli-integration"
+    ],
+    "decision": [
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
+      "decisions/01_drafts/extended-to-adaptive-thinking-migration",
+      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "decisions/01_drafts/skills-as-primary-extension-pattern",
+      "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
+      "decisions/02_validated/methodology/artifact-system-design-decisions",
+      "decisions/02_validated/methodology/methodology-stage-extension-decisions",
+      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
+      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "spine/standards/decision-page-standards"
+    ],
+    "lesson": [
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
+      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
+      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
+      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
+      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
+      "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
+      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
+      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
+      "spine/standards/lesson-page-standards"
+    ],
+    "artifact-type": [
+      "comparisons/mcp-vs-cli-decision-vs-lesson"
+    ],
+    "claude-code": [
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "comparisons/skills-architecture-patterns",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
+      "domains/ai-agents/claude-code/claude-code-best-practices",
+      "domains/ai-agents/claude-code/claude-code-context-management",
+      "domains/ai-agents/claude-code/claude-code-skills",
+      "domains/ai-agents/claude-code/claude-code",
+      "domains/ai-agents/orchestration/harness-engineering",
+      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "domains/automation/ai-driven-content-pipeline",
+      "domains/automation/claude-code-scheduling",
+      "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
+      "domains/tools-and-platforms/notebooklm-skills",
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
+      "lessons/03_validated/tools-architecture/always-plan-before-executing",
+      "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "patterns/03_validated/enforcement/enforcement-hook-patterns",
+      "sources/claude-code/src-claude-code-accuracy-tips",
+      "sources/claude-code/src-claude-slash-commands",
+      "sources/claude-code/src-harness-engineering",
+      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/claude-code/src-superpowers-end-of-vibe-coding",
+      "sources/claude-code/src-token-hacks-claude-code",
+      "sources/obsidian-notebooklm/src-axton-obsidian-visual-skills",
+      "sources/obsidian-notebooklm/src-claude-notebooklm-content-team",
+      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
+      "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
+      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
+      "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/src-7-levels-claude-code-rag",
+      "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "sources/tools-integration/src-playwright-mcp-visual-testing",
+      "sources/wiki-methodology/src-karpathy-claude-code-10x",
+      "spine/models/agent-config/model-claude-code",
+      "spine/standards/model-standards/model-claude-code-standards"
+    ],
     "model": [
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -33930,50 +34106,6 @@
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
       "spine/models/quality/model-quality-failure-prevention"
     ],
-    "claude-code": [
-      "comparisons/skills-architecture-patterns",
-      "decisions/01_drafts/pretooluse-hooks-layered-approach",
-      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
-      "domains/ai-agents/claude-code/claude-code-best-practices",
-      "domains/ai-agents/claude-code/claude-code-context-management",
-      "domains/ai-agents/claude-code/claude-code-skills",
-      "domains/ai-agents/claude-code/claude-code",
-      "domains/ai-agents/orchestration/harness-engineering",
-      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
-      "domains/automation/ai-driven-content-pipeline",
-      "domains/automation/claude-code-scheduling",
-      "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
-      "domains/tools-and-platforms/notebooklm-skills",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem",
-      "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
-      "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
-      "patterns/03_validated/enforcement/enforcement-hook-patterns",
-      "sources/claude-code/src-claude-code-accuracy-tips",
-      "sources/claude-code/src-claude-slash-commands",
-      "sources/claude-code/src-harness-engineering",
-      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
-      "sources/claude-code/src-superpowers-end-of-vibe-coding",
-      "sources/claude-code/src-token-hacks-claude-code",
-      "sources/obsidian-notebooklm/src-axton-obsidian-visual-skills",
-      "sources/obsidian-notebooklm/src-claude-notebooklm-content-team",
-      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
-      "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
-      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
-      "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
-      "sources/src-7-levels-claude-code-rag",
-      "sources/src-claude-code-prompt-patch-rebalancing",
-      "sources/src-cline-agentic-coding-ide-extension",
-      "sources/src-github-spec-kit-specification-driven-development",
-      "sources/tools-integration/src-playwright-cli-vs-mcp",
-      "sources/tools-integration/src-playwright-mcp-visual-testing",
-      "sources/wiki-methodology/src-karpathy-claude-code-10x",
-      "spine/models/agent-config/model-claude-code",
-      "spine/standards/model-standards/model-claude-code-standards"
-    ],
     "obsidian": [
       "comparisons/skills-architecture-patterns",
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface",
@@ -34023,23 +34155,6 @@
       "decisions/02_validated/tools/extension-system-operational-decisions",
       "domains/ai-agents/patterns/hooks-lifecycle-architecture",
       "domains/cross-domain/model-composition-rules"
-    ],
-    "decision": [
-      "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
-      "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
-      "decisions/01_drafts/extended-to-adaptive-thinking-migration",
-      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
-      "decisions/01_drafts/pretooluse-hooks-layered-approach",
-      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
-      "decisions/01_drafts/skills-as-primary-extension-pattern",
-      "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
-      "decisions/02_validated/methodology/artifact-system-design-decisions",
-      "decisions/02_validated/methodology/methodology-stage-extension-decisions",
-      "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
-      "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
-      "spine/standards/decision-page-standards"
     ],
     "local-first": [
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
@@ -34457,20 +34572,6 @@
     ],
     "wiki-pipeline": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations"
-    ],
-    "tool-integration": [
-      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
-      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "spine/models/ecosystem/model-mcp-cli-integration"
-    ],
-    "token-efficiency": [
-      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
-      "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
-      "patterns/03_validated/knowledge/context-aware-tool-loading",
-      "sources/src-7-levels-claude-code-rag",
-      "sources/src-code-review-graph-automated-review",
-      "sources/tools-integration/src-playwright-cli-vs-mcp",
-      "spine/models/ecosystem/model-mcp-cli-integration"
     ],
     "integration-pattern": [
       "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration"
@@ -35932,24 +36033,6 @@
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the"
-    ],
-    "lesson": [
-      "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
-      "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
-      "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
-      "lessons/01_drafts/contributed/structural-compliance-is-not-operational-compliance",
-      "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
-      "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
-      "lessons/01_drafts/if-you-can-verify-you-converge",
-      "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
-      "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
-      "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
-      "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
-      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
-      "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
-      "spine/standards/lesson-page-standards"
     ],
     "tier-selection": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project"
@@ -38144,6 +38227,12 @@
         "Decision \u2014 LocalAI v4.1.3 over Ollama / vLLM for multi-model orchestration under a VRAM constraint",
         "Decision \u2014 Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later",
         "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers"
+      ]
+    },
+    {
+      "target": "Decision \u2014 Skills as the Primary Extension Pattern",
+      "referenced_by": [
+        "MCP vs CLI \u2014 Decision Artifact vs Lesson Artifact"
       ]
     },
     {

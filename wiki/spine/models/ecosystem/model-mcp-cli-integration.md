@@ -284,6 +284,7 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[first-consumer-integration-reveals-systematic-gaps-between-k|First consumer integration reveals systematic gaps between knowledge and tooling]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[mcp-runtime-signaling|MCP Runtime Signaling — Integration Guide for Consumers]]
+[[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]

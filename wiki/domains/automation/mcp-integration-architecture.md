@@ -191,6 +191,7 @@ Tools:
 [[harness-engineering|Harness Engineering]]
 [[agent-orchestration-is-highest-connected-concept|Lesson — Agent Orchestration Is the Highest-Connected Concept in the Wiki]]
 [[automation-is-bridge-between-knowledge-and-action|Lesson — Automation Is the Bridge Between Knowledge and Action]]
+[[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[multi-channel-ai-agent-access|Multi-Channel AI Agent Access]]
 [[openarms|OpenArms]]

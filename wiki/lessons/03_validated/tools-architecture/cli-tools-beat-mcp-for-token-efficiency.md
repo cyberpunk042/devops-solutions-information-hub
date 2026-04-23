@@ -144,6 +144,7 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 [[context-aware-tool-loading|Context-Aware Tool Loading]]
 [[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]
 [[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]

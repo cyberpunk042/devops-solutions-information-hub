@@ -166,6 +166,7 @@ The structured context principle from [[structured-context-is-proto-programming-
 [[claude-code-best-practices|Claude Code Best Practices]]
 [[cross-domain-patterns|Cross-Domain Patterns]]
 [[hooks-lifecycle-architecture|Hooks Lifecycle Architecture]]
+[[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]

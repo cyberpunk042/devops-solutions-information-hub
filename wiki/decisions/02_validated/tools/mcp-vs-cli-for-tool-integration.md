@@ -132,6 +132,7 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 [[research-pipeline-orchestration|Research Pipeline Orchestration]]
 [[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
+[[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
