@@ -259,6 +259,7 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[methodology-framework|Methodology Framework]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
+[[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[model-sfif-architecture|Model — SFIF and Architecture]]
 [[identity-profile|OpenArms — Identity Profile]]
 [[identity-profile|OpenFleet — Identity Profile]]

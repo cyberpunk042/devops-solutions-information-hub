@@ -406,6 +406,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[methodology-framework|Methodology Framework]]
 [[methodology-system-map|Methodology System Map]]
 [[model-context-engineering|Model — Context Engineering]]
+[[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[openarms-vs-openfleet-enforcement|OpenArms vs OpenFleet Enforcement Architecture]]
 [[second-brain-integration-chain|Operations Plan — Second Brain Integration Chain — Complete Walkthrough]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]

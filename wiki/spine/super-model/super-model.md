@@ -267,6 +267,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
+[[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]

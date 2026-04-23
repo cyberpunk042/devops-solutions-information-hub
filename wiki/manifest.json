@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-23T00:30:34.686463+00:00",
+  "generated": "2026-04-23T00:35:06.400819+00:00",
   "stats": {
-    "pages": 463,
+    "pages": 464,
     "domains": 9,
     "sources": 54,
-    "comparisons": 5,
-    "relationships": 2799,
+    "comparisons": 6,
+    "relationships": 2805,
     "tags_unique": 1311,
     "layers": {
       "3": 4,
+      "5": 35,
       "6": 25,
       "2": 51,
       "4": 60,
-      "5": 34,
       "0": 1,
       "1": 36,
       "spine": 71
     },
     "maturity": {
-      "growing": 309,
+      "growing": 310,
       "seed": 28,
       "mature": 2
     }
@@ -5063,6 +5063,77 @@
         {
           "verb": "RELATES TO",
           "target": "NotebookLM"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/model-ecosystem-vs-four-project-ecosystem.md",
+      "slug": "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "title": "Model \u2014 Ecosystem Architecture vs Four-Project Ecosystem",
+      "type": "comparison",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-22",
+      "updated": "2026-04-22",
+      "tags": [
+        "comparison",
+        "ecosystem",
+        "model",
+        "openfleet",
+        "aicp",
+        "openarms",
+        "devops-control-plane",
+        "multi-project",
+        "integration",
+        "spine",
+        "architecture"
+      ],
+      "sources": [
+        {
+          "id": "model-ecosystem",
+          "type": "wiki",
+          "file": "wiki/spine/models/ecosystem/model-ecosystem.md",
+          "description": "The generalized ecosystem model \u2014 patterns, topologies, and universal invariants for any multi-project system"
+        },
+        {
+          "id": "four-project-ecosystem",
+          "type": "wiki",
+          "file": "wiki/domains/devops/four-project-ecosystem.md",
+          "description": "The concrete instance \u2014 project-by-project tables, repos, integration diagram, and ecosystem-specific details"
+        }
+      ],
+      "layer": 5,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Model \u2014 Ecosystem Architecture vs Four-Project Ecosystem",
+        "Ecosystem Model vs Instance"
+      ],
+      "relationships": [
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 SFIF and Architecture"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -31140,8 +31211,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 194,
-      "relationship_count": 1279
+      "page_count": 195,
+      "relationship_count": 1285
     },
     "ai-agents": {
       "page_count": 68,
@@ -31505,6 +31576,7 @@
     "integration": [
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "domains/automation/mcp-integration-architecture",
       "domains/cross-domain/integration/ai-methodology-consumption-guide",
       "domains/cross-domain/integration/second-brain-integration-requirements",
@@ -31520,6 +31592,7 @@
     "openarms": [
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
       "domains/cross-domain/mcp-runtime-signaling",
@@ -31673,6 +31746,7 @@
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T028-add-routing-report-cli-command",
       "backlog/tasks/T029-author-routing-review-ritual-standard",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
@@ -31722,6 +31796,7 @@
     "ecosystem": [
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
       "domains/devops/four-project-ecosystem",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
@@ -31740,6 +31815,7 @@
     ],
     "openfleet": [
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "domains/ai-agents/orchestration/agent-orchestration-patterns",
       "domains/ai-agents/orchestration/openfleet",
@@ -33150,6 +33226,7 @@
     "comparison": [
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/llm-wiki-vs-rag",
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "spine/standards/comparison-page-standards"
     ],
@@ -33275,14 +33352,62 @@
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "spine/models/depth/model-second-brain"
     ],
-    "immune-system": [
-      "comparisons/openarms-vs-openfleet-enforcement",
-      "domains/devops/immune-system-rules",
-      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
-      "spine/models/quality/model-quality-failure-prevention"
+    "model": [
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "spine/models/agent-config/model-markdown-as-iac",
+      "spine/models/depth/model-context-engineering",
+      "spine/models/depth/model-knowledge-evolution",
+      "spine/models/depth/model-local-ai",
+      "spine/models/depth/model-notebooklm",
+      "spine/models/depth/model-second-brain",
+      "spine/models/ecosystem/model-automation-pipelines",
+      "spine/models/ecosystem/model-ecosystem",
+      "spine/models/ecosystem/model-mcp-cli-integration",
+      "spine/models/foundation/model-llm-wiki",
+      "spine/models/foundation/model-methodology",
+      "spine/models/foundation/model-wiki-design",
+      "spine/models/quality/model-quality-failure-prevention",
+      "spine/models/quality/model-sfif-architecture"
+    ],
+    "devops-control-plane": [
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "domains/devops/four-project-ecosystem",
+      "ecosystem/project_profiles/devops-control-plane/identity-profile",
+      "spine/models/ecosystem/model-ecosystem"
+    ],
+    "multi-project": [
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "domains/devops/four-project-ecosystem",
+      "spine/models/ecosystem/model-ecosystem"
+    ],
+    "spine": [
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "spine/models/agent-config/model-claude-code",
+      "spine/models/agent-config/model-markdown-as-iac",
+      "spine/models/agent-config/model-skills-commands-hooks",
+      "spine/models/depth/model-context-engineering",
+      "spine/models/depth/model-knowledge-evolution",
+      "spine/models/depth/model-local-ai",
+      "spine/models/depth/model-notebooklm",
+      "spine/models/depth/model-second-brain",
+      "spine/models/ecosystem/model-automation-pipelines",
+      "spine/models/ecosystem/model-ecosystem",
+      "spine/models/ecosystem/model-mcp-cli-integration",
+      "spine/models/foundation/model-methodology",
+      "spine/models/quality/model-quality-failure-prevention",
+      "spine/models/quality/model-sfif-architecture",
+      "spine/references/2026-consumer-hardware-ai-stack",
+      "spine/references/model-registry",
+      "spine/standards/harness-contract",
+      "spine/super-model/enforcement-hierarchy",
+      "spine/super-model/goldilocks-protocol",
+      "spine/super-model/integration-ecosystem",
+      "spine/super-model/knowledge-architecture",
+      "spine/super-model/work-management"
     ],
     "architecture": [
+      "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
       "comparisons/skills-architecture-patterns",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
@@ -33297,6 +33422,13 @@
       "spine/models/ecosystem/model-ecosystem",
       "spine/models/quality/model-sfif-architecture",
       "spine/references/root-documentation-map"
+    ],
+    "immune-system": [
+      "comparisons/openarms-vs-openfleet-enforcement",
+      "domains/devops/immune-system-rules",
+      "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "spine/models/quality/model-quality-failure-prevention"
     ],
     "claude-code": [
       "comparisons/skills-architecture-patterns",
@@ -33568,23 +33700,6 @@
     ],
     "security": [
       "decisions/01_drafts/pretooluse-hooks-layered-approach"
-    ],
-    "model": [
-      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
-      "spine/models/agent-config/model-markdown-as-iac",
-      "spine/models/depth/model-context-engineering",
-      "spine/models/depth/model-knowledge-evolution",
-      "spine/models/depth/model-local-ai",
-      "spine/models/depth/model-notebooklm",
-      "spine/models/depth/model-second-brain",
-      "spine/models/ecosystem/model-automation-pipelines",
-      "spine/models/ecosystem/model-ecosystem",
-      "spine/models/ecosystem/model-mcp-cli-integration",
-      "spine/models/foundation/model-llm-wiki",
-      "spine/models/foundation/model-methodology",
-      "spine/models/foundation/model-wiki-design",
-      "spine/models/quality/model-quality-failure-prevention",
-      "spine/models/quality/model-sfif-architecture"
     ],
     "reasoning": [
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -34840,15 +34955,6 @@
     ],
     "time-limit": [
       "domains/devops/execution-modes-and-end-conditions"
-    ],
-    "devops-control-plane": [
-      "domains/devops/four-project-ecosystem",
-      "ecosystem/project_profiles/devops-control-plane/identity-profile",
-      "spine/models/ecosystem/model-ecosystem"
-    ],
-    "multi-project": [
-      "domains/devops/four-project-ecosystem",
-      "spine/models/ecosystem/model-ecosystem"
     ],
     "post-mortem": [
       "domains/devops/immune-system-rules"
@@ -37100,30 +37206,6 @@
     "extension-system": [
       "spine/models/agent-config/model-claude-code",
       "spine/standards/model-standards/model-skills-commands-hooks-standards"
-    ],
-    "spine": [
-      "spine/models/agent-config/model-claude-code",
-      "spine/models/agent-config/model-markdown-as-iac",
-      "spine/models/agent-config/model-skills-commands-hooks",
-      "spine/models/depth/model-context-engineering",
-      "spine/models/depth/model-knowledge-evolution",
-      "spine/models/depth/model-local-ai",
-      "spine/models/depth/model-notebooklm",
-      "spine/models/depth/model-second-brain",
-      "spine/models/ecosystem/model-automation-pipelines",
-      "spine/models/ecosystem/model-ecosystem",
-      "spine/models/ecosystem/model-mcp-cli-integration",
-      "spine/models/foundation/model-methodology",
-      "spine/models/quality/model-quality-failure-prevention",
-      "spine/models/quality/model-sfif-architecture",
-      "spine/references/2026-consumer-hardware-ai-stack",
-      "spine/references/model-registry",
-      "spine/standards/harness-contract",
-      "spine/super-model/enforcement-hierarchy",
-      "spine/super-model/goldilocks-protocol",
-      "spine/super-model/integration-ecosystem",
-      "spine/super-model/knowledge-architecture",
-      "spine/super-model/work-management"
     ],
     "soul-md": [
       "spine/models/agent-config/model-markdown-as-iac"

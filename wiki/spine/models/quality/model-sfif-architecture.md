@@ -259,4 +259,5 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 [[model-methodology|Model — Methodology]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
+[[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[model-local-ai|Model — Local AI ($0 Target)]]

@@ -370,6 +370,7 @@ See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the a
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[methodology-evolution-protocol|Methodology Evolution Protocol]]
+[[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[identity-profile|OpenFleet — Identity Profile]]
 [[E004-portable-methodology-engine|Portable Methodology Engine]]
 [[identity-profile|Research Wiki — Identity Profile]]
