@@ -177,6 +177,16 @@ Five days after the original 2026-04-17 synthesis, **Moonshot AI released [[src-
 >
 > And as a **local-batch-frontier** option: K2.6 Q2 GGUF (340 GB) via **KTransformers** on 19 GB VRAM + 64 GB RAM (incoming) + RAID 0 NVMe swap — realistic ~3-10 tok/s.
 
+> [!info] **Layer 5 has three sub-paths (added 2026-04-23)**
+>
+> | Sub-path | Cost model | Best for | Privacy |
+> |---|---|---|---|
+> | **5a. OpenRouter → K2.6** | $0.80 / $3.50 per M tokens | Daily default; per-request cost visibility; client-adjacent tasks | Medium (routed) |
+> | **5b. Ollama Cloud → K2.6** | $20/month flat (Pro plan, all cloud models) | Heavy prototyping, volume-unbounded experimentation (>5M output tokens/month breakeven) | Low — prototyping only; author of [[src-kimi-k2-6-ollama-cloud-njenga\|Njenga walkthrough]] explicitly warns off client/monetizable work |
+> | **5c. Local K2.6 Q2** | $0/token (Tier 2) | Offline, confidential, $0-target | High |
+>
+> See [[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6 synthesis]] § Three access paths for the full matrix, cost-math breakeven, and revised tier-stack rule. Not mutually exclusive — configure all three; route per session.
+
 **What this changes in the summary table** (updated 2026-04-22):
 
 > [!success] **$0 target and premium-cheap routing** (post-K2.6 update)

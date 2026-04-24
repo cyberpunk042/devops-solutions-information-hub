@@ -142,6 +142,8 @@ When this strategy was written (Stage 1 of consumer-hardware synthesis), the tar
 
 Five days later (2026-04-22), **[[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6]] on OpenRouter gives you Opus-4.6-class agentic and coding capability for $0.80 / $3.50 per million tokens** — ~1/20th Anthropic pricing, MIT-licensed, with 256K context and native agentic-swarm orchestration. At operator's expected volume, *using* K2.6 via OpenRouter is effectively cheaper than *training* a custom distilled model — and arrives at strictly higher raw capability than any 27B distill can reach.
 
+**2026-04-23 addendum:** K2.6 is also available via **Ollama Cloud Pro** at $20/month flat for all cloud models (`ollama launch claude --model kimi-k2.6:cloud`). Cost-effective for heavy prototyping (>5M output tokens/month breakeven vs OpenRouter) — but the privacy posture is explicitly "prototyping only" per the source article's own framing. The strategic argument below ("K2.6 obsoletes training-a-distill for raw capability") holds under either cloud path. See [[src-kimi-k2-6-moonshot-agent-swarm|K2.6 synthesis]] § Three access paths for which path to pick per workload.
+
 **Reassessment of each candidate under the K2.6 reality:**
 
 > [!info] **Candidate × K2.6 impact table**
