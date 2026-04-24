@@ -1976,8 +1976,12 @@ def query_health(paths: Dict[str, Path]) -> Dict[str, Any]:
                     if f.is_file() and f.name != ".gitkeep":
                         all_raw.append(f)
 
-    # Collect referenced raw paths from wiki page frontmatter
-    referenced: set = set()
+    # Collect referenced paths AND URLs from wiki page frontmatter.
+    # Raw files carry a `Source: <url>` header; synthesis pages often cite the
+    # URL (not the cached file path). Without URL matching, every URL-sourced
+    # raw file reads as unreferenced — inflating the backlog metric.
+    referenced_paths: set = set()
+    referenced_urls: set = set()
     for page in wiki_dir.rglob("*.md"):
         if page.name == "_index.md":
             continue
@@ -1987,17 +1991,38 @@ def query_health(paths: Dict[str, Path]) -> Dict[str, Any]:
             if not meta:
                 continue
             for src in meta.get("sources", []) or []:
-                if isinstance(src, dict) and "file" in src:
-                    referenced.add(str(src["file"]).strip())
+                if isinstance(src, dict):
+                    if "file" in src:
+                        referenced_paths.add(str(src["file"]).strip())
+                    if "url" in src:
+                        referenced_urls.add(str(src["url"]).strip())
         except Exception:
             continue
 
-    # Count raw files NOT referenced
+    def _raw_source_url(raw_path: Path) -> str:
+        """Extract `Source: <url>` from a raw file's header (first 10 lines)."""
+        try:
+            with raw_path.open("r", encoding="utf-8", errors="ignore") as fh:
+                for _ in range(10):
+                    line = fh.readline()
+                    if not line:
+                        break
+                    if line.startswith("Source: "):
+                        return line[len("Source: "):].strip()
+        except Exception:
+            pass
+        return ""
+
+    # Count raw files NOT referenced (by path OR by Source: URL)
     unreferenced_raw: List[str] = []
     for f in all_raw:
-        rel = f.relative_to(paths["root"])
-        if str(rel) not in referenced:
-            unreferenced_raw.append(str(rel))
+        rel = str(f.relative_to(paths["root"]))
+        if rel in referenced_paths:
+            continue
+        src_url = _raw_source_url(f)
+        if src_url and src_url in referenced_urls:
+            continue
+        unreferenced_raw.append(rel)
 
     raw_total = len(all_raw)
     raw_pending = len(unreferenced_raw)
