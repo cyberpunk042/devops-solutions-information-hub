@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-24T20:23:38.161604+00:00",
+  "generated": "2026-04-24T20:34:38.063914+00:00",
   "stats": {
-    "pages": 476,
+    "pages": 477,
     "domains": 9,
     "sources": 59,
     "comparisons": 8,
-    "relationships": 2880,
-    "tags_unique": 1367,
+    "relationships": 2885,
+    "tags_unique": 1369,
     "layers": {
       "3": 4,
       "5": 37,
@@ -20375,6 +20375,101 @@
       ]
     },
     {
+      "path": "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling.md",
+      "slug": "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "title": "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "2026-04-23",
+      "tags": [
+        "handoff",
+        "session",
+        "ai-infrastructure",
+        "vision",
+        "mission",
+        "post-anthropic",
+        "2026-04-23",
+        "pickup-cold"
+      ],
+      "sources": [
+        {
+          "id": "ai-infra-framework",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-infrastructure-decision-framework-2026.md"
+        },
+        {
+          "id": "decision-matrix",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-model-provider-harness-decision-matrix-2026.md"
+        },
+        {
+          "id": "harness-landscape",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-agentic-coding-harness-landscape-2026.md"
+        },
+        {
+          "id": "provider-landscape",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-inference-provider-landscape-2026.md"
+        },
+        {
+          "id": "local-training-playbook",
+          "type": "wiki",
+          "file": "wiki/spine/references/local-training-playbook-2026.md"
+        },
+        {
+          "id": "provider-monitoring-ops",
+          "type": "wiki",
+          "file": "wiki/spine/references/provider-pricing-monitoring-operations-plan.md"
+        },
+        {
+          "id": "opencode-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-opencode-harness-features.md"
+        },
+        {
+          "id": "codex-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-codex-cli-and-claude-code-plugin.md"
+        },
+        {
+          "id": "claude-code-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-claude-code-harness-features.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "WSL Ubuntu Migration Handoff"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "WSL Migration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision Matrix 2026"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix.md",
       "slug": "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix",
       "title": "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
@@ -32836,8 +32931,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 200,
-      "relationship_count": 1320
+      "page_count": 201,
+      "relationship_count": 1325
     },
     "ai-models": {
       "page_count": 14,
@@ -33783,6 +33878,7 @@
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ktransformers": [
@@ -37754,7 +37850,8 @@
     "session": [
       "log/2026-04-09/system/2026-04-09-session-summary",
       "log/2026-04-10/2026-04-10-session-summary",
-      "log/2026-04-17/2026-04-17-session-summary"
+      "log/2026-04-17/2026-04-17-session-summary",
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -37820,6 +37917,7 @@
     ],
     "handoff": [
       "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -37846,6 +37944,24 @@
     ],
     "64gb": [
       "log/2026-04-23-ram-upgrade-48gb-wsl"
+    ],
+    "ai-infrastructure": [
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "vision": [
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling"
+    ],
+    "mission": [
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "2026-04-23": [
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling"
+    ],
+    "pickup-cold": [
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "hcs": [
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
@@ -39095,9 +39211,6 @@
     "2026-landscape": [
       "spine/references/2026-consumer-hardware-ai-stack"
     ],
-    "ai-infrastructure": [
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
     "decision-framework": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
@@ -39111,9 +39224,6 @@
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "hardware-tier": [
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
-    "mission": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "decision-matrix": [
@@ -39251,9 +39361,6 @@
     ],
     "walkthrough": [
       "spine/references/second-brain-integration-chain"
-    ],
-    "pickup-cold": [
-      "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "ml-workstation": [
       "spine/references/wsl-ubuntu-migration-handoff"
@@ -39483,6 +39590,12 @@
       "referenced_by": [
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
         "Hierarchical Metrics Fail on Sparse Coverage"
+      ]
+    },
+    {
+      "target": "Decision Matrix 2026",
+      "referenced_by": [
+        "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool"
       ]
     },
     {
@@ -39945,6 +40058,7 @@
     {
       "target": "Principle 4",
       "referenced_by": [
+        "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool",
         "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
         "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
         "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
@@ -40348,6 +40462,18 @@
       "target": "Universal Stages",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "WSL Migration",
+      "referenced_by": [
+        "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool"
+      ]
+    },
+    {
+      "target": "WSL Ubuntu Migration Handoff",
+      "referenced_by": [
+        "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool"
       ]
     },
     {
