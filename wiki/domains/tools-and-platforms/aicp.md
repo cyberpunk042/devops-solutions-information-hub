@@ -138,6 +138,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 [[E001-local-inference-engine|Local Inference Engine (Subsystem 3)]]
 [[local-llm-quantization|Local LLM Quantization]]
+[[local-training-playbook-2026|Local Training Playbook 2026 — Wiki Alignment, Tool Calls, Semantic Enhancement]]
 [[mcp-integration-architecture|MCP Integration Architecture]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-local-ai|Model — Local AI ($0 Target)]]

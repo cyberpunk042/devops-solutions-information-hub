@@ -187,6 +187,35 @@ Five days after the original 2026-04-17 synthesis, **Moonshot AI released [[src-
 >
 > See [[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6 synthesis]] § Three access paths for the full matrix, cost-math breakeven, and revised tier-stack rule. Not mutually exclusive — configure all three; route per session.
 
+## 2026-04-24 Addendum — Local K2.6 Postmortem Supersedes Parts of the 2026-04-22 Framing
+
+AICP's 2026-04-22 through 2026-04-24 analysis (8 docs, 3,300+ lines) produced an empirical postmortem on local K2.6 as a primary tier — now captured in [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]. Four concrete updates to the Layer-5 framing above:
+
+> [!warning] The "local-batch-frontier at ~3-10 tok/s" estimate was wrong in practice
+> Measured reality on operator's Tier-0 hardware (RTX 2080 Ti + RTX 2080, 64 GB DDR4, NVMe swap) via llama.cpp `-ngl 0`: **~0.3 tok/s**. That is technically-working, not practically-usable. Local K2.6 Q2 is a **sovereignty-insurance fallback** for batch-tolerant work only, not a daily inference tier. The "realistic ~3-10 tok/s" estimate assumed KTransformers MoE-aware offload optimizations that did not materialize on consumer hardware in a usable form.
+
+> [!warning] Hardware break-even does not pay back for operator's projected volume
+> AICP's HARDWARE-BUILD-SCENARIOS (CAD pricing, 2026-04-24 quotes) + SCALING-PROJECTION-5YR shows that **no hardware tier pays back** at operator's realistic 5-year workload (2-3 personal sessions + 1-2 fleets of 10 agents). Tier 1 ~$15-19k CAD, Tier 2 ~$32k CAD, Tier 3 ~$65-80k CAD; smart-routed cloud totals ~$11,460 CAD over 5 years. Hardware is **capability insurance priced on non-economic grounds**, never "cheaper long-term."
+
+> [!success] The personal-daily default should be Ollama Cloud Pro, not OpenRouter
+> Prior framing (2026-04-22) named OpenRouter as the daily default. AICP's 2026-04-24 cost math flips this for personal work: Ollama Cloud Pro at **$27 CAD/mo flat** is mission-aligned (open-weight models only) and covers unlimited iteration up to ~20-30M tokens/mo soft-cap. **OpenRouter remains the client-work default** — per-request cost visibility and pinnable provider. Do not route employer/client work through Ollama's shared pool.
+
+> [!info] Subscription framework: phase-gated, not volume-permissive
+> The 4-phase framework ([[ai-infrastructure-decision-framework-2026|framework doc]]) gates tier upgrades on **sustained** volume — 2+ consecutive months above the next-phase threshold, not single-month spikes. Operator's prior $540 CAD/mo baseline (2× Anthropic + other) is replaced in Phase 1 by **$40-70 CAD/mo** smart-routed — ~1/10 the cost, with mission alignment.
+
+### Revised routing table (post-2026-04-24)
+
+> [!success] **$0-target and mission-aligned routing** (post-postmortem)
+>
+> | Task class | 2026-04-22 routing | 2026-04-24+ routing |
+> |------------|---------------------|---------------------|
+> | Multi-step agent workflows with tool calls | K2.6 cheap-cloud OR local | **K2.6 via Ollama Cloud Pro** (personal) / **OpenRouter** (client) |
+> | Code review, refactors on public code | K2.6 cheap-cloud | **K2.6 via Ollama Cloud Pro** — or **GPT-5.1-codex-mini via OpenRouter** ($0.25/$2) as closed-weight cost-minimum option |
+> | Substantive reasoning on corpus-wide analysis | K2.6 cheap-cloud OR local-batch | **K2.6 via Ollama Cloud Pro** — local-batch only if privacy-required and batch-tolerant |
+> | Client / employer / private-repo work | K2.6 cheap-cloud (unspecified) | **K2.6 via OpenRouter with pinned provider** — never Ollama shared pool |
+> | Offline / regulatory / sovereignty-hard | Local | **Local llama.cpp** (accept 0.3 tok/s batch) |
+> | Pure-math reasoning (rare) | Opus fallback | **GPT-5.x** ($2.50/$15 tier); mission-exception logged |
+
 **What this changes in the summary table** (updated 2026-04-22):
 
 > [!success] **$0 target and premium-cheap routing** (post-K2.6 update)

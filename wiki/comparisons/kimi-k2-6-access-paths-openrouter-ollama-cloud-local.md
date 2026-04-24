@@ -33,7 +33,13 @@ tags: [comparison, kimi, k2-6, openrouter, ollama-cloud, ktransformers, routing,
 
 ## Summary
 
-Three ways to reach K2.6: **OpenRouter** (pay-per-token cloud), **Ollama Cloud** (flat-rate cloud), and **Local KTransformers** (on-device). The parent [[src-kimi-k2-6-moonshot-agent-swarm|K2.6 synthesis]] describes each. This page operationalizes the choice — a decision flow the operator can consult per session, grounded in cost math, privacy posture, and throughput reality. The short version: **OpenRouter as the daily default, Ollama Cloud for heavy prototyping sessions, Local for anything touching private infrastructure or needing offline operation**. All three coexist in a single AICP `tier_map` — the choice is per-invocation, not a one-time commitment.
+Three ways to reach K2.6: **OpenRouter** (pay-per-token cloud), **Ollama Cloud** (flat-rate cloud), and **Local KTransformers / llama.cpp** (on-device). The parent [[src-kimi-k2-6-moonshot-agent-swarm|K2.6 synthesis]] describes each. This page operationalizes the choice — a decision flow the operator can consult per session, grounded in cost math, privacy posture, and throughput reality.
+
+> [!warning] Superseded summary (2026-04-23) — read the 2026-04-24 update below
+> Prior short version said "OpenRouter as the daily default." That framing was written before AICP's 2026-04-24 empirical analysis. The actual daily-default answer depends on whether the session is personal or client.
+
+> [!success] Current short version (post-AICP 2026-04-24 framework)
+> **Ollama Cloud Pro is the personal-daily default** (flat rate, mission-aligned open-weight, $27 CAD/mo). **OpenRouter is the client-daily default** (per-request visibility, pinnable provider). **Local is a sovereignty-insurance fallback**, not a primary path — measured 0.3 tok/s on operator's Tier-0 hardware is technically-working, not practically-usable. See [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]] for the full four-phase framework this update feeds into. All three coexist in AICP's `tier_map` — the choice is per-invocation, not a one-time commitment.
 
 ## Comparison Matrix
 
@@ -147,22 +153,24 @@ Three ways to reach K2.6: **OpenRouter** (pay-per-token cloud), **Ollama Cloud**
 
 ## Recommendation
 
-> [!success] Pick per session, not per project
+> [!success] Pick per session, not per project (updated 2026-04-23 after AICP 2026-04-24 postmortem)
 >
-> | Your session involves | Path |
-> |---|---|
-> | Wiki work, open-source research, reading public code | **OpenRouter** (daily default) |
-> | AICP development (operator's own stack) | **OpenRouter** — visibility for self-measurement |
-> | Personal prototype, volume-heavy iteration, no sensitive data | **Ollama Cloud** (cheaper past ~5.7M output tokens/month) |
-> | Employer repo, client code, credential-adjacent, monetizable work | **Local** (once E008 M003 lands) or **OpenRouter with vetted provider** |
-> | Offline, travel, outage, sovereignty-required | **Local** only |
-> | 300-agent swarm orchestration | **OpenRouter** or **Local** (Ollama Cloud untested) |
+> | Your session involves | Path | Why |
+> |---|---|---|
+> | Wiki work, open-source research, reading public code, AICP self-development | **Ollama Cloud Pro** (personal daily default) | Flat $27 CAD/mo; mission-aligned (open-weight); non-sensitive → shared pool acceptable |
+> | Employer repo, client code, credential-adjacent, monetizable work | **OpenRouter with pinned vetted provider** | Per-request cost visibility; provider-level quality pin; never Ollama shared pool |
+> | Short-horizon / light-volume one-off (<5M output tokens/mo) | **OpenRouter** (pay-per-token) | Below Ollama Pro breakeven; per-request billing cheapest |
+> | Long-horizon batch job that can tolerate 0.3 tok/s | **Local** llama.cpp | Sovereignty fallback; $0 marginal; actually usable at that throughput floor only for batch |
+> | Offline, travel, outage, regulatory data-residency | **Local** only | Sovereignty is the point; cost is secondary |
+> | 300-agent swarm orchestration | **OpenRouter** or **Local** | Ollama Cloud's compatibility layer untested for swarm API |
+> | Pure coding with cost-sensitivity and willing to accept closed-weight | **OpenRouter `gpt-5.1-codex-mini`** ($0.25/$2) | Cheaper than K2.6 for pure coding; mission-exception, log it |
 
-> [!warning] Anti-patterns to avoid
+> [!warning] Anti-patterns to avoid (extended post-postmortem)
 >
 > - **Don't route by preference** — the "which is cheapest right now" question is answered by session cost, not model vibe.
-> - **Don't default Ollama Cloud to "always on"** — the flat rate masks the privacy cost of misrouted sessions.
-> - **Don't wait for E008 M003 to configure paths 5a and 5b** — they're usable today and de-risk the 2026-04-27 subscription deadline independently.
+> - **Don't default Ollama Cloud to "always on" for everything** — the flat rate masks the privacy cost of misrouted sessions. Use it as the **personal-work** default, not the **all-work** default.
+> - **Don't treat "local K2.6 is running" as "local K2.6 is usable."** 0.3 tok/s on Tier-0 hardware is a sovereignty-insurance proof, not a functioning inference tier. Batch-tolerant work only.
+> - **Don't wait for Tier-1/2/3 hardware upgrade** to choose between 5a and 5b — they're independently usable today. Hardware is a separate Phase-3 decision per the [[ai-infrastructure-decision-framework-2026|framework]].
 
 ## Relationships
 

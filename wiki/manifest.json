@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-24T13:34:49.050600+00:00",
+  "generated": "2026-04-24T18:43:52.881312+00:00",
   "stats": {
-    "pages": 467,
+    "pages": 469,
     "domains": 9,
     "sources": 54,
     "comparisons": 8,
-    "relationships": 2821,
-    "tags_unique": 1315,
+    "relationships": 2836,
+    "tags_unique": 1328,
     "layers": {
       "3": 4,
       "5": 37,
@@ -15,10 +15,10 @@
       "4": 60,
       "0": 1,
       "1": 36,
-      "spine": 71
+      "spine": 73
     },
     "maturity": {
-      "growing": 315,
+      "growing": 317,
       "seed": 25,
       "mature": 2
     }
@@ -29222,6 +29222,140 @@
       ]
     },
     {
+      "path": "spine/references/ai-infrastructure-decision-framework-2026.md",
+      "slug": "spine/references/ai-infrastructure-decision-framework-2026",
+      "title": "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "reference",
+        "p0",
+        "ai-infrastructure",
+        "decision-framework",
+        "cost",
+        "capability",
+        "privacy",
+        "sovereignty",
+        "claude",
+        "gpt",
+        "codex",
+        "kimi",
+        "k2-6",
+        "openrouter",
+        "ollama-cloud",
+        "subscription",
+        "hardware-tier",
+        "mission",
+        "post-anthropic",
+        2026
+      ],
+      "sources": [
+        {
+          "id": "aicp-perspective-2026-04-24",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/PERSPECTIVE-AI-INFRASTRUCTURE-DECISION-2026-04-24.md",
+          "file": "raw/articles/aicp-perspective-ai-infrastructure-decision-2026-04-24.md",
+          "description": "AICP's strategic decision document \u2014 the operator-reviewed disillusion artifact. Source of the four-phase framework, the capability-vs-cost question, and the anti-patterns below."
+        },
+        {
+          "id": "aicp-postmortem-k26-local",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/POSTMORTEM-2026-04-24-k26-local-wrong-path.md",
+          "file": "raw/articles/aicp-postmortem-2026-04-24-k26-local-wrong-path.md",
+          "description": "The postmortem grounding why local K2.6 was the wrong primary path \u2014 two days, multiple tool-pivots, ending at 0.3 tok/s. Evidence for `local viability \u2260 local practicality` claim."
+        },
+        {
+          "id": "aicp-model-ecosystem-map",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/MODEL-ECOSYSTEM-FULL-MAP-2026-04-24.md",
+          "file": "raw/articles/aicp-model-ecosystem-full-map-2026-04-24.md",
+          "description": "Verified pricing matrix \u2014 Anthropic, OpenAI (GPT-5.x including codex variants), Moonshot, Google, DeepSeek, Z-AI, Qwen, Ollama Cloud. Source of the full-landscape numbers in this doc."
+        },
+        {
+          "id": "aicp-cloud-spend",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/CLOUD-SPEND-SCENARIOS-2026-04-24.md",
+          "file": "raw/articles/aicp-cloud-spend-scenarios-2026-04-24.md",
+          "description": "Cloud economics \u2014 OpenRouter vs Ollama Cloud vs Local, breakeven math, scenario-by-scenario monthly spend projections (CAD)."
+        },
+        {
+          "id": "aicp-hardware-build",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/HARDWARE-BUILD-SCENARIOS-2026-04-24.md",
+          "file": "raw/articles/aicp-hardware-build-scenarios-2026-04-24.md",
+          "description": "Three hardware tiers with CAD pricing ($15-19k / $32k / $65-80k), what each buys, upgrade paths, savings variants."
+        },
+        {
+          "id": "aicp-scaling-projection",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/SCALING-PROJECTION-5YR-2026-04-24.md",
+          "file": "raw/articles/aicp-scaling-projection-5yr-2026-04-24.md",
+          "description": "5-year token-volume projection for operator's specific workload pattern (2-3 personal sessions + 1-2 fleets of 10 agents)."
+        },
+        {
+          "id": "aicp-session-24-handoff",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/SESSION-2026-04-24-HANDOFF.md",
+          "file": "raw/articles/aicp-session-2026-04-24-handoff.md",
+          "description": "Operator's own framing of the 2026-04-24 session outcome, corrections, and open decisions."
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "AI Infrastructure Decision Framework 2026",
+        "AI Infrastructure Reality Check 2026",
+        "Vision \u2014 AI Infrastructure 2026"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer-Hardware AI Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "K2.6 Access Paths Comparison"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP vs CLI \u2014 Decision vs Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        }
+      ]
+    },
+    {
       "path": "spine/references/consumer-integration-roadmap-exemplar.md",
       "slug": "spine/references/consumer-integration-roadmap-exemplar",
       "title": "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)",
@@ -29506,6 +29640,89 @@
         {
           "verb": "RELATES TO",
           "target": "Methodology System Map"
+        }
+      ]
+    },
+    {
+      "path": "spine/references/local-training-playbook-2026.md",
+      "slug": "spine/references/local-training-playbook-2026",
+      "title": "Local Training Playbook 2026 \u2014 Wiki Alignment, Tool Calls, Semantic Enhancement",
+      "type": "operations-plan",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "operations-plan",
+        "training",
+        "lora",
+        "unsloth",
+        "wiki-alignment",
+        "tool-calls",
+        "semantic-enhancement",
+        "embeddings",
+        "local",
+        "qwen3",
+        "bge-m3",
+        "p1"
+      ],
+      "sources": [
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md",
+          "description": "Parent strategy doc \u2014 5 candidate approaches A/B/C/D/E. This playbook operationalizes the subset actually worth doing in 2026 Q2."
+        },
+        {
+          "id": "ai-infrastructure-decision-framework-2026",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-infrastructure-decision-framework-2026.md",
+          "description": "Framework doc \u2014 the specialty-routing + training-vs-rental section sets the economic context this playbook operates in."
+        },
+        {
+          "id": "src-unsloth-fast-lora-consumer-hardware",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "description": "Unsloth training mechanism \u2014 the toolchain this playbook assumes."
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Local Training Playbook 2026",
+        "Training Playbook \u2014 LoRA + Embeddings on Operator Hardware"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Unsloth"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Open-Model Evaluation Framework"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
         }
       ]
     },
@@ -31885,8 +32102,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 196,
-      "relationship_count": 1291
+      "page_count": 198,
+      "relationship_count": 1306
     },
     "ai-models": {
       "page_count": 14,
@@ -32354,7 +32571,8 @@
       "backlog/tasks/T043-author-inventory-models-script",
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
-      "backlog/tasks/T055-draft-harness-contract-outline"
+      "backlog/tasks/T055-draft-harness-contract-outline",
+      "spine/references/local-training-playbook-2026"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -32754,6 +32972,7 @@
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/operator-workstation-storage-tiering",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
@@ -32770,7 +32989,8 @@
       "backlog/tasks/T019-extend-pricing-table-for-k2-6",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "kimi-k2-6": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
@@ -32815,7 +33035,8 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
-      "backlog/milestones/post-anthropic-self-autonomous-stack"
+      "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ktransformers": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
@@ -32953,7 +33174,8 @@
       "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "log/2026-04-23-k2-6-q2-download-complete",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "circuit-breaker": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
@@ -32972,7 +33194,8 @@
       "backlog/modules/e012-m001-unsloth-toolchain-install",
       "backlog/tasks/T058-create-unsloth-venv",
       "log/2026-04-23-k2-6-q2-download-complete",
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/local-training-playbook-2026"
     ],
     "lora": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
@@ -32980,6 +33203,7 @@
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
       "backlog/modules/e012-m003-wiki-router-candidate-d",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/local-training-playbook-2026",
       "spine/references/second-brain-custom-model-strategy"
     ],
     "fine-tuning": [
@@ -33358,6 +33582,7 @@
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
       "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
       "spine/goldilocks-flow",
+      "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/consumer-integration-roadmap-exemplar",
       "spine/references/context-file-taxonomy",
       "spine/references/frontmatter-field-reference",
@@ -33440,7 +33665,8 @@
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T020-parameterize-localai-backend-config-key",
-      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main"
+      "backlog/tasks/T021-register-k2-6-local-instance-in-cli-main",
+      "spine/references/local-training-playbook-2026"
     ],
     "failover": [
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
@@ -33658,7 +33884,8 @@
       "backlog/tasks/T002-run-openrouter-smoke-tests"
     ],
     "gpt": [
-      "backlog/tasks/T002-run-openrouter-smoke-tests"
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "blkid": [
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive"
@@ -33730,7 +33957,8 @@
     ],
     "cost": [
       "backlog/tasks/T019-extend-pricing-table-for-k2-6",
-      "patterns/01_drafts/agent-execution-cost-optimization-stack"
+      "patterns/01_drafts/agent-execution-cost-optimization-stack",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "is-available": [
       "backlog/tasks/T022-implement-fast-tcp-probe-is-available"
@@ -34014,11 +34242,13 @@
     ],
     "kimi": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ollama-cloud": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "access-paths": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
@@ -34041,7 +34271,8 @@
     ],
     "privacy": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
-      "sources/tools-integration/src-gemma4-searxng-openclaw"
+      "sources/tools-integration/src-gemma4-searxng-openclaw",
+      "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "decision-support": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local"
@@ -34375,7 +34606,8 @@
     ],
     "qwen3": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model"
+      "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "spine/references/local-training-playbook-2026"
     ],
     "vram": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
@@ -34690,6 +34922,7 @@
     ],
     "claude": [
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/root-documentation-map"
     ],
     "backend-selection": [
@@ -35625,6 +35858,7 @@
     ],
     "operations-plan": [
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
+      "spine/references/local-training-playbook-2026",
       "spine/references/second-brain-integration-chain",
       "spine/standards/operations-plan-page-standards"
     ],
@@ -37351,7 +37585,8 @@
       "sources/src-7-levels-claude-code-rag"
     ],
     "embeddings": [
-      "sources/src-7-levels-claude-code-rag"
+      "sources/src-7-levels-claude-code-rag",
+      "spine/references/local-training-playbook-2026"
     ],
     "agentic-systems": [
       "sources/src-anthropic-building-effective-ai-agents"
@@ -37826,7 +38061,8 @@
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
     "training": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/references/local-training-playbook-2026"
     ],
     "moe-training": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
@@ -37976,6 +38212,33 @@
     "2026-landscape": [
       "spine/references/2026-consumer-hardware-ai-stack"
     ],
+    "ai-infrastructure": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "decision-framework": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "capability": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "sovereignty": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "codex": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "subscription": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "hardware-tier": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "mission": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "2026": [
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
     "roadmap": [
       "spine/references/consumer-integration-roadmap-exemplar"
     ],
@@ -38018,6 +38281,18 @@
     ],
     "parameters": [
       "spine/references/frontmatter-field-reference"
+    ],
+    "wiki-alignment": [
+      "spine/references/local-training-playbook-2026"
+    ],
+    "tool-calls": [
+      "spine/references/local-training-playbook-2026"
+    ],
+    "semantic-enhancement": [
+      "spine/references/local-training-playbook-2026"
+    ],
+    "bge-m3": [
+      "spine/references/local-training-playbook-2026"
     ],
     "system-map": [
       "spine/references/methodology-system-map"
@@ -38173,6 +38448,7 @@
         "Kimi K2.6 Access Paths \u2014 OpenRouter vs Ollama Cloud vs Local KTransformers",
         "Session 2026-04-17 Summary",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
         "Operator Workstation \u2014 Storage Tiering (authoritative disk map)",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
@@ -38568,6 +38844,12 @@
       ]
     },
     {
+      "target": "K2.6 Access Paths Comparison",
+      "referenced_by": [
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+      ]
+    },
+    {
       "target": "LLM Architecture Gallery",
       "referenced_by": [
         "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI"
@@ -38587,6 +38869,12 @@
         "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
         "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "MCP vs CLI \u2014 Decision vs Lesson",
+      "referenced_by": [
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
     {
@@ -38652,6 +38940,8 @@
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
+        "Local Training Playbook 2026 \u2014 Wiki Alignment, Tool Calls, Semantic Enhancement",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Operator Workstation \u2014 Storage Tiering (authoritative disk map)",
@@ -38714,9 +39004,21 @@
       ]
     },
     {
+      "target": "Principle 4",
+      "referenced_by": [
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+      ]
+    },
+    {
       "target": "Principle 4 \u2014 Declarations Aspirational",
       "referenced_by": [
         "Session 2026-04-17 Summary"
+      ]
+    },
+    {
+      "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them",
+      "referenced_by": [
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
     {
@@ -38725,7 +39027,8 @@
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "Kimi K2.6 Access Paths \u2014 OpenRouter vs Ollama Cloud vs Local KTransformers",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
-        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+        "Local Training Playbook 2026 \u2014 Wiki Alignment, Tool Calls, Semantic Enhancement"
       ]
     },
     {
@@ -38876,7 +39179,8 @@
         "E007 \u2014 OpenRouter Deadline De-Risk (Claude Code CLI \u2192 K2.6)",
         "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
-        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
     {
@@ -38925,6 +39229,7 @@
         "E012 \u2014 Custom Model Library (Unsloth LoRAs on Wiki Corpus)",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
+        "Local Training Playbook 2026 \u2014 Wiki Alignment, Tool Calls, Semantic Enhancement",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
       ]
     },
