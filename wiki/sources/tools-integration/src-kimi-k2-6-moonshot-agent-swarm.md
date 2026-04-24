@@ -268,3 +268,4 @@ Tier 4 (premium, rare)            : Direct Anthropic/OpenAI/Moonshot APIs
 [[Synthesis — Unsloth]]
 [[Synthesis — TurboQuant]]
 [[Principle 4 — Declarations Aspirational Until Verified]]
+[[kimi-k2-6-access-paths-openrouter-ollama-cloud-local|Kimi K2.6 Access Paths — OpenRouter vs Ollama Cloud vs Local KTransformers]]
