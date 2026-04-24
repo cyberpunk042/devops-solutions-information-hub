@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-24T19:17:59.061750+00:00",
+  "generated": "2026-04-24T19:34:24.945385+00:00",
   "stats": {
-    "pages": 473,
+    "pages": 474,
     "domains": 9,
     "sources": 58,
     "comparisons": 8,
-    "relationships": 2858,
-    "tags_unique": 1351,
+    "relationships": 2867,
+    "tags_unique": 1358,
     "layers": {
       "3": 4,
       "5": 37,
@@ -15,10 +15,10 @@
       "4": 60,
       "0": 1,
       "1": 40,
-      "spine": 73
+      "spine": 74
     },
     "maturity": {
-      "growing": 321,
+      "growing": 322,
       "seed": 25,
       "mature": 2
     }
@@ -29765,6 +29765,137 @@
       ]
     },
     {
+      "path": "spine/references/ai-model-provider-harness-decision-matrix-2026.md",
+      "slug": "spine/references/ai-model-provider-harness-decision-matrix-2026",
+      "title": "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "reference",
+        "p0",
+        "decision-matrix",
+        "ai-models",
+        "providers",
+        "harnesses",
+        "k2-6",
+        "gpt-5",
+        "opus",
+        "glm-4-7",
+        "deepseek",
+        "gemini",
+        "resilience",
+        "routing",
+        2026
+      ],
+      "sources": [
+        {
+          "id": "ai-infra-framework-2026",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-infrastructure-decision-framework-2026.md",
+          "description": "Parent vision doc \u2014 this matrix operationalizes its Specialty Routing + Resilience Playbook sections as a single-page lookup table"
+        },
+        {
+          "id": "harness-landscape",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-agentic-coding-harness-landscape-2026.md",
+          "description": "11+ harnesses with BYOM-vs-product split"
+        },
+        {
+          "id": "provider-landscape",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-inference-provider-landscape-2026.md",
+          "description": "10+ inference providers with verified 2026 pricing"
+        },
+        {
+          "id": "k2-6-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md",
+          "description": "K2.6 details for the default agentic model"
+        },
+        {
+          "id": "openrouter-glm-4-7",
+          "type": "api-documentation",
+          "url": "https://openrouter.ai/z-ai/glm-4.7",
+          "title": "GLM 4.7 \u2014 API Pricing & Providers | OpenRouter",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "deepseek-pricing",
+          "type": "api-documentation",
+          "url": "https://pricepertoken.com/pricing-page/provider/deepseek",
+          "title": "DeepSeek API Pricing (2026)",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "llm-stats-deepseek",
+          "type": "article",
+          "url": "https://llm-stats.com/models/deepseek-v3",
+          "title": "DeepSeek-V3 Pricing, Benchmarks & Performance",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "aicp-model-ecosystem-full-map",
+          "type": "documentation",
+          "project": "aicp",
+          "path": "docs/MODEL-ECOSYSTEM-FULL-MAP-2026-04-24.md",
+          "file": "raw/articles/aicp-model-ecosystem-full-map-2026-04-24.md",
+          "description": "AICP's verified provider-pricing map (companion source)"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026",
+        "AI Decision Matrix 2026",
+        "Model-Provider-Harness Matrix",
+        "Unified AI Stack Lookup"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Kimi K2.6 Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness Landscape 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Inference Provider Landscape 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Codex CLI + Plugin"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Claude Code Harness Features"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Local Training Playbook 2026"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        }
+      ]
+    },
+    {
       "path": "spine/references/consumer-integration-roadmap-exemplar.md",
       "slug": "spine/references/consumer-integration-roadmap-exemplar",
       "title": "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)",
@@ -32511,8 +32642,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 198,
-      "relationship_count": 1306
+      "page_count": 199,
+      "relationship_count": 1315
     },
     "ai-models": {
       "page_count": 14,
@@ -32806,6 +32937,7 @@
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/src-anthropic-building-effective-ai-agents",
       "spine/goldilocks-flow",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026",
       "spine/references/open-model-evaluation-framework"
     ],
     "flow": [
@@ -33386,6 +33518,7 @@
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
       "spine/references/ai-infrastructure-decision-framework-2026",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026",
       "spine/references/operator-workstation-storage-tiering",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
@@ -33592,7 +33725,8 @@
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "log/2026-04-23-k2-6-q2-download-complete",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "spine/references/ai-infrastructure-decision-framework-2026"
+      "spine/references/ai-infrastructure-decision-framework-2026",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "circuit-breaker": [
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
@@ -34001,6 +34135,7 @@
       "domains/cross-domain/methodology-artifacts/chains/artifact-chains-by-model",
       "spine/goldilocks-flow",
       "spine/references/ai-infrastructure-decision-framework-2026",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026",
       "spine/references/consumer-integration-roadmap-exemplar",
       "spine/references/context-file-taxonomy",
       "spine/references/frontmatter-field-reference",
@@ -34299,7 +34434,8 @@
       "backlog/tasks/T002-run-openrouter-smoke-tests"
     ],
     "opus": [
-      "backlog/tasks/T002-run-openrouter-smoke-tests"
+      "backlog/tasks/T002-run-openrouter-smoke-tests",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "gpt": [
       "backlog/tasks/T002-run-openrouter-smoke-tests",
@@ -38001,7 +38137,8 @@
       "sources/src-27-questions-llm-selection",
       "sources/src-hrm-trm-tiny-recursion-models",
       "sources/src-llm-architecture-gallery-raschka",
-      "spine/domain-overviews/ai-models-domain-overview"
+      "spine/domain-overviews/ai-models-domain-overview",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "decision-criteria": [
       "sources/src-27-questions-llm-selection"
@@ -38432,12 +38569,14 @@
     ],
     "resilience": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
-      "sources/tools-integration/src-inference-provider-landscape-2026"
+      "sources/tools-integration/src-inference-provider-landscape-2026",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "2026": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-inference-provider-landscape-2026",
-      "spine/references/ai-infrastructure-decision-framework-2026"
+      "spine/references/ai-infrastructure-decision-framework-2026",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
     "airllm": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
@@ -38749,6 +38888,27 @@
     "mission": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
+    "decision-matrix": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "providers": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "harnesses": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "gpt-5": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "glm-4-7": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "deepseek": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "gemini": [
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
     "roadmap": [
       "spine/references/consumer-integration-roadmap-exemplar"
     ],
@@ -39058,6 +39218,12 @@
       ]
     },
     {
+      "target": "Codex CLI + Plugin",
+      "referenced_by": [
+        "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+      ]
+    },
+    {
       "target": "Consumer Integration Roadmap Exemplar",
       "referenced_by": [
         "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth"
@@ -39330,7 +39496,8 @@
     {
       "target": "Harness Landscape 2026",
       "referenced_by": [
-        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)"
+        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
+        "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
       ]
     },
     {
@@ -39370,6 +39537,12 @@
       "referenced_by": [
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+      ]
+    },
+    {
+      "target": "Kimi K2.6 Synthesis",
+      "referenced_by": [
+        "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
       ]
     },
     {
@@ -39534,7 +39707,8 @@
         "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
         "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
-        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
+        "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
       ]
     },
     {
