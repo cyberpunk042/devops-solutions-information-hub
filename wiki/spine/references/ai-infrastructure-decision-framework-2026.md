@@ -111,17 +111,17 @@ Closed-weight providers are not "off-limits" — they are specialty vendors with
 >
 > | Provider / Model | Unique specialty | Reach for it when | Why not the default |
 > |---|---|---|---|
-> | **Anthropic Claude Code harness** | The agent-loop product itself (IDE, skills, hooks, MCP) | Any session where the harness is load-bearing, regardless of which model runs inside | Harness is separable from model choice — route via `ANTHROPIC_BASE_URL` |
+> | **Anthropic Claude Code harness** ([[src-claude-code-harness-features\|full synthesis]]) | TUI + skills (SKILL.md + 16 frontmatter fields, dual-mode invocation) + hooks (8 lifecycle events incl. PreToolUse that can deny/modify tool calls) + plugins (git-repo bundles via marketplace) + subagents (fresh-context parallel tasks with foreground/background) + MCP support + Opus 4.7 + 1M context | Any session where the harness is load-bearing, regardless of which model runs inside | Harness is separable from model choice — route via `ANTHROPIC_BASE_URL` |
 > | **Claude Opus** (current) | Creative-technical synthesis; tone fidelity; constitutional-AI behavior for sensitive reasoning | Wiki synthesis where tone + structure + reasoning combine; sensitive decision framing | $15/$75 per M vs K2.6's $0.80/$3.50 — reserve for tasks where Opus's specific behavior is load-bearing |
 > | **Future Claude** (e.g. Mythos if/when it lands) | Unknown; track and re-evaluate | When it lands and shows a clear capability delta | Don't pre-commit to subscription before measurement |
-> | **GPT-5.1-codex family** | Coding-specialized; `codex-mini` at $0.25/$2 is cheapest coding-capable tier | Pure coding tasks with tight cost budget; adversarial code review (GPT as critic vs K2.6 as author) | General agentic work — K2.6 leads on SWE-Bench Pro despite price |
-> | **GPT-5.4 / 5.4-pro** | Long context (1.05M vs K2.6's 262K); pure-math reasoning (AIME 96-99 vs K2.6 ~92) | Very-long-context synthesis; math-heavy workloads; adversarial review of an agentic workflow | 4× price of K2.6 on output; don't use for general agentic work |
-> | **GPT + K2.6 together** | Adversarial-review pattern: one writes, the other critiques | High-stakes architecture decisions, security reviews, cross-checking synthesis quality | Routine work where single-model output is good enough |
+> | **OpenAI Codex CLI + Codex Plugin for Claude Code** ([[src-codex-cli-and-claude-code-plugin\|full synthesis]]) | Codex TUI + the plugin that exposes `/codex:review`, `/codex:adversarial-review`, `/codex:rescue`, `/codex:status`, `/codex:result`, `/codex:cancel`, `/codex:setup` inside Claude Code. Adversarial-review is a documented command with `--base`, `--background`, `--wait` flags; read-only; structured JSON output (severity + line numbers + impact + suggested fixes); tests 7 attack surfaces (auth, data loss, rollbacks, race conditions, dependencies, version skew, observability) | Any code review that benefits from the adversarial-review command; delegation via `/codex:rescue` | Routine coding — K2.6 + Claude Code harness is cheaper and mission-aligned |
+> | **GPT-5.1-codex family** | Coding-specialized models accessible via API; `codex-mini` at $0.25/$2 is cheapest coding-capable tier | Coding tasks with tight cost budget; the API access path to codex-family models when not using Codex CLI itself | General agentic work — K2.6 leads on SWE-Bench Pro despite price |
+> | **GPT-5.4 / 5.4-pro** | Long context (1.05M vs K2.6's 262K); pure-math reasoning (AIME 96-99 vs K2.6 ~92) | Very-long-context synthesis; math-heavy workloads | 4× price of K2.6 on output; don't use for general agentic work |
 > | **Kimi K2.6** | Agentic frontier; 300-agent swarm; open-weight mission-alignment | General agentic coding, wiki synthesis, research pipelines | Pure-math corners, ultra-long context, certain creative-tone tasks |
 > | **Google Gemini 3.1 Pro** | Multimodal understanding (MMMU-Pro 83.0 vs K2.6's 79.4) | Image/video/UI review; diagram extraction; multimodal research | Text-only agentic work — doesn't justify the context-switch |
 > | **Local K2.6 Q2** | Sovereignty; offline; zero marginal cost on batch work | Confidential code; offline sessions; regulatory data-residency; long-running batch jobs tolerant of 0.3 tok/s | Interactive sessions — throughput floor is the practicality ceiling |
 >
-> **The adversarial-review specialty is worth naming explicitly:** pair K2.6 (author) + GPT-5.x (critic) on high-stakes decisions. K2.6 tends toward confident forward motion; GPT tends to surface risks and edge cases. Neither model is "better" — the pair is better than either alone. This is NOT doubled cost per decision; it's ~1.2× cost for substantially higher confidence on the handful of decisions where it matters.
+> **Note on Codex's adversarial-review:** it is a Codex CLI feature/command, not a generic cross-provider pattern to reinvent in AICP. When the operator wants adversarial review of code, running Codex's command is the right move — that's the specialty. Trying to replicate it as an AICP routing shape is premature abstraction.
 
 ## The Full Provider Landscape
 
@@ -221,7 +221,8 @@ Closed-weight providers are not "off-limits" — they are specialty vendors with
 > | OpenArms / OpenFleet agent development | OpenRouter K2.6 primary | Mission-aligned, visible cost |
 > | Client/employer work, private repos | OpenRouter K2.6 with pinned provider OR local-when-usable | Never Ollama shared pool |
 > | Pure coding at small-task scale | OpenRouter `gpt-5.1-codex-mini` ($0.25/$2) | Cheapest coding tier; specialty routing (not default lock-in) |
-> | High-stakes decision, architecture review, security review | **K2.6 author + GPT-5.1-codex critic** (adversarial pair) | Two-model review surfaces risks neither would alone; ~1.2× cost for substantially higher confidence |
+> | Adversarial review of code (security / correctness critique) | **`/codex:adversarial-review`** via Codex Plugin for Claude Code ([[src-codex-cli-and-claude-code-plugin\|docs]]) | Documented product command; read-only JSON output; tests 7 attack surfaces; use the command, don't rebuild it in AICP |
+> | Delegation of a stuck task to a different coding agent | **`/codex:rescue`** via Codex Plugin for Claude Code | Documented delegation command; supports `--background` + `/codex:status` polling |
 > | Creative-technical writing where tone + structure + reasoning combine | Opus-tier via Anthropic API | Specialty: Opus's tone fidelity is load-bearing for wiki synthesis and operator-voice material |
 > | Multimodal review (diagrams, UI mockups, video) | Gemini 3.1 Pro via OpenRouter | Gemini's MMMU-Pro edge; rare but real use |
 > | Long-context research synthesis (>200K tokens) | OpenRouter K2.6 (262K) or `gpt-5.4` (1.05M) | Context-size-driven choice |
@@ -253,6 +254,72 @@ Closed-weight providers are not "off-limits" — they are specialty vendors with
 > - **Expected Phase 1 spend**: $40-70 CAD/mo. **1/8 to 1/10 of prior baseline.**
 >
 > The smart-routed replacement is measurably cheaper than the prior single-provider habit. 5-year savings from the routing change alone: $12-18K CAD. Zero hardware required.
+
+## Resilience Playbook — Non-Lock-In Substitution Matrix
+
+The mission is not "use open-weight only" — it's **no single-provider dependency at either the harness or model layer**. This section is the operational playbook: when a provider/harness changes terms, goes down, or becomes unacceptable, **what replaces it and how fast**.
+
+### Two-layer substitution — harness × model
+
+Every working stack has a harness (the tool operator uses) and a model (the intelligence running inside). The operator's daily defaults and first-substitutes:
+
+| Layer | Current default | First substitute | Second substitute | Switch-cost |
+|---|---|---|---|---|
+| **Harness** | Claude Code + Codex Plugin | OpenCode (Go, 75+ providers, 95K stars) | Aider (token-efficient) | ~1h — config provider, port skills to SKILL.md |
+| **Model — general agentic** | Kimi K2.6 via OpenRouter | K2.6 via Moonshot direct | GLM 4.7 via Ollama Cloud | Minutes — env var change |
+| **Model — specialty: coding tight budget** | gpt-5.1-codex-mini via OpenRouter | gpt-5.1-codex-mini via OpenAI direct | Aider + K2.6 for mission-aligned substitute | Minutes |
+| **Model — specialty: adversarial review** | `/codex:adversarial-review` (Codex Plugin) | Prompted review skill in OpenCode/Claude Code against K2.6 | Manual review + K2.6 as critic | Hours — skill authoring; loses exact product semantics |
+| **Model — specialty: creative/tone** | Opus via Anthropic direct | K2.6 with careful prompting | GPT-5.4 | Hours — tone prompt tuning |
+| **Provider — cloud aggregator** | OpenRouter | Together AI (175 models, own GPUs) | Direct provider accounts | Hours — API key swap |
+| **Provider — flat-rate open-weight** | Ollama Cloud Pro | OpenRouter pay-per-token on K2.6 | DeepInfra (cheapest open-weight) | Minutes |
+| **Provider — speed-critical** | (not currently active) | Cerebras (~1000 TPS, 1M/day free) | Groq (315 TPS, free tier) | Minutes — add provider to config |
+| **Sovereignty fallback** | Local K2.6 Q2 via llama.cpp at 0.3 tok/s | (no further fallback needed — this IS the fallback) | — | Already configured |
+
+See [[src-agentic-coding-harness-landscape-2026|Harness Landscape 2026]] and [[src-inference-provider-landscape-2026|Inference Provider Landscape 2026]] for the full matrices with 10+ options in each layer.
+
+### Failure-mode playbook (what to do when X happens)
+
+> [!warning] Runbook for provider/harness disruptions
+>
+> | Trigger | First action (minutes) | Second action (hours) | Decision point (days) |
+> |---|---|---|---|
+> | **Anthropic changes Claude Code terms / pricing** | Switch primary harness to OpenCode (already BYOM-configured); point at K2.6 via OpenRouter | Port project skills from `.claude/skills/` → OpenCode skills (Agent Skills open standard is portable) | After 2 weeks of OpenCode: decide whether to keep Claude Code as specialty-harness or drop entirely |
+> | **Anthropic Opus pricing climbs** | K2.6 covers ~90% of what Opus was used for; specific tone-critical tasks fall to GPT-5.4 | Refine the ~10% tone-specialty cases with structured prompting on K2.6 | After 1 month: formalize the "Opus-only" task set or accept K2.6 as complete substitute |
+> | **OpenAI changes Codex CLI / API terms** | Drop `/codex:adversarial-review` command; author equivalent skill in Claude Code/OpenCode prompting the 7 attack surfaces | The skill covers ~80% of command value; remaining 20% is command-workflow polish | Decide if adversarial-review specialty is load-bearing enough to chase Codex elsewhere |
+> | **OpenRouter outage / 5.5% fee climbs** | Direct provider accounts activate (Moonshot for K2.6, OpenAI for GPT, Anthropic for Opus) — kept warm even unused | Switch AICP tier_map to direct endpoints | If OR becomes unreliable pattern: shift permanent daily default to direct providers |
+> | **Moonshot discontinues K2.6 open-weight** | Route K2.6 traffic to GLM 4.7 (via Ollama Cloud) or DeepSeek v3 | Re-evaluate which model is new "agentic frontier mission-anchor" | Days — compare candidates on operator's actual workload |
+> | **Ollama Cloud changes pricing / model mix** | OpenRouter K2.6 pay-per-token covers the same daily work (breakeven crosses back) | Add DeepInfra for high-volume open-weight | After 30 days: decide if flat-rate subscription is still the right shape |
+> | **Hardware becomes inadequate** (model grows past Tier 0) | Paid cloud continues; local tier passive until next gen | Research Tier 1 hardware or Blackwell availability | Review per the hardware decision framework above |
+> | **Multiple providers fail simultaneously (aggregator + direct)** | Local K2.6 Q2 at 0.3 tok/s for batch work; Gemini free tier for interactive | This is a 1-in-N-year event; survival-mode, not optimization-mode | After incident: write the post-mortem; adjust redundancy strategy |
+
+### Keep-warm accounts (non-lock-in infrastructure)
+
+> [!success] Maintain these accounts active even when not primary
+>
+> Switch-cost is proportional to how long the account has been inactive. Recommendation: keep active API-key accounts with:
+>
+> - **Anthropic direct** — $0/mo if unused; available instantly for Opus specialty
+> - **OpenAI direct** — $0/mo if unused; Codex CLI path + Gemini-context-size specialty
+> - **Moonshot direct** — $0/mo if unused; K2.6 without OpenRouter middleman
+> - **Together AI** — $0/mo if unused; second aggregator when OpenRouter is primary
+> - **Cerebras** — 1M tokens/day **free**; always-on speed option
+> - **Groq** — free tier; always-on low-latency option
+> - **Gemini API** — generous free tier; multimodal + long-context + experimental
+>
+> Operator cost to maintain all of these: **$0/month** (none require minimum spend). Switch-cost reduction: **hours not days**. Mission-resilience: verified via account presence, not asserted.
+
+### Price-monitoring and change-detection
+
+The framework and syntheses are **snapshots** (verified 2026-04-22 through 2026-04-24). Prices, terms, and capabilities will shift. Mission-aligned practice:
+
+1. **Quarterly review of the pricing matrices** in [[src-inference-provider-landscape-2026|Inference Provider Landscape]] and the MODEL-ECOSYSTEM-FULL-MAP from AICP's 2026-04-24 session.
+2. **Alert triggers for change-detection** — set up monitoring (or periodic manual check) on: OpenRouter K2.6 price (currently $0.80/$3.50), Ollama Cloud Pro ($20/mo), Anthropic Opus per-token (~$15/$75), OpenAI GPT-5.4 ($2.50/$15).
+3. **After any >20% price change**: re-run the breakeven math in [[ai-infrastructure-decision-framework-2026|this framework]]; adjust tier_map and default routing.
+4. **After any new major-model release** (K3, GPT-6, Claude 5, Gemini 4): re-synthesize as a source and compare against current defaults — the [[open-model-evaluation-framework|Open-Model Evaluation Framework]] is designed for exactly this.
+
+### The anti-fragile posture
+
+The mission-aligned stack is **more capable AFTER a provider disruption than before** — each substitution forced by an outage or price change exposes a new fallback path that becomes permanently part of the operator's vocabulary. 2026-04-22's AICP empirical session is the operator's proof-of-concept: two days of attempting local K2.6 produced the postmortem, the hardware-build-scenarios doc, the full ecosystem map, and the decision framework you're reading. **Disruption became infrastructure.**
 
 ## Training: Local Unsloth/LoRA vs Cloud GPU Rental
 

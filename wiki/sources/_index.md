@@ -43,9 +43,13 @@ Source synthesis pages — one per ingested source.
 - [Synthesis — Rethinking AI Agents — The Rise of Harness Engineering (YouTube Meta-Synthesis)](src-rethinking-ai-agents-harness-engineering-rise.md) — YouTube video that explicitly synthesizes the harness-engineering convergence happening across the field as of March ...
 - [Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture](src-skillmd-claudemd-agentsmd-three-layer-context.md) — This source compares the three primary agent configuration file types in the modern AI development ecosystem — CLAUDE
 - [Source — vercel-labs/opensrc: Source Code Access Toolkit for AI Agents](src-vercel-opensrc-toolkit.md) — `opensrc` is a Vercel Labs open-source CLI tool, written in Rust and distributed via npm, that gives AI coding agents...
+- [Synthesis — Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)](tools-integration/src-agentic-coding-harness-landscape-2026.md) — The agentic coding harness market in April 2026 has ~15 serious contenders
 - [Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload](tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md) — AirLLM is a Python library (Apache-2
+- [Synthesis — Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)](tools-integration/src-claude-code-harness-features.md) — Claude Code is Anthropic's agentic coding CLI — a TUI harness with a structured extension system comprising **skills*...
+- [Synthesis — OpenAI Codex CLI and the Codex Plugin for Claude Code](tools-integration/src-codex-cli-and-claude-code-plugin.md) — **Codex CLI** is OpenAI's coding-workflow CLI product (not the Codex model family — the product shares the name)
 - [Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw](tools-integration/src-gemma4-searxng-openclaw.md) — A practical tutorial on running OpenClaw 100% free and 100% private using Google's Gemma 4 open-source models via Oll...
 - [Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)](tools-integration/src-gpt-oss-openai-open-weight-moe.md) — In August 2025 OpenAI released **gpt-oss-20b** (21B total params, 3
+- [Synthesis — Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)](tools-integration/src-inference-provider-landscape-2026.md) — The operator's mission-critical question isn't "which provider is cheapest today?" — it's "**if my current provider c...
 - [Synthesis — Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model](tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md) — On **2026-04-20**, Moonshot AI released **Kimi K2
 - [Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens](tools-integration/src-playwright-cli-vs-mcp.md) — A direct side-by-side comparison of Playwright's MCP server integration vs
 - [Synthesis — Playwright MCP for Visual Development Testing](tools-integration/src-playwright-mcp-visual-testing.md) — Demonstrates how to embed Playwright MCP into a front-end development workflow so that Claude Code can see and verify...
@@ -61,4 +65,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `ai-agents`, `skills`, `mcp`, `harness-engineering`, `cost-optimization`, `obsidian`, `notebooklm`, `cli`, `automation`, `hooks`, `aicp`, `context-management`, `subagents`, `context-engineering`, `source-synthesis`, `knowledge-base`, `local-llm`, `methodology`, `moe`
+`claude-code`, `ai-agents`, `skills`, `mcp`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `subagents`, `notebooklm`, `automation`, `aicp`, `context-management`, `slash-commands`, `context-engineering`, `source-synthesis`, `knowledge-base`, `anthropic`, `local-llm`

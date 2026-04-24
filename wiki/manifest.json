@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-24T18:43:52.881312+00:00",
+  "generated": "2026-04-24T19:17:59.061750+00:00",
   "stats": {
-    "pages": 469,
+    "pages": 473,
     "domains": 9,
-    "sources": 54,
+    "sources": 58,
     "comparisons": 8,
-    "relationships": 2836,
-    "tags_unique": 1328,
+    "relationships": 2858,
+    "tags_unique": 1351,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,11 +14,11 @@
       "2": 51,
       "4": 60,
       "0": 1,
-      "1": 36,
+      "1": 40,
       "spine": 73
     },
     "maturity": {
-      "growing": 317,
+      "growing": 321,
       "seed": 25,
       "mature": 2
     }
@@ -25799,6 +25799,110 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-agentic-coding-harness-landscape-2026.md",
+      "slug": "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "title": "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "harness",
+        "cli",
+        "agentic-coding",
+        "claude-code",
+        "codex",
+        "opencode",
+        "aider",
+        "cline",
+        "cursor",
+        "gemini-cli",
+        "continue",
+        "crush",
+        "goose",
+        "vendor-lock-in",
+        "resilience",
+        2026
+      ],
+      "sources": [
+        {
+          "id": "artificialanalysis-agents-coding",
+          "type": "article",
+          "url": "https://artificialanalysis.ai/agents/coding",
+          "title": "Coding Agents Comparison \u2014 Artificial Analysis",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "tembo-cli-tools-2026",
+          "type": "article",
+          "url": "https://www.tembo.io/blog/coding-cli-tools-comparison",
+          "title": "The 2026 Guide to Coding CLI Tools: 15 AI Agents Compared \u2014 Tembo",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "morphllm-best-agents-2026",
+          "type": "article",
+          "url": "https://www.morphllm.com/best-ai-coding-agents-2026",
+          "title": "14 Best AI Coding Agents in 2026: Ranked by Benchmarks and Real Usage",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "morphllm-alternatives",
+          "type": "article",
+          "url": "https://www.morphllm.com/comparisons/claude-code-alternatives",
+          "title": "Claude Code Alternatives (2026): 11 Tested, 3 That Beat It for Under $20/mo",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "jock-harness-comparison",
+          "type": "article",
+          "url": "https://thoughts.jock.pl/p/ai-coding-harness-agents-2026",
+          "title": "Claude Code vs Codex CLI vs Aider vs OpenCode vs Pi vs Cursor",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "aimultiple-agentic-cli",
+          "type": "article",
+          "url": "https://aimultiple.com/agentic-cli",
+          "title": "Agentic CLI Tools Compared",
+          "ingested": "2026-04-23"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Agentic Coding Harness Landscape 2026",
+        "Harness Alternatives 2026",
+        "Coding CLI Landscape"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Claude Code Harness Features"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Codex CLI + Plugin"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md",
       "slug": "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
       "title": "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
@@ -25882,6 +25986,205 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-claude-code-harness-features.md",
+      "slug": "sources/tools-integration/src-claude-code-harness-features",
+      "title": "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "anthropic",
+        "harness",
+        "skills",
+        "hooks",
+        "plugins",
+        "subagents",
+        "mcp",
+        "agent-sdk",
+        "agent-skills-standard",
+        "opus-4-7",
+        "1m-context",
+        "slash-commands"
+      ],
+      "sources": [
+        {
+          "id": "cc-skills-docs",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/skills",
+          "title": "Extend Claude with skills \u2014 Claude Code Docs",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "cc-hooks-guide",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "title": "Automate workflows with hooks \u2014 Claude Code Docs",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "cc-subagents",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "title": "Create custom subagents \u2014 Claude Code Docs",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "cc-agent-sdk",
+          "type": "documentation",
+          "url": "https://platform.claude.com/docs/en/agent-sdk/overview",
+          "title": "Agent SDK overview \u2014 Claude API Docs",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "cc-plugins",
+          "type": "documentation",
+          "url": "https://code.claude.com/docs/en/plugins",
+          "title": "Plugins \u2014 Claude Code Docs",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "agentskills-standard",
+          "type": "documentation",
+          "url": "https://agentskills.io",
+          "title": "Agent Skills open standard",
+          "ingested": "2026-04-23"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
+        "Claude Code Harness Features",
+        "Claude Code 2026 Feature Reference"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Codex CLI + Codex Plugin for Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-codex-cli-and-claude-code-plugin.md",
+      "slug": "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "title": "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "codex",
+        "codex-cli",
+        "openai",
+        "claude-code",
+        "adversarial-review",
+        "plugin",
+        "slash-commands",
+        "mcp",
+        "agent-skills",
+        "gpt-5-5",
+        "code-review",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "codex-cli-features",
+          "type": "documentation",
+          "url": "https://developers.openai.com/codex/cli/features",
+          "title": "Features \u2014 Codex CLI | OpenAI Developers",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "codex-cli-slash-commands",
+          "type": "documentation",
+          "url": "https://developers.openai.com/codex/cli/slash-commands",
+          "title": "Slash commands in Codex CLI | OpenAI Developers",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "codex-plugin-cc-repo",
+          "type": "repository",
+          "url": "https://github.com/openai/codex-plugin-cc",
+          "title": "openai/codex-plugin-cc \u2014 Use Codex from Claude Code to review code or delegate tasks",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "codex-cli-home",
+          "type": "documentation",
+          "url": "https://developers.openai.com/codex/cli",
+          "title": "CLI \u2014 Codex | OpenAI Developers",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "codex-plugin-cc-community",
+          "type": "article",
+          "url": "https://community.openai.com/t/introducing-codex-plugin-for-claude-code/1378186",
+          "title": "Introducing Codex Plugin for Claude Code \u2014 OpenAI Developer Community",
+          "ingested": "2026-04-23"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
+        "Codex CLI Synthesis",
+        "Codex Plugin for Claude Code",
+        "codex-plugin-cc"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MCP vs CLI \u2014 Decision vs Lesson"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
         }
       ]
     },
@@ -26030,6 +26333,112 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-inference-provider-landscape-2026.md",
+      "slug": "sources/tools-integration/src-inference-provider-landscape-2026",
+      "title": "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "inference-provider",
+        "openrouter",
+        "together-ai",
+        "groq",
+        "cerebras",
+        "deepinfra",
+        "ollama-cloud",
+        "anthropic-direct",
+        "openai-direct",
+        "moonshot-direct",
+        "vendor-lock-in",
+        "resilience",
+        "free-tier",
+        2026
+      ],
+      "sources": [
+        {
+          "id": "openrouter-alternatives",
+          "type": "article",
+          "url": "https://ofox.ai/blog/openrouter-alternatives-2026/",
+          "title": "7 Best OpenRouter Alternatives in 2026: Pricing, Features, and Migration Guide",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "infrabase-providers",
+          "type": "article",
+          "url": "https://infrabase.ai/blog/ai-inference-api-providers-compared",
+          "title": "AI Inference API Providers Compared (2026)",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "pricepertoken-openrouter-together",
+          "type": "article",
+          "url": "https://pricepertoken.com/endpoints/compare/openrouter-vs-together",
+          "title": "OpenRouter vs Together AI Pricing 2026 \u2014 Model & Cost Comparison",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "edenai-openrouter-alts",
+          "type": "article",
+          "url": "https://www.edenai.co/post/best-alternatives-to-openrouter",
+          "title": "Top 7 OpenRouter Alternatives in 2026: Pricing, Routing, and Best Use Cases",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "awesomeagents-free-apis",
+          "type": "article",
+          "url": "https://awesomeagents.ai/tools/free-ai-inference-providers-2026/",
+          "title": "Every Free AI API in 2026: Complete Guide to Zero-Cost Inference",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "premai-openrouter-alts",
+          "type": "article",
+          "url": "https://blog.premai.io/best-openrouter-alternatives-for-private-production-ai/",
+          "title": "16 Best OpenRouter Alternatives for Private, Production AI (2026)",
+          "ingested": "2026-04-23"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Inference Provider Landscape 2026",
+        "API Provider Alternatives 2026",
+        "Non-Lock-In Inference Matrix"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Kimi K2.6"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Harness Landscape 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "K2.6 Access Paths Comparison"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
         }
       ]
     },
@@ -32114,8 +32523,8 @@
       "relationship_count": 533
     },
     "tools-and-platforms": {
-      "page_count": 24,
-      "relationship_count": 165
+      "page_count": 28,
+      "relationship_count": 187
     },
     "devops": {
       "page_count": 14,
@@ -32446,6 +32855,8 @@
       "sources/src-claude-agent-sdk-and-managed-agents",
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-code-review-graph-automated-review",
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-context-mode",
@@ -32889,6 +33300,7 @@
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/src-claude-agent-sdk-and-managed-agents",
       "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-claude-code-harness-features",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -32939,6 +33351,7 @@
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
       "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -32989,6 +33402,7 @@
       "backlog/tasks/T019-extend-pricing-table-for-k2-6",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "sources/tools-integration/src-inference-provider-landscape-2026",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
@@ -33018,6 +33432,8 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-claude-code-harness-features",
       "spine/models/quality/model-quality-failure-prevention",
       "spine/standards/harness-contract",
       "spine/standards/model-standards/model-claude-code-standards"
@@ -33078,7 +33494,8 @@
       "backlog/modules/e009-m002-mcp-server-continuity",
       "backlog/modules/e009-m003-skill-portability",
       "backlog/tasks/T045-install-opencode-binary",
-      "backlog/tasks/T051-audit-opencode-skill-and-agent-format"
+      "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
     "harness-neutral": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
@@ -33482,7 +33899,8 @@
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
     ],
     "continue": [
-      "backlog/modules/e009-m003-skill-portability"
+      "backlog/modules/e009-m003-skill-portability",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
     "ingest": [
       "backlog/modules/e009-m003-skill-portability"
@@ -33918,6 +34336,7 @@
       "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
       "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "spine/models/ecosystem/model-mcp-cli-integration",
       "spine/references/gateway-tools-reference"
@@ -34247,6 +34666,7 @@
     ],
     "ollama-cloud": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
+      "sources/tools-integration/src-inference-provider-landscape-2026",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
@@ -34396,6 +34816,9 @@
       "sources/src-claude-code-prompt-patch-rebalancing",
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-github-spec-kit-specification-driven-development",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
@@ -34971,7 +35394,9 @@
       "decisions/02_validated/tools/per-role-command-design-decisions",
       "domains/ai-agents/patterns/per-role-command-architecture",
       "sources/claude-code/src-claude-slash-commands",
-      "sources/src-github-spec-kit-specification-driven-development"
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "scope": [
       "decisions/02_validated/tools/per-role-command-design-decisions"
@@ -35037,6 +35462,7 @@
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/claude-code/src-superpowers-end-of-vibe-coding",
+      "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-playwright-mcp-visual-testing"
     ],
     "workflows": [
@@ -35148,7 +35574,8 @@
       "domains/ai-agents/claude-code/claude-code",
       "sources/src-anthropic-building-effective-ai-agents",
       "sources/src-anthropic-effective-harnesses-long-running-agents",
-      "sources/src-openclaw-billing-proxy"
+      "sources/src-openclaw-billing-proxy",
+      "sources/tools-integration/src-claude-code-harness-features"
     ],
     "automation": [
       "domains/ai-agents/claude-code/claude-code",
@@ -36302,7 +36729,8 @@
     "agent-skills": [
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
       "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability",
-      "sources/obsidian-notebooklm/src-kepano-obsidian-skills"
+      "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "visual-diagrams": [
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
@@ -37494,7 +37922,8 @@
       "sources/src-vercel-opensrc-toolkit"
     ],
     "codex-cli": [
-      "sources/obsidian-notebooklm/src-kepano-obsidian-skills"
+      "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "json-canvas": [
       "sources/obsidian-notebooklm/src-kepano-obsidian-skills"
@@ -37507,7 +37936,8 @@
       "spine/models/depth/model-notebooklm"
     ],
     "cursor": [
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
     "copilot": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
@@ -37531,7 +37961,8 @@
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
     ],
     "plugin": [
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "skill-portability": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
@@ -37744,13 +38175,15 @@
       "sources/src-claude-code-prompt-patch-rebalancing"
     ],
     "cline": [
-      "sources/src-cline-agentic-coding-ide-extension"
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
     "vs-code-extension": [
       "sources/src-cline-agentic-coding-ide-extension"
     ],
     "agentic-coding": [
-      "sources/src-cline-agentic-coding-ide-extension"
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
     "checkpoints": [
       "sources/src-cline-agentic-coding-ide-extension"
@@ -37763,7 +38196,8 @@
     ],
     "code-review": [
       "sources/src-code-review-graph-automated-review",
-      "sources/src-plannotator"
+      "sources/src-plannotator",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "graph-analysis": [
       "sources/src-code-review-graph-automated-review"
@@ -37975,6 +38409,36 @@
     "opensrc": [
       "sources/src-vercel-opensrc-toolkit"
     ],
+    "codex": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "aider": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+    ],
+    "gemini-cli": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+    ],
+    "crush": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+    ],
+    "goose": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+    ],
+    "vendor-lock-in": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "resilience": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "2026": [
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-inference-provider-landscape-2026",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
     "airllm": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
@@ -37986,6 +38450,34 @@
     ],
     "batch-inference": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
+    ],
+    "plugins": [
+      "sources/tools-integration/src-claude-code-harness-features"
+    ],
+    "agent-sdk": [
+      "sources/tools-integration/src-claude-code-harness-features"
+    ],
+    "agent-skills-standard": [
+      "sources/tools-integration/src-claude-code-harness-features"
+    ],
+    "opus-4-7": [
+      "sources/tools-integration/src-claude-code-harness-features"
+    ],
+    "1m-context": [
+      "sources/tools-integration/src-claude-code-harness-features"
+    ],
+    "openai": [
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "adversarial-review": [
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
+    ],
+    "gpt-5-5": [
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
+    ],
+    "tools-integration": [
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "searxng": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
@@ -38002,9 +38494,6 @@
     "gpt-oss": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
-    "openai": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
-    ],
     "apache-2-0": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
     ],
@@ -38017,6 +38506,33 @@
     ],
     "harmony-format": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+    ],
+    "inference-provider": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "together-ai": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "groq": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "cerebras": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "deepinfra": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "anthropic-direct": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "openai-direct": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "moonshot-direct": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
+    ],
+    "free-tier": [
+      "sources/tools-integration/src-inference-provider-landscape-2026"
     ],
     "moonshot": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
@@ -38224,9 +38740,6 @@
     "sovereignty": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
-    "codex": [
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
     "subscription": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
@@ -38234,9 +38747,6 @@
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "mission": [
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
-    "2026": [
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "roadmap": [
@@ -38542,6 +39052,12 @@
       ]
     },
     {
+      "target": "Codex CLI + Codex Plugin for Claude Code",
+      "referenced_by": [
+        "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)"
+      ]
+    },
+    {
       "target": "Consumer Integration Roadmap Exemplar",
       "referenced_by": [
         "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth"
@@ -38812,6 +39328,12 @@
       ]
     },
     {
+      "target": "Harness Landscape 2026",
+      "referenced_by": [
+        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)"
+      ]
+    },
+    {
       "target": "Harness turnCount Bug",
       "referenced_by": [
         "Per-task cost grows monotonically across multi-task runs (context accumulation)",
@@ -38846,6 +39368,7 @@
     {
       "target": "K2.6 Access Paths Comparison",
       "referenced_by": [
+        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
@@ -38874,6 +39397,7 @@
     {
       "target": "MCP vs CLI \u2014 Decision vs Lesson",
       "referenced_by": [
+        "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
@@ -39006,6 +39530,10 @@
     {
       "target": "Principle 4",
       "referenced_by": [
+        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
+        "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
+        "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
+        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
@@ -39174,11 +39702,26 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 Claude Code Harness Features",
+      "referenced_by": [
+        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Codex CLI + Plugin",
+      "referenced_by": [
+        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Kimi K2.6",
       "referenced_by": [
         "E007 \u2014 OpenRouter Deadline De-Risk (Claude Code CLI \u2192 K2.6)",
         "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
+        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
+        "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
+        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
