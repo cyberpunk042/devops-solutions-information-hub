@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-23T14:48:23.895924+00:00",
+  "generated": "2026-04-24T13:16:35.071878+00:00",
   "stats": {
     "pages": 466,
     "domains": 9,
     "sources": 54,
     "comparisons": 7,
     "relationships": 2814,
-    "tags_unique": 1312,
+    "tags_unique": 1314,
     "layers": {
       "3": 4,
       "5": 36,
@@ -25958,7 +25958,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-22",
-      "updated": "2026-04-22",
+      "updated": "2026-04-23",
       "last_reviewed": "",
       "tags": [
         "kimi",
@@ -25975,9 +25975,11 @@
         "multimodal",
         "gguf",
         "openrouter",
+        "ollama-cloud",
         "ktransformers",
         "cost-optimization",
-        "aicp"
+        "aicp",
+        "access-paths"
       ],
       "sources": [
         {
@@ -26035,6 +26037,15 @@
           "url": "https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds",
           "title": "AINews \u2014 Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6",
           "ingested": "2026-04-22"
+        },
+        {
+          "id": "src-kimi-k2-6-ollama-cloud-njenga",
+          "type": "article",
+          "url": "https://medium.com/@joe.njenga/i-tried-kimi-k2-6-on-claude-code-and-forgot-opus-4-6-exists-5d9ba4c01911",
+          "file": "raw/articles/kimi-k2-6-claude-code-ollama-cloud-joe-njenga-medium.md",
+          "title": "I Tried Kimi k2.6 on Claude Code (And Forgot Opus 4.6 Exists) \u2014 Joe Njenga",
+          "ingested": "2026-04-23",
+          "description": "Hands-on walkthrough of `ollama launch claude --model kimi-k2.6:cloud` \u2014 a THIRD access path for K2.6 (alongside OpenRouter cloud and local KTransformers). Ollama Cloud Pro is $20/month flat for all cloud models (vs OpenRouter's per-token pricing). Setup is one command; Anthropic-compatible endpoint at localhost:11434. Cost-math breakeven vs OpenRouter: ~5-6M output tokens/month."
         }
       ],
       "layer": 1,
@@ -37685,6 +37696,12 @@
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "multimodal": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "ollama-cloud": [
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "access-paths": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "qa-automation": [

@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-04-23
+updated: 2026-04-24
 sources: []
 tags: [log, directives, sessions]
 ---

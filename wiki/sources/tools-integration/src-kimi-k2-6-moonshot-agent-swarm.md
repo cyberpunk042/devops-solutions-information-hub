@@ -12,7 +12,7 @@ domain: ai-models
 status: synthesized
 confidence: high
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-23
 sources:
   - id: src-kimi-k2-6-blog
     type: blog-post
@@ -54,7 +54,14 @@ sources:
     url: https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds
     title: "AINews — Moonshot Kimi K2.6: the world's leading Open Model refreshes to catch up to Opus 4.6"
     ingested: 2026-04-22
-tags: [kimi, k2-6, moonshot, open-weight, mit-license, moe, mla, agentic, agent-swarm, long-horizon-coding, 256k-context, multimodal, gguf, openrouter, ktransformers, cost-optimization, aicp]
+  - id: src-kimi-k2-6-ollama-cloud-njenga
+    type: article
+    url: https://medium.com/@joe.njenga/i-tried-kimi-k2-6-on-claude-code-and-forgot-opus-4-6-exists-5d9ba4c01911
+    file: raw/articles/kimi-k2-6-claude-code-ollama-cloud-joe-njenga-medium.md
+    title: "I Tried Kimi k2.6 on Claude Code (And Forgot Opus 4.6 Exists) — Joe Njenga"
+    ingested: 2026-04-23
+    description: "Hands-on walkthrough of `ollama launch claude --model kimi-k2.6:cloud` — a THIRD access path for K2.6 (alongside OpenRouter cloud and local KTransformers). Ollama Cloud Pro is $20/month flat for all cloud models (vs OpenRouter's per-token pricing). Setup is one command; Anthropic-compatible endpoint at localhost:11434. Cost-math breakeven vs OpenRouter: ~5-6M output tokens/month."
+tags: [kimi, k2-6, moonshot, open-weight, mit-license, moe, mla, agentic, agent-swarm, long-horizon-coding, 256k-context, multimodal, gguf, openrouter, ollama-cloud, ktransformers, cost-optimization, aicp, access-paths]
 ---
 
 # Synthesis — Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model
@@ -112,6 +119,51 @@ On **2026-04-20**, Moonshot AI released **Kimi K2.6** — a Mixture-of-Experts (
 | **Claude Opus 4.6** | closed | — | $15/$75 per M (approx) | **S — but 20× cost** |
 
 K2.6 on OpenRouter is **dominant on the Pareto frontier** (capability × cost) for operator's current agentic workloads. Locally, K2.6 Q2 is a *candidate for Tier 2* (disk-offload offline), alongside AirLLM+70B and gpt-oss-120b.
+
+### Three access paths: OpenRouter vs Ollama Cloud vs Local KTransformers
+
+Added 2026-04-23 after the Njenga Medium walkthrough surfaced **Ollama Cloud** as a third access path with a fundamentally different cost model (flat-rate, not per-token). Each of the three paths suits a different workload shape, privacy posture, and cost curve.
+
+> [!abstract] K2.6 access paths — side by side
+>
+> | Dimension | OpenRouter | Ollama Cloud | Local KTransformers |
+> |---|---|---|---|
+> | **Model location** | Moonshot / provider-routed cloud | Ollama-hosted cloud | On-device (340 GB Q2 GGUF on `/mnt/models`) |
+> | **Inference cost model** | Per-token: $0.80 / $3.50 per M in/out | Flat: $20/month (Pro) for all cloud models | $0/token (hardware + electricity) |
+> | **Setup command** | `aicp --backend k2_6_openrouter ...` (already wired, E011 M002 done) | `ollama launch claude --model kimi-k2.6:cloud` | `python -m ktransformers.local_chat --model-path /mnt/models/kimi-k2-6-q2/...` (blocked on E008 M003 — dual-GPU optimization YAML) |
+> | **Endpoint protocol** | OpenRouter → OpenAI-compatible (Anthropic-translated) | Anthropic-compatible at `localhost:11434` | KTransformers OpenAI-compatible server (planned) |
+> | **Throughput / latency** | Depends on OpenRouter-routed provider (variance) | Ollama-managed (shared pool) | 3-10 tok/s realistic on 19 GB VRAM + 64 GB RAM |
+> | **Provider transparency** | Per-request cost visibility; pick high-quality providers | Opaque — which Ollama host serves, what quantization | Full control; known quant (Q2 Unsloth) |
+> | **Tool-use / agent-swarm API surface** | Whatever OpenRouter exposes from Moonshot — generally OK | Ollama's compatibility layer — unknown for 300-sub-agent swarm invocation | Full model capability (can configure directly) |
+> | **Privacy posture** | Medium — routed through OpenRouter + provider | **Low** — author of the Medium article explicitly flags "prototyping only, not client work" | **High** — never leaves the machine |
+> | **Best for** | Per-request billing, client work, quality-critical | Heavy prototyping, experimental, volume-unbounded | Offline, confidential, $0-target, long-horizon jobs where 3-10 tok/s is acceptable |
+
+> [!tip] Cost-math: when does Ollama Cloud beat OpenRouter?
+> OpenRouter is pay-as-you-go; Ollama Cloud Pro is $20/month flat. At K2.6's OpenRouter rates:
+> - $20 ÷ $3.50/M output = **~5.7M output tokens/month** is the breakeven for output-heavy workloads
+> - Mixed (30/70 in/out) workload: around the same range (input is much cheaper)
+>
+> A single heavy Claude-Code session produces ~200-500K output tokens. Monthly use across 20-30 sessions puts you at 5-15M output tokens — **Ollama Cloud is cheaper for heavy daily use**, OpenRouter is cheaper for light / per-project use.
+
+> [!warning] Privacy asymmetry is NOT a cost question
+> The Medium article's author explicitly divides work into "prototyping" vs "serious client/monetization" and places Ollama Cloud firmly in the prototyping bucket. For the operator's stack:
+>
+> - **Research wiki sessions** (public knowledge synthesis): Ollama Cloud safe
+> - **AICP development** (AICP repo, operator's code, no client data): Ollama Cloud mostly safe
+> - **OpenArms / client-connected work**: OpenRouter (with vetted provider) or Local only
+> - **Any session touching `.env` / credentials / private infra**: Local only
+>
+> The `ollama launch` command makes it trivially easy to flip a project to cloud inference — which is ALSO what makes it easy to accidentally route sensitive context through a shared pool. An operator rule of thumb: default to OpenRouter for daily use, explicitly opt into Ollama Cloud per-session for prototyping workloads.
+
+> [!info] Recommendation — revised tier stack with three K2.6 paths
+>
+> | Tier | Path | When to pick |
+> |---|---|---|
+> | 3a (cheap, online, quality) | OpenRouter → K2.6 | Default for daily agentic work; per-request cost visibility; client-adjacent tasks |
+> | 3b (cheap, online, heavy volume) | Ollama Cloud → K2.6 | Experimental prototypes, volume-heavy iterations where >5M output tokens/month is likely |
+> | 2 (free, offline, slow) | Local KTransformers → K2.6 Q2 | Confidential work, offline sessions, $0-target, willing to accept 3-10 tok/s |
+>
+> Not mutually exclusive — configure all three; route per session based on workload shape. The `ollama launch claude --model X` mechanism makes 3b a single-command flip without disturbing the other paths.
 
 ### How K2.6 reshapes the second-brain custom-model strategy
 
