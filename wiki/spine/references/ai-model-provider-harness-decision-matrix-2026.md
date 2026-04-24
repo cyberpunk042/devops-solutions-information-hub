@@ -67,20 +67,31 @@ Single-page lookup to pick (harness, model, provider) triples for any workload. 
 >
 > | Model | $USD/M in | $USD/M out | Context | SWE-Bench Pro / Verified | Best available via | Mission | Strengths |
 > |---|---:|---:|---:|---|---|---|---|
-> | **DeepSeek V3** | $0.28 | **$0.42** | 64K | Strong coding | OpenRouter, DeepSeek direct, 14 providers | ✅ open-weight | Cheapest competent coding; coding-math specialty |
-> | **GLM 4.7 Flash** | **$0.06** | **$0.40** | — | — (smaller) | OpenRouter, Ollama Cloud | ✅ open-weight | Cheapest of all; light/bulk tasks |
-> | **GLM 4.7** | $0.38 | **$1.74** | — | 73.8% Verified | OpenRouter, Ollama Cloud, Z.ai direct | ✅ open-weight | 2× cheaper than K2.6 on output; strong coding |
-> | **Kimi K2.6** | $0.80 | $3.50 | 262K | **58.6 Pro** (leads), 80.6% Verified (est.) | OpenRouter, Ollama Cloud, Moonshot direct, local KTransformers | ✅ open-weight | Agentic frontier, 300-agent swarm, mission-anchor |
-> | **DeepSeek V4-Pro** | — | $3.48 | — | **80.6% Verified** (= Opus 4.6) | OpenRouter, DeepSeek direct | ✅ open-weight | Opus-class coding at ~1/20 Opus cost |
-> | **gpt-5.1-codex-mini** | $0.25 | $2.00 | 400K | Strong coding | OpenAI direct, OpenRouter | ❌ closed (specialty) | Cheapest closed coding tier |
-> | **gpt-5 / 5.1** | $1.25 | $10.00 | 400K | — | OpenAI direct, OpenRouter | ❌ closed | General GPT tier |
-> | **gpt-5.1-codex / codex-max** | $1.25 | $10.00 | 400K | Strong | OpenAI direct, OpenRouter, Codex CLI | ❌ closed (specialty) | Codex CLI native; adversarial-review; rescue |
-> | **gpt-5.4** | $2.50 | $15.00 | **1.05M** | — | OpenAI direct, OpenRouter | ❌ closed (specialty) | Long context (1M+) specialty |
-> | **Claude Opus 4.6/4.7** | ~$15 | ~$75 | 200K / 1M (4.7) | High | Anthropic direct, OpenRouter | ❌ closed (specialty) | Creative-technical synthesis + tone |
-> | **Gemini 3.1 Pro** | varies | varies | 1M+ | — | Google direct (generous free tier), OpenRouter | ❌ closed (specialty + free) | Multimodal SOTA, free tier absorption |
+> | **DeepSeek V4-Flash** | **$0.14** | **$0.28** | **1.05M** | TBD | OpenRouter (verified), DeepSeek direct | ✅ open-weight | **Cheapest coding-capable; 1M context; floor price** |
+> | **DeepSeek V3.2** | $0.252 | **$0.378** | 131K | 73.1% Verified (V3.2-Speciale) | OpenRouter (verified), DeepSeek direct | ✅ open-weight | V3-tier current; coding+math |
+> | **GLM 4.7 Flash** | **$0.06** | $0.40 | 203K | — (smaller) | OpenRouter (verified), Ollama Cloud | ✅ open-weight | Cheapest input; light/bulk tasks |
+> | **DeepSeek Chat V3.1** | $0.15 | $0.75 | 33K | — | OpenRouter (verified), DeepSeek direct | ✅ open-weight | V3 chat variant — short-context cheap |
+> | **GLM 4.7** | $0.38 | **$1.74** | 203K | 73.8% Verified | OpenRouter (verified), Ollama Cloud, Z.ai direct | ✅ open-weight | Strong coding tier, cheap output |
+> | **gpt-5.1-codex-mini** | $0.25 | $2.00 | 400K | Strong coding | OpenAI direct, OpenRouter (verified) | ❌ closed (specialty) | Cheapest closed coding tier |
+> | **DeepSeek V4-Pro** | **$1.74** | **$3.48** | **1.05M** | **80.6% Verified** (= Opus 4.6) | OpenRouter (verified), DeepSeek direct | ✅ open-weight | Opus-class at 1/7 Opus cost, 1M context |
+> | **Kimi K2.6** | **$0.745** | **$4.655** | 256K | **58.6 Pro** (leads), 80.6% Verified (est.) | OpenRouter (verified), Ollama Cloud, Moonshot direct, local | ✅ open-weight | Agentic frontier, 300-agent swarm |
+> | **gpt-5 / 5.1 / 5.1-codex** | $1.25 | $10.00 | 400K | Strong | OpenAI direct, OpenRouter (verified) | ❌ closed | Codex CLI native; general GPT tier |
+> | **Gemini 2.5 Pro** | $1.25 | $10.00 | 1.05M | — | Google direct, OpenRouter (verified) | ❌ closed (specialty) | Long-context + Gemini ecosystem |
+> | **Gemini 3.1 Pro Preview** | $2.00 | $12.00 | 1.05M | — | Google direct, OpenRouter (verified) | ❌ closed (specialty) | Multimodal SOTA + 1M context |
+> | **gpt-5.4** | $2.50 | $15.00 | 1.05M | — | OpenAI direct, OpenRouter (verified) | ❌ closed (specialty) | Long context (1M+) specialty |
+> | **Claude Opus 4.6/4.7** | **$5.00** (OR) | **$25.00** (OR) | **1M** (4.7) | High | **Anthropic direct ~$15/$75**, OpenRouter ~$5/$25 (verified) | ❌ closed (specialty) | Creative-technical synthesis + tone |
 > | **gpt-5.4-pro** | $30 | $180 | 1.05M | — | OpenAI direct | ❌ closed (rare use) | Premium ceiling — reserve for edge cases |
 >
-> **Key insight**: SIX open-weight models now occupy the $0.28-$3.50 per M output range — including TWO that beat K2.6 on cost (DeepSeek V3, GLM 4.7 Flash, GLM 4.7). The K2.6 default is not "the only option" — it is "the currently-best-on-agentic-frontier option." Substitutes are one config line away.
+> **All prices on this row verified from OpenRouter `/api/v1/models` endpoint 2026-04-23** — cached at [wiki/config/provider-pricing-cache.json](../../config/provider-pricing-cache.json). Re-verify with `python3 -m tools.pipeline provider-check`.
+>
+> **Corrections surfaced by this verification pass:**
+> - **K2.6 on OpenRouter is $0.745/$4.655**, not $0.80/$3.50. Output ~33% higher than earlier citations suggested.
+> - **Opus 4.6/4.7 on OpenRouter is $5/$25**, not $15/$75 (direct). OpenRouter is **3× cheaper for Opus** — Opus specialty tasks cost substantially less than the framework previously estimated.
+> - **DeepSeek V4-Pro is $1.74/$3.48** — better than my earlier "~$3.48 output" framing (input is also cheap). At $1.74/$3.48, Opus-class coding capability is **20× cheaper** than Claude Opus direct ($15/$75).
+> - **DeepSeek V4-Flash** ($0.14/$0.28) **is now the cost floor** for coding-capable models — cheaper than K2.6, GLM 4.7 Flash output, and every closed-weight model. 1M context.
+> - **Gemini 2.5 Pro** ($1.25/$10) is 17% cheaper than Gemini 3.1 Pro Preview ($2/$12) — for long-context work not needing the very latest Gemini, use 2.5.
+>
+> **Key insight**: SEVEN open-weight models now occupy the $0.28-$4.655 per M output range — **five of them cheaper than K2.6**. K2.6 remains best-on-agentic-frontier but is no longer the cheapest viable coder. The practical routing rule: **match workload to tier, not "always K2.6."** DeepSeek V4-Flash covers most routine coding at a fraction of K2.6 cost with 4× the context window.
 
 ## Provider × Model Availability Matrix
 
@@ -253,3 +264,4 @@ Re-validate this matrix when:
 [[aicp|AICP]]
 [[local-training-playbook-2026|Local Training Playbook 2026]]
 [[Principle 4]]
+[[provider-pricing-monitoring-operations-plan|Provider Pricing Monitoring — Operations Plan]]

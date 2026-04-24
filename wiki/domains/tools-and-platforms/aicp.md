@@ -157,6 +157,7 @@ Cross-referencing `Knowledge Evolution Pipeline` and `Immune System Rules`: the 
 [[src-gemma4-searxng-openclaw|Synthesis — Gemma 4 + SearXNG for Free Private OpenClaw]]
 [[src-inference-provider-landscape-2026|Synthesis — Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)]]
 [[src-codex-cli-and-claude-code-plugin|Synthesis — OpenAI Codex CLI and the Codex Plugin for Claude Code]]
+[[src-opencode-harness-features|Synthesis — OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)]]
 [[src-turboquant-122b-macbook|Synthesis — TurboQuant 122B LLM on MacBook]]
 [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
 [[T001-test-openai-backend|Test OpenAI backend with LocalAI]]

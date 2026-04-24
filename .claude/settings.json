@@ -56,7 +56,9 @@
       "WebFetch(domain:the-decoder.com)",
       "mcp__research-wiki__wiki_gateway_health",
       "mcp__research-wiki__wiki_log",
-      "WebFetch(domain:developers.openai.com)"
+      "WebFetch(domain:developers.openai.com)",
+      "WebFetch(domain:opencode.ai)",
+      "WebFetch(domain:ollama.com)"
     ]
   }
 }

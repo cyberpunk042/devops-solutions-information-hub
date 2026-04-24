@@ -103,6 +103,26 @@ The 2026 AI-infrastructure landscape has one dominant empirical finding: **cost-
 >
 > **The mission-violating pattern is subscription-tier lock-in to ONE provider as the default.** Paying Anthropic $200/mo to use Opus for everything reinstalls the dependency the mission was built to break. Paying Anthropic API rates for Opus on a specific load-bearing task is fine — it's a specialty routing decision with a review trigger.
 
+## Harness Routing — When to Reach for Which (2026-04-23 activated stack)
+
+With OpenCode activated, the operator now has **two primary harnesses + one plugin bridge** on-disk. Route per-task:
+
+> [!success] Per-task harness selection (updated 2026-04-23 after OpenCode install)
+>
+> | Task shape | Harness | Why |
+> |---|---|---|
+> | Wiki synthesis / research / operator-voice work | **Claude Code** | Skills ecosystem + CLAUDE.md + the existing wiki skill set is load-bearing |
+> | Adversarial review of code | **Claude Code + `/codex:adversarial-review`** (via Codex Plugin) | Documented product command; don't rebuild |
+> | Multi-file refactor on typed codebase (TypeScript, Rust, Go, Java) | **OpenCode** | LSP gives symbol-accurate reasoning; grep-based harness approximates |
+> | Parallel research + implementation in same workspace | **OpenCode** multi-session | Persistent parallel contexts (vs Claude Code's ephemeral subagents) |
+> | Testing an unfamiliar model cheaply | **OpenCode** with `/connect` | 75+ providers first-class; pay-per-token visibility |
+> | Plan-before-edit mode (explicit) | **OpenCode** Plan mode (Tab toggle) | First-class mode; Claude Code blends plan+act |
+> | Skill-heavy wiki operations (pipeline, gateway, evolve) | **Claude Code** | Wiki MCP server + skills are pre-wired; AICP tier_map ready |
+> | Work that must survive Claude Code subscription changes | **OpenCode** | Proves the resilience claim operationally |
+> | BYOM against Ollama Cloud catalog (20+ models) | Either — use `/connect ollama` in OpenCode or `ollama launch claude --model X` | Both bridge to the same cloud; operator picks UX |
+>
+> **Operator rule of thumb**: Claude Code for work that leverages the wiki's skill ecosystem; OpenCode for codebase-heavy LSP-benefitting work, parallel contexts, or BYOM experimentation. Both read AGENTS.md — keep that file current as the cross-tool anchor.
+
 ## Specialty Routing — Each Provider's Unique Strengths
 
 Closed-weight providers are not "off-limits" — they are specialty vendors with distinct comparative advantages. The mission-aligned stack uses them FOR THEIR SPECIALTIES, not as defaults.
@@ -151,8 +171,8 @@ Closed-weight providers are not "off-limits" — they are specialty vendors with
 >
 > | Plan | $USD/mo | Models covered | Usage envelope | Privacy posture | Mission-aligned? |
 > |---|---:|---|---|---|---|
-> | **Ollama Cloud Pro** | $20 | K2.6, GLM 4.7, others open-weight | ~20-30M tokens/mo soft-cap (estimated) | Shared pool — **prototyping only** | ✅ |
-> | **Ollama Cloud Max** | ~$100 | Same, higher cap | ~80-120M tokens/mo (estimated) | Shared pool — **prototyping only** | ✅ |
+> | **Ollama Cloud Pro** | $20 | **20+ models** incl. kimi-k2.6, kimi-k2.5, deepseek-v4-flash (1M ctx), glm-5.1, glm-5, glm-4.7, qwen3.5/coder-next/next, devstral-2/small-2, nemotron-3-super/nano, minimax-m2.5/m2.7, gemma4, cogito-2.1 (671B MIT), AND **gemini-3-flash-preview** (corrected 2026-04-23) | ~20-30M tokens/mo soft-cap (estimated) | Shared pool — **prototyping only** | ✅ |
+> | **Ollama Cloud Max** | ~$100 | Same 20+ catalog, higher cap | ~80-120M tokens/mo (estimated) | Shared pool — **prototyping only** | ✅ |
 > | **ChatGPT Plus** | $20 | GPT-5.x via ChatGPT UI (not API) | ~50 msgs/3h cap per model tier | OpenAI TOS | Lock-in risk at default use |
 > | **ChatGPT Pro** | $200 | GPT-5.x + o-series + pro models | Much higher cap | OpenAI TOS | Lock-in risk at default use |
 > | **Claude Max 5×** | $100 | Opus/Sonnet via Claude Code + web | ~700 prompts/week | Anthropic TOS | Lock-in risk at default use |
@@ -265,7 +285,7 @@ Every working stack has a harness (the tool operator uses) and a model (the inte
 
 | Layer | Current default | First substitute | Second substitute | Switch-cost |
 |---|---|---|---|---|
-| **Harness** | Claude Code + Codex Plugin | OpenCode (Go, 75+ providers, 95K stars) | Aider (token-efficient) | ~1h — config provider, port skills to SKILL.md |
+| **Harness** | Claude Code + Codex Plugin | **OpenCode (ACTIVATED 2026-04-23)** — Go, 75+ providers, LSP-native, multi-session, Build/Plan toggle; see [[src-opencode-harness-features\|full synthesis]] | Aider (token-efficient) | ~1h — config provider, port skills (AGENTS.md is the cross-tool anchor) |
 | **Model — general agentic** | Kimi K2.6 via OpenRouter | K2.6 via Moonshot direct | GLM 4.7 via Ollama Cloud | Minutes — env var change |
 | **Model — specialty: coding tight budget** | gpt-5.1-codex-mini via OpenRouter | gpt-5.1-codex-mini via OpenAI direct | Aider + K2.6 for mission-aligned substitute | Minutes |
 | **Model — specialty: adversarial review** | `/codex:adversarial-review` (Codex Plugin) | Prompted review skill in OpenCode/Claude Code against K2.6 | Manual review + K2.6 as critic | Hours — skill authoring; loses exact product semantics |

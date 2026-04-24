@@ -51,6 +51,7 @@ Source synthesis pages — one per ingested source.
 - [Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)](tools-integration/src-gpt-oss-openai-open-weight-moe.md) — In August 2025 OpenAI released **gpt-oss-20b** (21B total params, 3
 - [Synthesis — Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)](tools-integration/src-inference-provider-landscape-2026.md) — The operator's mission-critical question isn't "which provider is cheapest today?" — it's "**if my current provider c...
 - [Synthesis — Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model](tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md) — On **2026-04-20**, Moonshot AI released **Kimi K2
+- [Synthesis — OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)](tools-integration/src-opencode-harness-features.md) — OpenCode is an open-source terminal-first AI coding harness — Go binary, 95K+ GitHub stars, 75+ LLM provider support,...
 - [Synthesis — Playwright CLI vs MCP — Automate QA with Less Tokens](tools-integration/src-playwright-cli-vs-mcp.md) — A direct side-by-side comparison of Playwright's MCP server integration vs
 - [Synthesis — Playwright MCP for Visual Development Testing](tools-integration/src-playwright-mcp-visual-testing.md) — Demonstrates how to embed Playwright MCP into a front-end development workflow so that Claude Code can see and verify...
 - [Synthesis — TurboQuant 122B LLM on MacBook](tools-integration/src-turboquant-122b-macbook.md) — TurboQuant, originally Google's quantization technique, has been adapted for Apple Silicon via MLX and extended to Mi...
@@ -65,4 +66,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `ai-agents`, `skills`, `mcp`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `subagents`, `notebooklm`, `automation`, `aicp`, `context-management`, `slash-commands`, `context-engineering`, `source-synthesis`, `knowledge-base`, `anthropic`, `local-llm`
+`claude-code`, `ai-agents`, `mcp`, `skills`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `subagents`, `notebooklm`, `automation`, `aicp`, `context-management`, `slash-commands`, `context-engineering`, `source-synthesis`, `knowledge-base`, `anthropic`, `local-llm`

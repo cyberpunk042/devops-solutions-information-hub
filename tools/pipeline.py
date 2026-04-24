@@ -1293,7 +1293,7 @@ Commands:
     parser.add_argument("command",
                         choices=["post", "fetch", "scan", "status", "run",
                                  "chain", "gaps", "crossref", "integrations",
-                                 "scaffold", "evolve", "backlog"],
+                                 "scaffold", "evolve", "backlog", "provider-check"],
                         help="Pipeline command")
     parser.add_argument("args", nargs="*", help="Command arguments (URLs, paths, chain name, etc.)")
     parser.add_argument("--batch", help="File containing URLs (one per line)")
@@ -1489,6 +1489,12 @@ Commands:
         if args.json:
             print(json.dumps(result, indent=2, default=str))
         sys.exit(0)
+
+    elif args.command == "provider-check":
+        from tools.provider_check import main as run_provider_check
+        # Rewrite argv so provider_check's parser sees only its own args
+        sys.argv = ["tools.provider_check"] + list(args.args) + (["--json"] if args.json else [])
+        sys.exit(run_provider_check())
 
     elif args.command == "evolve":
         from tools.evolve import evolve as run_evolve

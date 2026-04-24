@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-24T19:34:24.945385+00:00",
+  "generated": "2026-04-24T20:23:38.161604+00:00",
   "stats": {
-    "pages": 474,
+    "pages": 476,
     "domains": 9,
-    "sources": 58,
+    "sources": 59,
     "comparisons": 8,
-    "relationships": 2867,
-    "tags_unique": 1358,
+    "relationships": 2880,
+    "tags_unique": 1367,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,11 +14,11 @@
       "2": 51,
       "4": 60,
       "0": 1,
-      "1": 40,
-      "spine": 74
+      "1": 41,
+      "spine": 75
     },
     "maturity": {
-      "growing": 322,
+      "growing": 324,
       "seed": 25,
       "mature": 2
     }
@@ -26594,6 +26594,128 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-opencode-harness-features.md",
+      "slug": "sources/tools-integration/src-opencode-harness-features",
+      "title": "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
+      "type": "source-synthesis",
+      "domain": "tools-and-platforms",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "opencode",
+        "harness",
+        "tui",
+        "byom",
+        "agents-md",
+        "lsp",
+        "multi-session",
+        "session-sharing",
+        "mcp",
+        "plugins",
+        "build-plan-modes",
+        "go",
+        "open-source",
+        "75-providers",
+        2026
+      ],
+      "sources": [
+        {
+          "id": "opencode-docs",
+          "type": "documentation",
+          "url": "https://opencode.ai/docs/",
+          "title": "OpenCode Documentation (official)",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "opencode-lsp-docs",
+          "type": "documentation",
+          "url": "https://opencode.ai/docs/lsp/",
+          "title": "LSP Servers \u2014 OpenCode",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "opencode-plugins-docs",
+          "type": "documentation",
+          "url": "https://opencode.ai/docs/plugins/",
+          "title": "Plugins \u2014 OpenCode",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "opencode-tools-docs",
+          "type": "documentation",
+          "url": "https://opencode.ai/docs/tools/",
+          "title": "Tools \u2014 OpenCode",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "opencode-github",
+          "type": "repository",
+          "url": "https://github.com/opencode-ai/opencode",
+          "title": "opencode-ai/opencode \u2014 A powerful AI coding agent built for the terminal",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "awesome-opencode",
+          "type": "repository",
+          "url": "https://github.com/awesome-opencode/awesome-opencode",
+          "title": "awesome-opencode \u2014 Curated plugins, themes, agents, resources",
+          "ingested": "2026-04-23"
+        },
+        {
+          "id": "together-opencode-guide",
+          "type": "documentation",
+          "url": "https://docs.together.ai/docs/how-to-use-opencode",
+          "title": "How to use OpenCode with Together AI",
+          "ingested": "2026-04-23"
+        }
+      ],
+      "layer": 1,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "OpenCode Harness Features",
+        "OpenCode Synthesis",
+        "OpenCode 2026"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness Landscape 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Claude Code Harness Features"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Codex CLI + Codex Plugin for Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Inference Provider Landscape 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u00d7 Provider \u00d7 Harness Decision Matrix"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AICP"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-playwright-cli-vs-mcp.md",
       "slug": "sources/tools-integration/src-playwright-cli-vs-mcp",
       "title": "Synthesis \u2014 Playwright CLI vs MCP \u2014 Automate QA with Less Tokens",
@@ -30606,6 +30728,78 @@
       ]
     },
     {
+      "path": "spine/references/provider-pricing-monitoring-operations-plan.md",
+      "slug": "spine/references/provider-pricing-monitoring-operations-plan",
+      "title": "Provider Pricing Monitoring \u2014 Operations Plan",
+      "type": "operations-plan",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-23",
+      "updated": "2026-04-23",
+      "last_reviewed": "",
+      "tags": [
+        "operations-plan",
+        "monitoring",
+        "provider-pricing",
+        "openrouter",
+        "resilience",
+        "infrastructure-over-instructions",
+        "p1"
+      ],
+      "sources": [
+        {
+          "id": "ai-infra-framework-2026",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-infrastructure-decision-framework-2026.md",
+          "description": "Parent framework \u2014 the 'Price-monitoring and change-detection' section declared the need; this plan implements it."
+        },
+        {
+          "id": "decision-matrix-2026",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-model-provider-harness-decision-matrix-2026.md",
+          "description": "Consumer \u2014 the matrix cites verified cache values; the tool keeps those values honest."
+        },
+        {
+          "id": "openrouter-models-api",
+          "type": "api-documentation",
+          "url": "https://openrouter.ai/api/v1/models",
+          "title": "OpenRouter public models endpoint",
+          "ingested": "2026-04-23"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [
+        "Provider Pricing Monitoring \u2014 Operations Plan",
+        "provider-check Operations Plan",
+        "Price Drift Detection"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Inference Provider Landscape 2026"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        }
+      ]
+    },
+    {
       "path": "spine/references/root-documentation-map.md",
       "slug": "spine/references/root-documentation-map",
       "title": "Root Documentation Map \u2014 Repository-Level Files",
@@ -32642,8 +32836,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 199,
-      "relationship_count": 1315
+      "page_count": 200,
+      "relationship_count": 1320
     },
     "ai-models": {
       "page_count": 14,
@@ -32654,8 +32848,8 @@
       "relationship_count": 533
     },
     "tools-and-platforms": {
-      "page_count": 28,
-      "relationship_count": 187
+      "page_count": 29,
+      "relationship_count": 195
     },
     "devops": {
       "page_count": 14,
@@ -32989,6 +33183,7 @@
       "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-opencode-harness-features",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-context-mode",
@@ -33115,7 +33310,8 @@
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "backlog/tasks/T055-draft-harness-contract-outline",
-      "spine/references/local-training-playbook-2026"
+      "spine/references/local-training-playbook-2026",
+      "spine/references/provider-pricing-monitoring-operations-plan"
     ],
     "srp": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -33537,7 +33733,8 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "sources/tools-integration/src-inference-provider-landscape-2026",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "spine/references/ai-infrastructure-decision-framework-2026"
+      "spine/references/ai-infrastructure-decision-framework-2026",
+      "spine/references/provider-pricing-monitoring-operations-plan"
     ],
     "kimi-k2-6": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
@@ -33567,6 +33764,7 @@
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-opencode-harness-features",
       "spine/models/quality/model-quality-failure-prevention",
       "spine/standards/harness-contract",
       "spine/standards/model-standards/model-claude-code-standards"
@@ -33628,7 +33826,8 @@
       "backlog/modules/e009-m003-skill-portability",
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-opencode-harness-features"
     ],
     "harness-neutral": [
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
@@ -36225,7 +36424,8 @@
       "domains/cross-domain/methodology-artifacts/categories/deployment-closure-monitoring-artifacts"
     ],
     "monitoring": [
-      "domains/cross-domain/methodology-artifacts/categories/deployment-closure-monitoring-artifacts"
+      "domains/cross-domain/methodology-artifacts/categories/deployment-closure-monitoring-artifacts",
+      "spine/references/provider-pricing-monitoring-operations-plan"
     ],
     "lessons-learned": [
       "domains/cross-domain/methodology-artifacts/categories/deployment-closure-monitoring-artifacts"
@@ -36422,6 +36622,7 @@
     "operations-plan": [
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
       "spine/references/local-training-playbook-2026",
+      "spine/references/provider-pricing-monitoring-operations-plan",
       "spine/references/second-brain-integration-chain",
       "spine/standards/operations-plan-page-standards"
     ],
@@ -36841,7 +37042,8 @@
       "domains/tools-and-platforms/obsidian-cli"
     ],
     "tui": [
-      "domains/tools-and-platforms/obsidian-cli"
+      "domains/tools-and-platforms/obsidian-cli",
+      "sources/tools-integration/src-opencode-harness-features"
     ],
     "vault-management": [
       "domains/tools-and-platforms/obsidian-cli",
@@ -37777,6 +37979,7 @@
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-opencode-harness-features",
       "spine/models/agent-config/model-markdown-as-iac"
     ],
     "progressive-enrichment": [
@@ -38526,7 +38729,8 @@
       "sources/src-vercel-opensrc-toolkit"
     ],
     "open-source": [
-      "sources/src-vercel-opensrc-toolkit"
+      "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-opencode-harness-features"
     ],
     "rust": [
       "sources/src-vercel-opensrc-toolkit"
@@ -38570,11 +38774,13 @@
     "resilience": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-inference-provider-landscape-2026",
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+      "spine/references/ai-model-provider-harness-decision-matrix-2026",
+      "spine/references/provider-pricing-monitoring-operations-plan"
     ],
     "2026": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-inference-provider-landscape-2026",
+      "sources/tools-integration/src-opencode-harness-features",
       "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
@@ -38591,7 +38797,8 @@
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
     "plugins": [
-      "sources/tools-integration/src-claude-code-harness-features"
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-opencode-harness-features"
     ],
     "agent-sdk": [
       "sources/tools-integration/src-claude-code-harness-features"
@@ -38690,6 +38897,27 @@
     ],
     "multimodal": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+    ],
+    "byom": [
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "lsp": [
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "multi-session": [
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "session-sharing": [
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "build-plan-modes": [
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "go": [
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "75-providers": [
+      "sources/tools-integration/src-opencode-harness-features"
     ],
     "qa-automation": [
       "sources/tools-integration/src-playwright-cli-vs-mcp"
@@ -39000,6 +39228,12 @@
     "operator-workstation": [
       "spine/references/operator-workstation-storage-tiering"
     ],
+    "provider-pricing": [
+      "spine/references/provider-pricing-monitoring-operations-plan"
+    ],
+    "infrastructure-over-instructions": [
+      "spine/references/provider-pricing-monitoring-operations-plan"
+    ],
     "root": [
       "spine/references/root-documentation-map"
     ],
@@ -39214,7 +39448,8 @@
     {
       "target": "Codex CLI + Codex Plugin for Claude Code",
       "referenced_by": [
-        "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)"
+        "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
+        "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)"
       ]
     },
     {
@@ -39497,6 +39732,7 @@
       "target": "Harness Landscape 2026",
       "referenced_by": [
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
+        "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
       ]
     },
@@ -39605,6 +39841,12 @@
       ]
     },
     {
+      "target": "Model \u00d7 Provider \u00d7 Harness Decision Matrix",
+      "referenced_by": [
+        "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)"
+      ]
+    },
+    {
       "target": "Model \u2014 Local AI",
       "referenced_by": [
         "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
@@ -39707,6 +39949,7 @@
         "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
         "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
+        "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
       ]
@@ -39734,6 +39977,12 @@
       ]
     },
     {
+      "target": "Principle \u2014 Declarations Aspirational Until Infrastructure Verifies Them",
+      "referenced_by": [
+        "Provider Pricing Monitoring \u2014 Operations Plan"
+      ]
+    },
+    {
       "target": "Principle \u2014 Declarations Aspirational Until Verified",
       "referenced_by": [
         "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
@@ -39758,7 +40007,8 @@
         "First consumer integration reveals systematic gaps between knowledge and tooling",
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
         "Machine-Specific Config in Version Control Is Aspirational Portability",
-        "Aspirational Declaration Produces False Confidence at Every Layer"
+        "Aspirational Declaration Produces False Confidence at Every Layer",
+        "Provider Pricing Monitoring \u2014 Operations Plan"
       ]
     },
     {
