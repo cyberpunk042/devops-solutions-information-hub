@@ -246,3 +246,5 @@ The operator's 19 GB VRAM is comfortably above the AirLLM floor. The binding con
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
+[[src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding|Synthesis — Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding]]
+[[src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion|Synthesis — Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls]]

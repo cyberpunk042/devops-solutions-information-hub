@@ -288,3 +288,4 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
+[[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]

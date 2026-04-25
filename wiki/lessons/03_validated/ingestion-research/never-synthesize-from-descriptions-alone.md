@@ -132,3 +132,4 @@ This lesson applies far beyond wiki ingestion:
 [[2026-04-09-directive-never-stop-at-surface|Never Stop at Surface — Depth Verification Rule]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]

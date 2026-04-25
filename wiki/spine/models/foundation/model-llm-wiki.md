@@ -564,4 +564,6 @@ From building with this model — validated experience:
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[src-aidlc-aws-driven-development-lifecycle|Synthesis — AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)]]
+[[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

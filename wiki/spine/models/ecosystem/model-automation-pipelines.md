@@ -256,3 +256,4 @@ The three SDLC profiles (`wiki/config/sdlc-profiles/simplified.yaml`, `default.y
 [[plan-execute-review-cycle|Plan Execute Review Cycle]]
 [[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
 [[model-second-brain|Model — Second Brain]]
+[[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]

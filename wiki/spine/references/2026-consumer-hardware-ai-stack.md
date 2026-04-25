@@ -316,3 +316,5 @@ The four principles held across a day of intensive ingestion with no gaps or exc
 [[aicp|AICP]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[Principle 4 — Declarations Aspirational Until Verified]]
+[[src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding|Synthesis — Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding]]
+[[src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion|Synthesis — Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls]]

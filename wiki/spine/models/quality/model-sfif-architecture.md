@@ -261,3 +261,4 @@ The phase progression (POC → MVP → Staging → Production) also maps to SFIF
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[model-local-ai|Model — Local AI ($0 Target)]]
+[[src-aidlc-aws-driven-development-lifecycle|Synthesis — AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)]]

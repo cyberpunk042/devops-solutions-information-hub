@@ -136,4 +136,5 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 [[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
+[[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

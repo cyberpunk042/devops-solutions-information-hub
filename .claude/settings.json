@@ -58,7 +58,10 @@
       "mcp__research-wiki__wiki_log",
       "WebFetch(domain:developers.openai.com)",
       "WebFetch(domain:opencode.ai)",
-      "WebFetch(domain:ollama.com)"
+      "WebFetch(domain:ollama.com)",
+      "Bash(.venv/bin/python -m tools.gateway orient)",
+      "Bash(.venv/bin/python -m tools.pipeline status)",
+      "Bash(.venv/bin/python -m tools.gateway health)"
     ]
   },
   "hooks": {

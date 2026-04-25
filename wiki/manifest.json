@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-25T12:44:59.243757+00:00",
+  "generated": "2026-04-25T13:26:43.979329+00:00",
   "stats": {
-    "pages": 481,
-    "domains": 9,
-    "sources": 59,
+    "pages": 488,
+    "domains": 11,
+    "sources": 65,
     "comparisons": 8,
-    "relationships": 2911,
-    "tags_unique": 1379,
+    "relationships": 2958,
+    "tags_unique": 1439,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,12 +14,12 @@
       "2": 51,
       "4": 61,
       "0": 1,
-      "1": 41,
+      "1": 47,
       "spine": 75
     },
     "maturity": {
       "growing": 324,
-      "seed": 27,
+      "seed": 33,
       "mature": 2
     }
   },
@@ -21093,6 +21093,33 @@
       ]
     },
     {
+      "path": "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-.md",
+      "slug": "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-",
+      "title": "E008 epic \u2014 internal stack-vs-format inconsistency caused 2-day wrong-path execution",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "contributed",
+        "correction"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "log/gateway-identity-parser-fragility-forwarder-contribute-tar.md",
       "slug": "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
       "title": "Gateway identity parser fragility + forwarder contribute-target bug (2026-04-17)",
@@ -26666,6 +26693,86 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents.md",
+      "slug": "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
+      "title": "Synthesis \u2014 Firecrawl: Web Scraper API for AI Agents (Search \u00b7 Scrape \u00b7 Agent \u00b7 Change-Tracking)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "synthesis",
+        "firecrawl",
+        "web-scraping",
+        "ai-agents",
+        "mcp-server",
+        "fire-1",
+        "change-tracking",
+        "llmstxt",
+        "search-and-scrape",
+        "javascript-rendering",
+        "agent-skill",
+        "self-hosting",
+        "agpl",
+        "alternative-to-pipeline-fetch",
+        "ingestion-tool-comparison"
+      ],
+      "sources": [
+        {
+          "id": "src-firecrawl-github-readme",
+          "type": "documentation",
+          "url": "https://github.com/firecrawl/firecrawl",
+          "file": "raw/articles/firecrawlfirecrawl.md",
+          "title": "firecrawl/firecrawl \u2014 GitHub Repository",
+          "ingested": "2026-04-24"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Firecrawl",
+        "Firecrawl \u2014 Web Data API"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Firecrawl GitHub README"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Decision \u2014 MCP vs CLI for Tool Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Wiki Ingestion Pipeline"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Automation and Pipelines"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Synthesize from Descriptions Alone"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Knowledge Evolution"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-gemma4-searxng-openclaw.md",
       "slug": "sources/tools-integration/src-gemma4-searxng-openclaw",
       "title": "Synthesis \u2014 Gemma 4 + SearXNG for Free Private OpenClaw",
@@ -27071,6 +27178,73 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-omnivoice-tts-600-languages.md",
+      "slug": "sources/tools-integration/src-omnivoice-tts-600-languages",
+      "title": "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "synthesis",
+        "tts",
+        "omnivoice",
+        "coqui-tts",
+        "voice-cloning",
+        "voice-design",
+        "multilingual",
+        "gradio",
+        "uv",
+        "audiobook",
+        "fish-audio-s2",
+        "vibe-voice",
+        "tier-0",
+        "openclaw-openarms-integration"
+      ],
+      "sources": [
+        {
+          "id": "src-omnivoice-tts-youtube",
+          "type": "youtube-transcript",
+          "url": "https://www.youtube.com/watch?v=Edpsu61cwG8",
+          "file": "raw/transcripts/open-source-ai-tts-with-600-languages-installation-and-showcase-of-omnivoice.txt",
+          "title": "Open Source AI TTS With 600 Languages \u2014 Installation and Showcase of OmniVoice",
+          "ingested": "2026-04-24"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 OmniVoice TTS",
+        "OmniVoice"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "YouTube \u2014 OmniVoice TTS Showcase"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Unsloth: Fast LoRA on Consumer Hardware"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-opencode-harness-features.md",
       "slug": "sources/tools-integration/src-opencode-harness-features",
       "title": "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
@@ -27334,6 +27508,177 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion.md",
+      "slug": "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "title": "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "synthesis",
+        "unsloth",
+        "qwen",
+        "qwen3-6-27b",
+        "gguf",
+        "2-bit",
+        "ud-iq2",
+        "tool-calls",
+        "agentic-coding",
+        "opus-distillation",
+        "tier-0",
+        "hugging-face",
+        "community-discussion",
+        "mission-2026-04-27"
+      ],
+      "sources": [
+        {
+          "id": "src-unsloth-qwen36-27b-26-tool-calls",
+          "type": "documentation",
+          "url": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF/discussions/15",
+          "file": "raw/articles/unslothqwen36-27b-gguf-2-bit-qwen36-27b-made-26-tool-calls.md",
+          "title": "Unsloth/Qwen3.6-27B-GGUF \u00b7 Discussion #15: 2-bit Qwen3.6-27B made 26 tool calls",
+          "ingested": "2026-04-25"
+        },
+        {
+          "id": "unsloth-github",
+          "type": "documentation",
+          "url": "https://github.com/unslothai/unsloth",
+          "title": "Unsloth GitHub Repository"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Unsloth Qwen3.6-27B 2-bit",
+        "2-bit Qwen3.6-27B Discussion"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "HF Discussion \u2014 Unsloth/Qwen3.6-27B-GGUF #15"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Unsloth: Fast LoRA on Consumer Hardware"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Qwopus: Claude Opus Reasoning Distilled into Qwen 27B"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding.md",
+      "slug": "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "title": "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "synthesis",
+        "qwen",
+        "qwen3-6-27b",
+        "dense-model",
+        "open-weight",
+        "agentic-coding",
+        "gated-deltanet",
+        "hybrid-attention",
+        "multimodal",
+        "thinking-preservation",
+        "mtp",
+        "yarn",
+        "swe-bench",
+        "terminal-bench",
+        "27b-beats-397b",
+        "tier-0",
+        "mission-2026-04-27",
+        "ai-models"
+      ],
+      "sources": [
+        {
+          "id": "src-marktechpost-qwen36-27b-release",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/04/22/alibaba-qwen-team-releases-qwen3-6-27b-a-dense-open-weight-model-outperforming-397b-moe-on-agentic-coding-benchmarks/",
+          "file": "raw/articles/alibaba-qwen-team-releases-qwen36-27b-a-dense-open-weight-model-outperforming-39.md",
+          "title": "Alibaba Qwen Team Releases Qwen3.6-27B: A Dense Open-Weight Model Outperforming 397B MoE on Agentic Coding Benchmarks",
+          "ingested": "2026-04-25"
+        },
+        {
+          "id": "qwen-blog-3-6-27b",
+          "type": "documentation",
+          "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+          "title": "Qwen3.6-27B Blog (Alibaba Qwen Team)",
+          "ingested": "2026-04-25"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 Qwen3.6-27B",
+        "Qwen3.6-27B Dense Open-Weight Release"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "MarkTechPost \u2014 Qwen3.6-27B Release"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Qwopus: Claude Opus Reasoning Distilled into Qwen 27B"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 gpt-oss: OpenAI Open-Weight MoE"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Unsloth: Fast LoRA on Consumer Hardware"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-turboquant-122b-macbook.md",
       "slug": "sources/tools-integration/src-turboquant-122b-macbook",
       "title": "Synthesis \u2014 TurboQuant 122B LLM on MacBook",
@@ -27559,6 +27904,184 @@
         {
           "verb": "RELATES TO",
           "target": "LLM Wiki Standards \u2014 What Good Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md",
+      "slug": "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
+      "title": "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)",
+      "type": "source-synthesis",
+      "domain": "wiki-methodology",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "synthesis",
+        "aidlc",
+        "aws-labs",
+        "methodology",
+        "three-phase-workflow",
+        "inception-construction-operations",
+        "multi-platform",
+        "methodology-first",
+        "agent-agnostic",
+        "vision-document",
+        "technical-environment-document",
+        "never-vibe-code",
+        "question-answer-flow",
+        "opt-in-extensions",
+        "audit-trail",
+        "methodology-comparison",
+        "mit-0"
+      ],
+      "sources": [
+        {
+          "id": "src-awslabs-aidlc-workflows",
+          "type": "documentation",
+          "url": "https://github.com/awslabs/aidlc-workflows",
+          "file": "raw/articles/awslabsaidlc-workflows.md",
+          "title": "awslabs/aidlc-workflows \u2014 AI-Driven Development Life Cycle",
+          "ingested": "2026-04-24"
+        },
+        {
+          "id": "aidlc-method-paper",
+          "type": "documentation",
+          "url": "https://prod.d13rzhkk8cj2z0.amplifyapp.com/",
+          "title": "AI-DLC Method Definition Paper"
+        },
+        {
+          "id": "aidlc-blog",
+          "type": "article",
+          "url": "https://aws.amazon.com/blogs/devops/ai-driven-development-life-cycle/",
+          "title": "AI-Driven Development Life Cycle (AWS Blog)"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 AI-DLC",
+        "AWS AI-DLC Methodology"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "awslabs/aidlc-workflows GitHub Repository"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 SFIF and Architecture"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis: BMAD-METHOD"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis: OpenSpec \u2014 Spec-Driven Development"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 GitHub Spec Kit"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 Unsloth Qwen3.6-27B 2-bit"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Context Compaction Is a Reset Event"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle \u2014 Structured Context Governs Behavior"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 LLM Wiki"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port.md",
+      "slug": "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
+      "title": "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)",
+      "type": "source-synthesis",
+      "domain": "wiki-methodology",
+      "status": "synthesized",
+      "confidence": "low",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "",
+      "tags": [
+        "synthesis",
+        "aidlc",
+        "claude-code",
+        "plugin",
+        "community-port",
+        "low-confidence",
+        "grain-of-salt",
+        "three-phase-workflow",
+        "chat-based-qa",
+        "plugin-marketplace",
+        "mit-0"
+      ],
+      "sources": [
+        {
+          "id": "src-ijin-aidlc-cc-plugin",
+          "type": "documentation",
+          "url": "https://github.com/ijin/aidlc-cc-plugin",
+          "file": "raw/articles/ijinaidlc-cc-plugin.md",
+          "title": "ijin/aidlc-cc-plugin \u2014 AI-DLC Plugin for Claude Code",
+          "ingested": "2026-04-24"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Synthesis \u2014 AIDLC CC Plugin",
+        "ijin/aidlc-cc-plugin"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "ijin/aidlc-cc-plugin GitHub Repository"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "AWS AI-DLC"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
         }
       ]
     },
@@ -33341,8 +33864,16 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 32,
-      "relationship_count": 56
+      "page_count": 33,
+      "relationship_count": 57
+    },
+    "tools-integration": {
+      "page_count": 4,
+      "relationship_count": 28
+    },
+    "wiki-methodology": {
+      "page_count": 2,
+      "relationship_count": 18
     }
   },
   "tags": {
@@ -34020,6 +34551,7 @@
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
       "spine/evolution-log/methodology-evolution-history",
       "spine/learning-paths/methodology-fundamentals",
       "spine/models/foundation/model-methodology",
@@ -34291,7 +34823,8 @@
       "backlog/modules/e008-m002-k2-6-q2-gguf-download-and-verify",
       "log/2026-04-23-k2-6-q2-download-complete",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
     ],
     "moe": [
       "backlog/epics/pre-milestone/E008-local-k2-6-offline-frontier-tier",
@@ -34431,6 +34964,7 @@
       "backlog/modules/e012-m001-unsloth-toolchain-install",
       "backlog/tasks/T058-create-unsloth-venv",
       "log/2026-04-23-k2-6-q2-download-complete",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/local-training-playbook-2026"
     ],
@@ -34970,7 +35504,9 @@
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
       "backlog/modules/e012-m003-wiki-router-candidate-d",
       "sources/src-autobe-compiler-verified-backend-generation",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "sft": [
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
@@ -35479,6 +36015,7 @@
       "sources/src-pydantic-ai-typed-agent-framework",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "sources/src-vercel-opensrc-toolkit",
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "sources/wiki-methodology/src-awesome-design-md",
       "spine/domain-overviews/ai-agents-domain-overview"
@@ -35646,6 +36183,7 @@
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
       "spine/models/agent-config/model-claude-code",
       "spine/standards/model-standards/model-claude-code-standards"
@@ -37634,6 +38172,7 @@
       "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
       "log/amendment-to-prior-compliance-checker-correction-root-depth",
       "log/compliance-checker-agents-md-match-by-filename-regardless-o",
+      "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-",
       "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
       "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
       "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
@@ -38299,6 +38838,7 @@
       "log/2026-04-17/2026-04-17-session-summary",
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
       "spine/references/2026-consumer-hardware-ai-stack",
       "spine/references/open-model-evaluation-framework"
     ],
@@ -38414,7 +38954,9 @@
     "mission-2026-04-27": [
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
-      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "brain-refactor-active": [
       "log/2026-04-24-handoff-pickup-cold-forward"
@@ -38429,6 +38971,7 @@
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction-root-depth",
       "log/compliance-checker-agents-md-match-by-filename-regardless-o",
+      "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-",
       "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
       "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality"
@@ -38615,7 +39158,13 @@
       "patterns/03_validated/architecture/plan-execute-review-cycle"
     ],
     "synthesis": [
-      "patterns/03_validated/architecture/progressive-distillation"
+      "patterns/03_validated/architecture/progressive-distillation",
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
+      "sources/tools-integration/src-omnivoice-tts-600-languages",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
     ],
     "density": [
       "patterns/03_validated/architecture/progressive-distillation"
@@ -38800,7 +39349,8 @@
       "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
     ],
     "mcp-server": [
-      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill"
+      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
     ],
     "trend-pulse": [
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill"
@@ -38856,7 +39406,8 @@
     ],
     "plugin": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
     ],
     "skill-portability": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
@@ -38895,6 +39446,7 @@
       "sources/src-27-questions-llm-selection",
       "sources/src-hrm-trm-tiny-recursion-models",
       "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
       "spine/domain-overviews/ai-models-domain-overview",
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
@@ -39078,7 +39630,9 @@
     ],
     "agentic-coding": [
       "sources/src-cline-agentic-coding-ide-extension",
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "checkpoints": [
       "sources/src-cline-agentic-coding-ide-extension"
@@ -39380,6 +39934,42 @@
     "tools-integration": [
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
+    "firecrawl": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "web-scraping": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "fire-1": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "change-tracking": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "llmstxt": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "search-and-scrape": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "javascript-rendering": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "agent-skill": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "self-hosting": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "agpl": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "alternative-to-pipeline-fetch": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
+    "ingestion-tool-comparison": [
+      "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
+    ],
     "searxng": [
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
@@ -39451,7 +40041,49 @@
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
     ],
     "multimodal": [
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "tts": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "omnivoice": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "coqui-tts": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "voice-cloning": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "voice-design": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "multilingual": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "gradio": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "uv": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "audiobook": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "fish-audio-s2": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "vibe-voice": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
+    ],
+    "tier-0": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "openclaw-openarms-integration": [
+      "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
     "byom": [
       "sources/tools-integration/src-opencode-harness-features"
@@ -39492,6 +40124,56 @@
     "qa": [
       "sources/tools-integration/src-playwright-mcp-visual-testing"
     ],
+    "qwen3-6-27b": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "2-bit": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
+    ],
+    "ud-iq2": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
+    ],
+    "tool-calls": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "spine/references/local-training-playbook-2026"
+    ],
+    "opus-distillation": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
+    ],
+    "hugging-face": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
+    ],
+    "community-discussion": [
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
+    ],
+    "dense-model": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "gated-deltanet": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "hybrid-attention": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "thinking-preservation": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "mtp": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "yarn": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "swe-bench": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "terminal-bench": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "27b-beats-397b": [
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
     "m4-max": [
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
@@ -39507,6 +40189,69 @@
     ],
     "qwopus": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "aidlc": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "aws-labs": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "three-phase-workflow": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "inception-construction-operations": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "multi-platform": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "methodology-first": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "agent-agnostic": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "vision-document": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "technical-environment-document": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "never-vibe-code": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "question-answer-flow": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "opt-in-extensions": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "audit-trail": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "methodology-comparison": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle"
+    ],
+    "mit-0": [
+      "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "community-port": [
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "low-confidence": [
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "grain-of-salt": [
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "chat-based-qa": [
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "plugin-marketplace": [
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
     ],
     "awesome-list": [
       "sources/wiki-methodology/src-awesome-design-md"
@@ -39730,9 +40475,6 @@
       "spine/references/frontmatter-field-reference"
     ],
     "wiki-alignment": [
-      "spine/references/local-training-playbook-2026"
-    ],
-    "tool-calls": [
       "spine/references/local-training-playbook-2026"
     ],
     "semantic-enhancement": [
@@ -39959,6 +40701,12 @@
       "target": "AICP's $0 target on consumer hardware",
       "referenced_by": [
         "Single-Active Backend with LRU Eviction"
+      ]
+    },
+    {
+      "target": "AWS AI-DLC",
+      "referenced_by": [
+        "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
       ]
     },
     {
@@ -40299,6 +41047,18 @@
       ]
     },
     {
+      "target": "Firecrawl GitHub README",
+      "referenced_by": [
+        "Synthesis \u2014 Firecrawl: Web Scraper API for AI Agents (Search \u00b7 Scrape \u00b7 Agent \u00b7 Change-Tracking)"
+      ]
+    },
+    {
+      "target": "HF Discussion \u2014 Unsloth/Qwen3.6-27B-GGUF #15",
+      "referenced_by": [
+        "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls"
+      ]
+    },
+    {
       "target": "Harness Landscape 2026",
       "referenced_by": [
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
@@ -40393,6 +41153,12 @@
       ]
     },
     {
+      "target": "MarkTechPost \u2014 Qwen3.6-27B Release",
+      "referenced_by": [
+        "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding"
+      ]
+    },
+    {
       "target": "Method of Work",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
@@ -40445,6 +41211,9 @@
         "Synthesis \u2014 AirLLM: Layer-Wise Inference with NVMe SSD Offload",
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
+        "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
+        "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
+        "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines",
@@ -40612,6 +41381,7 @@
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
         "Machine-Specific Config in Version Control Is Aspirational Portability",
         "Aspirational Declaration Produces False Confidence at Every Layer",
+        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)",
         "Provider Pricing Monitoring \u2014 Operations Plan"
       ]
     },
@@ -40619,6 +41389,12 @@
       "target": "Principle \u2014 Right Process for Right Context",
       "referenced_by": [
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ]
+    },
+    {
+      "target": "Principle \u2014 Structured Context Governs Behavior",
+      "referenced_by": [
+        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {
@@ -40717,6 +41493,12 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle",
+      "referenced_by": [
+        "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 AirLLM",
       "referenced_by": [
         "E008 \u2014 Local K2.6 Offline Frontier Tier (KTransformers on /dev/sdd)",
@@ -40748,6 +41530,12 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 GitHub Spec Kit",
+      "referenced_by": [
+        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Kimi K2.6",
       "referenced_by": [
         "E007 \u2014 OpenRouter Deadline De-Risk (Claude Code CLI \u2192 K2.6)",
@@ -40761,6 +41549,13 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE",
+      "referenced_by": [
+        "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
+        "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Qwopus",
       "referenced_by": [
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
@@ -40769,6 +41564,13 @@
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Qwopus: Claude Opus Reasoning Distilled into Qwen 27B",
+      "referenced_by": [
+        "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
+        "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding"
       ]
     },
     {
@@ -40811,6 +41613,14 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 Unsloth: Fast LoRA on Consumer Hardware",
+      "referenced_by": [
+        "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
+        "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
+        "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 gpt-oss",
       "referenced_by": [
         "Synthesis \u2014 Qwopus \u2014 Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B",
@@ -40820,6 +41630,24 @@
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 gpt-oss: OpenAI Open-Weight MoE",
+      "referenced_by": [
+        "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding"
+      ]
+    },
+    {
+      "target": "Synthesis: BMAD-METHOD",
+      "referenced_by": [
+        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
+      ]
+    },
+    {
+      "target": "Synthesis: OpenSpec \u2014 Spec-Driven Development",
+      "referenced_by": [
+        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {
@@ -40979,6 +41807,12 @@
       ]
     },
     {
+      "target": "YouTube \u2014 OmniVoice TTS Showcase",
+      "referenced_by": [
+        "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages"
+      ]
+    },
+    {
       "target": "`tools/inventory_models.sh`",
       "referenced_by": [
         "E010 M004 \u2014 Model Weights Inventory Tool and Manifest"
@@ -40994,6 +41828,12 @@
       "target": "`wiki/spine/references/operator-workstation-storage-tiering.md`",
       "referenced_by": [
         "E010 M003 \u2014 Storage Tiering Documentation (authoritative disk map)"
+      ]
+    },
+    {
+      "target": "awslabs/aidlc-workflows GitHub Repository",
+      "referenced_by": [
+        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {
@@ -41193,6 +42033,12 @@
       "referenced_by": [
         "E012 M001 \u2014 Unsloth Toolchain Install (GPU build, 19 GB VRAM)",
         "T070 \u2014 Design 3 Adapter Training Datasets (methodology, compliance, relationship)"
+      ]
+    },
+    {
+      "target": "ijin/aidlc-cc-plugin GitHub Repository",
+      "referenced_by": [
+        "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
       ]
     },
     {
