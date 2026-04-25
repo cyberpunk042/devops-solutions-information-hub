@@ -61,7 +61,9 @@
       "WebFetch(domain:ollama.com)",
       "Bash(.venv/bin/python -m tools.gateway orient)",
       "Bash(.venv/bin/python -m tools.pipeline status)",
-      "Bash(.venv/bin/python -m tools.gateway health)"
+      "Bash(.venv/bin/python -m tools.gateway health)",
+      "Bash(.venv/bin/python -m tools.pipeline gaps)",
+      "Bash(.venv/bin/python -m tools.pipeline evolve --score)"
     ]
   },
   "hooks": {

@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-25T13:26:43.979329+00:00",
+  "generated": "2026-04-25T13:37:40.727188+00:00",
   "stats": {
-    "pages": 488,
+    "pages": 489,
     "domains": 11,
     "sources": 65,
     "comparisons": 8,
-    "relationships": 2958,
-    "tags_unique": 1439,
+    "relationships": 2964,
+    "tags_unique": 1442,
     "layers": {
       "3": 4,
       "5": 37,
@@ -20925,6 +20925,79 @@
       ]
     },
     {
+      "path": "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch.md",
+      "slug": "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "title": "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "2026-04-25",
+      "tags": [
+        "handoff",
+        "session",
+        "ingestion",
+        "qwen3-6-27b",
+        "mission-2026-04-27",
+        "tier-0",
+        "post-anthropic-stack",
+        "t-minus-2",
+        "additive-batch"
+      ],
+      "sources": [
+        {
+          "id": "directive-2026-04-25",
+          "type": "notes",
+          "file": "raw/notes/2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b.md",
+          "description": "Verbatim directive that drove this session's work."
+        },
+        {
+          "id": "prior-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-handoff-pickup-cold-forward.md",
+          "description": "Yesterday's handoff that this session closes the loop on (the 4 derailed ingestions are now synthesized)."
+        },
+        {
+          "id": "spine-update",
+          "type": "wiki",
+          "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
+          "description": "Spine reference page \u2014 added 2026-04-25 addendum on Qwen3.6-27B as new Layer-2 tier leader."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-24 Brain Refactor Handoff"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive \u2014 2026-04-25]]"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -33836,8 +33909,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 205,
-      "relationship_count": 1351
+      "page_count": 206,
+      "relationship_count": 1357
     },
     "ai-models": {
       "page_count": 14,
@@ -37364,6 +37437,7 @@
       "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
       "log/2026-04-09/system/2026-04-09-ingest-awesome-design-md",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "spine/models/foundation/model-llm-wiki"
     ],
     "multi-pass": [
@@ -38813,7 +38887,8 @@
       "log/2026-04-10/2026-04-10-session-summary",
       "log/2026-04-17/2026-04-17-session-summary",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
-      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -38883,6 +38958,7 @@
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -38955,6 +39031,7 @@
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
@@ -38966,6 +39043,26 @@
     ],
     "brain-enforcement": [
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "qwen3-6-27b": [
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "tier-0": [
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-omnivoice-tts-600-languages",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "post-anthropic-stack": [
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
+    ],
+    "t-minus-2": [
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
+    ],
+    "additive-batch": [
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -40077,11 +40174,6 @@
     "vibe-voice": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
-    "tier-0": [
-      "sources/tools-integration/src-omnivoice-tts-600-languages",
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
-    ],
     "openclaw-openarms-integration": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
@@ -40123,10 +40215,6 @@
     ],
     "qa": [
       "sources/tools-integration/src-playwright-mcp-visual-testing"
-    ],
-    "qwen3-6-27b": [
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "2-bit": [
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
@@ -40694,7 +40782,14 @@
     {
       "target": "2026-04-24 Brain Refactor Handoff",
       "referenced_by": [
-        "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)"
+        "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)",
+        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
+      ]
+    },
+    {
+      "target": "2026-04-24 \u2014 Pickup-Cold Handoff",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
       ]
     },
     {
@@ -41290,7 +41385,8 @@
     {
       "target": "Principle 1 \u2014 Infrastructure Over Instructions",
       "referenced_by": [
-        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config"
+        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
+        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
       ]
     },
     {
@@ -41344,6 +41440,7 @@
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
         "Kimi K2.6 Access Paths \u2014 OpenRouter vs Ollama Cloud vs Local KTransformers",
+        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "Local Training Playbook 2026 \u2014 Wiki Alignment, Tool Calls, Semantic Enhancement"
@@ -41834,6 +41931,12 @@
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
+      ]
+    },
+    {
+      "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive \u2014 2026-04-25]]",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
       ]
     },
     {

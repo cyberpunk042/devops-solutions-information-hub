@@ -242,6 +242,120 @@ AICP's 2026-04-22 through 2026-04-24 analysis (8 docs, 3,300+ lines) produced an
 > | 14. KTransformers setup + K2.6 Q2 local benchmark | 3-6 h | Real tok/s measured; Tier 2 viability confirmed | #13 + 64 GB RAM installed |
 > | 15. Wire K2.6 as AICP premium-cheap tier (OpenRouter first, local fallback) | 4-8 h | ~90% local + ~8% K2.6 routing-split reached | #7, #12 |
 
+## 2026-04-25 Addendum — Qwen3.6-27B Resets the Layer-2 Dense Tier
+
+Three days after the 2026-04-22 K2.6 update and one day after the 2026-04-24 local-K2.6 postmortem, **Alibaba Qwen released [[src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding|Qwen3.6-27B]]** (2026-04-22) — the first **dense** open-weight model in the Qwen3.6 family, **Apache 2.0**, **natively multimodal**, with a **hybrid Gated DeltaNet + Gated Attention architecture** (75% linear attention / 25% standard) that beats both Qwen3.6-35B-A3B (sparse MoE) and the much-larger **Qwen3.5-397B-A17B MoE** on agentic coding benchmarks. Day-of operational evidence from the [[src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion|Unsloth GGUF discussion]] confirms the **2-bit UD-IQ2 quantization** retains agentic capability — Daniel/Unsloth showcased the 2-bit model making **26 sequential tool calls**. This redraws the Layer-2 (Base models) row in the four-layer stack.
+
+> [!success] **The headline finding — 27B dense beats 397B MoE on agentic coding**
+>
+> | Benchmark | Qwen3.5-27B | Qwen3.6-27B | Qwen3.5-397B-A17B (MoE) | Claude 4.5 Opus | Kimi K2.6 |
+> |---|---|---|---|---|---|
+> | SWE-bench Verified | 75.0 | **77.2** | — | 80.9 | — |
+> | **SWE-bench Pro** | 51.2 | **53.5** | **50.9** ← lower | — | **58.6** |
+> | Terminal-Bench 2.0 (3h, 32 CPU, 48GB RAM) | — | **59.3** | — | **59.3** ← match | — |
+> | QwenWebBench (front-end coding) | 1068 | **1487** | — | — | — |
+> | NL2Repo | 27.3 | **36.2** | — | — | — |
+> | SkillsBench Avg5 | 27.2 | **48.2** (77% relative) | — | — | — |
+>
+> A **14.7× smaller dense model** beating a 397B MoE on the agentic-coding benchmark that matters most. This is empirical validation that **dense-and-trained-well outperforms parameter-count-as-proxy at the consumer-hardware tier**.
+
+### Architectural innovations relevant to consumer-hardware deployment
+
+> [!info] Why the architecture matters for tier-0 (19-32 GB VRAM)
+>
+> | Mechanism | Effect on consumer-hardware feasibility |
+> |---|---|
+> | **75% Gated DeltaNet (linear attention)** | O(n) attention dominates — long-context cost stays manageable on consumer GPUs even at 262K native context |
+> | **25% Gated Attention with 4 KV heads** | Dramatically reduces KV cache memory (4 KV heads vs typical 8-16) — drives down inference VRAM |
+> | **Multi-Token Prediction (MTP) trained multi-step** | Enables speculative decoding at inference — multi-token-per-step throughput without quality compromise |
+> | **Thinking Preservation** (`chat_template_kwargs.preserve_thinking: True`) | Retains historical CoT across conversation turns — **stateful reasoning at the architecture level**; reduces redundant token generation in agentic loops; complements [[src-anthropic-effective-harnesses-long-running-agents\|Anthropic's harness state-file pattern]] |
+> | **Native multimodal** (text + image + video, Causal LM with Vision Encoder) | Single model handles all modalities — no separate vision pipeline; mmproj GGUF files (BF16/F16/F32) ship alongside main quants |
+> | **YaRN context extension** | 262K native → 1M tokens (recommended ≥128K to preserve thinking capability) |
+
+### Updated Layer-2 row
+
+> [!info] **Layer 2 (Base models) — post-2026-04-25**
+>
+> | Layer | What it provides | 2026 example | Hardware floor | Matured |
+> |-------|------------------|--------------|----------------|---------|
+> | **2. Base models** | Competitive open-weight models | [[src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding\|**Qwen3.6-27B (DENSE — new tier leader)**]], [[src-gpt-oss-openai-open-weight-moe\|gpt-oss-20b]], [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b\|Qwopus v3]] | 16-20 GB for 20-27B Q4 · 5-7 GB for Qwen3.6-27B UD-IQ2 (2-bit) | 2025-2026 |
+>
+> **Operator framing (verbatim, 2026-04-25):** *"this is our best bet for this tier 0 machine / system."* The 2-bit UD-IQ2 quant fits comfortably in the operator's RTX 2080 Ti VRAM budget while the 26-tool-call demonstration confirms agentic capability is preserved at that quantization level.
+
+### Mission-relevant signal — the Opus-distillation hint
+
+> [!warning] **Worth tracking, not yet authoritative**
+>
+> An Unsloth-discussion commenter (`owao`) asked why "Here is a reasoning process\n\n" residue from Claude Opus traces wasn't stripped from training data — implying **Qwen3.6-27B's reasoning may be partially distilled from Opus traces** (similar to the [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b\|Qwopus pattern]] but at the official-Alibaba-channel scale). If true, this has **two contradictory mission implications**:
+>
+> | Frame | Implication |
+> |---|---|
+> | **Pro post-Anthropic stack** | The Qwen3.6-27B reasoning quality compounds Opus's existing strengths — choosing it for the local tier captures Opus reasoning provenance without per-token Anthropic cost. The post-Anthropic stack effectively inherits Opus's reasoning DNA at $0/token. |
+> | **Caveat for the stack's "anti-vendor-lock-in" mission** | Per the operator's saved memory: *"specialty routing across providers is mission-aligned; default-tier lock-in is the violation."* If Qwen3.6-27B's reasoning provenance traces back to Opus training data, the operator's stack still has indirect Anthropic dependency at the **training-data level** — not a runtime dependency, but a quality-provenance one. |
+>
+> Confidence: **medium → low** until corroborated. Verification candidates:
+> 1. Independent residue analysis across N outputs
+> 2. Official Qwen team statement on training-data composition
+> 3. Cross-reference with known Qwopus distillation traces
+>
+> **Operator stance (consistent with the 2026-04-24 mission framing):** the distillation provenance is a *signal worth knowing* but does not change the candidacy decision — the model is open-weight Apache 2.0, no Anthropic API runtime dependency, the reasoning quality is empirically there. The mission's actual constraint is "anti-vendor-lock-in," and Qwen3.6-27B satisfies that whether or not its training data included Opus traces.
+
+### Three Qwen tier-0 deployment paths (added to the existing Layer 2 framing)
+
+> [!abstract] How to actually deploy Qwen3.6-27B on tier-0 hardware
+>
+> | Path | Hardware | Toolchain | Speed estimate | Best for |
+> |---|---|---|---|---|
+> | **2a. Qwen3.6-27B BF16 (full precision)** | 16+ GB VRAM (e.g., RTX 4080/4090/A6000) | SGLang ≥0.5.10 / vLLM ≥0.19.0 / KTransformers / HF Transformers | Native | Reference-quality inference; baseline measurement |
+> | **2b. Qwen3.6-27B FP8 (block size 128)** | 12-16 GB VRAM | Same toolchains | ~Native (near-identical quality) | Production-grade inference at half VRAM |
+> | **2c. Qwen3.6-27B UD-IQ2 (2-bit Unsloth Dynamic)** | **5-7 GB VRAM (operator's tier-0 path)** | llama.cpp / Unsloth Studio | Slower per-token but fits where BF16/FP8 don't | The operator's "best bet for tier 0" — agentic capability proven via the 26-tool-call demo |
+> | **2d. Qwen3.6-27B + multimodal (mmproj-BF16/F16/F32)** | +1-3 GB on top of any of the above | Same + mmproj loaded | Same | Image/video input — single-model multimodal vs separate vision pipeline |
+>
+> The **2c path is what the operator named** — "tier 0 machine / system." Path 2a-2b are higher-fidelity options if the operator's hardware is upgraded (the 64 GB RAM milestone from E010 + storage tiering would also enable path 2a on lower-VRAM cards via offload).
+
+### Updated routing table (post-2026-04-25)
+
+> [!success] **$0-target and mission-aligned routing** (post-Qwen3.6-27B)
+>
+> | Task class | 2026-04-24 routing | 2026-04-25+ routing |
+> |------------|---------------------|---------------------|
+> | Daily personal coding & multi-step agent workflows | K2.6 via Ollama Cloud Pro / OpenRouter | **Qwen3.6-27B local (UD-IQ2 or FP8 if VRAM allows)** — primary candidate · K2.6 via Ollama Cloud Pro as cloud fallback for context-heavy tasks (>262K tokens or quality-critical) |
+> | Code review, refactors on public code | K2.6 cheap-cloud or GPT-5.1-codex-mini | **Qwen3.6-27B local** (SWE-bench Pro 53.5; matches Claude 4.5 Opus on Terminal-Bench 2.0) · K2.6 cheap-cloud only if cross-repo coordination needed |
+> | Substantive reasoning on corpus-wide analysis | K2.6 via Ollama Cloud Pro | **Qwen3.6-27B local with Thinking Preservation enabled** — the multi-turn reasoning carry-forward gives this a structural advantage for corpus-wide work · K2.6 cheap-cloud as fallback |
+> | Multimodal (image / video understanding) | Cloud (Opus 4.7 / Claude vision) | **Qwen3.6-27B local + mmproj** (native multimodal — VideoMME 87.7, AndroidWorld 70.3, VlmsAreBlind 97.0) |
+> | Client / employer / private-repo work | K2.6 OpenRouter (pinned provider) | **Qwen3.6-27B local** (sovereignty) · K2.6 OpenRouter as cloud fallback |
+> | Pure-math / max-stakes reasoning | GPT-5.x | **GPT-5.x or Opus 4.7** (no change — high-stakes still cloud, mission-exception logged) |
+> | Offline / regulatory / sovereignty-hard | Local llama.cpp | **Qwen3.6-27B local** (Apache 2.0; no per-token cost; full sovereignty) |
+>
+> **The new equilibrium — post-Qwen3.6-27B:** ~95% local (Qwen3.6-27B) + ~3% cheap-cloud (K2.6 via Ollama Cloud Pro / OpenRouter) + ~2% premium-cloud (Opus 4.7 / GPT-5.x) for the remaining max-stakes corners. The cloud-spend budget shrinks again — and unlike the 2026-04-22 K2.6 framing where the cheap-cloud share was ~8%, Qwen3.6-27B's local-reasoning quality drops it to ~3%.
+
+### Updated operator's concrete next-moves (post-Qwen3.6-27B)
+
+> [!tip] **2026-04-25+ next moves**
+>
+> | Action | Hours | Output | Dependency |
+> |--------|-------|--------|------------|
+> | 16. Pull Qwen3.6-27B UD-IQ2 GGUF from Unsloth HF org | 0.5-1 h (network-bound) | Tier-0 model staged | None |
+> | 17. Pull mmproj GGUF (BF16 or F16) for multimodal | 0.5 h | Vision capability staged | #16 |
+> | 18. Test Qwen3.6-27B UD-IQ2 via llama.cpp on operator's RTX 2080 Ti | 1-2 h | Real tok/s + tool-call success rate measured on operator's hardware | #16 |
+> | 19. Wire Qwen3.6-27B as AICP local-reasoning tier (replace gpt-oss-20b OR add as parallel option) | 4-8 h | Stage 3 routing updated; ~95% local achievable | #18 + AICP integration |
+> | 20. Validate Thinking Preservation in agentic loops (vs without) | 2-4 h | Per-turn token-cost reduction quantified | #18 |
+> | 21. Test Qwen3.6-27B's 26-tool-call capability on the wiki's `pipeline` toolset | 1-2 h | Confirm the model handles the wiki's internal tool surface | #18 |
+> | 22. Independent residue analysis to confirm/refute Opus-distillation hint | 2-4 h | Mission-provenance question resolved | #18 |
+> | 23. Replace gpt-oss-20b references in routing-related decisions with Qwen3.6-27B (if #18 confirms parity or better) | 1-2 h | Wiki routing decisions updated to reflect tier-0 candidate | #19 |
+>
+> **Action 18 is the load-bearing one for the 2026-04-27 mission deadline (T-2 days):** measured tok/s + tool-call success rate on the operator's actual hardware confirms or refutes the tier-0 candidacy at the empirical level. Without that measurement, "best bet for tier 0" is still aspirational — with it, the post-Anthropic stack's local-reasoning tier is committed.
+
+### Connection to AICP's E008-E012 milestones
+
+| Epic | What Qwen3.6-27B changes |
+|---|---|
+| **E008 — Local K2.6 offline frontier tier** | K2.6 local was deprioritized in 2026-04-24 postmortem (~0.3 tok/s on operator's hardware). Qwen3.6-27B replaces K2.6 local as the practical sovereignty tier — **at usable tok/s** because it's 27B dense (not 1T MoE). |
+| **E009 — Harness Neutrality + OpenCode Parity** | Unchanged — harness-level work, not model-specific |
+| **E010 — Storage and Hardware Enablement** | Lower priority for VRAM expansion if Qwen3.6-27B UD-IQ2 fits in current 5-7 GB. Higher priority if operator wants path 2a (BF16) for reference-quality. |
+| **E011 — Routing Integration AICP Tiers** | **Significantly impacted.** Rewire from "K2.6 cloud / gpt-oss local" tiers to "Qwen3.6-27B local primary / K2.6 cloud fallback / Opus exception" tiers. Mission-load-bearing for 2026-04-27. |
+| **E012 — Custom Model Library / Unsloth LoRAs** | **Boosted.** Qwen3.6-27B is the natural new base for wiki-corpus fine-tunes (replacing the originally-named Qwen3.5-4B). Larger base = more headroom for methodology fluency without losing tier-0 fit. |
+
 ## Connection to the Four Principles
 
 > [!abstract] **How today's synthesis validates (or extends) the four principles**
@@ -316,5 +430,6 @@ The four principles held across a day of intensive ingestion with no gaps or exc
 [[aicp|AICP]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[Principle 4 — Declarations Aspirational Until Verified]]
+[[2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch|2026-04-25 Session Handoff — Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update]]
 [[src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding|Synthesis — Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding]]
 [[src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion|Synthesis — Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls]]
