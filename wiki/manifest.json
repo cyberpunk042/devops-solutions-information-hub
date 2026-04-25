@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-25T12:39:15.541349+00:00",
+  "generated": "2026-04-25T12:44:59.243757+00:00",
   "stats": {
-    "pages": 480,
+    "pages": 481,
     "domains": 9,
     "sources": 59,
     "comparisons": 8,
-    "relationships": 2908,
-    "tags_unique": 1377,
+    "relationships": 2911,
+    "tags_unique": 1379,
     "layers": {
       "3": 4,
       "5": 37,
@@ -20643,6 +20643,70 @@
       ]
     },
     {
+      "path": "log/2026-04-24-handoff-pickup-cold-forward.md",
+      "slug": "log/2026-04-24-handoff-pickup-cold-forward",
+      "title": "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-24",
+      "updated": "2026-04-24",
+      "last_reviewed": "2026-04-24",
+      "tags": [
+        "handoff",
+        "pickup-cold",
+        "forward",
+        "mission-2026-04-27",
+        "brain-refactor-active",
+        "post-anthropic"
+      ],
+      "sources": [
+        {
+          "id": "brain-refactor-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md",
+          "description": "Retrospective handoff covering the full 2026-04-24 brain refactor \u2014 read for the WHY behind the current state."
+        },
+        {
+          "id": "prior-session-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling.md",
+          "description": "2026-04-23 session handoff \u2014 the AI infrastructure vision + decision matrix + tooling that this session built ON TOP of."
+        },
+        {
+          "id": "operator-directives",
+          "type": "notes",
+          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md",
+          "description": "Verbatim chain of all 2026-04-24 operator directives."
+        },
+        {
+          "id": "claude-md",
+          "type": "file",
+          "file": "CLAUDE.md",
+          "description": "The active brain \u2014 auto-loads at session start. New form (post-2026-04-24): operational program with routing table, MCP catalog, CLI catalog, 4 principles, methodology summary."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-24 Brain Refactor Handoff (retrospective)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-23 AI Infrastructure Handoff"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Self-Reference Drift lesson"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md",
       "slug": "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "title": "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update",
@@ -33249,8 +33313,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 204,
-      "relationship_count": 1348
+      "page_count": 205,
+      "relationship_count": 1351
     },
     "ai-models": {
       "page_count": 14,
@@ -34205,6 +34269,7 @@
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "log/2026-04-24-handoff-pickup-cold-forward",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ktransformers": [
@@ -38276,6 +38341,7 @@
     "handoff": [
       "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
@@ -38320,6 +38386,7 @@
     ],
     "pickup-cold": [
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "log/2026-04-24-handoff-pickup-cold-forward",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "hcs": [
@@ -38341,9 +38408,16 @@
     "gotcha": [
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
     ],
+    "forward": [
+      "log/2026-04-24-handoff-pickup-cold-forward"
+    ],
     "mission-2026-04-27": [
+      "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "brain-refactor-active": [
+      "log/2026-04-24-handoff-pickup-cold-forward"
     ],
     "loading-layer": [
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
@@ -39837,6 +39911,12 @@
       ]
     },
     {
+      "target": "2026-04-23 AI Infrastructure Handoff",
+      "referenced_by": [
+        "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)"
+      ]
+    },
+    {
       "target": "2026-04-23 Session Handoff \u2014 AI Infrastructure Vision & Tooling",
       "referenced_by": [
         "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
@@ -39867,6 +39947,12 @@
         "WSL Migration \u2014 Ubuntu 20.04 \u2192 Ubuntu 24.04 for K2.6 + ML Toolchain",
         "E010 M002 Complete \u2014 /mnt/models Live on 1 TB NVMe VHDX",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
+      ]
+    },
+    {
+      "target": "2026-04-24 Brain Refactor Handoff",
+      "referenced_by": [
+        "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)"
       ]
     },
     {
@@ -40603,6 +40689,12 @@
       "target": "Schema aspirationalism",
       "referenced_by": [
         "last_reviewed frontmatter field + evolve mark-reviewed CLI"
+      ]
+    },
+    {
+      "target": "Self-Reference Drift lesson",
+      "referenced_by": [
+        "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)"
       ]
     },
     {
