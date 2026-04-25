@@ -2249,6 +2249,167 @@ def query_compliance(paths: Dict[str, Path]) -> Dict[str, Any]:
     }
 
 
+def query_compliance_operational(paths: Dict[str, Path]) -> Dict[str, Any]:
+    """Operational verification — beyond structural file presence.
+
+    Per the self-reference-drift lesson (wiki/lessons/03_validated/methodology-process/
+    self-reference-drift-wiki-must-practice-its-own-teachings.md, 2026-04-25),
+    structural compliance (Tier 4/4 file presence) can coexist with operational
+    <Tier 2 (instructions not actually enforced). The 2026-04-24 incident showed
+    this directly: gateway compliance reported Tier 4 while the home project was
+    operating below Tier 2 because hooks were absent.
+
+    These checks distinguish structural from operational. Each verifies that a
+    structural artifact is also being USED, not just present.
+
+    Three operational checks:
+      1. Hooks operationally wired — .claude/hooks/ scripts exist + executable +
+         referenced in .claude/settings.json
+      2. CLAUDE.md has operational structure — Hard Rules section + tables (not
+         just prose pointers below the structured-context threshold)
+      3. Recent validation evidence — wiki/manifest.json has fresh generated_at
+         timestamp + non-zero page count (proves pipeline post is actually run)
+
+    Returns checks list (each with name/met/evidence), met_count, total,
+    operational_score string, and a note linking to the lesson.
+    """
+    import os as _os
+    from datetime import datetime as _datetime, timezone as _timezone
+
+    root = paths["root"]
+    checks: List[Dict[str, Any]] = []
+
+    # Check 1: Hooks layer is operationally wired
+    hooks_dir = root / ".claude" / "hooks"
+    settings_file = root / ".claude" / "settings.json"
+    hook_check: Dict[str, Any] = {
+        "name": "Hooks operationally wired in settings.json",
+        "met": False,
+        "evidence": [],
+    }
+    if hooks_dir.exists() and settings_file.exists():
+        hook_scripts = list(hooks_dir.glob("*.sh"))
+        executable = [h for h in hook_scripts if _os.access(h, _os.X_OK)]
+        try:
+            settings = json.loads(settings_file.read_text(encoding="utf-8"))
+            hooks_block = settings.get("hooks", {})
+            wired_count = 0
+            for event_hooks in hooks_block.values():
+                if isinstance(event_hooks, list):
+                    for entry in event_hooks:
+                        for h in entry.get("hooks", []):
+                            cmd = h.get("command", "")
+                            if ".claude/hooks/" in cmd:
+                                wired_count += 1
+            hook_check["met"] = bool(executable) and wired_count > 0
+            hook_check["evidence"] = [
+                f"{len(hook_scripts)} hook script(s) in .claude/hooks/",
+                f"{len(executable)} executable",
+                f"{wired_count} hook reference(s) wired in .claude/settings.json",
+            ]
+        except (json.JSONDecodeError, OSError) as e:
+            hook_check["evidence"].append(f"Could not parse settings.json: {e}")
+    else:
+        if not hooks_dir.exists():
+            hook_check["evidence"].append(".claude/hooks/ does not exist")
+        if not settings_file.exists():
+            hook_check["evidence"].append(".claude/settings.json does not exist")
+    checks.append(hook_check)
+
+    # Check 2: CLAUDE.md has operational structure (not just prose pointers)
+    claude_md = root / "CLAUDE.md"
+    structure_check: Dict[str, Any] = {
+        "name": "CLAUDE.md has operational structure (not just prose pointers)",
+        "met": False,
+        "evidence": [],
+    }
+    if claude_md.exists():
+        try:
+            content = claude_md.read_text(encoding="utf-8")
+            has_hard_rules = "Hard Rule" in content
+            # Heuristic for tables: pipe density. A real routing table has many pipes.
+            has_tables = content.count("|") > 20
+            has_routing = (
+                "routing" in content.lower()
+                or "operator intent" in content.lower()
+                or "First action" in content
+            )
+            structure_check["met"] = has_hard_rules and has_tables
+            structure_check["evidence"] = [
+                f"{'✓' if has_hard_rules else '✗'} contains 'Hard Rule' section",
+                f"{'✓' if has_tables else '✗'} contains markdown tables (>20 pipe chars)",
+                f"{'✓' if has_routing else '✗'} contains routing/intent reference",
+                f"({len(content)} chars total)",
+            ]
+        except OSError as e:
+            structure_check["evidence"].append(f"Could not read CLAUDE.md: {e}")
+    else:
+        structure_check["evidence"].append("CLAUDE.md does not exist")
+    checks.append(structure_check)
+
+    # Check 3: Recent validation evidence (wiki/manifest.json freshness)
+    manifest_file = root / "wiki" / "manifest.json"
+    manifest_check: Dict[str, Any] = {
+        "name": "Recent validation evidence (wiki/manifest.json)",
+        "met": False,
+        "evidence": [],
+    }
+    if manifest_file.exists():
+        try:
+            manifest = json.loads(manifest_file.read_text(encoding="utf-8"))
+            # Accept either 'generated' (current schema) or 'generated_at' (legacy/alt) — different
+            # manifest generators use different field names; both are valid timestamp signals.
+            generated_at = manifest.get("generated") or manifest.get("generated_at")
+            pages_field = manifest.get("pages")
+            if isinstance(pages_field, dict):
+                page_count = len(pages_field)
+            elif isinstance(pages_field, list):
+                page_count = len(pages_field)
+            else:
+                page_count = 0
+            if generated_at:
+                try:
+                    gen_dt = _datetime.fromisoformat(str(generated_at).replace("Z", "+00:00"))
+                    if gen_dt.tzinfo is None:
+                        gen_dt = gen_dt.replace(tzinfo=_timezone.utc)
+                    now = _datetime.now(_timezone.utc)
+                    age_hours = (now - gen_dt).total_seconds() / 3600.0
+                    # 168 hours = 7 days; recent enough that pipeline post is being run
+                    is_recent = age_hours < 168.0
+                    manifest_check["met"] = is_recent and page_count > 0
+                    manifest_check["evidence"] = [
+                        f"manifest generated at: {generated_at}",
+                        f"age: {age_hours:.1f} hours (recent if <168 = 7 days)",
+                        f"{page_count} pages indexed",
+                    ]
+                except (ValueError, AttributeError) as e:
+                    manifest_check["evidence"].append(f"Could not parse generated timestamp '{generated_at}': {e}")
+            else:
+                manifest_check["evidence"].append("manifest has no 'generated' or 'generated_at' field")
+        except (json.JSONDecodeError, OSError) as e:
+            manifest_check["evidence"].append(f"Could not parse manifest.json: {e}")
+    else:
+        manifest_check["evidence"].append("wiki/manifest.json does not exist (run pipeline post first)")
+    checks.append(manifest_check)
+
+    met_count = sum(1 for c in checks if c["met"])
+    total = len(checks)
+
+    return {
+        "checks": checks,
+        "met_count": met_count,
+        "total": total,
+        "operational_score": f"{met_count}/{total}",
+        "note": (
+            "Operational verification goes beyond structural file presence. Per the "
+            "self-reference-drift lesson (2026-04-25), a project can report Tier 4/4 "
+            "structural while operating below Tier 2 operationally — these checks "
+            "distinguish the two. See wiki/lessons/03_validated/methodology-process/"
+            "self-reference-drift-wiki-must-practice-its-own-teachings.md."
+        ),
+    }
+
+
 def query_location_mapping(paths: Dict[str, Path], title: Optional[str] = None) -> Dict[str, Any]:
     """Query the location mapping — find where archived/moved pages went."""
     import json as _json
@@ -2340,7 +2501,12 @@ def main():
     h.add_argument("--verbose", action="store_true", help="Show which pages have validation errors")
 
     # Compliance checker (Q25)
-    sub.add_parser("compliance", help="Super-model compliance checker — adoption tier + gaps")
+    c_comp = sub.add_parser("compliance", help="Super-model compliance checker — adoption tier + gaps")
+    c_comp.add_argument(
+        "--operational",
+        action="store_true",
+        help="Also run operational-depth checks (hooks wired in settings.json, CLAUDE.md has structured rules, recent manifest evidence) — distinguishes structural file presence from actual enforcement (closes Open Question 2 in self-reference-drift-wiki-must-practice-its-own-teachings.md)",
+    )
 
     # Status command (smart default — show everything)
     sub.add_parser("status", help="Show project identity, chain, models, and navigation guide")
@@ -2437,6 +2603,20 @@ def main():
             print("Recommendations:")
             for i, rec in enumerate(result["recommendations"], 1):
                 print(f"  {i}. {rec}")
+            print("")
+
+        # Operational verification — opt-in via --operational flag
+        if getattr(args, "operational", False):
+            op = query_compliance_operational(paths)
+            print(f"Operational Verification — beyond structural file presence  ({op['operational_score']} met)")
+            print("")
+            for check in op["checks"]:
+                mark = "✓" if check["met"] else "✗"
+                print(f"  {mark} {check['name']}")
+                for ev in check["evidence"]:
+                    print(f"      • {ev}")
+                print("")
+            print(f"  Note: {op['note']}")
             print("")
 
     elif args.command == "health":
