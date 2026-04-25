@@ -63,7 +63,8 @@
       "Bash(.venv/bin/python -m tools.pipeline status)",
       "Bash(.venv/bin/python -m tools.gateway health)",
       "Bash(.venv/bin/python -m tools.pipeline gaps)",
-      "Bash(.venv/bin/python -m tools.pipeline evolve --score)"
+      "Bash(.venv/bin/python -m tools.pipeline evolve --score)",
+      "Bash(.venv/bin/python -m tools.gateway compliance)"
     ]
   },
   "hooks": {

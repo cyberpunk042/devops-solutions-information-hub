@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-25T13:37:40.727188+00:00",
+  "generated": "2026-04-25T13:46:12.400850+00:00",
   "stats": {
     "pages": 489,
     "domains": 11,
@@ -18,8 +18,8 @@
       "spine": 75
     },
     "maturity": {
-      "growing": 324,
-      "seed": 33,
+      "growing": 325,
+      "seed": 32,
       "mature": 2
     }
   },
@@ -15607,106 +15607,6 @@
       ]
     },
     {
-      "path": "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings.md",
-      "slug": "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "title": "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
-      "type": "lesson",
-      "domain": "cross-domain",
-      "status": "synthesized",
-      "confidence": "high",
-      "created": "2026-04-24",
-      "updated": "2026-04-24",
-      "last_reviewed": "",
-      "tags": [
-        "lesson",
-        "self-reference",
-        "principle-validation",
-        "brain",
-        "claude-md",
-        "markdown-as-iac",
-        "agent-failure",
-        "distillation",
-        "predictability",
-        "dogfooding"
-      ],
-      "sources": [
-        {
-          "id": "session-2026-04-24-handoff",
-          "type": "wiki",
-          "file": "wiki/log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md",
-          "description": "The full incident \u2014 50 turns of agent failure where every principle violation surfaced simultaneously at the project's own self-reference layer."
-        },
-        {
-          "id": "session-2026-04-24-gap-analysis",
-          "type": "wiki",
-          "file": "wiki/log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md",
-          "description": "The structural diagnosis of which principles failed where, with current/required state per gap."
-        },
-        {
-          "id": "operator-directives-verbatim",
-          "type": "notes",
-          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md",
-          "description": "Verbatim operator framings of the failure: 'we broke the brain by splitting too much and distilling', 'behave FROM the project not OVER it', 'isn't all mostly happening in the claude.md and the rules files? did you even read the fucking knowledge?'"
-        },
-        {
-          "id": "principle-1",
-          "type": "wiki",
-          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
-        },
-        {
-          "id": "principle-4",
-          "type": "wiki",
-          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md"
-        }
-      ],
-      "layer": 4,
-      "maturity": "seed",
-      "derived_from": [
-        "Infrastructure Over Instructions for Process Enforcement",
-        "Declarations Are Aspirational Until Infrastructure Verifies Them",
-        "Structured Context Governs Agent Behavior More Than Content",
-        "The Agent Must Practice What It Documents"
-      ],
-      "aliases": [
-        "Self-Reference Drift",
-        "Self-Reference Drift \u2014 Wiki Must Practice Its Own Teachings"
-      ],
-      "relationships": [
-        {
-          "verb": "DERIVED FROM",
-          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
-        },
-        {
-          "verb": "DERIVED FROM",
-          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "The Agent Must Practice What It Documents"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 1"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 4"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Structural Compliance Is Not Operational Compliance"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Mandatory Without Verification Is Not Enforced"
-        }
-      ]
-    },
-    {
       "path": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy.md",
       "slug": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "title": "Specs-as-Code-Source Inverts the Traditional Hierarchy",
@@ -17854,6 +17754,106 @@
         {
           "verb": "BUILDS ON",
           "target": "Knowledge Evolution Pipeline"
+        }
+      ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md",
+      "slug": "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "title": "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-24",
+      "updated": "2026-04-25",
+      "last_reviewed": "2026-04-25",
+      "tags": [
+        "lesson",
+        "self-reference",
+        "principle-validation",
+        "brain",
+        "claude-md",
+        "markdown-as-iac",
+        "agent-failure",
+        "distillation",
+        "predictability",
+        "dogfooding"
+      ],
+      "sources": [
+        {
+          "id": "session-2026-04-24-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md",
+          "description": "The full incident \u2014 50 turns of agent failure where every principle violation surfaced simultaneously at the project's own self-reference layer."
+        },
+        {
+          "id": "session-2026-04-24-gap-analysis",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md",
+          "description": "The structural diagnosis of which principles failed where, with current/required state per gap."
+        },
+        {
+          "id": "operator-directives-verbatim",
+          "type": "notes",
+          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md",
+          "description": "Verbatim operator framings of the failure: 'we broke the brain by splitting too much and distilling', 'behave FROM the project not OVER it', 'isn't all mostly happening in the claude.md and the rules files? did you even read the fucking knowledge?'"
+        },
+        {
+          "id": "principle-1",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "growing",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Structured Context Governs Agent Behavior More Than Content",
+        "The Agent Must Practice What It Documents"
+      ],
+      "aliases": [
+        "Self-Reference Drift",
+        "Self-Reference Drift \u2014 Wiki Must Practice Its Own Teachings"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mandatory Without Verification Is Not Enforced"
         }
       ]
     },
@@ -20981,7 +20981,7 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive \u2014 2026-04-25]]"
+          "target": "Operator directive \u2014 2026-04-25"
         },
         {
           "verb": "FEEDS INTO",
@@ -34726,7 +34726,7 @@
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
@@ -36199,10 +36199,10 @@
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
       "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
@@ -37111,7 +37111,7 @@
     ],
     "brain": [
       "domains/ai-agents/orchestration/openclaw",
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
     ],
     "heartbeat": [
@@ -38404,37 +38404,6 @@
     "self": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
-    "self-reference": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
-      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
-    ],
-    "principle-validation": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
-    ],
-    "markdown-as-iac": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings"
-    ],
-    "agent-failure": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
-      "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
-      "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
-      "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label",
-      "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions"
-    ],
-    "distillation": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "patterns/03_validated/architecture/progressive-distillation",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
-    ],
-    "predictability": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings"
-    ],
-    "dogfooding": [
-      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings"
-    ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "sources/src-github-spec-kit-specification-driven-development"
@@ -38482,6 +38451,14 @@
     "frontmatter": [
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "spine/references/frontmatter-field-reference"
+    ],
+    "agent-failure": [
+      "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
+      "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
+      "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
+      "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions"
     ],
     "behavioral": [
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure"
@@ -38679,6 +38656,29 @@
     ],
     "brainstorm": [
       "lessons/03_validated/methodology-process/never-skip-stages-even-when-told-to-continue"
+    ],
+    "self-reference": [
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "principle-validation": [
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
+    ],
+    "markdown-as-iac": [
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
+    "distillation": [
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "patterns/03_validated/architecture/progressive-distillation",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "predictability": [
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
+    "dogfooding": [
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
     ],
     "self-enforcement": [
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
@@ -41346,6 +41346,12 @@
       ]
     },
     {
+      "target": "Operator directive \u2014 2026-04-25",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
+      ]
+    },
+    {
       "target": "Per-Task Cost Growth",
       "referenced_by": [
         "The harness 'turnCount' variable counts streaming events, not conversational turns",
@@ -41931,12 +41937,6 @@
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
-      ]
-    },
-    {
-      "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive \u2014 2026-04-25]]",
-      "referenced_by": [
-        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
       ]
     },
     {

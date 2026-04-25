@@ -1037,6 +1037,7 @@ def extract_commits_remote(target: ProjectTarget, since: datetime, until: dateti
     return events
 
 
+# lint:allow-default-cap: max_depth=4 prevents runaway recursion in gh-api remote dir walk; sensible for typical wiki nesting (≤4 levels); caller can override
 def _gh_walk_dir_md(target: ProjectTarget, rel_dir: str, since: datetime, until: datetime,
                     types_filter: Set[str], full_content: bool,
                     depth: int = 0, max_depth: int = 4) -> List[TimelineEvent]:

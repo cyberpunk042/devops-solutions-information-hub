@@ -8,9 +8,10 @@ domain: cross-domain
 layer: 4
 status: synthesized
 confidence: high
-maturity: seed
+maturity: growing
 created: 2026-04-24
-updated: 2026-04-24
+updated: 2026-04-25
+last_reviewed: 2026-04-25
 derived_from:
   - "Infrastructure Over Instructions for Process Enforcement"
   - "Declarations Are Aspirational Until Infrastructure Verifies Them"
@@ -57,7 +58,9 @@ The condition surfaced when the operator gave a routine ingestion directive ("Th
 
 ## Insight
 
-**Self-reference is a distinct validation surface.** A principle proven across sister-project adoption (OpenArms, OpenFleet) does NOT automatically hold at the home-project's own config layer. The home project must independently dogfood the principle in its own brain (CLAUDE.md + AGENTS.md + the rules files + hooks + commands), or it will exhibit the predicted failure mode whenever its own AI agent operates.
+> [!warning] **Self-reference is a distinct validation surface.**
+>
+> A principle proven across sister-project adoption (OpenArms, OpenFleet) does NOT automatically hold at the home-project's own config layer. The home project must independently dogfood the principle in its own brain (CLAUDE.md + AGENTS.md + the rules files + hooks + commands), or it will exhibit the predicted failure mode whenever its own AI agent operates. **The mechanism: a principle's adoption in sister projects produces no enforcement infrastructure at the home project; the home project's agent operates from the home project's own (unenforced) config; the agent therefore exhibits the predicted ~25% compliance failure mode the principle was originally derived to prevent.**
 
 This is non-obvious because the home project is the AUTHORITY on the principle — there's an unspoken assumption that the authority practices what it teaches. The 2026-04-24 incident showed this assumption is unfounded: the wiki distilled CLAUDE.md to <100 lines (per a soft line-count guideline) WITHOUT preserving the structured-context property the principles require. The result was a top layer of prose pointers ("see X for Y") with no operational program — and the agent at the top defaulted to base-model instincts, not the wiki's intelligence.
 
@@ -110,6 +113,34 @@ The corrective insight: **for any principle the wiki documents about AI agent co
 3. **For each declaration in the config, identify the verification gate.** If no gate exists, either add one (preferred) or rename/demote the declaration to match reality (`"recommended"` not `"required"`, `"future work"` not `"available"`).
 4. **Test by adversarial role-play or empirical session.** Have an AI agent operate the home project under realistic operator pressure. The failures it exhibits ARE the unverified declarations and the unenforced rules. Use the failures as evidence to prioritize the next round of self-reference fixes.
 5. **Track self-reference adoption as a metric** distinct from sister-project adoption. The wiki's own `gateway compliance` (or equivalent) should report the home project's tier — and the report should distinguish teaching-validated principles from self-applied principles.
+
+## Self-Check — Am I About to Make This Mistake?
+
+> [!warning] Ask yourself before declaring a principle "taught" at the home project:
+>
+> 1. **Is the principle structurally enforced in MY OWN config**, or only documented in the wiki I publish for others? If only documented, the principle predicts my own agent's failure on it. Sister-project adoption is downstream evidence; self-reference is upstream evidence — without the upstream, the principle is aspirational at home.
+> 2. **For each instruction-only rule in CLAUDE.md / AGENTS.md, what's the corresponding hook (or harness gate, or MCP block)?** If no enforcement infrastructure exists, the rule holds at instruction-rate (~25% per Principle 1 evidence). Build the hook or honestly accept and label the compliance gap.
+> 3. **For each declaration in my config files (`MUST`, `REQUIRED`, `MANDATORY`, `enforced`, `verified`), what's the verification gate?** Per Principle 4, declarations without gates are aspirational. Pair every assertion with a gate command, or rename/demote the declaration to match reality.
+> 4. **Has my home project gone through a stress-test session that exhibits the failures my principles predict?** If not, the principles are validated by sister-project evidence only — sister evidence does not automatically transfer to self-reference. Test by adversarial role-play OR an empirical session under realistic operator pressure.
+> 5. **Does my distilled top-layer config satisfy Principle 2 (Structured Context > Content)?** If CLAUDE.md is prose pointers ("see X for Y") with no routing tables / MUST-NOT lists / structured triggers, it's below the structured-context threshold even when concise. Distillation that preserves prose-pointer form sacrifices the principle's mechanism.
+> 6. **When I add a new principle / rule / declaration to the wiki, does my next commit also update the home project's enforcement layer?** Knowledge must flow upward to operational rules — see [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] for the general form.
+
+### How This Connects — Navigate From Here
+
+> [!abstract] From This Lesson → Related Knowledge
+>
+> | Direction | Go To |
+> |-----------|-------|
+> | **The principle this validates at the home-project layer** | [[infrastructure-over-instructions-for-process-enforcement\|Principle 1 — Infrastructure Over Instructions]] |
+> | **The principle this validates at five sub-layers in one config** | [[declarations-are-aspirational-until-infrastructure-verifies-them\|Principle 4 — Declarations Aspirational Until Verified]] |
+> | **The principle this validates at the structural-form layer** | [[structured-context-governs-agent-behavior-more-than-content\|Principle 2 — Structured Context Governs Behavior]] |
+> | **The general lesson this specializes** | [[the-agent-must-practice-what-it-documents\|The Agent Must Practice What It Documents]] |
+> | **The full incident — 50 turns of failure** | [[2026-04-24-session-handoff-brain-refactor-rules-and-hooks\|Session Handoff 2026-04-24 — Brain Refactor]] |
+> | **The structural diagnosis (gap-analysis)** | [[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis\|Top-Layer Routing Refactor — Gap Analysis]] |
+> | **The corrective infrastructure** | `.claude/rules/hook-architecture.md` (hook design pattern) · `.claude/hooks/` (4 production hooks) · `.claude/rules/` (7 rules files) |
+> | **The meta-pattern** | [[structural-compliance-is-not-operational-compliance\|Structural Compliance Is Not Operational Compliance]] · [[mandatory-without-verification-is-not-enforced\|Mandatory Without Verification Is Not Enforced]] |
+> | **Where this fits in the system map** | [[methodology-system-map\|Methodology System Map]] |
+> | **What this means for self-audit cadence** | The Open Questions below — drift recompounds without scheduled audit |
 
 ## Open Questions
 
