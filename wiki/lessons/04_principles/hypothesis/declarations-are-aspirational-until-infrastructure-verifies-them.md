@@ -4,6 +4,13 @@ aliases:
   - "Principle — Declarations Are Aspirational Until Infrastructure Verifies Them"
   - "Principle: Declarations Are Aspirational Until Infrastructure Verifies Them"
   - "Declaration-Verification Principle"
+  - "Principle 4"
+  - "Principle 4 — Declarations Aspirational"
+  - "Principle 4 — Declarations Aspirational Until Verified"
+  - "Principle 4 — Declarations Aspirational Until Infrastructure Verifies Them"
+  - "Principle 4 — Declarations Are Aspirational Until Infrastructure Verifies Them"
+  - "Principle — Declarations Aspirational Until Verified"
+  - "Principle — Declarations Aspirational Until Infrastructure Verifies Them"
 type: principle
 domain: cross-domain
 layer: 5

@@ -203,4 +203,4 @@ The [[ai-infrastructure-decision-framework-2026|framework's]] "Specialty Routing
 [[Synthesis — Kimi K2.6]]
 [[MCP vs CLI — Decision vs Lesson]]
 [[aicp|AICP]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]

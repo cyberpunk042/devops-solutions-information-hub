@@ -3,6 +3,10 @@ title: Principle — Infrastructure Over Instructions for Process Enforcement
 aliases:
   - "Principle — Infrastructure Over Instructions for Process Enforcement"
   - "Principle: Infrastructure Over Instructions for Process Enforcement"
+  - "Principle 1"
+  - "Principle 1 — Infrastructure Over Instructions"
+  - "Principle 1 — Infrastructure Over Instructions for Process Enforcement"
+  - "Infrastructure Over Instructions"
 type: principle
 domain: cross-domain
 layer: 5

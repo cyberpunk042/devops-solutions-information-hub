@@ -3,6 +3,11 @@ title: Principle — Right Process for Right Context — The Goldilocks Imperati
 aliases:
   - "Principle — Right Process for Right Context — The Goldilocks Imperative"
   - "Principle: Right Process for Right Context — The Goldilocks Imperative"
+  - "Principle 3"
+  - "Principle 3 — Goldilocks"
+  - "Principle 3 — Right Process for Right Context"
+  - "Principle — Goldilocks"
+  - "Goldilocks Imperative"
 type: principle
 domain: cross-domain
 layer: 5

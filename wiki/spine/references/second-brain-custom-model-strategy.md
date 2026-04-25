@@ -360,4 +360,4 @@ Every candidate pays back within the first few dozen real queries. **Fine-tuning
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[aicp|AICP]]
 [[open-model-evaluation-framework|Open-Model Evaluation Framework]]
-[[Principle — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]

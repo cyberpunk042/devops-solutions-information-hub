@@ -236,4 +236,4 @@ The pattern: **multiple credible open-weight reasoning models at every capabilit
 [[Synthesis — TurboQuant]]
 [[local-llm-quantization|Local LLM Quantization]]
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
-[[Principle — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]

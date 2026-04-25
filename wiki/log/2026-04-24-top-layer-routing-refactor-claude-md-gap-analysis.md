@@ -229,4 +229,4 @@ The top-layer configuration (CLAUDE.md + AGENTS.md + CONTEXT.md + SKILLS.md) is 
 [[model-methodology|Model — Methodology]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]

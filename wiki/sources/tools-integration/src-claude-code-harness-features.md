@@ -225,4 +225,4 @@ As of April 2026: Claude Code ships weekly. Opus 4.7 is current; 1M-token contex
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[model-claude-code|Model — Claude Code]]
 [[aicp|AICP]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]

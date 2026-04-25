@@ -163,6 +163,6 @@ Audit document at AICP wiki/decisions/00_inbox/skills-audit-2026-04-17.md with p
 
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[Extension Standards]]
-[[Principle — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]
 [[profile-as-coordination-bundle|Profile as Coordination Bundle]]
 [[model-registry|Model Registry]]

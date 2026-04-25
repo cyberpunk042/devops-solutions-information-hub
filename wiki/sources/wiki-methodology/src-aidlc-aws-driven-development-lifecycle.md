@@ -335,6 +335,6 @@ AIDLC's "minimum viable input" before kicking off:
 [[src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion|Synthesis — Unsloth Qwen3.6-27B 2-bit]]
 [[context-compaction-is-a-reset-event|Context Compaction Is a Reset Event]]
 [[Principle — Infrastructure Over Instructions]]
-[[Principle — Structured Context Governs Behavior]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Behavior]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[model-llm-wiki|Model — LLM Wiki]]

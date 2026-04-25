@@ -262,8 +262,8 @@ Then read in this order if unfamiliar:
 ## Backlinks
 
 [[2026-04-23 Session Handoff — AI Infrastructure Vision & Tooling]]
-[[Principle 1 — Infrastructure Over Instructions for Process Enforcement]]
-[[Principle 4 — Declarations Are Aspirational Until Infrastructure Verifies Them]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions for Process Enforcement]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Are Aspirational Until Infrastructure Verifies Them]]
 [[Top-Layer Routing Refactor — Gap Analysis]]
 [[model-skills-commands-hooks|Model — Skills, Commands, and Hooks]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]

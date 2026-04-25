@@ -190,4 +190,4 @@ Three ways to reach K2.6: **OpenRouter** (pay-per-token cloud), **Ollama Cloud**
 [[mcp-vs-cli-for-tool-integration|Decision — MCP vs CLI for Tool Integration]]
 [[second-brain-custom-model-strategy|Second-Brain Custom Model Strategy]]
 [[Model — Local AI]]
-[[Principle 4 — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]

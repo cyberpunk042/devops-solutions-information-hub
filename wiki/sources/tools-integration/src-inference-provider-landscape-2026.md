@@ -202,4 +202,4 @@ Free tiers in 2026 have grown substantially enough to absorb real work:
 [[Harness Landscape 2026]]
 [[K2.6 Access Paths Comparison]]
 [[aicp|AICP]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]

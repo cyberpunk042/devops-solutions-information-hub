@@ -99,5 +99,5 @@ Run `python3 -m tools.gateway orient`. Then read:
 [[model-local-ai|Model — Local AI ($0 Target)]]
 [[2026 Consumer-Hardware AI Stack]]
 [[open-model-evaluation-framework|Open-Model Evaluation Framework]]
-[[Principle 4 — Declarations Aspirational]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational]]
 [[aicp|AICP]]

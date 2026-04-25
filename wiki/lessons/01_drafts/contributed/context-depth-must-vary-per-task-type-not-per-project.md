@@ -143,6 +143,6 @@ The [[agent-execution-cost-optimization-stack|Cost Optimization Stack]] pattern 
 [[Right-Size Methodology Model]]
 [[tier-based-context-depth-trust-earned-through-approval-rates|Tier-Based Context Depth — Trust Earned Through Approval Rates]]
 [[agent-execution-cost-optimization-stack|Agent Execution Cost Optimization Stack]]
-[[Principle — Goldilocks]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Goldilocks]]
 [[Context Engineering Standards]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]

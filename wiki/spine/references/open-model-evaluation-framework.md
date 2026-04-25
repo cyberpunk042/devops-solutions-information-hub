@@ -342,7 +342,7 @@ This produces a defensible decision in ~1 hour for any new model. It does NOT pr
 ## Backlinks
 
 [[model-local-ai|Model — Local AI ($0 Target)]]
-[[Principle — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]
 [[Decision — Local vs Cloud Routing]]
 [[Synthesis — gpt-oss]]
 [[Synthesis — AirLLM]]

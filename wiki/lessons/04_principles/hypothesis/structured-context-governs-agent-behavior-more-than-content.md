@@ -3,6 +3,11 @@ title: Principle — Structured Context Governs Agent Behavior More Than Content
 aliases:
   - "Principle — Structured Context Governs Agent Behavior More Than Content"
   - "Principle: Structured Context Governs Agent Behavior More Than Content"
+  - "Principle 2"
+  - "Principle 2 — Structured Context Governs Agent Behavior"
+  - "Principle 2 — Structured Context"
+  - "Principle — Structured Context Governs Behavior"
+  - "Structured Context Governs Behavior"
 type: principle
 domain: cross-domain
 layer: 5

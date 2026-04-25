@@ -166,11 +166,11 @@ The corrective insight: **for any principle the wiki documents about AI agent co
 
 ## Backlinks
 
-[[Principle 1 — Infrastructure Over Instructions]]
-[[Principle 4 — Declarations Aspirational Until Infrastructure Verifies Them]]
-[[Principle 2 — Structured Context Governs Agent Behavior]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Infrastructure Verifies Them]]
+[[structured-context-governs-agent-behavior-more-than-content|Principle 2 — Structured Context Governs Agent Behavior]]
 [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
-[[Principle 1]]
-[[Principle 4]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle 1]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced]]

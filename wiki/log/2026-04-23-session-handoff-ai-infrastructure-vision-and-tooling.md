@@ -283,7 +283,7 @@ Then read in this order if unfamiliar:
 ## Backlinks
 
 [[WSL Ubuntu Migration Handoff]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
 [[WSL Migration]]
 [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]
 [[Decision Matrix 2026]]

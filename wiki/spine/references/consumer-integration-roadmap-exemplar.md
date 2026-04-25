@@ -213,5 +213,5 @@ Each milestone should close only when a specific gate passes. These are the gate
 [[identity-profile|OpenArms — Identity Profile]]
 [[defense-layer-progression-is-expensive|Defense Layer Progression Is Expensive]]
 [[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]
-[[Principle — Goldilocks]]
+[[right-process-for-right-context-the-goldilocks-imperative|Principle — Goldilocks]]
 [[Super-Model]]

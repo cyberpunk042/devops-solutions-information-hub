@@ -139,6 +139,6 @@ Full version with formatted tables, foldable evidence callouts, and per-domain a
 
 ## Backlinks
 
-[[Principle — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance]]
 [[model-registry|Model Registry]]

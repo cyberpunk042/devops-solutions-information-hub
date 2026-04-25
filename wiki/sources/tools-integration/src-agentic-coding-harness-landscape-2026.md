@@ -186,4 +186,4 @@ The operator's daily stack (Claude Code + Codex plugin) — if either disappears
 [[Synthesis — Codex CLI + Plugin]]
 [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]
 [[Synthesis — Kimi K2.6]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]

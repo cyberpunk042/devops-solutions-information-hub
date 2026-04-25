@@ -186,5 +186,5 @@ Specific implementation alignments:
 [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]
 [[ai-model-provider-harness-decision-matrix-2026|AI Model × Provider × Harness Decision Matrix 2026]]
 [[src-inference-provider-landscape-2026|Inference Provider Landscape 2026]]
-[[Principle — Declarations Aspirational Until Infrastructure Verifies Them]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Infrastructure Verifies Them]]
 [[Principle — Infrastructure Over Instructions]]

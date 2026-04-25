@@ -263,5 +263,5 @@ Re-validate this matrix when:
 [[src-claude-code-harness-features|Claude Code Harness Features]]
 [[aicp|AICP]]
 [[local-training-playbook-2026|Local Training Playbook 2026]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
 [[provider-pricing-monitoring-operations-plan|Provider Pricing Monitoring — Operations Plan]]

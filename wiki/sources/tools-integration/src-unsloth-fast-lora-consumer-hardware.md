@@ -218,4 +218,4 @@ Most of Unsloth's claims are structurally verified (code exists, runs publicly).
 [[open-model-evaluation-framework|Open-Model Evaluation Framework]]
 [[Synthesis — gpt-oss]]
 [[local-llm-quantization|Local LLM Quantization]]
-[[Principle — Declarations Aspirational Until Verified]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Aspirational Until Verified]]

@@ -188,5 +188,5 @@ For the auto-memory directory (`~/.claude/projects/-home-jfortin-devops-solution
 [[2026-04-24 Brain Refactor Handoff]]
 [[Operator directive — 2026-04-25]]
 [[2026-consumer-hardware-ai-stack|The 2026 Consumer-Hardware AI Stack — Strategic Synthesis]]
-[[Principle 1 — Infrastructure Over Instructions]]
-[[Principle 4 — Declarations Aspirational Until Verified]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle 1 — Infrastructure Over Instructions]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Verified]]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-25T13:53:28.166146+00:00",
+  "generated": "2026-04-25T13:58:22.630338+00:00",
   "stats": {
     "pages": 489,
     "domains": 11,
@@ -18945,7 +18945,14 @@
       "aliases": [
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
         "Principle: Declarations Are Aspirational Until Infrastructure Verifies Them",
-        "Declaration-Verification Principle"
+        "Declaration-Verification Principle",
+        "Principle 4",
+        "Principle 4 \u2014 Declarations Aspirational",
+        "Principle 4 \u2014 Declarations Aspirational Until Verified",
+        "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them",
+        "Principle 4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Principle \u2014 Declarations Aspirational Until Verified",
+        "Principle \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
       ],
       "relationships": [
         {
@@ -19041,7 +19048,11 @@
       ],
       "aliases": [
         "Principle \u2014 Infrastructure Over Instructions for Process Enforcement",
-        "Principle: Infrastructure Over Instructions for Process Enforcement"
+        "Principle: Infrastructure Over Instructions for Process Enforcement",
+        "Principle 1",
+        "Principle 1 \u2014 Infrastructure Over Instructions",
+        "Principle 1 \u2014 Infrastructure Over Instructions for Process Enforcement",
+        "Infrastructure Over Instructions"
       ],
       "relationships": [
         {
@@ -19140,7 +19151,12 @@
       ],
       "aliases": [
         "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative",
-        "Principle: Right Process for Right Context \u2014 The Goldilocks Imperative"
+        "Principle: Right Process for Right Context \u2014 The Goldilocks Imperative",
+        "Principle 3",
+        "Principle 3 \u2014 Goldilocks",
+        "Principle 3 \u2014 Right Process for Right Context",
+        "Principle \u2014 Goldilocks",
+        "Goldilocks Imperative"
       ],
       "relationships": [
         {
@@ -19242,7 +19258,12 @@
       ],
       "aliases": [
         "Principle \u2014 Structured Context Governs Agent Behavior More Than Content",
-        "Principle: Structured Context Governs Agent Behavior More Than Content"
+        "Principle: Structured Context Governs Agent Behavior More Than Content",
+        "Principle 2",
+        "Principle 2 \u2014 Structured Context Governs Agent Behavior",
+        "Principle 2 \u2014 Structured Context",
+        "Principle \u2014 Structured Context Governs Behavior",
+        "Structured Context Governs Behavior"
       ],
       "relationships": [
         {
@@ -41383,100 +41404,6 @@
       ]
     },
     {
-      "target": "Principle 1",
-      "referenced_by": [
-        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config"
-      ]
-    },
-    {
-      "target": "Principle 1 \u2014 Infrastructure Over Instructions",
-      "referenced_by": [
-        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
-        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
-      ]
-    },
-    {
-      "target": "Principle 1 \u2014 Infrastructure Over Instructions for Process Enforcement",
-      "referenced_by": [
-        "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
-      ]
-    },
-    {
-      "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior",
-      "referenced_by": [
-        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config"
-      ]
-    },
-    {
-      "target": "Principle 4",
-      "referenced_by": [
-        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
-        "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool",
-        "Top-Layer Routing Refactor \u2014 Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)",
-        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
-        "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
-        "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
-        "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
-        "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
-        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
-        "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
-      ]
-    },
-    {
-      "target": "Principle 4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
-      "referenced_by": [
-        "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
-      ]
-    },
-    {
-      "target": "Principle 4 \u2014 Declarations Aspirational",
-      "referenced_by": [
-        "Session 2026-04-17 Summary"
-      ]
-    },
-    {
-      "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them",
-      "referenced_by": [
-        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
-        "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
-      ]
-    },
-    {
-      "target": "Principle 4 \u2014 Declarations Aspirational Until Verified",
-      "referenced_by": [
-        "Milestone: Post-Anthropic Self-Autonomous AI Stack",
-        "Kimi K2.6 Access Paths \u2014 OpenRouter vs Ollama Cloud vs Local KTransformers",
-        "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update",
-        "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
-        "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
-        "Local Training Playbook 2026 \u2014 Wiki Alignment, Tool Calls, Semantic Enhancement"
-      ]
-    },
-    {
-      "target": "Principle \u2014 Declarations Aspirational Until Infrastructure Verifies Them",
-      "referenced_by": [
-        "Provider Pricing Monitoring \u2014 Operations Plan"
-      ]
-    },
-    {
-      "target": "Principle \u2014 Declarations Aspirational Until Verified",
-      "referenced_by": [
-        "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
-        "Verify Before Contributing to External Knowledge Systems",
-        "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
-        "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
-        "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
-        "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
-      ]
-    },
-    {
-      "target": "Principle \u2014 Goldilocks",
-      "referenced_by": [
-        "Context Depth Must Vary Per Task Type, Not Per Project \u2014 Tier Selection Extends Beyond Identity",
-        "Consumer Integration Roadmap \u2014 OpenArms Exemplar (First Full Plan)"
-      ]
-    },
-    {
       "target": "Principle \u2014 Infrastructure Over Instructions",
       "referenced_by": [
         "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
@@ -41492,12 +41419,6 @@
       "target": "Principle \u2014 Right Process for Right Context",
       "referenced_by": [
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
-      ]
-    },
-    {
-      "target": "Principle \u2014 Structured Context Governs Behavior",
-      "referenced_by": [
-        "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {

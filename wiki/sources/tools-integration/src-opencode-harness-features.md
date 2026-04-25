@@ -326,4 +326,4 @@ Since the operator has Ollama login active, these cloud models are immediately c
 [[src-inference-provider-landscape-2026|Inference Provider Landscape 2026]]
 [[Model × Provider × Harness Decision Matrix]]
 [[aicp|AICP]]
-[[Principle 4]]
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
