@@ -139,3 +139,4 @@ For any process rule that can be checked at the tool-call level, infrastructure 
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]
+[[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]

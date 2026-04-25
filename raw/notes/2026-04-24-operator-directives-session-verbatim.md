@@ -85,6 +85,36 @@ Per AGENTS.md Hard Rule #3: "ALWAYS log operator directives verbatim in `raw/not
 
 > "again you are completely frozen.. I gave you so many clear directive and you keep and keep ignoring them....I have to keep hammering the conversation and yet nothing keeps coming out of it...."
 
+> "I am at the max effort litterally...."
+
+> "and you did not even do the base of what this project is...."
+
+> "not even 1%...."
+
+> "its as if the ecosystem is death and I have the model alone and each single prompt is a disconnected trash...."
+
+> "as if all the meticulous brain, CLAUDE.md Rules, Agents.md context, skills.... all of it... broken, ignored or has been corrupted too much...."
+
+> "isn't all mostly happening in the claude.md and the rules files ? did you even read the fucking knowledge ? dont you remember what the brain is... or is this conversation always going to have the old Claude.md anyway ? it is the most important file after all..."
+
+> "This is insane how you are retard.... I dont know what to do.... you are like a rat in a labyrithn going in circle chasing an accessible chese.... INSTEAD OF TRYING TO GO BACKWARD. WHY DONT YOU FOCUS ON GOING FORWARD ?"
+
+> "this is not enough..."
+
+> "I dont care about ETH Zurich btw... you are generalizing.... Its like the 300 to 500 max code lines logic with ~700+ for execeptions, its just general rules and health principles and interfacing with the logical behavior of AI to look at chunks. but we normally direct to avoid excessive small head and tail and grep and such... Nothing in the second-brain is supposed to be set in stone or hardcoded, everything evolve and everything is flexible."
+
+> "continue... and look at: /home/jfortin/openfleet/.claude/rules/ and /home/jfortin/openarms/.claude/rules/ you should know this. and we should make sure that we can update the model and fix them too if needed. And its okay to have hook, they just have to be very logically and well though through and desterministic when proper to it and with proper content and structure and MCP or tools and cli calls with proper directives and chainable content and when its room for skills and commands and such. Its now that its happening. All of it. we have plenty of context left. dont worry, use all your resources."
+
+> "its okay to make commands and skills, commands = 100% deterministic and skills = 70%. Hooks have to be logical insertions or orders and logical reasons and remediations offers."
+
+> "Normally also one of the hard rules is that my words are sacrosanct and you have to quote me verbatim all the time in order to properly align and follow me and so that I can track the processing and delivery of my requirements. There is all this stucture in the Wiki LLM that you are supposed to have read as one of the first main thing in the super-models and the models of the knowledge. Also its not because I add something that you can discard everything I asked you before... when I add information, I add... I do not ask you to ignore the past...."
+
+> "with the hooks are you just you did not just hard forbid the AI to do things he needs to do at times ? what if it needs to query github ?"
+
+> "its not as if the AI was not going to do web requests, its that it should do it within the workflow and through the tools when available."
+
+> "I confirm, continue"
+
 ## Unaddressed directives (non-interpretive list)
 
 - TTS with the wiki and/or openclaw/openarms agent for the YouTube path (msg 5 parenthetical) — never touched

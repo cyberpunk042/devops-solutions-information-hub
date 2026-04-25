@@ -2401,6 +2401,11 @@ def main():
                          "(the caller's own wiki) for self-contribution. If no second brain "
                          "is configured, 'brain' falls back to local automatically.")
 
+    # Digest — emit structured operating-knowledge digest for SessionStart loading
+    # SCAFFOLD STUB — refactor.scaffold artifact (gap-analysis: wiki/top-layer-routing-refactor-claude-md.md)
+    # Implementation pending refactor.implement stage.
+    sub.add_parser("digest", help="Emit structured digest of super-model + 4 principles + methodology stages + MCP tool routing for session-start loading (SCAFFOLD STUB — implementation pending)")
+
     args = parser.parse_args()
     paths = resolve_paths(
         wiki_root=args.wiki_root if hasattr(args, "wiki_root") else None,
@@ -2755,6 +2760,24 @@ def main():
             print("    └── MCP server — 17 tools for Claude Code integration")
         else:
             print(f"Navigation target '{nav_target}' — use 'gateway navigate' for full tree")
+
+    elif args.command == "digest":
+        # SCAFFOLD STUB — refactor.scaffold artifact.
+        # Gap analysis: wiki/top-layer-routing-refactor-claude-md.md
+        # Implementation pending refactor.implement stage.
+        # Target output: structured Markdown program (~150-300 lines) with:
+        #   - super-model summary (5 sub-super-models, 16 named models, 4 adoption tiers)
+        #   - 4 principles (statement + application-by-context table per principle)
+        #   - methodology.yaml stage/gate cheat-sheet (5 stages × ALLOWED/FORBIDDEN, 9 models)
+        #   - artifact-types.yaml (17 types, required sections, content thresholds)
+        #   - MCP tool routing map (operator intent → tool)
+        # SessionStart hook will inject this into agent context before first operator prompt.
+        # Per Principle 2: structure IS the program — emit tables, not prose.
+        print("# Gateway Digest — SCAFFOLD STUB")
+        print("#")
+        print("# Target: structured operating-knowledge digest for SessionStart loading.")
+        print("# Implementation pending refactor.implement stage.")
+        print("# See wiki/top-layer-routing-refactor-claude-md.md for the gap analysis.")
 
     else:
         # No command: show guided entry point

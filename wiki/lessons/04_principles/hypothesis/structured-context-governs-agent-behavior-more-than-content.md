@@ -135,3 +135,4 @@ When instructing AI agents, the SHAPE of information (headers, tables, YAML bloc
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]]
 [[progressive-structural-enrichment-in-agent-config|Progressive Structural Enrichment in Agent Config]]
+[[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]

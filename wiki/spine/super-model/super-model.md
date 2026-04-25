@@ -275,6 +275,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
+[[2026-04-24-session-handoff-brain-refactor-rules-and-hooks|Session Handoff 2026-04-24 — Brain Refactor: Rules Layer, Hook Layer, Model Update]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
 [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]
 [[integration-ecosystem|Sub-Model — Integration and Ecosystem — Dual-Perspective and Feedback]]
@@ -282,3 +283,4 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[work-management|Sub-Model — Work Management — Hierarchy, Tracking, and PM Levels]]
 [[2026-consumer-hardware-ai-stack|The 2026 Consumer-Hardware AI Stack — Strategic Synthesis]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+[[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]

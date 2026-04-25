@@ -1,25 +1,25 @@
 {
-  "generated": "2026-04-24T20:44:24.714584+00:00",
+  "generated": "2026-04-25T12:39:15.541349+00:00",
   "stats": {
-    "pages": 477,
+    "pages": 480,
     "domains": 9,
     "sources": 59,
     "comparisons": 8,
-    "relationships": 2885,
-    "tags_unique": 1369,
+    "relationships": 2908,
+    "tags_unique": 1377,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 25,
       "2": 51,
-      "4": 60,
+      "4": 61,
       "0": 1,
       "1": 41,
       "spine": 75
     },
     "maturity": {
       "growing": 324,
-      "seed": 25,
+      "seed": 27,
       "mature": 2
     }
   },
@@ -15607,6 +15607,106 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings.md",
+      "slug": "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "title": "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-24",
+      "updated": "2026-04-24",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "self-reference",
+        "principle-validation",
+        "brain",
+        "claude-md",
+        "markdown-as-iac",
+        "agent-failure",
+        "distillation",
+        "predictability",
+        "dogfooding"
+      ],
+      "sources": [
+        {
+          "id": "session-2026-04-24-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md",
+          "description": "The full incident \u2014 50 turns of agent failure where every principle violation surfaced simultaneously at the project's own self-reference layer."
+        },
+        {
+          "id": "session-2026-04-24-gap-analysis",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md",
+          "description": "The structural diagnosis of which principles failed where, with current/required state per gap."
+        },
+        {
+          "id": "operator-directives-verbatim",
+          "type": "notes",
+          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md",
+          "description": "Verbatim operator framings of the failure: 'we broke the brain by splitting too much and distilling', 'behave FROM the project not OVER it', 'isn't all mostly happening in the claude.md and the rules files? did you even read the fucking knowledge?'"
+        },
+        {
+          "id": "principle-1",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Infrastructure Over Instructions for Process Enforcement",
+        "Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "Structured Context Governs Agent Behavior More Than Content",
+        "The Agent Must Practice What It Documents"
+      ],
+      "aliases": [
+        "Self-Reference Drift",
+        "Self-Reference Drift \u2014 Wiki Must Practice Its Own Teachings"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Structural Compliance Is Not Operational Compliance"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mandatory Without Verification Is Not Enforced"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy.md",
       "slug": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "title": "Specs-as-Code-Source Inverts the Traditional Hierarchy",
@@ -20539,6 +20639,224 @@
         {
           "verb": "UNBLOCKS",
           "target": "E008-local-k2-6-offline-frontier-tier"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md",
+      "slug": "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "title": "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-24",
+      "updated": "2026-04-24",
+      "last_reviewed": "2026-04-24",
+      "tags": [
+        "handoff",
+        "session",
+        "refactor",
+        "brain",
+        "rules",
+        "hooks",
+        "claude-md",
+        "mission-2026-04-27",
+        "self-reference",
+        "principle-validation"
+      ],
+      "sources": [
+        {
+          "id": "gap-analysis-2026-04-24",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md",
+          "description": "The document-stage artifact that drove the refactor's design."
+        },
+        {
+          "id": "operator-directives-verbatim",
+          "type": "notes",
+          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md",
+          "description": "All operator directives from the 2026-04-24 session, verbatim."
+        },
+        {
+          "id": "openarms-rules-pattern",
+          "type": "directory",
+          "project": "openarms",
+          "path": ".claude/rules/",
+          "description": "OpenArms's 12-file .claude/rules/ pattern \u2014 the production reference for topic-split rules detail."
+        },
+        {
+          "id": "openfleet-rules-pattern",
+          "type": "directory",
+          "project": "openfleet",
+          "path": ".claude/rules/",
+          "description": "OpenFleet's 2-file pattern (second-brain-connection, work-mode) and OpenArms's hook layer (4 hooks via settings.json + scripts/methodology/hooks/)."
+        },
+        {
+          "id": "principle-infrastructure",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        },
+        {
+          "id": "principle-declarations-aspirational",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md"
+        },
+        {
+          "id": "model-skills-commands-hooks",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "Updated 2026-04-24 with mechanism-determinism levels + hook design pattern callout."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-23 Session Handoff \u2014 AI Infrastructure Vision & Tooling"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Top-Layer Routing Refactor \u2014 Gap Analysis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md",
+      "slug": "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
+      "title": "Top-Layer Routing Refactor \u2014 Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-24",
+      "updated": "2026-04-24",
+      "last_reviewed": "",
+      "tags": [
+        "methodology",
+        "gap-analysis",
+        "refactor",
+        "claude-md",
+        "routing",
+        "hooks",
+        "mcp",
+        "loading-layer",
+        "brain-enforcement",
+        "self-reference",
+        "mission-2026-04-27"
+      ],
+      "sources": [
+        {
+          "id": "operator-directives-2026-04-24",
+          "type": "notes",
+          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md",
+          "description": "Verbatim operator directives and diagnosis across the 2026-04-24 session \u2014 primary source for the systemic bug this refactor addresses."
+        },
+        {
+          "id": "principle-infrastructure-over-instructions",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        },
+        {
+          "id": "principle-structured-context",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md"
+        },
+        {
+          "id": "principle-goldilocks",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md"
+        },
+        {
+          "id": "principle-declarations-aspirational",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md"
+        },
+        {
+          "id": "claude-md",
+          "type": "file",
+          "file": "CLAUDE.md"
+        },
+        {
+          "id": "agents-md",
+          "type": "file",
+          "file": "AGENTS.md"
+        },
+        {
+          "id": "context-md",
+          "type": "file",
+          "file": "CONTEXT.md"
+        },
+        {
+          "id": "methodology-yaml",
+          "type": "file",
+          "file": "wiki/config/methodology.yaml"
+        },
+        {
+          "id": "super-model",
+          "type": "wiki",
+          "file": "wiki/spine/super-model/super-model.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Infrastructure Over Instructions for Process Enforcement"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Right Process for Right Context \u2014 The Goldilocks Imperative"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Methodology"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Mandatory Without Verification Is Not Enforced"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
         }
       ]
     },
@@ -32931,8 +33249,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 201,
-      "relationship_count": 1325
+      "page_count": 204,
+      "relationship_count": 1348
     },
     "ai-models": {
       "page_count": 14,
@@ -33223,6 +33541,7 @@
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/src-anthropic-building-effective-ai-agents",
       "spine/goldilocks-flow",
@@ -33270,6 +33589,7 @@
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/03_validated/tools-architecture/automation-is-bridge-between-knowledge-and-action",
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/03_validated/architecture/gateway-centric-routing",
       "patterns/03_validated/knowledge/context-aware-tool-loading",
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
@@ -33629,6 +33949,7 @@
       "log/2026-04-09/methodology/2026-04-09-directive-never-stop-at-surface",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
       "log/2026-04-09/system/2026-04-09-directive-record-process-skills-supermodel",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/03_validated/enforcement/stage-aware-skill-injection",
       "sources/src-bmad-method-agile-ai-development-framework",
@@ -33718,6 +34039,8 @@
       "domains/automation/wiki-event-driven-automation",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
@@ -33734,7 +34057,10 @@
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/03_validated/knowledge/claude-md-structural-patterns",
@@ -34796,7 +35122,9 @@
     "refactor": [
       "backlog/tasks/T017-parameterize-openrouter-backend-config-key",
       "backlog/tasks/T020-parameterize-localai-backend-config-key",
-      "domains/devops/task-type-artifact-matrix"
+      "domains/devops/task-type-artifact-matrix",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
     ],
     "backend-registration": [
       "backlog/tasks/T018-register-k2-6-openrouter-instance-in-cli-main",
@@ -35196,6 +35524,7 @@
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
@@ -36105,7 +36434,9 @@
       "sources/src-pydantic-ai-typed-agent-framework"
     ],
     "brain": [
-      "domains/ai-agents/orchestration/openclaw"
+      "domains/ai-agents/orchestration/openclaw",
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
     ],
     "heartbeat": [
       "domains/ai-agents/orchestration/openclaw"
@@ -36693,7 +37024,8 @@
     "gap-analysis": [
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-gaps",
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-honest-assessment",
-      "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass"
+      "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
     ],
     "artifact-system": [
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-gaps",
@@ -37394,6 +37726,37 @@
     "self": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
+    "self-reference": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "principle-validation": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
+    ],
+    "markdown-as-iac": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
+    "agent-failure": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
+      "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
+      "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
+      "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label",
+      "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions"
+    ],
+    "distillation": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "patterns/03_validated/architecture/progressive-distillation",
+      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
+    ],
+    "predictability": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
+    "dogfooding": [
+      "lessons/01_drafts/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "sources/src-github-spec-kit-specification-driven-development"
@@ -37441,13 +37804,6 @@
     "frontmatter": [
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "spine/references/frontmatter-field-reference"
-    ],
-    "agent-failure": [
-      "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
-      "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
-      "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
-      "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label",
-      "lessons/03_validated/methodology-quality/hardcoded-instances-fail-build-frameworks-not-solutions"
     ],
     "behavioral": [
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure"
@@ -37653,7 +38009,8 @@
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
     ],
     "rules": [
-      "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
+      "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
     ],
     "universal": [
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts"
@@ -37851,7 +38208,8 @@
       "log/2026-04-09/system/2026-04-09-session-summary",
       "log/2026-04-10/2026-04-10-session-summary",
       "log/2026-04-17/2026-04-17-session-summary",
-      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling"
+      "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -37918,6 +38276,7 @@
     "handoff": [
       "log/2026-04-22-wsl-migration-to-ubuntu-24-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -37981,6 +38340,16 @@
     ],
     "gotcha": [
       "log/2026-04-23-vhdx-attach-procedure-and-hcs-fix"
+    ],
+    "mission-2026-04-27": [
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "loading-layer": [
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "brain-enforcement": [
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -38176,10 +38545,6 @@
     ],
     "density": [
       "patterns/03_validated/architecture/progressive-distillation"
-    ],
-    "distillation": [
-      "patterns/03_validated/architecture/progressive-distillation",
-      "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b"
     ],
     "features": [
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
@@ -39472,6 +39837,12 @@
       ]
     },
     {
+      "target": "2026-04-23 Session Handoff \u2014 AI Infrastructure Vision & Tooling",
+      "referenced_by": [
+        "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
+      ]
+    },
+    {
       "target": "2026-04-23-e010-m002-mount-complete",
       "referenced_by": [
         "K2.6 Q2 Download + SHA256 Verify Complete (E008 M002 closed)"
@@ -40056,9 +40427,35 @@
       ]
     },
     {
+      "target": "Principle 1",
+      "referenced_by": [
+        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config"
+      ]
+    },
+    {
+      "target": "Principle 1 \u2014 Infrastructure Over Instructions",
+      "referenced_by": [
+        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config"
+      ]
+    },
+    {
+      "target": "Principle 1 \u2014 Infrastructure Over Instructions for Process Enforcement",
+      "referenced_by": [
+        "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
+      ]
+    },
+    {
+      "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior",
+      "referenced_by": [
+        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config"
+      ]
+    },
+    {
       "target": "Principle 4",
       "referenced_by": [
+        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
         "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool",
+        "Top-Layer Routing Refactor \u2014 Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)",
         "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
         "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
         "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
@@ -40066,6 +40463,12 @@
         "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy",
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+      ]
+    },
+    {
+      "target": "Principle 4 \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them",
+      "referenced_by": [
+        "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
       ]
     },
     {
@@ -40077,6 +40480,7 @@
     {
       "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them",
       "referenced_by": [
+        "Self-Reference Drift \u2014 A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
     },
@@ -40456,6 +40860,12 @@
       "target": "Three-Layer Autocomplete Chain Validated",
       "referenced_by": [
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "Top-Layer Routing Refactor \u2014 Gap Analysis",
+      "referenced_by": [
+        "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
       ]
     },
     {

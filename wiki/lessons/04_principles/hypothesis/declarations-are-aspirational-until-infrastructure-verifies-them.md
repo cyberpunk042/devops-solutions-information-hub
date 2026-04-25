@@ -150,4 +150,5 @@ The two principles form a family: Infrastructure > Instructions is the SEED; thi
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[src-airllm-layer-wise-inference-nvme-ssd-offload|Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload]]
+[[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]
 [[2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli|last_reviewed frontmatter field + evolve mark-reviewed CLI]]

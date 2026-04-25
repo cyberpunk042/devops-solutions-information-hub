@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-04-24
+updated: 2026-04-25
 sources: []
 tags: [log, directives, sessions]
 ---
@@ -27,6 +27,8 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-17 | [AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU](aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
 | 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
+| 2026-04-24 | [Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)](2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md) | concept | `methodology`, `gap-analysis`, `refactor`, `claude-md`, `routing`, `hooks`, `mcp`, `loading-layer`, `brain-enforcement`, `self-reference`, `mission-2026-04-27` |
+| 2026-04-24 | [Session Handoff 2026-04-24 — Brain Refactor: Rules Layer, Hook Layer, Model Update](2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md) | session | `handoff`, `session`, `refactor`, `brain`, `rules`, `hooks`, `claude-md`, `mission-2026-04-27`, `self-reference`, `principle-validation` |
 | 2026-04-22 | [VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)](2026-04-23-vhdx-attach-procedure-and-hcs-fix.md) | completion | `note`, `completion`, `e010`, `vhdx`, `wsl`, `mount`, `hcs`, `access-denied`, `icacls`, `takeown`, `troubleshooting`, `gotcha` |
 | 2026-04-23 | [Session Handoff 2026-04-23 — AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool](2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling.md) | session | `handoff`, `session`, `ai-infrastructure`, `vision`, `mission`, `post-anthropic`, `2026-04-23`, `pickup-cold` |
 | 2026-04-22 | [RAM Upgrade — 48 GB WSL Cap Live (E010 M001 complete)](2026-04-23-ram-upgrade-48gb-wsl.md) | completion | `note`, `completion`, `e010`, `ram`, `hardware`, `wsl`, `48gb`, `64gb`, `milestone-gate` |

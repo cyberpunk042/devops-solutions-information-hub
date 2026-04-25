@@ -888,6 +888,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]
 [[three-classes-of-methodology-output|Three Classes of Methodology Output]]
+[[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]
 [[universal-stages-domain-specific-artifacts|Universal Stages, Domain-Specific Artifacts]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]
 [[identity-profile|devops-control-plane — Identity Profile]]

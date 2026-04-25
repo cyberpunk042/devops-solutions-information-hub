@@ -50,6 +50,8 @@ The AI agent extension ecosystem is a four-level hierarchy: CLAUDE.md (always lo
 
 - **Skill specification determines portability.** The agentskills.io SKILL.md format works across Claude Code, Codex CLI, OpenCode, Cursor, and any system-prompt-configurable agent. Format choice is a one-time decision with compounding distribution gains.
 
+- **Mechanism-determinism levels (operator directive 2026-04-24):** the four extension layers have distinct determinism profiles that govern WHICH layer to reach for. **Commands = 100% deterministic** (operator slash-invokes; predictable scripted steps). **Skills = ~70% deterministic** (auto-triggered by description-match on prose; quality of description determines trigger reliability). **Hooks = logical** (the determinism is in the design — must have a logical insertion point + a logical reason + a remediation offer + a bypass mechanism per [[block-with-reason-and-justified-escalation]]). **MCP/CLI = programmatic** (the agent invokes; deterministic execution but discretionary invocation). Quoting the operator: *"its okay to make commands and skills, commands = 100% deterministic and skills = 70%. Hooks have to be logical insertions or orders and logical reasons and remediations offers."*
+
 ## Deep Analysis
 
 ### Level 0: The Configuration File Ecosystem
@@ -132,6 +134,17 @@ my-skill/
 > - **Blocking** — PreToolUse fires before a tool executes. Returns `block` (deny), `allow` (bypass checks), `ask` (escalate), `defer` (pass to next hook). Plus `updatedInput` to modify the call in-flight. Qualitatively more powerful than binary pass/fail.
 > - **Reverse hook** — Stop fires when the agent finishes. Returns `block` to force continuation. TeammateIdle prevents idle agents. Together they bracket execution from BOTH ends.
 > - **Context injection** — SessionStart, UserPromptSubmit, PreToolUse, PostToolUse, SubagentStart accept `additionalContext` — injecting information without user intervention. The mechanism context-mode uses to restore state after compaction.
+
+> [!success] **Hook Design Pattern (mandatory four parts)**
+>
+> Per operator directive 2026-04-24: *"Hooks have to be logical insertions or orders and logical reasons and remediations offers."* Every hook in this ecosystem MUST have:
+>
+> 1. **Logical insertion point** — pick the lifecycle event whose semantics match the rule. Wrong event = misses the rule or false-positives unrelated calls. (PreToolUse for blocking; PostToolUse for validation; SessionStart for context injection; PostCompact for state restoration; UserPromptSubmit for prose-trigger detection.)
+> 2. **Logical reason** — print/return WHY the hook acted. Format: `BLOCKED: <action>. REASON: <rule>. CITATION: <CLAUDE.md Hard Rule N or .claude/rules/<topic>.md>`. The agent (and the operator) must be able to learn from the block.
+> 3. **Remediation offer** — explicitly state the correct alternative. "Don't do X" without "do Y instead" leaves the agent stuck. Format: `INSTEAD: <correct command or tool>`.
+> 4. **Bypass mechanism** — every hook needs a documented escalation path for legitimate edge cases. Examples: `REASON=<reason>` env var on Bash hooks (since the agent can set env vars); fallback tool (e.g., Bash + curl) when WebFetch is blocked but lookup is needed; operator override; logged exception.
+>
+> Reference implementations: `~/openarms/scripts/methodology/hooks/pre-bash.sh` (production); `~/devops-solutions-information-hub/.claude/hooks/pre-webfetch-corpus-check.sh` + `pre-bash.sh` + `session-start.sh` + `post-compact.sh` (built 2026-04-24, all four following this pattern). Anti-pattern: hook that blocks without reason / without remediation / without bypass — those create their own failure class (OpenArms T086: correct fix reverted twice because hook looked like scope creep without explanation). See [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]].
 
 > [!info] **Four handler types**
 > | Type | Speed | Power | Use for |
@@ -418,6 +431,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[model-markdown-as-iac|Model — Markdown as IaC — Design.md and Agent Configuration]]
 [[root-documentation-map|Root Documentation Map — Repository-Level Files]]
+[[2026-04-24-session-handoff-brain-refactor-rules-and-hooks|Session Handoff 2026-04-24 — Brain Refactor: Rules Layer, Hook Layer, Model Update]]
 [[src-vercel-opensrc-toolkit|Source — vercel-labs/opensrc: Source Code Access Toolkit for AI Agents]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
@@ -431,3 +445,4 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
+[[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]

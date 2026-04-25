@@ -27,6 +27,9 @@ See [README.md](README.md) for full project overview. See [CONTEXT.md](CONTEXT.m
 5. **ALWAYS verify depth.** Source DESCRIBES a thing → you MUST read a real INSTANCE. README ≠ understanding.
 6. **ALWAYS run `python3 -m tools.pipeline post`** after wiki changes. 6-step validation chain. 0 errors required.
 7. **NEVER claim done without evidence.** Run the command. Show the output. 0 errors = done.
+8. **NEVER fabricate state, bugs, or operator framings.** Operator never said it = don't claim they did. Investigate via project tools (`gateway query`, `pipeline status`, `lint`, `validate`, `wiki_search`) before asserting any factual claim.
+9. **Behave FROM the project, not OVER it.** When operating inside a project, use its tools (MCP, CLI, loaded knowledge) as the operating system, not as external citations. The project IS the intelligence; the intelligence comes from USING the project.
+10. **Operator words are SACROSANCT — quote verbatim, never paraphrase, never dilute.** Verbatim quoting is the alignment mechanism — it lets the operator track that requirements landed correctly. When new direction arrives, LAYER it on prior direction; never overwrite or discard the past.
 
 ## Stage Gates (Enforced)
 
@@ -122,6 +125,19 @@ Live in `wiki/backlog/`. Each tracks `readiness` (definition) AND `progress` (ex
 1. **Infrastructure Over Instructions** — hooks achieve 100%; rules alone ~25%.
 2. **Structured Context Governs Agent Behavior More Than Content** — tables beat prose 2-3x.
 3. **Right Process for Right Context (Goldilocks)** — methodology depth adapts to phase × scale × trust.
+4. **Declarations Are Aspirational Until Infrastructure Verifies Them** — every declared element (name, field, attribute, claim, tier) needs a verification gate or it's aspirational. Generalizes #1 from process rules to every declaration layer.
+
+### Mechanism-Determinism Levels (universal taxonomy for AI-agent extension architectures)
+
+| Mechanism | Determinism | Trigger | Use when |
+|---|---|---|---|
+| **Hook** | Logical (block + reason + remediation + bypass) | Tool-call lifecycle event | Structural enforcement at the tool-call boundary |
+| **Command** (slash, operator-invoked) | **100% deterministic** | Operator types `/<name>` | Predictable scripted workflows; operator-driven |
+| **Skill** (auto-trigger by description) | **~70% deterministic** | Description-match on operator prose | Workflows where auto-trigger is desirable; description quality determines reliability |
+| **MCP tool** | Programmatic | AI invokes during reasoning | Discrete operations; deferred load |
+| **CLI** | Programmatic | AI runs via Bash | Shell-mediated operations; chaining/piping |
+
+**Hook Design Pattern (mandatory four parts):** every hook MUST have (1) logical insertion point — right lifecycle event + matcher; (2) logical reason — print/return WHY the hook acted with citation; (3) remediation offer — explicitly state the correct alternative; (4) bypass mechanism — documented escalation path for legitimate edge cases. Anti-pattern: hook that blocks without reason / remediation / bypass.
 
 ## How to Use the Second Brain
 
