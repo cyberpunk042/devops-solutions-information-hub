@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-27T17:05:18.186879+00:00",
+  "generated": "2026-04-27T17:28:28.620824+00:00",
   "stats": {
-    "pages": 503,
+    "pages": 504,
     "domains": 11,
     "sources": 72,
     "comparisons": 9,
-    "relationships": 3105,
-    "tags_unique": 1597,
+    "relationships": 3116,
+    "tags_unique": 1604,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 42,
+      "seed": 43,
       "mature": 2
     }
   },
@@ -11735,6 +11735,185 @@
       ]
     },
     {
+      "path": "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md",
+      "slug": "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "title": "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
+      "type": "operations-plan",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "operations-plan",
+        "rlm",
+        "recursive-language-models",
+        "qwen3-6-27b",
+        "fine-tune",
+        "composition-path",
+        "post-anthropic-mission",
+        "anti-vendor-lock-in",
+        "sovereignty-tier",
+        "hypothetical",
+        "post-t-0",
+        "prime-rl",
+        "verifiers",
+        "longbenchpro",
+        "oolong",
+        "browsecomp-plus",
+        "longbench-v2",
+        "deterministic-steps",
+        "tier-0-candidate",
+        "hardware-tier-0",
+        "mission-2026-04-27",
+        "p1"
+      ],
+      "sources": [
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "The 8B training recipe this plan scales: 750 LongBenchPro tasks \u2192 2,250 candidate trajectories \u2192 1,072 filtered \u2192 per-turn SFT samples \u2192 programmatic FINAL/FINAL_VAR fix \u2192 prime-rl batch 64, 300 steps, 48 H100 hours."
+        },
+        {
+          "id": "prime-rl-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+          "description": "Training framework \u2014 Apache 2.0, FSDP2 + vLLM, FP8 + EP/CP, IPO + Kimi-K2.5 KL default loss, async k=2."
+        },
+        {
+          "id": "verifiers-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments.md",
+          "description": "Environment library \u2014 v0.1.12 (2026-04-17) added RLMEnv (context dropping, prompt builder, hardened transport) + RLM tasksets."
+        },
+        {
+          "id": "rlm-implementation-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Deployment runtime \u2014 alexzhang13/rlm SDK, 5 backends (incl. vllm for local), 6 environments, REPL semantics."
+        },
+        {
+          "id": "tier-0-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
+          "description": "The decision matrix this plan implements \u2014 specifically the third path (Composition: future RLM-Qwen3.6-27B fine-tune at ~$300-500 USD)."
+        },
+        {
+          "id": "qwen3-6-27b-marktechpost",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding.md",
+          "description": "Base model \u2014 Qwen3.6-27B-Dense (Apache 2.0); SWE-bench Pro 53.5; hybrid Gated-DeltaNet (75%) + Attention (25%); native multimodal."
+        },
+        {
+          "id": "qwen3-6-27b-unsloth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion.md",
+          "description": "Quantization detail \u2014 UD-IQ2 fits 5-7GB VRAM with retained 26-tool-call agentic capability; deployment target for the trained model on operator's tier-0 hardware."
+        },
+        {
+          "id": "oolong-longbench-pro-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md",
+          "description": "LongBench Pro = training data source (English split, 750 tasks). OOLONG + OOLONG-Pairs = evaluation surface."
+        },
+        {
+          "id": "browsecomp-longbench-v2-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md",
+          "description": "Remaining 2 evaluation benchmarks \u2014 BrowseComp+ (1K-doc multi-hop research) + LongBench v2 CodeQA split (multi-file code repository understanding)."
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission framing \u2014 this plan is a worked example of step 6 ('close gaps systematically') of the lesson's How-to-Apply."
+        },
+        {
+          "id": "aicp-handoff",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "Authoritative compute-side state \u2014 operator's tier-0 hardware (X299 + RTX 2080 Ti 11GB + RTX 2080 8GB + 64GB DDR4); AICP backend pattern (`local`/`k2_6_local`/`k2_6_openrouter`/`ollama_cloud`); $540\u2192$100 routing finding the trained model would slot into."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "RLM-Qwen3.6-27B Operations Plan",
+        "Operations Plan \u2014 RLM-Qwen3.6-27B",
+        "Hypothetical RLM-Qwen3.6-27B Fine-Tune Plan",
+        "Composition Path Operations Plan"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Tier-0 Candidate Comparison"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Prime Intellect prime-rl"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Prime Intellect Verifiers"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Implementation"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Qwen3.6-27B Base Model"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Qwen3.6-27B at 2-bit Unsloth"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "OOLONG + LongBench Pro Benchmarks"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "BrowseComp+ + LongBench v2 Benchmarks"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-27 Session-End Handoff"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Learning Path \u2014 RLM Thread Evidence Chain"
+        }
+      ]
+    },
+    {
       "path": "domains/cross-domain/wiki-post-ingestion-operations-plan.md",
       "slug": "domains/cross-domain/wiki-post-ingestion-operations-plan",
       "title": "Operations Plan \u2014 Wiki Post-Ingestion Validation",
@@ -21760,18 +21939,6 @@
           "target": "2026-04-24 Brain Refactor Handoff"
         },
         {
-          "verb": "IMPLEMENTS",
-          "target": "directive *\"I just listen to a video about this"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "this sounds unbelievable"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "ingest it\"* \u2014 fully executed; the empirical claim was empirically anchored"
-        },
-        {
           "verb": "DEMONSTRATES",
           "target": "Principle 1"
         },
@@ -21786,14 +21953,6 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Self-Reference Drift"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "future RLM-Qwen3.6-27B fine-tune work + AICP backend wiring + operator's mission-execution path"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "tomorrow's pickup-cold session with comprehensive runbook + curated learning-paths"
         },
         {
           "verb": "FEEDS INTO",
@@ -35863,8 +36022,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 212,
-      "relationship_count": 1412
+      "page_count": 213,
+      "relationship_count": 1423
     },
     "ai-models": {
       "page_count": 14,
@@ -36348,6 +36507,7 @@
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "backlog/tasks/T055-draft-harness-contract-outline",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "spine/references/local-training-playbook-2026",
       "spine/references/provider-pricing-monitoring-operations-plan"
     ],
@@ -38304,6 +38464,7 @@
     ],
     "tier-0-candidate": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
@@ -38317,6 +38478,7 @@
     ],
     "qwen3-6-27b": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
@@ -38330,10 +38492,12 @@
     ],
     "post-anthropic-mission": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "mission-2026-04-27": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
@@ -38359,6 +38523,7 @@
     ],
     "anti-vendor-lock-in": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
@@ -38388,6 +38553,7 @@
     ],
     "sovereignty-tier": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
@@ -39805,11 +39971,73 @@
       "domains/cross-domain/methodology-initiative/methodology-standards-initiative-infrastructure"
     ],
     "operations-plan": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
       "spine/references/local-training-playbook-2026",
       "spine/references/provider-pricing-monitoring-operations-plan",
       "spine/references/second-brain-integration-chain",
       "spine/standards/operations-plan-page-standards"
+    ],
+    "rlm": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
+    "recursive-language-models": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
+    "fine-tune": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "composition-path": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "hypothetical": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "post-t-0": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "prime-rl": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "verifiers": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "longbenchpro": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "oolong": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "browsecomp-plus": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "longbench-v2": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "deterministic-steps": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "hardware-tier-0": [
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
     ],
     "post-ingestion": [
       "domains/cross-domain/wiki-post-ingestion-operations-plan"
@@ -42193,14 +42421,6 @@
     "batch-inference": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
-    "browsecomp-plus": [
-      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
-    "longbench-v2": [
-      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
-    ],
     "deep-research": [
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
     ],
@@ -42435,11 +42655,6 @@
     "openclaw-openarms-integration": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
-    "oolong": [
-      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
     "longbench-pro": [
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
@@ -42517,10 +42732,6 @@
     "qa": [
       "sources/tools-integration/src-playwright-mcp-visual-testing"
     ],
-    "prime-rl": [
-      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
     "async-rl": [
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
@@ -42586,9 +42797,6 @@
     "post-training-stack": [
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
-    "verifiers": [
-      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
-    ],
     "llm-rl": [
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
     ],
@@ -42597,13 +42805,6 @@
     ],
     "rlm-env": [
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
-    ],
-    "recursive-language-models": [
-      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "training-framework": [
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
@@ -42690,12 +42891,6 @@
     ],
     "27b-beats-397b": [
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
-    ],
-    "rlm": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "empirical-findings": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
@@ -43257,6 +43452,7 @@
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
         "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)",
@@ -43407,6 +43603,12 @@
       ]
     },
     {
+      "target": "2026-04-27 Session-End Handoff",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
@@ -43447,6 +43649,12 @@
       ]
     },
     {
+      "target": "Anti-Vendor-Lock-In Lesson",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
       "target": "Block with Reason",
       "referenced_by": [
         "The pre-write hook prevents operator-Claude from racing the running agent on backlog files"
@@ -43457,6 +43665,12 @@
       "referenced_by": [
         "Decision \u2014 Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)",
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "BrowseComp+ + LongBench v2 Benchmarks",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
       ]
     },
     {
@@ -43856,6 +44070,12 @@
       ]
     },
     {
+      "target": "Learning Path \u2014 RLM Thread Evidence Chain",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
       "target": "Lesson \u2014 Harness Engineering Is the Dominant Performance Lever",
       "referenced_by": [
         "Synthesis \u2014 Anthropic \u2014 Building Effective AI Agents \u2014 5 Canonical Workflow Patterns",
@@ -43981,6 +44201,12 @@
       ]
     },
     {
+      "target": "OOLONG + LongBench Pro Benchmarks",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
       "target": "OOLONG + LongBench Pro Synthesis",
       "referenced_by": [
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage"
@@ -44086,9 +44312,21 @@
       ]
     },
     {
+      "target": "Qwen3.6-27B Base Model",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
       "target": "Qwen3.6-27B Dense Beats 397B MoE",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)"
+      ]
+    },
+    {
+      "target": "Qwen3.6-27B at 2-bit Unsloth",
+      "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
       ]
     },
     {
@@ -44100,7 +44338,8 @@
     {
       "target": "RLM Implementation",
       "referenced_by": [
-        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)"
+        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
       ]
     },
     {
@@ -44529,6 +44768,7 @@
     {
       "target": "Tier-0 Candidate Comparison",
       "referenced_by": [
+        "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
@@ -44587,12 +44827,6 @@
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
-      ]
-    },
-    {
-      "target": "directive *\"I just listen to a video about this",
-      "referenced_by": [
-        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
       ]
     },
     {
@@ -44795,21 +45029,9 @@
       ]
     },
     {
-      "target": "future RLM-Qwen3.6-27B fine-tune work + AICP backend wiring + operator's mission-execution path",
-      "referenced_by": [
-        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
-      ]
-    },
-    {
       "target": "ijin/aidlc-cc-plugin GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
-      ]
-    },
-    {
-      "target": "ingest it\"* \u2014 fully executed; the empirical claim was empirically anchored",
-      "referenced_by": [
-        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
       ]
     },
     {
@@ -44831,18 +45053,6 @@
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
-      ]
-    },
-    {
-      "target": "this sounds unbelievable",
-      "referenced_by": [
-        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
-      ]
-    },
-    {
-      "target": "tomorrow's pickup-cold session with comprehensive runbook + curated learning-paths",
-      "referenced_by": [
-        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
       ]
     },
     {
