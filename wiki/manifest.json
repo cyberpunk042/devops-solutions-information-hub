@@ -1,25 +1,25 @@
 {
-  "generated": "2026-04-27T19:25:49.665927+00:00",
+  "generated": "2026-04-27T20:51:08.733178+00:00",
   "stats": {
-    "pages": 510,
+    "pages": 511,
     "domains": 11,
     "sources": 76,
     "comparisons": 9,
-    "relationships": 3202,
-    "tags_unique": 1708,
+    "relationships": 3212,
+    "tags_unique": 1718,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 25,
       "2": 51,
-      "4": 62,
+      "4": 63,
       "0": 1,
       "1": 47,
       "spine": 76
     },
     "maturity": {
       "growing": 325,
-      "seed": 47,
+      "seed": 48,
       "mature": 2
     }
   },
@@ -16053,6 +16053,129 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md",
+      "slug": "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
+      "title": "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "lesson",
+        "saturation",
+        "declarations",
+        "p4-specialization",
+        "verification",
+        "regather-discipline",
+        "hard-rule-11",
+        "self-reference",
+        "day-arc-2026-04-27",
+        "mission-2026-04-27",
+        "premature-completion-claims",
+        "terminal-vs-conditional",
+        "recursive-p4-application",
+        "meta-finding"
+      ],
+      "sources": [
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "Direct parent \u2014 this lesson specializes P4 to a specific declaration class: saturation / completion / done / terminal claims."
+        },
+        {
+          "id": "handoff-14-premature-saturation",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation.md",
+          "description": "Premature-saturation evidence \u2014 declared 'natural saturation' at 13 artifacts in S1 close; subsequently demonstrated premature when S2 produced 7 additional artifacts."
+        },
+        {
+          "id": "handoff-15-continuation-close",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1.md",
+          "description": "Mid-close handoff \u2014 itself superseded by FINAL handoff because it didn't include the 2 final edits (lesson Evidence 6 enrichment + learning-path expansion). Two saturation iterations within the same day."
+        },
+        {
+          "id": "handoff-final",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done.md",
+          "description": "Stronger-saturation evidence + introduces Hard Rule #11 explicitly. The handoff that names the meta-finding this lesson distills."
+        },
+        {
+          "id": "self-reference-drift-evidence-6",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md",
+          "description": "Cycle 4 evidence captured post-FINAL-handoff demonstrating saturation extends further when context permits AND operator initiates continuation. The lesson's 4-cycle empirical accumulation IS the most-recent verification of this meta-claim."
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Sibling lesson \u2014 also specializes P4 to a specific declaration class (mission claims). Same parent (P4); different declaration class."
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Declarations Are Aspirational Until Infrastructure Verifies Them",
+        "FINAL Handoff Hard Rule #11 \u2014 Saturation Is Itself a Claim That Needs Verification",
+        "Self-Reference Drift Lesson Cycle 4 Validation",
+        "Anti-Vendor-Lock-In Lesson \u2014 Mission-Class P4 Specialization"
+      ],
+      "aliases": [
+        "Saturation Declarations Need Verification",
+        "Saturation Is a P4 Claim",
+        "Lesson \u2014 Saturation Declarations P4",
+        "Hard Rule 11 Lesson",
+        "Saturation Verification Lesson"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "2026-04-27 FINAL Session-End Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Self-Reference Drift Lesson"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "Handoff #14 \u2014 S1 Close"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "Handoff #15 \u2014 S2 Continuation Close"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "FINAL Handoff"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology System Map"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy.md",
       "slug": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "title": "Specs-as-Code-Source Inverts the Traditional Hierarchy",
@@ -18212,8 +18335,8 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-24",
-      "updated": "2026-04-25",
-      "last_reviewed": "2026-04-25",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
       "tags": [
         "lesson",
         "self-reference",
@@ -37055,8 +37178,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 215,
-      "relationship_count": 1457
+      "page_count": 216,
+      "relationship_count": 1467
     },
     "ai-models": {
       "page_count": 14,
@@ -38987,6 +39110,7 @@
       "backlog/tasks/T027-verify-metrics-capture-k2-6-backends",
       "backlog/tasks/T030-verify-cuda-toolchain",
       "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "lessons/03_validated/methodology-quality/never-present-speculation-as-fact",
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "patterns/01_drafts/artifact-path-verification-at-gate-close"
@@ -39354,6 +39478,7 @@
       "lessons/01_drafts/harness-engineering-is-the-dominant-performance-lever",
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
@@ -39532,6 +39657,7 @@
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
@@ -41785,6 +41911,42 @@
     "self": [
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability"
     ],
+    "saturation": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "declarations": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "p4-specialization": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "regather-discipline": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "hard-rule-11": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "self-reference": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "day-arc-2026-04-27": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "premature-completion-claims": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "terminal-vs-conditional": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "recursive-p4-application": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
+    "meta-finding": [
+      "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
+    ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "sources/src-github-spec-kit-specification-driven-development"
@@ -42038,11 +42200,6 @@
     ],
     "brainstorm": [
       "lessons/03_validated/methodology-process/never-skip-stages-even-when-told-to-continue"
-    ],
-    "self-reference": [
-      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
-      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
-      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
     ],
     "principle-validation": [
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
@@ -44990,6 +45147,12 @@
       ]
     },
     {
+      "target": "2026-04-27 FINAL Session-End Handoff",
+      "referenced_by": [
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal"
+      ]
+    },
+    {
       "target": "2026-04-27 Mid-Session Handoff",
       "referenced_by": [
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
@@ -45067,6 +45230,7 @@
       "target": "Anti-Vendor-Lock-In Lesson",
       "referenced_by": [
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
@@ -45432,6 +45596,12 @@
       ]
     },
     {
+      "target": "FINAL Handoff",
+      "referenced_by": [
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal"
+      ]
+    },
+    {
       "target": "Firecrawl GitHub README",
       "referenced_by": [
         "Synthesis \u2014 Firecrawl: Web Scraper API for AI Agents (Search \u00b7 Scrape \u00b7 Agent \u00b7 Change-Tracking)"
@@ -45444,9 +45614,21 @@
       ]
     },
     {
+      "target": "Handoff #14 \u2014 S1 Close",
+      "referenced_by": [
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal"
+      ]
+    },
+    {
       "target": "Handoff #14 \u2014 S1 close",
       "referenced_by": [
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
+      ]
+    },
+    {
+      "target": "Handoff #15 \u2014 S2 Continuation Close",
+      "referenced_by": [
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal"
       ]
     },
     {
@@ -45872,6 +46054,7 @@
     {
       "target": "Self-Reference Drift Lesson",
       "referenced_by": [
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
       ]

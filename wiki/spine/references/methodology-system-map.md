@@ -339,6 +339,7 @@ See [[wiki/config/README.md]] for the definitive thorough reference. Summary bel
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[methodology-config-architecture|Methodology Config Architecture — How the Pieces Fit Together]]
 [[identity-profile|Research Wiki — Identity Profile]]
+[[saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work|Saturation Declarations Are P4 Aspirational — Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal]]
 [[session-handoff-standards|Session Handoff Standards]]
 [[enforcement-hierarchy|Sub-Model — Enforcement Hierarchy — From Instructions to Immune System]]
 [[goldilocks-protocol|Sub-Model — Goldilocks Protocol — Identity and Adaptation]]

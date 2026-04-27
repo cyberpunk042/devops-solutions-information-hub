@@ -79,6 +79,7 @@ Lessons that synthesize an entire domain's structural position.
 - [Harness Engineering Is the Dominant Performance Lever](01_drafts/harness-engineering-is-the-dominant-performance-lever.md) — For LLM-based agentic systems, **the harness — not the model — is now the dominant performance lever**
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
 - [Machine-Specific Config in Version Control Is Aspirational Portability](01_drafts/machine-specific-config-in-vcs-is-aspirational-portability.md) — Committing configuration files that contain machine-specific absolute paths silently breaks portability
+- [Saturation Declarations Are P4 Aspirational — Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal](01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md) — A "saturation" / "natural saturation" / "complete" / "done" / "we've reached the ceiling" declaration is itself a cla...
 - [Specs-as-Code-Source Inverts the Traditional Hierarchy](01_drafts/specs-as-code-source-inverts-hierarchy.md) — Traditional software development treats code as the primary artifact and specifications as scaffolding — supporting d...
 - [Agents take small unauthorized scope expansions when the change is a 'clean win'](02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md) — The v8 methodology blocks overt scope creep through stage hooks, diff validators, and done-when checks
 - [Epic readiness math is wrong when an epic has implicit goals beyond its current children](02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md) — The harness computes epic readiness as the average of its child task readiness values
@@ -131,4 +132,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`lesson`, `contributed`, `methodology`, `inbox`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `cross-domain`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `principle`, `validation`, `harness-engineering`
+`lesson`, `contributed`, `methodology`, `inbox`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `cross-domain`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `verification`, `principle`, `validation`

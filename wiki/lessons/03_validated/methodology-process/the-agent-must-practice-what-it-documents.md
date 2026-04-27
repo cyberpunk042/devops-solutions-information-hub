@@ -148,6 +148,7 @@ This lesson applies to any system that both produces and consumes its own method
 [[models-are-systems-not-documents|Models Are Systems, Not Documents]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 [[2026-04-09-directive-record-process-skills-supermodel|Record the Process — Skills, Super-Model, Preach by Example]]
+[[saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work|Saturation Declarations Are P4 Aspirational — Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal]]
 [[self-reference-drift-wiki-must-practice-its-own-teachings|Self-Reference Drift — A Wiki That Teaches a Principle Predicts Its Own Failure When It Doesn't Apply That Principle to Its Own Config]]
 [[standards-must-preach-by-example|Standards Must Preach by Example]]
 [[systemic-incompleteness-is-invisible-to-validation|Systemic Incompleteness Is Invisible to Validation]]
