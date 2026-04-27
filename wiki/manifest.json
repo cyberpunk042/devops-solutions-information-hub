@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-27T15:27:20.574492+00:00",
+  "generated": "2026-04-27T15:36:34.877131+00:00",
   "stats": {
-    "pages": 497,
+    "pages": 498,
     "domains": 11,
-    "sources": 70,
+    "sources": 71,
     "comparisons": 9,
-    "relationships": 3048,
-    "tags_unique": 1548,
+    "relationships": 3054,
+    "tags_unique": 1559,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 38,
+      "seed": 39,
       "mature": 2
     }
   },
@@ -27817,6 +27817,106 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md",
+      "slug": "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "title": "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "oolong",
+        "longbench-pro",
+        "long-context-benchmarks",
+        "evaluation",
+        "training-data",
+        "distributional-reasoning",
+        "aggregation",
+        "classification",
+        "counting",
+        "bilingual",
+        "english-chinese",
+        "cmu",
+        "real-world-data",
+        "synthetic-data",
+        "rlm-anchor",
+        "frontier-model-evaluation",
+        "mission-2026-04-27",
+        "paradigm-validation",
+        "anti-vendor-lock-in",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "oolong-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2511.02817",
+          "file": "raw/articles/251102817-oolong-evaluating-long-context-reasoning-and-aggregation-capabilities.md",
+          "title": "OOLONG: Evaluating Long Context Reasoning and Aggregation Capabilities (Bertsch et al., Nov 2025)",
+          "description": "CMU-affiliated benchmark used as the load-bearing eval in RLM paper Table 1; trec_coarse split scored 56.5% by RLM(GPT-5) vs 44.0% by base GPT-5",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "longbench-pro-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2601.02872",
+          "file": "raw/articles/260102872-longbench-pro-a-more-realistic-and-comprehensive-bilingual-long-contex.md",
+          "title": "LongBench Pro: A More Realistic and Comprehensive Bilingual Long-Context Evaluation Benchmark (Chen et al., Jan 2026)",
+          "description": "Source of 750 English tasks \u2192 2250 candidate trajectories \u2192 1072 filtered \u2192 SFT samples used to train RLM-Qwen3-8B",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "RLM paper deep-dive \u2014 uses OOLONG as eval (Table 1) and LongBenchPro as training data source"
+        },
+        {
+          "id": "rlm-empirical-findings",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b.md",
+          "description": "RLM empirical findings \u2014 OOLONG headline number (114% improvement at 132K)"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "OOLONG Benchmark",
+        "LongBench Pro",
+        "OOLONG + LongBenchPro Synthesis"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Empirical Findings"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3 \u2014 Goldilocks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Tier-0 Candidate Comparison"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-opencode-harness-features.md",
       "slug": "sources/tools-integration/src-opencode-harness-features",
       "title": "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
@@ -35110,8 +35210,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 10,
-      "relationship_count": 98
+      "page_count": 11,
+      "relationship_count": 104
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -37123,7 +37223,8 @@
       "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
     ],
     "training-data": [
-      "backlog/tasks/T060-audit-wiki-corpus-training-readiness"
+      "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
     ],
     "qa-pairs": [
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
@@ -37568,6 +37669,7 @@
       "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
       "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
@@ -37581,6 +37683,7 @@
     ],
     "anti-vendor-lock-in": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
@@ -37620,6 +37723,7 @@
     "tools-integration": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
@@ -39891,7 +39995,8 @@
       "spine/super-model/super-model"
     ],
     "aggregation": [
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
     ],
     "knowledge-flow": [
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
@@ -41497,6 +41602,56 @@
     "openclaw-openarms-integration": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
+    "oolong": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "longbench-pro": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "long-context-benchmarks": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "evaluation": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "spine/references/open-model-evaluation-framework"
+    ],
+    "distributional-reasoning": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "classification": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "counting": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "bilingual": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "english-chinese": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "cmu": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "real-world-data": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "synthetic-data": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "rlm-anchor": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "frontier-model-evaluation": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "paradigm-validation": [
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
     "byom": [
       "sources/tools-integration/src-opencode-harness-features"
     ],
@@ -41720,10 +41875,6 @@
     "benchmark-results": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
-    "oolong": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
     "browsecomp-plus": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
@@ -41753,9 +41904,6 @@
     "oct-2025-blogpost": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
-    "paradigm-validation": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
     "paper-deep-dive": [
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
@@ -41775,9 +41923,6 @@
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "training-recipe": [
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
-    "longbench-pro": [
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "six-observations": [
@@ -42149,9 +42294,6 @@
     "entry-point": [
       "spine/references/model-registry"
     ],
-    "evaluation": [
-      "spine/references/open-model-evaluation-framework"
-    ],
     "checklist": [
       "spine/references/open-model-evaluation-framework"
     ],
@@ -42291,6 +42433,7 @@
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
         "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
@@ -43503,6 +43646,12 @@
       "target": "Three-Layer Autocomplete Chain Validated",
       "referenced_by": [
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "Tier-0 Candidate Comparison",
+      "referenced_by": [
+        "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread"
       ]
     },
     {

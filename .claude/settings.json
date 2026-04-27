@@ -70,7 +70,8 @@
       "Bash(.venv/bin/python -m tools.pipeline crossref)",
       "Bash(.venv/bin/python -m tools.pipeline fetch https://arxiv.org/abs/2512.24601 https://alexzhang13.github.io/blog/2025/rlm/)",
       "Bash(.venv/bin/python -m tools.pipeline fetch https://arxiv.org/pdf/2512.24601)",
-      "Bash(.venv/bin/python -m tools.pipeline fetch https://github.com/PrimeIntellect-ai/verifiers https://github.com/PrimeIntellect-ai/prime-rl)"
+      "Bash(.venv/bin/python -m tools.pipeline fetch https://github.com/PrimeIntellect-ai/verifiers https://github.com/PrimeIntellect-ai/prime-rl)",
+      "Bash(.venv/bin/python -m tools.pipeline fetch https://arxiv.org/abs/2511.02817 https://arxiv.org/abs/2601.02872)"
     ]
   },
   "hooks": {
