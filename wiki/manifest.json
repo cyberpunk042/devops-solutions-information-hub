@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-27T18:49:09.806272+00:00",
+  "generated": "2026-04-27T19:14:24.272677+00:00",
   "stats": {
     "pages": 509,
     "domains": 11,
     "sources": 76,
     "comparisons": 9,
-    "relationships": 3179,
+    "relationships": 3187,
     "tags_unique": 1697,
     "layers": {
       "3": 4,
@@ -32033,7 +32033,15 @@
       "relationships": [
         {
           "verb": "BUILDS ON",
-          "target": "2026-04-27 Session Handoff"
+          "target": "2026-04-27 Mid-Session Handoff (S1)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-27 Session-End Handoff #14 (S1 close)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-27 Continuation Session-End Handoff (S2 close)"
         },
         {
           "verb": "BUILDS ON",
@@ -32042,6 +32050,30 @@
         {
           "verb": "BUILDS ON",
           "target": "RLM Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM-Qwen3.6-27B Operations Plan"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "BrowseComp+ Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LongBench Pro Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "OOLONG Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LongBench v2 Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
         },
         {
           "verb": "RELATES TO",
@@ -36841,7 +36873,7 @@
     },
     "cross-domain": {
       "page_count": 214,
-      "relationship_count": 1434
+      "relationship_count": 1442
     },
     "ai-models": {
       "page_count": 14,
@@ -44727,23 +44759,35 @@
       ]
     },
     {
+      "target": "2026-04-27 Continuation Session-End Handoff",
+      "referenced_by": [
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
+      ]
+    },
+    {
       "target": "2026-04-27 Mid-Session Handoff",
       "referenced_by": [
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
-        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
+        "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
       "target": "2026-04-27 Session Handoff",
       "referenced_by": [
-        "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
-        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
+        "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence"
       ]
     },
     {
       "target": "2026-04-27 Session-End Handoff",
       "referenced_by": [
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
+      "target": "2026-04-27 Session-End Handoff #14",
+      "referenced_by": [
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
@@ -44801,7 +44845,8 @@
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
-        "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)"
+        "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
@@ -44836,7 +44881,8 @@
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
-        "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)"
+        "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
