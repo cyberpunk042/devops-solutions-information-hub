@@ -136,6 +136,7 @@ This lesson applies to any system that both produces and consumes its own method
 [[immune-system-rules|Immune System Rules]]
 [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 [[2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance|2026-04-25 Regather + Systemic Bug Investigation — Layer-2 Teaching Gap and Second P4 Instance in Spine]]
+[[2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission|2026-04-27 Session Handoff — RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)]]
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
