@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-27T19:14:24.272677+00:00",
+  "generated": "2026-04-27T19:25:49.665927+00:00",
   "stats": {
-    "pages": 509,
+    "pages": 510,
     "domains": 11,
     "sources": 76,
     "comparisons": 9,
-    "relationships": 3187,
-    "tags_unique": 1697,
+    "relationships": 3202,
+    "tags_unique": 1708,
     "layers": {
       "3": 4,
       "5": 37,
@@ -21939,6 +21939,189 @@
       ]
     },
     {
+      "path": "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done.md",
+      "slug": "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
+      "title": "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "handoff",
+        "session",
+        "final",
+        "day-arc-complete",
+        "2-session-arc",
+        "s1-13-artifacts",
+        "s2-7-artifacts",
+        "mission-wiki-side-done",
+        "rlm-table-1-100pct-layer-1",
+        "anti-vendor-lock-in-fully-grounded",
+        "evaluation-layer-evidence-chain-complete-end-to-end",
+        "t-0-eod-final",
+        "mission-2026-04-27",
+        "brain-refactor-validated-cycle-3-cumulative",
+        "p1-wiki-side-functionally-closed",
+        "paper-pdf-layer-1-comprehensive",
+        "supersedes-handoff-14-and-15"
+      ],
+      "sources": [
+        {
+          "id": "prior-s1-end-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation.md",
+          "description": "Handoff #14 \u2014 Session 1 close at 503 pages with the RLM thread documented across 13 artifacts. Acknowledged 'natural saturation' on the wiki side. This FINAL handoff supersedes #14 as the definitive closure for the day-arc."
+        },
+        {
+          "id": "prior-s2-continuation-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1.md",
+          "description": "Handoff #15 \u2014 continuation session close at 508 pages after Session 2's 5 substantive artifacts. This FINAL handoff supersedes #15 as the definitive closure (#15 didn't include the 2 subsequent edits \u2014 anti-vendor-lock-in lesson Evidence 6 enrichment + RLM-thread learning-path expansion)."
+        },
+        {
+          "id": "prior-mid-session-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission.md",
+          "description": "Mid-session handoff #10 of S1 \u2014 captured the 9-artifact arc at the natural punctuation point of completing the RLM Table 1 benchmark abstract-level coverage."
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Layer-4 evolved-knowledge lesson \u2014 Evidence 6 (evaluation layer) enriched in S2 with the 4-of-4 Layer-1 grounding table. The mission claim 'a mission claim with paper evidence at every stack layer is empirical' is now most rigorously grounded at the evaluation layer."
+        },
+        {
+          "id": "rlm-qwen3-6-27b-operations-plan",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md",
+          "description": "Operations plan authored in S2 \u2014 implements the 'Composition Path' from the tier-0 candidate comparison; was hypothetical, now executable per Principle 4."
+        },
+        {
+          "id": "rlm-thread-learning-path",
+          "type": "wiki",
+          "file": "wiki/spine/learning-paths/rlm-thread-evidence-chain-2026-04-27.md",
+          "description": "Curated reading order \u2014 expanded in S2 from 11 \u2192 16 artifacts and 3 \u2192 5 paths (added Path E: Audit Evaluation Layer)."
+        },
+        {
+          "id": "tier-0-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
+          "description": "Decision matrix \u2014 the 'Composition Path' that the operations plan implements"
+        },
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "RLM paper deep-dive \u2014 Table 1 contextualizes all 4 evaluation surfaces"
+        },
+        {
+          "id": "browsecomp-plus-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality.md",
+          "description": "S2 Layer-1 deep-dive \u2014 UWaterloo IR group; oracle 93.49%; +14 abs pts retriever-swap finding"
+        },
+        {
+          "id": "longbench-pro-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings.md",
+          "description": "S2 Layer-1 deep-dive \u2014 IIE-CAS + UCAS + Beihang + Xiaohongshu; 1500 bilingual samples; 3 findings"
+        },
+        {
+          "id": "oolong-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k.md",
+          "description": "S2 Layer-1 deep-dive \u2014 CMU LTI; 2-split design; DeepSeek-R1 below-random pathology forensically explained"
+        },
+        {
+          "id": "longbench-v2-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans.md",
+          "description": "S2 Layer-1 deep-dive \u2014 Tsinghua + Zhipu.AI; 503 multi-choice; o1-preview beats humans by +4 abs pts"
+        },
+        {
+          "id": "self-reference-drift-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md",
+          "description": "Lesson \u2014 Evidence 6 added in S1 documents the brain refactor's hook layer empirically catching reflexive truncation. The continuation session validated this finding 5+ more times (Cycle 3)."
+        },
+        {
+          "id": "aicp-handoff-2026-04-24",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "AICP authoritative compute-side state \u2014 $540\u2192$100 routing finding; the natural compute-side P0 work the operations plan integrates with"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "SUPERSEDES",
+          "target": "Handoff #14 \u2014 S1 close"
+        },
+        {
+          "verb": "SUPERSEDES",
+          "target": "Handoff #15 \u2014 S2 continuation close"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Mid-session handoff #10"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-25 End-State Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-24 Brain Refactor Handoff"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Self-Reference Drift Lesson"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "RLM-Qwen3.6-27B Operations Plan"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Learning Path \u2014 RLM Thread Evidence Chain"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model Provider Harness Decision Matrix 2026"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation.md",
       "slug": "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "title": "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
@@ -36872,8 +37055,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 214,
-      "relationship_count": 1442
+      "page_count": 215,
+      "relationship_count": 1457
     },
     "ai-models": {
       "page_count": 14,
@@ -39356,6 +39539,7 @@
       "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
@@ -42090,6 +42274,7 @@
       "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
     ],
@@ -42165,6 +42350,7 @@
       "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "spine/references/wsl-ubuntu-migration-handoff"
@@ -42314,10 +42500,12 @@
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
     ],
     "rlm-table-1-100pct-layer-1": [
-      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
+      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
     ],
     "anti-vendor-lock-in-fully-grounded": [
-      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
+      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
     ],
     "evaluation-layer-evidence-chain-complete": [
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
@@ -42332,7 +42520,41 @@
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
     ],
     "paper-pdf-layer-1-comprehensive": [
-      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1"
+      "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "final": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "day-arc-complete": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "2-session-arc": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "s1-13-artifacts": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "s2-7-artifacts": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "mission-wiki-side-done": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "evaluation-layer-evidence-chain-complete-end-to-end": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "t-0-eod-final": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "brain-refactor-validated-cycle-3-cumulative": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "p1-wiki-side-functionally-closed": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
+    ],
+    "supersedes-handoff-14-and-15": [
+      "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
     ],
     "session-end": [
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation"
@@ -44620,6 +44842,7 @@
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
         "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)",
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
@@ -44705,6 +44928,7 @@
       "referenced_by": [
         "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)",
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update",
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
         "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)"
       ]
@@ -44730,6 +44954,7 @@
     {
       "target": "2026-04-25 End-State Handoff",
       "referenced_by": [
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)"
       ]
     },
@@ -44806,6 +45031,7 @@
     {
       "target": "AI Model Provider Harness Decision Matrix 2026",
       "referenced_by": [
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
@@ -44842,6 +45068,7 @@
       "referenced_by": [
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
@@ -45217,6 +45444,18 @@
       ]
     },
     {
+      "target": "Handoff #14 \u2014 S1 close",
+      "referenced_by": [
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
+      ]
+    },
+    {
+      "target": "Handoff #15 \u2014 S2 continuation close",
+      "referenced_by": [
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
+      ]
+    },
+    {
       "target": "Harness Landscape 2026",
       "referenced_by": [
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
@@ -45286,6 +45525,7 @@
       "referenced_by": [
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
@@ -45343,6 +45583,12 @@
       "target": "Methodology as Framework",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "Mid-session handoff #10",
+      "referenced_by": [
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
       ]
     },
     {
@@ -45626,7 +45872,8 @@
     {
       "target": "Self-Reference Drift Lesson",
       "referenced_by": [
-        "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded"
+        "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
       ]
     },
     {
