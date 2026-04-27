@@ -70,7 +70,7 @@ The remaining two benchmarks anchoring the [RLM paper Table 1](src-rlm-paper-dee
 > | **Released** | Yes — fixed corpus public | Yes — project website linked |
 > | **Used in RLM paper** | Table 1 BrowseComp+ (1K) — RLM(GPT-5) 91.3% vs base GPT-5 0.0% | Table 1 CodeQA split — RLM(GPT-5) 62.0% vs base GPT-5 24.0% |
 > | **Paper length** | Standard arXiv length | **26 pages, 13 figures** |
-> | **Confidence label** | high (abstract level — paper PDF not yet ingested) | high (abstract level — paper PDF not yet ingested) |
+> | **Confidence label** | **high (Layer 1 — full PDF deepened in dedicated synth: [BrowseComp+ Paper Deep Dive](src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality.md))** | high (abstract level — paper PDF not yet ingested) |
 
 ## Key Insights
 
@@ -234,6 +234,7 @@ Every layer of the open-source post-Anthropic stack now has empirical validation
 
 ## Relationships
 
+- EXTENDS: [[src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality|BrowseComp+ Paper Deep Dive]] (Layer 1 deepening from the full PDF — Tables 1-8, oracle 93.49%, citation quality matrix, reasoning-effort ablation, API cost analysis; this combined synth covered BrowseComp+ at abstract level)
 - BUILDS ON: [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|RLM Paper Deep Dive]] (this synthesis anchors the remaining benchmarks the deep-dive uses)
 - BUILDS ON: [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|RLM Empirical Findings]] (BrowseComp+ is in the headline blogpost framing)
 - BUILDS ON: [[src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors|OOLONG + LongBench Pro Synthesis]] (companion synth — together cover all 4 RLM Table 1 benchmarks)
@@ -247,6 +248,7 @@ Every layer of the open-source post-Anthropic stack now has empirical validation
 
 ## Backlinks
 
+[[BrowseComp+ Paper Deep Dive]]
 [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|RLM Paper Deep Dive]]
 [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|RLM Empirical Findings]]
 [[OOLONG + LongBench Pro Synthesis]]
