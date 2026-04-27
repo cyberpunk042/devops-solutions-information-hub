@@ -136,6 +136,7 @@ This lesson applies to any system that both produces and consumes its own method
 [[immune-system-rules|Immune System Rules]]
 [[knowledge-evolution-pipeline|Knowledge Evolution Pipeline]]
 [[2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance|2026-04-25 Regather + Systemic Bug Investigation — Layer-2 Teaching Gap and Second P4 Instance in Spine]]
+[[2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1|2026-04-27 Continuation Session-End Handoff — Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded]]
 [[2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission|2026-04-27 Session Handoff — RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)]]
 [[2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation|2026-04-27 Session-End Handoff — 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)]]
 [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One — When Every Layer of the Open-Source Stack Has Paper Evidence]]
