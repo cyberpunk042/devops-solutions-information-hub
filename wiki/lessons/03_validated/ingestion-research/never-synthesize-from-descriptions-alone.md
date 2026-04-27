@@ -126,6 +126,7 @@ This lesson applies far beyond wiki ingestion:
 [[always-plan-before-executing|Always Plan Before Executing]]
 [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 [[immune-system-rules|Immune System Rules]]
+[[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One — When Every Layer of the Open-Source Stack Has Paper Evidence]]
 [[model-llm-wiki-standards|LLM Wiki Standards — What Good Looks Like]]
 [[model-quality-failure-prevention|Model — Quality and Failure Prevention]]
 [[never-present-speculation-as-fact|Never Present Speculation as Fact]]

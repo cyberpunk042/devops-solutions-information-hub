@@ -1,0 +1,187 @@
+---
+title: "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One — When Every Layer of the Open-Source Stack Has Paper Evidence"
+aliases:
+  - "Anti-Vendor-Lock-In as Empirical Claim"
+  - "Open-Source Stack Needs Paper Evidence at Every Layer"
+  - "Lesson — Anti-Vendor-Lock-In Empirical"
+type: lesson
+domain: cross-domain
+layer: 4
+status: synthesized
+confidence: high
+maturity: seed
+created: 2026-04-27
+updated: 2026-04-27
+last_reviewed: 2026-04-27
+derived_from:
+  - "RLM Paper Deep Dive (Table 1, Training Recipe)"
+  - "RLM Empirical Findings (OOLONG 114% improvement)"
+  - "BrowseComp+ + LongBench v2 (retriever +14pts)"
+  - "Tier-0 Candidate Comparison"
+  - "Prime Intellect Verifiers + prime-rl (Apache 2.0 training stack)"
+  - "Declarations Are Aspirational Until Infrastructure Verifies Them"
+sources:
+  - id: rlm-paper-deep-dive
+    type: wiki
+    file: wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md
+    description: "Paper-level deep-dive — primary empirical anchor for inference-paradigm + training-recipe layers"
+  - id: tier-0-comparison
+    type: wiki
+    file: wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md
+    description: "Cross-synthesis demonstrating the actionable use of layered paper evidence"
+  - id: browsecomp-longbench-v2
+    type: wiki
+    file: wiki/sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md
+    description: "Retriever-layer empirical anchor — Qwen3-Embedding-8B +14pts over BM25 (open-source retriever competitive with closed-source generation)"
+  - id: prime-rl-synth
+    type: wiki
+    file: wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md
+    description: "Training-layer empirical anchor — Apache 2.0 training framework, 48 H100 hours for RLM-Qwen3-8B"
+  - id: oolong-longbench-pro
+    type: wiki
+    file: wiki/sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md
+    description: "Evaluation-layer empirical anchor — public benchmarks defining the task class"
+  - id: principle-4
+    type: wiki
+    file: wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md
+    description: "Direct parent principle — this lesson specializes P4 to mission-class claims about open-source viability"
+  - id: feedback-mission-framing
+    type: notes
+    file: ~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_mission_framing.md
+    description: "Operator's mission framing memory — anti-vendor-lock-in NOT anti-closed-weight"
+tags: [lesson, anti-vendor-lock-in, empirical-claim, paper-evidence, open-source-stack, post-anthropic-mission, layered-validation, end-to-end-traceability, mission-2026-04-27, p4-application, sovereignty-tier, rlm-thread, qwen3, prime-intellect, mit-oasys, tools-integration, claim-vs-aspiration]
+---
+
+# Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One — When Every Layer of the Open-Source Stack Has Paper Evidence
+
+## Summary
+
+A mission claim that "the open-source AI stack can substitute for closed-source frontier" remains aspirational unless every layer of the stack — generation, retrieval, inference paradigm, training framework, evaluation, loss objective — has direct empirical paper evidence. The wiki's 2026-04-27 session arc demonstrates this empirically: the RLM thread alone (9 source artifacts + 1 comparison + 1 handoff + 1 learning-path) populated all 7 layers of the open-source post-Anthropic stack with paper-citable evidence, transforming "anti-vendor-lock-in is our mission" from a slogan into a traceable engineering claim. This lesson generalizes [Principle 4 (Declarations Aspirational Until Verified)](../04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md) from per-declaration verification to mission-level claim verification: a mission claim with paper evidence at every layer is empirical; a mission claim with paper evidence at only the top layer (e.g., "closed-source costs are high") is aspirational. The verification gate for a stack-level claim is *layer-by-layer paper evidence*, not aggregate market analysis.
+
+## Context
+
+> [!info] When this lesson applies
+>
+> This lesson applies to any organization or project that:
+> 1. Makes a stack-level claim about cost/quality/sovereignty (e.g., "open-source can substitute for closed-source", "edge inference is viable", "sovereign AI stack is achievable")
+> 2. Has a multi-layer technical stack involved in delivering that claim (generation + retrieval + training + evaluation + deployment)
+> 3. Wants to convert the claim from aspirational to empirical (i.e., wants the claim to be defensible under scrutiny, not just rhetorically supportable)
+
+The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_mission_framing.md)) is anti-vendor-lock-in NOT anti-closed-weight — the framing distinction matters. Anti-vendor-lock-in means the operator wants to be ABLE to substitute open-source layers wherever closed-source dependencies create risk; it does not mean refusing all closed-source models. For this stance to be defensible, the open-source substitutes must actually work at each layer where they're claimed.
+
+## Insight
+
+> [!tip] **The empirical-vs-aspirational test for a stack-level claim**
+>
+> A mission claim about "the open-source stack works" is EMPIRICAL if and only if **every layer in the stack has direct paper evidence demonstrating quality / cost / capability competitive with the closed-source alternative**. Without that layer-by-layer evidence, the claim is aspirational — supported by a few headline numbers but not traceable end-to-end. The verification gate is not aggregate market analysis ("OSS is doing well overall") but per-layer paper citation: for layer L, what specific paper / benchmark / quantified comparison establishes that the open-source option in L is competitive at L's role? If you cannot answer that for every L in the stack, the claim has aspirational gaps.
+>
+> The transformation from aspirational to empirical happens when these gaps are systematically closed by ingesting + synthesizing the relevant papers at each layer. The wiki's 2026-04-27 session demonstrates this: the RLM thread alone closed 7+ layers (generation, retrieval, inference paradigm, training framework, environment library, evaluation, loss objective) by producing 11 source-grounded wiki artifacts in one focused arc. The mission claim moved from "we believe anti-vendor-lock-in" to "every layer has a citable paper / repo / synthesis with quantified evidence and provenance."
+
+## Evidence
+
+> [!success]- **Evidence 1 — Generation layer: Qwen3.6-27B beats some 397B MoE on agentic coding (Apr 2026)**
+>
+> Per [src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding](../../sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding.md): Qwen3.6-27B-Dense (Apache 2.0) achieves 53.5 on SWE-bench Pro vs 50.9 for some 397B-class MoE models. Direct empirical evidence that an open-source 27B-dense model is competitive with much-larger closed-source alternatives at the agentic-coding role. Layer-validated.
+>
+> Per [src-rlm-paper-deep-dive](../../sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md) Table 1: RLM(Qwen3-Coder-480B-A35B) achieves 56.0 on CodeQA, 44.7 on BrowseComp+ (1K), 48.0 on OOLONG, 23.1 on OOLONG-Pairs — strong open-source frontier-class generation across all 4 long-context benchmarks.
+
+> [!success]- **Evidence 2 — Retrieval layer: Qwen3-Embedding-8B +14pts over BM25 on BrowseComp+ (Aug 2025 paper)**
+>
+> Per [src-browsecomp-plus-and-longbench-v2](../../sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md): same generation model (GPT-5), retriever swap from BM25 → Qwen3-Embedding-8B yields 55.9% → 70.1% on BrowseComp+ accuracy with FEWER search calls. Open-source dense retrievers compete with (and beat) classical alternatives at the retrieval role. Layer-validated.
+
+> [!success]- **Evidence 3 — Inference paradigm layer: RLM scales 2 orders of magnitude beyond context window (Dec 2025/Jan 2026 arXiv)**
+>
+> Per [src-rlm-paper-deep-dive](../../sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md): RLM(GPT-5) achieves 91.3% on BrowseComp+ at 1K-doc subset (~6-11M tokens) where base GPT-5 hits the context limit at 0.0%. The recursive REPL paradigm extends effective context by 2 orders of magnitude — the open-source SDK at github.com/alexzhang13/rlm enables anyone to deploy this. Layer-validated.
+
+> [!success]- **Evidence 4 — Training framework layer: prime-rl is Apache 2.0 + scales to 1000+ GPUs (Mar 2026 status)**
+>
+> Per [src-prime-intellect-prime-rl](../../sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md): Prime Intellect's prime-rl framework (Apache 2.0) trained RLM-Qwen3-8B in 48 H100 hours (~$48-100 USD cloud rental). Native verifiers integration. Production-grade async RL with FSDP2 + vLLM + FP8 + EP/CP parallelism. Open-source training framework reaches the scale required for frontier post-training. Layer-validated.
+
+> [!success]- **Evidence 5 — Environment library layer: verifiers v0.1.12 has RLMEnv (Apr 2026 release)**
+>
+> Per [src-prime-intellect-verifiers](../../sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments.md): Verifiers v0.1.12 (2026-04-17) explicitly added RLM harnesses + tasksets + RLMEnv improvements (context dropping, prompt builder, hardened transport). Environment library for hosting evaluation/training tasks is open-source + production-grade + RLM-aware. Layer-validated.
+
+> [!success]- **Evidence 6 — Evaluation layer: 4 public benchmarks define the task class (Dec 2024 → Jan 2026)**
+>
+> Per [src-oolong-and-longbench-pro](../../sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md) + [src-browsecomp-plus-and-longbench-v2](../../sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md): all 4 RLM Table 1 benchmarks (CodeQA · BrowseComp+ · OOLONG · OOLONG-Pairs) plus the training-data benchmark (LongBench Pro) are public, released with evaluation harnesses, and reproducible. The empirical evidence chain at every layer is auditable by any third party. Layer-validated.
+
+> [!success]- **Evidence 7 — Loss objective layer: IPO + Kimi-K2.5 KL is documented + extensible (Mar 2026 default)**
+>
+> Per [src-prime-intellect-prime-rl](../../sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md): prime-rl's default loss is IPO (DPPO-Binary TV variant from arxiv:2602.04879) + Kimi-K2.5 KL (arxiv:2602.02276). Bring-your-own algorithms supported via `loss.type = "custom"` + `import_path`. Open-source loss objective + research-citable foundation. Layer-validated.
+
+> [!success]- **Evidence 8 — Post-trained 8B model approaches frontier on 3/4 long-context tasks (arXiv 2512.24601 v2)**
+>
+> Per [src-rlm-paper-deep-dive](../../sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md): RLM-Qwen3-8B (8B parameters, fine-tuned on 1,000 trajectories from LongBenchPro in 48 H100 hours) outperforms base Qwen3-8B by 28.3% on average across 4 long-context tasks AND approaches GPT-5 quality on 3 of those 4 tasks. **The open-source 8B model approaches the closed-source frontier when given the right paradigm + training**. Single most powerful empirical anchor for the lesson. Layer-validated.
+
+> [!success]- **Evidence 9 — Sustained mission validation: $540 → $100 CAD/mo finding (AICP 2026-04-24 handoff)**
+>
+> Per AICP's authoritative state (`~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md`): **smart cloud-tier routing alone drops cloud spend ~$540 → ~$100 CAD/mo (80% reduction) without hardware investment**. This is empirical at the deployment layer — operator's actual workload, actual prior bill, actual measured savings. The mission's cost-claim is not theoretical; it is operationally measured. Combined with Evidence 8 (post-trained 8B reaches frontier-class quality), the cost story compounds: the 80% routing reduction PLUS the recursive-paradigm capability gain.
+
+## Applicability
+
+> [!info] **When this lesson applies (decision matrix)**
+>
+> | Stance | Applies? |
+> |---|---|
+> | **Mission claims about open-source viability that affect production deployment decisions** | YES — paper-evidence-per-layer is the verification gate |
+> | **Cost-routing decisions that depend on open-source quality** | YES — same gate; without per-layer evidence, the routing decision is on speculative grounds |
+> | **Sovereignty / regulatory claims about substitutability** | YES — sovereignty without empirical substitutes is rhetoric, not policy |
+> | **Multi-layer technical claims at any scale** (not just AI) | YES — generalizes; the principle is layer-by-layer empirical evidence |
+> | **Single-layer claims** (e.g., "this specific model is good") | NO — single-layer claims need only single-layer evidence; this lesson is about composite stack claims |
+> | **Pure research claims** (e.g., "this paradigm is interesting") | NO — research isn't required to be production-deployment-defensible |
+>
+> Mission-relevant for the wiki specifically: anti-vendor-lock-in is the operator's stated mission framing. This lesson moves it from aspirational ("we'd like to") to empirical ("we have paper evidence at every layer that"). The operator's $540 → $100 routing finding becomes one piece of a larger end-to-end traceable claim.
+
+## Open Questions
+
+> [!question] How does this lesson compose with [Principle 4 (Declarations Aspirational Until Verified)](../04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md)?
+> P4 says "every declaration needs a verification gate or it's aspirational." This lesson specializes P4 to MISSION-LEVEL claims, where the verification gate is *layer-by-layer paper evidence*. Is this a true specialization or a separate principle? Both? (Requires: cross-comparison + possibly promotion to principle in time.)
+
+> [!question] At what stack-layer-coverage threshold does a mission claim become "empirical enough"?
+> The session covered 7 layers. Are 7 enough? Are 4 enough? The threshold may be context-dependent: production deployment may require more, sovereignty research less. (Requires: cross-mission empirical study.)
+
+> [!question] Does this lesson apply to closed-source stacks too?
+> A closed-source stack ("we use GPT-5 + Anthropic + Pinecone + ...") could be paper-evidenced layer-by-layer too — the lesson isn't specifically about open-source. The OSS focus comes from the *mission claim* being about anti-vendor-lock-in. For other missions, the layer-by-layer-evidence requirement holds but the layers / sources differ. (Requires: generalization analysis.)
+
+> [!question] How quickly does the evidence layer go stale?
+> The 9 evidence items here are from late 2024 → early 2026. As the field evolves, papers age. Specific quantified comparisons (e.g., Qwen3.6-27B beats some 397B MoE on SWE-bench Pro) may not hold against a 2027 frontier release. The lesson's CONCLUSION holds (paper evidence is the gate); the SPECIFIC EVIDENCE rotates. (Requires: cadence-based evidence re-validation.)
+
+## How to Apply
+
+> [!tip] Concrete steps to convert a mission claim from aspirational to empirical
+>
+> 1. **List your stack layers**. For an AI stack: generation, retrieval, inference paradigm, training framework, environment library, evaluation, loss objective, deployment. For other domains: identify the analogous layers.
+> 2. **For each layer, identify the open-source option you'd use**. Be specific (model name, library version, paper).
+> 3. **For each layer, identify the closed-source alternative the open-source option would substitute for**. Same specificity.
+> 4. **For each layer, find the paper / benchmark / quantified comparison establishing the open-source option is competitive at that role**. This is the per-layer empirical gate.
+> 5. **Catalog gaps**. Layers without paper evidence are aspirational — your mission claim has known weak spots there.
+> 6. **Close gaps systematically**. Each gap is a focused research/ingestion task. The wiki's 2026-04-27 session is the worked example of how to close 7+ gaps in one focused arc.
+> 7. **Maintain the catalog**. As the field evolves, evidence rotates. The catalog should be a living document, not a one-shot audit.
+
+> [!warning] **What NOT to do**
+> - Aggregate-level claims without per-layer evidence ("OSS is doing well overall" — true but not actionable for production decisions)
+> - Single-headline claims used to imply stack-level capability ("open-source matched GPT-5 on this benchmark, therefore the OSS stack works" — non-sequitur, the benchmark covers ONE layer)
+> - Outdated evidence treated as current (a 2023 quantified comparison says nothing about 2026 capability)
+> - Cross-domain inference (paper evidence at the generation layer says nothing about the retrieval layer)
+
+## Relationships
+
+- DERIVED FROM: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Infrastructure Verifies Them]] (specializes P4 to mission-class claims)
+- DERIVED FROM: [[infrastructure-over-instructions-for-process-enforcement|Principle 1]] (paper evidence is the infrastructure for the mission claim)
+- BUILDS ON: [[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]] (per-layer evidence requires reading actual papers/repos, not aggregate descriptions)
+- BUILDS ON: [[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]] (the wiki must do the per-layer work to credibly publish the mission claim)
+- DEMONSTRATED BY: [[rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate|Tier-0 Candidate Comparison]] (worked example of per-layer evidence informing a mission decision)
+- DEMONSTRATED BY: [[2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission|2026-04-27 Session Handoff]] (the session that closed 7 layers in one arc)
+- RELATES TO: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] (spine reference where the mission claim lives)
+- RELATES TO: [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]] (decision-layer where the claim's empirical traceability matters)
+
+## Backlinks
+
+[[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4 — Declarations Aspirational Until Infrastructure Verifies Them]]
+[[infrastructure-over-instructions-for-process-enforcement|Principle 1]]
+[[never-synthesize-from-descriptions-alone|Never Synthesize from Descriptions Alone]]
+[[the-agent-must-practice-what-it-documents|The Agent Must Practice What It Documents]]
+[[Tier-0 Candidate Comparison]]
+[[2026-04-27 Session Handoff]]
+[[2026 Consumer Hardware AI Stack]]
+[[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]

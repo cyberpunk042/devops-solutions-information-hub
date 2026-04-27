@@ -65,6 +65,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Evolution — Methodology System](evolution-log/methodology-evolution-history.md) — How the methodology system evolved from prose instructions to infrastructure-enforced stage gates
 - [Goldilocks Flow — From Identity to Action](goldilocks-flow.md) — The complete decision flow from "who am I?" to "what do I do next?" — every decision point with criteria, defaults, a...
 - [Learning Path — Methodology Fundamentals](learning-paths/methodology-fundamentals.md) — Guided sequence for understanding the research wiki's methodology system — from what a methodology model IS, through ...
+- [Learning Path — RLM Thread Evidence Chain (Session Arc 2026-04-27)](learning-paths/rlm-thread-evidence-chain-2026-04-27.md) — Curated reading order for the 11 wiki artifacts produced during the 2026-04-27 session arc, which built the complete ...
 - [Model — Claude Code](models/agent-config/model-claude-code.md) — Claude Code is Anthropic's CLI coding agent — a tool-use loop that reads, writes, and reasons about codebases from th...
 - [Model — Markdown as IaC — Design.md and Agent Configuration](models/agent-config/model-markdown-as-iac.md) — The Design
 - [Model — Skills, Commands, and Hooks](models/agent-config/model-skills-commands-hooks.md) — The AI agent extension ecosystem is a four-level hierarchy: CLAUDE
@@ -137,4 +138,4 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 
 ## Tags
 
-`standards`, `quality`, `spine`, `exemplar`, `page-type`, `model`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `second-brain`, `aicp`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `hooks`
+`standards`, `spine`, `quality`, `exemplar`, `page-type`, `model`, `reference`, `methodology`, `domain-overview`, `gold-standard`, `anti-patterns`, `skills`, `concept`, `second-brain`, `aicp`, `ecosystem`, `integration`, `sub-model`, `navigation-hub`, `navigation`

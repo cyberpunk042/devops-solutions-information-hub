@@ -1,25 +1,25 @@
 {
-  "generated": "2026-04-27T16:31:14.874372+00:00",
+  "generated": "2026-04-27T16:57:47.939731+00:00",
   "stats": {
-    "pages": 500,
+    "pages": 502,
     "domains": 11,
     "sources": 72,
     "comparisons": 9,
-    "relationships": 3072,
-    "tags_unique": 1581,
+    "relationships": 3088,
+    "tags_unique": 1591,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 25,
       "2": 51,
-      "4": 61,
+      "4": 62,
       "0": 1,
       "1": 47,
-      "spine": 75
+      "spine": 76
     },
     "maturity": {
       "growing": 325,
-      "seed": 40,
+      "seed": 42,
       "mature": 2
     }
   },
@@ -14638,6 +14638,130 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+      "slug": "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "title": "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "lesson",
+        "anti-vendor-lock-in",
+        "empirical-claim",
+        "paper-evidence",
+        "open-source-stack",
+        "post-anthropic-mission",
+        "layered-validation",
+        "end-to-end-traceability",
+        "mission-2026-04-27",
+        "p4-application",
+        "sovereignty-tier",
+        "rlm-thread",
+        "qwen3",
+        "prime-intellect",
+        "mit-oasys",
+        "tools-integration",
+        "claim-vs-aspiration"
+      ],
+      "sources": [
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "Paper-level deep-dive \u2014 primary empirical anchor for inference-paradigm + training-recipe layers"
+        },
+        {
+          "id": "tier-0-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
+          "description": "Cross-synthesis demonstrating the actionable use of layered paper evidence"
+        },
+        {
+          "id": "browsecomp-longbench-v2",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md",
+          "description": "Retriever-layer empirical anchor \u2014 Qwen3-Embedding-8B +14pts over BM25 (open-source retriever competitive with closed-source generation)"
+        },
+        {
+          "id": "prime-rl-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+          "description": "Training-layer empirical anchor \u2014 Apache 2.0 training framework, 48 H100 hours for RLM-Qwen3-8B"
+        },
+        {
+          "id": "oolong-longbench-pro",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md",
+          "description": "Evaluation-layer empirical anchor \u2014 public benchmarks defining the task class"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md",
+          "description": "Direct parent principle \u2014 this lesson specializes P4 to mission-class claims about open-source viability"
+        },
+        {
+          "id": "feedback-mission-framing",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_mission_framing.md",
+          "description": "Operator's mission framing memory \u2014 anti-vendor-lock-in NOT anti-closed-weight"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "RLM Paper Deep Dive (Table 1, Training Recipe)",
+        "RLM Empirical Findings (OOLONG 114% improvement)",
+        "BrowseComp+ + LongBench v2 (retriever +14pts)",
+        "Tier-0 Candidate Comparison",
+        "Prime Intellect Verifiers + prime-rl (Apache 2.0 training stack)",
+        "Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ],
+      "aliases": [
+        "Anti-Vendor-Lock-In as Empirical Claim",
+        "Open-Source Stack Needs Paper Evidence at Every Layer",
+        "Lesson \u2014 Anti-Vendor-Lock-In Empirical"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Infrastructure Verifies Them"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Never Synthesize from Descriptions Alone"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "Tier-0 Candidate Comparison"
+        },
+        {
+          "verb": "DEMONSTRATED BY",
+          "target": "2026-04-27 Session Handoff"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        }
+      ]
     },
     {
       "path": "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md",
@@ -30684,6 +30808,94 @@
       ]
     },
     {
+      "path": "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27.md",
+      "slug": "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "title": "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)",
+      "type": "learning-path",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "learning-path",
+        "spine",
+        "rlm",
+        "recursive-language-models",
+        "evidence-chain",
+        "session-arc",
+        "mission-2026-04-27",
+        "post-anthropic-stack",
+        "tier-0-candidate",
+        "anti-vendor-lock-in",
+        "navigation",
+        "curated-reading"
+      ],
+      "sources": [
+        {
+          "id": "session-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission.md",
+          "description": "The 2026-04-27 session handoff that produced this thread"
+        },
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "Anchor artifact \u2014 the RLM paper PDF deep-dive"
+        },
+        {
+          "id": "tier-0-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
+          "description": "Anchor artifact \u2014 the actionable mission comparison"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "RLM Thread Learning Path",
+        "Learning Path \u2014 RLM",
+        "Learning Path \u2014 Recursive Language Models Thread"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-27 Session Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Tier-0 Candidate Comparison"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Paper Deep Dive"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Fundamentals Learning Path"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Self-Reference Drift"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        }
+      ]
+    },
+    {
       "path": "spine/models/agent-config/model-claude-code.md",
       "slug": "spine/models/agent-config/model-claude-code",
       "title": "Model \u2014 Claude Code",
@@ -35458,8 +35670,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 209,
-      "relationship_count": 1379
+      "page_count": 211,
+      "relationship_count": 1395
     },
     "ai-models": {
       "page_count": 14,
@@ -35741,6 +35953,7 @@
     "navigation": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
       "spine/goldilocks-flow",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/references/methodology-system-map",
       "spine/references/model-registry"
     ],
@@ -37746,6 +37959,7 @@
     ],
     "lesson": [
       "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
@@ -37847,6 +38061,7 @@
     ],
     "spine": [
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-markdown-as-iac",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -37899,7 +38114,8 @@
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "rlm-qwen3-8b": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
@@ -37920,10 +38136,12 @@
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
     ],
     "post-anthropic-mission": [
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "mission-2026-04-27": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
@@ -37939,22 +38157,26 @@
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "operator-decision": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
     ],
     "anti-vendor-lock-in": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "mit-oasys": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
@@ -37964,12 +38186,14 @@
     ],
     "prime-intellect": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "sovereignty-tier": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
     ],
@@ -37987,6 +38211,7 @@
     ],
     "tools-integration": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
@@ -38122,6 +38347,7 @@
     "qwen3": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "spine/references/local-training-playbook-2026"
     ],
     "vram": [
@@ -39882,6 +40108,31 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
+    "empirical-claim": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "paper-evidence": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "open-source-stack": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "layered-validation": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "end-to-end-traceability": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "p4-application": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "rlm-thread": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+    ],
+    "claim-vs-aspiration": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
     "contributed": [
       "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
@@ -40751,16 +41002,14 @@
     ],
     "post-anthropic-stack": [
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "t-minus-2": [
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
     ],
     "additive-batch": [
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
-    ],
-    "rlm-thread": [
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
     ],
     "complete-evidence-chain": [
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
@@ -42131,7 +42380,8 @@
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "training-framework": [
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
@@ -42222,7 +42472,8 @@
     "rlm": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "empirical-findings": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
@@ -42462,6 +42713,7 @@
     ],
     "learning-path": [
       "spine/learning-paths/methodology-fundamentals",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/standards/learning-path-page-standards"
     ],
     "onboarding": [
@@ -42470,6 +42722,15 @@
     ],
     "fundamentals": [
       "spine/learning-paths/methodology-fundamentals"
+    ],
+    "evidence-chain": [
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
+    "session-arc": [
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
+    "curated-reading": [
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "model-definition": [
       "spine/models/agent-config/model-claude-code",
@@ -42774,6 +43035,7 @@
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)",
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
@@ -42781,7 +43043,8 @@
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)",
-        "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
+        "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)",
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
@@ -42896,6 +43159,13 @@
       "target": "2026-04-25 \u2014 End-state handoff",
       "referenced_by": [
         "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
+      ]
+    },
+    {
+      "target": "2026-04-27 Session Handoff",
+      "referenced_by": [
+        "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
@@ -43385,6 +43655,12 @@
       "target": "Method of Work",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "Methodology Fundamentals Learning Path",
+      "referenced_by": [
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {
@@ -44014,8 +44290,10 @@
     {
       "target": "Tier-0 Candidate Comparison",
       "referenced_by": [
+        "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
-        "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread"
+        "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
     {

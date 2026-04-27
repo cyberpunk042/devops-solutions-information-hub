@@ -265,6 +265,7 @@ Each sub-model is a NAVIGATION HUB for its domain — it lists member pages, ent
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[methodology-evolution-history|Evolution — Methodology System]]
 [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
+[[rlm-thread-evidence-chain-2026-04-27|Learning Path — RLM Thread Evidence Chain (Session Arc 2026-04-27)]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]
 [[second-brain-complete-system-v2-0|Milestone — Second Brain Complete System — v2.0]]
 [[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
