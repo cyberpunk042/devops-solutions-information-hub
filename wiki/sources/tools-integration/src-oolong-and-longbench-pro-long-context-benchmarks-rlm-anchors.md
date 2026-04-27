@@ -66,7 +66,7 @@ Two benchmarks load-bearing for the [RLM paper deep-dive](src-rlm-paper-deep-div
 > | **Released** | Yes — data + evaluation harness | Yes — bilingual; HTML version available |
 > | **Used in RLM paper as** | Primary evaluation surface (Table 1: `trec_coarse` split + `OOLONG-Pairs` modification) | Training data source for RLM-Qwen3-8B (English split, 750 tasks) |
 > | **Key finding** | Frontier models <50% at 128K when tasks require dense-access reasoning, not retrieval | Long-context optimization > parameter scaling; effective context << claimed context; thinking paradigm Pareto-trade-off |
-> | **Confidence label** | high (abstract level only — Layer 1 PDF not yet ingested) | **high (Layer 1 — full PDF deepened in dedicated synth: [LongBench Pro Paper Deep Dive](src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings.md); affiliations corrected from speculative "Tsinghua-affiliated" to actual IIE-CAS + UCAS + Beihang + Xiaohongshu)** |
+> | **Confidence label** | **high (Layer 1 — full PDF deepened in dedicated synth: [OOLONG Paper Deep Dive](src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k.md); CMU/LTI affiliation confirmed; 9-model leaderboard + DeepSeek-R1 below-random pathology + reasoning-effort counter-intuition + aggregation-bottleneck ablation)** | **high (Layer 1 — full PDF deepened in dedicated synth: [LongBench Pro Paper Deep Dive](src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings.md); affiliations corrected from speculative "Tsinghua-affiliated" to actual IIE-CAS + UCAS + Beihang + Xiaohongshu)** |
 
 ## Key Insights
 
@@ -196,6 +196,7 @@ These benchmarks are the **measurement infrastructure** the wiki's mission depen
 
 ## Relationships
 
+- EXTENDS: [[src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k|OOLONG Paper Deep Dive]] (Layer 1 deepening from the full PDF — 9-model leaderboard with per-context-length stratification, DeepSeek-R1 below-random pathology with 60%-no-answer trace analysis, Gemini 2.5 Pro API/filter failure modes, reasoning-effort × context-length counter-intuition, label-providing ablation isolating aggregation as the bottleneck)
 - EXTENDS: [[src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings|LongBench Pro Paper Deep Dive]] (Layer 1 deepening from the full PDF — 11×25 task taxonomy, 46-LLM evaluation, three findings empirically grounded, Human-Model Collaborative pipeline, 63-annotator construction; this combined synth covered LongBench Pro at abstract level and incorrectly speculated Tsinghua affiliation)
 - BUILDS ON: [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|RLM Paper Deep Dive]] (this synthesis anchors the benchmarks the deep-dive uses)
 - BUILDS ON: [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|RLM Empirical Findings]] (OOLONG is the source of the headline 114% improvement)
@@ -206,6 +207,7 @@ These benchmarks are the **measurement infrastructure** the wiki's mission depen
 
 ## Backlinks
 
+[[src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k|OOLONG Paper Deep Dive]]
 [[src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings|LongBench Pro Paper Deep Dive]]
 [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|RLM Paper Deep Dive]]
 [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|RLM Empirical Findings]]
