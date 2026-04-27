@@ -65,7 +65,10 @@
       "Bash(.venv/bin/python -m tools.pipeline gaps)",
       "Bash(.venv/bin/python -m tools.pipeline evolve --score)",
       "Bash(.venv/bin/python -m tools.gateway compliance)",
-      "Bash(.venv/bin/python -m tools.gateway compliance --operational)"
+      "Bash(.venv/bin/python -m tools.gateway compliance --operational)",
+      "Bash(.venv/bin/python -m tools.pipeline fetch https://github.com/alexzhang13/rlm)",
+      "Bash(.venv/bin/python -m tools.pipeline crossref)",
+      "Bash(.venv/bin/python -m tools.pipeline fetch https://arxiv.org/abs/2512.24601 https://alexzhang13.github.io/blog/2025/rlm/)"
     ]
   },
   "hooks": {

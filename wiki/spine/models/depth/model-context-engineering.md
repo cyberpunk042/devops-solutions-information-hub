@@ -437,6 +437,8 @@ Full analysis: [[execution-mode-is-consumer-property-not-project-property|Execut
 [[src-claude-code-prompt-patch-rebalancing|Source — Claude Code Prompt Patch: Rebalancing System Prompt Instructions]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-arxiv-meta-harness-outer-loop-search|Synthesis — Meta-Harness — End-to-End Optimization of Model Harnesses via Outer-Loop Search]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
+[[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|Synthesis — RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]

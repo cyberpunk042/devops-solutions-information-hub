@@ -133,3 +133,4 @@ This lesson applies far beyond wiki ingestion:
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
 [[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
+[[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|Synthesis — RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)]]

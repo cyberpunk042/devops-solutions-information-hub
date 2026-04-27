@@ -137,4 +137,5 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 [[model-claude-code|Model — Claude Code]]
 [[model-mcp-cli-integration|Model — MCP and CLI Integration]]
 [[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

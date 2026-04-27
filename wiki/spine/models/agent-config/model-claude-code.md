@@ -603,6 +603,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-arxiv-natural-language-agent-harnesses|Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
 [[src-rethinking-ai-agents-harness-engineering-rise|Synthesis — Rethinking AI Agents — The Rise of Harness Engineering (YouTube Meta-Synthesis)]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-aidlc-cc-plugin-claude-code-port|Synthesis — ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)]]

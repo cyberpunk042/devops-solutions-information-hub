@@ -199,3 +199,4 @@ The post explicitly limits scope to web app development. Generalization to other
 [[Structured Context Governs Agent Behavior More Than Content]]
 [[model-claude-code|Model — Claude Code]]
 [[src-claude-agent-sdk-and-managed-agents|Synthesis — Claude Agent SDK and Managed Agents]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]

@@ -566,4 +566,6 @@ From building with this model — validated experience:
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 [[src-aidlc-aws-driven-development-lifecycle|Synthesis — AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)]]
 [[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
+[[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|Synthesis — RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

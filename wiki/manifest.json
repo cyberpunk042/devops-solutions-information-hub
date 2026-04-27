@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-25T15:00:50.299993+00:00",
+  "generated": "2026-04-27T14:45:31.501005+00:00",
   "stats": {
-    "pages": 491,
+    "pages": 493,
     "domains": 11,
-    "sources": 65,
+    "sources": 67,
     "comparisons": 8,
-    "relationships": 2978,
-    "tags_unique": 1456,
+    "relationships": 3004,
+    "tags_unique": 1483,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 32,
+      "seed": 34,
       "mature": 2
     }
   },
@@ -21260,7 +21260,7 @@
         },
         {
           "verb": "IMPLEMENTS",
-          "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive 2026-04-25]]"
+          "target": "Operator directive 2026-04-25"
         },
         {
           "verb": "DEMONSTRATES",
@@ -28108,6 +28108,267 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b.md",
+      "slug": "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "title": "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "rlm",
+        "recursive-language-models",
+        "empirical-findings",
+        "benchmark-results",
+        "oolong",
+        "browsecomp-plus",
+        "rlm-qwen3-8b",
+        "gpt-5-mini",
+        "gpt-5",
+        "context-rot",
+        "long-context",
+        "retrieval",
+        "post-training",
+        "dec-2025-arxiv",
+        "oct-2025-blogpost",
+        "mit-oasys",
+        "mission-2026-04-27",
+        "tier-0-candidate",
+        "tools-integration",
+        "anti-vendor-lock-in",
+        "paradigm-validation"
+      ],
+      "sources": [
+        {
+          "id": "rlm-arxiv-abstract",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2512.24601",
+          "file": "raw/articles/251224601-recursive-language-models.md",
+          "title": "Recursive Language Models \u2014 arXiv 2512.24601 (v2 28 Jan 2026)",
+          "description": "Submitted 31 Dec 2025; revised 28 Jan 2026 (v2). Authors: Alex L. Zhang, Tim Kraska, Omar Khattab. 9 pages + 33 with Appendix. cs.AI / cs.CL.",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "rlm-blogpost-oct-2025",
+          "type": "article",
+          "url": "https://alexzhang13.github.io/blog/2025/rlm/",
+          "file": "raw/articles/recursive-language-models-alex-l-zhang.md",
+          "title": "Recursive Language Models (Oct 2025 blogpost)",
+          "description": "Original blogpost preceding the arXiv paper; primary source for OOLONG + BrowseComp-Plus experimental results",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "rlm-implementation-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Companion synthesis on RLM architecture + reference SDK (alexzhang13/rlm); this page covers the empirical/research framing"
+        },
+        {
+          "id": "rlm-tweet-summary",
+          "type": "article",
+          "url": "https://x.com/a1zhang/status/1978469116542337259",
+          "description": "Original Twitter/X compressed-summary thread"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "RLM Empirical Findings",
+        "RLM Benchmark Results",
+        "RLM-Qwen3-8B",
+        "Synthesis \u2014 RLM Benchmarks"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM (Recursive Language Models): Implementation companion"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle 2 \u2014 Structured Context Governs Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3 \u2014 Goldilocks"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 HRM and TRM"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Claude Agent SDK and Managed Agents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model Provider Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Synthesize from Descriptions Alone"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+      "slug": "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "title": "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "rlm",
+        "recursive-language-models",
+        "repl",
+        "context-engineering",
+        "harness",
+        "inference-paradigm",
+        "mit-oasys",
+        "near-infinite-context",
+        "task-agnostic",
+        "dec-2025-arxiv",
+        "mission-2026-04-27",
+        "tier-0-candidate",
+        "tools-integration",
+        "llm-query",
+        "rlm-query",
+        "depth-recursion",
+        "sandbox-environments",
+        "anthropic-harness-precedent"
+      ],
+      "sources": [
+        {
+          "id": "rlm-paper-arxiv",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2512.24601",
+          "title": "Recursive Language Models (Zhang, Kraska, Khattab \u2014 MIT OASYS \u2014 Dec 2025)",
+          "description": "The arXiv preprint expanding the Oct 2025 blogpost into a formal paper with experimental results"
+        },
+        {
+          "id": "rlm-blogpost",
+          "type": "article",
+          "url": "https://alexzhang13.github.io/blog/2025/rlm/",
+          "title": "Recursive Language Models Blogpost (Oct 2025)",
+          "description": "Original idea + initial experiments that preceded the arXiv paper"
+        },
+        {
+          "id": "rlm-repo",
+          "type": "documentation",
+          "url": "https://github.com/alexzhang13/rlm",
+          "file": "raw/articles/alexzhang13rlm.md",
+          "title": "alexzhang13/rlm \u2014 Reference Implementation",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "rlm-minimal",
+          "type": "documentation",
+          "url": "https://github.com/alexzhang13/rlm-minimal",
+          "title": "RLM Minimal \u2014 Stripped-down companion repo"
+        },
+        {
+          "id": "rlm-docs-site",
+          "type": "documentation",
+          "url": "https://alexzhang13.github.io/rlm/",
+          "title": "RLM Documentation Site"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Recursive Language Models",
+        "RLMs",
+        "RLM \u2014 Recursive Language Models",
+        "Synthesis \u2014 Recursive Language Models"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Principle 2 \u2014 Structured Context Governs Behavior"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Anthropic \u2014 Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Claude Agent SDK and Managed Agents"
+        },
+        {
+          "verb": "ENABLED BY",
+          "target": "Decision \u2014 MCP vs CLI for Tool Integration"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model Provider Harness Decision Matrix"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-turboquant-122b-macbook.md",
       "slug": "sources/tools-integration/src-turboquant-122b-macbook",
       "title": "Synthesis \u2014 TurboQuant 122B LLM on MacBook",
@@ -34297,8 +34558,8 @@
       "relationship_count": 57
     },
     "tools-integration": {
-      "page_count": 4,
-      "relationship_count": 28
+      "page_count": 6,
+      "relationship_count": 54
     },
     "wiki-methodology": {
       "page_count": 2,
@@ -35211,6 +35472,7 @@
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-opencode-harness-features",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
       "spine/models/quality/model-quality-failure-prevention",
       "spine/standards/harness-contract",
       "spine/standards/model-standards/model-claude-code-standards"
@@ -37311,6 +37573,7 @@
       "sources/src-7-levels-claude-code-rag",
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
       "spine/models/depth/model-context-engineering",
       "spine/standards/model-standards/model-context-engineering-standards"
     ],
@@ -39395,7 +39658,9 @@
       "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
     ],
     "brain-refactor-active": [
       "log/2026-04-24-handoff-pickup-cold-forward"
@@ -40433,7 +40698,9 @@
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
     "tools-integration": [
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
     ],
     "firecrawl": [
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
@@ -40665,6 +40932,96 @@
     ],
     "27b-beats-397b": [
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "rlm": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "recursive-language-models": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "empirical-findings": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "benchmark-results": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "oolong": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "browsecomp-plus": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "rlm-qwen3-8b": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "gpt-5-mini": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "gpt-5": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "context-rot": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "long-context": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "retrieval": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "post-training": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "dec-2025-arxiv": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "oct-2025-blogpost": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "mit-oasys": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "tier-0-candidate": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "anti-vendor-lock-in": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "paradigm-validation": [
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "repl": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "inference-paradigm": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "near-infinite-context": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "task-agnostic": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "llm-query": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "rlm-query": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "depth-recursion": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "sandbox-environments": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "anthropic-harness-precedent": [
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
     ],
     "m4-max": [
       "sources/tools-integration/src-turboquant-122b-macbook"
@@ -40911,9 +41268,6 @@
     "harnesses": [
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
-    "gpt-5": [
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
-    ],
     "glm-4-7": [
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
@@ -41126,6 +41480,13 @@
   },
   "orphaned_refs": [
     {
+      "target": "2026 Consumer Hardware AI Stack",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
+      ]
+    },
+    {
       "target": "2026 Consumer-Hardware AI Stack",
       "referenced_by": [
         "E011 \u2014 Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)",
@@ -41224,6 +41585,18 @@
       "target": "2026-04-25 \u2014 End-state handoff",
       "referenced_by": [
         "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
+      ]
+    },
+    {
+      "target": "AI Model Provider Harness Decision Matrix",
+      "referenced_by": [
+        "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
+      ]
+    },
+    {
+      "target": "AI Model Provider Harness Decision Matrix 2026",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)"
       ]
     },
     {
@@ -41749,6 +42122,8 @@
         "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
         "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
         "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding",
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Model \u2014 NotebookLM",
         "Model \u2014 Automation and Pipelines",
@@ -41786,6 +42161,12 @@
       ]
     },
     {
+      "target": "Operator directive 2026-04-25",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 End State with Failures Documented (Operator-Cut)"
+      ]
+    },
+    {
       "target": "Operator directive \u2014 2026-04-25",
       "referenced_by": [
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
@@ -41820,6 +42201,13 @@
       "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Principle 2 \u2014 Structured Context Governs Behavior",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
       ]
     },
     {
@@ -41979,6 +42367,12 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 HRM and TRM",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 Kimi K2.6",
       "referenced_by": [
         "E007 \u2014 OpenRouter Deadline De-Risk (Claude Code CLI \u2192 K2.6)",
@@ -42014,6 +42408,12 @@
       "referenced_by": [
         "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
         "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 RLM (Recursive Language Models): Implementation companion",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)"
       ]
     },
     {
@@ -42277,12 +42677,6 @@
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
-      ]
-    },
-    {
-      "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive 2026-04-25]]",
-      "referenced_by": [
-        "2026-04-25 Session Handoff \u2014 End State with Failures Documented (Operator-Cut)"
       ]
     },
     {

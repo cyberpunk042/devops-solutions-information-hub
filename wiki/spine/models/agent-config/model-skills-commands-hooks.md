@@ -440,6 +440,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[src-claude-code-harness-features|Synthesis — Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
 [[src-rethinking-ai-agents-harness-engineering-rise|Synthesis — Rethinking AI Agents — The Rise of Harness Engineering (YouTube Meta-Synthesis)]]
 [[src-skillmd-claudemd-agentsmd-three-layer-context|Synthesis — SKILL.md vs CLAUDE.md vs AGENTS.md — Three-Layer Agent Context Architecture]]
 [[src-aidlc-cc-plugin-claude-code-port|Synthesis — ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)]]

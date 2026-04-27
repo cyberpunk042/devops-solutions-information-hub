@@ -486,6 +486,8 @@ AICP's complexity scoring tiers (simple → moderate → complex → cloud-only)
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding|Synthesis — Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding]]
 [[src-qwopus-claude-opus-reasoning-distilled-qwen-27b|Synthesis — Qwopus — Claude Opus 4.6 Reasoning Distilled into Local Qwen 27B]]
+[[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
+[[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|Synthesis — RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)]]
 [[src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion|Synthesis — Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls]]
 [[src-unsloth-fast-lora-consumer-hardware|Synthesis — Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware]]
 [[src-gpt-oss-openai-open-weight-moe|Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)]]
