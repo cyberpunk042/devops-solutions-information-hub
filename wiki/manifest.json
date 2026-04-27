@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-25T14:13:26.753220+00:00",
+  "generated": "2026-04-25T15:00:50.299993+00:00",
   "stats": {
-    "pages": 489,
+    "pages": 491,
     "domains": 11,
     "sources": 65,
     "comparisons": 8,
-    "relationships": 2964,
-    "tags_unique": 1442,
+    "relationships": 2978,
+    "tags_unique": 1456,
     "layers": {
       "3": 4,
       "5": 37,
@@ -20946,6 +20946,341 @@
       ]
     },
     {
+      "path": "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance.md",
+      "slug": "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
+      "title": "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "2026-04-25",
+      "tags": [
+        "handoff",
+        "session",
+        "regather",
+        "systemic-bug",
+        "p4-instance-spine",
+        "layer-2-teaching-gap",
+        "response-composition-boundary",
+        "behave-from-the-project",
+        "fix-at-the-root",
+        "mission-2026-04-27",
+        "e022-shipped",
+        "skills-layer-unbuilt"
+      ],
+      "sources": [
+        {
+          "id": "prior-handoff-end-state",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-25-session-handoff-end-state-with-failures.md",
+          "description": "Prior session's operator-cut handoff; pickup-cold runbook drove this session's regather"
+        },
+        {
+          "id": "spine-super-model",
+          "type": "wiki",
+          "file": "wiki/spine/super-model/super-model.md",
+          "description": "The meta-model \u2014 what this whole system IS as a system"
+        },
+        {
+          "id": "model-registry",
+          "type": "wiki",
+          "file": "wiki/spine/references/model-registry.md",
+          "description": "All 16 named models with paths"
+        },
+        {
+          "id": "methodology-engine",
+          "type": "file",
+          "file": "wiki/config/methodology.yaml"
+        },
+        {
+          "id": "schema-engine",
+          "type": "file",
+          "file": "wiki/config/wiki-schema.yaml"
+        },
+        {
+          "id": "artifact-types-engine",
+          "type": "file",
+          "file": "wiki/config/artifact-types.yaml"
+        },
+        {
+          "id": "sister-projects-registry",
+          "type": "file",
+          "file": "wiki/config/sister-projects.yaml"
+        },
+        {
+          "id": "model-llm-wiki",
+          "type": "wiki",
+          "file": "wiki/spine/models/foundation/model-llm-wiki.md"
+        },
+        {
+          "id": "model-wiki-design",
+          "type": "wiki",
+          "file": "wiki/spine/models/foundation/model-wiki-design.md"
+        },
+        {
+          "id": "model-claude-code",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-claude-code.md",
+          "description": "Spine page where the second P4 instance was discovered this session \u2014 declares 5 skills + no hooks, both wrong"
+        },
+        {
+          "id": "model-skills-commands-hooks",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md"
+        },
+        {
+          "id": "model-markdown-as-iac",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md"
+        },
+        {
+          "id": "model-context-engineering",
+          "type": "wiki",
+          "file": "wiki/spine/models/depth/model-context-engineering.md"
+        },
+        {
+          "id": "model-quality-failure-prevention",
+          "type": "wiki",
+          "file": "wiki/spine/models/quality/model-quality-failure-prevention.md",
+          "description": "3-layer defense framework \u2014 names the layer where the bug lives (Layer 2 teaching, ~60% compliance)"
+        },
+        {
+          "id": "principle-1",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md"
+        },
+        {
+          "id": "principle-2",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md"
+        },
+        {
+          "id": "principle-3",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md"
+        },
+        {
+          "id": "principle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md"
+        },
+        {
+          "id": "gateway-output-contract",
+          "type": "wiki",
+          "file": "wiki/spine/standards/gateway-output-contract.md"
+        },
+        {
+          "id": "concept-page-standards",
+          "type": "wiki",
+          "file": "wiki/spine/standards/concept-page-standards.md"
+        },
+        {
+          "id": "enforcement-hierarchy",
+          "type": "wiki",
+          "file": "wiki/spine/super-model/enforcement-hierarchy.md"
+        },
+        {
+          "id": "e022-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing.md",
+          "description": "Epic that shipped gateway orient + what-do-i-need; in review at 95%/90%"
+        },
+        {
+          "id": "e022-m002",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e022-m002-gateway-orient-subcommand.md"
+        },
+        {
+          "id": "e022-m003",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/e022-m003-what-do-i-need-upgrade.md"
+        },
+        {
+          "id": "gateway-tool",
+          "type": "file",
+          "file": "tools/gateway.py",
+          "description": "Verified: gateway_orient + _orient_brain_fresh + _wdin_brain_task_bound implemented at lines 264-505"
+        },
+        {
+          "id": "session-start-hook",
+          "type": "file",
+          "file": ".claude/hooks/session-start.sh",
+          "description": "Current session-start reminder \u2014 prose pointers to spine, not content injection (bounded by contract size ceiling)"
+        },
+        {
+          "id": "post-compact-hook",
+          "type": "file",
+          "file": ".claude/hooks/post-compact.sh"
+        },
+        {
+          "id": "settings-json",
+          "type": "file",
+          "file": ".claude/settings.json"
+        },
+        {
+          "id": "directives-2026-04-24",
+          "type": "notes",
+          "file": "raw/notes/2026-04-24-operator-directives-session-verbatim.md"
+        },
+        {
+          "id": "directives-2026-04-25",
+          "type": "notes",
+          "file": "raw/notes/2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b.md"
+        },
+        {
+          "id": "handoff-2026-04-23",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling.md"
+        },
+        {
+          "id": "handoff-2026-04-24",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks.md"
+        },
+        {
+          "id": "gap-analysis-2026-04-24",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis.md",
+          "description": "Named Gap 1 (SessionStart loading) which E022 implements; this session verified Gap 1 is contract-bounded by design, not a deferred fix"
+        },
+        {
+          "id": "handoff-2026-04-25-ingestion",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch.md"
+        },
+        {
+          "id": "aicp-session-handoff",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "AICP's own 2026-04-24 handoff \u2014 authoritative on local-AI tier-0 state ($540\u2192$100 routing finding, K2.6 local at 0.3 tok/s)"
+        },
+        {
+          "id": "self-reference-drift-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md",
+          "description": "The lesson this session adds further evidence to (Open Question 2 still open per its own framing)"
+        },
+        {
+          "id": "agent-must-practice-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md",
+          "description": "Validated lesson naming this exact bug at the agent-discipline layer"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-25 \u2014 End-state handoff (operator-cut)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-24 \u2014 Brain Refactor Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-24 Gap Analysis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Self-Reference Drift"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "E022 \u2014 Context-Aware Gateway Orientation"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-04-25-session-handoff-end-state-with-failures.md",
+      "slug": "log/2026-04-25-session-handoff-end-state-with-failures",
+      "title": "2026-04-25 Session Handoff \u2014 End State with Failures Documented (Operator-Cut)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-25",
+      "updated": "2026-04-25",
+      "last_reviewed": "2026-04-25",
+      "tags": [
+        "handoff",
+        "session",
+        "failure-mode",
+        "fabrication",
+        "self-reference-drift-empirical",
+        "operator-cut",
+        "end-state",
+        "mission-2026-04-27"
+      ],
+      "sources": [
+        {
+          "id": "directive-2026-04-25",
+          "type": "notes",
+          "file": "raw/notes/2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b.md",
+          "description": "Verbatim directive that drove the early session's work."
+        },
+        {
+          "id": "prior-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch.md",
+          "description": "Earlier session log that overstated 'mission accomplished' before the late-session failure mode surfaced."
+        },
+        {
+          "id": "aicp-session-handoff",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "AICP's own 2026-04-24 handoff \u2014 authoritative source on actual local-AI tier-0 state. AICP path: ~/devops-expert-local-ai (NOT ~/aicp)."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-25 \u2014 Earlier session handoff (overstated)"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive 2026-04-25]]"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Self-Reference Drift"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-24 Brain Refactor"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch.md",
       "slug": "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "title": "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update",
@@ -33930,8 +34265,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 206,
-      "relationship_count": 1357
+      "page_count": 208,
+      "relationship_count": 1371
     },
     "ai-models": {
       "page_count": 14,
@@ -38909,6 +39244,8 @@
       "log/2026-04-17/2026-04-17-session-summary",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
+      "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch"
     ],
     "summary": [
@@ -38979,6 +39316,8 @@
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
+      "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
@@ -39052,6 +39391,8 @@
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
+      "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
@@ -39064,6 +39405,48 @@
     ],
     "brain-enforcement": [
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis"
+    ],
+    "regather": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "systemic-bug": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "p4-instance-spine": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "layer-2-teaching-gap": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "response-composition-boundary": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "behave-from-the-project": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "fix-at-the-root": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "e022-shipped": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "skills-layer-unbuilt": [
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance"
+    ],
+    "failure-mode": [
+      "log/2026-04-25-session-handoff-end-state-with-failures"
+    ],
+    "fabrication": [
+      "log/2026-04-25-session-handoff-end-state-with-failures"
+    ],
+    "self-reference-drift-empirical": [
+      "log/2026-04-25-session-handoff-end-state-with-failures"
+    ],
+    "operator-cut": [
+      "log/2026-04-25-session-handoff-end-state-with-failures"
+    ],
+    "end-state": [
+      "log/2026-04-25-session-handoff-end-state-with-failures"
     ],
     "qwen3-6-27b": [
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
@@ -40801,6 +41184,12 @@
       ]
     },
     {
+      "target": "2026-04-24 Brain Refactor",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 End State with Failures Documented (Operator-Cut)"
+      ]
+    },
+    {
       "target": "2026-04-24 Brain Refactor Handoff",
       "referenced_by": [
         "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)",
@@ -40808,9 +41197,33 @@
       ]
     },
     {
+      "target": "2026-04-24 Gap Analysis",
+      "referenced_by": [
+        "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
+      ]
+    },
+    {
+      "target": "2026-04-24 \u2014 Brain Refactor Handoff",
+      "referenced_by": [
+        "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
+      ]
+    },
+    {
       "target": "2026-04-24 \u2014 Pickup-Cold Handoff",
       "referenced_by": [
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update"
+      ]
+    },
+    {
+      "target": "2026-04-25 \u2014 Earlier session handoff",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 End State with Failures Documented (Operator-Cut)"
+      ]
+    },
+    {
+      "target": "2026-04-25 \u2014 End-state handoff",
+      "referenced_by": [
+        "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
       ]
     },
     {
@@ -41134,6 +41547,12 @@
         "Corpus Training Readiness Audit (T060) \u2014 E012 Wiki-Assistant",
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
+      ]
+    },
+    {
+      "target": "E022 \u2014 Context-Aware Gateway Orientation",
+      "referenced_by": [
+        "2026-04-25 Regather + Systemic Bug Investigation \u2014 Layer-2 Teaching Gap and Second P4 Instance in Spine"
       ]
     },
     {
@@ -41858,6 +42277,12 @@
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
+      ]
+    },
+    {
+      "target": "directive in [[2026-04-25-operator-directive-continue-ingestions-plus-qwen3-6-27b|Operator directive 2026-04-25]]",
+      "referenced_by": [
+        "2026-04-25 Session Handoff \u2014 End State with Failures Documented (Operator-Cut)"
       ]
     },
     {
