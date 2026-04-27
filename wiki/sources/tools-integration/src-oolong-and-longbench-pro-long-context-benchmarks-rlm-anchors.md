@@ -66,7 +66,7 @@ Two benchmarks load-bearing for the [RLM paper deep-dive](src-rlm-paper-deep-div
 > | **Released** | Yes — data + evaluation harness | Yes — bilingual; HTML version available |
 > | **Used in RLM paper as** | Primary evaluation surface (Table 1: `trec_coarse` split + `OOLONG-Pairs` modification) | Training data source for RLM-Qwen3-8B (English split, 750 tasks) |
 > | **Key finding** | Frontier models <50% at 128K when tasks require dense-access reasoning, not retrieval | Long-context optimization > parameter scaling; effective context << claimed context; thinking paradigm Pareto-trade-off |
-> | **Confidence label** | high (abstract level only — Layer 1 PDF not yet ingested) | high (abstract level only — Layer 1 PDF not yet ingested) |
+> | **Confidence label** | high (abstract level only — Layer 1 PDF not yet ingested) | **high (Layer 1 — full PDF deepened in dedicated synth: [LongBench Pro Paper Deep Dive](src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings.md); affiliations corrected from speculative "Tsinghua-affiliated" to actual IIE-CAS + UCAS + Beihang + Xiaohongshu)** |
 
 ## Key Insights
 
@@ -196,6 +196,7 @@ These benchmarks are the **measurement infrastructure** the wiki's mission depen
 
 ## Relationships
 
+- EXTENDS: [[src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings|LongBench Pro Paper Deep Dive]] (Layer 1 deepening from the full PDF — 11×25 task taxonomy, 46-LLM evaluation, three findings empirically grounded, Human-Model Collaborative pipeline, 63-annotator construction; this combined synth covered LongBench Pro at abstract level and incorrectly speculated Tsinghua affiliation)
 - BUILDS ON: [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|RLM Paper Deep Dive]] (this synthesis anchors the benchmarks the deep-dive uses)
 - BUILDS ON: [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|RLM Empirical Findings]] (OOLONG is the source of the headline 114% improvement)
 - DEMONSTRATES: [[right-process-for-right-context-the-goldilocks-imperative|Principle 3 — Goldilocks]] (LongBench Pro's multi-dimensional taxonomy lets researchers slice tasks by appropriate complexity)
@@ -205,6 +206,7 @@ These benchmarks are the **measurement infrastructure** the wiki's mission depen
 
 ## Backlinks
 
+[[src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings|LongBench Pro Paper Deep Dive]]
 [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|RLM Paper Deep Dive]]
 [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|RLM Empirical Findings]]
 [[right-process-for-right-context-the-goldilocks-imperative|Principle 3 — Goldilocks]]

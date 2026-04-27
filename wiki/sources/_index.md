@@ -54,6 +54,7 @@ Source synthesis pages — one per ingested source.
 - [Synthesis — gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)](tools-integration/src-gpt-oss-openai-open-weight-moe.md) — In August 2025 OpenAI released **gpt-oss-20b** (21B total params, 3
 - [Synthesis — Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)](tools-integration/src-inference-provider-landscape-2026.md) — The operator's mission-critical question isn't "which provider is cheapest today?" — it's "**if my current provider c...
 - [Synthesis — Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model](tools-integration/src-kimi-k2-6-moonshot-agent-swarm.md) — On **2026-04-20**, Moonshot AI released **Kimi K2
+- [Synthesis — LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11×25 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)](tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings.md) — The arXiv 2601
 - [Synthesis — OmniVoice: Open-Source TTS Supporting 600+ Languages](tools-integration/src-omnivoice-tts-600-languages.md) — OmniVoice is an **open-source text-to-speech system built on Coqui TTS**, supporting **600+ languages** with both **v...
 - [Synthesis — OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread](tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md) — Two benchmarks load-bearing for the [RLM paper deep-dive](src-rlm-paper-deep-dive-table-1-training-recipe-six-observa...
 - [Synthesis — OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)](tools-integration/src-opencode-harness-features.md) — OpenCode is an open-source terminal-first AI coding harness — Go binary, 95K+ GitHub stars, 75+ LLM provider support,...
@@ -80,4 +81,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `ai-agents`, `mcp`, `mission-2026-04-27`, `skills`, `tools-integration`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `anti-vendor-lock-in`, `synthesis`, `subagents`, `notebooklm`, `automation`, `context-engineering`, `methodology`, `aicp`, `context-management`
+`claude-code`, `ai-agents`, `mission-2026-04-27`, `mcp`, `skills`, `anti-vendor-lock-in`, `tools-integration`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `synthesis`, `subagents`, `notebooklm`, `automation`, `context-engineering`, `methodology`, `aicp`, `context-management`
