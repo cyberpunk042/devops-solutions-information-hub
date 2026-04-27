@@ -1,6 +1,7 @@
 ---
 title: "Day 1 — OpenRouter + Kimi K2.6 via Claude Code CLI (Setup + POC Procedure)"
 type: note
+note_type: completion
 layer: 0
 domain: ai-models
 status: draft

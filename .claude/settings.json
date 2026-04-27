@@ -93,7 +93,8 @@
       "Bash(.venv/bin/python -m tools.gateway query --chains)",
       "Bash(.venv/bin/python -m tools.gateway query --docs README)",
       "Bash(.venv/bin/python -m tools.gateway query --field unknown_field)",
-      "Bash(.venv/bin/python -m tools.gateway navigate)"
+      "Bash(.venv/bin/python -m tools.gateway navigate)",
+      "Bash(.venv/bin/python -m tools.gateway query --profiles)"
     ]
   },
   "hooks": {
