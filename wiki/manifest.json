@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-27T23:28:24.607930+00:00",
+  "generated": "2026-04-27T23:48:03.744260+00:00",
   "stats": {
-    "pages": 513,
+    "pages": 514,
     "domains": 11,
     "sources": 76,
     "comparisons": 9,
-    "relationships": 3214,
-    "tags_unique": 1718,
+    "relationships": 3222,
+    "tags_unique": 1728,
     "layers": {
       "3": 4,
       "5": 37,
@@ -22299,6 +22299,92 @@
       ]
     },
     {
+      "path": "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle.md",
+      "slug": "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
+      "title": "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "handoff",
+        "session",
+        "post-arc",
+        "post-final-handoff",
+        "bug-audit",
+        "p4-instances",
+        "saturation-verification",
+        "cycle-4-validation",
+        "gateway-audit",
+        "search-audit",
+        "routing-md-fix",
+        "mission-2026-04-27",
+        "brain-refactor-validated",
+        "hook-layer-empirical"
+      ],
+      "sources": [
+        {
+          "id": "prior-final-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done.md",
+          "description": "The handoff that introduced Hard Rule #11 ('Saturation is itself a claim that needs verification'). This log is the first empirical verification cycle of that rule \u2014 the post-handoff session refuted its own 'wiki-side functionally exhausted' claim across 11 forward artifacts."
+        },
+        {
+          "id": "saturation-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md",
+          "description": "Layer-4 evolved-knowledge lesson authored mid-arc. This session's existence IS its first verification cycle \u2014 the lesson teaches 'test saturation by attempting forward work', and this session demonstrated forward work consistently lands until operator-approval boundaries are reached."
+        },
+        {
+          "id": "self-reference-drift-cycle-4",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings.md",
+          "description": "Evidence 6 was extended this session to 4-cycle cumulative documentation (was 1-cycle). Cycle 4 is this very session's pre-bash hook firings \u2014 12+ in this session alone."
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-27 FINAL Session-End Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Self-Reference Drift Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026-04-24 Brain Refactor Handoff"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation.md",
       "slug": "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "title": "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
@@ -37232,8 +37318,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 218,
-      "relationship_count": 1469
+      "page_count": 219,
+      "relationship_count": 1477
     },
     "ai-models": {
       "page_count": 14,
@@ -39720,6 +39806,7 @@
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
       "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
@@ -42490,6 +42577,7 @@
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
       "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
     ],
@@ -42566,6 +42654,7 @@
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-continuation-session-end-handoff-rlm-table-1-100pct-layer-1",
       "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "spine/references/wsl-ubuntu-migration-handoff"
@@ -42771,6 +42860,41 @@
     "supersedes-handoff-14-and-15": [
       "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done"
     ],
+    "post-arc": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "post-final-handoff": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "bug-audit": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "p4-instances": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "saturation-verification": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "cycle-4-validation": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "gateway-audit": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "search-audit": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "routing-md-fix": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
+    "brain-refactor-validated": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
+      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+    ],
+    "hook-layer-empirical": [
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+    ],
     "session-end": [
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation"
     ],
@@ -42793,10 +42917,6 @@
     ],
     "natural-saturation": [
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation"
-    ],
-    "brain-refactor-validated": [
-      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
     ],
     "hook-layer-working": [
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
@@ -45144,6 +45264,7 @@
         "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)",
         "2026-04-25 Session Handoff \u2014 Qwen3.6-27B Ingestion Batch + Mission-Critical Spine Update",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
+        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
         "2026-04-27 Session-End Handoff \u2014 13-Artifact RLM-Thread Arc Reaches Natural Saturation (Context-Almost-Full, T-0 Mission EOD)",
         "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)"
       ]
@@ -45207,7 +45328,8 @@
     {
       "target": "2026-04-27 FINAL Session-End Handoff",
       "referenced_by": [
-        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal"
+        "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
+        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface"
       ]
     },
     {
@@ -46089,6 +46211,13 @@
       ]
     },
     {
+      "target": "Saturation Lesson",
+      "referenced_by": [
+        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
+        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface"
+      ]
+    },
+    {
       "target": "Schema Aspirationalism",
       "referenced_by": [
         "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth",
@@ -46114,7 +46243,8 @@
       "referenced_by": [
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
-        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
+        "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
+        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface"
       ]
     },
     {
