@@ -59,7 +59,7 @@ MECHANISM DETERMINISM (per operator 2026-04-24):
   Commands (.claude/commands/) ..................... 100% deterministic, operator slash-invoked
   Skills (.claude/skills/) ......................... ~70% deterministic, auto-trigger (NOT YET BUILT in this project)
   Hooks (.claude/hooks/) ........................... logical insertion + reason + remediation
-  MCP tools (30 available) ......................... programmatic, deferred-load via ToolSearch
+  MCP tools (28 available) ......................... programmatic, deferred-load via ToolSearch
   CLI (tools.pipeline / tools.gateway / etc.) ...... programmatic, via Bash
 
 ═══════════════════════════════════════════════════════════════════════════

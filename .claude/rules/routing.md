@@ -48,7 +48,9 @@
 | 24 | `"check provider pricing"` | Pricing snapshot | — | `.venv/bin/python -m tools.pipeline provider-check` | |
 | 25 | `"scaffold a page of type X"` | Template scaffold | `wiki_gateway_template` MCP | `.venv/bin/python -m tools.pipeline scaffold <type> "<title>"` | |
 
-## MCP Tool Catalog (30 tools, deferred — load via ToolSearch when needed)
+## MCP Tool Catalog (28 tools, deferred — load via ToolSearch when needed)
+
+> **Verification gate**: count is computed from `@server.tool()` decorators in `tools/mcp_server.py`. Earlier "30 tools" claim listed 2 phantom entries (`wiki_pages` + `wiki_root`) that were never implemented — surfaced 2026-04-27 by `gateway navigate`'s computed-count fix. P4 instance (declaration without verification gate) closed by removing the phantom entries.
 
 ### Gateway (9)
 - `wiki_gateway_query` — query methodology, stages, models, fields, chains
@@ -67,11 +69,10 @@
 - `wiki_post` — run post-ingestion 6-step chain (index → manifest → validate → wikilinks → lint)
 - `wiki_crossref` — find new connections across pages
 
-### Knowledge (8)
+### Knowledge (7)
 - `wiki_search` — search wiki content
 - `wiki_read_page` — read a specific page by title or path
 - `wiki_list_pages` — enumerate pages by domain/type
-- `wiki_pages` — pages metadata
 - `wiki_backlog` — backlog status (epics, modules, tasks, readiness)
 - `wiki_gaps` — gap analysis with recommendations
 - `wiki_log` — add log entry to wiki/log/ (verbatim directives, session logs, completion notes)
@@ -85,10 +86,9 @@
 - `wiki_integrations` — integrations management
 - `wiki_sync` — Obsidian sync ops
 
-### Status / meta (3)
+### Status / meta (2)
 - `wiki_status` — wiki stats
 - `wiki_methodology_guide` — methodology guidance
-- `wiki_root` — wiki root info
 
 ## CLI Catalog (canonical: `.venv/bin/python -m <module>`)
 
