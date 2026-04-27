@@ -48,7 +48,7 @@ sources:
     url: https://docs.together.ai/docs/how-to-use-opencode
     title: "How to use OpenCode with Together AI"
     ingested: 2026-04-23
-tags: [opencode, harness, tui, byom, agents-md, lsp, multi-session, session-sharing, mcp, plugins, build-plan-modes, go, open-source, 75-providers, 2026]
+tags: [opencode, harness, tui, byom, agents-md, lsp, multi-session, session-sharing, mcp, plugins, build-plan-modes, go, open-source, 75-providers, "2026"]
 ---
 
 # Synthesis — OpenCode Harness (2026)

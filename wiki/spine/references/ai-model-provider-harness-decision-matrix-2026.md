@@ -52,7 +52,7 @@ sources:
     path: docs/MODEL-ECOSYSTEM-FULL-MAP-2026-04-24.md
     file: raw/articles/aicp-model-ecosystem-full-map-2026-04-24.md
     description: "AICP's verified provider-pricing map (companion source)"
-tags: [reference, p0, decision-matrix, ai-models, providers, harnesses, k2-6, gpt-5, opus, glm-4-7, deepseek, gemini, resilience, routing, 2026]
+tags: [reference, p0, decision-matrix, ai-models, providers, harnesses, k2-6, gpt-5, opus, glm-4-7, deepseek, gemini, resilience, routing, "2026"]
 ---
 
 # AI Model × Provider × Harness Decision Matrix 2026

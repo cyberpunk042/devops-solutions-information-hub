@@ -43,7 +43,7 @@ sources:
     url: https://blog.premai.io/best-openrouter-alternatives-for-private-production-ai/
     title: "16 Best OpenRouter Alternatives for Private, Production AI (2026)"
     ingested: 2026-04-23
-tags: [inference-provider, openrouter, together-ai, groq, cerebras, deepinfra, ollama-cloud, anthropic-direct, openai-direct, moonshot-direct, vendor-lock-in, resilience, free-tier, 2026]
+tags: [inference-provider, openrouter, together-ai, groq, cerebras, deepinfra, ollama-cloud, anthropic-direct, openai-direct, moonshot-direct, vendor-lock-in, resilience, free-tier, "2026"]
 ---
 
 # Synthesis — Inference Provider Landscape 2026

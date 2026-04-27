@@ -56,7 +56,7 @@ sources:
     path: docs/SESSION-2026-04-24-HANDOFF.md
     file: raw/articles/aicp-session-2026-04-24-handoff.md
     description: "Operator's own framing of the 2026-04-24 session outcome, corrections, and open decisions."
-tags: [reference, p0, ai-infrastructure, decision-framework, cost, capability, privacy, sovereignty, claude, gpt, codex, kimi, k2-6, openrouter, ollama-cloud, subscription, hardware-tier, mission, post-anthropic, 2026]
+tags: [reference, p0, ai-infrastructure, decision-framework, cost, capability, privacy, sovereignty, claude, gpt, codex, kimi, k2-6, openrouter, ollama-cloud, subscription, hardware-tier, mission, post-anthropic, "2026"]
 ---
 
 # AI Infrastructure Decision Framework 2026

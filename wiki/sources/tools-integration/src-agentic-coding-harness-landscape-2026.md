@@ -43,7 +43,7 @@ sources:
     url: https://aimultiple.com/agentic-cli
     title: "Agentic CLI Tools Compared"
     ingested: 2026-04-23
-tags: [harness, cli, agentic-coding, claude-code, codex, opencode, aider, cline, cursor, gemini-cli, continue, crush, goose, vendor-lock-in, resilience, 2026]
+tags: [harness, cli, agentic-coding, claude-code, codex, opencode, aider, cline, cursor, gemini-cli, continue, crush, goose, vendor-lock-in, resilience, "2026"]
 ---
 
 # Synthesis — Agentic Coding Harness Landscape 2026

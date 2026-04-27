@@ -1129,7 +1129,7 @@ def query_backlog(paths: Dict[str, Path]) -> Dict[str, Any]:
         return {"error": "No backlog/epics/ directory found", "epics": []}
 
     epics = []
-    for f in sorted(epics_dir.glob("*.md")):
+    for f in sorted(epics_dir.rglob("*.md")):
         if f.name == "_index.md":
             continue
         text = f.read_text(encoding="utf-8")
@@ -1222,30 +1222,60 @@ def query_logs(paths: Dict[str, Path], limit: int = 0) -> Dict[str, Any]:
 
 
 def query_page(paths: Dict[str, Path], title: str) -> Dict[str, Any]:
-    """Look up a page by title — return metadata + summary + relationships."""
+    """Look up a page by title or alias — return metadata + summary + relationships.
+
+    Matches the input against the page's `title` first, then against any entry
+    in its `aliases` list. Aliases are a documented frontmatter field per
+    wiki-schema.yaml — consumers (operator, agents, MCP wrapper) trust them
+    as queryable. Title-only matching was a P4 instance: aliases declared
+    without a verification gate. (Surfaced 2026-04-27.)
+    """
     wiki_dir = paths["wiki"]
     pages = find_wiki_pages(wiki_dir)
+    needle = title.lower()
+
+    matched_via = None
+    matched_page = None
+    matched_fm = None
+    matched_body = None
 
     for p in pages:
         text = p.read_text(encoding="utf-8")
         fm, body = parse_frontmatter(text)
-        if fm and fm.get("title", "").lower() == title.lower():
-            sections = parse_sections(body)
-            rels = parse_relationships(text)
-            return {
-                "title": fm.get("title"),
-                "type": fm.get("type"),
-                "domain": fm.get("domain"),
-                "status": fm.get("status"),
-                "maturity": fm.get("maturity", "N/A"),
-                "confidence": fm.get("confidence"),
-                "path": str(p.relative_to(wiki_dir)),
-                "summary": sections.get("Summary", "")[:200],
-                "relationships": len(rels),
-                "lines": len(text.split("\n")),
-            }
+        if not fm:
+            continue
+        if fm.get("title", "").lower() == needle:
+            matched_via = "title"
+            matched_page, matched_fm, matched_body = p, fm, body
+            break
+        aliases = fm.get("aliases") or []
+        if isinstance(aliases, list):
+            for a in aliases:
+                if isinstance(a, str) and a.lower() == needle:
+                    matched_via = "alias"
+                    matched_page, matched_fm, matched_body = p, fm, body
+                    break
+        if matched_page is not None:
+            break
 
-    return {"error": f"Page '{title}' not found"}
+    if matched_page is None:
+        return {"error": f"Page '{title}' not found"}
+
+    sections = parse_sections(matched_body)
+    rels = parse_relationships(matched_page.read_text(encoding="utf-8"))
+    return {
+        "title": matched_fm.get("title"),
+        "matched_via": matched_via,
+        "type": matched_fm.get("type"),
+        "domain": matched_fm.get("domain"),
+        "status": matched_fm.get("status"),
+        "maturity": matched_fm.get("maturity", "N/A"),
+        "confidence": matched_fm.get("confidence"),
+        "path": str(matched_page.relative_to(wiki_dir)),
+        "summary": sections.get("Summary", "")[:200],
+        "relationships": len(rels),
+        "lines": len(matched_page.read_text(encoding="utf-8").split("\n")),
+    }
 
 
 # ---------------------------------------------------------------------------
