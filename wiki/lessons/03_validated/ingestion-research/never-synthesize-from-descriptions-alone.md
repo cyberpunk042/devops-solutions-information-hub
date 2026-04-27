@@ -132,6 +132,7 @@ This lesson applies far beyond wiki ingestion:
 [[2026-04-09-directive-never-stop-at-surface|Never Stop at Surface — Depth Verification Rule]]
 [[model-quality-failure-prevention-standards|Quality Standards — What Good Failure Prevention Looks Like]]
 [[shallow-ingestion-is-systemic-not-isolated|Shallow Ingestion Is Systemic, Not Isolated]]
+[[src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks|Synthesis — BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage]]
 [[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
 [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|Synthesis — RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)]]
 [[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|Synthesis — RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)]]

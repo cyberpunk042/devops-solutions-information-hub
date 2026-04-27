@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-27T15:36:34.877131+00:00",
+  "generated": "2026-04-27T15:47:53.606239+00:00",
   "stats": {
-    "pages": 498,
+    "pages": 499,
     "domains": 11,
-    "sources": 71,
+    "sources": 72,
     "comparisons": 9,
-    "relationships": 3054,
-    "tags_unique": 1559,
+    "relationships": 3064,
+    "tags_unique": 1573,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 39,
+      "seed": 40,
       "mature": 2
     }
   },
@@ -27066,6 +27066,132 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md",
+      "slug": "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "title": "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "browsecomp-plus",
+        "longbench-v2",
+        "deep-research",
+        "multi-hop",
+        "code-repository-understanding",
+        "long-context-benchmarks",
+        "codeqa",
+        "search-r1",
+        "qwen3-embedding",
+        "gpt-5",
+        "o1-preview",
+        "thinking-paradigm",
+        "jimmy-lin",
+        "tsinghua",
+        "rlm-table-1",
+        "fixed-corpus",
+        "fairness-transparency",
+        "mission-2026-04-27",
+        "paradigm-validation",
+        "anti-vendor-lock-in",
+        "tools-integration",
+        "ir-research",
+        "retrieval"
+      ],
+      "sources": [
+        {
+          "id": "browsecomp-plus-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2508.06600",
+          "file": "raw/articles/250806600-browsecomp-plus-a-more-fair-and-transparent-evaluation-benchmark-of-de.md",
+          "title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent (Chen et al., Aug 2025)",
+          "description": "20-author IR-research benchmark (lead authors: Zijian Chen, Xueguang Ma, Jimmy Lin) \u2014 derived from BrowseComp with fixed corpus + human-verified supporting docs + mined challenging negatives. Used in RLM Table 1 (RLM(GPT-5) 91.3% on 1K-doc subset).",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "longbench-v2-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2412.15204",
+          "title": "LongBench v2: Towards Deeper Understanding and Reasoning on Realistic Long-context Multitasks (Bai et al., Dec 2024 / Jan 2025 v2)",
+          "file": "raw/articles/241215204-longbench-v2-towards-deeper-understanding-and-reasoning-on-realistic-l.md",
+          "description": "503 multi-choice questions \u00d7 6 categories (incl. **CodeQA** \u2014 RLM Table 1 task). 8K to 2M words. Humans 53.7% under 15-min constraint. o1-preview 57.7% surpasses humans by 4% (validating thinking-paradigm for long-context).",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "rlm-paper-deep-dive-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "RLM paper deep-dive \u2014 Table 1 uses BrowseComp+ (1K docs) + LongBench v2 CodeQA split"
+        },
+        {
+          "id": "rlm-empirical-findings-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b.md",
+          "description": "RLM blogpost-level findings \u2014 BrowseComp+ headline (RLM(GPT-5) maintains perfect performance at 1000 documents / 10M+ tokens)"
+        },
+        {
+          "id": "oolong-longbench-pro-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors.md",
+          "description": "Companion synthesis \u2014 covers OOLONG (eval) + LongBench Pro (training data); this page covers the OTHER two Table 1 benchmarks"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "BrowseComp-Plus",
+        "BrowseComp+",
+        "LongBench v2",
+        "BrowseComp+ + LongBench v2 Synthesis"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Paper Deep Dive"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Empirical Findings"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "OOLONG + LongBench Pro Synthesis"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Tier-0 Candidate Comparison"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3 \u2014 Goldilocks"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "AI Model Provider Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Never Synthesize from Descriptions Alone"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-claude-code-harness-features.md",
       "slug": "sources/tools-integration/src-claude-code-harness-features",
       "title": "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
@@ -35210,8 +35336,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 11,
-      "relationship_count": 104
+      "page_count": 12,
+      "relationship_count": 114
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -37669,6 +37795,7 @@
       "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
       "log/2026-04-25-session-handoff-end-state-with-failures",
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
@@ -37683,6 +37810,7 @@
     ],
     "anti-vendor-lock-in": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
@@ -37722,6 +37850,7 @@
     ],
     "tools-integration": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
@@ -41429,6 +41558,75 @@
     "batch-inference": [
       "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload"
     ],
+    "browsecomp-plus": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "longbench-v2": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "deep-research": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "multi-hop": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "code-repository-understanding": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "long-context-benchmarks": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
+    ],
+    "codeqa": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "search-r1": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "qwen3-embedding": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "gpt-5": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "o1-preview": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "thinking-paradigm": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "jimmy-lin": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "tsinghua": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "rlm-table-1": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "fixed-corpus": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "fairness-transparency": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "paradigm-validation": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "ir-research": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks"
+    ],
+    "retrieval": [
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
     "plugins": [
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-opencode-harness-features"
@@ -41611,9 +41809,6 @@
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
-    "long-context-benchmarks": [
-      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
-    ],
     "evaluation": [
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "spine/references/open-model-evaluation-framework"
@@ -41647,10 +41842,6 @@
     ],
     "frontier-model-evaluation": [
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors"
-    ],
-    "paradigm-validation": [
-      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
     "byom": [
       "sources/tools-integration/src-opencode-harness-features"
@@ -41875,22 +42066,11 @@
     "benchmark-results": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
-    "browsecomp-plus": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
     "gpt-5-mini": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
-    "gpt-5": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
-    ],
     "context-rot": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
-    "retrieval": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
     "post-training": [
@@ -41911,9 +42091,6 @@
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "four-tasks": [
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
-    "codeqa": [
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "oolong-pairs": [
@@ -42433,6 +42610,7 @@
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
         "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)",
@@ -42552,6 +42730,7 @@
     {
       "target": "AI Model Provider Harness Decision Matrix 2026",
       "referenced_by": [
+        "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
@@ -43109,6 +43288,12 @@
       ]
     },
     {
+      "target": "OOLONG + LongBench Pro Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage"
+      ]
+    },
+    {
       "target": "OpenArms v10 \u2014 Five Cognitive Contexts",
       "referenced_by": [
         "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
@@ -43651,6 +43836,7 @@
     {
       "target": "Tier-0 Candidate Comparison",
       "referenced_by": [
+        "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread"
       ]
     },

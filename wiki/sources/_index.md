@@ -45,6 +45,7 @@ Source synthesis pages — one per ingested source.
 - [Source — vercel-labs/opensrc: Source Code Access Toolkit for AI Agents](src-vercel-opensrc-toolkit.md) — `opensrc` is a Vercel Labs open-source CLI tool, written in Rust and distributed via npm, that gives AI coding agents...
 - [Synthesis — Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)](tools-integration/src-agentic-coding-harness-landscape-2026.md) — The agentic coding harness market in April 2026 has ~15 serious contenders
 - [Synthesis — AirLLM: Layer-Wise Inference with NVMe SSD Offload](tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload.md) — AirLLM is a Python library (Apache-2
+- [Synthesis — BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage](tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks.md) — The remaining two benchmarks anchoring the [RLM paper Table 1](src-rlm-paper-deep-dive-table-1-training-recipe-six-ob...
 - [Synthesis — Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)](tools-integration/src-claude-code-harness-features.md) — Claude Code is Anthropic's agentic coding CLI — a TUI harness with a structured extension system comprising **skills*...
 - [Synthesis — OpenAI Codex CLI and the Codex Plugin for Claude Code](tools-integration/src-codex-cli-and-claude-code-plugin.md) — **Codex CLI** is OpenAI's coding-workflow CLI product (not the Codex model family — the product shares the name)
 - [Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)](tools-integration/src-firecrawl-web-scraper-for-ai-agents.md) — Firecrawl is an **open-source (AGPL-3
@@ -78,4 +79,4 @@ Source synthesis pages — one per ingested source.
 
 ## Tags
 
-`claude-code`, `ai-agents`, `mcp`, `skills`, `mission-2026-04-27`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `tools-integration`, `synthesis`, `subagents`, `notebooklm`, `automation`, `context-engineering`, `methodology`, `aicp`, `context-management`, `slash-commands`
+`claude-code`, `ai-agents`, `mcp`, `skills`, `mission-2026-04-27`, `tools-integration`, `cli`, `harness-engineering`, `hooks`, `cost-optimization`, `obsidian`, `synthesis`, `subagents`, `notebooklm`, `automation`, `context-engineering`, `methodology`, `aicp`, `anti-vendor-lock-in`, `context-management`
