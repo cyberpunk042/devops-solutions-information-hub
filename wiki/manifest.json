@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-27T15:58:31.121494+00:00",
+  "generated": "2026-04-27T16:31:14.874372+00:00",
   "stats": {
     "pages": 500,
     "domains": 11,
     "sources": 72,
     "comparisons": 9,
-    "relationships": 3076,
+    "relationships": 3072,
     "tags_unique": 1581,
     "layers": {
       "3": 4,
@@ -21609,18 +21609,6 @@
           "target": "2026-04-24 Brain Refactor Handoff"
         },
         {
-          "verb": "IMPLEMENTS",
-          "target": "directive *\"I just listen to a video about this"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "this sounds unbelievable"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "ingest it\"* \u2014 fully executed"
-        },
-        {
           "verb": "DEMONSTRATES",
           "target": "Principle 1"
         },
@@ -21639,10 +21627,6 @@
         {
           "verb": "FEEDS INTO",
           "target": "AI Infrastructure Decision Framework 2026"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "future RLM-Qwen3.6-27B fine-tune work + AICP backend wiring + operator's mission-execution path"
         }
       ]
     },
@@ -35475,7 +35459,7 @@
     },
     "cross-domain": {
       "page_count": 209,
-      "relationship_count": 1383
+      "relationship_count": 1379
     },
     "ai-models": {
       "page_count": 14,
@@ -44089,12 +44073,6 @@
       ]
     },
     {
-      "target": "directive *\"I just listen to a video about this",
-      "referenced_by": [
-        "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)"
-      ]
-    },
-    {
       "target": "e007-m002-harness-interactive-validation",
       "referenced_by": [
         "E009 M001 \u2014 OpenCode Install and Base Config (OpenRouter K2.6 wired)",
@@ -44294,21 +44272,9 @@
       ]
     },
     {
-      "target": "future RLM-Qwen3.6-27B fine-tune work + AICP backend wiring + operator's mission-execution path",
-      "referenced_by": [
-        "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)"
-      ]
-    },
-    {
       "target": "ijin/aidlc-cc-plugin GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
-      ]
-    },
-    {
-      "target": "ingest it\"* \u2014 fully executed",
-      "referenced_by": [
-        "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)"
       ]
     },
     {
@@ -44330,12 +44296,6 @@
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
-      ]
-    },
-    {
-      "target": "this sounds unbelievable",
-      "referenced_by": [
-        "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)"
       ]
     },
     {

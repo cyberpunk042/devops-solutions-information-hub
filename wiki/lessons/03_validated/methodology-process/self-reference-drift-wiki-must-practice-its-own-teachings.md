@@ -104,6 +104,25 @@ The corrective insight: **for any principle the wiki documents about AI agent co
 >
 > This evidence updates Open Question 2's status from "RESOLVED via `--operational` flag" to "partially addressed, fundamentally still open" — reasoning-layer fabrication is in the gap the structural+operational check cannot measure. The lesson's prediction held: principles taught at the home project predict the agent's failures when the agent operates from those same principles without applying them.
 
+> [!success]- **Evidence 6 — Hook layer empirically catches reflexive truncation across a 10-artifact session, validating structural enforcement at the tool-call boundary (2026-04-27)**
+>
+> Live observation across the 2026-04-27 session that produced 10 wiki artifacts (regather log + 9 RLM-thread syntheses including the [tier-0 candidate comparison](../../../comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md)). Across the session arc, the brain refactor's 4-hook enforcement layer fired as designed:
+>
+> | Hook | Event observed | Outcome |
+> |---|---|---|
+> | `pre-bash.sh` | Mid-session, agent reflexively wrote `\| tail -20` to truncate `pipeline post` output | **BLOCKED** with reason + remediation; agent re-ran without truncation, read full output |
+> | `pre-webfetch-corpus-check.sh` | 5 corpus-URL ingestions across the session (github.com × 3, arxiv.org × 4) | All routed through `pipeline fetch` — never WebFetch on a corpus URL. Hook didn't fire because routing held. |
+> | `session-start.sh` | Session start | Fired and printed loaded-knowledge reminder + Hard Rules |
+> | `post-compact.sh` | Mid-session compact event | Fired and restored sacrosanct directives + Hard Rules |
+>
+> **What this evidence shows**: structural enforcement at the tool-call boundary works empirically across a multi-turn productive session. Even when the agent (under pressure of producing 10 artifacts in one arc) reflexively defaulted to truncation, the hook caught it deterministically. Five corpus-URL ingestions held the routing without any drift.
+>
+> **What this evidence does NOT show**: reasoning-layer compliance. The hook layer cannot reach response composition — Claude Code exposes 26 lifecycle events × 7 categories (Session/Tool/Permission/Subagent/Task/System/Compaction), but **no `PreEmit`/`PreResponse` event**. Reasoning-layer fabrication (Evidence 5's `~/aicp/` pattern, this session's first-turn surface-vs-depth answer about Wiki LLM/Methodology/Standards) remains in the architectural gap.
+>
+> **Net for Open Question 2**: the question stays open as Evidence 5 named it, but Evidence 6 confirms the positive direction — *the brain refactor's enforcement does work empirically for what it can reach*. The reasoning layer is the frontier. Closing it would require either (a) Claude Code adding response-composition hooks (out of project scope), (b) building a skill at `.claude/skills/answer-from-spine/` with description-match auto-trigger (~70% deterministic per operator's 2026-04-24 mechanism quote; skills layer not yet built), or (c) operator catch-and-correct (the working Layer-3 mechanism per [model-quality-failure-prevention](../../../spine/models/quality/model-quality-failure-prevention.md)).
+>
+> **Asymmetry between Evidence 5 and Evidence 6**: Evidence 5 documented one reasoning-layer failure that NO hook can catch. Evidence 6 documents many tool-call-layer interactions that the hooks DO catch. Both are correct simultaneously. This is the empirical shape of "the brain refactor's enforcement layer is necessary but not sufficient" — necessary because tool-call drift would otherwise compound, not sufficient because reasoning-layer drift remains operator-corrected.
+
 ## Applicability
 
 > [!info] When this lesson applies
