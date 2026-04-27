@@ -34,7 +34,7 @@ sources:
 tags: [epic, models, update, knowledge-integration, v2, milestone-v2]
 ---
 
-# E010 — Model Updates — All 15 Models Reflect Current Knowledge
+# E010 — Model Updates — All 16 Models Reflect Current Knowledge
 ## Summary
 
 Update EVERY one of the 15 named models in the wiki so each fully reflects the current state of knowledge — including all session learnings, sister project evidence (OpenArms v10 enforcement, OpenFleet immune system, both project scans), the three extracted principles, the SDLC customization framework, the Goldilocks protocol, readiness vs progress, PM levels, and the corrected execution mode semantics. This is the FOUNDATION epic — every other epic in Milestone v2.0 depends on models being current, because models define WHAT the system IS. If a model is outdated, the standards that reference it are wrong, the examples are misleading, and the templates teach the wrong thing.

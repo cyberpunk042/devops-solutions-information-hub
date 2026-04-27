@@ -1,25 +1,25 @@
 {
-  "generated": "2026-04-27T23:15:08.481577+00:00",
+  "generated": "2026-04-27T23:28:24.607930+00:00",
   "stats": {
-    "pages": 511,
+    "pages": 513,
     "domains": 11,
     "sources": 76,
     "comparisons": 9,
-    "relationships": 3212,
+    "relationships": 3214,
     "tags_unique": 1718,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 25,
       "2": 51,
-      "4": 63,
+      "4": 65,
       "0": 1,
       "1": 47,
       "spine": 76
     },
     "maturity": {
       "growing": 325,
-      "seed": 48,
+      "seed": 50,
       "mature": 2
     }
   },
@@ -14817,6 +14817,60 @@
       "derived_from": [],
       "aliases": [],
       "relationships": []
+    },
+    {
+      "path": "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute.md",
+      "slug": "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
+      "title": "audit-numbers-age-fast-rebaseline-before-execute",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
+      "path": "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching.md",
+      "slug": "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching",
+      "title": "sunk-cost-in-technical-paths-prefer-root-switching",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "",
+      "tags": [
+        "contributed",
+        "inbox"
+      ],
+      "sources": [],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
     },
     {
       "path": "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
@@ -37178,8 +37232,8 @@
       "relationship_count": 345
     },
     "cross-domain": {
-      "page_count": 216,
-      "relationship_count": 1467
+      "page_count": 218,
+      "relationship_count": 1469
     },
     "ai-models": {
       "page_count": 14,
@@ -41705,33 +41759,9 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
     ],
-    "empirical-claim": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
-    "paper-evidence": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
-    "open-source-stack": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
-    "layered-validation": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
-    "end-to-end-traceability": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
-    "p4-application": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
-    "rlm-thread": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
-    ],
-    "claim-vs-aspiration": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
-    ],
     "contributed": [
+      "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching",
       "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
@@ -41764,6 +41794,8 @@
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
     ],
     "inbox": [
+      "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
+      "lessons/00_inbox/sunk-cost-in-technical-paths-prefer-root-switching",
       "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/01_drafts/contributed/per-task-cost-grows-monotonically-across-multi-task-runs",
@@ -41775,6 +41807,32 @@
       "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "lessons/02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals",
       "lessons/02_synthesized/contributed/right-size-the-methodology-model-to-the-actual-work-not-the"
+    ],
+    "empirical-claim": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "paper-evidence": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "open-source-stack": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "layered-validation": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "end-to-end-traceability": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "p4-application": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+    ],
+    "rlm-thread": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+    ],
+    "claim-vs-aspiration": [
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "tier-selection": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project"

@@ -62,6 +62,8 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Pages
 
+- [audit-numbers-age-fast-rebaseline-before-execute](00_inbox/audit-numbers-age-fast-rebaseline-before-execute.md) — # Audit Numbers Age Fast — Rebaseline Before Executing Against an Old Audit
+- [sunk-cost-in-technical-paths-prefer-root-switching](00_inbox/sunk-cost-in-technical-paths-prefer-root-switching.md) — # Sunk-Cost in Technical Paths — Prefer Root Switching to Adjacent Switching
 - [Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One — When Every Layer of the Open-Source Stack Has Paper Evidence](01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) — A mission claim that "the open-source AI stack can substitute for closed-source frontier" remains aspirational unless...
 - [Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps](01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md) — AICP's
 - [Context Depth Must Vary Per Task Type, Not Per Project — Tier Selection Extends Beyond Identity](01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project.md) — Context engineering defines three tier budgets (Expert 5-10K / Capable 2-5K / Lightweight 500-1K tokens) with a 10× c...
@@ -132,4 +134,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`lesson`, `contributed`, `methodology`, `inbox`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `cross-domain`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `verification`, `principle`, `validation`
+`contributed`, `lesson`, `inbox`, `methodology`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `cross-domain`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `verification`, `principle`, `validation`
