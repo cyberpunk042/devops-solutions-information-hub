@@ -568,4 +568,5 @@ From building with this model — validated experience:
 [[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]
 [[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
 [[src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b|Synthesis — RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)]]
+[[src-rlm-paper-deep-dive-table-1-training-recipe-six-observations|Synthesis — RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)]]
 [[wiki-gateway-tools-unified-knowledge-interface|Wiki Gateway Tools — Unified Knowledge Interface]]

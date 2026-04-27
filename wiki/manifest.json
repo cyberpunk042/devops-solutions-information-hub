@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-27T14:45:31.501005+00:00",
+  "generated": "2026-04-27T15:27:20.574492+00:00",
   "stats": {
-    "pages": 493,
+    "pages": 497,
     "domains": 11,
-    "sources": 67,
-    "comparisons": 8,
-    "relationships": 3004,
-    "tags_unique": 1483,
+    "sources": 70,
+    "comparisons": 9,
+    "relationships": 3048,
+    "tags_unique": 1548,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 34,
+      "seed": 38,
       "mature": 2
     }
   },
@@ -5456,6 +5456,149 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md",
+      "slug": "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "title": "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+      "type": "comparison",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "comparison",
+        "tier-0-candidate",
+        "rlm-qwen3-8b",
+        "qwen3-6-27b",
+        "long-context",
+        "dense-vs-recursive",
+        "post-anthropic-mission",
+        "mission-2026-04-27",
+        "operator-decision",
+        "anti-vendor-lock-in",
+        "mit-oasys",
+        "alibaba-qwen",
+        "prime-intellect",
+        "sovereignty-tier",
+        "rtx-2080-ti",
+        "training-required",
+        "hardware-floor",
+        "cost-analysis",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "rlm-paper-deep-dive",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "Source for RLM-Qwen3-8B specs, Table 1 numbers, training recipe (48 H100 hours), 4-task evaluation"
+        },
+        {
+          "id": "rlm-empirical-findings",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b.md",
+          "description": "Source for headline empirical claims about RLM(cheaper-model) > frontier-model"
+        },
+        {
+          "id": "rlm-implementation",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Source for RLM SDK implementation details (alexzhang13/rlm)"
+        },
+        {
+          "id": "verifiers",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments.md",
+          "description": "RLMEnv hosting environment library \u2014 required to operate RLM-Qwen3-8B"
+        },
+        {
+          "id": "prime-rl",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+          "description": "Training framework for RLM-Qwen3-8B; 48 H100 hours recipe"
+        },
+        {
+          "id": "qwen3-6-27b-marktechpost",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding.md",
+          "description": "Source for Qwen3.6-27B-Dense (Apache 2.0, hybrid Gated DeltaNet+Attention 75/25, beats 397B MoE on agentic coding)"
+        },
+        {
+          "id": "qwen3-6-27b-unsloth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion.md",
+          "description": "Source for Qwen3.6-27B at 2-bit UD-IQ2 retaining 26-tool-call agentic capability"
+        },
+        {
+          "id": "spine-2026-hardware-stack",
+          "type": "wiki",
+          "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
+          "description": "Spine reference declaring Qwen3.6-27B as the existing Layer-2 dense tier-0 candidate"
+        },
+        {
+          "id": "aicp-handoff-2026-04-24",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "Authoritative current state of operator's tier-0 hardware (RTX 2080 Ti, 64GB DDR4) and mission position ($540\u2192$100 routing)"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "RLM-Qwen3-8B vs Qwen3.6-27B",
+        "Tier-0 Long-Context Candidate Comparison",
+        "Comparison \u2014 Tier-0 RLM vs Dense"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Qwen3.6-27B Dense Beats 397B MoE"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Qwen3.6-27B at 2-bit, 26 Tool Calls"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "RLM Paper Deep Dive"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "RLM Empirical Findings"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "RLM Implementation"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Prime Intellect Verifiers"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Prime Intellect prime-rl"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3 \u2014 Goldilocks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model Provider Harness Decision Matrix"
         }
       ]
     },
@@ -27937,6 +28080,259 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+      "slug": "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "title": "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "prime-rl",
+        "prime-intellect",
+        "async-rl",
+        "rl-training-at-scale",
+        "fsdp2",
+        "vllm",
+        "fp8-inference",
+        "pd-disaggregation",
+        "expert-parallelism",
+        "context-parallelism",
+        "moe-training",
+        "rlm-qwen3-8b-trainer",
+        "sft",
+        "multi-node-slurm",
+        "kubernetes",
+        "intellect-3",
+        "qwen3-moe",
+        "glm-5",
+        "minimax-m2",
+        "nemotron-h",
+        "gpt-oss",
+        "aipo",
+        "ipo",
+        "kimi-k25-kl",
+        "mit-csail-connection",
+        "mission-2026-04-27",
+        "sovereignty-tier",
+        "anti-vendor-lock-in",
+        "post-training-stack",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "prime-rl-repo",
+          "type": "documentation",
+          "url": "https://github.com/PrimeIntellect-ai/prime-rl",
+          "file": "raw/articles/primeintellect-aiprime-rl.md",
+          "title": "PrimeIntellect-ai/prime-rl \u2014 Async RL Training at Scale",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "verifiers-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments.md",
+          "description": "Verifiers companion synthesis \u2014 prime-rl natively integrates with verifiers environments via the Environments Hub"
+        },
+        {
+          "id": "rlm-paper-trainer",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "RLM paper deep-dive \u2014 prime-rl is the named training library for RLM-Qwen3-8B (48 H100 hours, batch 64, 300 steps)"
+        },
+        {
+          "id": "aipo-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2505.24034",
+          "title": "AIPO \u2014 Asynchronous Importance-Sampling Policy Optimization (Llama-RL)",
+          "description": "Loss objective prime-rl uses by default; introduced in Llama-RL"
+        },
+        {
+          "id": "ipo-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2602.04879",
+          "title": "IPO \u2014 DPPO-Binary TV variant",
+          "description": "Default loss in prime-rl as of 2026-03-02 changelog entry"
+        },
+        {
+          "id": "kimi-k25-kl",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2602.02276",
+          "title": "Kimi-K2.5 KL",
+          "description": "KL term in prime-rl's default loss"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Prime Intellect prime-rl",
+        "PRIME-RL",
+        "Async RL Training at Scale",
+        "Synthesis \u2014 prime-rl"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 Prime Intellect Verifiers"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM Paper Deep Dive"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3 \u2014 Goldilocks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model Provider Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments.md",
+      "slug": "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "title": "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "verifiers",
+        "prime-intellect",
+        "llm-rl",
+        "environments",
+        "rlm-env",
+        "recursive-language-models",
+        "training-framework",
+        "rubrics",
+        "datasets",
+        "harnesses",
+        "prime-cli",
+        "environments-hub",
+        "will-brown",
+        "prime-rl-integration",
+        "openenv",
+        "browser-env",
+        "mcp-env",
+        "tool-env",
+        "stateful-tool-env",
+        "mit-csail-connection",
+        "mission-2026-04-27",
+        "sovereignty-tier",
+        "anti-vendor-lock-in",
+        "tools-integration"
+      ],
+      "sources": [
+        {
+          "id": "verifiers-repo",
+          "type": "documentation",
+          "url": "https://github.com/PrimeIntellect-ai/verifiers",
+          "file": "raw/articles/primeintellect-aiverifiers.md",
+          "title": "PrimeIntellect-ai/verifiers \u2014 Environments for LLM Reinforcement Learning",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "verifiers-docs",
+          "type": "documentation",
+          "url": "https://docs.primeintellect.ai/verifiers",
+          "title": "Verifiers official documentation site"
+        },
+        {
+          "id": "environments-hub",
+          "type": "documentation",
+          "url": "https://app.primeintellect.ai/dashboard/environments?ex_sort=most_stars",
+          "title": "Environments Hub \u2014 community-published RL environments"
+        },
+        {
+          "id": "original-author-citation",
+          "type": "documentation",
+          "url": "https://github.com/willccbb",
+          "description": "Will Brown (@willccbb) \u2014 original creator of verifiers; cited via @misc{brown_verifiers_2025}"
+        },
+        {
+          "id": "rlm-paper-connection",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+          "description": "RLM paper deep-dive \u2014 verifiers is the runtime substrate for RLMEnv used in the RLM-Qwen3-8B training recipe"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Prime Intellect Verifiers",
+        "Verifiers Library",
+        "RLMEnv",
+        "Synthesis \u2014 Verifiers"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM Implementation Companion"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM Paper Deep Dive"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Claude Code Harness Features"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 OpenCode Harness Features"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion.md",
       "slug": "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "title": "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
@@ -28214,6 +28610,182 @@
         {
           "verb": "COMPARES TO",
           "target": "Synthesis \u2014 Claude Agent SDK and Managed Agents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Model Provider Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 LLM Wiki"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Local AI ($0 Target)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Never Synthesize from Descriptions Alone"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md",
+      "slug": "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "title": "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "2026-04-27",
+      "tags": [
+        "rlm",
+        "recursive-language-models",
+        "paper-deep-dive",
+        "table-1",
+        "four-tasks",
+        "codeqa",
+        "browsecomp-plus",
+        "oolong",
+        "oolong-pairs",
+        "s-niah",
+        "rlm-qwen3-8b",
+        "training-recipe",
+        "prime-rl",
+        "longbench-pro",
+        "six-observations",
+        "negative-results",
+        "system-prompt",
+        "mit-csail",
+        "mit-oasys",
+        "mit-dsg",
+        "prime-intellect",
+        "modal-labs",
+        "laude-institute",
+        "mission-2026-04-27",
+        "tier-0-candidate",
+        "post-training",
+        "sft",
+        "fine-tuning",
+        "48-h100-hours",
+        "1000-trajectories",
+        "gpt-5-mini",
+        "qwen3-coder-480b",
+        "qwen3-8b"
+      ],
+      "sources": [
+        {
+          "id": "rlm-paper-pdf",
+          "type": "paper",
+          "url": "https://arxiv.org/pdf/2512.24601",
+          "file": "raw/papers/recursive-language-models.md",
+          "title": "Recursive Language Models \u2014 arXiv 2512.24601 (v2 28 Jan 2026 PDF)",
+          "description": "Full paper PDF, 1928-line scrape. Authors: Alex L. Zhang, Tim Kraska, Omar Khattab. MIT CSAIL. 9 pages main + 33 with Appendix. Preprint dated January 29, 2026. Citations include DeepSeek-R1, Qwen3, ReAct, MemGPT, LongBench v2, BrowseComp-Plus, ViperGPT, THREAD, ReDel, Context Folding, AgentFold, ReSum, Mem0, MemAgent, G-Memory.",
+          "ingested": "2026-04-27"
+        },
+        {
+          "id": "rlm-implementation-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Implementation companion \u2014 covers the alexzhang13/rlm reference SDK (architecture, REPL semantics, 5 backends, 6 environments)"
+        },
+        {
+          "id": "rlm-empirical-findings-companion",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b.md",
+          "description": "Empirical-findings companion \u2014 covers the Oct 2025 blogpost + arXiv abstract; this page covers the paper's deep specifics that exceed the blogpost-level summary"
+        },
+        {
+          "id": "oolong-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2511.02817",
+          "title": "OOLONG: Evaluating Long Context Reasoning and Aggregation Capabilities (Bertsch et al. 2025)",
+          "description": "Long-reasoning benchmark used for RLM's main results; trec_coarse split is the focus"
+        },
+        {
+          "id": "browsecomp-plus-paper",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2508.06600",
+          "title": "BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent (Chen et al. 2025)",
+          "description": "DeepResearch benchmark with 100K-document offline corpus; RLM uses 150 sampled instances with 1K-document context"
+        },
+        {
+          "id": "longbench-v2",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2412.15204",
+          "title": "LongBench v2 (Bai et al. 2025)",
+          "description": "Multi-choice code repository understanding (CodeQA split) used as fourth RLM task"
+        },
+        {
+          "id": "longbench-pro",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/2601.02872",
+          "title": "LongBenchPro (Chen et al. 2026)",
+          "description": "Bilingual long-context benchmark used as the SOURCE of training trajectories for RLM-Qwen3-8B (English split, 750 tasks)"
+        },
+        {
+          "id": "prime-rl-library",
+          "type": "documentation",
+          "url": "https://github.com/PrimeIntellect-ai/prime-rl",
+          "title": "prime-rl library (Prime Intellect)",
+          "description": "Fine-tuning library used for RLM-Qwen3-8B training. Connects to wiki's existing Prime Intellect ecosystem references."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "RLM Paper Deep Dive",
+        "RLM Paper Table 1",
+        "RLM-Qwen3-8B Training Recipe",
+        "RLM Six Observations"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM (Implementation Companion)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM Empirical Findings (Blogpost + Abstract)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Context Engineering"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 3 \u2014 Goldilocks"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Anthropic Effective Harnesses for Long-Running Agents"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Claude Agent SDK and Managed Agents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 HRM and TRM"
         },
         {
           "verb": "FEEDS INTO",
@@ -34537,6 +35109,10 @@
       "page_count": 68,
       "relationship_count": 533
     },
+    "tools-integration": {
+      "page_count": 10,
+      "relationship_count": 98
+    },
     "tools-and-platforms": {
       "page_count": 29,
       "relationship_count": 195
@@ -34556,10 +35132,6 @@
     "log": {
       "page_count": 33,
       "relationship_count": 57
-    },
-    "tools-integration": {
-      "page_count": 6,
-      "relationship_count": 54
     },
     "wiki-methodology": {
       "page_count": 2,
@@ -35671,6 +36243,7 @@
     "fine-tuning": [
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/second-brain-custom-model-strategy"
     ],
@@ -36201,7 +36774,9 @@
     ],
     "sft": [
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
-      "log/2026-04-23-corpus-training-readiness-audit"
+      "log/2026-04-23-corpus-training-readiness-audit",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "candidate-d": [
       "backlog/modules/e012-m003-wiki-router-candidate-d"
@@ -36610,6 +37185,7 @@
       "comparisons/mcp-vs-cli-decision-vs-lesson",
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "comparisons/openarms-vs-openfleet-enforcement",
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "spine/standards/comparison-page-standards"
     ],
     "glob-grep": [
@@ -36957,6 +37533,98 @@
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
       "spine/models/quality/model-quality-failure-prevention"
     ],
+    "tier-0-candidate": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "rlm-qwen3-8b": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "qwen3-6-27b": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "long-context": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "dense-vs-recursive": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "post-anthropic-mission": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "mission-2026-04-27": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "log/2026-04-24-handoff-pickup-cold-forward",
+      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
+      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
+      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
+      "log/2026-04-25-session-handoff-end-state-with-failures",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "operator-decision": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "anti-vendor-lock-in": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "mit-oasys": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "alibaba-qwen": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "prime-intellect": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "sovereignty-tier": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "rtx-2080-ti": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "training-required": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "hardware-floor": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "cost-analysis": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "tools-integration": [
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
     "obsidian": [
       "comparisons/skills-architecture-patterns",
       "decisions/02_validated/knowledge/obsidian-vs-notebooklm-as-knowledge-interface",
@@ -37148,7 +37816,8 @@
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "vllm": [
-      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration"
+      "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
     "infrastructure": [
       "decisions/01_drafts/localai-over-ollama-vllm-for-multi-model-orchestration",
@@ -39650,18 +40319,6 @@
     "forward": [
       "log/2026-04-24-handoff-pickup-cold-forward"
     ],
-    "mission-2026-04-27": [
-      "log/2026-04-24-handoff-pickup-cold-forward",
-      "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
-      "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
-      "log/2026-04-25-regather-systemic-bug-investigation-and-second-p4-instance",
-      "log/2026-04-25-session-handoff-end-state-with-failures",
-      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
-    ],
     "brain-refactor-active": [
       "log/2026-04-24-handoff-pickup-cold-forward"
     ],
@@ -39712,11 +40369,6 @@
     ],
     "end-state": [
       "log/2026-04-25-session-handoff-end-state-with-failures"
-    ],
-    "qwen3-6-27b": [
-      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
     "tier-0": [
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
@@ -40369,7 +41021,8 @@
       "sources/src-claude-agent-sdk-and-managed-agents"
     ],
     "system-prompt": [
-      "sources/src-claude-code-prompt-patch-rebalancing"
+      "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "behavioral-patching": [
       "sources/src-claude-code-prompt-patch-rebalancing"
@@ -40697,11 +41350,6 @@
     "gpt-5-5": [
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin"
     ],
-    "tools-integration": [
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
-    ],
     "firecrawl": [
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents"
     ],
@@ -40751,7 +41399,8 @@
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "gpt-oss": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
     "apache-2-0": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
@@ -40887,6 +41536,133 @@
     "qa": [
       "sources/tools-integration/src-playwright-mcp-visual-testing"
     ],
+    "prime-rl": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "async-rl": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "rl-training-at-scale": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "fsdp2": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "fp8-inference": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "pd-disaggregation": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "expert-parallelism": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "context-parallelism": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "moe-training": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "rlm-qwen3-8b-trainer": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "multi-node-slurm": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "kubernetes": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "intellect-3": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "qwen3-moe": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "glm-5": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "minimax-m2": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "nemotron-h": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "aipo": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "ipo": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "kimi-k25-kl": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "mit-csail-connection": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "post-training-stack": [
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "verifiers": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "llm-rl": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "environments": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "rlm-env": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "recursive-language-models": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
+    ],
+    "training-framework": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "rubrics": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "datasets": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "harnesses": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "prime-cli": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "environments-hub": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "will-brown": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "prime-rl-integration": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "openenv": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "browser-env": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "mcp-env": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "tool-env": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
+    "stateful-tool-env": [
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
+    ],
     "2-bit": [
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
     ],
@@ -40935,10 +41711,7 @@
     ],
     "rlm": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
-    ],
-    "recursive-language-models": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
     ],
     "empirical-findings": [
@@ -40948,16 +41721,16 @@
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
     "oolong": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "browsecomp-plus": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
-    "rlm-qwen3-8b": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "gpt-5-mini": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "gpt-5": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
@@ -40966,14 +41739,12 @@
     "context-rot": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
-    "long-context": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
     "retrieval": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
     "post-training": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "dec-2025-arxiv": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
@@ -40982,19 +41753,62 @@
     "oct-2025-blogpost": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
-    "mit-oasys": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
-    ],
-    "tier-0-candidate": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
-    ],
-    "anti-vendor-lock-in": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
     "paradigm-validation": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+    ],
+    "paper-deep-dive": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "table-1": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "four-tasks": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "codeqa": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "oolong-pairs": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "s-niah": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "training-recipe": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "longbench-pro": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "six-observations": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "negative-results": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "mit-csail": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "mit-dsg": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "modal-labs": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "laude-institute": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "48-h100-hours": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "1000-trajectories": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "qwen3-coder-480b": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "qwen3-8b": [
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "repl": [
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
@@ -41032,9 +41846,6 @@
     "training": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
       "spine/references/local-training-playbook-2026"
-    ],
-    "moe-training": [
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
     "qwopus": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
@@ -41265,9 +42076,6 @@
     "providers": [
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
-    "harnesses": [
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
-    ],
     "glm-4-7": [
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
@@ -41482,7 +42290,11 @@
     {
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
+        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)",
         "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
       ]
     },
@@ -41590,13 +42402,16 @@
     {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
+        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
       ]
     },
     {
       "target": "AI Model Provider Harness Decision Matrix 2026",
       "referenced_by": [
-        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)"
+        "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
       ]
     },
     {
@@ -42120,9 +42935,11 @@
         "Synthesis \u2014 gpt-oss: OpenAI's Apache-2.0 Open-Weight MoE Models (20b + 120b)",
         "Synthesis \u2014 Kimi K2.6: Moonshot's 1T/32B-Active Open-Weight Agentic Frontier Model",
         "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
+        "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
         "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
         "Synthesis \u2014 Qwen3.6-27B: Dense 27B Beats 397B MoE on Agentic Coding",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)",
         "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)",
         "Synthesis \u2014 Unsloth: Fast LoRA Fine-Tuning on Consumer Hardware",
         "Model \u2014 NotebookLM",
@@ -42134,6 +42951,12 @@
         "Open-Model Evaluation Framework \u2014 How to Look at a New Model Announcement",
         "Operator Workstation \u2014 Storage Tiering (authoritative disk map)",
         "Second-Brain Custom Model \u2014 Training Strategy and Roadmap"
+      ]
+    },
+    {
+      "target": "Model \u2014 Markdown as IaC",
+      "referenced_by": [
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
       ]
     },
     {
@@ -42239,6 +43062,24 @@
       "referenced_by": [
         "Defense Layer Progression Is Expensive \u2014 Prevention Is Cheap, Detection and Correction Are Milestones",
         "Aspirational Declaration Produces False Confidence at Every Layer"
+      ]
+    },
+    {
+      "target": "Qwen3.6-27B Dense Beats 397B MoE",
+      "referenced_by": [
+        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)"
+      ]
+    },
+    {
+      "target": "Qwen3.6-27B at 2-bit, 26 Tool Calls",
+      "referenced_by": [
+        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)"
+      ]
+    },
+    {
+      "target": "RLM Implementation",
+      "referenced_by": [
+        "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)"
       ]
     },
     {
@@ -42351,7 +43192,8 @@
     {
       "target": "Synthesis \u2014 Claude Code Harness Features",
       "referenced_by": [
-        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)"
+        "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)",
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
       ]
     },
     {
@@ -42369,7 +43211,8 @@
     {
       "target": "Synthesis \u2014 HRM and TRM",
       "referenced_by": [
-        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)"
+        "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
+        "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
       ]
     },
     {
@@ -42383,6 +43226,18 @@
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 OpenCode Harness Features",
+      "referenced_by": [
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Prime Intellect Verifiers",
+      "referenced_by": [
+        "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)"
       ]
     },
     {
@@ -42411,9 +43266,34 @@
       ]
     },
     {
+      "target": "Synthesis \u2014 RLM",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 RLM (Recursive Language Models): Implementation companion",
       "referenced_by": [
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 RLM Empirical Findings",
+      "referenced_by": [
+        "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 RLM Implementation Companion",
+      "referenced_by": [
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 RLM Paper Deep Dive",
+      "referenced_by": [
+        "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
       ]
     },
     {

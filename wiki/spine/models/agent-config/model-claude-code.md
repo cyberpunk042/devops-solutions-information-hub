@@ -602,6 +602,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-llm-architecture-gallery-raschka|Synthesis — LLM Architecture Gallery (Raschka)]]
 [[src-arxiv-natural-language-agent-harnesses|Synthesis — Natural-Language Agent Harnesses (NLAH) — Externalizing Harness Logic as Editable Artifacts]]
+[[src-prime-intellect-verifiers-llm-rl-environments|Synthesis — Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)]]
 [[src-pydantic-ai-typed-agent-framework|Synthesis — Pydantic AI: Typed Agent Framework]]
 [[src-rlm-recursive-language-models-mit-oasys|Synthesis — RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)]]
 [[src-rethinking-ai-agents-harness-engineering-rise|Synthesis — Rethinking AI Agents — The Rise of Harness Engineering (YouTube Meta-Synthesis)]]
