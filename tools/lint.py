@@ -558,6 +558,57 @@ def _check_domain_health(
     return domain_health
 
 
+def _check_frontmatter_types(pages: List[Path]) -> List[Dict[str, str]]:
+    """Advisory check — flag frontmatter type mismatches that downstream tools trust.
+
+    The canonical instance: `tags` is a YAML list. If a tag is bare like `2026`
+    (no quotes), YAML auto-coerces it to int, breaking any consumer that does
+    `" ".join(tags)` (e.g. tools/view.py's search). Bug #1 surfaced 2026-04-27
+    after 5 pages had this exact pattern silently for weeks.
+
+    Returns one entry per offending page with the problem field + index + value.
+    """
+    issues = []
+    for md_file in pages:
+        try:
+            text = md_file.read_text(encoding="utf-8")
+            meta, _ = parse_frontmatter(text)
+        except Exception:
+            continue
+        if not meta:
+            continue
+
+        # tags must be list[str]
+        tags = meta.get("tags")
+        if isinstance(tags, list):
+            for i, t in enumerate(tags):
+                if not isinstance(t, str):
+                    issues.append({
+                        "file": str(md_file),
+                        "field": "tags",
+                        "index": i,
+                        "value": repr(t),
+                        "value_type": type(t).__name__,
+                        "fix": f'Quote the value: change `{t}` to `"{t}"` in tags list',
+                    })
+
+        # aliases must be list[str] when present
+        aliases = meta.get("aliases")
+        if isinstance(aliases, list):
+            for i, a in enumerate(aliases):
+                if not isinstance(a, str):
+                    issues.append({
+                        "file": str(md_file),
+                        "field": "aliases",
+                        "index": i,
+                        "value": repr(a),
+                        "value_type": type(a).__name__,
+                        "fix": f'Quote the value: change `{a}` to `"{a}"` in aliases list',
+                    })
+
+    return issues
+
+
 def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
     """Run all wiki health checks and return a structured report.
 
@@ -601,6 +652,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         wiki_dir / "backlog" / "operator-decision-queue.md",
     )
     unsolicited_caps = _check_unsolicited_caps(wiki_dir.parent / "tools")
+    frontmatter_type_issues = _check_frontmatter_types(pages)
 
     total_issues = (
         len(dead_relationships)
@@ -608,9 +660,12 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         + len(thin_pages)
         + len(orphan_pages)
         + sum(len(d["issues"]) for d in domain_health)
+        + len(frontmatter_type_issues)
     )
     # Unstyled pages, standards issues, queue drift, unsolicited caps are
-    # advisory — not counted in total_issues (won't cause `pipeline post` to fail)
+    # advisory — not counted in total_issues (won't cause `pipeline post` to fail).
+    # Frontmatter-type issues ARE counted because they break downstream tools
+    # (view search crashed on int tags — Bug #1, 2026-04-27).
 
     return {
         "orphan_pages": orphan_pages,
@@ -622,6 +677,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
         "standards_issues": standards_issues,
         "queue_drift": queue_drift,
         "unsolicited_caps": unsolicited_caps,
+        "frontmatter_type_issues": frontmatter_type_issues,
         "domain_health": domain_health,
         "summary": {
             "pages_scanned": len(pages),
@@ -634,6 +690,7 @@ def lint_wiki(wiki_dir: Path, config: LintConfig) -> Dict[str, Any]:
             "standards_issues": len(standards_issues),
             "queue_drift": len(queue_drift),
             "unsolicited_caps": len(unsolicited_caps),
+            "frontmatter_type_issues": len(frontmatter_type_issues),
             "domain_health_issues": sum(len(d["issues"]) for d in domain_health),
         },
     }

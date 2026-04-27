@@ -2948,10 +2948,27 @@ def main():
             print("│   ├── instructions (25%) → hooks (100%) → harness → immune system")
             print("│   └── 7 behavioral failure classes persist after infrastructure")
             print("│")
-            print("├── PRINCIPLES → wiki/lessons/04_principles/hypothesis/")
-            print("│   ├── Infrastructure Over Instructions")
-            print("│   ├── Structured Context Governs Behavior")
-            print("│   └── Right Process for Right Context (Goldilocks)")
+            # Principles count + names computed from the principles directory
+            # (was hardcoded as 3 — drifted to 4 when P4 was added 2026-04-16; surfaced 2026-04-27).
+            principles_dir = paths["wiki"] / "lessons" / "04_principles" / "hypothesis"
+            principle_titles = []
+            if principles_dir.exists():
+                for pf in sorted(principles_dir.glob("*.md")):
+                    if pf.name == "_index.md":
+                        continue
+                    try:
+                        pf_fm, _ = parse_frontmatter(pf.read_text(encoding="utf-8"))
+                        if pf_fm:
+                            t = pf_fm.get("title", pf.stem)
+                            # Strip "Principle —" prefix if present
+                            t = t.replace("Principle — ", "").replace("Principle —", "")
+                            principle_titles.append(t)
+                    except Exception:
+                        continue
+            print(f"├── PRINCIPLES ({len(principle_titles)}) → wiki/lessons/04_principles/hypothesis/")
+            for i, t in enumerate(principle_titles):
+                connector = "└──" if i == len(principle_titles) - 1 else "├──"
+                print(f"│   {connector} {t}")
             print("│")
             print("├── TRACKING → gateway query --field readiness / --field progress")
             print("│   ├── readiness (definition completeness) gates progress (execution)")
@@ -2967,7 +2984,16 @@ def main():
             print("    ├── gateway (this tool) — query, template, config, move, archive, backup, contribute")
             print("    ├── pipeline — post, fetch, scaffold, status, gaps, evolve")
             print("    ├── view — dashboard, spine, model, search, refs")
-            print("    └── MCP server — 17 tools for Claude Code integration")
+            # MCP tool count computed from @server.tool() decorator count in mcp_server.py
+            # (was hardcoded as 17 — drifted to 30 by 2026-04-27; surfaced same day).
+            mcp_path = paths["root"] / "tools" / "mcp_server.py"
+            mcp_count = "?"
+            if mcp_path.exists():
+                try:
+                    mcp_count = mcp_path.read_text(encoding="utf-8").count("@server.tool()")
+                except Exception:
+                    pass
+            print(f"    └── MCP server — {mcp_count} tools for Claude Code integration")
         else:
             print(f"Navigation target '{nav_target}' — use 'gateway navigate' for full tree")
 
