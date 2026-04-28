@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T15:25:52.020291+00:00",
+  "generated": "2026-04-28T15:29:10.780513+00:00",
   "stats": {
-    "pages": 518,
+    "pages": 519,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3254,
-    "tags_unique": 1751,
+    "relationships": 3263,
+    "tags_unique": 1756,
     "layers": {
       "3": 4,
       "5": 37,
@@ -3477,6 +3477,99 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 4"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook.md",
+      "slug": "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "title": "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+      "type": "module",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "module",
+        "p0",
+        "smoke-test",
+        "runbook",
+        "multica",
+        "aicp",
+        "ollama-cloud",
+        "claude-code",
+        "opencode",
+        "3-layer-validation",
+        "operator-actionable",
+        "pre-3090",
+        "mission-2026-04-28",
+        "m003"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Parent epic \u2014 this module is the operator-actionable smoke-test that validates 3-layer composability empirically"
+        },
+        {
+          "id": "m001",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config.md",
+          "description": "Predecessor module \u2014 established the `custom_env` mechanism this runbook exercises"
+        },
+        {
+          "id": "aicp-handoff",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "AICP authoritative state \u2014 `local`, `k2_6_local`, `k2_6_openrouter`, `ollama_cloud` backends wired"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M003 \u2014 3-Layer Smoke Test",
+        "Multica AICP Ollama Cloud Round-Trip Runbook"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "M001 \u2014 Multica Per-Agent Provider Config"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "K2.6 Access Paths Comparison"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M004 (Local-Ollama tier post-3090) \u2014 once Variant A passes"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "the same pattern applies post-3090 with `local` backend instead of `ollama_cloud`"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Anti-Vendor-Lock-In Lesson"
         }
       ]
     },
@@ -37694,8 +37787,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 90,
-      "relationship_count": 364
+      "page_count": 91,
+      "relationship_count": 373
     },
     "cross-domain": {
       "page_count": 219,
@@ -38239,6 +38332,7 @@
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
       "backlog/modules/e012-m003-wiki-router-candidate-d",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
       "backlog/tasks/T016-update-failover-chain-and-profiles",
@@ -38594,6 +38688,7 @@
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m003-storage-tiering-documentation",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
@@ -38716,6 +38811,7 @@
       "backlog/modules/e009-m001-opencode-install-and-base-config",
       "backlog/modules/e009-m002-mcp-server-continuity",
       "backlog/modules/e009-m003-skill-portability",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
@@ -38877,6 +38973,7 @@
     "multica": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "orchestrator": [
@@ -38889,6 +38986,7 @@
     ],
     "ollama-cloud": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "sources/tools-integration/src-inference-provider-landscape-2026",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
@@ -39070,6 +39168,7 @@
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix"
@@ -39523,10 +39622,81 @@
     ],
     "mission-2026-04-28": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "m001": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "smoke-test": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "backlog/tasks/T002-run-openrouter-smoke-tests"
+    ],
+    "runbook": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
+    ],
+    "claude-code": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "comparisons/mcp-vs-cli-decision-vs-lesson",
+      "comparisons/skills-architecture-patterns",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
+      "domains/ai-agents/claude-code/claude-code-best-practices",
+      "domains/ai-agents/claude-code/claude-code-context-management",
+      "domains/ai-agents/claude-code/claude-code-skills",
+      "domains/ai-agents/claude-code/claude-code",
+      "domains/ai-agents/orchestration/harness-engineering",
+      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
+      "domains/automation/ai-driven-content-pipeline",
+      "domains/automation/claude-code-scheduling",
+      "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
+      "domains/tools-and-platforms/notebooklm-skills",
+      "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
+      "lessons/03_validated/tools-architecture/always-plan-before-executing",
+      "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
+      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "patterns/03_validated/enforcement/enforcement-hook-patterns",
+      "sources/claude-code/src-claude-code-accuracy-tips",
+      "sources/claude-code/src-claude-slash-commands",
+      "sources/claude-code/src-harness-engineering",
+      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
+      "sources/claude-code/src-superpowers-end-of-vibe-coding",
+      "sources/claude-code/src-token-hacks-claude-code",
+      "sources/obsidian-notebooklm/src-axton-obsidian-visual-skills",
+      "sources/obsidian-notebooklm/src-claude-notebooklm-content-team",
+      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
+      "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
+      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
+      "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/src-7-levels-claude-code-rag",
+      "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-claude-code-harness-features",
+      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "sources/tools-integration/src-playwright-mcp-visual-testing",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
+      "sources/wiki-methodology/src-karpathy-claude-code-10x",
+      "spine/models/agent-config/model-claude-code",
+      "spine/standards/model-standards/model-claude-code-standards"
+    ],
+    "3-layer-validation": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
+    ],
+    "operator-actionable": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
+    ],
+    "pre-3090": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
+    ],
+    "m003": [
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
     ],
     "backlog": [
       "backlog/operator-decision-queue",
@@ -39618,9 +39788,6 @@
       "spine/standards/task-page-standards"
     ],
     "done": [
-      "backlog/tasks/T002-run-openrouter-smoke-tests"
-    ],
-    "smoke-test": [
       "backlog/tasks/T002-run-openrouter-smoke-tests"
     ],
     "opus": [
@@ -40106,56 +40273,6 @@
     ],
     "artifact-type": [
       "comparisons/mcp-vs-cli-decision-vs-lesson"
-    ],
-    "claude-code": [
-      "comparisons/mcp-vs-cli-decision-vs-lesson",
-      "comparisons/skills-architecture-patterns",
-      "decisions/01_drafts/pretooluse-hooks-layered-approach",
-      "decisions/02_validated/tools/mcp-vs-cli-for-tool-integration",
-      "domains/ai-agents/claude-code/claude-code-best-practices",
-      "domains/ai-agents/claude-code/claude-code-context-management",
-      "domains/ai-agents/claude-code/claude-code-skills",
-      "domains/ai-agents/claude-code/claude-code",
-      "domains/ai-agents/orchestration/harness-engineering",
-      "domains/ai-agents/patterns/hooks-lifecycle-architecture",
-      "domains/automation/ai-driven-content-pipeline",
-      "domains/automation/claude-code-scheduling",
-      "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
-      "domains/tools-and-platforms/notebooklm-skills",
-      "domains/tools-and-platforms/obsidian-skills-ecosystem",
-      "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
-      "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
-      "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
-      "patterns/03_validated/enforcement/enforcement-hook-patterns",
-      "sources/claude-code/src-claude-code-accuracy-tips",
-      "sources/claude-code/src-claude-slash-commands",
-      "sources/claude-code/src-harness-engineering",
-      "sources/claude-code/src-shanraisshan-claude-code-best-practice",
-      "sources/claude-code/src-superpowers-end-of-vibe-coding",
-      "sources/claude-code/src-token-hacks-claude-code",
-      "sources/obsidian-notebooklm/src-axton-obsidian-visual-skills",
-      "sources/obsidian-notebooklm/src-claude-notebooklm-content-team",
-      "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
-      "sources/obsidian-notebooklm/src-kepano-obsidian-skills",
-      "sources/obsidian-notebooklm/src-notebooklm-claude-code-workflow",
-      "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
-      "sources/src-7-levels-claude-code-rag",
-      "sources/src-claude-code-prompt-patch-rebalancing",
-      "sources/src-cline-agentic-coding-ide-extension",
-      "sources/src-github-spec-kit-specification-driven-development",
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
-      "sources/tools-integration/src-claude-code-harness-features",
-      "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "sources/tools-integration/src-playwright-cli-vs-mcp",
-      "sources/tools-integration/src-playwright-mcp-visual-testing",
-      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
-      "sources/wiki-methodology/src-karpathy-claude-code-10x",
-      "spine/models/agent-config/model-claude-code",
-      "spine/standards/model-standards/model-claude-code-standards"
     ],
     "model": [
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
@@ -45895,6 +46012,7 @@
       "target": "Anti-Vendor-Lock-In Lesson",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
@@ -46271,7 +46389,8 @@
     {
       "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly",
       "referenced_by": [
-        "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)"
+        "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
       ]
     },
     {
@@ -46373,6 +46492,7 @@
       "target": "K2.6 Access Paths Comparison",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
@@ -46421,6 +46541,18 @@
         "Synthesis \u2014 Meta-Harness \u2014 End-to-End Optimization of Model Harnesses via Outer-Loop Search",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts",
         "Synthesis \u2014 Rethinking AI Agents \u2014 The Rise of Harness Engineering (YouTube Meta-Synthesis)"
+      ]
+    },
+    {
+      "target": "M001 \u2014 Multica Per-Agent Provider Config",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
+      ]
+    },
+    {
+      "target": "M004 (Local-Ollama tier post-3090) \u2014 once Variant A passes",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
       ]
     },
     {
@@ -46744,6 +46876,7 @@
     {
       "target": "Saturation Lesson",
       "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface"
       ]
@@ -47434,6 +47567,12 @@
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
+      ]
+    },
+    {
+      "target": "the same pattern applies post-3090 with `local` backend instead of `ollama_cloud`",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
       ]
     },
     {
