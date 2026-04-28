@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T16:41:31.321916+00:00",
+  "generated": "2026-04-28T16:56:25.220281+00:00",
   "stats": {
-    "pages": 522,
+    "pages": 523,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3287,
-    "tags_unique": 1763,
+    "relationships": 3294,
+    "tags_unique": 1767,
     "layers": {
       "3": 4,
       "5": 37,
@@ -23185,6 +23185,86 @@
       ]
     },
     {
+      "path": "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption.md",
+      "slug": "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
+      "title": "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "session",
+        "log",
+        "post-anthropic",
+        "3-layer-stack",
+        "multica",
+        "ollama-cloud",
+        "rtx-3090",
+        "operator-corrections",
+        "deviation-pattern",
+        "register-vs-research",
+        "mission-2026-04-28",
+        "day-arc"
+      ],
+      "sources": [
+        {
+          "id": "prior-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle.md",
+          "description": "The prior session log \u2014 captured the bug-audit arc + saturation lesson first verification cycle. This 2026-04-28 log builds on that day's regather state and tracks the post-Anthropic 3-layer stack assembly that followed."
+        },
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "The epic this session arc captured \u2014 orchestrator + harness + provider 3-layer composability"
+        },
+        {
+          "id": "learning-path",
+          "type": "wiki",
+          "file": "wiki/spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28.md",
+          "description": "Curated reading order for the artifacts produced this session"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-27 Post-FINAL-Handoff Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Learning Path \u2014 3-Layer Stack"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -38073,8 +38153,8 @@
       "relationship_count": 378
     },
     "cross-domain": {
-      "page_count": 221,
-      "relationship_count": 1496
+      "page_count": 222,
+      "relationship_count": 1503
     },
     "ai-models": {
       "page_count": 14,
@@ -39058,6 +39138,7 @@
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
@@ -39260,6 +39341,7 @@
     "3-layer-stack": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
     "multica": [
@@ -39268,6 +39350,7 @@
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
@@ -39285,12 +39368,14 @@
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "sources/tools-integration/src-inference-provider-landscape-2026",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "rtx-3090": [
-      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
     ],
     "rlm-qwen3-8b": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
@@ -39628,6 +39713,7 @@
       "log/2026-04-22-last-reviewed-frontmatter-field-evolve-mark-reviewed-cli",
       "log/2026-04-22-lint-tooling-fixes-backlog-modules-index-gap-wiki-health",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -39925,6 +40011,7 @@
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
@@ -43478,7 +43565,8 @@
       "log/2026-04-27-final-session-end-handoff-day-arc-complete-mission-wiki-side-done",
       "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -43833,6 +43921,18 @@
     ],
     "9-artifacts": [
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+    ],
+    "operator-corrections": [
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+    ],
+    "deviation-pattern": [
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+    ],
+    "register-vs-research": [
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
+    ],
+    "day-arc": [
+      "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -46274,6 +46374,12 @@
       ]
     },
     {
+      "target": "2026-04-27 Post-FINAL-Handoff Session Log",
+      "referenced_by": [
+        "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
+      ]
+    },
+    {
       "target": "2026-04-27 Session Handoff",
       "referenced_by": [
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence"
@@ -46737,6 +46843,7 @@
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+        "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
       ]
     },
@@ -46869,6 +46976,12 @@
       ]
     },
     {
+      "target": "Learning Path \u2014 3-Layer Stack",
+      "referenced_by": [
+        "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
+      ]
+    },
+    {
       "target": "Learning Path \u2014 RLM Thread Evidence Chain",
       "referenced_by": [
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
@@ -46974,7 +47087,8 @@
       "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
-        "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
+        "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
+        "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
       ]
     },
     {
@@ -47245,7 +47359,8 @@
       "referenced_by": [
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
-        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface"
+        "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
+        "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
       ]
     },
     {
