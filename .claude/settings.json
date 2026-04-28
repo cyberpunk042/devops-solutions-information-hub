@@ -97,7 +97,8 @@
       "Bash(.venv/bin/python -m tools.gateway query --profiles)",
       "Bash(.venv/bin/python -m tools.gateway query --field aliases)",
       "Bash(.venv/bin/python -m tools.gateway query --field maturity)",
-      "Bash(.venv/bin/python -m tools.view search \"Ollama Cloud\")"
+      "Bash(.venv/bin/python -m tools.view search \"Ollama Cloud\")",
+      "Bash(.venv/bin/python -m tools.stats)"
     ]
   },
   "hooks": {

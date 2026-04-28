@@ -1,7 +1,7 @@
 # Research Wiki — Master Index
 
-Central intelligence spine for the devops ecosystem. 297 pages of synthesized
-knowledge across AI agents, knowledge systems, devops, automation, and tools.
+Central intelligence spine for the devops ecosystem. 525 pages of synthesized
+knowledge across AI agents, AI models, knowledge systems, devops, automation, tools, and cross-domain methodology.
 
 ## How to Browse This Wiki
 
@@ -9,8 +9,8 @@ This wiki is organized like a library. Start at the level that matches what you 
 
 | Level | What You'll Find | Start Here |
 |-------|-----------------|------------|
-| **Models** | System definitions — the big picture, 15 named models | [[model-registry|Model Registry]] |
-| **Domains** | Concept pages grouped by topic (53 pages across 7 domains) | Domain list below |
+| **Models** | System definitions — the big picture, 16 named models | [[model-registry|Model Registry]] |
+| **Domains** | Concept pages grouped by topic (81 pages across 7 domains) | Domain list below |
 | **Patterns** | Recurring structures validated across 2+ independent systems | [patterns/](patterns/) |
 | **Lessons** | Codified experience — what worked, what failed, why | [lessons/](lessons/) |
 | **Decisions** | Choice frameworks with alternatives and rationale | [decisions/](decisions/) |
@@ -23,7 +23,7 @@ This wiki is organized like a library. Start at the level that matches what you 
 
 ## Models — The Big Picture
 
-15 named models organized into a three-layer pattern: system definition (model page) + execution standards (standards page) + visual design (callout vocabulary).
+16 named models organized into a three-layer pattern: system definition (model page) + execution standards (standards page) + visual design (callout vocabulary).
 
 | Model | What It Defines | Standards |
 |-------|----------------|-----------|
@@ -38,12 +38,12 @@ See [[model-registry|Model Registry]] for all 16 models with maturity status and
 
 | Domain | Pages | What's Inside |
 |--------|-------|---------------|
+| [cross-domain/](domains/cross-domain/) | 31 | Methodology framework, Goldilocks Protocol, Skyscraper/Pyramid/Mountain quality tiers, RLM operations plan |
 | [ai-agents/](domains/ai-agents/) | 15 | Agent orchestration, Claude Code, harness engineering, skills, hooks, rework prevention |
-| [knowledge-systems/](domains/knowledge-systems/) | 11 | LLM Wiki pattern, evolution pipeline, memory lifecycle, graph, PKM theory |
+| [knowledge-systems/](domains/knowledge-systems/) | 10 | LLM Wiki pattern, evolution pipeline, memory lifecycle, graph, PKM theory |
 | [tools-and-platforms/](domains/tools-and-platforms/) | 10 | Obsidian, NotebookLM, AICP, OpenArms, Plane |
 | [devops/](domains/devops/) | 9 | Stage-gate methodology, SFIF, backlog hierarchy, WSL2, ecosystem |
 | [automation/](domains/automation/) | 5 | Pipeline orchestration, MCP integration, scheduling, event-driven automation |
-| [cross-domain/](domains/cross-domain/) | 2 | Methodology framework, Skyscraper/Pyramid/Mountain |
 | [ai-models/](domains/ai-models/) | 1 | Local LLM quantization |
 
 ## Knowledge Layers — Progressive Distillation
@@ -52,14 +52,15 @@ Each layer is denser and more actionable than the previous:
 
 | Layer | Directory | Pages | What It Contains |
 |-------|-----------|-------|-----------------|
-| L0 | `raw/` | 70 files | Unprocessed source material (transcripts, articles, notes) |
-| L1 | `sources/` | 24 | One synthesis per source — the evidence layer |
-| L2 | `domains/` | 53 | Core concepts — one idea per page, by domain |
-| L3 | `comparisons/` | 4 | Structured side-by-side evaluations |
-| L4 | `lessons/` | 22 | Codified experience with evidence and applicability |
-| L5 | `patterns/` | 11 | Recurring structures with 2+ validated instances |
-| L6 | `decisions/` | 5 | Choice frameworks with alternatives and rationale |
-| Spine | `spine/` | 31 | Models, standards, overviews, adoption guide |
+| L0 | `raw/` | 224 files | Unprocessed source material (115 articles, 85 notes, 16 transcripts, 7 papers, 1 dump) |
+| L1 | `sources/` | 77 | One synthesis per source — the evidence layer |
+| L2 | `domains/` | 81 | Core concepts — one idea per page, by domain |
+| L3 | `comparisons/` | 9 | Structured side-by-side evaluations |
+| L4 | `lessons/` | 69 | Codified experience with evidence and applicability |
+| L5 | `patterns/` | 30 | Recurring structures with 2+ validated instances |
+| L6 | `decisions/` | 26 | Choice frameworks with alternatives and rationale |
+| L7 | `lessons/04_principles/` | 4 | Governing truths derived from ≥3 validated lessons |
+| Spine | `spine/` | 79 | Models, standards, overviews, adoption guide |
 
 ## Operational
 
