@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T13:04:33.198773+00:00",
+  "generated": "2026-04-28T15:23:54.707238+00:00",
   "stats": {
-    "pages": 517,
+    "pages": 518,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3249,
-    "tags_unique": 1745,
+    "relationships": 3254,
+    "tags_unique": 1751,
     "layers": {
       "3": 4,
       "5": 37,
@@ -3402,6 +3402,81 @@
         {
           "verb": "RELATES TO",
           "target": "Model \u2014 MCP and CLI Integration"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config.md",
+      "slug": "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "title": "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "module",
+        "p0",
+        "multica",
+        "custom_env",
+        "per-agent-provider",
+        "anthropic-base-url",
+        "ollama-cloud-routing",
+        "aicp-routing",
+        "anti-vendor-lock-in",
+        "mission-2026-04-28",
+        "post-anthropic",
+        "m001"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Parent epic \u2014 this module is the load-bearing investigation that unblocks M002-M005"
+        },
+        {
+          "id": "multica-readme",
+          "type": "repository",
+          "file": "raw/articles/multica-aimultica.md",
+          "title": "Multica README + agent docs (lines 4424, 6444, 7037, 7095, 7455)",
+          "description": "Multica's documented agent fields \u2014 confirms `custom_env` as the per-agent env-injection mechanism. Plus operational notes (plaintext DB storage warning, override-not-merge semantics, redaction for non-owners)."
+        },
+        {
+          "id": "multica-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-multica-managed-agents-platform.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "Multica Per-Agent Provider Config",
+        "M001 \u2014 Multica custom_env Investigation"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "K2.6 Access Paths"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
         }
       ]
     },
@@ -37619,8 +37694,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 89,
-      "relationship_count": 359
+      "page_count": 90,
+      "relationship_count": 364
     },
     "cross-domain": {
       "page_count": 219,
@@ -38518,6 +38593,7 @@
       "backlog/modules/e007-m002-harness-interactive-validation",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m003-storage-tiering-documentation",
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
@@ -38595,6 +38671,7 @@
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "spine/references/ai-infrastructure-decision-framework-2026"
@@ -38799,6 +38876,7 @@
     ],
     "multica": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "orchestrator": [
@@ -38835,6 +38913,7 @@
     ],
     "anti-vendor-lock-in": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
@@ -38990,6 +39069,7 @@
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix"
@@ -39425,6 +39505,28 @@
     ],
     "upgrade": [
       "backlog/modules/e022-m003-what-do-i-need-upgrade"
+    ],
+    "custom_env": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "per-agent-provider": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "anthropic-base-url": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "ollama-cloud-routing": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "aicp-routing": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "mission-2026-04-28": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "m001": [
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
     ],
     "backlog": [
       "backlog/operator-decision-queue",
@@ -44665,9 +44767,6 @@
     "vendor-neutral": [
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
-    "mission-2026-04-28": [
-      "sources/tools-integration/src-multica-managed-agents-platform"
-    ],
     "tts": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
@@ -46170,6 +46269,12 @@
       ]
     },
     {
+      "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)"
+      ]
+    },
+    {
       "target": "Extension Standards",
       "referenced_by": [
         "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps"
@@ -46256,6 +46361,12 @@
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ]
+    },
+    {
+      "target": "K2.6 Access Paths",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)"
       ]
     },
     {

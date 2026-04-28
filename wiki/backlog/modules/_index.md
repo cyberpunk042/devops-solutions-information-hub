@@ -38,3 +38,4 @@ tags: [backlog, modules]
 | E012-M004 | [E012 M004 — Multi-LoRA Adapter Architecture (Candidate E, base + N adapters)](e012-m004-multi-lora-adapter-architecture-e.md) | P2 | draft | design | 60 | E012 |
 | E022-M002 | [E022-M002 — Gateway Orient Subcommand (Module Design)](e022-m002-gateway-orient-subcommand.md) | P1 | active | design | 40 | E022 |
 | E022-M003 | [E022-M003 — Gateway What-Do-I-Need Upgrade (Module Design)](e022-m003-what-do-i-need-upgrade.md) | P1 | active | design | 40 | E022 |
+| POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M001 — Multica Per-Agent Provider Config (`custom_env` field is the answer)](post-anthropic-3-layer-m001-multica-per-agent-provider-config.md) | P0 | active | test | 95 |  |
