@@ -296,7 +296,7 @@ Nine named methodology models. Each is a DIFFERENT stage sequence solving a diff
 > [!example]- **Real instance: This research wiki's own lifecycle**
 > 1. **Scaffold** — CLAUDE.md, raw/, wiki/, tools/ directories, Python venv, tech stack chosen
 > 2. **Foundation** — tools/common.py, wiki/config/wiki-schema.yaml, wiki/config/templates/, validation tooling
-> 3. **Infrastructure** — tools/pipeline.py (13 chains), MCP server (17 tools), sync service, watcher daemon, evolve engine
+> 3. **Infrastructure** — tools/pipeline.py (13 chains), MCP server (28 tools), sync service, watcher daemon, evolve engine
 > 4. **Features** — Evolution pipeline, backlog system, model-building skill, 14 named models, standards documents
 
 > [!tip] **The recursive property**

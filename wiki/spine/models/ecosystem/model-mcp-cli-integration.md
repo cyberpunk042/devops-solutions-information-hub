@@ -141,7 +141,7 @@ When MCP IS the right choice, server design minimizes the schema overhead:
 > | Strategy | What uses it | Why |
 > |----------|-------------|-----|
 > | **CLI+Skills** | Wiki pipeline, Playwright QA, NotebookLM queries, Context7, all project-internal tooling | Deferred loading, zero idle overhead |
-> | **MCP** | Wiki MCP server (17 tools), AICP inference bridge, external services | Cross-conversation discoverability, service bridging |
+> | **MCP** | Wiki MCP server (28 tools), AICP inference bridge, external services | Cross-conversation discoverability, service bridging |
 > | **Sandbox** | Full codebase analysis, large document processing, parallel ingestion | >30% context cost isolation |
 
 ---

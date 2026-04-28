@@ -159,7 +159,7 @@ Pass 1-2 → declare v1 complete. Fail → iterate on data curation, not hyperpa
    ```bash
    python -m tools.mcp_server --list-tools --json > data/mcp-schemas.json
    ```
-   (26 tools at current count.)
+   (28 tools at current count.)
 2. **Generate positive examples** (correct tool calls) — 15-30 per tool covering happy-path invocations:
    ```
    User: "Search the wiki for 'harness-owned loop'"

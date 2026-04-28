@@ -10,7 +10,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-28
 sources:
   - id: three-layer-pattern
     type: wiki
@@ -31,7 +31,7 @@ tags: [reference, documentation, root, readme, agents, claude, architecture, des
 
 ## Summary
 
-The repository root contains 8 documentation files (2,714 total lines) that serve as the entry point for humans, AI tools, and external integrators. Each file has ONE responsibility and references the others bidirectionally. This implements the three-layer agent context pattern (per ETH Zurich Feb 2026 research: oversized CLAUDE.md files reduce task success by ~3%) and provides consistent entry paths regardless of the consumer — human, Claude Code, Codex CLI, Copilot, Gemini, Cursor, or MCP client from another project.
+The repository root contains 8 documentation files (3,044 total lines as of 2026-04-28) that serve as the entry point for humans, AI tools, and external integrators. Each file has ONE responsibility and references the others bidirectionally. This implements the three-layer agent context pattern (per ETH Zurich Feb 2026 research: oversized CLAUDE.md files reduce task success by ~3%) and provides consistent entry paths regardless of the consumer — human, Claude Code, Codex CLI, Copilot, Gemini, Cursor, or MCP client from another project.
 
 ## Reference Content
 
@@ -41,13 +41,13 @@ The repository root contains 8 documentation files (2,714 total lines) that serv
 >
 > | File | Lines | Audience | Responsibility |
 > |------|-------|----------|---------------|
-> | **README.md** | 200 | First visitor (human/AI) | Project overview, what it IS, entry points by role |
-> | **AGENTS.md** | 159 | Any AI tool | Universal cross-tool context. 60k+ repo standard. |
-> | **CLAUDE.md** | 107 | Claude Code specifically | Claude-specific overrides. References AGENTS.md. |
-> | **CONTEXT.md** | 227 | Anyone understanding scope | Identity profile, current state, active epics, constraints |
-> | **ARCHITECTURE.md** | 585 | Anyone modifying structure | Data flow, tool topology, page schema, integration points |
+> | **README.md** | 412 | First visitor (human/AI) | Project overview, what it IS, entry points by role |
+> | **AGENTS.md** | 178 | Any AI tool | Universal cross-tool context. 60k+ repo standard. |
+> | **CLAUDE.md** | 119 | Claude Code specifically | Claude-specific overrides. References AGENTS.md + .claude/rules/. |
+> | **CONTEXT.md** | 234 | Anyone understanding scope | Identity profile, current state, active epics, constraints |
+> | **ARCHITECTURE.md** | 632 | Anyone modifying structure | Data flow, tool topology, page schema, integration points |
 > | **DESIGN.md** | 355 | Page creators | Callout vocabulary, layouts, styling, graceful degradation |
-> | **TOOLS.md** | 806 | Operators | Complete CLI reference (pipeline, gateway, view, sync, MCP) |
+> | **TOOLS.md** | 839 | Operators | Complete CLI reference (pipeline, gateway, view, sync, MCP) |
 > | **SKILLS.md** | 275 | Skill users/authors | Skills catalog, SKILL.md format, extension hierarchy |
 
 ### The Three-Layer Architecture (Implemented)
@@ -56,8 +56,8 @@ The repository root contains 8 documentation files (2,714 total lines) that serv
 >
 > | Layer | File | Size Target | Our State | Status |
 > |-------|------|------------|-----------|--------|
-> | **Layer 1 — Universal** | AGENTS.md | <100 lines | 159 lines | Slightly over (pragmatic — this is a complex system) |
-> | **Layer 2 — Tool-specific** | CLAUDE.md | <100 lines | 107 lines | Meets target (was 315L before slim) |
+> | **Layer 1 — Universal** | AGENTS.md | <100 lines | 178 lines | Slightly over (pragmatic — complex system + universal hard rules) |
+> | **Layer 2 — Tool-specific** | CLAUDE.md | <100 lines | 119 lines | Slightly over target (was 315L before slim 2026-04-09; rules extracted to `.claude/rules/`) |
 > | **Layer 3 — Conditional** | `.claude/skills/*` | <500 lines each | Compliant | See [[SKILLS.md]] for catalog |
 >
 > **ETH Zurich research (Feb 2026):** AI-generated context files reduce task success by ~3%. Oversized CLAUDE.md files are structurally harmful. Our slim matches the recommendation.
@@ -111,7 +111,7 @@ The repository root contains 8 documentation files (2,714 total lines) that serv
 - Role-based entry table ("You are... → Read this first")
 - Knowledge layer structure (L0 → L7)
 - Operational layers (raw/, wiki/, tools/, .claude/, wiki/config/)
-- Core principles (3 principles from convergent evidence)
+- Core principles (4 principles from convergent evidence)
 - Quick Start (human operator commands)
 - Ecosystem diagram (ASCII)
 - Status metrics (pages, relationships, models, standards)
@@ -172,7 +172,7 @@ The repository root contains 8 documentation files (2,714 total lines) that serv
 - Gateway (12 subcommands, dual-scope)
 - View (9 commands)
 - Sync (WSL ↔ Windows)
-- MCP Server (21 tools)
+- MCP Server (28 tools)
 - Quality tools (validate, lint, stats)
 - Export (openfleet, aicp, methodology)
 - Setup (including systemd services)

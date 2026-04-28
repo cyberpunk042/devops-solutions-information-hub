@@ -260,7 +260,7 @@ Your project defines its own skills in `skills/` that wrap its own methodology o
 
 #### MCP (Tool-Level Access)
 
-MCP tools provide programmatic access. The wiki exposes 15 tools: `wiki_status`, `wiki_search`, `wiki_evolve`, etc. These are the finest-grained interface.
+MCP tools provide programmatic access. The wiki exposes 28 tools: `wiki_status`, `wiki_search`, `wiki_evolve`, `wiki_gateway_orient`, `wiki_gateway_contribute`, `wiki_fetch`, `wiki_post`, `wiki_crossref`, etc. These are the finest-grained interface.
 
 Your project defines its own MCP tools that expose methodology state. OpenFleet uses MCP tool stage-gating: the tool itself checks which stage the current task is in and refuses to execute if the stage is wrong. This is infrastructure-layer enforcement.
 
