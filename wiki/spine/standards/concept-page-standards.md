@@ -27,7 +27,7 @@ tags: [standards, concept, page-type, quality, exemplar]
 
 ## Summary
 
-Standards for concept pages — the most common page type in the wiki (74 pages). A concept page defines WHAT something IS: its components, mechanisms, relationships, and boundaries. This document specifies the quality bar section by section, shows what good looks like via the gold-standard exemplar, and lists the common failures specific to this type.
+Standards for concept pages — the most common page type in the wiki (114 pages as of 2026-04-28). A concept page defines WHAT something IS: its components, mechanisms, relationships, and boundaries. This document specifies the quality bar section by section, shows what good looks like via the gold-standard exemplar, and lists the common failures specific to this type.
 
 ## Key Insights
 

@@ -49,10 +49,10 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 
 ### The Gold-Standard Exemplar
 
-> [!success] [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] — 126 lines
+> [!success] [[cross-domain-domain-overview|Cross-Domain — Domain Overview]] — 140 lines
 >
 > - State of Knowledge with 3 tiers (Authoritative, Good, Thin)
-> - Maturity Map showing 29 lessons, 6 patterns, 13 decisions
+> - Maturity Map showing 69 lessons, 30 patterns, 26 decisions
 > - Specific gap analysis with actionable priorities
 > - Key Pages in recommended reading order
 
@@ -64,7 +64,7 @@ Standards for domain overview pages — curator pages that assess a domain's kno
 >
 > **2. Summary** — "The cross-domain area is not a subject-matter domain but a structural layer." Immediately tells the reader what this domain IS and how it differs from content domains. ← Orientation in seconds — the reader knows whether this is the right domain before scrolling.
 >
-> **3. Maturity Map** — Groups 29 lessons by maturity (seed/growing/mature/canonical) as a table with counts. ← Shows domain health at a glance. A reader sees "3 canonical, 12 growing, 14 seed" and knows WHERE the domain is strong vs thin.
+> **3. Maturity Map** — Groups 69 lessons by validation tier as a table with counts. ← Shows domain health at a glance. A reader sees "4 principles, 41 validated, 24 in pipeline (2 inbox / 19 drafts / 3 synthesized)" and knows WHERE the domain is strong vs thin.
 >
 > **4. Coverage Assessment** — "What's covered: methodology framework, artifact taxonomy, agent compliance. What's thin: SDLC customization, formal context grammar." Named gaps with specificity. ← Not "some areas need work" — exact named gaps that become backlog candidates.
 >

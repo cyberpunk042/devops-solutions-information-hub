@@ -105,7 +105,7 @@ Every page type has its own standards doc with: section-by-section quality bar, 
 - [Operations Plan — Second Brain Integration Chain — Complete Walkthrough](references/second-brain-integration-chain.md) — Complete step-by-step chain for integrating ANY project with the second brain
 - [WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)](references/wsl-ubuntu-migration-handoff.md) — This page is the **pickup-cold procedure** for any AI session (or the operator after an absence) that lands in the Po...
 - [Comparison Page Standards](standards/comparison-page-standards.md) — Standards for comparison pages — structured evaluations of alternatives across multiple criteria
-- [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (74 pages)
+- [Concept Page Standards](standards/concept-page-standards.md) — Standards for concept pages — the most common page type in the wiki (114 pages as of 2026-04-28)
 - [Decision Page Standards](standards/decision-page-standards.md) — Standards for decision pages — the highest-layer evolved page type (Layer 6)
 - [Deep-Dive Page Standards](standards/deep-dive-page-standards.md) — Standards for deep-dive pages — extended analysis that goes significantly deeper than a concept page
 - [Domain Overview Page Standards](standards/domain-overview-page-standards.md) — Standards for domain overview pages — curator pages that assess a domain's knowledge state, classify pages by maturit...

@@ -218,7 +218,7 @@ These are not hypothetical — each profile exists in the ecosystem. Follow alon
 
 > [!example]- Walkthrough A: Solo Agent on This Wiki (Research Wiki)
 >
-> **Step 1 — DETECT:** Gateway auto-detects: `domain=knowledge` (wiki/config/ found), `scale=medium` (297 pages), `phase=production` (CI + tests + daily use). Second brain = `self` (this IS the second brain).
+> **Step 1 — DETECT:** Gateway auto-detects: `domain=knowledge` (wiki/config/ found), `scale=medium` (525 pages), `phase=production` (CI + tests + daily use). Second brain = `self` (this IS the second brain).
 >
 > **Step 2 — DECLARE:** CLAUDE.md already has the identity profile:
 > `Type=system, Execution Mode=solo, Domain=knowledge, Phase=production, Scale=medium, PM Level=L1, Trust Tier=operator-supervised`
