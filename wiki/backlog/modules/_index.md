@@ -41,4 +41,3 @@ tags: [backlog, modules]
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M001 — Multica Per-Agent Provider Config (`custom_env` field is the answer)](post-anthropic-3-layer-m001-multica-per-agent-provider-config.md) | P0 | active | test | 95 |  |
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M002 — Harness-Level Integration Details (MCP Wiring · OpenCode Config · claude-code-router Wrapper Option)](post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config.md) | P0 | active | implement | 85 |  |
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M003 — Multica → Claude Code → AICP → Ollama Cloud Smoke-Test Runbook](post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook.md) | P0 | active | scaffold | 75 |  |
-| REPO-DOCS | [Repo Docs Overhaul M001 — README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)](repo-docs-overhaul-m001-readme-rewrite.md) | P0 | active | scaffold | 80 |  |

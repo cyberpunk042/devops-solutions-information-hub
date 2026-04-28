@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T20:38:16.719605+00:00",
+  "generated": "2026-04-28T20:58:28.784161+00:00",
   "stats": {
     "pages": 525,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3309,
-    "tags_unique": 1774,
+    "relationships": 3298,
+    "tags_unique": 1772,
     "layers": {
       "3": 4,
       "5": 37,
@@ -1739,7 +1739,7 @@
     {
       "path": "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28.md",
       "slug": "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
-      "title": "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)",
+      "title": "Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown",
       "type": "epic",
       "domain": "backlog",
       "status": "active",
@@ -1751,76 +1751,29 @@
         "epic",
         "p0",
         "documentation",
-        "readme",
-        "repo-polish",
-        "github-markdown",
-        "sell-praise",
-        "user-facing",
-        "navigation",
-        "lean",
-        "mission-2026-04-28",
-        "refactor-model"
+        "augment",
+        "github",
+        "repo",
+        "mission-2026-04-28"
       ],
       "sources": [
         {
           "id": "operator-directive",
           "type": "directive",
-          "file": "wiki/log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption.md",
-          "description": "Operator verbatim 2026-04-28 \u2014 *'we will also need to do a massive github markdown upgrade and make the project / repo hyper clear and clean and working and lean and smooth and strong. Yeah the readme is serving a purpose but I have to be able to find my track into the real documentation and what I want to see as a user and whatnot or how I want to sell / praise this tool and whatnot.'* The session log captures the day-arc verbatim directives; this directive is the latest one driving net-new mission scope."
-        },
-        {
-          "id": "current-readme",
-          "type": "file",
-          "file": "README.md",
-          "description": "412 lines \u2014 current README state. Has substance but mixes setup detail with conceptual content; stale page count (339+ \u2192 actual 523); no sell/praise framing; no scan-and-find optimization."
-        },
-        {
-          "id": "current-root-docs",
-          "type": "file",
-          "file": "ARCHITECTURE.md",
-          "description": "Root docs total: 3044 lines (README 412 + CLAUDE 119 + AGENTS 178 + CONTEXT 234 + ARCHITECTURE 632 + DESIGN 355 + TOOLS 839 + SKILLS 275). ARCHITECTURE.md (632 lines) is the largest single root doc; representative anchor for this source entry. Substantial total \u2014 operator-stated need: lean."
+          "file": "wiki/log/2026-04-28-session-handoff.md",
+          "description": "Operator-stated directive 2026-04-28 \u2014 verbatim below"
         }
       ],
       "layer": "",
       "maturity": "",
       "derived_from": [],
       "aliases": [
-        "Repo Docs Overhaul Epic",
-        "README + Root Docs Polish 2026-04-28",
-        "Documentation Polish Epic"
+        "Repo GitHub Top-Tier Augmentation"
       ],
       "relationships": [
         {
           "verb": "IMPLEMENTS",
           "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Root Documentation Map"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 2 \u2014 Structured Context > Content"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 1"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Learning Path \u2014 Post-Anthropic 3-Layer Stack"
-        },
-        {
-          "verb": "RELATES TO",
-          "target": "Learning Path \u2014 RLM Thread Evidence Chain"
-        },
-        {
-          "verb": "FEEDS INTO",
-          "target": "2026 Consumer Hardware AI Stack"
         }
       ]
     },
@@ -3738,80 +3691,6 @@
         {
           "verb": "FEEDS INTO",
           "target": "Anti-Vendor-Lock-In Lesson"
-        }
-      ]
-    },
-    {
-      "path": "backlog/modules/repo-docs-overhaul-m001-readme-rewrite.md",
-      "slug": "backlog/modules/repo-docs-overhaul-m001-readme-rewrite",
-      "title": "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)",
-      "type": "module",
-      "domain": "backlog",
-      "status": "active",
-      "confidence": "high",
-      "created": "2026-04-28",
-      "updated": "2026-04-28",
-      "last_reviewed": "2026-04-28",
-      "tags": [
-        "module",
-        "p0",
-        "readme",
-        "documentation",
-        "repo-polish",
-        "github-markdown",
-        "sell-praise",
-        "navigation",
-        "m001-readme"
-      ],
-      "sources": [
-        {
-          "id": "parent-epic",
-          "type": "wiki",
-          "file": "wiki/backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28.md",
-          "description": "Parent epic \u2014 captures the operator-stated workstream"
-        },
-        {
-          "id": "current-readme",
-          "type": "file",
-          "file": "README.md",
-          "description": "Current README (412 lines) \u2014 substance preserved in this draft, reframed for scan-and-find"
-        }
-      ],
-      "layer": "",
-      "maturity": "",
-      "derived_from": [],
-      "aliases": [
-        "M001 \u2014 README Rewrite Draft",
-        "README Rewrite Module"
-      ],
-      "relationships": [
-        {
-          "verb": "PART OF",
-          "target": "Epic \u2014 Repo Documentation Overhaul"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Learning Path \u2014 3-Layer Stack"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Decision: Adopt Multica"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "Anti-Vendor-Lock-In Lesson"
-        },
-        {
-          "verb": "DEMONSTRATES",
-          "target": "Principle 2 \u2014 Structured Context > Content"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "M002 (Root-Doc Audit + Lean Pass) \u2014 README rewrite first; root-doc lean pass second"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "M003 (Navigation Coherence) \u2014 README's 5 tracks anchor the navigation work"
         }
       ]
     },
@@ -23347,6 +23226,52 @@
       ]
     },
     {
+      "path": "log/2026-04-28-session-handoff.md",
+      "slug": "log/2026-04-28-session-handoff",
+      "title": "2026-04-28 Session Handoff",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "handoff",
+        "session",
+        "2026-04-28",
+        "multica",
+        "post-anthropic",
+        "registered-corrections"
+      ],
+      "sources": [
+        {
+          "id": "prior-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle.md",
+          "description": "Prior session log \u2014 2026-04-27 post-FINAL-handoff bug-audit arc"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-27 Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Epic \u2014 Repo Documentation Overhaul"
+        }
+      ]
+    },
+    {
       "path": "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption.md",
       "slug": "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "title": "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
@@ -38311,12 +38236,12 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 94,
-      "relationship_count": 393
+      "page_count": 93,
+      "relationship_count": 379
     },
     "cross-domain": {
-      "page_count": 222,
-      "relationship_count": 1503
+      "page_count": 223,
+      "relationship_count": 1506
     },
     "ai-models": {
       "page_count": 14,
@@ -38599,8 +38524,6 @@
     ],
     "navigation": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
-      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite",
       "spine/goldilocks-flow",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
@@ -39220,7 +39143,6 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
@@ -39305,6 +39227,7 @@
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
+      "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/references/ai-infrastructure-decision-framework-2026"
@@ -39517,6 +39440,7 @@
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
@@ -39592,7 +39516,6 @@
     "documentation": [
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
       "backlog/modules/e010-m003-storage-tiering-documentation",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite",
       "backlog/tasks/T026-document-aicp-fallback-chain-standard",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
       "domains/cross-domain/methodology-artifacts/categories/methodology-artifact-taxonomy",
@@ -39602,27 +39525,13 @@
       "spine/references/gateway-tools-reference",
       "spine/references/root-documentation-map"
     ],
-    "readme": [
-      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite",
-      "spine/references/root-documentation-map"
-    ],
-    "repo-polish": [
-      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite"
-    ],
-    "github-markdown": [
-      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite"
-    ],
-    "sell-praise": [
-      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite"
-    ],
-    "user-facing": [
+    "augment": [
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28"
     ],
-    "lean": [
+    "github": [
+      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28"
+    ],
+    "repo": [
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28"
     ],
     "mission-2026-04-28": [
@@ -39634,9 +39543,6 @@
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
-    ],
-    "refactor-model": [
-      "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28"
     ],
     "sdlc": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
@@ -39770,7 +39676,6 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix"
@@ -40302,9 +40207,6 @@
     ],
     "m003": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
-    ],
-    "m001-readme": [
-      "backlog/modules/repo-docs-overhaul-m001-readme-rewrite"
     ],
     "backlog": [
       "backlog/operator-decision-queue",
@@ -43766,6 +43668,7 @@
       "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
     ],
     "summary": [
@@ -43844,6 +43747,7 @@
       "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "log/2026-04-28-session-handoff",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -44121,6 +44025,12 @@
     ],
     "9-artifacts": [
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission"
+    ],
+    "2026-04-28": [
+      "log/2026-04-28-session-handoff"
+    ],
+    "registered-corrections": [
+      "log/2026-04-28-session-handoff"
     ],
     "operator-corrections": [
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
@@ -46295,6 +46205,9 @@
     "root": [
       "spine/references/root-documentation-map"
     ],
+    "readme": [
+      "spine/references/root-documentation-map"
+    ],
     "strategy": [
       "spine/references/second-brain-custom-model-strategy"
     ],
@@ -46401,7 +46314,6 @@
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
-        "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)",
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
@@ -46584,6 +46496,12 @@
       ]
     },
     {
+      "target": "2026-04-27 Session Log",
+      "referenced_by": [
+        "2026-04-28 Session Handoff"
+      ]
+    },
+    {
       "target": "2026-04-27 Session-End Handoff",
       "referenced_by": [
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
@@ -46648,7 +46566,6 @@
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
@@ -46845,7 +46762,6 @@
     {
       "target": "Decision: Adopt Multica",
       "referenced_by": [
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
       ]
     },
@@ -47040,10 +46956,10 @@
     {
       "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly",
       "referenced_by": [
-        "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)",
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+        "2026-04-28 Session Handoff",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
       ]
@@ -47051,7 +46967,7 @@
     {
       "target": "Epic \u2014 Repo Documentation Overhaul",
       "referenced_by": [
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)"
+        "2026-04-28 Session Handoff"
       ]
     },
     {
@@ -47185,20 +47101,12 @@
     {
       "target": "Learning Path \u2014 3-Layer Stack",
       "referenced_by": [
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
-      ]
-    },
-    {
-      "target": "Learning Path \u2014 Post-Anthropic 3-Layer Stack",
-      "referenced_by": [
-        "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)"
       ]
     },
     {
       "target": "Learning Path \u2014 RLM Thread Evidence Chain",
       "referenced_by": [
-        "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
@@ -47237,21 +47145,9 @@
       ]
     },
     {
-      "target": "M002 (Root-Doc Audit + Lean Pass) \u2014 README rewrite first; root-doc lean pass second",
-      "referenced_by": [
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)"
-      ]
-    },
-    {
       "target": "M003",
       "referenced_by": [
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
-      ]
-    },
-    {
-      "target": "M003 (Navigation Coherence) \u2014 README's 5 tracks anchor the navigation work",
-      "referenced_by": [
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)"
       ]
     },
     {
@@ -47314,7 +47210,7 @@
       "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
-        "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)",
+        "Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
       ]
@@ -47475,13 +47371,6 @@
       "target": "Pre-Write Hook Race Prevention \u2014 Operator/Agent File Contention",
       "referenced_by": [
         "Enforcement Hook Patterns"
-      ]
-    },
-    {
-      "target": "Principle 2 \u2014 Structured Context > Content",
-      "referenced_by": [
-        "Repo Documentation Overhaul \u2014 README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)",
-        "Repo Docs Overhaul M001 \u2014 README Rewrite (Draft Inside, Awaiting Approval to Replace README.md)"
       ]
     },
     {
