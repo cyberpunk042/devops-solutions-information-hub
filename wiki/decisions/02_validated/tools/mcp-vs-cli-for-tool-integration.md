@@ -131,6 +131,7 @@ The one nuance: if CLI skills accumulate significant institutional knowledge tha
 [[claude-code-context-management|Claude Code Context Management]]
 [[wiki-ingestion-pipeline|Wiki Ingestion Pipeline]]
 [[research-pipeline-orchestration|Research Pipeline Orchestration]]
+[[adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04|Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)]]
 [[model-knowledge-evolution-standards|Evolution Standards — What Good Knowledge Promotion Looks Like]]
 [[kimi-k2-6-access-paths-openrouter-ollama-cloud-local|Kimi K2.6 Access Paths — OpenRouter vs Ollama Cloud vs Local KTransformers]]
 [[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]

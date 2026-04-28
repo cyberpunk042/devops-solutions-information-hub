@@ -15,6 +15,7 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 ## Pages
 
 - [Decision — 4-Tier Router with Configurable Profiles over Hardcoded Routing](01_drafts/4-tier-router-with-profiles-over-hardcoded-routing.md) — AICP routes inference requests through a 4-tier escalation chain (local LocalAI → fleet peer → OpenRouter free tier →...
+- [Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)](01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md) — Adopt **Multica** ([multica-ai/multica](https://github
 - [Decision — AICP Active-State Mechanism: `.aicp/state.yaml` Per-Repo with Git-Branch Fallback](01_drafts/aicp-active-state-mechanism-for-hooks.md) — To enable Layer B PreToolUse stage-gate hooks (block writes to forbidden paths per the active task's `current_stage`)...
 - [Decision — Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models](01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values.md) — AICP's Qwen3 model configs use **asymmetric KV cache quantization** — `cache_type_k: q4_0` paired with `cache_type_v:...
 - [Decision — Consumer Runtime Signaling via MCP Config](01_drafts/consumer-runtime-signaling-via-mcp-config.md) — When a consumer (OpenArms harness, OpenFleet orchestrator, solo Claude session, or any other MCP client) connects to ...
@@ -42,4 +43,4 @@ Choice frameworks with alternatives, rationale, and reversibility assessment.
 
 ## Tags
 
-`decision`, `aicp`, `design-decisions`, `transferable`, `pattern`, `hooks`, `skills`, `architecture`, `stage-gate`, `mcp`, `methodology`, `versioning`, `local-first`, `qwen3`, `runtime`, `localai`, `infrastructure`, `claude-code`, `quality-tiers`, `composition`
+`decision`, `aicp`, `design-decisions`, `transferable`, `pattern`, `hooks`, `architecture`, `skills`, `stage-gate`, `mcp`, `methodology`, `versioning`, `local-first`, `qwen3`, `runtime`, `localai`, `infrastructure`, `claude-code`, `quality-tiers`, `composition`

@@ -1,16 +1,16 @@
 {
-  "generated": "2026-04-28T15:31:41.606690+00:00",
+  "generated": "2026-04-28T15:39:07.042710+00:00",
   "stats": {
-    "pages": 519,
+    "pages": 520,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3261,
-    "tags_unique": 1756,
+    "relationships": 3271,
+    "tags_unique": 1757,
     "layers": {
       "3": 4,
       "5": 37,
-      "6": 25,
+      "6": 26,
       "2": 51,
       "4": 65,
       "0": 1,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 51,
+      "seed": 52,
       "mature": 2
     }
   },
@@ -6148,6 +6148,116 @@
         {
           "verb": "RELATES TO",
           "target": "Decision \u2014 LocalAI over Ollama/vLLM"
+        }
+      ]
+    },
+    {
+      "path": "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md",
+      "slug": "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "title": "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
+      "type": "decision",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "",
+      "tags": [
+        "decision",
+        "p0",
+        "orchestrator",
+        "multica",
+        "post-anthropic",
+        "anti-vendor-lock-in",
+        "3-layer-stack",
+        "mission-2026-04-28",
+        "architecture",
+        "harness-orchestration",
+        "vendor-neutral"
+      ],
+      "sources": [
+        {
+          "id": "multica-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-multica-managed-agents-platform.md",
+          "description": "Layer-1 source synthesis for Multica \u2014 license, architecture, supported harnesses, per-agent shaping dimensions, operator-validated 2026-04-28"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 Evidence 10 documents the orchestrator-layer empirical substitute"
+        },
+        {
+          "id": "epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Parent epic this decision implements"
+        },
+        {
+          "id": "m001-custom-env",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config.md",
+          "description": "Operator-validated `custom_env` mechanism \u2014 the per-agent provider routing made possible by this decision"
+        },
+        {
+          "id": "operator-multica-self-host",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_multica_self_hosted_2026_04_28.md",
+          "description": "Operator's self-host install at /home/jfortin/.multica/server/, source-level access"
+        }
+      ],
+      "layer": 6,
+      "maturity": "seed",
+      "derived_from": [
+        "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform",
+        "Anti-Vendor-Lock-In Lesson Evidence 10",
+        "Post-Anthropic Stack 3-Layer Composability Epic"
+      ],
+      "aliases": [
+        "Adopt Multica Decision 2026-04-28",
+        "Multica Orchestrator Adoption"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "Post-Anthropic 3-Layer Stack Epic"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Decision Matrix 2026"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Decision \u2014 MCP vs CLI for Tool Integration"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "M001"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "M003"
         }
       ]
     },
@@ -37783,8 +37893,8 @@
       "relationship_count": 371
     },
     "cross-domain": {
-      "page_count": 219,
-      "relationship_count": 1477
+      "page_count": 220,
+      "relationship_count": 1487
     },
     "ai-models": {
       "page_count": 14,
@@ -38685,6 +38795,7 @@
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
       "backlog/tasks/T041-author-operator-workstation-storage-tiering-reference",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "spine/references/ai-infrastructure-decision-framework-2026",
       "spine/references/ai-model-provider-harness-decision-matrix-2026",
       "spine/references/operator-workstation-storage-tiering",
@@ -38759,6 +38870,7 @@
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "spine/references/ai-infrastructure-decision-framework-2026"
@@ -38960,16 +39072,19 @@
       "backlog/tasks/T070-design-adapter-training-datasets"
     ],
     "3-layer-stack": [
-      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04"
     ],
     "multica": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "orchestrator": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
@@ -39005,6 +39120,7 @@
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
@@ -39615,6 +39731,7 @@
     "mission-2026-04-28": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "m001": [
@@ -40226,6 +40343,7 @@
     "decision": [
       "comparisons/mcp-vs-cli-decision-vs-lesson",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
@@ -40326,6 +40444,7 @@
       "comparisons/openarms-vs-openfleet-enforcement",
       "comparisons/skills-architecture-patterns",
       "decisions/01_drafts/4-tier-router-with-profiles-over-hardcoded-routing",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
       "decisions/02_validated/knowledge/wiki-first-with-lightrag-upgrade-path",
       "domains/cross-domain/integration/skyscraper-pyramid-mountain",
@@ -40545,6 +40664,13 @@
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/standards/pattern-page-standards"
+    ],
+    "harness-orchestration": [
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04"
+    ],
+    "vendor-neutral": [
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "state": [
       "decisions/01_drafts/aicp-active-state-mechanism-for-hooks"
@@ -44873,9 +44999,6 @@
     "cloud-optional": [
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
-    "vendor-neutral": [
-      "sources/tools-integration/src-multica-managed-agents-platform"
-    ],
     "tts": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
@@ -46005,6 +46128,7 @@
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+        "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
@@ -46536,9 +46660,21 @@
       ]
     },
     {
+      "target": "M001",
+      "referenced_by": [
+        "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
+      ]
+    },
+    {
       "target": "M001 \u2014 Multica Per-Agent Provider Config",
       "referenced_by": [
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
+      ]
+    },
+    {
+      "target": "M003",
+      "referenced_by": [
+        "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
       ]
     },
     {
@@ -46593,7 +46729,8 @@
     {
       "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
       "referenced_by": [
-        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)"
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
+        "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
       ]
     },
     {
