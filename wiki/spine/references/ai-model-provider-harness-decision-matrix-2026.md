@@ -312,5 +312,6 @@ Re-validate this matrix when:
 [[aicp|AICP]]
 [[local-training-playbook-2026|Local Training Playbook 2026]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
+[[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Post-Anthropic Stack 3-Layer Composability — Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)]]
 [[provider-pricing-monitoring-operations-plan|Provider Pricing Monitoring — Operations Plan]]
 [[src-multica-managed-agents-platform|Synthesis — Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)]]

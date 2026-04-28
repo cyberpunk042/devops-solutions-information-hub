@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T12:38:00.007973+00:00",
+  "generated": "2026-04-28T13:04:33.198773+00:00",
   "stats": {
-    "pages": 516,
+    "pages": 517,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3235,
-    "tags_unique": 1739,
+    "relationships": 3249,
+    "tags_unique": 1745,
     "layers": {
       "3": 4,
       "5": 37,
@@ -1602,6 +1602,141 @@
       ]
     },
     {
+      "path": "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+      "slug": "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "title": "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "in-progress",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "epic",
+        "p0",
+        "post-anthropic",
+        "3-layer-stack",
+        "multica",
+        "orchestrator",
+        "harness",
+        "aicp",
+        "provider-routing",
+        "ollama-cloud",
+        "rtx-3090",
+        "rlm-qwen3-8b",
+        "qwen3-6-27b",
+        "anti-vendor-lock-in",
+        "mission-2026-04",
+        "milestone-class",
+        "in-progress"
+      ],
+      "sources": [
+        {
+          "id": "post-anthropic-milestone",
+          "type": "wiki",
+          "file": "wiki/backlog/milestones/post-anthropic-self-autonomous-stack.md",
+          "description": "Parent milestone \u2014 this epic is the empirical 3-layer assembly that closes the milestone's anti-vendor-lock-in claim at the orchestrator + harness + provider layers"
+        },
+        {
+          "id": "multica-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-multica-managed-agents-platform.md",
+          "description": "Multica orchestrator-layer source synthesis \u2014 Apache 2.0, 10 supported harness CLIs, self-host or cloud, vendor-neutral. Operator IS using Multica (registered 2026-04-28)."
+        },
+        {
+          "id": "ollama-cloud-registered",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_ollama_cloud_consensus_2026_04.md",
+          "description": "Ollama Cloud is in operator's active stack since 2026-04-23 \u2014 registered cloud-LLM tier in the AICP backend pattern (`ollama_cloud`)"
+        },
+        {
+          "id": "rtx-3090-ordered",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rtx_3090_acquired_2026_04_27.md",
+          "description": "RTX 3090 (renewed) ordered 2026-04-27, ETA 2-3 weeks \u2014 hardware uplift unlocking local-AI tier with 24GB VRAM Ampere"
+        },
+        {
+          "id": "rlm-qwen3-8b-live",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_rlm_qwen3_8b_hf_checkpoint_live.md",
+          "description": "MIT released RLM-Qwen3-8B at `mit-oasys/rlm-qwen3-8b-v0.1` \u2014 confirmed live 2026-04-27. Phase-1 long-context tier available at $0 cash."
+        },
+        {
+          "id": "aicp-handoff",
+          "type": "external",
+          "file": "~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md",
+          "description": "Authoritative AICP-side state \u2014 `local`, `k2_6_local`, `k2_6_openrouter`, `ollama_cloud` backends wired; $540\u2192$100 routing finding measured"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "Post-Anthropic 3-Layer Stack Epic",
+        "Multica + AICP + 3090 Assembly",
+        "Three-Layer Anti-Vendor-Lock-In Stack"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Harness Landscape 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Inference Provider Landscape 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "K2.6 Access Paths Comparison"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Tier-0 Candidate Comparison"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E007 \u2014 OpenRouter De-Risk"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "E009 \u2014 Harness Neutrality"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        }
+      ]
+    },
+    {
       "path": "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md",
       "slug": "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "title": "SDLC Rules and Structure \u2014 Customizable Project Lifecycle",
@@ -1741,7 +1876,7 @@
       "status": "draft",
       "confidence": "high",
       "created": "2026-04-22",
-      "updated": "2026-04-22",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "milestone",
@@ -37484,8 +37619,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 88,
-      "relationship_count": 345
+      "page_count": 89,
+      "relationship_count": 359
     },
     "cross-domain": {
       "page_count": 219,
@@ -37550,6 +37685,7 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -38021,6 +38157,7 @@
       "backlog/epics/pre-milestone/E001-local-inference-engine",
       "backlog/epics/pre-milestone/E002-ecosystem-integration",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/modules/e011-m001-tier-definitions-update",
       "backlog/modules/e011-m002-k2-6-openrouter-backend-adapter",
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
@@ -38376,6 +38513,7 @@
     "p0": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/e007-m002-harness-interactive-validation",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -38424,6 +38562,7 @@
     "harness": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "backlog/modules/e009-m004-harness-contract-document",
       "decisions/02_validated/tools/extension-system-operational-decisions",
@@ -38454,6 +38593,7 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
@@ -38653,6 +38793,73 @@
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
       "backlog/tasks/T070-design-adapter-training-datasets"
+    ],
+    "3-layer-stack": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+    ],
+    "multica": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "orchestrator": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "provider-routing": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+    ],
+    "ollama-cloud": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
+      "sources/tools-integration/src-inference-provider-landscape-2026",
+      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "spine/references/ai-infrastructure-decision-framework-2026"
+    ],
+    "rtx-3090": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+    ],
+    "rlm-qwen3-8b": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
+    "qwen3-6-27b": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
+      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
+      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "anti-vendor-lock-in": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
+      "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
+      "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
+    "mission-2026-04": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+    ],
+    "milestone-class": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+    ],
+    "in-progress": [
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
     ],
     "sdlc": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
@@ -39688,12 +39895,6 @@
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
-    "ollama-cloud": [
-      "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
-      "sources/tools-integration/src-inference-provider-landscape-2026",
-      "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
-      "spine/references/ai-infrastructure-decision-framework-2026"
-    ],
     "access-paths": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm"
@@ -39942,18 +40143,6 @@
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
-    "rlm-qwen3-8b": [
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
-    ],
-    "qwen3-6-27b": [
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
-      "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
-      "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
-    ],
     "long-context": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
@@ -39999,24 +40188,6 @@
     ],
     "operator-decision": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
-    ],
-    "anti-vendor-lock-in": [
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
-      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
-      "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
-      "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
-      "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
-      "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k",
-      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
-      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "mit-oasys": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
@@ -43454,10 +43625,6 @@
       "sources/wiki-methodology/src-sdlc-frameworks-research",
       "spine/standards/source-synthesis-page-standards"
     ],
-    "orchestrator": [
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
-      "sources/tools-integration/src-multica-managed-agents-platform"
-    ],
     "contributions": [
       "sources/ecosystem-projects/src-openfleet-fleet-architecture"
     ],
@@ -44463,9 +44630,6 @@
     "rlm-codeqa-split": [
       "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans"
     ],
-    "multica": [
-      "sources/tools-integration/src-multica-managed-agents-platform"
-    ],
     "managed-agents-platform": [
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
@@ -45393,6 +45557,7 @@
     {
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
@@ -45630,6 +45795,7 @@
     {
       "target": "Anti-Vendor-Lock-In Lesson",
       "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
@@ -45816,6 +45982,12 @@
       ]
     },
     {
+      "target": "E007 \u2014 OpenRouter De-Risk",
+      "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)"
+      ]
+    },
+    {
       "target": "E007-openrouter-deadline-de-risk",
       "referenced_by": [
         "E009 \u2014 Harness Neutrality (OpenCode as Second Consumer)",
@@ -45868,6 +46040,12 @@
       "target": "E009 M003 \u2014 Skill portability",
       "referenced_by": [
         "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
+      ]
+    },
+    {
+      "target": "E009 \u2014 Harness Neutrality",
+      "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)"
       ]
     },
     {
@@ -46042,6 +46220,7 @@
     {
       "target": "Harness Landscape 2026",
       "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "Synthesis \u2014 OpenCode Harness: Build/Plan Modes, LSP, Multi-Session, AGENTS.md, 75+ Providers (2026)",
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
@@ -46082,6 +46261,7 @@
     {
       "target": "K2.6 Access Paths Comparison",
       "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Synthesis \u2014 Inference Provider Landscape 2026 (OpenRouter, Together, Groq, Cerebras, DeepInfra, Ollama Cloud, Direct APIs)",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
       ]
@@ -46179,6 +46359,12 @@
       "target": "Mid-session handoff #10",
       "referenced_by": [
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
+      ]
+    },
+    {
+      "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
+      "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)"
       ]
     },
     {
@@ -46850,6 +47036,7 @@
     {
       "target": "Tier-0 Candidate Comparison",
       "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",

@@ -14,6 +14,7 @@ epics:
   - "E010"
   - "E011"
   - "E012"
+  - "post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
 acceptance_criteria:
   - "Claude Code CLI can route through OpenRouter to Kimi K2.6 end-to-end (harness + tool-use)"
   - "Local K2.6 Q2 runs via KTransformers on /dev/sdd (WD_BLACK NVMe) with measured tok/s documented"
@@ -23,9 +24,13 @@ acceptance_criteria:
   - "64 GB RAM installed; /dev/sdd mounted at /mnt/models; disk-speed baselines measured"
   - "Cost tracking shows sustained ~6-7\u00d7 reduction vs Anthropic-direct Opus on the same workloads"
   - "Operator confirms: the 2026-04-27 subscription transition was a non-event"
+  - "EXTENDED 2026-04-28 — 3-layer composability achieved: Multica orchestrator + harness (Claude Code/OpenCode) + AICP provider routing, no single vendor controls more than one layer"
+  - "EXTENDED 2026-04-28 — Multica orchestrating Claude Code agent → AICP routes to Ollama Cloud / OpenRouter / local backend, observed end-to-end"
+  - "EXTENDED 2026-04-28 — RTX 3090 (renewed, ETA mid-May 2026) integrated as local-tier hardware: local Ollama, Qwen3.6-27B at UD-IQ2, RLM-Qwen3-8B from `mit-oasys/rlm-qwen3-8b-v0.1` all running locally on 24GB"
+  - "EXTENDED 2026-04-28 — Resilience smoke test passes: any single layer disabled, AICP failover or Multica re-route maintains task completion"
 confidence: high
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-04-28
 sources:
   - id: operator-directive
     type: file
