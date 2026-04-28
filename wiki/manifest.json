@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-28T15:46:55.705947+00:00",
+  "generated": "2026-04-28T16:41:31.321916+00:00",
   "stats": {
-    "pages": 521,
+    "pages": 522,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3278,
+    "relationships": 3287,
     "tags_unique": 1763,
     "layers": {
       "3": 4,
@@ -15,11 +15,11 @@
       "4": 65,
       "0": 1,
       "1": 48,
-      "spine": 76
+      "spine": 77
     },
     "maturity": {
       "growing": 325,
-      "seed": 52,
+      "seed": 53,
       "mature": 2
     }
   },
@@ -33087,6 +33087,98 @@
       ]
     },
     {
+      "path": "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28.md",
+      "slug": "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
+      "title": "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
+      "type": "learning-path",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "learning-path",
+        "spine",
+        "post-anthropic",
+        "3-layer-stack",
+        "multica",
+        "harness",
+        "aicp",
+        "orchestrator",
+        "anti-vendor-lock-in",
+        "mission-2026-04-28",
+        "navigation",
+        "curated-reading"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "The epic this path navigates. Authored 2026-04-28 to capture the milestone-class assembly of orchestrator + harness + provider layers."
+        },
+        {
+          "id": "multica-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-multica-managed-agents-platform.md",
+          "description": "The Layer-1 source synthesis for Multica \u2014 the new orchestrator-layer artifact that this path's reading order flows from."
+        },
+        {
+          "id": "decision-page",
+          "type": "wiki",
+          "file": "wiki/decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04.md",
+          "description": "The architectural decision artifact. Captures alternatives, rationale, reversibility."
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "3-Layer Stack Learning Path",
+        "Multica + AICP + 3090 Reading Order",
+        "Post-Anthropic Stack 2026-04-28 Path"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Decision: Adopt Multica"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Decision Matrix 2026"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "RLM Thread Learning Path (2026-04-27)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Fundamentals Learning Path"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        }
+      ]
+    },
+    {
       "path": "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27.md",
       "slug": "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "title": "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)",
@@ -37981,8 +38073,8 @@
       "relationship_count": 378
     },
     "cross-domain": {
-      "page_count": 220,
-      "relationship_count": 1487
+      "page_count": 221,
+      "relationship_count": 1496
     },
     "ai-models": {
       "page_count": 14,
@@ -38265,6 +38357,7 @@
     "navigation": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
       "spine/goldilocks-flow",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/references/methodology-system-map",
       "spine/references/model-registry"
@@ -38563,6 +38656,7 @@
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/models/depth/model-local-ai",
       "spine/models/ecosystem/model-ecosystem",
       "spine/references/2026-consumer-hardware-ai-stack",
@@ -38939,6 +39033,7 @@
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-opencode-harness-features",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/models/quality/model-quality-failure-prevention",
       "spine/standards/harness-contract",
       "spine/standards/model-standards/model-claude-code-standards"
@@ -38963,6 +39058,7 @@
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ktransformers": [
@@ -39163,7 +39259,8 @@
     ],
     "3-layer-stack": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
-      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04"
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
     "multica": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
@@ -39171,13 +39268,15 @@
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
-      "sources/tools-integration/src-multica-managed-agents-platform"
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
     "orchestrator": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
-      "sources/tools-integration/src-multica-managed-agents-platform"
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
     "provider-routing": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
@@ -39226,6 +39325,7 @@
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "mission-2026-04": [
@@ -39825,7 +39925,8 @@
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
-      "sources/tools-integration/src-multica-managed-agents-platform"
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
     "m001": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
@@ -40526,6 +40627,7 @@
     ],
     "spine": [
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-markdown-as-iac",
@@ -45681,6 +45783,7 @@
     ],
     "learning-path": [
       "spine/learning-paths/methodology-fundamentals",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/standards/learning-path-page-standards"
     ],
@@ -45691,13 +45794,14 @@
     "fundamentals": [
       "spine/learning-paths/methodology-fundamentals"
     ],
+    "curated-reading": [
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
     "evidence-chain": [
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "session-arc": [
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
-    ],
-    "curated-reading": [
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "model-definition": [
@@ -46019,6 +46123,7 @@
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)",
         "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)",
+        "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
@@ -46249,6 +46354,7 @@
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
+        "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
@@ -46429,6 +46535,12 @@
       "target": "Decision \u2014 Skills as the Primary Extension Pattern",
       "referenced_by": [
         "MCP vs CLI \u2014 Decision Artifact vs Lesson Artifact"
+      ]
+    },
+    {
+      "target": "Decision: Adopt Multica",
+      "referenced_by": [
+        "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
       ]
     },
     {
@@ -46624,7 +46736,8 @@
       "referenced_by": [
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
-        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
+        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+        "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
       ]
     },
     {
@@ -46841,6 +46954,7 @@
     {
       "target": "Methodology Fundamentals Learning Path",
       "referenced_by": [
+        "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
     },
