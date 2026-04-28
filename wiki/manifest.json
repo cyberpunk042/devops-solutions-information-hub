@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T02:01:33.510705+00:00",
+  "generated": "2026-04-28T12:09:39.984664+00:00",
   "stats": {
     "pages": 515,
     "domains": 11,
@@ -5468,8 +5468,8 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-27",
-      "updated": "2026-04-27",
-      "last_reviewed": "2026-04-27",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
       "tags": [
         "comparison",
         "tier-0-candidate",
@@ -11743,8 +11743,8 @@
       "status": "synthesized",
       "confidence": "medium",
       "created": "2026-04-27",
-      "updated": "2026-04-27",
-      "last_reviewed": "2026-04-27",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
       "tags": [
         "operations-plan",
         "rlm",

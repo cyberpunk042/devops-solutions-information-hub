@@ -12,8 +12,8 @@ confidence: medium
 maturity: seed
 priority: P1
 created: 2026-04-27
-updated: 2026-04-27
-last_reviewed: 2026-04-27
+updated: 2026-04-28
+last_reviewed: 2026-04-28
 sources:
   - id: rlm-paper-deep-dive
     type: wiki
@@ -67,6 +67,26 @@ tags: [operations-plan, rlm, recursive-language-models, qwen3-6-27b, fine-tune, 
 ## Summary
 
 Reproducible, deterministic operations plan for fine-tuning **Qwen3.6-27B-Dense** (Alibaba, Apache 2.0, 2026-04-22 release) into a **natively-recursive language model** by applying the [RLM paper's training recipe](../../sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md) — scaled from the published 8B recipe (Qwen3-8B base, 48 H100 hours, ~$48-100 USD) to 27B (~150-200 H100 hours, **~$300-500 USD cloud GPU rental** at typical 2026 rates). End state: a checkpoint **RLM-Qwen3.6-27B** that combines (a) Qwen3.6-27B-Dense's agentic-coding gains (SWE-bench Pro 53.5, beats some 397B MoE), (b) the RLM paradigm's effective-context extension (32K native → ~3.2M+ effective via REPL-recursion), (c) Apache 2.0 throughout the stack, deployable as the operator's local tier-0 long-context primary via AICP. **This plan is hypothetical — it has not been executed.** It is authored as the actionable artifact named in the [tier-0 candidate comparison](../../comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate.md) "Composition Path" and the [2026-04-27 session-end handoff](../../log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation.md) P1 wiki-side list. Execution requires operator approval (compute budget commitment + cloud-GPU access) and AICP-side coordination for deployment wiring.
+
+## Phase-1 vs Phase-2 framing (REVISED 2026-04-28)
+
+> [!warning] **This plan is now Phase-2-conditional, not Phase-1-default**
+>
+> Two state changes since the original 2026-04-27 authoring:
+>
+> 1. **MIT released the RLM-Qwen3-8B checkpoint** at [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) — the operations plan's previous "checkpoint release status unverified" caveat is now resolved. Pull-and-run available at $0.
+> 2. **Operator ordered RTX 3090 (renewed)** on 2026-04-27, ETA 2-3 weeks. 24GB VRAM Ampere — comfortably runs Qwen3.6-27B at UD-IQ2 quantization (~14-16GB) AND fits RLM-Qwen3-8B at full precision.
+>
+> **Together, these unblock a $0-cash routing path**: deploy `mit-oasys/rlm-qwen3-8b-v0.1` for long-context tasks + vanilla Qwen3.6-27B for short-context tasks, routed by context length via AICP. No cloud GPU rental required for Phase-1 capability.
+>
+> **This operations plan (the $300-500 cloud fine-tune producing RLM-Qwen3.6-27B) is now the Phase-2 path** — executed only IF the Phase-1 routing approach demonstrates a real workload ceiling that consolidation into one combined model would break. Empirical evidence required from the routed deployment before committing the spend.
+>
+> | Phase | What you do | Cash | Wall time | Capability |
+> |---|---|---|---|---|
+> | **Phase 1** (default) | Pull MIT 8B checkpoint + run vanilla 27B + AICP context-length routing | **$0** | hours (after 3090 delivery) | Long-context via RLM-8B + short-context via 27B |
+> | **Phase 2** (conditional) | This operations plan — fine-tune 27B with RLM recipe via cloud GPUs | **~$300-500 one-time** | ~24h cloud + this plan's wall time | One combined RLM-Qwen3.6-27B (long + short consolidated) |
+>
+> **Phase 2 is justified IFF Phase 1 hits a concrete ceiling on operator's actual workload that the combined model would break through.** That's an empirical decision after running Phase 1, not an aspirational decision before.
 
 ## Prerequisites
 
@@ -349,7 +369,7 @@ Global rollback if the plan fails irrecoverably partway through (per-step rollba
 > 2. **Teacher model availability.** Qwen3-Coder-480B-A35B-Instruct as the teacher (per the paper) requires either (a) self-hosted vLLM at significant compute cost, or (b) OpenRouter access at per-token cost layered onto training. Alternative teachers (smaller, cheaper) may produce lower-quality trajectories — risking the 28.3% improvement claim from the paper.
 > 3. **Filter thresholds may need tuning.** The paper's 16% bad-FINAL / 13% bad-FINAL_VAR rates were measured for Qwen3-Coder-480B as teacher. A different teacher will have different rates; the programmatic correction code in Step 4 needs validation against actual teacher behavior.
 > 4. **Domain-transfer risk.** RLM-Qwen3-8B trained on LongBenchPro generalized to OOLONG / BrowseComp+ / CodeQA / OOLONG-Pairs (paper Observation 6). The same generalization may or may not hold at 27B scale — empirical question, answerable only by running Step 6.
-> 5. **Hardware compatibility.** Operator's RTX 2080 Ti (Turing, pre-Ampere) may not run prime-rl natively (the README's tested hardware list starts at RTX 3090). This plan assumes *cloud GPU access* for training (Steps 3-5); operator's local hardware is for *deployment* (Step 8) only, via UD-IQ2 quantization. If cloud GPU access is unavailable, this plan does not apply — fallback to deploying RLM-Qwen3-8B (if checkpoint releases) or vanilla Qwen3.6-27B without RLM training.
+> 5. **Hardware compatibility.** Operator ordered RTX 3090 (renewed) on 2026-04-27 (ETA 2-3 weeks); until delivery, current tier-0 is RTX 2080 Ti (Turing, pre-Ampere) which may not run prime-rl natively (the README's tested hardware list starts at RTX 3090). Once 3090 is in hand, **Step 8 deployment becomes comfortable** — Qwen3.6-27B at UD-IQ2 (~14-16GB) fits 24GB with headroom. **Training (Steps 3-5) still requires cloud GPU access regardless** — single 3090 is ~100-500x slower than 8× H100 cluster (months vs ~24 hours). If cloud GPU access is unavailable, this plan does not apply — fallback to deploying RLM-Qwen3-8B from [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) (confirmed live 2026-04-27) or vanilla Qwen3.6-27B without RLM training.
 > 6. **License compatibility.** Qwen3.6-27B is Apache 2.0; LongBench Pro license needs verification (likely permissive, but check). RLM SDK is open per repo. **No vendor lock-in introduced by execution.**
 
 > [!info] Future extensions (not in scope for this plan)
@@ -366,6 +386,8 @@ This plan is a worked example of step 6 ("close gaps systematically") of the [an
 By [Principle 4](../../lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them.md), the tier-0 candidate comparison's "Composition Path" is **aspirational until infrastructure verifies it**. This operations plan IS that infrastructure (deterministic steps + validation gates + rollback paths). Executing the plan is what demotes the claim from aspirational to empirical. **Until executed, the plan itself is at `seed` maturity** — its very existence is the verification gate that the composition path is *concretely actionable*, not vaporware.
 
 By [Principle 1](../../lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement.md), every step has a Validation field that uses tooling output, not narrative judgment. A "dumb" agent following this plan mechanically would not need to make trade-off decisions — those have been resolved (or marked as out-of-scope) here.
+
+**Phase-2-conditional execution per [Saturation Lesson Hard Rule #11](../../lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md)**: this plan's spend ($300-500 cloud rental, one-time) is justified IFF the Phase-1 routing approach (RLM-Qwen3-8B + vanilla Qwen3.6-27B + AICP context-length routing, $0 cash) demonstrates a real ceiling on operator's actual workload. The Phase-1 path is now available at $0 since the [MIT RLM-Qwen3-8B checkpoint](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) is confirmed live (2026-04-27) and the operator's incoming RTX 3090 (ETA 2-3 weeks from 2026-04-27) comfortably runs both candidates locally. Empirical evidence from the Phase-1 deployment is the operator's gate for Phase-2 commitment.
 
 ## Cost-Math Cross-Check
 

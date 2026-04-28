@@ -10,8 +10,8 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-27
-updated: 2026-04-27
-last_reviewed: 2026-04-27
+updated: 2026-04-28
+last_reviewed: 2026-04-28
 sources:
   - id: rlm-paper-deep-dive
     type: wiki
@@ -74,16 +74,17 @@ Two distinct paths to operator's mission goal of a sovereignty-tier, post-Anthro
 > | **Headline empirical result** | Beats some 397B MoE on SWE-bench Pro: 53.5 vs 50.9 (agentic coding) | Approaches GPT-5 on 3/4 long-context tasks (CodeQA, BrowseComp+, OOLONG-Pairs) at 8B params |
 > | **Hardware: full precision** | ~54GB VRAM (BF16) | ~16GB VRAM (BF16) |
 > | **Hardware: quantized** | UD-IQ2 ~14-16GB (Unsloth, 2-bit, retains 26-tool-call capability) | LoRA + INT8 likely ≤8GB |
-> | **Operator's RTX 2080 Ti (11GB) compatibility** | UD-IQ2 quantized: tight but possibly runnable; full FP fails | INT8 + LoRA: comfortable fit; BF16 also feasible |
+> | **Operator's hardware (incoming RTX 3090, ETA 2-3 weeks from 2026-04-27)** | UD-IQ2 (~14-16GB): comfortable on 24GB with headroom; BF16 (~54GB): requires offload | BF16 (~16GB): comfortable fit on 24GB; full precision feasible |
+> | **Operator's hardware (current — RTX 2080 Ti 11GB until 3090 delivered)** | UD-IQ2 quantized: tight but possibly runnable; full FP fails | INT8 + LoRA: comfortable fit; BF16 also feasible |
 > | **Inference paradigm** | Direct call: `llm.completion(prompt)` | REPL-recursive: `rlm.completion(prompt)` with sub-LM calls |
 > | **Latency profile** | Standard LM call (seconds) | Iterative loop (seconds to minutes per query, blocking) |
 > | **Tool-call capability** | Native (best-in-class for tier-0 size) | Inherited from Qwen3-8B + REPL programmatic tools |
 > | **Long-context degradation** | Standard transformer attention (likely degrades at ≥128K) | **Robust at 10M+ tokens** per RLM paper Figure 1 + Table 1 |
-> | **Training required for adoption** | None — pull weights, run | None if checkpoint released; OR 48 H100 hours self-training |
+> | **Training required for adoption** | None — pull weights, run | None — checkpoint published at [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) (confirmed live 2026-04-27) |
 > | **Open-source training stack** | N/A (already released) | verifiers + prime-rl (Apache 2.0) — public path to reproduce |
 > | **Ecosystem integration** | llama.cpp · vLLM · Ollama · Transformers · Unsloth · all major harnesses | RLM SDK (alexzhang13/rlm) · verifiers (`RLMEnv`) · prime-rl (`uv run sft`) · pip install rlms |
-> | **Mission-immediate availability** | ✅ Ready now | ⚠ Checkpoint release status unverified at synthesis time |
-> | **Mission-medium-term path** | Use directly; quantize if VRAM-tight | Self-train if no checkpoint; combines with future RLM-Qwen3.6-27B fine-tune |
+> | **Mission-immediate availability** | ✅ Ready now | ✅ Ready now — checkpoint live at [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) (confirmed 2026-04-27) |
+> | **Mission-medium-term path** | Use directly; quantize if VRAM-tight | Use directly; self-training was the fallback; now obsolete since checkpoint released |
 > | **Wiki source pages** | [marktechpost synth](../sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding.md) · [Unsloth discussion synth](../sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion.md) · [spine ref](../spine/references/2026-consumer-hardware-ai-stack.md) | [implementation synth](../sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md) · [empirical findings synth](../sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b.md) · [paper deep-dive synth](../sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations.md) |
 
 ## Key Insights
@@ -143,11 +144,17 @@ The most ambitious move. Apply the [RLM paper's training recipe](../sources/tool
 
 **Open Questions** for this path: does the LongBenchPro→generalization signal hold at 27B scale? Does 27B + recursion + REPL run on operator's tier-0 hardware? What's the empirical performance vs Opus 4.7 on operator's specific task mix? **None are answered today**; all require experimentation.
 
-### The Pragmatic Path — Qwen3.6-27B Now, Watch RLM Path
+### The Phase-1 Path (REVISED 2026-04-28) — Both Routed at $0 Cash
 
-For T-0 (today), the **lowest-risk move** is to deploy Qwen3.6-27B at UD-IQ2 quantization on operator's existing hardware (or upgrade VRAM if needed), wire it as AICP's `local` backend, and capture the smart-routing $540→$100 win the [AICP 2026-04-24 handoff](../../../devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md) documented. RLM-Qwen3-8B remains a roadmap item: validate when checkpoint releases, OR commit to the 48 H100-hour self-training run if the operator's mission needs the long-context capability.
+State changes since original 2026-04-27 authoring: (a) MIT released the [RLM-Qwen3-8B checkpoint](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) — pull-and-run available; (b) operator ordered RTX 3090 (renewed) on 2026-04-27, ETA 2-3 weeks — 24GB VRAM comfortably runs BOTH candidates locally.
 
-This is the [Goldilocks principle](../lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md) at the model-selection level: don't deploy paradigm-shifting infrastructure for tasks the simpler path solves.
+**Phase-1 default**: deploy BOTH at $0 cash, routed by context length:
+- **Long context (>32K tokens)** → `mit-oasys/rlm-qwen3-8b-v0.1` (RLM paradigm, robust at 10M+ tokens)
+- **Short context (≤32K tokens)** → vanilla Qwen3.6-27B at UD-IQ2 (~14-16GB, comfortable on 24GB) for agentic coding + tool use
+
+This is the [Goldilocks principle](../lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative.md) at the model-selection level: each model serves its strongest regime; AICP routes based on the request's context length. **Both checkpoints exist; no training required for Phase-1 capability.**
+
+The earlier framing — "Qwen3.6-27B now, watch RLM path" — was correct under uncertainty about the RLM-Qwen3-8B checkpoint. With the checkpoint now confirmed live, the Phase-1 default upgrades from "27B alone" to "both routed at $0."
 
 ### The Mission-Maximalist Path — Both, Routed
 
@@ -169,8 +176,8 @@ This is the [3-layer defense](../sources/tools-integration/src-prime-intellect-p
 
 > [!warning] What this comparison cannot answer
 >
-> 1. **Has Hugging Face released the RLM-Qwen3-8B checkpoint?** The paper's "code is available at https://github.com/alexzhang13/rlm" links the SDK, not the model weights. Need to check Hugging Face / paper-author releases.
-> 2. **Does RTX 2080 Ti support flash-attn3 or BF16 efficiently?** Turing architecture predates Hopper; both candidates may need fallback paths (FP16, sm75 kernels).
+> 1. ~~**Has Hugging Face released the RLM-Qwen3-8B checkpoint?**~~ **RESOLVED 2026-04-27**: yes, live at [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1). Run with vLLM + the alexzhang13/rlm SDK out-of-box.
+> 2. **Does RTX 2080 Ti support flash-attn3 or BF16 efficiently?** Turing architecture predates Hopper; this question becomes moot once RTX 3090 is delivered (Ampere — full BF16 + flash-attn3 supported). Operator ordered RTX 3090 (renewed) on 2026-04-27, ETA 2-3 weeks. Until delivery, current 2080 Ti may need fallback paths (FP16, sm75 kernels).
 > 3. **What are the exact OOLONG queries?** Now answered for OOLONG-Pairs (Appendix D.1 has all 20). Original OOLONG `trec_coarse` requires anonymous-author-share per the blogpost — may not be public yet.
 > 4. **What's the failure rate on operator's actual workload?** Both candidates are validated on academic benchmarks, not operator's specific tasks. Empirical validation on actual workload is the load-bearing missing data.
 
@@ -181,18 +188,16 @@ This is the [3-layer defense](../sources/tools-integration/src-prime-intellect-p
 
 ## How to Apply
 
-> [!tip] Operator decision tree for T-0
+> [!tip] Operator decision tree (REVISED 2026-04-28)
 >
-> 1. **Question**: Is the workload long-context-dominant (>32K tokens average)?
->    - **No** → deploy Qwen3.6-27B (UD-IQ2) as AICP `local` backend; mission-immediate.
->    - **Yes** → continue.
-> 2. **Question**: Has RLM-Qwen3-8B checkpoint been released to Hugging Face?
->    - **No** → either (a) deploy Qwen3.6-27B as interim AND commit to RLM-Qwen3-8B self-training (48 H100 hours, ~$48-100 USD), or (b) skip RLM until release and use Qwen3.6-27B alone.
->    - **Yes** → continue.
-> 3. **Question**: Is RTX 2080 Ti hardware sufficient for both candidates?
->    - **Verified** → deploy both, configure AICP for context-length routing.
->    - **Not verified** → benchmark first; pick the one that runs, hold the other for hardware upgrade.
-> 4. **Long-term**: Schedule RLM-Qwen3.6-27B fine-tune as the consolidating move once operator's compute budget allows (~$300-500 USD).
+> 1. **Wait for RTX 3090 delivery** (2-3 weeks from 2026-04-27 — mid-May 2026). Until then, current 2080 Ti is the constraint and Phase-1 deployment is blocked on hardware.
+> 2. **Once 3090 is in hand, deploy both at $0**:
+>    - Pull `mit-oasys/rlm-qwen3-8b-v0.1` from Hugging Face → AICP `local` backend (long-context regime)
+>    - Pull Qwen3.6-27B base + apply UD-IQ2 quantization → AICP secondary `local` backend (short-context regime)
+>    - Wire AICP context-length router: `>32K → RLM-Qwen3-8B; ≤32K → Qwen3.6-27B`
+>    - Capture the AICP smart-routing $540→$100 measurement on the new routed setup
+> 3. **Run real workload** (days/weeks). Measure where the routing approach is sufficient vs where it hits a ceiling.
+> 4. **Phase-2 conditional**: IF and ONLY IF Phase-1 demonstrates a real workload ceiling that consolidation would break, schedule the [RLM-Qwen3.6-27B fine-tune](../domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan.md) (~$300-500 cloud rental, one-time, ~24h cloud wall time). Don't pre-commit; let empirical evidence drive the spend.
 
 ## Relationships
 
