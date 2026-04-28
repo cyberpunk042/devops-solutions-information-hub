@@ -11,7 +11,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-28
 sources:
   - id: operator-directive-rework
     type: directive

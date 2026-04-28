@@ -11,7 +11,7 @@ confidence: high
 maturity: growing
 priority: P1
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-28
 sources:
   - id: second-brain-custom-model-strategy
     type: wiki

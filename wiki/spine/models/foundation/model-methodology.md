@@ -10,7 +10,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-13
+updated: 2026-04-28
 sources:
   - id: src-openarms-methodology
     type: documentation

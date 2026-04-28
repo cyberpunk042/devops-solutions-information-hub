@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-28T22:42:25.563659+00:00",
+  "generated": "2026-04-28T23:38:08.691629+00:00",
   "stats": {
     "pages": 525,
     "domains": 11,
@@ -33154,7 +33154,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-12",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "goldilocks",
@@ -33474,7 +33474,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-12",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "claude-code",
@@ -33657,7 +33657,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-14",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "skills",
@@ -33880,7 +33880,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "model",
@@ -33956,7 +33956,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-14",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "model",
@@ -34390,7 +34390,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "mcp",
@@ -34467,7 +34467,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "llm-wiki",
@@ -34546,7 +34546,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "methodology",
@@ -34812,7 +34812,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-09",
-      "updated": "2026-04-14",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "model",
@@ -35116,7 +35116,7 @@
       "status": "synthesized",
       "confidence": "authoritative",
       "created": "2026-04-09",
-      "updated": "2026-04-10",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "adoption",
@@ -35718,7 +35718,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-23",
-      "updated": "2026-04-23",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "operations-plan",
@@ -36284,7 +36284,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-18",
-      "updated": "2026-04-18",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "strategy",
@@ -36556,7 +36556,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "standards",
@@ -36714,7 +36714,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-11",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "standards",
@@ -36845,7 +36845,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-15",
-      "updated": "2026-04-15",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "standards",
@@ -37260,7 +37260,7 @@
       "status": "synthesized",
       "confidence": "high",
       "created": "2026-04-10",
-      "updated": "2026-04-13",
+      "updated": "2026-04-28",
       "last_reviewed": "",
       "tags": [
         "knowledge-evolution",

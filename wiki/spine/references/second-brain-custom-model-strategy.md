@@ -11,7 +11,7 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-28
 sources:
   - id: src-unsloth-fast-lora-consumer-hardware
     type: wiki

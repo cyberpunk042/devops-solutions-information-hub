@@ -10,7 +10,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-14
+updated: 2026-04-28
 sources:
   - id: src-claude-agent-sdk-and-managed-agents
     type: wiki

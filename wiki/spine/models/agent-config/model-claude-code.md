@@ -10,7 +10,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-09
-updated: 2026-04-12
+updated: 2026-04-28
 sources:
   - id: src-shanraisshan-claude-code-best-practice
     type: documentation
