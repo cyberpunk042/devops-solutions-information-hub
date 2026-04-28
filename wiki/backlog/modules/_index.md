@@ -39,4 +39,5 @@ tags: [backlog, modules]
 | E022-M002 | [E022-M002 — Gateway Orient Subcommand (Module Design)](e022-m002-gateway-orient-subcommand.md) | P1 | active | design | 40 | E022 |
 | E022-M003 | [E022-M003 — Gateway What-Do-I-Need Upgrade (Module Design)](e022-m003-what-do-i-need-upgrade.md) | P1 | active | design | 40 | E022 |
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M001 — Multica Per-Agent Provider Config (`custom_env` field is the answer)](post-anthropic-3-layer-m001-multica-per-agent-provider-config.md) | P0 | active | test | 95 |  |
+| POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M002 — Harness-Level Integration Details (MCP Wiring · OpenCode Config · claude-code-router Wrapper Option)](post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config.md) | P0 | active | implement | 85 |  |
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M003 — Multica → Claude Code → AICP → Ollama Cloud Smoke-Test Runbook](post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook.md) | P0 | active | scaffold | 75 |  |

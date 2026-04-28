@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T15:39:07.042710+00:00",
+  "generated": "2026-04-28T15:46:55.705947+00:00",
   "stats": {
-    "pages": 520,
+    "pages": 521,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3271,
-    "tags_unique": 1757,
+    "relationships": 3278,
+    "tags_unique": 1763,
     "layers": {
       "3": 4,
       "5": 37,
@@ -3477,6 +3477,94 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Principle 4"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config.md",
+      "slug": "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
+      "title": "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "module",
+        "p0",
+        "multica",
+        "mcp-integration",
+        "research-wiki-mcp",
+        "opencode-config",
+        "claude-code-router",
+        "harness-level",
+        "post-anthropic",
+        "mission-2026-04-28",
+        "m002"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Parent epic \u2014 this module fills the harness-level integration gap that M001 (custom_env mechanism) and M003 (smoke-test runbook) don't fully cover"
+        },
+        {
+          "id": "m001",
+          "type": "wiki",
+          "file": "wiki/backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config.md",
+          "description": "Predecessor \u2014 `custom_env` mechanism. M002 builds on M001 by adding harness-specific concerns (MCP, wrapper, OpenCode config)"
+        },
+        {
+          "id": "opencode-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-opencode-harness-features.md",
+          "description": "OpenCode's 75-provider config detail \u2014 the harness-level config mechanism for OpenCode agents in Multica"
+        },
+        {
+          "id": "multica-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-multica-managed-agents-platform.md",
+          "description": "Multica's mcp_config field documentation (currently only Claude Code consumes it per docs line 7043)"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M002 \u2014 Harness-Level Integration Details",
+        "Multica MCP + OpenCode + Wrapper Wiring"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "M001 \u2014 `custom_env` Mechanism"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "OpenCode Synthesis"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M003 \u2014 Smoke-Test Runbook"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 MCP vs CLI"
         }
       ]
     },
@@ -37889,8 +37977,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 91,
-      "relationship_count": 371
+      "page_count": 92,
+      "relationship_count": 378
     },
     "cross-domain": {
       "page_count": 220,
@@ -38790,6 +38878,7 @@
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e010-m003-storage-tiering-documentation",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
@@ -38870,6 +38959,7 @@
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
@@ -39078,6 +39168,7 @@
     "multica": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "sources/tools-integration/src-multica-managed-agents-platform"
@@ -39276,6 +39367,7 @@
       "backlog/modules/e022-m002-gateway-orient-subcommand",
       "backlog/modules/e022-m003-what-do-i-need-upgrade",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
@@ -39730,12 +39822,31 @@
     ],
     "mission-2026-04-28": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "m001": [
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+    ],
+    "mcp-integration": [
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
+    ],
+    "research-wiki-mcp": [
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
+    ],
+    "opencode-config": [
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
+    ],
+    "claude-code-router": [
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
+    ],
+    "harness-level": [
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
+    ],
+    "m002": [
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
     ],
     "smoke-test": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
@@ -46294,6 +46405,12 @@
       ]
     },
     {
+      "target": "Decision \u2014 MCP vs CLI",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)"
+      ]
+    },
+    {
       "target": "Decision \u2014 Qwen3-8B as Main Reasoning Model",
       "referenced_by": [
         "Decision \u2014 Asymmetric KV Cache Quantization (q4_0 Keys + q2_K Values) for Qwen3 Models"
@@ -46506,6 +46623,7 @@
       "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly",
       "referenced_by": [
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
+        "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
       ]
     },
@@ -46672,9 +46790,21 @@
       ]
     },
     {
+      "target": "M001 \u2014 `custom_env` Mechanism",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)"
+      ]
+    },
+    {
       "target": "M003",
       "referenced_by": [
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
+      ]
+    },
+    {
+      "target": "M003 \u2014 Smoke-Test Runbook",
+      "referenced_by": [
+        "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)"
       ]
     },
     {
