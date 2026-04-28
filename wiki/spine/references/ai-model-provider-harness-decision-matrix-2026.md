@@ -13,7 +13,7 @@ confidence: high
 maturity: growing
 priority: P0
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-04-28
 sources:
   - id: ai-infra-framework-2026
     type: wiki
@@ -217,6 +217,53 @@ Projected cost impact at operator's volume (15-30M output tokens/month): switchi
 >
 > When something changes (provider prices, new model releases, mission drift), re-run this decision flow against the updated matrix. The matrix is a live reference; the decision process is stable.
 
+## Orchestrator Layer — Above the Harness × Provider Matrix (added 2026-04-28)
+
+> [!abstract] **The matrix is now 3-axis: Orchestrator × Harness × Provider**
+>
+> Until 2026-04-28 this matrix tracked two axes (Harness × Provider × Model). The 2026-04-28 [Multica ingestion](../../sources/tools-integration/src-multica-managed-agents-platform.md) surfaced an orchestrator-layer tool — a meta-harness that auto-detects and orchestrates 10 of the wiki-tracked harness CLIs above the harness layer. This adds a third independently-substitutable dimension to the operator's stack.
+>
+> | Layer | Axis values | Lock-in risk | Substitutability |
+> |---|---|---|---|
+> | **Orchestrator** | (none) → Multica → Paperclip → operator-built | Low (open-source options exist; self-host viable) | Apache 2.0 + 10 harnesses + self-host = no single vendor controls this layer |
+> | **Harness** | Claude Code · Codex · OpenCode · OpenClaw · Cursor · Gemini CLI · Hermes · Pi · Kimi CLI · Kiro CLI · Aider · Cline · Continue · Crush · Goose · ... | Medium (some harnesses are vendor-tied: Claude Code → Anthropic ecosystem; Cursor → Cursor Inc.) | High via [harness landscape](../../sources/tools-integration/src-agentic-coding-harness-landscape-2026.md) coverage |
+> | **Provider × Model** | (the existing Master Matrix above) | Variable — see Master Matrix mission column | High via OpenRouter + Ollama Cloud + direct + local |
+>
+> **Anti-vendor-lock-in is now empirical at three layers, not two.** Per [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence chain, this closes the orchestrator-layer documentation gap. No single vendor controls more than one of the three dimensions in the operator's current stack.
+
+### Orchestrator selection (2026-04-28)
+
+> [!info] When does the orchestrator layer matter?
+>
+> | Operator state | Orchestrator choice | Why |
+> |---|---|---|
+> | **Solo operator, single machine, single harness** | None (run harness directly) | No coordination cost; orchestrator overhead exceeds benefit |
+> | **Solo operator, multi-harness** (Claude Code + OpenCode + Codex) | Multica trial-recommended | Unified board UX + skill reuse + multi-runtime monitoring; $0 (Apache 2.0 + free cloud or self-host) |
+> | **Solo operator, multi-runtime** (laptop + cloud GPU instance + dedicated workstation) | Multica recommended | Auto-detection + WebSocket streaming designed for this case |
+> | **Team-of-humans + agents** | Multica recommended | Built-in human + agent collaboration UX; agents in assignee dropdown |
+> | **Heavy governance / approvals / budgets** | Paperclip (per Multica's own comparison table) | Different abstraction — Paperclip simulates an AI agent company with org-chart depth |
+> | **Operator-specific tooling needs** | Operator-built atop Multica's open API | Multica is open-source, extensible; self-host gives full control |
+
+### Composability with existing AICP layer
+
+The operator's existing AICP backend pattern (`local`, `k2_6_local`, `k2_6_openrouter`, `ollama_cloud`) sits at the **provider routing** layer (below the harness). Multica sits at the **orchestrator** layer (above the harness). They compose without conflict:
+
+```
+Multica (orchestrator — task assignment + agent state + skill reuse)
+  ├─ Claude Code  ─→  AICP routing  ─→  local (Qwen3.6-27B at UD-IQ2 on incoming RTX 3090)
+  ├─ OpenCode     ─→  AICP routing  ─→  Ollama Cloud (K2.6) | OpenRouter | local
+  └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
+```
+
+**Three composable substitution layers**: orchestrator (Multica) × harness (10 supported) × provider (AICP backend pattern). Each layer is independently swappable without rebuilding the layers above or below it.
+
+### Quarterly review trigger added
+
+When re-validating this matrix per the criteria below, also check:
+- **A new orchestrator crosses the capability bar** (e.g., new managed-agents platform; significant Multica/Paperclip feature drift)
+- **An existing orchestrator changes license** (e.g., Multica relicenses away from Apache 2.0)
+- **Operator's orchestrator strategy changes** (adopt Multica → adopt different orchestrator → revert to direct harness use)
+
 ## Updates + quarterly review triggers
 
 Re-validate this matrix when:
@@ -224,6 +271,7 @@ Re-validate this matrix when:
 - **A new open-weight model lands** that beats K2.6, GLM 4.7, or DeepSeek in its tier (e.g., K3, GLM 5, DeepSeek V5)
 - **A major provider deprecates or launches** (e.g., Ollama Cloud model mix change, new aggregator, Cerebras adds K2.6)
 - **A new harness crosses the capability bar** to enter the "serious contender" set (currently 11+ harnesses)
+- **A new orchestrator crosses the capability bar** (managed-agents platforms — added 2026-04-28)
 - **Operator workload pattern changes** (new fleet, new domain, new regulatory constraint)
 
 ## How This Connects
