@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T12:09:39.984664+00:00",
+  "generated": "2026-04-28T12:24:29.654660+00:00",
   "stats": {
-    "pages": 515,
+    "pages": 516,
     "domains": 11,
-    "sources": 76,
+    "sources": 77,
     "comparisons": 9,
-    "relationships": 3223,
-    "tags_unique": 1728,
+    "relationships": 3235,
+    "tags_unique": 1739,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,12 +14,12 @@
       "2": 51,
       "4": 65,
       "0": 1,
-      "1": 47,
+      "1": 48,
       "spine": 76
     },
     "maturity": {
       "growing": 325,
-      "seed": 50,
+      "seed": 51,
       "mature": 2
     }
   },
@@ -29586,6 +29586,149 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-multica-managed-agents-platform.md",
+      "slug": "sources/tools-integration/src-multica-managed-agents-platform",
+      "title": "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-28",
+      "updated": "2026-04-28",
+      "last_reviewed": "2026-04-28",
+      "tags": [
+        "multica",
+        "orchestrator",
+        "managed-agents-platform",
+        "meta-harness",
+        "claude-code",
+        "codex",
+        "openclaw",
+        "opencode",
+        "hermes",
+        "gemini",
+        "pi",
+        "cursor-agent",
+        "kimi",
+        "kiro-cli",
+        "apache-2-0",
+        "go",
+        "postgresql",
+        "pgvector",
+        "websocket",
+        "self-hosted",
+        "cloud-optional",
+        "vendor-neutral",
+        "anti-vendor-lock-in",
+        "mission-2026-04-28",
+        "paper-pdf-layer-1",
+        "post-anthropic-stack"
+      ],
+      "sources": [
+        {
+          "id": "multica-github",
+          "type": "repository",
+          "url": "https://github.com/multica-ai/multica",
+          "file": "raw/articles/multica-aimultica.md",
+          "title": "multica-ai/multica \u2014 README + 29 fetched files",
+          "description": "Authoritative open-source repository \u2014 Apache 2.0, Go backend + Next.js 16 frontend + PostgreSQL 17 (pgvector) + local-daemon agent runtime. Verified 2026-04-28.",
+          "ingested": "2026-04-28"
+        },
+        {
+          "id": "multica-website",
+          "type": "documentation",
+          "url": "https://multica.ai/",
+          "file": "raw/articles/multica-project-management-for-human-agent-teams.md",
+          "title": "Multica \u2014 Project Management for Human + Agent Teams",
+          "description": "Project marketing page \u2014 supports BOTH self-host AND cloud (multica.ai/app); confirms vendor-neutral framing, BYO-LLM, and the agent-as-teammate model",
+          "ingested": "2026-04-28"
+        },
+        {
+          "id": "harness-landscape",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-agentic-coding-harness-landscape-2026.md",
+          "description": "The 11+ harness landscape this orchestrator sits above. Multica supports 10 of them (Claude Code, Codex, OpenClaw, OpenCode, Hermes, Gemini, Pi, Cursor Agent, Kimi, Kiro CLI)."
+        },
+        {
+          "id": "opencode-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-opencode-harness-features.md",
+          "description": "Per-harness synthesis for one of the supported backends. Multica orchestrates OpenCode at the layer above OpenCode's per-provider routing."
+        },
+        {
+          "id": "ai-decision-matrix",
+          "type": "wiki",
+          "file": "wiki/spine/references/ai-model-provider-harness-decision-matrix-2026.md",
+          "description": "Decision matrix where Multica adds an orchestrator dimension. The matrix already covers harness \u00d7 provider; Multica adds a third axis (orchestrator)."
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson. Multica's explicit 'No vendor lock-in / Bring your own LLM provider, swap agent backends' framing is empirical anti-vendor-lock-in at the orchestrator layer \u2014 a layer the lesson's evidence chain hadn't yet documented."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Multica",
+        "Multica Managed Agents Platform",
+        "Multica Orchestrator",
+        "Multica Synthesis"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Agentic Coding Harness Landscape 2026"
+        },
+        {
+          "verb": "DERIVED FROM",
+          "target": "OpenCode Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Inference Provider Landscape 2026"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Kimi K2.6"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Ecosystem Architecture"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, Hooks"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-omnivoice-tts-600-languages.md",
       "slug": "sources/tools-integration/src-omnivoice-tts-600-languages",
       "title": "Synthesis \u2014 OmniVoice: Open-Source TTS Supporting 600+ Languages",
@@ -37357,8 +37500,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 16,
-      "relationship_count": 166
+      "page_count": 17,
+      "relationship_count": 178
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -38359,6 +38502,7 @@
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-opencode-harness-features"
     ],
     "harness-neutral": [
@@ -39541,6 +39685,7 @@
     "kimi": [
       "comparisons/kimi-k2-6-access-paths-openrouter-ollama-cloud-local",
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ollama-cloud": [
@@ -39701,6 +39846,7 @@
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
@@ -39864,6 +40010,7 @@
       "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
       "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
       "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
       "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k",
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
@@ -40687,7 +40834,8 @@
       "patterns/03_validated/architecture/gateway-centric-routing",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
       "sources/src-openclaw-billing-proxy",
-      "sources/tools-integration/src-gemma4-searxng-openclaw"
+      "sources/tools-integration/src-gemma4-searxng-openclaw",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "agent-framework": [
       "domains/ai-agents/orchestration/openclaw",
@@ -41853,7 +42001,8 @@
     ],
     "self-hosted": [
       "domains/tools-and-platforms/plane",
-      "sources/tools-integration/src-gemma4-searxng-openclaw"
+      "sources/tools-integration/src-gemma4-searxng-openclaw",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "docker": [
       "domains/tools-and-platforms/plane"
@@ -42815,6 +42964,7 @@
       "log/2026-04-25-session-handoff-qwen3-6-27b-ingestion-batch",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
     ],
     "t-minus-2": [
@@ -43145,7 +43295,8 @@
       "patterns/03_validated/architecture/gateway-centric-routing"
     ],
     "websocket": [
-      "patterns/03_validated/architecture/gateway-centric-routing"
+      "patterns/03_validated/architecture/gateway-centric-routing",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "agent-dispatch": [
       "patterns/03_validated/architecture/gateway-centric-routing"
@@ -43304,7 +43455,8 @@
       "spine/standards/source-synthesis-page-standards"
     ],
     "orchestrator": [
-      "sources/ecosystem-projects/src-openfleet-fleet-architecture"
+      "sources/ecosystem-projects/src-openfleet-fleet-architecture",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "contributions": [
       "sources/ecosystem-projects/src-openfleet-fleet-architecture"
@@ -43509,7 +43661,8 @@
       "sources/src-arxiv-natural-language-agent-harnesses"
     ],
     "meta-harness": [
-      "sources/src-arxiv-meta-harness-outer-loop-search"
+      "sources/src-arxiv-meta-harness-outer-loop-search",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "outer-loop-optimization": [
       "sources/src-arxiv-meta-harness-outer-loop-search"
@@ -43859,6 +44012,7 @@
     "codex": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "aider": [
@@ -44025,6 +44179,7 @@
       "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
       "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
       "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
+      "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k"
     ],
     "plugins": [
@@ -44102,7 +44257,8 @@
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "apache-2-0": [
-      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
+      "sources/tools-integration/src-gpt-oss-openai-open-weight-moe",
+      "sources/tools-integration/src-multica-managed-agents-platform"
     ],
     "mxfp4": [
       "sources/tools-integration/src-gpt-oss-openai-open-weight-moe"
@@ -44307,6 +44463,47 @@
     "rlm-codeqa-split": [
       "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans"
     ],
+    "multica": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "managed-agents-platform": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "hermes": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "gemini": [
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "spine/references/ai-model-provider-harness-decision-matrix-2026"
+    ],
+    "pi": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "cursor-agent": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "kiro-cli": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "go": [
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/tools-integration/src-opencode-harness-features"
+    ],
+    "postgresql": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "pgvector": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "cloud-optional": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "vendor-neutral": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
+    "mission-2026-04-28": [
+      "sources/tools-integration/src-multica-managed-agents-platform"
+    ],
     "tts": [
       "sources/tools-integration/src-omnivoice-tts-600-languages"
     ],
@@ -44460,9 +44657,6 @@
       "sources/tools-integration/src-opencode-harness-features"
     ],
     "build-plan-modes": [
-      "sources/tools-integration/src-opencode-harness-features"
-    ],
-    "go": [
       "sources/tools-integration/src-opencode-harness-features"
     ],
     "75-providers": [
@@ -44997,9 +45191,6 @@
     "deepseek": [
       "spine/references/ai-model-provider-harness-decision-matrix-2026"
     ],
-    "gemini": [
-      "spine/references/ai-model-provider-harness-decision-matrix-2026"
-    ],
     "roadmap": [
       "spine/references/consumer-integration-roadmap-exemplar"
     ],
@@ -45213,6 +45404,7 @@
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
+        "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG (Bertsch et al. Nov 2025) + LongBench Pro (Chen et al. Jan 2026): The Long-Context Benchmarks Anchoring the RLM Thread",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
         "Synthesis \u2014 Prime Intellect PRIME-RL: Async RL Training at Scale (1000+ GPUs, FSDP2 + vLLM, Used to Train RLM-Qwen3-8B)",
@@ -45445,6 +45637,7 @@
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
+        "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
       ]
@@ -45894,6 +46087,12 @@
       ]
     },
     {
+      "target": "Kimi K2.6",
+      "referenced_by": [
+        "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
+      ]
+    },
+    {
       "target": "Kimi K2.6 Synthesis",
       "referenced_by": [
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
@@ -46046,6 +46245,12 @@
       "target": "Model \u2014 Markdown as IaC",
       "referenced_by": [
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
+      ]
+    },
+    {
+      "target": "Model \u2014 Skills, Commands, Hooks",
+      "referenced_by": [
+        "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
       ]
     },
     {

@@ -265,3 +265,4 @@ Re-validate this matrix when:
 [[local-training-playbook-2026|Local Training Playbook 2026]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
 [[provider-pricing-monitoring-operations-plan|Provider Pricing Monitoring — Operations Plan]]
+[[src-multica-managed-agents-platform|Synthesis — Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)]]
