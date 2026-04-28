@@ -10,7 +10,7 @@ status: synthesized
 confidence: authoritative
 maturity: growing
 created: 2026-04-10
-updated: 2026-04-13
+updated: 2026-04-28
 sources:
   - id: operator-vision
     type: directive
@@ -24,7 +24,7 @@ tags: [super-model, second-brain, hub, ecosystem, adoption, models, standards, i
 # Super-Model — Research Wiki as Ecosystem Intelligence Hub
 ## Summary
 
-This is the super-model — the packaging of all 16 models, 22 standards pages, and the full knowledge architecture into a consumable system that any project can adopt. The research wiki is not just a documentation project. It is a central intelligence hub that defines HOW work is done (methodology), WHAT knowledge looks like (LLM Wiki), HOW quality is maintained (failure prevention), and HOW projects integrate (ecosystem architecture). This page is the entry point — whether you are an operator, a solo agent, a harness-managed agent, or a client project adopting the system for the first time.
+This is the super-model — the packaging of all 16 models, 26 standards pages, and the full knowledge architecture into a consumable system that any project can adopt. The research wiki is not just a documentation project. It is a central intelligence hub that defines HOW work is done (methodology), WHAT knowledge looks like (LLM Wiki), HOW quality is maintained (failure prevention), and HOW projects integrate (ecosystem architecture). This page is the entry point — whether you are an operator, a solo agent, a harness-managed agent, or a client project adopting the system for the first time.
 
 > [!info] What the hub offers — v2.0
 >
@@ -117,24 +117,25 @@ Each project adapts the super-model to its context. The second brain maintains a
 
 ## Current State — v2.0
 
-> [!abstract] System metrics (updated 2026-04-19)
+> [!abstract] System metrics (updated 2026-04-28)
 >
 > | Metric | Value |
 > |--------|-------|
-> | **Pages** | 391 |
-> | **Relationships** | 2,560+ |
+> | **Pages** | 525 |
+> | **Relationships** | 3,298 |
 > | **Models** | 16 (+ 9 methodology models in methodology.yaml) |
-> | **Standards** | 25 (per-type + per-model + gateway output contract) |
-> | **Lessons** | 44+ validated + 13 contributed (3 inbox pending review) |
-> | **Patterns** | 19+ validated + 11 in 01_drafts (5 new from AICP 2026-04-18/19) |
+> | **Standards** | 26 (15 per-type + 8 per-model + gateway-output-contract + harness-contract + session-handoff-standards) |
+> | **Lessons** | 41 validated · 4 principles (Layer 7) · 24 in pipeline (2 inbox / 19 drafts / 3 synthesized) · **69 total** |
+> | **Patterns** | 15 validated · 1 synthesized · 14 drafts · **30 total** |
 > | **Principles** | 4 (Infrastructure > Instructions, Structured Context > Content, Goldilocks, Declarations Are Aspirational Until Verified) |
-> | **Decisions** | 17+ validated + 8 in 01_drafts (7 new from AICP 2026-04-18/19) |
-> | **Source syntheses** | 48+ (4 added 2026-04-17: AirLLM, gpt-oss, Unsloth, Qwopus v3) |
-> | **Spine references** | 3 added 2026-04-17/18 (Open-Model Evaluation Framework, 2026 Consumer-Hardware AI Stack, Second-Brain Custom Model Strategy) |
+> | **Decisions** | 16 validated · 10 drafts · **26 total** |
+> | **Source syntheses** | 77 — recent: Multica, RLM (paper deep-dive + empirical findings), BrowseComp-Plus, OOLONG, LongBench Pro/v2, Qwen3.6-27B, Kimi K2.6 |
+> | **Spine references** | Open-Model Evaluation Framework · 2026 Consumer-Hardware AI Stack · Second-Brain Custom Model Strategy · AI Decision Matrix 2026 · AI Infrastructure Decision Framework 2026 |
 > | **Ecosystem profiles** | 5 (OpenArms, OpenFleet, AICP, devops-control-plane, Research Wiki) — all reconciled with consumer-property doctrine |
-> | **Cross-project contributions accepted** | 17 (OpenFleet: 5, AICP: 13, others: —) — 4-day window 2026-04-16→19 |
+> | **MCP tools** | 28 (verified by decorator count post phantom-removal 2026-04-27) |
 > | **Validation errors** | 0 |
-> | **Lint issues** | 3 (pre-existing) |
+> | **Lint issues** | 5 (pre-existing advisory) |
+> | **Super-Model Compliance** | Tier 4/4 (Hub Integration) — all 12 requirements met |
 >
 > **v2.0 architecture:**
 > - 5 sub-super-models as navigation hubs (Goldilocks, Enforcement, Knowledge, Work Management, Integration)
@@ -166,7 +167,7 @@ Each project adapts the super-model to its context. The second brain maintains a
 > | **A harness-managed agent** | Your stage skill (injected by harness) | The skill points to the right methodology model and artifacts |
 > | **An agent from another project connecting to the second brain** | [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]] → 4 entry paths | Query methodology, get standards, adapt to your domain |
 > | **A system designer** | [[model-methodology|Model — Methodology]] → [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] | Design the right PM infrastructure for your scale |
-> | **A human learning the system** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] → 24 pages in 6 parts | Progressive learning from concepts to execution to enforcement |
+> | **A human learning the system** | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] → 30 pages in 8 parts | Progressive learning from concepts to execution to enforcement |
 
 > [!tip] The Weave — How Everything Connects
 >
