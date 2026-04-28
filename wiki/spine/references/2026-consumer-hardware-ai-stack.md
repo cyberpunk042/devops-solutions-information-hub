@@ -11,7 +11,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-28
 sources:
   - id: src-unsloth-fast-lora-consumer-hardware
     type: wiki
@@ -355,6 +355,38 @@ Three days after the 2026-04-22 K2.6 update and one day after the 2026-04-24 loc
 | **E010 — Storage and Hardware Enablement** | Lower priority for VRAM expansion if Qwen3.6-27B UD-IQ2 fits in current 5-7 GB. Higher priority if operator wants path 2a (BF16) for reference-quality. |
 | **E011 — Routing Integration AICP Tiers** | **Significantly impacted.** Rewire from "K2.6 cloud / gpt-oss local" tiers to "Qwen3.6-27B local primary / K2.6 cloud fallback / Opus exception" tiers. Mission-load-bearing for 2026-04-27. |
 | **E012 — Custom Model Library / Unsloth LoRAs** | **Boosted.** Qwen3.6-27B is the natural new base for wiki-corpus fine-tunes (replacing the originally-named Qwen3.5-4B). Larger base = more headroom for methodology fluency without losing tier-0 fit. |
+
+## 2026-04-28 Addendum — 3-Layer Composability Achieved (Multica + Harness + AICP)
+
+> [!success] **The stack reached 3-layer composability.**
+>
+> Two new operator-stated facts crystallized the assembly: **RTX 3090 (renewed) ordered 2026-04-27, ETA 2-3 weeks** (Subsystem 3 hardware unlock per CONTEXT.md threshold) · **Multica adopted as the orchestrator layer**, self-hosted at `/home/jfortin/.multica/server/` (built from source, Apache 2.0). Combined with the existing harness layer (Claude Code + OpenCode) and AICP provider routing (`local`/`k2_6_local`/`k2_6_openrouter`/`ollama_cloud` backends), the operator's stack now spans **three independently-substitutable layers**: **orchestrator (Multica) × harness (10 supported CLIs) × provider (10+ via AICP routing)**. No single vendor controls more than one of the three.
+
+### Three new things this addendum captures
+
+1. **Orchestrator layer is now a first-class substitutable component.** Multica auto-detects 10 harness CLIs (Claude Code · Codex · OpenClaw · OpenCode · Hermes · Gemini · Pi · Cursor Agent · Kimi · Kiro CLI) and exposes per-agent provider routing via `custom_env` (operator-validated 2026-04-28). Per-agent shaping spans 7 dimensions: `provider × custom_env × custom_args × skills × instructions × model × mcp_config`. See [[src-multica-managed-agents-platform|Multica Synthesis]] and [[adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04|Decision: Adopt Multica]] for the full architectural rationale.
+
+2. **MIT RLM-Qwen3-8B HF checkpoint is live.** [`mit-oasys/rlm-qwen3-8b-v0.1`](https://huggingface.co/mit-oasys/rlm-qwen3-8b-v0.1) (confirmed 2026-04-27). Combined with Qwen3.6-27B at UD-IQ2 quantization (per the 2026-04-25 addendum), the operator now has **two open-weight tier-0 candidates** that fit comfortably on the incoming RTX 3090 (24GB VRAM Ampere): RLM-Qwen3-8B for long-context (32K → ~3.2M effective via REPL recursion) + Qwen3.6-27B for short-context dense reasoning. Both at $0 cash (no cloud GPU rental). The [[rlm-qwen3-6-27b-fine-tune-operations-plan|RLM-Qwen3.6-27B fine-tune operations plan]] becomes Phase-2-conditional (~$300-500 one-time, only if Phase-1 routing demonstrates a real workload ceiling).
+
+3. **3-layer composability empirically claimed.** Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] Evidence 10 (added 2026-04-28), the orchestrator layer is now documented + open-source + self-host capable. Combined with prior Evidence 1-9 (harness + provider + retrieval + inference paradigm + training + environment + evaluation × 4 + loss + deployment), the wiki's mission claim is empirically traceable across **3 structural composition layers**, not just 2. See [[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Post-Anthropic 3-Layer Stack Assembly Epic]] for the in-progress operational implementation.
+
+### Hardware-tier reframing (incoming RTX 3090 changes Tier 0)
+
+The 2026-04-25 addendum's "operator's RTX 2080 Ti VRAM budget" framing is **superseded for Tier 0** by the incoming 3090. Once delivered (~mid-May 2026):
+
+| Workload | Tier 0 placement (post-3090) |
+|---|---|
+| Short-context agentic coding | Local: Qwen3.6-27B at UD-IQ2 (~14-16GB) on 3090 — comfortable with headroom |
+| Long-context reasoning + RAG | Local: RLM-Qwen3-8B BF16 (~16GB) on 3090 — full precision fits with headroom |
+| Multi-agent orchestration | Multica daemon → routes to local agents (3090) AND cloud agents (Ollama Cloud / OpenRouter) per `custom_env` |
+| Cost-sensitive bulk inference | Cloud: Ollama Cloud Pro (flat $20/mo) — registered active stack member |
+| Frontier-edge specialty | Cloud: OpenRouter routing (per existing tier_map) — Anthropic / OpenAI / DeepSeek / GLM as cost-per-task warrants |
+
+The Tier 0 hardware floor is **24GB VRAM (Ampere)** post-delivery — meaningfully different from the 11GB Turing floor that constrained 2026-04-25's framing. K2.6 local remains sovereignty-insurance (per 2026-04-24 addendum); not a primary path.
+
+### Curated reading order (for operators evaluating the same 3-layer pattern)
+
+See [[post-anthropic-3-layer-stack-2026-04-28|Learning Path — Post-Anthropic 3-Layer Stack 2026-04-28]] for the 5-goal × 12-artifact navigation. Goal A (30 min) covers the architecture; Goal C (1.5h with hands-on) walks through M003's smoke-test runbook to validate empirically.
 
 ## Connection to the Four Principles
 

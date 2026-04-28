@@ -52,6 +52,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E011 | [E011 — Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)](epics/pre-milestone/E011-routing-integration-aicp-tiers.md) | P1 | draft | 10 |
 | E012 | [E012 — Custom Model Library (Unsloth LoRAs on Wiki Corpus)](epics/pre-milestone/E012-custom-model-library-unsloth-loras.md) | P2 | draft | 5 |
 | POST | [Post-Anthropic Stack 3-Layer Composability — Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)](epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) | P0 | in-progress | 65 |
+| REPO | [Repo Documentation Overhaul — README + Root Docs Polish for Hyper-Clean, Sell-Worthy, Navigation-Coherent Repo (2026-04-28)](epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28.md) | P0 | active | 25 |
 | SDLC | [SDLC Rules and Structure — Customizable Project Lifecycle](epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md) | P0 | draft | 10 |
 | WIKI | [Wiki Gateway Tools — Unified Knowledge Interface](epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface.md) | P0 | draft | 5 |
 
