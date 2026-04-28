@@ -231,7 +231,7 @@ Evolved pages organize into maturity-based subfolders: `00_inbox → 01_drafts �
 > - Weekly evolution cadence codified as pipeline chain
 > - Source page coexistence policy
 > - Maturity folder structure implemented (00_inbox→04_principles)
-> - 40 validated lessons + 15 validated patterns + 3 principles extracted
+> - 41 validated lessons + 15 validated patterns + 4 principles extracted
 > - 10+ evolved pages generated (lessons, patterns, decisions, principles)
 
 > [!warning] **Thin or unverified**

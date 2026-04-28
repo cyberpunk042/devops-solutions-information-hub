@@ -162,7 +162,7 @@ Every context-aware subcommand branches on location × freshness. Output shape i
 >
 > READ THE BASE (each builds on the previous):
 >   1. super-model.md → 2. model-registry.md → 3. foundation models
->   4. 3 principles → 5. per-type standards
+>   4. principles (4 governing) → 5. per-type standards
 >
 > NEXT: gateway what-do-i-need    (after you have internalized the base)
 > ```

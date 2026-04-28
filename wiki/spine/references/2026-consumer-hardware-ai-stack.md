@@ -128,7 +128,7 @@ As above — the primary beneficiary of today's evidence. Integration-blocked on
 The Apache 2.0 licensing matters here specifically: DCP handles infrastructure governance where policy and audit trails matter. Running gpt-oss / Qwopus locally means the reasoning traces NEVER leave the machine — a structural win for sensitive infrastructure decisions.
 
 ### Research Wiki (this project)
-The wiki IS the highest-value fine-tuning corpus in the ecosystem: 368 curated pages, 2461 relationships, 16 models, 22+ standards, all consistent-schema Markdown. A Qwen3.5-4B LoRA fine-tune on the wiki corpus produces a methodology-fluent local assistant in 1-3 hours. This enables the wiki to *itself* become distributed intelligence (fine-tune ships with the wiki export) rather than only a reading surface.
+The wiki IS the highest-value fine-tuning corpus in the ecosystem: 525 curated pages, 3,298 relationships, 16 models, 26 standards (as of 2026-04-28), all consistent-schema Markdown. A Qwen3.5-4B LoRA fine-tune on the wiki corpus produces a methodology-fluent local assistant in 1-3 hours. This enables the wiki to *itself* become distributed intelligence (fine-tune ships with the wiki export) rather than only a reading surface.
 
 ## The Operator's Concrete Next Moves (Ranked by Impact × Ease)
 

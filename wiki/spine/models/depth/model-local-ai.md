@@ -110,7 +110,7 @@ The routing model above assumes inference over a fixed catalog of models. With [
 > | Deployment footprint | Full model per task class | One base + many 10-100 MB LoRA adapters |
 > | Cost to create a specialized model | Research-lab budget | 2-6 hours on consumer hardware |
 
-**Concrete ecosystem implication**: the wiki itself (367 pages, 2455 relationships, 16 models, 22+ standards) is a candidate SFT training corpus. Unsloth Data Recipes auto-convert structured Markdown into training pairs. A 4-8 hour fine-tune run produces a locally-deployable model that speaks fluent methodology — routable via AICP for wiki-maintenance tasks at $0 per invocation. See [[src-unsloth-fast-lora-consumer-hardware|Unsloth synthesis]] for feasibility math and the Qwopus precedent.
+**Concrete ecosystem implication**: the wiki itself (525 pages, 3,298 relationships, 16 models, 26 standards as of 2026-04-28) is a candidate SFT training corpus. Unsloth Data Recipes auto-convert structured Markdown into training pairs. A 4-8 hour fine-tune run produces a locally-deployable model that speaks fluent methodology — routable via AICP for wiki-maintenance tasks at $0 per invocation. See [[src-unsloth-fast-lora-consumer-hardware|Unsloth synthesis]] for feasibility math and the Qwopus precedent.
 
 ### How to Evaluate a New Model Announcement (NEW 2026-04-17)
 

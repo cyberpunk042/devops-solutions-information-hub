@@ -394,12 +394,13 @@ The field crystallized harness engineering as a named discipline in late-2024 �
 > The key insight: documentation layers WORK when each layer has a clear owner (CLAUDE.md = agent, wiki/ = knowledge, docs/ = humans, src/ = developers) and the agent knows which layer to read for which purpose.
 
 > [!example]- **Real instance: this research wiki's harness**
-> - **CLAUDE.md** — 180 lines. Schema, ingestion modes, quality gates, tooling commands, agent methodology section with stage gates.
-> - **5 skills** — wiki-agent, evolve, continue, model-builder, notebooklm. Each a folder with `skill.md`.
+> - **CLAUDE.md** — 119 lines (slim after rules-extraction to `.claude/rules/`). Operator directives, identity profile, 4 principles, 10 hard rules, routing summary, methodology pointer, self-reference, hook layer, pointers to depth.
+> - **7 `.claude/rules/` files** — routing.md, methodology.md, self-reference.md, learnings.md, work-mode.md, ingestion.md, hook-architecture.md. Loaded on demand per topic.
 > - **9 commands** — `/continue`, `/evolve`, `/ingest`, `/review`, `/gaps`, `/status`, `/backlog`, `/log`, `/build-model`.
+> - **Skills not yet built** — per CLAUDE.md hot-path framing, the project currently uses commands + MCP + 4 hooks + 7 rules files + loaded knowledge instead. Skills are the planned next layer (~70% deterministic auto-trigger).
 > - **28 MCP tools** (verified 2026-04-27 by decorator count post-phantom-removal; grown from 17 → 26 → 28) — wiki operations accessible from any Claude Code conversation. Past Model — MCP and CLI Integration's stated ~17-20 upper limit for schema overhead; selective tool exposure recommended as the next step.
 > - **Pipeline chains** — `post` (6-step validation), `health`, `evolve`, `continue`, `review`. Deterministic orchestration at level 1.
-> - **No hooks yet** — operating at levels 0-1. Hook-based stage-gate enforcement is the planned next step.
+> - **4 hooks wired** — pre-webfetch-corpus-check.sh (corpus URL routing) · pre-bash.sh (truncation pipe blocking) · session-start.sh (digest injection) · post-compact.sh (state restoration). Operating at levels 0-2; hook layer empirically validated at 19+ cumulative firings (per saturation lesson).
 
 ### Key Pages
 
@@ -506,12 +507,13 @@ Validated experience from operating Claude Code in this ecosystem.
 > The key insight: documentation layers WORK when each layer has a clear owner (CLAUDE.md = agent, wiki/ = knowledge, docs/ = humans, src/ = developers) and the agent knows which layer to read for which purpose.
 
 > [!example]- **Real instance: this research wiki's harness**
-> - **CLAUDE.md** — 180 lines. Schema, ingestion modes, quality gates, tooling commands, agent methodology section with stage gates.
-> - **5 skills** — wiki-agent, evolve, continue, model-builder, notebooklm. Each a folder with `skill.md`.
+> - **CLAUDE.md** — 119 lines (slim after rules-extraction to `.claude/rules/`). Operator directives, identity profile, 4 principles, 10 hard rules, routing summary, methodology pointer, self-reference, hook layer, pointers to depth.
+> - **7 `.claude/rules/` files** — routing.md, methodology.md, self-reference.md, learnings.md, work-mode.md, ingestion.md, hook-architecture.md. Loaded on demand per topic.
 > - **9 commands** — `/continue`, `/evolve`, `/ingest`, `/review`, `/gaps`, `/status`, `/backlog`, `/log`, `/build-model`.
+> - **Skills not yet built** — per CLAUDE.md hot-path framing, the project currently uses commands + MCP + 4 hooks + 7 rules files + loaded knowledge instead. Skills are the planned next layer (~70% deterministic auto-trigger).
 > - **28 MCP tools** (verified 2026-04-27 by decorator count post-phantom-removal; grown from 17 → 26 → 28) — wiki operations accessible from any Claude Code conversation. Past Model — MCP and CLI Integration's stated ~17-20 upper limit for schema overhead; selective tool exposure recommended as the next step.
 > - **Pipeline chains** — `post` (6-step validation), `health`, `evolve`, `continue`, `review`. Deterministic orchestration at level 1.
-> - **No hooks yet** — operating at levels 0-1. Hook-based stage-gate enforcement is the planned next step.
+> - **4 hooks wired** — pre-webfetch-corpus-check.sh (corpus URL routing) · pre-bash.sh (truncation pipe blocking) · session-start.sh (digest injection) · post-compact.sh (state restoration). Operating at levels 0-2; hook layer empirically validated at 19+ cumulative firings (per saturation lesson).
 
 ## Open Questions
 

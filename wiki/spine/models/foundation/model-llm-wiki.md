@@ -372,7 +372,7 @@ Evolved knowledge pages (lessons, patterns, decisions) organize into maturity-ba
 
 The scalability rule: when any folder exceeds ~10 items, add sub-structure (clusters/, related/, unrelated/). This keeps browsing manageable at every level.
 
-Currently the research wiki has: 40 validated lessons, 15 validated patterns, 3 principles (hypothesis). Zero inbox, zero drafts, zero synthesized — everything was promoted during the 2026-04-12 session. The inbox is ready for new incoming knowledge from source ingestion.
+Currently the research wiki has: 41 validated lessons, 15 validated patterns, 4 principles. Plus 19 drafts, 3 synthesized, 2 inbox items pending review (as of 2026-04-28). The pipeline has been running continuously since 2026-04-12; lessons flow in via source ingestion + cross-project contributions.
 
 ### Dual-Scope: Second Brain AND Project Wiki
 
@@ -494,8 +494,8 @@ From building with this model — validated experience:
 > OpenFleet has 10 agents but they don't write to the wiki simultaneously. The contribution system gates inputs. Real multi-agent co-authoring remains untested. (Requires: multi-agent testing)
 
 > [!question] ~~When does LightRAG become necessary?~~
-> **RESOLVED:** When keyword search + relationship traversal can't find cross-domain answers. ~200+ pages with dense relationships. Wiki at 296 pages — approaching threshold.
-> The wiki is at ~280 pages — above the ~200 index-navigation ceiling. LightRAG integration is designed but not deployed. (Requires: benchmarking search accuracy with current page count)
+> **RESOLVED:** When keyword search + relationship traversal can't find cross-domain answers. ~200+ pages with dense relationships. Wiki at 525 pages (as of 2026-04-28) — well past threshold.
+> The wiki is at 525 pages — well above the ~200 index-navigation ceiling. LightRAG integration is designed but not deployed. (Requires: benchmarking search accuracy with current page count)
 
 ### How This All Weaves Together — Navigation from This Page
 

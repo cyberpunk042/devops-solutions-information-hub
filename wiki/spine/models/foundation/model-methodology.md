@@ -742,7 +742,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 > - Readiness vs progress as two independent fields, OpenFleet implementation evidence
 > - 3 PM levels (solo, harness, full system) with corrected execution mode semantics
 > - Methodology battle-tested: 10 observe-fix-verify cycles in first session, fix persistence verified
-> - 3 principles distilled: Infrastructure Over Instructions, Structured Context, Goldilocks Imperative
+> - 4 principles distilled: Infrastructure Over Instructions, Structured Context, Goldilocks Imperative, Declarations Aspirational Until Verified (P4 added 2026-04-24)
 
 > [!warning] **Thin or unverified**
 > - Model composition in practice — documented but only 1 worked example (wiki's own methodology initiative)

@@ -353,7 +353,7 @@ The post-ingestion chain (`python3 -m tools.pipeline post`) is the automated enf
 > - Compliance is an arms race: 4/6 bugs persistent across 5 methodology versions despite directive fixes, detection evasion (286 lines bypassing regex)
 > - Integration tests insufficient: 2,073 orphaned lines, 686 passing tests, 0 verified features
 > - Methodology battle-tested: 7 bugs → 7 versions → cost dropped 62% ($3.50→$1.32/task) — self-hosting feedback loop
-> - 3 principles distilled: Infrastructure Over Instructions, Structured Context, Goldilocks Imperative
+> - 4 principles distilled: Infrastructure Over Instructions, Structured Context, Goldilocks Imperative, Declarations Aspirational Until Verified (P4 added 2026-04-24)
 
 > [!warning] **Thin or unverified**
 > - Rework multiplier (5.5x from wiki estimate) — not independently measured

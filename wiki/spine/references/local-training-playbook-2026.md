@@ -52,7 +52,7 @@ tags: [operations-plan, training, lora, unsloth, wiki-alignment, tool-calls, sem
 > | Unsloth installed | ⚠️ Install via `pip install unsloth` in AICP venv or standalone | `uv pip install unsloth transformers peft datasets accelerate bitsandbytes` |
 > | Sentence-Transformers installed (Track 3) | ⚠️ `pip install sentence-transformers` | — |
 > | Ollama for deployment | ⚠️ Install Ollama CLI | `curl -fsSL https://ollama.com/install.sh \| sh` |
-> | Wiki corpus exportable to jsonl | ✅ 468 pages, parseable via `tools.manifest` | — |
+> | Wiki corpus exportable to jsonl | ✅ 525 pages, parseable via `tools.manifest` | — |
 > | Evaluation holdout set reserved | ❌ Needs building (step 1 of each track) | See per-track Data sections |
 
 ## The Decision Grid (before starting)
