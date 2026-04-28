@@ -11,8 +11,8 @@ status: synthesized
 confidence: high
 maturity: seed
 created: 2026-04-27
-updated: 2026-04-27
-last_reviewed: 2026-04-27
+updated: 2026-04-28
+last_reviewed: 2026-04-28
 derived_from:
   - "RLM Paper Deep Dive (Table 1, Training Recipe)"
   - "RLM Empirical Findings (OOLONG 114% improvement)"
@@ -125,6 +125,18 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 > [!success]- **Evidence 9 — Sustained mission validation: $540 → $100 CAD/mo finding (AICP 2026-04-24 handoff)**
 >
 > Per AICP's authoritative state (`~/devops-expert-local-ai/docs/SESSION-2026-04-24-HANDOFF.md`): **smart cloud-tier routing alone drops cloud spend ~$540 → ~$100 CAD/mo (80% reduction) without hardware investment**. This is empirical at the deployment layer — operator's actual workload, actual prior bill, actual measured savings. The mission's cost-claim is not theoretical; it is operationally measured. Combined with Evidence 8 (post-trained 8B reaches frontier-class quality), the cost story compounds: the 80% routing reduction PLUS the recursive-paradigm capability gain.
+
+> [!success]- **Evidence 10 — Orchestrator layer: Multica (Apache 2.0, self-host, 10 harnesses) closes the 3-layer composability gap (2026-04-28)**
+>
+> Per [Multica synthesis](../../sources/tools-integration/src-multica-managed-agents-platform.md) and operator-validated 2026-04-28: **Multica is the empirical orchestrator-layer substitute** above the harness layer. Apache 2.0 license · self-host capable (operator's own install at `/home/jfortin/.multica/server/` confirmed) · auto-detects 10 harness CLIs (Claude Code · Codex · OpenClaw · OpenCode · Hermes · Gemini · Pi · Cursor Agent · Kimi · Kiro CLI). Per-agent provider routing via the `custom_env` field — operator confirmed *"Injected into the agent process at launch (e.g. ANTHROPIC_API_KEY, ANTHROPIC_BASE_URL)"* — letting different agents target different providers (AICP / Ollama Cloud / OpenRouter / direct) without changing harness or orchestrator. **Three independent substitution layers**: orchestrator (Multica) × harness (10 supported) × provider (10+ via AICP routing). **No single vendor controls more than one of the three layers.** This Evidence item closes the orchestrator-layer documentation gap that Evidence 1-9 had treated implicitly.
+>
+> | Layer | Empirical substitute(s) | Lock-in risk after substitution |
+> |---|---|---|
+> | **Orchestrator (NEW)** | Multica (Apache 2.0 + self-host) · operator-built · alternative is direct CLI use without orchestration | Low — open-source + 10 harnesses |
+> | Harness | Claude Code · OpenCode · Codex · Cursor · etc. (per Evidence 1) | Low — operator already runs 2 (CC + OpenCode) |
+> | Provider × Model | Per Evidence 1 (Qwen3.6-27B), Evidence 2 (Qwen3-Embedding-8B), Evidence 8 (RLM-Qwen3-8B) — all open-weight; AICP routing per Evidence 9 | Variable per layer — see prior Evidence items |
+>
+> **Anti-vendor-lock-in is now empirical at three structural layers, not two.** The wiki's mission claim is end-to-end traceable across the orchestrator + harness + provider stack. See [post-Anthropic 3-layer stack epic](../../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) for the in-progress operational assembly.
 
 ## Applicability
 
