@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-28T15:29:10.780513+00:00",
+  "generated": "2026-04-28T15:31:41.606690+00:00",
   "stats": {
     "pages": 519,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3263,
+    "relationships": 3261,
     "tags_unique": 1756,
     "layers": {
       "3": 4,
@@ -3558,14 +3558,6 @@
         {
           "verb": "DEMONSTRATES",
           "target": "Saturation Lesson"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "M004 (Local-Ollama tier post-3090) \u2014 once Variant A passes"
-        },
-        {
-          "verb": "ENABLES",
-          "target": "the same pattern applies post-3090 with `local` backend instead of `ollama_cloud`"
         },
         {
           "verb": "FEEDS INTO",
@@ -37788,7 +37780,7 @@
   "domains": {
     "backlog": {
       "page_count": 91,
-      "relationship_count": 373
+      "relationship_count": 371
     },
     "cross-domain": {
       "page_count": 219,
@@ -46550,12 +46542,6 @@
       ]
     },
     {
-      "target": "M004 (Local-Ollama tier post-3090) \u2014 once Variant A passes",
-      "referenced_by": [
-        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
-      ]
-    },
-    {
       "target": "MCP vs CLI \u2014 Decision vs Lesson",
       "referenced_by": [
         "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
@@ -47567,12 +47553,6 @@
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
-      ]
-    },
-    {
-      "target": "the same pattern applies post-3090 with `local` backend instead of `ollama_cloud`",
-      "referenced_by": [
-        "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook"
       ]
     },
     {

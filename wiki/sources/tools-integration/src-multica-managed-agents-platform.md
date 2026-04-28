@@ -14,6 +14,7 @@ maturity: seed
 created: 2026-04-28
 updated: 2026-04-28
 last_reviewed: 2026-04-28
+operator_validated: 2026-04-28
 sources:
   - id: multica-github
     type: repository
@@ -74,8 +75,27 @@ Multica ([multica-ai/multica](https://github.com/multica-ai/multica), Apache 2.0
 | **Setup command** | `multica setup` (Cloud) or `multica setup self-host` |
 | **Self-host with server** | `bash -s -- --with-server` flag pulls images from GHCR; Docker required |
 | **Languages** | English + Simplified Chinese |
-| **Confidence** | high — README verified at full PDF depth + project page read |
+| **Confidence** | high — README verified at full PDF depth + project page read + **operator-validated 2026-04-28** |
 | **Mission relevance** | Critical — closes the orchestrator-layer documentation gap in the wiki's anti-vendor-lock-in evidence chain |
+| **Operator's deployment** | **Self-host at `/home/jfortin/.multica/server/`** — built from source, operator-written `.env` with dev-mode key. **Source-level access** (operator can patch/fork/extend the daemon if needed). |
+
+## Operator-Validated Per-Agent Shaping (2026-04-28)
+
+> [!success] **6 independent per-agent dimensions** — operator-confirmed via live UI inspection
+>
+> | Field | What it shapes | Example value |
+> |---|---|---|
+> | `provider` | Harness CLI selected | `claude` / `opencode` / `codex` / etc. |
+> | `instructions` | System prompt injected at start | `"You are a wiki-research agent. Cite sources."` |
+> | **`custom_env`** | **Env vars injected into the agent process at launch** — operator quote: *"Injected into the agent process at launch (e.g. ANTHROPIC_API_KEY, ANTHROPIC_BASE_URL)"* | `ANTHROPIC_BASE_URL=http://localhost:<aicp>`<br>`ANTHROPIC_API_KEY=<token>` |
+> | **`custom_args`** | **CLI flags appended to the agent command at launch** — operator quote: *"Additional CLI arguments appended to the agent command at launch. Supported flags depend on the agent's CLI."* Example launch mode for OpenCode: `opencode run (json)<your args>` | `--mode build` (for OpenCode Build Mode) |
+> | `model` | Model name passed to the harness | provider-specific |
+> | `mcp_config` | MCP server config — currently consumed only by Claude Code per docs line 7043 | research-wiki MCP, claude-mem, etc. |
+> | **`skills`** | **Workspace-level reusable capability bundles attached per agent** — operator confirmed *"And I can add them skill too"* | `wiki-page-scaffold`, `pipeline-post-validate` |
+>
+> **Each agent in Multica = (provider × custom_env × custom_args × skills × instructions × model × mcp_config)** — 7 independent per-agent shaping dimensions. This is what makes per-agent provider routing, per-agent capability composition, and multi-tier orchestration concrete.
+>
+> **Operational caveats** (per docs lines 6444, 7095, 7100): `custom_env` is plaintext in DB (mitigated for self-host since operator owns the filesystem); `custom_env` overrides shell env rather than merging; multi-user workspaces redact `custom_env` for non-owners (single-operator workspace unaffected); `mcp_config` only consumed by Claude Code today. Per-harness `skills` injection paths differ per provider (per docs line 7042 — Claude Code: `.claude/skills/`, Codex: `$CODEX_HOME/skills/`, Pi: `.pi/skills/`, etc.).
 
 ## Key Insights
 
