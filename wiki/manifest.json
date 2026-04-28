@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-27T23:48:03.744260+00:00",
+  "generated": "2026-04-28T02:01:33.510705+00:00",
   "stats": {
-    "pages": 514,
+    "pages": 515,
     "domains": 11,
     "sources": 76,
     "comparisons": 9,
-    "relationships": 3222,
+    "relationships": 3223,
     "tags_unique": 1728,
     "layers": {
       "3": 4,
@@ -22941,6 +22941,33 @@
       ]
     },
     {
+      "path": "log/rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license.md",
+      "slug": "log/rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license",
+      "title": "rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license",
+      "type": "note",
+      "domain": "log",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-27",
+      "updated": "2026-04-27",
+      "last_reviewed": "",
+      "tags": [
+        "contributed",
+        "remark"
+      ],
+      "sources": [],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RELATES TO",
+          "target": "Model Registry"
+        }
+      ]
+    },
+    {
       "path": "log/walkthrough-c-openfleet-ground-truth-verification-2026-04.md",
       "slug": "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "title": "Walkthrough C (OpenFleet) ground-truth verification 2026-04-17",
@@ -37350,8 +37377,8 @@
       "relationship_count": 195
     },
     "log": {
-      "page_count": 33,
-      "relationship_count": 57
+      "page_count": 34,
+      "relationship_count": 58
     },
     "wiki-methodology": {
       "page_count": 2,
@@ -41873,6 +41900,7 @@
       "log/e008-epic-\u2014-internal-stack-vs-format-inconsistency-caused-2-",
       "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
       "log/openfleet-identity-profile-agents-md-layer-1-upgrade-compl",
+      "log/rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license",
       "log/walkthrough-c-openfleet-ground-truth-verification-2026-04",
       "patterns/01_drafts/agent-execution-cost-optimization-stack",
       "patterns/01_drafts/aspirational-declaration-without-enforcement",
@@ -42558,6 +42586,7 @@
       "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "log/aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g",
       "log/gateway-identity-parser-fragility-forwarder-contribute-tar",
+      "log/rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license",
       "spine/models/foundation/model-wiki-design"
     ],
     "visual": [

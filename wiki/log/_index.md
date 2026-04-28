@@ -19,6 +19,7 @@ Operator directives, session summaries, and task completion notes.
 | Date | Title | Type | Tags |
 |------|-------|------|------|
 | 2026-04-17 | [Walkthrough C (OpenFleet) ground-truth verification 2026-04-17](walkthrough-c-openfleet-ground-truth-verification-2026-04.md) | session | `contributed`, `correction` |
+| 2026-04-27 | [rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license](rlm-qwen3-8b-v0-1-released-on-huggingface-mit-license.md) | session | `contributed`, `remark` |
 | 2026-04-18 | [OpenFleet identity profile — AGENTS.md Layer-1 upgrade completed 2026-04-17 (was 'candidate')](openfleet-identity-profile-agents-md-layer-1-upgrade-compl.md) | session | `contributed`, `correction` |
 | 2026-04-17 | [Gateway identity parser fragility + forwarder contribute-target bug (2026-04-17)](gateway-identity-parser-fragility-forwarder-contribute-tar.md) | session | `contributed`, `remark` |
 | 2026-04-25 | [E008 epic — internal stack-vs-format inconsistency caused 2-day wrong-path execution](e008-epic-—-internal-stack-vs-format-inconsistency-caused-2-.md) | session | `contributed`, `correction` |

@@ -81,3 +81,7 @@ curl -sS https://huggingface.co/api/models/mit-oasys/rlm-qwen3-8b-v0.1
 ## Relationships
 
 - RELATES TO: [[model-registry|Model Registry]]
+
+## Backlinks
+
+[[model-registry|Model Registry]]

@@ -1494,7 +1494,47 @@ def op_contribute(paths: Dict[str, Path], contrib_type: str, title: str,
         audit_fragment += f"contribution_reason: \"{reason}\"\n"
 
     if contrib_type == "lesson":
-        page_content = f"""---
+        # Detect whether the contributor passed pre-structured lesson content
+        # (with its own ## headings) vs short Summary-only text. Structured content
+        # gets a clean envelope; summary text gets the placeholder scaffolding.
+        # P4 fix 2026-04-27 — surfaced as Bug #9 in the gateway audit trail
+        # (template was unconditionally appending empty placeholder sections,
+        # producing pages with content trapped inside Summary block + empty
+        # ## Context / ## Insight / ## Evidence appended after).
+        content_stripped = content.strip()
+        # Strip any leading H1 the contributor may have included (template adds its own).
+        if content_stripped.startswith("# "):
+            first_newline = content_stripped.find("\n")
+            if first_newline != -1:
+                content_stripped = content_stripped[first_newline + 1:].lstrip()
+            else:
+                content_stripped = ""
+        has_structured_sections = "\n## " in ("\n" + content_stripped)
+
+        if has_structured_sections:
+            # Structured content: embed as-is after H1, no empty placeholders.
+            page_content = f"""---
+title: "{title}"
+type: lesson
+domain: {domain}
+layer: 4
+status: synthesized
+confidence: medium
+maturity: seed
+derived_from: []
+created: {today}
+updated: {today}
+sources: []
+tags: [contributed, inbox]
+{audit_fragment}---
+
+# {title}
+
+{content_stripped}
+"""
+        else:
+            # Summary-only content: original behavior — Summary + placeholder sections.
+            page_content = f"""---
 title: "{title}"
 type: lesson
 domain: {domain}
@@ -1513,7 +1553,7 @@ tags: [contributed, inbox]
 
 ## Summary
 
-{content}
+{content_stripped}
 
 ## Context
 
