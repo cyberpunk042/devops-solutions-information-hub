@@ -9,7 +9,7 @@ status: synthesized
 confidence: medium
 maturity: growing
 created: 2026-04-08
-updated: 2026-04-13
+updated: 2026-04-28
 sources: []
 tags: [domain-overview, cross-domain]
 ---
@@ -18,17 +18,17 @@ tags: [domain-overview, cross-domain]
 
 ## Summary
 
-The cross-domain area is not a subject-matter domain but a structural layer — it holds concept pages, comparisons, patterns, decisions, and lessons that emerge from synthesizing across two or more subject domains. The domain folder contains 2 concept pages (Methodology Framework, Skyscraper Pyramid Mountain), while cross-domain content also lives in the wiki's evolved layers: 29 lesson pages (in lessons/), 6 pattern pages (in patterns/), 13 decision pages (in decisions/), and 5 comparison pages (in comparisons/ including 2 cross-domain ones). This is the domain where convergences, tradeoffs, and durable principles live — content no single-domain page can capture. Cross-domain synthesis is deliberately selective, representing only insights with multi-source validation.
+The cross-domain area is not a subject-matter domain but a structural layer — it holds concept pages, comparisons, patterns, decisions, and lessons that emerge from synthesizing across two or more subject domains. The domain folder contains 31 pages (foundational concepts like Methodology Framework, Skyscraper Pyramid Mountain, plus operations plans, references, and evolved subfolders), while cross-domain content also lives in the wiki's evolved layers: 69 lesson pages (in lessons/), 30 pattern pages (in patterns/), 26 decision pages (in decisions/), and 9 comparison pages (in comparisons/). This is the domain where convergences, tradeoffs, and durable principles live — content no single-domain page can capture. Cross-domain synthesis is deliberately selective, representing only insights with multi-source validation.
 
 > [!info] Domain at a glance
 >
 > | Metric | Value |
 > |--------|-------|
-> | Concept pages (in domain folder) | 2 |
-> | Lesson pages (wiki-wide) | 29 |
-> | Pattern pages (wiki-wide) | 6 |
-> | Decision pages (wiki-wide) | 13 |
-> | Comparison pages (wiki-wide) | 5 |
+> | Pages (in domain folder) | 31 |
+> | Lesson pages (wiki-wide) | 69 |
+> | Pattern pages (wiki-wide) | 30 |
+> | Decision pages (wiki-wide) | 26 |
+> | Comparison pages (wiki-wide) | 9 |
 
 ## State of Knowledge
 
@@ -42,9 +42,9 @@ The cross-domain area is not a subject-matter domain but a structural layer — 
 - Deterministic Shell LLM Core — pattern extracted from OpenFleet + devops-control-plane + harness engineering.
 
 **Good coverage:**
-- 29 lesson pages across all domains — covering convergences from multi-source validation (e.g., Never Skip Stages, CLI Beats MCP, Always Plan Before Executing, Models Are Systems Not Documents).
-- 13 decision pages — concrete operational decisions with rationale and reversibility ratings.
-- 6 pattern pages — including Progressive Distillation, Gateway-Centric Routing, Context-Aware Tool Loading, Scaffold-Foundation-Infrastructure-Features.
+- 69 lesson pages across all domains — covering convergences from multi-source validation (e.g., Never Skip Stages, CLI Beats MCP, Always Plan Before Executing, Models Are Systems Not Documents, Saturation Declarations Are P4 Aspirational, Anti-Vendor-Lock-In Is an Empirical Claim).
+- 26 decision pages — concrete operational decisions with rationale and reversibility ratings.
+- 30 pattern pages — including Progressive Distillation, Gateway-Centric Routing, Context-Aware Tool Loading, Scaffold-Foundation-Infrastructure-Features, Block With Reason and Justified Escalation, Three-Permission Modes.
 - Skyscraper Pyramid Mountain — architectural quality analogy for three structural states of a codebase.
 
 **Thin coverage:**
@@ -55,32 +55,32 @@ The cross-domain area is not a subject-matter domain but a structural layer — 
 
 | Maturity | Pages |
 |----------|-------|
-| **growing** (concept, 2) | Methodology Framework, Skyscraper Pyramid Mountain |
+| **growing** (domain folder, 31) | Methodology Framework, Skyscraper Pyramid Mountain, plus operations plans (RLM-Qwen3.6-27B fine-tune, wiki post-ingestion), references, methodology-initiative subfolder |
 
-**Evolved layers (all growing maturity):**
+**Evolved layers:**
 
 | Layer | Count | Notable pages |
 |-------|-------|---------------|
-| Lessons | 29 | Never Skip Stages, CLI Beats MCP, Always Plan Before Executing, Models Are Systems Not Documents, Schema Is the Real Product, Never Synthesize from Descriptions Alone |
-| Patterns | 6 | Plan Execute Review Cycle, Deterministic Shell LLM Core, Progressive Distillation, Gateway-Centric Routing, Context-Aware Tool Loading, Scaffold-Foundation-Infrastructure-Features |
-| Decisions | 13 | MCP vs CLI, Obsidian vs NotebookLM, Stage-Gate Operational, Local Model vs Cloud API, Wiki-First with LightRAG Upgrade Path |
-| Comparisons | 5 | Skills Architecture Patterns, Agentic Search vs Vector Search, Cross-Domain Patterns, LLM Wiki vs RAG |
+| Lessons | 69 (41 validated · 4 principles · 24 in pipeline) | Never Skip Stages, CLI Beats MCP, Always Plan Before Executing, Models Are Systems Not Documents, Schema Is the Real Product, Never Synthesize from Descriptions Alone, Saturation Declarations Are P4 Aspirational, Anti-Vendor-Lock-In Is Empirical |
+| Patterns | 30 (15 validated · 1 synthesized · 14 drafts) | Plan Execute Review Cycle, Deterministic Shell LLM Core, Progressive Distillation, Gateway-Centric Routing, Context-Aware Tool Loading, Scaffold-Foundation-Infrastructure-Features, Block With Reason and Justified Escalation, Three-Permission Modes |
+| Decisions | 26 (16 validated · 10 drafts) | MCP vs CLI, Obsidian vs NotebookLM, Stage-Gate Operational, Local Model vs Cloud API, Wiki-First with LightRAG Upgrade Path, Adopt Multica as Orchestrator Layer |
+| Comparisons | 9 | Skills Architecture Patterns, Agentic Search vs Vector Search, Cross-Domain Patterns, LLM Wiki vs RAG, Kimi K2.6 Access Paths, RLM-Qwen3-8B vs Qwen3.6-27B Tier-0 |
 
 All concept pages assigned maturity. All styled with callout vocabulary.
 
 ## Gaps
 
-- **Principles layer (layer 7)**: The highest evolved layer is completely empty. Principles like "make intelligence persistent, not ephemeral" and "enforce at runtime, not by prompt" should be extractable from current content.
+- **Principles layer (layer 7)**: 4 principles populated (Infrastructure > Instructions, Structured Context > Content, Goldilocks, Declarations Aspirational Until Verified — P4 added 2026-04-24). Additional candidate principles like "make intelligence persistent, not ephemeral" and "enforce at runtime, not by prompt" remain extractable from current content.
 - **Local-first inference as ecosystem principle**: The "local inference when adequate, cloud inference when necessary" principle appears in AICP, OpenFleet, Local LLM Quantization, and Claude Code scheduling — a candidate for the first principles page.
 - **The compounding knowledge principle**: Karpathy's insight that filing query answers back into the wiki compounds knowledge over time appears in LLM Wiki Pattern, Wiki Event-Driven Automation, and Memory Lifecycle Management. A cross-domain synthesis would make this actionable.
-- **Pattern promotion pipeline**: 29 lessons exist but only 6 have been promoted to patterns. Systematic review of lessons for pattern candidates is overdue.
+- **Pattern promotion pipeline**: 69 lessons exist; 30 patterns total (15 validated). The promotion ratio (lessons → patterns) remains thin given the lesson volume — systematic review for pattern candidates is overdue.
 
 ## Priorities
 
 1. **First principles page** — Begin the principles layer with 2-3 abstract, durable insights extracted from the 6 existing patterns
 2. **Local-first inference principle** — Synthesize from AICP + OpenFleet + Local LLM Quantization as a first principles page
 3. **Compounding knowledge pattern** — Extract the file-answers-back pattern from LLM Wiki Pattern + Wiki Event-Driven Automation + Memory Lifecycle
-4. **Pattern promotion review** — Systematically review 29 lessons for promotion to pattern candidates
+4. **Pattern promotion review** — Systematically review 69 lessons for promotion to pattern candidates
 5. **Promote agentic search comparison** — Sharpen decision criteria for Agentic Search vs Vector Search; promote to decision page
 
 ## Key Pages
