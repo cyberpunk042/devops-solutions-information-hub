@@ -9,7 +9,7 @@ status: synthesized
 confidence: high
 maturity: growing
 created: 2026-04-11
-updated: 2026-04-13
+updated: 2026-04-28
 sources:
   - id: methodology-config
     type: file
@@ -57,7 +57,7 @@ Complete map of the methodology system — every component, where it lives, what
 
 ### Entry Layer — Root Documentation
 
-> [!abstract] Repository-Level Docs (8 files, 2,714 lines)
+> [!abstract] Repository-Level Docs (8 files, 3,044 lines as of 2026-04-28)
 >
 > | File | What It Contains | Audience |
 > |------|-----------------|----------|
@@ -79,10 +79,10 @@ Complete map of the methodology system — every component, where it lives, what
 >
 > | Page | Lines | What It Explains |
 > |------|-------|-----------------|
-> | [[model-methodology|Model — Methodology]] | 850+ | The 9 models, stage gates, composition, quality tiers, adoption, compliance |
-> | [[model-registry|Model Registry]] | 100+ | All 16 named models with status, standards, and maturity |
-> | [[methodology-framework|Methodology Framework]] | 400+ | The META — what a model IS, selection, composition, adaptation, recursion |
-> | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] | 440+ | Gold standards for execution with real examples and anti-patterns |
+> | [[model-methodology|Model — Methodology]] | 896 | The 9 models, stage gates, composition, quality tiers, adoption, compliance |
+> | [[model-registry|Model Registry]] | 125 | All 16 named models with status, standards, and maturity |
+> | [[methodology-framework|Methodology Framework]] | 439 | The META — what a model IS, selection, composition, adaptation, recursion |
+> | [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]] | 545 | Gold standards for execution with real examples and anti-patterns |
 
 > [!abstract] Supporting Concept Pages
 >
@@ -142,13 +142,14 @@ Complete map of the methodology system — every component, where it lives, what
 > | [[enforcement-must-be-mindful-hard-blocks-need-justified-bypass|Enforcement Must Be Mindful — Hard Blocks Need Justified Bypass]] | Every block needs a reason and a bypass mechanism |
 > | [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]] | Markdown is the programming language of AI. Structure > content for compliance. |
 
-> [!abstract] Principles (distilled from validated lessons — highest knowledge layer)
+> [!abstract] Principles (distilled from validated lessons — highest knowledge layer; 4 principles total)
 >
 > | Principle | What It Governs |
 > |-----------|----------------|
 > | [[infrastructure-over-instructions-for-process-enforcement|Principle — Infrastructure Over Instructions for Process Enforcement]] | HOW to enforce: infrastructure > instructions. Quantified from 5 converging lessons. |
 > | [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]] | WHY it works: structure > content. Form programs behavior; prose requires parsing. |
 > | [[right-process-for-right-context-the-goldilocks-imperative|Principle — Right Process for Right Context — The Goldilocks Imperative]] | WHEN to apply: right process = f(identity, phase, scale, PM level). Adaptation, not dogma. |
+> | [[declarations-are-aspirational-until-infrastructure-verifies-them\|Principle — Declarations Are Aspirational Until Infrastructure Verifies Them]] | WHAT counts as enforced: every declaration (variable name, schema field, attribute, claim, tier) is aspirational unless a gate verifies it holds. P4 added 2026-04-24. |
 
 > [!abstract] SDLC Framework
 >
@@ -220,7 +221,7 @@ Complete map of the methodology system — every component, where it lives, what
 > | Page | What It Explains |
 > |------|-----------------|
 > | [[methodology-evolution-history|Evolution — Methodology System]] | How the system evolved from v1 to current |
-> | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] | 24-page guided sequence in 6 parts for learning methodology |
+> | [[methodology-fundamentals|Learning Path — Methodology Fundamentals]] | 30-page guided sequence in 8 parts for learning methodology |
 > | [[methodology-standards-initiative-honest-assessment|Methodology Standards Initiative — Honest Assessment]] | Gap analysis of what's built vs what was asked for |
 
 ### Configuration Layer — Config Files
@@ -262,12 +263,12 @@ See [[wiki/config/README.md]] for the definitive thorough reference. Summary bel
 >
 > **Composition order:** schema → methodology.yaml → methodology profile → domain profile → sdlc profile → project-local CLAUDE.md (highest precedence)
 
-> [!info] Template Files (22 total)
+> [!info] Template Files (26 total as of 2026-04-28)
 >
 > | Directory | Count | Types |
 > |-----------|-------|-------|
-> | `wiki/config/templates/` | 16 | All wiki page types (concept through operations-plan) |
-> | `wiki/config/templates/methodology/` | 6 | Stage documents (requirements-spec, infra-analysis, gap-analysis, design-plan, tech-spec, test-plan) |
+> | `wiki/config/templates/` | 19 | All wiki page types (concept through operations-plan, plus added types) |
+> | `wiki/config/templates/methodology/` | 7 | Stage documents (requirements-spec, infra-analysis, gap-analysis, design-plan, tech-spec, test-plan, plus one added) |
 >
 > Scaffold any template: `python3 -m tools.pipeline scaffold <type> "Title"`
 > Scaffold methodology templates: `python3 -m tools.pipeline scaffold methodology/<name> "Title"`
