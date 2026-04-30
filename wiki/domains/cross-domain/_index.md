@@ -46,6 +46,7 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 - [Methodology Standards Initiative — Infrastructure Analysis](methodology-initiative/methodology-standards-initiative-infrastructure.md) — Complete mapping of the methodology and artifact infrastructure across the research wiki and its most evolved consume...
 - [Model Composition Rules](model-composition-rules.md) — Formal rules for how methodology models combine when work is multi-layered
 - [Operations Plan — RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)](rlm-qwen3-6-27b-fine-tune-operations-plan.md) — Reproducible, deterministic operations plan for fine-tuning **Qwen3
+- [Secure Tamper-Proof Model on Shared GPU — Research Synthesis (Operator-Initiated 2026-04-30)](secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) — Operator-authored concept 2026-04-30: a model that runs on a shared GPU but cannot be tampered with — **seamless, bla...
 - [Operations Plan — Wiki Post-Ingestion Validation](wiki-post-ingestion-operations-plan.md) — Sequential operations plan for validating the wiki after any content change
 
 ## Tags

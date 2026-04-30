@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-28T23:43:31.171627+00:00",
+  "generated": "2026-04-30T12:59:48.801121+00:00",
   "stats": {
-    "pages": 525,
+    "pages": 526,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3298,
-    "tags_unique": 1772,
+    "relationships": 3308,
+    "tags_unique": 1781,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 53,
+      "seed": 54,
       "mature": 2
     }
   },
@@ -12444,6 +12444,185 @@
         {
           "verb": "RELATES TO",
           "target": "Learning Path \u2014 RLM Thread Evidence Chain"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+      "slug": "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "title": "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-04-30",
+      "updated": "2026-04-30",
+      "last_reviewed": "2026-04-30",
+      "tags": [
+        "concept",
+        "security",
+        "confidential-computing",
+        "tee",
+        "gpu",
+        "nvidia-h100",
+        "rlm",
+        "markdown-as-iac",
+        "python-sandboxing",
+        "weight-encryption",
+        "attestation",
+        "anti-vendor-lock-in",
+        "post-anthropic",
+        "mission-2026-04-30",
+        "operator-initiated",
+        "exploratory"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-04-30-secure-tamper-proof-model-on-shared-gpu-cypher-decypher-rlm-script.md",
+          "description": "Operator-stated directive 2026-04-30 \u2014 verbatim concept of a tamper-proof model running on shared GPU with cypher/decypher, configurable opt-ins, RLM-script-orientation, Markdown+Python rules, and Python-on-GPU stretch idea"
+        },
+        {
+          "id": "rlm-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "RLM substrate \u2014 REPL-driven recursive inference, LocalREPL with soft sandbox, cloud sandbox options (docker/modal/prime/daytona/e2b)"
+        },
+        {
+          "id": "markdown-as-iac",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
+          "description": "Markdown-as-IaC model \u2014 Markdown files at project root as binding configuration for agents; precedent for operator's 'Markdown rules' framing"
+        },
+        {
+          "id": "anti-vendor-lock-in",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 adds a fourth structural layer (trust/confidential-compute) to the orchestrator \u00d7 harness \u00d7 provider stack"
+        },
+        {
+          "id": "nvidia-cc-h100",
+          "type": "documentation",
+          "url": "https://developer.nvidia.com/blog/confidential-computing-on-h100-gpus-for-secure-and-trustworthy-ai/",
+          "description": "NVIDIA Confidential Computing on H100 \u2014 AES-256-GCM HBM encryption, attestation, on-chip key"
+        },
+        {
+          "id": "nvidia-secure-ai-ga",
+          "type": "documentation",
+          "url": "https://developer.nvidia.com/blog/announcing-nvidia-secure-ai-general-availability/",
+          "description": "NVIDIA Secure AI GA announcement \u2014 H100/H200 CC mode is production-deployed today"
+        },
+        {
+          "id": "nvidia-attestation",
+          "type": "documentation",
+          "url": "https://docs.nvidia.com/attestation/index.html",
+          "description": "NVIDIA Attestation Services (NRAS) + Reference Integrity Manifests (RIM)"
+        },
+        {
+          "id": "nvidia-cc-snp-deployment",
+          "type": "documentation",
+          "url": "https://docs.nvidia.com/cc-deployment-guide-snp.pdf",
+          "description": "NVIDIA CC + AMD SEV-SNP deployment guide \u2014 kata-qemu-nvidia-gpu-snp runtime"
+        },
+        {
+          "id": "aws-nitro-enclaves-llm",
+          "type": "documentation",
+          "url": "https://aws.amazon.com/blogs/machine-learning/large-language-model-inference-over-confidential-data-using-aws-nitro-enclaves/",
+          "description": "AWS Nitro Enclaves for LLM inference \u2014 CPU-only enclave with weights decrypted only inside; throughput-bottlenecked"
+        },
+        {
+          "id": "redhat-confidential-ai-2025-10",
+          "type": "documentation",
+          "url": "https://next.redhat.com/2025/10/23/enhancing-ai-inference-security-with-confidential-computing-a-path-to-private-data-inference-with-proprietary-llms/",
+          "description": "Red Hat Confidential AI inference (Oct 2025) \u2014 vendor-neutral overview of the deployed pattern"
+        },
+        {
+          "id": "caveman-compression",
+          "type": "documentation",
+          "url": "https://github.com/JuliusBrussee/caveman",
+          "description": "Caveman by Julius Brussee \u2014 TOKEN/prompt compressor (Lite/Full/Ultra/Wenyan modes, ~75% token reduction). Operator referenced 'caveman mode / model / github' \u2014 confirming this is the likely referent (not weight/model encryption)."
+        },
+        {
+          "id": "triton-openai",
+          "type": "documentation",
+          "url": "https://openai.com/index/triton/",
+          "description": "Triton \u2014 Python-decorated GPU kernel DSL, production-deployed in vLLM/PyTorch internals"
+        },
+        {
+          "id": "pytorch-cuda-free",
+          "type": "documentation",
+          "url": "https://pytorch.org/blog/cuda-free-inference-for-llms/",
+          "description": "PyTorch CUDA-free inference \u2014 Triton end-to-end path"
+        },
+        {
+          "id": "zama-concrete-ml",
+          "type": "documentation",
+          "url": "https://docs.zama.org/concrete-ml/llms/inference",
+          "description": "Zama Concrete ML \u2014 FHE inference; vendor-sourced numbers ~2.5s/token (50\u00d7 slowdown). Not interactive-viable in 2026."
+        },
+        {
+          "id": "spheron-cgpu",
+          "type": "documentation",
+          "url": "https://www.spheron.network/blog/confidential-gpu-computing-nvidia-tee-encrypted-vram/",
+          "description": "Confidential GPU Computing overview \u2014 useful framing of NVIDIA TEE; vendor blog (flag for over-marketing claims)"
+        },
+        {
+          "id": "post-anthropic-3-layer-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Adjacent epic \u2014 orchestrator \u00d7 harness \u00d7 provider 3-layer stack. The trust/confidential-compute concept extends this to 4 substitutable layers."
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Secure Tamper-Proof Model Concept",
+        "Tamper-Resistant Inference on Shared GPU",
+        "Cypher-Decypher Model Concept",
+        "Confidential GPU Inference \u2014 Wiki Synthesis"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM (Recursive Language Models)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RLM-Qwen3.6-27B Fine-Tune Operations Plan"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Qwopus Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
         }
       ]
     },
@@ -38240,8 +38419,8 @@
       "relationship_count": 379
     },
     "cross-domain": {
-      "page_count": 223,
-      "relationship_count": 1506
+      "page_count": 224,
+      "relationship_count": 1516
     },
     "ai-models": {
       "page_count": 14,
@@ -39225,6 +39404,7 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-28-session-handoff",
@@ -39488,6 +39668,7 @@
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
@@ -40032,6 +40213,7 @@
     "gpu": [
       "backlog/modules/e012-m001-unsloth-toolchain-install",
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
     "training-toolchain": [
@@ -41187,7 +41369,8 @@
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
     ],
     "security": [
-      "decisions/01_drafts/pretooluse-hooks-layered-approach"
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "reasoning": [
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -42376,6 +42559,7 @@
     ],
     "rlm": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
@@ -42437,6 +42621,46 @@
     ],
     "hardware-tier-0": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
+    ],
+    "concept": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "spine/models/depth/model-local-ai",
+      "spine/models/depth/model-notebooklm",
+      "spine/models/depth/model-second-brain",
+      "spine/models/ecosystem/model-automation-pipelines",
+      "spine/standards/concept-page-standards",
+      "spine/standards/harness-contract"
+    ],
+    "confidential-computing": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "tee": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "nvidia-h100": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "markdown-as-iac": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
+    "python-sandboxing": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "weight-encryption": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "attestation": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "mission-2026-04-30": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "operator-initiated": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "exploratory": [
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "post-ingestion": [
       "domains/cross-domain/wiki-post-ingestion-operations-plan"
@@ -43436,9 +43660,6 @@
     "principle-validation": [
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks"
-    ],
-    "markdown-as-iac": [
-      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
     ],
     "distillation": [
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
@@ -46044,14 +46265,6 @@
     "evolution-pipeline": [
       "spine/models/depth/model-knowledge-evolution"
     ],
-    "concept": [
-      "spine/models/depth/model-local-ai",
-      "spine/models/depth/model-notebooklm",
-      "spine/models/depth/model-second-brain",
-      "spine/models/ecosystem/model-automation-pipelines",
-      "spine/standards/concept-page-standards",
-      "spine/standards/harness-contract"
-    ],
     "grounded-research": [
       "spine/models/depth/model-notebooklm"
     ],
@@ -46316,6 +46529,7 @@
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
@@ -46568,6 +46782,7 @@
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
@@ -46959,6 +47174,7 @@
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "2026-04-28 Session Handoff",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)"
@@ -47278,6 +47494,7 @@
     {
       "target": "Model \u2014 Markdown as IaC",
       "referenced_by": [
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
       ]
     },
@@ -47436,10 +47653,22 @@
       ]
     },
     {
+      "target": "Qwopus Synthesis",
+      "referenced_by": [
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
+      ]
+    },
+    {
       "target": "RLM Implementation",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
+      "target": "RLM-Qwen3.6-27B Fine-Tune Operations Plan",
+      "referenced_by": [
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
       ]
     },
     {
@@ -47646,6 +47875,7 @@
     {
       "target": "Synthesis \u2014 RLM",
       "referenced_by": [
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
       ]
     },
@@ -47905,6 +48135,12 @@
       "target": "Universal Stages",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "Unsloth Synthesis",
+      "referenced_by": [
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
       ]
     },
     {
