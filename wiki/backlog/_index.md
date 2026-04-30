@@ -18,7 +18,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 
 | Milestone | Target | Status | Epics |
 |-----------|--------|--------|-------|
-| [Milestone: Post-Anthropic Self-Autonomous AI Stack](milestones/post-anthropic-self-autonomous-stack.md) | 2026-04-27 | draft | E007, E008, E009, E010, E011, E012, post-anthropic-stack-3-layer-assembly-multica-aicp-3090 |
+| [Milestone: Post-Anthropic Self-Autonomous AI Stack](milestones/post-anthropic-self-autonomous-stack.md) | 2026-04-27 | draft | E007, E008, E009, E010, E011, E012, post-anthropic-stack-3-layer-assembly-multica-aicp-3090, secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04 |
 | [Milestone — Second Brain Complete System — v2.0](milestones/second-brain-complete-system-v2-0.md) | 2026-05-15 | draft | E010, E011, E012, E013, E014, E015, E016, E017, E018, E019, E020, E021, E022, E023 |
 
 ## Epics
@@ -54,6 +54,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | POST | [Post-Anthropic Stack 3-Layer Composability — Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)](epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) | P0 | in-progress | 65 |
 | REPO | [Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown](epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28.md) | P0 | active | 5 |
 | SDLC | [SDLC Rules and Structure — Customizable Project Lifecycle](epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md) | P0 | draft | 10 |
+| SECURE | [Secure Tamper-Proof Inference Pipeline — Cypher + Decypher + Compression for 80–90% Space Saved on Large Context (Operator-Authored 2026-04-30)](epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) | P0 | active | 25 |
 | WIKI | [Wiki Gateway Tools — Unified Knowledge Interface](epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface.md) | P0 | draft | 5 |
 
 ## References

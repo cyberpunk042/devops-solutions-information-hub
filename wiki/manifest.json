@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-30T12:59:48.801121+00:00",
+  "generated": "2026-04-30T13:05:49.656566+00:00",
   "stats": {
-    "pages": 526,
+    "pages": 527,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3308,
-    "tags_unique": 1781,
+    "relationships": 3321,
+    "tags_unique": 1792,
     "layers": {
       "3": 4,
       "5": 37,
@@ -1845,6 +1845,160 @@
         {
           "verb": "DEPENDS ON",
           "target": "Artifact Type System"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md",
+      "slug": "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "title": "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-04-30",
+      "updated": "2026-04-30",
+      "last_reviewed": "2026-04-30",
+      "tags": [
+        "epic",
+        "p0",
+        "security",
+        "tamper-proof",
+        "cypher",
+        "decypher",
+        "compression",
+        "caveman",
+        "quantization",
+        "rlm",
+        "markdown-rules",
+        "python-isolation",
+        "triton",
+        "gpu",
+        "nvidia-cc",
+        "anti-vendor-lock-in",
+        "post-anthropic",
+        "mission-2026-04-30",
+        "fourth-layer",
+        "milestone-class",
+        "operator-authored"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "directive",
+          "file": "raw/notes/2026-04-30-secure-tamper-proof-model-on-shared-gpu-cypher-decypher-rlm-script.md",
+          "description": "Operator directive 2026-04-30 \u2014 verbatim concept statement plus 2026-04-30 correction registering operational properties (seamless / blazing-fast / transparent / +performance / 80-90% space saved on large context); caveman = JuliusBrussee confirmed"
+        },
+        {
+          "id": "design-synthesis",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Design ground truth \u2014 the research synthesis page captures the operator-authored concept with composition math, integration levers, and supporting paths. This epic tracks execution against that design."
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 this epic delivers the empirical 4th substitutable layer (trust / confidential-compute) on top of the 3-layer orchestrator \u00d7 harness \u00d7 provider stack"
+        },
+        {
+          "id": "post-anthropic-3-layer-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Adjacent epic \u2014 orchestrator \u00d7 harness \u00d7 provider 3-layer stack. This trust-layer epic extends that assembly to 4 substitutable layers."
+        },
+        {
+          "id": "post-anthropic-milestone",
+          "type": "wiki",
+          "file": "wiki/backlog/milestones/post-anthropic-self-autonomous-stack.md",
+          "description": "Parent milestone \u2014 this epic adds the 4th-layer trust/confidential-compute property to the post-Anthropic mission claim"
+        },
+        {
+          "id": "rlm-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "RLM substrate \u2014 REPL-driven recursive inference; this epic wires the REPL's context-variable to be the compressed-encrypted form with lazy decypher"
+        },
+        {
+          "id": "caveman-compression",
+          "type": "documentation",
+          "url": "https://github.com/JuliusBrussee/caveman",
+          "description": "Operator-confirmed compression reference \u2014 Caveman by Julius Brussee, ~75% prompt-layer token reduction; the prompt-layer slice of the 80-90% combined envelope"
+        },
+        {
+          "id": "nvidia-cc-h100",
+          "type": "documentation",
+          "url": "https://developer.nvidia.com/blog/announcing-nvidia-secure-ai-general-availability/",
+          "description": "NVIDIA H100/H200 CC mode (Secure AI GA) \u2014 the L3 additive substrate when H100-class hardware is available"
+        },
+        {
+          "id": "triton-openai",
+          "type": "documentation",
+          "url": "https://openai.com/index/triton/",
+          "description": "Triton \u2014 Python-on-GPU kernel DSL; carries the decypher and decompression kernels in HBM at GPU compute cost (cheap) instead of CPU\u2194GPU bandwidth (expensive)"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "Secure Tamper-Proof Inference Epic",
+        "Cypher Decypher Compression Pipeline Epic",
+        "Tamper-Proof Inference 4th Layer",
+        "Trust-Layer Epic"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Synthesis \u2014 RLM (Recursive Language Models)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RLM-Qwen3.6-27B Fine-Tune Operations Plan"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Adopt Multica"
         }
       ]
     },
@@ -38415,8 +38569,8 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 93,
-      "relationship_count": 379
+      "page_count": 94,
+      "relationship_count": 392
     },
     "cross-domain": {
       "page_count": 224,
@@ -38483,6 +38637,7 @@
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
       "domains/devops/task-type-artifact-matrix",
@@ -39315,6 +39470,7 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/e007-m002-harness-interactive-validation",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -39400,6 +39556,7 @@
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
@@ -39664,6 +39821,7 @@
     ],
     "anti-vendor-lock-in": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
@@ -39689,7 +39847,8 @@
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
     ],
     "milestone-class": [
-      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
     ],
     "in-progress": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
@@ -39773,6 +39932,72 @@
       "log/2026-04-09/system/2026-04-09-session-summary",
       "log/2026-04-10/2026-04-10-session-summary",
       "log/2026-04-17/2026-04-17-session-summary"
+    ],
+    "security": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "decisions/01_drafts/pretooluse-hooks-layered-approach",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "tamper-proof": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "cypher": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "decypher": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "compression": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "caveman": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "quantization": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "domains/ai-models/local-llm-quantization",
+      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
+      "sources/tools-integration/src-turboquant-122b-macbook",
+      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
+    ],
+    "rlm": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
+      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+    ],
+    "markdown-rules": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "python-isolation": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "triton": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "gpu": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "patterns/01_drafts/single-active-backend-with-lru-eviction"
+    ],
+    "nvidia-cc": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "mission-2026-04-30": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
+    "fourth-layer": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "operator-authored": [
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
     ],
     "unified-interface": [
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface"
@@ -40209,12 +40434,6 @@
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "backlog/tasks/T070-design-adapter-training-datasets",
       "log/2026-04-23-corpus-training-readiness-audit"
-    ],
-    "gpu": [
-      "backlog/modules/e012-m001-unsloth-toolchain-install",
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "patterns/01_drafts/single-active-backend-with-lru-eviction"
     ],
     "training-toolchain": [
       "backlog/modules/e012-m001-unsloth-toolchain-install"
@@ -41275,13 +41494,6 @@
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "sources/src-llm-architecture-gallery-raschka"
     ],
-    "quantization": [
-      "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "domains/ai-models/local-llm-quantization",
-      "sources/tools-integration/src-airllm-layer-wise-inference-nvme-ssd-offload",
-      "sources/tools-integration/src-turboquant-122b-macbook",
-      "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
-    ],
     "qwen3": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -41367,10 +41579,6 @@
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/ecosystem-projects/src-openarms-v10-enforcement"
-    ],
-    "security": [
-      "decisions/01_drafts/pretooluse-hooks-layered-approach",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "reasoning": [
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
@@ -42557,14 +42765,6 @@
       "spine/references/second-brain-integration-chain",
       "spine/standards/operations-plan-page-standards"
     ],
-    "rlm": [
-      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
-      "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
-    ],
     "recursive-language-models": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
@@ -42651,9 +42851,6 @@
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "attestation": [
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
-    ],
-    "mission-2026-04-30": [
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "operator-initiated": [
@@ -46527,6 +46724,7 @@
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
@@ -46779,6 +46977,7 @@
       "target": "Anti-Vendor-Lock-In Lesson",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
@@ -46869,6 +47068,12 @@
       ]
     },
     {
+      "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU",
+      "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)"
+      ]
+    },
+    {
       "target": "Consumer Integration Roadmap Exemplar",
       "referenced_by": [
         "Structural Compliance Is Not Operational Compliance \u2014 Compliance Checkers Measure Presence, Not Depth"
@@ -46911,6 +47116,12 @@
       "target": "Decision \u2014 4-tier Router with Profiles",
       "referenced_by": [
         "Three Permission Modes (Think / Edit / Act) \u2014 Operator-Selected AI Authority Tiers"
+      ]
+    },
+    {
+      "target": "Decision \u2014 Adopt Multica",
+      "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)"
       ]
     },
     {
@@ -47171,6 +47382,7 @@
     {
       "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly",
       "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
@@ -47427,6 +47639,7 @@
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown",
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)"
       ]
@@ -47494,6 +47707,7 @@
     {
       "target": "Model \u2014 Markdown as IaC",
       "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
       ]
@@ -47668,6 +47882,7 @@
     {
       "target": "RLM-Qwen3.6-27B Fine-Tune Operations Plan",
       "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
       ]
     },
@@ -47875,6 +48090,7 @@
     {
       "target": "Synthesis \u2014 RLM",
       "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
       ]
@@ -48140,6 +48356,7 @@
     {
       "target": "Unsloth Synthesis",
       "referenced_by": [
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
       ]
     },

@@ -15,6 +15,7 @@ epics:
   - "E011"
   - "E012"
   - "post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
+  - "secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
 acceptance_criteria:
   - "Claude Code CLI can route through OpenRouter to Kimi K2.6 end-to-end (harness + tool-use)"
   - "Local K2.6 Q2 runs via KTransformers on /dev/sdd (WD_BLACK NVMe) with measured tok/s documented"
@@ -28,6 +29,8 @@ acceptance_criteria:
   - "EXTENDED 2026-04-28 — Multica orchestrating Claude Code agent → AICP routes to Ollama Cloud / OpenRouter / local backend, observed end-to-end"
   - "EXTENDED 2026-04-28 — RTX 3090 (renewed, ETA mid-May 2026) integrated as local-tier hardware: local Ollama, Qwen3.6-27B at UD-IQ2, RLM-Qwen3-8B from `mit-oasys/rlm-qwen3-8b-v0.1` all running locally on 24GB"
   - "EXTENDED 2026-04-28 — Resilience smoke test passes: any single layer disabled, AICP failover or Multica re-route maintains task completion"
+  - "EXTENDED 2026-04-30 — 4th substitutable layer (trust / confidential-compute) operational: compressed-encrypted weights + on-GPU decypher kernels (Triton) deliver 80-90% space saved on large context, seamless and performance-positive on RTX 3090; L3 additive (NVIDIA H100/H200 CC mode + attestation) available when H100-class hardware is rented or acquired"
+  - "EXTENDED 2026-04-30 — Anti-vendor-lock-in extends to security stance: operator owns keys (file / passphrase / cert / HSM), attestation verifiable, no provider can swap weights without detection"
 confidence: high
 created: 2026-04-22
 updated: 2026-04-28
