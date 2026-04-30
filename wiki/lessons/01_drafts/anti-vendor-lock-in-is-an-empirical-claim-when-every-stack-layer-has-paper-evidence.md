@@ -138,6 +138,23 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 >
 > **Anti-vendor-lock-in is now empirical at three structural layers, not two.** The wiki's mission claim is end-to-end traceable across the orchestrator + harness + provider stack. See [post-Anthropic 3-layer stack epic](../../backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) for the in-progress operational assembly.
 
+> [!success]- **Evidence 11 — Trust / confidential-compute layer: tamper-proof inference on shared GPU via cypher + decypher + compression closes the 4-layer composability claim (2026-04-30)**
+>
+> Per [Concept — Secure Tamper-Proof Model on Shared GPU](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) and the operator-authored [Trust-Layer Epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md): the operator's tamper-proof-inference design (compression + cypher + decypher composed for **80–90% space saved on large context**, seamless and performance-positive) adds a **fourth substitutable layer** — trust / confidential-compute — to the empirical mission claim. The substitution axes within this layer are independently documented and operator-controllable:
+>
+> | Substitution axis | Empirical substitutes |
+> |---|---|
+> | **Hardware vendor** | NVIDIA (H100/H200/Blackwell CC mode, GA today via [NVIDIA Secure AI](https://developer.nvidia.com/blog/announcing-nvidia-secure-ai-general-availability/)) · AMD (SEV-SNP CPU + GPU passthrough) · Intel (TDX) · open-hardware (RISC-V Keystone, when production-ready) |
+> | **TEE / confidential-compute provider** | NVIDIA Secure AI · AWS Nitro Enclaves · Azure Confidential VMs · GCP Confidential Computing · self-hosted on operator hardware |
+> | **Key management** | operator-held key file · passphrase-derived · certificate-bound · HSM-managed (YubiHSM · AWS CloudHSM · Azure Key Vault HSM) |
+> | **Compression substrate** | [Caveman](https://github.com/JuliusBrussee/caveman) (operator-confirmed) · [Unsloth UD-IQ2/Q2_K](../../sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md) · KV-cache compression (asymmetric quantization, sparsity) |
+> | **On-GPU decypher kernels** | [Triton (OpenAI)](https://openai.com/index/triton/) — GA, used in vLLM/PyTorch internals · Numba CUDA · CuPy |
+> | **Inference substrate** | [RLM (MIT OASYS)](../../sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md) — REPL-driven recursive inference; the REPL variable IS the compressed-encrypted form, decrypted lazily |
+>
+> **Four independent substitution layers, each individually substitutable**: orchestrator (Multica per Evidence 10) × harness (Claude Code / OpenCode / Codex / etc. per Evidence 1) × provider (Qwen3.6-27B / RLM-Qwen3-8B / Kimi K2.6 / AICP routing per Evidence 1, 8, 9) × **trust (cypher + decypher + compression + attestation, configurable opt-ins L0 → L4)**. **No single vendor controls more than one of the four layers.** The default trust stance on the operator's RTX 3090 (incoming mid-May 2026) is **L2** (compressed-encrypted weights + KV cache + on-GPU decypher kernels via Triton); **L3 additive** (NVIDIA H100/H200 CC mode + attestation) when H100-class hardware is rented or acquired. The 80-90% space envelope and performance-positive properties are operator-asserted operational claims captured for empirical validation in the trust-layer epic's M006.
+>
+> This Evidence item moves the lesson's mission claim from 3-layer empirical to **4-layer empirical**, with the trust layer being structurally where the operator owns the keys, the attestation is verifiable, and no provider can swap weights or tamper without detection.
+
 ## Applicability
 
 > [!info] **When this lesson applies (decision matrix)**

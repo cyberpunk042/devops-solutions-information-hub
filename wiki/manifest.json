@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-30T13:05:49.656566+00:00",
+  "generated": "2026-04-30T13:10:57.540198+00:00",
   "stats": {
     "pages": 527,
     "domains": 11,
     "sources": 77,
     "comparisons": 9,
-    "relationships": 3321,
+    "relationships": 3322,
     "tags_unique": 1792,
     "layers": {
       "3": 4,
@@ -1733,6 +1733,10 @@
         {
           "verb": "FEEDS INTO",
           "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Trust-Layer Epic \u2014 Cypher + Decypher + Compression"
         }
       ]
     },
@@ -38570,7 +38574,7 @@
   "domains": {
     "backlog": {
       "page_count": 94,
-      "relationship_count": 392
+      "relationship_count": 393
     },
     "cross-domain": {
       "page_count": 224,
@@ -48345,6 +48349,12 @@
       "target": "Top-Layer Routing Refactor \u2014 Gap Analysis",
       "referenced_by": [
         "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
+      ]
+    },
+    {
+      "target": "Trust-Layer Epic \u2014 Cypher + Decypher + Compression",
+      "referenced_by": [
+        "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)"
       ]
     },
     {

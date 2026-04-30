@@ -155,6 +155,8 @@ This epic is the **operational realization** of the wiki's [anti-vendor-lock-in 
 
 Per [Saturation Lesson Hard Rule #11](../../../lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md), this epic empirically refutes any "the post-Anthropic mission is wiki-side complete" claim — there's a concrete operational mission-execution path that the wiki had been calling "operator-driven, AICP-side" in earlier framings, and which is now being explicitly documented as a wiki-side epic with the 3-layer composability target.
 
+**EXTENDED 2026-04-30 — 4th-layer extension via the [Trust-Layer Epic](secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md).** The operator-authored tamper-proof-inference design (cypher + decypher + compression composed for 80-90% space saved on large context, seamless and performance-positive) adds a **fourth substitutable layer** — trust / confidential-compute — on top of orchestrator × harness × provider. The two epics compose: this 3-layer epic delivers the substrate; the 4th-layer epic delivers the security stance and compression-encryption pipeline that runs *on top of* whichever orchestrator × harness × provider triple is selected. Per [anti-vendor-lock-in lesson Evidence 11](../../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md), the mission claim now extends to 4 structural layers, not 3.
+
 ## Relationships
 
 - IMPLEMENTS: [[post-anthropic-self-autonomous-stack|Milestone — Post-Anthropic Self-Autonomous Stack]] — extends from 2-layer (harness + provider) to 3-layer (orchestrator + harness + provider)
@@ -171,6 +173,7 @@ Per [Saturation Lesson Hard Rule #11](../../../lessons/01_drafts/saturation-decl
 - DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]] (each layer's substitutability is verified by working integration, not just declared)
 - FEEDS INTO: [[2026-consumer-hardware-ai-stack|2026 Consumer Hardware AI Stack]] (concrete 2026 stack assembly with empirical components)
 - FEEDS INTO: [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]] (operationalizes the Specialty Routing + Resilience Playbook sections)
+- EXTENDED BY: [[secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04|Trust-Layer Epic — Cypher + Decypher + Compression]] — adds the 4th substitutable layer (trust / confidential-compute) on top of the orchestrator × harness × provider stack delivered here
 
 ## Backlinks
 
@@ -188,3 +191,4 @@ Per [Saturation Lesson Hard Rule #11](../../../lessons/01_drafts/saturation-decl
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
 [[2026 Consumer Hardware AI Stack]]
 [[ai-infrastructure-decision-framework-2026|AI Infrastructure Decision Framework 2026]]
+[[Trust-Layer Epic — Cypher + Decypher + Compression]]
