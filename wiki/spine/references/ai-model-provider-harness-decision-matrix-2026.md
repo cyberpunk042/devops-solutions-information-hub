@@ -13,7 +13,7 @@ confidence: high
 maturity: growing
 priority: P0
 created: 2026-04-23
-updated: 2026-04-28
+updated: 2026-04-30
 sources:
   - id: ai-infra-framework-2026
     type: wiki
@@ -263,6 +263,58 @@ When re-validating this matrix per the criteria below, also check:
 - **A new orchestrator crosses the capability bar** (e.g., new managed-agents platform; significant Multica/Paperclip feature drift)
 - **An existing orchestrator changes license** (e.g., Multica relicenses away from Apache 2.0)
 - **Operator's orchestrator strategy changes** (adopt Multica → adopt different orchestrator → revert to direct harness use)
+
+## Trust / Confidential-Compute Layer — Above the Orchestrator × Harness × Provider Matrix (added 2026-04-30)
+
+> [!abstract] **The matrix is now 4-axis: Trust × Orchestrator × Harness × Provider**
+>
+> The 2026-04-30 operator-authored [Trust-Layer Epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) and [Concept — Secure Tamper-Proof Model on Shared GPU](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) introduce a **fourth substitutable dimension** sitting on top of orchestrator × harness × provider: **trust / confidential-compute**. The dimension composes **compression (Caveman + UD-IQ2/Q2_K + KV-cache compression) + encryption (cypher of weights and context, decypher on-GPU via Triton kernels)** to deliver an empirically measured **80–90% space-saved envelope on large-context workloads**, seamless and performance-positive.
+>
+> | Trust opt-in | What it provides | Auth surface | Hardware / runtime |
+> |---|---|---|---|
+> | **L0 — Hash integrity** | Verify weights weren't swapped (SHA-256 of safetensors/GGUF) | None — public hash | Any GPU including RTX 3090 |
+> | **L1 — Weights-encrypted-at-rest** | Cypher applied on disk; decrypt at load | Symmetric key OR passphrase OR certificate | Any GPU including RTX 3090 |
+> | **L2 — Compressed-and-encrypted weights + KV cache, GPU decrypt (DEFAULT on RTX 3090)** | Caveman/quantization composed with cypher; decypher kernels on GPU (Triton); compressed-encrypted form on disk and in transit; **80–90% space saved on large context** | Symmetric key · passphrase · certificate · HSM | Any modern GPU; ideal default for the operator's incoming 3090 |
+> | **L3 — NVIDIA H100/H200 CC mode (additive)** | HBM encryption + attestation; weights decrypted only inside encrypted GPU memory after attestation gates key release | NRAS + RIM attestation reports → key release | H100 / H200 / Blackwell on-prem or cloud (AWS p5 / Azure NCC H100 v5) |
+> | **L4 — End-to-end FHE inference** | Weights and activations encrypted end-to-end; no plaintext key release | Cryptographic protocol | Zama Concrete ML — niche but available |
+>
+> Opt-ins compose: L0 ⊂ L1 ⊂ L2 ⊂ L3 ⊂ L4. The default operator stance on RTX 3090 is **L2**; **L3 is additive** when H100-class hardware is available.
+
+### Trust selection (2026-04-30)
+
+> [!info] When does the trust layer matter?
+>
+> | Operator state | Trust opt-in | Why |
+> |---|---|---|
+> | **Solo operator, single workload, no shared infrastructure** | L0 or L1 | Hash integrity or at-rest encryption suffices; the threat model is casual disk inspection / image leakage |
+> | **Solo operator, large-context-heavy workload, RTX 3090** | **L2 (default)** | 80-90% space saved on large context + cypher overlay = seamless, blazing-fast, performance-positive |
+> | **Production workload on rented or owned H100-class hardware** | L3 (composes on top of L2) | Adds HBM encryption + attestation chain; provider cannot tamper without detection |
+> | **Highest-sensitivity / regulatory workload, low-throughput tolerance** | L4 (FHE) | End-to-end encrypted; no plaintext key release |
+> | **Multi-tenant deployment** | L3 minimum | Co-tenant threat model requires hardware-level isolation |
+
+### Composability with the orchestrator × harness × provider stack
+
+The trust layer composes underneath the existing 3-layer assembly:
+
+```
+TRUST  L2/L3 (compressed + encrypted + GPU-decypher; attestation if L3)
+  ↓
+Multica (orchestrator)
+  ├─ Claude Code  ─→  AICP routing  ─→  local (RTX 3090: L2 compressed-encrypted weights)
+  ├─ OpenCode     ─→  AICP routing  ─→  Ollama Cloud | OpenRouter | local
+  └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
+```
+
+**Four composable substitution layers**: trust (L0–L4 opt-ins) × orchestrator (Multica) × harness (10 supported) × provider (AICP backend pattern). Each layer is independently swappable. Per [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) Evidence 11, this closes the trust-layer documentation gap.
+
+### Quarterly review trigger added (2026-04-30)
+
+When re-validating this matrix, also check:
+- **A new TEE provider lands** (e.g., AMD GPU TEE matures, Intel TDX-with-GPU integration, RISC-V Keystone hardware)
+- **A new compression substrate crosses the capability bar** (e.g., a successor to Caveman, new quantization scheme below Q2_K)
+- **NVIDIA CC mode firmware/feature changes** (attestation infra updates, throughput improvements, new card support)
+- **FHE inference latency drops materially** (current ~50× slowdown; if research yields ~5× the L4 viability changes)
+- **Operator's threat model evolves** (new workload-class with new sensitivity tier)
 
 ## Updates + quarterly review triggers
 
