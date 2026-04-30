@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-30T14:11:41.709239+00:00",
+  "generated": "2026-04-30T14:14:53.621274+00:00",
   "stats": {
-    "pages": 529,
+    "pages": 530,
     "domains": 11,
     "sources": 78,
     "comparisons": 9,
-    "relationships": 3345,
+    "relationships": 3353,
     "tags_unique": 1809,
     "layers": {
       "3": 4,
@@ -15,11 +15,11 @@
       "4": 65,
       "0": 1,
       "1": 49,
-      "spine": 77
+      "spine": 78
     },
     "maturity": {
       "growing": 325,
-      "seed": 55,
+      "seed": 56,
       "mature": 2
     }
   },
@@ -34086,6 +34086,111 @@
       ]
     },
     {
+      "path": "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30.md",
+      "slug": "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
+      "title": "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)",
+      "type": "learning-path",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-30",
+      "updated": "2026-04-30",
+      "last_reviewed": "2026-04-30",
+      "tags": [
+        "learning-path",
+        "spine",
+        "trust-layer",
+        "fourth-layer",
+        "tamper-proof",
+        "cypher",
+        "decypher",
+        "compression",
+        "caveman",
+        "wenyan",
+        "rlm",
+        "anti-vendor-lock-in",
+        "post-anthropic",
+        "mission-2026-04-30",
+        "navigation",
+        "curated-reading"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md",
+          "description": "The Trust-Layer Epic this path navigates \u2014 milestone-class assembly of the 4th substitutable layer (trust / confidential-compute) on top of orchestrator \u00d7 harness \u00d7 provider"
+        },
+        {
+          "id": "design-synthesis",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Concept page that captures the operator-authored design \u2014 the synthesis grounding for the 80\u201390% composition math, integration levers L0\u2013L4, and supporting paths"
+        },
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Layer-1 source synthesis for the operator-confirmed compression reference \u2014 Wenyan-Full mode delivers 80\u201390% character reduction at a single layer"
+        },
+        {
+          "id": "session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression.md",
+          "description": "Session log capturing the arc \u2014 verbatim directives, phase-by-phase narrative, state delta, artifact inventory, pending items"
+        },
+        {
+          "id": "prior-path",
+          "type": "wiki",
+          "file": "wiki/spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28.md",
+          "description": "The prior session arc's learning path (3-layer stack, 2026-04-28) \u2014 this path is its 4th-layer extension"
+        }
+      ],
+      "layer": "spine",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Trust-Layer Learning Path",
+        "Tamper-Proof Inference Reading Order",
+        "Cypher Decypher Compression Path",
+        "4th-Layer Path"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-30 Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Post-Anthropic 3-Layer Stack Learning Path"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
       "path": "spine/models/agent-config/model-claude-code.md",
       "slug": "spine/models/agent-config/model-claude-code",
       "title": "Model \u2014 Claude Code",
@@ -38860,8 +38965,8 @@
       "relationship_count": 393
     },
     "cross-domain": {
-      "page_count": 225,
-      "relationship_count": 1524
+      "page_count": 226,
+      "relationship_count": 1532
     },
     "ai-models": {
       "page_count": 14,
@@ -39148,6 +39253,7 @@
       "spine/goldilocks-flow",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/references/methodology-system-map",
       "spine/references/model-registry"
     ],
@@ -39856,6 +39962,7 @@
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "ktransformers": [
@@ -40132,7 +40239,8 @@
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "mission-2026-04": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
@@ -40231,24 +40339,29 @@
     ],
     "tamper-proof": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "cypher": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "decypher": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "compression": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "caveman": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "quantization": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -40266,7 +40379,8 @@
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "markdown-rules": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -40295,11 +40409,13 @@
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "fourth-layer": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "operator-authored": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
@@ -41525,6 +41641,7 @@
       "comparisons/model-ecosystem-vs-four-project-ecosystem",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/models/agent-config/model-claude-code",
       "spine/models/agent-config/model-markdown-as-iac",
       "spine/models/agent-config/model-skills-commands-hooks",
@@ -44774,11 +44891,13 @@
     ],
     "trust-layer": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "wenyan": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "do-not-undermine": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
@@ -46780,6 +46899,7 @@
       "spine/learning-paths/methodology-fundamentals",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/standards/learning-path-page-standards"
     ],
     "onboarding": [
@@ -46791,7 +46911,8 @@
     ],
     "curated-reading": [
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "evidence-chain": [
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
@@ -47312,6 +47433,12 @@
       ]
     },
     {
+      "target": "2026-04-30 Session Log",
+      "referenced_by": [
+        "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
+      ]
+    },
+    {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
@@ -47373,7 +47500,8 @@
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
-        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
+        "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)",
+        "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
     {
@@ -47454,7 +47582,8 @@
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
-        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+        "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
     {
@@ -48026,7 +48155,8 @@
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
-        "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)"
+        "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
+        "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
     {
@@ -48179,6 +48309,12 @@
       ]
     },
     {
+      "target": "Post-Anthropic 3-Layer Stack Learning Path",
+      "referenced_by": [
+        "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
+      ]
+    },
+    {
       "target": "Post-Anthropic Directive",
       "referenced_by": [
         "Harness Contract \u2014 Invariants for a Harness-Neutral Ecosystem"
@@ -48315,7 +48451,8 @@
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
-        "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)"
+        "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
+        "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
     {
