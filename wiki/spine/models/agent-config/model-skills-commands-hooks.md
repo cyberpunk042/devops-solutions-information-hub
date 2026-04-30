@@ -436,6 +436,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[structured-context-is-proto-programming-for-ai-agents|Structured Context Is Proto-Programming for AI Agents]]
 [[src-anthropic-building-effective-ai-agents|Synthesis — Anthropic — Building Effective AI Agents — 5 Canonical Workflow Patterns]]
+[[src-caveman-prompt-output-compressor-julius-brussee|Synthesis — Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65–75% Output Reduction · ~46% Memory-File Compression · 80–90% Character Reduction in Wenyan Mode)]]
 [[src-claude-agent-sdk-and-managed-agents|Synthesis — Claude Agent SDK and Managed Agents]]
 [[src-claude-code-harness-features|Synthesis — Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]

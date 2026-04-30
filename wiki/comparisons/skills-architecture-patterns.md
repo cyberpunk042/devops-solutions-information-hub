@@ -215,4 +215,5 @@ The connection to context management is the critical constraint that shapes all 
 [[design-md-pattern|Design.md Pattern]]
 [[infrastructure-as-code-patterns|Infrastructure as Code Patterns]]
 [[skill-specification-is-key-to-interoperability|Skill Specification Is the Key to Ecosystem Interoperability]]
+[[src-caveman-prompt-output-compressor-julius-brussee|Synthesis — Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65–75% Output Reduction · ~46% Memory-File Compression · 80–90% Character Reduction in Wenyan Mode)]]
 [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]

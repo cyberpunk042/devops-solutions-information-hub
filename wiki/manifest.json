@@ -1,12 +1,12 @@
 {
-  "generated": "2026-04-30T13:32:06.266313+00:00",
+  "generated": "2026-04-30T13:53:37.626885+00:00",
   "stats": {
-    "pages": 527,
+    "pages": 528,
     "domains": 11,
-    "sources": 77,
+    "sources": 78,
     "comparisons": 9,
-    "relationships": 3322,
-    "tags_unique": 1792,
+    "relationships": 3337,
+    "tags_unique": 1807,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,12 +14,12 @@
       "2": 51,
       "4": 65,
       "0": 1,
-      "1": 48,
+      "1": 49,
       "spine": 77
     },
     "maturity": {
       "growing": 325,
-      "seed": 54,
+      "seed": 55,
       "mature": 2
     }
   },
@@ -29567,6 +29567,178 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+      "slug": "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "title": "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-04-30",
+      "updated": "2026-04-30",
+      "last_reviewed": "2026-04-30",
+      "tags": [
+        "source-synthesis",
+        "caveman",
+        "julius-brussee",
+        "prompt-compression",
+        "output-compression",
+        "token-reduction",
+        "wenyan",
+        "classical-chinese",
+        "mit-licensed",
+        "claude-code-plugin",
+        "codex-plugin",
+        "gemini-cli-extension",
+        "skill",
+        "hooks",
+        "sessionstart",
+        "userpromptsubmit",
+        "statusline",
+        "cross-agent",
+        "npx-skills",
+        "anti-vendor-lock-in",
+        "mission-2026-04-30",
+        "operator-confirmed",
+        "trust-layer",
+        "layer-1",
+        "paper-evidence"
+      ],
+      "sources": [
+        {
+          "id": "caveman-github",
+          "type": "repository",
+          "url": "https://github.com/JuliusBrussee/caveman",
+          "file": "raw/articles/juliusbrusseecaveman.md",
+          "title": "JuliusBrussee/caveman \u2014 README + 17 deep-fetched files",
+          "description": "Authoritative open-source repository \u2014 MIT licensed, ships as Claude Code plugin / Codex plugin / Gemini CLI extension / npx-skills for 40+ agents. Operator-confirmed reference 2026-04-30.",
+          "ingested": "2026-04-30"
+        },
+        {
+          "id": "brevity-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2604.00025",
+          "description": "March 2026 paper 'Brevity Constraints Reverse Performance Hierarchies in Language Models' \u2014 caveman cites this as evidence that constraining models to brief responses can improve accuracy by ~26 percentage points on certain benchmarks"
+        },
+        {
+          "id": "cavemem",
+          "type": "repository",
+          "url": "https://github.com/JuliusBrussee/cavemem",
+          "description": "Cross-agent persistent memory \u2014 sister project. Compressed SQLite + MCP, local by default. The caveman ecosystem's memory-compression layer."
+        },
+        {
+          "id": "cavekit",
+          "type": "repository",
+          "url": "https://github.com/JuliusBrussee/cavekit",
+          "description": "Spec-driven autonomous build loop \u2014 sister project. Natural language \u2192 kits \u2192 parallel build \u2192 verified."
+        },
+        {
+          "id": "tamper-proof-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Operator-authored 2026-04-30 concept \u2014 Caveman is the prompt-layer compression slice of the operator's 80\u201390% space-saved envelope (compression \u00d7 encryption composed)"
+        },
+        {
+          "id": "trust-layer-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md",
+          "description": "Trust-Layer Epic \u2014 Caveman is named as the compression substrate for the prompt-layer slice of the L2 default opt-in"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 Caveman closes the compression-substrate slot in Evidence 11's 4-layer substitutability claim (trust \u00d7 orchestrator \u00d7 harness \u00d7 provider)"
+        },
+        {
+          "id": "skills-architecture-comparison",
+          "type": "wiki",
+          "file": "wiki/comparisons/skills-architecture-patterns.md",
+          "description": "Cross-ecosystem synthesis \u2014 Caveman is a SKILL.md-format skill that ships across Claude Code, Cursor, Windsurf, Cline, Copilot, and 40+ other agents via npx skills; demonstrates the open SKILL.md interoperability claim"
+        },
+        {
+          "id": "model-skills-commands-hooks",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "Caveman demonstrates the SKILL.md + hooks + commands extension model in production \u2014 auto-activation via SessionStart hook, mode switching via UserPromptSubmit hook, statusline badge"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Caveman",
+        "Caveman Compressor",
+        "Caveman Synthesis",
+        "JuliusBrussee/caveman",
+        "Caveman Prompt Compressor",
+        "Caveman Output Compressor",
+        "Wenyan Mode"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Skills Architecture Patterns"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "claude-code-prompt-patch"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "18 Claude Code Token Hacks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Synthesis \u2014 RLM (Recursive Language Models)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Superpowers Plugin"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Decision Matrix 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-claude-code-harness-features.md",
       "slug": "sources/tools-integration/src-claude-code-harness-features",
       "title": "Synthesis \u2014 Claude Code Harness: Skills, Hooks, Plugins, Subagents, MCP (2026)",
@@ -38589,8 +38761,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 17,
-      "relationship_count": 178
+      "page_count": 18,
+      "relationship_count": 193
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -39392,6 +39564,7 @@
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/src-claude-agent-sdk-and-managed-agents",
       "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
@@ -39836,6 +40009,7 @@
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
       "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
       "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
       "sources/tools-integration/src-multica-managed-agents-platform",
@@ -39955,7 +40129,8 @@
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
     ],
     "caveman": [
-      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "quantization": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -39995,7 +40170,8 @@
     ],
     "mission-2026-04-30": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "fourth-layer": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
@@ -43411,7 +43587,8 @@
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
     "paper-evidence": [
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "open-source-stack": [
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
@@ -43730,7 +43907,8 @@
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone"
     ],
     "layer-1": [
-      "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone"
+      "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "research-engine": [
       "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine"
@@ -44690,7 +44868,8 @@
     ],
     "cross-agent": [
       "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work",
-      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
+      "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "synergy-matrix": [
       "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work"
@@ -44804,6 +44983,7 @@
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "sources/wiki-methodology/src-sdlc-frameworks-research",
       "spine/standards/source-synthesis-page-standards"
     ],
@@ -44843,7 +45023,8 @@
     "skill": [
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill"
+      "sources/obsidian-notebooklm/src-pleaseprompto-notebooklm-skill",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "mcp-server": [
       "sources/obsidian-notebooklm/src-claude-world-notebooklm-skill",
@@ -45270,6 +45451,7 @@
     ],
     "claude-code-plugin": [
       "sources/src-plannotator",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "sources/wiki-methodology/src-context-mode"
     ],
     "pm": [
@@ -45530,6 +45712,51 @@
       "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k"
+    ],
+    "julius-brussee": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "prompt-compression": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "output-compression": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "token-reduction": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "wenyan": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "classical-chinese": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "mit-licensed": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "codex-plugin": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "gemini-cli-extension": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "sessionstart": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "userpromptsubmit": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "statusline": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "npx-skills": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "operator-confirmed": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "trust-layer": [
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "plugins": [
       "sources/tools-integration/src-claude-code-harness-features",
@@ -46725,6 +46952,12 @@
   },
   "orphaned_refs": [
     {
+      "target": "18 Claude Code Token Hacks",
+      "referenced_by": [
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
+      ]
+    },
+    {
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
@@ -46739,6 +46972,7 @@
         "2026-04-27 Session Handoff \u2014 RLM Thread Complete Evidence Chain (T-0 Post-Anthropic Mission Day)",
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
@@ -46990,6 +47224,7 @@
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
@@ -47074,7 +47309,8 @@
     {
       "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU",
       "referenced_by": [
-        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)"
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
       ]
     },
     {
@@ -47713,6 +47949,7 @@
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
       ]
     },
@@ -47991,6 +48228,12 @@
       ]
     },
     {
+      "target": "Superpowers Plugin",
+      "referenced_by": [
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
+      ]
+    },
+    {
       "target": "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle",
       "referenced_by": [
         "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
@@ -48096,6 +48339,7 @@
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 RLM Paper Deep Dive: Table 1 Across 4 Tasks, RLM-Qwen3-8B Training Recipe (48 H100 hrs / prime-rl / 1000 trajectories), and Six Observations (arXiv 2512.24601 v2 Jan 2026)"
       ]
     },
@@ -48410,6 +48654,12 @@
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
+      ]
+    },
+    {
+      "target": "claude-code-prompt-patch",
+      "referenced_by": [
+        "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
       ]
     },
     {
