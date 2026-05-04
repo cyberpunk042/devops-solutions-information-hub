@@ -16,6 +16,7 @@ epics:
   - "E012"
   - "post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
   - "secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+  - "custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05"
 acceptance_criteria:
   - "Claude Code CLI can route through OpenRouter to Kimi K2.6 end-to-end (harness + tool-use)"
   - "Local K2.6 Q2 runs via KTransformers on /dev/sdd (WD_BLACK NVMe) with measured tok/s documented"
@@ -31,6 +32,9 @@ acceptance_criteria:
   - "EXTENDED 2026-04-28 — Resilience smoke test passes: any single layer disabled, AICP failover or Multica re-route maintains task completion"
   - "EXTENDED 2026-04-30 — 4th substitutable layer (trust / confidential-compute) operational: compressed-encrypted weights + on-GPU decypher kernels (Triton) deliver 80-90% space saved on large context, seamless and performance-positive on RTX 3090; L3 additive (NVIDIA H100/H200 CC mode + attestation) available when H100-class hardware is rented or acquired"
   - "EXTENDED 2026-04-30 — Anti-vendor-lock-in extends to security stance: operator owns keys (file / passphrase / cert / HSM), attestation verifiable, no provider can swap weights without detection"
+  - "EXTENDED 2026-05-04 — Custom-tailored senior-engineer-tier model group + recreated intelligence layer at I/O boundaries operational: operator-controlled customization on open-weight base(s) via preference fine-tune (DPO/IPO) + curated instruction data + behavioral constitution; Mixture-of-LoRAs across senior-engineer task surfaces; Python hyperstructure on top of Markdown-as-IaC; multi-version release discipline (`v0.1-seed` → `v0.5-growing` → `v1.0-validated`); composes operator-toggle-able with the trust + compression layers"
+  - "EXTENDED 2026-05-04 — Pain-point reduction empirically measured: fresh-environment session-start time-to-first-quality-output reduced vs Opus 4.x baseline; the *'shouldn't have to be so long and hard or repetitive'* property validated, not just declared"
+  - "EXTENDED 2026-05-04 — Anti-vendor-lock-in extends to model-customization stance: operator owns the training data, alignment data, behavioral constitution, base-model choice, fine-tune method, evaluation gate; mission claim is now empirical at a candidate 5th substitutable layer (model-customization / operator-authored-tier) OR a substitutable axis WITHIN the provider layer — operator-decision in the Custom-Tailored Model Group Epic M006"
 confidence: high
 created: 2026-04-22
 updated: 2026-04-28

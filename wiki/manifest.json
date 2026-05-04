@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-04T15:41:23.268537+00:00",
+  "generated": "2026-05-04T19:50:38.604467+00:00",
   "stats": {
-    "pages": 536,
+    "pages": 540,
     "domains": 11,
     "sources": 82,
     "comparisons": 9,
-    "relationships": 3431,
-    "tags_unique": 1853,
+    "relationships": 3486,
+    "tags_unique": 1875,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 61,
+      "seed": 62,
       "mature": 2
     }
   },
@@ -1598,6 +1598,239 @@
         {
           "verb": "BUILDS ON",
           "target": "Synthesis \u2014 Unsloth"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md",
+      "slug": "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "title": "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+      "type": "epic",
+      "domain": "backlog",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "epic",
+        "p0",
+        "custom-model",
+        "senior-engineer-tier",
+        "moe-group",
+        "intelligence-layer",
+        "behavioral-alignment",
+        "preference-data",
+        "dpo",
+        "ipo",
+        "multi-version",
+        "information-virus",
+        "interfaces",
+        "middleware",
+        "python-hyperstructure",
+        "markdown-as-iac",
+        "trust-layer-composition",
+        "compression-composition",
+        "anti-vendor-lock-in",
+        "post-anthropic",
+        "mission-2026-05-04",
+        "milestone-class",
+        "operator-authored",
+        "strategic-tier"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md",
+          "description": "Operator directive 2026-05-04 \u2014 verbatim concept of senior-engineer-tier customized model group + recreated intelligence layer at I/O boundaries + multi-version + information-virus + interfaces + middleware + composition with cypher/decypher + composition with I/O compression. Plus the pain-point trigger (root-ghostproxy bootstrap on Debian 13 non-GUI; even fully-configured systems pay AI alignment overhead repeatedly per session)."
+        },
+        {
+          "id": "design-synthesis",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Design ground-truth synthesis \u2014 captures operator-authored concept with architecture sketch, phase scope, mission alignment, and 8 open design questions. This epic tracks execution against that synthesis."
+        },
+        {
+          "id": "e012-tactical-predecessor",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md",
+          "description": "Existing tactical custom-model epic (P2) \u2014 Wiki-Assistant + Wiki-Router + Multi-LoRA. This new epic NESTS E012's deliverables as components (Wiki-Router becomes the input-boundary intelligence-layer router; Wiki-Assistant becomes one of the small-LoRA specialists in the model group). E012 stays P2 tactical; this new epic is P0 strategic-tier."
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md",
+          "description": "Existing 5-candidate custom-model strategy doc \u2014 provides the candidate-base + LoRA-rank + data-recipe substrate. This epic adds the senior-engineer-tier behavioral-alignment dimension on top."
+        },
+        {
+          "id": "trust-layer-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md",
+          "description": "Trust-Layer Epic \u2014 composes with this epic via operator-toggle-able L0\u2013L4 opt-ins (operator: 'with and without cypher / decypher with or without I/O Compression')"
+        },
+        {
+          "id": "post-anthropic-3-layer-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md",
+          "description": "Adjacent epic \u2014 orchestrator \u00d7 harness \u00d7 provider 3-layer stack. The custom model group becomes a routable provider in this stack via Multica + AICP routing."
+        },
+        {
+          "id": "post-anthropic-milestone",
+          "type": "wiki",
+          "file": "wiki/backlog/milestones/post-anthropic-self-autonomous-stack.md",
+          "description": "Parent milestone \u2014 this epic adds custom-model strategic-tier scope to the post-Anthropic mission (operator: 'this will be part of this project... massive project... really long')"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 this epic delivers candidate Evidence 12 (custom-model-customization substitutable axis OR 5th layer; operator-decision)"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Convergence lesson \u2014 operator's 'like we teach' names this directly; model-creation workflow becomes the 9th instance of the spec-driven convergent pattern"
+        },
+        {
+          "id": "rlm-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "RLM substrate \u2014 `mit-oasys/rlm-qwen3-8b-v0.1` is itself a customization-on-open-weight-base instance; candidate base for v0.1-seed"
+        },
+        {
+          "id": "prime-rl-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+          "description": "Training framework \u2014 Apache 2.0; IPO + Kimi-K2.5 KL default loss; 48 H100 hours / ~$48-100 cloud-rental for the RLM-Qwen3-8B post-train precedent"
+        },
+        {
+          "id": "unsloth-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "description": "Consumer-hardware fine-tune substrate \u2014 LoRA + UD-IQ2 / Q2_K; the realistic training environment on RTX 3090"
+        },
+        {
+          "id": "dpo-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2305.18290",
+          "description": "Direct Preference Optimization \u2014 preference-data fine-tuning method"
+        },
+        {
+          "id": "ipo-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2310.12036",
+          "description": "IPO \u2014 DPO refinement; default loss in prime-rl"
+        },
+        {
+          "id": "lorahub-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2307.13269",
+          "description": "LoRAHub \u2014 composing multiple LoRA modules; substrate for operator's MoE-of-LoRAs framing"
+        },
+        {
+          "id": "ties-merging-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2306.01708",
+          "description": "TIES merging \u2014 composing fine-tuned models without retraining"
+        },
+        {
+          "id": "constitutional-ai",
+          "type": "documentation",
+          "url": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+          "description": "Constitutional AI \u2014 alignment-by-constitution precedent for operator's 'core' as the constitution"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "Senior-Engineer-Tier Custom Model Group Epic",
+        "Custom Model Group + Intelligence Layer Pipeline",
+        "Operator-Tier Model Mission Epic",
+        "Custom-Tailored Model Mission"
+      ],
+      "relationships": [
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "E012 \u2014 Custom Model Library (Unsloth LoRAs)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "prime-rl Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Qwopus Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "DEPENDS ON",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "AI Infrastructure Decision Framework 2026"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Adopt Multica"
         }
       ]
     },
@@ -10102,6 +10335,247 @@
         {
           "verb": "RELATES TO",
           "target": "Claude Code Best Practices"
+        }
+      ]
+    },
+    {
+      "path": "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+      "slug": "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "title": "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+      "type": "concept",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "concept",
+        "custom-model",
+        "senior-engineer-tier",
+        "moe-group",
+        "intelligence-layer",
+        "behavioral-alignment",
+        "preference-data",
+        "dpo",
+        "ipo",
+        "multi-version",
+        "information-virus",
+        "interfaces",
+        "middleware",
+        "python-hyperstructure",
+        "markdown-as-iac",
+        "trust-layer-composition",
+        "compression-composition",
+        "anti-vendor-lock-in",
+        "post-anthropic",
+        "mission-2026-05-04",
+        "operator-authored",
+        "exploratory"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md",
+          "description": "Operator-stated directive 2026-05-04 \u2014 verbatim concept of a customized senior-engineer-tier model group + intelligence layer recreated at I/O boundaries + multi-version + information-virus + front/out interfaces + middleware + composes with cypher/decypher + composes with I/O compression"
+        },
+        {
+          "id": "e012-custom-model-library",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md",
+          "description": "Existing tactical custom-model epic \u2014 Wiki-Assistant + Wiki-Router + Multi-LoRA. P2 priority. The new mission EXTENDS E012's tactical scope with strategic-tier dimensions; does not replace it."
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md",
+          "description": "Existing 5-candidate custom-model strategy doc \u2014 Wiki-Assistant / Wiki-Reasoner / Wiki-Opus-Distilled / Wiki-Router / Multi-LoRA. The new mission adds a 6th dimension (senior-engineer-tier behavioral-alignment core) and a 7th dimension (recreated intelligence layer at I/O boundaries) on top of these candidates."
+        },
+        {
+          "id": "trust-layer-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md",
+          "description": "Trust-Layer Epic \u2014 composes with this concept (operator: 'with and without cypher / decypher with or without I/O Compression')"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 this concept adds a candidate substitutable axis (custom-authored model tier) WITHIN the provider layer, OR a candidate 5th layer (model-customization). Operator design call."
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Spec-driven convergence lesson \u2014 operator's *'like we teach'* names this directly: apply the wiki's methodology to the model-creation workflow itself"
+        },
+        {
+          "id": "model-markdown-as-iac",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
+          "description": "Markdown-as-IaC model \u2014 operator's *'python and turn thing into proto-programming or proto proto-programming / structure and hyperstructure'* extends this pattern to Python-as-programming-layer on top of declarative Markdown"
+        },
+        {
+          "id": "rlm-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "RLM substrate \u2014 `mit-oasys/rlm-qwen3-8b-v0.1` is itself an instance of operator-controlled customization on an open-weight base (Qwen3-8B post-trained in 48 H100 hours, approaches frontier on 3/4 long-context tasks)"
+        },
+        {
+          "id": "prime-rl-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md",
+          "description": "Training framework \u2014 Apache 2.0, IPO + Kimi-K2.5 KL default loss, custom-loss support via loss.type=custom, 48 H100 hours / ~$48-100 cloud rental for a frontier-approaching post-train"
+        },
+        {
+          "id": "qwopus-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b.md",
+          "description": "Distillation precedent \u2014 Claude Opus reasoning distilled into Qwen 27B; structural-alignment LoRA; reasoning-structure transfer demonstrated"
+        },
+        {
+          "id": "gpt-oss-architecture",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-gpt-oss-architecture-shared-experts-distillation.md",
+          "description": "MoE architecture precedent \u2014 shared experts + distillation; relevant to operator's *'Group of MoE models of various sizes and needs'* framing"
+        },
+        {
+          "id": "unsloth-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md",
+          "description": "Consumer-hardware fine-tuning \u2014 LoRA + UD-IQ2 / Q2_K quantization; the realistic training substrate on RTX 3090"
+        },
+        {
+          "id": "cavekit-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md",
+          "description": "Most-distilled spec-driven instance \u2014 minimum viable shape (SPEC.md + 3 commands + 2 skills); a candidate template for the model-creation workflow's own spec discipline"
+        },
+        {
+          "id": "2026-consumer-hardware-stack",
+          "type": "wiki",
+          "file": "wiki/spine/references/2026-consumer-hardware-ai-stack.md",
+          "description": "Hardware reality \u2014 RTX 3090 (24 GB VRAM, ETA mid-May 2026) is the realistic training substrate for L2-tier customizations on operator's stack"
+        },
+        {
+          "id": "feedback-do-not-undermine",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/feedback_do_not_undermine_operator_design_assertions.md",
+          "description": "Operator-stated rule \u2014 when operator names operational properties or asserts a design path, ground with research; do not impose research-found ceilings"
+        },
+        {
+          "id": "dpo-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2305.18290",
+          "description": "Direct Preference Optimization \u2014 preference-data fine-tuning method; behavioral-alignment substrate alternative to RLHF"
+        },
+        {
+          "id": "ipo-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2310.12036",
+          "description": "IPO (Identity Preference Optimization) \u2014 DPO refinement that prime-rl uses by default"
+        },
+        {
+          "id": "constitutional-ai",
+          "type": "documentation",
+          "url": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+          "description": "Constitutional AI / RLAIF \u2014 alignment-by-constitution precedent for operator's *'core'* injection (operator's standards as the constitution)"
+        },
+        {
+          "id": "lorahub-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2307.13269",
+          "description": "LoRAHub \u2014 composing multiple LoRA modules for cross-task generalization; the realistic substrate for operator's *'Group of MoE models'* via expert-LoRA composition"
+        },
+        {
+          "id": "ties-merging-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/abs/2306.01708",
+          "description": "TIES merging \u2014 composing fine-tuned models without retraining; operator-controllable substrate for combining specialized fine-tunes"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Senior-Engineer-Tier Custom Model Group",
+        "Operator-Authored Custom Model Mission",
+        "MoE Group + Intelligence Layer at I/O Boundaries",
+        "Behavioral-Aligned Custom Model Concept"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "E012 \u2014 Custom Model Library (Unsloth LoRAs)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "prime-rl Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Qwopus Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Cavekit v4 Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026 Consumer Hardware AI Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
         }
       ]
     },
@@ -23962,6 +24436,194 @@
         {
           "verb": "BUILDS ON",
           "target": "Synthesis \u2014 Caveman"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-04-session-handoff-pre-compaction.md",
+      "slug": "log/2026-05-04-session-handoff-pre-compaction",
+      "title": "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "handoff",
+        "session",
+        "2026-05-04",
+        "pre-compaction",
+        "trust-layer",
+        "spec-driven-convergence",
+        "caveman-ecosystem",
+        "multi-arc",
+        "registered-corrections"
+      ],
+      "sources": [
+        {
+          "id": "prior-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-28-session-handoff.md",
+          "description": "Prior session handoff (2026-04-28) \u2014 registered RTX 3090 ordered + Multica self-host + Ollama Cloud as active stack member. This handoff continues from that registered state."
+        },
+        {
+          "id": "trust-layer-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression.md",
+          "description": "2026-04-30 trust-layer arc session log \u2014 captures the cypher+decypher+compression 80-90% envelope concept arc"
+        },
+        {
+          "id": "spec-driven-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson.md",
+          "description": "2026-05-04 spec-driven convergence arc session log \u2014 captures the Fowler SPDD + JS Mastery Six-File ingestion + Layer-4 lesson authoring"
+        },
+        {
+          "id": "convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Layer-4 lesson \u2014 8 independent convergence instances (now including cavekit) of the spec-driven agentic build pattern"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-28 Session Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-30 Trust-Layer Arc Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Spec-Driven Convergence Arc Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson (8 instances)"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
+      "path": "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point.md",
+      "slug": "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "title": "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "session",
+        "log",
+        "custom-model-mission",
+        "senior-engineer-tier",
+        "moe-group",
+        "intelligence-layer",
+        "behavioral-alignment",
+        "root-ghostproxy",
+        "pain-point-root-cause",
+        "post-anthropic",
+        "mission-2026-05-04",
+        "day-arc",
+        "post-compaction"
+      ],
+      "sources": [
+        {
+          "id": "pre-compaction-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-handoff-pre-compaction.md",
+          "description": "Pre-compaction handoff (also 2026-05-04, earlier) \u2014 captured the prior multi-arc state (4-layer mission claim \u00b7 8-instance convergence \u00b7 3-of-3 caveman ecosystem). This session continues post-compaction."
+        },
+        {
+          "id": "directive-raw-note",
+          "type": "file",
+          "file": "raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md",
+          "description": "Verbatim operator directive log \u2014 concept decomposition + pain-point decomposition + root-ghostproxy context + composition with prior mission layers"
+        },
+        {
+          "id": "concept-synthesis",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Design ground-truth synthesis for the operator-authored custom-model mission"
+        },
+        {
+          "id": "epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md",
+          "description": "Strategic-tier epic \u2014 extends post-Anthropic milestone; nests E012 tactical scope; 6 candidate modules M001\u2013M006"
+        },
+        {
+          "id": "e012-predecessor",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md",
+          "description": "Existing tactical custom-model epic (P2) \u2014 nested by, not replaced by, the new strategic-tier epic"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Pre-Compaction Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-30 Trust-Layer Arc Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Spec-Driven Convergence Arc Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Concept \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Epic"
         },
         {
           "verb": "DEMONSTRATES",
@@ -39852,12 +40514,12 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 94,
-      "relationship_count": 393
+      "page_count": 95,
+      "relationship_count": 413
     },
     "cross-domain": {
-      "page_count": 230,
-      "relationship_count": 1583
+      "page_count": 233,
+      "relationship_count": 1618
     },
     "ai-models": {
       "page_count": 14,
@@ -39918,6 +40580,7 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -40755,6 +41418,7 @@
     "p0": [
       "backlog/epics/pre-milestone/E007-openrouter-deadline-de-risk",
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -40842,18 +41506,21 @@
       "backlog/epics/pre-milestone/E010-storage-and-hardware-enablement",
       "backlog/epics/pre-milestone/E011-routing-integration-aicp-tiers",
       "backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras",
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "backlog/milestones/post-anthropic-self-autonomous-stack",
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
       "log/2026-04-23-session-handoff-ai-infrastructure-vision-and-tooling",
       "log/2026-04-24-handoff-pickup-cold-forward",
       "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/references/ai-infrastructure-decision-framework-2026"
@@ -41055,6 +41722,131 @@
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
       "backlog/tasks/T070-design-adapter-training-datasets"
     ],
+    "custom-model": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "spine/references/second-brain-custom-model-strategy"
+    ],
+    "senior-engineer-tier": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "moe-group": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "intelligence-layer": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "behavioral-alignment": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "preference-data": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "dpo": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "ipo": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
+    ],
+    "multi-version": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "information-virus": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "interfaces": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "middleware": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "python-hyperstructure": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "markdown-as-iac": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
+    ],
+    "trust-layer-composition": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "compression-composition": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "anti-vendor-lock-in": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
+      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
+      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
+      "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
+      "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
+      "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k",
+      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
+      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
+      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
+      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
+    ],
+    "mission-2026-05-04": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "milestone-class": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
+    ],
+    "operator-authored": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
+      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+    ],
+    "strategic-tier": [
+      "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05"
+    ],
     "3-layer-stack": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
@@ -41109,39 +41901,8 @@
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
-    "anti-vendor-lock-in": [
-      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
-      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
-      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
-      "decisions/01_drafts/adopt-multica-as-orchestrator-layer-post-anthropic-stack-2026-04",
-      "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
-      "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
-      "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
-      "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
-      "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
-      "sources/tools-integration/src-longbench-v2-paper-deep-dive-503-samples-17-models-o1-preview-beats-humans",
-      "sources/tools-integration/src-multica-managed-agents-platform",
-      "sources/tools-integration/src-oolong-and-longbench-pro-long-context-benchmarks-rlm-anchors",
-      "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k",
-      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale",
-      "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
-      "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
-      "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
-    ],
     "mission-2026-04": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
-    ],
-    "milestone-class": [
-      "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
-      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
     ],
     "in-progress": [
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090"
@@ -41310,9 +42071,6 @@
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
-    ],
-    "operator-authored": [
-      "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04"
     ],
     "unified-interface": [
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface"
@@ -41558,6 +42316,7 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "spine/standards/note-page-standards"
     ],
@@ -43820,6 +44579,20 @@
     "crystallization": [
       "domains/automation/wiki-event-driven-automation"
     ],
+    "concept": [
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "spine/models/depth/model-local-ai",
+      "spine/models/depth/model-notebooklm",
+      "spine/models/depth/model-second-brain",
+      "spine/models/ecosystem/model-automation-pipelines",
+      "spine/standards/concept-page-standards",
+      "spine/standards/harness-contract"
+    ],
+    "exploratory": [
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+    ],
     "consumption": [
       "domains/cross-domain/integration/ai-methodology-consumption-guide"
     ],
@@ -44155,15 +44928,6 @@
     "hardware-tier-0": [
       "domains/cross-domain/rlm-qwen3-6-27b-fine-tune-operations-plan"
     ],
-    "concept": [
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "spine/models/depth/model-local-ai",
-      "spine/models/depth/model-notebooklm",
-      "spine/models/depth/model-second-brain",
-      "spine/models/ecosystem/model-automation-pipelines",
-      "spine/standards/concept-page-standards",
-      "spine/standards/harness-contract"
-    ],
     "confidential-computing": [
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
@@ -44172,10 +44936,6 @@
     ],
     "nvidia-h100": [
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
-    ],
-    "markdown-as-iac": [
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
-      "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
     ],
     "python-sandboxing": [
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
@@ -44187,9 +44947,6 @@
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "operator-initiated": [
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
-    ],
-    "exploratory": [
       "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
     ],
     "post-ingestion": [
@@ -44985,14 +45742,6 @@
     "ai-dlc": [
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
-    "mission-2026-05-04": [
-      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
-      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
-    ],
     "methodology-process": [
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
@@ -45490,6 +46239,8 @@
       "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-handoff-pre-compaction",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
     "summary": [
@@ -45569,6 +46320,7 @@
       "log/2026-04-27-session-end-handoff-13-artifacts-rlm-thread-saturation",
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "log/2026-04-28-session-handoff",
+      "log/2026-05-04-session-handoff-pre-compaction",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -45851,7 +46603,8 @@
       "log/2026-04-28-session-handoff"
     ],
     "registered-corrections": [
-      "log/2026-04-28-session-handoff"
+      "log/2026-04-28-session-handoff",
+      "log/2026-05-04-session-handoff-pre-compaction"
     ],
     "operator-corrections": [
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption"
@@ -45865,10 +46618,12 @@
     "day-arc": [
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
     "trust-layer": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-handoff-pre-compaction",
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
@@ -45882,6 +46637,34 @@
     ],
     "80-90-space-saved": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+    ],
+    "2026-05-04": [
+      "log/2026-05-04-session-handoff-pre-compaction"
+    ],
+    "pre-compaction": [
+      "log/2026-05-04-session-handoff-pre-compaction"
+    ],
+    "spec-driven-convergence": [
+      "log/2026-05-04-session-handoff-pre-compaction"
+    ],
+    "caveman-ecosystem": [
+      "log/2026-05-04-session-handoff-pre-compaction",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "multi-arc": [
+      "log/2026-05-04-session-handoff-pre-compaction"
+    ],
+    "custom-model-mission": [
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "root-ghostproxy": [
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "pain-point-root-cause": [
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+    ],
+    "post-compaction": [
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
     ],
     "fowler": [
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
@@ -47063,9 +47846,6 @@
     "mcp-progressive-disclosure": [
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
-    "caveman-ecosystem": [
-      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
-    ],
     "fts5": [
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/wiki-methodology/src-context-mode"
@@ -47612,9 +48392,6 @@
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
     "aipo": [
-      "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
-    ],
-    "ipo": [
       "sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale"
     ],
     "kimi-k25-kl": [
@@ -48199,9 +48976,6 @@
     "strategy": [
       "spine/references/second-brain-custom-model-strategy"
     ],
-    "custom-model": [
-      "spine/references/second-brain-custom-model-strategy"
-    ],
     "wiki-corpus": [
       "spine/references/second-brain-custom-model-strategy"
     ],
@@ -48307,9 +49081,11 @@
     {
       "target": "2026 Consumer Hardware AI Stack",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Anti-Vendor-Lock-In Is an Empirical Claim, Not an Aspirational One \u2014 When Every Layer of the Open-Source Stack Has Paper Evidence",
@@ -48536,6 +49312,26 @@
       ]
     },
     {
+      "target": "2026-04-30 Trust-Layer Arc Session Log",
+      "referenced_by": [
+        "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
+      ]
+    },
+    {
+      "target": "2026-05-04 Pre-Compaction Handoff",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
+      ]
+    },
+    {
+      "target": "2026-05-04 Spec-Driven Convergence Arc Session Log",
+      "referenced_by": [
+        "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
+      ]
+    },
+    {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
@@ -48593,10 +49389,12 @@
     {
       "target": "Anti-Vendor-Lock-In Lesson",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
@@ -48604,6 +49402,7 @@
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
@@ -48667,6 +49466,12 @@
       ]
     },
     {
+      "target": "Cavekit v4 Synthesis",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+      ]
+    },
+    {
       "target": "Claude Code Slash Commands",
       "referenced_by": [
         "Per-Role Command Architecture"
@@ -48701,6 +49506,13 @@
       "target": "Codex CLI + Plugin",
       "referenced_by": [
         "AI Model \u00d7 Provider \u00d7 Harness Decision Matrix 2026"
+      ]
+    },
+    {
+      "target": "Concept \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
       ]
     },
     {
@@ -48740,6 +49552,12 @@
       ]
     },
     {
+      "target": "Custom-Tailored Model Group Epic",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
+      ]
+    },
+    {
       "target": "Decision Matrix 2026",
       "referenced_by": [
         "Session Handoff 2026-04-23 \u2014 AI Infrastructure Vision, Landscapes, Decision Matrix, Price-Monitoring Tool"
@@ -48760,6 +49578,7 @@
     {
       "target": "Decision \u2014 Adopt Multica",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)"
       ]
     },
@@ -48977,6 +49796,13 @@
       ]
     },
     {
+      "target": "E012 \u2014 Custom Model Library",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+      ]
+    },
+    {
       "target": "E012-custom-model-library-unsloth-loras",
       "referenced_by": [
         "Milestone: Post-Anthropic Self-Autonomous AI Stack",
@@ -49021,10 +49847,12 @@
     {
       "target": "Epic \u2014 Post-Anthropic 3-Layer Stack Assembly",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Post-Anthropic 3-Layer Stack M001 \u2014 Multica Per-Agent Provider Config (`custom_env` field is the answer)",
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)",
         "Post-Anthropic 3-Layer Stack M003 \u2014 Multica \u2192 Claude Code \u2192 AICP \u2192 Ollama Cloud Smoke-Test Runbook",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "2026-04-28 Session Handoff",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
@@ -49304,12 +50132,16 @@
     {
       "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Post-Anthropic Stack 3-Layer Composability \u2014 Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)",
         "Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
+        "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
@@ -49376,7 +50208,9 @@
     {
       "target": "Model \u2014 Markdown as IaC",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
@@ -49572,6 +50406,8 @@
     {
       "target": "Qwopus Synthesis",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
       ]
     },
@@ -49580,6 +50416,13 @@
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)"
+      ]
+    },
+    {
+      "target": "RLM Synthesis",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
       ]
     },
     {
@@ -49633,6 +50476,8 @@
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
+        "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
@@ -49690,6 +50535,9 @@
     {
       "target": "Spec-Driven Convergence Lesson",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
@@ -50109,7 +50957,9 @@
     {
       "target": "Unsloth Synthesis",
       "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
       ]
     },
@@ -50385,6 +51235,13 @@
         "RAM Upgrade \u2014 48 GB WSL Cap Live (E010 M001 complete)",
         "VHDX Attach Procedure + HCS E_ACCESSDENIED Fix (authoritative)",
         "WSL Ubuntu-24.04 Migration Handoff (pickup-cold procedure)"
+      ]
+    },
+    {
+      "target": "prime-rl Synthesis",
+      "referenced_by": [
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
       ]
     },
     {

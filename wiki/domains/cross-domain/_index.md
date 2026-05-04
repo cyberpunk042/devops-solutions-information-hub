@@ -16,6 +16,7 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ## Pages
 
+- [Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer — Research Synthesis (Operator-Authored 2026-05-04)](custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) — Operator-authored concept 2026-05-04: build **a custom-tailored model group (MoE-style, multiple sizes per task class...
 - [How AI Agents Consume the Methodology Wiki](integration/ai-methodology-consumption-guide.md) — This page bridges the gap between the methodology wiki as KNOWLEDGE and the methodology wiki as OPERATIONAL GUIDANCE ...
 - [Second Brain Integration System — Full Chain Requirements](integration/second-brain-integration-requirements.md) — Complete requirements spec for the second brain integration system — covering the FULL chain from project init throug...
 - [Skyscraper, Pyramid, Mountain](integration/skyscraper-pyramid-mountain.md) — Skyscraper, Pyramid, Mountain is an architectural quality analogy that describes the three structural states a codeba...
@@ -51,4 +52,4 @@ Meta-level concepts that span multiple domains. The methodology framework govern
 
 ## Tags
 
-`methodology`, `artifacts`, `standards`, `domain-specific`, `framework`, `artifact-chain`, `second-brain`, `requirements`, `architecture`, `reference`, `flexible`, `sdlc`, `ai-agents`, `integration`, `goldilocks`, `skyscraper`, `harness`, `fleet`, `design`, `models`
+`methodology`, `artifacts`, `standards`, `domain-specific`, `framework`, `artifact-chain`, `anti-vendor-lock-in`, `second-brain`, `requirements`, `architecture`, `reference`, `flexible`, `sdlc`, `concept`, `markdown-as-iac`, `post-anthropic`, `exploratory`, `ai-agents`, `integration`, `goldilocks`

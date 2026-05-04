@@ -155,6 +155,27 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 >
 > This Evidence item moves the lesson's mission claim from 3-layer empirical to **4-layer empirical**, with the trust layer being structurally where the operator owns the keys, the attestation is verifiable, and no provider can swap weights or tamper without detection.
 
+> [!success]- **Evidence 12 — Custom-tailored model-customization layer (operator-authored tier): operator owns training data + alignment data + behavioral constitution (operator-authored 2026-05-04)**
+>
+> Per the [Concept — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) and the operator-authored [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md): the operator's senior-engineer-tier customized model group (multi-version, Mixture-of-LoRAs, behavioral-alignment core via preference fine-tune, recreated intelligence layer at I/O boundaries) introduces a **candidate substitutability layer** above and beyond the four existing layers. Substitutability axes within this layer are independently documented and operator-controllable:
+>
+> | Substitution axis | Empirical substitutes |
+> |---|---|
+> | **Open-weight base** | Qwen3 / Qwen3-Coder / Qwen3.6-27B (per Evidence 1) · RLM-Qwen3-8B (per Evidence 8) · Llama 3 · DeepSeek V2/V3 · Mixtral · GPT-OSS shared-experts (per [synthesis](../../sources/tools-integration/src-gpt-oss-architecture-shared-experts-distillation.md)) |
+> | **Fine-tune method** | LoRA / QLoRA · full fine-tune · DPO ([arxiv:2305.18290](https://arxiv.org/abs/2305.18290)) · IPO ([arxiv:2310.12036](https://arxiv.org/abs/2310.12036)) · KTO · SLiC · GRPO · Constitutional AI / RLAIF |
+> | **Training framework** | [prime-rl (Apache 2.0)](../../sources/tools-integration/src-prime-intellect-prime-rl-async-rl-training-at-scale.md) · [Unsloth (consumer-hardware)](../../sources/tools-integration/src-unsloth-fast-lora-consumer-hardware.md) · TRL · Axolotl · LLaMA-Factory · Hugging Face PEFT |
+> | **Preference-data source** | operator-curated · synthetic from a stronger model · trace-distillation (per [Qwopus precedent](../../sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b.md)) · hybrid |
+> | **Behavioral-constitution authoring** | single document parallels CLAUDE.md scope · per-domain split (coding-tier · methodology-tier · debugging-tier) · layered (operator's standards + wiki's principles + per-project overrides) |
+> | **Composition mechanism** | Mixture-of-LoRAs ([LoRAHub arxiv:2307.13269](https://arxiv.org/abs/2307.13269)) · TIES merging ([arxiv:2306.01708](https://arxiv.org/abs/2306.01708)) · MoE-base + LoRA · single specialist |
+> | **Evaluation gate** | held-out hack-vs-right behavior tests · methodology-compliance tests · sister-project consumer satisfaction · operator-graded |
+> | **Distribution channel** | bundled with sister-project `setup --connect` · Multica-deployable · HuggingFace publish · operator-internal only |
+>
+> **Five (candidate) independent substitutable layers, each individually substitutable**: model-customization (this Evidence) × trust × orchestrator × harness × provider. **No single vendor controls more than one of the five.** The default operator stance on the incoming RTX 3090 (mid-May 2026 ETA): Phase 0 toolchain (Unsloth + prime-rl + Triton) → Phase 1 data discipline (preference pairs + instruction data + constitution v0.1) → Phase 2 first specialist LoRA `v0.1-seed` → Phase 4 recreated intelligence layer at I/O boundaries → Phase 5 behavioral preference fine-tune (the *naturally WANT to do things right* property) → Phase 6 trust + compression composition (L2 default).
+>
+> **Mission-claim layer-count is OPERATOR-DECISION** (captured in the Custom-Tailored Model Group Epic M006): Option A (substitutable axis WITHIN the provider layer — keeps the lesson at 4 layers); Option B (5th substitutable layer — model-customization / operator-authored-tier — acknowledges the strategic-tier scope explicitly). Default proposal: Option B, reflecting the operator's framing of this as *"massive project, really long"* and the structural distinction between vendor-supplied and operator-authored model artifacts. Pending operator confirmation; this Evidence item is documented as a **candidate** layer until operator decides.
+>
+> The pain-point anchor (operator-named 2026-05-04, verbatim): *"on this machine I have the system level config and so many things including the project(s) itself but as much as I can configure the harness more and ecosystem and the project itself.. it takes time before getting started... THE pain point must be itentified with their root."* The custom-model layer's empirical justification is the **root-cause solution to the per-session alignment overhead**: when operator's standards are external to the model, every fresh environment pays alignment cost; when operator's standards are in the weights, alignment is a one-time training cost.
+
 ## Applicability
 
 > [!info] **When this lesson applies (decision matrix)**

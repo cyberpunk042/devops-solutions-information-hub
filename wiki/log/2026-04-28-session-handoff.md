@@ -145,3 +145,4 @@ git log --oneline -25
 [[2026-04-27 Session Log]]
 [[Epic — Post-Anthropic 3-Layer Stack Assembly]]
 [[Epic — Repo Documentation Overhaul]]
+[[2026-05-04-session-handoff-pre-compaction|2026-05-04 Session Handoff (Pre-Compaction) — Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)]]

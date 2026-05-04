@@ -18,7 +18,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 
 | Milestone | Target | Status | Epics |
 |-----------|--------|--------|-------|
-| [Milestone: Post-Anthropic Self-Autonomous AI Stack](milestones/post-anthropic-self-autonomous-stack.md) | 2026-04-27 | draft | E007, E008, E009, E010, E011, E012, post-anthropic-stack-3-layer-assembly-multica-aicp-3090, secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04 |
+| [Milestone: Post-Anthropic Self-Autonomous AI Stack](milestones/post-anthropic-self-autonomous-stack.md) | 2026-04-27 | draft | E007, E008, E009, E010, E011, E012, post-anthropic-stack-3-layer-assembly-multica-aicp-3090, secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04, custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05 |
 | [Milestone — Second Brain Complete System — v2.0](milestones/second-brain-complete-system-v2-0.md) | 2026-05-15 | draft | E010, E011, E012, E013, E014, E015, E016, E017, E018, E019, E020, E021, E022, E023 |
 
 ## Epics
@@ -51,6 +51,7 @@ All planned work, organized by milestones, epics, modules, and tasks.
 | E010 | [E010 — Storage and Hardware Enablement (64 GB RAM + /dev/sdd + tiering)](epics/pre-milestone/E010-storage-and-hardware-enablement.md) | P0 | draft | 25 |
 | E011 | [E011 — Routing Integration (AICP Tiers Updated for K2.6 + Local Stack)](epics/pre-milestone/E011-routing-integration-aicp-tiers.md) | P1 | draft | 10 |
 | E012 | [E012 — Custom Model Library (Unsloth LoRAs on Wiki Corpus)](epics/pre-milestone/E012-custom-model-library-unsloth-loras.md) | P2 | draft | 5 |
+| CUSTOM | [Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)](epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) | P0 | active | 20 |
 | POST | [Post-Anthropic Stack 3-Layer Composability — Multica Orchestrator + Harness + AICP Provider Routing (Operator-Driven Assembly, Mid-May 2026 Hardware Delivery)](epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090.md) | P0 | in-progress | 65 |
 | REPO | [Augment the Entire Repository to Be a GitHub Top-Tier Repository with Perfect Paths and Clarity and Markdown](epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28.md) | P0 | active | 5 |
 | SDLC | [SDLC Rules and Structure — Customizable Project Lifecycle](epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle.md) | P0 | draft | 10 |
