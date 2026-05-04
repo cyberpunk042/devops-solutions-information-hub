@@ -316,6 +316,64 @@ When re-validating this matrix, also check:
 - **FHE inference latency drops materially** (current ~50× slowdown; if research yields ~5× the L4 viability changes)
 - **Operator's threat model evolves** (new workload-class with new sensitivity tier)
 
+## Custom-Model / Operator-Authored Tier — Above the Trust × Orchestrator × Harness × Provider Matrix (added 2026-05-04, candidate)
+
+> [!abstract] **The matrix is now potentially 5-axis: Custom-Model × Trust × Orchestrator × Harness × Provider** (operator-decision pending in [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) M006)
+>
+> The 2026-05-04 operator-authored [Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Concept](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) and [Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) introduce a **candidate fifth substitutable dimension**: the operator-authored model tier sits above the four existing layers (vendor-supplied vs operator-authored). Per [Anti-Vendor-Lock-In Evidence 12](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md), 8 substitution axes within the layer are independently controllable: open-weight base · fine-tune method (LoRA / full / DPO / IPO / KTO) · training framework · preference-data source · behavioral-constitution authoring · composition mechanism (Mixture-of-LoRAs / TIES / MoE-base+LoRA) · evaluation gate · distribution channel.
+>
+> | Custom-model opt-in | What it provides | Realistic effort | Hardware / runtime |
+> |---|---|---|---|
+> | **C0 — Vendor-supplied (default)** | Use a vendor or open-weight model as-is; alignment via runtime prompting (CLAUDE.md + AGENTS.md + .claude/rules/) | Zero training cost; per-session alignment overhead | Any GPU |
+> | **C1 — Wiki-fluency LoRA (E012 tactical)** | Domain-fluency LoRAs (Wiki-Assistant + Wiki-Router + Multi-LoRA per E012) on small bases for AICP routing efficiency | 1 afternoon to 1 weekend per LoRA on consumer hardware | RTX 3090 (post-mid-May 2026) |
+> | **C2 — Senior-engineer-tier specialist LoRA (DEFAULT post-3090)** | Single specialist LoRA on a strong base (Qwen3.6-27B at UD-IQ2 / RLM-Qwen3-8B / Qwen3-Coder); operator-tier behavior in the weights | 1 weekend on RTX 3090 | RTX 3090 (24 GB VRAM) |
+> | **C3 — Mixture-of-LoRAs across senior-engineer task surfaces** | Multiple specialist LoRAs (coding · methodology-reasoning · spec-authoring · validation-checking · refactor-planning · debug-analysis) composed via inference-time routing | Per-LoRA: 1 weekend; group expansion is additive | RTX 3090 |
+> | **C4 — Behavioral preference fine-tune (DPO / IPO over hack-vs-right pairs)** | The *naturally WANT to do things right* property baked into the weights via preference fine-tune; operator-curated preference pairs as the alignment signal | 12–48 hours on RTX 3090 OR 4–12 H100 hours rental (~$48–100/cycle) | RTX 3090 OR cloud H100 |
+> | **C5 — Recreated intelligence layer at I/O boundaries** | Input boundary (routing + Caveman compression + spec loading + tool-use planning) + output boundary (schema gate + self-verification + methodology compliance + hallucination detection) as Python hyperstructure | Iterative; Python development atop Markdown-as-IaC | Any GPU; Python runtime |
+>
+> Opt-ins compose: C0 ⊂ C1 ⊂ C2 ⊂ C3 ⊂ C4 ⊂ C5. The default operator stance post-RTX-3090-delivery is **C2 → C3 → C4 → C5 progressive** per the [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) phased rollout. Pain-point root cause (operator-named 2026-05-04): alignment substrate external to the model = repeated per-session cost; baking standards into the weights = pay alignment cost once at training.
+
+### Custom-model selection (2026-05-04)
+
+> [!info] When does the custom-model layer matter?
+>
+> | Operator state | Custom-model opt-in | Why |
+> |---|---|---|
+> | **Pre-3090 (current)** | C0 | Hardware-blocked; runtime prompting via CLAUDE.md + .claude/rules/ is the only available substrate |
+> | **Post-3090, single workload, AICP routing efficiency goal** | C1 (per E012) | Tactical wiki-domain-fluency LoRAs reduce cloud token spend |
+> | **Post-3090, senior-engineer daily-driver workload** | **C2 (default)** | Operator-tier behavior in the weights eliminates per-session alignment overhead |
+> | **Post-3090, multi-task-class workload (coding · methodology · debugging · refactoring · validation)** | C3 | Mixture-of-LoRAs gives task-specific specialists routed at inference |
+> | **Post-3090, *naturally WANT to do things right* property required** | C4 | Preference fine-tune over hack-vs-right pairs is the only mechanism that bakes behavioral alignment |
+> | **Production-grade reliability across all workloads** | C5 (composes on top of C2/C3/C4) | Python intelligence layer adds schema-gate + self-verify + hallucination-detect at output boundary |
+> | **Sister-project consumer (OpenArms · OpenFleet · AICP · devops-control-plane · root-ghostproxy when registered)** | C2 or higher (operator-decision) | Information-virus methodology propagation by weight, not prompt |
+
+### Composability with the trust × orchestrator × harness × provider stack
+
+The custom-model layer composes orthogonally with all four existing layers — operator-toggle-able per workload:
+
+```
+CUSTOM-MODEL  C2/C3/C4/C5 (operator-authored model group with recreated intelligence layer)
+  ↓
+TRUST  L0/L1/L2/L3/L4 (compressed + encrypted + GPU-decypher; attestation if L3+)
+  ↓
+Multica (orchestrator)
+  ├─ Claude Code  ─→  AICP routing  ─→  custom-model tier (C2+) | local | Ollama Cloud | OpenRouter
+  ├─ OpenCode     ─→  AICP routing  ─→  custom-model tier (C2+) | local | Ollama Cloud | OpenRouter
+  └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
+```
+
+**Five candidate composable substitution layers**: custom-model (C0–C5 opt-ins) × trust (L0–L4 opt-ins) × orchestrator (Multica) × harness (10 supported) × provider (AICP backend pattern). **No single vendor controls more than one of the five.**
+
+### Quarterly review trigger added (2026-05-04)
+
+When re-validating this matrix, also check:
+- **A new fine-tune method matures** (e.g., GRPO/SLiC successor; new preference-optimization loss) — affects C4 best-practice
+- **A new open-weight base lands** at the senior-engineer-tier (e.g., Qwen3.7, RLM-Qwen3-32B, Llama 4) — affects C2 base-model choice
+- **MoE-architecture maturity vs Mixture-of-LoRAs efficiency** — empirical reassessment of C3 architecture pattern
+- **Constitutional AI / RLAIF tooling matures** — affects C4 alignment substrate options
+- **Sister-project consumer adoption pattern** — operator-authored model distribution channels evolve (C5 propagation)
+- **Operator's behavior-test pass-rate evolves** — `v0.1-seed` → `v0.5-growing` → `v1.0-validated` thresholds
+
 ## Updates + quarterly review triggers
 
 Re-validate this matrix when:

@@ -422,6 +422,7 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[harness-owned-loop-deterministic-agent-execution|Harness-Owned Loop — Deterministic Agent Execution]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
+[[custom-tailored-senior-engineer-tier-model-group-2026-05-04|Learning Path — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)]]
 [[methodology-fundamentals|Learning Path — Methodology Fundamentals]]
 [[machine-specific-config-in-vcs-is-aspirational-portability|Machine-Specific Config in Version Control Is Aspirational Portability]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]

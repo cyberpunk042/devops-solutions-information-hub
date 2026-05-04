@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-04T19:50:38.604467+00:00",
+  "generated": "2026-05-04T20:32:32.416865+00:00",
   "stats": {
-    "pages": 540,
+    "pages": 541,
     "domains": 11,
     "sources": 82,
     "comparisons": 9,
-    "relationships": 3486,
-    "tags_unique": 1875,
+    "relationships": 3499,
+    "tags_unique": 1876,
     "layers": {
       "3": 4,
       "5": 37,
@@ -19,7 +19,7 @@
     },
     "maturity": {
       "growing": 325,
-      "seed": 62,
+      "seed": 63,
       "mature": 2
     }
   },
@@ -1749,7 +1749,9 @@
         "Senior-Engineer-Tier Custom Model Group Epic",
         "Custom Model Group + Intelligence Layer Pipeline",
         "Operator-Tier Model Mission Epic",
-        "Custom-Tailored Model Mission"
+        "Custom-Tailored Model Mission",
+        "Custom-Tailored Model Group Epic",
+        "Custom-Tailored Senior-Engineer-Tier Model Group Epic"
       ],
       "relationships": [
         {
@@ -10502,7 +10504,9 @@
         "Senior-Engineer-Tier Custom Model Group",
         "Operator-Authored Custom Model Mission",
         "MoE Group + Intelligence Layer at I/O Boundaries",
-        "Behavioral-Aligned Custom Model Concept"
+        "Behavioral-Aligned Custom Model Concept",
+        "Concept \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer",
+        "Custom-Tailored Model Group Concept"
       ],
       "relationships": [
         {
@@ -35375,6 +35379,148 @@
       ]
     },
     {
+      "path": "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04.md",
+      "slug": "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
+      "title": "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
+      "type": "learning-path",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "learning-path",
+        "custom-model",
+        "senior-engineer-tier",
+        "moe-group",
+        "intelligence-layer",
+        "behavioral-alignment",
+        "navigation",
+        "mission-2026-05-04",
+        "post-anthropic",
+        "fifth-layer-candidate"
+      ],
+      "sources": [
+        {
+          "id": "concept-synthesis",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Goal A entry \u2014 design ground truth"
+        },
+        {
+          "id": "epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md",
+          "description": "Goal B entry \u2014 work scope and 6 candidate modules"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Goal C entry \u2014 mission claim and Evidence 12 (5th layer candidate)"
+        },
+        {
+          "id": "e012-tactical-predecessor",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/E012-custom-model-library-unsloth-loras.md",
+          "description": "Goal D entry \u2014 tactical predecessor that the new strategic-tier epic nests"
+        },
+        {
+          "id": "second-brain-custom-model-strategy",
+          "type": "wiki",
+          "file": "wiki/spine/references/second-brain-custom-model-strategy.md",
+          "description": "Goal D supporting \u2014 5-candidate matrix + 2026-05-04 addendum"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Goal E entry \u2014 composition with trust layer (operator: 'with and without cypher / decypher with or without I/O Compression')"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Goal F entry \u2014 methodology applied to model-creation workflow ('like we teach')"
+        },
+        {
+          "id": "session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point.md",
+          "description": "Goal G entry \u2014 pain-point root-cause analysis + arc continuity"
+        },
+        {
+          "id": "raw-directive",
+          "type": "file",
+          "file": "raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md",
+          "description": "Verbatim operator directive log"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Custom-Tailored Model Group Learning Path",
+        "Senior-Engineer-Tier Model Mission Learning Path",
+        "Custom-Model + Intelligence Layer Reading Order"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Epic"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "E012 \u2014 Custom Model Library (Unsloth LoRAs)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Session Log"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Trust-Layer Learning Path"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Post-Anthropic 3-Layer Stack Learning Path"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        }
+      ]
+    },
+    {
       "path": "spine/learning-paths/methodology-fundamentals.md",
       "slug": "spine/learning-paths/methodology-fundamentals",
       "title": "Learning Path \u2014 Methodology Fundamentals",
@@ -40518,8 +40664,8 @@
       "relationship_count": 413
     },
     "cross-domain": {
-      "page_count": 233,
-      "relationship_count": 1618
+      "page_count": 234,
+      "relationship_count": 1631
     },
     "ai-models": {
       "page_count": 14,
@@ -40805,6 +40951,7 @@
     "navigation": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
       "spine/goldilocks-flow",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
@@ -41521,6 +41668,7 @@
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/references/ai-infrastructure-decision-framework-2026"
@@ -41725,27 +41873,32 @@
     "custom-model": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/references/second-brain-custom-model-strategy"
     ],
     "senior-engineer-tier": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "moe-group": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "intelligence-layer": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "behavioral-alignment": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
-      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "preference-data": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
@@ -41832,7 +41985,8 @@
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "milestone-class": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
@@ -48763,11 +48917,15 @@
       "spine/evolution-log/methodology-evolution-history"
     ],
     "learning-path": [
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/learning-paths/methodology-fundamentals",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30",
       "spine/standards/learning-path-page-standards"
+    ],
+    "fifth-layer-candidate": [
+      "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
     "onboarding": [
       "spine/learning-paths/methodology-fundamentals",
@@ -49325,6 +49483,12 @@
       ]
     },
     {
+      "target": "2026-05-04 Session Log",
+      "referenced_by": [
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
+      ]
+    },
+    {
       "target": "2026-05-04 Spec-Driven Convergence Arc Session Log",
       "referenced_by": [
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
@@ -49411,6 +49575,7 @@
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)",
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
@@ -49509,13 +49674,6 @@
       ]
     },
     {
-      "target": "Concept \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer",
-      "referenced_by": [
-        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
-        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
-      ]
-    },
-    {
       "target": "Concept \u2014 Secure Tamper-Proof Model on Shared GPU",
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
@@ -49549,12 +49707,6 @@
       "referenced_by": [
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
         "Hierarchical Metrics Fail on Sparse Coverage"
-      ]
-    },
-    {
-      "target": "Custom-Tailored Model Group Epic",
-      "referenced_by": [
-        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
       ]
     },
     {
@@ -49799,7 +49951,8 @@
       "target": "E012 \u2014 Custom Model Library",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
-        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
     {
@@ -50142,6 +50295,7 @@
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
@@ -50318,6 +50472,7 @@
     {
       "target": "Post-Anthropic 3-Layer Stack Learning Path",
       "referenced_by": [
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
@@ -50540,7 +50695,8 @@
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
-        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
     {
@@ -50940,6 +51096,12 @@
       "target": "Top-Layer Routing Refactor \u2014 Gap Analysis",
       "referenced_by": [
         "Session Handoff 2026-04-24 \u2014 Brain Refactor: Rules Layer, Hook Layer, Model Update"
+      ]
+    },
+    {
+      "target": "Trust-Layer Concept",
+      "referenced_by": [
+        "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
     {

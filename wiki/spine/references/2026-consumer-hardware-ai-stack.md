@@ -436,6 +436,58 @@ Read in order:
 2. [[secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04|Trust-Layer Epic]] — the work scope (Goals, Done When, Candidate Module Breakdown M001–M006)
 3. [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] § Evidence 11 — the mission-claim extension to 4 layers
 
+## 2026-05-04 Addendum — 5th Layer Candidate: Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer
+
+> [!success] **The stack reaches a candidate 5-layer composability** (operator-decision pending).
+>
+> Operator-authored 2026-05-04: a custom-tailored senior-engineer-tier model group + recreated intelligence layer at I/O boundaries that **carries operator's behavioral core in the weights** via preference fine-tune (DPO / IPO over hack-vs-right pairs) + curated instruction data + behavioral constitution. Multiple versions, MoE-style group composition (Mixture-of-LoRAs across senior-engineer task surfaces), Python-as-programming hyperstructure on top of Markdown-as-IaC, and operator-toggle-able composition with the trust + compression layers. The pain-point root cause (operator-named): *alignment substrate external to the model = repeated per-session cost*; baking standards into the weights = pay alignment cost once at training.
+
+### What this addendum captures
+
+1. **Custom-model opt-ins C0 → C5 are configurable per workload** (operator's *"opt-ins and configurations and possible keys or passphrases or certificat"* extended to the model-customization stance):
+
+   | Custom-model opt-in | What it provides | Default for RTX 3090? |
+   |---|---|---|
+   | C0 — Vendor-supplied | Use base model with runtime prompting alignment | Pre-3090 only |
+   | C1 — Wiki-fluency LoRA (E012 tactical) | Domain-fluency LoRAs for AICP routing efficiency | Optional; tactical |
+   | **C2 — Senior-engineer-tier specialist LoRA** | Operator-tier behavior in the weights | **YES — default post-3090** |
+   | C3 — Mixture-of-LoRAs across senior-engineer task surfaces | Multiple specialists routed at inference | Progressive expansion |
+   | **C4 — Behavioral preference fine-tune (DPO / IPO over hack-vs-right pairs)** | The *naturally WANT to do things right* property baked in | **YES — highest-leverage** |
+   | C5 — Recreated intelligence layer at I/O boundaries | Python hyperstructure: input boundary (routing + Caveman compression + spec loading + tool-use planning) + output boundary (schema gate + self-verification + methodology compliance + hallucination detection) | Composes with C2/C3/C4 |
+
+2. **Hardware fit on operator's incoming RTX 3090 (mid-May 2026)**:
+
+   | Phase | Substrate | Realistic effort | Output |
+   |---|---|---|---|
+   | Phase 0 | Unsloth + prime-rl + Triton bootstrap | 1–3 days | Reproducible training environment |
+   | Phase 1 | `data/preferences/v0.1.jsonl` + `data/instructions/v0.1.jsonl` + `constitution-v0.1.md` | Operator-time | Alignment signal that distinguishes operator-tier from base-tier |
+   | Phase 2 | First specialist LoRA on chosen base (Qwen3.6-27B at UD-IQ2 / RLM-Qwen3-8B / Qwen3-Coder) | 1 weekend | `v0.1-seed` deployable artifact |
+   | Phase 3 | Mixture-of-LoRAs group expansion | Per-LoRA: 1 weekend | Senior-engineer-tier task-surface coverage |
+   | Phase 4 | Recreated intelligence layer at I/O boundaries | Iterative | Python hyperstructure operational |
+   | Phase 5 | Behavioral preference fine-tune (DPO / IPO) | 12–48 hours on RTX 3090 OR 4–12 H100 hours rental (~$48–100/cycle) | The *naturally WANT* property empirically validated |
+   | Phase 6 | Trust + compression composition (L2 default) | Wire L2 per Trust-Layer Epic M001 | Full 4-layer composition |
+   | Phase 7 | Multi-version + ecosystem propagation | Continuous | Information-virus to sister projects |
+
+3. **Anti-vendor-lock-in extends to model-customization stance.** Per [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] candidate Evidence 12 (added 2026-05-04), the custom-model layer is empirically substitutable across 8 axes: open-weight base · fine-tune method · training framework · preference-data source · behavioral-constitution authoring · composition mechanism · evaluation gate · distribution channel. **No single vendor controls more than one of the (candidate) five layers.**
+
+4. **Pain-point root-cause solved at the right place.** When operator's standards are external to the model (CLAUDE.md + AGENTS.md + .claude/rules/ + harness + ecosystem config), every fresh environment pays alignment cost. When operator's standards are in the weights, alignment is a one-time training cost. Per CLAUDE.md sacrosanct directive: *"fix it at the root instead.. its not hard"* applied to the AI alignment overhead itself.
+
+### Where it lands on operator's incoming hardware (mid-May 2026)
+
+| Hardware | Default custom-model opt-in | What it delivers |
+|---|---|---|
+| **RTX 3090 (incoming)** | **C2 → C3 → C4 → C5 progressive** | Operator-tier behavior in the weights; Mixture-of-LoRAs group; behavioral preference fine-tune; recreated intelligence layer; all via consumer hardware |
+| **Cloud H100 (rental, optional)** | C4 larger-base option | When operator opts for larger preference-data RL training cycles (~$48–100 per cycle per RLM-Qwen3-8B precedent) |
+| **Any future hardware** | All opt-ins compose forward; operator's *core* is the durable artifact, not the hardware | Anti-vendor-lock-in extends to model-customization stance |
+
+### Reading order for the custom-model layer
+
+Read in order:
+1. [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Concept — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer]] — the design ground truth (Summary + 7 grounded Key Insights + 7-phase realistic rollout + 8 open design questions)
+2. [[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05|Custom-Tailored Model Group Epic]] — the work scope (Goals, Done When, Candidate Module Breakdown M001–M006, 9 open questions)
+3. [[second-brain-custom-model-strategy|Second-Brain Custom Model Strategy]] § 2026-05-04 Addendum — the 5-candidate matrix extended with senior-engineer-tier dimensions
+4. [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] § Evidence 12 — the candidate mission-claim extension (5th layer or substitutable axis)
+
 ## Connection to the Four Principles
 
 > [!abstract] **How today's synthesis validates (or extends) the four principles**

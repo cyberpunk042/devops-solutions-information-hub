@@ -5,6 +5,8 @@ aliases:
   - "Custom Model Group + Intelligence Layer Pipeline"
   - "Operator-Tier Model Mission Epic"
   - "Custom-Tailored Model Mission"
+  - "Custom-Tailored Model Group Epic"
+  - "Custom-Tailored Senior-Engineer-Tier Model Group Epic"
 type: epic
 domain: backlog
 status: active
@@ -256,7 +258,7 @@ The wiki's [Anti-Vendor-Lock-In Lesson](../../../lessons/01_drafts/anti-vendor-l
 ## Backlinks
 
 [[Milestone — Post-Anthropic Self-Autonomous Stack]]
-[[Concept — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer]]
+[[custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis|Concept — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer]]
 [[E012 — Custom Model Library (Unsloth LoRAs)]]
 [[second-brain-custom-model-strategy|Second-Brain Custom Model Strategy]]
 [[secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04|Trust-Layer Epic]]

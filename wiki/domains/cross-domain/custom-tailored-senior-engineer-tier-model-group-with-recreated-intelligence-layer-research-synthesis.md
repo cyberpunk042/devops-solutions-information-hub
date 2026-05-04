@@ -5,6 +5,8 @@ aliases:
   - "Operator-Authored Custom Model Mission"
   - "MoE Group + Intelligence Layer at I/O Boundaries"
   - "Behavioral-Aligned Custom Model Concept"
+  - "Concept — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer"
+  - "Custom-Tailored Model Group Concept"
 type: concept
 domain: cross-domain
 status: synthesized

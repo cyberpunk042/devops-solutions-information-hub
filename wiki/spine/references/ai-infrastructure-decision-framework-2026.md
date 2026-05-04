@@ -277,18 +277,19 @@ Closed-weight providers are not "off-limits" — they are specialty vendors with
 
 ## Resilience Playbook — Non-Lock-In Substitution Matrix
 
-The mission is not "use open-weight only" — it's **no single-provider dependency at any of the four composable layers** (trust × orchestrator × harness × provider). This section is the operational playbook: when a provider/harness/orchestrator changes terms, goes down, or becomes unacceptable, **what replaces it and how fast**.
+The mission is not "use open-weight only" — it's **no single-provider dependency at any of the (candidate) five composable layers** (custom-model × trust × orchestrator × harness × provider). This section is the operational playbook: when a provider/harness/orchestrator changes terms, goes down, or becomes unacceptable, **what replaces it and how fast**.
 
-> [!success] **Resilience now spans 4 substitutable layers (extended 2026-04-30).**
+> [!success] **Resilience now spans 4 substitutable layers + 1 candidate (extended 2026-05-04).**
 >
 > | Layer | Substitution dimension | Reference |
 > |---|---|---|
+> | **Custom-model / operator-authored tier** (CANDIDATE 2026-05-04 — operator-decision pending) | Open-weight base · fine-tune method (LoRA / full / DPO / IPO / KTO) · training framework · preference-data source · behavioral-constitution authoring · composition mechanism · evaluation gate · distribution channel | [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) · [Concept — Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer](../../domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) · [Anti-Vendor-Lock-In Lesson Evidence 12](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) |
 > | **Trust / confidential-compute** (NEW 2026-04-30) | Hardware vendor · TEE provider · key management · compression substrate · on-GPU decypher kernels · inference substrate | [Trust-Layer Epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) · [Concept — Secure Tamper-Proof Model on Shared GPU](../../domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md) · [Anti-Vendor-Lock-In Lesson Evidence 11](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) |
 > | **Orchestrator** (added 2026-04-28) | Multica · Paperclip · operator-built · none (direct harness) | [AI Decision Matrix Trust + Orchestrator sections](ai-model-provider-harness-decision-matrix-2026.md) |
 > | **Harness** | Claude Code · OpenCode · Codex · Cursor · Gemini CLI · Aider · ... | [Harness Landscape 2026](../../sources/tools-integration/src-agentic-coding-harness-landscape-2026.md) |
 > | **Provider × Model** | OpenRouter · Together · Ollama Cloud · direct providers · local | [Inference Provider Landscape 2026](../../sources/tools-integration/src-inference-provider-landscape-2026.md) |
 >
-> The harness × model substitution matrix below remains operationally complete for the 2-layer subset; the orchestrator and trust dimensions extend it without invalidating it. **Anti-vendor-lock-in is empirical at all four layers.**
+> The harness × model substitution matrix below remains operationally complete for the 2-layer subset; the orchestrator, trust, and custom-model dimensions extend it without invalidating it. **Anti-vendor-lock-in is empirical at four layers + 1 candidate (operator-decision pending in [Custom-Tailored Model Group Epic](../../backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05.md) M006: Option A — substitutable axis WITHIN provider; Option B — 5th layer; default proposal: Option B).**
 
 ### Harness × Model substitution (2-layer subset)
 
