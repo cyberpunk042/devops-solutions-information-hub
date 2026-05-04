@@ -354,14 +354,36 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 > | **Identity** | [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]] |
 > | **System map** | [[methodology-system-map|Methodology System Map]] |
 
+## 2026-05-04 Addendum — Spec-Driven Agentic Build Convergence (8+ Independent Practitioners)
+
+> [!success] **For any production-grade AI-assisted build in 2026, instantiate one of the 7+ documented spec-driven instances**
+>
+> Per [the convergence lesson (Layer 4)](../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md), at least 8 independent practitioners have converged on the same core pattern: treat prompts/specs/contexts as version-controlled first-class artifacts, not ad-hoc chat. Pick the instance by workload class:
+>
+> | Scale | Recommended instance |
+> |---|---|
+> | Solo / freelance / small-team | [Six-File Context System](../../sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md) — 6 markdown files + per-feature numbered specs |
+> | Enterprise IT / regulated domains | [Fowler/Thoughtworks SPDD](../../sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md) — REASONS Canvas + `openspdd` CLI + closed-loop sync |
+> | Multi-platform vendor coordination | [GitHub Spec Kit](../../sources/src-github-spec-kit-specification-driven-development.md) |
+> | Cloud-vendor delivery org | [AWS AI-DLC](../../sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md) |
+> | Agile-team adoption with role separation | [BMAD-METHOD](../../sources/src-bmad-method-agile-ai-development-framework.md) |
+> | Spec-first lightweight independence | [OpenSpec](../../sources/src-openspec-spec-driven-development-framework.md) |
+> | Foundational schema-as-product framing | [Karpathy LLM Wiki Pattern](../../sources/wiki-methodology/src-karpathy-llm-wiki-idea-file.md) |
+> | **Minimum viable shape — solo Claude Code projects** | [Cavekit v4 (Julius Brussee)](../../sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md) — SPEC.md + 3 commands + 2 skills · §-addressable sections · backprop reflex |
+> | **The wiki itself** | CLAUDE.md + AGENTS.md + .claude/rules/ + wiki/backlog/modules/ — instance #9 (the wiki teaches what it implements) |
+>
+> The structural insight is **invariant** across instances; the vocabulary differs. The 3 disciplines that matter: **abstraction first** · **alignment** · **iterative review**. The closed-loop sync rule: *"fix the prompt first, then the code"* prevents prompt and code from silently diverging.
+
 ## Relationships
 
 - BUILDS ON: [[model-methodology|Model — Methodology]]
 - BUILDS ON: [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 - BUILDS ON: [[model-composition-rules|Model Composition Rules]]
+- BUILDS ON: [[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Agentic Build Convergence Lesson]] (Layer 4 — 7+ instances; the empirical foundation for any production-grade adoption)
 - RELATES TO: [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 - RELATES TO: [[stage-gate-methodology|Stage-Gate Methodology]]
 - RELATES TO: [[four-project-ecosystem|Four-Project Ecosystem]]
+- RELATES TO: [[model-markdown-as-iac|Model — Markdown as IaC]] (the substrate the 7+ convergent instances all instantiate)
 - FEEDS INTO: [[model-ecosystem|Model — Ecosystem Architecture]]
 - FEEDS INTO: [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
 
@@ -370,11 +392,14 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[model-methodology|Model — Methodology]]
 [[artifact-chains-by-model|Artifact Chains by Methodology Model]]
 [[model-composition-rules|Model Composition Rules]]
+[[Spec-Driven Agentic Build Convergence Lesson]]
 [[model-methodology-standards|Methodology Standards — What Good Execution Looks Like]]
 [[stage-gate-methodology|Stage-Gate Methodology]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
+[[Model — Markdown as IaC]]
 [[model-ecosystem|Model — Ecosystem Architecture]]
 [[super-model|Super-Model — Research Wiki as Ecosystem Intelligence Hub]]
+[[2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson|2026-05-04 Session Log — Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested → 7-Instance Layer-4 Lesson Authored]]
 [[ai-agent-artifacts|AI Agent Artifacts — Standards and Guide]]
 [[domain-chain-infrastructure|Artifact Chain — Infrastructure-IaC Domain]]
 [[domain-chain-knowledge|Artifact Chain — Knowledge-Evolution Domain]]
@@ -418,9 +443,12 @@ Track BOTH dimensions independently. Readiness = is it defined? Progress = is it
 [[readiness-vs-progress|Readiness vs Progress — Two-Dimensional Work Tracking]]
 [[sdlc-customization-framework|SDLC Customization Framework — Phases, Scale, and Profile Selection]]
 [[sdlc-rules-and-structure-customizable-project-lifecycle|SDLC Rules and Structure — Customizable Project Lifecycle]]
+[[spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts|Spec-Driven Agentic Build Is the 2026 Convergent Pattern — Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)]]
 [[stage-aware-skill-injection|Stage-Aware Skill Injection]]
 [[structural-compliance-is-not-operational-compliance|Structural Compliance Is Not Operational Compliance — Compliance Checkers Measure Presence, Not Depth]]
 [[src-aidlc-aws-driven-development-lifecycle|Synthesis — AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)]]
+[[src-cavekit-spec-driven-development-claude-code-julius-brussee|Synthesis — Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)]]
+[[src-jsmastery-six-file-context-system-agentic-build|Synthesis — JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview · architecture · code-standards · ai-workflow-rules · ui-context · progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)]]
 [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
 [[three-lines-of-defense-immune-system-for-agent-quality|Three Lines of Defense — Immune System for Agent Quality]]
 [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]]

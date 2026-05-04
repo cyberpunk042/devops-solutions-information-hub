@@ -221,3 +221,4 @@ note_type: session
 [[methodology-evolution-history|Evolution — Methodology System]]
 [[methodology-framework|Methodology Framework]]
 [[observe-fix-verify-loop|Observe-Fix-Verify Loop — The Battle-Testing Cycle for Autonomous Agent Infrastructure]]
+[[src-cavekit-spec-driven-development-claude-code-julius-brussee|Synthesis — Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)]]

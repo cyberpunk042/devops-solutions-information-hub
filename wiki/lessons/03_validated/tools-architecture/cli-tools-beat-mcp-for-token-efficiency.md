@@ -152,5 +152,6 @@ The accuracy implication compounds: schema tokens from unused tools occupy space
 [[skills-architecture-is-dominant-extension-pattern|Skills Architecture Is the Dominant LLM Extension Pattern]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
 [[src-caveman-prompt-output-compressor-julius-brussee|Synthesis — Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65–75% Output Reduction · ~46% Memory-File Compression · 80–90% Character Reduction in Wenyan Mode)]]
+[[src-cavemem-cross-agent-persistent-memory-julius-brussee|Synthesis — Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)]]
 [[src-context-mode|Synthesis — Context Mode — MCP Sandbox for Context Saving]]
 [[model-wiki-design-standards|Wiki Design Standards — What Good Styling Looks Like]]

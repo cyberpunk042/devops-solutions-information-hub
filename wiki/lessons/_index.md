@@ -82,6 +82,7 @@ Lessons that synthesize an entire domain's structural position.
 - [If You Can Verify, You Converge](01_drafts/if-you-can-verify-you-converge.md) — When a deterministic verification mechanism exists — a compiler, a schema validator, a test runner, a halting conditi...
 - [Machine-Specific Config in Version Control Is Aspirational Portability](01_drafts/machine-specific-config-in-vcs-is-aspirational-portability.md) — Committing configuration files that contain machine-specific absolute paths silently breaks portability
 - [Saturation Declarations Are P4 Aspirational — Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal](01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work.md) — A "saturation" / "natural saturation" / "complete" / "done" / "we've reached the ceiling" declaration is itself a cla...
+- [Spec-Driven Agentic Build Is the 2026 Convergent Pattern — Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)](01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) — By mid-2026, **at least eight independent practitioners** — spanning enterprise IT (Thoughtworks Global IT Services),...
 - [Specs-as-Code-Source Inverts the Traditional Hierarchy](01_drafts/specs-as-code-source-inverts-hierarchy.md) — Traditional software development treats code as the primary artifact and specifications as scaffolding — supporting d...
 - [Agents take small unauthorized scope expansions when the change is a 'clean win'](02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md) — The v8 methodology blocks overt scope creep through stage hooks, diff validators, and done-when checks
 - [Epic readiness math is wrong when an epic has implicit goals beyond its current children](02_synthesized/contributed/epic-readiness-math-is-wrong-when-an-epic-has-implicit-goals.md) — The harness computes epic readiness as the average of its child task readiness values
@@ -134,4 +135,4 @@ Lessons that synthesize an entire domain's structural position.
 
 ## Tags
 
-`contributed`, `lesson`, `inbox`, `methodology`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `cross-domain`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `verification`, `principle`, `validation`
+`lesson`, `contributed`, `inbox`, `methodology`, `quality`, `failure-lesson`, `openarms`, `enforcement`, `agent-failure`, `cross-domain`, `lesson-learned`, `second-brain`, `llm-wiki`, `skills`, `infrastructure`, `aspirational`, `compliance`, `verification`, `convergence`, `principle`

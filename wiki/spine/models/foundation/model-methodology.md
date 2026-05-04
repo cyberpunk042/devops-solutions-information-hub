@@ -886,6 +886,7 @@ This page is ONE thread in a woven system. Here's how to navigate from here to A
 [[src-github-spec-kit-specification-driven-development|Synthesis — GitHub Spec Kit: Specification-Driven Development]]
 [[methodology-artifact-taxonomy-research|Synthesis — Methodology Artifact Taxonomy — Full Spectrum Research]]
 [[src-sdlc-frameworks-research|Synthesis — SDLC Frameworks Research — CMMI, Lean Startup, and Agentic SDLC]]
+[[src-fowler-structured-prompt-driven-development-spdd|Synthesis — Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)]]
 [[src-aidlc-cc-plugin-claude-code-port|Synthesis — ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)]]
 [[src-bmad-method-agile-ai-development-framework|Synthesis: BMAD-METHOD — Agile AI-Driven Development Framework]]
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]

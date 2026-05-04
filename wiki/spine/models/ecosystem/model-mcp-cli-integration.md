@@ -287,5 +287,6 @@ The gateway (`tools/gateway.py`) unifies CLI + MCP into one engine. It demonstra
 [[mcp-vs-cli-decision-vs-lesson|MCP vs CLI — Decision Artifact vs Lesson Artifact]]
 [[model-ecosystem-vs-four-project-ecosystem|Model — Ecosystem Architecture vs Four-Project Ecosystem]]
 [[src-7-levels-claude-code-rag|Source — The 7 Levels of Claude Code & RAG]]
+[[src-cavemem-cross-agent-persistent-memory-julius-brussee|Synthesis — Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)]]
 [[src-cline-agentic-coding-ide-extension|Synthesis — Cline — Agentic Coding IDE Extension with Plan/Act, Skills, Hooks, MCP]]
 [[src-firecrawl-web-scraper-for-ai-agents|Synthesis — Firecrawl: Web Scraper API for AI Agents (Search · Scrape · Agent · Change-Tracking)]]

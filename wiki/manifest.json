@@ -1,25 +1,25 @@
 {
-  "generated": "2026-04-30T14:17:12.003404+00:00",
+  "generated": "2026-05-04T15:41:23.268537+00:00",
   "stats": {
-    "pages": 530,
+    "pages": 536,
     "domains": 11,
-    "sources": 78,
+    "sources": 82,
     "comparisons": 9,
-    "relationships": 3354,
-    "tags_unique": 1809,
+    "relationships": 3431,
+    "tags_unique": 1853,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 26,
       "2": 51,
-      "4": 65,
+      "4": 66,
       "0": 1,
-      "1": 49,
+      "1": 53,
       "spine": 78
     },
     "maturity": {
       "growing": 325,
-      "seed": 56,
+      "seed": 61,
       "mature": 2
     }
   },
@@ -17105,6 +17105,184 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+      "slug": "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "title": "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "lesson",
+        "layer-4",
+        "spec-driven",
+        "agentic-build",
+        "prompts-as-artifacts",
+        "version-controlled-specs",
+        "abstraction-first",
+        "alignment",
+        "iterative-review",
+        "closed-loop",
+        "fix-prompt-first",
+        "six-file-context",
+        "reasons-canvas",
+        "bmad",
+        "openspec",
+        "spec-kit",
+        "ai-dlc",
+        "karpathy",
+        "convergence",
+        "mission-2026-05-04",
+        "methodology-process"
+      ],
+      "sources": [
+        {
+          "id": "fowler-spdd-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
+          "description": "Evidence 1 \u2014 Thoughtworks enterprise-IT instance: REASONS Canvas + workflow + closed-loop. Authored at Thoughtworks Global IT Services, used in production before public release 2026-04-28."
+        },
+        {
+          "id": "jsmastery-six-file-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
+          "description": "Evidence 2 \u2014 solo/freelance teaching instance: six context files + per-feature numbered specs. Demonstrated end-to-end in a 29-feature Ghost AI build (2026)."
+        },
+        {
+          "id": "bmad-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-bmad-method-agile-ai-development-framework.md",
+          "description": "Evidence 3 \u2014 BMAD-METHOD framework instance: agile AI-driven development with personas + party mode + structured story-spec progression."
+        },
+        {
+          "id": "openspec-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-openspec-spec-driven-development-framework.md",
+          "description": "Evidence 4 \u2014 OpenSpec lightweight spec-driven framework instance: solves the fundamental problem of agents losing context across sessions via specs as the persisted artifact."
+        },
+        {
+          "id": "spec-kit-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-github-spec-kit-specification-driven-development.md",
+          "description": "Evidence 5 \u2014 GitHub's Spec Kit instance: Specification-Driven Development from the platform-vendor side; toolkit that operationalizes spec-first workflow."
+        },
+        {
+          "id": "aidlc-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md",
+          "description": "Evidence 6 \u2014 AWS AI-DLC instance: AI-Driven Development Lifecycle methodology (not a tool, not a framework \u2014 a methodology). Cloud-vendor articulation of the same core."
+        },
+        {
+          "id": "karpathy-llm-wiki-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-karpathy-llm-wiki-idea-file.md",
+          "description": "Evidence 7 \u2014 Karpathy's LLM Wiki Pattern: schema-as-the-real-product framing; the schema/spec is the durable artifact, content is generated from it. Foundational to the convergence."
+        },
+        {
+          "id": "cavekit-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md",
+          "description": "Evidence 8 (added 2026-05-04) \u2014 Cavekit v4 (Julius Brussee): the most distilled instance documented. SPEC.md + 3 commands + 2 skills \u00b7 caveman-encoded with mathematical-symbol vocabulary (\u2192 \u2234 \u2200 \u2203 ! ? \u22a5 \u2260 \u2208 \u2209 \u2264 \u2265 & |) \u00b7 backprop reflex turns bugs into permanent \u00a7V invariants. The convergent pattern's minimum viable shape."
+        },
+        {
+          "id": "schema-is-the-real-product-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/knowledge-systems/schema-is-the-real-product.md",
+          "description": "Adjacent validated lesson \u2014 same structural insight applied to wiki construction; the schema file is the real product, content is generated from it"
+        },
+        {
+          "id": "structured-context-principle",
+          "type": "wiki",
+          "file": "wiki/lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
+          "description": "Parent principle (P2) \u2014 this lesson specializes P2 to the AI-assisted build context; the structured spec/prompt/canvas IS the structured context that programs agent behavior more reliably than ad-hoc chat"
+        },
+        {
+          "id": "markdown-as-iac-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
+          "description": "Wiki model \u2014 the 7 evidence instances are all instantiations of Markdown-as-IaC at the project-build scale"
+        },
+        {
+          "id": "agent-must-practice-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md",
+          "description": "Adjacent \u2014 this lesson is about the wiki itself instantiating the same convergent pattern (CLAUDE.md + AGENTS.md + .claude/rules/ + per-module specs in wiki/backlog/modules/ = the wiki's own version of Six-File + per-feature specs)"
+        }
+      ],
+      "layer": 4,
+      "maturity": "seed",
+      "derived_from": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD) \u2014 Thoughtworks (Fowler)",
+        "Synthesis \u2014 JS Mastery Six-File Context System",
+        "Synthesis \u2014 BMAD-METHOD",
+        "Synthesis \u2014 OpenSpec Spec-Driven Development Framework",
+        "Synthesis \u2014 GitHub Spec Kit Specification-Driven Development",
+        "Synthesis \u2014 AWS AI-DLC AI-Driven Development Lifecycle",
+        "Synthesis \u2014 Karpathy's LLM Wiki Idea File (schema-as-product framing)",
+        "Synthesis \u2014 Cavekit v4 (Julius Brussee) \u2014 most distilled instance: 1 file + 3 commands + 2 skills"
+      ],
+      "aliases": [
+        "Spec-Driven Agentic Build Convergence",
+        "Prompts as Version-Controlled Artifacts",
+        "2026 Convergent Build Pattern",
+        "Structured Specs Beat Ad-Hoc Chat",
+        "First-Class Prompt Artifacts Lesson"
+      ],
+      "relationships": [
+        {
+          "verb": "DERIVED FROM",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior More Than Content"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Fowler SPDD Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Schema Is the Real Product"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
+        }
+      ]
+    },
+    {
       "path": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy.md",
       "slug": "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "title": "Specs-as-Code-Source Inverts the Traditional Hierarchy",
@@ -23804,6 +23982,116 @@
       ]
     },
     {
+      "path": "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson.md",
+      "slug": "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "title": "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "session",
+        "log",
+        "spec-driven",
+        "agentic-build",
+        "convergence",
+        "fowler",
+        "spdd",
+        "jsmastery",
+        "six-file-context",
+        "layer-4-lesson",
+        "methodology-process",
+        "mission-2026-05-04",
+        "day-arc",
+        "ingestion-arc"
+      ],
+      "sources": [
+        {
+          "id": "prior-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression.md",
+          "description": "Prior session log \u2014 captured the 2026-04-30 trust-layer arc (cypher + decypher + compression for 80-90% space saved). This 2026-05-04 log builds on the trust-layer arc and captures the spec-driven-build-convergence ingestion arc."
+        },
+        {
+          "id": "fowler-spdd-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
+          "description": "Layer-1 source synthesis authored this session \u2014 Fowler/Thoughtworks SPDD with REASONS Canvas + workflow + closed-loop"
+        },
+        {
+          "id": "jsmastery-six-file-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
+          "description": "Layer-1 source synthesis authored this session \u2014 JS Mastery Six-File Context System: 6 markdown files + per-feature numbered specs"
+        },
+        {
+          "id": "convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Layer-4 lesson authored this session \u2014 7-instance convergence on prompts/specs/contexts as version-controlled first-class artifacts. Functions as the navigation hub for the 7 evidence instances."
+        },
+        {
+          "id": "raw-fowler-spdd",
+          "type": "file",
+          "file": "raw/articles/structured-prompt-driven-development-spdd.md",
+          "description": "Pipeline-fetched Fowler article 2026-05-04 (per Hard Rule 6 \u2014 corpus URL routes through pipeline)"
+        },
+        {
+          "id": "raw-jsmastery-transcript",
+          "type": "file",
+          "file": "raw/transcripts/how-senior-engineers-actually-build-with-ai-in-2026-build-a-full-stack-systems-a.txt",
+          "description": "Pipeline-fetched YouTube transcript 2026-05-04 (1,713 raw lines / 219KB, ~25K words across 4 chunks). Operator's hint: 'first bit + some bits here and there' \u2014 the first chunk carried the methodology framing, the rest is the worked Ghost AI build."
+        },
+        {
+          "id": "raw-jsmastery-templates",
+          "type": "file",
+          "file": "raw/dumps/Six-File+Context+Methodology/templates/",
+          "description": "Operator-downloaded blank templates the JS Mastery video produces \u2014 CLAUDE.md wiring + 6 context-folder templates (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker)"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-04-30 Session Log \u2014 Trust-Layer Arc"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Fowler SPDD Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -29682,6 +29970,160 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md",
+      "slug": "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "title": "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "source-synthesis",
+        "cavekit",
+        "julius-brussee",
+        "spec-driven",
+        "claude-code",
+        "sdd",
+        "spec-md",
+        "caveman-encoding",
+        "backprop",
+        "six-section-spec",
+        "paragon-of-distillation",
+        "two-version-architecture",
+        "mit-licensed",
+        "layer-1",
+        "paper-evidence",
+        "mission-2026-05-04",
+        "operator-named-ecosystem",
+        "convergence-instance-8"
+      ],
+      "sources": [
+        {
+          "id": "cavekit-github",
+          "type": "repository",
+          "url": "https://github.com/JuliusBrussee/cavekit",
+          "file": "raw/articles/juliusbrusseecavekit.md",
+          "title": "JuliusBrussee/cavekit \u2014 README + 9 deep-fetched files",
+          "description": "Authoritative open-source repository \u2014 MIT licensed, npm + Claude Code marketplace distribution. v4 default; v3.1.0 frozen at tag. Ingested 2026-05-04 per Hard Rule 6 (corpus URL routes through `pipeline fetch`).",
+          "ingested": "2026-05-04"
+        },
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Sister project \u2014 caveman (output compression). Cavekit v4 reuses caveman grammar as default for SPEC.md writes (v3 was opt-in for inter-agent chatter; v4 made it default)."
+        },
+        {
+          "id": "cavemem-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee.md",
+          "description": "Sister project \u2014 cavemem (cross-agent memory). Same author, same caveman compression engine. Three-tool ecosystem: cavekit orchestrates \u00b7 caveman compresses what agent says \u00b7 cavemem compresses what agent remembers."
+        },
+        {
+          "id": "convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "PRIMARY \u2014 cavekit is the 8th independent instance of the 2026 spec-driven agentic-build convergent pattern. Tagline 'compressed spec-driven development for claude code' is the lesson's territory verbatim. SPEC.md is the durable version-controlled first-class artifact the lesson centers on."
+        },
+        {
+          "id": "jsmastery-six-file-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
+          "description": "Adjacent \u2014 Six-File context system uses 6 separate markdown files; cavekit v4 distills to 1 file with 6 addressable sections (\u00a7G \u00a7C \u00a7I \u00a7V \u00a7T \u00a7B). Same convergent pattern, different shape \u2014 both valid by workload class."
+        },
+        {
+          "id": "fowler-spdd-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
+          "description": "Adjacent \u2014 Fowler's REASONS Canvas has 7 sections (R\u00b7E\u00b7A\u00b7S\u00b7O\u00b7N\u00b7S); cavekit's SPEC.md has 6 (\u00a7G \u00a7C \u00a7I \u00a7V \u00a7T \u00a7B). Both treat the structured spec as a durable version-controlled artifact with closed-loop sync (cavekit's backprop reflex parallels SPDD's 'fix prompt first')."
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Adjacent \u2014 cavekit v4's caveman-encoded SPEC.md is itself a strong instance of the trust-layer's compression-with-technical-preservation pattern at the spec-artifact layer. Same shape (compress + preserve technical substance + retrieve) at a different layer."
+        },
+        {
+          "id": "schema-is-the-real-product-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/knowledge-systems/schema-is-the-real-product.md",
+          "description": "Validated lesson \u2014 cavekit's central thesis ('the spec is the only artifact that earns its tokens') is a direct restatement of this lesson at the AI-build layer."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cavekit",
+        "Cavekit Synthesis",
+        "Cavekit v4",
+        "JuliusBrussee/cavekit",
+        "SPEC.md format",
+        "Caveman Ecosystem Build Layer"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Cavemem Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Schema Is the Real Product"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "JS Mastery Six-File Context System"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Fowler SPDD"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Skyscraper / Pyramid / Mountain Pattern"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Evolution Protocol"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
       "slug": "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "title": "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
@@ -29846,6 +30288,155 @@
         {
           "verb": "FEEDS INTO",
           "target": "AI Decision Matrix 2026"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "2026 Consumer Hardware AI Stack"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee.md",
+      "slug": "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "title": "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "source-synthesis",
+        "cavemem",
+        "julius-brussee",
+        "persistent-memory",
+        "cross-agent-memory",
+        "compression-at-rest",
+        "mcp-progressive-disclosure",
+        "caveman-ecosystem",
+        "sqlite",
+        "fts5",
+        "vector-search",
+        "hybrid-search",
+        "local-first",
+        "privacy-aware",
+        "claude-code",
+        "cursor",
+        "gemini-cli",
+        "opencode",
+        "codex",
+        "mit-licensed",
+        "layer-1",
+        "paper-evidence",
+        "mission-2026-05-04",
+        "operator-named-ecosystem"
+      ],
+      "sources": [
+        {
+          "id": "cavemem-github",
+          "type": "repository",
+          "url": "https://github.com/JuliusBrussee/cavemem",
+          "file": "raw/articles/juliusbrusseecavemem.md",
+          "title": "JuliusBrussee/cavemem \u2014 README + 13 deep-fetched files",
+          "description": "Authoritative open-source repository \u2014 MIT licensed, npm-distributed (`npm install -g cavemem`), supports Claude Code \u00b7 Cursor \u00b7 Gemini CLI \u00b7 OpenCode \u00b7 Codex. Ingested 2026-05-04 per Hard Rule 6 (corpus URL routes through `pipeline fetch`).",
+          "ingested": "2026-05-04"
+        },
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Sister project \u2014 caveman (output token compressor). Same author, same caveman grammar, same intensity levels (lite/full/ultra). Cavemem reuses caveman's compression engine for memory at rest."
+        },
+        {
+          "id": "caveman-ecosystem",
+          "type": "documentation",
+          "url": "https://github.com/JuliusBrussee/cavekit",
+          "description": "Sister project \u2014 cavekit (spec-driven autonomous build loop). Three-tool ecosystem composes: cavekit orchestrates the build \u00b7 caveman compresses what the agent says \u00b7 cavemem compresses what the agent remembers."
+        },
+        {
+          "id": "convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Adjacent \u2014 cavemem operationalizes the cross-agent memory layer of the convergent pattern: persistent compressed memory across the 5 supported IDEs is what the convergent pattern's `progress-tracker.md` does in-tree, but at the agent-runtime layer."
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Adjacent \u2014 cavemem's compression-at-rest with technical-token preservation parallels the operator's trust-layer concept of cypher+decypher with technical-substance preservation. Different layer (memory at rest vs weights/context); same mechanism shape (compress + preserve technical substance + retrieve on demand)."
+        },
+        {
+          "id": "model-mcp-cli-integration",
+          "type": "wiki",
+          "file": "wiki/spine/models/ecosystem/model-mcp-cli-integration.md",
+          "description": "Adjacent \u2014 cavemem is a strong empirical instance of MCP progressive disclosure (search/timeline compact \u2192 get_observations expanded). Saves ~10\u00d7 tokens vs fetching full bodies upfront \u2014 concrete validation of the wiki's MCP-cli model claims."
+        },
+        {
+          "id": "cli-tools-beat-mcp-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency.md",
+          "description": "Adjacent validated lesson \u2014 cavemem cleverly composes BOTH: a CLI for setup/management AND an MCP server for agent-runtime memory access. Demonstrates the both-and pattern when each interface serves a different consumer."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cavemem",
+        "Cavemem Synthesis",
+        "JuliusBrussee/cavemem",
+        "Cross-Agent Memory",
+        "Caveman Ecosystem Memory Layer"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "JS Mastery Six-File Context System"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 MCP and CLI Integration"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "CLI Tools Beat MCP for Token Efficiency"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Agentic Search vs Vector Search Comparison"
+        },
+        {
+          "verb": "COMPARES TO",
+          "target": "Synthesis \u2014 Context Mode (MCP Sandbox for Context Saving)"
         },
         {
           "verb": "FEEDS INTO",
@@ -33057,6 +33648,294 @@
         {
           "verb": "FEEDS INTO",
           "target": "Wiki Ingestion Pipeline"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
+      "slug": "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "title": "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "source-synthesis",
+        "spdd",
+        "structured-prompt-driven",
+        "reasons-canvas",
+        "thoughtworks",
+        "fowler",
+        "prompts-as-artifacts",
+        "spec-driven",
+        "openspdd",
+        "governance",
+        "ai-assisted-delivery",
+        "methodology",
+        "layer-1",
+        "paper-evidence",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "fowler-spdd-article",
+          "type": "documentation",
+          "url": "https://martinfowler.com/articles/structured-prompt-driven/",
+          "file": "raw/articles/structured-prompt-driven-development-spdd.md",
+          "title": "Structured Prompt-Driven Development (SPDD) \u2014 martinfowler.com 2026-04-28",
+          "description": "Authoritative source \u2014 Wei Zhang (AI-assisted delivery expert at Thoughtworks) + Jessie Jie Xia (Global CIO at Thoughtworks). Full method walkthrough with billing-engine example.",
+          "ingested": "2026-05-04"
+        },
+        {
+          "id": "spec-kit-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-github-spec-kit-specification-driven-development.md",
+          "description": "Adjacent \u2014 GitHub's Spec Kit implements pure spec-driven development (SDD); SPDD adds workflow + REASONS Canvas + sync discipline on top of the same starting point"
+        },
+        {
+          "id": "openspec-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-openspec-spec-driven-development-framework.md",
+          "description": "Adjacent \u2014 OpenSpec is another spec-driven framework for AI coding assistants; SPDD's REASONS Canvas is one canonical structure for the spec artifact OpenSpec produces"
+        },
+        {
+          "id": "bmad-synth",
+          "type": "wiki",
+          "file": "wiki/sources/src-bmad-method-agile-ai-development-framework.md",
+          "description": "Adjacent \u2014 BMAD-METHOD overlaps in framing prompts as governable artifacts but uses different abstractions (party mode / personas) instead of REASONS Canvas"
+        },
+        {
+          "id": "aidlc-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md",
+          "description": "Adjacent \u2014 AWS AI-DLC is a parallel methodology framing AI-driven delivery; SPDD is a more concrete workflow + canvas instantiation"
+        },
+        {
+          "id": "markdown-as-iac-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
+          "description": "Wiki model \u2014 SPDD is a strong instantiation of Markdown-as-IaC at the project-delivery scale: the structured prompt IS the binding configuration kept in version control"
+        },
+        {
+          "id": "jsmastery-six-file",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
+          "description": "Sibling \u2014 independent practitioner's instantiation of the same core pattern at solo/freelance scale (Six-File Context System). SPDD \u2194 Six-File Context = enterprise vs solo convergence on the same core."
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "SPDD",
+        "Structured Prompt-Driven Development",
+        "REASONS Canvas",
+        "Fowler SPDD",
+        "Thoughtworks SPDD",
+        "openspdd"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "GitHub Spec Kit Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "OpenSpec Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "BMAD Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "AWS AI-DLC Synthesis"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "JS Mastery Six-File Context System Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Methodology"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md",
+      "slug": "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
+      "title": "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)",
+      "type": "source-synthesis",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "source-synthesis",
+        "six-file-context",
+        "jsmastery",
+        "adrian-hajdin",
+        "spec-driven",
+        "agentic-build",
+        "prompts-as-artifacts",
+        "claude-code",
+        "codex",
+        "methodology",
+        "code-rabbit",
+        "ghost-ai",
+        "progress-tracker",
+        "npx-skills",
+        "agentskills",
+        "layer-1",
+        "paper-evidence",
+        "mission-2026-05-04",
+        "operator-named"
+      ],
+      "sources": [
+        {
+          "id": "jsmastery-video",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=14RP8liACqo",
+          "file": "raw/transcripts/how-senior-engineers-actually-build-with-ai-in-2026-build-a-full-stack-systems-a.txt",
+          "title": "How Senior Engineers Actually Build With AI in 2026 \u2014 Build a Full Stack Systems Architecture App (Adrian Hajdin / JS Mastery)",
+          "description": "Authoritative source \u2014 full ~3-hour tutorial walking through the methodology + 29 feature specs of the Ghost AI build. Operator-named source 2026-05-04.",
+          "ingested": "2026-05-04"
+        },
+        {
+          "id": "jsmastery-templates",
+          "type": "file",
+          "file": "raw/dumps/Six-File+Context+Methodology/templates/",
+          "description": "Operator-downloaded blank templates the video produces \u2014 CLAUDE.md wiring + 6 context files (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker)"
+        },
+        {
+          "id": "fowler-spdd-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md",
+          "description": "Sibling \u2014 Thoughtworks' SPDD is the enterprise-scale convergent instance of the same core pattern (prompts as first-class artifacts, abstraction-first, alignment, iterative review, fix-prompt-first closed loop)"
+        },
+        {
+          "id": "markdown-as-iac-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-markdown-as-iac.md",
+          "description": "Wiki model \u2014 the Six-File Context System is a strong instantiation at the solo/freelance project-build scale; the six Markdown files ARE the binding configuration the agent reads before any code"
+        },
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Adjacent \u2014 caveman-compress sub-skill compresses memory files (CLAUDE.md + context files) into caveman-speak for ~46% input compression, directly applicable to the Six-File Context system to keep the AGENTS.md + 6 files token-efficient"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Adjacent \u2014 the Six-File Context's `ai-workflow-rules.md` parallels the operator's Markdown-rules-DSL concept in the trust-layer epic (runtime contract declared in Markdown, enforced by Python in isolated mode)"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Six-File Context System",
+        "JS Mastery Six-File",
+        "Six-File Methodology",
+        "Spec-Driven Agentic Build",
+        "JS Mastery Methodology",
+        "context/ folder pattern"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Markdown as IaC"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "CLAUDE.md Structural Patterns"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "Fowler SPDD Synthesis"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "BMAD Synthesis"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "OpenSpec Synthesis"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "GitHub Spec Kit Synthesis"
+        },
+        {
+          "verb": "PARALLELS",
+          "target": "AWS AI-DLC Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Never Skip Stages"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Epic"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Methodology Framework"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Methodology Adoption Guide"
         }
       ]
     },
@@ -36582,6 +37461,10 @@
           "target": "Model Composition Rules"
         },
         {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Agentic Build Convergence Lesson"
+        },
+        {
           "verb": "RELATES TO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         },
@@ -36592,6 +37475,10 @@
         {
           "verb": "RELATES TO",
           "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Markdown as IaC"
         },
         {
           "verb": "FEEDS INTO",
@@ -38969,8 +39856,8 @@
       "relationship_count": 393
     },
     "cross-domain": {
-      "page_count": 226,
-      "relationship_count": 1533
+      "page_count": 230,
+      "relationship_count": 1583
     },
     "ai-models": {
       "page_count": 14,
@@ -38981,8 +39868,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 18,
-      "relationship_count": 193
+      "page_count": 20,
+      "relationship_count": 220
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -39695,6 +40582,8 @@
       "sources/src-openspec-spec-driven-development-framework",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
       "spine/evolution-log/methodology-evolution-history",
       "spine/learning-paths/methodology-fundamentals",
       "spine/models/foundation/model-methodology",
@@ -40013,6 +40902,7 @@
       "backlog/tasks/T045-install-opencode-binary",
       "backlog/tasks/T051-audit-opencode-skill-and-agent-format",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-opencode-harness-features"
     ],
@@ -40668,6 +41558,7 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "spine/standards/note-page-standards"
     ],
     "contract": [
@@ -41013,12 +41904,15 @@
       "sources/src-cline-agentic-coding-ide-extension",
       "sources/src-github-spec-kit-specification-driven-development",
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-claude-code-harness-features",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
       "spine/models/agent-config/model-claude-code",
       "spine/standards/model-standards/model-claude-code-standards"
@@ -41365,7 +42259,8 @@
       "comparisons/agentic-search-vs-vector-search",
       "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-core/lightrag",
-      "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
+      "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "rag": [
       "comparisons/agentic-search-vs-vector-search",
@@ -41380,7 +42275,8 @@
       "comparisons/llm-wiki-vs-rag",
       "domains/knowledge-systems/wiki-core/lightrag",
       "domains/knowledge-systems/wiki-core/wiki-knowledge-graph",
-      "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search"
+      "lessons/03_validated/knowledge-systems/graph-enhanced-retrieval-bridges-wiki-and-vector-search",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "knowledge-retrieval": [
       "comparisons/agentic-search-vs-vector-search",
@@ -41599,6 +42495,7 @@
       "lessons/01_drafts/if-you-can-verify-you-converge",
       "lessons/01_drafts/machine-specific-config-in-vcs-is-aspirational-portability",
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
@@ -41852,6 +42749,7 @@
       "decisions/02_validated/tools/local-model-vs-cloud-api-for-routine-operations",
       "domains/ai-models/local-llm-quantization",
       "domains/tools-and-platforms/aicp",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-gemma4-searxng-openclaw"
     ],
     "transferable": [
@@ -42547,8 +43445,13 @@
     ],
     "spec-driven": [
       "domains/ai-agents/orchestration/harness-engineering",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
-      "sources/claude-code/src-harness-engineering"
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/claude-code/src-harness-engineering",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "typescript": [
       "domains/ai-agents/orchestration/harness-engineering",
@@ -42733,10 +43636,12 @@
       "sources/src-openspec-spec-driven-development-framework"
     ],
     "bmad": [
-      "domains/ai-agents/patterns/spec-driven-development"
+      "domains/ai-agents/patterns/spec-driven-development",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "spec-kit": [
-      "domains/ai-agents/patterns/spec-driven-development"
+      "domains/ai-agents/patterns/spec-driven-development",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "superpowers": [
       "domains/ai-agents/patterns/spec-driven-development",
@@ -42763,7 +43668,8 @@
       "domains/ai-agents/patterns/spec-driven-development"
     ],
     "openspec": [
-      "domains/ai-agents/patterns/spec-driven-development"
+      "domains/ai-agents/patterns/spec-driven-development",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
     ],
     "task-lifecycle": [
       "domains/ai-agents/patterns/task-lifecycle-stage-gating"
@@ -43564,6 +44470,7 @@
     ],
     "karpathy": [
       "domains/knowledge-systems/wiki-core/llm-wiki-pattern",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation",
       "sources/wiki-methodology/src-karpathy-claude-code-10x",
@@ -43835,7 +44742,11 @@
     ],
     "paper-evidence": [
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "open-source-stack": [
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
@@ -43957,8 +44868,10 @@
     ],
     "convergence": [
       "lessons/01_drafts/if-you-can-verify-you-converge",
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
       "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "sources/src-autobe-compiler-verified-backend-generation"
     ],
     "deterministic-shell": [
@@ -44028,9 +44941,67 @@
     "meta-finding": [
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work"
     ],
+    "layer-4": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "agentic-build": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "prompts-as-artifacts": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "version-controlled-specs": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "abstraction-first": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "alignment": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
+    ],
+    "iterative-review": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "closed-loop": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "fix-prompt-first": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "six-file-context": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "reasons-canvas": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "ai-dlc": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts"
+    ],
+    "mission-2026-05-04": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "methodology-process": [
+      "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "patterns/01_drafts/observe-fix-verify-loop"
+    ],
     "sdd": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
-      "sources/src-github-spec-kit-specification-driven-development"
+      "sources/src-github-spec-kit-specification-driven-development",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
     ],
     "specifications": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
@@ -44155,7 +45126,11 @@
     ],
     "layer-1": [
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "research-engine": [
       "lessons/03_validated/ingestion-research/notebooklm-as-grounded-research-engine"
@@ -44449,9 +45424,6 @@
     "old-models": [
       "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
     ],
-    "alignment": [
-      "log/2026-04-09/methodology/2026-04-09-directive-docs-layers-old-models"
-    ],
     "chains": [
       "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed"
     ],
@@ -44517,7 +45489,8 @@
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -44891,7 +45864,8 @@
     ],
     "day-arc": [
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
-      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+      "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
     "trust-layer": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
@@ -44908,6 +45882,24 @@
     ],
     "80-90-space-saved": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
+    ],
+    "fowler": [
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "spdd": [
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "jsmastery": [
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "layer-4-lesson": [
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
+    ],
+    "ingestion-arc": [
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -44963,9 +45955,6 @@
     ],
     "agent-autonomy-boundary": [
       "patterns/01_drafts/block-with-reason-and-justified-escalation"
-    ],
-    "methodology-process": [
-      "patterns/01_drafts/observe-fix-verify-loop"
     ],
     "battle-testing": [
       "patterns/01_drafts/observe-fix-verify-loop"
@@ -45248,7 +46237,11 @@
       "sources/ecosystem-projects/src-openarms-v10-enforcement",
       "sources/ecosystem-projects/src-openfleet-fleet-architecture",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
       "sources/wiki-methodology/src-sdlc-frameworks-research",
       "spine/standards/source-synthesis-page-standards"
     ],
@@ -45324,7 +46317,8 @@
     ],
     "cursor": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "copilot": [
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill"
@@ -45606,7 +46600,8 @@
       "sources/src-code-review-graph-automated-review"
     ],
     "sqlite": [
-      "sources/src-code-review-graph-automated-review"
+      "sources/src-code-review-graph-automated-review",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "constitutional-compliance": [
       "sources/src-github-spec-kit-specification-driven-development"
@@ -45807,15 +46802,18 @@
     ],
     "codex": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
       "spine/references/ai-infrastructure-decision-framework-2026"
     ],
     "aider": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
     ],
     "gemini-cli": [
-      "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
+      "sources/tools-integration/src-agentic-coding-harness-landscape-2026",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "crush": [
       "sources/tools-integration/src-agentic-coding-harness-landscape-2026"
@@ -45978,8 +46976,43 @@
       "sources/tools-integration/src-multica-managed-agents-platform",
       "sources/tools-integration/src-oolong-paper-deep-dive-synth-real-leaderboard-cmu-frontier-fails-128k"
     ],
+    "cavekit": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
     "julius-brussee": [
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "spec-md": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "caveman-encoding": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "backprop": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "six-section-spec": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "paragon-of-distillation": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "two-version-architecture": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
+    ],
+    "mit-licensed": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "operator-named-ecosystem": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "convergence-instance-8": [
+      "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee"
     ],
     "prompt-compression": [
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
@@ -45991,9 +47024,6 @@
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "classical-chinese": [
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
-    ],
-    "mit-licensed": [
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "codex-plugin": [
@@ -46012,10 +47042,36 @@
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "npx-skills": [
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "operator-confirmed": [
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+    ],
+    "cavemem": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "persistent-memory": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "cross-agent-memory": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "compression-at-rest": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "mcp-progressive-disclosure": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "caveman-ecosystem": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
+    ],
+    "fts5": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/wiki-methodology/src-context-mode"
+    ],
+    "privacy-aware": [
+      "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "plugins": [
       "sources/tools-integration/src-claude-code-harness-features",
@@ -46853,9 +47909,6 @@
     "session-continuity": [
       "sources/wiki-methodology/src-context-mode"
     ],
-    "fts5": [
-      "sources/wiki-methodology/src-context-mode"
-    ],
     "rrf": [
       "sources/wiki-methodology/src-context-mode"
     ],
@@ -46864,6 +47917,39 @@
     ],
     "12-platform": [
       "sources/wiki-methodology/src-context-mode"
+    ],
+    "structured-prompt-driven": [
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "thoughtworks": [
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "openspdd": [
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "governance": [
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "ai-assisted-delivery": [
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "adrian-hajdin": [
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "code-rabbit": [
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "ghost-ai": [
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "progress-tracker": [
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "agentskills": [
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "operator-named": [
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "primary-source": [
       "sources/wiki-methodology/src-karpathy-llm-wiki-idea-file"
@@ -47234,6 +48320,7 @@
         "Synthesis \u2014 BrowseComp-Plus (Chen et al. Aug 2025) + LongBench v2 (Bai et al. Dec 2024): Completing the RLM Table 1 Benchmark Coverage",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
@@ -47443,6 +48530,12 @@
       ]
     },
     {
+      "target": "2026-04-30 Session Log \u2014 Trust-Layer Arc",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored"
+      ]
+    },
+    {
       "target": "AI Model Provider Harness Decision Matrix",
       "referenced_by": [
         "Comparison \u2014 RLM-Qwen3-8B vs Qwen3.6-27B-Dense for the Tier-0 Long-Context Candidate Role (Post-Anthropic Mission, T-0 2026-04-27)",
@@ -47474,6 +48567,13 @@
       ]
     },
     {
+      "target": "AWS AI-DLC Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
+      ]
+    },
+    {
       "target": "Agent Failure Taxonomy",
       "referenced_by": [
         "Mandatory Without Verification Is Not Enforced \u2014 Skill-Layer Instance of Infrastructure > Instructions",
@@ -47482,6 +48582,12 @@
         "Agents take small unauthorized scope expansions when the change is a 'clean win'",
         "Artifact Path Verification at Gate Close",
         "Aspirational Naming in Lifecycle Code"
+      ]
+    },
+    {
+      "target": "Agentic Search vs Vector Search Comparison",
+      "referenced_by": [
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
       ]
     },
     {
@@ -47494,6 +48600,7 @@
         "Operations Plan \u2014 RLM-Qwen3.6-27B Fine-Tune (Hypothetical Composition Path for Tier-0 Long-Context)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
         "Saturation Declarations Are P4 Aspirational \u2014 Test Saturation Claims by Attempting Forward Work Before Treating Them as Terminal",
+        "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
         "2026-04-27 Continuation Session-End Handoff \u2014 Post-Compact Regather + 5 Substantive Artifacts (RLM-Qwen3.6-27B Operations Plan + 4 Layer-1 Benchmark Deep-Dives), RLM Table 1 100% at Layer 1, Anti-Vendor-Lock-In Lesson Fully Grounded",
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
@@ -47503,9 +48610,18 @@
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)",
         "Learning Path \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica + Harness + AICP, Session Arc 2026-04-28)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
+      ]
+    },
+    {
+      "target": "BMAD Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
       ]
     },
     {
@@ -47542,6 +48658,12 @@
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
         "Learning Path \u2014 RLM Thread Evidence Chain (Session Arc 2026-04-27)"
+      ]
+    },
+    {
+      "target": "CLAUDE.md Structural Patterns",
+      "referenced_by": [
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
       ]
     },
     {
@@ -47934,6 +49056,21 @@
       ]
     },
     {
+      "target": "Fowler SPDD Synthesis",
+      "referenced_by": [
+        "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
+        "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
+      ]
+    },
+    {
+      "target": "GitHub Spec Kit Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
+      ]
+    },
+    {
       "target": "HF Discussion \u2014 Unsloth/Qwen3.6-27B-GGUF #15",
       "referenced_by": [
         "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls"
@@ -48002,6 +49139,19 @@
       "referenced_by": [
         "Harness Engineering Is the Dominant Performance Lever",
         "Synthesis \u2014 Natural-Language Agent Harnesses (NLAH) \u2014 Externalizing Harness Logic as Editable Artifacts"
+      ]
+    },
+    {
+      "target": "JS Mastery Six-File Context System",
+      "referenced_by": [
+        "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
+      ]
+    },
+    {
+      "target": "JS Mastery Six-File Context System Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)"
       ]
     },
     {
@@ -48228,14 +49378,26 @@
       "referenced_by": [
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+        "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
+        "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
-        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)"
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
+        "Synthesis \u2014 Prime Intellect Verifiers: Environments for LLM RL (with RLMEnv for Recursive Language Models)",
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)",
+        "Methodology Adoption Guide"
       ]
     },
     {
       "target": "Model \u2014 Skills, Commands, Hooks",
       "referenced_by": [
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)"
+      ]
+    },
+    {
+      "target": "Never Skip Stages",
+      "referenced_by": [
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
       ]
     },
     {
@@ -48273,6 +49435,13 @@
       "target": "OpenFleet Fleet Architecture",
       "referenced_by": [
         "Context File Taxonomy \u2014 The 8 Dimensions of Agent Context"
+      ]
+    },
+    {
+      "target": "OpenSpec Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
+        "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)"
       ]
     },
     {
@@ -48331,8 +49500,16 @@
       ]
     },
     {
+      "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior More Than Content",
+      "referenced_by": [
+        "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)"
+      ]
+    },
+    {
       "target": "Principle 2 \u2014 Structured Context Governs Behavior",
       "referenced_by": [
+        "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
         "Synthesis \u2014 RLM Empirical Findings: OOLONG, BrowseComp-Plus, and RLM-Qwen3-8B Approaching GPT-5 (Oct 2025 blogpost + Dec 2025/Jan 2026 arXiv 2512.24601)",
         "Synthesis \u2014 RLM (Recursive Language Models): Task-Agnostic Inference for Near-Infinite Contexts via REPL + Recursion (MIT OASYS, Dec 2025)"
       ]
@@ -48456,6 +49633,7 @@
         "2026-04-27 Post-FINAL-Handoff Continuation \u2014 11-Artifact Bug-Audit Arc Refutes Saturation Claim, First Verification Cycle of the Saturation Lesson, 6 P4 Instances Closed in Gateway/Search/Routing Surface",
         "2026-04-28 Session Log \u2014 Post-Anthropic 3-Layer Stack Assembly (Multica Adoption + Operator Behavioral Corrections)",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
+        "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
@@ -48471,6 +49649,8 @@
       "target": "Schema Is the Real Product",
       "referenced_by": [
         "Schema aspirationalism \u2014 defining required sections you never validate produces false confidence",
+        "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
+        "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
         "Synthesis \u2014 LLM Wiki v2 -- Extending Karpathy's Pattern with Agentmemory Lessons"
       ]
     },
@@ -48493,6 +49673,26 @@
       "target": "Self-Reference Drift lesson",
       "referenced_by": [
         "2026-04-24 \u2014 Pickup-Cold Handoff (forward-focused: what to do in next session)"
+      ]
+    },
+    {
+      "target": "Skyscraper / Pyramid / Mountain Pattern",
+      "referenced_by": [
+        "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)"
+      ]
+    },
+    {
+      "target": "Spec-Driven Agentic Build Convergence Lesson",
+      "referenced_by": [
+        "Methodology Adoption Guide"
+      ]
+    },
+    {
+      "target": "Spec-Driven Convergence Lesson",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
+        "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
       ]
     },
     {
@@ -48562,6 +49762,12 @@
       "target": "Synthesis \u2014 Codex CLI + Plugin",
       "referenced_by": [
         "Synthesis \u2014 Agentic Coding Harness Landscape 2026 (Claude Code, Codex, OpenCode, Aider, Cline, Cursor, Gemini CLI, Continue, Crush, Goose)"
+      ]
+    },
+    {
+      "target": "Synthesis \u2014 Context Mode",
+      "referenced_by": [
+        "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)"
       ]
     },
     {

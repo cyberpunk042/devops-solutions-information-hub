@@ -222,6 +222,24 @@ The Design.md pattern extends beyond visual design into BEHAVIORAL design. CLAUD
 
 The Goldilocks identity profile is the most concrete instance of CLAUDE.md-as-IaC in the ecosystem. Each project declares 7 dimensions (type, execution mode, domain, phase, scale, PM level, trust tier) as a YAML-style table in CLAUDE.md. This table is not documentation — it is a programmatic declaration that determines SDLC profile selection, methodology depth, and artifact requirements. The wiki's own identity profile (`wiki/ecosystem/project_profiles/research-wiki/identity-profile.md`) serves as the worked example. See [[goldilocks-flow|Goldilocks Flow — From Identity to Action]] for how identity drives the entire decision chain.
 
+### Empirical Convergence — 8+ Independent Practitioners Instantiate This Model (added 2026-05-04)
+
+> [!success] **Markdown-as-IaC is the underlying substrate of the [2026 Spec-Driven Agentic Build Convergence](../../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md) — paper-evidenced at 7+ independent instances.**
+>
+> | Instance | Markdown-as-IaC artifact |
+> |---|---|
+> | [Fowler/Thoughtworks SPDD](../../../sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd.md) | REASONS Canvas (.md) — version-controlled prompt artifact with 7 dimensions (R · E · A · S · O · N · S) read by `openspdd` CLI |
+> | [JS Mastery Six-File Context System](../../../sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build.md) | 6 context files in `context/` folder + per-feature `NN-feature.md` specs + `AGENTS.md` wiring file |
+> | [BMAD-METHOD](../../../sources/src-bmad-method-agile-ai-development-framework.md) | Story-spec markdown files + persona configuration files |
+> | [OpenSpec](../../../sources/src-openspec-spec-driven-development-framework.md) | Lightweight spec-driven framework — markdown specs as the persisted artifact |
+> | [GitHub Spec Kit](../../../sources/src-github-spec-kit-specification-driven-development.md) | Specification-Driven Development toolkit — markdown specs operationalized |
+> | [AWS AI-DLC](../../../sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle.md) | Lifecycle artifacts as markdown methodology documents |
+> | [Karpathy's LLM Wiki Pattern](../../../sources/wiki-methodology/src-karpathy-llm-wiki-idea-file.md) | Schema/agent-config IS the durable product — content generated from it |
+> | [Cavekit v4 (Julius Brussee)](../../../sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee.md) | **Most distilled instance**: SPEC.md + 3 commands + 2 skills · §-addressable sections · backprop reflex turns bugs into permanent §V invariants |
+> | **+ this wiki itself** | CLAUDE.md + AGENTS.md + .claude/rules/ + wiki/backlog/modules/ — the 9th instance and the substrate this model formalizes |
+>
+> Empirical convergence at this density (7+ independent practitioners, multiple scales, multiple vocabularies) is the strongest empirical anchor for Markdown-as-IaC's mission claim. Per [the convergence lesson](../../../lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md): the question is not *whether* to instantiate Markdown-as-IaC for production-grade AI-assisted builds, but *which instance* fits the workload class.
+
 ## Open Questions
 
 > [!question] ~~****When does the companion file ecosystem tip into context overhead?****~~
