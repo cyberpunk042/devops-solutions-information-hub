@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-30T14:14:53.621274+00:00",
+  "generated": "2026-04-30T14:17:12.003404+00:00",
   "stats": {
     "pages": 530,
     "domains": 11,
     "sources": 78,
     "comparisons": 9,
-    "relationships": 3353,
+    "relationships": 3354,
     "tags_unique": 1809,
     "layers": {
       "3": 4,
@@ -6521,6 +6521,10 @@
         {
           "verb": "IMPLEMENTS",
           "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        },
+        {
+          "verb": "EXTENDED BY",
+          "target": "Trust-Layer Epic (2026-04-30)"
         },
         {
           "verb": "BUILDS ON",
@@ -38966,7 +38970,7 @@
     },
     "cross-domain": {
       "page_count": 226,
-      "relationship_count": 1532
+      "relationship_count": 1533
     },
     "ai-models": {
       "page_count": 14,

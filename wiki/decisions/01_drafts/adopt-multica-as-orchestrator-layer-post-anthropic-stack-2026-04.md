@@ -136,12 +136,32 @@ This decision affects:
 > | **The mission lesson the decision supports** | [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence\|Anti-Vendor-Lock-In Lesson]] |
 > | **The principle this decision verifies** | [[declarations-are-aspirational-until-infrastructure-verifies-them\|Principle 4]] |
 
+## EXTENDED 2026-04-30 — Multica Sits Below the Trust Layer (4-Layer Composition)
+
+> [!info] **The decision composes with the 4th-layer extension**
+>
+> Per the [Trust-Layer Epic](../../backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04.md) authored 2026-04-30, the operator's tamper-proof-inference design adds a fourth substitutable layer — trust / confidential-compute — on top of orchestrator × harness × provider. **Multica's role does not change**: it remains the orchestrator-layer choice. The trust layer's cypher + decypher + compression pipeline runs *underneath* Multica's orchestration, regardless of which harness and provider are selected. The decision's reversibility analysis is unaffected — Multica swap remains moderate cost, the trust layer is independent.
+>
+> Composability picture:
+>
+> ```
+> TRUST  L2/L3 (compressed + encrypted + GPU-decypher; attestation if L3)
+>   ↓
+> Multica (orchestrator — this decision)
+>   ├─ Claude Code  ─→  AICP routing  ─→  local (RTX 3090 with L2)
+>   ├─ OpenCode     ─→  AICP routing  ─→  Ollama Cloud | OpenRouter | local
+>   └─ Kimi CLI     ─→  AICP routing  ─→  Moonshot direct | OpenRouter
+> ```
+>
+> See [anti-vendor-lock-in lesson Evidence 11](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md) for the 4-layer empirical claim, and the [Trust-Layer Learning Path](../../spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30.md) for the curated reading order.
+
 ## Relationships
 
 - DERIVED FROM: [[src-multica-managed-agents-platform|Multica Synthesis]] (the Layer-1 source for the orchestrator-layer empirical evidence)
 - DERIVED FROM: [[anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence|Anti-Vendor-Lock-In Lesson]] § Evidence 10
 - DERIVED FROM: [[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Post-Anthropic 3-Layer Stack Epic]]
 - IMPLEMENTS: [[post-anthropic-self-autonomous-stack|Milestone — Post-Anthropic Self-Autonomous Stack]]
+- EXTENDED BY: [[secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04|Trust-Layer Epic (2026-04-30)]] — Multica's orchestrator role composes underneath the trust layer; 4-layer mission claim added 2026-04-30
 - BUILDS ON: [[ai-model-provider-harness-decision-matrix-2026|AI Decision Matrix 2026]] (orchestrator dimension)
 - DEMONSTRATES: [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]] (verified by operator's `custom_env` validation, not just declared)
 - DEMONSTRATES: [[infrastructure-over-instructions-for-process-enforcement|Principle 1]] (Multica's daemon = infrastructure; per-agent `custom_env` = infrastructure not instructions)
@@ -155,6 +175,7 @@ This decision affects:
 [[Anti-Vendor-Lock-In Lesson]]
 [[post-anthropic-stack-3-layer-assembly-multica-aicp-3090|Post-Anthropic 3-Layer Stack Epic]]
 [[Milestone — Post-Anthropic Self-Autonomous Stack]]
+[[Trust-Layer Epic (2026-04-30)]]
 [[ai-model-provider-harness-decision-matrix-2026|AI Decision Matrix 2026]]
 [[declarations-are-aspirational-until-infrastructure-verifies-them|Principle 4]]
 [[infrastructure-over-instructions-for-process-enforcement|Principle 1]]

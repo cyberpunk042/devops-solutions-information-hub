@@ -130,6 +130,10 @@ For a reader auditing the wiki's anti-vendor-lock-in claim with the new orchestr
 >
 > **Outcome**: you can independently audit whether anti-vendor-lock-in holds at 3 structural layers (orchestrator × harness × provider) per the wiki's claim. Distinct from Goal A's architecture-level reading because this audit is per-layer empirical verification, not just structural awareness.
 
+> [!success]- **EXTENDED 2026-04-30 — 4th-layer extension via the Trust-Layer Learning Path**
+>
+> This 3-layer path is now followed by the [Trust-Layer Learning Path (2026-04-30)](trust-layer-tamper-proof-inference-2026-04-30.md), which adds a fourth substitutable layer (trust / confidential-compute) with cypher + decypher + compression composed for **80–90% space saved on large context**, seamless and performance-positive. The two paths compose: this 3-layer path delivers the substrate (orchestrator × harness × provider); the trust-layer path delivers the security stance and compression-encryption pipeline that runs *on top of* whichever orchestrator × harness × provider triple is selected. Per [anti-vendor-lock-in lesson Evidence 11](../../lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md), the mission claim now extends to 4 structural layers, not 3.
+
 ## Outcomes
 
 > [!success] After completing this path you should be able to:
