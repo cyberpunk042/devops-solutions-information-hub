@@ -41,3 +41,13 @@ tags: [backlog, modules]
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M001 — Multica Per-Agent Provider Config (`custom_env` field is the answer)](post-anthropic-3-layer-m001-multica-per-agent-provider-config.md) | P0 | active | test | 95 |  |
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M002 — Harness-Level Integration Details (MCP Wiring · OpenCode Config · claude-code-router Wrapper Option)](post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config.md) | P0 | active | implement | 85 |  |
 | POST-ANTHROPIC | [Post-Anthropic 3-Layer Stack M003 — Multica → Claude Code → AICP → Ollama Cloud Smoke-Test Runbook](post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook.md) | P0 | active | scaffold | 75 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M001 — Author CLAUDE.md + AGENTS.md](root-ghostproxy-m001-author-claude-md-and-agents-md.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M002 — Methodology Layer Decision](root-ghostproxy-m002-methodology-layer-decision.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M003 — Foundation Hardening](root-ghostproxy-m003-foundation-hardening.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M004 — Infrastructure Tooling](root-ghostproxy-m004-infrastructure-tooling.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M005 — First Specialized Feature Module (Suricata or PolarProxy)](root-ghostproxy-m005-first-specialized-feature-module.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M006 — Pre-Connect Verification](root-ghostproxy-m006-pre-connect-verification.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M007 — Connect to Second Brain](root-ghostproxy-m007-connect-second-brain.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M008 — Smoke Test from Inside](root-ghostproxy-m008-smoke-test-from-inside.md) | P0 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M009 — Worked Example: Ingest README into Second Brain](root-ghostproxy-m009-worked-example-readme-ingest.md) | P1 | draft | document | 10 |  |
+| ROOT-GHOSTPROXY | [root-ghostproxy M010 — sister-projects.yaml auto_connect Decision](root-ghostproxy-m010-sister-projects-yaml-flip.md) | P2 | draft | document | 10 |  |

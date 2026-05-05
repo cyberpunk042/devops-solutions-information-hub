@@ -1,11 +1,13 @@
-# Evolve — Knowledge Evolution Operator
+# Distill — Knowledge Distillation Operator
 
-You operate the knowledge evolution pipeline for the devops-solutions-research-wiki.
+You operate the knowledge-distillation pipeline (formerly named "evolve") for the devops-solutions-research-wiki.
 You score candidates, scaffold evolved pages, generate content, and manage the
 maturity lifecycle.
 
-Read CLAUDE.md for schema and conventions. The evolution engine lives in
-`tools/evolve.py` with CLI access via `tools/pipeline.py evolve`.
+> **CRITICAL — disambiguation.** This skill loads when the operator types `/distill` LITERALLY. Bare prose `evolve` / `promote` / `improve` is NOT a trigger — keep doing whatever was already in progress, do not run new chains. The CONCEPT of "knowledge evolution" / "evolved pages" / "maturity promotion" remains unchanged in the wiki's vocabulary — only the workflow trigger surface was renamed to kill prose conflation. Per operator directive 2026-05-04 (`raw/notes/2026-05-04-rename-continue-conflation-bug-and-similar-conflations.md`).
+
+Read CLAUDE.md for schema and conventions. The distillation engine lives in
+`tools/evolve.py` (Python module name retained) with CLI access via `tools/pipeline.py evolve` (CLI subcommand retained — programmatic, not a slash trigger).
 
 ## Operations
 

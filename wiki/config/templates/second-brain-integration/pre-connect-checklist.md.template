@@ -1,0 +1,57 @@
+---
+title: "Pre-Connect Verification — {{project_name}} → second brain ({{date}})"
+type: note
+note_type: pre-connect-verification
+status: in-progress
+project: {{project_name}}
+date: {{date}}
+---
+
+# Pre-Connect Verification — {{date}}
+
+> M006 of the SFIF rollout epic. Records the state checks completed BEFORE
+> running `python3 -m tools.setup --connect-project {{project_path}}` for real.
+> File this log entry under wiki/log/ for audit trail.
+
+## Pre-conditions verified
+
+| Pre-condition | Check command | Result | Output |
+|---|---|---|---|
+| AGENTS.md exists | `test -f {{project_path}}/AGENTS.md && echo OK \|\| echo MISSING` | {{agents_md_check_result}} | {{agents_md_check_output_link}} |
+| Working tree clean | `cd {{project_path}} && git status --porcelain` | {{git_status_check_result}} | {{git_status_check_output_link}} |
+| Sister-projects.yaml entry correct | `python3 -m tools.setup --connect-project {{project_path}} --dry-run \| grep "Sister entry resolved"` | {{sister_entry_check_result}} | {{sister_entry_output_link}} |
+| .mcp.json existing content captured | `cat {{project_path}}/.mcp.json` (if exists) | {{mcp_json_capture_result}} | {{mcp_json_capture_output_link}} |
+| tools/ existing content captured | `ls -la {{project_path}}/tools/` (if exists) | {{tools_capture_result}} | {{tools_capture_output_link}} |
+| Pre-connect snapshot taken | `cd {{project_path}} && git rev-parse HEAD` (or tar artefact) | {{snapshot_result}} | {{snapshot_artefact_path}} |
+
+## Dry-run output
+
+`python3 -m tools.setup --connect-project {{project_path}} --dry-run`:
+
+```
+{{dry_run_output}}
+```
+
+## Variant determination
+
+Per `_load_sister_entry()` resolution:
+- **Sister entry name**: {{sister_entry_name}}
+- **Type**: `{{type}}`
+- **Group**: `{{group}}`
+- **Brain-pointer block variant**: `{{brain_pointer_variant}}`
+
+## Operator authorization
+
+> {{operator_authorization_quote}}
+
+Source: {{operator_authorization_source}}.
+
+## Decision: proceed with M007 connect?
+
+- [ ] All pre-conditions verified
+- [ ] Operator authorization captured
+- [ ] Atomic rollback plan documented (revert commit / restore tar)
+
+**Decision**: {{proceed_decision}}.
+
+If yes → proceed to M007. If no → resolve blocking issue, re-run M006.

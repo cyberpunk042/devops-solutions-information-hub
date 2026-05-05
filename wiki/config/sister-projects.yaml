@@ -171,6 +171,56 @@ projects:
     queryable_frontmatter: []
     note: "OpenClaw is OpenArms's upstream. Usually accessed via OpenArms's patches/ directory, not directly. Remote owner unverified — path not accessible at session time 2026-04-15."
 
+  # ---------------------------------------------------------------------------
+  # NEW PROJECT (added 2026-05-04 per operator directive). PRE-SFIF-INFRASTRUCTURE.
+  #
+  # Two new schema fields introduced here (optional for existing projects;
+  # canonical for this new entry):
+  #   type:   project taxonomy — what the project IS at the scope level.
+  #           Values: system | product | service | root | ... (extendable).
+  #           `root` (NEW 2026-05-04) = project sets up an OPERATING SYSTEM or
+  #           system-level config via IaC. Type is independent of install path —
+  #           even when installed under a non-root user (e.g., jfortin), the
+  #           project remains type=root because what it CONFIGURES is the OS.
+  #           See raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md
+  #   group:  purpose-class clustering of projects of similar intent.
+  #           Distinct from `domain` (technology axis: TypeScript/Python/etc.).
+  #           Group is intent axis: operating-system-setup | ai-agent-platform |
+  #           agent-orchestration | knowledge-curation | etc.
+  #
+  # Existing 5 entries above don't carry type/group yet — operator may
+  # backfill. Defaults treat both as unspecified.
+  # ---------------------------------------------------------------------------
+  root-ghostproxy:
+    description: "Root-level operating-system AI safety + IaC. Hardens Claude Code + opencode at the OS level via ~/.claude/settings.json + 5 hooks (policy-block, malware-block, leak-detector, integrity, session-start, session-summary) + opencode bridge plugin. Planned modules: suricata (IPS), polarproxy (TLS inspection). type=root because it configures the OS, regardless of which user installs it. Currently at SFIF Foundation tier (install.sh + base hooks). SFIF Infrastructure + Features pending — see epic root-ghostproxy-sfif-rollout-and-second-brain-integration."
+    type: root                            # NEW value — project SETS UP an OS / system-level config (scope, not path)
+    group: operating-system-setup          # NEW dimension — purpose-class clustering
+    path: ~/                              # repo root IS the home dir per /root README ("git init'd at $HOME"). On root user, ~/ = /root. On any user, ~/ = $HOME (the .git is at $HOME/.git).
+    wiki_dir: wiki                        # planned future location — does NOT yet exist (project pre-Infrastructure tier)
+    auto_connect: false                   # PENDING operator authorization. NOT auto-connected by `tools.setup`. Explicit `--connect-project <path>` after the project's own AGENTS.md exists (Stream 1 dependency on Stream 2 Scaffold output).
+    remote:
+      type: github
+      owner: cyberpunk042                 # PRESUMED (matches other sisters); operator confirms before remote-fallback ops
+      repo: root-ghostproxy
+      default_branch: main
+      url: https://github.com/cyberpunk042/root-ghostproxy
+    aliases:
+      - root-ghostproxy
+    layout:
+      # PRE-SFIF-INFRASTRUCTURE state as of 2026-05-04. Currently populated:
+      #   .claude/settings.json + hooks/*.sh + integrity.py    — security envelope (Foundation)
+      #   .config/opencode/opencode.json + plugin/             — opencode bridge (Foundation)
+      #   install.sh, uninstall.sh                             — entry points (Foundation)
+      #   README.md                                            — project doc (Scaffold)
+      #   .gitignore                                           — deny-all + whitelist
+      # NOT yet populated (planned by SFIF Infrastructure / Features):
+      #   wiki/, backlog/, log/, config/, tools/, AGENTS.md, CLAUDE.md
+      # Layout below reflects current reality. Update after SFIF Infrastructure rollout.
+      root_docs: .
+    queryable_frontmatter: []              # no frontmatter convention yet — no wiki/ exists
+    patterns: {}
+    note: "PRE-SFIF-INFRASTRUCTURE. Two pending work streams (future session, NOT this preparation session): (1) Stream 2 — pure SFIF project base (CLAUDE.md, AGENTS.md, methodology layer, Infrastructure tooling, Features modules suricata + polarproxy). (2) Stream 1 — second-brain integration (`tools/setup.py --connect-project <path>` to install MCP entry + gateway/view forwarders + AGENTS.md `## Second Brain Connection` block). Stream 1 depends on Stream 2 Scaffold (AGENTS.md must exist first). See: raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md and the SFIF rollout epic."
+
 # Write policy — this wiki never writes to sister projects via these tools.
 # Cross-project contributions go through each project's own contribution flow.
 # NO TRUNCATION policy: the sister_project tool does not apply default caps

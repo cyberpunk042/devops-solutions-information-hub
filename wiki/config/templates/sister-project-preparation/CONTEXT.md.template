@@ -1,0 +1,64 @@
+# CONTEXT.md — {{project_name}} active mission + SFIF stage
+
+> Operational state for agent sessions. Distinct from CLAUDE.md (rules) and
+> README.md (description). Read this to know what the project is currently
+> working on, what stage it's at, and what's next.
+
+## Identity Profile (Goldilocks — full)
+
+| Dimension | Value | Rationale |
+|---|---|---|
+| Type | {{type}} | {{type_rationale}} |
+| Group | {{group}} | {{group_rationale}} |
+| Domain | {{domain}} | {{domain_rationale}} |
+| Phase | {{phase}} | {{phase_rationale}} |
+| Scale | {{scale}} | {{scale_rationale}} |
+| Execution mode | {{execution_mode}} | {{execution_mode_rationale}} |
+| SDLC profile | {{sdlc_profile}} | {{sdlc_profile_rationale}} |
+| PM Level | {{pm_level}} | {{pm_level_rationale}} |
+| Trust tier | {{trust_tier}} | {{trust_tier_rationale}} |
+
+Canonical source: {{identity_profile_pointer}}.
+
+## SFIF Stage
+
+Current stage: **{{sfif_stage}}**.
+
+| SFIF Stage | Definition | Done When | This project's status |
+|---|---|---|---|
+| Scaffold | Directory structure, file stubs, conventions in place | Type sketches compile; no business logic | {{scaffold_status}} |
+| Foundation | Project installs reliably, idempotent, integrity check passes | `install --dry-run` + `--check` clean; integrity check green | {{foundation_status}} |
+| Infrastructure | Project enforces its own quality gates programmatically (verifier scripts, validation pipeline) | Verifier exists, returns 0 on clean; integrated into CI or pre-commit | {{infrastructure_status}} |
+| Features | Specialized feature modules added | At least one feature module end-to-end with tests | {{features_status}} |
+
+Source: [`wiki/spine/models/quality/model-sfif-architecture.md`](wiki/spine/models/quality/model-sfif-architecture.md) (in second brain) or local copy if methodology-layer choice was "local."
+
+## Active Mission (operator verbatim)
+
+> {{mission_verbatim_quote}}
+
+Source: {{mission_verbatim_source}}.
+
+## Active Epic
+
+[{{active_epic_title}}](wiki/backlog/epics/{{active_epic_slug}}.md) — {{active_epic_short_summary}}.
+
+Active modules under this epic:
+
+{{active_modules_list}}
+
+## Recent operator directives (verbatim, sacrosanct)
+
+| Date | Quote | Source |
+|---|---|---|
+{{recent_directives_table}}
+
+Full history: [wiki/log/](wiki/log/) + memory layer auto-loaded sacrosanct rules.
+
+## Next-best moves (per the active epic)
+
+{{next_best_moves_list}}
+
+## Project ecosystem position
+
+{{ecosystem_position}}

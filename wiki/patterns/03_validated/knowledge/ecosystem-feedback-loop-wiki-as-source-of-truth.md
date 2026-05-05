@@ -163,6 +163,7 @@ The pattern has three properties that distinguish it from simple documentation:
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
 [[agent-failure-taxonomy-seven-classes-of-behavioral-failure|Agent Failure Taxonomy — Seven Classes of Behavioral Failure]]
 [[contribution-gating-cross-agent-inputs-before-work|Contribution Gating — Cross-Agent Inputs Before Work]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[infrastructure-enforcement-proves-instructions-fail|Infrastructure Enforcement Proves Instructions Fail]]
 [[project-self-identification-protocol|Project Self-Identification Protocol — The Goldilocks Framework]]
 [[identity-profile|Research Wiki — Identity Profile]]

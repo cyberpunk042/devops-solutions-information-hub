@@ -64,12 +64,12 @@ Full 30-tool MCP catalog + 24-row routing table + CLI catalog: **[.claude/rules/
 | Operator says... | First action |
 |---|---|
 | `"ingest <url>"` / "new ingestions" / URL list | `pipeline fetch <urls>` OR `wiki_fetch` MCP. Then read raws → synthesis pages → `pipeline post` → `crossref`. |
-| `"continue"` / "resume" / "where are we" | `gateway orient` OR `wiki_continue` MCP. |
+| `/checkin` (slash, literal) | `wiki_checkin` MCP / `pipeline chain checkin`. **Bare prose** `continue` / `resume` / `where are we` is trajectory-continue — no new tool calls. See `raw/notes/2026-05-04-rename-continue-conflation-bug-and-similar-conflations.md`. |
 | `"status"` / "what's next" | `pipeline status` OR `wiki_status` MCP. |
 | `"log <directive>"` / verbatim quote | Write `raw/notes/YYYY-MM-DD-<slug>.md` BEFORE acting OR `wiki_log` MCP. |
 | `"gaps"` / "what's missing" | `pipeline gaps` OR `wiki_gaps` MCP. |
 | `"search"` / "read page" / "show me X" | `wiki_search` / `wiki_read_page` MCP, OR `tools.view search`. |
-| `"evolve"` / "promote" | `pipeline evolve --score` OR `wiki_evolve` MCP. |
+| `/distill` (slash, literal) | `wiki_distill` MCP / `pipeline chain distill` / `pipeline evolve --score` (CLI subcommand retained). **Bare prose** `evolve` / `promote` / `improve` is trajectory-language — no new tool calls. See `raw/notes/2026-05-04-rename-continue-conflation-bug-and-similar-conflations.md`. |
 | `"validate"` / wiki change committed | `pipeline post` (MANDATORY). |
 | Build/review model | Read `.claude/commands/build-model.md`. |
 | Health / compliance / flow | `wiki_gateway_health` / `_compliance` / `_flow` MCPs. |

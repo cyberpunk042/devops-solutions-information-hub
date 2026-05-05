@@ -1,0 +1,44 @@
+<!-- Inject this section into CLAUDE.md after the identity table, before the
+     operator-intent routing table. Per Adoption Guide step 5. References
+     /root/wiki/config/methodology.yaml + the chosen profiles + the work-loop. -->
+
+## Methodology
+
+This project uses the stage-gate methodology defined in:
+- [`wiki/config/methodology.yaml`](wiki/config/methodology.yaml) — 9 models, 5 universal stages, ALLOWED/FORBIDDEN per stage, gates, end conditions
+- [`wiki/config/sdlc-profile.yaml`](wiki/config/sdlc-profile.yaml) — `{{sdlc_profile}}` profile (right-sized per project tier)
+- [`wiki/config/domain-profile.yaml`](wiki/config/domain-profile.yaml) — `{{domain_profile}}` profile (gate-command + path-pattern overrides)
+- [`wiki/config/methodology-profile.yaml`](wiki/config/methodology-profile.yaml) — `{{methodology_profile}}` profile (process style)
+
+These four files are **copied from the second brain** at `{{second_brain_path}}/wiki/config/` per Adoption Guide step 1. Adapt per project (artifacts, gate commands, commit scope, directory layout); keep the invariants (stage names, stage ordering, readiness ranges, hierarchy rules, work-loop structure).
+
+**5 universal stages:**
+
+| Stage | Readiness | ALLOWED outputs | FORBIDDEN outputs | Gate |
+|---|---|---|---|---|
+| **document** | 0–25% | wiki-page, raw notes, research notes | code-file, test-file | Page exists with Summary + gaps identified |
+| **design** | 25–50% | design-document, ADR, tech-spec, type sketches in docs | code-file, test-file | Spec reviewed; no code yet |
+| **scaffold** | 50–80% | type-definition, schema, test-stub, config-file | implementation, real test assertions | Types compile, no business logic |
+| **implement** | 80–95% | implementation, integration-wiring, config | new test files | Code compiles, lint passes |
+| **test** | 95–100% | test-implementation, test-results | new features, scope changes | 0 test failures, health check clean |
+
+**Stage rules:**
+- "Continue" = advance within CURRENT stage. NEVER skip ahead.
+- One commit per stage. Don't advance without the stage's quality gate passing.
+- ALLOWED/FORBIDDEN are not suggestions — they are hard constraints.
+
+**Backlog hierarchy:** Epic → Module → Task. Readiness flows upward (task readiness aggregates to module, module to epic). Status flows upward. You work on tasks, not on epics directly.
+
+**Quality gate commands per stage:**
+
+| Stage | Gate command (this project) |
+|---|---|
+| document | {{gate_command_document}} |
+| design | {{gate_command_design}} |
+| scaffold | {{gate_command_scaffold}} |
+| implement | {{gate_command_implement}} |
+| test | {{gate_command_test}} |
+
+**Work loop expectation:** the agent follows the work loop defined in `methodology-profile.yaml`. Stage boundaries are hard. ALLOWED/FORBIDDEN per stage is enforced.
+
+**Active epic:** [{{active_epic_title}}](wiki/backlog/epics/{{active_epic_slug}}.md). Active modules + tasks: [wiki/backlog/](wiki/backlog/).

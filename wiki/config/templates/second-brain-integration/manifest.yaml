@@ -1,0 +1,83 @@
+# Second-Brain Integration Templates — Manifest
+#
+# Template list B. Defines the OVERLAY content a sister project adds when
+# integrating with the second brain via `tools.setup --connect-project <path>`.
+# Applied AFTER Template list A (sister-project-preparation) — the base context
+# files exist, and B injects/appends second-brain-aware sections.
+#
+# Counterpart: Template list A (sister-project-preparation/manifest.yaml) defines
+# the base files (README, CLAUDE.md, AGENTS.md, CONTEXT.md, etc.).
+#
+# Renderer: tools/setup.py — `_inject_brain_pointer()` already handles the main
+# block. Other overlays are operator-applied (or extend setup.py to do them).
+# Variant selection: type=root + group=operating-system-setup gets the
+# "root-os-setup" variant; otherwise "generic."
+
+templates:
+  brain_pointer_block:
+    file: second-brain-connection-block.md.template
+    target: AGENTS.md or CLAUDE.md (appended; AGENTS.md preferred)
+    purpose: "The ## Second Brain Connection section. Lists gateway/view forwarder commands, MCP tools, methodology query patterns, contribute-back command. Variant per type."
+    inject_via: "tools/setup.py:_inject_brain_pointer (existing); template extracts the inline _BRAIN_POINTER_BLOCK_* constants for editability."
+    placeholders: [project_name, type, group, second_brain_path, mcp_entry_path]
+    variants:
+      - id: generic
+        for_types: ["service", "product", "research", "platform", "default"]
+        emphasizes: "adoption-tier evolution, browse + contribute"
+      - id: root-os-setup
+        for_types: ["root"]
+        for_groups: ["operating-system-setup"]
+        emphasizes: "OS-level IaC framing, second brain as methodology + verification source, security envelope"
+
+  claude_md_methodology_section:
+    file: claude-md-methodology-section.md.template
+    target: CLAUDE.md
+    purpose: "Methodology pointer section per Adoption Guide step 5. References /root/wiki/config/methodology.yaml + sdlc-profile + domain-profile + methodology-profile and the work-loop expectation."
+    inject_position: "after identity table, before routing table"
+    placeholders: [project_name, methodology_path, sdlc_profile, domain_profile, methodology_profile]
+
+  readme_sister_project_section:
+    file: readme-sister-project-section.md.template
+    target: README.md
+    purpose: "Sister-project status block — declares the project's type/group, second-brain registration, and how to query the second brain from this project."
+    inject_position: "before License section"
+    placeholders: [project_name, type, group, second_brain_path, sister_projects_yaml_entry_url]
+
+  pre_connect_checklist:
+    file: pre-connect-checklist.md.template
+    target: wiki/log/<date>-pre-connect-verification.md (new file per M006 invocation)
+    purpose: "M006 Pre-connect verification log entry. Records the dry-run output, AGENTS.md presence, git status, snapshot artefact, operator authorization."
+    inject_position: "(new file)"
+    placeholders: [project_name, date, dry_run_output, git_status_output, snapshot_artefact_path, operator_authorization_quote]
+
+  agents_md_second_brain_pointers_addendum:
+    file: agents-md-second-brain-pointers-addendum.md.template
+    target: AGENTS.md (Pointers table — add rows)
+    purpose: "Additional rows for the AGENTS.md Pointers table once second-brain integration is live: research-wiki MCP, gateway forwarder, view forwarder."
+    inject_position: "Pointers table — append rows"
+    placeholders: [second_brain_path, gateway_forwarder_path, view_forwarder_path]
+
+# Application order:
+# 1. Base files exist (Template list A applied).
+# 2. `tools.setup --connect-project <path>` runs from the second brain.
+# 3. setup.py auto-injects brain_pointer_block (variant per type/group).
+# 4. setup.py installs gateway.py + view.py forwarders.
+# 5. setup.py adds research-wiki MCP entry to .mcp.json.
+# 6. (Manual or extended) Apply claude_md_methodology_section to CLAUDE.md.
+# 7. (Manual or extended) Apply readme_sister_project_section to README.md.
+# 8. (Manual or extended) Apply agents_md_second_brain_pointers_addendum.
+# 9. Run M006 pre-connect-checklist as audit log of the integration step.
+
+application_order:
+  automatic_via_setup_py:
+    - brain_pointer_block
+  manual_or_extended:
+    - claude_md_methodology_section
+    - readme_sister_project_section
+    - agents_md_second_brain_pointers_addendum
+  audit_log:
+    - pre_connect_checklist
+
+# Setup.py extension scope (future enhancement, currently not done):
+#   --bootstrap-overlay PATH    # apply all overlays at once after --connect-project
+#   --apply-overlay <id> PATH   # apply a specific overlay manually

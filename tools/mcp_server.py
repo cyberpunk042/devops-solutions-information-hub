@@ -225,8 +225,8 @@ def wiki_integrations() -> str:
 
 
 @server.tool()
-def wiki_continue() -> str:
-    """Resume the wiki mission. Runs: post-chain, evolve review, evolve score, gaps, crossref. Returns full mission state."""
+def wiki_checkin() -> str:
+    """Mission state-and-options checkin. Runs: post-chain, evolve review, evolve score, gaps, crossref. Returns full mission state. Invoked by /checkin slash command (NOT by prose 'continue' — that is trajectory-continue per operator directive 2026-05-04)."""
     root = get_project_root()
     report = {}
 
@@ -274,7 +274,7 @@ def wiki_continue() -> str:
 
 
 @server.tool()
-def wiki_evolve(mode: str = "score", top: int = 10, type_filter: str = None) -> str:
+def wiki_distill(mode: str = "score", top: int = 10, type_filter: str = None) -> str:
     """Run the evolution pipeline. Modes: score, scaffold, dry-run, review, stale."""
     from tools.evolve import evolve as run_evolve
     root = get_project_root()

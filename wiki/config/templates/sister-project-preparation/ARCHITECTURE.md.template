@@ -1,0 +1,58 @@
+# ARCHITECTURE.md — {{project_name}}
+
+> System topology, component responsibilities, data flow. Allows README.md to
+> stay tight by extracting deep architecture detail here.
+
+## System overview
+
+{{system_overview}}
+
+## Topology diagram
+
+```
+{{topology_diagram}}
+```
+
+## Components
+
+{{components_table}}
+
+## Data flow
+
+{{data_flow_description}}
+
+## Component responsibilities
+
+{{component_responsibilities}}
+
+## Interfaces / boundaries
+
+{{interfaces_table}}
+
+## Failure modes + recovery
+
+| Failure | Detection | Recovery |
+|---|---|---|
+{{failure_modes_table}}
+
+## Performance characteristics
+
+{{performance_characteristics}}
+
+## Scalability + scale-out boundaries
+
+{{scalability_notes}}
+
+## Integration points (with other systems)
+
+{{integration_points_table}}
+
+## Architectural decisions (recent)
+
+{{recent_adrs_list}}
+
+For ADR history, see [wiki/decisions/](wiki/decisions/) (if present) or [wiki/log/](wiki/log/).
+
+## Glossary
+
+{{glossary_table}}

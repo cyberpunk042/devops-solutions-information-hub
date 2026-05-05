@@ -1,0 +1,43 @@
+# TOOLS.md — {{project_name}}
+
+> Tool reference. What each script/binary does, when to use it, with concrete
+> invocations. Reference, not narrative. Cross-reference this from CLAUDE.md
+> routing table.
+
+## Binary / script catalog
+
+| Tool | Path | Purpose | Common invocation |
+|---|---|---|---|
+{{tools_catalog_table}}
+
+## Detailed reference
+
+{{tool_detail_sections}}
+
+## Operator-intent → tool routing (summary)
+
+For full operator-intent → tool routing, see [CLAUDE.md](CLAUDE.md). This section is summary only.
+
+| Operator says... | Tool / command |
+|---|---|
+{{operator_intent_routing_summary}}
+
+## Tool dependencies (system-level)
+
+| System dependency | Required by | Install command (Debian) |
+|---|---|---|
+{{system_dependencies_table}}
+
+## Verification commands (after any tool change)
+
+```bash
+{{verification_commands}}
+```
+
+## Known issues / quirks per tool
+
+{{known_issues_per_tool}}
+
+## Cross-references
+
+{{tool_cross_references}}

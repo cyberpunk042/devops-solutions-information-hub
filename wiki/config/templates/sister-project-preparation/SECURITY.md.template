@@ -1,0 +1,72 @@
+# SECURITY.md — {{project_name}}
+
+> Security policy summary. For type=root projects this is **load-bearing**.
+> Threat model + what's protected + fail-closed invariants + escalation paths.
+
+## Threat model
+
+{{threat_model_description}}
+
+### Adversaries
+
+| Adversary | Capabilities | What we defend against |
+|---|---|---|
+{{adversaries_table}}
+
+### Assets to protect
+
+{{assets_to_protect_list}}
+
+### Out of scope
+
+{{out_of_scope_list}}
+
+## What's protected
+
+{{protections_overview}}
+
+### Layer-by-layer
+
+| Layer | Mechanism | What it blocks |
+|---|---|---|
+{{protection_layers_table}}
+
+## Fail-closed invariants
+
+{{fail_closed_invariants_list}}
+
+## Hooks / enforcement
+
+| Hook | Event | Purpose | Bypass (if any) |
+|---|---|---|---|
+{{hooks_enforcement_table}}
+
+## Tamper detection
+
+{{tamper_detection_description}}
+
+## Escalation path
+
+{{escalation_path}}
+
+## Audit + logging
+
+{{audit_logging_description}}
+
+## Known limitations
+
+{{security_known_limitations}}
+
+## Reporting a vulnerability
+
+{{vuln_reporting_process}}
+
+## Compliance / posture
+
+{{compliance_notes}}
+
+## Cross-references
+
+- [DESIGN.md](DESIGN.md) — security patterns
+- [ARCHITECTURE.md](ARCHITECTURE.md) — security boundaries in the topology
+- {{additional_security_cross_references}}

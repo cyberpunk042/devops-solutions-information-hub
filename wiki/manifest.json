@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-04T20:32:32.416865+00:00",
+  "generated": "2026-05-05T00:41:59.659574+00:00",
   "stats": {
-    "pages": 541,
-    "domains": 11,
-    "sources": 82,
+    "pages": 560,
+    "domains": 12,
+    "sources": 88,
     "comparisons": 9,
-    "relationships": 3499,
-    "tags_unique": 1876,
+    "relationships": 3579,
+    "tags_unique": 1942,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,12 +14,12 @@
       "2": 51,
       "4": 66,
       "0": 1,
-      "1": 53,
+      "1": 59,
       "spine": 78
     },
     "maturity": {
+      "seed": 71,
       "growing": 325,
-      "seed": 63,
       "mature": 2
     }
   },
@@ -2013,6 +2013,99 @@
         {
           "verb": "IMPLEMENTS",
           "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
+      "path": "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md",
+      "slug": "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "title": "Epic \u2014 root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)",
+      "type": "epic",
+      "domain": "cross-domain",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "epic",
+        "root-ghostproxy",
+        "sfif",
+        "second-brain-integration",
+        "sister-project",
+        "type-root",
+        "group-operating-system-setup",
+        "pre-milestone",
+        "future-session-work"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-04-root-prep",
+          "type": "directive",
+          "file": "raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md"
+        },
+        {
+          "id": "root-ghostproxy-identity-profile",
+          "type": "wiki",
+          "file": "wiki/ecosystem/project_profiles/root-ghostproxy/identity-profile.md"
+        },
+        {
+          "id": "root-ghostproxy-readme",
+          "type": "file",
+          "file": "/root/README.md",
+          "description": "Read in full 2026-05-04 \u2014 architecture, install steps, v1 limitations"
+        },
+        {
+          "id": "model-sfif-architecture",
+          "type": "wiki",
+          "file": "wiki/spine/models/quality/model-sfif-architecture.md",
+          "description": "Build framework: Scaffold \u2192 Foundation \u2192 Infrastructure \u2192 Features (recursive, applies at project / feature / component levels)"
+        },
+        {
+          "id": "sister-projects-registry",
+          "type": "file",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "root-ghostproxy entry added 2026-05-04 with type=root, group=operating-system-setup, auto_connect=false"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Epic \u2014 root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 SFIF and Architecture"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Project Self-Identification Protocol \u2014 The Goldilocks Framework"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Ecosystem Feedback Loop \u2014 Wiki as Source of Truth"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Model \u2014 Ecosystem Architecture"
         }
       ]
     },
@@ -4084,6 +4177,654 @@
         {
           "verb": "FEEDS INTO",
           "target": "Anti-Vendor-Lock-In Lesson"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md.md",
+      "slug": "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "title": "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "sfif-scaffold",
+        "claude-md",
+        "agents-md",
+        "three-layer-context",
+        "m001"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "identity-profile",
+          "type": "wiki",
+          "file": "wiki/ecosystem/project_profiles/root-ghostproxy/identity-profile.md"
+        },
+        {
+          "id": "model-skills-commands-hooks",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "Three-layer agent context \u2014 AGENTS.md universal cross-tool, CLAUDE.md Claude Code-specific routing, skills auto-trigger"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M001 \u2014 root-ghostproxy CLAUDE.md + AGENTS.md"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BLOCKS",
+          "target": "M007 \u2014 Connect (--connect-project script needs AGENTS.md)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "root-ghostproxy Identity Profile"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "M002 \u2014 Methodology layer decision"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m002-methodology-layer-decision.md",
+      "slug": "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
+      "title": "root-ghostproxy M002 \u2014 Methodology Layer Decision",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "sfif-scaffold-design",
+        "methodology",
+        "goldilocks",
+        "m002"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "methodology-engine",
+          "type": "file",
+          "file": "wiki/config/methodology.yaml",
+          "description": "Second brain's methodology engine \u2014 9 models, 5 stages, ALLOWED/FORBIDDEN, gates"
+        },
+        {
+          "id": "project-self-identification-protocol",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/methodology-framework/project-self-identification-protocol.md",
+          "description": "Goldilocks 9-dimension protocol \u2014 guides per-project methodology right-sizing"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M002 \u2014 root-ghostproxy methodology layer"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Project Self-Identification Protocol"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "root-ghostproxy Identity Profile"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M001 \u2014 CLAUDE.md / AGENTS.md (decision lands here)"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M003 \u2014 Foundation hardening (uses chosen methodology for gates)"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m003-foundation-hardening.md",
+      "slug": "backlog/modules/root-ghostproxy-m003-foundation-hardening",
+      "title": "root-ghostproxy M003 \u2014 Foundation Hardening",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "sfif-foundation",
+        "install",
+        "idempotency",
+        "integrity-check",
+        "m003"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "model-sfif-architecture",
+          "type": "wiki",
+          "file": "wiki/spine/models/quality/model-sfif-architecture.md",
+          "description": "Foundation tier definition and gates"
+        },
+        {
+          "id": "root-ghostproxy-readme",
+          "type": "file",
+          "file": "/root/README.md",
+          "description": "Existing README \u2014 install steps, v1 limitations"
+        },
+        {
+          "id": "root-ghostproxy-install-script",
+          "type": "file",
+          "file": "/root/install.sh",
+          "description": "Existing bootstrap script \u2014 classified as not-IaC per prior session"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M003 \u2014 root-ghostproxy Foundation"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 SFIF and Architecture"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M001"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M002"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M004 \u2014 Infrastructure tooling (depends on Foundation gate)"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m004-infrastructure-tooling.md",
+      "slug": "backlog/modules/root-ghostproxy-m004-infrastructure-tooling",
+      "title": "root-ghostproxy M004 \u2014 Infrastructure Tooling",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "sfif-infrastructure",
+        "tooling",
+        "validation",
+        "ci",
+        "pre-commit",
+        "m004"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "model-sfif-architecture",
+          "type": "wiki",
+          "file": "wiki/spine/models/quality/model-sfif-architecture.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M004 \u2014 root-ghostproxy Infrastructure"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 SFIF and Architecture"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M003 \u2014 Foundation hardening"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M005 \u2014 First specialized feature module (Suricata or PolarProxy)"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module.md",
+      "slug": "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module",
+      "title": "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "sfif-features",
+        "suricata",
+        "polarproxy",
+        "operator-decision-pending",
+        "m005"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "src-suricata",
+          "type": "wiki",
+          "file": "wiki/sources/src-suricata.md",
+          "description": "Suricata Layer 0 \u2014 IDS/IPS/NSM engine README, QA process, SID conventions"
+        },
+        {
+          "id": "src-suricata-install-quickstart",
+          "type": "wiki",
+          "file": "wiki/sources/src-suricata-install-quickstart.md",
+          "description": "Suricata Layer 1 \u2014 install paths (PPA / Debian / source build), quickstart suricata.yaml + canary alert SID 2100498"
+        },
+        {
+          "id": "src-suricata-ips-mode-linux",
+          "type": "wiki",
+          "file": "wiki/sources/src-suricata-ips-mode-linux.md",
+          "description": "Suricata Layer 1 \u2014 5 IPS modes (NFQUEUE iptables/nftables, AF_PACKET, DPDK, Netmap), failopen via nftables `bypass`, br0-vs-AF_PACKET-IPS architectural decision"
+        },
+        {
+          "id": "src-suricata-yaml-config",
+          "type": "wiki",
+          "file": "wiki/sources/src-suricata-yaml-config.md",
+          "description": "Suricata Layer 1 \u2014 suricata.yaml master config navigation (22 sub-sections + 8 sub-chapters), action-order semantics, EVE JSON, threading, hardening"
+        },
+        {
+          "id": "src-polarproxy",
+          "type": "wiki",
+          "file": "wiki/sources/src-polarproxy.md",
+          "description": "PolarProxy Layer 0 \u2014 TLS inspection proxy, 8 modes, license tiers, routing patterns"
+        },
+        {
+          "id": "src-hanke-honeypot-polarproxy-suricata-integration",
+          "type": "wiki",
+          "file": "wiki/sources/src-hanke-honeypot-polarproxy-suricata-integration.md",
+          "description": "Layer 1 \u2014 canonical Suricata + PolarProxy integration via dummy interface + tcpreplay; 4-service systemd dependency chain"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M005 \u2014 Suricata-or-PolarProxy first"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata Layer 0"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata install + quickstart"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata IPS Mode for Linux"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata.yaml master config"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "PolarProxy Layer 0"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Hanke integration pattern"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M004 \u2014 Infrastructure tooling"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m006-pre-connect-verification.md",
+      "slug": "backlog/modules/root-ghostproxy-m006-pre-connect-verification",
+      "title": "root-ghostproxy M006 \u2014 Pre-Connect Verification",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "second-brain-integration",
+        "stream-1",
+        "pre-connect-verification",
+        "m006"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "sister-projects-registry",
+          "type": "file",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "root-ghostproxy entry: type=root, group=operating-system-setup, auto_connect=false"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M006 \u2014 Stream 1 pre-connect"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M001"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M007 \u2014 Connect (--connect-project)"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m007-connect-second-brain.md",
+      "slug": "backlog/modules/root-ghostproxy-m007-connect-second-brain",
+      "title": "root-ghostproxy M007 \u2014 Connect to Second Brain",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "second-brain-integration",
+        "stream-1",
+        "connect",
+        "mcp",
+        "m007"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "tools-setup-module",
+          "type": "file",
+          "file": "tools/setup.py",
+          "description": "Second brain's setup module \u2014 implements --connect-project; writes .mcp.json entry, gateway/view forwarders, AGENTS.md ## Second Brain Connection block"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M007 \u2014 Run --connect-project"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M006 \u2014 Pre-connect verification"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M008 \u2014 Smoke test from inside"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside.md",
+      "slug": "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
+      "title": "root-ghostproxy M008 \u2014 Smoke Test from Inside",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p0",
+        "root-ghostproxy",
+        "second-brain-integration",
+        "stream-1",
+        "smoke-test",
+        "m008"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M008 \u2014 Verify second-brain connection works from /root"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M007 \u2014 Connect"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M009 \u2014 Worked example"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest.md",
+      "slug": "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
+      "title": "root-ghostproxy M009 \u2014 Worked Example: Ingest README into Second Brain",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p1",
+        "root-ghostproxy",
+        "second-brain-integration",
+        "stream-1",
+        "worked-example",
+        "bidirectional-flow",
+        "m009"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M009 \u2014 Bidirectional flow proof"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M008 \u2014 Smoke test (connection must be working)"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "M001 \u2014 README is ideally updated before M009 ingests it"
+        },
+        {
+          "verb": "ENABLES",
+          "target": "M010 \u2014 sister-projects.yaml auto-connect decision"
+        }
+      ]
+    },
+    {
+      "path": "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip.md",
+      "slug": "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
+      "title": "root-ghostproxy M010 \u2014 sister-projects.yaml auto_connect Decision",
+      "type": "module",
+      "domain": "backlog",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "module",
+        "p2",
+        "root-ghostproxy",
+        "second-brain-integration",
+        "stream-1",
+        "operator-decision",
+        "auto-connect",
+        "m010"
+      ],
+      "sources": [
+        {
+          "id": "parent-epic",
+          "type": "wiki",
+          "file": "wiki/backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05.md"
+        },
+        {
+          "id": "sister-projects-registry",
+          "type": "file",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "Current root-ghostproxy entry: type=root, group=operating-system-setup, auto_connect=false"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [
+        "M010 \u2014 auto_connect flip decision"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "BLOCKED BY",
+          "target": "M009 \u2014 Worked example"
         }
       ]
     },
@@ -16153,6 +16894,81 @@
       ]
     },
     {
+      "path": "ecosystem/project_profiles/root-ghostproxy/identity-profile.md",
+      "slug": "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "title": "root-ghostproxy \u2014 Identity Profile",
+      "type": "reference",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "ecosystem",
+        "project-profile",
+        "root-ghostproxy",
+        "identity",
+        "goldilocks",
+        "type-root",
+        "group-operating-system-setup",
+        "sfif-pre-infrastructure",
+        "seed"
+      ],
+      "sources": [
+        {
+          "id": "root-ghostproxy-readme",
+          "type": "file",
+          "file": "/root/README.md",
+          "description": "root-ghostproxy README on this machine (ghostproxy host) \u2014 install.sh + ~/.claude/settings.json + hooks + opencode bridge architecture"
+        },
+        {
+          "id": "operator-directive-2026-05-04-root-prep",
+          "type": "directive",
+          "file": "raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md",
+          "description": "Operator directive establishing type=root, group=operating-system-setup, two-stream future-session work plan"
+        },
+        {
+          "id": "operator-directive-2026-05-04-pain-point",
+          "type": "directive",
+          "file": "raw/notes/2026-05-04-custom-tailored-model-group-moe-intelligence-layer-and-root-ghostproxy-pain-point.md",
+          "description": "Operator's original framing of root-ghostproxy as 'IPS + system AI safety setup project' with suricata/polarproxy as modules"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "root-ghostproxy \u2014 Identity Profile"
+      ],
+      "relationships": [
+        {
+          "verb": "PART OF",
+          "target": "Four-Project Ecosystem"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Model \u2014 SFIF and Architecture"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "Infrastructure as Code Patterns"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Claude Code"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Model \u2014 Skills, Commands, and Hooks"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Project Self-Identification Protocol \u2014 The Goldilocks Framework"
+        }
+      ]
+    },
+    {
       "path": "index.md",
       "slug": "index",
       "title": "index",
@@ -24460,6 +25276,56 @@
       ]
     },
     {
+      "path": "log/2026-05-04-new-machine-context-load-and-adaptation-findings.md",
+      "slug": "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
+      "title": "2026-05-04 \u2014 New-Machine Context Load + Adaptation Findings (ghostproxy bootstrap, fresh Debian 13)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "session",
+        "log",
+        "new-machine",
+        "ghostproxy",
+        "debian-13",
+        "fresh-clone",
+        "adaptation",
+        "p4-instances",
+        "root-ghostproxy",
+        "hook-stacking",
+        "alignment-overhead"
+      ],
+      "sources": [
+        {
+          "id": "directive-raw-note",
+          "type": "file",
+          "file": "raw/notes/2026-05-04-new-machine-context-load.md",
+          "description": "Verbatim operator directive \u2014 context load + 30+ ops + possible project adaptation"
+        },
+        {
+          "id": "pain-point-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point.md",
+          "description": "The session log that named the very pain point this load is exercising"
+        },
+        {
+          "id": "trust-layer-arc",
+          "type": "wiki",
+          "file": "wiki/log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression.md",
+          "description": "Prior strategic-tier mission arc; new mission composes with the trust layer"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/2026-05-04-session-handoff-pre-compaction.md",
       "slug": "log/2026-05-04-session-handoff-pre-compaction",
       "title": "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
@@ -29502,6 +30368,74 @@
       ]
     },
     {
+      "path": "sources/src-hanke-honeypot-polarproxy-suricata-integration.md",
+      "slug": "sources/src-hanke-honeypot-polarproxy-suricata-integration",
+      "title": "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface",
+      "type": "source-synthesis",
+      "domain": "infrastructure",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "polarproxy",
+        "suricata",
+        "integration",
+        "dummy-interface",
+        "tcpreplay",
+        "pcap-over-ip",
+        "elk",
+        "filebeat",
+        "logstash",
+        "kibana",
+        "layer-1",
+        "root-ghostproxy",
+        "module"
+      ],
+      "sources": [
+        {
+          "id": "nirusu-honeypot-readme",
+          "type": "documentation",
+          "url": "https://github.com/Nirusu/how-to-setup-a-honeypot"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata source-synthesis (Layer 0)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "PolarProxy source-synthesis (Layer 0)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata install + quickstart"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata IPS Mode for Linux"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata.yaml config navigation"
+        },
+        {
+          "verb": "USED BY",
+          "target": "M005 \u2014 First specialized feature module"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        }
+      ]
+    },
+    {
       "path": "sources/src-hrm-trm-tiny-recursion-models.md",
       "slug": "sources/src-hrm-trm-tiny-recursion-models",
       "title": "Synthesis \u2014 HRM and TRM: Tiny Recursive Models Beat LLMs on ARC-AGI",
@@ -29807,6 +30741,40 @@
       ]
     },
     {
+      "path": "sources/src-polarproxy.md",
+      "slug": "sources/src-polarproxy",
+      "title": "Synthesis: PolarProxy TLS inspection proxy",
+      "type": "source-synthesis",
+      "domain": "infrastructure",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "polarproxy",
+        "tls",
+        "ssl-inspection",
+        "mitm",
+        "pcap",
+        "network-security",
+        "root-ghostproxy",
+        "module"
+      ],
+      "sources": [
+        {
+          "id": "netresec-polarproxy-product-page",
+          "type": "article",
+          "url": "https://www.netresec.com/?page=PolarProxy"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "sources/src-pydantic-ai-typed-agent-framework.md",
       "slug": "sources/src-pydantic-ai-typed-agent-framework",
       "title": "Synthesis \u2014 Pydantic AI: Typed Agent Framework",
@@ -30098,6 +31066,208 @@
           "target": "CLAUDE.md Structural Patterns for Agent Compliance"
         }
       ]
+    },
+    {
+      "path": "sources/src-suricata-install-quickstart.md",
+      "slug": "sources/src-suricata-install-quickstart",
+      "title": "Synthesis: Suricata install + quickstart (Layer-1 instance)",
+      "type": "source-synthesis",
+      "domain": "infrastructure",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "suricata",
+        "install",
+        "quickstart",
+        "debian",
+        "ubuntu",
+        "layer-1",
+        "root-ghostproxy",
+        "module",
+        "network-security"
+      ],
+      "sources": [
+        {
+          "id": "suricata-docs-install",
+          "type": "documentation",
+          "url": "https://docs.suricata.io/en/latest/install.html"
+        },
+        {
+          "id": "suricata-docs-quickstart",
+          "type": "documentation",
+          "url": "https://docs.suricata.io/en/latest/quickstart.html"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata source-synthesis (Layer 0)"
+        },
+        {
+          "verb": "USED BY",
+          "target": "M005 \u2014 First specialized feature module"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "PolarProxy synthesis"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-suricata-ips-mode-linux.md",
+      "slug": "sources/src-suricata-ips-mode-linux",
+      "title": "Synthesis: Suricata IPS Mode for Linux (Layer-1 instance)",
+      "type": "source-synthesis",
+      "domain": "infrastructure",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "suricata",
+        "ips-mode",
+        "nfqueue",
+        "af-packet",
+        "dpdk",
+        "netmap",
+        "inline",
+        "layer-1",
+        "root-ghostproxy",
+        "module",
+        "architectural-decision"
+      ],
+      "sources": [
+        {
+          "id": "suricata-docs-ips-linux",
+          "type": "documentation",
+          "url": "https://docs.suricata.io/en/latest/ips/setting-up-ipsinline-for-linux.html"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata source-synthesis (Layer 0)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata install + quickstart (Layer-1 install instance)"
+        },
+        {
+          "verb": "USED BY",
+          "target": "M005 \u2014 First specialized feature module"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "PolarProxy synthesis"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-suricata-yaml-config.md",
+      "slug": "sources/src-suricata-yaml-config",
+      "title": "Synthesis: Suricata.yaml master configuration (navigation + key sections)",
+      "type": "source-synthesis",
+      "domain": "infrastructure",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "suricata",
+        "suricata-yaml",
+        "configuration",
+        "layer-1",
+        "root-ghostproxy",
+        "module",
+        "navigation"
+      ],
+      "sources": [
+        {
+          "id": "suricata-docs-config-yaml",
+          "type": "documentation",
+          "url": "https://docs.suricata.io/en/latest/configuration/suricata-yaml.html"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata source-synthesis (Layer 0)"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata install + quickstart"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Suricata IPS Mode for Linux"
+        },
+        {
+          "verb": "USED BY",
+          "target": "M005 \u2014 First specialized feature module"
+        },
+        {
+          "verb": "USED BY",
+          "target": "Epic \u2014 root-ghostproxy SFIF Rollout"
+        }
+      ]
+    },
+    {
+      "path": "sources/src-suricata.md",
+      "slug": "sources/src-suricata",
+      "title": "Synthesis: Suricata IDS/IPS/NSM engine",
+      "type": "source-synthesis",
+      "domain": "infrastructure",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "",
+      "tags": [
+        "suricata",
+        "ids",
+        "ips",
+        "nsm",
+        "network-security",
+        "root-ghostproxy",
+        "module"
+      ],
+      "sources": [
+        {
+          "id": "oisf-suricata-readme",
+          "type": "documentation",
+          "url": "https://github.com/OISF/suricata"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "sources/src-vercel-opensrc-toolkit.md",
@@ -40660,12 +41830,12 @@
   ],
   "domains": {
     "backlog": {
-      "page_count": 95,
-      "relationship_count": 413
+      "page_count": 105,
+      "relationship_count": 458
     },
     "cross-domain": {
-      "page_count": 234,
-      "relationship_count": 1631
+      "page_count": 237,
+      "relationship_count": 1645
     },
     "ai-models": {
       "page_count": 14,
@@ -40699,6 +41869,10 @@
       "page_count": 34,
       "relationship_count": 58
     },
+    "infrastructure": {
+      "page_count": 6,
+      "relationship_count": 21
+    },
     "wiki-methodology": {
       "page_count": 2,
       "relationship_count": 18
@@ -40729,6 +41903,7 @@
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
       "backlog/epics/pre-milestone/post-anthropic-stack-3-layer-assembly-multica-aicp-3090",
       "backlog/epics/pre-milestone/repo-documentation-overhaul-readme-root-docs-polish-2026-04-28",
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
@@ -40937,6 +42112,7 @@
     "goldilocks": [
       "backlog/epics/milestone-v2/e013-super-model-evolution-v2-0-with-sub-super-models",
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
       "domains/cross-domain/integration/second-brain-integration-requirements",
       "domains/cross-domain/methodology-framework/project-self-identification-protocol",
       "ecosystem/project_profiles/aicp/identity-profile",
@@ -40944,12 +42120,14 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "lessons/01_drafts/execution-mode-is-consumer-property-not-project-property",
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
       "spine/goldilocks-flow"
     ],
     "navigation": [
       "backlog/epics/milestone-v2/e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow",
+      "sources/src-suricata-yaml-config",
       "spine/goldilocks-flow",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28",
@@ -40965,6 +42143,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "spine/goldilocks-flow"
     ],
     "routing": [
@@ -41008,6 +42187,7 @@
       "backlog/epics/pre-milestone/E009-harness-neutrality-and-opencode-parity",
       "backlog/epics/pre-milestone/wiki-gateway-tools-unified-knowledge-interface",
       "backlog/modules/e009-m002-mcp-server-continuity",
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain",
       "comparisons/mcp-vs-cli-decision-vs-lesson",
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "decisions/01_drafts/skills-as-primary-extension-pattern",
@@ -41060,6 +42240,7 @@
       "domains/devops/four-project-ecosystem",
       "lessons/01_drafts/contributed/first-consumer-integration-reveals-systematic-gaps-between-k",
       "lessons/03_validated/knowledge-systems/new-content-must-integrate-into-existing-pages",
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration",
       "spine/models/ecosystem/model-ecosystem",
       "spine/models/ecosystem/model-mcp-cli-integration",
       "spine/references/consumer-integration-roadmap-exemplar",
@@ -41132,6 +42313,7 @@
       "backlog/modules/e011-m003-k2-6-local-backend-adapter",
       "backlog/modules/e011-m004-circuit-breakers-and-fallback-chain",
       "backlog/modules/e011-m005-routing-metric-and-review-ritual",
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
       "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T014-add-k2-6-backend-entries-to-default-yaml",
       "backlog/tasks/T015-extend-router-complexity-to-tier-mapping",
@@ -41184,6 +42366,7 @@
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
       "backlog/modules/e012-m003-wiki-router-candidate-d",
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e",
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
       "backlog/tasks/T058-create-unsloth-venv",
       "backlog/tasks/T060-audit-wiki-corpus-training-readiness",
       "backlog/tasks/T070-design-adapter-training-datasets"
@@ -41288,6 +42471,7 @@
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
       "ecosystem/project_profiles/research-wiki/identity-profile",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "spine/models/ecosystem/model-ecosystem",
@@ -41334,6 +42518,7 @@
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
       "backlog/epics/pre-milestone/E006-standards-by-example",
       "backlog/modules/e012-m002-wiki-assistant-candidate-a",
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
       "backlog/tasks/T070-design-adapter-training-datasets",
       "decisions/02_validated/methodology/artifact-system-design-decisions",
       "decisions/02_validated/methodology/methodology-framework-design-decisions",
@@ -41428,6 +42613,7 @@
     "configuration": [
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
       "patterns/01_drafts/profile-as-coordination-bundle",
+      "sources/src-suricata-yaml-config",
       "spine/references/context-file-taxonomy",
       "spine/standards/model-standards/model-claude-code-standards"
     ],
@@ -41494,6 +42680,7 @@
     ],
     "claude-md": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
       "domains/ai-agents/patterns/design-md-pattern",
       "domains/devops/infrastructure-as-code-patterns",
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
@@ -41550,6 +42737,7 @@
     ],
     "validation": [
       "backlog/epics/pre-milestone/E005-agent-compliance-framework",
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling",
       "domains/cross-domain/wiki-post-ingestion-operations-plan",
       "lessons/01_drafts/contributed/schema-aspirationalism-defining-required-sections-you-neve",
       "lessons/03_validated/knowledge-systems/automated-knowledge-validation-prevents-wiki-decay",
@@ -41576,6 +42764,14 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening",
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling",
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module",
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification",
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain",
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
       "backlog/tasks/T002-run-openrouter-smoke-tests",
       "backlog/tasks/T003-harness-test-1-sanity",
       "backlog/tasks/T008-verify-dev-sdd-filesystem-nondestructive",
@@ -42092,6 +43288,62 @@
       "sources/tools-integration/src-multica-managed-agents-platform",
       "spine/learning-paths/post-anthropic-3-layer-stack-2026-04-28"
     ],
+    "root-ghostproxy": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening",
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling",
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module",
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification",
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain",
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile",
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
+      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration",
+      "sources/src-polarproxy",
+      "sources/src-suricata-install-quickstart",
+      "sources/src-suricata-ips-mode-linux",
+      "sources/src-suricata-yaml-config",
+      "sources/src-suricata"
+    ],
+    "sfif": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "domains/ai-agents/patterns/task-lifecycle-stage-gating",
+      "domains/cross-domain/methodology-framework/global-standards-adherence",
+      "domains/cross-domain/methodology-framework/methodology-framework",
+      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
+      "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
+      "spine/models/quality/model-sfif-architecture"
+    ],
+    "second-brain-integration": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification",
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain",
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip"
+    ],
+    "sister-project": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05"
+    ],
+    "type-root": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+    ],
+    "group-operating-system-setup": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
+    ],
+    "pre-milestone": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05"
+    ],
+    "future-session-work": [
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05"
+    ],
     "sdlc": [
       "backlog/epics/pre-milestone/sdlc-rules-and-structure-customizable-project-lifecycle",
       "domains/ai-agents/patterns/spec-driven-development",
@@ -42309,9 +43561,25 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision",
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening",
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling",
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module",
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification",
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain",
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
       "decisions/02_validated/methodology/when-to-use-milestone-vs-epic-vs-module-vs-task",
       "domains/devops/backlog-hierarchy-rules",
-      "domains/devops/task-type-artifact-matrix"
+      "domains/devops/task-type-artifact-matrix",
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration",
+      "sources/src-polarproxy",
+      "sources/src-suricata-install-quickstart",
+      "sources/src-suricata-ips-mode-linux",
+      "sources/src-suricata-yaml-config",
+      "sources/src-suricata"
     ],
     "e007": [
       "backlog/modules/e007-m002-harness-interactive-validation",
@@ -42348,9 +43616,11 @@
       "backlog/modules/e009-m001-opencode-install-and-base-config",
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
       "backlog/modules/e012-m001-unsloth-toolchain-install",
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening",
       "backlog/tasks/T011-install-huggingface-hub-cli",
       "backlog/tasks/T045-install-opencode-binary",
-      "backlog/tasks/T058-create-unsloth-venv"
+      "backlog/tasks/T058-create-unsloth-venv",
+      "sources/src-suricata-install-quickstart"
     ],
     "cuda": [
       "backlog/modules/e008-m001-ktransformers-install-and-config",
@@ -42470,6 +43740,7 @@
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "spine/standards/note-page-standards"
@@ -42749,7 +44020,8 @@
       "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
     ],
     "m001": [
-      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config"
+      "backlog/modules/post-anthropic-3-layer-m001-multica-per-agent-provider-config",
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
     ],
     "mcp-integration": [
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
@@ -42767,10 +44039,12 @@
       "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
     ],
     "m002": [
-      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config"
+      "backlog/modules/post-anthropic-3-layer-m002-harness-level-integration-mcp-wiring-opencode-config",
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision"
     ],
     "smoke-test": [
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
       "backlog/tasks/T002-run-openrouter-smoke-tests"
     ],
     "runbook": [
@@ -42840,7 +44114,113 @@
       "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
     ],
     "m003": [
-      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook"
+      "backlog/modules/post-anthropic-3-layer-m003-multica-aicp-ollama-cloud-smoke-test-runbook",
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening"
+    ],
+    "sfif-scaffold": [
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
+    ],
+    "agents-md": [
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md",
+      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
+      "patterns/01_drafts/three-layer-agent-context-architecture",
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-opencode-harness-features",
+      "spine/models/agent-config/model-markdown-as-iac"
+    ],
+    "three-layer-context": [
+      "backlog/modules/root-ghostproxy-m001-author-claude-md-and-agents-md"
+    ],
+    "sfif-scaffold-design": [
+      "backlog/modules/root-ghostproxy-m002-methodology-layer-decision"
+    ],
+    "sfif-foundation": [
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening"
+    ],
+    "idempotency": [
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening"
+    ],
+    "integrity-check": [
+      "backlog/modules/root-ghostproxy-m003-foundation-hardening"
+    ],
+    "sfif-infrastructure": [
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
+    ],
+    "tooling": [
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
+    ],
+    "ci": [
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
+    ],
+    "pre-commit": [
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
+    ],
+    "m004": [
+      "backlog/modules/root-ghostproxy-m004-infrastructure-tooling"
+    ],
+    "sfif-features": [
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module"
+    ],
+    "suricata": [
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module",
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration",
+      "sources/src-suricata-install-quickstart",
+      "sources/src-suricata-ips-mode-linux",
+      "sources/src-suricata-yaml-config",
+      "sources/src-suricata"
+    ],
+    "polarproxy": [
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module",
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration",
+      "sources/src-polarproxy"
+    ],
+    "operator-decision-pending": [
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module"
+    ],
+    "m005": [
+      "backlog/modules/root-ghostproxy-m005-first-specialized-feature-module"
+    ],
+    "stream-1": [
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification",
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain",
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside",
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest",
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip"
+    ],
+    "pre-connect-verification": [
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification"
+    ],
+    "m006": [
+      "backlog/modules/root-ghostproxy-m006-pre-connect-verification"
+    ],
+    "connect": [
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain"
+    ],
+    "m007": [
+      "backlog/modules/root-ghostproxy-m007-connect-second-brain"
+    ],
+    "m008": [
+      "backlog/modules/root-ghostproxy-m008-smoke-test-from-inside"
+    ],
+    "worked-example": [
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest"
+    ],
+    "bidirectional-flow": [
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest"
+    ],
+    "m009": [
+      "backlog/modules/root-ghostproxy-m009-worked-example-readme-ingest"
+    ],
+    "operator-decision": [
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip",
+      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
+    ],
+    "auto-connect": [
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip"
+    ],
+    "m010": [
+      "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip"
     ],
     "backlog": [
       "backlog/operator-decision-queue",
@@ -43555,9 +44935,6 @@
       "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
       "spine/learning-paths/rlm-thread-evidence-chain-2026-04-27"
-    ],
-    "operator-decision": [
-      "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate"
     ],
     "mit-oasys": [
       "comparisons/rlm-qwen3-8b-vs-qwen3-6-27b-tier-0-long-context-candidate",
@@ -44596,14 +45973,6 @@
     "mcp-tools": [
       "domains/ai-agents/patterns/task-lifecycle-stage-gating"
     ],
-    "sfif": [
-      "domains/ai-agents/patterns/task-lifecycle-stage-gating",
-      "domains/cross-domain/methodology-framework/global-standards-adherence",
-      "domains/cross-domain/methodology-framework/methodology-framework",
-      "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
-      "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features",
-      "spine/models/quality/model-sfif-architecture"
-    ],
     "autonomous-agents": [
       "domains/ai-agents/patterns/task-lifecycle-stage-gating",
       "domains/devops/stage-gate-methodology",
@@ -45254,7 +46623,8 @@
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
     ],
     "seed": [
-      "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
+      "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
     ],
     "growing": [
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline"
@@ -45591,12 +46961,16 @@
       "ecosystem/project_profiles/devops-control-plane/identity-profile",
       "ecosystem/project_profiles/openarms/identity-profile",
       "ecosystem/project_profiles/openfleet/identity-profile",
-      "ecosystem/project_profiles/research-wiki/identity-profile"
+      "ecosystem/project_profiles/research-wiki/identity-profile",
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
     ],
     "self-referential": [
       "ecosystem/project_profiles/research-wiki/identity-profile",
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example"
+    ],
+    "sfif-pre-infrastructure": [
+      "ecosystem/project_profiles/root-ghostproxy/identity-profile"
     ],
     "contributed": [
       "lessons/00_inbox/audit-numbers-age-fast-rebaseline-before-execute",
@@ -46029,6 +47403,10 @@
     ],
     "layer-1": [
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration",
+      "sources/src-suricata-install-quickstart",
+      "sources/src-suricata-ips-mode-linux",
+      "sources/src-suricata-yaml-config",
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
@@ -46287,7 +47665,8 @@
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
     ],
     "adaptation": [
-      "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
+      "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative",
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
     ],
     "right-process": [
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
@@ -46393,6 +47772,7 @@
       "log/2026-04-28-session-handoff",
       "log/2026-04-28-session-log-post-anthropic-3-layer-stack-assembly-multica-adoption",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
       "log/2026-05-04-session-handoff-pre-compaction",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
@@ -46689,7 +48069,8 @@
       "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
     ],
     "p4-instances": [
-      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
+      "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle",
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
     ],
     "saturation-verification": [
       "log/2026-04-27-post-final-handoff-bug-audit-arc-saturation-lesson-first-verification-cycle"
@@ -46792,6 +48173,24 @@
     "80-90-space-saved": [
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression"
     ],
+    "new-machine": [
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
+    ],
+    "ghostproxy": [
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
+    ],
+    "debian-13": [
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
+    ],
+    "fresh-clone": [
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
+    ],
+    "hook-stacking": [
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
+    ],
+    "alignment-overhead": [
+      "log/2026-05-04-new-machine-context-load-and-adaptation-findings"
+    ],
     "2026-05-04": [
       "log/2026-05-04-session-handoff-pre-compaction"
     ],
@@ -46809,9 +48208,6 @@
       "log/2026-05-04-session-handoff-pre-compaction"
     ],
     "custom-model-mission": [
-      "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
-    ],
-    "root-ghostproxy": [
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
     ],
     "pain-point-root-cause": [
@@ -46943,14 +48339,6 @@
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "spine/references/context-file-taxonomy"
-    ],
-    "agents-md": [
-      "patterns/01_drafts/progressive-structural-enrichment-in-agent-config",
-      "patterns/01_drafts/three-layer-agent-context-architecture",
-      "sources/src-cline-agentic-coding-ide-extension",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
-      "sources/tools-integration/src-opencode-harness-features",
-      "spine/models/agent-config/model-markdown-as-iac"
     ],
     "progressive-enrichment": [
       "patterns/01_drafts/progressive-structural-enrichment-in-agent-config"
@@ -47552,6 +48940,27 @@
     "presets": [
       "sources/src-github-spec-kit-specification-driven-development"
     ],
+    "dummy-interface": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
+    "tcpreplay": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
+    "pcap-over-ip": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
+    "elk": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
+    "filebeat": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
+    "logstash": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
+    "kibana": [
+      "sources/src-hanke-honeypot-polarproxy-suricata-integration"
+    ],
     "small-models": [
       "sources/src-hrm-trm-tiny-recursion-models"
     ],
@@ -47654,6 +49063,23 @@
     "pm": [
       "sources/src-plannotator"
     ],
+    "tls": [
+      "sources/src-polarproxy"
+    ],
+    "ssl-inspection": [
+      "sources/src-polarproxy"
+    ],
+    "mitm": [
+      "sources/src-polarproxy"
+    ],
+    "pcap": [
+      "sources/src-polarproxy"
+    ],
+    "network-security": [
+      "sources/src-polarproxy",
+      "sources/src-suricata-install-quickstart",
+      "sources/src-suricata"
+    ],
     "pydantic": [
       "sources/src-pydantic-ai-typed-agent-framework"
     ],
@@ -47711,6 +49137,48 @@
     "context-loading": [
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "spine/models/agent-config/model-skills-commands-hooks"
+    ],
+    "quickstart": [
+      "sources/src-suricata-install-quickstart"
+    ],
+    "debian": [
+      "sources/src-suricata-install-quickstart"
+    ],
+    "ubuntu": [
+      "sources/src-suricata-install-quickstart"
+    ],
+    "ips-mode": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "nfqueue": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "af-packet": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "dpdk": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "netmap": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "inline": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "architectural-decision": [
+      "sources/src-suricata-ips-mode-linux"
+    ],
+    "suricata-yaml": [
+      "sources/src-suricata-yaml-config"
+    ],
+    "ids": [
+      "sources/src-suricata"
+    ],
+    "ips": [
+      "sources/src-suricata"
+    ],
+    "nsm": [
+      "sources/src-suricata"
     ],
     "vercel": [
       "sources/src-vercel-opensrc-toolkit"
@@ -50019,6 +51487,25 @@
       ]
     },
     {
+      "target": "Epic \u2014 root-ghostproxy SFIF Rollout",
+      "referenced_by": [
+        "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
+        "root-ghostproxy M002 \u2014 Methodology Layer Decision",
+        "root-ghostproxy M003 \u2014 Foundation Hardening",
+        "root-ghostproxy M004 \u2014 Infrastructure Tooling",
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)",
+        "root-ghostproxy M006 \u2014 Pre-Connect Verification",
+        "root-ghostproxy M007 \u2014 Connect to Second Brain",
+        "root-ghostproxy M008 \u2014 Smoke Test from Inside",
+        "root-ghostproxy M009 \u2014 Worked Example: Ingest README into Second Brain",
+        "root-ghostproxy M010 \u2014 sister-projects.yaml auto_connect Decision",
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface",
+        "Synthesis: Suricata install + quickstart (Layer-1 instance)",
+        "Synthesis: Suricata IPS Mode for Linux (Layer-1 instance)",
+        "Synthesis: Suricata.yaml master configuration (navigation + key sections)"
+      ]
+    },
+    {
       "target": "Extension Standards",
       "referenced_by": [
         "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps"
@@ -50079,6 +51566,12 @@
       "target": "Handoff #15 \u2014 S2 continuation close",
       "referenced_by": [
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done"
+      ]
+    },
+    {
+      "target": "Hanke integration pattern",
+      "referenced_by": [
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)"
       ]
     },
     {
@@ -50205,7 +51698,15 @@
     {
       "target": "M001",
       "referenced_by": [
+        "root-ghostproxy M003 \u2014 Foundation Hardening",
+        "root-ghostproxy M006 \u2014 Pre-Connect Verification",
         "Decision: Adopt Multica as Orchestrator Layer in the Post-Anthropic Stack (2026-04-28)"
+      ]
+    },
+    {
+      "target": "M001 \u2014 CLAUDE.md / AGENTS.md",
+      "referenced_by": [
+        "root-ghostproxy M002 \u2014 Methodology Layer Decision"
       ]
     },
     {
@@ -50215,9 +51716,27 @@
       ]
     },
     {
+      "target": "M001 \u2014 README is ideally updated before M009 ingests it",
+      "referenced_by": [
+        "root-ghostproxy M009 \u2014 Worked Example: Ingest README into Second Brain"
+      ]
+    },
+    {
       "target": "M001 \u2014 `custom_env` Mechanism",
       "referenced_by": [
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)"
+      ]
+    },
+    {
+      "target": "M002",
+      "referenced_by": [
+        "root-ghostproxy M003 \u2014 Foundation Hardening"
+      ]
+    },
+    {
+      "target": "M002 \u2014 Methodology layer decision",
+      "referenced_by": [
+        "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md"
       ]
     },
     {
@@ -50227,9 +51746,72 @@
       ]
     },
     {
+      "target": "M003 \u2014 Foundation hardening",
+      "referenced_by": [
+        "root-ghostproxy M002 \u2014 Methodology Layer Decision",
+        "root-ghostproxy M004 \u2014 Infrastructure Tooling"
+      ]
+    },
+    {
       "target": "M003 \u2014 Smoke-Test Runbook",
       "referenced_by": [
         "Post-Anthropic 3-Layer Stack M002 \u2014 Harness-Level Integration Details (MCP Wiring \u00b7 OpenCode Config \u00b7 claude-code-router Wrapper Option)"
+      ]
+    },
+    {
+      "target": "M004 \u2014 Infrastructure tooling",
+      "referenced_by": [
+        "root-ghostproxy M003 \u2014 Foundation Hardening",
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)"
+      ]
+    },
+    {
+      "target": "M005 \u2014 First specialized feature module",
+      "referenced_by": [
+        "root-ghostproxy M004 \u2014 Infrastructure Tooling",
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface",
+        "Synthesis: Suricata install + quickstart (Layer-1 instance)",
+        "Synthesis: Suricata IPS Mode for Linux (Layer-1 instance)",
+        "Synthesis: Suricata.yaml master configuration (navigation + key sections)"
+      ]
+    },
+    {
+      "target": "M006 \u2014 Pre-connect verification",
+      "referenced_by": [
+        "root-ghostproxy M007 \u2014 Connect to Second Brain"
+      ]
+    },
+    {
+      "target": "M007 \u2014 Connect",
+      "referenced_by": [
+        "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
+        "root-ghostproxy M006 \u2014 Pre-Connect Verification",
+        "root-ghostproxy M008 \u2014 Smoke Test from Inside"
+      ]
+    },
+    {
+      "target": "M008 \u2014 Smoke test",
+      "referenced_by": [
+        "root-ghostproxy M009 \u2014 Worked Example: Ingest README into Second Brain"
+      ]
+    },
+    {
+      "target": "M008 \u2014 Smoke test from inside",
+      "referenced_by": [
+        "root-ghostproxy M007 \u2014 Connect to Second Brain"
+      ]
+    },
+    {
+      "target": "M009 \u2014 Worked example",
+      "referenced_by": [
+        "root-ghostproxy M008 \u2014 Smoke Test from Inside",
+        "root-ghostproxy M010 \u2014 sister-projects.yaml auto_connect Decision"
+      ]
+    },
+    {
+      "target": "M010 \u2014 sister-projects.yaml auto-connect decision",
+      "referenced_by": [
+        "root-ghostproxy M009 \u2014 Worked Example: Ingest README into Second Brain"
       ]
     },
     {
@@ -50470,6 +52052,25 @@
       ]
     },
     {
+      "target": "PolarProxy Layer 0",
+      "referenced_by": [
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)"
+      ]
+    },
+    {
+      "target": "PolarProxy source-synthesis",
+      "referenced_by": [
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface"
+      ]
+    },
+    {
+      "target": "PolarProxy synthesis",
+      "referenced_by": [
+        "Synthesis: Suricata install + quickstart (Layer-1 instance)",
+        "Synthesis: Suricata IPS Mode for Linux (Layer-1 instance)"
+      ]
+    },
+    {
       "target": "Post-Anthropic 3-Layer Stack Learning Path",
       "referenced_by": [
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
@@ -50519,6 +52120,12 @@
       "target": "Principle \u2014 Right Process for Right Context",
       "referenced_by": [
         "Principle \u2014 Declarations Are Aspirational Until Infrastructure Verifies Them"
+      ]
+    },
+    {
+      "target": "Project Self-Identification Protocol",
+      "referenced_by": [
+        "root-ghostproxy M002 \u2014 Methodology Layer Decision"
       ]
     },
     {
@@ -50722,6 +52329,50 @@
       "target": "Superpowers Plugin",
       "referenced_by": [
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
+      ]
+    },
+    {
+      "target": "Suricata IPS Mode for Linux",
+      "referenced_by": [
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)",
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface",
+        "Synthesis: Suricata.yaml master configuration (navigation + key sections)"
+      ]
+    },
+    {
+      "target": "Suricata Layer 0",
+      "referenced_by": [
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)"
+      ]
+    },
+    {
+      "target": "Suricata install + quickstart",
+      "referenced_by": [
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)",
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface",
+        "Synthesis: Suricata IPS Mode for Linux (Layer-1 instance)",
+        "Synthesis: Suricata.yaml master configuration (navigation + key sections)"
+      ]
+    },
+    {
+      "target": "Suricata source-synthesis",
+      "referenced_by": [
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface",
+        "Synthesis: Suricata install + quickstart (Layer-1 instance)",
+        "Synthesis: Suricata IPS Mode for Linux (Layer-1 instance)",
+        "Synthesis: Suricata.yaml master configuration (navigation + key sections)"
+      ]
+    },
+    {
+      "target": "Suricata.yaml config navigation",
+      "referenced_by": [
+        "Synthesis: Hanke honeypot \u2014 Suricata + PolarProxy integration via dummy interface"
+      ]
+    },
+    {
+      "target": "Suricata.yaml master config",
+      "referenced_by": [
+        "root-ghostproxy M005 \u2014 First Specialized Feature Module (Suricata or PolarProxy)"
       ]
     },
     {
@@ -51404,6 +53055,13 @@
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+      ]
+    },
+    {
+      "target": "root-ghostproxy Identity Profile",
+      "referenced_by": [
+        "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
+        "root-ghostproxy M002 \u2014 Methodology Layer Decision"
       ]
     },
     {

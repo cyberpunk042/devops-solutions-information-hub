@@ -22,7 +22,7 @@
       "WebFetch(domain:zettelkasten.de)",
       "Bash(python3 -m tools.pipeline status)",
       "Bash(python3 -m tools.setup --services)",
-      "Bash(python3 -m tools.pipeline chain continue)",
+      "Bash(python3 -m tools.pipeline chain checkin)",
       "Bash(python3 -m tools.pipeline evolve --scaffold --top 10)",
       "Bash(python3 -m tools.pipeline evolve --score --top 10)",
       "Bash(python3 -m tools.pipeline evolve --review)",

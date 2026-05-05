@@ -587,6 +587,7 @@ Validated experience from operating Claude Code in this ecosystem.
 [[extended-to-adaptive-thinking-migration|Decision — Extended Thinking to Adaptive Thinking Migration]]
 [[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[gateway-output-contract|Gateway Output Contract — What Good Tool Output Looks Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[ai-methodology-consumption-guide|How AI Agents Consume the Methodology Wiki]]
@@ -612,3 +613,4 @@ Validated experience from operating Claude Code in this ecosystem.
 [[src-aidlc-cc-plugin-claude-code-port|Synthesis — ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)]]
 [[three-permission-modes-think-edit-act|Three Permission Modes (Think / Edit / Act) — Operator-Selected AI Authority Tiers]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
+[[identity-profile|root-ghostproxy — Identity Profile]]

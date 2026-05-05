@@ -367,7 +367,61 @@ def find_second_brain() -> Path:
     return None
 
 
-def connect_second_brain(project_root: Path, brain_path: Path = None):
+def _load_sister_entry(brain_path: Path, target_path: Path) -> dict:
+    """Find the sister-projects.yaml entry matching target_path.
+
+    Returns the entry dict (with `type`, `group`, etc.) or empty dict if no match.
+    Match is by resolved path equality after ~/ expansion.
+    """
+    registry_path = brain_path / "wiki" / "config" / "sister-projects.yaml"
+    if not registry_path.exists():
+        return {}
+    try:
+        import yaml
+        data = yaml.safe_load(registry_path.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return {}
+    projects = data.get("projects", {}) or {}
+    target_resolved = Path(target_path).expanduser().resolve()
+    for name, info in projects.items():
+        raw_path = info.get("path", "")
+        if not raw_path:
+            continue
+        try:
+            entry_resolved = Path(os.path.expanduser(raw_path)).resolve()
+        except Exception:
+            continue
+        if entry_resolved == target_resolved:
+            entry = dict(info)
+            entry["_name"] = name
+            return entry
+    return {}
+
+
+def _render_brain_pointer_block(sister_entry: dict) -> str:
+    """Render the brain-pointer block content based on sister type/group.
+
+    Backwards-compatible: when sister_entry is empty or has no `type`, returns
+    the existing generic block (adoption-tier focused). When `type=root` and
+    `group=operating-system-setup`, returns OS-setup-specialized content
+    emphasizing security envelope + IaC framing.
+    """
+    marker_end = _BRAIN_POINTER_MARKER.replace("-->", "-END -->")
+    sister_type = sister_entry.get("type") if sister_entry else None
+    sister_group = sister_entry.get("group") if sister_entry else None
+
+    if sister_type == "root" and sister_group == "operating-system-setup":
+        return _BRAIN_POINTER_BLOCK_ROOT_OS_SETUP.format(
+            marker=_BRAIN_POINTER_MARKER,
+            marker_end=marker_end,
+        )
+    return _BRAIN_POINTER_BLOCK.format(
+        marker=_BRAIN_POINTER_MARKER,
+        marker_end=marker_end,
+    )
+
+
+def connect_second_brain(project_root: Path, brain_path: Path = None, dry_run: bool = False):
     """Connect a sister project to the second brain.
 
     Adds/updates the research-wiki MCP server entry in the project's .mcp.json.
@@ -379,6 +433,8 @@ def connect_second_brain(project_root: Path, brain_path: Path = None):
 
     Or from the second brain itself targeting a sister:
         python3 -m tools.setup --connect-project ~/openarms
+
+    With dry_run=True, prints what would be written without modifying any file.
     """
     if brain_path is None:
         brain_path = find_second_brain()
@@ -393,6 +449,17 @@ def connect_second_brain(project_root: Path, brain_path: Path = None):
     if not venv.exists():
         log_warn(f"Second brain venv not found at {brain_path}/.venv — using system python")
         venv = Path(shutil.which("python3") or "python3")
+
+    if dry_run:
+        log_info(f"[DRY-RUN] Would connect: target={project_root} brain={brain_path}")
+
+    # Resolve sister entry (for type/group-aware block rendering)
+    sister_entry = _load_sister_entry(brain_path, project_root)
+    if dry_run:
+        if sister_entry:
+            log_info(f"[DRY-RUN] Sister entry resolved: name={sister_entry.get('_name')} type={sister_entry.get('type','-')} group={sister_entry.get('group','-')}")
+        else:
+            log_info(f"[DRY-RUN] No sister-projects.yaml entry matches {project_root} — generic block will be used")
 
     # Build MCP server config
     mcp_entry = {
@@ -414,22 +481,36 @@ def connect_second_brain(project_root: Path, brain_path: Path = None):
     if "mcpServers" not in mcp_config:
         mcp_config["mcpServers"] = {}
 
+    existing_entry = mcp_config["mcpServers"].get("research-wiki")
     mcp_config["mcpServers"]["research-wiki"] = mcp_entry
 
-    mcp_json_path.write_text(json.dumps(mcp_config, indent=2) + "\n", encoding="utf-8")
+    if dry_run:
+        log_info(f"[DRY-RUN] Would write {mcp_json_path}")
+        if existing_entry and existing_entry != mcp_entry:
+            log_info(f"[DRY-RUN]   research-wiki entry would be REPLACED. Existing: {existing_entry}")
+        elif existing_entry == mcp_entry:
+            log_info(f"[DRY-RUN]   research-wiki entry already matches — no change")
+        else:
+            log_info(f"[DRY-RUN]   research-wiki entry would be ADDED")
+        log_info(f"[DRY-RUN]   New entry: {mcp_entry}")
+    else:
+        mcp_json_path.write_text(json.dumps(mcp_config, indent=2) + "\n", encoding="utf-8")
 
     # Create CLI forwarding scripts so gateway + view work from the sister
-    _install_gateway_forwarder(project_root, brain_path, venv)
-    _install_view_forwarder(project_root, brain_path, venv)
+    _install_gateway_forwarder(project_root, brain_path, venv, dry_run=dry_run)
+    _install_view_forwarder(project_root, brain_path, venv, dry_run=dry_run)
 
     # Add second-brain connection block to AGENTS.md (or CLAUDE.md) if not already present
-    _inject_brain_pointer(project_root, brain_path)
+    _inject_brain_pointer(project_root, brain_path, sister_entry=sister_entry, dry_run=dry_run)
 
-    log_info(f"Connected to second brain: {brain_path}")
-    log_info(f"  MCP entry:  {mcp_json_path}")
-    log_info(f"  CLI:        python3 -m tools.gateway orient")
-    log_info(f"              python3 -m tools.view spine")
-    log_info(f"  MCP:        wiki_gateway_orient (from Claude Code)")
+    if dry_run:
+        log_info(f"[DRY-RUN] Connection preview complete. No files modified.")
+    else:
+        log_info(f"Connected to second brain: {brain_path}")
+        log_info(f"  MCP entry:  {mcp_json_path}")
+        log_info(f"  CLI:        python3 -m tools.gateway orient")
+        log_info(f"              python3 -m tools.view spine")
+        log_info(f"  MCP:        wiki_gateway_orient (from Claude Code)")
     return True
 
 
@@ -469,17 +550,80 @@ python3 -m tools.view search <query> # search across all knowledge
 """
 
 
-def _inject_brain_pointer(project_root: Path, brain_path: Path):
+# Variant for type=root + group=operating-system-setup projects.
+# These projects configure the OS / system-level safety envelope (hooks, deny lists,
+# integrity checks, install.sh-as-bootstrap). The framing is different from a
+# typical knowledge/agent project: less "adoption tier evolution," more
+# "OS-level IaC with second-brain as methodology + verification source."
+_BRAIN_POINTER_BLOCK_ROOT_OS_SETUP = """
+{marker}
+## Second Brain Connection (type=root, group=operating-system-setup)
+
+This project configures the **operating system** for safe AI agent operation
+(hooks, deny lists, integrity checks, IaC bootstrap). It is registered in the
+second brain as a sister project of `type=root` + `group=operating-system-setup`.
+
+**The second brain** (research wiki at the connected path) provides:
+- **Methodology** — 9 models, 5 universal SFIF stages, ALLOWED/FORBIDDEN
+  outputs per stage, gate commands. Query: `python3 -m tools.gateway query --model <name>`.
+- **Verification** — every declaration in this project's CLAUDE.md / AGENTS.md /
+  hooks should pair with a verification gate (Principle 4: Declarations
+  Aspirational Until Verified). Health/compliance checks: `python3 -m tools.gateway health`,
+  `python3 -m tools.gateway compliance`.
+- **Validated patterns** — 44+ operational lessons, including lessons that
+  apply directly to OS-setup projects (privilege drop, integrity fail-closed,
+  hook architecture, deny-list enforcement). Browse: `python3 -m tools.view lessons`.
+- **Cross-project knowledge** — patterns from other sister projects (OpenArms,
+  OpenFleet, AICP, the second brain itself) usable as proven references.
+
+**Your brain** (this project's CLAUDE.md / AGENTS.md / `~/.claude/settings.json`
+hooks / `.gitignore` whitelist / install.sh / integrity.py) is the OS-level
+agent. The second brain does NOT run at OS level; it informs the design and
+provides post-hoc validation.
+
+**First step for any fresh session in this project:**
+```
+python3 -m tools.gateway orient
+```
+This loads the second-brain identity context for this project (type=root,
+group=operating-system-setup) and prints the SFIF-stage-aware orientation.
+
+**Browse second-brain knowledge relevant to OS-setup projects:**
+```
+python3 -m tools.view spine                           # the 16 models + standards
+python3 -m tools.view model sfif-architecture         # the project-lifecycle macro model
+python3 -m tools.view model markdown-as-iac           # Markdown configuration as the substrate
+python3 -m tools.view search "deny-list"              # search across all knowledge
+python3 -m tools.view search "integrity check"
+python3 -m tools.view search "hook architecture"
+```
+
+**Contribute learnings back** (OS-setup-specific lessons feed the corpus):
+```
+python3 -m tools.gateway contribute --type lesson --title "..."
+```
+
+**SFIF stage of this project** — see the SFIF rollout epic in the second brain
+for the per-module breakdown (M1-M10) and current readiness.
+{marker_end}
+"""
+
+
+def _inject_brain_pointer(project_root: Path, brain_path: Path, sister_entry: dict = None, dry_run: bool = False):
     """Add or update the second-brain connection block in AGENTS.md or CLAUDE.md.
 
     If the marker block exists, REPLACES it (so re-connect updates the content).
     Prefers AGENTS.md (cross-tool); falls back to CLAUDE.md.
+
+    The block content is rendered per sister-projects.yaml `type` and `group`:
+    type=root + group=operating-system-setup gets the OS-setup-specialized block;
+    everything else gets the generic block.
+
+    With dry_run=True, prints what would be written without modifying files.
     """
     marker_end = _BRAIN_POINTER_MARKER.replace("-->", "-END -->")
-    block = _BRAIN_POINTER_BLOCK.format(
-        marker=_BRAIN_POINTER_MARKER,
-        marker_end=marker_end,
-    )
+    block = _render_brain_pointer_block(sister_entry or {})
+    variant = "ROOT_OS_SETUP" if (sister_entry and sister_entry.get("type") == "root" and sister_entry.get("group") == "operating-system-setup") else "GENERIC"
 
     for fname in ["AGENTS.md", "CLAUDE.md"]:
         target = project_root / fname
@@ -489,18 +633,27 @@ def _inject_brain_pointer(project_root: Path, brain_path: Path):
                 # Replace existing block
                 start = content.index(_BRAIN_POINTER_MARKER)
                 end = content.index(marker_end) + len(marker_end)
-                content = content[:start] + block.strip() + content[end:]
-                target.write_text(content, encoding="utf-8")
-                log_info(f"  Brain pointer updated in: {target}")
+                new_content = content[:start] + block.strip() + content[end:]
+                if dry_run:
+                    log_info(f"[DRY-RUN]   Brain pointer would be UPDATED in: {target} (variant={variant})")
+                else:
+                    target.write_text(new_content, encoding="utf-8")
+                    log_info(f"  Brain pointer updated in: {target} (variant={variant})")
             elif _BRAIN_POINTER_MARKER not in content:
                 # First injection
-                target.write_text(content + block, encoding="utf-8")
-                log_info(f"  Brain pointer added to: {target}")
+                if dry_run:
+                    log_info(f"[DRY-RUN]   Brain pointer would be ADDED to: {target} (variant={variant})")
+                else:
+                    target.write_text(content + block, encoding="utf-8")
+                    log_info(f"  Brain pointer added to: {target} (variant={variant})")
             return
-    log_warn("  No AGENTS.md or CLAUDE.md found — skipping brain pointer injection")
+    if dry_run:
+        log_warn(f"[DRY-RUN]   No AGENTS.md or CLAUDE.md found at {project_root} — brain pointer injection would be SKIPPED")
+    else:
+        log_warn("  No AGENTS.md or CLAUDE.md found — skipping brain pointer injection")
 
 
-def _install_gateway_forwarder(project_root: Path, brain_path: Path, venv: Path):
+def _install_gateway_forwarder(project_root: Path, brain_path: Path, venv: Path, dry_run: bool = False):
     """Create a thin tools/gateway.py in the sister project that forwards to the second brain.
 
     This allows `python3 -m tools.gateway orient` to work from any connected project.
@@ -508,6 +661,8 @@ def _install_gateway_forwarder(project_root: Path, brain_path: Path, venv: Path)
     knows which project it's being called from.
 
     If tools/gateway.py already exists and was NOT generated by us, it's left untouched.
+
+    With dry_run=True, prints what would be written without modifying files.
     """
     tools_dir = project_root / "tools"
     gateway_file = tools_dir / "gateway.py"
@@ -517,8 +672,17 @@ def _install_gateway_forwarder(project_root: Path, brain_path: Path, venv: Path)
     if gateway_file.exists():
         existing = gateway_file.read_text(encoding="utf-8")
         if _marker not in existing:
-            log_warn(f"  {gateway_file} exists (not ours) — skipping forwarder")
+            if dry_run:
+                log_warn(f"[DRY-RUN]   {gateway_file} exists (not ours) — forwarder would be SKIPPED")
+            else:
+                log_warn(f"  {gateway_file} exists (not ours) — skipping forwarder")
             return
+
+    if dry_run:
+        log_info(f"[DRY-RUN]   Would create/update: {gateway_file}")
+        if not (tools_dir / "__init__.py").exists():
+            log_info(f"[DRY-RUN]   Would create: {tools_dir / '__init__.py'}")
+        return
 
     tools_dir.mkdir(parents=True, exist_ok=True)
 
@@ -599,11 +763,13 @@ def connect_all_sisters(brain_root: Path, only_authorized: bool = True):
     return connected > 0
 
 
-def _install_view_forwarder(project_root: Path, brain_path: Path, venv: Path):
+def _install_view_forwarder(project_root: Path, brain_path: Path, venv: Path, dry_run: bool = False):
     """Create a thin tools/view.py in the sister project that forwards to the second brain.
 
     Allows `python3 -m tools.view spine`, `python3 -m tools.view model llm`, etc.
     from any connected project.
+
+    With dry_run=True, prints what would be written without modifying files.
     """
     tools_dir = project_root / "tools"
     view_file = tools_dir / "view.py"
@@ -612,8 +778,15 @@ def _install_view_forwarder(project_root: Path, brain_path: Path, venv: Path):
     if view_file.exists():
         existing = view_file.read_text(encoding="utf-8")
         if _marker not in existing:
-            log_warn(f"  {view_file} exists (not ours) — skipping view forwarder")
+            if dry_run:
+                log_warn(f"[DRY-RUN]   {view_file} exists (not ours) — view forwarder would be SKIPPED")
+            else:
+                log_warn(f"  {view_file} exists (not ours) — skipping view forwarder")
             return
+
+    if dry_run:
+        log_info(f"[DRY-RUN]   Would create/update: {view_file}")
+        return
 
     tools_dir.mkdir(parents=True, exist_ok=True)
 
@@ -739,6 +912,8 @@ def main():
                         help="Remove second brain MCP connection from THIS project")
     parser.add_argument("--brain", metavar="PATH",
                         help="Path to the second brain (auto-detected if not specified)")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="Preview --connect / --connect-project mutations without writing any files")
     args = parser.parse_args()
 
     root = get_project_root()
@@ -748,7 +923,7 @@ def main():
         sys.exit(0 if success else 1)
     elif args.connect:
         brain = Path(args.brain).resolve() if args.brain else None
-        success = connect_second_brain(root, brain)
+        success = connect_second_brain(root, brain, dry_run=args.dry_run)
         sys.exit(0 if success else 1)
     elif args.connect_project:
         target = Path(args.connect_project).resolve()
@@ -756,7 +931,7 @@ def main():
         if not target.exists():
             log_error(f"Project path not found: {target}")
             sys.exit(1)
-        success = connect_second_brain(target, brain)
+        success = connect_second_brain(target, brain, dry_run=args.dry_run)
         sys.exit(0 if success else 1)
     elif args.connect_all:
         brain = Path(args.brain).resolve() if args.brain else root

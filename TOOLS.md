@@ -183,17 +183,17 @@ Run a named multi-step chain.
 
 ```bash
 python3 -m tools.pipeline chain --list          # list all chains
-python3 -m tools.pipeline chain continue        # session entry point
+python3 -m tools.pipeline chain checkin         # session entry point (slash /checkin only)
 python3 -m tools.pipeline chain health          # minimal wiki health check
-python3 -m tools.pipeline chain review          # full weekly review
-python3 -m tools.pipeline chain evolve          # score + scaffold + post
+python3 -m tools.pipeline chain healthcheck     # full weekly health check (slash /healthcheck only)
+python3 -m tools.pipeline chain distill         # score + scaffold + post (slash /distill only)
 ```
 
 **All chains:**
 
 | Chain | What It Does | Input? |
 |-------|-------------|--------|
-| `continue` | Resume mission: status → review → score → gaps | No |
+| `checkin` | Mission state-and-options checkin: status → review → score → gaps. Slash `/checkin` only — bare prose "continue" is trajectory-continue, no trigger. | No |
 | `health` | Post-chain → gaps → crossref | No |
 | `review` | Post-chain → evolve review → gaps → crossref | No |
 | `publish` | Post-chain → sync to Windows | No |
@@ -517,8 +517,8 @@ Manual start (debugging only):
 | `wiki_sync` | One-shot wiki → Windows sync |
 | `wiki_mirror_to_notebooklm` | Push source URLs to NotebookLM notebook |
 | `wiki_integrations` | Check integration status (Obsidian, NotebookLM) |
-| `wiki_continue` | Resume mission: status → review → score → gaps |
-| `wiki_evolve` | Evolution pipeline (modes: score, scaffold, dry-run, review, stale) |
+| `wiki_checkin` | Mission state-and-options checkin: status → review → score → gaps. Formerly `wiki_continue`. |
+| `wiki_distill` | Knowledge-distillation pipeline (modes: score, scaffold, dry-run, review, stale). Formerly `wiki_evolve`. |
 | `wiki_backlog` | Backlog summary, optionally filtered by epic |
 | `wiki_log` | Create a log entry in `wiki/log/` |
 
@@ -718,12 +718,12 @@ python3 -m tools.pipeline post                               # validate + index
 
 ### Start a session
 ```bash
-python3 -m tools.pipeline chain continue    # status → review → score → gaps
+python3 -m tools.pipeline chain checkin     # status → review → score → gaps (slash /checkin only)
 ```
 
 ### Weekly review
 ```bash
-python3 -m tools.pipeline chain review      # post → evolve review → gaps → crossref
+python3 -m tools.pipeline chain healthcheck # post → evolve review → gaps → crossref (slash /healthcheck only)
 ```
 
 ### Promote a lesson

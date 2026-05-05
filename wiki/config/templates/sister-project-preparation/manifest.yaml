@@ -1,0 +1,106 @@
+# Sister-Project Preparation Templates — Manifest
+#
+# Template list A. Defines the MD files every NEW sister project needs at its
+# repo root, organized into 3 main + secondary tiers. Used to scaffold a project
+# at SFIF Scaffold/Foundation tier so a fresh agent session in that project has
+# operational context.
+#
+# Counterpart: Template list B (second-brain-integration/manifest.yaml) provides
+# the OVERLAY content a sister project adds to integrate with the second brain.
+# Apply A first, then B's overlay sections during/after `--connect-project`.
+#
+# Renderer: tools.setup (extension pending — currently templates are referenced
+# manually). Placeholders in {{var}} format are filled from sister-projects.yaml
+# entry + identity-profile.md + operator-directive raw notes.
+#
+# Anti-duplication principle: each template renders pointer-based content,
+# referencing canonical sources rather than inlining their data. A rendered file
+# that duplicates content already in memory layer / identity-profile / methodology
+# config is "trash" per operator directive 2026-05-04 ("USELESS DATA WASTE OF
+# TOKEN AND MONEY"). Templates enforce reference style, not narrative style.
+
+templates:
+  main:
+    - id: readme
+      file: README.md.template
+      target: README.md
+      purpose: "Project description, architecture summary, install + verify commands. Update-not-recreate when an existing README is present (preserve operator-authored content)."
+      length_target_lines: 100-200
+      placeholders: [project_name, description, architecture_summary, install_commands, what_is_protected, limitations, license]
+
+    - id: claude_md
+      file: CLAUDE.md.template
+      target: CLAUDE.md
+      purpose: "Claude Code-specific routing table + identity tier reference + methodology pointer + hard rules pointer. NOT a duplicate of AGENTS.md — Claude-specific routing only."
+      length_target_lines: 100-200
+      placeholders: [project_name, type, group, domain, phase, scale, methodology_path, agents_md_path, memory_layer_path]
+
+    - id: agents_md
+      file: AGENTS.md.template
+      target: AGENTS.md
+      purpose: "Universal cross-tool agent context. Tight + pointer-based — references memory layer, identity-profile, sacrosanct sources. Does NOT duplicate auto-loaded content."
+      length_target_lines: 50-100
+      placeholders: [project_name, type, group, domain, identity_profile_pointer, memory_layer_pointer, claude_md_pointer]
+
+  secondary:
+    - id: context_md
+      file: CONTEXT.md.template
+      target: CONTEXT.md
+      purpose: "Identity profile (9-dim Goldilocks) + active SFIF stage + active epic. Per-session-relevant operational state, distinct from CLAUDE.md (rules) and README.md (description)."
+      length_target_lines: 50-100
+      placeholders: [project_name, type, group, domain, phase, scale, sfif_stage, active_epic_pointer]
+
+    - id: architecture_md
+      file: ARCHITECTURE.md.template
+      target: ARCHITECTURE.md
+      purpose: "System topology, data flow, component responsibilities. Allows README.md to be tight by extracting deep architecture detail here."
+      length_target_lines: 100-300
+      placeholders: [project_name, components_diagram, data_flow_description, component_responsibilities]
+
+    - id: tools_md
+      file: TOOLS.md.template
+      target: TOOLS.md
+      purpose: "Tool reference — what each script/binary in the project does, when to use it, with concrete invocations. Reference, not narrative."
+      length_target_lines: 100-300
+      placeholders: [project_name, tools_list]
+
+    - id: design_md
+      file: DESIGN.md.template
+      target: DESIGN.md
+      purpose: "Design patterns the project implements (deny-all+whitelist, fail-closed integrity, two-layer hooks, etc). Non-redundant with ARCHITECTURE.md (design rationale, not topology)."
+      length_target_lines: 50-200
+      placeholders: [project_name, patterns_list]
+
+    - id: security_md
+      file: SECURITY.md.template
+      target: SECURITY.md
+      purpose: "Security policy summary. For OS-setup type projects, this is load-bearing — covers threat model, what's protected, escalation paths, fail-closed properties."
+      length_target_lines: 100-200
+      placeholders: [project_name, threat_model, whats_protected, fail_closed_invariants, escalation_path]
+
+# Selection rules per project tier:
+# - SFIF Scaffold tier:    main only (3 files)
+# - SFIF Foundation tier:  main + CONTEXT + ARCHITECTURE (5 files)
+# - SFIF Infrastructure:   add TOOLS + DESIGN (7 files)
+# - SFIF Features:         all 8 (main + 5 secondary)
+#
+# A project at SFIF Foundation+ tier with type=root SHOULD include SECURITY.md
+# regardless of overall tier (security is load-bearing for type=root).
+
+selection_rules:
+  by_sfif_stage:
+    Scaffold: [readme, claude_md, agents_md]
+    Foundation: [readme, claude_md, agents_md, context_md, architecture_md]
+    Infrastructure: [readme, claude_md, agents_md, context_md, architecture_md, tools_md, design_md]
+    Features: [readme, claude_md, agents_md, context_md, architecture_md, tools_md, design_md, security_md]
+
+  by_type:
+    root:
+      always_include: [security_md]
+      reason: "type=root projects gate the OS-level security envelope; SECURITY.md is always relevant regardless of SFIF stage"
+
+# Post-render: apply Template list B (second-brain-integration) overlay to inject
+# the connection block + methodology pointer + sister-project section.
+overlay:
+  apply_after: sister-project-preparation
+  manifest: ../second-brain-integration/manifest.yaml

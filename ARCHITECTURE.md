@@ -104,7 +104,7 @@ devops-solutions-research-wiki/
 ├── skills/                     # Claude Code skill definitions (invokable sub-agents)
 │   ├── wiki-agent/             # Full ingestion + query + maintenance
 │   ├── evolve/                 # Score, scaffold, review, promote maturity
-│   ├── continue/               # Resume mission: diagnostics → state → options
+│   ├── checkin/                # Mission state-and-options checkin: diagnostics → state → options (slash /checkin only; prose "continue" is trajectory-continue)
 │   ├── model-builder/          # Build, review, or evolve a wiki model
 │   └── notebooklm/             # NotebookLM sync operations
 │
@@ -241,7 +241,7 @@ Key commands:
 - `scaffold` — creates typed pages from `wiki/config/templates/`
 - `evolve` — delegates to `evolve.py` (score, scaffold, review)
 - `gaps`, `crossref` — analysis pipelines
-- `chain <name>` — runs a named pipeline chain (continue, review, health, evolve, full)
+- `chain <name>` — runs a named pipeline chain (checkin, review, health, evolve, full)
 - `status` — pipeline's own plumbing state: raw files inventory + wiki page count
 
 Deprecated (use gateway):
@@ -459,7 +459,7 @@ This means the same gateway binary serves both the wiki and all sister projects 
 
 Registered in `.mcp.json` (stdio transport). Auto-discovered by Claude Code. Any agent in any project can call wiki operations as native tool calls.
 
-Tool categories: status, search, read, list, post, fetch, gaps, crossref, sync, mirror, evolve, backlog, log, gateway_query, gateway_template, gateway_contribute, gateway_flow, integrations, continue, scan_project, fetch_topic.
+Tool categories: status, search, read, list, post, fetch, gaps, crossref, sync, mirror, evolve, backlog, log, gateway_query, gateway_template, gateway_contribute, gateway_flow, integrations, checkin, scan_project, fetch_topic.
 
 Start manually: `python -m tools.mcp_server`
 

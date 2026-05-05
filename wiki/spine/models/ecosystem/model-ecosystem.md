@@ -366,6 +366,7 @@ See [[three-pm-levels|Three PM Levels — Wiki to Fleet to Full Tool]] for the a
 [[identity-profile|AICP — Identity Profile]]
 [[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[first-consumer-integration-reveals-systematic-gaps-between-k|First consumer integration reveals systematic gaps between knowledge and tooling]]
 [[if-you-can-verify-you-converge|If You Can Verify, You Converge]]
 [[methodology-adoption-guide|Methodology Adoption Guide]]

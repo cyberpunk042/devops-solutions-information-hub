@@ -1,0 +1,27 @@
+<!-- Inject this section into README.md before the License section. Declares
+     the project's sister-project status + how to query the second brain. -->
+
+## Sister project of the research wiki
+
+This project is registered as a sister of the **research wiki / second brain** at `{{second_brain_path}}`.
+
+| Field | Value |
+|---|---|
+| Project name | `{{project_name}}` |
+| Type | `{{type}}` |
+| Group | `{{group}}` |
+| Domain | `{{domain}}` |
+| Auto-connect | `{{auto_connect}}` |
+| Sister entry | [{{sister_projects_yaml_entry_url}}]({{sister_projects_yaml_entry_url}}) |
+
+**Connection mechanism**: `python3 -m tools.setup --connect-project /root` from inside the second brain installs:
+- `research-wiki` MCP server entry in `/root/.mcp.json`
+- `tools/gateway.py` forwarder (so `python3 -m tools.gateway orient` works from inside this project)
+- `tools/view.py` forwarder (so `python3 -m tools.view spine` etc. works)
+- A `## Second Brain Connection` block appended to `AGENTS.md`
+
+**Bidirectional flow:**
+- This project consumes from the second brain: methodology, standards, validated lessons, patterns, sister-project syntheses (e.g. Suricata, PolarProxy, Hanke integration).
+- This project contributes to the second brain: lessons learned, patterns observed, decisions made — via `python3 -m tools.gateway contribute --type lesson --title "..."`.
+
+For per-session orientation: `python3 -m tools.gateway orient`. For methodology + adoption guide: see the second brain's `wiki/spine/references/adoption-guide.md`.

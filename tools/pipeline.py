@@ -1083,13 +1083,13 @@ CHAINS: Dict[str, Dict[str, Any]] = {
         "steps": ["gaps", "crossref", "mirror", "post", "sync"],
         "needs_input": False,
     },
-    "evolve": {
-        "description": "Score candidates → scaffold top N → post-chain",
+    "distill": {
+        "description": "Knowledge distillation: score candidates → scaffold top N → post-chain (slash /distill only; prose 'evolve'/'promote' is trajectory-language, not a trigger)",
         "steps": ["evolve-score", "post"],
         "needs_input": False,
     },
-    "evolve-auto": {
-        "description": "Score → scaffold → generate (local model) → post-chain",
+    "distill-auto": {
+        "description": "Knowledge distillation (auto): score → scaffold → generate via local model → post-chain",
         "steps": ["evolve-auto", "post"],
         "needs_input": False,
     },
@@ -1098,13 +1098,13 @@ CHAINS: Dict[str, Dict[str, Any]] = {
         "steps": ["evolve-spine", "post"],
         "needs_input": False,
     },
-    "review": {
-        "description": "Post-chain → evolve review → gaps → crossref (weekly review)",
+    "healthcheck": {
+        "description": "Wiki weekly health check: post-chain → evolve review → gaps → crossref (slash /healthcheck only; prose 'review' is feedback-language, not a trigger)",
         "steps": ["post", "evolve-review", "gaps", "crossref"],
         "needs_input": False,
     },
-    "continue": {
-        "description": "Resume mission — status → review → score → gaps (session entry point)",
+    "checkin": {
+        "description": "Mission state-and-options checkin — status → review → score → gaps (slash-invoked, NOT triggered by prose 'continue')",
         "steps": ["status", "post", "evolve-review", "evolve-score", "gaps", "crossref"],
         "needs_input": False,
     },

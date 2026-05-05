@@ -160,6 +160,7 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 [[local-model-vs-cloud-api-for-routine-operations|Decision — Local Model vs Cloud API for Routine Operations]]
 [[polling-vs-event-driven-change-detection|Decision — Polling vs Event-Driven Change Detection]]
 [[deterministic-shell-llm-core|Deterministic Shell, LLM Core]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
 [[four-project-ecosystem|Four-Project Ecosystem]]
 [[gateway-centric-routing|Gateway-Centric Routing]]
@@ -171,3 +172,4 @@ The same two-tier pattern appears in devops-control-plane: stacks/*.yml (always 
 [[src-awesome-design-md|Synthesis — awesome-design-md — 58 Design Systems for AI Agents]]
 [[wsl2-development-patterns|WSL2 Development Patterns]]
 [[identity-profile|devops-control-plane — Identity Profile]]
+[[identity-profile|root-ghostproxy — Identity Profile]]

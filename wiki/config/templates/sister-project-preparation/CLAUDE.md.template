@@ -1,0 +1,71 @@
+# CLAUDE.md — {{project_name}} (Claude Code delta)
+
+> Claude Code-specific routing + identity tier reference + methodology pointer.
+> Universal cross-tool context lives in [AGENTS.md](AGENTS.md). Memory rules at
+> `~/.claude/projects/{{memory_layer_slug}}/memory/` are binding and auto-loaded.
+
+## Identity (Goldilocks — stable fields, abbreviated)
+
+| Dimension | Value |
+|---|---|
+| Type | {{type}} |
+| Group | {{group}} |
+| Domain | {{domain}} |
+| Phase | {{phase}} |
+| Scale | {{scale}} |
+| PM Level | {{pm_level}} |
+| Trust tier | {{trust_tier}} |
+
+Execution mode + SDLC profile + methodology model are **task properties** — declared per session, not hardcoded. Full profile: [{{identity_profile_pointer}}]({{identity_profile_pointer}}).
+
+## Operator-Intent Routing Table
+
+> Maps operator prose to first action. Slash commands (`/checkin`, `/distill`, etc.) are operator-invoked LITERALLY — bare prose words `continue` / `evolve` / `review` are trajectory-language, NOT triggers. See `~/.claude/projects/<project>/memory/feedback_words_are_sacrosanct.md`.
+
+| Operator says... | First action |
+|---|---|
+{{routing_table_rows}}
+
+## Hard Rules (every-message hot path — Claude-specific)
+
+> Universal rules (no unsolicited actions, never read credentials, words sacrosanct, augment-don't-overwrite, horse-and-driver, think-before-act) are in the **memory layer** auto-loaded every session. NOT duplicated here.
+
+| # | Rule | Enforcement |
+|---|------|-------------|
+{{claude_specific_hard_rules}}
+
+## Methodology Pointer
+
+This project uses the stage-gate methodology defined in:
+- [`wiki/config/methodology.yaml`](wiki/config/methodology.yaml) — stages, task types, modes, end conditions
+- [`wiki/config/sdlc-profile.yaml`](wiki/config/sdlc-profile.yaml) — `{{sdlc_profile}}` profile (project tier)
+- [`wiki/config/domain-profile.yaml`](wiki/config/domain-profile.yaml) — `{{domain_profile}}` profile (gate-command + path-pattern overrides)
+- [`wiki/config/methodology-profile.yaml`](wiki/config/methodology-profile.yaml) — `{{methodology_profile}}` profile (process style)
+
+The agent MUST follow the work loop defined in the methodology profile. Stage boundaries are hard. ALLOWED/FORBIDDEN outputs per stage are enforced.
+
+## Backlog
+
+Active work: [wiki/backlog/](wiki/backlog/). Three-level hierarchy: **Epic → Module → Task**. Readiness flows up. Status flows up. You work on tasks, not epics directly.
+
+Active epic: [{{active_epic_slug}}](wiki/backlog/epics/{{active_epic_slug}}.md).
+
+## Pointers to Depth
+
+| For... | Read |
+|---|---|
+| Universal cross-tool rules | [AGENTS.md](AGENTS.md) |
+| Project description + install + what's protected | [README.md](README.md) |
+| Identity profile (Goldilocks full) | {{identity_profile_pointer}} |
+| Active mission + SFIF stage | [CONTEXT.md](CONTEXT.md) (if present) |
+| System architecture | [ARCHITECTURE.md](ARCHITECTURE.md) (if present) |
+| Tool reference | [TOOLS.md](TOOLS.md) (if present) |
+| Design patterns | [DESIGN.md](DESIGN.md) (if present) |
+| Security policy | [SECURITY.md](SECURITY.md) (if present) |
+| Detailed topic rules | [.claude/rules/](.claude/rules/) (if present) |
+| Operator-invoked slash commands | [.claude/commands/](.claude/commands/) (if present) |
+| Memory (auto-loaded) | `~/.claude/projects/{{memory_layer_slug}}/memory/` |
+
+<!-- SECOND-BRAIN-CONNECTION -->
+<!-- Optional: if --connect-project appends the brain-pointer block here instead of AGENTS.md, the variant per sister-projects.yaml type/group is rendered. Default target is AGENTS.md; CLAUDE.md is fallback. -->
+<!-- SECOND-BRAIN-CONNECTION-END -->

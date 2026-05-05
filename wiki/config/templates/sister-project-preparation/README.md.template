@@ -1,0 +1,79 @@
+# {{project_name}}
+
+{{tagline}}
+
+## What this project is
+
+{{description_short}}
+
+{{description_extended}}
+
+## Architecture
+
+{{architecture_summary}}
+
+(For full topology + data flow + component responsibilities, see [ARCHITECTURE.md](ARCHITECTURE.md).)
+
+## File layout
+
+```
+{{file_layout_tree}}
+```
+
+## Install on a new host
+
+```bash
+{{install_commands}}
+```
+
+After install:
+
+```bash
+{{post_install_verification_commands}}
+```
+
+## What's protected
+
+{{whats_protected_summary}}
+
+(For threat model + fail-closed invariants + escalation, see [SECURITY.md](SECURITY.md).)
+
+## Tool reference (summary)
+
+{{tools_summary}}
+
+(For full tool reference with concrete invocations, see [TOOLS.md](TOOLS.md).)
+
+## Limitations
+
+{{limitations_list}}
+
+## Backlog + active work
+
+This project uses the stage-gate methodology (see [CLAUDE.md](CLAUDE.md) Methodology Pointer section). Active backlog: [wiki/backlog/](wiki/backlog/).
+
+Active epic: [{{active_epic_title}}](wiki/backlog/epics/{{active_epic_slug}}.md).
+
+## Sister project status
+
+{{sister_project_status_block}}
+
+## Publishing
+
+{{publishing_notes}}
+
+## License
+
+{{license}}
+
+## Project context (for agents)
+
+| For... | Read |
+|---|---|
+| Universal cross-tool rules | [AGENTS.md](AGENTS.md) |
+| Claude Code routing | [CLAUDE.md](CLAUDE.md) |
+| Identity profile + active mission | [CONTEXT.md](CONTEXT.md) |
+| Architecture in depth | [ARCHITECTURE.md](ARCHITECTURE.md) |
+| Tool reference | [TOOLS.md](TOOLS.md) |
+| Design patterns | [DESIGN.md](DESIGN.md) |
+| Security policy | [SECURITY.md](SECURITY.md) |

@@ -253,6 +253,7 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[ecosystem-feedback-loop-wiki-as-source-of-truth|Ecosystem Feedback Loop — Wiki as Source of Truth]]
 [[E002-ecosystem-integration|Ecosystem Integration Interfaces]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[execution-modes-and-end-conditions|Execution Modes and End Conditions]]
 [[mcp-runtime-signaling|MCP Runtime Signaling — Integration Guide for Consumers]]
@@ -273,3 +274,4 @@ The four-project ecosystem is a personal devops infrastructure built by a single
 [[task-type-artifact-matrix|Task Type Artifact Matrix]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
 [[identity-profile|devops-control-plane — Identity Profile]]
+[[identity-profile|root-ghostproxy — Identity Profile]]

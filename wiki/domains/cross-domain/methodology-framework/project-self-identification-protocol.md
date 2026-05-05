@@ -35,21 +35,31 @@ Every agent session, every harness run, every tool invocation must be able to an
 
 1. **Self-identification is prerequisite to methodology selection.** Before an agent or system can choose a methodology model, SDLC profile, or enforcement level, it must know WHAT it is. OpenArms discovered this the hard way: 5 cognitive contexts reading one CLAUDE.md, each needing different rules, none marked.
 
-2. **Seven identity dimensions determine "just right."**
+2. **Nine identity dimensions determine "just right."** *(Updated 2026-05-04: Type and Group dimensions added per operator directive — see `raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md`. Originally seven questions.)*
 
-> [!abstract] The Seven Questions
+> [!abstract] The Nine Questions
 >
 > | # | Question | Values | Source | Auto-Detectable? |
 > |---|---------|--------|--------|-----------------|
 > | 1 | **What am I?** | Solo / harness-managed / fleet agent / sub-agent | The CONSUMER's runtime decides this (the program that launched you) | **No** — **solo is the default** for every project. A harness or fleet that wraps a project DECLARES non-default when it connects (e.g., via MCP config `runtime:` field). From inside the project, this cannot be detected — local absence of harness code is NOT evidence of solo mode elsewhere. See [[execution-mode-is-consumer-property-not-project-property\|Execution Mode Is a Consumer Property, Not a Project Property]]. |
 > | 2 | **What execution mode?** | solo / harness v1 / harness v2 / harness v3 / full system | The harness decides its own version at launch based on its flags and capabilities | **No** — execution mode is a CONSUMER property, not a project property. Filesystem may show what CAPABILITIES exist locally, but can never reveal which consumer is using the project elsewhere. Declare in CLAUDE.md or pass at runtime. |
-> | 3 | **What domain?** | TypeScript / Python / Infrastructure / Knowledge / Mixed | package.json, pyproject.toml, main.tf, wiki/config/ | **Yes** — detectable from project marker files |
-> | 4 | **What project phase?** | POC / MVP / Staging / Production | CI presence, test presence, Docker/deployment markers | **Partially** — heuristic from CI+tests+deploy markers. Operator should confirm. |
-> | 5 | **What scale?** | micro / small / medium / large / massive | Source file count (excluding vendored deps) | **Yes** — detectable by counting source files |
-> | 6 | **What PM level?** | L1 (Wiki only) / L2 (Fleet) / L3 (Full PM) | What infrastructure is available AND running | **No** — same problem as execution mode. Infrastructure may exist but not be active. |
-> | 7 | **What trust tier?** | Trainee / Standard / Expert | Approval rate data (fleet), operator declaration (solo) | **No** — requires operational data (approval rates) or explicit declaration |
+> | 3 | **What type?** *(NEW 2026-05-04)* | system / product / service / **root** / agent / library / tool / framework | Project's scope at the highest level — what is this AT ALL | **Partially** — `root` projects can sometimes be detected (install.sh writes to $HOME paths). Most types must be operator-declared in CLAUDE.md. **`root` (NEW value)** = project sets up an operating system / system-level config via IaC. Independent of install path: same project under any user remains type=root because what it CONFIGURES is the OS, not the user. |
+> | 4 | **What group?** *(NEW 2026-05-04)* | operating-system-setup / ai-agent-platform / agent-orchestration / knowledge-curation / ai-inference / governance / ... | Purpose-class clustering of projects with similar intent | **No** — operator declares. Distinct from Domain (tech axis): Group is intent axis. A project's Group answers "what purpose-class does it serve?" — independent of what it's built with. |
+> | 5 | **What domain?** | TypeScript / Python / Infrastructure / Knowledge / Mixed | package.json, pyproject.toml, main.tf, wiki/config/ | **Yes** — detectable from project marker files |
+> | 6 | **What project phase?** | POC / MVP / Staging / Production | CI presence, test presence, Docker/deployment markers | **Partially** — heuristic from CI+tests+deploy markers. Operator should confirm. |
+> | 7 | **What scale?** | micro / small / medium / large / massive | Source file count (excluding vendored deps) | **Yes** — detectable by counting source files |
+> | 8 | **What PM level?** | L1 (Wiki only) / L2 (Fleet) / L3 (Full PM) | What infrastructure is available AND running | **No** — same problem as execution mode. Infrastructure may exist but not be active. |
+> | 9 | **What trust tier?** | Trainee / Standard / Expert | Approval rate data (fleet), operator declaration (solo) | **No** — requires operational data (approval rates) or explicit declaration |
 >
-> **Critical distinction:** Questions 3 and 5 are auto-detectable from the filesystem. Questions 1, 2, 6, 7 CANNOT be auto-detected — they depend on RUNTIME state or operational data that the project files don't contain. Question 4 is partially detectable (heuristic). When auto-detection can't determine the answer, the gateway says "unknown — declare in CLAUDE.md or pass at runtime" and warns the user.
+> **Critical distinction:** Questions 5 and 7 are auto-detectable from the filesystem. Questions 1, 2, 4, 8, 9 CANNOT be auto-detected — they depend on RUNTIME state, operational data, or operator declaration. Questions 3 and 6 are partially detectable (heuristic). When auto-detection can't determine the answer, the gateway says "unknown — declare in CLAUDE.md or pass at runtime" and warns the user.
+
+> [!info] Type=root and Group=operating-system-setup — operator definition (verbatim 2026-05-04)
+>
+> > *"a project of type root and group operating-system-setup. WHy root ? since it could have been jfortin install too.. since its an operating system IaC project, even in a user such as jfortin it would remain a root-type project."*
+>
+> Type=root means **scope**, not **path**. Even when installed under a non-root user (e.g., `jfortin`), the project remains type=root because what it CONFIGURES is the OS, regardless of which user account runs the install.
+>
+> Group=operating-system-setup is a NEW dimension — purpose-class. Distinct from Type (scope) and Domain (tech). A project answers all three: type=*scope*, domain=*technology*, group=*intent*. First example: root-ghostproxy (claude-code + opencode hardening + planned suricata/polarproxy modules). See: `raw/notes/2026-05-04-prepare-root-ghostproxy-as-sister-type-root-group-operating-system-setup.md` and `wiki/ecosystem/project_profiles/root-ghostproxy/identity-profile.md`.
 
 3. **The answers compose into a profile that selects everything downstream.** Identity → SDLC profile → methodology model → enforcement level → context depth → tool scope. Each step narrows based on the identity profile. An expert-tier agent on a v3 harness in a Production/1M TypeScript project gets FULL profile with FULL enforcement. A trainee-tier solo agent on v1 in a POC/10k Python project gets SIMPLIFIED profile with advisory rules only.
 
@@ -232,6 +242,7 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 [[consumer-runtime-signaling-via-mcp-config|Decision — Consumer Runtime Signaling via MCP Config]]
 [[e013-super-model-evolution-v2-0-with-sub-super-models|E013 — Super-Model Evolution — v2.0 with Sub-Super-Models]]
 [[e014-goldilocks-navigable-system-identity-to-action-in-continuous-flow|E014 — Goldilocks Navigable System — Identity to Action in Continuous Flow]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[execution-mode-is-consumer-property-not-project-property|Execution Mode Is a Consumer Property, Not a Project Property — Guard Against Conflation Drift]]
 [[global-standards-adherence|Global Standards Adherence — Engineering Principles the Wiki Follows]]
 [[goldilocks-flow|Goldilocks Flow — From Identity to Action]]
@@ -242,3 +253,4 @@ The Goldilocks Framework should adhere to recognized standards where applicable:
 [[structured-context-governs-agent-behavior-more-than-content|Principle — Structured Context Governs Agent Behavior More Than Content]]
 [[second-brain-integration-requirements|Second Brain Integration System — Full Chain Requirements]]
 [[the-wiki-is-a-hub-not-a-silo|The Wiki Is a Hub, Not a Silo]]
+[[identity-profile|root-ghostproxy — Identity Profile]]

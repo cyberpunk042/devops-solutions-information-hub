@@ -59,12 +59,12 @@ Skills in `.claude/commands/`:
 | Command | Trigger | What it does |
 |---------|---------|-------------|
 | `/ingest` | Source ingestion | Fetch URLs, process raw files into wiki source-synthesis pages, run post-chain, run crossref |
-| `/continue` | Session resume | Run `pipeline chain continue`, check MEMORY.md, check service status, present state + options |
-| `/evolve` | Knowledge evolution | Score evolution candidates, scaffold, generate, review maturity promotions |
+| `/checkin` | Mission state-and-options checkin | Run `pipeline chain checkin`, check MEMORY.md, check service status, present state + options. **Slash-invoked only** — bare prose `continue` / `resume` is trajectory-continue, NOT a trigger. |
+| `/distill` | Knowledge distillation | Score evolution candidates, scaffold, generate, review maturity promotions. **Slash-invoked only** — bare prose `evolve`/`promote` is trajectory-language, NOT a trigger. |
 | `/build-model` | Model work | Build, review, or evolve a wiki model using SFIF stages and LLM Wiki Standards |
 | `/log` | Directive logging | Create a log entry in `wiki/log/` — directive, session summary, or completion note |
 | `/status` | State check | Run `pipeline status`, `tools.stats`, `setup --services`, report everything |
-| `/review` | Health review | Run `pipeline chain review` — validation errors, maturity promotions, stale pages, gaps |
+| `/healthcheck` | Wiki weekly health check | Run `pipeline chain healthcheck` — validation errors, maturity promotions, stale pages, gaps. **Slash-invoked only** — bare prose `review` is feedback-language, NOT a trigger. |
 | `/backlog` | Backlog management | Show epic/task summary, completion %, ask what to work on |
 | `/gaps` | Gap analysis | Run `pipeline gaps` + `crossref`, prioritize, suggest next research targets |
 
@@ -115,10 +115,10 @@ New source to ingest?
   → /ingest
 
 Resuming a session?
-  → /continue
+  → /checkin
 
 Promoting lessons/patterns/decisions?
-  → /evolve
+  → /distill
 
 Building or reviewing a wiki model?
   → /build-model
@@ -133,7 +133,7 @@ Logging a directive verbatim?
   → /log
 
 Weekly health check?
-  → /review
+  → /healthcheck
 ```
 
 ---

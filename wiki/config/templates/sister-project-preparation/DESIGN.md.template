@@ -1,0 +1,38 @@
+# DESIGN.md — {{project_name}}
+
+> Design patterns the project implements + the rationale for each.
+> Distinct from ARCHITECTURE.md (topology). DESIGN.md = "why this shape."
+
+## Design principles in force
+
+{{design_principles_list}}
+
+## Patterns implemented
+
+{{design_patterns_table}}
+
+## Pattern: detail sections
+
+{{pattern_detail_sections}}
+
+## Anti-patterns deliberately avoided
+
+| Anti-pattern | Why we avoid | What we do instead |
+|---|---|---|
+{{anti_patterns_table}}
+
+## Trade-offs taken
+
+| Choice | Alternative considered | Why this one wins for {{project_name}} |
+|---|---|---|
+{{trade_offs_table}}
+
+## Open design questions
+
+{{open_design_questions_list}}
+
+## Cross-references
+
+- [ARCHITECTURE.md](ARCHITECTURE.md) — topology (not pattern rationale)
+- [SECURITY.md](SECURITY.md) — security-specific patterns
+- {{additional_cross_references}}

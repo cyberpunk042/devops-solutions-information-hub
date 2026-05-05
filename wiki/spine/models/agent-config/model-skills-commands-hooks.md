@@ -424,6 +424,7 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[pretooluse-hooks-layered-approach|Decision — Layered PreToolUse Hooks: Universal R01-R04 Baseline First, Stage-Gate Enforcement Later]]
 [[skills-as-primary-extension-pattern|Decision — Skills as the Primary Extension Pattern (over MCP-everywhere or hooks-only)]]
 [[enforcement-hook-patterns|Enforcement Hook Patterns]]
+[[root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05|Epic — root-ghostproxy SFIF Rollout + Second-Brain Integration (2026-05)]]
 [[model-skills-commands-hooks-standards|Extension Standards — What Good Skills, Commands, and Hooks Look Like]]
 [[harness-engineering-is-the-dominant-performance-lever|Harness Engineering Is the Dominant Performance Lever]]
 [[mandatory-without-verification-is-not-enforced|Mandatory Without Verification Is Not Enforced — Skill-Layer Instance of Infrastructure > Instructions]]
@@ -450,3 +451,5 @@ The 7-level framework also validates the architectural choice to use a wiki + wi
 [[src-openspec-spec-driven-development-framework|Synthesis: OpenSpec — Spec-Driven Development Framework]]
 [[three-layer-agent-context-architecture|Three-Layer Agent Context Architecture]]
 [[2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis|Top-Layer Routing Refactor — Gap Analysis (CLAUDE.md + Loading + Hook Enforcement)]]
+[[root-ghostproxy-m001-author-claude-md-and-agents-md|root-ghostproxy M001 — Author CLAUDE.md + AGENTS.md]]
+[[identity-profile|root-ghostproxy — Identity Profile]]

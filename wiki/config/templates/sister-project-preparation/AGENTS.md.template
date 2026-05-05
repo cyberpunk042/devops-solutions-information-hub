@@ -1,0 +1,68 @@
+# AGENTS.md — {{project_name}}
+
+> Universal cross-tool agent context for this project. **Tight + pointer-based by design** —
+> this file references canonical sources rather than re-stating their content. Auto-loaded
+> memory rules at `~/.claude/projects/{{memory_layer_slug}}/memory/` are binding and load
+> automatically every session; this file does NOT inline them.
+
+## Identity (Goldilocks 9-dimension)
+
+| Dimension | Value | Source / why |
+|---|---|---|
+| Type | {{type}} | {{type_rationale}} |
+| Group | {{group}} | {{group_rationale}} |
+| Domain | {{domain}} | {{domain_rationale}} |
+| Phase | {{phase}} | SFIF stage as of {{updated_date}} |
+| Scale | {{scale}} | {{scale_rationale}} |
+| Execution mode | {{execution_mode}} | {{execution_mode_rationale}} |
+| SDLC profile | {{sdlc_profile}} | See `wiki/config/sdlc-profile.yaml` |
+| PM Level | {{pm_level}} | {{pm_level_rationale}} |
+| Trust tier | {{trust_tier}} | {{trust_tier_rationale}} |
+
+Full identity profile (canonical, do not duplicate here): [{{identity_profile_pointer}}]({{identity_profile_pointer}}).
+
+## Pointers — where to find the canonical content
+
+| Resource | Where | Purpose |
+|---|---|---|
+| **Memory layer** | `~/.claude/projects/{{memory_layer_slug}}/memory/` | Sacrosanct directives, feedback rules, project memories. Auto-loaded every session — do NOT duplicate here. |
+| **Project README** | [README.md](README.md) | What this project IS — architecture summary, install steps, what's protected, limitations. |
+| **Claude Code routing** | [CLAUDE.md](CLAUDE.md) | Claude Code-specific operator-intent routing table. Do not duplicate routing in this file. |
+| **Identity profile** | {{identity_profile_pointer}} | Goldilocks 9-dimension profile in full. |
+| **Methodology engine** | [wiki/config/methodology.yaml](wiki/config/methodology.yaml) | 9 models, 5 stages, ALLOWED/FORBIDDEN per stage, gates. Engine for stage selection + work loop. |
+| **SDLC profile** | [wiki/config/sdlc-profile.yaml](wiki/config/sdlc-profile.yaml) | Project-tier SDLC profile (e.g. simplified for micro scale). |
+| **Domain profile** | [wiki/config/domain-profile.yaml](wiki/config/domain-profile.yaml) | Domain-specific gate-command + path-pattern overrides. |
+| **Methodology profile** | [wiki/config/methodology-profile.yaml](wiki/config/methodology-profile.yaml) | Process-style profile (stage-gated, agile-ai, etc). |
+| **Backlog** | [wiki/backlog/](wiki/backlog/) | Active epic + modules + atomic tasks. |
+| **Log** | [wiki/log/](wiki/log/) | Operator directives verbatim, session logs, completion notes. |
+| **Second brain** | (after `--connect-project` runs) `~/.claude/<project>/.mcp.json` `research-wiki` MCP entry | Cross-project methodology + standards + lessons + patterns. |
+
+## Hard rules
+
+These rules are PROJECT-SPECIFIC additions. Universal rules (no unsolicited actions, never read credential files, words sacrosanct, augment-don't-overwrite, horse-and-driver, think-before-act) are in the auto-loaded memory layer — do NOT duplicate them here.
+
+{{project_specific_hard_rules}}
+
+## Working contract
+
+Operator drives, AI is the horse. Operator approves each artefact before it lands. Iteration: AI drafts → operator reviews → operator approves or revises → AI executes. No bundling. No "while I'm at it" extras.
+
+For specific Claude Code routing of operator intents (`"ingest <url>"`, `"status"`, `/checkin`, etc.), see [CLAUDE.md](CLAUDE.md).
+
+## Mission
+
+> {{mission_verbatim_quote}}
+
+Source (canonical): {{mission_verbatim_source}}.
+
+## SDLC stage indicator
+
+Current stage: **{{sfif_stage}}** (per [wiki/backlog/epics/{{active_epic_slug}}.md](wiki/backlog/epics/{{active_epic_slug}}.md)).
+
+Stage definitions: [wiki/config/methodology.yaml](wiki/config/methodology.yaml) §`stages`.
+
+<!-- SECOND-BRAIN-CONNECTION -->
+<!-- Block injected automatically by `python3 -m tools.setup --connect-project <path>` from the second brain.
+     Content variant per sister-projects.yaml `type` and `group` (root-OS-setup variant for type=root + group=operating-system-setup).
+     This file MUST exist before the connect script runs (script appends here, does not create the file). -->
+<!-- SECOND-BRAIN-CONNECTION-END -->

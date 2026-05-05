@@ -7,7 +7,7 @@
 | Mechanism | Determinism | Trigger | Use when |
 |---|---|---|---|
 | **Hook** | Logical (block + reason + remediation) | Tool-call lifecycle event | Structural enforcement: rule MUST hold at this point. Examples: corpus URL must route through pipeline, truncation must have a reason. |
-| **Command** | **100% deterministic** | Operator types `/<name>` | Workflow with predictable steps, operator-driven, no auto-trigger needed. Examples: `/ingest`, `/continue`, `/log`. |
+| **Command** | **100% deterministic** | Operator types `/<name>` | Workflow with predictable steps, operator-driven, no auto-trigger needed. Examples: `/ingest`, `/checkin`, `/log`. |
 | **Skill** | **~70% deterministic** | Auto-triggered by description-match on operator prose | Workflow where auto-trigger is desirable but not load-bearing. Description quality determines trigger reliability. |
 | **MCP tool** | Programmatic | AI invokes during reasoning | Discrete operations: search, fetch, read, post, contribute. Deferred load via ToolSearch. |
 | **CLI** | Programmatic | AI runs via Bash | Shell-mediated operations, especially when chaining or piping needed. |
@@ -23,13 +23,13 @@
 | # | Operator says... | First action | Primary tool | CLI fallback | Notes |
 |---|---|---|---|---|---|
 | 1 | `"ingest <url>"` / `"new ingestions:"` / URL list | Pipeline fetch → read raws full → author synthesis → pipeline post → crossref | `wiki_fetch` MCP | `.venv/bin/python -m tools.pipeline fetch <urls>` | Pipeline routes YouTube → transcript API, GitHub → README scrape, PDF → arxiv-aware. Hook denies WebFetch on corpus URLs. |
-| 2 | `"continue"` / `"resume"` / `"where are we"` | Orient + state | `wiki_continue` MCP | `.venv/bin/python -m tools.gateway orient` | After compaction or fresh start. |
+| 2 | `/checkin` (slash, literal) | Mission state-and-options diagnostic | `wiki_checkin` MCP | `.venv/bin/python -m tools.pipeline chain checkin` | Slash-invoked ONLY. Bare prose `continue` / `resume` / `where are we` is **trajectory-continue** — keep going on the same trajectory, no new tool calls. Per operator directive 2026-05-04 (`raw/notes/2026-05-04-rename-continue-conflation-bug-and-similar-conflations.md`). |
 | 3 | `"status"` / `"what's next"` | State report | `wiki_status` MCP | `.venv/bin/python -m tools.pipeline status` | Plus stats and services. |
 | 4 | `"log <directive>"` / verbatim quote | Log verbatim BEFORE acting | `wiki_log` MCP | Write `raw/notes/YYYY-MM-DD-<slug>.md` | AGENTS.md Hard Rule #3. |
 | 5 | `"gaps"` / `"what's missing"` | Gap analysis | `wiki_gaps` MCP | `.venv/bin/python -m tools.pipeline gaps` | |
 | 6 | `"search wiki for X"` | Wiki search | `wiki_search` MCP | `.venv/bin/python -m tools.view search "X"` | |
 | 7 | `"show me <page>"` / `"read X"` | Read specific page | `wiki_read_page` MCP | Read tool on `wiki/` path | |
-| 8 | `"promote"` / `"evolve"` / `"what's ready"` | Evolution pipeline | `wiki_evolve` MCP | `.venv/bin/python -m tools.pipeline evolve --score` | |
+| 8 | `/distill` (slash, literal) | Knowledge-distillation pipeline | `wiki_distill` MCP | `.venv/bin/python -m tools.pipeline evolve --score` | Slash-invoked ONLY. Bare prose `evolve` / `promote` / `improve` is trajectory-language — no new tool calls. CLI subcommand `pipeline evolve --score` retained (programmatic, not conflated). Per operator directive 2026-05-04. |
 | 9 | `"scan project X"` | Sister-project scan | `wiki_scan_project` MCP | `.venv/bin/python -m tools.pipeline scan <path>` | |
 | 10 | `"build a model"` / `"review model"` | Model workflow | — | Read `.claude/commands/build-model.md` | Operator-invoked slash command. |
 | 11 | `"health check"` | Health score | `wiki_gateway_health` MCP | `.venv/bin/python -m tools.gateway health` | |
@@ -76,10 +76,10 @@
 - `wiki_backlog` — backlog status (epics, modules, tasks, readiness)
 - `wiki_gaps` — gap analysis with recommendations
 - `wiki_log` — add log entry to wiki/log/ (verbatim directives, session logs, completion notes)
-- `wiki_continue` — resume mission (diagnostics → state → options)
+- `wiki_checkin` — mission state-and-options checkin (diagnostics → state → options). Formerly `wiki_continue`; renamed 2026-05-04 to break prose-vs-slash conflation.
 
 ### Maintenance (6)
-- `wiki_evolve` — knowledge evolution pipeline (score → scaffold → generate → review)
+- `wiki_distill` — knowledge-distillation pipeline (score → scaffold → generate → review). Formerly `wiki_evolve`; renamed 2026-05-04 to break prose-vs-slash conflation.
 - `wiki_scan_project` — scan a sister project for ingestible content
 - `wiki_sister_project` — sister-project ops
 - `wiki_mirror_to_notebooklm` — NotebookLM source sync
