@@ -1,17 +1,17 @@
 {
-  "generated": "2026-05-05T00:41:59.659574+00:00",
+  "generated": "2026-05-05T22:04:14.167370+00:00",
   "stats": {
-    "pages": 560,
+    "pages": 583,
     "domains": 12,
     "sources": 88,
     "comparisons": 9,
-    "relationships": 3579,
-    "tags_unique": 1942,
+    "relationships": 3595,
+    "tags_unique": 2056,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 26,
-      "2": 51,
+      "2": 73,
       "4": 66,
       "0": 1,
       "1": 59,
@@ -19,8 +19,8 @@
     },
     "maturity": {
       "seed": 71,
-      "growing": 325,
-      "mature": 2
+      "growing": 326,
+      "mature": 23
     }
   },
   "pages": [
@@ -18820,6 +18820,59 @@
       ]
     },
     {
+      "path": "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md",
+      "slug": "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "title": "Lesson \u2014 Fresh AI sessions need ACTIVE orientation (hook + command), not passive context loading. Auto-loaded brain text is NOT enough.",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "fresh-session",
+        "orientation",
+        "broken-and-idle",
+        "hook",
+        "command",
+        "determinism",
+        "additionalContext",
+        "context-engineering",
+        "sister-project-applicable",
+        "layer-2",
+        "validated"
+      ],
+      "sources": [
+        {
+          "id": "root-ghostproxy-broken-and-idle-test",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/projects/-root/471cef22-638f-4e3e-a4a9-3ebe7a80a8bc.jsonl",
+          "description": "Empirical fresh-session test that surfaced the failure mode"
+        },
+        {
+          "id": "root-ghostproxy-fix-applied-test",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/projects/-root/f65c412b-d145-4c6c-a819-536201c63e6a.jsonl",
+          "description": "Empirical fresh-session test post-fix showing active orientation working"
+        },
+        {
+          "id": "skills-commands-hooks-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md",
+          "description": "5-mechanism determinism ladder this lesson reinforces"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event.md",
       "slug": "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event",
       "title": "Context Compaction Is a Reset Event",
@@ -19191,6 +19244,78 @@
       ]
     },
     {
+      "path": "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern.md",
+      "slug": "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "title": "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "going-to-extremes",
+        "correction-shape",
+        "calibration-not-swing",
+        "meta-pattern",
+        "anti-over-correction",
+        "operator-self-discipline",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-going-to-extremes",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-going-to-extremes-pattern-and-dismissing-sacrosanct-words.md",
+          "description": "Operator: 'now you are exibitting the going to the extrime symptoms and you are dismissing other of my sacrosanct words.. it should not be possible..'"
+        },
+        {
+          "id": "companion-lesson-refine-triggers",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules.md",
+          "description": "Composes with refine-triggers \u2014 that's the SPECIFIC case (rule edits with permission semantics); this is the META PATTERN (correction-shape across all kinds of fixes)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPOSES WITH",
+          "target": "refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules"
+        },
+        {
+          "verb": "COMPOSES WITH",
+          "target": "verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
+        },
+        {
+          "verb": "COMPOSES WITH",
+          "target": "agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "root-ghostproxy operating-principles #12 (\"Don't dismiss operator-sacrosanct words via over-correction\") \u2014 generalizes from rule-edits to all correction shapes"
+        },
+        {
+          "verb": "IMPLEMENTS",
+          "target": "structural-prevention principle (rules require mechanism, not just text)"
+        },
+        {
+          "verb": "USED BY",
+          "target": "root-ghostproxy operating-principles.md #12 + this conversation's distillation"
+        },
+        {
+          "verb": "POTENTIALLY USED BY",
+          "target": "every sister project with operator-corrected agent behavior"
+        }
+      ]
+    },
+    {
       "path": "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md",
       "slug": "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "title": "Enforcement Must Be Mindful \u2014 Hard Blocks Need Justified Bypass",
@@ -19437,6 +19562,140 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Adoption Guide"
+        }
+      ]
+    },
+    {
+      "path": "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules.md",
+      "slug": "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "title": "Lesson \u2014 When fixing overzealous rules: refine the TRIGGER, don't revoke the operator-granted PERMISSION",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "rule-refinement",
+        "trigger-vs-permission",
+        "anti-over-correction",
+        "sacrosanct-preservation",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-05-tighter-triggers",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-loop-cron-lifecycle-policy-blockers-tools-and-bulletproof-mvp-directive.md",
+          "description": "Operator: 'now you are exibitting the going to the extrime symptoms and you are dismissing other of my sacrosanct words.. it should not be possible..'"
+        },
+        {
+          "id": "companion-loop-cron-context",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/rules/loop-cron-lifecycle.md",
+          "description": "Operator: 'WHY IS EVERYTHING SO FUCKING UNCLEAR... NO LOOP TO PROGRESS AND FIX THE SYSTEMTIC BUGS AND START WORKING AND EVOLVING IN ITERATION' \u2014 context where the trigger refinement was authored"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md",
+      "slug": "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "title": "Lesson \u2014 Second-brain agent must respect sister-project boundaries: NO direct cross-project file edits, use proper channels",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "sister-project",
+        "boundary-respect",
+        "cross-project",
+        "scope-discipline",
+        "second-brain-agent",
+        "sister-project-applicable",
+        "layer-2",
+        "systemic-bug-correction"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-05-cross-project-boundary",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-cross-project-boundary-violation-correction.md",
+          "description": "Operator: 'why are you not working on your own files and folder right now... if you have something to tell to /root project use a proper channel... what the fuck would you even have to do with it?'"
+        },
+        {
+          "id": "companion-rule-root-side",
+          "type": "rule",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/rules/work-mode.md",
+          "description": "Companion to the /root-side rule: /root agent must not write to /opt directly (operator: 'LET THE SECOND-BRAIN BE ITS OWN'). This lesson is the symmetric inverse: second-brain agent must not write to sister-project files directly."
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact.md",
+      "slug": "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "title": "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "verbal-acknowledgment",
+        "structural-fix",
+        "anti-talk",
+        "anti-freeze",
+        "artefact-required",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-do-something-not-talk",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-do-something-about-it-not-just-repeat-it.md",
+          "description": "Operator: 'exactly like you just repeated like a fucking retard instaed of fucking doing something about it.'"
+        },
+        {
+          "id": "companion-anti-pattern",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-systemic-failure-utmost-priority-do-not-call-it-a-day.md",
+          "description": "Operator: 'WHEN I FUCKING REPORT SYSTEMIC FAILURE.. YOU DO NOT FUCKING CALL IT A DAY... THOSE FUCKING BUG WILL NOT FIX THEMSELVES.'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RULE-VERSION",
+          "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry"
         }
       ]
     },
@@ -20323,6 +20582,50 @@
       ]
     },
     {
+      "path": "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine.md",
+      "slug": "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "title": "Lesson \u2014 Second brain and projects CO-EVOLVE; neither is ever finished. Plan for evolution, plan for failures, stay flexible.",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "co-evolution",
+        "never-finished",
+        "second-brain",
+        "projects",
+        "evolution",
+        "failure-planning",
+        "flexibility",
+        "strictness-graduation",
+        "sister-project-applicable",
+        "layer-2",
+        "doctrine"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-co-evolution-doctrine",
+          "type": "directive",
+          "file": "raw/notes/2026-05-05-second-brain-co-evolution-strictness-graduation-and-self-arming-loop-permission.md"
+        },
+        {
+          "id": "super-model",
+          "type": "wiki",
+          "file": "wiki/spine/super-model/super-model.md",
+          "description": "What this system IS \u2014 co-evolution emerges from the super-model"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo.md",
       "slug": "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "title": "The Wiki Is a Hub, Not a Silo",
@@ -20484,6 +20787,138 @@
       ]
     },
     {
+      "path": "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm.md",
+      "slug": "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "title": "Lesson \u2014 Agent bug-fix flow must be mechanical: log \u2192 analyze \u2192 identify \u2192 fix \u2192 verify \u2192 confirm. Stopping at any step is its own bug.",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "bug-fix",
+        "mechanical-flow",
+        "evolve-to-fix",
+        "anti-freeze",
+        "anti-stop",
+        "sequence",
+        "sister-project-applicable",
+        "layer-2",
+        "methodology-integration"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-evolve-to-fix-flow",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-evolve-to-fix-bug-flow-and-natural-methodology-following.md",
+          "description": "Operator: 'WE WILL FUCKING EVOLVE TO FIX IT... THIS IS THE WHOLE POINT OF EVERYTHING... WHAT DOES IT LEAD TO ? A LOG... THE COME AFTER ? AN ANALYSIS ? and so on... it shoul dbe natural for you to identify those require to fix what we consider brain files and project files to solve the issue by following the required patterns and in order.'"
+        },
+        {
+          "id": "companion-anti-pattern-stop-at-analysis",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-do-something-about-it-not-just-repeat-it.md",
+          "description": "Operator: 'WHY DID YOU STOP THEN... FIRST YOU TAKE A RANDOM TRACK AND THEN YOU JUST IGNORE THE FUCKIGN TRACK I AM ASKING FOR... THOSE FUCKING BUG WILL NOT FIX THEMSELVES.' Plus: 'exactly like you just repeated like a fucking retard instaed of fucking doing something about it.'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated.md",
+      "slug": "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "title": "Lesson \u2014 Autopilot loop + batch-accumulator log: agent self-iterates, accumulates findings, operator processes in batch. Empirically validated 2026-05-05.",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "autopilot",
+        "loop",
+        "batch-accumulator",
+        "self-evaluation",
+        "self-improvement",
+        "mode-dual",
+        "empirically-validated",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "root-ghostproxy-test-session-empirical-validation",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/projects/-root/0487d686-2839-447f-bc7e-354a55a2683a.jsonl",
+          "description": "Test session 2026-05-05 13:34 \u2014 operator activated /mode-dual + iteration loop; agent ran 2 cycles surfacing 10 findings"
+        },
+        {
+          "id": "root-ghostproxy-iteration-log",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-mode-dual-self-improvement-iterations.md",
+          "description": "The batch-accumulator log produced by the autopilot"
+        },
+        {
+          "id": "operator-directive-mode-dual-self-improvement",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-mode-dual-self-evaluate-self-test-self-improve-with-loop.md"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded.md",
+      "slug": "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
+      "title": "Lesson \u2014 Compound / waterfall input-retention rule: operator inputs must cumulate, never discard prior context",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "compound-waterfall",
+        "input-retention",
+        "cumulative-inputs",
+        "anti-discard",
+        "sister-project-applicable",
+        "layer-2",
+        "additive-doctrine"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-compound-waterfall",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-compound-waterfall-input-retention-directive.md",
+          "description": "Operator: 'we might need a compound and waterfal rule and strategy so that we cummulate properly my inputs and make sure we never discard the tasks or inputs from before... we can add or augment tools when we need.'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know.md",
       "slug": "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
       "title": "Coverage Blindness \u2014 Modeling Only What You Know",
@@ -20539,6 +20974,49 @@
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
         }
       ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation.md",
+      "slug": "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "title": "Lesson \u2014 Decision-presentation discipline: every operator-pending decision needs CONTEXT + GUIDANCE + RECOMMENDATION (not a wall of vague questions)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "decision-presentation",
+        "context-guidance-recommendation",
+        "anti-question-wall",
+        "signal-to-noise",
+        "pm-lens",
+        "sister-project-applicable",
+        "layer-2",
+        "communication-discipline"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-decision-presentation",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-decision-presentation-discipline-context-guidance-recommendation.md",
+          "description": "Operator: 'this kind of situation we need a new feature /function / command and/or tools and way to do so that i am not just face to a wall of vague information and with lack of context and guidance'"
+        },
+        {
+          "id": "companion-blocker-filter-discipline",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline.md",
+          "description": "Composes with blocker-filter discipline \u2014 both are PM-lens signal-to-noise patterns. Filter says 'only surface what's genuinely pending'; this says 'and when you do surface it, package it properly.'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label.md",
@@ -20664,6 +21142,50 @@
           "target": "Decision \u2014 Methodology Framework Design Decisions"
         }
       ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze.md",
+      "slug": "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
+      "title": "Lesson \u2014 Multiple paths existing \u2260 blocked: options mean evaluate-and-drive-parallel, not freeze",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "multi-branch",
+        "parallel-driving",
+        "anti-freeze",
+        "options-not-blockers",
+        "operator-directive",
+        "sister-project-applicable",
+        "layer-2",
+        "agent-self-discipline"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-multi-branch-parallel",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-multi-branch-parallel-driving-not-freeze-when-options.md",
+          "description": "Operator: 'continue.. be clear if you are blocked.. cuz if you are right now it really wasn't... and dont freeze before there is multiple path.. this is suppsosed to just open more option and possibility for evaluating order and such and proving you can handle multiple branches at the same time and just keep track in general'"
+        },
+        {
+          "id": "companion-anti-freeze-rule",
+          "type": "rule",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/rules/operating-principles.md",
+          "description": "Composes with Principle #10 (Don't-freeze-when-corrected). This lesson captures the variant: don't-freeze-when-options-exist."
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "lessons/03_validated/methodology-process/never-skip-stages-even-when-told-to-continue.md",
@@ -20826,6 +21348,159 @@
           "target": "Mandatory Without Verification Is Not Enforced"
         }
       ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task.md",
+      "slug": "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
+      "title": "Lesson \u2014 Sidetrack detection + recovery: agents lose the original task by treating each operator message as a new context, drift cumulatively",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "sidetrack",
+        "task-drift",
+        "attention-management",
+        "original-task",
+        "anti-context-loss",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-05-sidetrack-recognition",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-sidetrack-recognition-systemic-failure-directive.md",
+          "description": "Operator: 'wtf happened btw.. how did we go from on track to sidetrack and you completely lost about what we currently are doing? this too is an imporant question and systemic failure'"
+        },
+        {
+          "id": "empirical-2026-05-05-sidetrack-traced",
+          "type": "empirical-evidence",
+          "project": "devops-solutions-information-hub",
+          "path": "/opt/devops-solutions-information-hub/raw/notes/2026-05-05-sidetrack-detection-emperical-trace.md",
+          "description": "Tracing in conversation: agent received original task (monitor live session + extract for second-brain). Operator made a complaint about a tangent (blockers SRP). Agent SWITCHED TASKS to 'rectify the complaint' instead of integrating the complaint into the original task. Original task was abandoned silently. Hours of agent work went into the wrong direction."
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time.md",
+      "slug": "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "title": "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "structural-not-surfaced",
+        "symptom-recurrence",
+        "surface-discipline",
+        "status-block",
+        "journey-plan-cursor",
+        "sister-project-applicable",
+        "layer-2",
+        "agent-self-discipline"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-journey-plan-cursor-recurrence",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-journey-plan-cursor-not-surfaced-symptom-recurrence.md",
+          "description": "Operator: 'this again reveal one other symtom I had talked about where the journey and plan and cursor in them does not seem clear'"
+        },
+        {
+          "id": "companion-lesson-verbal-acknowledgment",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact.md",
+          "description": "Composes with verbal-acknowledgment lesson \u2014 that lesson says 'verbal isn't structural'; this one says 'structural-but-invisible-at-use-time isn't a fix either'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPOSES WITH",
+          "target": "verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
+        },
+        {
+          "verb": "COMPOSES WITH",
+          "target": "broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+        },
+        {
+          "verb": "COMPOSES WITH",
+          "target": "decision-presentation-discipline-context-guidance-recommendation"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "agent-bug-fix-flow's CONFIRM step \u2014 \"report the chain to the operator\" implicitly requires surfacing"
+        },
+        {
+          "verb": "USED BY",
+          "target": "root-ghostproxy SB-075 (journey/plan/cursor not visible)"
+        },
+        {
+          "verb": "POTENTIALLY USED BY",
+          "target": "every sister project with structural-fix infrastructure"
+        }
+      ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings.md",
+      "slug": "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "title": "Lesson \u2014 Systemic-bugs tracker as a dedicated governance register (distinct from blockers/decisions/findings)",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "governance",
+        "systemic-bugs",
+        "tracker-pattern",
+        "srp-discipline",
+        "sister-project-applicable",
+        "layer-2",
+        "agent-behavioral-bugs"
+      ],
+      "sources": [
+        {
+          "id": "empirical-2026-05-05-systemic-bugs-tracker-emergence",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/governance/systemic-bugs.md",
+          "description": "/root test session agent authored a systemic-bugs.md governance register integrated into the /cycle command + tools.cycle.py. New register category beyond blockers / decisions / findings."
+        },
+        {
+          "id": "companion-lessons",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required.md",
+          "description": "Builds on fake-blockers-vs-real-blockers (the SRP discipline that this register's existence operationalizes)"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents.md",
@@ -21025,6 +21700,147 @@
         {
           "verb": "FEEDS INTO",
           "target": "Methodology Standards \u2014 What Good Execution Looks Like"
+        }
+      ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline.md",
+      "slug": "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
+      "title": "Lesson \u2014 Anti-minimizing: don't undercount systemic bugs; blocker register self-filters before surfacing",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "anti-minimizing",
+        "blocker-filtering",
+        "agent-self-resolution",
+        "decumulation",
+        "sister-project-applicable",
+        "layer-2",
+        "communication-discipline"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-05-stop-minimizing",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-stop-minimizing-systemic-bug-counts.md",
+          "description": "Operator: 'the total amount of systemic failure was commulating to over 10... this little list of resolve is not enough... YOU NEED TO FUCKING STOP MINIMIZING' + 'lets me repeat again.. there was more bugs than this.. you have to fucking stop minimizing'"
+        },
+        {
+          "id": "operator-directive-2026-05-05-blocker-filter",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-blocker-filter-discipline-directive.md",
+          "description": "Operator: 'blocker its fine if they cummulate and they can decumulate and filter when possible so that when I ask its already real remaining blockers and not things like this you solved by yourself because you had all the information or just knew the right answers'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "COMPOSES WITH",
+          "target": "fake-blockers-vs-real-blockers"
+        }
+      ]
+    },
+    {
+      "path": "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files.md",
+      "slug": "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
+      "title": "Lesson \u2014 Bug vs systemic-bug nuance: systemic bugs live at the meta level (harness, ecosystem, brain files); regular bugs live inside the code",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "bug-categorization",
+        "systemic-vs-regular",
+        "meta-level",
+        "harness",
+        "ecosystem",
+        "brain-files",
+        "agent-bugs",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-bug-vs-systemic-nuance",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-bug-vs-systemic-bug-meta-level-nuance.md",
+          "description": "Operator: 'its important to know the nuance between a bug and a systmic bug too.. I see you writting and I realize that now... systemic bug are often happening at the meta level not at the inside. not that some case its not inside though, but with agents its often the harness and ecosystem and brains files'"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required.md",
+      "slug": "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
+      "title": "Lesson \u2014 Fake blockers vs real blockers: every 'blocker' claim requires empirical verification, not assumption",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "fake-blockers",
+        "empirical-verification",
+        "no-fabricated-blockers",
+        "srp-discipline",
+        "sister-project-applicable",
+        "layer-2",
+        "agent-self-discipline"
+      ],
+      "sources": [
+        {
+          "id": "operator-correction-2026-05-05-fake-blockers",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-fake-blockers-empirical-verification-correction.md",
+          "description": "Operator: 'wtf is this bug... why would I need to grant you WenFetch and WebSearch ?? why would those even be blocked or discourage ? Did I not say the complete opposite earlier... almost everything you told me.. none of them are blockers.. wtf is happening...'"
+        },
+        {
+          "id": "operator-original-blockers-srp-frustration",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-blockers-srp-violation-systemic-rectification-directive.md",
+          "description": "Operator: 'I hate to see retard blockers... blockers a not made to put random things'"
+        },
+        {
+          "id": "companion-rule",
+          "type": "rule",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/rules/operating-principles.md",
+          "description": "root-ghostproxy operating-principles.md Principle #8 (Empirical-verification-before-blocked) is the rule version of this lesson"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "RULE-VERSION",
+          "target": "root-ghostproxy `operating-principles.md` Principle #8"
         }
       ]
     },
@@ -21720,6 +22536,48 @@
       ]
     },
     {
+      "path": "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern.md",
+      "slug": "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
+      "title": "Lesson \u2014 Hook scope: machine-level hooks fire across all projects (cross-firing anti-pattern); project-level scope is more precise",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "hook-scope",
+        "machine-vs-project",
+        "cross-firing",
+        "two-layer-architecture",
+        "sister-project-applicable",
+        "layer-2",
+        "hook-design"
+      ],
+      "sources": [
+        {
+          "id": "empirical-2026-05-05-opt-write-block-cross-fire",
+          "type": "empirical-evidence",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/hooks/opt-write-block.sh",
+          "description": "The /root user's machine-level opt-write-block.sh hook fired against an /opt-cwd session attempting a legitimate /opt write, because the hook is at /root/.claude/hooks/ (root-user $HOME) and applies to ALL root-user sessions including non-/root-project ones"
+        },
+        {
+          "id": "companion-lesson-cross-project-boundary",
+          "type": "lesson",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md",
+          "description": "Composes with second-brain-agent-must-respect-sister-project-boundaries \u2014 that's about WHO writes; this is about HOW the enforcement is scoped"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability.md",
       "slug": "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability",
       "title": "Skill Specification Is the Key to Ecosystem Interoperability",
@@ -22178,6 +23036,49 @@
           "target": "Super-Model \u2014 Research Wiki as Ecosystem Intelligence Hub"
         }
       ]
+    },
+    {
+      "path": "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits.md",
+      "slug": "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
+      "title": "Lesson \u2014 Spec-driven evolution: the project evolves its OWN spec (rules, hooks, code) to fix bugs it exhibits. This IS the point of everything.",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "spec-driven-evolution",
+        "self-evolving-project",
+        "meta-doctrine",
+        "evolve-to-fix",
+        "sister-project-applicable",
+        "layer-2",
+        "operator-canonical-statement"
+      ],
+      "sources": [
+        {
+          "id": "operator-directive-2026-05-05-evolve-to-fix-doctrine",
+          "type": "directive",
+          "project": "root-ghostproxy",
+          "path": "/root/wiki/log/2026-05-05-evolve-to-fix-bug-flow-and-natural-methodology-following.md",
+          "description": "Operator: 'WE WILL FUCKING EVOLVE TO FIX IT... THIS IS THE WHOLE POINT OF EVERYTHING... why is it not automatic that you would want to update and evolve and augment the project to solve the bugs?'"
+        },
+        {
+          "id": "companion-spec-driven-development",
+          "type": "doctrine",
+          "project": "root-ghostproxy",
+          "path": "/root/CLAUDE.md",
+          "description": "Builds on the operator's spec-driven development doctrine (2026-05-05): repo carries the spec; install.sh + brain files + wiki ARE the spec. This lesson extends that: when bugs are found, the SPEC EVOLVES."
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "lessons/04_principles/hypothesis/structured-context-governs-agent-behavior-more-than-content.md",
@@ -25624,6 +26525,50 @@
       ]
     },
     {
+      "path": "log/2026-05-05-orient-pair-adoption-decision.md",
+      "slug": "log/2026-05-05-orient-pair-adoption-decision",
+      "title": "Orient Pair Adoption Decision \u2014 second-brain opts in to root-ghostproxy's session-orientation pattern (2026-05-05)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "adoption",
+        "opt-in",
+        "transcension",
+        "orient",
+        "session-orientation",
+        "second-brain",
+        "decision-log",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "pattern-session-orientation-pair",
+          "type": "wiki",
+          "file": "wiki/patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report.md"
+        },
+        {
+          "id": "operator-directive-feature-transcension",
+          "type": "directive",
+          "file": "raw/notes/2026-05-05-opt-in-transcension-of-root-features-to-individual-projects-directive.md"
+        },
+        {
+          "id": "companion-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -27118,6 +28063,96 @@
       ]
     },
     {
+      "path": "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions.md",
+      "slug": "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions",
+      "title": "Pattern \u2014 Second-brain observer extracting learnings from live sister-project sessions (read-only observation + lesson distillation)",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "second-brain",
+        "observer",
+        "cross-project",
+        "learning-extraction",
+        "sister-project",
+        "observation-protocol",
+        "operator-mediated"
+      ],
+      "sources": [
+        {
+          "id": "empirical-2026-05-05-test-session-observation",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/projects/",
+          "description": "Operator ran a live test session of root-ghostproxy in /root. Operator simultaneously worked with /opt second-brain agent. Pattern of read-only observation + lesson-distillation emerged (with failure modes when boundaries weren't respected)."
+        },
+        {
+          "id": "companion-lesson-boundary",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits.md"
+        }
+      ],
+      "layer": 2,
+      "maturity": "growing",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
+      "path": "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles.md",
+      "slug": "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "title": "Pattern \u2014 Agent Modes (Three-Mode: PM / Architect / Dual) with Mode-Aware /loop Cycles for Autopilot",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "medium",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "agent-modes",
+        "pm-scrum-master",
+        "devops-architect",
+        "dual-expert",
+        "mode-aware-loop",
+        "autopilot",
+        "persona-overlay",
+        "claude-code",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "root-ghostproxy-modes-implementation",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/modes/",
+          "description": "First implementation of the three-mode pattern in the ecosystem"
+        },
+        {
+          "id": "operator-directive-modes-architecture",
+          "type": "directive",
+          "file": "raw/notes/2026-05-05-claudeignore-purpose-and-modes-architecture-directive.md"
+        },
+        {
+          "id": "skills-commands-hooks-model",
+          "type": "wiki",
+          "file": "wiki/spine/models/agent-config/model-skills-commands-hooks.md"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "patterns/03_validated/architecture/deterministic-shell-llm-core.md",
       "slug": "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "title": "Deterministic Shell, LLM Core",
@@ -27581,6 +28616,58 @@
           "target": "Infrastructure as Code Patterns"
         }
       ]
+    },
+    {
+      "path": "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report.md",
+      "slug": "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report",
+      "title": "Pattern \u2014 Session-orientation pair: SessionStart hook + /orient command + ORIENT REPORT (status I/O for cold-start intelligence)",
+      "type": "pattern",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "pattern",
+        "session-orientation",
+        "sessionstart-hook",
+        "orient-command",
+        "status-io",
+        "cold-start",
+        "orient-report",
+        "additionalcontext",
+        "sister-project-applicable",
+        "layer-2",
+        "transcendable"
+      ],
+      "sources": [
+        {
+          "id": "root-ghostproxy-orient-implementation",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/commands/orient.md",
+          "description": "First implementation: deterministic 21-step intel-gathering chain"
+        },
+        {
+          "id": "root-ghostproxy-session-orient-hook",
+          "type": "project",
+          "project": "root-ghostproxy",
+          "path": "/root/.claude/hooks/session-orient.sh",
+          "description": "Session-orient hook (Python, additionalContext JSON) directing the agent to invoke /orient"
+        },
+        {
+          "id": "companion-lesson-broken-and-idle",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading.md",
+          "description": "The lesson capturing WHY this pattern exists; this pattern is the HOW + Adoption"
+        }
+      ],
+      "layer": 2,
+      "maturity": "mature",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work.md",
@@ -41834,8 +42921,8 @@
       "relationship_count": 458
     },
     "cross-domain": {
-      "page_count": 237,
-      "relationship_count": 1645
+      "page_count": 260,
+      "relationship_count": 1661
     },
     "ai-models": {
       "page_count": 14,
@@ -42100,6 +43187,7 @@
       "domains/cross-domain/methodology-artifacts/chains/domain-chain-knowledge",
       "domains/cross-domain/methodology-evolution-protocol",
       "domains/knowledge-systems/pkm-theory/knowledge-evolution-pipeline",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
       "log/2026-04-10/2026-04-10-directive-quality-evolution-epic",
       "patterns/03_validated/architecture/progressive-distillation",
       "spine/evolution-log/methodology-evolution-history",
@@ -42282,7 +43370,8 @@
       "backlog/epics/milestone-v2/e016-integration-chain-proof-end-to-end-with-openarms"
     ],
     "orientation": [
-      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing"
+      "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
     ],
     "context-aware": [
       "backlog/epics/milestone-v2/e022-context-aware-gateway-orientation-and-routing",
@@ -42473,6 +43562,7 @@
       "ecosystem/project_profiles/research-wiki/identity-profile",
       "ecosystem/project_profiles/root-ghostproxy/identity-profile",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "spine/models/ecosystem/model-ecosystem",
       "spine/references/2026-consumer-hardware-ai-stack",
@@ -42824,6 +43914,7 @@
       "domains/cross-domain/mcp-runtime-signaling",
       "domains/cross-domain/methodology-framework/three-pm-levels",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
@@ -43328,7 +44419,9 @@
       "backlog/modules/root-ghostproxy-m010-sister-projects-yaml-flip"
     ],
     "sister-project": [
-      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05"
+      "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
     ],
     "type-root": [
       "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
@@ -43499,9 +44592,12 @@
       "lessons/03_validated/knowledge-systems/knowledge-systems-is-foundational-domain",
       "lessons/03_validated/knowledge-systems/obsidian-as-knowledge-infrastructure",
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "lessons/03_validated/knowledge-systems/wiki-maintenance-problem-solved-by-llm-automation",
       "log/2026-04-09/system/2026-04-09-directive-validate-second-brain-readiness",
+      "log/2026-05-05-orient-pair-adoption-decision",
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions",
       "patterns/03_validated/architecture/progressive-distillation",
       "patterns/03_validated/knowledge/ecosystem-feedback-loop-wiki-as-source-of-truth",
       "sources/obsidian-notebooklm/src-obsidian-claude-code-second-brain",
@@ -43758,7 +44854,8 @@
       "spine/standards/harness-contract"
     ],
     "doctrine": [
-      "backlog/modules/e009-m004-harness-contract-document"
+      "backlog/modules/e009-m004-harness-contract-document",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
     ],
     "e010": [
       "backlog/modules/e010-m001-64gb-ram-install-and-verify",
@@ -43975,7 +45072,8 @@
       "backlog/modules/e012-m004-multi-lora-adapter-architecture-e"
     ],
     "orient": [
-      "backlog/modules/e022-m002-gateway-orient-subcommand"
+      "backlog/modules/e022-m002-gateway-orient-subcommand",
+      "log/2026-05-05-orient-pair-adoption-decision"
     ],
     "context-detection": [
       "backlog/modules/e022-m002-gateway-orient-subcommand",
@@ -44071,6 +45169,7 @@
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
       "log/2026-04-22-openrouter-k2-6-day-1-setup-procedure",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
       "patterns/03_validated/enforcement/enforcement-hook-patterns",
       "sources/claude-code/src-claude-code-accuracy-tips",
       "sources/claude-code/src-claude-slash-commands",
@@ -44790,13 +45889,32 @@
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings",
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
       "lessons/03_validated/methodology-process/three-classes-of-methodology-output",
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts",
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
       "lessons/03_validated/methodology-quality/models-are-built-in-layers-not-all-at-once",
       "lessons/03_validated/methodology-quality/standards-must-preach-by-example",
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
       "spine/standards/lesson-page-standards"
     ],
     "artifact-type": [
@@ -45079,6 +46197,9 @@
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "patterns/01_drafts/three-permission-modes-think-edit-act",
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries",
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report",
       "patterns/03_validated/enforcement/harness-owned-loop-deterministic-agent-execution",
       "patterns/03_validated/enforcement/three-lines-of-defense-immune-system-for-agent-quality",
       "spine/standards/pattern-page-standards"
@@ -45148,7 +46269,9 @@
     "cross-project": [
       "decisions/01_drafts/consumer-runtime-signaling-via-mcp-config",
       "lessons/03_validated/enforcement-compliance/harness-ownership-converges-independently-across-projects",
-      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
     ],
     "thinking": [
       "decisions/01_drafts/extended-to-adaptive-thinking-migration"
@@ -45595,6 +46718,7 @@
     "context-engineering": [
       "domains/ai-agents/claude-code/claude-code-context-management",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/context-engineering/structured-context-is-proto-programming-for-ai-agents",
       "patterns/01_drafts/three-layer-agent-context-architecture",
       "sources/claude-code/src-shanraisshan-claude-code-best-practice",
@@ -46677,7 +47801,8 @@
       "domains/knowledge-systems/pkm-theory/para-methodology"
     ],
     "projects": [
-      "domains/knowledge-systems/pkm-theory/para-methodology"
+      "domains/knowledge-systems/pkm-theory/para-methodology",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
     ],
     "areas": [
       "domains/knowledge-systems/pkm-theory/para-methodology"
@@ -47068,6 +48193,7 @@
     ],
     "adoption": [
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
+      "log/2026-05-05-orient-pair-adoption-decision",
       "spine/references/adoption-guide",
       "spine/references/consumer-integration-roadmap-exemplar",
       "spine/references/methodology-adoption-guide",
@@ -47289,6 +48415,76 @@
     "code-generation": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
     ],
+    "fresh-session": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "broken-and-idle": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "hook": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "command": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "determinism": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "additionalContext": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "sister-project-applicable": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "layer-2": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded",
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task",
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline",
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
+      "log/2026-05-05-orient-pair-adoption-decision",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "validated": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
+      "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
+    ],
     "context-compaction": [
       "lessons/03_validated/context-engineering/context-compaction-is-a-reset-event"
     ],
@@ -47339,6 +48535,26 @@
       "lessons/03_validated/enforcement-compliance/agent-failure-taxonomy-seven-classes-of-behavioral-failure",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail"
     ],
+    "going-to-extremes": [
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern"
+    ],
+    "correction-shape": [
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern"
+    ],
+    "calibration-not-swing": [
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern"
+    ],
+    "meta-pattern": [
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "patterns/01_drafts/aspirational-declaration-without-enforcement"
+    ],
+    "anti-over-correction": [
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules"
+    ],
+    "operator-self-discipline": [
+      "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern"
+    ],
     "bypass": [
       "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass",
       "patterns/01_drafts/block-with-reason-and-justified-escalation"
@@ -47370,6 +48586,44 @@
     "instructions": [
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
+    ],
+    "rule-refinement": [
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules"
+    ],
+    "trigger-vs-permission": [
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules"
+    ],
+    "sacrosanct-preservation": [
+      "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules"
+    ],
+    "boundary-respect": [
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits"
+    ],
+    "scope-discipline": [
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits"
+    ],
+    "second-brain-agent": [
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits"
+    ],
+    "systemic-bug-correction": [
+      "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits"
+    ],
+    "verbal-acknowledgment": [
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
+    ],
+    "structural-fix": [
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
+    ],
+    "anti-talk": [
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
+    ],
+    "anti-freeze": [
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
+    ],
+    "artefact-required": [
+      "lessons/03_validated/enforcement-compliance/verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
     ],
     "cross-reference": [
       "lessons/03_validated/ingestion-research/multi-stage-ingestion-beats-single-pass"
@@ -47478,6 +48732,24 @@
     "design-principles": [
       "lessons/03_validated/knowledge-systems/schema-is-the-real-product"
     ],
+    "co-evolution": [
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
+    ],
+    "never-finished": [
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
+    ],
+    "failure-planning": [
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
+    ],
+    "flexibility": [
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine",
+      "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline",
+      "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed",
+      "spine/references/context-file-taxonomy"
+    ],
+    "strictness-graduation": [
+      "lessons/03_validated/knowledge-systems/second-brain-and-projects-co-evolve-never-finished-doctrine"
+    ],
     "hub": [
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo",
       "log/2026-04-09/models/2026-04-09-directive-quality-models-hub-mindset",
@@ -47493,6 +48765,62 @@
     "dual-perspective": [
       "lessons/03_validated/knowledge-systems/the-wiki-is-a-hub-not-a-silo"
     ],
+    "bug-fix": [
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
+    ],
+    "mechanical-flow": [
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
+    ],
+    "evolve-to-fix": [
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits"
+    ],
+    "anti-stop": [
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
+    ],
+    "sequence": [
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
+    ],
+    "methodology-integration": [
+      "lessons/03_validated/methodology-process/agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
+    ],
+    "autopilot": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated",
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
+    "loop": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
+    ],
+    "batch-accumulator": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
+    ],
+    "self-evaluation": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
+    ],
+    "self-improvement": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
+    ],
+    "mode-dual": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
+    ],
+    "empirically-validated": [
+      "lessons/03_validated/methodology-process/autopilot-loop-batch-accumulator-pattern-empirically-validated"
+    ],
+    "compound-waterfall": [
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded"
+    ],
+    "input-retention": [
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded"
+    ],
+    "cumulative-inputs": [
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded"
+    ],
+    "anti-discard": [
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded"
+    ],
+    "additive-doctrine": [
+      "lessons/03_validated/methodology-process/compound-waterfall-input-retention-rule-cumulative-not-discarded"
+    ],
     "coverage": [
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know",
       "patterns/01_drafts/hierarchical-metrics-fail-on-sparse-coverage"
@@ -47502,6 +48830,25 @@
     ],
     "gap": [
       "lessons/03_validated/methodology-process/coverage-blindness-modeling-only-what-you-know"
+    ],
+    "decision-presentation": [
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
+    ],
+    "context-guidance-recommendation": [
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
+    ],
+    "anti-question-wall": [
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
+    ],
+    "signal-to-noise": [
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
+    ],
+    "pm-lens": [
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation"
+    ],
+    "communication-discipline": [
+      "lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation",
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline"
     ],
     "execution": [
       "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label",
@@ -47513,17 +48860,29 @@
     "method-of-work": [
       "lessons/03_validated/methodology-process/follow-the-method-of-work-not-the-methodology-label"
     ],
-    "flexibility": [
-      "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline",
-      "log/2026-04-09/methodology/2026-04-09-directive-methodology-is-flexible-not-fixed",
-      "spine/references/context-file-taxonomy"
-    ],
     "composability": [
       "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline"
     ],
     "overfitting": [
       "lessons/03_validated/methodology-process/methodology-is-a-framework-not-a-fixed-pipeline",
       "sources/src-hrm-trm-tiny-recursion-models"
+    ],
+    "multi-branch": [
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
+    ],
+    "parallel-driving": [
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
+    ],
+    "options-not-blockers": [
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
+    ],
+    "operator-directive": [
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze"
+    ],
+    "agent-self-discipline": [
+      "lessons/03_validated/methodology-process/multi-branch-parallel-driving-options-mean-evaluate-not-freeze",
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required"
     ],
     "stage-gates": [
       "lessons/03_validated/methodology-process/never-skip-stages-even-when-told-to-continue",
@@ -47554,6 +48913,53 @@
     "dogfooding": [
       "lessons/03_validated/methodology-process/self-reference-drift-wiki-must-practice-its-own-teachings"
     ],
+    "sidetrack": [
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task"
+    ],
+    "task-drift": [
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task"
+    ],
+    "attention-management": [
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task"
+    ],
+    "original-task": [
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task"
+    ],
+    "anti-context-loss": [
+      "lessons/03_validated/methodology-process/sidetrack-detection-and-recovery-when-agent-loses-the-original-task"
+    ],
+    "structural-not-surfaced": [
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time"
+    ],
+    "symptom-recurrence": [
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time"
+    ],
+    "surface-discipline": [
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time"
+    ],
+    "status-block": [
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time"
+    ],
+    "journey-plan-cursor": [
+      "lessons/03_validated/methodology-process/structural-but-not-surfaced-failure-mode-fix-must-reach-the-operator-at-use-time"
+    ],
+    "governance": [
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
+    ],
+    "systemic-bugs": [
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings"
+    ],
+    "tracker-pattern": [
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings"
+    ],
+    "srp-discipline": [
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings",
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required"
+    ],
+    "agent-behavioral-bugs": [
+      "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings"
+    ],
     "self-enforcement": [
       "lessons/03_validated/methodology-process/the-agent-must-practice-what-it-documents"
     ],
@@ -47566,6 +48972,42 @@
     ],
     "universal": [
       "lessons/03_validated/methodology-process/universal-stages-domain-specific-artifacts"
+    ],
+    "anti-minimizing": [
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline"
+    ],
+    "blocker-filtering": [
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline"
+    ],
+    "agent-self-resolution": [
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline"
+    ],
+    "decumulation": [
+      "lessons/03_validated/methodology-quality/anti-minimizing-systemic-bug-counts-and-blocker-filter-discipline"
+    ],
+    "bug-categorization": [
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files"
+    ],
+    "systemic-vs-regular": [
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files"
+    ],
+    "meta-level": [
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files"
+    ],
+    "brain-files": [
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files"
+    ],
+    "agent-bugs": [
+      "lessons/03_validated/methodology-quality/bug-vs-systemic-bug-nuance-systemic-bugs-live-at-the-meta-level-harness-ecosystem-brain-files"
+    ],
+    "fake-blockers": [
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required"
+    ],
+    "empirical-verification": [
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required"
+    ],
+    "no-fabricated-blockers": [
+      "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required"
     ],
     "reproducibility": [
       "lessons/03_validated/methodology-quality/infrastructure-must-be-reproducible-not-manual"
@@ -47632,6 +49074,21 @@
     "agent-design": [
       "lessons/03_validated/tools-architecture/cli-tools-beat-mcp-for-token-efficiency"
     ],
+    "hook-scope": [
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern"
+    ],
+    "machine-vs-project": [
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern"
+    ],
+    "cross-firing": [
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern"
+    ],
+    "two-layer-architecture": [
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern"
+    ],
+    "hook-design": [
+      "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern"
+    ],
     "interoperability": [
       "lessons/03_validated/tools-architecture/skill-specification-is-key-to-interoperability"
     ],
@@ -47656,10 +49113,6 @@
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
-    "validated": [
-      "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
-      "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
-    ],
     "convergent": [
       "lessons/04_principles/hypothesis/declarations-are-aspirational-until-infrastructure-verifies-them",
       "lessons/04_principles/hypothesis/infrastructure-over-instructions-for-process-enforcement"
@@ -47670,6 +49123,18 @@
     ],
     "right-process": [
       "lessons/04_principles/hypothesis/right-process-for-right-context-the-goldilocks-imperative"
+    ],
+    "spec-driven-evolution": [
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits"
+    ],
+    "self-evolving-project": [
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits"
+    ],
+    "meta-doctrine": [
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits"
+    ],
+    "operator-canonical-statement": [
+      "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits"
     ],
     "directive": [
       "log/2026-04-09/methodology/2026-04-09-directive-FOLLOW-THE-WORKFLOW",
@@ -48234,6 +49699,19 @@
     "ingestion-arc": [
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
+    "opt-in": [
+      "log/2026-05-05-orient-pair-adoption-decision"
+    ],
+    "transcension": [
+      "log/2026-05-05-orient-pair-adoption-decision"
+    ],
+    "session-orientation": [
+      "log/2026-05-05-orient-pair-adoption-decision",
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "decision-log": [
+      "log/2026-05-05-orient-pair-adoption-decision"
+    ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
       "log/amendment-to-prior-compliance-checker-correction-root-depth",
@@ -48270,9 +49748,6 @@
     ],
     "gate-close": [
       "patterns/01_drafts/artifact-path-verification-at-gate-close"
-    ],
-    "meta-pattern": [
-      "patterns/01_drafts/aspirational-declaration-without-enforcement"
     ],
     "naming": [
       "patterns/01_drafts/aspirational-naming-in-lifecycle-code"
@@ -48390,6 +49865,36 @@
     "convergent-evidence": [
       "patterns/02_synthesized/adapters-never-raise-failure-as-data-at-integration-boundaries"
     ],
+    "observer": [
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
+    ],
+    "learning-extraction": [
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
+    ],
+    "observation-protocol": [
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
+    ],
+    "operator-mediated": [
+      "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
+    ],
+    "agent-modes": [
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
+    "pm-scrum-master": [
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
+    "devops-architect": [
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
+    "dual-expert": [
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
+    "mode-aware-loop": [
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
+    "persona-overlay": [
+      "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles"
+    ],
     "deterministic": [
       "patterns/03_validated/architecture/deterministic-shell-llm-core",
       "patterns/03_validated/architecture/plan-execute-review-cycle",
@@ -48441,6 +49946,27 @@
     ],
     "design-lifecycle": [
       "patterns/03_validated/architecture/scaffold-foundation-infrastructure-features"
+    ],
+    "sessionstart-hook": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "orient-command": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "status-io": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "cold-start": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "orient-report": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "additionalcontext": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "transcendable": [
+      "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
     ],
     "contribution-gating": [
       "patterns/03_validated/enforcement/contribution-gating-cross-agent-inputs-before-work"
@@ -50324,9 +51850,6 @@
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
     ],
     "openspdd": [
-      "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
-    ],
-    "governance": [
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
     ],
     "ai-assisted-delivery": [
@@ -52813,15 +54336,39 @@
       ]
     },
     {
+      "target": "agent-bug-fix-flow's CONFIRM step \u2014 \"report the chain to the operator\" implicitly requires surfacing",
+      "referenced_by": [
+        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
+      ]
+    },
+    {
+      "target": "agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+      ]
+    },
+    {
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {
+      "target": "broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
+      "referenced_by": [
+        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
+      ]
+    },
+    {
       "target": "claude-code-prompt-patch",
       "referenced_by": [
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
+      ]
+    },
+    {
+      "target": "decision-presentation-discipline-context-guidance-recommendation",
+      "referenced_by": [
+        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
       ]
     },
     {
@@ -53024,6 +54571,24 @@
       ]
     },
     {
+      "target": "every sister project with operator-corrected agent behavior",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+      ]
+    },
+    {
+      "target": "every sister project with structural-fix infrastructure",
+      "referenced_by": [
+        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
+      ]
+    },
+    {
+      "target": "fake-blockers-vs-real-blockers",
+      "referenced_by": [
+        "Lesson \u2014 Anti-minimizing: don't undercount systemic bugs; blocker register self-filters before surfacing"
+      ]
+    },
+    {
       "target": "ijin/aidlc-cc-plugin GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 ijin/aidlc-cc-plugin: Community Claude Code Port of AWS AI-DLC (Grain of Salt)"
@@ -53058,6 +54623,12 @@
       ]
     },
     {
+      "target": "refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+      ]
+    },
+    {
       "target": "root-ghostproxy Identity Profile",
       "referenced_by": [
         "root-ghostproxy M001 \u2014 Author CLAUDE.md + AGENTS.md",
@@ -53065,9 +54636,52 @@
       ]
     },
     {
+      "target": "root-ghostproxy SB-075",
+      "referenced_by": [
+        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
+      ]
+    },
+    {
+      "target": "root-ghostproxy `operating-principles.md` Principle #8",
+      "referenced_by": [
+        "Lesson \u2014 Fake blockers vs real blockers: every 'blocker' claim requires empirical verification, not assumption"
+      ]
+    },
+    {
+      "target": "root-ghostproxy operating-principles #12 (\"Don't dismiss operator-sacrosanct words via over-correction\") \u2014 generalizes from rule-edits to all correction shapes",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+      ]
+    },
+    {
+      "target": "root-ghostproxy operating-principles.md #12 + this conversation's distillation",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+      ]
+    },
+    {
+      "target": "root-ghostproxy operating-principles.md Principle #11 anti-pattern \"verbal-only\" entry",
+      "referenced_by": [
+        "Lesson \u2014 Verbal acknowledgment is not a fix: every bug-fix must produce a structural artefact (rule, file, hook, code)"
+      ]
+    },
+    {
+      "target": "structural-prevention principle",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+      ]
+    },
+    {
       "target": "validated by T117",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
+      ]
+    },
+    {
+      "target": "verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
+      "referenced_by": [
+        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)",
+        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
       ]
     },
     {

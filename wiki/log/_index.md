@@ -5,7 +5,7 @@ domain: log
 status: active
 confidence: high
 created: 2026-04-09
-updated: 2026-05-04
+updated: 2026-05-05
 sources: []
 tags: [log, directives, sessions]
 ---
@@ -29,6 +29,7 @@ Operator directives, session summaries, and task completion notes.
 | 2026-04-17 | [AICP Stage 3 hardware unlocked 2026-04-17 — 19GB VRAM dual-GPU](aicp-stage-3-hardware-unlocked-2026-04-17-19gb-vram-dual-g.md) | session | `contributed`, `remark` |
 | 2026-04-17 | [AICP identity-profile.md needs reconciliation per consumer-property doctrine + outdated facts](aicp-identity-profile.md-needs-reconciliation-per-consumer-p.md) | session | `contributed`, `correction` |
 | 2026-04-18 | [5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)](5-candidate-behavioral-failure-detection-rules-from-openflee.md) | session | `contributed`, `remark` |
+| 2026-05-05 | [Orient Pair Adoption Decision — second-brain opts in to root-ghostproxy's session-orientation pattern (2026-05-05)](2026-05-05-orient-pair-adoption-decision.md) | note | `adoption`, `opt-in`, `transcension`, `orient`, `session-orientation`, `second-brain`, `decision-log`, `layer-2` |
 | 2026-05-04 | [2026-05-04 Session Log — Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested → 7-Instance Layer-4 Lesson Authored](2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson.md) | session | `session`, `log`, `spec-driven`, `agentic-build`, `convergence`, `fowler`, `spdd`, `jsmastery`, `six-file-context`, `layer-4-lesson`, `methodology-process`, `mission-2026-05-04`, `day-arc`, `ingestion-arc` |
 | 2026-05-04 | [2026-05-04 Session Log — Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)](2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point.md) | session | `session`, `log`, `custom-model-mission`, `senior-engineer-tier`, `moe-group`, `intelligence-layer`, `behavioral-alignment`, `root-ghostproxy`, `pain-point-root-cause`, `post-anthropic`, `mission-2026-05-04`, `day-arc`, `post-compaction` |
 | 2026-05-04 | [2026-05-04 Session Handoff (Pre-Compaction) — Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)](2026-05-04-session-handoff-pre-compaction.md) | session | `handoff`, `session`, `2026-05-04`, `pre-compaction`, `trust-layer`, `spec-driven-convergence`, `caveman-ecosystem`, `multi-arc`, `registered-corrections` |

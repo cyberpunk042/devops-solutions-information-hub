@@ -131,6 +131,11 @@
             "type": "command",
             "command": "bash .claude/hooks/session-start.sh",
             "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/session-orient.sh",
+            "timeout": 10
           }
         ]
       }
@@ -141,6 +146,11 @@
           {
             "type": "command",
             "command": "bash .claude/hooks/post-compact.sh",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/post-orient.sh",
             "timeout": 10
           }
         ]
