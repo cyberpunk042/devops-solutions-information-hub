@@ -1,5 +1,5 @@
 {
-  "generated": "2026-05-06T19:51:25.235265+00:00",
+  "generated": "2026-05-06T20:06:12.149523+00:00",
   "stats": {
     "pages": 594,
     "domains": 12,
@@ -17196,11 +17196,6 @@
           "id": "claude-code-hooks-reference",
           "type": "external",
           "url": "https://code.claude.com/docs/en/hooks"
-        },
-        {
-          "id": "empirical-verification",
-          "type": "empirical",
-          "description": "2026-05-06 debugging session \u2014 settings.json edits ineffective for live session; settings.local.json edit took effect on next prompt"
         }
       ],
       "layer": "",
@@ -26705,7 +26700,7 @@
       "path": "log/2026-05-05-handoff-to-root-session.md",
       "slug": "log/2026-05-05-handoff-to-root-session",
       "title": "Handoff \u2014 Second-brain \u2192 root-ghostproxy session (2026-05-05): cross-applicable lessons distilled, orient pair adopted, transcendable-feature framework available",
-      "type": "log",
+      "type": "note",
       "domain": "cross-domain",
       "status": "active",
       "confidence": "high",
@@ -26723,9 +26718,9 @@
       "sources": [
         {
           "id": "this-session-evolution-arc",
-          "type": "project",
-          "project": "devops-solutions-information-hub",
-          "description": "/opt second-brain session 2026-05-05 \u2014 distillation arc post-/root-test-session"
+          "type": "wiki",
+          "file": "wiki/log/2026-05-05-handoff-to-root-session.md",
+          "description": "/opt second-brain session 2026-05-05 \u2014 distillation arc post-/root-test-session (self-reference; this artifact captures the arc)"
         }
       ],
       "layer": "",

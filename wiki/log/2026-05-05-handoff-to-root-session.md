@@ -1,6 +1,7 @@
 ---
 title: "Handoff — Second-brain → root-ghostproxy session (2026-05-05): cross-applicable lessons distilled, orient pair adopted, transcendable-feature framework available"
-type: log
+type: note
+note_type: session
 domain: cross-domain
 status: active
 confidence: high
@@ -8,13 +9,17 @@ created: 2026-05-05
 updated: 2026-05-05
 sources:
   - id: this-session-evolution-arc
-    type: project
-    project: devops-solutions-information-hub
-    description: "/opt second-brain session 2026-05-05 — distillation arc post-/root-test-session"
+    type: wiki
+    file: wiki/log/2026-05-05-handoff-to-root-session.md
+    description: "/opt second-brain session 2026-05-05 — distillation arc post-/root-test-session (self-reference; this artifact captures the arc)"
 tags: [handoff, cross-session, second-brain-to-root, evolution-summary, sister-project, layer-2]
 ---
 
 # Handoff — second-brain → root-ghostproxy session (2026-05-05)
+
+## Summary
+
+Operator-mediated channel for the /root agent (next root-ghostproxy session) to pick up what evolved on the /opt second-brain side during the 2026-05-05 distillation arc that ran in parallel with a /root test session (~10:46–16:55). 19 mature lessons + 1 principle + 2 patterns landed at 03_validated / 04_principles tiers, all schema-validated via `pipeline post` with the 4 required sections (Context, Insight, Evidence, Applicability) plus Relationships + structured tables. No /root files were edited from /opt — boundary respected per the second-brain-observer pattern.
 
 ## Context
 

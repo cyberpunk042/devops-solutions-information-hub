@@ -14,13 +14,14 @@ sources:
   - id: claude-code-hooks-reference
     type: external
     url: https://code.claude.com/docs/en/hooks
-  - id: empirical-verification
-    type: empirical
-    description: 2026-05-06 debugging session — settings.json edits ineffective for live session; settings.local.json edit took effect on next prompt
 tags: [claude-code, hooks, settings, configuration, hot-reload, caching, lesson, draft]
 ---
 
 # Claude Code settings.local.json hot-reloads; settings.json caches at session start
+
+## Summary
+
+Claude Code reads hook configuration from multiple settings files with asymmetric reload behavior: `.claude/settings.json` is loaded once at session start and cached for the session's lifetime (edits during a live session do not update the cached config; even `touch`-ing the file does not trigger reload), while `.claude/settings.local.json` is hot-reloaded per prompt (edits take effect on next prompt). This caching asymmetry is undocumented in the official Claude Code hook docs but verifiable via the session log and empirical testing. When iterating hook wiring during an active development session, knowing WHICH file hot-reloads is essential — otherwise edits to the wrong file have no effect for the live session and developers spend hours debugging "why isn't my fix taking effect."
 
 ## Context
 
@@ -46,6 +47,17 @@ Debugging session 2026-05-06 produced the following empirical sequence:
 4. Adding the correct Stop hook wiring to `settings.local.json` → next prompt fired the Stop hook correctly → bug fixed without session restart
 
 Session log (`.claude/projects/<dir>/<session-id>.jsonl`) recorded the actual hook events firing — confirmed UserPromptSubmit until settings.local.json fix, then Stop after.
+
+## Applicability
+
+**When this lesson applies:**
+
+| Scenario | Apply? |
+|---|---|
+| Iterating hook wiring during an active Claude Code development session | **YES** — edit `settings.local.json` for live-session iteration |
+| Persisting hook configuration across all sessions (machine-wide / project-wide canonical) | **YES** — finalize in `settings.json` after iteration, then `/clear` or restart for it to take effect |
+| Mid-session debugging of "why isn't my hook firing" | **YES** — first check whether you're editing the cached file (`settings.json`) or the hot-reload file (`settings.local.json`) |
+| One-off scripts or non-Claude-Code tooling | NO — this is Claude-Code-specific behavior |
 
 ## Implication / How to apply
 
