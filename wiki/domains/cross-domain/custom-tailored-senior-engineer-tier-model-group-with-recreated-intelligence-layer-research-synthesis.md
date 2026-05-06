@@ -169,6 +169,19 @@ The custom-tailored model group is the **solution at the right place**: bake the
 >
 > The intelligence layer is **infrastructure** (per Principle 1) — not prompt-engineering. The operator's framing is correct: the model alone is insufficient; the layer-by-layer infrastructure around it is what compounds quality.
 
+> [!success] **3-Tier Programming Hyperstructure (operator-stated 2026-05-04): proto-programming / structure → proto-proto-programming / hyperstructure → literal programming.**
+>
+> Operator-stated 2026-05-04 (verbatim, raw note `raw/notes/2026-05-04-anythingllm-subquadratic-multi-source-ingestion-and-internal-cypher-langue-extension.md`): *"there are way to turn into python. there is normal proto-programming / structure and proto-proto-programming / hyperstructure and then there is litteral programming. In and out the the model and even in the middleware I think."*
+>
+> | Tier | Operator's name | Substrate | Existing wiki instances |
+> |---|---|---|---|
+> | **Tier 1 — proto-programming / structure** | Markdown-as-IaC | Declarative Markdown (CLAUDE.md · AGENTS.md · `.claude/rules/` · YAML configs · per-feature specs · per-LoRA SPECs) | The wiki's existing `tools/methodology.yaml` + `wiki/config/*.yaml` + per-page YAML frontmatter |
+> | **Tier 2 — proto-proto-programming / hyperstructure** | Python-as-programming layer atop Markdown | Python that *reads and executes* Markdown configs (`tools/pipeline.py` · `tools/gateway.py` · `tools/mcp_server.py` · methodology engine reading YAML+Markdown) | All wiki tooling |
+> | **Tier 3 — literal programming** (NEW operator-stated tier) | Actual executable Python | Python the model *writes* (in output) · Python that *invokes* the model (middleware) · Python that *runs alongside* the model (intelligence layer at I/O) | Operator's senior-engineer-tier model output · M003 intelligence layer · M005 trust+compression composition |
+> | Position spans | "In and out the the model and even in the middleware I think." | All tiers exist at every position: model input boundary · model interior · model output boundary · middleware | Composes orthogonally |
+>
+> **Implication**: the model's output isn't just text — at literal-programming tier, the model produces Python that the middleware executes (or the operator reviews, or the verification gate runs). The middleware reads operator's Markdown specs (Tier 1), uses Python hyperstructure (Tier 2) to dispatch, and the model writes/inspects literal programs (Tier 3). **All three tiers compose at every I/O position.**
+
 > [!success] **Python-as-programming hyperstructure on top of Markdown-as-IaC is an additive extension, not a replacement.**
 >
 > Per [Model — Markdown as IaC](../../spine/models/agent-config/model-markdown-as-iac.md): Markdown files at project root are binding configuration for agents (CLAUDE.md, AGENTS.md, .claude/rules/, the wiki's spec-driven artifacts). Operator's *"and we use python and turn thing into proto-programming or proto proto-programming / structure and hyperstructure"* extends this: **Python is the executable structure layer atop declarative Markdown.** This is exactly the substrate the wiki already runs on (`tools/pipeline.py` · `tools/gateway.py` · `tools/mcp_server.py` · the methodology engine reads YAML/Markdown configs and executes them). The custom-model intelligence layer follows the same precedent: Markdown declares the rules + intent + spec; Python executes — including the model-call surfaces, the routing logic, the validation gates, the cypher/decypher overlay, the compression overlay. **Hyperstructure** means the layers compose — Python composes over Markdown, the trust layer composes over Python, the model group composes underneath. The operator is not inventing a new substrate; they are naming the next composition tier on the substrate the wiki already runs on.

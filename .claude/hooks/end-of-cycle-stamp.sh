@@ -1,16 +1,25 @@
 #!/usr/bin/env python3
-# Stop hook — emit end-of-cycle status stamp via systemMessage for /opt
-# second-brain sessions. Adapted from the parallel root-ghostproxy hook
-# pattern (see /root/.claude/hooks/end-of-cycle-stamp.sh) to /opt's data
-# model (no tools.cycle/state — uses gateway/stats/file-scan instead).
+# Stop hook — emit end-of-cycle status stamp via systemMessage for the
+# second-brain project, wherever it lives on disk. Adapted from the parallel
+# root-ghostproxy hook pattern (see /root/.claude/hooks/end-of-cycle-stamp.sh)
+# to second-brain's data model (no tools.cycle/state — uses gateway/stats/
+# file-scan instead).
 #
 # Operator directive 2026-05-05: "we could have our stamp here too. adapted
 # to us... like with hooks. some commons and some of our own and we keep
 # evolving them and all".
 #
-# Self-gates via /opt/.../CLAUDE.md presence + cwd/CLAUDE_PROJECT_DIR check
-# so this fires only for /opt second-brain sessions, not /root or other
-# sister-project sessions on the same host.
+# Operator directive 2026-05-06 (verbatim): "we are coming from another
+# system that the second-brain is inside /opt... we should just support it..
+# we have a relative / flexible strategy.. we need to fix this now. usualy
+# there is the $HOME variable for example." — PROJECT_ROOT now resolves from
+# CLAUDE_PROJECT_DIR env (Claude Code's canonical project-root variable),
+# falling back to /opt/devops-solutions-information-hub for backward compat
+# on the other-machine config that originated the hook.
+#
+# Self-gates via {PROJECT_ROOT}/CLAUDE.md presence + cwd/CLAUDE_PROJECT_DIR
+# check so this fires only for second-brain sessions, not sister-project
+# sessions on the same host.
 
 from __future__ import annotations
 
@@ -22,7 +31,9 @@ import sys
 import time
 from pathlib import Path
 
-PROJECT_ROOT = Path("/opt/devops-solutions-information-hub")
+PROJECT_ROOT = Path(
+    os.environ.get("CLAUDE_PROJECT_DIR", "/opt/devops-solutions-information-hub")
+)
 TRACE_LOG = "/tmp/hook-fire-trace.log"
 
 # Operator stamp preference — shared across all root-user sessions via

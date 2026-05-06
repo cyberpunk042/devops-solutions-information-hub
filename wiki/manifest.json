@@ -1,24 +1,24 @@
 {
-  "generated": "2026-05-05T22:04:14.167370+00:00",
+  "generated": "2026-05-06T19:51:25.235265+00:00",
   "stats": {
-    "pages": 583,
+    "pages": 594,
     "domains": 12,
-    "sources": 88,
+    "sources": 95,
     "comparisons": 9,
-    "relationships": 3595,
-    "tags_unique": 2056,
+    "relationships": 3650,
+    "tags_unique": 2145,
     "layers": {
       "3": 4,
       "5": 37,
       "6": 26,
-      "2": 73,
+      "2": 74,
       "4": 66,
       "0": 1,
-      "1": 59,
+      "1": 66,
       "spine": 78
     },
     "maturity": {
-      "seed": 71,
+      "seed": 80,
       "growing": 326,
       "mature": 23
     }
@@ -17166,6 +17166,50 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache.md",
+      "slug": "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "title": "Claude Code settings.local.json hot-reloads; settings.json caches at session start",
+      "type": "lesson",
+      "domain": "ai-agents",
+      "status": "draft",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "",
+      "tags": [
+        "claude-code",
+        "hooks",
+        "settings",
+        "configuration",
+        "hot-reload",
+        "caching",
+        "lesson",
+        "draft"
+      ],
+      "sources": [
+        {
+          "id": "operator-debugging-session-2026-05-06",
+          "type": "directive",
+          "file": "raw/notes/2026-05-06-claude-code-hook-stamp-bug-cached-config-vs-settings-local-hot-reload.md"
+        },
+        {
+          "id": "claude-code-hooks-reference",
+          "type": "external",
+          "url": "https://code.claude.com/docs/en/hooks"
+        },
+        {
+          "id": "empirical-verification",
+          "type": "empirical",
+          "description": "2026-05-06 debugging session \u2014 settings.json edits ineffective for live session; settings.local.json edit took effect on next prompt"
+        }
+      ],
+      "layer": "",
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski.md",
       "slug": "lessons/01_drafts/contributed/boilerplate-skill-anti-pattern-at-scale-47pct-aicps-78-ski",
       "title": "Boilerplate skill anti-pattern at scale: 47% of AICP's 78 skills are identical instruction dumps",
@@ -18663,6 +18707,56 @@
       ]
     },
     {
+      "path": "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md",
+      "slug": "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
+      "title": "Lesson \u2014 User-level settings.json hook command paths must be absolute or `$HOME`-prefixed; relative paths break when sessions run from non-project cwds",
+      "type": "lesson",
+      "domain": "cross-domain",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "lesson",
+        "settings-json",
+        "hooks",
+        "path-resolution",
+        "user-level-vs-project-level",
+        "deadlock-recovery",
+        "monitor-tool-escape",
+        "self-blocking",
+        "sister-project-applicable",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "empirical-2026-05-05-self-deadlock",
+          "type": "empirical-evidence",
+          "project": "devops-solutions-information-hub",
+          "path": "/opt/devops-solutions-information-hub/wiki/lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed.md",
+          "description": "Agent in /opt second-brain session changed /root/.claude/settings.json (user-level) hook paths from absolute to relative without testing. /opt session's hooks tried to resolve relative paths against /opt cwd \u2014 failed \u2014 blocked all tool calls. Self-deadlock until escape via Monitor tool (bypasses PreToolUse matcher)."
+        },
+        {
+          "id": "companion-going-to-extremes",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern.md",
+          "description": "This incident is a sharp instance of the going-to-extremes pattern: changed all 9 hook paths simultaneously instead of test-one-then-propagate."
+        },
+        {
+          "id": "companion-decision-presentation",
+          "type": "wiki",
+          "file": "wiki/lessons/03_validated/methodology-process/decision-presentation-discipline-context-guidance-recommendation.md",
+          "description": "Should have surfaced the proposed change as a decision-package (CONTEXT/GUIDANCE/RECOMMENDATION/TO-ANSWER) for operator review before applying \u2014 the resolution semantics were not understood."
+        }
+      ],
+      "layer": 2,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
+    },
+    {
       "path": "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha.md",
       "slug": "lessons/02_synthesized/contributed/agents-take-small-unauthorized-scope-expansions-when-the-cha",
       "title": "Agents take small unauthorized scope expansions when the change is a 'clean win'",
@@ -19284,36 +19378,7 @@
       "maturity": "mature",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "COMPOSES WITH",
-          "target": "refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules"
-        },
-        {
-          "verb": "COMPOSES WITH",
-          "target": "verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
-        },
-        {
-          "verb": "COMPOSES WITH",
-          "target": "agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "root-ghostproxy operating-principles #12 (\"Don't dismiss operator-sacrosanct words via over-correction\") \u2014 generalizes from rule-edits to all correction shapes"
-        },
-        {
-          "verb": "IMPLEMENTS",
-          "target": "structural-prevention principle (rules require mechanism, not just text)"
-        },
-        {
-          "verb": "USED BY",
-          "target": "root-ghostproxy operating-principles.md #12 + this conversation's distillation"
-        },
-        {
-          "verb": "POTENTIALLY USED BY",
-          "target": "every sister project with operator-corrected agent behavior"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "lessons/03_validated/enforcement-compliance/enforcement-must-be-mindful-hard-blocks-need-justified-bypass.md",
@@ -21433,32 +21498,7 @@
       "maturity": "mature",
       "derived_from": [],
       "aliases": [],
-      "relationships": [
-        {
-          "verb": "COMPOSES WITH",
-          "target": "verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact"
-        },
-        {
-          "verb": "COMPOSES WITH",
-          "target": "broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
-        },
-        {
-          "verb": "COMPOSES WITH",
-          "target": "decision-presentation-discipline-context-guidance-recommendation"
-        },
-        {
-          "verb": "BUILDS ON",
-          "target": "agent-bug-fix-flow's CONFIRM step \u2014 \"report the chain to the operator\" implicitly requires surfacing"
-        },
-        {
-          "verb": "USED BY",
-          "target": "root-ghostproxy SB-075 (journey/plan/cursor not visible)"
-        },
-        {
-          "verb": "POTENTIALLY USED BY",
-          "target": "every sister project with structural-fix infrastructure"
-        }
-      ]
+      "relationships": []
     },
     {
       "path": "lessons/03_validated/methodology-process/systemic-bugs-tracker-as-dedicated-governance-register-distinct-from-blockers-decisions-findings.md",
@@ -26415,6 +26455,143 @@
       ]
     },
     {
+      "path": "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming.md",
+      "slug": "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "title": "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "session",
+        "log",
+        "multi-source-ingestion",
+        "layer-1",
+        "strands",
+        "qwen-scope",
+        "sae",
+        "recursivemas",
+        "lfm2",
+        "tokenization-drift",
+        "subquadratic",
+        "anythingllm",
+        "how-to-train-gpt",
+        "internal-cypher-langue",
+        "3-tier-programming",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "prior-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point.md",
+          "description": "Prior 2026-05-04 session log \u2014 custom-tailored model mission + root-ghostproxy pain point. This arc continues from there with multi-source ingestion."
+        },
+        {
+          "id": "directive-raw-note",
+          "type": "file",
+          "file": "raw/notes/2026-05-04-anythingllm-subquadratic-multi-source-ingestion-and-internal-cypher-langue-extension.md",
+          "description": "Verbatim operator directive \u2014 9 URLs to ingest + AnythingLLM/subquadratic operator-named leads + 3-tier programming framing + internal-cypher-langue extension"
+        },
+        {
+          "id": "strands-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md"
+        },
+        {
+          "id": "qwen-scope-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md"
+        },
+        {
+          "id": "recursivemas-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md"
+        },
+        {
+          "id": "lfm2-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne.md"
+        },
+        {
+          "id": "tokenization-drift-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost.md"
+        },
+        {
+          "id": "subq-anythingllm-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads.md"
+        },
+        {
+          "id": "train-gpt-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy.md"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Custom-Tailored Model Mission Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Qwen-Scope Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RecursiveMAS Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "LFM 2 Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Tokenization Drift Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "SubQuadratic + AnythingLLM Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "How To Train Your GPT Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Trust-Layer Concept"
+        }
+      ]
+    },
+    {
       "path": "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson.md",
       "slug": "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "title": "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
@@ -26523,6 +26700,39 @@
           "target": "Methodology Adoption Guide"
         }
       ]
+    },
+    {
+      "path": "log/2026-05-05-handoff-to-root-session.md",
+      "slug": "log/2026-05-05-handoff-to-root-session",
+      "title": "Handoff \u2014 Second-brain \u2192 root-ghostproxy session (2026-05-05): cross-applicable lessons distilled, orient pair adopted, transcendable-feature framework available",
+      "type": "log",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-05",
+      "updated": "2026-05-05",
+      "last_reviewed": "",
+      "tags": [
+        "handoff",
+        "cross-session",
+        "second-brain-to-root",
+        "evolution-summary",
+        "sister-project",
+        "layer-2"
+      ],
+      "sources": [
+        {
+          "id": "this-session-evolution-arc",
+          "type": "project",
+          "project": "devops-solutions-information-hub",
+          "description": "/opt second-brain session 2026-05-05 \u2014 distillation arc post-/root-test-session"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": []
     },
     {
       "path": "log/2026-05-05-orient-pair-adoption-decision.md",
@@ -34052,6 +34262,103 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne.md",
+      "slug": "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne",
+      "title": "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "lfm2",
+        "liquid-ai",
+        "edge-models",
+        "on-device",
+        "small-models",
+        "hybrid-architecture",
+        "short-convolution",
+        "gqa",
+        "doom-loop",
+        "dpo",
+        "rl-with-verifiable-rewards",
+        "repetition-penalty",
+        "agentic-rl",
+        "28t-tokens",
+        "post-chinchilla",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "youtube-talk",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=fLUtUkqYHnQ",
+          "file": "raw/transcripts/everything-i-learned-training-frontier-small-models-maxime-labonne-liquid-ai.txt",
+          "description": "Maxime Labonne (Head of Pre-Training, Liquid AI) \u2014 full presentation on lessons from training small frontier models LFM 2 / LFM 2.5; covers hybrid architecture, 28T-token pre-training, doom-loop solutions, agentic RL"
+        },
+        {
+          "id": "liquid-ai-hf",
+          "type": "documentation",
+          "url": "https://huggingface.co/LiquidAI",
+          "description": "Liquid AI HuggingFace organization \u2014 LFM 2 / LFM 2.5 family weights"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "LFM 2 Synthesis",
+        "Liquid AI Edge Models",
+        "Maxime Labonne Frontier Small Models",
+        "LFM 2.5 350M"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Second-Brain Custom Model Strategy"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RecursiveMAS Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "prime-rl Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings.md",
       "slug": "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
       "title": "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
@@ -35401,6 +35708,94 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md",
+      "slug": "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
+      "title": "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "qwen",
+        "qwen3",
+        "qwen3-5",
+        "sae",
+        "sparse-autoencoder",
+        "mechanistic-interpretability",
+        "residual-stream",
+        "feature-steering",
+        "toxicity-classification",
+        "sasft",
+        "dapo",
+        "post-training",
+        "internal-cypher-langue",
+        "decypher",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "marktechpost-article",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/05/01/qwen-ai-releases-qwen-scope-an-open-source-sparse-autoencoders-sae-suite-that-turns-llm-internal-features-into-practical-development-tools/",
+          "file": "raw/articles/qwen-ai-releases-qwen-scope-an-open-source-sparse-autoencoders-sae-suite-that-tu.md",
+          "description": "MarkTechPost 2026-05-01 \u2014 Qwen Team's release of Qwen-Scope: 14 SAE groups across 7 backbones (5 dense Qwen3-1.7B/8B + Qwen3.5-2B/9B/27B + 2 MoE Qwen3-30B-A3B + Qwen3.5-35B-A3B); 4 use cases (steering \u00b7 evaluation analysis \u00b7 toxicity classification \u00b7 post-training)."
+        },
+        {
+          "id": "qwen-scope-paper",
+          "type": "documentation",
+          "url": "https://qianwen-res.oss-accelerate.aliyuncs.com/qwen-scope/Qwen_Scope.pdf",
+          "description": "Qwen-Scope technical paper \u2014 full architecture + experimental details"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Qwen-Scope Synthesis",
+        "Qwen SAE Suite",
+        "Sparse Autoencoders for Qwen3 / Qwen3.5",
+        "Mechanistic Interpretability via Qwen-Scope"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "prime-rl Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion.md",
       "slug": "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "title": "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls",
@@ -35568,6 +35963,109 @@
         {
           "verb": "FEEDS INTO",
           "target": "The 2026 Consumer-Hardware AI Stack \u2014 Strategic Synthesis"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md",
+      "slug": "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026",
+      "title": "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "recursivemas",
+        "recursive-multi-agent",
+        "stanford",
+        "latent-space",
+        "arxiv-2604-25917",
+        "mas",
+        "multi-agent-systems",
+        "rlm-extension",
+        "mixture-of-agents",
+        "latent-state-transfer",
+        "token-reduction",
+        "inference-speedup",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "arxiv-paper",
+          "type": "paper",
+          "url": "https://huggingface.co/papers/2604.25917",
+          "file": "raw/articles/paper-page-recursive-multi-agent-systems.md",
+          "description": "Stanford paper Apr 28 2026 \u2014 extends recursive language model paradigm from single-model to multi-agent systems via RecursiveLink module + inner-outer loop learning. #1 paper of the day on HuggingFace; 257 upvotes; Stanford-led with 12 authors."
+        },
+        {
+          "id": "project-page",
+          "type": "documentation",
+          "url": "https://recursivemas.github.io",
+          "description": "Project page with code, data, demo video"
+        },
+        {
+          "id": "github-repo",
+          "type": "documentation",
+          "url": "https://github.com/RecursiveMAS/RecursiveMAS",
+          "description": "Open-source repository, 279 GitHub stars at synthesis time"
+        },
+        {
+          "id": "hf-models",
+          "type": "documentation",
+          "url": "https://huggingface.co/RecursiveMAS",
+          "description": "19 models published \u2014 Mixture-Science-BioMistral-7B, Mixture-Summarizer-Qwen3.5-2B, Deliberation-Reflector-Qwen3.5-4B, Deliberation-Toolcaller-Qwen3.5-4B, etc."
+        },
+        {
+          "id": "rlm-synthesis",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-rlm-recursive-language-models-mit-oasys.md",
+          "description": "Predecessor \u2014 RLM's recursive scaling paradigm at single-model level; RecursiveMAS extends to multi-agent"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "RecursiveMAS Synthesis",
+        "Recursive Multi-Agent Systems",
+        "RecursiveMAS arXiv 2604.25917"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Qwen-Scope Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
         }
       ]
     },
@@ -36005,6 +36503,237 @@
         {
           "verb": "FEEDS INTO",
           "target": "AI Model Provider Harness Decision Matrix"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md",
+      "slug": "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
+      "title": "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "strands",
+        "aws",
+        "agentic-framework",
+        "intent-based-tools",
+        "mcp",
+        "semantic-search",
+        "token-efficiency",
+        "tool-design",
+        "narrow-scope",
+        "agent-cardinality",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "thenewstack-article",
+          "type": "article",
+          "url": "https://thenewstack.io/strands-agents-tool-design/",
+          "file": "raw/articles/cut-ai-token-usage-by-96-here039s-how-aws-strands-agents-does-it-the-new-stack.md",
+          "description": "The New Stack 2026-04-29 \u2014 AWS dev advocate Morgan Willis demonstrates 3 iterations of accounting-API tool design: API-endpoint tools (52K tokens) \u2192 intent-based tools (2K) \u2192 remote MCP server + semantic-search gateway (~1K). 14M+ Strands downloads in <1 year."
+        },
+        {
+          "id": "strands-framework",
+          "type": "documentation",
+          "url": "https://strandsagents.com/",
+          "description": "Strands Agents \u2014 open-source agentic framework from AWS"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Strands Agents Synthesis",
+        "AWS Strands Intent-Based Tools",
+        "Strands 96% Token Reduction"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads.md",
+      "slug": "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads",
+      "title": "Synthesis \u2014 SubQuadratic SubQ (12M Context Claim, Sparse Attention) + AnythingLLM (Operator-Named Breakthrough Leads, Tracked Skeptically)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "low",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "subquadratic",
+        "subq",
+        "anythingllm",
+        "sparse-attention",
+        "12m-context",
+        "low-confidence",
+        "early-stage-lead",
+        "operator-named",
+        "attention-mechanisms",
+        "mission-2026-05-04",
+        "tracked-leads"
+      ],
+      "sources": [
+        {
+          "id": "youtube-anythingllm",
+          "type": "video",
+          "url": "https://www.youtube.com/watch?v=34I9hKjJbSM",
+          "file": "raw/transcripts/a-new-ai-model-just-dropped-with-a-crazy-claim.txt",
+          "description": "Timothy Karen (founder of AnythingLLM) commentary on the SubQuadratic SubQ model release; cautious-skeptical analysis citing missing technical report, benchmarks on 1M context (not the claimed 12M), and missing 12M-token comparison data"
+        },
+        {
+          "id": "anythingllm-website",
+          "type": "documentation",
+          "url": "https://anythingllm.com/",
+          "description": "AnythingLLM \u2014 privacy-first local-model orchestrator; founder Timothy Karen presents SubQ analysis"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "SubQuadratic Synthesis",
+        "AnythingLLM Synthesis",
+        "SubQ 12M Context",
+        "Sparse Attention Lead"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Multica Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "LFM 2 Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
+      "path": "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost.md",
+      "slug": "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
+      "title": "Synthesis \u2014 Tokenization Drift: How Small Formatting Changes Push Inputs Out-of-Distribution + Automated Prompt Optimization (APO) Loop (MarkTechPost 2026-05-03)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "tokenization",
+        "tokenization-drift",
+        "ood",
+        "out-of-distribution",
+        "prompt-engineering",
+        "apo",
+        "automated-prompt-optimization",
+        "sft-template",
+        "jaccard-similarity",
+        "bpe",
+        "gpt-2",
+        "prompt-format",
+        "mission-2026-05-04"
+      ],
+      "sources": [
+        {
+          "id": "marktechpost-article",
+          "type": "article",
+          "url": "https://www.marktechpost.com/2026/05/03/what-is-tokenization-drift-and-how-to-fix-it/",
+          "file": "raw/articles/what-is-tokenization-drift-and-how-to-fix-it-marktechpost.md",
+          "description": "MarkTechPost 2026-05-03 \u2014 Arham Islam \u2014 explains tokenization drift via GPT-2 tokenizer worked example, builds Jaccard-overlap drift metric, demonstrates automated prompt optimization loop selecting SFT-aligned templates"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Tokenization Drift Synthesis",
+        "APO Synthesis",
+        "Out-of-Distribution Risk via Tokenization",
+        "Prompt Format Drift"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Qwen-Scope Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
         }
       ]
     },
@@ -36708,6 +37437,94 @@
         {
           "verb": "FEEDS INTO",
           "target": "Model \u2014 Methodology"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy.md",
+      "slug": "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy",
+      "title": "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
+      "type": "source-synthesis",
+      "domain": "wiki-methodology",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-04",
+      "updated": "2026-05-04",
+      "last_reviewed": "2026-05-04",
+      "tags": [
+        "synthesis",
+        "pedagogy",
+        "gpt-training",
+        "llama3",
+        "transformer-architecture",
+        "rope",
+        "rmsnorm",
+        "swiglu",
+        "pre-norm",
+        "adamw",
+        "bpe",
+        "weight-tying",
+        "mixed-precision",
+        "kv-cache",
+        "education",
+        "tutorial",
+        "mission-2026-05-04",
+        "custom-model-prerequisite"
+      ],
+      "sources": [
+        {
+          "id": "github-repo",
+          "type": "documentation",
+          "url": "https://github.com/raiyanyahya/how-to-train-your-gpt",
+          "file": "raw/articles/raiyanyahyahow-to-train-your-gpt.md",
+          "description": "Open-source 12-chapter, 3,671-line interactive textbook teaching how to build, train, and run a modern decoder-only Transformer (LLaMA-3 style) from absolute scratch \u2014 annotated to Python-developer-with-zero-ML-experience level"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "How to Train Your GPT Synthesis",
+        "Raiyan Yahya GPT Training Guide",
+        "LLaMA-3-Style GPT Pedagogy",
+        "GPT Training Tutorial Repo"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Tokenization Drift Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Unsloth Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RLM Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "prime-rl Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
         }
       ]
     },
@@ -42921,7 +43738,7 @@
       "relationship_count": 458
     },
     "cross-domain": {
-      "page_count": 260,
+      "page_count": 263,
       "relationship_count": 1661
     },
     "ai-models": {
@@ -42929,12 +43746,12 @@
       "relationship_count": 82
     },
     "ai-agents": {
-      "page_count": 68,
+      "page_count": 69,
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 20,
-      "relationship_count": 220
+      "page_count": 26,
+      "relationship_count": 266
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -42961,8 +43778,8 @@
       "relationship_count": 21
     },
     "wiki-methodology": {
-      "page_count": 2,
-      "relationship_count": 18
+      "page_count": 3,
+      "relationship_count": 27
     }
   },
   "tags": {
@@ -43300,6 +44117,7 @@
       "sources/tools-integration/src-opencode-harness-features",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
       "spine/models/ecosystem/model-mcp-cli-integration",
@@ -43702,6 +44520,7 @@
     ],
     "configuration": [
       "backlog/epics/pre-milestone/E004-portable-methodology-engine",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "patterns/01_drafts/profile-as-coordination-bundle",
       "sources/src-suricata-yaml-config",
       "spine/references/context-file-taxonomy",
@@ -43752,6 +44571,8 @@
       "domains/ai-agents/patterns/per-role-command-architecture",
       "domains/automation/wiki-event-driven-automation",
       "domains/cross-domain/methodology-artifacts/categories/ai-agent-artifacts",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/enforcement-compliance/infrastructure-enforcement-proves-instructions-fail",
       "log/2026-04-24-session-handoff-brain-refactor-rules-and-hooks",
       "log/2026-04-24-top-layer-routing-refactor-claude-md-gap-analysis",
@@ -44193,7 +45014,8 @@
     ],
     "dpo": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
-      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis"
+      "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
     ],
     "ipo": [
       "backlog/epics/pre-milestone/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-2026-05",
@@ -44268,10 +45090,18 @@
       "domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis",
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "sources/tools-integration/src-cavekit-spec-driven-development-claude-code-julius-brussee",
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee",
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026",
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads",
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd",
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy",
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build",
       "spine/learning-paths/custom-tailored-senior-engineer-tier-model-group-2026-05-04"
     ],
@@ -44421,6 +45251,7 @@
     "sister-project": [
       "backlog/epics/pre-milestone/root-ghostproxy-sfif-rollout-and-second-brain-integration-2026-05",
       "lessons/03_validated/enforcement-compliance/second-brain-agent-must-respect-sister-project-boundaries-no-direct-cross-project-file-edits",
+      "log/2026-05-05-handoff-to-root-session",
       "patterns/02_synthesized/second-brain-observer-pattern-extracting-learnings-from-live-sister-project-sessions"
     ],
     "type-root": [
@@ -44504,6 +45335,7 @@
     "decypher": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
       "spine/learning-paths/trust-layer-tamper-proof-inference-2026-04-30"
     ],
     "compression": [
@@ -44838,6 +45670,7 @@
       "log/2026-04-30-session-log-trust-layer-arc-tamper-proof-inference-cypher-decypher-compression",
       "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "spine/standards/note-page-standards"
     ],
@@ -45044,6 +45877,7 @@
       "backlog/modules/e012-m003-wiki-router-candidate-d",
       "sources/src-autobe-compiler-verified-backend-generation",
       "sources/src-qwopus-claude-opus-reasoning-distilled-qwen-27b",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
@@ -45165,6 +45999,7 @@
       "domains/knowledge-systems/wiki-core/wiki-ingestion-pipeline",
       "domains/tools-and-platforms/notebooklm-skills",
       "domains/tools-and-platforms/obsidian-skills-ecosystem",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/03_validated/context-engineering/context-management-is-primary-productivity-lever",
       "lessons/03_validated/tools-architecture/always-plan-before-executing",
       "lessons/03_validated/tools-architecture/skills-architecture-is-dominant-extension-pattern",
@@ -45854,6 +46689,7 @@
       "sources/src-7-levels-claude-code-rag",
       "sources/src-code-review-graph-automated-review",
       "sources/tools-integration/src-playwright-cli-vs-mcp",
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
       "spine/models/ecosystem/model-mcp-cli-integration"
     ],
     "decision": [
@@ -45878,6 +46714,7 @@
     "lesson": [
       "comparisons/mcp-vs-cli-decision-vs-lesson",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache",
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project",
       "lessons/01_drafts/contributed/defense-layer-progression-is-expensive",
       "lessons/01_drafts/contributed/mandatory-without-verification-is-not-enforced",
@@ -45889,6 +46726,7 @@
       "lessons/01_drafts/saturation-declarations-are-p4-aspirational-test-by-attempting-forward-work",
       "lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts",
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy",
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
       "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
@@ -46228,12 +47066,14 @@
     ],
     "kv-cache": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
-      "sources/src-llm-architecture-gallery-raschka"
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
     ],
     "qwen3": [
       "decisions/01_drafts/asymmetric-kv-cache-quantization-q4-keys-q2-values",
       "decisions/01_drafts/qwen3-8b-as-main-reasoning-model",
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
       "spine/references/local-training-playbook-2026"
     ],
     "vram": [
@@ -48178,6 +49018,18 @@
     "claim-vs-aspiration": [
       "lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence"
     ],
+    "settings": [
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
+    "hot-reload": [
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
+    "caching": [
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
+    "draft": [
+      "lessons/01_drafts/claude-code-settings-local-hot-reload-vs-settings-cache"
+    ],
     "tier-selection": [
       "lessons/01_drafts/contributed/context-depth-must-vary-per-task-type-not-per-project"
     ],
@@ -48415,25 +49267,26 @@
     "code-generation": [
       "lessons/01_drafts/specs-as-code-source-inverts-hierarchy"
     ],
-    "fresh-session": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    "settings-json": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
     ],
-    "broken-and-idle": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    "path-resolution": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
     ],
-    "hook": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    "user-level-vs-project-level": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
     ],
-    "command": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    "deadlock-recovery": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
     ],
-    "determinism": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    "monitor-tool-escape": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
     ],
-    "additionalContext": [
-      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    "self-blocking": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed"
     ],
     "sister-project-applicable": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
       "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
@@ -48457,6 +49310,7 @@
       "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
     ],
     "layer-2": [
+      "lessons/01_drafts/user-level-settings-json-hook-path-resolution-relative-vs-home-prefixed",
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
       "lessons/03_validated/enforcement-compliance/correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern",
       "lessons/03_validated/enforcement-compliance/refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
@@ -48476,9 +49330,28 @@
       "lessons/03_validated/methodology-quality/fake-blockers-vs-real-blockers-empirical-verification-required",
       "lessons/03_validated/tools-architecture/hook-scope-machine-vs-project-level-cross-firing-anti-pattern",
       "lessons/04_principles/hypothesis/spec-driven-evolution-the-project-evolves-its-own-spec-to-fix-bugs-it-exhibits",
+      "log/2026-05-05-handoff-to-root-session",
       "log/2026-05-05-orient-pair-adoption-decision",
       "patterns/03_validated/architecture/agent-modes-three-mode-pattern-with-mode-aware-loop-cycles",
       "patterns/03_validated/architecture/session-orientation-pair-sessionstart-hook-and-orient-command-with-orient-report"
+    ],
+    "fresh-session": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "broken-and-idle": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "hook": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "command": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "determinism": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
+    ],
+    "additionalContext": [
+      "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading"
     ],
     "validated": [
       "lessons/03_validated/context-engineering/broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
@@ -48657,6 +49530,7 @@
     ],
     "layer-1": [
       "lessons/03_validated/ingestion-research/never-synthesize-from-descriptions-alone",
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "sources/src-hanke-honeypot-polarproxy-suricata-integration",
       "sources/src-suricata-install-quickstart",
       "sources/src-suricata-ips-mode-linux",
@@ -49240,6 +50114,7 @@
       "log/2026-05-04-new-machine-context-load-and-adaptation-findings",
       "log/2026-05-04-session-handoff-pre-compaction",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
     ],
     "summary": [
@@ -49320,6 +50195,7 @@
       "log/2026-04-27-session-handoff-rlm-thread-complete-evidence-chain-t-0-mission",
       "log/2026-04-28-session-handoff",
       "log/2026-05-04-session-handoff-pre-compaction",
+      "log/2026-05-05-handoff-to-root-session",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -49681,6 +50557,50 @@
     "post-compaction": [
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
     ],
+    "multi-source-ingestion": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming"
+    ],
+    "strands": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "qwen-scope": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming"
+    ],
+    "sae": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "recursivemas": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "lfm2": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "tokenization-drift": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "subquadratic": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "anythingllm": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "how-to-train-gpt": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming"
+    ],
+    "internal-cypher-langue": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "3-tier-programming": [
+      "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming"
+    ],
     "fowler": [
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
@@ -49698,6 +50618,15 @@
     ],
     "ingestion-arc": [
       "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
+    ],
+    "cross-session": [
+      "log/2026-05-05-handoff-to-root-session"
+    ],
+    "second-brain-to-root": [
+      "log/2026-05-05-handoff-to-root-session"
+    ],
+    "evolution-summary": [
+      "log/2026-05-05-handoff-to-root-session"
     ],
     "opt-in": [
       "log/2026-05-05-orient-pair-adoption-decision"
@@ -49922,11 +50851,18 @@
     "synthesis": [
       "patterns/03_validated/architecture/progressive-distillation",
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne",
       "sources/tools-integration/src-omnivoice-tts-600-languages",
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding",
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026",
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads",
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
       "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
-      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
     ],
     "density": [
       "patterns/03_validated/architecture/progressive-distillation"
@@ -49999,7 +50935,8 @@
       "spine/models/foundation/model-wiki-design"
     ],
     "tool-design": [
-      "patterns/03_validated/knowledge/context-aware-tool-loading"
+      "patterns/03_validated/knowledge/context-aware-tool-loading",
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
     ],
     "playwright": [
       "patterns/03_validated/knowledge/context-aware-tool-loading",
@@ -50324,7 +51261,8 @@
       "sources/src-arxiv-meta-harness-outer-loop-search"
     ],
     "stanford": [
-      "sources/src-arxiv-meta-harness-outer-loop-search"
+      "sources/src-arxiv-meta-harness-outer-loop-search",
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
     ],
     "nlah": [
       "sources/src-arxiv-natural-language-agent-harnesses"
@@ -50406,6 +51344,7 @@
     ],
     "prompt-engineering": [
       "sources/src-claude-code-prompt-patch-rebalancing",
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
       "spine/models/depth/model-context-engineering"
     ],
     "quality-enforcement": [
@@ -50488,7 +51427,8 @@
       "sources/src-hanke-honeypot-polarproxy-suricata-integration"
     ],
     "small-models": [
-      "sources/src-hrm-trm-tiny-recursion-models"
+      "sources/src-hrm-trm-tiny-recursion-models",
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
     ],
     "recursive-reasoning": [
       "sources/src-hrm-trm-tiny-recursion-models"
@@ -50530,7 +51470,8 @@
       "sources/src-llm-architecture-gallery-raschka"
     ],
     "attention-mechanisms": [
-      "sources/src-llm-architecture-gallery-raschka"
+      "sources/src-llm-architecture-gallery-raschka",
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
     ],
     "mla": [
       "sources/src-llm-architecture-gallery-raschka",
@@ -50952,7 +51893,8 @@
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
     ],
     "token-reduction": [
-      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
+      "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee",
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
     ],
     "classical-chinese": [
       "sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee"
@@ -51134,6 +52076,42 @@
     "multimodal": [
       "sources/tools-integration/src-kimi-k2-6-moonshot-agent-swarm",
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
+    ],
+    "liquid-ai": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "edge-models": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "on-device": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "hybrid-architecture": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "short-convolution": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "gqa": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "doom-loop": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "rl-with-verifiable-rewards": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "repetition-penalty": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "agentic-rl": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "28t-tokens": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
+    ],
+    "post-chinchilla": [
+      "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne"
     ],
     "longbench-pro": [
       "sources/tools-integration/src-longbench-pro-paper-deep-dive-1500-samples-46-models-three-findings",
@@ -51601,6 +52579,35 @@
     "stateful-tool-env": [
       "sources/tools-integration/src-prime-intellect-verifiers-llm-rl-environments"
     ],
+    "qwen3-5": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "sparse-autoencoder": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "mechanistic-interpretability": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "residual-stream": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "feature-steering": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "toxicity-classification": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "sasft": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "dapo": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite"
+    ],
+    "post-training": [
+      "sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite",
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
+    ],
     "2-bit": [
       "sources/tools-integration/src-qwen3-6-27b-2-bit-26-tool-calls-unsloth-discussion"
     ],
@@ -51647,6 +52654,33 @@
     "27b-beats-397b": [
       "sources/tools-integration/src-qwen3-6-27b-dense-beats-397b-moe-agentic-coding"
     ],
+    "recursive-multi-agent": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "latent-space": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "arxiv-2604-25917": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "mas": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "multi-agent-systems": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "rlm-extension": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "mixture-of-agents": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "latent-state-transfer": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
+    "inference-speedup": [
+      "sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026"
+    ],
     "empirical-findings": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
     ],
@@ -51659,10 +52693,6 @@
     ],
     "context-rot": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
-    ],
-    "post-training": [
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
-      "sources/tools-integration/src-rlm-paper-deep-dive-table-1-training-recipe-six-observations"
     ],
     "dec-2025-arxiv": [
       "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
@@ -51743,6 +52773,78 @@
     "anthropic-harness-precedent": [
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys"
     ],
+    "aws": [
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "agentic-framework": [
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "intent-based-tools": [
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "semantic-search": [
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "narrow-scope": [
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "agent-cardinality": [
+      "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction"
+    ],
+    "subq": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "sparse-attention": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "12m-context": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "low-confidence": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads",
+      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
+    ],
+    "early-stage-lead": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "operator-named": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads",
+      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
+    ],
+    "tracked-leads": [
+      "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads"
+    ],
+    "tokenization": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "ood": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "out-of-distribution": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "apo": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "automated-prompt-optimization": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "sft-template": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "jaccard-similarity": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "bpe": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "gpt-2": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
+    "prompt-format": [
+      "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost"
+    ],
     "m4-max": [
       "sources/tools-integration/src-turboquant-122b-macbook"
     ],
@@ -51807,9 +52909,6 @@
     "community-port": [
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
     ],
-    "low-confidence": [
-      "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
-    ],
     "grain-of-salt": [
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
     ],
@@ -51855,6 +52954,48 @@
     "ai-assisted-delivery": [
       "sources/wiki-methodology/src-fowler-structured-prompt-driven-development-spdd"
     ],
+    "pedagogy": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "gpt-training": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "llama3": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "transformer-architecture": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "rope": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "rmsnorm": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "swiglu": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "pre-norm": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "adamw": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "weight-tying": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "mixed-precision": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "education": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "tutorial": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
+    "custom-model-prerequisite": [
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+    ],
     "adrian-hajdin": [
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
@@ -51868,9 +53009,6 @@
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "agentskills": [
-      "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
-    ],
-    "operator-named": [
       "sources/wiki-methodology/src-jsmastery-six-file-context-system-agentic-build"
     ],
     "primary-source": [
@@ -52468,6 +53606,12 @@
       ]
     },
     {
+      "target": "2026-05-04 Custom-Tailored Model Mission Session Log",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)"
+      ]
+    },
+    {
       "target": "2026-05-04 Pre-Compaction Handoff",
       "referenced_by": [
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
@@ -52558,12 +53702,18 @@
         "2026-04-27 FINAL Session-End Handoff \u2014 2-Session Day-Arc Complete (S1 13 Artifacts + S2 7 Artifacts), All Wiki-Side P1 Functionally Closed, RLM Table 1 100% Layer 1, Anti-Vendor-Lock-In Mission Empirically Traceable End-to-End at Layer 1, Mission Side Done",
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
         "Synthesis \u2014 Multica: Open-Source Managed-Agents Platform (Orchestrator Layer Above 10 Harness CLIs, Apache 2.0, Self-Host or Cloud)",
         "Synthesis \u2014 OOLONG Paper Deep Dive: 2-Split Aggregation Benchmark, 9-Model Leaderboard, Frontier Models Fail Below 50% at 128K, DeepSeek-R1 Pathology, Reasoning-Effort Counter-Intuition (CMU; arXiv 2511.02817 v1, Nov 2025)",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
+        "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
+        "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
+        "Synthesis \u2014 SubQuadratic SubQ (12M Context Claim, Sparse Attention) + AnythingLLM (Operator-Named Breakthrough Leads, Tracked Skeptically)",
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
@@ -52698,6 +53848,12 @@
       "referenced_by": [
         "Epic readiness math is wrong when an epic has implicit goals beyond its current children",
         "Hierarchical Metrics Fail on Sparse Coverage"
+      ]
+    },
+    {
+      "target": "Custom-Tailored Senior-Engineer-Tier Model Group Concept",
+      "referenced_by": [
+        "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway"
       ]
     },
     {
@@ -53062,6 +54218,12 @@
       ]
     },
     {
+      "target": "Goldilocks Protocol",
+      "referenced_by": [
+        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution"
+      ]
+    },
+    {
       "target": "HF Discussion \u2014 Unsloth/Qwen3.6-27B-GGUF #15",
       "referenced_by": [
         "Synthesis \u2014 Unsloth GGUF: 2-bit Qwen3.6-27B Made 26 Tool Calls"
@@ -53123,6 +54285,12 @@
       "target": "Harness turnCount Bug \u2014 OpenArms Evidence",
       "referenced_by": [
         "Aspirational Naming in Lifecycle Code"
+      ]
+    },
+    {
+      "target": "How To Train Your GPT Synthesis",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)"
       ]
     },
     {
@@ -53707,7 +54875,11 @@
       "target": "RLM Synthesis",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
-        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
+        "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
+        "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch"
       ]
     },
     {
@@ -53763,6 +54935,7 @@
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
@@ -53826,6 +54999,9 @@
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
+        "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
+        "Synthesis \u2014 Tokenization Drift: How Small Formatting Changes Push Inputs Out-of-Distribution + Automated Prompt Optimization (APO) Loop (MarkTechPost 2026-05-03)",
+        "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
@@ -53840,6 +55016,12 @@
       "target": "Sub-Model \u2014 Goldilocks Protocol",
       "referenced_by": [
         "Profile as Coordination Bundle"
+      ]
+    },
+    {
+      "target": "SubQuadratic + AnythingLLM Synthesis",
+      "referenced_by": [
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)"
       ]
     },
     {
@@ -54275,6 +55457,12 @@
     {
       "target": "Trust-Layer Concept",
       "referenced_by": [
+        "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
+        "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
+        "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
+        "Synthesis \u2014 SubQuadratic SubQ (12M Context Claim, Sparse Attention) + AnythingLLM (Operator-Named Breakthrough Leads, Tracked Skeptically)",
+        "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
@@ -54296,7 +55484,10 @@
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
         "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
-        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)"
+        "Secure Tamper-Proof Model on Shared GPU \u2014 Research Synthesis (Operator-Initiated 2026-04-30)",
+        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
+        "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch"
       ]
     },
     {
@@ -54336,39 +55527,15 @@
       ]
     },
     {
-      "target": "agent-bug-fix-flow's CONFIRM step \u2014 \"report the chain to the operator\" implicitly requires surfacing",
-      "referenced_by": [
-        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
-      ]
-    },
-    {
-      "target": "agent-bug-fix-flow-must-be-mechanical-log-analyze-identify-fix-verify-confirm",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
-      ]
-    },
-    {
       "target": "awslabs/aidlc-workflows GitHub Repository",
       "referenced_by": [
         "Synthesis \u2014 AWS AI-DLC: AI-Driven Development Lifecycle (Methodology, Not a Tool)"
       ]
     },
     {
-      "target": "broken-and-idle-fresh-sessions-need-active-orientation-not-passive-context-loading",
-      "referenced_by": [
-        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
-      ]
-    },
-    {
       "target": "claude-code-prompt-patch",
       "referenced_by": [
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)"
-      ]
-    },
-    {
-      "target": "decision-presentation-discipline-context-guidance-recommendation",
-      "referenced_by": [
-        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
       ]
     },
     {
@@ -54571,18 +55738,6 @@
       ]
     },
     {
-      "target": "every sister project with operator-corrected agent behavior",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
-      ]
-    },
-    {
-      "target": "every sister project with structural-fix infrastructure",
-      "referenced_by": [
-        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
-      ]
-    },
-    {
       "target": "fake-blockers-vs-real-blockers",
       "referenced_by": [
         "Lesson \u2014 Anti-minimizing: don't undercount systemic bugs; blocker register self-filters before surfacing"
@@ -54619,13 +55774,10 @@
       "target": "prime-rl Synthesis",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
-        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
-      ]
-    },
-    {
-      "target": "refine-triggers-not-revoke-permissions-when-fixing-overzealous-rules",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+        "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
+        "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch"
       ]
     },
     {
@@ -54636,27 +55788,9 @@
       ]
     },
     {
-      "target": "root-ghostproxy SB-075",
-      "referenced_by": [
-        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
-      ]
-    },
-    {
       "target": "root-ghostproxy `operating-principles.md` Principle #8",
       "referenced_by": [
         "Lesson \u2014 Fake blockers vs real blockers: every 'blocker' claim requires empirical verification, not assumption"
-      ]
-    },
-    {
-      "target": "root-ghostproxy operating-principles #12 (\"Don't dismiss operator-sacrosanct words via over-correction\") \u2014 generalizes from rule-edits to all correction shapes",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
-      ]
-    },
-    {
-      "target": "root-ghostproxy operating-principles.md #12 + this conversation's distillation",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
       ]
     },
     {
@@ -54666,22 +55800,9 @@
       ]
     },
     {
-      "target": "structural-prevention principle",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)"
-      ]
-    },
-    {
       "target": "validated by T117",
       "referenced_by": [
         "Right-size the methodology model to the actual work, not the structural category"
-      ]
-    },
-    {
-      "target": "verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact",
-      "referenced_by": [
-        "Lesson \u2014 Correction-as-calibration, not swing: the going-to-extremes anti-pattern (agent's correction reflex is to swing to the opposite, not calibrate to the middle)",
-        "Lesson \u2014 Structural-but-not-surfaced failure mode: a fix that lands in a register but isn't visible at use-time recurs as a symptom"
       ]
     },
     {

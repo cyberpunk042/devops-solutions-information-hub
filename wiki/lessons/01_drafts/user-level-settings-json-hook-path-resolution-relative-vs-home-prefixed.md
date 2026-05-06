@@ -148,9 +148,3 @@ Universal. Any Claude Code project with user-level settings.json hooks has this 
 
 ## Relationships
 
-- COMPOSES WITH: [[correction-as-calibration-not-swing-the-going-to-extremes-anti-pattern]] — this incident is a sharp instance: I changed all 9 paths in one shot instead of one-and-test
-- COMPOSES WITH: [[decision-presentation-discipline-context-guidance-recommendation]] — should have surfaced as decision-package; semantics were unfamiliar
-- COMPOSES WITH: [[verbal-acknowledgment-is-not-a-fix-bug-fix-requires-structural-artefact]] — initial response was "I broke it, you fix it" until forced to find the structural escape
-- BUILDS ON: pattern of "tool meta-blocks tool" — when the tool that gates the fix IS the broken thing
-- USED BY: root-ghostproxy systemic-bugs SB-086 (this incident registered there)
-- POTENTIALLY USED BY: every project with user-level Claude Code settings.json hook config

@@ -179,6 +179,63 @@ The wiki's [anti-vendor-lock-in lesson](../../lessons/01_drafts/anti-vendor-lock
 
 The 4th layer's substitution path: hardware vendor (NVIDIA / AMD / Intel TDX), TEE provider (NVIDIA Secure AI / AWS Nitro / Azure CC / GCP CC), and key-management approach (operator-held / KMS / HSM). All have published documentation; all are individually substitutable. Anti-vendor-lock-in extends to security stance — operator owns the keys, attestation is verifiable, provider cannot tamper without detection.
 
+## 2026-05-04 Addendum — Internal-Cypher-Langue Extension (operator-stated, sacrosanct)
+
+> [!info] Operator extends the trust-layer framing from I/O boundary to interior representation (verbatim 2026-05-04, raw note `raw/notes/2026-05-04-anythingllm-subquadratic-multi-source-ingestion-and-internal-cypher-langue-extension.md`):
+>
+> *"I wounder if there isnt even a connection about the things I discussed and the cypher en compression and how we could not only at the I/O but possibly reduce the size in such said mode compare to the non cypher and or compressed version ? just idea.. I am in no way a real expert, at least not yet. But I am starting to see it and see the parts of the virutal "brain" / sum of all pieces."*
+>
+> *"I imagine something a bit like a black box.. even more than right now.. you would not even understand the inner happening because its happening in a coded and optimised langues and require possibly a minimal decypher and or decompress to see properly probably after the input using the same encryption and settings and salt as the input."*
+>
+> *"I am talking about a kind of unique langue in a sense.. not that cypher in a sense isn't alwasy just that althrough it also or mostly a translation / transformation at the same time."*
+
+### Operator-asserted properties (registered, not contested)
+
+| Property | Operator's framing | Empirical mechanism (paper-grade) |
+|---|---|---|
+| **Internal compression** | Reduce size in coded mode vs non-cypher / non-compressed | Sparse autoencoder representation: residual-stream activation → top-k sparse latent features (k=50 or 100 of N=16×–64× hidden size). Per [Qwen-Scope Synthesis](../../sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md): activation IS structurally compressed when projected through SAE encoder. |
+| **Black-box property** | Inner happening illegible without decypher | SAE weights ARE the decypher key; without them, residuals are opaque high-dimensional vectors |
+| **Same-key inspection** | "using the same encryption and settings and salt as the input" | Operator-trained SAE on operator's own corpus = operator-controlled inspection key; per-version SAE (sae-vX.Y) ships alongside model-vX.Y |
+| **Translation/transformation** | "cypher in a sense isn't alwasy just [encryption], althrough it also or mostly a translation / transformation at the same time" | SAE encoder is exactly translation: high-D activations → sparse interpretable features; the translation IS the cypher in this composition |
+| **Black-box-MORE-than-right-now** | Stronger interpretability barrier than current opacity | Operator-controlled SAE means provider/inspector cannot run unauthorized SAE without operator's weights; trust extends from weights to interpretability surface |
+
+### Mechanism: Qwen-Scope as Production-Deployed Decypher
+
+Per [Qwen-Scope Synthesis](../../sources/tools-integration/src-qwen-scope-sparse-autoencoders-llm-interpretability-suite.md): Qwen Team released 14 SAE groups across 7 backbones (Qwen3-1.7B/8B/30B-A3B + Qwen3.5-2B/9B/27B/35B-A3B) on 2026-05-01. SAE decomposes residual-stream activations into sparse interpretable features (each input activates only k of N features; each feature corresponds to a concept). **Four production applications already validated**: inference-time steering · evaluation redundancy analysis (ρ=0.85 on 17 benchmarks) · multilingual toxicity classification (F1>0.90 across 13 languages, 99% retention at 10% data) · post-training improvements (SASFT cuts code-switching >50%; DAPO+SAE-steering reduces repetition).
+
+**Composition with L0–L4 trust opt-ins (additive, not replacing)**:
+
+| Trust opt-in | Internal-cypher-langue extension |
+|---|---|
+| L0 — Hash integrity | + operator-trained SAE published with same hash for inspection-key integrity |
+| L1 — Weights-encrypted-at-rest | + SAE weights also encrypted-at-rest with same key |
+| **L2 — Compressed-encrypted weights + KV cache + on-GPU decypher (DEFAULT)** | **+ SAE features computed inside encrypted memory; sparse-feature output stays encrypted unless operator explicitly inspects with operator's SAE-key** |
+| L3 — NVIDIA H100/H200 CC mode | + attestation report includes SAE-version + activation-monitoring policy |
+| L4 — End-to-end FHE | + FHE inference over SAE features (extreme niche; research-stage) |
+
+### Implication for Operator's Mission
+
+| Pre-2026-05-04 framing | Post-2026-05-04 extension |
+|---|---|
+| Trust layer = cypher/decypher at I/O + compression at I/O | Trust layer = cypher/decypher at I/O + compression at I/O **+ SAE-style interpretability decypher at interior representation** |
+| Compression at the encryption layer = +0% space (overlay) | Compression at internal-langue layer = **structural sparsity** (k of N features active, where N=16×–64× hidden size; effective compression ratio depends on k/N) |
+| Inspection requires operator's key for weights | Inspection requires operator's key for weights **+ operator's SAE for interior interpretability** |
+| Black box = opaque to provider | Black box = opaque to provider AND opaque to non-operator inspectors AT THE LANGUE LAYER |
+| Translation in cypher = bytewise scrambling | Translation in cypher = **structural translation into sparse interpretable feature dictionary** (operator-defined dictionary) |
+
+### Connection to Custom-Model Mission
+
+The operator's [Custom-Tailored Senior-Engineer-Tier Model Group Concept](custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md) M003 (Recreated Intelligence Layer at I/O Boundaries) extends to **interior intelligence layer** with this addendum: SAE-based feature steering + monitoring + safety classification operates inside the model, not just at I/O. M004 (Behavioral Preference Fine-Tune) gains SASFT (per Qwen-Scope Insight 5) as the regularization mechanism that uses SAE features as alignment signals.
+
+**Operator's per-version manifest now includes**:
+- Base model weights (operator-encrypted at L1+)
+- LoRA weights (operator-encrypted at L1+)
+- Preference data (operator-encrypted at L1+)
+- Instruction data (operator-encrypted at L1+)
+- Behavioral constitution (operator-encrypted at L1+)
+- **SAE weights for interior decypher (NEW — operator-controlled inspection key)**
+- **Canonical template for tokenization-drift prevention (NEW — per [Tokenization Drift Synthesis](../../sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost.md))**
+
 ## Open Questions (operator design calls)
 
 > [!question] Threat model breadth — single stance, or per-workload toggle?
