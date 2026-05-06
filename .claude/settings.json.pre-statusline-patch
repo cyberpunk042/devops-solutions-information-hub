@@ -155,17 +155,6 @@
           }
         ]
       }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 /opt/devops-solutions-information-hub/.claude/hooks/end-of-cycle-stamp.sh",
-            "timeout": 10
-          }
-        ]
-      }
     ]
   }
 }
