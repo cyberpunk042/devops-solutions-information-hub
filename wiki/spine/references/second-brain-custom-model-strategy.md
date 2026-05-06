@@ -167,6 +167,25 @@ Five days later (2026-04-22), **[[src-kimi-k2-6-moonshot-agent-swarm|Kimi K2.6]]
 
 **The deeper principle.** The custom-model strategy exists to *fill gaps in the commercial landscape*. When the commercial landscape shifts — as it did on 2026-04-20 with K2.6 — the gaps move. The strategy must follow. The candidates are *tools*, not *destinations*; their justification is the shape of the gap on the day we pick them up.
 
+### 2026-05-06 Empirical Caveat — Ollama Cloud Top-Tier Slowness
+
+Per operator-tested 2026-05-06 (verbatim in [`raw/notes/2026-05-06-ollama-cloud-top-tier-slow-empirical-observation-and-subscription-vs-per-token-tradeoff.md`](../../../raw/notes/2026-05-06-ollama-cloud-top-tier-slow-empirical-observation-and-subscription-vs-per-token-tradeoff.md)):
+
+> *"I tested the top tier model on ollama cloud and effectively currently they are very slow... properly overused and low priority requests and/or such... almost as if they were running on my machine."*
+
+**Implication for the strategy**: the 2026-04-22 K2.6 reshape that argues *"using K2.6 via OpenRouter is effectively cheaper than training a custom distilled model"* assumes K2.6 via Ollama Cloud Pro at $20/mo tier or via OpenRouter at $0.80/$3.50 per million tokens delivers usable performance. **As of 2026-05-06, Ollama Cloud Pro top-tier is empirically slow** — operator validated this. OpenRouter does NOT exhibit the same slow performance per operator. **But**: operator-stated subscription-vs-per-token tradeoff: *"subsription is way more practical... per-token billing is hard to budget."*
+
+Concrete strategy adjustment:
+
+| Workload class | Pre-2026-05-06 default | Post-2026-05-06 operator-validated route |
+|---|---|---|
+| Non-sensitive personal-daily | Ollama Cloud Pro flat-rate at top-tier | Ollama Cloud Pro at non-top-tier (still flat-rate) OR OpenRouter K2.6 (per-token, faster) per workload |
+| Time-sensitive work | OpenRouter K2.6 | OpenRouter K2.6 (confirmed faster) |
+| Predictable-budget work | Claude Code subscription · Ollama Cloud Pro · OpenCode subscription | Same — operator stated *"I still cannot separate myself from [Claude Code]"* |
+| Top-tier speed-critical via flat-rate | Untested | $100/mo Ollama Cloud tier might unlock speed — operator-untested-hypothesis; track |
+
+**Track over time**: operator-stated *"we will need to validate the progress of this over time, it will probably fix itself at some point."* Re-test Ollama Cloud top-tier speed periodically; if it resolves, restore default; if not, reframe candidate routing further.
+
 ## 2026-05-04 Addendum — Senior-Engineer-Tier + Behavioral-Alignment Core + Recreated Intelligence Layer Extension
 
 > Operator directive 2026-05-04 (verbatim, sacrosanct): *"I really am going to need to find and customize my own model.. I think the models in genral lack a core that bring way more intelligence to the model and make it adapted to a real senior software engineer instead of a newbe... most model try to do both ends at the same time and end up achieing both mediocer ... My goal would be to really tailing it to my need and knowledge and proned ways and high standards and Adding my core to it. An AI that not longer try to hack or rush or quickfix things but naturally WANT to do things right... Of course it will have multiple versions. but we want to act potentially like both an information virus if you will and also front and out interfaces and possibly a little of middlewares shaping and integrations... we probalby need to find our find Group of MoE models of various sizes and needs and we create an intelligence layer... we recreate intelligence at the layers needed. in and out... like we teach... with and without cypher / decypher with or without I/O Compression"*

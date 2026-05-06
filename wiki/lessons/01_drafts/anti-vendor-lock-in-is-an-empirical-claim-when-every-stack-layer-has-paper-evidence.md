@@ -192,6 +192,34 @@ The wiki's mission ([feedback_mission_framing.md](file:///home/jfortin/.claude/p
 >
 > **Key implication for the mission claim**: every compression layer has independently-substitutable mechanisms; **no single vendor controls multiple layers' compression simultaneously**. The mission's empirical-substitutability claim now has cross-cutting evidence beyond the 4-layer-+-1-candidate vertical structure (orchestrator × harness × provider × trust × custom-model-candidate) — compression as a horizontal axis cuts across vertical layers, each layer presenting its own substitutability. **For any production AI build, anti-vendor-lock-in compounds across both the vertical mission layers AND the horizontal compression layers.**
 
+> [!success]- **Evidence 14 — Provider × billing-model substitutability: empirically validated 2026-05-06 across speed/cost dimensions**
+>
+> Per operator-tested 2026-05-06 (verbatim in [`raw/notes/2026-05-06-ollama-cloud-top-tier-slow-empirical-observation-and-subscription-vs-per-token-tradeoff.md`](../../../raw/notes/2026-05-06-ollama-cloud-top-tier-slow-empirical-observation-and-subscription-vs-per-token-tradeoff.md)): the **provider × billing-model layer** has multiple substitutable axes that operator empirically validated 2026-05-06:
+>
+> | Provider × Billing | Speed (operator-validated 2026-05-06) | Cost predictability | Operator's framing |
+> |---|---|---|---|
+> | **Ollama Cloud Pro flat $20/mo** | **Top-tier currently very slow** (overuse + low-priority requests; *"almost as if they were running on my machine"*) | Predictable flat-rate | Track over time; *"will probably fix itself"* |
+> | **OpenRouter per-token** | Fast (operator empirically confirmed) | Hard to budget — *"its hard to have a proper budget with a per token billing"* | Speed-positive; budget-negative |
+> | **Claude Code subscription** | Stable working | Predictable monthly | *"I still cannot separate myself from [Claude Code] even though now at least I can go on opencode and such other options"* |
+> | **OpenCode subscription** | Available alternative | Predictable | Substitution path operational |
+>
+> **Substitutability axes within provider × billing layer**:
+>
+> - Billing model: per-token (OpenRouter) · flat-rate-subscription (Ollama Cloud Pro · Claude Code · OpenCode) · pay-per-use micropayments via x402 (per Evidence 12 candidate)
+> - Provider commercial tier: free · paid-base · paid-pro · enterprise
+> - Speed-vs-cost tradeoff: per-token-faster · flat-rate-slower-but-budget-predictable
+>
+> **Operator-mission application**: the [Goldilocks Protocol](../04_principles/hypothesis/goldilocks-protocol.md) applies at the provider economics level — operator picks per workload class:
+>
+> | Workload class | Optimal provider × billing |
+> |---|---|
+> | Speed-critical | OpenRouter per-token |
+> | Budget-critical / personal-daily | Ollama Cloud Pro flat OR Claude Code subscription |
+> | Subscription-stability needed | Claude Code subscription (operator-confirmed cannot-separate-myself dependency) |
+> | Long-context-default workloads (1M+) | DeepSeek V4 via DeepSeek API · cloud H100 rental for V4-Pro |
+>
+> **The mission claim's empirical substitutability holds at the billing-model dimension** — operator can swap among per-token / flat-subscription / micropayment / free-tier without vendor lock-in. The 2026-05-06 Ollama Cloud top-tier slow observation IS the dynamic shifting evidence the [2026-04-22 K2.6 reshape](../../spine/references/second-brain-custom-model-strategy.md) called out: *"the gaps move. The strategy must follow."*
+
 ## Applicability
 
 > [!info] **When this lesson applies (decision matrix)**

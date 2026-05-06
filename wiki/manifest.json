@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-06T22:13:13.680504+00:00",
+  "generated": "2026-05-06T22:22:15.770155+00:00",
   "stats": {
-    "pages": 603,
+    "pages": 604,
     "domains": 12,
-    "sources": 103,
+    "sources": 104,
     "comparisons": 9,
-    "relationships": 3739,
-    "tags_unique": 2256,
+    "relationships": 3749,
+    "tags_unique": 2265,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,11 +14,11 @@
       "2": 74,
       "4": 67,
       "0": 1,
-      "1": 74,
+      "1": 75,
       "spine": 78
     },
     "maturity": {
-      "seed": 89,
+      "seed": 90,
       "growing": 326,
       "mature": 23
     }
@@ -34091,6 +34091,132 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16.md",
+      "slug": "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
+      "title": "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "cloudflare",
+        "ai-platform",
+        "ai-gateway",
+        "workers-ai",
+        "agents-week-2026",
+        "unified-inference-layer",
+        "multi-provider",
+        "automatic-failover",
+        "replicate-cog",
+        "bring-your-own-model",
+        "time-to-first-token",
+        "kimi-k2-5-cloudflare-hosted",
+        "cost-monitoring",
+        "custom-metadata",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "cloudflare-ai-platform-blog",
+          "type": "article",
+          "url": "https://blog.cloudflare.com/ai-platform/",
+          "file": "raw/articles/cloudflares-ai-platform-an-inference-layer-designed-for-agents.md",
+          "description": "Cloudflare's canonical AI Platform announcement (Ming Lu + Michelle Chen, 2026-04-16, Agents Week 2026) \u2014 AI Gateway evolves to unified inference layer; 70+ models across 12+ providers via single API; Workers AI binding integration; automatic failover; bring-your-own-model via Replicate Cog; Replicate team joined Cloudflare's AI Platform team"
+        },
+        {
+          "id": "ai-gateway-docs",
+          "type": "documentation",
+          "url": "https://developers.cloudflare.com/ai-gateway",
+          "description": "Cloudflare AI Gateway developer docs"
+        },
+        {
+          "id": "workers-ai-docs",
+          "type": "documentation",
+          "url": "https://developers.cloudflare.com/workers-ai/",
+          "description": "Cloudflare Workers AI developer docs \u2014 open-source model catalog including Kimi K2.5 + real-time voice models hosted on Cloudflare's network"
+        },
+        {
+          "id": "replicate-cog",
+          "type": "documentation",
+          "url": "https://cog.run/",
+          "description": "Replicate's Cog containerization technology for ML models \u2014 used by Cloudflare's bring-your-own-model path"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Anti-Vendor-Lock-In Lesson Evidence 14 \u2014 provider \u00d7 billing-model substitutability empirically validated 2026-05-06; AI Gateway is structurally a substitutable axis at the unified-inference-layer dimension"
+        },
+        {
+          "id": "ollama-cloud-2026-05-06-empirical",
+          "type": "file",
+          "file": "raw/notes/2026-05-06-ollama-cloud-top-tier-slow-empirical-observation-and-subscription-vs-per-token-tradeoff.md",
+          "description": "Operator-validated 2026-05-06 \u2014 Ollama Cloud top-tier slow; OpenRouter per-token faster but harder to budget. AI Gateway adds another candidate at this provider \u00d7 billing tier with automatic failover."
+        },
+        {
+          "id": "agents-week-summary-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements.md",
+          "description": "Agents Week 2026 master summary \u2014 AI Platform sits in Agent Toolbox tier"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cloudflare AI Platform Synthesis",
+        "AI Gateway Unified Inference Layer",
+        "Cloudflare 12+ Provider Inference",
+        "AI Gateway Automatic Failover"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Mesh Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Agent Memory Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Markdown for Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare x402 Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cloudflare Agents Week 2026 Summary"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
       "slug": "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "title": "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
@@ -44988,8 +45114,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 33,
-      "relationship_count": 333
+      "page_count": 34,
+      "relationship_count": 343
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -50380,6 +50506,7 @@
       "lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers",
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
       "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23",
@@ -52145,6 +52272,7 @@
       "patterns/03_validated/architecture/progressive-distillation",
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
       "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23",
@@ -52670,7 +52798,8 @@
       "sources/src-cline-agentic-coding-ide-extension"
     ],
     "multi-provider": [
-      "sources/src-cline-agentic-coding-ide-extension"
+      "sources/src-cline-agentic-coding-ide-extension",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
     ],
     "ecosystem-comparison": [
       "sources/src-cline-agentic-coding-ide-extension"
@@ -53266,6 +53395,7 @@
     "cloudflare": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14",
       "sources/tools-integration/src-cloudflare-x402-foundation-coinbase-pay-per-crawl-machine-payments-2025-09-23"
@@ -53276,6 +53406,7 @@
     "agents-week-2026": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
       "sources/tools-integration/src-cloudflare-mesh-private-networking-for-users-nodes-agents-workers-2026-04-14"
     ],
     "context-rot": [
@@ -53304,6 +53435,7 @@
     ],
     "workers-ai": [
       "sources/tools-integration/src-cloudflare-agent-memory-rrf-retrieval-context-rot-solution-2026-04-17",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16",
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
     ],
     "llama-4-scout": [
@@ -53340,7 +53472,8 @@
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
     ],
     "ai-platform": [
-      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+      "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements",
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
     ],
     "unweight": [
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
@@ -53374,6 +53507,33 @@
     ],
     "shared-dictionary-compression": [
       "sources/tools-integration/src-cloudflare-agents-week-2026-summary-and-cross-cutting-announcements"
+    ],
+    "ai-gateway": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "unified-inference-layer": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "automatic-failover": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "replicate-cog": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "bring-your-own-model": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "time-to-first-token": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "kimi-k2-5-cloudflare-hosted": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "cost-monitoring": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
+    ],
+    "custom-metadata": [
+      "sources/tools-integration/src-cloudflare-ai-platform-unified-inference-layer-12-providers-automatic-failover-2026-04-16"
     ],
     "markdown-for-agents": [
       "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
@@ -55330,6 +55490,7 @@
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
+        "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
         "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
         "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
@@ -55430,6 +55591,12 @@
       "target": "Clean-Win Scope Expansion \u2014 What Hooks Miss",
       "referenced_by": [
         "Enforcement Hook Patterns"
+      ]
+    },
+    {
+      "target": "Cloudflare Agents Week 2026 Summary",
+      "referenced_by": [
+        "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog"
       ]
     },
     {
@@ -55867,6 +56034,7 @@
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
+        "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",
         "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
         "Synthesis \u2014 Cloudflare x402 + Coinbase Foundation (Sep 23 2025): HTTP 402 Payment Required as Machine-Readable Payment Negotiation Layer for AI Agents",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
@@ -57132,6 +57300,7 @@
       "referenced_by": [
         "End-to-End Compression Across the AI Stack Composes Multiplicatively \u2014 6+ Independent Mechanisms at 6 Distinct Layers, Each Substitutable Per Anti-Vendor-Lock-In",
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+        "Synthesis \u2014 Cloudflare AI Platform (Apr 16 2026): Unified Inference Layer for 12+ Providers + 70+ Models with Automatic Failover + Bring-Your-Own-Model via Replicate Cog",
         "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
         "Synthesis \u2014 Cloudflare Mesh (Apr 14 2026): Private Networking for Users + Nodes + Agents + Workers \u2014 Direct root-ghostproxy Mission Overlap",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2",
