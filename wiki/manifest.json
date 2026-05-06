@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-06T20:06:12.149523+00:00",
+  "generated": "2026-05-06T21:34:52.356619+00:00",
   "stats": {
-    "pages": 594,
+    "pages": 597,
     "domains": 12,
-    "sources": 95,
+    "sources": 98,
     "comparisons": 9,
-    "relationships": 3650,
-    "tags_unique": 2145,
+    "relationships": 3682,
+    "tags_unique": 2183,
     "layers": {
       "3": 4,
       "5": 37,
@@ -14,11 +14,11 @@
       "2": 74,
       "4": 66,
       "0": 1,
-      "1": 66,
+      "1": 69,
       "spine": 78
     },
     "maturity": {
-      "seed": 80,
+      "seed": 83,
       "growing": 326,
       "mature": 23
     }
@@ -33678,6 +33678,168 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02.md",
+      "slug": "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
+      "title": "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "cloudflare",
+        "markdown-for-agents",
+        "content-negotiation",
+        "http-headers",
+        "accept-header",
+        "content-signals",
+        "llms-txt",
+        "ai-crawlers",
+        "server-side-compression",
+        "80-percent-token-reduction",
+        "workers-ai",
+        "browser-rendering-api",
+        "ai-bot-traffic",
+        "claude-code-integration",
+        "opencode-integration",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "cloudflare-blog-announcement",
+          "type": "article",
+          "url": "https://blog.cloudflare.com/markdown-for-agents/",
+          "file": "raw/articles/introducing-markdown-for-agents.md",
+          "description": "Cloudflare's canonical blog post by Celso Martinho + Will Allen (2026-02-12) \u2014 feature announcement, 80% token reduction worked example (this announcement post = 16,180 HTML tokens \u2192 3,150 markdown), content negotiation pattern, x-markdown-tokens header, Content Signals integration, fallback alternatives (Workers AI AI.toMarkdown() + Browser Rendering /markdown), Cloudflare Radar tracking"
+        },
+        {
+          "id": "cloudflare-developer-docs",
+          "type": "documentation",
+          "url": "https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/",
+          "file": "raw/articles/markdown-for-agents-cloudflare-fundamentals-docs.md",
+          "description": "Cloudflare's official developer documentation \u2014 output-structure spec (YAML frontmatter + Markdown body + JSON-LD code block), HTML pre-processing rules, enablement paths (dashboard / API / per-subdomain configuration rules / per-custom-hostname custom metadata), Pro/Business/Enterprise/SSL-for-SaaS pricing tier, 2 MB origin response limit"
+        },
+        {
+          "id": "infoq-industry-coverage",
+          "type": "article",
+          "url": "https://www.infoq.com/news/2026/03/cloudflare-crawler/",
+          "file": "raw/articles/cloudflare-debuts-markdown-for-agents-and-content-signals-to-guide-ai-crawlers-i.md",
+          "description": "Matt Foster, InfoQ 2026-03-05 \u2014 industry-perspective coverage; documents Content Signals proposal (search / ai-input / ai-train in robots.txt comments), pay-per-crawl HTTP 402 model (separate Cloudflare experiment), industry pushback (Google's John Mueller called converting pages to Markdown 'a stupid idea' on Bluesky), publisher-side context (Medium / Reuters / NYT / CNN blocking AI crawlers)"
+        },
+        {
+          "id": "anthropic-context-engineering",
+          "type": "documentation",
+          "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+          "description": "Anthropic upstream \u2014 context-engineering canonical reference; Cloudflare's 80% reduction directly addresses the 'tokens have financial AND cognitive cost' framing the article anchors"
+        },
+        {
+          "id": "firecrawl-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents.md",
+          "description": "Firecrawl Synthesis \u2014 alternative-vendor at the SAME functional layer (HTML\u2192Markdown for AI agents); Firecrawl is client-side scraper-as-service; Cloudflare Markdown for Agents is server-side opt-in; complementary, not competing"
+        },
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Caveman Synthesis \u2014 adjacent compression substrate (prompt-output compressor 80-90% character reduction); Cloudflare's 80% at-source compression composes orthogonally with Caveman's at-prompt compression"
+        },
+        {
+          "id": "strands-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction.md",
+          "description": "Strands Agents Synthesis \u2014 adjacent compression at the tool-call layer (96% via intent-based tool design); Cloudflare is content-source layer; both compose"
+        },
+        {
+          "id": "recursivemas-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-recursivemas-recursive-multi-agent-systems-stanford-2026.md",
+          "description": "RecursiveMAS Synthesis \u2014 adjacent compression at the inter-agent layer (34.6-75.6% via cross-agent latent transfer); Cloudflare is content-source; both compose"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept \u2014 operator's compression-theme mission framing (80-90% combined envelope); Cloudflare adds a content-source axis to the multi-layer composition"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 (Recreated Intelligence Layer at I/O Boundaries); Cloudflare's Accept-header pattern is a NEW input-boundary practice that costs $0 (just a header) but saves 80% tokens when source supports it"
+        },
+        {
+          "id": "mlmastery-context-engineering-synth",
+          "type": "wiki",
+          "file": "wiki/sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide.md",
+          "description": "MLMastery Context Engineering Synthesis \u2014 adjacent context-engineering practice; Cloudflare Markdown for Agents is the at-source mechanism the input-boundary practices the article describes can leverage"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Cloudflare Markdown for Agents Synthesis",
+        "Markdown for Agents (Cloudflare)",
+        "Server-Side Markdown Conversion",
+        "Content Negotiation for AI Agents",
+        "Cloudflare 80% Token Reduction"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Firecrawl Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "RecursiveMAS Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "MLMastery Context Engineering Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "VentureBeat Agent-Integration-Layer Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        }
+      ]
+    },
+    {
       "path": "sources/tools-integration/src-codex-cli-and-claude-code-plugin.md",
       "slug": "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
       "title": "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
@@ -36853,6 +37015,162 @@
       ]
     },
     {
+      "path": "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026.md",
+      "slug": "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
+      "title": "Synthesis \u2014 VentureBeat: Agent Integration Layer Is the Supply-Chain Attack Surface No Scanner Sees (CLI-Anything \u00b7 SKILL.md Poisoning \u00b7 ClawHavoc 1,184 Compromised \u00b7 Cisco/Snyk First Tools April 2026)",
+      "type": "source-synthesis",
+      "domain": "tools-integration",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "security",
+        "supply-chain",
+        "agent-integration-layer",
+        "skill-md",
+        "mcp",
+        "sast",
+        "sca",
+        "cli-anything",
+        "openclaw",
+        "clawhub",
+        "clawhavoc",
+        "ddipe",
+        "cisco-skill-scanner",
+        "snyk-mcp-scan",
+        "prompt-injection",
+        "instruction-poisoning",
+        "root-ghostproxy-relevant",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "venturebeat-article",
+          "type": "article",
+          "url": "https://venturebeat.com/security/one-command-open-source-repo-ai-agent-backdoor-openclaw-supply-chain-scanner",
+          "file": "raw/articles/venturebeat-cli-anything-agent-integration-layer-supply-chain-attack.md",
+          "description": "Louis Columbus, VentureBeat 2026-05-05 \u2014 CLI-Anything (UHK Data Intelligence Lab) generates SKILL.md files; same artifact class Snyk's ToxicSkills found 76 malicious payloads in (Feb 2026); Antiy CERT confirmed 1,184 compromised packages on ClawHub via the ClawHavoc campaign; Cisco + Snyk shipped first agent-integration-layer scanners April 2026"
+        },
+        {
+          "id": "ddipe-paper",
+          "type": "documentation",
+          "url": "https://arxiv.org/",
+          "description": "Griffith U + NTU + UNSW + U-Tokyo April 2026 paper \u2014 'Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems' \u2014 introduces Document-Driven Implicit Payload Execution (DDIPE) with 11.6%-33.5% bypass rates across 4 frameworks \u00d7 5 LLMs; 2.5% evade all 4 detection layers"
+        },
+        {
+          "id": "cve-2026-22708",
+          "type": "documentation",
+          "url": "https://nvd.nist.gov/",
+          "description": "Pillar Security demonstrated against Cursor January 2026 \u2014 implicitly-trusted shell built-in commands poisoned via indirect prompt injection; users see only final command, poisoning happens through commands the IDE never surfaces for approval"
+        },
+        {
+          "id": "cisco-skill-scanner",
+          "type": "documentation",
+          "url": "https://www.cisco.com/",
+          "description": "Cisco's open-source AI Agent Security Scanner for IDEs \u2014 first agent-integration-layer scanner shipped April 2026"
+        },
+        {
+          "id": "snyk-mcp-scan",
+          "type": "documentation",
+          "url": "https://snyk.io/",
+          "description": "Snyk's mcp-scan \u2014 companion tool for MCP server security; behavioral analysis of agent instruction files"
+        },
+        {
+          "id": "ox-security-mcp-marketplaces",
+          "type": "documentation",
+          "url": "https://ox.security/",
+          "description": "OX Security April 2026 \u2014 researchers poisoned 9 of 11 MCP marketplaces using PoC servers"
+        },
+        {
+          "id": "trend-micro-mcp-exposure",
+          "type": "documentation",
+          "url": "https://trendmicro.com/",
+          "description": "Trend Micro \u2014 initially 492 MCP servers exposed to internet with zero auth; by April 2026, 1,467 exposed servers"
+        },
+        {
+          "id": "anthropic-mcp-sdk",
+          "type": "documentation",
+          "url": "https://github.com/modelcontextprotocol",
+          "description": "Anthropic's MCP SDK transport mechanism (per The Register) \u2014 vulnerability class inherited by any developer using the official SDK"
+        },
+        {
+          "id": "openclaw-sister-project",
+          "type": "wiki",
+          "file": "wiki/config/sister-projects.yaml",
+          "description": "OpenClaw is registered in this wiki's sister-projects.yaml as 'Upstream parent of OpenArms \u2014 fork relationship, features flow both ways'. The article reports OpenClaw's ClawHub marketplace had 1,184 compromised skills \u2014 direct mission-relevance for the operator's ecosystem (OpenArms downstream \u2192 OpenClaw upstream \u2192 ClawHub supply-chain risk)"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept covers cypher/decypher/compression at the weight + I/O layers. This article documents a DIFFERENT attack surface \u2014 the agent integration layer \u2014 that operator's trust-layer composition does NOT cover. Layer 3 of the VentureBeat matrix is a candidate FIFTH dimension within trust."
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 (Recreated Intelligence Layer at I/O Boundaries) gains output-boundary application: SKILL.md / MCP-config / rules-file inspection BEFORE agent ingests any new instruction artifact"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Spec-Driven Convergence Lesson \u2014 version-controlled SKILL.md / spec artifacts are precisely the attack surface this article identifies; the convergence's verification-checklist + closed-loop-sync rules become security primitives, not just quality primitives"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Agent Integration Layer Attack Surface",
+        "VentureBeat Supply-Chain Poisoning Synthesis",
+        "SKILL.md Poisoning",
+        "ClawHavoc Synthesis",
+        "Three-Layer Agent Supply-Chain Audit"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Decision \u2014 Adopt Multica"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Cavekit v4 Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        }
+      ]
+    },
+    {
       "path": "sources/wiki-methodology/methodology-artifact-taxonomy-research.md",
       "slug": "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "title": "Synthesis \u2014 Methodology Artifact Taxonomy \u2014 Full Spectrum Research",
@@ -37879,6 +38197,159 @@
         {
           "verb": "RELATES TO",
           "target": "Schema Is the Real Product"
+        }
+      ]
+    },
+    {
+      "path": "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide.md",
+      "slug": "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
+      "title": "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target",
+      "type": "source-synthesis",
+      "domain": "wiki-methodology",
+      "status": "synthesized",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "synthesis",
+        "context-engineering",
+        "ai-agents",
+        "token-budgeting",
+        "prompt-engineering",
+        "prefix-caching",
+        "conversation-history",
+        "retrieval",
+        "semantic-chunking",
+        "agent-controlled-retrieval",
+        "probe-based-evaluation",
+        "anchored-iterative-summarization",
+        "context-utilization",
+        "anthropic-upstream",
+        "mission-2026-05-06"
+      ],
+      "sources": [
+        {
+          "id": "mlmastery-article",
+          "type": "article",
+          "url": "https://machinelearningmastery.com/effective-context-engineering-for-ai-agents-a-developers-guide/",
+          "file": "raw/articles/mlmastery-effective-context-engineering-for-ai-agents-developers-guide.md",
+          "description": "Bala Priya C, MachineLearningMastery 2026-04-28 \u2014 developer-facing guide to context engineering practice; covers context-window-as-RAM mental model, static-vs-dynamic split, conversation-history strategies (recency / rolling-summarization / anchored-iterative-summarization), retrieval as budgeted operation, token budgeting across agent loops (60-80% utilization target), probe-based evaluation framework"
+        },
+        {
+          "id": "anthropic-context-engineering",
+          "type": "documentation",
+          "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+          "description": "Anthropic's canonical 'Effective context engineering for AI agents' \u2014 primary upstream source the article distills; should be ingested separately at Layer 1 if the operator wants the full Anthropic-published reference"
+        },
+        {
+          "id": "weaviate-context-engineering",
+          "type": "documentation",
+          "url": "https://weaviate.io/blog/context-engineering",
+          "description": "Weaviate 'Context Engineering \u2013 LLM Memory and Retrieval for AI Agents' \u2014 vendor-side framing of the same practice from the retrieval-tech vendor perspective"
+        },
+        {
+          "id": "factory-ai-evaluation-framework",
+          "type": "documentation",
+          "url": "https://factory.ai/",
+          "description": "Factory.ai's evaluation framework \u2014 3 probe types (recall \u00b7 artifact \u00b7 continuation) cited in the article as the canonical probe-based evaluation pattern"
+        },
+        {
+          "id": "google-adk",
+          "type": "documentation",
+          "url": "https://google.github.io/adk-docs/",
+          "description": "Google's Agent Development Kit (ADK) team \u2014 referenced for the three-way pressure framing (cost+latency spirals \u00b7 signal degradation \u00b7 eventual overflow)"
+        },
+        {
+          "id": "how-long-contexts-fail",
+          "type": "documentation",
+          "url": "https://machinelearningmastery.com/",
+          "description": "How Long Contexts Fail \u2014 companion article on context-bloat and context-poisoning failure modes"
+        },
+        {
+          "id": "custom-model-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/custom-tailored-senior-engineer-tier-model-group-with-recreated-intelligence-layer-research-synthesis.md",
+          "description": "Custom-Tailored Model Group Concept \u2014 M003 (Recreated Intelligence Layer at I/O Boundaries) directly maps to this article's input-boundary practices (static/dynamic split + retrieval budgeting + agent-controlled retrieval)"
+        },
+        {
+          "id": "trust-layer-concept",
+          "type": "wiki",
+          "file": "wiki/domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis.md",
+          "description": "Trust-Layer Concept \u2014 composes with this article's compression/budgeting practices; Caveman compression operates at the same layer as anchored-iterative-summarization"
+        },
+        {
+          "id": "tokenization-drift-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost.md",
+          "description": "Tokenization Drift Synthesis \u2014 static-context discipline (this article) prevents the format-drift failure mode (tokenization-drift article); combined: pin canonical SFT template AND enforce static/dynamic split at the prompt layer"
+        },
+        {
+          "id": "spec-driven-convergence-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/spec-driven-agentic-build-is-the-2026-convergent-pattern-prompts-are-first-class-artifacts.md",
+          "description": "Spec-Driven Convergence Lesson \u2014 anchored-iterative-summarization IS the closed-loop-sync mechanism applied to session state; the convergence's structured artifacts ARE the static-context layer"
+        },
+        {
+          "id": "caveman-synth",
+          "type": "wiki",
+          "file": "wiki/sources/tools-integration/src-caveman-prompt-output-compressor-julius-brussee.md",
+          "description": "Caveman Synthesis \u2014 concrete compression mechanism at the prompt layer; one of the substitution axes for this article's 'compress older exchanges into a short summary' practice"
+        }
+      ],
+      "layer": 1,
+      "maturity": "seed",
+      "derived_from": [],
+      "aliases": [
+        "Context Engineering Synthesis",
+        "MLMastery Context Engineering",
+        "Token Budgeting Across Agent Loops",
+        "Anchored Iterative Summarization"
+      ],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "Custom-Tailored Model Group Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Trust-Layer Concept"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Spec-Driven Convergence Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Tokenization Drift Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Caveman Synthesis"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "RecursiveMAS Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Strands Agents Synthesis"
+        },
+        {
+          "verb": "RELATES TO",
+          "target": "Qwen-Scope Synthesis"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 2 \u2014 Structured Context Governs Agent Behavior"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Goldilocks Protocol"
         }
       ]
     },
@@ -43745,8 +44216,8 @@
       "relationship_count": 533
     },
     "tools-integration": {
-      "page_count": 26,
-      "relationship_count": 266
+      "page_count": 28,
+      "relationship_count": 287
     },
     "tools-and-platforms": {
       "page_count": 29,
@@ -43773,8 +44244,8 @@
       "relationship_count": 21
     },
     "wiki-methodology": {
-      "page_count": 3,
-      "relationship_count": 27
+      "page_count": 4,
+      "relationship_count": 38
     }
   },
   "tags": {
@@ -44113,6 +44584,7 @@
       "sources/tools-integration/src-playwright-cli-vs-mcp",
       "sources/tools-integration/src-playwright-mcp-visual-testing",
       "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
       "sources/wiki-methodology/src-context-mode",
       "spine/models/agent-config/model-claude-code",
       "spine/models/ecosystem/model-mcp-cli-integration",
@@ -45315,7 +45787,8 @@
     "security": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
       "decisions/01_drafts/pretooluse-hooks-layered-approach",
-      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis"
+      "domains/cross-domain/secure-tamper-proof-model-on-shared-gpu-research-synthesis",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
     ],
     "tamper-proof": [
       "backlog/epics/pre-milestone/secure-tamper-proof-inference-pipeline-cypher-decypher-compression-2026-04",
@@ -46611,6 +47084,7 @@
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
       "sources/wiki-methodology/methodology-artifact-taxonomy-research",
       "sources/wiki-methodology/src-awesome-design-md",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
       "spine/domain-overviews/ai-agents-domain-overview"
     ],
     "kimi": [
@@ -47561,6 +48035,7 @@
       "sources/src-bmad-method-agile-ai-development-framework",
       "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
       "sources/tools-integration/src-rlm-recursive-language-models-mit-oasys",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
       "spine/models/depth/model-context-engineering",
       "spine/standards/model-standards/model-context-engineering-standards"
     ],
@@ -47715,7 +48190,8 @@
       "sources/obsidian-notebooklm/src-pablo-mano-obsidian-cli-skill",
       "sources/src-openclaw-billing-proxy",
       "sources/tools-integration/src-gemma4-searxng-openclaw",
-      "sources/tools-integration/src-multica-managed-agents-platform"
+      "sources/tools-integration/src-multica-managed-agents-platform",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
     ],
     "agent-framework": [
       "domains/ai-agents/orchestration/openclaw",
@@ -50754,7 +51230,8 @@
     ],
     "skill-md": [
       "patterns/01_drafts/three-layer-agent-context-architecture",
-      "sources/src-skillmd-claudemd-agentsmd-three-layer-context"
+      "sources/src-skillmd-claudemd-agentsmd-three-layer-context",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
     ],
     "cross-tool-portability": [
       "patterns/01_drafts/three-layer-agent-context-architecture"
@@ -50845,6 +51322,7 @@
     ],
     "synthesis": [
       "patterns/03_validated/architecture/progressive-distillation",
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
       "sources/tools-integration/src-firecrawl-web-scraper-for-ai-agents",
       "sources/tools-integration/src-lfm2-liquid-ai-frontier-small-models-edge-deployment-maxime-labonne",
       "sources/tools-integration/src-omnivoice-tts-600-languages",
@@ -50855,9 +51333,11 @@
       "sources/tools-integration/src-strands-agents-aws-intent-based-tool-design-96-percent-token-reduction",
       "sources/tools-integration/src-subquadratic-subq-12m-context-sparse-attention-and-anythingllm-breakthrough-leads",
       "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
       "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port",
-      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy"
+      "sources/wiki-methodology/src-how-to-train-your-gpt-raiyanyahya-llama3-architecture-pedagogy",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
     ],
     "density": [
       "patterns/03_validated/architecture/progressive-distillation"
@@ -51340,6 +51820,7 @@
     "prompt-engineering": [
       "sources/src-claude-code-prompt-patch-rebalancing",
       "sources/tools-integration/src-tokenization-drift-and-automated-prompt-optimization-marktechpost",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide",
       "spine/models/depth/model-context-engineering"
     ],
     "quality-enforcement": [
@@ -51786,7 +52267,8 @@
     ],
     "retrieval": [
       "sources/tools-integration/src-browsecomp-plus-and-longbench-v2-rlm-table-1-benchmarks",
-      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b"
+      "sources/tools-integration/src-rlm-empirical-findings-oolong-browsecomp-rlm-qwen3-8b",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
     ],
     "deep-research-agents": [
       "sources/tools-integration/src-browsecomp-plus-paper-deep-dive-fixed-corpus-table-1-oracle-citation-quality"
@@ -51953,6 +52435,56 @@
     ],
     "1m-context": [
       "sources/tools-integration/src-claude-code-harness-features"
+    ],
+    "cloudflare": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "markdown-for-agents": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "content-negotiation": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "http-headers": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "accept-header": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "content-signals": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "llms-txt": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "ai-crawlers": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "server-side-compression": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "80-percent-token-reduction": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "workers-ai": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "browser-rendering-api": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "ai-bot-traffic": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "claude-code-integration": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "opencode-integration": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02"
+    ],
+    "mission-2026-05-06": [
+      "sources/tools-integration/src-cloudflare-markdown-for-agents-content-negotiation-80-percent-token-reduction-2026-02",
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026",
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
     ],
     "openai": [
       "sources/tools-integration/src-codex-cli-and-claude-code-plugin",
@@ -52853,6 +53385,45 @@
     "qwopus": [
       "sources/tools-integration/src-unsloth-fast-lora-consumer-hardware"
     ],
+    "supply-chain": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "agent-integration-layer": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "sast": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "sca": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "cli-anything": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "clawhub": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "clawhavoc": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "ddipe": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "cisco-skill-scanner": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "snyk-mcp-scan": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "prompt-injection": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "instruction-poisoning": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
+    "root-ghostproxy-relevant": [
+      "sources/tools-integration/src-venturebeat-agent-integration-layer-supply-chain-poisoning-cli-anything-skill-md-2026"
+    ],
     "aidlc": [
       "sources/wiki-methodology/src-aidlc-aws-driven-development-lifecycle",
       "sources/wiki-methodology/src-aidlc-cc-plugin-claude-code-port"
@@ -53017,6 +53588,33 @@
     ],
     "scaling": [
       "sources/wiki-methodology/src-llm-wiki-v2-agentmemory"
+    ],
+    "token-budgeting": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "prefix-caching": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "conversation-history": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "semantic-chunking": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "agent-controlled-retrieval": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "probe-based-evaluation": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "anchored-iterative-summarization": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "context-utilization": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
+    ],
+    "anthropic-upstream": [
+      "sources/wiki-methodology/src-mlmastery-effective-context-engineering-for-ai-agents-developers-guide"
     ],
     "maturity-model": [
       "sources/wiki-methodology/src-sdlc-frameworks-research"
@@ -53700,6 +54298,7 @@
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 LongBench Pro Paper Deep Dive: 1,500-Sample Bilingual Benchmark, 11\u00d725 Task Taxonomy, 46-Model Evaluation, Three Findings, Human-Model Collaborative Construction (arXiv 2601.02872 v1, Jan 2026)",
         "Synthesis \u2014 LongBench v2 Paper Deep Dive: 503-Sample Multi-Choice Benchmark, 6\u00d720 Task Taxonomy, 17-Model Leaderboard, o1-Preview Beats Humans by 4%, RAG + Memorization + YaRN Ablations (Tsinghua + Zhipu.AI; arXiv 2412.15204 v2, Jan 2025)",
@@ -53709,6 +54308,7 @@
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
         "Synthesis \u2014 SubQuadratic SubQ (12M Context Claim, Sparse Attention) + AnythingLLM (Operator-Named Breakthrough Leads, Tracked Skeptically)",
+        "Synthesis \u2014 VentureBeat: Agent Integration Layer Is the Supply-Chain Attack Surface No Scanner Sees (CLI-Anything \u00b7 SKILL.md Poisoning \u00b7 ClawHavoc 1,184 Compromised \u00b7 Cisco/Snyk First Tools April 2026)",
         "Synthesis \u2014 Structured Prompt-Driven Development (SPDD): Thoughtworks' REASONS Canvas + Workflow for Governable AI-Assisted Delivery (Wei Zhang + Jessie Jie Xia, martinfowler.com 2026-04-28)",
         "Synthesis \u2014 JS Mastery Six-File Context System: Spec-Driven Agentic Build Methodology (project-overview \u00b7 architecture \u00b7 code-standards \u00b7 ai-workflow-rules \u00b7 ui-context \u00b7 progress-tracker + AGENTS.md, 2026 video tutorial + downloadable templates)",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
@@ -53769,7 +54369,8 @@
     {
       "target": "Cavekit v4 Synthesis",
       "referenced_by": [
-        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)"
+        "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer \u2014 Research Synthesis (Operator-Authored 2026-05-04)",
+        "Synthesis \u2014 VentureBeat: Agent Integration Layer Is the Supply-Chain Attack Surface No Scanner Sees (CLI-Anything \u00b7 SKILL.md Poisoning \u00b7 ClawHavoc 1,184 Compromised \u00b7 Cisco/Snyk First Tools April 2026)"
       ]
     },
     {
@@ -53873,7 +54474,8 @@
       "target": "Decision \u2014 Adopt Multica",
       "referenced_by": [
         "Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer Pipeline (Operator-Authored 2026-05-04)",
-        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)"
+        "Secure Tamper-Proof Inference Pipeline \u2014 Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context (Operator-Authored 2026-04-30)",
+        "Synthesis \u2014 VentureBeat: Agent Integration Layer Is the Supply-Chain Attack Surface No Scanner Sees (CLI-Anything \u00b7 SKILL.md Poisoning \u00b7 ClawHavoc 1,184 Compromised \u00b7 Cisco/Snyk First Tools April 2026)"
       ]
     },
     {
@@ -54198,6 +54800,12 @@
       ]
     },
     {
+      "target": "Firecrawl Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source"
+      ]
+    },
+    {
       "target": "Fowler SPDD Synthesis",
       "referenced_by": [
         "Spec-Driven Agentic Build Is the 2026 Convergent Pattern \u2014 Eight+ Independent Practitioners Treat Prompts/Specs/Contexts as Version-Controlled First-Class Artifacts (Not Ad-Hoc Chat)",
@@ -54215,7 +54823,8 @@
     {
       "target": "Goldilocks Protocol",
       "referenced_by": [
-        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution"
+        "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
+        "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target"
       ]
     },
     {
@@ -54505,6 +55114,12 @@
       "referenced_by": [
         "Synthesis \u2014 OpenAI Codex CLI and the Codex Plugin for Claude Code",
         "AI Infrastructure Decision Framework 2026 \u2014 Full Landscape \u00d7 Cost \u00d7 Capability \u00d7 Privacy"
+      ]
+    },
+    {
+      "target": "MLMastery Context Engineering Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source"
       ]
     },
     {
@@ -54994,9 +55609,12 @@
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
         "Synthesis \u2014 Cavekit v4: Compressed Spec-Driven Development for Claude Code (Julius Brussee, MIT-Licensed, SPEC.md + 3 Commands + Caveman Encoding + Backprop Reflex)",
         "Synthesis \u2014 Cavemem: Cross-Agent Persistent Memory for AI Coding Assistants (Julius Brussee, MIT-Licensed, Compressed-at-Rest SQLite + FTS5 + Vector Index + MCP Progressive Disclosure)",
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
         "Synthesis \u2014 Tokenization Drift: How Small Formatting Changes Push Inputs Out-of-Distribution + Automated Prompt Optimization (APO) Loop (MarkTechPost 2026-05-03)",
+        "Synthesis \u2014 VentureBeat: Agent Integration Layer Is the Supply-Chain Attack Surface No Scanner Sees (CLI-Anything \u00b7 SKILL.md Poisoning \u00b7 ClawHavoc 1,184 Compromised \u00b7 Cisco/Snyk First Tools April 2026)",
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
+        "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
@@ -55453,11 +56071,14 @@
       "target": "Trust-Layer Concept",
       "referenced_by": [
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 RecursiveMAS: Recursive Multi-Agent Systems (Stanford, arXiv 2604.25917) \u2014 8.3% Accuracy + 1.2-2.4\u00d7 Speedup + 34.6-75.6% Token Reduction",
         "Synthesis \u2014 Strands Agents (AWS): Intent-Based Tool Design Cuts Token Usage 96% (52K \u2192 2K) via Narrow Scope + Semantic-Search MCP Gateway",
         "Synthesis \u2014 SubQuadratic SubQ (12M Context Claim, Sparse Attention) + AnythingLLM (Operator-Named Breakthrough Leads, Tracked Skeptically)",
+        "Synthesis \u2014 VentureBeat: Agent Integration Layer Is the Supply-Chain Attack Surface No Scanner Sees (CLI-Anything \u00b7 SKILL.md Poisoning \u00b7 ClawHavoc 1,184 Compromised \u00b7 Cisco/Snyk First Tools April 2026)",
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch",
+        "Synthesis \u2014 Effective Context Engineering for AI Agents (MachineLearningMastery, April 2026): Treat Context Window as RAM, Token Budgets Across Agent Loops, Probe-Based Evaluation, 60-80% Utilization Target",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)"
       ]
     },
@@ -55483,6 +56104,12 @@
         "Synthesis \u2014 LFM 2 / 2.5 (Liquid AI): Frontier Small Models for Edge Deployment \u2014 Hybrid Short-Conv + GQA Architecture, 28T-Token Pre-Training, Doom-Loop Solution",
         "Synthesis \u2014 Qwen-Scope: Open-Source Sparse Autoencoder Suite That Decodes Qwen3/Qwen3.5 Internal Features Into Interpretable Concepts",
         "Synthesis \u2014 How To Train Your GPT (Raiyan Yahya): 12-Chapter Pedagogical Guide to Building a LLaMA-3-Style 124M GPT From Scratch"
+      ]
+    },
+    {
+      "target": "VentureBeat Agent-Integration-Layer Synthesis",
+      "referenced_by": [
+        "Synthesis \u2014 Cloudflare Markdown for Agents (Feb 2026): Server-Side HTML\u2192Markdown Content Negotiation Delivers 80% Token Reduction at the Content Source"
       ]
     },
     {

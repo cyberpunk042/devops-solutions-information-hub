@@ -18,6 +18,7 @@ Supported sources:
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import sys
@@ -232,11 +233,75 @@ def _fetch_github_content(url: str) -> Tuple[str, str, str]:
     return "\n".join(content_parts), title, "documentation"
 
 
+def _fetch_via_firecrawl(url: str) -> Tuple[str, str]:
+    """Fall back to Firecrawl cloud API for URLs blocked by anti-bot / rate-limit.
+
+    Per the Firecrawl synthesis (wiki/sources/tools-integration/src-firecrawl-*):
+    Firecrawl handles JS-heavy pages + anti-bot bypass via Fire-Engine (cloud-only).
+    The /v1/scrape endpoint returns clean LLM-ready markdown directly — replaces
+    the urllib + HTML-strip pipeline for blocked URLs.
+
+    Requires FIRECRAWL_API_KEY env var (free tier: 500 credits/month).
+    Operator setup: export FIRECRAWL_API_KEY=fc-... in shell, restart Claude Code.
+
+    Returns (markdown_content, title). Raises if API key missing or call fails.
+    """
+    api_key = os.environ.get("FIRECRAWL_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "FIRECRAWL_API_KEY not set. Set in shell (export FIRECRAWL_API_KEY=fc-...) "
+            "to enable Firecrawl fallback for anti-bot-blocked URLs."
+        )
+
+    payload = json.dumps({"url": url, "formats": ["markdown"]}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.firecrawl.dev/v1/scrape",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": "research-wiki-ingest",
+        },
+        method="POST",
+    )
+
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+
+    if not result.get("success"):
+        raise RuntimeError(f"Firecrawl scrape failed: {result.get('error', 'unknown')}")
+
+    data = result.get("data", {})
+    markdown = data.get("markdown", "") or ""
+    title = data.get("metadata", {}).get("title") or url
+
+    if not markdown.strip():
+        raise RuntimeError("Firecrawl returned empty content")
+
+    return markdown, title
+
+
 def _fetch_web_page(url: str) -> Tuple[str, str]:
-    """Fetch a web page and extract main text content. Returns (content, title)."""
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        html = resp.read().decode("utf-8", errors="ignore")
+    """Fetch a web page and extract main text content. Returns (content, title).
+
+    Two-tier strategy:
+      1. Standard urllib fetch + HTML strip (free, fast, works for most URLs).
+      2. On HTTP 403 (anti-bot block) or 429 (rate limit), fall through to
+         Firecrawl cloud API if FIRECRAWL_API_KEY is set (handles JS + anti-bot
+         via Fire-Engine; returns clean markdown). Otherwise re-raise original.
+    """
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            html = resp.read().decode("utf-8", errors="ignore")
+    except urllib.error.HTTPError as e:
+        if e.code in (403, 429) and os.environ.get("FIRECRAWL_API_KEY"):
+            print(
+                f"    HTTP {e.code} on {url} — falling back to Firecrawl cloud...",
+                file=sys.stderr,
+            )
+            return _fetch_via_firecrawl(url)
+        raise
 
     # Extract title
     title_match = re.search(r"<title>(.*?)</title>", html, re.DOTALL)
