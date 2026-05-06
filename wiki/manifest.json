@@ -1,12 +1,12 @@
 {
-  "generated": "2026-05-06T22:22:15.770155+00:00",
+  "generated": "2026-05-06T22:31:47.153112+00:00",
   "stats": {
-    "pages": 604,
+    "pages": 605,
     "domains": 12,
     "sources": 104,
     "comparisons": 9,
-    "relationships": 3749,
-    "tags_unique": 2265,
+    "relationships": 3759,
+    "tags_unique": 2275,
     "layers": {
       "3": 4,
       "5": 37,
@@ -26930,6 +26930,124 @@
       "relationships": []
     },
     {
+      "path": "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring.md",
+      "slug": "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
+      "title": "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
+      "type": "note",
+      "domain": "cross-domain",
+      "status": "active",
+      "confidence": "high",
+      "created": "2026-05-06",
+      "updated": "2026-05-06",
+      "last_reviewed": "2026-05-06",
+      "tags": [
+        "handoff",
+        "session",
+        "2026-05-06",
+        "pre-compaction",
+        "multi-arc",
+        "infrastructure-wiring",
+        "firecrawl-fallback",
+        "accept-header-wiring",
+        "root-ghostproxy-registration",
+        "stop-hook-fix",
+        "14-syntheses",
+        "layer-4-compression-lesson",
+        "ollama-cloud-empirical",
+        "cloudflare-agents-week"
+      ],
+      "sources": [
+        {
+          "id": "prior-handoff",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-handoff-pre-compaction.md",
+          "description": "Prior handoff (2026-05-04) \u2014 pre-compaction state with 4-layer mission claim + 8-instance spec-driven convergence + 3-of-3 caveman ecosystem. This 2026-05-06 handoff continues from there post-compaction."
+        },
+        {
+          "id": "custom-model-mission-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point.md",
+          "description": "Earlier-day session log establishing operator's custom-tailored model mission + pain-point root-cause analysis"
+        },
+        {
+          "id": "multi-source-ingestion-session-log",
+          "type": "wiki",
+          "file": "wiki/log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming.md",
+          "description": "Earlier-day multi-source ingestion arc \u2014 7 syntheses + internal-cypher-langue extension + 3-tier programming hyperstructure"
+        },
+        {
+          "id": "ollama-cloud-empirical-2026-05-06",
+          "type": "file",
+          "file": "raw/notes/2026-05-06-ollama-cloud-top-tier-slow-empirical-observation-and-subscription-vs-per-token-tradeoff.md",
+          "description": "Operator-stated empirical observation 2026-05-06 \u2014 Ollama Cloud top-tier slow + per-token-vs-subscription tradeoff"
+        },
+        {
+          "id": "ollama-cloud-memory",
+          "type": "notes",
+          "file": "~/.claude/projects/-home-jfortin-devops-solutions-information-hub/memory/project_ollama_cloud_consensus_2026_04.md",
+          "description": "Memory updated with 2026-05-06 caveat"
+        },
+        {
+          "id": "compression-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/end-to-end-compression-across-the-ai-stack-composes-multiplicatively-6-plus-independent-mechanisms-at-6-distinct-layers.md",
+          "description": "NEW Layer-4 lesson \u2014 multi-layer compression convergence at 11 mechanisms across 6 layers + 1 cross-cutting paradigm"
+        },
+        {
+          "id": "anti-vendor-lock-in-lesson",
+          "type": "wiki",
+          "file": "wiki/lessons/01_drafts/anti-vendor-lock-in-is-an-empirical-claim-when-every-stack-layer-has-paper-evidence.md",
+          "description": "Mission lesson \u2014 Evidence 12 (custom-model-customization candidate 5th layer), Evidence 13 (compression cross-cutting axis), Evidence 14 (provider \u00d7 billing-model substitutability) added this session"
+        }
+      ],
+      "layer": "",
+      "maturity": "",
+      "derived_from": [],
+      "aliases": [],
+      "relationships": [
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Pre-Compaction Handoff"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Custom-Model Mission Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "2026-05-04 Multi-Source Ingestion Session Log"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Multi-Layer Compression Lesson"
+        },
+        {
+          "verb": "BUILDS ON",
+          "target": "Anti-Vendor-Lock-In Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Saturation Lesson"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "The Agent Must Practice What It Documents"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 1 \u2014 Infrastructure Over Instructions"
+        },
+        {
+          "verb": "DEMONSTRATES",
+          "target": "Principle 4 \u2014 Declarations Aspirational Until Verified"
+        },
+        {
+          "verb": "FEEDS INTO",
+          "target": "Milestone \u2014 Post-Anthropic Self-Autonomous Stack"
+        }
+      ]
+    },
+    {
       "path": "log/5-candidate-behavioral-failure-detection-rules-from-openflee.md",
       "slug": "log/5-candidate-behavioral-failure-detection-rules-from-openflee",
       "title": "5 candidate behavioral-failure detection rules from OpenFleet doctor.py (2026-04-18)",
@@ -45102,8 +45220,8 @@
       "relationship_count": 458
     },
     "cross-domain": {
-      "page_count": 264,
-      "relationship_count": 1672
+      "page_count": 265,
+      "relationship_count": 1682
     },
     "ai-models": {
       "page_count": 14,
@@ -51533,7 +51651,8 @@
       "log/2026-05-04-session-handoff-pre-compaction",
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point",
       "log/2026-05-04-session-log-multi-source-ingestion-arc-7-l1-syntheses-internal-cypher-langue-3-tier-programming",
-      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson"
+      "log/2026-05-04-session-log-spec-driven-convergence-arc-fowler-spdd-jsmastery-six-file-context-7-instance-lesson",
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
     ],
     "summary": [
       "log/2026-04-09/system/2026-04-09-session-summary",
@@ -51615,6 +51734,7 @@
       "log/2026-04-28-session-handoff",
       "log/2026-05-04-session-handoff-pre-compaction",
       "log/2026-05-05-handoff-to-root-session",
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring",
       "spine/references/wsl-ubuntu-migration-handoff"
     ],
     "t060": [
@@ -51955,7 +52075,8 @@
       "log/2026-05-04-session-handoff-pre-compaction"
     ],
     "pre-compaction": [
-      "log/2026-05-04-session-handoff-pre-compaction"
+      "log/2026-05-04-session-handoff-pre-compaction",
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
     ],
     "spec-driven-convergence": [
       "log/2026-05-04-session-handoff-pre-compaction"
@@ -51965,7 +52086,8 @@
       "sources/tools-integration/src-cavemem-cross-agent-persistent-memory-julius-brussee"
     ],
     "multi-arc": [
-      "log/2026-05-04-session-handoff-pre-compaction"
+      "log/2026-05-04-session-handoff-pre-compaction",
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
     ],
     "custom-model-mission": [
       "log/2026-05-04-session-log-custom-tailored-model-mission-and-root-ghostproxy-pain-point"
@@ -52059,6 +52181,36 @@
     ],
     "decision-log": [
       "log/2026-05-05-orient-pair-adoption-decision"
+    ],
+    "2026-05-06": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "infrastructure-wiring": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "firecrawl-fallback": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "accept-header-wiring": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "root-ghostproxy-registration": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "stop-hook-fix": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "14-syntheses": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "layer-4-compression-lesson": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "ollama-cloud-empirical": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
+    ],
+    "cloudflare-agents-week": [
+      "log/2026-05-06-session-handoff-pre-compaction-multi-arc-research-sweep-and-infrastructure-wiring"
     ],
     "correction": [
       "log/aicp-identity-profile.md-needs-reconciliation-per-consumer-p",
@@ -55388,15 +55540,28 @@
       ]
     },
     {
+      "target": "2026-05-04 Custom-Model Mission Session Log",
+      "referenced_by": [
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)"
+      ]
+    },
+    {
       "target": "2026-05-04 Custom-Tailored Model Mission Session Log",
       "referenced_by": [
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)"
       ]
     },
     {
+      "target": "2026-05-04 Multi-Source Ingestion Session Log",
+      "referenced_by": [
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)"
+      ]
+    },
+    {
       "target": "2026-05-04 Pre-Compaction Handoff",
       "referenced_by": [
-        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)"
+        "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)"
       ]
     },
     {
@@ -55486,6 +55651,7 @@
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "Synthesis \u2014 BrowseComp-Plus Paper Deep Dive: Fixed 100K Corpus, Tables 1-8 Across 11 LLMs \u00d7 5 Retrievers, Oracle 93.49%, Citation Quality, API Cost (arXiv 2508.06600 v1, Aug 2025)",
         "Synthesis \u2014 Caveman: Prompt + Output Token Compressor (Julius Brussee, MIT-Licensed, ~65\u201375% Output Reduction \u00b7 ~46% Memory-File Compression \u00b7 80\u201390% Character Reduction in Wenyan Mode)",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
@@ -56395,6 +56561,7 @@
         "2026-04-30 Session Log \u2014 Trust-Layer Arc: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context)",
         "2026-05-04 Session Handoff (Pre-Compaction) \u2014 Trust-Layer Arc Continuation + Spec-Driven Convergence Arc + Caveman Ecosystem Complete (3 of 3 Tools Ingested)",
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "Learning Path \u2014 Custom-Tailored Senior-Engineer-Tier Model Group + Recreated Intelligence Layer (Mission Arc 2026-05-04)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
@@ -56485,6 +56652,7 @@
     {
       "target": "Multi-Layer Compression Lesson",
       "referenced_by": [
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "Synthesis \u2014 Cloudflare Agent Memory (Apr 17 2026): 5-Channel RRF Retrieval + Multi-Stage Ingestion Pipeline = Solving Context Rot for Long-Running AI Agents",
         "Synthesis \u2014 Cloudflare Agents Week 2026 (Apr 14\u201320, 2026): Master Index of 26+ Announcements Across Compute \u00b7 Security \u00b7 Agent Toolbox \u00b7 Prototype-to-Production \u00b7 Agentic Web",
         "Synthesis \u2014 DeepSeek V4 (Apr 2026): Token-Wise Compression + DSA (DeepSeek Sparse Attention) Delivers 1M Context as Default at 27% FLOPs / 10% KV Cache vs V3.2"
@@ -56773,6 +56941,7 @@
         "2026-05-04 Session Log \u2014 Custom-Tailored Senior-Engineer-Tier Model Group Mission Initiated (Root-Cause Pain Point Identified via root-ghostproxy Bootstrap)",
         "2026-05-04 Session Log \u2014 Multi-Source Ingestion Arc (7 Layer-1 Syntheses) + Internal-Cypher-Langue Extension + 3-Tier Programming Hyperstructure (proto/proto-proto/literal)",
         "2026-05-04 Session Log \u2014 Spec-Driven Agentic Build Convergence Arc: Fowler SPDD + JS Mastery Six-File Context System Ingested \u2192 7-Instance Layer-4 Lesson Authored",
+        "2026-05-06 Session Handoff (Pre-Compaction) \u2014 Multi-Arc Research Sweep + Infrastructure Wiring (Stop Hook Fix \u00b7 root-ghostproxy Registration \u00b7 Firecrawl + Accept-Header Fallback Chain \u00b7 14+ Layer-1 Syntheses \u00b7 Layer-4 Compression Lesson \u00b7 Anti-Vendor-Lock-In Evidence 12-14)",
         "Learning Path \u2014 Trust Layer: Tamper-Proof Inference Pipeline (Cypher + Decypher + Compression for 80\u201390% Space Saved on Large Context, Session Arc 2026-04-30)"
       ]
     },
