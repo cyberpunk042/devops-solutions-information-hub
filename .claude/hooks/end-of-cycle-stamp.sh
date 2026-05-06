@@ -25,6 +25,29 @@ from pathlib import Path
 PROJECT_ROOT = Path("/opt/devops-solutions-information-hub")
 TRACE_LOG = "/tmp/hook-fire-trace.log"
 
+# Operator stamp preference — shared across all root-user sessions via
+# Path.home()/.claude/stamp-config.json (matches /root/tools/stamp.py
+# CONFIG_PATH). Schema: {layout: horizontal|vertical, enabled: on|off|auto}.
+# Defaults: layout=vertical, enabled=auto (mode-conditional; /opt has no
+# active-mode mechanism so auto = on).
+STAMP_CONFIG_PATH = Path.home() / ".claude" / "stamp-config.json"
+STAMP_DEFAULTS = {"layout": "vertical", "enabled": "auto"}
+
+
+def _load_stamp_config() -> dict:
+    cfg = dict(STAMP_DEFAULTS)
+    try:
+        if STAMP_CONFIG_PATH.exists():
+            data = json.loads(STAMP_CONFIG_PATH.read_text())
+            if isinstance(data, dict):
+                if data.get("layout") in ("horizontal", "vertical"):
+                    cfg["layout"] = data["layout"]
+                if data.get("enabled") in ("on", "off", "auto"):
+                    cfg["enabled"] = data["enabled"]
+    except Exception:
+        pass
+    return cfg
+
 
 def _trace(tag: str, extra: str = "") -> None:
     try:
@@ -189,6 +212,86 @@ def _task_state() -> tuple[int, int, int, int]:
     return (done, inprog, draft, blocked)
 
 
+def build_stamp_horizontal() -> str:
+    """Horizontal layout matching /root/tools/cycle.py emit_status_block_ansi_horizontal:
+    6 single-line-per-section rows with glyph + padded label + grouped fields.
+    Separator conventions: ` · ` within logical group, `║` between groups.
+    Per SB-114 sub-req (a) + SB-116 UX iteration. Adapted to /opt's data model
+    (pages/epics/modules/tasks/lessons/notes/decisions/gaps; no tools.cycle).
+    """
+    pages = _count_files("wiki/**/*.md")
+    notes = _recent_notes(5)
+    open_decisions = _count_open_decisions()
+    research_gaps = _count_research_gaps()
+    epic_active, epic_draft, epic_inprog = _epic_state()
+    epic_total = epic_active + epic_draft + epic_inprog
+    mod_active, mod_draft, mod_inprog = _module_state()
+    mod_total = mod_active + mod_draft + mod_inprog
+    t_done, t_inprog, t_draft, t_blocked = _task_state()
+    t_total = t_done + t_inprog + t_draft + t_blocked
+    lesson_drafts, _lesson_candidates, lesson_validated = _count_lessons()
+    phase = _phase()
+
+    R = "\033[31m"; G = "\033[32m"; Y = "\033[33m"; B = "\033[34m"
+    M = "\033[35m"; K = "\033[36m"; BO = "\033[1m"; D = "\033[2m"; X = "\033[0m"
+    ts = time.strftime("%H:%M:%S")
+
+    LABEL_WIDTH = 8  # widest = "Progress" (matches /root pattern)
+    GLYPHS = {
+        "Status":   "●",
+        "Journey":  "↺",
+        "Plan":     "◆",
+        "Blocked":  "⊘",
+        "Progress": "▰",
+        "Cursor":   "▶",
+    }
+    def lbl(name: str) -> str:
+        glyph = GLYPHS.get(name, "·")
+        return f"{M}{BO}{glyph} {name:<{LABEL_WIDTH}}{X}"
+
+    L = ["```ansi"]
+
+    # Status — timestamp · type · phase
+    L.append(f"{lbl('Status')}  {D}{ts}{X}  ·  type=second-brain  ·  {G}phase={phase}{X}")
+
+    # Journey — top 3 recent raw/notes/ slugs, smart-trimmed
+    journey_slugs = []
+    for date, slug in notes[:3]:
+        journey_slugs.append(_smart_trim(slug, 35))
+    journey_line = f"{D}" + "  ·  ".join(journey_slugs) + f"{X}" if journey_slugs else f"{D}(none){X}"
+    L.append(f"{lbl('Journey')}  {journey_line}")
+
+    # Plan — pages + epics counts ║ epic state breakdown
+    L.append(
+        f"{lbl('Plan')}  {Y}pages {pages}{X}  ·  {Y}epics {epic_total}{X}  ·  {Y}modules {mod_total}{X}  "
+        f"{D}║{X}  {D}({epic_active} active · {epic_inprog} in-progress · {epic_draft} draft){X}"
+    )
+
+    # Blocked — operator decisions ║ research gaps · blocked tasks
+    def _flag(n: int, label: str, color: str) -> str:
+        return f"{G}0 {label}{X}" if n == 0 else f"{color}{n} {label}{X}"
+    L.append(
+        f"{lbl('Blocked')}  {_flag(open_decisions, 'open decisions', R)}  "
+        f"{D}║{X}  {_flag(research_gaps, 'research gaps', Y)}  ·  {_flag(t_blocked, 'blocked tasks', R)}"
+    )
+
+    # Progress — lessons + tasks done/total ║ task breakdown
+    L.append(
+        f"{lbl('Progress')}  {B}lessons{X}  {G}validated={lesson_validated}{X}  ·  {Y}drafts={lesson_drafts}{X}  "
+        f"{D}║{X}  {G}tasks {t_done}/{t_total}{X}  {D}({t_inprog} in-progress · {t_draft} draft · {t_blocked} blocked){X}"
+    )
+
+    # Cursor — most recent activity + reference paths
+    if notes:
+        latest = _smart_trim(notes[0][1], 50)
+        L.append(f"{lbl('Cursor')}  {Y}↪{X} {latest}  {D}· raw/notes/ + wiki/backlog/{X}")
+    else:
+        L.append(f"{lbl('Cursor')}  {D}(no recent activity){X}")
+
+    L.append("```")
+    return "\n".join(L)
+
+
 def build_stamp() -> str:
     # Gather all data once
     pages = _count_files("wiki/**/*.md")
@@ -285,10 +388,40 @@ def main() -> None:
         _trace("exit-suppress-on-mismatch")
         sys.exit(0)
 
+    # Route per shared stamp-config (Path.home()/.claude/stamp-config.json,
+    # written by /root/tools/stamp.py via /stamp-* slash commands).
+    cfg = _load_stamp_config()
+    if cfg["enabled"] == "off":
+        _trace("exit-disabled-by-config")
+        sys.exit(0)
+
+    # enabled=auto → mode-conditional (SB-114 sub-req c: default-hide-when-no-mode).
+    # Active-mode is PER-PROJECT state (each project has its own mode files).
+    # /opt's active-mode lives at /opt/.../.claude/active-mode (project-local),
+    # NOT at Path.home()/.claude/active-mode (which is /root's mode for the
+    # /root project). Stamp-config is shared (operator-preference) but
+    # active-mode is per-project (project-state).
+    if cfg["enabled"] == "auto":
+        active_mode = ""
+        try:
+            mode_file = PROJECT_ROOT / ".claude" / "active-mode"
+            if mode_file.exists():
+                active_mode = mode_file.read_text().strip()
+        except Exception:
+            pass
+        if not active_mode:
+            _trace("exit-auto-no-mode")
+            sys.exit(0)
+    # enabled=on falls through to render unconditionally.
+
+    layout = cfg["layout"]
     try:
-        stamp = build_stamp()
+        if layout == "horizontal":
+            stamp = build_stamp_horizontal()
+        else:
+            stamp = build_stamp()
     except Exception as exc:
-        _trace("exit-build-error", f"err={exc!r}")
+        _trace("exit-build-error", f"err={exc!r} layout={layout}")
         sys.exit(0)
 
     if not stamp.strip():
@@ -296,7 +429,7 @@ def main() -> None:
         sys.exit(0)
 
     print(json.dumps({"systemMessage": stamp}))
-    _trace("fired-systemMessage", f"stamp_len={len(stamp)}")
+    _trace("fired-systemMessage", f"stamp_len={len(stamp)} layout={layout}")
     sys.exit(0)
 
 
